@@ -4,6 +4,8 @@ const MODES = {
   CLOZE_INPUT: 'cloze-input',
 };
 
+const FINNISH_LETTERS = [...'abcdefghijklmnopqrstuvwxyzåäö'];
+
 const state = {
   words: [],
   current: null,
@@ -29,6 +31,9 @@ const els = {
   options: document.querySelector('#options'),
   typingForm: document.querySelector('#typing-form'),
   typedAnswer: document.querySelector('#typed-answer'),
+  letterKeyboard: document.querySelector('#letter-keyboard'),
+  keyboardBackspace: document.querySelector('#keyboard-backspace'),
+  keyboardClear: document.querySelector('#keyboard-clear'),
   hintButtons: [...document.querySelectorAll('.hint-button')],
   hintPattern: document.querySelector('#hint-pattern'),
   modeButtons: [...document.querySelectorAll('.mode-button')],
@@ -164,7 +169,6 @@ function revealHint(hintIndex) {
   usedButton.classList.add('used');
   const nextButton = els.hintButtons[hintIndex + 1];
   if (nextButton) nextButton.disabled = false;
-  els.typedAnswer.focus();
 }
 
 function getOptionSizeClass(label) {
@@ -195,6 +199,81 @@ function renderChoiceOptions(options, labelSelector, isFinnish = false) {
   }
 }
 
+function makeLetterKeyboard(word) {
+  const answerLetters = [...new Set([...normalizeFinnish(word)])];
+  const targetCount = Math.max(10, answerLetters.length);
+  const extras = shuffle(
+    FINNISH_LETTERS.filter((letter) => !answerLetters.includes(letter)),
+  ).slice(0, targetCount - answerLetters.length);
+  return shuffle([...answerLetters, ...extras]);
+}
+
+function setKeyboardDisabled(disabled) {
+  for (const button of els.letterKeyboard.querySelectorAll('.letter-key')) {
+    button.disabled = disabled;
+  }
+  els.keyboardBackspace.disabled = disabled;
+  els.keyboardClear.disabled = disabled;
+}
+
+function insertLetter(letter) {
+  if (state.answered || state.mode !== MODES.CLOZE_INPUT) return;
+
+  const input = els.typedAnswer;
+  const start = Number.isInteger(input.selectionStart) ? input.selectionStart : input.value.length;
+  const end = Number.isInteger(input.selectionEnd) ? input.selectionEnd : input.value.length;
+  input.value = `${input.value.slice(0, start)}${letter}${input.value.slice(end)}`;
+
+  const caret = start + letter.length;
+  input.setSelectionRange(caret, caret);
+  input.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+function removeLastLetter() {
+  if (state.answered || state.mode !== MODES.CLOZE_INPUT) return;
+
+  const input = els.typedAnswer;
+  const start = Number.isInteger(input.selectionStart) ? input.selectionStart : input.value.length;
+  const end = Number.isInteger(input.selectionEnd) ? input.selectionEnd : input.value.length;
+
+  if (start !== end) {
+    input.value = `${input.value.slice(0, start)}${input.value.slice(end)}`;
+    input.setSelectionRange(start, start);
+    return;
+  }
+
+  if (start === 0) return;
+  const before = [...input.value.slice(0, start)];
+  before.pop();
+  const newStart = before.join('').length;
+  input.value = `${before.join('')}${input.value.slice(end)}`;
+  input.setSelectionRange(newStart, newStart);
+}
+
+function clearTypedAnswer() {
+  if (state.answered || state.mode !== MODES.CLOZE_INPUT) return;
+  els.typedAnswer.value = '';
+  els.typedAnswer.setSelectionRange(0, 0);
+}
+
+function renderLetterKeyboard(word) {
+  els.letterKeyboard.replaceChildren();
+  for (const letter of makeLetterKeyboard(word)) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'letter-key';
+    button.textContent = letter;
+    button.setAttribute('aria-label', `حرف ${letter}`);
+    button.addEventListener('click', () => {
+      insertLetter(letter);
+      button.classList.add('pressed');
+      window.setTimeout(() => button.classList.remove('pressed'), 120);
+    });
+    els.letterKeyboard.append(button);
+  }
+  setKeyboardDisabled(false);
+}
+
 function hideFeedback() {
   els.feedback.hidden = true;
   els.feedbackBackdrop.hidden = true;
@@ -221,9 +300,11 @@ function renderQuestion() {
   els.typingForm.hidden = true;
   els.options.hidden = true;
   els.options.replaceChildren();
+  els.typedAnswer.blur();
   els.typedAnswer.value = '';
   els.typedAnswer.disabled = false;
   els.typedAnswer.classList.remove('correct', 'wrong');
+  els.letterKeyboard.replaceChildren();
   resetHints();
   updateModeButtons();
 
@@ -250,7 +331,7 @@ function renderQuestion() {
 
   els.questionLabel.textContent = 'واژه مناسب را در جای خالی بنویس.';
   els.typingForm.hidden = false;
-  requestAnimationFrame(() => els.typedAnswer.focus());
+  renderLetterKeyboard(state.current.word);
 }
 
 function finishAnswer(isCorrect) {
@@ -291,14 +372,14 @@ function answerTyped(event) {
   event.preventDefault();
   if (state.answered) return;
   const answer = normalizeFinnish(els.typedAnswer.value);
-  if (!answer) {
-    els.typedAnswer.focus();
-    return;
-  }
+  if (!answer) return;
+
   const isCorrect = answer === normalizeFinnish(state.current.word);
+  els.typedAnswer.blur();
   els.typedAnswer.disabled = true;
   els.typedAnswer.classList.add(isCorrect ? 'correct' : 'wrong');
   for (const button of els.hintButtons) button.disabled = true;
+  setKeyboardDisabled(true);
   finishAnswer(isCorrect);
 }
 
@@ -345,6 +426,8 @@ els.next.addEventListener('click', renderQuestion);
 els.feedbackBackdrop.addEventListener('click', renderQuestion);
 els.speak.addEventListener('click', speakCurrentWord);
 els.typingForm.addEventListener('submit', answerTyped);
+els.keyboardBackspace.addEventListener('click', removeLastLetter);
+els.keyboardClear.addEventListener('click', clearTypedAnswer);
 for (const button of els.modeButtons) {
   button.addEventListener('click', () => changeMode(button.dataset.mode));
 }
