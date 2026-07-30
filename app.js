@@ -33,6 +33,9 @@ const els = {
   hintPattern: document.querySelector('#hint-pattern'),
   modeButtons: [...document.querySelectorAll('.mode-button')],
   feedback: document.querySelector('#feedback'),
+  feedbackBackdrop: document.querySelector('#feedback-backdrop'),
+  feedbackStatusIcon: document.querySelector('#feedback-status-icon'),
+  answerEffect: document.querySelector('#answer-effect'),
   result: document.querySelector('#result-message'),
   exampleFi: document.querySelector('#example-fi'),
   exampleFa: document.querySelector('#example-fa'),
@@ -188,14 +191,29 @@ function renderChoiceOptions(options, labelSelector, isFinnish = false) {
   }
 }
 
+function hideFeedback() {
+  els.feedback.hidden = true;
+  els.feedbackBackdrop.hidden = true;
+  els.feedbackStatusIcon.className = 'feedback-status-icon';
+}
+
+function playAnswerEffect(isCorrect) {
+  const stateClass = isCorrect ? 'correct' : 'wrong';
+  els.answerEffect.className = `answer-effect ${stateClass}`;
+  void els.answerEffect.offsetWidth;
+  els.answerEffect.classList.add('show');
+  window.setTimeout(() => {
+    els.answerEffect.className = 'answer-effect';
+  }, 720);
+}
+
 function renderQuestion() {
   const previousRank = state.current?.rank ?? null;
   state.current = getRandomWord(previousRank);
   state.currentExample = getRandomExample(state.current);
   state.answered = false;
 
-  els.feedback.hidden = true;
-  els.next.hidden = true;
+  hideFeedback();
   els.typingForm.hidden = true;
   els.options.hidden = true;
   els.options.replaceChildren();
@@ -246,18 +264,21 @@ function finishAnswer(isCorrect) {
   state.total += 1;
   if (isCorrect) state.correct += 1;
 
+  const stateClass = isCorrect ? 'correct' : 'wrong';
   els.result.textContent = isCorrect
-    ? 'پاسخ درست است.'
+    ? 'آفرین! پاسخ درست است.'
     : state.mode === MODES.TRANSLATION
       ? `پاسخ درست: ${state.current.translation_fa}`
       : `پاسخ درست: ${state.current.word} — ${state.current.translation_fa}`;
-  els.result.className = `result-message ${isCorrect ? 'correct' : 'wrong'}`;
+  els.result.className = `result-message ${stateClass}`;
+  els.feedbackStatusIcon.className = `feedback-status-icon ${stateClass}`;
   els.exampleFi.textContent = state.currentExample.fi;
   els.exampleFa.textContent = state.currentExample.fa;
+  els.feedbackBackdrop.hidden = false;
   els.feedback.hidden = false;
-  els.next.hidden = false;
   updateScore();
-  els.next.focus();
+  playAnswerEffect(isCorrect);
+  window.setTimeout(() => els.next.focus(), 250);
 }
 
 function answerChoice(selectedButton, selectedWord) {
@@ -338,6 +359,7 @@ async function init() {
 }
 
 els.next.addEventListener('click', renderQuestion);
+els.feedbackBackdrop.addEventListener('click', renderQuestion);
 els.speak.addEventListener('click', speakCurrentWord);
 els.typingForm.addEventListener('submit', answerTyped);
 
