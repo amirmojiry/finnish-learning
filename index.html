@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260731-3">
   <link rel="stylesheet" href="option-sizing.css?v=20260731-1">
+  <link rel="stylesheet" href="typing-keyboard.css?v=20260731-1">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -74,9 +75,21 @@
         <form id="typing-form" class="typing-form" hidden>
           <label for="typed-answer">واژه فنلاندی مناسب را بنویس:</label>
           <div class="answer-row">
-            <input id="typed-answer" name="typed-answer" type="text" lang="fi" dir="ltr" autocomplete="off" autocapitalize="none" spellcheck="false">
+            <input id="typed-answer" class="keyboard-input" name="typed-answer" type="text" lang="fi" dir="ltr" autocomplete="off" autocapitalize="none" spellcheck="false">
             <button class="primary-button compact" type="submit">بررسی</button>
           </div>
+
+          <div class="letter-keyboard-wrap">
+            <div class="letter-keyboard-toolbar">
+              <span class="letter-keyboard-label">با حروف زیر بساز یا روی کادر بزن و تایپ کن</span>
+              <div class="letter-keyboard-actions">
+                <button id="keyboard-backspace" class="keyboard-action" type="button" aria-label="حذف آخرین حرف">⌫</button>
+                <button id="keyboard-clear" class="keyboard-action" type="button" aria-label="پاک‌کردن پاسخ">×</button>
+              </div>
+            </div>
+            <div id="letter-keyboard" class="letter-keyboard" role="group" aria-label="حروف پیشنهادی"></div>
+          </div>
+
           <div class="hint-controls" aria-label="راهنماهای پاسخ">
             <button class="hint-button" type="button" data-hint-index="0">حرف اول</button>
             <button class="hint-button" type="button" data-hint-index="1" disabled>حرف آخر</button>
@@ -113,6 +126,6 @@
     </a>
   </nav>
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
-  <script src="app.js?v=20260731-4" defer></script>
+  <script src="app.js?v=20260731-5" defer></script>
 </body>
 </html>
