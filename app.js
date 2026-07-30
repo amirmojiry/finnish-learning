@@ -216,16 +216,17 @@ function setKeyboardDisabled(disabled) {
   els.keyboardClear.disabled = disabled;
 }
 
+function moveCaretToEnd(input) {
+  const end = input.value.length;
+  input.setSelectionRange(end, end);
+}
+
 function insertLetter(letter) {
   if (state.answered || state.mode !== MODES.CLOZE_INPUT) return;
 
   const input = els.typedAnswer;
-  const start = Number.isInteger(input.selectionStart) ? input.selectionStart : input.value.length;
-  const end = Number.isInteger(input.selectionEnd) ? input.selectionEnd : input.value.length;
-  input.value = `${input.value.slice(0, start)}${letter}${input.value.slice(end)}`;
-
-  const caret = start + letter.length;
-  input.setSelectionRange(caret, caret);
+  input.value += letter;
+  moveCaretToEnd(input);
   input.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
@@ -233,27 +234,18 @@ function removeLastLetter() {
   if (state.answered || state.mode !== MODES.CLOZE_INPUT) return;
 
   const input = els.typedAnswer;
-  const start = Number.isInteger(input.selectionStart) ? input.selectionStart : input.value.length;
-  const end = Number.isInteger(input.selectionEnd) ? input.selectionEnd : input.value.length;
-
-  if (start !== end) {
-    input.value = `${input.value.slice(0, start)}${input.value.slice(end)}`;
-    input.setSelectionRange(start, start);
-    return;
-  }
-
-  if (start === 0) return;
-  const before = [...input.value.slice(0, start)];
-  before.pop();
-  const newStart = before.join('').length;
-  input.value = `${before.join('')}${input.value.slice(end)}`;
-  input.setSelectionRange(newStart, newStart);
+  const letters = [...input.value];
+  letters.pop();
+  input.value = letters.join('');
+  moveCaretToEnd(input);
+  input.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
 function clearTypedAnswer() {
   if (state.answered || state.mode !== MODES.CLOZE_INPUT) return;
   els.typedAnswer.value = '';
-  els.typedAnswer.setSelectionRange(0, 0);
+  moveCaretToEnd(els.typedAnswer);
+  els.typedAnswer.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
 function renderLetterKeyboard(word) {
