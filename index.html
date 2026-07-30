@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f8fc">
-  <meta name="description" content="تمرین تعاملی واژه‌های پرکاربرد فنلاندی با ترجمه فارسی و جمله‌های جای‌خالی">
-  <title>تمرین فنلاندی</title>
+  <meta name="description" content="تمرین و واژه‌نامه تعاملی زبان فنلاندی با ترجمه فارسی">
+  <title>یادگیری فنلاندی</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260731-3">
   <link rel="stylesheet" href="option-sizing.css?v=20260731-1">
   <link rel="stylesheet" href="typing-keyboard.css?v=20260731-1">
+  <link rel="stylesheet" href="dictionary.css?v=20260731-1">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -20,9 +21,10 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./">Finnish Learning</a>
+    <a class="brand" href="#home" data-view-link="home">Finnish Learning</a>
     <nav aria-label="منوی اصلی">
-      <a class="active" href="#quiz">واژه‌های پرکاربرد</a>
+      <a class="desktop-view-link active" href="#home" data-view-link="home">تمرین‌ها</a>
+      <a class="desktop-view-link" href="#dictionary" data-view-link="dictionary">واژه‌نامه</a>
       <a href="data/common-words.json">فایل JSON</a>
     </nav>
   </header>
@@ -30,102 +32,167 @@
   <header class="mobile-app-bar">
     <div>
       <span>Finnish Learning</span>
-      <strong>تمرین واژه‌ها</strong>
+      <strong id="mobile-view-title">تمرین واژه‌ها</strong>
     </div>
     <span class="app-status-dot" aria-hidden="true"></span>
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">تمرین روزانه زبان فنلاندی</p>
-      <h1>۱۰۰ واژه پرکاربرد فنلاندی</h1>
-      <p>نوع تمرین را انتخاب کن و معنی یا کاربرد واژه‌ها را مرور کن.</p>
-    </section>
+    <div id="home-view" class="app-view home-view">
+      <section class="hero">
+        <p class="eyebrow">تمرین روزانه زبان فنلاندی</p>
+        <h1>۱۰۰ واژه پرکاربرد فنلاندی</h1>
+        <p>نوع تمرین را انتخاب کن و معنی یا کاربرد واژه‌ها را مرور کن.</p>
+      </section>
 
-    <section id="quiz" class="quiz-card" aria-labelledby="quiz-title">
-      <div class="mode-switcher" role="tablist" aria-label="نوع تمرین">
-        <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="translation" aria-label="تمرین ترجمه واژه">ترجمه</button>
-        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-choice" aria-label="تمرین جای‌خالی چهارگزینه‌ای">چهارگزینه‌ای</button>
-        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-input" aria-label="تمرین جای‌خالی تایپی">نوشتن</button>
-      </div>
-
-      <div class="stats" aria-label="آمار آزمون">
-        <span class="score-chip">درست <strong id="correct-count">۰</strong></span>
-        <span class="score-chip">کل <strong id="total-count">۰</strong></span>
-        <button id="reset-score" class="text-button" type="button">پاک‌کردن</button>
-      </div>
-
-      <div id="loading" class="status">در حال بارگذاری واژه‌ها…</div>
-      <div id="error" class="status error" hidden></div>
-
-      <div id="quiz-content" hidden>
-        <p id="quiz-title" class="question-label">ترجمه این واژه چیست؟</p>
-        <div id="word-row" class="word-row">
-          <span id="rank" class="rank"></span>
-          <h2 id="word" lang="fi"></h2>
-          <button id="speak-word" class="icon-button" type="button" aria-label="پخش تلفظ واژه" title="پخش تلفظ">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/></svg>
-          </button>
+      <section id="quiz" class="quiz-card" aria-labelledby="quiz-title">
+        <div class="mode-switcher" role="tablist" aria-label="نوع تمرین">
+          <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="translation">ترجمه</button>
+          <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-choice">چهارگزینه‌ای</button>
+          <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-input">نوشتن</button>
         </div>
-        <div id="sentence-panel" class="sentence-panel" hidden>
-          <p id="cloze-sentence" class="cloze-sentence" lang="fi"></p>
-          <p id="cloze-translation" class="cloze-translation"></p>
+
+        <div class="stats" aria-label="آمار آزمون">
+          <span class="score-chip">درست <strong id="correct-count">۰</strong></span>
+          <span class="score-chip">کل <strong id="total-count">۰</strong></span>
+          <button id="reset-score" class="text-button" type="button">پاک‌کردن</button>
         </div>
-        <div id="options" class="options" role="group" aria-label="گزینه‌های پاسخ"></div>
-        <form id="typing-form" class="typing-form" hidden>
-          <label for="typed-answer">واژه فنلاندی مناسب را بنویس:</label>
-          <div class="answer-row">
-            <input id="typed-answer" class="keyboard-input" name="typed-answer" type="text" lang="fi" dir="ltr" autocomplete="off" autocapitalize="none" spellcheck="false">
-            <button class="primary-button compact" type="submit">بررسی</button>
+
+        <div id="loading" class="status">در حال بارگذاری واژه‌ها…</div>
+        <div id="error" class="status error" hidden></div>
+
+        <div id="quiz-content" hidden>
+          <p id="quiz-title" class="question-label">ترجمه این واژه چیست؟</p>
+          <div id="word-row" class="word-row">
+            <span id="rank" class="rank"></span>
+            <h2 id="word" lang="fi"></h2>
+            <button id="speak-word" class="icon-button" type="button" aria-label="پخش تلفظ واژه">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/></svg>
+            </button>
           </div>
-
-          <div class="letter-keyboard-wrap">
-            <div class="letter-keyboard-toolbar">
-              <span class="letter-keyboard-label">با حروف زیر بساز یا روی کادر بزن و تایپ کن</span>
-              <div class="letter-keyboard-actions">
-                <button id="keyboard-backspace" class="keyboard-action" type="button" aria-label="حذف آخرین حرف">⌫</button>
-                <button id="keyboard-clear" class="keyboard-action" type="button" aria-label="پاک‌کردن پاسخ">×</button>
-              </div>
+          <div id="sentence-panel" class="sentence-panel" hidden>
+            <p id="cloze-sentence" class="cloze-sentence" lang="fi"></p>
+            <p id="cloze-translation" class="cloze-translation"></p>
+          </div>
+          <div id="options" class="options" role="group" aria-label="گزینه‌های پاسخ"></div>
+          <form id="typing-form" class="typing-form" hidden>
+            <label for="typed-answer">واژه فنلاندی مناسب را بنویس:</label>
+            <div class="answer-row">
+              <input id="typed-answer" class="keyboard-input" name="typed-answer" type="text" lang="fi" dir="ltr" autocomplete="off" autocapitalize="none" spellcheck="false">
+              <button class="primary-button compact" type="submit">بررسی</button>
             </div>
-            <div id="letter-keyboard" class="letter-keyboard" role="group" aria-label="حروف پیشنهادی"></div>
+            <div class="letter-keyboard-wrap">
+              <div class="letter-keyboard-toolbar">
+                <span class="letter-keyboard-label">با حروف زیر بساز یا روی کادر بزن و تایپ کن</span>
+                <div class="letter-keyboard-actions">
+                  <button id="keyboard-backspace" class="keyboard-action" type="button" aria-label="حذف آخرین حرف">⌫</button>
+                  <button id="keyboard-clear" class="keyboard-action" type="button" aria-label="پاک‌کردن پاسخ">×</button>
+                </div>
+              </div>
+              <div id="letter-keyboard" class="letter-keyboard" role="group" aria-label="حروف پیشنهادی"></div>
+            </div>
+            <div class="hint-controls" aria-label="راهنماهای پاسخ">
+              <button class="hint-button" type="button" data-hint-index="0">حرف اول</button>
+              <button class="hint-button" type="button" data-hint-index="1" disabled>حرف آخر</button>
+              <button class="hint-button" type="button" data-hint-index="2" disabled>حرف دوم</button>
+            </div>
+            <p id="hint-pattern" class="hint-pattern" lang="fi" dir="ltr" aria-live="polite" hidden></p>
+          </form>
+          <div id="feedback" class="feedback" aria-live="polite" hidden>
+            <div class="feedback-heading">
+              <span id="feedback-status-icon" class="feedback-status-icon" aria-hidden="true"></span>
+              <p id="result-message" class="result-message"></p>
+            </div>
+            <div class="example-box">
+              <p id="example-fi" lang="fi"></p>
+              <p id="example-fa"></p>
+            </div>
+            <button id="next-word" class="primary-button" type="button">سؤال بعدی</button>
           </div>
-
-          <div class="hint-controls" aria-label="راهنماهای پاسخ">
-            <button class="hint-button" type="button" data-hint-index="0">حرف اول</button>
-            <button class="hint-button" type="button" data-hint-index="1" disabled>حرف آخر</button>
-            <button class="hint-button" type="button" data-hint-index="2" disabled>حرف دوم</button>
-          </div>
-          <p id="hint-pattern" class="hint-pattern" lang="fi" dir="ltr" aria-live="polite" hidden></p>
-        </form>
-        <div id="feedback" class="feedback" aria-live="polite" hidden>
-          <div class="feedback-heading">
-            <span id="feedback-status-icon" class="feedback-status-icon" aria-hidden="true"></span>
-            <p id="result-message" class="result-message"></p>
-          </div>
-          <div class="example-box">
-            <p id="example-fi" lang="fi"></p>
-            <p id="example-fa"></p>
-          </div>
-          <button id="next-word" class="primary-button" type="button">سؤال بعدی</button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="about">
-      <h2>درباره تمرین‌ها</h2>
-      <p>در حالت ترجمه، معنی فارسی واژه را انتخاب می‌کنی. در دو حالت جای‌خالی، واژه اصلی از جمله حذف می‌شود و باید آن را انتخاب یا تایپ کنی. در حالت تایپی سه راهنمای مرحله‌ای برای حرف اول، حرف آخر و حرف دوم در دسترس است.</p>
-    </section>
+      <section class="about">
+        <h2>درباره تمرین‌ها</h2>
+        <p>در حالت ترجمه، معنی فارسی واژه را انتخاب می‌کنی. در حالت‌های جای‌خالی، واژه اصلی از جمله حذف می‌شود و باید آن را انتخاب یا تایپ کنی.</p>
+      </section>
+    </div>
+
+    <div id="dictionary-view" class="app-view dictionary-view" hidden>
+      <section class="dictionary-shell">
+        <div id="dictionary-list-panel" class="dictionary-list-panel">
+          <div class="dictionary-header">
+            <div>
+              <h1>واژه‌نامه</h1>
+              <p>همه واژه‌ها، معنی، نوع، ریشه و مثال‌ها</p>
+            </div>
+            <span id="dictionary-count" class="dictionary-count"></span>
+          </div>
+          <div class="dictionary-controls">
+            <div class="dictionary-search-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20.7 19.3-4.2-4.2a7 7 0 1 0-1.4 1.4l4.2 4.2 1.4-1.4ZM5 11a6 6 0 1 1 12 0 6 6 0 0 1-12 0Z"/></svg>
+              <input id="dictionary-search" class="dictionary-control" type="search" placeholder="جست‌وجوی واژه، معنی یا ریشه">
+            </div>
+            <select id="dictionary-sort" class="dictionary-control" aria-label="مرتب‌سازی واژه‌ها">
+              <option value="frequency">بر اساس بسامد</option>
+              <option value="alphabetical">به ترتیب الفبایی</option>
+            </select>
+            <select id="dictionary-pos-filter" class="dictionary-control" aria-label="فیلتر نوع واژه">
+              <option value="all">همه انواع واژه</option>
+            </select>
+          </div>
+          <div id="dictionary-list" class="dictionary-list"></div>
+          <div id="dictionary-empty" class="dictionary-empty" hidden>واژه‌ای پیدا نشد.</div>
+        </div>
+
+        <article id="dictionary-detail" class="dictionary-detail" hidden>
+          <button id="dictionary-back" class="dictionary-back" type="button">بازگشت به فهرست</button>
+          <div class="word-detail-hero">
+            <div class="word-detail-title">
+              <h1 id="detail-word" lang="fi"></h1>
+              <p id="detail-translation"></p>
+            </div>
+            <button id="detail-speak" class="word-detail-speak" type="button" aria-label="پخش تلفظ">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/></svg>
+            </button>
+          </div>
+          <div class="word-detail-meta">
+            <div class="word-meta-card"><span class="word-meta-label">رتبه بسامد</span><strong id="detail-rank" class="word-meta-value"></strong></div>
+            <div class="word-meta-card"><span class="word-meta-label">نوع واژه</span><strong id="detail-pos" class="word-meta-value"></strong></div>
+            <div class="word-meta-card"><span class="word-meta-label">شکل پایه</span><strong id="detail-lemma" class="word-meta-value" lang="fi"></strong></div>
+          </div>
+          <section class="word-detail-section">
+            <h2>مثال‌ها</h2>
+            <div id="detail-examples"></div>
+          </section>
+          <section class="word-detail-section">
+            <h2>تمرین همین واژه</h2>
+            <div class="word-practice-grid">
+              <button class="word-practice-button" type="button" data-practice-mode="translation">ترجمه چهارگزینه‌ای</button>
+              <button class="word-practice-button" type="button" data-practice-mode="cloze-choice">جای‌خالی چهارگزینه‌ای</button>
+              <button class="word-practice-button" type="button" data-practice-mode="cloze-input">نوشتن در جای‌خالی</button>
+            </div>
+          </section>
+        </article>
+      </section>
+    </div>
   </main>
 
   <div id="feedback-backdrop" class="feedback-backdrop" hidden></div>
-  <div id="answer-effect" class="answer-effect" aria-hidden="true"><span id="answer-effect-icon"></span></div>
+  <div id="answer-effect" class="answer-effect" aria-hidden="true"><span></span></div>
+
   <nav class="bottom-nav" aria-label="ناوبری اصلی اپ">
-    <a class="bottom-nav-item active" href="./" aria-current="page">
+    <a class="bottom-nav-item active" href="#home" data-view-link="home" aria-current="page">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z"/></svg>
       <span>خانه</span>
     </a>
+    <a class="bottom-nav-item" href="#dictionary" data-view-link="dictionary">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H4V3Zm16 0h-4a4 4 0 0 0-2 0.54V21a4 4 0 0 1 4-4h2V3Z"/></svg>
+      <span>واژه‌نامه</span>
+    </a>
   </nav>
+
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
-  <script src="app.js?v=20260731-6" defer></script>
+  <script src="app.js?v=20260731-7" defer></script>
 </body>
 </html>
