@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="تمرین تعاملی واژه‌های پرکاربرد فنلاندی با ترجمه فارسی">
+  <meta name="description" content="تمرین تعاملی واژه‌های پرکاربرد فنلاندی با ترجمه فارسی و جمله‌های جای‌خالی">
   <title>تمرین فنلاندی</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,10 +20,22 @@
     <section class="hero">
       <p class="eyebrow">تمرین روزانه زبان فنلاندی</p>
       <h1>۱۰۰ واژه پرکاربرد فنلاندی</h1>
-      <p>ترجمه درست واژه فنلاندی را از میان چهار گزینه انتخاب کن.</p>
+      <p>نوع تمرین را انتخاب کن و معنی یا کاربرد واژه‌ها را مرور کن.</p>
     </section>
 
     <section id="quiz" class="quiz-card" aria-labelledby="quiz-title">
+      <div class="mode-switcher" role="tablist" aria-label="نوع تمرین">
+        <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="translation">
+          ترجمه واژه
+        </button>
+        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-choice">
+          جای‌خالی چهارگزینه‌ای
+        </button>
+        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-input">
+          جای‌خالی تایپی
+        </button>
+      </div>
+
       <div class="stats" aria-label="آمار آزمون">
         <span>درست: <strong id="correct-count">۰</strong></span>
         <span>کل: <strong id="total-count">۰</strong></span>
@@ -35,13 +47,43 @@
 
       <div id="quiz-content" hidden>
         <p id="quiz-title" class="question-label">ترجمه این واژه چیست؟</p>
-        <div class="word-row">
+
+        <div id="word-row" class="word-row">
           <span id="rank" class="rank"></span>
           <h2 id="word" lang="fi"></h2>
           <button id="speak-word" class="icon-button" type="button" aria-label="پخش تلفظ واژه" title="پخش تلفظ">🔊</button>
         </div>
 
-        <div id="options" class="options" role="group" aria-label="گزینه‌های ترجمه"></div>
+        <div id="sentence-panel" class="sentence-panel" hidden>
+          <p id="cloze-sentence" class="cloze-sentence" lang="fi"></p>
+          <p id="cloze-translation" class="cloze-translation"></p>
+        </div>
+
+        <div id="options" class="options" role="group" aria-label="گزینه‌های پاسخ"></div>
+
+        <form id="typing-form" class="typing-form" hidden>
+          <label for="typed-answer">واژه فنلاندی مناسب را بنویس:</label>
+          <div class="answer-row">
+            <input
+              id="typed-answer"
+              name="typed-answer"
+              type="text"
+              lang="fi"
+              dir="ltr"
+              autocomplete="off"
+              autocapitalize="none"
+              spellcheck="false"
+            >
+            <button class="primary-button compact" type="submit">بررسی پاسخ</button>
+          </div>
+
+          <div class="hint-controls" aria-label="راهنماهای پاسخ">
+            <button class="hint-button" type="button" data-hint-index="0">راهنمای ۱: حرف اول</button>
+            <button class="hint-button" type="button" data-hint-index="1" disabled>راهنمای ۲: حرف آخر</button>
+            <button class="hint-button" type="button" data-hint-index="2" disabled>راهنمای ۳: حرف دوم</button>
+          </div>
+          <p id="hint-pattern" class="hint-pattern" lang="fi" dir="ltr" aria-live="polite" hidden></p>
+        </form>
 
         <div id="feedback" class="feedback" aria-live="polite" hidden>
           <p id="result-message" class="result-message"></p>
@@ -51,13 +93,13 @@
           </div>
         </div>
 
-        <button id="next-word" class="primary-button" type="button" hidden>واژه بعدی</button>
+        <button id="next-word" class="primary-button" type="button" hidden>سؤال بعدی</button>
       </div>
     </section>
 
     <section class="about">
-      <h2>درباره این تمرین</h2>
-      <p>هر پرسش یک واژه تصادفی و چهار ترجمه فارسی نشان می‌دهد. پس از پاسخ، مثال فنلاندی و ترجمه آن نمایش داده می‌شود.</p>
+      <h2>درباره تمرین‌ها</h2>
+      <p>در حالت ترجمه، معنی فارسی واژه را انتخاب می‌کنی. در دو حالت جای‌خالی، واژه اصلی از جمله حذف می‌شود و باید آن را انتخاب یا تایپ کنی. در حالت تایپی سه راهنمای مرحله‌ای برای حرف اول، حرف آخر و حرف دوم در دسترس است.</p>
     </section>
   </main>
 
