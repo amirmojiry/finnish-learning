@@ -7,6 +7,7 @@ const MODES = {
 const state = {
   words: [],
   current: null,
+  currentExample: null,
   answered: false,
   mode: localStorage.getItem('fiQuizMode') || MODES.TRANSLATION,
   revealedHintPositions: new Set(),
@@ -64,6 +65,18 @@ function shuffle(items) {
 function getRandomWord(exceptRank = null) {
   const pool = state.words.filter((item) => item.rank !== exceptRank);
   return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function getExamples(word) {
+  return [
+    { fi: word.example_fi, fa: word.example_fa },
+    { fi: word.example_2_fi, fa: word.example_2_fa },
+  ].filter((example) => example.fi && example.fa);
+}
+
+function getRandomExample(word) {
+  const examples = getExamples(word);
+  return examples[Math.floor(Math.random() * examples.length)];
 }
 
 function makeTranslationOptions(correctWord) {
@@ -178,6 +191,7 @@ function renderChoiceOptions(options, labelSelector, isFinnish = false) {
 function renderQuestion() {
   const previousRank = state.current?.rank ?? null;
   state.current = getRandomWord(previousRank);
+  state.currentExample = getRandomExample(state.current);
   state.answered = false;
 
   els.feedback.hidden = true;
@@ -207,10 +221,10 @@ function renderQuestion() {
   els.wordRow.hidden = true;
   els.sentencePanel.hidden = false;
   els.clozeSentence.textContent = blankWordInSentence(
-    state.current.example_fi,
+    state.currentExample.fi,
     state.current.word,
   );
-  els.clozeTranslation.textContent = state.current.example_fa;
+  els.clozeTranslation.textContent = state.currentExample.fa;
 
   if (state.mode === MODES.CLOZE_CHOICE) {
     els.questionLabel.textContent = 'کدام واژه جای خالی را کامل می‌کند؟';
@@ -238,8 +252,8 @@ function finishAnswer(isCorrect) {
       ? `پاسخ درست: ${state.current.translation_fa}`
       : `پاسخ درست: ${state.current.word} — ${state.current.translation_fa}`;
   els.result.className = `result-message ${isCorrect ? 'correct' : 'wrong'}`;
-  els.exampleFi.textContent = state.current.example_fi;
-  els.exampleFa.textContent = state.current.example_fa;
+  els.exampleFi.textContent = state.currentExample.fi;
+  els.exampleFa.textContent = state.currentExample.fa;
   els.feedback.hidden = false;
   els.next.hidden = false;
   updateScore();
@@ -303,7 +317,11 @@ async function init() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
 
-    if (!Array.isArray(data.words) || data.words.length < 4) {
+    const hasValidWords = Array.isArray(data.words)
+      && data.words.length >= 4
+      && data.words.every((word) => getExamples(word).length >= 1);
+
+    if (!hasValidWords) {
       throw new Error('ساختار فایل واژه‌ها معتبر نیست.');
     }
 
