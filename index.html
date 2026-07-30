@@ -2,13 +2,14 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8fc">
   <meta name="description" content="تمرین تعاملی واژه‌های پرکاربرد فنلاندی با ترجمه فارسی و جمله‌های جای‌خالی">
   <title>تمرین فنلاندی</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260731-2">
+  <link rel="stylesheet" href="styles.css?v=20260731-3">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -24,6 +25,14 @@
     </nav>
   </header>
 
+  <header class="mobile-app-bar">
+    <div>
+      <span>Finnish Learning</span>
+      <strong>تمرین واژه‌ها</strong>
+    </div>
+    <span class="app-status-dot" aria-hidden="true"></span>
+  </header>
+
   <main>
     <section class="hero">
       <p class="eyebrow">تمرین روزانه زبان فنلاندی</p>
@@ -33,21 +42,21 @@
 
     <section id="quiz" class="quiz-card" aria-labelledby="quiz-title">
       <div class="mode-switcher" role="tablist" aria-label="نوع تمرین">
-        <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="translation">
-          ترجمه واژه
+        <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="translation" aria-label="تمرین ترجمه واژه">
+          ترجمه
         </button>
-        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-choice">
-          جای‌خالی چهارگزینه‌ای
+        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-choice" aria-label="تمرین جای‌خالی چهارگزینه‌ای">
+          چهارگزینه‌ای
         </button>
-        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-input">
-          جای‌خالی تایپی
+        <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-input" aria-label="تمرین جای‌خالی تایپی">
+          نوشتن
         </button>
       </div>
 
       <div class="stats" aria-label="آمار آزمون">
-        <span>درست: <strong id="correct-count">۰</strong></span>
-        <span>کل: <strong id="total-count">۰</strong></span>
-        <button id="reset-score" class="text-button" type="button">پاک‌کردن امتیاز</button>
+        <span class="score-chip">درست <strong id="correct-count">۰</strong></span>
+        <span class="score-chip">کل <strong id="total-count">۰</strong></span>
+        <button id="reset-score" class="text-button" type="button">پاک‌کردن</button>
       </div>
 
       <div id="loading" class="status">در حال بارگذاری واژه‌ها…</div>
@@ -59,7 +68,11 @@
         <div id="word-row" class="word-row">
           <span id="rank" class="rank"></span>
           <h2 id="word" lang="fi"></h2>
-          <button id="speak-word" class="icon-button" type="button" aria-label="پخش تلفظ واژه" title="پخش تلفظ">🔊</button>
+          <button id="speak-word" class="icon-button" type="button" aria-label="پخش تلفظ واژه" title="پخش تلفظ">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/>
+            </svg>
+          </button>
         </div>
 
         <div id="sentence-panel" class="sentence-panel" hidden>
@@ -82,26 +95,28 @@
               autocapitalize="none"
               spellcheck="false"
             >
-            <button class="primary-button compact" type="submit">بررسی پاسخ</button>
+            <button class="primary-button compact" type="submit">بررسی</button>
           </div>
 
           <div class="hint-controls" aria-label="راهنماهای پاسخ">
-            <button class="hint-button" type="button" data-hint-index="0">راهنمای ۱: حرف اول</button>
-            <button class="hint-button" type="button" data-hint-index="1" disabled>راهنمای ۲: حرف آخر</button>
-            <button class="hint-button" type="button" data-hint-index="2" disabled>راهنمای ۳: حرف دوم</button>
+            <button class="hint-button" type="button" data-hint-index="0">حرف اول</button>
+            <button class="hint-button" type="button" data-hint-index="1" disabled>حرف آخر</button>
+            <button class="hint-button" type="button" data-hint-index="2" disabled>حرف دوم</button>
           </div>
           <p id="hint-pattern" class="hint-pattern" lang="fi" dir="ltr" aria-live="polite" hidden></p>
         </form>
 
         <div id="feedback" class="feedback" aria-live="polite" hidden>
-          <p id="result-message" class="result-message"></p>
+          <div class="feedback-heading">
+            <span id="feedback-status-icon" class="feedback-status-icon" aria-hidden="true"></span>
+            <p id="result-message" class="result-message"></p>
+          </div>
           <div class="example-box">
             <p id="example-fi" lang="fi"></p>
             <p id="example-fa"></p>
           </div>
+          <button id="next-word" class="primary-button" type="button">سؤال بعدی</button>
         </div>
-
-        <button id="next-word" class="primary-button" type="button" hidden>سؤال بعدی</button>
       </div>
     </section>
 
@@ -111,10 +126,24 @@
     </section>
   </main>
 
+  <div id="feedback-backdrop" class="feedback-backdrop" hidden></div>
+  <div id="answer-effect" class="answer-effect" aria-hidden="true">
+    <span id="answer-effect-icon"></span>
+  </div>
+
+  <nav class="bottom-nav" aria-label="ناوبری اصلی اپ">
+    <a class="bottom-nav-item active" href="./" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z"/>
+      </svg>
+      <span>خانه</span>
+    </a>
+  </nav>
+
   <footer>
     <p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p>
   </footer>
 
-  <script src="app.js?v=20260731-2" defer></script>
+  <script src="app.js?v=20260731-3" defer></script>
 </body>
 </html>
