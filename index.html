@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="تمرین تعاملی واژه‌های پرکاربرد فنلاندی با ترجمه فارسی">
+  <title>تمرین فنلاندی</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">Finnish Learning</a>
+    <nav aria-label="منوی اصلی">
+      <a class="active" href="#quiz">واژه‌های پرکاربرد</a>
+      <a href="data/common-words.json">فایل JSON</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">تمرین روزانه زبان فنلاندی</p>
+      <h1>۱۰۰ واژه پرکاربرد فنلاندی</h1>
+      <p>ترجمه درست واژه فنلاندی را از میان چهار گزینه انتخاب کن.</p>
+    </section>
+
+    <section id="quiz" class="quiz-card" aria-labelledby="quiz-title">
+      <div class="stats" aria-label="آمار آزمون">
+        <span>درست: <strong id="correct-count">۰</strong></span>
+        <span>کل: <strong id="total-count">۰</strong></span>
+        <button id="reset-score" class="text-button" type="button">پاک‌کردن امتیاز</button>
+      </div>
+
+      <div id="loading" class="status">در حال بارگذاری واژه‌ها…</div>
+      <div id="error" class="status error" hidden></div>
+
+      <div id="quiz-content" hidden>
+        <p id="quiz-title" class="question-label">ترجمه این واژه چیست؟</p>
+        <div class="word-row">
+          <span id="rank" class="rank"></span>
+          <h2 id="word" lang="fi"></h2>
+          <button id="speak-word" class="icon-button" type="button" aria-label="پخش تلفظ واژه" title="پخش تلفظ">🔊</button>
+        </div>
+
+        <div id="options" class="options" role="group" aria-label="گزینه‌های ترجمه"></div>
+
+        <div id="feedback" class="feedback" aria-live="polite" hidden>
+          <p id="result-message" class="result-message"></p>
+          <div class="example-box">
+            <p id="example-fi" lang="fi"></p>
+            <p id="example-fa"></p>
+          </div>
+        </div>
+
+        <button id="next-word" class="primary-button" type="button" hidden>واژه بعدی</button>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>درباره این تمرین</h2>
+      <p>هر پرسش یک واژه تصادفی و چهار ترجمه فارسی نشان می‌دهد. پس از پاسخ، مثال فنلاندی و ترجمه آن نمایش داده می‌شود.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
