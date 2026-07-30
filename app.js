@@ -86,7 +86,6 @@ function makeTranslationOptions(correctWord) {
   const distractors = shuffle(
     state.words.filter((item) => item.rank !== correctWord.rank),
   ).slice(0, 3);
-
   return shuffle([correctWord, ...distractors]);
 }
 
@@ -98,7 +97,6 @@ function makeFinnishWordOptions(correctWord) {
     Math.abs(wordLength(a.word) - targetLength)
     - Math.abs(wordLength(b.word) - targetLength)
   ));
-
   return shuffle([correctWord, ...candidates.slice(0, 3)]);
 }
 
@@ -114,11 +112,9 @@ function blankWordInSentence(sentence, word) {
   const escapedWord = escapeRegExp(word);
   const exactWord = new RegExp(`(^|[^\\p{L}])${escapedWord}(?=$|[^\\p{L}])`, 'iu');
   const blank = makeBlank(word);
-
   if (exactWord.test(sentence)) {
     return sentence.replace(exactWord, (match, prefix) => `${prefix}${blank}`);
   }
-
   return sentence.replace(new RegExp(escapedWord, 'iu'), blank);
 }
 
@@ -138,7 +134,6 @@ function resetHints() {
   state.revealedHintPositions = new Set();
   els.hintPattern.hidden = true;
   els.hintPattern.textContent = '';
-
   els.hintButtons.forEach((button, index) => {
     button.disabled = index !== 0;
     button.classList.remove('used');
@@ -161,19 +156,23 @@ function renderHintPattern() {
 
 function revealHint(hintIndex) {
   if (state.answered || !state.current || state.mode !== MODES.CLOZE_INPUT) return;
-
   const letters = [...state.current.word];
   state.revealedHintPositions.add(getHintPosition(hintIndex, letters));
   renderHintPattern();
-
   const usedButton = els.hintButtons[hintIndex];
   usedButton.disabled = true;
   usedButton.classList.add('used');
-
   const nextButton = els.hintButtons[hintIndex + 1];
   if (nextButton) nextButton.disabled = false;
-
   els.typedAnswer.focus();
+}
+
+function getOptionSizeClass(label) {
+  const length = [...label.trim()].length;
+  if (length <= 10) return 'option-text-short';
+  if (length <= 22) return 'option-text-medium';
+  if (length <= 42) return 'option-text-long';
+  return 'option-text-extra-long';
 }
 
 function renderChoiceOptions(options, labelSelector, isFinnish = false) {
@@ -181,10 +180,15 @@ function renderChoiceOptions(options, labelSelector, isFinnish = false) {
   els.options.hidden = false;
 
   for (const optionWord of options) {
+    const label = labelSelector(optionWord);
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = `option${isFinnish ? ' finnish-option' : ''}`;
-    button.textContent = labelSelector(optionWord);
+    button.className = [
+      'option',
+      isFinnish ? 'finnish-option' : '',
+      getOptionSizeClass(label),
+    ].filter(Boolean).join(' ');
+    button.textContent = label;
     button.dataset.rank = String(optionWord.rank);
     button.addEventListener('click', () => answerChoice(button, optionWord));
     els.options.append(button);
@@ -229,28 +233,18 @@ function renderQuestion() {
     els.sentencePanel.hidden = true;
     els.word.textContent = state.current.word;
     els.rank.textContent = `#${state.current.rank}`;
-    renderChoiceOptions(
-      makeTranslationOptions(state.current),
-      (item) => item.translation_fa,
-    );
+    renderChoiceOptions(makeTranslationOptions(state.current), (item) => item.translation_fa);
     return;
   }
 
   els.wordRow.hidden = true;
   els.sentencePanel.hidden = false;
-  els.clozeSentence.textContent = blankWordInSentence(
-    state.currentExample.fi,
-    state.current.word,
-  );
+  els.clozeSentence.textContent = blankWordInSentence(state.currentExample.fi, state.current.word);
   els.clozeTranslation.textContent = state.currentExample.fa;
 
   if (state.mode === MODES.CLOZE_CHOICE) {
     els.questionLabel.textContent = 'کدام واژه جای خالی را کامل می‌کند؟';
-    renderChoiceOptions(
-      makeFinnishWordOptions(state.current),
-      (item) => item.word,
-      true,
-    );
+    renderChoiceOptions(makeFinnishWordOptions(state.current), (item) => item.word, true);
     return;
   }
 
@@ -283,15 +277,12 @@ function finishAnswer(isCorrect) {
 
 function answerChoice(selectedButton, selectedWord) {
   if (state.answered) return;
-
   const isCorrect = selectedWord.rank === state.current.rank;
-
   for (const button of els.options.querySelectorAll('.option')) {
     button.disabled = true;
     const rank = Number(button.dataset.rank);
     if (rank === state.current.rank) button.classList.add('correct');
   }
-
   if (!isCorrect) selectedButton.classList.add('wrong');
   finishAnswer(isCorrect);
 }
@@ -299,13 +290,11 @@ function answerChoice(selectedButton, selectedWord) {
 function answerTyped(event) {
   event.preventDefault();
   if (state.answered) return;
-
   const answer = normalizeFinnish(els.typedAnswer.value);
   if (!answer) {
     els.typedAnswer.focus();
     return;
   }
-
   const isCorrect = answer === normalizeFinnish(state.current.word);
   els.typedAnswer.disabled = true;
   els.typedAnswer.classList.add(isCorrect ? 'correct' : 'wrong');
@@ -332,20 +321,14 @@ function speakCurrentWord() {
 async function init() {
   updateScore();
   updateModeButtons();
-
   try {
     const response = await fetch('./data/common-words.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-
     const hasValidWords = Array.isArray(data.words)
       && data.words.length >= 4
       && data.words.every((word) => getExamples(word).length >= 1);
-
-    if (!hasValidWords) {
-      throw new Error('ساختار فایل واژه‌ها معتبر نیست.');
-    }
-
+    if (!hasValidWords) throw new Error('ساختار فایل واژه‌ها معتبر نیست.');
     state.words = data.words;
     els.loading.hidden = true;
     els.content.hidden = false;
@@ -362,15 +345,12 @@ els.next.addEventListener('click', renderQuestion);
 els.feedbackBackdrop.addEventListener('click', renderQuestion);
 els.speak.addEventListener('click', speakCurrentWord);
 els.typingForm.addEventListener('submit', answerTyped);
-
 for (const button of els.modeButtons) {
   button.addEventListener('click', () => changeMode(button.dataset.mode));
 }
-
 els.hintButtons.forEach((button, index) => {
   button.addEventListener('click', () => revealHint(index));
 });
-
 els.reset.addEventListener('click', () => {
   state.correct = 0;
   state.total = 0;
@@ -379,12 +359,10 @@ els.reset.addEventListener('click', () => {
 
 document.addEventListener('keydown', (event) => {
   const isChoiceMode = [MODES.TRANSLATION, MODES.CLOZE_CHOICE].includes(state.mode);
-
   if (!state.answered && isChoiceMode && ['1', '2', '3', '4'].includes(event.key)) {
     const button = els.options.querySelectorAll('.option')[Number(event.key) - 1];
     button?.click();
   }
-
   if (
     state.answered
     && (event.key === 'Enter' || event.key === ' ')
