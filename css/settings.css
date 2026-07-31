@@ -30,6 +30,10 @@
   padding-top: 20px;
 }
 
+.settings-section + .settings-section {
+  margin-top: 20px;
+}
+
 .settings-section-heading {
   display: flex;
   align-items: center;
@@ -135,6 +139,40 @@
   transform: scale(1);
 }
 
+.settings-about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.settings-about-row h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.settings-about-row p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.settings-about-button {
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  color: var(--primary);
+  font-size: .82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.settings-about-button:hover {
+  border-color: var(--primary);
+}
+
 html[data-theme="dark"] {
   color-scheme: dark;
   --bg: #0d1422;
@@ -238,6 +276,10 @@ html[data-theme="dark"] .word-detail-speak {
     padding-top: 15px;
   }
 
+  .settings-section + .settings-section {
+    margin-top: 15px;
+  }
+
   .theme-choice {
     min-height: 116px;
     border-radius: 16px;
@@ -247,6 +289,10 @@ html[data-theme="dark"] .word-detail-speak {
   .theme-choice-icon {
     width: 38px;
     height: 38px;
+  }
+
+  .settings-about-row {
+    align-items: flex-start;
   }
 
   .bottom-nav {

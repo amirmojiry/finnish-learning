@@ -30,6 +30,8 @@ Do not mix the responsibilities of the data sources:
 
 Never replace Parole frequency percentages with UD percentages. Never present a manually assigned fallback part of speech when a dominant UD analysis is available.
 
+Frequency-based learning coverage must be calculated only by summing the Parole `frequency_percent` values of matching surface forms. A reviewed form has at least one recorded spaced-repetition answer; a mastered form must satisfy the current spaced-repetition mastery rule. Label these values as approximate written-corpus token coverage. Never describe them as a literal percentage of Finnish understood, known, or communicatively mastered.
+
 ## 4. Vocabulary entry contract
 
 Every entry in `data/common-words.json` must contain the following fields:
@@ -84,6 +86,7 @@ The suite must cover at least:
 - alignment between vocabulary and the UD browser summary
 - dominant-UPOS ordering and the known `ovat` AUX/indicative regression fixture
 - dictionary POS option generation, stale-option removal, valid-selection preservation, and invalid-selection reset
+- spaced-repetition queue behavior, reviewed-word ordering, per-word status, and reviewed/mastered frequency coverage
 - required script order and UI integration contracts
 - synchronized English and Persian README status facts
 - English-only source-code comments
@@ -99,6 +102,7 @@ Do not weaken an assertion merely to make CI pass. Change a test contract only a
 - Rebuild the POS filter after UD dominant-POS synchronization.
 - Escape corpus text before injecting it into HTML.
 - Do not load large source-analysis files in the browser when a compact generated summary can provide the required UI data.
+- Interactive statistics must use semantic buttons and expose expanded state and controlled regions when they reveal details.
 
 ## 8. Documentation synchronization
 

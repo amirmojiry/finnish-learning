@@ -38,13 +38,25 @@ Surface forms are used as keys instead of display ranks so appending positions 2
 
 Malformed or unsupported values are sanitized before use. Invalid JSON falls back to an empty progress object instead of preventing the app from loading.
 
+## Reviewed-word history
+
+The Started statistic is an interactive control. It opens a list of all vocabulary forms with at least one recorded review answer, ordered by the most recent review time. Each list item shows the current learning state, total answer count, accuracy, and a direct route to the dictionary detail page.
+
+Dictionary detail pages receive a review-status card only after the word has entered spaced repetition. The card distinguishes learning, due, and mastered states and shows answer accuracy and the latest review date.
+
+## Frequency coverage
+
+Reviewed coverage is the sum of `frequency_percent` for every reviewed surface form. Mastered coverage uses the same calculation but includes only records that satisfy the mastery rule.
+
+These values estimate token coverage in the written Finnish Parole corpus. They must be presented as approximate corpus coverage, not as a literal percentage of language comprehension, vocabulary size, or communicative ability.
+
 ## Browser integration
 
-The review panel is mounted in the profile view. The same profile page also contains appearance settings, while the home view remains dedicated to the full-height exercise card.
+The review panel is mounted directly in the Settings view. The same page contains appearance controls and a compact link to About, while the primary bottom navigation contains only Home, Dictionary, and Settings.
 
 Starting a review uses the existing focused-practice functions, so all three exercise modes keep their current answer rendering and feedback behavior. Only answers submitted while a review session is active update the spaced-repetition schedule; normal free practice continues to update the general score without altering review timing.
 
-The legacy `#settings` hash redirects to the profile view so older bookmarks remain usable.
+The legacy `#profile` hash redirects to Settings so bookmarks created during version 1.1 remain usable.
 
 ## Required validation
 
@@ -54,4 +66,4 @@ Run:
 npm test
 ```
 
-The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, local-day reset, summary counts, malformed storage, profile placement, home-layout isolation, asset loading order, and the public app functions used by the integration.
+The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, settings placement, navigation contracts, asset loading order, and the public app functions used by the integration.
