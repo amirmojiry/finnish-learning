@@ -100,16 +100,18 @@ test('invalid stored data is replaced with a safe empty schema', () => {
   assert.equal(progress.dailyNew.count, 0);
 });
 
-test('the browser integration assets are present exactly once and load after the base app', () => {
+test('the browser integration assets are present exactly once and load in dependency order', () => {
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   assert.equal((html.match(/css\/spaced-repetition\.css/g) || []).length, 1);
   assert.equal((html.match(/spaced-repetition\.js/g) || []).length, 1);
+  assert.equal((html.match(/profile-review-mount\.js/g) || []).length, 1);
   assert.ok(html.indexOf('app.js') < html.indexOf('spaced-repetition.js'));
+  assert.ok(html.indexOf('spaced-repetition.js') < html.indexOf('profile-review-mount.js'));
 });
 
 test('the review panel is mounted in profile and does not make the home view scrollable', () => {
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-  const source = fs.readFileSync(path.join(ROOT, 'spaced-repetition.js'), 'utf8');
+  const mount = fs.readFileSync(path.join(ROOT, 'profile-review-mount.js'), 'utf8');
   const css = fs.readFileSync(path.join(ROOT, 'css', 'spaced-repetition.css'), 'utf8');
   const navigation = fs.readFileSync(path.join(ROOT, 'settings.js'), 'utf8');
 
@@ -117,10 +119,11 @@ test('the review panel is mounted in profile and does not make the home view scr
   assert.match(html, /id="spaced-review-slot"/);
   assert.match(html, /class="[^"]*profile-view-link/);
   assert.doesNotMatch(html, /id="settings-view"/);
-  assert.match(source, /getElementById\('spaced-review-slot'\)/);
-  assert.doesNotMatch(source, /insertAdjacentElement\('afterend'/);
+  assert.match(mount, /getElementById\('spaced-review-slot'\)/);
+  assert.match(mount, /replaceChildren\(panel\)/);
   assert.doesNotMatch(css, /\.home-view\s*\{[^}]*overflow-y:\s*auto/s);
   assert.match(navigation, /location\.hash === '#profile'/);
+  assert.match(navigation, /location\.hash === '#settings'/);
 });
 
 test('the review integration keeps its required public app contracts', () => {
