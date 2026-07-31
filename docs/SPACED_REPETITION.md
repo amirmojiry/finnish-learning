@@ -40,9 +40,11 @@ Malformed or unsupported values are sanitized before use. Invalid JSON falls bac
 
 ## Browser integration
 
-The review panel is injected after the home-page hero. It uses the existing focused-practice functions so all three exercise modes keep their current answer rendering and feedback behavior.
+The review panel is mounted in the profile view. The same profile page also contains appearance settings, while the home view remains dedicated to the full-height exercise card.
 
-Only answers submitted while a review session is active update the spaced-repetition schedule. Normal free practice continues to update the general score but does not alter review timing.
+Starting a review uses the existing focused-practice functions, so all three exercise modes keep their current answer rendering and feedback behavior. Only answers submitted while a review session is active update the spaced-repetition schedule; normal free practice continues to update the general score without altering review timing.
+
+The legacy `#settings` hash redirects to the profile view so older bookmarks remain usable.
 
 ## Required validation
 
@@ -52,4 +54,4 @@ Run:
 npm test
 ```
 
-The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, local-day reset, summary counts, malformed storage, asset loading order, and the public app functions used by the integration.
+The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, local-day reset, summary counts, malformed storage, profile placement, home-layout isolation, asset loading order, and the public app functions used by the integration.
