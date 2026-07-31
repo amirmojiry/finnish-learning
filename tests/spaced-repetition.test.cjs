@@ -103,25 +103,35 @@ test('the browser integration assets are present exactly once and load after the
   assert.ok(html.indexOf('app.js') < html.indexOf('spaced-repetition.js'));
 });
 
-test('settings owns review, appearance, and the about link while bottom navigation has three items', () => {
+test('profile owns review while settings owns appearance and the about link', () => {
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const source = fs.readFileSync(path.join(ROOT, 'spaced-repetition.js'), 'utf8');
   const css = fs.readFileSync(path.join(ROOT, 'css', 'spaced-repetition.css'), 'utf8');
   const navigation = fs.readFileSync(path.join(ROOT, 'settings.js'), 'utf8');
   const bottomNav = html.match(/<nav class="bottom-nav"[\s\S]*?<\/nav>/)?.[0] || '';
+  const profileView = html.match(/<div id="profile-view"[\s\S]*?<div id="settings-view"/)?.[0] || '';
   const settingsView = html.match(/<div id="settings-view"[\s\S]*?<\/main>/)?.[0] || '';
+
+  assert.match(html, /id="profile-view"/);
   assert.match(html, /id="settings-view"/);
-  assert.match(html, /id="spaced-review-slot"/);
+  assert.match(profileView, /id="spaced-review-slot"/);
+  assert.doesNotMatch(profileView, /data-theme-choice=/);
+  assert.doesNotMatch(profileView, /about-view-link/);
   assert.match(settingsView, /data-theme-choice="light"/);
+  assert.match(settingsView, /data-theme-choice="dark"/);
   assert.match(settingsView, /class="[^"]*about-view-link/);
-  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 3);
+  assert.doesNotMatch(settingsView, /id="spaced-review-slot"/);
+  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 4);
+  assert.match(bottomNav, /profile-view-link/);
+  assert.match(bottomNav, /settings-view-link/);
   assert.doesNotMatch(bottomNav, /about-view-link/);
-  assert.doesNotMatch(html, /id="profile-view"/);
   assert.match(source, /getElementById\('spaced-review-slot'\)/);
   assert.doesNotMatch(source, /insertAdjacentElement\('afterend'/);
   assert.match(source, /spaced-review-history/);
   assert.match(source, /detail-review-status/);
   assert.match(source, /calculateCoverage/);
+  assert.match(css, /\.profile-review-slot/);
+  assert.doesNotMatch(css, /\.settings-review-slot/);
   assert.doesNotMatch(css, /\.home-view\s*\{[^}]*overflow-y:\s*auto/s);
   assert.match(navigation, /location\.hash === '#settings'/);
   assert.match(navigation, /location\.hash === '#profile'/);

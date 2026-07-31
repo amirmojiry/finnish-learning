@@ -1,5 +1,6 @@
 (() => {
   const THEME_KEY = 'fiAppTheme';
+  const profileView = document.querySelector('#profile-view');
   const settingsView = document.querySelector('#settings-view');
   const aboutView = document.querySelector('#about-view');
   const homeView = document.querySelector('#home-view');
@@ -7,6 +8,7 @@
   const mobileTitle = document.querySelector('#mobile-view-title');
   const themeLabel = document.querySelector('#current-theme-label');
   const themeButtons = [...document.querySelectorAll('[data-theme-choice]')];
+  const profileLinks = [...document.querySelectorAll('.profile-view-link')];
   const settingsLinks = [...document.querySelectorAll('.settings-view-link')];
   const aboutLinks = [...document.querySelectorAll('.about-view-link')];
   const regularViewLinks = [...document.querySelectorAll('[data-view-link]')];
@@ -31,14 +33,16 @@
   }
 
   function specialViewFromHash() {
-    if (location.hash === '#settings' || location.hash === '#profile') return 'settings';
+    if (location.hash === '#profile') return 'profile';
+    if (location.hash === '#settings') return 'settings';
     if (location.hash === '#about') return 'about';
     return null;
   }
 
   function activateSpecialNavigation(view) {
+    const navigationView = view === 'about' ? 'settings' : view;
     for (const item of allNavItems) {
-      const isCurrent = view === 'settings' && item.classList.contains('settings-view-link');
+      const isCurrent = item.classList.contains(`${navigationView}-view-link`);
       item.classList.toggle('active', isCurrent);
       if (isCurrent) item.setAttribute('aria-current', 'page');
       else item.removeAttribute('aria-current');
@@ -46,26 +50,29 @@
   }
 
   function showSpecialView(view, { updateHash = true } = {}) {
-    if (!settingsView || !aboutView) return;
+    if (!profileView || !settingsView || !aboutView) return;
 
     homeView.hidden = true;
     dictionaryView.hidden = true;
+    profileView.hidden = view !== 'profile';
     settingsView.hidden = view !== 'settings';
     aboutView.hidden = view !== 'about';
 
-    if (mobileTitle) mobileTitle.textContent = view === 'settings' ? 'تنظیمات' : 'درباره';
+    const titles = { profile: 'پروفایل', settings: 'تنظیمات', about: 'درباره' };
+    if (mobileTitle) mobileTitle.textContent = titles[view];
     activateSpecialNavigation(view);
 
-    const hash = view === 'settings' ? '#settings' : '#about';
+    const hash = `#${view}`;
     if (updateHash && location.hash !== hash) history.replaceState(null, '', hash);
   }
 
   function leaveSpecialViews() {
+    if (profileView) profileView.hidden = true;
     if (settingsView) settingsView.hidden = true;
     if (aboutView) aboutView.hidden = true;
 
     for (const item of allNavItems) {
-      if (!item.classList.contains('settings-view-link')) continue;
+      if (!item.classList.contains('profile-view-link') && !item.classList.contains('settings-view-link')) continue;
       item.classList.remove('active');
       item.removeAttribute('aria-current');
     }
@@ -78,6 +85,10 @@
   }
 
   themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice)));
+  profileLinks.forEach((link) => link.addEventListener('click', (event) => {
+    event.preventDefault();
+    showSpecialView('profile');
+  }));
   settingsLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
     showSpecialView('settings');
@@ -93,13 +104,14 @@
     const view = specialViewFromHash();
     if (!view) return;
 
-    const targetView = view === 'settings' ? settingsView : aboutView;
+    const targetViews = { profile: profileView, settings: settingsView, about: aboutView };
+    const targetView = targetViews[view];
     if (targetView.hidden || !homeView.hidden || !dictionaryView.hidden) {
       showSpecialView(view, { updateHash: false });
     }
   });
 
-  for (const view of [homeView, dictionaryView, settingsView, aboutView]) {
+  for (const view of [homeView, dictionaryView, profileView, settingsView, aboutView]) {
     if (view) viewObserver.observe(view, { attributes: true, attributeFilter: ['hidden'] });
   }
 

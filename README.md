@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.2.0`
+- Version: `1.2.1`
 - Vocabulary entries: **200**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -28,12 +28,12 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
 - focused practice for an individual dictionary word
-- settings-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
+- profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
 - per-word review status on dictionary detail pages
 - approximate reviewed and mastered token coverage derived from Parole frequency percentages
 - persistent local review scheduling, answer counts, lapses, and mastery status for each started word
-- Settings page combining review progress, appearance controls, and access to About
+- separate Profile page for review progress and Settings page for appearance controls and About access
 - progressive hints and a compact Finnish letter keyboard
 - linked dictionary words inside examples
 - light and dark themes
@@ -115,7 +115,7 @@ Then open `http://localhost:8000`.
 
 ## Quality and deployment
 
-Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, spaced-repetition scheduling, frequency coverage, reviewed-word ordering, per-word status, Settings navigation, script order, documentation parity, English-only source comments, and deployment wiring.
+Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, spaced-repetition scheduling, frequency coverage, reviewed-word ordering, per-word status, separate Profile and Settings navigation, script order, documentation parity, English-only source comments, and deployment wiring.
 
 GitHub Pages deployment depends on the complete validation job and cannot publish a revision with failing tests or stale generated files.
 
