@@ -1,0 +1,66 @@
+name: Apply spaced repetition release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/spaced-repetition-roadmap-details
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-spaced-repetition-release
+  cancel-in-progress: true
+
+jobs:
+  synchronize-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply final review integration safeguards
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('spaced-repetition.js')
+          content = path.read_text(encoding='utf-8')
+          content = content.replace(
+              "if (!progress || typeof progress !== 'object') return clean;",
+              "if (!progress || typeof progress !== 'object' || progress.version !== SCHEMA_VERSION) return clean;",
+              1,
+          )
+          content = content.replace(
+              "if (typeof windowObject.hideFeedback === 'function') windowObject.hideFeedback();\n      if (typeof windowObject.renderQuestion === 'function') windowObject.renderQuestion();\n      updatePanel();\n    }\n\n    function launchNext()",
+              "if (typeof windowObject.hideFeedback === 'function') windowObject.hideFeedback();\n      const nextButton = document.getElementById('next-word');\n      if (nextButton) nextButton.textContent = 'سؤال بعدی';\n      if (typeof windowObject.renderQuestion === 'function') windowObject.renderQuestion();\n      updatePanel();\n    }\n\n    function launchNext()",
+              1,
+          )
+          content = content.replace(
+              "completionMessage = 'مرور متوقف شد. پاسخ‌های ثبت‌شده حفظ شده‌اند.';\n      if (typeof windowObject.hideFeedback === 'function') windowObject.hideFeedback();",
+              "completionMessage = 'مرور متوقف شد. پاسخ‌های ثبت‌شده حفظ شده‌اند.';\n      const nextButton = document.getElementById('next-word');\n      if (nextButton) nextButton.textContent = 'سؤال بعدی';\n      if (typeof windowObject.hideFeedback === 'function') windowObject.hideFeedback();",
+              1,
+          )
+          path.write_text(content, encoding='utf-8')
+          PY
+      - name: Synchronize release metadata and assets
+        run: npm run sync
+      - name: Compile Python sources
+        run: python3 -m compileall -q scripts tools tests
+      - name: Run complete regression suite
+        run: npm test
+      - name: Commit synchronized release files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Synchronize spaced repetition release
+          file_pattern: spaced-repetition.js index.html README.md README.fa.md deploy-version.txt
