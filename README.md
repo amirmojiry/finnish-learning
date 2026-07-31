@@ -8,44 +8,54 @@ A lightweight, mobile-friendly web app for learning and practicing Finnish vocab
 
 ## Current features
 
-- 100 high-frequency Finnish word forms with Persian translations
-- three exercise modes:
-  - choose the Persian translation
-  - complete a Finnish sentence with four choices
-  - type the missing Finnish word
-- three progressive hints in typing mode: first letter, last letter, and second letter
-- two Finnish example sentences and Persian translations for every word
-- random use of either example sentence in exercises
-- Finnish part of speech and dictionary base form (`lemma`) for every entry
-- browser-based Finnish text-to-speech
-- score and selected exercise mode saved locally in the browser
-- responsive Persian interface using Vazirmatn
-- keyboard shortcuts for multiple-choice exercises
+- 100 high-frequency written Finnish word forms with Persian translations
+- frequency rank, corpus occurrence count, and occurrence percentage
+- dictionary with search, alphabetical/frequency sorting, and part-of-speech filters
+- word detail pages with meaning, part of speech, lemma, examples, and pronunciation
+- three exercise modes: translation, multiple-choice cloze, and typed cloze
+- focused exercises for an individual dictionary word
+- progressive hints and a compact letter keyboard in typing mode
+- two Finnish examples with Persian translations for every entry
+- linked dictionary words inside examples
+- light and dark themes
+- locally saved score, exercise mode, and theme
 
 The vocabulary data is stored in [`data/common-words.json`](data/common-words.json).
 
-## Vocabulary data
+## Vocabulary source
+
+The ranking now uses the **Frequency List of Written Finnish Word Forms** provided by Kotus through the Language Bank of Finland. It is based on the Finnish Parole corpus of approximately 17 million written tokens.
+
+Because this is a word-form frequency list, it includes inflected forms such as `suomen`, `vuoden`, `olivat`, and `suomessa`, as well as corpus items such as the abbreviation `mm` and the numeral `1`.
 
 Each entry includes:
 
 - frequency rank
+- corpus occurrence count
+- occurrence percentage
 - Finnish word form
 - Persian translation
 - part of speech in English and Persian
 - dictionary base form (`lemma`)
 - two Finnish examples with Persian translations
 
-The ranking is based on the OpenSubtitles-oriented Finnish frequency list published on Wiktionary. Because it is corpus-based, it contains inflected forms such as `olen`, `oli`, and `minulle`, not only dictionary headwords.
+Source: [Kotus / Kielipankki — Frequency List of Written Finnish Word Forms](https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/)
 
 ## Run locally
-
-The app loads its vocabulary with `fetch`, so use a local HTTP server instead of opening `index.html` directly.
 
 ```bash
 python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Rebuild vocabulary data
+
+The source frequency metadata and learning details are stored separately and merged into `data/common-words.json`:
+
+```bash
+node scripts/build-parole-vocabulary.mjs
+```
 
 ## Roadmap
 
@@ -54,34 +64,24 @@ Then open `http://localhost:8000`.
 - [ ] spaced-repetition review queue
 - [ ] mastery score and answer history for each word
 - [ ] focused practice for weak or frequently missed words
-- [ ] filters by frequency range, part of speech, and lemma
-- [ ] word details after each answer: lemma, part of speech, and both examples
+- [ ] filters by frequency range and lemma
 - [ ] session length and difficulty settings
 
 ### Phase 2 — more exercise types
 
 - [ ] reverse translation from Persian to Finnish
-- [ ] listening and dictation exercises using Finnish text-to-speech
+- [ ] listening and dictation exercises
 - [ ] sentence-ordering exercises
 - [ ] verb conjugation exercises
-- [ ] Finnish case-form exercises for pronouns and nouns
-- [ ] pronunciation practice with speech recognition where browser support is available
+- [ ] Finnish case-form exercises
+- [ ] pronunciation practice with speech recognition
 
 ### Phase 3 — personal learning app
 
 - [ ] daily goal, streak, and progress dashboard
 - [ ] import and export learning progress
 - [ ] bookmarks and custom word lists
-- [ ] larger decks: 500, 1,000, and topic-based words
+- [ ] larger and topic-based decks
 - [ ] installable Progressive Web App
-- [ ] offline exercises through a service worker
+- [ ] offline exercises
 - [ ] accessibility audit and improved screen-reader support
-
-The roadmap prioritizes retrieval practice and distributed review for retention. PWA installation, offline use, and optional speech recognition are planned as progressive enhancements because browser support differs across devices.
-
-## References used for the roadmap
-
-- [Distributed practice in second-language learning](https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/effects-of-distributed-practice-on-second-language-fluency-development/4F6787916C198376CAD222934D3B37E4)
-- [MDN: Making PWAs installable](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- [MDN: Offline and background operation](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
-- [MDN: Using the Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
