@@ -107,6 +107,18 @@ test('the browser integration assets are present exactly once and load after the
   assert.ok(html.indexOf('app.js') < html.indexOf('spaced-repetition.js'));
 });
 
+test('the mobile home view stays scrollable after the review panel is inserted', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'css/spaced-repetition.css'), 'utf8');
+  assert.match(
+    css,
+    /\.home-view\s*\{[^}]*height:\s*100%;[^}]*overflow-y:\s*auto;[^}]*-webkit-overflow-scrolling:\s*touch;[^}]*\}/s,
+  );
+  assert.match(
+    css,
+    /\.home-view \.quiz-card\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*100%;[^}]*\}/s,
+  );
+});
+
 test('the review integration keeps its required public app contracts', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
   for (const functionName of ['openWordDetail', 'startFocusedPractice', 'hideFeedback', 'renderQuestion']) {
