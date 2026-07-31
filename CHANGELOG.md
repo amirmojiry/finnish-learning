@@ -6,6 +6,18 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-07-31
+
+### Changed
+
+- The spaced-repetition dashboard now lives in the profile view together with appearance settings.
+- The home view is again dedicated to the full-height exercise card and no longer needs an extra review-page scroll container.
+- The legacy `#settings` URL continues to open the profile view for backward compatibility.
+
+### Added
+
+- Regression coverage for profile placement, script order, and isolation of the mobile home layout.
+
 ## [1.1.1] - 2026-07-31
 
 ### Fixed
