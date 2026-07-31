@@ -6,6 +6,14 @@
   <meta name="theme-color" content="#f7f8fc">
   <meta name="description" content="تمرین و واژه‌نامه تعاملی زبان فنلاندی با ترجمه فارسی">
   <title>یادگیری فنلاندی</title>
+  <script>
+    (() => {
+      const theme = localStorage.getItem('fiAppTheme') || 'light';
+      document.documentElement.dataset.theme = theme;
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = theme === 'dark' ? '#111a2a' : '#f7f8fc';
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +21,7 @@
   <link rel="stylesheet" href="option-sizing.css?v=20260731-1">
   <link rel="stylesheet" href="typing-keyboard.css?v=20260731-1">
   <link rel="stylesheet" href="dictionary.css?v=20260731-1">
+  <link rel="stylesheet" href="settings.css?v=20260731-1">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -25,6 +34,7 @@
     <nav aria-label="منوی اصلی">
       <a class="desktop-view-link active" href="#home" data-view-link="home">تمرین‌ها</a>
       <a class="desktop-view-link" href="#dictionary" data-view-link="dictionary">واژه‌نامه</a>
+      <a class="desktop-view-link settings-view-link" href="#settings">تنظیمات</a>
       <a href="data/common-words.json">فایل JSON</a>
     </nav>
   </header>
@@ -51,16 +61,13 @@
           <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-choice">چهارگزینه‌ای</button>
           <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="cloze-input">نوشتن</button>
         </div>
-
         <div class="stats" aria-label="آمار آزمون">
           <span class="score-chip">درست <strong id="correct-count">۰</strong></span>
           <span class="score-chip">کل <strong id="total-count">۰</strong></span>
           <button id="reset-score" class="text-button" type="button">پاک‌کردن</button>
         </div>
-
         <div id="loading" class="status">در حال بارگذاری واژه‌ها…</div>
         <div id="error" class="status error" hidden></div>
-
         <div id="quiz-content" hidden>
           <p id="quiz-title" class="question-label">ترجمه این واژه چیست؟</p>
           <div id="word-row" class="word-row">
@@ -111,7 +118,6 @@
           </div>
         </div>
       </section>
-
       <section class="about">
         <h2>درباره تمرین‌ها</h2>
         <p>در حالت ترجمه، معنی فارسی واژه را انتخاب می‌کنی. در حالت‌های جای‌خالی، واژه اصلی از جمله حذف می‌شود و باید آن را انتخاب یا تایپ کنی.</p>
@@ -122,10 +128,7 @@
       <section class="dictionary-shell">
         <div id="dictionary-list-panel" class="dictionary-list-panel">
           <div class="dictionary-header">
-            <div>
-              <h1>واژه‌نامه</h1>
-              <p>همه واژه‌ها، معنی، نوع، ریشه و مثال‌ها</p>
-            </div>
+            <div><h1>واژه‌نامه</h1><p>همه واژه‌ها، معنی، نوع، ریشه و مثال‌ها</p></div>
             <span id="dictionary-count" class="dictionary-count"></span>
           </div>
           <div class="dictionary-controls">
@@ -137,21 +140,15 @@
               <option value="frequency">بر اساس بسامد</option>
               <option value="alphabetical">به ترتیب الفبایی</option>
             </select>
-            <select id="dictionary-pos-filter" class="dictionary-control" aria-label="فیلتر نوع واژه">
-              <option value="all">همه انواع واژه</option>
-            </select>
+            <select id="dictionary-pos-filter" class="dictionary-control" aria-label="فیلتر نوع واژه"><option value="all">همه انواع واژه</option></select>
           </div>
           <div id="dictionary-list" class="dictionary-list"></div>
           <div id="dictionary-empty" class="dictionary-empty" hidden>واژه‌ای پیدا نشد.</div>
         </div>
-
         <article id="dictionary-detail" class="dictionary-detail" hidden>
           <button id="dictionary-back" class="dictionary-back" type="button">بازگشت به فهرست</button>
           <div class="word-detail-hero">
-            <div class="word-detail-title">
-              <h1 id="detail-word" lang="fi"></h1>
-              <p id="detail-translation"></p>
-            </div>
+            <div class="word-detail-title"><h1 id="detail-word" lang="fi"></h1><p id="detail-translation"></p></div>
             <button id="detail-speak" class="word-detail-speak" type="button" aria-label="پخش تلفظ">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/></svg>
             </button>
@@ -161,10 +158,7 @@
             <div class="word-meta-card"><span class="word-meta-label">نوع واژه</span><strong id="detail-pos" class="word-meta-value"></strong></div>
             <div class="word-meta-card"><span class="word-meta-label">شکل پایه</span><strong id="detail-lemma" class="word-meta-value" lang="fi"></strong></div>
           </div>
-          <section class="word-detail-section">
-            <h2>مثال‌ها</h2>
-            <div id="detail-examples"></div>
-          </section>
+          <section class="word-detail-section"><h2>مثال‌ها</h2><div id="detail-examples"></div></section>
           <section class="word-detail-section">
             <h2>تمرین همین واژه</h2>
             <div class="word-practice-grid">
@@ -176,6 +170,33 @@
         </article>
       </section>
     </div>
+
+    <div id="settings-view" class="app-view settings-view" hidden>
+      <section class="settings-shell">
+        <header class="settings-header">
+          <h1>تنظیمات</h1>
+          <p>ظاهر و رفتار اپ را شخصی‌سازی کن.</p>
+        </header>
+        <section class="settings-section" aria-labelledby="theme-setting-title">
+          <div class="settings-section-heading">
+            <h2 id="theme-setting-title">حالت نمایش</h2>
+            <span id="current-theme-label">روشن</span>
+          </div>
+          <div class="theme-choices" role="group" aria-label="انتخاب حالت نمایش">
+            <button class="theme-choice" type="button" data-theme-choice="light" aria-pressed="true">
+              <span class="theme-choice-check">✓</span>
+              <span class="theme-choice-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V1h1v3h-1Zm0 19v-3h1v3h-1ZM4 12H1v1h3v-1Zm19 0h-3v1h3v-1ZM5.64 6.34 3.52 4.22l.7-.7 2.12 2.12-.7.7Zm14.14 14.14-2.12-2.12.7-.7 2.12 2.12-.7.7Zm0-16.26-2.12 2.12.7.7 2.12-2.12-.7-.7ZM6.34 18.36l-2.12 2.12-.7-.7 2.12-2.12.7.7ZM12.5 7A5.5 5.5 0 1 0 18 12.5 5.5 5.5 0 0 0 12.5 7Z"/></svg></span>
+              <span><strong>حالت روشن</strong><small>پس‌زمینه روشن برای استفاده روزانه</small></span>
+            </button>
+            <button class="theme-choice" type="button" data-theme-choice="dark" aria-pressed="false">
+              <span class="theme-choice-check">✓</span>
+              <span class="theme-choice-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 9 9 0 1 0 20.2 15.3Z"/></svg></span>
+              <span><strong>حالت تیره</strong><small>نور کمتر برای شب و محیط تاریک</small></span>
+            </button>
+          </div>
+        </section>
+      </section>
+    </div>
   </main>
 
   <div id="feedback-backdrop" class="feedback-backdrop" hidden></div>
@@ -183,16 +204,18 @@
 
   <nav class="bottom-nav" aria-label="ناوبری اصلی اپ">
     <a class="bottom-nav-item active" href="#home" data-view-link="home" aria-current="page">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z"/></svg>
-      <span>خانه</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z"/></svg><span>خانه</span>
     </a>
     <a class="bottom-nav-item" href="#dictionary" data-view-link="dictionary">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H4V3Zm16 0h-4a4 4 0 0 0-2 0.54V21a4 4 0 0 1 4-4h2V3Z"/></svg>
-      <span>واژه‌نامه</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H4V3Zm16 0h-4a4 4 0 0 0-2 .54V21a4 4 0 0 1 4-4h2V3Z"/></svg><span>واژه‌نامه</span>
+    </a>
+    <a class="bottom-nav-item settings-view-link" href="#settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.07-.94l2.03-1.58-1.92-3.32-2.39.96a7.2 7.2 0 0 0-1.62-.94L14.87 3h-3.84l-.36 3.18c-.58.24-1.12.55-1.62.94l-2.39-.96-1.92 3.32 2.03 1.58c-.05.31-.07.64-.07.94s.02.63.07.94l-2.03 1.58 1.92 3.32 2.39-.96c.5.39 1.04.7 1.62.94l.36 3.18h3.84l.36-3.18c.58-.24 1.12-.55 1.62-.94l2.39.96 1.92-3.32-2.02-1.58ZM13 15.5A3.5 3.5 0 1 1 13 8a3.5 3.5 0 0 1 0 7.5Z"/></svg><span>تنظیمات</span>
     </a>
   </nav>
 
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
   <script src="app.js?v=20260731-7" defer></script>
+  <script src="settings.js?v=20260731-1" defer></script>
 </body>
 </html>
