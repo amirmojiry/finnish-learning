@@ -8,7 +8,7 @@ A lightweight, mobile-friendly web app for learning and practicing Finnish vocab
 
 ## Current features
 
-- 100 high-frequency written Finnish word forms with Persian translations
+- 200 high-frequency written Finnish word forms with Persian translations
 - frequency rank, corpus occurrence count, and occurrence percentage
 - dictionary with search, alphabetical/frequency sorting, and part-of-speech filters
 - word detail pages with meaning, part of speech, lemma, examples, and pronunciation
@@ -24,13 +24,14 @@ The vocabulary data is stored in [`data/common-words.json`](data/common-words.js
 
 ## Vocabulary source
 
-The ranking now uses the **Frequency List of Written Finnish Word Forms** provided by Kotus through the Language Bank of Finland. It is based on the Finnish Parole corpus of approximately 17 million written tokens.
+The ranking uses the **Frequency List of Written Finnish Word Forms** provided by Kotus through the Language Bank of Finland. It is based on the Finnish Parole corpus of approximately 17 million written tokens.
 
-Because this is a word-form frequency list, it includes inflected forms such as `suomen`, `vuoden`, `olivat`, and `suomessa`, as well as corpus items such as the abbreviation `mm` and the numeral `1`.
+Because this is a word-form frequency list, it includes inflected forms such as `suomen`, `vuoden`, `olivat`, and `suomessa`, as well as corpus items such as the abbreviation `mm` and numerals such as `1`, `2`, and `1995`.
 
 Each of the 200 entries includes:
 
-- frequency rank
+- unique list position in `rank`
+- original source rank in `frequency_rank`
 - corpus occurrence count
 - occurrence percentage
 - Finnish word form
@@ -38,6 +39,8 @@ Each of the 200 entries includes:
 - part of speech in English and Persian
 - dictionary base form (`lemma`)
 - two Finnish examples with Persian translations
+
+The separate `frequency_rank` field preserves tied source ranks. For example, two forms may have the same corpus count and the same original rank while still having different unique list positions in the app.
 
 Source: [Kotus / Kielipankki — Frequency List of Written Finnish Word Forms](https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/)
 
@@ -51,7 +54,7 @@ Then open `http://localhost:8000`.
 
 ## Rebuild vocabulary data
 
-The source frequency metadata and learning details are stored separately and merged into `data/common-words.json`:
+The Latin-1 source list is stored in `data/parole_frek_3.txt`. Learning details for entries 101–200 are stored in two separate JSON files and merged into `data/common-words.json`:
 
 ```bash
 node scripts/build-parole-vocabulary.mjs
