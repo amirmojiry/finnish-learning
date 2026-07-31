@@ -20,7 +20,7 @@ A lightweight, mobile-friendly web app for learning and practicing Finnish vocab
 - light and dark themes
 - locally saved score, exercise mode, and theme
 
-The vocabulary data is stored in [`data/common-words.json`](data/common-words.json).
+The vocabulary data used by the app is stored in [`data/common-words.json`](data/common-words.json).
 
 ## Vocabulary source
 
@@ -44,6 +44,13 @@ The separate `frequency_rank` field preserves tied source ranks. For example, tw
 
 Source: [Kotus / Kielipankki — Frequency List of Written Finnish Word Forms](https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/)
 
+## Data files
+
+Only two vocabulary files are retained in `data/`:
+
+- `common-words.json`: the complete 200-entry dataset currently used by the app
+- `parole_frek_3.txt`: the original Latin-1 Parole frequency list retained for adding entries after rank 200
+
 ## Run locally
 
 ```bash
@@ -51,14 +58,6 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
-
-## Rebuild vocabulary data
-
-The Latin-1 source list is stored in `data/parole_frek_3.txt`. Learning details for entries 101–200 are stored in two separate JSON files and merged into `data/common-words.json`:
-
-```bash
-node scripts/build-parole-vocabulary.mjs
-```
 
 ## Roadmap
 
