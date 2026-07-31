@@ -12,6 +12,47 @@ function extractStatus(text, versionPattern, countPattern) {
   return { version, count };
 }
 
+function collectPythonCommentLines(source) {
+  const comments = [];
+  let openTripleQuote = null;
+
+  source.split(/\r?\n/).forEach((line, index) => {
+    let candidate = line;
+
+    if (openTripleQuote) {
+      const closeIndex = candidate.indexOf(openTripleQuote);
+      if (closeIndex === -1) return;
+      candidate = candidate.slice(closeIndex + 3);
+      openTripleQuote = null;
+    }
+
+    while (candidate) {
+      const doubleIndex = candidate.indexOf('"""');
+      const singleIndex = candidate.indexOf("'''");
+      const indexes = [doubleIndex, singleIndex].filter((value) => value >= 0);
+      const tripleIndex = indexes.length ? Math.min(...indexes) : -1;
+      const commentIndex = candidate.indexOf('#');
+
+      if (commentIndex >= 0 && (tripleIndex === -1 || commentIndex < tripleIndex)) {
+        comments.push({ text: candidate.slice(commentIndex), line: index + 1 });
+        return;
+      }
+      if (tripleIndex === -1) return;
+
+      const quote = candidate.slice(tripleIndex, tripleIndex + 3);
+      const remainder = candidate.slice(tripleIndex + 3);
+      const closingIndex = remainder.indexOf(quote);
+      if (closingIndex === -1) {
+        openTripleQuote = quote;
+        return;
+      }
+      candidate = remainder.slice(closingIndex + 3);
+    }
+  });
+
+  return comments;
+}
+
 test('dictionary POS integration loads after app state and before UD synchronization', () => {
   const html = read('index.html');
   const appIndex = html.indexOf('app.js?');
@@ -88,22 +129,32 @@ test('source-code comments do not contain Persian characters', () => {
         walk(fullPath);
         return;
       }
-      if (!extensions.has(path.extname(entry.name))) return;
+
+      const extension = path.extname(entry.name);
+      if (!extensions.has(extension)) return;
 
       const relative = path.relative(root, fullPath);
       const source = fs.readFileSync(fullPath, 'utf8');
-      source.split(/\r?\n/).forEach((line, index) => {
-        const trimmed = line.trim();
-        if ((trimmed.startsWith('//') || (trimmed.startsWith('#') && !trimmed.startsWith('#!')))
-          && persianPattern.test(trimmed)) {
-          violations.push(`${relative}:${index + 1}`);
-        }
-      });
 
-      for (const match of source.matchAll(/\/\*[\s\S]*?\*\//g)) {
-        if (persianPattern.test(match[0])) {
-          const line = source.slice(0, match.index).split(/\r?\n/).length;
-          violations.push(`${relative}:${line}`);
+      if (extension === '.py') {
+        collectPythonCommentLines(source).forEach((comment) => {
+          if (persianPattern.test(comment.text) && !comment.text.startsWith('#!')) {
+            violations.push(`${relative}:${comment.line}`);
+          }
+        });
+      } else {
+        source.split(/\r?\n/).forEach((line, index) => {
+          const trimmed = line.trim();
+          if (trimmed.startsWith('//') && persianPattern.test(trimmed)) {
+            violations.push(`${relative}:${index + 1}`);
+          }
+        });
+
+        for (const match of source.matchAll(/\/\*[\s\S]*?\*\//g)) {
+          if (persianPattern.test(match[0])) {
+            const line = source.slice(0, match.index).split(/\r?\n/).length;
+            violations.push(`${relative}:${line}`);
+          }
         }
       }
     });
