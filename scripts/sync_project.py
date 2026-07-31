@@ -31,6 +31,14 @@ def replace_marker_block(content: str, start: str, end: str, block: str) -> str:
     return f"{content[:first_line_end + 1]}\n{block}\n{content[first_line_end + 1:]}"
 
 
+def ensure_local_asset(content: str, tag: str, pattern: re.Pattern[str], anchor: re.Pattern[str]) -> str:
+    if pattern.search(content):
+        return pattern.sub(tag, content, count=1)
+    if not anchor.search(content):
+        raise RuntimeError(f"Asset insertion anchor not found for: {tag}")
+    return anchor.sub(rf"\1\n{tag}", content, count=1)
+
+
 def sync_index() -> None:
     path = ROOT / "index.html"
     content = path.read_text(encoding="utf-8")
@@ -50,16 +58,33 @@ def sync_index() -> None:
         r'^\s*<script src="dictionary-pos\.js(?:\?v=[^"]+)?" defer></script>\s*$',
         re.MULTILINE,
     )
-    if dictionary_pos_pattern.search(content):
-        content = dictionary_pos_pattern.sub(dictionary_pos_tag, content, count=1)
-    else:
-        app_script_pattern = re.compile(
-            r'(^\s*<script src="app\.js(?:\?v=[^"]+)?" defer></script>\s*$)',
-            re.MULTILINE,
-        )
-        if not app_script_pattern.search(content):
-            raise RuntimeError("The app.js script anchor was not found in index.html")
-        content = app_script_pattern.sub(rf"\1\n{dictionary_pos_tag}", content, count=1)
+    app_script_pattern = re.compile(
+        r'(^\s*<script src="app\.js(?:\?v=[^"]+)?" defer></script>\s*$)',
+        re.MULTILINE,
+    )
+    content = ensure_local_asset(content, dictionary_pos_tag, dictionary_pos_pattern, app_script_pattern)
+
+    spaced_css_tag = f'  <link rel="stylesheet" href="css/spaced-repetition.css?v={VERSION}">'
+    spaced_css_pattern = re.compile(
+        r'^\s*<link rel="stylesheet" href="css/spaced-repetition\.css(?:\?v=[^"]+)?">\s*$',
+        re.MULTILINE,
+    )
+    about_css_anchor = re.compile(
+        r'(^\s*<link rel="stylesheet" href="css/about\.css(?:\?v=[^"]+)?">\s*$)',
+        re.MULTILINE,
+    )
+    content = ensure_local_asset(content, spaced_css_tag, spaced_css_pattern, about_css_anchor)
+
+    spaced_script_tag = f'  <script src="spaced-repetition.js?v={VERSION}" defer></script>'
+    spaced_script_pattern = re.compile(
+        r'^\s*<script src="spaced-repetition\.js(?:\?v=[^"]+)?" defer></script>\s*$',
+        re.MULTILINE,
+    )
+    ud_script_anchor = re.compile(
+        r'(^\s*<script src="ud-analysis\.js(?:\?v=[^"]+)?" defer></script>\s*$)',
+        re.MULTILINE,
+    )
+    content = ensure_local_asset(content, spaced_script_tag, spaced_script_pattern, ud_script_anchor)
 
     asset_pattern = re.compile(
         r'(?P<prefix>(?:href|src)=")'
@@ -86,8 +111,11 @@ def sync_index() -> None:
         count=1,
     )
 
-    if content.count("dictionary-pos.js") != 1:
-        raise RuntimeError("dictionary-pos.js must be referenced exactly once")
+    for asset in ("dictionary-pos.js", "css/spaced-repetition.css", "spaced-repetition.js"):
+        if content.count(asset) != 1:
+            raise RuntimeError(f"{asset} must be referenced exactly once")
+    if content.index("app.js") > content.index("spaced-repetition.js"):
+        raise RuntimeError("spaced-repetition.js must load after app.js")
 
     path.write_text(content, encoding="utf-8")
 
