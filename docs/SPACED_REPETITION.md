@@ -52,11 +52,11 @@ These values estimate token coverage in the written Finnish Parole corpus. They 
 
 ## Browser integration
 
-The review panel is mounted directly in the Settings view. The same page contains appearance controls and a compact link to About, while the primary bottom navigation contains only Home, Dictionary, and Settings.
+The review panel is mounted directly in the Profile view. Profile contains the review queue, reviewed-word history, per-word progress summary, and frequency coverage.
+
+Settings is a separate view containing only the light/dark appearance controls and a compact link to About. The bottom navigation contains Home, Dictionary, Profile, and Settings; About is not a primary navigation item.
 
 Starting a review uses the existing focused-practice functions, so all three exercise modes keep their current answer rendering and feedback behavior. Only answers submitted while a review session is active update the spaced-repetition schedule; normal free practice continues to update the general score without altering review timing.
-
-The legacy `#profile` hash redirects to Settings so bookmarks created during version 1.1 remain usable.
 
 ## Required validation
 
@@ -66,4 +66,4 @@ Run:
 npm test
 ```
 
-The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, settings placement, navigation contracts, asset loading order, and the public app functions used by the integration.
+The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, separate Profile and Settings placement, navigation contracts, asset loading order, and the public app functions used by the integration.
