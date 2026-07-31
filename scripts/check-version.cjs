@@ -17,19 +17,31 @@ assert.match(
   'index.html must expose the current application version.',
 );
 
+const localAssets = [...indexHtml.matchAll(
+  /(?:href|src)="((?!https?:\/\/|\/\/|data:|#)[^"?]+\.(?:css|js))(?:\?v=([^"]+))?"/g,
+)].map((match) => ({ path: match[1], cacheVersion: match[2] }));
+
+assert.ok(localAssets.length > 0, 'index.html must reference local CSS or JavaScript assets.');
+localAssets.forEach((asset) => {
+  assert.equal(
+    asset.cacheVersion,
+    version,
+    `${asset.path} must use the current version as its cache key.`,
+  );
+});
+
 [
   'app.js',
   'dictionary-pos.js',
-  'dictionary.js',
   'settings.js',
   'ud-analysis.js',
   'css/styles.css',
   'css/dictionary.css',
   'css/ud-analysis.css',
-].forEach((asset) => {
+].forEach((requiredAsset) => {
   assert.ok(
-    indexHtml.includes(`${asset}?v=${version}`),
-    `${asset} must use the current version as its cache key.`,
+    localAssets.some((asset) => asset.path === requiredAsset),
+    `${requiredAsset} must be referenced by index.html.`,
   );
 });
 
