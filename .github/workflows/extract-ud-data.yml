@@ -11,7 +11,7 @@ on:
       - '.github/workflows/extract-ud-data.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: extract-finnish-ud-data
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -42,3 +44,9 @@ jobs:
           path: data/ud/*.json
           if-no-files-found: error
           retention-days: 7
+
+      - name: Commit generated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Generate Finnish UD enrichment data
+          file_pattern: data/ud/*.json
