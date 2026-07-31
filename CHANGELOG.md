@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-07-31
+
+### Added
+
+- A daily spaced-repetition review queue that prioritizes overdue words and introduces at most ten new words per local day.
+- Persistent per-word scheduling data in local storage, including interval, ease factor, answer totals, lapses, and the next review time.
+- Review status cards for due, new, started, and mastered vocabulary.
+- Regression tests for scheduling intervals, retry behavior, daily limits, queue ordering, progress summaries, storage recovery, and browser integration contracts.
+- Two-sentence descriptions for every roadmap item in both English and Persian documentation.
+
 ## [1.0.0] - 2026-07-31
 
 ### Added
