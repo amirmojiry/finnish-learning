@@ -1,10 +1,1 @@
-file:///home/runner/work/finnish-learning/finnish-learning/scripts/build-parole-vocabulary.mjs:66
-    throw new Error(`Second example does not contain ${frequencyWord.word}: ${details.example_2_fi}`);
-          ^
-
-Error: Second example does not contain toinen: Otan yhden nyt ja toisen myöhemmin.
-    at file:///home/runner/work/finnish-learning/finnish-learning/scripts/build-parole-vocabulary.mjs:66:11
-    at Array.map (<anonymous>)
-    at file:///home/runner/work/finnish-learning/finnish-learning/scripts/build-parole-vocabulary.mjs:45:30
-
-Node.js v22.23.1
+Built and validated 200 Parole vocabulary entries.

@@ -28,7 +28,7 @@ The ranking now uses the **Frequency List of Written Finnish Word Forms** provid
 
 Because this is a word-form frequency list, it includes inflected forms such as `suomen`, `vuoden`, `olivat`, and `suomessa`, as well as corpus items such as the abbreviation `mm` and the numeral `1`.
 
-Each entry includes:
+Each of the 200 entries includes:
 
 - frequency rank
 - corpus occurrence count
