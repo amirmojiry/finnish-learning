@@ -87,6 +87,7 @@ The suite must cover at least:
 - dominant-UPOS ordering and the known `ovat` AUX/indicative regression fixture
 - dictionary POS option generation, stale-option removal, valid-selection preservation, and invalid-selection reset
 - spaced-repetition queue behavior, reviewed-word ordering, per-word status, and reviewed/mastered frequency coverage
+- separate Profile and Settings view ownership and primary navigation contracts
 - required script order and UI integration contracts
 - synchronized English and Persian README status facts
 - English-only source-code comments
@@ -103,6 +104,7 @@ Do not weaken an assertion merely to make CI pass. Change a test contract only a
 - Escape corpus text before injecting it into HTML.
 - Do not load large source-analysis files in the browser when a compact generated summary can provide the required UI data.
 - Interactive statistics must use semantic buttons and expose expanded state and controlled regions when they reveal details.
+- Profile owns spaced repetition, reviewed-word history, learning coverage, and progress summaries. Settings owns only appearance controls and the link to About. Do not merge these views without an explicit product decision and matching tests and documentation.
 
 ## 8. Documentation synchronization
 
