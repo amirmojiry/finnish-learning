@@ -40,8 +40,11 @@ jobs:
       - name: Build compact browser summary
         run: python3 tools/ud-import/build_ui_summary.py
 
-      - name: Validate generated JSON files
-        run: python3 -c "import json,pathlib; p=pathlib.Path('data/ud'); names=['word-analyses.json','word-summary.json','examples.json','labels-fa.json','metadata.json','coverage-report.json']; data={n:json.loads((p/n).read_text(encoding='utf-8')) for n in names}; assert data['word-summary.json']['word_count']==200; print((p/'coverage-report.json').read_text(encoding='utf-8'))"
+      - name: Connect UD analysis to the app
+        run: python3 tools/ud-import/connect_ui.py
+
+      - name: Validate generated JSON files and UI references
+        run: python3 -c "import json,pathlib; p=pathlib.Path('data/ud'); names=['word-analyses.json','word-summary.json','examples.json','labels-fa.json','metadata.json','coverage-report.json']; data={n:json.loads((p/n).read_text(encoding='utf-8')) for n in names}; assert data['word-summary.json']['word_count']==200; html=pathlib.Path('index.html').read_text(encoding='utf-8'); assert html.count('css/ud-analysis.css')==1 and html.count('ud-analysis.js')==1; print((p/'coverage-report.json').read_text(encoding='utf-8'))"
 
       - name: Upload generated data
         uses: actions/upload-artifact@v4
@@ -51,8 +54,8 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-      - name: Commit generated data
+      - name: Commit generated data and UI connection
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Generate Finnish UD enrichment data
-          file_pattern: data/ud/*.json
+          file_pattern: data/ud/*.json index.html
