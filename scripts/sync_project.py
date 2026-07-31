@@ -79,6 +79,12 @@ def sync_index() -> None:
         content,
         count=1,
     )
+    content = re.sub(
+        r'(<div class="about-stat"><strong>)[۰-۹0-9]+(</strong><span>واژه پرتکرار</span></div>)',
+        rf'\g<1>{persian_count}\g<2>',
+        content,
+        count=1,
+    )
 
     if content.count("dictionary-pos.js") != 1:
         raise RuntimeError("dictionary-pos.js must be referenced exactly once")
