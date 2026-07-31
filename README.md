@@ -28,10 +28,12 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
 - focused practice for an individual dictionary word
+- daily spaced-repetition review queue with due-word priority and a ten-new-word daily limit
+- persistent local review scheduling, answer counts, lapses, and mastery status for each started word
 - progressive hints and a compact Finnish letter keyboard
 - linked dictionary words inside examples
 - light and dark themes
-- locally saved score, exercise mode, and theme
+- locally saved score, exercise mode, theme, and review progress
 
 ## Data ownership
 
@@ -107,7 +109,7 @@ Then open `http://localhost:8000`.
 
 ## Quality and deployment
 
-Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, script order, documentation parity, English-only source comments, and deployment wiring.
+Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, spaced-repetition scheduling, script order, documentation parity, English-only source comments, and deployment wiring.
 
 GitHub Pages deployment depends on the complete validation job and cannot publish a revision with failing tests or stale generated files.
 
@@ -115,27 +117,27 @@ GitHub Pages deployment depends on the complete validation job and cannot publis
 
 ### Phase 1 — smarter review
 
-- [ ] spaced-repetition review queue
-- [ ] mastery score and answer history for each word
-- [ ] focused practice for weak or frequently missed words
-- [ ] filters by frequency range and lemma
-- [ ] session length and difficulty settings
+- [x] **Spaced-repetition review queue.** It prioritizes overdue words and introduces at most ten new words per local day. Correct and incorrect answers automatically schedule the next review and persist the schedule in local storage.
+- [ ] **Mastery score and answer history for each word.** A per-word score will summarize accuracy, review interval, and recent performance in a learner-friendly form. A chronological history will show when the word was practiced and how each answer changed its status.
+- [ ] **Focused practice for weak or frequently missed words.** A dedicated session will select words with low accuracy, repeated lapses, or short review intervals. Learners will be able to practice this weak set without mixing it with already stable vocabulary.
+- [ ] **Filters by frequency range and lemma.** The dictionary and practice pool will support selecting source-rank ranges and grouping inflected forms by their lemma. These filters will make it easier to study a defined frequency band or all forms of the same base word.
+- [ ] **Session length and difficulty settings.** Learners will choose how many questions a session contains and how many new words may appear. Difficulty controls will adjust distractor similarity, hint availability, and the balance of exercise modes.
 
 ### Phase 2 — more exercise types
 
-- [ ] reverse translation from Persian to Finnish
-- [ ] listening and dictation exercises
-- [ ] sentence-ordering exercises
-- [ ] verb conjugation exercises
-- [ ] Finnish case-form exercises
-- [ ] pronunciation practice with speech recognition
+- [ ] **Reverse translation from Persian to Finnish.** The prompt will show a Persian meaning and require selecting or typing the matching Finnish form. Accepted alternatives will be handled explicitly so ambiguous translations do not produce unfair errors.
+- [ ] **Listening and dictation exercises.** The app will play a Finnish word or sentence without initially showing its written form. Learners will type what they hear and receive feedback on spelling and the intended vocabulary item.
+- [ ] **Sentence-ordering exercises.** Sentence tokens will be shuffled and presented as movable or selectable pieces. The completed order will be checked against a real or curated Finnish sentence while preserving punctuation.
+- [ ] **Verb conjugation exercises.** A lemma, person, tense, and mood will define the requested verb form. Answers will be validated against reviewed conjugation data rather than generated guesses.
+- [ ] **Finnish case-form exercises.** Learners will produce or identify noun, adjective, and pronoun forms for a specified grammatical case. Examples and UD features will provide context for why each case is used.
+- [ ] **Pronunciation practice with speech recognition.** The app will record a spoken Finnish word or short sentence and compare it with the target. Feedback will focus on intelligibility and likely mismatches without presenting the score as a clinical pronunciation assessment.
 
 ### Phase 3 — personal learning app
 
-- [ ] daily goal, streak, and progress dashboard
-- [ ] import and export learning progress
-- [ ] bookmarks and custom word lists
-- [ ] larger and topic-based decks
-- [ ] installable Progressive Web App
-- [ ] offline exercises
-- [ ] accessibility audit and improved screen-reader support
+- [ ] **Daily goal, streak, and progress dashboard.** Learners will set a realistic daily target based on answered questions or completed reviews. The dashboard will visualize consistency, vocabulary growth, due workload, and longer-term trends.
+- [ ] **Import and export learning progress.** Review history and personal settings will be downloadable in a documented portable format. The importer will validate versions and preserve existing data unless the learner explicitly approves replacement.
+- [ ] **Bookmarks and custom word lists.** Any dictionary entry will be addable to named personal lists such as work, travel, or difficult words. These lists will be available as filters and dedicated practice pools.
+- [ ] **Larger and topic-based decks.** The vocabulary system will support additional frequency ranges and curated thematic collections. Deck metadata will identify source, level, coverage, and compatibility with the available exercises.
+- [ ] **Installable Progressive Web App.** A web app manifest and service worker will allow installation from supported browsers. Updates will be version-aware so cached files cannot silently mix incompatible releases.
+- [ ] **Offline exercises.** Core vocabulary, selected examples, and practice logic will remain usable without a network connection. Progress recorded offline will be stored locally and reconciled safely when online features become available.
+- [ ] **Accessibility audit and improved screen-reader support.** The interface will be tested for keyboard use, focus order, contrast, motion preferences, and semantic announcements. Findings will become regression checks so later UI changes do not reintroduce known barriers.
