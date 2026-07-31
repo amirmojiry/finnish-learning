@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAROLE_LINE = re.compile(r"^(\d+)\s+(\d+)\s+(\S+)\s+\(([\d.]+)\s+%\)$")
+PAROLE_LINE = re.compile(r"^(\d+)\s+(\d+)\s+(.+?)\s+\(([\d.]+)\s+%\)$")
 
 
 def load_json(relative_path: str):
