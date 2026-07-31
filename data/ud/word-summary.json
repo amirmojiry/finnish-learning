@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-07-31T09:13:04+00:00",
+  "schema_version": 2,
+  "generated_at": "2026-07-31T09:33:55+00:00",
   "ud_release": "2.18",
   "word_count": 200,
   "words": [
@@ -248,6 +248,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ja",
@@ -1009,6 +1010,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -1755,6 +1757,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ei",
@@ -2212,6 +2215,7 @@
           "upos": "INTJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "että",
@@ -2924,6 +2928,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -3514,6 +3519,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -3912,6 +3918,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hän",
@@ -4123,6 +4130,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mutta",
@@ -4752,6 +4760,7 @@
           "upos": "X"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -5055,6 +5064,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kuin",
@@ -5251,6 +5261,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "myös",
@@ -5683,6 +5694,7 @@
           "upos": "CCONJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kun",
@@ -6372,6 +6384,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -7040,6 +7053,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -7311,6 +7325,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tai",
@@ -7767,6 +7782,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "joka",
@@ -8337,6 +8353,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "niin",
@@ -8676,6 +8693,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mukaan",
@@ -8990,6 +9008,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "jo",
@@ -9205,6 +9224,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vain",
@@ -9923,6 +9943,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -10350,6 +10371,7 @@
           "upos": "CCONJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "jos",
@@ -10772,6 +10794,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "nyt",
@@ -11437,6 +11460,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -12100,6 +12124,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "voida",
@@ -12593,6 +12618,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hän",
@@ -13198,6 +13224,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -13728,6 +13755,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "Suomi",
@@ -14017,6 +14045,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vielä",
@@ -14124,6 +14153,7 @@
           "upos": "CCONJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "sekä",
@@ -14564,6 +14594,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "sitten",
@@ -15188,6 +15219,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -15432,6 +15464,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kanssa",
@@ -15559,6 +15592,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kuitenkin",
@@ -16020,6 +16054,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vuosi",
@@ -16311,6 +16346,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "jälkeen",
@@ -17011,6 +17047,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -17649,6 +17686,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ei",
@@ -17775,6 +17813,7 @@
           "upos": "ADJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "viime",
@@ -18399,6 +18438,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mikä",
@@ -18624,6 +18664,7 @@
           "upos": "CCONJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vaikka",
@@ -19146,6 +19187,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -19624,6 +19666,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vuosi",
@@ -20167,6 +20210,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kaikki",
@@ -20771,6 +20815,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "sillä",
@@ -21124,6 +21169,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "koko",
@@ -21357,6 +21403,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "joka",
@@ -21918,6 +21965,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ei",
@@ -22427,6 +22475,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -22875,6 +22924,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ennen",
@@ -23134,6 +23184,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "noin",
@@ -23602,6 +23653,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "joka",
@@ -24099,6 +24151,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -24651,6 +24704,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "minä",
@@ -25323,6 +25377,7 @@
           "upos": "NOUN"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ei",
@@ -26030,6 +26085,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "sanoa",
@@ -26599,6 +26655,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "sanoa",
@@ -26953,6 +27010,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hyvin",
@@ -27677,6 +27735,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tulla",
@@ -28134,6 +28193,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "paljon",
@@ -28843,6 +28903,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "saada",
@@ -29336,6 +29397,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vuosi",
@@ -29785,6 +29847,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "markka",
@@ -30045,6 +30108,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "koska",
@@ -30357,6 +30421,7 @@
           ]
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "multiword_token",
         "lemma": "että+ei",
@@ -30747,6 +30812,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "joka",
@@ -31120,6 +31186,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hän",
@@ -31409,6 +31476,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vaan",
@@ -31879,6 +31947,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kaksi",
@@ -32585,6 +32654,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "pitää",
@@ -32945,6 +33015,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "yli",
@@ -33103,6 +33174,7 @@
           "upos": "ADP"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "lisäksi",
@@ -33628,6 +33700,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -34166,6 +34239,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mikään",
@@ -34656,6 +34730,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "prosentti",
@@ -34967,6 +35042,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aina",
@@ -35532,6 +35608,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "eli",
@@ -36042,6 +36119,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -36231,6 +36309,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "esimerkiksi",
@@ -36822,6 +36901,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -37269,6 +37349,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "itse",
@@ -37710,6 +37791,7 @@
           "upos": "ADP"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aika",
@@ -37942,6 +38024,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "enää",
@@ -38521,6 +38604,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "yksi",
@@ -38978,6 +39062,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "miten",
@@ -39191,6 +39276,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ensi",
@@ -39867,6 +39953,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tulla",
@@ -40065,6 +40152,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mm",
@@ -40615,6 +40703,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "enemmän",
@@ -40952,6 +41041,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "juuri",
@@ -41247,6 +41337,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "Helsinki",
@@ -41693,6 +41784,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "Suomi",
@@ -42295,6 +42387,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "saada",
@@ -42707,6 +42800,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "1",
@@ -43258,6 +43352,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "näin",
@@ -43805,6 +43900,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -44334,6 +44430,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -44953,6 +45050,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mikä",
@@ -45186,6 +45284,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "taas",
@@ -45665,6 +45764,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mies",
@@ -45949,6 +46049,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "eri",
@@ -46407,6 +46508,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vastaan",
@@ -46859,6 +46961,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "miljoona",
@@ -47263,6 +47366,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "Eurooppa",
@@ -47621,6 +47725,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mieli",
@@ -48018,6 +48123,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "silloin",
@@ -48213,6 +48319,7 @@
           "upos": "CCONJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kuten",
@@ -48315,6 +48422,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ainakin",
@@ -48931,6 +49039,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -49452,6 +49561,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "se",
@@ -49545,6 +49655,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "lähes",
@@ -49813,6 +49924,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "voida",
@@ -50300,6 +50412,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "osa",
@@ -50864,6 +50977,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kertoa",
@@ -51432,6 +51546,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "yhtä",
@@ -51713,6 +51828,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kyllä",
@@ -52300,6 +52416,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aika",
@@ -52594,6 +52711,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "uusi",
@@ -53246,6 +53364,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "toinen",
@@ -53431,6 +53550,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vasta",
@@ -53964,6 +54084,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hyvä",
@@ -54119,6 +54240,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "jopa",
@@ -54341,6 +54463,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aivan",
@@ -54507,6 +54630,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ehkä",
@@ -54953,6 +55077,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kolme",
@@ -55325,6 +55450,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "samalla",
@@ -55452,6 +55578,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "edes",
@@ -55889,6 +56016,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hallitus",
@@ -56383,6 +56511,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ilman",
@@ -56789,6 +56918,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -57201,6 +57331,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mukana",
@@ -57641,6 +57772,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "päivä",
@@ -58259,6 +58391,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "minä",
@@ -58387,6 +58520,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "yhä",
@@ -58953,6 +59087,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -59446,6 +59581,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "pitää",
@@ -59713,6 +59849,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "uusi",
@@ -60336,6 +60473,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tehdä",
@@ -60754,6 +60892,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vähän",
@@ -60836,6 +60975,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kuitenkaan",
@@ -61085,6 +61225,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "heti",
@@ -61459,6 +61600,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "2",
@@ -61906,6 +62048,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kerran",
@@ -62438,6 +62581,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "suomi",
@@ -63076,6 +63220,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "saada",
@@ -63471,6 +63616,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hän",
@@ -63638,6 +63784,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "siis",
@@ -63864,6 +64011,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "klo",
@@ -64281,6 +64429,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "siellä",
@@ -64573,6 +64722,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "joka",
@@ -65138,6 +65288,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aika",
@@ -65324,6 +65475,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "edelleen",
@@ -65892,6 +66044,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aika",
@@ -66112,6 +66265,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tampere",
@@ -66597,6 +66751,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "maa",
@@ -67039,6 +67194,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kautta",
@@ -67424,6 +67580,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "pois",
@@ -67793,6 +67950,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "presidentti",
@@ -68413,6 +68571,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "saada",
@@ -68821,6 +68980,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "valtio",
@@ -69288,6 +69448,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kerta",
@@ -69910,6 +70071,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tulla",
@@ -70482,6 +70644,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "minä",
@@ -71138,6 +71301,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "antaa",
@@ -71330,6 +71494,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "oma",
@@ -71468,6 +71633,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "liian",
@@ -71891,6 +72057,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "voida",
@@ -72233,6 +72400,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hallitus",
@@ -72881,6 +73049,7 @@
           "upos": "CCONJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "muu",
@@ -73291,6 +73460,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -73455,6 +73625,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -73764,6 +73935,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "markka",
@@ -74090,6 +74262,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kuinka",
@@ -74210,6 +74383,7 @@
           "upos": "ADP"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "vuoksi",
@@ -74711,6 +74885,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "aika",
@@ -74941,6 +75116,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "usein",
@@ -75457,6 +75633,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -76047,6 +76224,7 @@
           "upos": "PART"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kuulua",
@@ -76499,6 +76677,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "maailma",
@@ -76997,6 +77176,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tämä",
@@ -77480,6 +77660,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kertoa",
@@ -77967,6 +78148,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "suuri",
@@ -78382,6 +78564,7 @@
           "upos": "ADP"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "tapa",
@@ -78815,6 +78998,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "kaupunki",
@@ -79411,6 +79595,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -80120,6 +80305,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "olla",
@@ -80553,6 +80739,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "hän",
@@ -81140,6 +81327,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mikä",
@@ -81793,6 +81981,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "lisää",
@@ -81959,6 +82148,7 @@
           "upos": "ADV"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "koskaan",
@@ -82395,6 +82585,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "uusi",
@@ -83016,6 +83207,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "ottaa",
@@ -83599,6 +83791,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "alkaa",
@@ -83940,6 +84133,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "Helsinki",
@@ -84552,6 +84746,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "alkaa",
@@ -84953,6 +85148,7 @@
           "upos": "ADJ"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "Venäjä",
@@ -85194,6 +85390,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "1995",
@@ -85747,6 +85944,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "pitää",
@@ -86211,6 +86409,7 @@
           }
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "joku",
@@ -86450,6 +86649,7 @@
           "upos": "ADP"
         }
       ],
+      "examples": [],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "välillä",
