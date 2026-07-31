@@ -37,8 +37,11 @@ jobs:
       - name: Enrich CoNLL-U multiword tokens
         run: python3 tools/ud-import/enrich_multiword_tokens.py
 
+      - name: Build compact browser summary
+        run: python3 tools/ud-import/build_ui_summary.py
+
       - name: Validate generated JSON files
-        run: python3 -c "import json,pathlib; p=pathlib.Path('data/ud'); names=['word-analyses.json','examples.json','labels-fa.json','metadata.json','coverage-report.json']; [json.loads((p/n).read_text(encoding='utf-8')) for n in names]; print((p/'coverage-report.json').read_text(encoding='utf-8'))"
+        run: python3 -c "import json,pathlib; p=pathlib.Path('data/ud'); names=['word-analyses.json','word-summary.json','examples.json','labels-fa.json','metadata.json','coverage-report.json']; data={n:json.loads((p/n).read_text(encoding='utf-8')) for n in names}; assert data['word-summary.json']['word_count']==200; print((p/'coverage-report.json').read_text(encoding='utf-8'))"
 
       - name: Upload generated data
         uses: actions/upload-artifact@v4
