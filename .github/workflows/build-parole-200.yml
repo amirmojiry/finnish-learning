@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Correct known draft typo
+      - name: Correct known draft examples
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -29,6 +29,14 @@ jobs:
           text = text.replace(
               'Ostin uuden sijaan aivan uusi tietokoneen.',
               'Tämä on aivan uusi tietokone.'
+          )
+          text = text.replace(
+              'Otan yhden nyt ja toisen myöhemmin.',
+              'Toinen vaihtoehto valitaan myöhemmin.'
+          )
+          text = text.replace(
+              'یکی را حالا و دیگری را بعداً برمی‌دارم.',
+              'گزینه دوم بعداً انتخاب می‌شود.'
           )
           path.write_text(text, encoding='utf-8')
           PY
