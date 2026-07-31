@@ -51,7 +51,7 @@ jobs:
           cat data/parole-build.log
           exit 0
 
-      - name: Update app for 200 entries and numeric tokens
+      - name: Update app for 200 entries and disable stale data caching
         if: steps.build.outputs.status == '0'
         run: |
           python - <<'PY'
@@ -65,18 +65,24 @@ jobs:
           )
           app = app.replace(
               "fetch('./data/common-words.json')",
-              "fetch('./data/common-words.json?v=20260731-10')"
+              "fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' })"
+          )
+          app = app.replace(
+              "fetch('./data/common-words.json?v=20260731-10')",
+              "fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' })"
           )
           app_path.write_text(app, encoding='utf-8')
 
           index_path = Path('index.html')
           index = index_path.read_text(encoding='utf-8')
           index = index.replace('۱۰۰ واژه پرکاربرد فنلاندی', '۲۰۰ واژه پرکاربرد فنلاندی')
-          index = index.replace('app.js?v=20260731-7', 'app.js?v=20260731-10')
+          index = index.replace('app.js?v=20260731-7', 'app.js?v=20260731-11')
+          index = index.replace('app.js?v=20260731-10', 'app.js?v=20260731-11')
           index_path.write_text(index, encoding='utf-8')
 
           readme_path = Path('README.md')
           readme = readme_path.read_text(encoding='utf-8')
+          readme = readme.replace('100 high-frequency written Finnish word forms', '200 high-frequency written Finnish word forms')
           readme = readme.replace('100 high-frequency Finnish word forms', '200 high-frequency Finnish word forms')
           readme = readme.replace('The first 100 entries', 'The first 200 entries')
           readme = readme.replace('Each entry includes:', 'Each of the 200 entries includes:')
@@ -84,6 +90,7 @@ jobs:
 
           readme_fa_path = Path('README.fa.md')
           readme_fa = readme_fa_path.read_text(encoding='utf-8')
+          readme_fa = readme_fa.replace('۱۰۰ صورت واژگانی پرتکرار در زبان نوشتاری فنلاندی', '۲۰۰ صورت واژگانی پرتکرار در زبان نوشتاری فنلاندی')
           readme_fa = readme_fa.replace('۱۰۰ صورت واژگانی پرتکرار فنلاندی', '۲۰۰ صورت واژگانی پرتکرار فنلاندی')
           readme_fa = readme_fa.replace('۱۰۰ مدخل نخست', '۲۰۰ مدخل نخست')
           readme_fa = readme_fa.replace('هر مدخل شامل موارد زیر است:', 'هر یک از ۲۰۰ مدخل شامل موارد زیر است:')
@@ -99,5 +106,5 @@ jobs:
           if [ "${{ steps.build.outputs.status }}" = "0" ]; then
             git add data/common-words.json app.js index.html README.md README.fa.md
           fi
-          git diff --cached --quiet || git commit -m "Validate Parole vocabulary expansion"
+          git diff --cached --quiet || git commit -m "Disable stale vocabulary caching"
           git push
