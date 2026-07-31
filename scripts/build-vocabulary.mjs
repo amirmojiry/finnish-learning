@@ -81,8 +81,8 @@ async function readParoleRows(sourceFile) {
         position: index + 1,
         rank: index + 1,
         frequency_rank: Number(match[1]),
-        frequency_count: Number(match[2]),
         word: match[3],
+        frequency_count: Number(match[2]),
         frequency_percent: Number(match[4]),
       };
     });
