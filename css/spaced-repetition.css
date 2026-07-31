@@ -1,5 +1,9 @@
+.profile-review-slot {
+  margin-bottom: 20px;
+}
+
 .spaced-review-card {
-  margin: 0 0 24px;
+  margin: 0;
   padding: clamp(18px, 4vw, 28px);
   border: 1px solid rgba(34, 87, 214, 0.2);
   border-radius: 24px;
@@ -70,24 +74,14 @@
 }
 
 @media (max-width: 620px) {
-  .home-view {
-    height: 100%;
-    min-height: 0;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
-  }
-
-  .home-view .quiz-card {
-    height: auto;
-    min-height: 100%;
+  .profile-review-slot {
+    margin-bottom: 14px;
   }
 
   .spaced-review-card {
-    margin-bottom: 10px;
     padding: 14px;
     border-radius: 18px;
+    box-shadow: none;
   }
 
   .spaced-review-heading {
