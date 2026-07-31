@@ -6,6 +6,17 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-07-31
+
+### Fixed
+
+- Profile and Settings are separate views again: spaced repetition and learning progress live in Profile, while Settings contains only appearance controls and the About link.
+- The bottom and desktop navigation now expose both Profile and Settings without restoring a separate About navigation item.
+
+### Added
+
+- Regression coverage that prevents review content from being placed in Settings and prevents appearance or About controls from being placed in Profile.
+
 ## [1.2.0] - 2026-07-31
 
 ### Added
