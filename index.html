@@ -17,11 +17,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260731-12">
-  <link rel="stylesheet" href="css/option-sizing.css?v=20260731-12">
-  <link rel="stylesheet" href="css/typing-keyboard.css?v=20260731-12">
-  <link rel="stylesheet" href="css/dictionary.css?v=20260731-12">
-  <link rel="stylesheet" href="css/settings.css?v=20260731-12">
+  <link rel="stylesheet" href="css/styles.css?v=20260731-13">
+  <link rel="stylesheet" href="css/option-sizing.css?v=20260731-13">
+  <link rel="stylesheet" href="css/typing-keyboard.css?v=20260731-13">
+  <link rel="stylesheet" href="css/dictionary.css?v=20260731-13">
+  <link rel="stylesheet" href="css/settings.css?v=20260731-13">
+  <link rel="stylesheet" href="css/about.css?v=20260731-13">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -34,6 +35,7 @@
     <nav aria-label="منوی اصلی">
       <a class="desktop-view-link active" href="#home" data-view-link="home">تمرین‌ها</a>
       <a class="desktop-view-link" href="#dictionary" data-view-link="dictionary">واژه‌نامه</a>
+      <a class="desktop-view-link about-view-link" href="#about">درباره</a>
       <a class="desktop-view-link settings-view-link" href="#settings">تنظیمات</a>
       <a href="data/common-words.json">فایل JSON</a>
     </nav>
@@ -171,6 +173,54 @@
       </section>
     </div>
 
+    <div id="about-view" class="app-view about-view" hidden>
+      <section class="about-shell">
+        <header class="about-page-header">
+          <div class="about-app-mark" aria-hidden="true">FI</div>
+          <div>
+            <h1>درباره Finnish Learning</h1>
+            <p>تمرین ساده و روزانه واژگان فنلاندی برای فارسی‌زبانان</p>
+          </div>
+        </header>
+
+        <section class="about-section">
+          <h2>درباره برنامه</h2>
+          <p>Finnish Learning یک برنامه وب سبک و مناسب موبایل برای یادگیری صورت‌های واژگانی پرتکرار زبان فنلاندی است. برنامه واژه‌نامه، معنی فارسی، نوع واژه، شکل پایه، تلفظ و مثال‌ها را با تمرین‌های کوتاه ترکیب می‌کند تا مرور واژه‌ها سریع و کاربردی باشد.</p>
+          <div class="about-stats" aria-label="مشخصات برنامه">
+            <div class="about-stat"><strong>۲۰۰</strong><span>واژه پرتکرار</span></div>
+            <div class="about-stat"><strong>۳</strong><span>نوع تمرین</span></div>
+            <div class="about-stat"><strong>۲</strong><span>مثال برای هر واژه</span></div>
+          </div>
+        </section>
+
+        <section class="about-section">
+          <h2>منبع واژه‌ها</h2>
+          <p>ترتیب واژه‌ها بر اساس فهرست بسامد صورت‌های واژگانی زبان نوشتاری فنلاندی است که Kotus از طریق Kielipankki منتشر کرده است. این فهرست از پیکره نوشتاری Parole با حدود ۱۷ میلیون توکن استخراج شده است.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>سازنده</h2>
+          <div class="creator-card">
+            <div class="creator-avatar" aria-hidden="true">AM</div>
+            <div class="creator-info">
+              <strong>امیرحسین مجیری فروزشانی</strong>
+              <span>توسعه‌دهنده نرم‌افزار ساکن واسا، فنلاند، با تمرکز بر توسعه وب و نرم‌افزارهای ابری. این برنامه ابتدا برای پاسخ به نیازهای واقعی او در مسیر یادگیری زبان فنلاندی ساخته شد و به‌تدریج توسعه پیدا می‌کند.</span>
+            </div>
+          </div>
+          <div class="about-links">
+            <a class="about-link" href="https://github.com/amirmojiry/finnish-learning" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.5 9.5 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+              کد منبع برنامه
+            </a>
+            <a class="about-link" href="https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h13a3 3 0 0 1 3 3v15H7a3 3 0 0 1-3-3V3Zm3 14h11V6a1 1 0 0 0-1-1H6v12.17A3 3 0 0 1 7 17Zm0 2a1 1 0 0 0 0 2h11v-2H7Z"/></svg>
+              منبع فهرست واژه‌ها
+            </a>
+          </div>
+        </section>
+      </section>
+    </div>
+
     <div id="settings-view" class="app-view settings-view" hidden>
       <section class="settings-shell">
         <header class="settings-header">
@@ -209,6 +259,9 @@
     <a class="bottom-nav-item" href="#dictionary" data-view-link="dictionary">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H4V3Zm16 0h-4a4 4 0 0 0-2 .54V21a4 4 0 0 1 4-4h2V3Z"/></svg><span>واژه‌نامه</span>
     </a>
+    <a class="bottom-nav-item about-view-link" href="#about">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 17h2v-6h-2v6Zm0-8h2V7h-2v2Zm1-7a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/></svg><span>درباره</span>
+    </a>
     <a class="bottom-nav-item settings-view-link" href="#settings">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.07-.94l2.03-1.58-1.92-3.32-2.39.96a7.2 7.2 0 0 0-1.62-.94L14.87 3h-3.84l-.36 3.18c-.58.24-1.12.55-1.62.94l-2.39-.96-1.92 3.32 2.03 1.58c-.05.31-.07.64-.07.94s.02.63.07.94l-2.03 1.58 1.92 3.32 2.39-.96c.5.39 1.04.7 1.62.94l.36 3.18h3.84l.36-3.18c.58-.24 1.12-.55 1.62-.94l2.39.96 1.92-3.32-2.02-1.58ZM13 15.5A3.5 3.5 0 1 1 13 8a3.5 3.5 0 0 1 0 7.5Z"/></svg><span>تنظیمات</span>
     </a>
@@ -216,6 +269,6 @@
 
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
   <script src="app.js?v=20260731-11" defer></script>
-  <script src="settings.js?v=20260731-1" defer></script>
+  <script src="settings.js?v=20260731-13" defer></script>
 </body>
 </html>
