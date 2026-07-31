@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-07-31
+
+### Fixed
+
+- The mobile home view now scrolls when the spaced-review panel is present, keeping the exercise card and all answer controls reachable.
+
 ## [1.1.0] - 2026-07-31
 
 ### Added
