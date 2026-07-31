@@ -2,7 +2,7 @@ file:///home/runner/work/finnish-learning/finnish-learning/scripts/build-parole-
     throw new Error(`Second example does not contain ${frequencyWord.word}: ${details.example_2_fi}`);
           ^
 
-Error: Second example does not contain eikä: En nähnyt enkä kuullut mitään.
+Error: Second example does not contain toinen: Otan yhden nyt ja toisen myöhemmin.
     at file:///home/runner/work/finnish-learning/finnish-learning/scripts/build-parole-vocabulary.mjs:66:11
     at Array.map (<anonymous>)
     at file:///home/runner/work/finnish-learning/finnish-learning/scripts/build-parole-vocabulary.mjs:45:30
