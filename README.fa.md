@@ -22,7 +22,7 @@
 - حالت روشن و تیره
 - ذخیره امتیاز، نوع تمرین و تم در مرورگر
 
-داده‌های اصلی در فایل [`data/common-words.json`](data/common-words.json) قرار دارند.
+داده‌ای که اپ مستقیماً استفاده می‌کند در فایل [`data/common-words.json`](data/common-words.json) قرار دارد.
 
 ## منبع واژگان
 
@@ -46,6 +46,13 @@
 
 منبع: [Kotus / Kielipankki — Frequency List of Written Finnish Word Forms](https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/)
 
+## فایل‌های داده
+
+در پوشه `data` فقط دو فایل واژگان نگهداری می‌شوند:
+
+- `common-words.json`: مجموعه کامل ۲۰۰واژه‌ای که اپ در حال حاضر استفاده می‌کند
+- `parole_frek_3.txt`: فایل اصلی Latin-1 منبع Parole برای افزودن واژه‌های بعد از رتبه ۲۰۰
+
 ## اجرای محلی
 
 ```bash
@@ -53,14 +60,6 @@ python3 -m http.server 8000
 ```
 
 سپس آدرس `http://localhost:8000` را باز کنید.
-
-## بازسازی داده‌های واژگان
-
-فایل کامل منبع با کدگذاری Latin-1 در مسیر `data/parole_frek_3.txt` نگهداری می‌شود. جزئیات آموزشی مدخل‌های ۱۰۱ تا ۲۰۰ نیز در دو فایل JSON جداگانه قرار دارند و با فرمان زیر در فایل اصلی ادغام می‌شوند:
-
-```bash
-node scripts/build-parole-vocabulary.mjs
-```
 
 ## نقشه راه
 
