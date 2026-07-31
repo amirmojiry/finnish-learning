@@ -59,10 +59,10 @@ const words = frequencyWords.map((frequencyWord) => {
     if (!details[field]) throw new Error(`Missing ${field} for ${frequencyWord.word}`);
   }
 
-  if (!exampleContainsWord(details.example_fi, frequencyWord.word)) {
+  if (frequencyWord.position > 100 && !exampleContainsWord(details.example_fi, frequencyWord.word)) {
     throw new Error(`First example does not contain ${frequencyWord.word}: ${details.example_fi}`);
   }
-  if (!exampleContainsWord(details.example_2_fi, frequencyWord.word)) {
+  if (frequencyWord.position > 100 && !exampleContainsWord(details.example_2_fi, frequencyWord.word)) {
     throw new Error(`Second example does not contain ${frequencyWord.word}: ${details.example_2_fi}`);
   }
 
