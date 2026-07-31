@@ -1,0 +1,176 @@
+.word-meta-card {
+  position: relative;
+}
+
+.ud-frequency-label-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ud-frequency-info-button {
+  width: 19px;
+  height: 19px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--primary) 38%, var(--border));
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface));
+  color: var(--primary);
+  padding: 0;
+  font: 800 12px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.ud-frequency-info-button:hover,
+.ud-frequency-info-button:focus-visible,
+.ud-frequency-info-button[aria-expanded="true"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+  outline: none;
+}
+
+.ud-frequency-info-button:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.ud-frequency-popover {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% - 2px);
+  right: 10px;
+  left: 10px;
+  min-width: 210px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .16);
+  padding: 10px 11px;
+  text-align: right;
+}
+
+.ud-frequency-popover > strong,
+.ud-frequency-popover > span,
+.ud-frequency-popover > small {
+  display: block;
+}
+
+.ud-frequency-popover > strong {
+  margin-bottom: 5px;
+  font-size: .76rem;
+}
+
+.ud-frequency-popover > span {
+  color: var(--text);
+  font-size: .72rem;
+  line-height: 1.8;
+}
+
+.ud-frequency-popover > span b {
+  color: var(--primary);
+}
+
+.ud-frequency-popover > small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .62rem;
+}
+
+.ud-examples-card {
+  margin-top: 10px;
+}
+
+.ud-example-list {
+  display: grid;
+  gap: 8px;
+}
+
+.ud-example {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  padding: 9px 10px;
+}
+
+.ud-example blockquote {
+  margin: 0;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: .78rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.ud-example mark {
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+  color: inherit;
+  padding: 0 2px;
+  font-weight: 800;
+}
+
+.ud-example figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .62rem;
+  direction: ltr;
+  text-align: left;
+}
+
+.ud-feature-values {
+  display: grid;
+  gap: 8px;
+}
+
+.ud-feature-value {
+  min-width: 0;
+}
+
+.ud-feature-value .ud-value-chip {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.ud-feature-value .ud-example {
+  margin-top: 5px;
+  border-style: dashed;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--primary) 3%, var(--surface));
+}
+
+.ud-example.is-compact {
+  padding: 7px 8px;
+}
+
+.ud-example.is-compact blockquote {
+  font-size: .72rem;
+}
+
+.ud-example.is-compact figcaption {
+  font-size: .58rem;
+}
+
+@media (max-width: 680px) {
+  .ud-frequency-popover {
+    right: 8px;
+    left: 8px;
+    min-width: 0;
+  }
+
+  .ud-example blockquote {
+    font-size: .75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ud-frequency-info-button {
+    transition: none;
+  }
+}
