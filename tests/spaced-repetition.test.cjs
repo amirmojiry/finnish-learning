@@ -107,16 +107,20 @@ test('the browser integration assets are present exactly once and load after the
   assert.ok(html.indexOf('app.js') < html.indexOf('spaced-repetition.js'));
 });
 
-test('the mobile home view stays scrollable after the review panel is inserted', () => {
-  const css = fs.readFileSync(path.join(ROOT, 'css/spaced-repetition.css'), 'utf8');
-  assert.match(
-    css,
-    /\.home-view\s*\{[^}]*height:\s*100%;[^}]*overflow-y:\s*auto;[^}]*-webkit-overflow-scrolling:\s*touch;[^}]*\}/s,
-  );
-  assert.match(
-    css,
-    /\.home-view \.quiz-card\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*100%;[^}]*\}/s,
-  );
+test('the review panel is mounted in profile and does not make the home view scrollable', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const source = fs.readFileSync(path.join(ROOT, 'spaced-repetition.js'), 'utf8');
+  const css = fs.readFileSync(path.join(ROOT, 'css', 'spaced-repetition.css'), 'utf8');
+  const navigation = fs.readFileSync(path.join(ROOT, 'settings.js'), 'utf8');
+
+  assert.match(html, /id="profile-view"/);
+  assert.match(html, /id="spaced-review-slot"/);
+  assert.match(html, /class="[^"]*profile-view-link/);
+  assert.doesNotMatch(html, /id="settings-view"/);
+  assert.match(source, /getElementById\('spaced-review-slot'\)/);
+  assert.doesNotMatch(source, /insertAdjacentElement\('afterend'/);
+  assert.doesNotMatch(css, /\.home-view\s*\{[^}]*overflow-y:\s*auto/s);
+  assert.match(navigation, /location\.hash === '#profile'/);
 });
 
 test('the review integration keeps its required public app contracts', () => {
