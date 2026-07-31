@@ -1,5 +1,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
 
 const {
   collectPosTypes,
@@ -57,4 +60,61 @@ test('matchesPos uses the displayed Persian label with an English fallback', () 
   assert.equal(matchesPos(noun, 'اسم'), true);
   assert.equal(matchesPos(noun, 'فعل'), false);
   assert.equal(matchesPos(auxiliary, 'AUX'), true);
+});
+
+test('browser renderer rebuilds the select from current words and drops stale options', () => {
+  const source = fs.readFileSync(path.resolve(__dirname, '../dictionary-pos.js'), 'utf8');
+  const select = {
+    value: 'فعل',
+    children: [],
+    replaceChildren() {
+      this.children = [];
+    },
+    appendChild(child) {
+      this.children.push(child);
+    },
+  };
+  const context = {
+    console,
+    state: {
+      words: [
+        { part_of_speech: 'VERB', part_of_speech_fa: 'فعل' },
+        { part_of_speech: 'NOUN', part_of_speech_fa: 'اسم' },
+      ],
+    },
+    document: {
+      getElementById(id) {
+        return id === 'dictionary-pos-filter' ? select : null;
+      },
+      createElement(tagName) {
+        assert.equal(tagName, 'option');
+        return { value: '', textContent: '' };
+      },
+    },
+    populatePosFilter() {},
+  };
+
+  vm.createContext(context);
+  vm.runInContext(source, context, { filename: 'dictionary-pos.js' });
+
+  const firstLabels = context.renderPosFilters();
+  assert.deepEqual([...firstLabels], ['اسم', 'فعل'].sort((left, right) => left.localeCompare(right, 'fa')));
+  assert.equal(select.value, 'فعل');
+  assert.deepEqual(
+    select.children.map((option) => option.value),
+    ['all', ...firstLabels],
+  );
+
+  context.state.words = [
+    { part_of_speech: 'AUX', part_of_speech_fa: 'فعل کمکی' },
+  ];
+  select.value = 'فعل';
+
+  const secondLabels = context.renderPosFilters();
+  assert.deepEqual([...secondLabels], ['فعل کمکی']);
+  assert.equal(select.value, 'all');
+  assert.deepEqual(
+    select.children.map((option) => option.value),
+    ['all', 'فعل کمکی'],
+  );
 });
