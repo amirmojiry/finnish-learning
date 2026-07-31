@@ -15,52 +15,87 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 
 [نسخه فارسی](README.fa.md)
 
-A lightweight, mobile-friendly web app for learning and practicing Finnish vocabulary with Persian translations.
+A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
 
 - 200 high-frequency written Finnish word forms with Persian translations
-- frequency rank, corpus occurrence count, and occurrence percentage
-- dictionary with search, alphabetical/frequency sorting, and part-of-speech filters
-- word detail pages with meaning, part of speech, lemma, examples, and pronunciation
+- exact Parole source rank, corpus occurrence count, and occurrence percentage
+- dictionary search and alphabetical or frequency sorting
+- part-of-speech filters generated only from categories present in the current vocabulary
+- dominant part of speech and morphological analysis derived from Universal Dependencies
+- real UD corpus examples, including examples tied to specific morphological values
+- word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
-- focused exercises for an individual dictionary word
-- progressive hints and a compact letter keyboard in typing mode
-- two Finnish examples with Persian translations for every entry
+- focused practice for an individual dictionary word
+- progressive hints and a compact Finnish letter keyboard
 - linked dictionary words inside examples
 - light and dark themes
 - locally saved score, exercise mode, and theme
 
-The vocabulary data used by the app is stored in [`data/common-words.json`](data/common-words.json).
+## Data ownership
 
-## Vocabulary source
+The project keeps three data responsibilities separate:
 
-The ranking uses the **Frequency List of Written Finnish Word Forms** provided by Kotus through the Language Bank of Finland. It is based on the Finnish Parole corpus of approximately 17 million written tokens.
+- **Parole/Kotus/Kielipankki** supplies frequency rank, occurrence count, surface form, and occurrence percentage.
+- **Universal Dependencies** supplies dominant UPOS, corpus-observed lemmas, morphology, dependencies, treebank distribution, and corpus examples.
+- **Curated learning data** supplies Persian translations, fallback part-of-speech labels, learner-facing lemmas, and two Finnish/Persian example pairs.
 
-Because this is a word-form frequency list, it includes inflected forms such as `suomen`, `vuoden`, `olivat`, and `suomessa`, as well as corpus items such as the abbreviation `mm` and numerals such as `1`, `2`, and `1995`.
+The ranking is based on the [Frequency List of Written Finnish Word Forms](https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/), which uses the Finnish Parole corpus of approximately 17 million written tokens. Because this is a surface-form list, it includes inflected forms, abbreviations, and numerals. Tied source ranks are preserved in `frequency_rank`, while `position` and `rank` remain unique and sequential inside the app.
 
-Each of the 200 entries includes:
+## Important data paths
 
-- unique list position in `rank`
-- original source rank in `frequency_rank`
-- corpus occurrence count
-- occurrence percentage
-- Finnish word form
-- Persian translation
-- part of speech in English and Persian
-- dictionary base form (`lemma`)
-- two Finnish examples with Persian translations
+- `data/common-words.json`: generated vocabulary consumed by the app
+- `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
+- `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
+- `data/ud/`: generated compact and detailed UD analysis files
+- `ud-import-2.18/`: CoNLL-U source treebanks used by the UD pipeline
+- `scripts/build-vocabulary.mjs`: reproducible vocabulary builder
+- `tools/ud-import/`: UD extraction and browser-summary generators
 
-The separate `frequency_rank` field preserves tied source ranks. For example, two forms may have the same corpus count and the same original rank while still having different unique list positions in the app.
+Generated UD JSON files must not be edited manually.
 
-Source: [Kotus / Kielipankki — Frequency List of Written Finnish Word Forms](https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/)
+## Add a vocabulary range
 
-## Data files
+For a range such as positions 201–300:
 
-Only two vocabulary files are retained in `data/`:
+1. Add a reviewed bundle such as `data/vocabulary-details/201-300.json` using the schema documented in that directory.
+2. Run the vocabulary builder; source rank, count, form, and percentage are read directly from the original Parole file.
+3. Regenerate the UD outputs.
+4. Synchronize visible counts, cache keys, deployment metadata, and both README status blocks.
+5. Use a MINOR version bump, update `CHANGELOG.md`, and run the complete test suite.
 
-- `common-words.json`: the complete 200-entry dataset currently used by the app
-- `parole_frek_3.txt`: the original Latin-1 Parole frequency list retained for adding entries after rank 200
+```bash
+npm run build:vocabulary
+python3 tools/ud-import/extract_ud.py
+python3 tools/ud-import/enrich_multiword_tokens.py
+python3 tools/ud-import/enrich_ui_examples.py
+python3 tools/ud-import/build_ui_summary.py
+python3 tools/ud-import/connect_ui.py
+npm run sync
+npm test
+```
+
+The GitHub UD workflow performs the same generation and validation automatically when its inputs change.
+
+## Development commands
+
+```bash
+npm run sync
+npm test
+npm run test:js
+npm run test:data
+```
+
+Version commands:
+
+```bash
+npm run version:patch
+npm run version:minor
+npm run version:major
+```
+
+`VERSION` is the canonical application version. Version commands synchronize `package.json`, local asset cache keys, deployment metadata, the changelog scaffold, and both README status blocks.
 
 ## Run locally
 
@@ -69,6 +104,12 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Quality and deployment
+
+Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, script order, documentation parity, English-only source comments, and deployment wiring.
+
+GitHub Pages deployment depends on the complete validation job and cannot publish a revision with failing tests or stale generated files.
 
 ## Roadmap
 
