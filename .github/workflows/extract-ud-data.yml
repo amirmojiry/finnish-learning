@@ -34,6 +34,9 @@ jobs:
       - name: Extract UD analyses and examples
         run: python3 tools/ud-import/extract_ud.py
 
+      - name: Enrich CoNLL-U multiword tokens
+        run: python3 tools/ud-import/enrich_multiword_tokens.py
+
       - name: Validate generated JSON files
         run: python3 -c "import json,pathlib; p=pathlib.Path('data/ud'); names=['word-analyses.json','examples.json','labels-fa.json','metadata.json','coverage-report.json']; [json.loads((p/n).read_text(encoding='utf-8')) for n in names]; print((p/'coverage-report.json').read_text(encoding='utf-8'))"
 
