@@ -8,6 +8,7 @@ on:
       - 'ud-import-2.18/*.conllu'
       - 'tools/ud-import/**'
       - 'data/common-words.json'
+      - 'VERSION'
       - '.github/workflows/extract-ud-data.yml'
 
 permissions:
@@ -31,6 +32,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Extract UD analyses and examples
         run: python3 tools/ud-import/extract_ud.py
 
@@ -45,6 +51,9 @@ jobs:
 
       - name: Connect UD analysis to the app
         run: python3 tools/ud-import/connect_ui.py
+
+      - name: Synchronize project metadata
+        run: python3 scripts/sync_project.py
 
       - name: Validate generated JSON files and UI references
         run: |
@@ -65,23 +74,36 @@ jobs:
               name: json.loads((data_dir / name).read_text(encoding='utf-8'))
               for name in names
           }
-          summary = data['word-summary.json']
-          assert summary['schema_version'] == 2
-          assert summary['word_count'] == 200
+          vocabulary = json.loads(
+              pathlib.Path('data/common-words.json').read_text(encoding='utf-8')
+          )
+          vocabulary_count = len(vocabulary['words'])
+          vocabulary_forms = {row['word'].casefold() for row in vocabulary['words']}
 
-          ovat = next(row for row in summary['words'] if row['word'] == 'ovat')
-          assert ovat['upos'][0]['tag'] == 'AUX'
-          assert ovat['examples']
-          mood = next(feature for feature in ovat['features'] if feature['name'] == 'Mood')
-          indicative = next(value for value in mood['values'] if value['value'] == 'Ind')
-          assert indicative.get('example', {}).get('text')
+          summary = data['word-summary.json']
+          summary_forms = {row['word'].casefold() for row in summary['words']}
+          assert summary['schema_version'] == 2
+          assert summary['word_count'] == vocabulary_count
+          assert summary_forms == vocabulary_forms
+
+          if 'ovat' in vocabulary_forms:
+              ovat = next(row for row in summary['words'] if row['word'].casefold() == 'ovat')
+              assert ovat['upos'][0]['tag'] == 'AUX'
+              assert ovat['examples']
+              mood = next(feature for feature in ovat['features'] if feature['name'] == 'Mood')
+              indicative = next(value for value in mood['values'] if value['value'] == 'Ind')
+              assert indicative.get('example', {}).get('text')
 
           html = pathlib.Path('index.html').read_text(encoding='utf-8')
           assert html.count('css/ud-analysis.css') == 1
           assert html.count('css/ud-analysis-examples.css') == 1
+          assert html.count('dictionary-pos.js') == 1
           assert html.count('ud-analysis.js') == 1
           print((data_dir / 'coverage-report.json').read_text(encoding='utf-8'))
           PY
+
+      - name: Run complete regression suite
+        run: npm test
 
       - name: Upload generated data
         uses: actions/upload-artifact@v4
@@ -91,8 +113,8 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-      - name: Commit generated data and UI connection
+      - name: Commit generated data and synchronized metadata
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Generate Finnish UD enrichment data
-          file_pattern: data/ud/*.json index.html
+          file_pattern: data/ud/*.json index.html README.md README.fa.md deploy-version.txt

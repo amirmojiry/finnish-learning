@@ -1,0 +1,18 @@
+---
+description: Mandatory project rules for Finnish Learning changes
+globs: "**/*"
+alwaysApply: true
+---
+
+Read and follow `AGENTS.md` before editing this repository.
+
+Critical rules:
+
+- All code comments, identifiers, developer logs, commit messages, and workflow step names are English.
+- Run `npm run sync` after changing versions, vocabulary data, local assets, or documented counts.
+- Run `npm test` before completing any task. Never bypass failed tests or deploy a failing revision.
+- Parole owns frequency data; UD owns corpus analysis and dominant POS; curated application data owns Persian translations and learner examples.
+- New vocabulary entries must satisfy the complete contract in `AGENTS.md`, regenerate UD summaries, and update both README files through synchronization.
+- Never hardcode the vocabulary total in application logic, generators, workflows, or tests.
+- Dictionary POS options must contain only categories represented by currently loaded words after UD synchronization.
+- Keep `README.md` and `README.fa.md` factually synchronized and update `CHANGELOG.md` for releases.
