@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="app-version" content="1.1.1">
+  <meta name="app-version" content="1.1.2">
   <meta name="theme-color" content="#f7f8fc">
   <meta name="description" content="تمرین و واژه‌نامه تعاملی زبان فنلاندی با ترجمه فارسی">
   <title>یادگیری فنلاندی</title>
@@ -18,15 +18,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.1.1">
-  <link rel="stylesheet" href="css/option-sizing.css?v=1.1.1">
-  <link rel="stylesheet" href="css/typing-keyboard.css?v=1.1.1">
-  <link rel="stylesheet" href="css/dictionary.css?v=1.1.1">
-  <link rel="stylesheet" href="css/ud-analysis.css?v=1.1.1">
-  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=1.1.1">
-  <link rel="stylesheet" href="css/settings.css?v=1.1.1">
-  <link rel="stylesheet" href="css/about.css?v=1.1.1">
-  <link rel="stylesheet" href="css/spaced-repetition.css?v=1.1.1">
+  <link rel="stylesheet" href="css/styles.css?v=1.1.2">
+  <link rel="stylesheet" href="css/option-sizing.css?v=1.1.2">
+  <link rel="stylesheet" href="css/typing-keyboard.css?v=1.1.2">
+  <link rel="stylesheet" href="css/dictionary.css?v=1.1.2">
+  <link rel="stylesheet" href="css/ud-analysis.css?v=1.1.2">
+  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=1.1.2">
+  <link rel="stylesheet" href="css/settings.css?v=1.1.2">
+  <link rel="stylesheet" href="css/about.css?v=1.1.2">
+  <link rel="stylesheet" href="css/spaced-repetition.css?v=1.1.2">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -40,7 +40,7 @@
       <a class="desktop-view-link active" href="#home" data-view-link="home">تمرین‌ها</a>
       <a class="desktop-view-link" href="#dictionary" data-view-link="dictionary">واژه‌نامه</a>
       <a class="desktop-view-link about-view-link" href="#about">درباره</a>
-      <a class="desktop-view-link settings-view-link" href="#settings">تنظیمات</a>
+      <a class="desktop-view-link profile-view-link" href="#profile">پروفایل</a>
       <a href="data/common-words.json">فایل JSON</a>
     </nav>
   </header>
@@ -225,12 +225,13 @@
       </section>
     </div>
 
-    <div id="settings-view" class="app-view settings-view" hidden>
+    <div id="profile-view" class="app-view settings-view profile-view" hidden>
       <section class="settings-shell">
         <header class="settings-header">
-          <h1>تنظیمات</h1>
-          <p>ظاهر و رفتار اپ را شخصی‌سازی کن.</p>
+          <h1>پروفایل</h1>
+          <p>مرور هوشمند و تنظیمات شخصی تو.</p>
         </header>
+        <div id="spaced-review-slot" class="profile-review-slot" aria-live="polite"></div>
         <section class="settings-section" aria-labelledby="theme-setting-title">
           <div class="settings-section-heading">
             <h2 id="theme-setting-title">حالت نمایش</h2>
@@ -266,16 +267,17 @@
     <a class="bottom-nav-item about-view-link" href="#about">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 17h2v-6h-2v6Zm0-8h2V7h-2v2Zm1-7a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/></svg><span>درباره</span>
     </a>
-    <a class="bottom-nav-item settings-view-link" href="#settings">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.07-.94l2.03-1.58-1.92-3.32-2.39.96a7.2 7.2 0 0 0-1.62-.94L14.87 3h-3.84l-.36 3.18c-.58.24-1.12.55-1.62.94l-2.39-.96-1.92 3.32 2.03 1.58c-.05.31-.07.64-.07.94s.02.63.07.94l-2.03 1.58 1.92 3.32 2.39-.96c.5.39 1.04.7 1.62.94l.36 3.18h3.84l.36-3.18c.58-.24 1.12-.55 1.62-.94l2.39.96 1.92-3.32-2.02-1.58ZM13 15.5A3.5 3.5 0 1 1 13 8a3.5 3.5 0 0 1 0 7.5Z"/></svg><span>تنظیمات</span>
+    <a class="bottom-nav-item profile-view-link" href="#profile">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z"/></svg><span>پروفایل</span>
     </a>
   </nav>
 
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
-  <script src="app.js?v=1.1.1" defer></script>
-  <script src="dictionary-pos.js?v=1.1.1" defer></script>
-  <script src="settings.js?v=1.1.1" defer></script>
-  <script src="ud-analysis.js?v=1.1.1" defer></script>
-  <script src="spaced-repetition.js?v=1.1.1" defer></script>
+  <script src="app.js?v=1.1.2" defer></script>
+  <script src="dictionary-pos.js?v=1.1.2" defer></script>
+  <script src="settings.js?v=1.1.2" defer></script>
+  <script src="ud-analysis.js?v=1.1.2" defer></script>
+  <script src="spaced-repetition.js?v=1.1.2" defer></script>
+  <script src="profile-review-mount.js?v=1.1.2" defer></script>
 </body>
 </html>
