@@ -235,7 +235,8 @@
     const appReady = () => Boolean(document.getElementById('quiz-content') && !document.getElementById('quiz-content').hidden && typeof windowObject.openWordDetail === 'function' && typeof windowObject.startFocusedPractice === 'function');
     const currentMode = () => document.querySelector('.mode-button.active')?.dataset.mode || windowObject.localStorage.getItem('fiQuizMode') || 'translation';
     function closeHistory() { elements.history.hidden = true; elements.learnedCard.setAttribute('aria-expanded', 'false'); }
-    function openWordDetails(word) { closeHistory(); if (typeof windowObject.openWordDetail === 'function') windowObject.openWordDetail(word); else windowObject.location.hash = `#word-${word.rank}`; }
+    function activateRegularView(view) { document.querySelector(`[data-view-link="${view}"]`)?.click(); }
+    function openWordDetails(word) { closeHistory(); activateRegularView('dictionary'); if (typeof windowObject.openWordDetail === 'function') windowObject.openWordDetail(word); else windowObject.location.hash = `#word-${word.rank}`; }
     function renderHistory() {
       const entries = reviewedWordEntries(words, progress);
       elements.historyList.replaceChildren();
@@ -282,7 +283,7 @@
       elements.start.textContent = available === 0 ? 'مروری برای امروز نیست' : 'شروع مرور';
       elements.message.textContent = completionMessage || (available > 0 ? `${toPersianNumber(stats.due)} واژه موعددار و تا ${toPersianNumber(stats.availableNewToday)} واژه جدید آماده است.` : 'همه مرورهای امروز انجام شده‌اند. موعد بعدی در زمان مناسب فعال می‌شود.');
     }
-    function launchWord(word, mode = currentMode()) { if (!word) return; answerRecorded = false; windowObject.hideFeedback?.(); if (typeof windowObject.openWordDetail === 'function' && typeof windowObject.startFocusedPractice === 'function') { windowObject.openWordDetail(word); windowObject.startFocusedPractice(mode); } else windowObject.location.hash = `#word-${word.rank}`; }
+    function launchWord(word, mode = currentMode()) { if (!word) return; answerRecorded = false; activateRegularView('home'); windowObject.hideFeedback?.(); if (typeof windowObject.openWordDetail === 'function' && typeof windowObject.startFocusedPractice === 'function') { windowObject.openWordDetail(word); windowObject.startFocusedPractice(mode); } else windowObject.location.hash = `#word-${word.rank}`; }
     function completeSession() { active = false; currentWord = null; queue = []; completionMessage = `مرور امروز تمام شد؛ ${toPersianNumber(sessionCorrect)} پاسخ از ${toPersianNumber(sessionAnswered)} پاسخ درست بود.`; windowObject.hideFeedback?.(); const nextButton = document.getElementById('next-word'); if (nextButton) nextButton.textContent = 'سؤال بعدی'; windowObject.renderQuestion?.(); updatePanel(); }
     function launchNext() { if (!active) return; if (queue.length === 0) { completeSession(); return; } currentWord = queue.shift(); launchWord(currentWord); updatePanel(); }
     function stopSession() { active = false; queue = []; currentWord = null; completionMessage = 'مرور متوقف شد. پاسخ‌های ثبت‌شده حفظ شده‌اند.'; const nextButton = document.getElementById('next-word'); if (nextButton) nextButton.textContent = 'سؤال بعدی'; windowObject.hideFeedback?.(); windowObject.renderQuestion?.(); updatePanel(); }
