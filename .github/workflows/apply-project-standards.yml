@@ -1,0 +1,40 @@
+name: Apply project standards
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/versioning-tests-rules-pos-filter
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-project-standards
+  cancel-in-progress: true
+
+jobs:
+  synchronize-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synchronize generated project files
+        run: python3 scripts/sync_project.py
+      - name: Run complete regression suite
+        run: npm test
+      - name: Commit synchronized project files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Synchronize versioned project metadata
+          file_pattern: index.html README.md README.fa.md deploy-version.txt
