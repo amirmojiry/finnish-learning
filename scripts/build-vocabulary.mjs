@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUTPUT_PATH = path.join(ROOT, 'data/common-words.json');
 const DETAILS_DIRECTORY = path.join(ROOT, 'data/vocabulary-details');
-const PAROLE_LINE = /^(\d+)\s+(\d+)\s+(.+?)\s+\(([\d.]+)\s+%\)$/;
+const PAROLE_LINE = /^(\d+)\s+(\d+)\s+(.+?)\s+\((\S+)\s+%\)$/;
 const REQUIRED_DETAIL_FIELDS = [
   'translation_fa',
   'example_fi',
@@ -77,13 +77,17 @@ async function readParoleRows(sourceFile) {
       if (!match) {
         throw new Error(`Cannot parse Parole row ${index + 1}: ${line}`);
       }
+      const frequencyPercent = Number(match[4]);
+      if (!Number.isFinite(frequencyPercent)) {
+        throw new Error(`Invalid Parole percentage at row ${index + 1}: ${match[4]}`);
+      }
       return {
         position: index + 1,
         rank: index + 1,
         frequency_rank: Number(match[1]),
         word: match[3],
         frequency_count: Number(match[2]),
-        frequency_percent: Number(match[4]),
+        frequency_percent: frequencyPercent,
       };
     });
 }
