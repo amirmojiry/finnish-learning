@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUTPUT_PATH = path.join(ROOT, 'data/common-words.json');
 const DETAILS_DIRECTORY = path.join(ROOT, 'data/vocabulary-details');
-const PAROLE_LINE = /^(\d+)\s+(\d+)\s+(\S+)\s+\(([\d.]+)\s+%\)$/;
+const PAROLE_LINE = /^(\d+)\s+(\d+)\s+(.+?)\s+\(([\d.]+)\s+%\)$/;
 const REQUIRED_DETAIL_FIELDS = [
   'translation_fa',
   'example_fi',
