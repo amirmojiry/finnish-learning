@@ -30,11 +30,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verify synchronized generated files
-        run: |
-          python3 scripts/sync_project.py
-          git diff --exit-code
+      - name: Synchronize generated files in the test workspace
+        run: python3 scripts/sync_project.py
       - name: Compile Python sources
         run: python3 -m compileall -q scripts tools tests
       - name: Run complete regression suite
         run: npm test
+      - name: Verify generated files were committed
+        run: git diff --exit-code
