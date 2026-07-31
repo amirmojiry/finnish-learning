@@ -1,13 +1,18 @@
 (() => {
   'use strict';
 
-  const SUMMARY_URL = 'data/ud/word-summary.json?v=20260731-1';
-  const LABELS_URL = 'data/ud/labels-fa.json?v=20260731-1';
+  const SUMMARY_URL = 'data/ud/word-summary.json?v=20260731-2';
+  const LABELS_URL = 'data/ud/labels-fa.json?v=20260731-2';
+  const VOCABULARY_URL = 'data/common-words.json?v=20260731-8';
   const SECTION_ID = 'ud-analysis-section';
 
   const numberFormatter = new Intl.NumberFormat('fa-IR');
   const percentFormatter = new Intl.NumberFormat('fa-IR', {
     maximumFractionDigits: 1,
+    minimumFractionDigits: 0,
+  });
+  const frequencyPercentFormatter = new Intl.NumberFormat('fa-IR', {
+    maximumFractionDigits: 6,
     minimumFractionDigits: 0,
   });
 
@@ -55,11 +60,13 @@
     Style: { Coll: 'محاوره‌ای', Arch: 'کهن', Rare: 'کم‌کاربرد' },
   };
 
-  const state = {
+  const udState = {
     promise: null,
     wordsByForm: new Map(),
+    frequencyByForm: new Map(),
     labels: null,
     lastWord: '',
+    frequencyEventsBound: false,
   };
 
   function normalizeWord(value) {
@@ -75,6 +82,10 @@
       .replaceAll("'", '&#039;');
   }
 
+  function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
   function formatNumber(value) {
     return numberFormatter.format(Number(value) || 0);
   }
@@ -83,12 +94,16 @@
     return `${percentFormatter.format(Number(value) || 0)}٪`;
   }
 
+  function formatFrequencyPercent(value) {
+    return `${frequencyPercentFormatter.format(Number(value) || 0)}٪`;
+  }
+
   function getUposLabel(tag) {
-    return state.labels?.upos?.[tag] || tag || 'نامشخص';
+    return udState.labels?.upos?.[tag] || tag || 'نامشخص';
   }
 
   function getFeatureLabel(name) {
-    return state.labels?.features?.[name] || name;
+    return udState.labels?.features?.[name] || name;
   }
 
   function getFeatureValueLabel(feature, value) {
@@ -97,7 +112,12 @@
 
   function getRelationLabel(relation) {
     const base = String(relation || 'dep').split(':')[0];
-    return state.labels?.dependency_relations?.[base] || base;
+    return udState.labels?.dependency_relations?.[base] || base;
+  }
+
+  function getDominantUpos(row) {
+    const rows = Array.isArray(row?.upos) ? row.upos : [];
+    return rows.length ? rows[0] : null;
   }
 
   function makeProgressRows(rows, options) {
@@ -118,21 +138,121 @@
     }).join('');
   }
 
+  function getSectionAnchor(detail) {
+    const practiceGrid = detail?.querySelector('.word-practice-grid');
+    return practiceGrid?.closest('.word-detail-section')
+      || detail?.querySelector('.word-detail-meta')
+      || null;
+  }
+
   function ensureSection() {
-    let section = document.getElementById(SECTION_ID);
-    if (section) return section;
-
     const detail = document.getElementById('dictionary-detail');
-    const meta = detail?.querySelector('.word-detail-meta');
-    if (!detail || !meta) return null;
+    const anchor = getSectionAnchor(detail);
+    if (!detail || !anchor) return null;
 
-    section = document.createElement('section');
-    section.id = SECTION_ID;
-    section.className = 'ud-analysis-section';
-    section.hidden = true;
-    section.setAttribute('aria-live', 'polite');
-    meta.insertAdjacentElement('afterend', section);
+    let section = document.getElementById(SECTION_ID);
+    if (!section) {
+      section = document.createElement('section');
+      section.id = SECTION_ID;
+      section.className = 'ud-analysis-section';
+      section.hidden = true;
+      section.setAttribute('aria-live', 'polite');
+    }
+    if (section.previousElementSibling !== anchor) {
+      anchor.insertAdjacentElement('afterend', section);
+    }
     return section;
+  }
+
+  function ensureFrequencyInfo() {
+    const rankValue = document.getElementById('detail-rank');
+    const card = rankValue?.closest('.word-meta-card');
+    const label = card?.querySelector('.word-meta-label');
+    if (!card || !label) return null;
+
+    let row = card.querySelector('.ud-frequency-label-row');
+    let button = card.querySelector('.ud-frequency-info-button');
+    let popover = card.querySelector('.ud-frequency-popover');
+
+    if (!row) {
+      row = document.createElement('div');
+      row.className = 'ud-frequency-label-row';
+      label.insertAdjacentElement('beforebegin', row);
+      row.appendChild(label);
+    }
+
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ud-frequency-info-button';
+      button.textContent = '!';
+      button.setAttribute('aria-label', 'نمایش تعداد و درصد بسامد');
+      button.setAttribute('aria-expanded', 'false');
+      row.appendChild(button);
+    }
+
+    if (!popover) {
+      popover = document.createElement('div');
+      popover.className = 'ud-frequency-popover';
+      popover.hidden = true;
+      popover.setAttribute('role', 'status');
+      card.appendChild(popover);
+    }
+
+    if (!button.dataset.bound) {
+      button.dataset.bound = 'true';
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const opening = popover.hidden;
+        document.querySelectorAll('.ud-frequency-popover:not([hidden])').forEach((item) => {
+          item.hidden = true;
+          item.parentElement?.querySelector('.ud-frequency-info-button')?.setAttribute('aria-expanded', 'false');
+        });
+        popover.hidden = !opening;
+        button.setAttribute('aria-expanded', opening ? 'true' : 'false');
+      });
+    }
+
+    return { button, popover };
+  }
+
+  function bindFrequencyDismissEvents() {
+    if (udState.frequencyEventsBound) return;
+    udState.frequencyEventsBound = true;
+    document.addEventListener('click', (event) => {
+      if (event.target.closest?.('.ud-frequency-info-button, .ud-frequency-popover')) return;
+      document.querySelectorAll('.ud-frequency-popover:not([hidden])').forEach((popover) => {
+        popover.hidden = true;
+        popover.parentElement?.querySelector('.ud-frequency-info-button')?.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      document.querySelectorAll('.ud-frequency-popover:not([hidden])').forEach((popover) => {
+        popover.hidden = true;
+        const button = popover.parentElement?.querySelector('.ud-frequency-info-button');
+        button?.setAttribute('aria-expanded', 'false');
+        button?.focus();
+      });
+    });
+  }
+
+  function updateFrequencyInfo(normalizedWord) {
+    const controls = ensureFrequencyInfo();
+    if (!controls) return;
+    const frequency = udState.frequencyByForm.get(normalizedWord);
+    if (!frequency) {
+      controls.button.hidden = true;
+      controls.popover.hidden = true;
+      return;
+    }
+
+    controls.button.hidden = false;
+    controls.popover.innerHTML = `
+      <strong>بسامد در پیکره نوشتاری Parole</strong>
+      <span>تعداد تکرار: <b>${formatNumber(frequency.frequency_count)}</b></span>
+      <span>سهم از کل پیکره: <b>${formatFrequencyPercent(frequency.frequency_percent)}</b></span>
+      <small>بر پایه فهرست اصلی Kotus/Kielipankki</small>`;
   }
 
   function renderStatus(message, type = 'loading') {
@@ -146,34 +266,86 @@
       </div>`;
   }
 
-  async function loadData() {
-    if (state.promise) return state.promise;
+  function syncDominantPosToAppData() {
+    let appState;
+    try {
+      appState = typeof state !== 'undefined' ? state : null;
+    } catch (error) {
+      return false;
+    }
+    if (!appState?.words?.length || !udState.wordsByForm.size) return false;
 
-    state.promise = Promise.all([
+    let changed = false;
+    appState.words.forEach((word) => {
+      const row = udState.wordsByForm.get(normalizeWord(word.word));
+      const dominant = getDominantUpos(row);
+      if (!dominant?.tag) return;
+      const label = getUposLabel(dominant.tag);
+      if (word.part_of_speech !== dominant.tag || word.part_of_speech_fa !== label) {
+        word.part_of_speech = dominant.tag;
+        word.part_of_speech_fa = label;
+        word.ud_upos_percent = Number(dominant.percent) || 0;
+        changed = true;
+      }
+      const mapped = appState.wordMap?.get(normalizeWord(word.word));
+      if (mapped && mapped !== word) {
+        mapped.part_of_speech = dominant.tag;
+        mapped.part_of_speech_fa = label;
+        mapped.ud_upos_percent = Number(dominant.percent) || 0;
+      }
+    });
+
+    if (changed) {
+      try {
+        if (typeof renderPosFilters === 'function') renderPosFilters();
+        if (typeof renderDictionaryList === 'function') renderDictionaryList();
+      } catch (error) {
+        console.warn('UD POS values were applied, but the dictionary list could not be refreshed:', error);
+      }
+    }
+    return true;
+  }
+
+  function scheduleDominantPosSync() {
+    [0, 300, 900, 1800].forEach((delay) => {
+      window.setTimeout(syncDominantPosToAppData, delay);
+    });
+  }
+
+  async function loadData() {
+    if (udState.promise) return udState.promise;
+
+    udState.promise = Promise.all([
       fetch(SUMMARY_URL, { cache: 'no-cache' }),
       fetch(LABELS_URL, { cache: 'no-cache' }),
-    ]).then(async ([summaryResponse, labelsResponse]) => {
-      if (!summaryResponse.ok || !labelsResponse.ok) {
-        throw new Error('UD data request failed');
+      fetch(VOCABULARY_URL),
+    ]).then(async ([summaryResponse, labelsResponse, vocabularyResponse]) => {
+      if (!summaryResponse.ok || !labelsResponse.ok || !vocabularyResponse.ok) {
+        throw new Error('UD or vocabulary data request failed');
       }
-      const [summary, labels] = await Promise.all([
+      const [summary, labels, vocabulary] = await Promise.all([
         summaryResponse.json(),
         labelsResponse.json(),
+        vocabularyResponse.json(),
       ]);
-      if (!Array.isArray(summary.words)) {
-        throw new Error('Invalid UD summary schema');
+      if (!Array.isArray(summary.words) || !Array.isArray(vocabulary.words)) {
+        throw new Error('Invalid UD or vocabulary schema');
       }
-      state.labels = labels;
-      state.wordsByForm = new Map(
+      udState.labels = labels;
+      udState.wordsByForm = new Map(
         summary.words.map((row) => [normalizeWord(row.word), row]),
       );
+      udState.frequencyByForm = new Map(
+        vocabulary.words.map((row) => [normalizeWord(row.word), row]),
+      );
+      scheduleDominantPosSync();
       return summary;
     }).catch((error) => {
-      state.promise = null;
+      udState.promise = null;
       throw error;
     });
 
-    return state.promise;
+    return udState.promise;
   }
 
   function renderTreebanks(row) {
@@ -215,16 +387,57 @@
       </span>`).join('')}</div>`;
   }
 
+  function highlightTarget(text, targetForm) {
+    const safeText = escapeHtml(text);
+    const safeTarget = escapeHtml(targetForm || '');
+    if (!safeTarget) return safeText;
+    try {
+      const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])(${escapeRegExp(safeTarget)})(?=$|[^\\p{L}\\p{N}])`, 'iu');
+      return safeText.replace(pattern, '$1<mark>$2</mark>');
+    } catch (error) {
+      return safeText;
+    }
+  }
+
+  function renderUdExample(example, compact = false) {
+    if (!example?.text) return '';
+    const source = [example.treebank, example.split].filter(Boolean).join(' · ');
+    return `
+      <figure class="ud-example ${compact ? 'is-compact' : ''}">
+        <blockquote lang="fi" dir="ltr">${highlightTarget(example.text, example.target_form)}</blockquote>
+        <figcaption>
+          <span>${escapeHtml(source || 'UD')}</span>
+          ${example.target_lemma ? `<span>lemma: <b class="ud-ltr">${escapeHtml(example.target_lemma)}</b></span>` : ''}
+        </figcaption>
+      </figure>`;
+  }
+
+  function renderCorpusExamples(row) {
+    const examples = Array.isArray(row.examples) ? row.examples : [];
+    if (!examples.length) return '';
+    return `
+      <article class="ud-card ud-examples-card">
+        <header class="ud-card-header">
+          <div><h3>مثال‌های واقعی از پیکره</h3><span>UD sentences</span></div>
+          <span class="ud-disclosure-count">${formatNumber(examples.length)} مثال</span>
+        </header>
+        <div class="ud-example-list">${examples.map((example) => renderUdExample(example)).join('')}</div>
+      </article>`;
+  }
+
   function renderFeatureValues(feature) {
-    return (feature.values || []).map((item) => {
+    return `<div class="ud-feature-values">${(feature.values || []).map((item) => {
       const translated = getFeatureValueLabel(feature.name, item.value);
       return `
-        <span class="ud-value-chip" title="${formatNumber(item.count)} رخداد">
-          <span class="ud-code">${escapeHtml(item.value)}</span>
-          ${translated ? `<span>${escapeHtml(translated)}</span>` : ''}
-          <b>${formatPercent(item.percent)}</b>
-        </span>`;
-    }).join('');
+        <div class="ud-feature-value">
+          <div class="ud-value-chip" title="${formatNumber(item.count)} رخداد">
+            <span class="ud-code">${escapeHtml(item.value)}</span>
+            ${translated ? `<span>${escapeHtml(translated)}</span>` : ''}
+            <b>${formatPercent(item.percent)}</b>
+          </div>
+          ${item.example ? renderUdExample(item.example, true) : ''}
+        </div>`;
+    }).join('')}</div>`;
   }
 
   function renderFeatures(row) {
@@ -242,7 +455,7 @@
           </div>
           <small>در ${formatPercent(feature.coverage_percent)} شواهد</small>
         </header>
-        <div class="ud-value-list">${renderFeatureValues(feature)}</div>
+        ${renderFeatureValues(feature)}
       </article>`).join('')}</div>`;
   }
 
@@ -338,10 +551,20 @@
       </aside>`;
   }
 
+  function applyCurrentDominantPos(row) {
+    const detailPos = document.getElementById('detail-pos');
+    const dominant = getDominantUpos(row);
+    if (!detailPos || !dominant?.tag) return;
+    detailPos.textContent = getUposLabel(dominant.tag);
+    detailPos.title = `${dominant.tag} · ${formatPercent(dominant.percent)} از رخدادهای UD`;
+    detailPos.dataset.udUpos = dominant.tag;
+  }
+
   function renderWord(row) {
     const section = ensureSection();
     if (!section) return;
 
+    applyCurrentDominantPos(row);
     const treebankCount = Object.values(row.treebanks || {}).filter((count) => Number(count) > 0).length;
     const surfaceTokenCount = Number(row.surface_kinds?.token) || 0;
     const uposNote = row.upos_observed_occurrences < row.occurrences
@@ -354,7 +577,7 @@
         <div>
           <span class="ud-kicker">تحلیل پیکره‌ای UD 2.18</span>
           <h2>این واژه در متن‌های واقعی چگونه به‌کار رفته است؟</h2>
-          <p>آمار زیر از برچسب‌گذاری دستوری و نحوی چهار treebank فنلاندی استخراج شده است.</p>
+          <p>آمار و مثال‌ها از برچسب‌گذاری دستوری و نحوی چهار treebank فنلاندی استخراج شده‌اند.</p>
         </div>
         <span class="ud-evidence-badge">${formatNumber(row.occurrences)} رخداد</span>
       </div>
@@ -388,9 +611,11 @@
         ${renderLemmas(row)}
       </article>
 
+      ${renderCorpusExamples(row)}
+
       <details class="ud-disclosure">
         <summary>
-          <span><strong>ویژگی‌های صرفی</strong><small>FEATS و مقدارهای مشاهده‌شده</small></span>
+          <span><strong>ویژگی‌های صرفی همراه مثال</strong><small>FEATS، مقدارها و یک جمله واقعی برای هر مقدار موجود</small></span>
           <span class="ud-disclosure-count">${formatNumber(row.features?.length || 0)} گروه</span>
         </summary>
         <div class="ud-disclosure-body">${renderFeatures(row)}</div>
@@ -423,7 +648,7 @@
         <div class="ud-disclosure-body">${renderAnalyses(row)}</div>
       </details>
 
-      <p class="ud-source-note">درصدها سهم رخدادهای همین صورت واژگانی در فایل‌های بارگذاری‌شده UD هستند و لزوماً توزیع کل زبان فنلاندی را نشان نمی‌دهند.</p>`;
+      <p class="ud-source-note">درصدهای UD سهم رخدادهای همین صورت واژگانی در treebankهای بارگذاری‌شده‌اند. تعداد و درصد کنار رتبه بسامد، جداگانه از فهرست اصلی Parole می‌آیند.</p>`;
   }
 
   async function refreshForCurrentWord(force = false) {
@@ -431,14 +656,16 @@
     const word = wordElement?.textContent?.trim() || '';
     if (!word) return;
     const normalized = normalizeWord(word);
-    if (!force && normalized === state.lastWord) return;
-    state.lastWord = normalized;
+    if (!force && normalized === udState.lastWord) return;
+    udState.lastWord = normalized;
 
     renderStatus('در حال بارگذاری تحلیل پیکره‌ای…');
     try {
       await loadData();
       if (normalizeWord(document.getElementById('detail-word')?.textContent) !== normalized) return;
-      const row = state.wordsByForm.get(normalized);
+      updateFrequencyInfo(normalized);
+      syncDominantPosToAppData();
+      const row = udState.wordsByForm.get(normalized);
       if (!row) {
         renderStatus('برای این واژه تحلیل UD پیدا نشد.', 'error');
         return;
@@ -452,11 +679,21 @@
 
   function initialize() {
     ensureSection();
+    ensureFrequencyInfo();
+    bindFrequencyDismissEvents();
     const wordElement = document.getElementById('detail-word');
     if (!wordElement) return;
 
     const observer = new MutationObserver(() => refreshForCurrentWord());
     observer.observe(wordElement, { childList: true, characterData: true, subtree: true });
+
+    loadData().then(() => {
+      scheduleDominantPosSync();
+      const currentWord = normalizeWord(wordElement.textContent);
+      if (currentWord) updateFrequencyInfo(currentWord);
+    }).catch((error) => {
+      console.error('Failed to preload UD analysis:', error);
+    });
 
     if (wordElement.textContent.trim()) {
       refreshForCurrentWord(true);
