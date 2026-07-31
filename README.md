@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.1.2`
+- Version: `1.2.0`
 - Vocabulary entries: **200**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -28,13 +28,18 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
 - focused practice for an individual dictionary word
-- profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
+- settings-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
+- clickable reviewed-word history with accuracy and learning state
+- per-word review status on dictionary detail pages
+- approximate reviewed and mastered token coverage derived from Parole frequency percentages
 - persistent local review scheduling, answer counts, lapses, and mastery status for each started word
-- profile page combining review progress and appearance settings
+- Settings page combining review progress, appearance controls, and access to About
 - progressive hints and a compact Finnish letter keyboard
 - linked dictionary words inside examples
 - light and dark themes
 - locally saved score, exercise mode, theme, and review progress
+
+The coverage percentage is an estimate of how much of the written Parole corpus is represented by reviewed surface forms. It is not a literal measurement of complete Finnish comprehension or communicative ability.
 
 ## Data ownership
 
@@ -110,7 +115,7 @@ Then open `http://localhost:8000`.
 
 ## Quality and deployment
 
-Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, spaced-repetition scheduling, profile placement, script order, documentation parity, English-only source comments, and deployment wiring.
+Pull requests and non-main branches run continuous integration. The suite checks semantic-version consistency, vocabulary reproducibility, exact Parole alignment, vocabulary schema, UD coverage, the `ovat → AUX` regression fixture, feature-specific examples, dynamic POS filters, spaced-repetition scheduling, frequency coverage, reviewed-word ordering, per-word status, Settings navigation, script order, documentation parity, English-only source comments, and deployment wiring.
 
 GitHub Pages deployment depends on the complete validation job and cannot publish a revision with failing tests or stale generated files.
 
@@ -119,7 +124,7 @@ GitHub Pages deployment depends on the complete validation job and cannot publis
 ### Phase 1 — smarter review
 
 - [x] **Spaced-repetition review queue.** It prioritizes overdue words and introduces at most ten new words per local day. Correct and incorrect answers automatically schedule the next review and persist the schedule in local storage.
-- [ ] **Mastery score and answer history for each word.** A per-word score will summarize accuracy, review interval, and recent performance in a learner-friendly form. A chronological history will show when the word was practiced and how each answer changed its status.
+- [ ] **Mastery score and answer history for each word.** Aggregate accuracy and current review state are now visible, but a chronological event history is still pending. The completed feature will show when every answer occurred and how it changed the word schedule.
 - [ ] **Focused practice for weak or frequently missed words.** A dedicated session will select words with low accuracy, repeated lapses, or short review intervals. Learners will be able to practice this weak set without mixing it with already stable vocabulary.
 - [ ] **Filters by frequency range and lemma.** The dictionary and practice pool will support selecting source-rank ranges and grouping inflected forms by their lemma. These filters will make it easier to study a defined frequency band or all forms of the same base word.
 - [ ] **Session length and difficulty settings.** Learners will choose how many questions a session contains and how many new words may appear. Difficulty controls will adjust distractor similarity, hint availability, and the balance of exercise modes.
