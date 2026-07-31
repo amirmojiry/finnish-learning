@@ -1,17 +1,17 @@
 (() => {
   const THEME_KEY = 'fiAppTheme';
-  const settingsView = document.querySelector('#settings-view');
+  const profileView = document.querySelector('#profile-view');
   const aboutView = document.querySelector('#about-view');
   const homeView = document.querySelector('#home-view');
   const dictionaryView = document.querySelector('#dictionary-view');
   const mobileTitle = document.querySelector('#mobile-view-title');
   const themeLabel = document.querySelector('#current-theme-label');
   const themeButtons = [...document.querySelectorAll('[data-theme-choice]')];
-  const settingsLinks = [...document.querySelectorAll('.settings-view-link')];
+  const profileLinks = [...document.querySelectorAll('.profile-view-link')];
   const aboutLinks = [...document.querySelectorAll('.about-view-link')];
   const regularViewLinks = [...document.querySelectorAll('[data-view-link]')];
   const allNavItems = [...document.querySelectorAll('.bottom-nav-item, .desktop-view-link')];
-  const specialNavItems = [...document.querySelectorAll('.settings-view-link, .about-view-link')];
+  const specialNavItems = [...document.querySelectorAll('.profile-view-link, .about-view-link')];
   const themeMeta = document.querySelector('meta[name="theme-color"]');
 
   function currentTheme() {
@@ -32,7 +32,7 @@
   }
 
   function specialViewFromHash() {
-    if (location.hash === '#settings') return 'settings';
+    if (location.hash === '#profile' || location.hash === '#settings') return 'profile';
     if (location.hash === '#about') return 'about';
     return null;
   }
@@ -47,22 +47,22 @@
   }
 
   function showSpecialView(view, { updateHash = true } = {}) {
-    if (!settingsView || !aboutView) return;
+    if (!profileView || !aboutView) return;
 
     homeView.hidden = true;
     dictionaryView.hidden = true;
-    settingsView.hidden = view !== 'settings';
+    profileView.hidden = view !== 'profile';
     aboutView.hidden = view !== 'about';
 
-    if (mobileTitle) mobileTitle.textContent = view === 'settings' ? 'تنظیمات' : 'درباره';
+    if (mobileTitle) mobileTitle.textContent = view === 'profile' ? 'پروفایل' : 'درباره';
     activateSpecialNavigation(view);
 
-    const hash = view === 'settings' ? '#settings' : '#about';
+    const hash = view === 'profile' ? '#profile' : '#about';
     if (updateHash && location.hash !== hash) history.replaceState(null, '', hash);
   }
 
   function leaveSpecialViews() {
-    if (settingsView) settingsView.hidden = true;
+    if (profileView) profileView.hidden = true;
     if (aboutView) aboutView.hidden = true;
 
     for (const item of specialNavItems) {
@@ -78,9 +78,9 @@
   }
 
   themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice)));
-  settingsLinks.forEach((link) => link.addEventListener('click', (event) => {
+  profileLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
-    showSpecialView('settings');
+    showSpecialView('profile');
   }));
   aboutLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -93,13 +93,13 @@
     const view = specialViewFromHash();
     if (!view) return;
 
-    const targetView = view === 'settings' ? settingsView : aboutView;
+    const targetView = view === 'profile' ? profileView : aboutView;
     if (targetView.hidden || !homeView.hidden || !dictionaryView.hidden) {
       showSpecialView(view, { updateHash: false });
     }
   });
 
-  for (const view of [homeView, dictionaryView, settingsView, aboutView]) {
+  for (const view of [homeView, dictionaryView, profileView, aboutView]) {
     if (view) viewObserver.observe(view, { attributes: true, attributeFilter: ['hidden'] });
   }
 
