@@ -37,6 +37,9 @@ jobs:
       - name: Enrich CoNLL-U multiword tokens
         run: python3 tools/ud-import/enrich_multiword_tokens.py
 
+      - name: Attach feature-specific examples
+        run: python3 tools/ud-import/enrich_ui_examples.py
+
       - name: Build compact browser summary
         run: python3 tools/ud-import/build_ui_summary.py
 
@@ -44,7 +47,41 @@ jobs:
         run: python3 tools/ud-import/connect_ui.py
 
       - name: Validate generated JSON files and UI references
-        run: python3 -c "import json,pathlib; p=pathlib.Path('data/ud'); names=['word-analyses.json','word-summary.json','examples.json','labels-fa.json','metadata.json','coverage-report.json']; data={n:json.loads((p/n).read_text(encoding='utf-8')) for n in names}; assert data['word-summary.json']['word_count']==200; html=pathlib.Path('index.html').read_text(encoding='utf-8'); assert html.count('css/ud-analysis.css')==1 and html.count('ud-analysis.js')==1; print((p/'coverage-report.json').read_text(encoding='utf-8'))"
+        run: |
+          python3 - <<'PY'
+          import json
+          import pathlib
+
+          data_dir = pathlib.Path('data/ud')
+          names = [
+              'word-analyses.json',
+              'word-summary.json',
+              'examples.json',
+              'labels-fa.json',
+              'metadata.json',
+              'coverage-report.json',
+          ]
+          data = {
+              name: json.loads((data_dir / name).read_text(encoding='utf-8'))
+              for name in names
+          }
+          summary = data['word-summary.json']
+          assert summary['schema_version'] == 2
+          assert summary['word_count'] == 200
+
+          ovat = next(row for row in summary['words'] if row['word'] == 'ovat')
+          assert ovat['upos'][0]['tag'] == 'AUX'
+          assert ovat['examples']
+          mood = next(feature for feature in ovat['features'] if feature['name'] == 'Mood')
+          indicative = next(value for value in mood['values'] if value['value'] == 'Ind')
+          assert indicative.get('example', {}).get('text')
+
+          html = pathlib.Path('index.html').read_text(encoding='utf-8')
+          assert html.count('css/ud-analysis.css') == 1
+          assert html.count('css/ud-analysis-examples.css') == 1
+          assert html.count('ud-analysis.js') == 1
+          print((data_dir / 'coverage-report.json').read_text(encoding='utf-8'))
+          PY
 
       - name: Upload generated data
         uses: actions/upload-artifact@v4
