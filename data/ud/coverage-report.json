@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-31T08:45:39+00:00",
+  "generated_at": "2026-07-31T08:46:12+00:00",
   "target_word_count": 200,
-  "found_word_count": 199,
-  "missing_word_count": 1,
-  "coverage_percent": 99.5,
-  "total_matched_occurrences": 93446,
+  "found_word_count": 200,
+  "missing_word_count": 0,
+  "coverage_percent": 100.0,
+  "total_matched_occurrences": 93694,
   "words_with_multiple_upos": 81,
   "words_with_multiple_lemmas": 65,
-  "words_with_examples": 199,
-  "selected_sentence_count": 865,
+  "words_with_examples": 200,
+  "selected_sentence_count": 870,
   "treebanks": {
     "FTB": {
       "files": 3,
@@ -36,13 +36,11 @@
       "matched_tokens": 45496
     }
   },
-  "missing_words": [
-    {
-      "word_id": "fi-0065",
-      "rank": 65,
-      "word": "ettei"
-    }
-  ],
+  "missing_words": [],
   "low_evidence_words": [],
-  "words_without_selected_examples": []
+  "words_without_selected_examples": [],
+  "multiword_token_forms": [
+    "ettei"
+  ],
+  "multiword_token_occurrences": 248
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-31T08:45:39+00:00",
+  "generated_at": "2026-07-31T08:46:12+00:00",
   "ud_release": "2.18",
   "input_directory": "ud-import-2.18",
   "vocabulary_file": "data/common-words.json",
@@ -127,5 +127,12 @@
       "tokens": 162815,
       "matched_tokens": 36203
     }
-  ]
+  ],
+  "multiword_token_support": {
+    "enabled": true,
+    "forms": [
+      "ettei"
+    ],
+    "occurrences": 248
+  }
 }

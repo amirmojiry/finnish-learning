@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-31T08:45:39+00:00",
+  "generated_at": "2026-07-31T08:46:12+00:00",
   "ud_release": "2.18",
   "sentences": [
     {
@@ -24235,6 +24235,169 @@
       ]
     },
     {
+      "sentence_id": "tdt:train:b202.56",
+      "sent_id": "b202.56",
+      "treebank": "TDT",
+      "split": "train",
+      "source_file": "fi_tdt-ud-train.conllu",
+      "text": "Harmi, ettei sitä saatu videolle!",
+      "token_count": 8,
+      "target_token_ids": [
+        "3-4"
+      ],
+      "matched_targets": [
+        {
+          "word_id": "fi-0065",
+          "rank": 65,
+          "word": "ettei",
+          "token_id": "3-4",
+          "component_token_ids": [
+            3,
+            4
+          ],
+          "kind": "multiword_token"
+        }
+      ],
+      "tokens": [
+        {
+          "id": 1,
+          "form": "Harmi",
+          "lemma": "harmi",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 0,
+          "deprel": "root"
+        },
+        {
+          "id": 2,
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 6,
+          "deprel": "punct"
+        },
+        {
+          "id": 3,
+          "form": "että",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {},
+          "head": 6,
+          "deprel": "mark"
+        },
+        {
+          "id": 4,
+          "form": "ei",
+          "lemma": "ei",
+          "upos": "AUX",
+          "feats": {
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Polarity": [
+              "Neg"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "aux"
+        },
+        {
+          "id": 5,
+          "form": "sitä",
+          "lemma": "se",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PronType": [
+              "Dem"
+            ]
+          },
+          "head": 6,
+          "deprel": "obj"
+        },
+        {
+          "id": 6,
+          "form": "saatu",
+          "lemma": "saada",
+          "upos": "VERB",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PartForm": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Part"
+            ],
+            "Voice": [
+              "Pass"
+            ]
+          },
+          "head": 1,
+          "deprel": "csubj:cop"
+        },
+        {
+          "id": 7,
+          "form": "videolle",
+          "lemma": "video",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "All"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 6,
+          "deprel": "obl"
+        },
+        {
+          "id": 8,
+          "form": "!",
+          "lemma": "!",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 1,
+          "deprel": "punct"
+        }
+      ],
+      "multiword_tokens": [
+        {
+          "id": "3-4",
+          "start": 3,
+          "end": 4,
+          "form": "ettei"
+        }
+      ]
+    },
+    {
       "sentence_id": "tdt:train:b203.28",
       "sent_id": "b203.28",
       "treebank": "TDT",
@@ -31437,6 +31600,159 @@
       ]
     },
     {
+      "sentence_id": "tdt:train:e1029.33",
+      "sent_id": "e1029.33",
+      "treebank": "TDT",
+      "split": "train",
+      "source_file": "fi_tdt-ud-train.conllu",
+      "text": "Yksikkö vastasi, ettei ole.",
+      "token_count": 7,
+      "target_token_ids": [
+        "4-5"
+      ],
+      "matched_targets": [
+        {
+          "word_id": "fi-0065",
+          "rank": 65,
+          "word": "ettei",
+          "token_id": "4-5",
+          "component_token_ids": [
+            4,
+            5
+          ],
+          "kind": "multiword_token"
+        }
+      ],
+      "tokens": [
+        {
+          "id": 1,
+          "form": "Yksikkö",
+          "lemma": "yksikkö",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 2,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 2,
+          "form": "vastasi",
+          "lemma": "vastata",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 0,
+          "deprel": "root"
+        },
+        {
+          "id": 3,
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 6,
+          "deprel": "punct"
+        },
+        {
+          "id": 4,
+          "form": "että",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {},
+          "head": 6,
+          "deprel": "mark"
+        },
+        {
+          "id": 5,
+          "form": "ei",
+          "lemma": "ei",
+          "upos": "AUX",
+          "feats": {
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Polarity": [
+              "Neg"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "aux"
+        },
+        {
+          "id": 6,
+          "form": "ole",
+          "lemma": "olla",
+          "upos": "VERB",
+          "feats": {
+            "Connegative": [
+              "Yes"
+            ],
+            "Mood": [
+              "Ind"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ]
+          },
+          "head": 2,
+          "deprel": "ccomp"
+        },
+        {
+          "id": 7,
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 2,
+          "deprel": "punct"
+        }
+      ],
+      "multiword_tokens": [
+        {
+          "id": "4-5",
+          "start": 4,
+          "end": 5,
+          "form": "ettei"
+        }
+      ]
+    },
+    {
       "sentence_id": "tdt:train:e1029.36",
       "sent_id": "e1029.36",
       "treebank": "TDT",
@@ -35649,6 +35965,200 @@
           "feats": {},
           "head": 5,
           "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sentence_id": "tdt:train:f102.25",
+      "sent_id": "f102.25",
+      "treebank": "TDT",
+      "split": "train",
+      "source_file": "fi_tdt-ud-train.conllu",
+      "text": "On niin kirkasta ettei kukaan näe mitään.",
+      "token_count": 9,
+      "target_token_ids": [
+        "4-5"
+      ],
+      "matched_targets": [
+        {
+          "word_id": "fi-0065",
+          "rank": 65,
+          "word": "ettei",
+          "token_id": "4-5",
+          "component_token_ids": [
+            4,
+            5
+          ],
+          "kind": "multiword_token"
+        }
+      ],
+      "tokens": [
+        {
+          "id": 1,
+          "form": "On",
+          "lemma": "olla",
+          "upos": "AUX",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "0"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 3,
+          "deprel": "cop"
+        },
+        {
+          "id": 2,
+          "form": "niin",
+          "lemma": "niin",
+          "upos": "ADV",
+          "feats": {},
+          "head": 3,
+          "deprel": "advmod"
+        },
+        {
+          "id": 3,
+          "form": "kirkasta",
+          "lemma": "kirkas",
+          "upos": "ADJ",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Degree": [
+              "Pos"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 0,
+          "deprel": "root"
+        },
+        {
+          "id": 4,
+          "form": "että",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {},
+          "head": 7,
+          "deprel": "mark"
+        },
+        {
+          "id": 5,
+          "form": "ei",
+          "lemma": "ei",
+          "upos": "AUX",
+          "feats": {
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Polarity": [
+              "Neg"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 7,
+          "deprel": "aux"
+        },
+        {
+          "id": 6,
+          "form": "kukaan",
+          "lemma": "kukaan",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PronType": [
+              "Ind"
+            ]
+          },
+          "head": 7,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 7,
+          "form": "näe",
+          "lemma": "nähdä",
+          "upos": "VERB",
+          "feats": {
+            "Connegative": [
+              "Yes"
+            ],
+            "Mood": [
+              "Ind"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ]
+          },
+          "head": 3,
+          "deprel": "ccomp"
+        },
+        {
+          "id": 8,
+          "form": "mitään",
+          "lemma": "mikään",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PronType": [
+              "Ind"
+            ]
+          },
+          "head": 7,
+          "deprel": "obj"
+        },
+        {
+          "id": 9,
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 3,
+          "deprel": "punct"
+        }
+      ],
+      "multiword_tokens": [
+        {
+          "id": "4-5",
+          "start": 4,
+          "end": 5,
+          "form": "ettei"
         }
       ]
     },
@@ -51213,6 +51723,203 @@
           "feats": {},
           "head": 3,
           "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sentence_id": "tdt:train:fD03.57",
+      "sent_id": "fD03.57",
+      "treebank": "TDT",
+      "split": "train",
+      "source_file": "fi_tdt-ud-train.conllu",
+      "text": "Tulimme katsomaan, ettei mitään ole hätänä.",
+      "token_count": 9,
+      "target_token_ids": [
+        "4-5"
+      ],
+      "matched_targets": [
+        {
+          "word_id": "fi-0065",
+          "rank": 65,
+          "word": "ettei",
+          "token_id": "4-5",
+          "component_token_ids": [
+            4,
+            5
+          ],
+          "kind": "multiword_token"
+        }
+      ],
+      "tokens": [
+        {
+          "id": 1,
+          "form": "Tulimme",
+          "lemma": "tulla",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Plur"
+            ],
+            "Person": [
+              "1"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 0,
+          "deprel": "root"
+        },
+        {
+          "id": 2,
+          "form": "katsomaan",
+          "lemma": "katsoa",
+          "upos": "VERB",
+          "feats": {
+            "Case": [
+              "Ill"
+            ],
+            "InfForm": [
+              "3"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "VerbForm": [
+              "Inf"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 1,
+          "deprel": "xcomp"
+        },
+        {
+          "id": 3,
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 8,
+          "deprel": "punct"
+        },
+        {
+          "id": 4,
+          "form": "että",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {},
+          "head": 8,
+          "deprel": "mark"
+        },
+        {
+          "id": 5,
+          "form": "ei",
+          "lemma": "ei",
+          "upos": "AUX",
+          "feats": {
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Polarity": [
+              "Neg"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 8,
+          "deprel": "aux"
+        },
+        {
+          "id": 6,
+          "form": "mitään",
+          "lemma": "mikään",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PronType": [
+              "Ind"
+            ]
+          },
+          "head": 8,
+          "deprel": "nsubj:cop"
+        },
+        {
+          "id": 7,
+          "form": "ole",
+          "lemma": "olla",
+          "upos": "AUX",
+          "feats": {
+            "Connegative": [
+              "Yes"
+            ],
+            "Mood": [
+              "Ind"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ]
+          },
+          "head": 8,
+          "deprel": "cop"
+        },
+        {
+          "id": 8,
+          "form": "hätänä",
+          "lemma": "hätä",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Ess"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 2,
+          "deprel": "ccomp"
+        },
+        {
+          "id": 9,
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 1,
+          "deprel": "punct"
+        }
+      ],
+      "multiword_tokens": [
+        {
+          "id": "4-5",
+          "start": 4,
+          "end": 5,
+          "form": "ettei"
         }
       ]
     },
@@ -124683,6 +125390,204 @@
           "feats": {},
           "head": 2,
           "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sentence_id": "tdt:train:wn079.7",
+      "sent_id": "wn079.7",
+      "treebank": "TDT",
+      "split": "train",
+      "source_file": "fi_tdt-ud-train.conllu",
+      "text": "Ulkoministeriössä arvellaan ettei asiaa oteta EY-tuomioistuimen käsiteltäväksi .",
+      "token_count": 9,
+      "target_token_ids": [
+        "3-4"
+      ],
+      "matched_targets": [
+        {
+          "word_id": "fi-0065",
+          "rank": 65,
+          "word": "ettei",
+          "token_id": "3-4",
+          "component_token_ids": [
+            3,
+            4
+          ],
+          "kind": "multiword_token"
+        }
+      ],
+      "tokens": [
+        {
+          "id": 1,
+          "form": "Ulkoministeriössä",
+          "lemma": "ulko#ministeriö",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Ine"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 2,
+          "deprel": "obl"
+        },
+        {
+          "id": 2,
+          "form": "arvellaan",
+          "lemma": "arvella",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Pass"
+            ]
+          },
+          "head": 0,
+          "deprel": "root"
+        },
+        {
+          "id": 3,
+          "form": "että",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {},
+          "head": 6,
+          "deprel": "mark"
+        },
+        {
+          "id": 4,
+          "form": "ei",
+          "lemma": "ei",
+          "upos": "AUX",
+          "feats": {
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Polarity": [
+              "Neg"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "aux"
+        },
+        {
+          "id": 5,
+          "form": "asiaa",
+          "lemma": "asia",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 6,
+          "deprel": "obj"
+        },
+        {
+          "id": 6,
+          "form": "oteta",
+          "lemma": "ottaa",
+          "upos": "VERB",
+          "feats": {
+            "Connegative": [
+              "Yes"
+            ],
+            "Mood": [
+              "Ind"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Pass"
+            ]
+          },
+          "head": 2,
+          "deprel": "ccomp"
+        },
+        {
+          "id": 7,
+          "form": "EY-tuomioistuimen",
+          "lemma": "EY#tuomio#istuin",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Gen"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 8,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 8,
+          "form": "käsiteltäväksi",
+          "lemma": "käsitellä",
+          "upos": "VERB",
+          "feats": {
+            "Case": [
+              "Tra"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PartForm": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Part"
+            ],
+            "Voice": [
+              "Pass"
+            ]
+          },
+          "head": 6,
+          "deprel": "advcl"
+        },
+        {
+          "id": 9,
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 2,
+          "deprel": "punct"
+        }
+      ],
+      "multiword_tokens": [
+        {
+          "id": "3-4",
+          "start": 3,
+          "end": 4,
+          "form": "ettei"
         }
       ]
     },
