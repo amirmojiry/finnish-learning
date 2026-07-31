@@ -1,5 +1,16 @@
 # Finnish Learning
 
+<!-- PROJECT_STATUS_START -->
+## Project status
+
+- Version: `1.0.0`
+- Vocabulary entries: **200**
+- Required quality gate: `npm test`
+- Production deploys run only after the complete test suite passes.
+
+See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
+<!-- PROJECT_STATUS_END -->
+
 **[Open the live app](https://amirmojiry.github.io/finnish-learning/)**
 
 [نسخه فارسی](README.fa.md)
