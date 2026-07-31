@@ -8,12 +8,13 @@ import json
 from pathlib import Path
 from typing import Any
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 MAX_LEMMAS = 8
 MAX_ANALYSES = 6
 MAX_DEPENDENCY_RELATIONS = 8
 MAX_CONTEXT_ITEMS = 3
 MAX_FEATURE_VALUES = 12
+MAX_UI_EXAMPLES = 3
 
 
 def compact_context(rows: list[dict[str, Any]] | None) -> list[dict[str, Any]]:
@@ -26,6 +27,20 @@ def compact_context(rows: list[dict[str, Any]] | None) -> list[dict[str, Any]]:
         }
         for row in (rows or [])[:MAX_CONTEXT_ITEMS]
     ]
+
+
+def compact_example(row: dict[str, Any] | None) -> dict[str, Any] | None:
+    if not row or not row.get("text"):
+        return None
+    return {
+        "sentence_id": row.get("sentence_id", ""),
+        "text": row.get("text", ""),
+        "treebank": row.get("treebank", ""),
+        "split": row.get("split", ""),
+        "target_form": row.get("target_form", ""),
+        "target_lemma": row.get("target_lemma", ""),
+        "target_upos": row.get("target_upos", ""),
+    }
 
 
 def compact_analysis(row: dict[str, Any]) -> dict[str, Any]:
@@ -79,21 +94,29 @@ def compact_word(row: dict[str, Any]) -> dict[str, Any]:
         ],
     }
 
+    feature_examples = row.get("feature_examples") or {}
     features = []
     for feature in row.get("features", []):
+        feature_name = feature.get("name", "")
+        value_examples = feature_examples.get(feature_name, {})
+        values = []
+        for value in feature.get("values", [])[:MAX_FEATURE_VALUES]:
+            value_name = value.get("value", "")
+            compacted_value = {
+                "value": value_name,
+                "count": int(value.get("count", 0)),
+                "percent": float(value.get("percent", 0)),
+            }
+            example = compact_example(value_examples.get(value_name))
+            if example:
+                compacted_value["example"] = example
+            values.append(compacted_value)
         features.append(
             {
-                "name": feature.get("name", ""),
+                "name": feature_name,
                 "observed_count": int(feature.get("observed_count", 0)),
                 "coverage_percent": float(feature.get("coverage_percent", 0)),
-                "values": [
-                    {
-                        "value": value.get("value", ""),
-                        "count": int(value.get("count", 0)),
-                        "percent": float(value.get("percent", 0)),
-                    }
-                    for value in feature.get("values", [])[:MAX_FEATURE_VALUES]
-                ],
+                "values": values,
             }
         )
 
@@ -120,6 +143,11 @@ def compact_word(row: dict[str, Any]) -> dict[str, Any]:
         "dependency_as_head": as_head,
         "analyses": [
             compact_analysis(item) for item in row.get("analyses", [])[:MAX_ANALYSES]
+        ],
+        "examples": [
+            example
+            for item in row.get("ui_examples", [])[:MAX_UI_EXAMPLES]
+            if (example := compact_example(item))
         ],
     }
     dominant = row.get("dominant_analysis")
