@@ -7,9 +7,11 @@ import re
 from pathlib import Path
 
 INDEX_PATH = Path("index.html")
-CSS_TAG = '  <link rel="stylesheet" href="css/ud-analysis.css?v=20260731-2">'
-CSS_EXAMPLES_TAG = '  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=20260731-2">'
-JS_TAG = '  <script src="ud-analysis.js?v=20260731-2" defer></script>'
+VERSION_PATH = Path("VERSION")
+VERSION = VERSION_PATH.read_text(encoding="utf-8").strip()
+CSS_TAG = f'  <link rel="stylesheet" href="css/ud-analysis.css?v={VERSION}">'
+CSS_EXAMPLES_TAG = f'  <link rel="stylesheet" href="css/ud-analysis-examples.css?v={VERSION}">'
+JS_TAG = f'  <script src="ud-analysis.js?v={VERSION}" defer></script>'
 
 
 def replace_or_insert_css(content: str) -> str:
@@ -77,7 +79,7 @@ def main() -> None:
         raise RuntimeError("UD script must be referenced exactly once")
 
     INDEX_PATH.write_text(updated, encoding="utf-8")
-    print("Connected UD analysis assets to index.html")
+    print(f"Connected UD analysis assets for version {VERSION}.")
 
 
 if __name__ == "__main__":
