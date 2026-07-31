@@ -66,11 +66,6 @@ jobs:
           source_path = Path('spaced-repetition.js')
           source = source_path.read_text(encoding='utf-8')
           old_mount = '''    const hero = document.querySelector('#home-view .hero');
-              const quiz = document.getElementById('quiz');
-              if (hero && quiz) hero.insertAdjacentElement('afterend', panel);
-              return panel;'''
-          if old_mount not in source:
-              old_mount = '''    const hero = document.querySelector('#home-view .hero');
     const quiz = document.getElementById('quiz');
     if (hero && quiz) hero.insertAdjacentElement('afterend', panel);
     return panel;'''
@@ -121,3 +116,5 @@ jobs:
         with:
           commit_message: Apply profile review release
           file_pattern: VERSION package.json CHANGELOG.md index.html README.md README.fa.md deploy-version.txt spaced-repetition.js settings.js css/spaced-repetition.css tests/spaced-repetition.test.cjs docs/SPACED_REPETITION.md
+
+# Temporary workflow trigger.
