@@ -1,0 +1,3 @@
+Finnish Learning deployment
+Vocabulary entries: 200
+Build version: 2026-07-31-1021
