@@ -6,6 +6,24 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-07-31
+
+### Added
+
+- A clickable reviewed-word history in settings with per-word accuracy, review state, and direct links to dictionary details.
+- Approximate reviewed and mastered token coverage calculated from the original Parole frequency percentages.
+- Review-status cards on dictionary detail pages for words that have entered spaced repetition.
+
+### Changed
+
+- The primary navigation now contains Home, Dictionary, and Settings; About is available from a compact button inside Settings.
+- Appearance controls and the spaced-repetition dashboard now share the Settings view.
+- The frequency-coverage message explicitly describes corpus token coverage and does not present it as a complete comprehension score.
+
+### Removed
+
+- The obsolete profile review mount helper and the separate Profile navigation label.
+
 ## [1.1.2] - 2026-07-31
 
 ### Changed
