@@ -7,8 +7,9 @@ import re
 from pathlib import Path
 
 INDEX_PATH = Path("index.html")
-CSS_TAG = '  <link rel="stylesheet" href="css/ud-analysis.css?v=20260731-1">'
-JS_TAG = '  <script src="ud-analysis.js?v=20260731-1" defer></script>'
+CSS_TAG = '  <link rel="stylesheet" href="css/ud-analysis.css?v=20260731-2">'
+CSS_EXAMPLES_TAG = '  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=20260731-2">'
+JS_TAG = '  <script src="ud-analysis.js?v=20260731-2" defer></script>'
 
 
 def replace_or_insert_css(content: str) -> str:
@@ -26,6 +27,23 @@ def replace_or_insert_css(content: str) -> str:
     if not anchor.search(content):
         raise RuntimeError("Dictionary stylesheet anchor was not found in index.html")
     return anchor.sub(rf'\1\n{CSS_TAG}', content, count=1)
+
+
+def replace_or_insert_examples_css(content: str) -> str:
+    pattern = re.compile(
+        r'^\s*<link rel="stylesheet" href="css/ud-analysis-examples\.css\?v=[^"]+">\s*$',
+        re.MULTILINE,
+    )
+    if pattern.search(content):
+        return pattern.sub(CSS_EXAMPLES_TAG, content, count=1)
+
+    anchor = re.compile(
+        r'(^\s*<link rel="stylesheet" href="css/ud-analysis\.css\?v=[^"]+">\s*$)',
+        re.MULTILINE,
+    )
+    if not anchor.search(content):
+        raise RuntimeError("UD stylesheet anchor was not found in index.html")
+    return anchor.sub(rf'\1\n{CSS_EXAMPLES_TAG}', content, count=1)
 
 
 def replace_or_insert_js(content: str) -> str:
@@ -48,10 +66,13 @@ def replace_or_insert_js(content: str) -> str:
 def main() -> None:
     content = INDEX_PATH.read_text(encoding="utf-8")
     updated = replace_or_insert_css(content)
+    updated = replace_or_insert_examples_css(updated)
     updated = replace_or_insert_js(updated)
 
     if updated.count("css/ud-analysis.css") != 1:
         raise RuntimeError("UD stylesheet must be referenced exactly once")
+    if updated.count("css/ud-analysis-examples.css") != 1:
+        raise RuntimeError("UD example stylesheet must be referenced exactly once")
     if updated.count("ud-analysis.js") != 1:
         raise RuntimeError("UD script must be referenced exactly once")
 
