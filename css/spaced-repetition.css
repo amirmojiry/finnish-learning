@@ -1,4 +1,4 @@
-.settings-review-slot {
+.profile-review-slot {
   margin-bottom: 20px;
 }
 
@@ -241,7 +241,7 @@
 }
 
 @media (max-width: 620px) {
-  .settings-review-slot {
+  .profile-review-slot {
     margin-bottom: 14px;
   }
 
