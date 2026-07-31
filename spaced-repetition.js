@@ -49,7 +49,7 @@
 
   function sanitizeProgress(progress, now = Date.now()) {
     const clean = emptyProgress(now);
-    if (!progress || typeof progress !== 'object') return clean;
+    if (!progress || typeof progress !== 'object' || progress.version !== SCHEMA_VERSION) return clean;
 
     const words = progress.words && typeof progress.words === 'object' ? progress.words : {};
     for (const [key, record] of Object.entries(words)) {
@@ -298,6 +298,8 @@
       queue = [];
       completionMessage = `مرور امروز تمام شد؛ ${toPersianNumber(sessionCorrect)} پاسخ از ${toPersianNumber(sessionAnswered)} پاسخ درست بود.`;
       if (typeof windowObject.hideFeedback === 'function') windowObject.hideFeedback();
+      const nextButton = document.getElementById('next-word');
+      if (nextButton) nextButton.textContent = 'سؤال بعدی';
       if (typeof windowObject.renderQuestion === 'function') windowObject.renderQuestion();
       updatePanel();
     }
@@ -318,6 +320,8 @@
       queue = [];
       currentWord = null;
       completionMessage = 'مرور متوقف شد. پاسخ‌های ثبت‌شده حفظ شده‌اند.';
+      const nextButton = document.getElementById('next-word');
+      if (nextButton) nextButton.textContent = 'سؤال بعدی';
       if (typeof windowObject.hideFeedback === 'function') windowObject.hideFeedback();
       if (typeof windowObject.renderQuestion === 'function') windowObject.renderQuestion();
       updatePanel();

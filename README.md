@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Vocabulary entries: **200**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
