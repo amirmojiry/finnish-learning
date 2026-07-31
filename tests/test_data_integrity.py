@@ -1,11 +1,12 @@
 import json
-import math
+import re
 import unicodedata
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+PAROLE_LINE = re.compile(r"^(\d+)\s+(\d+)\s+(\S+)\s+\(([\d.]+)\s+%\)$")
 
 
 def load_json(relative_path: str):
@@ -16,16 +17,55 @@ def normalize_word(value: str) -> str:
     return unicodedata.normalize("NFC", value).casefold().strip()
 
 
+def parse_parole_rows(relative_path: str, limit: int):
+    source = (ROOT / relative_path).read_bytes().decode("latin-1")
+    lines = [line.strip() for line in source.splitlines() if line.strip()][:limit]
+    if len(lines) != limit:
+        raise AssertionError(f"Expected {limit} Parole rows, found {len(lines)}")
+
+    rows = []
+    for index, line in enumerate(lines, start=1):
+        match = PAROLE_LINE.fullmatch(line)
+        if not match:
+            raise AssertionError(f"Cannot parse Parole row {index}: {line}")
+        rows.append(
+            {
+                "frequency_rank": int(match.group(1)),
+                "frequency_count": int(match.group(2)),
+                "word": match.group(3),
+                "frequency_percent": float(match.group(4)),
+            }
+        )
+    return rows
+
+
+def example_contains_word(sentence: str, word: str) -> bool:
+    pattern = re.compile(
+        rf"(^|[^\wÅÄÖåäö]){re.escape(word)}(?=$|[^\wÅÄÖåäö])",
+        flags=re.IGNORECASE | re.UNICODE,
+    )
+    return bool(pattern.search(sentence))
+
+
 class VocabularyIntegrityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.vocabulary = load_json("data/common-words.json")
         cls.words = cls.vocabulary["words"]
+        cls.source_rows = parse_parole_rows(
+            cls.vocabulary["source"]["source_file"],
+            len(cls.words),
+        )
 
-    def test_top_level_count_matches_entries(self):
+    def test_top_level_metadata_and_nonempty_vocabulary(self):
         self.assertGreater(len(self.words), 0)
-        self.assertEqual(self.vocabulary["count"], len(self.words))
-        self.assertGreater(self.vocabulary["token_total"], 0)
+        self.assertTrue(str(self.vocabulary.get("title_fa", "")).strip())
+        self.assertTrue(str(self.vocabulary.get("description_fa", "")).strip())
+        self.assertTrue(str(self.vocabulary.get("source", {}).get("name", "")).strip())
+        self.assertEqual(
+            self.vocabulary["source"]["source_file"],
+            "data/parole_frek_3.txt",
+        )
 
     def test_positions_and_display_ranks_are_unique_and_sequential(self):
         expected = list(range(1, len(self.words) + 1))
@@ -49,6 +89,10 @@ class VocabularyIntegrityTests(unittest.TestCase):
             "part_of_speech",
             "part_of_speech_fa",
             "lemma",
+            "example_fi",
+            "example_fa",
+            "example_2_fi",
+            "example_2_fa",
         )
 
         for word in self.words:
@@ -62,26 +106,26 @@ class VocabularyIntegrityTests(unittest.TestCase):
                 self.assertIsInstance(word["frequency_percent"], (int, float))
                 self.assertGreater(word["frequency_percent"], 0)
 
-                self.assertIsInstance(word["examples"], list)
-                self.assertEqual(len(word["examples"]), 2)
-                for example in word["examples"]:
-                    self.assertTrue(str(example.get("fi", "")).strip())
-                    self.assertTrue(str(example.get("fa", "")).strip())
+    def test_frequency_fields_match_the_original_parole_file_exactly(self):
+        for position, (word, source_row) in enumerate(
+            zip(self.words, self.source_rows, strict=True),
+            start=1,
+        ):
+            with self.subTest(position=position, word=word["word"]):
+                self.assertEqual(word["position"], position)
+                self.assertEqual(word["rank"], position)
+                self.assertEqual(word["frequency_rank"], source_row["frequency_rank"])
+                self.assertEqual(word["frequency_count"], source_row["frequency_count"])
+                self.assertEqual(normalize_word(word["word"]), normalize_word(source_row["word"]))
+                self.assertEqual(word["frequency_percent"], source_row["frequency_percent"])
 
-    def test_frequency_percentage_matches_original_count_arithmetic(self):
-        token_total = self.vocabulary["token_total"]
+    def test_newer_learning_examples_include_the_target_form(self):
         for word in self.words:
+            if word["position"] <= 100:
+                continue
             with self.subTest(word=word["word"]):
-                expected = word["frequency_count"] / token_total * 100
-                self.assertTrue(
-                    math.isclose(
-                        word["frequency_percent"],
-                        expected,
-                        rel_tol=1e-6,
-                        abs_tol=1e-6,
-                    ),
-                    f"Frequency percentage mismatch for {word['word']}",
-                )
+                self.assertTrue(example_contains_word(word["example_fi"], word["word"]))
+                self.assertTrue(example_contains_word(word["example_2_fi"], word["word"]))
 
 
 class UdSummaryIntegrityTests(unittest.TestCase):
@@ -121,7 +165,11 @@ class UdSummaryIntegrityTests(unittest.TestCase):
                     example = value.get("example")
                     if example is None:
                         continue
-                    with self.subTest(word=form, feature=feature.get("name"), value=value.get("value")):
+                    with self.subTest(
+                        word=form,
+                        feature=feature.get("name"),
+                        value=value.get("value"),
+                    ):
                         self.assertTrue(str(example.get("text", "")).strip())
                         self.assertTrue(str(example.get("target_form", "")).strip())
                         self.assertTrue(str(example.get("treebank", "")).strip())
