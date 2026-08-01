@@ -47,3 +47,5 @@ jobs:
           git add -A
           git commit -m "Add Parole vocabulary entries 201-300"
           git push
+
+# This branch-only workflow is removed after successful finalization.
