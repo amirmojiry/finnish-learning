@@ -1,40 +1,69 @@
-name: Continuous integration
+name: Finalize vocabulary 201-300
 
 on:
   workflow_dispatch:
   push:
-    branches-ignore:
-      - main
+    branches:
+      - agent/add-vocabulary-201-300
   pull_request:
     branches:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: finalize-vocabulary-201-300
   cancel-in-progress: true
 
 jobs:
-  test:
+  finalize:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out feature branch
         uses: actions/checkout@v4
+        with:
+          ref: agent/add-vocabulary-201-300
+          fetch-depth: 0
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Synchronize generated files in the test workspace
-        run: python3 scripts/sync_project.py
-      - name: Compile Python sources
-        run: python3 -m compileall -q scripts tools tests
-      - name: Run complete regression suite
+      - name: Install dependencies
+        run: npm ci
+      - name: Build vocabulary and release metadata
+        run: |
+          if [ "$(tr -d '\r\n' < VERSION)" = "1.2.1" ]; then
+            npm run version:minor
+          fi
+          npm run build:vocabulary
+          python3 tools/ud-import/extract_ud.py
+          python3 tools/ud-import/enrich_multiword_tokens.py
+          python3 tools/ud-import/enrich_ui_examples.py
+          python3 tools/ud-import/build_ui_summary.py
+          python3 tools/ud-import/connect_ui.py
+          npm run sync
+      - name: Run complete test suite
         run: npm test
-      - name: Verify generated files were committed
-        run: git diff --exit-code
+      - name: Prepare final branch contents
+        run: |
+          rm -f data/vocabulary-details/201-300-source.txt
+          rm -f .github/workflows/prepare-vocabulary-201-300.yml
+          rm -f .github/workflows/finalize-vocabulary-201-300.yml
+          git checkout origin/main -- .github/workflows/ci.yml
+      - name: Commit generated outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Add Parole vocabulary entries 201-300"
+            git push origin HEAD:agent/add-vocabulary-201-300
+          fi
