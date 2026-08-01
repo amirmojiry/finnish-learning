@@ -1,39 +1,39 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-31T20:02:51+00:00",
-  "target_word_count": 200,
-  "found_word_count": 200,
+  "generated_at": "2026-08-01T06:44:00+00:00",
+  "target_word_count": 300,
+  "found_word_count": 300,
   "missing_word_count": 0,
   "coverage_percent": 100.0,
-  "total_matched_occurrences": 93694,
-  "words_with_multiple_upos": 81,
-  "words_with_multiple_lemmas": 65,
-  "words_with_examples": 200,
-  "selected_sentence_count": 870,
+  "total_matched_occurrences": 104491,
+  "words_with_multiple_upos": 108,
+  "words_with_multiple_lemmas": 94,
+  "words_with_examples": 300,
+  "selected_sentence_count": 1263,
   "treebanks": {
     "FTB": {
       "files": 3,
       "sentences": 18723,
       "tokens": 159625,
-      "matched_tokens": 40144
+      "matched_tokens": 44708
     },
     "OOD": {
       "files": 1,
       "sentences": 2122,
       "tokens": 19383,
-      "matched_tokens": 4122
+      "matched_tokens": 4564
     },
     "PUD": {
       "files": 1,
       "sentences": 1000,
       "tokens": 15813,
-      "matched_tokens": 3684
+      "matched_tokens": 4068
     },
     "TDT": {
       "files": 3,
       "sentences": 15136,
       "tokens": 202193,
-      "matched_tokens": 45496
+      "matched_tokens": 50903
     }
   },
   "missing_words": [],
