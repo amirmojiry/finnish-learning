@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-31T20:02:51+00:00",
+  "generated_at": "2026-08-01T06:44:00+00:00",
   "ud_release": "2.18",
   "input_directory": "ud-import-2.18",
   "vocabulary_file": "data/common-words.json",
@@ -13,7 +13,7 @@
       "files": 3,
       "sentences": 15136,
       "tokens": 202193,
-      "matched_tokens": 45496
+      "matched_tokens": 50903
     },
     "FTB": {
       "name": "Finnish-FTB",
@@ -23,7 +23,7 @@
       "files": 3,
       "sentences": 18723,
       "tokens": 159625,
-      "matched_tokens": 40144
+      "matched_tokens": 44708
     },
     "PUD": {
       "name": "Finnish-PUD",
@@ -33,7 +33,7 @@
       "files": 1,
       "sentences": 1000,
       "tokens": 15813,
-      "matched_tokens": 3684
+      "matched_tokens": 4068
     },
     "OOD": {
       "name": "Finnish-OOD",
@@ -43,7 +43,7 @@
       "files": 1,
       "sentences": 2122,
       "tokens": 19383,
-      "matched_tokens": 4122
+      "matched_tokens": 4564
     }
   },
   "input_files": [
@@ -55,7 +55,7 @@
       "sha256": "676c3e0d09f2ee6c23ab8e8fef4dad86e56693beb742c1a9b2761e36bbac5c4c",
       "sentences": 1875,
       "tokens": 15726,
-      "matched_tokens": 3982
+      "matched_tokens": 4452
     },
     {
       "file": "fi_ftb-ud-test.conllu",
@@ -65,7 +65,7 @@
       "sha256": "f7b738e86bf79c4c2db18ad8141649b175846d9f57c452ac1ca8671cc34f954e",
       "sentences": 1867,
       "tokens": 16286,
-      "matched_tokens": 4069
+      "matched_tokens": 4501
     },
     {
       "file": "fi_ftb-ud-train.conllu",
@@ -75,7 +75,7 @@
       "sha256": "cc8c5290f26d16219c97f587a68ccfd86e2f3a4232998eb0d523642a316a1ce9",
       "sentences": 14981,
       "tokens": 127613,
-      "matched_tokens": 32093
+      "matched_tokens": 35755
     },
     {
       "file": "fi_ood-ud-test.conllu",
@@ -85,7 +85,7 @@
       "sha256": "cd84438725207499fd72f34916550ebef2a99acf7bd6077b62dd33e3c656c714",
       "sentences": 2122,
       "tokens": 19383,
-      "matched_tokens": 4122
+      "matched_tokens": 4564
     },
     {
       "file": "fi_pud-ud-test.conllu",
@@ -95,7 +95,7 @@
       "sha256": "303c3d03795ca8ddb3340d4d7c2ac28d2aaececa8f9ba962f0440f5c2c2412a0",
       "sentences": 1000,
       "tokens": 15813,
-      "matched_tokens": 3684
+      "matched_tokens": 4068
     },
     {
       "file": "fi_tdt-ud-dev.conllu",
@@ -105,7 +105,7 @@
       "sha256": "e4c0f4d3afc4a66b71a64756d62f900d1e4c3b58d9bc548dea330f12f15d89b0",
       "sentences": 1364,
       "tokens": 18308,
-      "matched_tokens": 4323
+      "matched_tokens": 4800
     },
     {
       "file": "fi_tdt-ud-test.conllu",
@@ -115,7 +115,7 @@
       "sha256": "3317528f16ab74333dce44051971e1ed0d115c8ffa1359a20f3bddb8e63498ee",
       "sentences": 1555,
       "tokens": 21070,
-      "matched_tokens": 4970
+      "matched_tokens": 5556
     },
     {
       "file": "fi_tdt-ud-train.conllu",
@@ -125,7 +125,7 @@
       "sha256": "07217d128d3752e61f1249c1e57de402ca17b31d2fba479d4f857ff78e28b40d",
       "sentences": 12217,
       "tokens": 162815,
-      "matched_tokens": 36203
+      "matched_tokens": 40547
     }
   ],
   "multiword_token_support": {
