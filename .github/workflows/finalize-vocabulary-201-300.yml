@@ -1,0 +1,49 @@
+name: Finalize vocabulary 201-300
+
+on:
+  push:
+    branches:
+      - agent/add-vocabulary-201-300
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/add-vocabulary-201-300
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build vocabulary and release metadata
+        run: |
+          npm run version:minor
+          npm run build:vocabulary
+          python3 tools/ud-import/extract_ud.py
+          python3 tools/ud-import/enrich_multiword_tokens.py
+          python3 tools/ud-import/enrich_ui_examples.py
+          python3 tools/ud-import/build_ui_summary.py
+          python3 tools/ud-import/connect_ui.py
+          npm run sync
+      - name: Run complete test suite
+        run: npm test
+      - name: Remove temporary preparation files
+        run: |
+          rm -f data/vocabulary-details/201-300-source.txt
+          rm -f .github/workflows/prepare-vocabulary-201-300.yml
+          rm -f .github/workflows/finalize-vocabulary-201-300.yml
+      - name: Commit generated outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Add Parole vocabulary entries 201-300"
+          git push
