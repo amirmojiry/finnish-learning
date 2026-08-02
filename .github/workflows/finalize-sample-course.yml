@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/sample-a1-section
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
