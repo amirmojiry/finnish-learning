@@ -9,12 +9,14 @@ const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 
 const section = course.validateSection(rawSection);
 
 test('the sample A1.1 section contains ten deterministic fifteen-activity lessons', () => {
+  const rebuiltSection = course.validateSection(rawSection);
   assert.notEqual(section, rawSection);
   assert.equal(section.level, 'A1.1');
   assert.equal(section.lessons.length, 10);
   assert.equal(section.activity_count_per_lesson, 15);
   assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
   assert.equal(Object.keys(section.items).length, 45);
+  assert.deepEqual(rebuiltSection.lessons.map((lesson) => lesson.activities), section.lessons.map((lesson) => lesson.activities));
 });
 
 test('the section combines curriculum topics with source-aware frequency metadata', () => {
