@@ -1,0 +1,37 @@
+name: Finalize sample A1 section v2
+
+on:
+  push:
+    branches:
+      - agent/sample-a1-section
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: finalize-sample-a1-section-v2
+  cancel-in-progress: true
+
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/sample-a1-section
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build, validate, and publish the prototype branch
+        run: |
+          base64 -di .course-payload/finalize-course.sh.gz.b64 | gzip -d > /tmp/finalize-course.sh
+          bash /tmp/finalize-course.sh
