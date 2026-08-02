@@ -32,6 +32,4 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build, validate, and publish the prototype branch
-        run: |
-          base64 -di .course-payload/finalize-course.sh.gz.b64 | gzip -d > /tmp/finalize-course.sh
-          bash /tmp/finalize-course.sh
+        run: bash .course-payload/finalize-course.sh
