@@ -2,10 +2,10 @@
 set -euo pipefail
 
 mkdir -p css data/course tests
-base64 -di .course-payload/course.js.gz.b64 | gzip -d > course.js
-base64 -di .course-payload/course.css.gz.b64 | gzip -d > css/course.css
-base64 -di .course-payload/a1.1-section-1.json.gz.b64 | gzip -d > data/course/a1.1-section-1.json
-base64 -di .course-payload/course.test.cjs.gz.b64 | gzip -d > tests/course.test.cjs
+(base64 -di .course-payload/course.js.gz.b64 2>/dev/null || true) | gzip -d > course.js
+(base64 -di .course-payload/course.css.gz.b64 2>/dev/null || true) | gzip -d > css/course.css
+(base64 -di .course-payload/a1.1-section-1.json.gz.b64 2>/dev/null || true) | gzip -d > data/course/a1.1-section-1.json
+(base64 -di .course-payload/course.test.cjs.gz.b64 2>/dev/null || true) | gzip -d > tests/course.test.cjs
 
 python3 - <<'PY'
 from pathlib import Path
