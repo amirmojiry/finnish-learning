@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.3.0`
+- Version: `1.4.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -19,7 +19,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 
 ## Current features
 
-- 200 high-frequency written Finnish word forms with Persian translations
+- 300 high-frequency written Finnish word forms with Persian translations
 - exact Parole source rank, corpus occurrence count, and occurrence percentage
 - dictionary search and alphabetical or frequency sorting
 - part-of-speech filters generated only from categories present in the current vocabulary
@@ -27,6 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
+- a complete prototype A1.1 section with 10 sequential lessons and 15 deterministic activities per lesson
 - focused practice for an individual dictionary word
 - profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -54,6 +55,7 @@ The ranking is based on the [Frequency List of Written Finnish Word Forms](https
 ## Important data paths
 
 - `data/common-words.json`: generated vocabulary consumed by the app
+- `data/course/a1.1-section-1.json`: reviewed manifest for the sample A1.1 section
 - `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
 - `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
 - `data/ud/`: generated compact and detailed UD analysis files
