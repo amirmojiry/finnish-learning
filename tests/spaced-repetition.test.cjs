@@ -121,7 +121,8 @@ test('profile owns review while settings owns appearance and the about link', ()
   assert.match(settingsView, /data-theme-choice="dark"/);
   assert.match(settingsView, /class="[^"]*about-view-link/);
   assert.doesNotMatch(settingsView, /id="spaced-review-slot"/);
-  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 4);
+  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 5);
+  assert.match(bottomNav, /course-view-link/);
   assert.match(bottomNav, /profile-view-link/);
   assert.match(bottomNav, /settings-view-link/);
   assert.doesNotMatch(bottomNav, /about-view-link/);

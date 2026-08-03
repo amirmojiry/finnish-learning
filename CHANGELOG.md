@@ -6,6 +6,19 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-08-03
+
+### Added
+
+- A new A1.1 course view with a complete ten-lesson sample section and fifteen deterministic activities per lesson.
+- Sequential lesson unlocking, local course progress, lesson scores, listening prompts, typed production, and topic-aware curated content.
+- A reviewed static lesson manifest combining introductory expressions, high-frequency forms, family vocabulary, and a ten-word animal collection.
+- Regression coverage for course data, progression, answers, navigation, and asset integration.
+
+### Changed
+
+- Primary mobile navigation now exposes the course as a fifth destination.
+
 ## [1.3.0] - 2026-08-01
 
 - Describe the release changes here.
