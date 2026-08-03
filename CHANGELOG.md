@@ -6,6 +6,17 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-08-03
+
+### Fixed
+
+- Keep all five mobile navigation items inside the bottom navigation bar, including Settings on narrow screens.
+
+### Changed
+
+- Restyle the desktop header as a compact responsive navigation surface with clearer active and hover states.
+- Remove the raw vocabulary JSON link from the primary desktop navigation.
+
 ## [1.4.0] - 2026-08-03
 
 ### Added
