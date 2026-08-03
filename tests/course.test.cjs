@@ -6,6 +6,7 @@ const path = require('node:path');
 const course = require('../course.js');
 const ROOT = path.resolve(__dirname, '..');
 const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-1.json'), 'utf8'));
+const vocabulary = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'common-words.json'), 'utf8'));
 const section = course.validateSection(rawSection);
 
 test('the sample A1.1 section contains ten deterministic fifteen-activity lessons', () => {
@@ -21,13 +22,27 @@ test('the sample A1.1 section contains ten deterministic fifteen-activity lesson
 
 test('the section combines curriculum topics with source-aware frequency metadata', () => {
   const animals = Object.values(section.items).filter((item) => item.topics.includes('animals'));
+  const rankBySurface = new Map(
+    vocabulary.words.map((entry) => [entry.word.normalize('NFC').toLocaleLowerCase('fi-FI'), entry.frequency_rank]),
+  );
   assert.equal(animals.length, 10);
-  assert.equal(section.items.sina.frequency_status, 'ranked');
+  for (const item of Object.values(section.items)) {
+    const key = item.surface_form.normalize('NFC').toLocaleLowerCase('fi-FI');
+    const expectedRank = rankBySurface.get(key);
+    if (expectedRank === undefined) {
+      assert.equal(item.frequency_status, 'unranked', item.id);
+      assert.equal(item.frequency_rank, null, item.id);
+    } else {
+      assert.equal(item.frequency_status, 'ranked', item.id);
+      assert.equal(item.frequency_rank, expectedRank, item.id);
+    }
+  }
+  assert.equal(section.items.mina.frequency_rank, 54);
+  assert.equal(section.items.tama.frequency_rank, 49);
   assert.equal(section.items.sina.frequency_rank, 202);
   assert.equal(section.items.han.frequency_rank, 7);
   assert.equal(section.items.ei.frequency_rank, 3);
   assert.equal(section.items.hirvi.frequency_status, 'unranked');
-  assert.equal(section.items.hirvi.frequency_rank, null);
   assert.ok(Object.values(section.items).some((item) => item.item_type === 'expression'));
   assert.ok(Object.values(section.items).some((item) => item.item_type === 'sentence_frame'));
 });
