@@ -1,6 +1,6 @@
 {
   "name": "finnish-learning",
-  "version": "1.4.2",
+  "version": "1.4.1",
   "private": true,
   "description": "A Persian-first Finnish vocabulary learning web application.",
   "scripts": {
