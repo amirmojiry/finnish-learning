@@ -1,0 +1,86 @@
+name: Align course frequency metadata
+
+on:
+  push:
+    branches:
+      - agent/sample-a1-section
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: align-course-frequency-metadata
+  cancel-in-progress: true
+
+jobs:
+  align:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/sample-a1-section
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Align metadata and strengthen regression coverage
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const coursePath = 'data/course/a1.1-section-1.json';
+          const vocabularyPath = 'data/common-words.json';
+          const testPath = 'tests/course.test.cjs';
+
+          const course = JSON.parse(fs.readFileSync(coursePath, 'utf8'));
+          const vocabulary = JSON.parse(fs.readFileSync(vocabularyPath, 'utf8'));
+          const rankBySurface = new Map(
+            vocabulary.words.map((entry) => [entry.word.normalize('NFC').toLocaleLowerCase('fi-FI'), entry.frequency_rank]),
+          );
+
+          for (const item of Object.values(course.items)) {
+            const key = item.surface_form.normalize('NFC').toLocaleLowerCase('fi-FI');
+            if (rankBySurface.has(key)) {
+              item.frequency_status = 'ranked';
+              item.frequency_rank = rankBySurface.get(key);
+            } else {
+              item.frequency_status = 'unranked';
+              item.frequency_rank = null;
+            }
+          }
+          fs.writeFileSync(coursePath, `${JSON.stringify(course)}\n`);
+
+          let testSource = fs.readFileSync(testPath, 'utf8');
+          const loadAnchor = "const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-1.json'), 'utf8'));\nconst section = course.validateSection(rawSection);";
+          const loadReplacement = "const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-1.json'), 'utf8'));\nconst vocabulary = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'common-words.json'), 'utf8'));\nconst section = course.validateSection(rawSection);";
+          if (!testSource.includes(loadAnchor)) throw new Error('Course test load anchor not found');
+          testSource = testSource.replace(loadAnchor, loadReplacement);
+
+          const oldTest = `test('the section combines curriculum topics with source-aware frequency metadata', () => {\n  const animals = Object.values(section.items).filter((item) => item.topics.includes('animals'));\n  assert.equal(animals.length, 10);\n  assert.equal(section.items.sina.frequency_status, 'ranked');\n  assert.equal(section.items.sina.frequency_rank, 202);\n  assert.equal(section.items.han.frequency_rank, 7);\n  assert.equal(section.items.ei.frequency_rank, 3);\n  assert.equal(section.items.hirvi.frequency_status, 'unranked');\n  assert.equal(section.items.hirvi.frequency_rank, null);\n  assert.ok(Object.values(section.items).some((item) => item.item_type === 'expression'));\n  assert.ok(Object.values(section.items).some((item) => item.item_type === 'sentence_frame'));\n});`;
+          const newTest = `test('the section combines curriculum topics with source-aware frequency metadata', () => {\n  const animals = Object.values(section.items).filter((item) => item.topics.includes('animals'));\n  const rankBySurface = new Map(\n    vocabulary.words.map((entry) => [entry.word.normalize('NFC').toLocaleLowerCase('fi-FI'), entry.frequency_rank]),\n  );\n  assert.equal(animals.length, 10);\n  for (const item of Object.values(section.items)) {\n    const key = item.surface_form.normalize('NFC').toLocaleLowerCase('fi-FI');\n    const expectedRank = rankBySurface.get(key);\n    if (expectedRank === undefined) {\n      assert.equal(item.frequency_status, 'unranked', item.id);\n      assert.equal(item.frequency_rank, null, item.id);\n    } else {\n      assert.equal(item.frequency_status, 'ranked', item.id);\n      assert.equal(item.frequency_rank, expectedRank, item.id);\n    }\n  }\n  assert.equal(section.items.mina.frequency_rank, 54);\n  assert.equal(section.items.tama.frequency_rank, 49);\n  assert.equal(section.items.sina.frequency_rank, 202);\n  assert.equal(section.items.han.frequency_rank, 7);\n  assert.equal(section.items.ei.frequency_rank, 3);\n  assert.equal(section.items.hirvi.frequency_status, 'unranked');\n  assert.ok(Object.values(section.items).some((item) => item.item_type === 'expression'));\n  assert.ok(Object.values(section.items).some((item) => item.item_type === 'sentence_frame'));\n});`;
+          if (!testSource.includes(oldTest)) throw new Error('Course frequency test anchor not found');
+          fs.writeFileSync(testPath, testSource.replace(oldTest, newTest));
+          NODE
+
+      - name: Run complete test suite
+        run: npm test
+
+      - name: Remove temporary workflow and commit
+        run: |
+          rm -f .github/workflows/fix-course-frequency-metadata.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Align course frequency metadata"
+          git push origin HEAD:agent/sample-a1-section
