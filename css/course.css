@@ -706,3 +706,52 @@
     box-shadow: none;
   }
 }
+
+
+/* Five-item mobile navigation fit */
+@media (max-width: 620px) {
+  .bottom-nav {
+    gap: 0;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-left: max(4px, env(safe-area-inset-left));
+    padding-right: max(4px, env(safe-area-inset-right));
+    overflow: hidden;
+  }
+
+  .bottom-nav-item {
+    width: 20%;
+    min-width: 0;
+    max-width: none;
+    flex: 1 1 20%;
+    padding: 4px 1px;
+    font-size: .64rem;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .bottom-nav-item span {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bottom-nav-item svg {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .bottom-nav-item {
+    font-size: .59rem;
+  }
+
+  .bottom-nav-item svg {
+    width: 21px;
+    height: 21px;
+  }
+}

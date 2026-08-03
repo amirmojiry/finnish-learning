@@ -103,3 +103,15 @@ test('the new course view and assets are integrated exactly once', () => {
   assert.match(bottomNav, /course-view-link/);
   assert.ok(html.indexOf('settings.js') < html.indexOf('course.js'));
 });
+
+
+test('desktop and mobile navigation stay contained and focused', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const coreStyles = fs.readFileSync(path.join(ROOT, 'css', 'styles.css'), 'utf8');
+  const courseStyles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
+  assert.doesNotMatch(desktopHeader, /data\/common-words\.json/);
+  assert.match(coreStyles, /\/\* Desktop navigation polish \*\/[\s\S]*\.site-header nav/);
+  assert.match(courseStyles, /\/\* Five-item mobile navigation fit \*\/[\s\S]*flex-wrap:\s*nowrap/);
+  assert.match(courseStyles, /\.bottom-nav-item\s*\{[\s\S]*?max-width:\s*none/);
+});
