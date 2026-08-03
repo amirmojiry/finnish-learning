@@ -33,6 +33,7 @@ test('the section combines curriculum topics with source-aware frequency metadat
       assert.equal(item.frequency_status, 'unranked', item.id);
       assert.equal(item.frequency_rank, null, item.id);
     } else {
+      assert.ok(Number.isInteger(expectedRank) && expectedRank > 0, item.id);
       assert.equal(item.frequency_status, 'ranked', item.id);
       assert.equal(item.frequency_rank, expectedRank, item.id);
     }
