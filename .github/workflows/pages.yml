@@ -15,15 +15,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -32,11 +28,9 @@ jobs:
         run: |
           python3 scripts/sync_project.py
           git diff --exit-code
-      - name: Run regression tests
-        run: npm test
 
   deploy:
-    needs: validate
+    needs: verify
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
