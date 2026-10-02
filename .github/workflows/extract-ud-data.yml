@@ -2,7 +2,7 @@ name: Extract Finnish UD data
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: [main]
     paths:
       - 'ud-import-2.18/*.conllu'
@@ -12,7 +12,7 @@ on:
       - '.github/workflows/extract-ud-data.yml'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: extract-finnish-ud-data
@@ -105,8 +105,8 @@ jobs:
           print((data_dir / 'coverage-report.json').read_text(encoding='utf-8'))
           PY
 
-      - name: Run complete regression suite
-        run: npm test
+      - name: Verify generated UD data is committed
+        run: git diff --exit-code
 
       - name: Upload generated data
         uses: actions/upload-artifact@v4
@@ -115,9 +115,3 @@ jobs:
           path: data/ud/*.json
           if-no-files-found: error
           retention-days: 7
-
-      - name: Commit generated data and synchronized metadata
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Generate Finnish UD enrichment data
-          file_pattern: data/ud/*.json index.html README.md README.fa.md deploy-version.txt
