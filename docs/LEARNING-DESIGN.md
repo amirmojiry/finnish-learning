@@ -357,49 +357,68 @@ Those features require a separate backend or serverless API. The static frontend
 
 ## 12. Recommended implementation phases
 
-### Phase A — specification and schema design
+The roadmap is course-first. Personalization and convenience features should not displace completion of the instructional sequence.
 
-- define CEFR can-do outcomes for A1.1;
-- design section and lesson manifests;
-- define topic taxonomy;
-- define lexeme, surface-form, expression, and curriculum metadata;
-- design backward compatibility with the current vocabulary JSON;
-- define mastery evidence and task weights;
-- create content-review rules and source attribution.
+### Phase 1 — complete the A1.1 course foundation
 
-### Phase B — static A1.1 course engine
+- define the full A1.1 curriculum matrix from reviewed CEFR can-do outcomes;
+- turn the existing 10-lesson prototype into a complete, coherent A1.1 learning path;
+- ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions or sentence frames, and an explicit grammar or morphology objective;
+- define prerequisite and recycling relationships between lessons;
+- add short lesson summaries and grammar explanations where explicit instruction improves understanding;
+- keep all course data static and deployable on GitHub Pages;
+- validate every lesson manifest and accepted answer deterministically.
 
-- implement course, section, lesson, and activity navigation;
-- create deterministic 15-activity lesson manifests;
-- add curriculum unlocking and progress;
-- introduce frequency and curated vocabulary streams;
-- implement task-aware spaced repetition;
-- retain all functionality on GitHub Pages.
+A lesson is not considered complete merely because it contains 15 activities. It must have a communicative purpose and reviewed content coverage.
 
-### Phase C — morphology and richer practice
+### Phase 2 — richer A1.1 practice and retention
 
-- group surface forms by lexeme;
-- add morphology-aware distractors;
-- add lemma and inflection exercises;
-- add listening, dictation, and sentence-ordering;
-- introduce reviewed implicit grammar sequences.
+- connect curriculum targets to lexeme- and surface-form-aware spaced repetition;
+- add Persian-to-Finnish production;
+- add listening and dictation with static or build-time-generated audio where practical;
+- add sentence ordering, expression completion, and controlled sentence production;
+- add morphology-aware distractors and introductory inflection exercises;
+- add focused review of weak or frequently missed course targets;
+- record chronological answer evidence needed for better mastery decisions.
 
-### Phase D — content pipeline
+### Phase 3 — expand the structured course
 
-- use GitHub Actions for validated build-time generation;
-- add schema and linguistic validation;
-- add human-review status to generated content;
-- generate compact static lesson bundles and optional audio.
+- build A1.2 and A1.3 using the same reviewed curriculum schema;
+- expand high-frequency vocabulary without replacing topic-based curriculum choices;
+- add new practical domains such as shopping, transport, home, work, weather, appointments, and health;
+- expand grammar in pedagogical order, including present tense, negation, question formation, core cases, local cases, partitive use, possession, and common stem changes;
+- introduce short dialogues, readings, and listening passages that recycle earlier material;
+- move into A2 only after the A1 progression is coherent and validated.
 
-### Phase E — optional backend
+### Phase 4 — content pipeline and quality at scale
 
-Only when needed:
+- formalize topic taxonomy, expressions, lexeme/surface-form links, and curriculum metadata;
+- use GitHub Actions only for validation or intentional build-time generation;
+- keep AI-generated drafts unpublished until reviewed or deterministically validated;
+- generate compact static lesson bundles and optional audio artifacts;
+- add course-level completeness checks so missing grammar, vocabulary, expression, or recycling targets are visible before merge.
+
+### Phase 5 — secondary learner features
+
+After the structured course is useful end to end:
+
+- configurable session length and difficulty;
+- daily goals, streaks, and richer progress dashboards;
+- bookmarks and custom word lists;
+- import/export of local learning progress;
+- PWA installation and offline study;
+- accessibility improvements and screen-reader regression coverage.
+
+### Phase 6 — optional backend
+
+Only when GitHub Pages is no longer sufficient:
 
 - accounts and synchronized progress;
 - live AI tutoring;
 - free-text semantic feedback;
 - speech uploads and richer pronunciation analysis;
 - teacher dashboards or shared courses.
+
 
 ## 13. Initial A1.1 planning template
 
@@ -448,14 +467,18 @@ A1.1 should be prototyped as one complete section before the whole level is popu
 
 The current product direction is therefore:
 
-- CEFR-aligned chapters or stages;
-- sections containing 10 lessons;
-- lessons containing approximately 15 activities;
-- frequency vocabulary distributed through the curriculum;
-- additional topic vocabulary and expressions even when unranked or low-frequency;
-- optional multi-valued topic categorization;
-- lexeme-centered knowledge with surface-form practice;
-- task-aware spaced retrieval;
-- future implicit and explicit grammar integration;
-- gradual four-skill coverage;
-- static-first architecture on GitHub Pages, with build-time generation and an optional backend only when required.
+- the primary product is a structured Finnish course, not a standalone vocabulary trainer;
+- GitHub Pages remains the target platform for the current development stage;
+- A1.1 is the immediate curriculum priority, followed by A1.2, A1.3, and later A2+;
+- each lesson combines communicative goals with high-frequency vocabulary, curated topic vocabulary, useful sentences or expressions, and grammar;
+- sections normally contain about 10 lessons and lessons normally contain about 15 activities, but pedagogical completeness matters more than fixed counts;
+- frequency vocabulary is distributed through the curriculum without overriding source frequency data;
+- topic vocabulary and useful expressions may be introduced even when unranked or low-frequency;
+- lexeme-centered knowledge is practiced through real surface forms;
+- spaced retrieval supports the course but does not replace curriculum sequencing;
+- reading, listening, writing, and speaking coverage should increase progressively where a static architecture can support them;
+- reviewed static content and deterministic validation are preferred over live generation;
+- personalization features are secondary to completing a coherent instructional path;
+- repository changes follow issue -> branch -> draft PR -> green latest PR commit -> ready for review;
+- GitHub Actions should avoid duplicate full-suite runs and expensive unscoped generation;
+- a backend remains optional until a concrete feature requires it.
