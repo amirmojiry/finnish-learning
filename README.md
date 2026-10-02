@@ -123,29 +123,50 @@ GitHub Pages deployment depends on the complete validation job and cannot publis
 
 ## Roadmap
 
-### Phase 1 — smarter review
+The roadmap is course-first: complete a coherent Finnish learning path before prioritizing convenience or gamification features.
 
-- [x] **Spaced-repetition review queue.** It prioritizes overdue words and introduces at most ten new words per local day. Correct and incorrect answers automatically schedule the next review and persist the schedule in local storage.
-- [ ] **Mastery score and answer history for each word.** Aggregate accuracy and current review state are now visible, but a chronological event history is still pending. The completed feature will show when every answer occurred and how it changed the word schedule.
-- [ ] **Focused practice for weak or frequently missed words.** A dedicated session will select words with low accuracy, repeated lapses, or short review intervals. Learners will be able to practice this weak set without mixing it with already stable vocabulary.
-- [ ] **Filters by frequency range and lemma.** The dictionary and practice pool will support selecting source-rank ranges and grouping inflected forms by their lemma. These filters will make it easier to study a defined frequency band or all forms of the same base word.
-- [ ] **Session length and difficulty settings.** Learners will choose how many questions a session contains and how many new words may appear. Difficulty controls will adjust distractor similarity, hint availability, and the balance of exercise modes.
+### Phase 1 — complete A1.1
 
-### Phase 2 — more exercise types
+- [ ] Define the complete A1.1 curriculum matrix from reviewed CEFR can-do outcomes.
+- [ ] Turn the current 10-lesson prototype into a coherent A1.1 path.
+- [ ] Ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions/sentence frames, and a grammar or morphology objective.
+- [ ] Add lesson summaries and short explicit grammar explanations where useful.
+- [ ] Define prerequisite and recycling relationships between lessons.
+- [ ] Add deterministic completeness checks for lesson manifests and accepted answers.
 
-- [ ] **Reverse translation from Persian to Finnish.** The prompt will show a Persian meaning and require selecting or typing the matching Finnish form. Accepted alternatives will be handled explicitly so ambiguous translations do not produce unfair errors.
-- [ ] **Listening and dictation exercises.** The app will play a Finnish word or sentence without initially showing its written form. Learners will type what they hear and receive feedback on spelling and the intended vocabulary item.
-- [ ] **Sentence-ordering exercises.** Sentence tokens will be shuffled and presented as movable or selectable pieces. The completed order will be checked against a real or curated Finnish sentence while preserving punctuation.
-- [ ] **Verb conjugation exercises.** A lemma, person, tense, and mood will define the requested verb form. Answers will be validated against reviewed conjugation data rather than generated guesses.
-- [ ] **Finnish case-form exercises.** Learners will produce or identify noun, adjective, and pronoun forms for a specified grammatical case. Examples and UD features will provide context for why each case is used.
-- [ ] **Pronunciation practice with speech recognition.** The app will record a spoken Finnish word or short sentence and compare it with the target. Feedback will focus on intelligibility and likely mismatches without presenting the score as a clinical pronunciation assessment.
+### Phase 2 — richer A1.1 practice
 
-### Phase 3 — personal learning app
+- [ ] Add Persian-to-Finnish production.
+- [ ] Add listening and dictation using static or build-time-generated audio where practical.
+- [ ] Add sentence ordering, expression completion, and controlled sentence production.
+- [ ] Add morphology-aware distractors and introductory inflection exercises.
+- [ ] Add focused practice for weak or frequently missed course targets.
+- [ ] Record chronological answer history needed for stronger mastery decisions.
 
-- [ ] **Daily goal, streak, and progress dashboard.** Learners will set a realistic daily target based on answered questions or completed reviews. The dashboard will visualize consistency, vocabulary growth, due workload, and longer-term trends.
-- [ ] **Import and export learning progress.** Review history and personal settings will be downloadable in a documented portable format. The importer will validate versions and preserve existing data unless the learner explicitly approves replacement.
-- [ ] **Bookmarks and custom word lists.** Any dictionary entry will be addable to named personal lists such as work, travel, or difficult words. These lists will be available as filters and dedicated practice pools.
-- [ ] **Larger and topic-based decks.** The vocabulary system will support additional frequency ranges and curated thematic collections. Deck metadata will identify source, level, coverage, and compatibility with the available exercises.
-- [ ] **Installable Progressive Web App.** A web app manifest and service worker will allow installation from supported browsers. Updates will be version-aware so cached files cannot silently mix incompatible releases.
-- [ ] **Offline exercises.** Core vocabulary, selected examples, and practice logic will remain usable without a network connection. Progress recorded offline will be stored locally and reconciled safely when online features become available.
-- [ ] **Accessibility audit and improved screen-reader support.** The interface will be tested for keyboard use, focus order, contrast, motion preferences, and semantic announcements. Findings will become regression checks so later UI changes do not reintroduce known barriers.
+### Phase 3 — expand the structured course
+
+- [ ] Build A1.2 and A1.3 with the same reviewed curriculum model.
+- [ ] Expand high-frequency vocabulary while preserving curated topic vocabulary.
+- [ ] Add practical domains such as shopping, transport, home, work, weather, appointments, and health.
+- [ ] Expand grammar in pedagogical order.
+- [ ] Add short dialogues, readings, and listening passages that recycle earlier material.
+- [ ] Move into A2 only after the A1 path is coherent and validated.
+
+### Phase 4 — scale content safely
+
+- [ ] Formalize topic taxonomy, expression metadata, and lexeme/surface-form links.
+- [ ] Add course-level validation for missing vocabulary, grammar, expressions, and recycling targets.
+- [ ] Use GitHub Actions only for validation or intentional build-time generation.
+- [ ] Keep AI-generated learning content unpublished until reviewed or deterministically validated.
+- [ ] Generate compact static lesson bundles and optional audio artifacts.
+
+### Phase 5 — secondary learner features
+
+- [ ] Session length and difficulty settings.
+- [ ] Daily goals, streaks, and richer progress dashboards.
+- [ ] Bookmarks and custom word lists.
+- [ ] Import/export of local progress.
+- [ ] Installable PWA and offline study.
+- [ ] Accessibility and screen-reader improvements.
+
+See [Learning design and curriculum plan](docs/LEARNING-DESIGN.md) for the detailed rationale and architecture.
