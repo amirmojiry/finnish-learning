@@ -68,12 +68,37 @@ test('dictionary POS integration loads after app state and before UD synchroniza
   assert.match(udScript, /renderPosFilters\(\)/, 'UD synchronization must rebuild POS options.');
 });
 
-test('GitHub Pages deployment is blocked behind the complete validation job', () => {
-  const workflow = read('.github/workflows/pages.yml');
-  assert.match(workflow, /^\s{2}validate:\s*$/m);
-  assert.match(workflow, /^\s{4}needs: validate\s*$/m);
+test('pull requests are the single complete regression gate and must link an issue', () => {
+  const workflow = read('.github/workflows/ci.yml');
+  assert.match(workflow, /pull_request:/);
+  assert.doesNotMatch(workflow, /branches-ignore:/);
+  assert.match(workflow, /Require a linked issue/);
+  assert.match(workflow, /Closes #13/);
+  assert.match(workflow, /Run complete regression suite/);
   assert.match(workflow, /run: npm test/);
+  assert.match(workflow, /cancel-in-progress: true/);
+});
+
+test('GitHub Pages deployment avoids repeating the complete regression suite', () => {
+  const workflow = read('.github/workflows/pages.yml');
+  assert.match(workflow, /^\s{2}verify:\s*$/m);
+  assert.match(workflow, /^\s{4}needs: verify\s*$/m);
+  assert.doesNotMatch(workflow, /run: npm test/);
   assert.match(workflow, /git diff --exit-code/);
+});
+
+test('expensive generators do not auto-commit directly to main', () => {
+  const vocabulary = read('.github/workflows/build-vocabulary.yml');
+  const ud = read('.github/workflows/extract-ud-data.yml');
+
+  assert.match(vocabulary, /workflow_dispatch:/);
+  assert.doesNotMatch(vocabulary, /git push/);
+  assert.doesNotMatch(vocabulary, /contents: write/);
+
+  assert.match(ud, /pull_request:/);
+  assert.match(ud, /paths:/);
+  assert.doesNotMatch(ud, /git-auto-commit-action/);
+  assert.doesNotMatch(ud, /contents: write/);
 });
 
 test('UD extraction derives vocabulary totals instead of hardcoding 200', () => {
