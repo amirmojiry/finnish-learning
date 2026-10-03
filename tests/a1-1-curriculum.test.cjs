@@ -207,3 +207,36 @@ test('each lesson declares an exact lexical target count', () => {
     assert.equal(lesson.lexical_target_count, actual, `${lesson.id} has a stale lexical_target_count`);
   }
 });
+
+
+test('parts-of-day assessment does not depend on future routine verbs', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const lesson = lessons.find((item) => item.id === 'a1.1-s3-l04');
+  assert.deepEqual(lesson.recycle_from, ['a1.1-s3-l03']);
+  assert.doesNotMatch(lesson.assessment.criterion_en, /routine event/i);
+  for (const expression of ['Aamulla.','Päivällä.','Illalla.','Yöllä.']) {
+    assert.ok(lesson.expressions.includes(expression), `Missing time-of-day expression: ${expression}`);
+  }
+});
+
+test('negation lesson encodes explicit connegative mappings for assessed verbs', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const lesson = lessons.find((item) => item.id === 'a1.1-s3-l07');
+  assert.ok(Array.isArray(lesson.connegative_pairs));
+  assert.ok(lesson.connegative_pairs.length >= 4);
+
+  const expected = new Map([
+    ['syön', 'syö'],
+    ['juon', 'juo'],
+    ['nukun', 'nuku'],
+    ['opiskelen', 'opiskele'],
+    ['työskentelen', 'työskentele'],
+  ]);
+
+  for (const [affirmative, connegative] of expected) {
+    const pair = lesson.connegative_pairs.find((item) => item.affirmative === affirmative);
+    assert.ok(pair, `Missing connegative pair for ${affirmative}`);
+    assert.equal(pair.connegative, connegative);
+    assert.equal(pair.negative, `En ${connegative}.`);
+  }
+});
