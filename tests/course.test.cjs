@@ -440,6 +440,7 @@ test('course runtime loads all three implemented section files and renders multi
   assert.match(source, /clock-choice/);
   assert.match(source, /negative-transform/);
   assert.match(source, /guided-writing/);
+  assert.match(source, /event-time-match/);
   assert.match(styles, /\.course-section-open/);
   assert.match(styles, /\.course-number-grid/);
   assert.match(styles, /\.course-clock-face/);
@@ -628,10 +629,55 @@ test('all Section 3 custom activity references and accepted answers are explicit
         for (const option of activity.options) assert.ok(section3.items[option]);
         continue;
       }
+      if (activity.type === 'event-time-match') {
+        assert.ok(section3.items[activity.event_item]);
+        assert.ok(section3.items[activity.time_item]);
+        assert.ok(activity.options.includes(activity.time_item));
+        for (const option of activity.options) assert.ok(section3.items[option]);
+        continue;
+      }
       if (activity.type === 'number-grid' || activity.type === 'dialogue-order') continue;
       assert.ok(section3.items[activity.item], lesson.id + ': ' + activity.item);
       for (const option of activity.options || []) assert.ok(section3.items[option], lesson.id + ': ' + option);
       if (activity.type === 'type') assert.ok(course.acceptedAnswers(section3.items[activity.item]).length);
     }
+  }
+});
+
+
+test('day-reference sentence frames are taught without grading the ellipsis placeholder', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l01');
+  const frameIds = new Set(['s3-tanaan-on-frame', 's3-huomenna-on-frame']);
+
+  assert.equal(lesson.activities.length, 15);
+  assert.ok(lesson.activities.some((activity) => activity.type === 'teach' && frameIds.has(activity.item)));
+  assert.ok(lesson.activities.some((activity) => activity.type === 'choice' && frameIds.has(activity.item)));
+  assert.ok(
+    lesson.activities.every((activity) => !(activity.type === 'type' && frameIds.has(activity.item))),
+    'ellipsis sentence frames must not be typed as literal answers',
+  );
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type' && activity.item === 's3-tanaan'));
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type' && activity.item === 's3-huomenna'));
+});
+
+test('when lesson contains five deterministic event-to-time matching assessments', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l08');
+  const matches = lesson.activities.filter((activity) => activity.type === 'event-time-match');
+
+  assert.equal(matches.length, 5);
+  const pairs = matches.map((activity) => [
+    section3.items[activity.event_item].surface_form,
+    section3.items[activity.time_item].surface_form,
+  ]);
+  assert.deepEqual(pairs, [
+    ['Aamulla syön.', 'Aamulla.'],
+    ['Päivällä opiskelen.', 'Päivällä.'],
+    ['Illalla tulen kotiin.', 'Illalla.'],
+    ['Yöllä nukun.', 'Yöllä.'],
+    ['Syön kello kolme.', 'Kello kolme.'],
+  ]);
+  for (const activity of matches) {
+    assert.ok(activity.options.includes(activity.time_item));
+    assert.equal(new Set(activity.options).size, activity.options.length);
   }
 });
