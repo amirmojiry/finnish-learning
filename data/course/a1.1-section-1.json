@@ -824,8 +824,8 @@
       "lemma": "on",
       "translation_fa": "است / هست",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 2,
       "topics": [
         "verbs"
       ],
@@ -841,8 +841,8 @@
       "lemma": "ja",
       "translation_fa": "و",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 1,
       "topics": [
         "connectors"
       ],
@@ -858,8 +858,8 @@
       "lemma": "ole",
       "translation_fa": "باش / است (در عبارت ثابت)",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 13,
       "topics": [
         "verbs",
         "politeness"
@@ -945,8 +945,8 @@
       "lemma": "en",
       "translation_fa": "من ... نمی‌کنم",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 55,
       "topics": [
         "negation"
       ],
