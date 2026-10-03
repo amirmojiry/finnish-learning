@@ -2,24 +2,31 @@ name: Continuous integration
 
 on:
   workflow_dispatch:
-  push:
-    branches-ignore:
-      - main
   pull_request:
     branches:
       - main
+    types: [opened, synchronize, reopened, ready_for_review, edited]
 
 permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Require a linked issue
+        if: github.event_name == 'pull_request'
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          if ! printf '%s\n' "$PR_BODY" | grep -Eiq '(close[sd]?|fix(e[sd])?|resolve[sd]?) +#[0-9]+'; then
+            echo "Pull requests must link an issue with a closing keyword, for example: Closes #13"
+            exit 1
+          fi
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Set up Node.js

@@ -4,13 +4,21 @@ These rules apply to every AI-assisted change in this repository. Read this file
 
 ## 1. Required workflow
 
-1. Inspect the current implementation and every file affected by the requested behavior.
-2. Make the smallest coherent change that preserves existing functionality.
-3. Run `npm run sync` whenever the version, vocabulary data, local assets, or documented counts change.
-4. Run `npm test` before declaring the work complete.
-5. Do not merge or deploy with failing tests, stale generated files, unsynchronized documentation, or an unexplained data-coverage regression.
-6. Update `CHANGELOG.md` and bump the semantic version when a change is user-visible or changes data behavior.
-7. For a bug fix, add or strengthen a regression test that fails without the fix.
+Every repository change must follow the same issue-first lifecycle, including documentation, data, CI, and maintenance work.
+
+1. Create or identify a GitHub issue that defines the problem, scope, and acceptance criteria before changing the repository.
+2. Inspect the current implementation and every file affected by the issue.
+3. Create a dedicated branch for the issue and make the smallest coherent change that preserves existing functionality.
+4. Open a **draft pull request** linked with a closing keyword such as `Closes #123`.
+5. Run `npm run sync` whenever the version, vocabulary data, local assets, or documented counts change.
+6. Run `npm test` before declaring the implementation complete.
+7. Keep the pull request in draft while the latest PR commit has a pending, cancelled, skipped unexpectedly, or failing required GitHub Actions run.
+8. Mark the pull request **ready for review only after the required GitHub Actions workflow succeeds on the latest PR commit**.
+9. Do not merge or deploy with failing tests, stale generated files, unsynchronized documentation, an unexplained data-coverage regression, or unresolved review feedback.
+10. Update `CHANGELOG.md` and bump the semantic version when a change is user-visible or changes data behavior.
+11. For a bug fix, add or strengthen a regression test that fails without the fix.
+
+Direct feature or generated-data commits to `main` are not part of the normal workflow. Generated outputs belong in the same issue branch and pull request as their source change.
 
 ## 2. Language and code style
 
@@ -118,8 +126,11 @@ Do not weaken an assertion merely to make CI pass. Change a test contract only a
 
 - Use clear English commit messages.
 - Keep generated outputs in the same pull request as their source changes.
-- GitHub Pages must depend on the complete validation job.
-- Do not bypass CI, remove a quality gate, or deploy an untested state to resolve a workflow failure.
+- Pull requests are the full regression-test gate. Avoid duplicate full-suite runs for the same commit when a cheaper deterministic validation is sufficient.
+- GitHub Pages deployment may use a lightweight synchronization/integrity check because the reviewed pull request already passed the complete regression suite.
+- Expensive data-generation workflows must be path-scoped or manual and must not auto-commit directly to `main`.
+- Use workflow concurrency with cancellation where a newer run supersedes an older one.
+- Do not bypass CI, remove the PR quality gate, or deploy an unreviewed state to resolve a workflow failure.
 - A green workflow is necessary but not sufficient: inspect the generated diff for unexpected data loss, count changes, or coverage reductions.
 
 ## 10. Completion checklist
