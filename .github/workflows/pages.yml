@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
+  checks: read
   pages: write
   id-token: write
 
@@ -17,9 +19,15 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    outputs:
+      reviewed_pr: ${{ steps.reviewed.outputs.reviewed_pr }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -28,8 +36,28 @@ jobs:
         run: |
           python3 scripts/sync_project.py
           git diff --exit-code
-      - name: Run full regression suite for manual or direct deployments
-        if: github.event_name == 'workflow_dispatch' || github.event.head_commit.message == ''
+      - name: Detect successful reviewed pull request
+        id: reviewed
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          reviewed_pr=false
+          pr_json="$(gh api -H 'Accept: application/vnd.github+json'             "/repos/$REPOSITORY/commits/$COMMIT_SHA/pulls")"
+          pr_head_sha="$(printf '%s' "$pr_json" | jq -r             '[.[] | select(.merged_at != null and .base.ref == "main")][0].head.sha // empty')"
+
+          if [ -n "$pr_head_sha" ]; then
+            successful_ci="$(gh api -H 'Accept: application/vnd.github+json'               "/repos/$REPOSITORY/commits/$pr_head_sha/check-runs"               --jq '[.check_runs[] | select(.name == "test" and .conclusion == "success")] | length')"
+            if [ "$successful_ci" -gt 0 ]; then
+              reviewed_pr=true
+            fi
+          fi
+
+          echo "reviewed_pr=$reviewed_pr" >> "$GITHUB_OUTPUT"
+      - name: Run full regression suite when no reviewed PR can be verified
+        if: github.event_name == 'workflow_dispatch' || steps.reviewed.outputs.reviewed_pr != 'true'
         run: |
           python3 -m compileall -q scripts tools tests
           npm test
