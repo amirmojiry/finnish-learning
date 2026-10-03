@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.9.0`
+- Version: `1.10.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
-- real curriculum-driven A1.1 Sections 1–3 with 30 sequential learner-facing lessons and 15 deterministic activities per lesson
+- real curriculum-driven A1.1 Sections 1–3 plus Section 4, completing the 40-lesson A1.1 path with 15 deterministic activities per lesson
 - focused practice for an individual dictionary word
 - profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -55,7 +55,7 @@ The ranking is based on the [Frequency List of Written Finnish Word Forms](https
 ## Important data paths
 
 - `data/common-words.json`: generated vocabulary consumed by the app
-- `data/course/a1.1-section-1.json` through `data/course/a1.1-section-3.json`: reviewed manifests for the implemented A1.1 sections
+- `data/course/a1.1-section-1.json` through `data/course/a1.1-section-4.json`: reviewed manifests for the complete A1.1 path
 - `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
 - `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
 - `data/ud/`: generated compact and detailed UD analysis files
@@ -128,11 +128,11 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 ### Phase 1 — complete A1.1
 
 - [x] Define the complete A1.1 curriculum matrix from reviewed CEFR can-do outcomes.
-- [ ] Turn the current 10-lesson prototype into a coherent A1.1 path.
-- [ ] Ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions/sentence frames, and a grammar or morphology objective.
-- [ ] Add lesson summaries and short explicit grammar explanations where useful.
-- [ ] Define prerequisite and recycling relationships between lessons.
-- [ ] Add deterministic completeness checks for lesson manifests and accepted answers.
+- [x] Turn the current 10-lesson prototype into a coherent A1.1 path.
+- [x] Ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions/sentence frames, and a grammar or morphology objective.
+- [x] Add lesson summaries and short explicit grammar explanations where useful.
+- [x] Define prerequisite and recycling relationships between lessons.
+- [x] Add deterministic completeness checks for lesson manifests and accepted answers.
 
 ### Phase 2 — richer A1.1 practice
 
