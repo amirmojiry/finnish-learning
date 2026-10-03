@@ -11,6 +11,7 @@
     './data/course/a1.1-section-1.json',
     './data/course/a1.1-section-2.json',
     './data/course/a1.1-section-3.json',
+    './data/course/a1.1-section-4.json',
   ];
   const SECTION_URL = SECTION_URLS[0];
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
@@ -283,7 +284,9 @@
           continue;
         }
         if (activity.type === 'guided-writing') {
-          if (!Array.isArray(activity.expected_items) || activity.expected_items.length !== 3) throw new Error(`Guided writing must define three sentences in ${lesson.id}`);
+          if (!Array.isArray(activity.expected_items) || activity.expected_items.length < 2 || activity.expected_items.length > 4) {
+            throw new Error(`Guided writing must define two to four sentences in ${lesson.id}`);
+          }
           for (const itemId of activity.expected_items) {
             if (!section.items[itemId] || !acceptedAnswers(section.items[itemId]).length) throw new Error(`Invalid guided-writing item: ${itemId}`);
           }
@@ -297,9 +300,38 @@
           }
           continue;
         }
+
+        if (activity.type === 'visual-choice') {
+          const visualItem = section.items[activity.item];
+          if (!visualItem || !visualItem.visual) throw new Error(`Visual choice lacks pictogram in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.item)) throw new Error(`Visual choice must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) if (!section.items[optionId]) throw new Error(`Unknown visual option: ${optionId}`);
+          continue;
+        }
+        if (activity.type === 'prompt-choice') {
+          if (!section.items[activity.prompt_item] || !section.items[activity.answer_item]) throw new Error(`Invalid prompt choice in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.answer_item)) throw new Error(`Prompt choice must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) if (!section.items[optionId]) throw new Error(`Unknown prompt-choice option: ${optionId}`);
+          continue;
+        }
+        if (activity.type === 'category-match') {
+          if (!section.items[activity.item]) throw new Error(`Unknown category item in ${lesson.id}`);
+          if (!activity.answer || !Array.isArray(activity.options) || !activity.options.includes(activity.answer)) throw new Error(`Invalid category match in ${lesson.id}`);
+          continue;
+        }
+        if (activity.type === 'short-reading') {
+          if (!section.items[activity.item] || section.items[activity.item].item_type !== 'reading') throw new Error(`Invalid short reading in ${lesson.id}`);
+          if (!section.items[activity.question_item]) throw new Error(`Invalid short-reading answer in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.question_item)) throw new Error(`Short reading must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) if (!section.items[optionId]) throw new Error(`Unknown reading option: ${optionId}`);
+          continue;
+        }
         if (activity.type === 'dialogue-order') {
-          if (!Array.isArray(activity.turns) || activity.turns.length !== 4) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
-          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== 4) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
+          if (!Array.isArray(activity.turns) || activity.turns.length < 3 || activity.turns.length > 5) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
+          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== activity.turns.length) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
+          const expected = Array.from({ length: activity.turns.length }, (_, index) => index).sort((a, b) => a - b);
+          const actual = [...activity.answer_order].sort((a, b) => a - b);
+          if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error(`Dialogue answer must be a permutation in ${lesson.id}`);
           for (const itemId of activity.turns) {
             if (!section.items[itemId]) throw new Error(`Unknown dialogue item: ${itemId}`);
           }
