@@ -182,8 +182,8 @@
       "lemma": "missä",
       "translation_fa": "کجا / در کجا",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 188,
       "topics": [
         "questions",
         "location"
@@ -200,8 +200,8 @@
       "lemma": "on",
       "translation_fa": "است / هست",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 2,
       "topics": [
         "location"
       ],
@@ -786,8 +786,8 @@
       "lemma": "yksi",
       "translation_fa": "یک",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 84,
       "topics": [
         "numbers",
         "cafe"
