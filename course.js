@@ -139,28 +139,45 @@
     if (!Array.isArray(targets) || targets.length < 1 || targets.length > 6) {
       throw new Error('A standard lesson must define between one and six practice targets.');
     }
-    const pool = uniqueOptions([...targets, ...previousTargets.slice().reverse()]);
-    while (pool.length < 5) pool.push(targets[pool.length % targets.length]);
-    const [t1, t2, t3, t4, t5] = pool;
-    const sixth = targets[5] || null;
-    const review = sixth || (previousTargets.length ? previousTargets[previousTargets.length - 1] : t2);
-    return [
-      { type: 'teach', item: t1 },
-      { type: 'choice', mode: 'meaning', item: t1, options: uniqueOptions([t1, t2, t3, t4]) },
-      { type: 'teach', item: t2 },
-      { type: 'choice', mode: 'finnish', item: t2, options: uniqueOptions([t1, t2, t3, t5]) },
-      { type: 'teach', item: t3 },
-      { type: 'choice', mode: 'meaning', item: t3, options: uniqueOptions([t1, t2, t3, t4]) },
-      { type: 'teach', item: t4 },
-      { type: 'choice', mode: 'cloze', item: t4, options: uniqueOptions([t1, t2, t4, t5]) },
-      { type: 'teach', item: t5 },
-      { type: 'type', mode: 'finnish', item: t5 },
-      { type: 'choice', mode: 'listen', item: t1, options: uniqueOptions([t1, t2, t3, t5]) },
-      { type: 'choice', mode: 'cloze', item: t2, options: uniqueOptions([t1, t2, t3, t4]) },
-      { type: 'choice', mode: 'meaning', item: review, options: uniqueOptions([review, t1, t3, t5]) },
-      { type: 'type', mode: 'cloze', item: t4 },
-      { type: 'choice', mode: 'finnish', item: t5, options: uniqueOptions([t2, t3, t4, t5]) },
+    const reviewTargets = uniqueOptions(previousTargets.slice().reverse().filter((id) => !targets.includes(id)));
+    const optionPool = uniqueOptions([...targets, ...reviewTargets]);
+    const optionsFor = (itemId) => {
+      const options = [itemId];
+      for (const candidate of optionPool) {
+        if (candidate !== itemId && !options.includes(candidate)) options.push(candidate);
+        if (options.length === 4) break;
+      }
+      return options;
+    };
+
+    const activities = [];
+    for (const target of targets) {
+      activities.push({ type: 'teach', item: target });
+      activities.push({ type: 'choice', mode: 'meaning', item: target, options: optionsFor(target) });
+    }
+
+    const gradedModes = [
+      ['choice', 'finnish'],
+      ['choice', 'listen'],
+      ['choice', 'cloze'],
+      ['type', 'finnish'],
+      ['type', 'cloze'],
     ];
+    let cursor = 0;
+    while (activities.length < 15) {
+      const useReview = reviewTargets.length && cursor % 3 === 2;
+      const item = useReview
+        ? reviewTargets[cursor % reviewTargets.length]
+        : targets[cursor % targets.length];
+      const [type, mode] = gradedModes[cursor % gradedModes.length];
+      activities.push(
+        type === 'choice'
+          ? { type, mode, item, options: optionsFor(item) }
+          : { type, mode, item },
+      );
+      cursor += 1;
+    }
+    return activities.slice(0, 15);
   }
 
   function buildCheckpointActivities(section, lesson) {
@@ -218,6 +235,14 @@
         throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or fifteen deterministic activities.`);
       }
       for (const activity of lesson.activities) {
+        if (activity.type === 'dialogue-order') {
+          if (!Array.isArray(activity.turns) || activity.turns.length !== 4) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
+          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== 4) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
+          for (const itemId of activity.turns) {
+            if (!section.items[itemId]) throw new Error(`Unknown dialogue item: ${itemId}`);
+          }
+          continue;
+        }
         if (!section.items[activity.item]) throw new Error(`Unknown course item: ${activity.item}`);
         for (const optionId of activity.options || []) {
           if (!section.items[optionId]) throw new Error(`Unknown course option: ${optionId}`);
@@ -521,6 +546,7 @@
     }
 
     function questionHeading(activity) {
+      if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
       if (activity.mode === 'finnish') return 'گزینهٔ فنلاندی درست را انتخاب کن.';
@@ -533,7 +559,7 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = section.items[activity.item];
+      const item = activity.type === 'dialogue-order' ? null : section.items[activity.item];
       root.replaceChildren();
 
       const shell = document.createElement('section');
@@ -593,7 +619,51 @@
         card.append(example);
       }
 
-      if (activity.type === 'teach') {
+      if (activity.type === 'dialogue-order') {
+        const instruction = document.createElement('p');
+        instruction.className = 'course-dialogue-instruction';
+        instruction.textContent = 'چهار نوبت گفت‌وگو را به ترتیب درست بچین.';
+        card.append(instruction);
+
+        const ordered = [];
+        const turns = document.createElement('div');
+        turns.className = 'course-dialogue-options';
+        activity.turns.forEach((itemId, index) => {
+          const turnItem = section.items[itemId];
+          const button = createButton(turnItem.surface_form, 'course-option', () => {
+            if (answered || ordered.includes(index)) return;
+            ordered.push(index);
+            button.disabled = true;
+            button.dataset.order = String(ordered.length);
+            button.textContent = `${toPersianNumber(ordered.length)}. ${turnItem.surface_form}`;
+            if (ordered.length === 4) {
+              answered = true;
+              sessionGraded += 1;
+              const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+              if (correct) sessionCorrect += 1;
+              const result = document.createElement('div');
+              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+              const title = document.createElement('strong');
+              title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را دوباره مرور کن.';
+              const dialogue = document.createElement('div');
+              dialogue.className = 'course-dialogue-review';
+              for (const answerIndex of activity.answer_order) {
+                const line = document.createElement('p');
+                line.lang = 'fi';
+                line.dir = 'ltr';
+                line.textContent = section.items[activity.turns[answerIndex]].surface_form;
+                dialogue.append(line);
+              }
+              result.append(title, dialogue, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+              card.append(result);
+            }
+          });
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          turns.append(button);
+        });
+        card.append(turns);
+      } else if (activity.type === 'teach') {
         const word = document.createElement('div');
         word.className = 'course-teach-word';
         const surface = document.createElement('strong');
