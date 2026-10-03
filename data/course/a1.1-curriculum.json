@@ -10,7 +10,8 @@
     "Useful expressions and sentence frames are taught as first-class targets.",
     "Grammar is introduced in service of communicative tasks and recycled later.",
     "New material is deliberately recycled across later lessons and section checkpoints.",
-    "All four skills are tracked, while receptive and highly controlled production tasks dominate early A1.1."
+    "All four skills are tracked, while receptive and highly controlled production tasks dominate early A1.1.",
+    "Items in high_frequency_targets must be present in the current source-backed common vocabulary dataset; other useful items remain curated topic or expression targets until source frequency data is incorporated."
   ],
   "lesson_defaults": {
     "target_activity_count": 15,
@@ -222,14 +223,14 @@
           "can_do_en": "Ask who a person is and what a familiar object is.",
           "can_do_fa": "بپرسد یک شخص چه کسی است یا یک شیء آشنا چیست.",
           "high_frequency_targets": [
-            "kuka",
             "mikä",
             "hän",
             "tämä"
           ],
           "topic_targets": [
             "ihminen",
-            "esine"
+            "esine",
+            "kuka"
           ],
           "expressions": [
             "Kuka hän on?",
@@ -268,11 +269,10 @@
           "title_fa": "عبارت‌های مودبانه",
           "can_do_en": "Thank, apologize and use a basic polite response.",
           "can_do_fa": "تشکر کند، عذرخواهی کند و از پاسخ‌های مودبانهٔ پایه استفاده کند.",
-          "high_frequency_targets": [
-            "kiitos"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
-            "anteeksi"
+            "anteeksi",
+            "kiitos"
           ],
           "expressions": [
             "Kiitos.",
@@ -533,13 +533,13 @@
           "can_do_en": "Say where you are from and ask another person.",
           "can_do_fa": "بگوید اهل کجاست و همین سؤال را از دیگری بپرسد.",
           "high_frequency_targets": [
-            "mistä",
             "olen"
           ],
           "topic_targets": [
             "Suomi",
             "Iran",
-            "maa"
+            "maa",
+            "mistä"
           ],
           "expressions": [
             "Olen Suomesta.",
@@ -578,13 +578,12 @@
           "title_fa": "زبان‌ها",
           "can_do_en": "Say which language or languages you speak.",
           "can_do_fa": "بگوید به چه زبان یا زبان‌هایی صحبت می‌کند.",
-          "high_frequency_targets": [
-            "puhun"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "suomi",
             "persia",
-            "englanti"
+            "englanti",
+            "puhun"
           ],
           "expressions": [
             "Puhun suomea.",
@@ -622,13 +621,13 @@
           "can_do_en": "Say where you live and ask where another person lives.",
           "can_do_fa": "بگوید کجا زندگی می‌کند و محل زندگی دیگری را بپرسد.",
           "high_frequency_targets": [
-            "missä",
-            "asun"
+            "missä"
           ],
           "topic_targets": [
             "kaupunki",
             "Vaasa",
-            "Helsinki"
+            "Helsinki",
+            "asun"
           ],
           "expressions": [
             "Asun Vaasassa.",
@@ -666,15 +665,14 @@
           "title_fa": "خانواده من",
           "can_do_en": "Name a few close family members.",
           "can_do_fa": "چند عضو نزدیک خانواده را نام ببرد.",
-          "high_frequency_targets": [
-            "lapsi"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "perhe",
             "äiti",
             "isä",
             "sisar",
-            "veli"
+            "veli",
+            "lapsi"
           ],
           "expressions": [
             "Tämä on minun äitini.",
@@ -713,12 +711,12 @@
           "can_do_en": "Express very simple possession with my/your.",
           "can_do_fa": "مالکیت بسیار ساده را با «من» و «تو» بیان کند.",
           "high_frequency_targets": [
-            "minun",
-            "sinun"
+            "minun"
           ],
           "topic_targets": [
             "nimi",
-            "koti"
+            "koti",
+            "sinun"
           ],
           "expressions": [
             "minun nimeni",
@@ -800,13 +798,12 @@
           "title_fa": "اطلاعات تماس",
           "can_do_en": "Understand and give a very short phone number or address with support.",
           "can_do_fa": "با کمک، شماره تلفن یا نشانی بسیار کوتاه را بفهمد و بیان کند.",
-          "high_frequency_targets": [
-            "numero"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "puhelinnumero",
             "osoite",
-            "katu"
+            "katu",
+            "numero"
           ],
           "expressions": [
             "Mikä sinun puhelinnumerosi on?",
@@ -931,12 +928,11 @@
           "title_fa": "امروز و فردا",
           "can_do_en": "Distinguish today, tomorrow and yesterday in simple statements.",
           "can_do_fa": "امروز، فردا و دیروز را در جمله‌های ساده تشخیص دهد.",
-          "high_frequency_targets": [
+          "high_frequency_targets": [],
+          "topic_targets": [
+            "eilen",
             "tänään",
             "huomenna"
-          ],
-          "topic_targets": [
-            "eilen"
           ],
           "expressions": [
             "Tänään on …",
@@ -1014,12 +1010,11 @@
           "title_fa": "ساعت‌های کامل",
           "can_do_en": "Understand and say simple whole-hour times.",
           "can_do_fa": "ساعت‌های کامل ساده را بفهمد و بیان کند.",
-          "high_frequency_targets": [
-            "kello"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "aamu",
-            "ilta"
+            "ilta",
+            "kello"
           ],
           "expressions": [
             "Kello on yksi.",
@@ -1096,16 +1091,15 @@
           "title_fa": "کارهای روزمره: من",
           "can_do_en": "Say a few common things you do.",
           "can_do_fa": "چند کار روزمرهٔ رایج خود را بیان کند.",
-          "high_frequency_targets": [
-            "menen",
-            "tulen"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "syön",
             "juon",
             "nukun",
             "opiskelen",
-            "työskentelen"
+            "työskentelen",
+            "menen",
+            "tulen"
           ],
           "expressions": [
             "Minä syön.",
@@ -1143,12 +1137,12 @@
           "can_do_en": "Ask what another person does in a few familiar situations.",
           "can_do_fa": "دربارهٔ چند کار آشنا از طرف مقابل سؤال کند.",
           "high_frequency_targets": [
-            "mitä",
-            "teet"
+            "mitä"
           ],
           "topic_targets": [
             "työ",
-            "koulu"
+            "koulu",
+            "teet"
           ],
           "expressions": [
             "Mitä teet?",
@@ -1224,11 +1218,10 @@
           "title_fa": "چه زمانی؟",
           "can_do_en": "Ask and answer when a simple event happens.",
           "can_do_fa": "زمان یک رویداد ساده را بپرسد و پاسخ کوتاه بدهد.",
-          "high_frequency_targets": [
-            "milloin"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
-            "aika"
+            "aika",
+            "milloin"
           ],
           "expressions": [
             "Milloin?",
@@ -1354,15 +1347,14 @@
           "title_fa": "خانه و اتاق‌ها",
           "can_do_en": "Name a few common places in a home.",
           "can_do_fa": "چند مکان رایج در خانه را نام ببرد.",
-          "high_frequency_targets": [
-            "koti"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "huone",
             "keittiö",
             "olohuone",
             "makuuhuone",
-            "wc"
+            "wc",
+            "koti"
           ],
           "expressions": [
             "Tämä on keittiö.",
@@ -1446,15 +1438,14 @@
           "title_fa": "خوراک و نوشیدنی",
           "can_do_en": "Recognize and name a few very common foods and drinks.",
           "can_do_fa": "چند خوراکی و نوشیدنی بسیار رایج را تشخیص دهد و نام ببرد.",
-          "high_frequency_targets": [
-            "vesi"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "kahvi",
             "tee",
             "maito",
             "leipä",
-            "ruoka"
+            "ruoka",
+            "vesi"
           ],
           "expressions": [
             "Tämä on kahvia.",
@@ -1489,12 +1480,11 @@
           "title_fa": "من ... می‌خواهم",
           "can_do_en": "Express one or two basic wants involving familiar food or drink.",
           "can_do_fa": "یکی دو خواسته یا نیاز پایه دربارهٔ خوراک و نوشیدنی را بیان کند.",
-          "high_frequency_targets": [
-            "haluan"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "nälkä",
-            "jano"
+            "jano",
+            "haluan"
           ],
           "expressions": [
             "Haluan kahvia.",
@@ -1660,14 +1650,13 @@
           "title_fa": "توصیف ساده",
           "can_do_en": "Describe a familiar person, object or animal with one basic adjective.",
           "can_do_fa": "یک شخص، شیء یا حیوان آشنا را با یک صفت پایه توصیف کند.",
-          "high_frequency_targets": [
-            "iso",
-            "pieni"
-          ],
+          "high_frequency_targets": [],
           "topic_targets": [
             "punainen",
             "valkoinen",
-            "musta"
+            "musta",
+            "iso",
+            "pieni"
           ],
           "expressions": [
             "Koira on iso.",
