@@ -281,3 +281,13 @@ test('course navigation visually hides its label but retains an accessible name'
   assert.match(styles, /clip:\s*rect\(0, 0, 0, 0\)/);
   assert.match(html, /course-view-link nav-icon-only active[^>]+aria-label="دوره"/);
 });
+
+
+test('legacy home and dictionary hashes route before vocabulary fetch resolves', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
+
+  const initMatch = app.match(/async function init\(\)\{([^}]|\}(?!catch))*routeFromHash\(\);try\{const r=await fetch/);
+  assert.ok(initMatch, 'init must route the current hash before awaiting vocabulary fetch');
+  assert.match(app, /if\(h\.startsWith\('#word-'\)\)\{[\s\S]*?showView\('dictionary',\{updateHash:false\}\);return/);
+  assert.match(app, /if\(state\.view==='dictionary'\)\{els\.dictionaryList\.replaceChildren\(\);els\.dictionaryEmpty\.hidden=false;els\.dictionaryEmpty\.textContent='بارگذاری واژه‌ها انجام نشد\.'/);
+});
