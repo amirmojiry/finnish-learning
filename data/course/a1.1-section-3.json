@@ -1,0 +1,2638 @@
+{
+  "schema_version": 1,
+  "id": "a1.1-section-3",
+  "curriculum_section_id": "a1.1-s3",
+  "level": "A1.1",
+  "title_fa": "بخش ۳: زمان و یک روز ساده",
+  "subtitle_fa": "امروز و فردا، روزهای هفته، ساعت‌های کامل و کارهای روزمرهٔ ساده",
+  "description_fa": "بخش سوم A1.1 زبان بسیار تمرین‌شده دربارهٔ روز، ساعت و یک برنامهٔ روزانهٔ ساده را پوشش می‌دهد.",
+  "activity_count_per_lesson": 15,
+  "can_do_fa": [
+    "امروز، فردا و دیروز و روزهای هفته را تشخیص می‌دهم.",
+    "چند ساعت کامل ساده را می‌فهمم و بیان می‌کنم.",
+    "چند کار روزمره را دربارهٔ خودم می‌گویم و از طرف مقابل می‌پرسم.",
+    "چند فعل آشنا را با شکل منفی درست به‌کار می‌برم.",
+    "یک برنامهٔ روزانهٔ بسیار کوتاه را به‌ترتیب بیان می‌کنم."
+  ],
+  "items": {
+    "s3-eilen": {
+      "id": "s3-eilen",
+      "surface_form": "eilen",
+      "lemma": "eilen",
+      "translation_fa": "دیروز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Eilen oli maanantai.",
+      "example_fa": "دیروز دوشنبه بود.",
+      "accepted_answers": [
+        "eilen"
+      ]
+    },
+    "s3-tanaan": {
+      "id": "s3-tanaan",
+      "surface_form": "tänään",
+      "lemma": "tänään",
+      "translation_fa": "امروز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Tänään on maanantai.",
+      "example_fa": "امروز دوشنبه است.",
+      "accepted_answers": [
+        "tänään"
+      ]
+    },
+    "s3-huomenna": {
+      "id": "s3-huomenna",
+      "surface_form": "huomenna",
+      "lemma": "huomenna",
+      "translation_fa": "فردا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Huomenna on tiistai.",
+      "example_fa": "فردا سه‌شنبه است.",
+      "accepted_answers": [
+        "huomenna"
+      ]
+    },
+    "s3-tanaan-on-frame": {
+      "id": "s3-tanaan-on-frame",
+      "surface_form": "Tänään on …",
+      "lemma": "Tänään on ",
+      "translation_fa": "امروز ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Tänään on maanantai.",
+      "example_fa": "امروز دوشنبه است.",
+      "accepted_answers": [
+        "Tänään on …"
+      ]
+    },
+    "s3-huomenna-on-frame": {
+      "id": "s3-huomenna-on-frame",
+      "surface_form": "Huomenna on …",
+      "lemma": "Huomenna on ",
+      "translation_fa": "فردا ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Huomenna on tiistai.",
+      "example_fa": "فردا سه‌شنبه است.",
+      "accepted_answers": [
+        "Huomenna on …"
+      ]
+    },
+    "s3-maanantai": {
+      "id": "s3-maanantai",
+      "surface_form": "maanantai",
+      "lemma": "maanantai",
+      "translation_fa": "دوشنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on maanantai.",
+      "example_fa": "امروز دوشنبه است.",
+      "accepted_answers": [
+        "maanantai"
+      ]
+    },
+    "s3-tiistai": {
+      "id": "s3-tiistai",
+      "surface_form": "tiistai",
+      "lemma": "tiistai",
+      "translation_fa": "سه‌شنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on tiistai.",
+      "example_fa": "امروز سه‌شنبه است.",
+      "accepted_answers": [
+        "tiistai"
+      ]
+    },
+    "s3-keskiviikko": {
+      "id": "s3-keskiviikko",
+      "surface_form": "keskiviikko",
+      "lemma": "keskiviikko",
+      "translation_fa": "چهارشنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on keskiviikko.",
+      "example_fa": "امروز چهارشنبه است.",
+      "accepted_answers": [
+        "keskiviikko"
+      ]
+    },
+    "s3-torstai": {
+      "id": "s3-torstai",
+      "surface_form": "torstai",
+      "lemma": "torstai",
+      "translation_fa": "پنج‌شنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on torstai.",
+      "example_fa": "امروز پنج‌شنبه است.",
+      "accepted_answers": [
+        "torstai"
+      ]
+    },
+    "s3-perjantai": {
+      "id": "s3-perjantai",
+      "surface_form": "perjantai",
+      "lemma": "perjantai",
+      "translation_fa": "جمعه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on perjantai.",
+      "example_fa": "امروز جمعه است.",
+      "accepted_answers": [
+        "perjantai"
+      ]
+    },
+    "s3-lauantai": {
+      "id": "s3-lauantai",
+      "surface_form": "lauantai",
+      "lemma": "lauantai",
+      "translation_fa": "شنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on lauantai.",
+      "example_fa": "امروز شنبه است.",
+      "accepted_answers": [
+        "lauantai"
+      ]
+    },
+    "s3-sunnuntai": {
+      "id": "s3-sunnuntai",
+      "surface_form": "sunnuntai",
+      "lemma": "sunnuntai",
+      "translation_fa": "یکشنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on sunnuntai.",
+      "example_fa": "امروز یکشنبه است.",
+      "accepted_answers": [
+        "sunnuntai"
+      ]
+    },
+    "s3-tanaan-maanantai": {
+      "id": "s3-tanaan-maanantai",
+      "surface_form": "Tänään on maanantai.",
+      "lemma": "Tänään on maanantai",
+      "translation_fa": "امروز دوشنبه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays",
+        "time"
+      ],
+      "example_fi": "Tänään on maanantai.",
+      "example_fa": "امروز دوشنبه است.",
+      "accepted_answers": [
+        "Tänään on maanantai."
+      ]
+    },
+    "s3-huomenna-tiistai": {
+      "id": "s3-huomenna-tiistai",
+      "surface_form": "Huomenna on tiistai.",
+      "lemma": "Huomenna on tiistai",
+      "translation_fa": "فردا سه‌شنبه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays",
+        "time"
+      ],
+      "example_fi": "Huomenna on tiistai.",
+      "example_fa": "فردا سه‌شنبه است.",
+      "accepted_answers": [
+        "Huomenna on tiistai."
+      ]
+    },
+    "s3-aamu": {
+      "id": "s3-aamu",
+      "surface_form": "aamu",
+      "lemma": "aamu",
+      "translation_fa": "صبح",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Aamu alkaa.",
+      "example_fa": "صبح آغاز می‌شود.",
+      "accepted_answers": [
+        "aamu"
+      ]
+    },
+    "s3-ilta": {
+      "id": "s3-ilta",
+      "surface_form": "ilta",
+      "lemma": "ilta",
+      "translation_fa": "عصر / شب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Ilta alkaa.",
+      "example_fa": "عصر آغاز می‌شود.",
+      "accepted_answers": [
+        "ilta"
+      ]
+    },
+    "s3-kello": {
+      "id": "s3-kello",
+      "surface_form": "kello",
+      "lemma": "kello",
+      "translation_fa": "ساعت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "clock"
+      ],
+      "example_fi": "Kello on yksi.",
+      "example_fa": "ساعت یک است.",
+      "accepted_answers": [
+        "kello"
+      ]
+    },
+    "s3-kello-yksi": {
+      "id": "s3-kello-yksi",
+      "surface_form": "Kello on yksi.",
+      "lemma": "Kello on yksi",
+      "translation_fa": "ساعت یک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on yksi.",
+      "example_fa": "ساعت یک است.",
+      "accepted_answers": [
+        "Kello on yksi."
+      ]
+    },
+    "s3-kello-kaksi": {
+      "id": "s3-kello-kaksi",
+      "surface_form": "Kello on kaksi.",
+      "lemma": "Kello on kaksi",
+      "translation_fa": "ساعت دو است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on kaksi.",
+      "example_fa": "ساعت دو است.",
+      "accepted_answers": [
+        "Kello on kaksi."
+      ]
+    },
+    "s3-kello-kolme": {
+      "id": "s3-kello-kolme",
+      "surface_form": "Kello on kolme.",
+      "lemma": "Kello on kolme",
+      "translation_fa": "ساعت سه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on kolme.",
+      "example_fa": "ساعت سه است.",
+      "accepted_answers": [
+        "Kello on kolme."
+      ]
+    },
+    "s3-kello-nelja": {
+      "id": "s3-kello-nelja",
+      "surface_form": "Kello on neljä.",
+      "lemma": "Kello on neljä",
+      "translation_fa": "ساعت چهار است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on neljä.",
+      "example_fa": "ساعت چهار است.",
+      "accepted_answers": [
+        "Kello on neljä."
+      ]
+    },
+    "s3-kello-viisi": {
+      "id": "s3-kello-viisi",
+      "surface_form": "Kello on viisi.",
+      "lemma": "Kello on viisi",
+      "translation_fa": "ساعت پنج است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on viisi.",
+      "example_fa": "ساعت پنج است.",
+      "accepted_answers": [
+        "Kello on viisi."
+      ]
+    },
+    "s3-nyt": {
+      "id": "s3-nyt",
+      "surface_form": "nyt",
+      "lemma": "nyt",
+      "translation_fa": "الان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Nyt on ilta.",
+      "example_fa": "الان عصر است.",
+      "accepted_answers": [
+        "nyt"
+      ]
+    },
+    "s3-aamulla": {
+      "id": "s3-aamulla",
+      "surface_form": "aamulla",
+      "lemma": "aamulla",
+      "translation_fa": "صبح / در صبح",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Aamulla juon kahvia.",
+      "example_fa": "صبح قهوه می‌نوشم.",
+      "accepted_answers": [
+        "aamulla"
+      ]
+    },
+    "s3-paivalla": {
+      "id": "s3-paivalla",
+      "surface_form": "päivällä",
+      "lemma": "päivällä",
+      "translation_fa": "در طول روز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Päivällä opiskelen.",
+      "example_fa": "روز درس می‌خوانم.",
+      "accepted_answers": [
+        "päivällä"
+      ]
+    },
+    "s3-illalla": {
+      "id": "s3-illalla",
+      "surface_form": "illalla",
+      "lemma": "illalla",
+      "translation_fa": "عصر / شب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Illalla olen kotona.",
+      "example_fa": "عصر در خانه هستم.",
+      "accepted_answers": [
+        "illalla"
+      ]
+    },
+    "s3-yolla": {
+      "id": "s3-yolla",
+      "surface_form": "yöllä",
+      "lemma": "yöllä",
+      "translation_fa": "شب / در شب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Yöllä nukun.",
+      "example_fa": "شب می‌خوابم.",
+      "accepted_answers": [
+        "yöllä"
+      ]
+    },
+    "s3-aamulla-expr": {
+      "id": "s3-aamulla-expr",
+      "surface_form": "Aamulla.",
+      "lemma": "Aamulla",
+      "translation_fa": "صبح.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Aamulla.",
+      "example_fa": "صبح.",
+      "accepted_answers": [
+        "Aamulla."
+      ]
+    },
+    "s3-paivalla-expr": {
+      "id": "s3-paivalla-expr",
+      "surface_form": "Päivällä.",
+      "lemma": "Päivällä",
+      "translation_fa": "در طول روز.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Päivällä.",
+      "example_fa": "در طول روز.",
+      "accepted_answers": [
+        "Päivällä."
+      ]
+    },
+    "s3-illalla-expr": {
+      "id": "s3-illalla-expr",
+      "surface_form": "Illalla.",
+      "lemma": "Illalla",
+      "translation_fa": "عصر.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Illalla.",
+      "example_fa": "عصر.",
+      "accepted_answers": [
+        "Illalla."
+      ]
+    },
+    "s3-yolla-expr": {
+      "id": "s3-yolla-expr",
+      "surface_form": "Yöllä.",
+      "lemma": "Yöllä",
+      "translation_fa": "شب.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Yöllä.",
+      "example_fa": "شب.",
+      "accepted_answers": [
+        "Yöllä."
+      ]
+    },
+    "s3-syon": {
+      "id": "s3-syon",
+      "surface_form": "syön",
+      "lemma": "syön",
+      "translation_fa": "می‌خورم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Minä syön.",
+      "example_fa": "من می‌خورم.",
+      "accepted_answers": [
+        "syön"
+      ]
+    },
+    "s3-juon": {
+      "id": "s3-juon",
+      "surface_form": "juon",
+      "lemma": "juon",
+      "translation_fa": "می‌نوشم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Minä juon kahvia.",
+      "example_fa": "من قهوه می‌نوشم.",
+      "accepted_answers": [
+        "juon"
+      ]
+    },
+    "s3-nukun": {
+      "id": "s3-nukun",
+      "surface_form": "nukun",
+      "lemma": "nukun",
+      "translation_fa": "می‌خوابم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Yöllä nukun.",
+      "example_fa": "شب می‌خوابم.",
+      "accepted_answers": [
+        "nukun"
+      ]
+    },
+    "s3-opiskelen": {
+      "id": "s3-opiskelen",
+      "surface_form": "opiskelen",
+      "lemma": "opiskelen",
+      "translation_fa": "درس می‌خوانم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Päivällä opiskelen.",
+      "example_fa": "روز درس می‌خوانم.",
+      "accepted_answers": [
+        "opiskelen"
+      ]
+    },
+    "s3-tyoskentelen": {
+      "id": "s3-tyoskentelen",
+      "surface_form": "työskentelen",
+      "lemma": "työskentelen",
+      "translation_fa": "کار می‌کنم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Päivällä työskentelen.",
+      "example_fa": "روز کار می‌کنم.",
+      "accepted_answers": [
+        "työskentelen"
+      ]
+    },
+    "s3-menen": {
+      "id": "s3-menen",
+      "surface_form": "menen",
+      "lemma": "menen",
+      "translation_fa": "می‌روم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Menen kotiin.",
+      "example_fa": "به خانه می‌روم.",
+      "accepted_answers": [
+        "menen"
+      ]
+    },
+    "s3-tulen": {
+      "id": "s3-tulen",
+      "surface_form": "tulen",
+      "lemma": "tulen",
+      "translation_fa": "می‌آیم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Tulen kotiin.",
+      "example_fa": "به خانه می‌آیم.",
+      "accepted_answers": [
+        "tulen"
+      ]
+    },
+    "s3-mina-syon": {
+      "id": "s3-mina-syon",
+      "surface_form": "Minä syön.",
+      "lemma": "Minä syön",
+      "translation_fa": "من می‌خورم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine"
+      ],
+      "example_fi": "Minä syön.",
+      "example_fa": "من می‌خورم.",
+      "accepted_answers": [
+        "Minä syön."
+      ]
+    },
+    "s3-mina-juon-kahvia": {
+      "id": "s3-mina-juon-kahvia",
+      "surface_form": "Minä juon kahvia.",
+      "lemma": "Minä juon kahvia",
+      "translation_fa": "من قهوه می‌نوشم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine"
+      ],
+      "example_fi": "Minä juon kahvia.",
+      "example_fa": "من قهوه می‌نوشم.",
+      "accepted_answers": [
+        "Minä juon kahvia."
+      ]
+    },
+    "s3-menen-kotiin": {
+      "id": "s3-menen-kotiin",
+      "surface_form": "Menen kotiin.",
+      "lemma": "Menen kotiin",
+      "translation_fa": "به خانه می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine"
+      ],
+      "example_fi": "Menen kotiin.",
+      "example_fa": "به خانه می‌روم.",
+      "accepted_answers": [
+        "Menen kotiin."
+      ]
+    },
+    "s3-mita": {
+      "id": "s3-mita",
+      "surface_form": "mitä",
+      "lemma": "mitä",
+      "translation_fa": "چه / چه چیزی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions"
+      ],
+      "example_fi": "Mitä teet?",
+      "example_fa": "چه کار می‌کنی؟",
+      "accepted_answers": [
+        "mitä"
+      ]
+    },
+    "s3-tyo": {
+      "id": "s3-tyo",
+      "surface_form": "työ",
+      "lemma": "työ",
+      "translation_fa": "کار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "work"
+      ],
+      "example_fi": "Työ on täällä.",
+      "example_fa": "کار اینجاست.",
+      "accepted_answers": [
+        "työ"
+      ]
+    },
+    "s3-koulu": {
+      "id": "s3-koulu",
+      "surface_form": "koulu",
+      "lemma": "koulu",
+      "translation_fa": "مدرسه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "school"
+      ],
+      "example_fi": "Koulu on täällä.",
+      "example_fa": "مدرسه اینجاست.",
+      "accepted_answers": [
+        "koulu"
+      ]
+    },
+    "s3-teet": {
+      "id": "s3-teet",
+      "surface_form": "teet",
+      "lemma": "teet",
+      "translation_fa": "انجام می‌دهی / می‌کنی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "verbs",
+        "questions"
+      ],
+      "example_fi": "Mitä teet?",
+      "example_fa": "چه کار می‌کنی؟",
+      "accepted_answers": [
+        "teet"
+      ]
+    },
+    "s3-mita-teet": {
+      "id": "s3-mita-teet",
+      "surface_form": "Mitä teet?",
+      "lemma": "Mitä teet",
+      "translation_fa": "چه کار می‌کنی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "routine"
+      ],
+      "example_fi": "Mitä teet?",
+      "example_fa": "چه کار می‌کنی؟",
+      "accepted_answers": [
+        "Mitä teet?"
+      ]
+    },
+    "s3-opiskeletko": {
+      "id": "s3-opiskeletko",
+      "surface_form": "Opiskeletko?",
+      "lemma": "Opiskeletko",
+      "translation_fa": "درس می‌خوانی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "routine"
+      ],
+      "example_fi": "Opiskeletko? Kyllä.",
+      "example_fa": "درس می‌خوانی؟ بله.",
+      "accepted_answers": [
+        "Opiskeletko?"
+      ]
+    },
+    "s3-tyoskenteletko": {
+      "id": "s3-tyoskenteletko",
+      "surface_form": "Työskenteletkö?",
+      "lemma": "Työskenteletkö",
+      "translation_fa": "کار می‌کنی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "routine"
+      ],
+      "example_fi": "Työskenteletkö? Kyllä.",
+      "example_fa": "کار می‌کنی؟ بله.",
+      "accepted_answers": [
+        "Työskenteletkö?"
+      ]
+    },
+    "s3-en": {
+      "id": "s3-en",
+      "surface_form": "en",
+      "lemma": "en",
+      "translation_fa": "من ... نمی‌کنم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation"
+      ],
+      "example_fi": "En syö.",
+      "example_fa": "نمی‌خورم.",
+      "accepted_answers": [
+        "en"
+      ]
+    },
+    "s3-connegative-syon": {
+      "id": "s3-connegative-syon",
+      "surface_form": "syö",
+      "lemma": "syö",
+      "translation_fa": "شکل منفیِ فعل syön",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "morphology"
+      ],
+      "example_fi": "En syö.",
+      "example_fa": "می‌خورم → نمی‌خورم",
+      "accepted_answers": [
+        "syö"
+      ]
+    },
+    "s3-negative-syon": {
+      "id": "s3-negative-syon",
+      "surface_form": "En syö.",
+      "lemma": "En syö",
+      "translation_fa": "می‌خورم → نمی‌خورم",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "En syö.",
+      "example_fa": "می‌خورم → نمی‌خورم",
+      "accepted_answers": [
+        "En syö."
+      ]
+    },
+    "s3-pair-syon": {
+      "id": "s3-pair-syon",
+      "surface_form": "Minä syön. → En syö.",
+      "lemma": "Minä syön. → En syö",
+      "translation_fa": "می‌خورم → نمی‌خورم",
+      "item_type": "transformation",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "Minä syön. → En syö.",
+      "example_fa": "می‌خورم → نمی‌خورم",
+      "accepted_answers": [
+        "Minä syön. → En syö."
+      ]
+    },
+    "s3-connegative-juon": {
+      "id": "s3-connegative-juon",
+      "surface_form": "juo",
+      "lemma": "juo",
+      "translation_fa": "شکل منفیِ فعل juon",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "morphology"
+      ],
+      "example_fi": "En juo.",
+      "example_fa": "می‌نوشم → نمی‌نوشم",
+      "accepted_answers": [
+        "juo"
+      ]
+    },
+    "s3-negative-juon": {
+      "id": "s3-negative-juon",
+      "surface_form": "En juo.",
+      "lemma": "En juo",
+      "translation_fa": "می‌نوشم → نمی‌نوشم",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "En juo.",
+      "example_fa": "می‌نوشم → نمی‌نوشم",
+      "accepted_answers": [
+        "En juo."
+      ]
+    },
+    "s3-pair-juon": {
+      "id": "s3-pair-juon",
+      "surface_form": "Minä juon. → En juo.",
+      "lemma": "Minä juon. → En juo",
+      "translation_fa": "می‌نوشم → نمی‌نوشم",
+      "item_type": "transformation",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "Minä juon. → En juo.",
+      "example_fa": "می‌نوشم → نمی‌نوشم",
+      "accepted_answers": [
+        "Minä juon. → En juo."
+      ]
+    },
+    "s3-connegative-nukun": {
+      "id": "s3-connegative-nukun",
+      "surface_form": "nuku",
+      "lemma": "nuku",
+      "translation_fa": "شکل منفیِ فعل nukun",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "morphology"
+      ],
+      "example_fi": "En nuku.",
+      "example_fa": "می‌خوابم → نمی‌خوابم",
+      "accepted_answers": [
+        "nuku"
+      ]
+    },
+    "s3-negative-nukun": {
+      "id": "s3-negative-nukun",
+      "surface_form": "En nuku.",
+      "lemma": "En nuku",
+      "translation_fa": "می‌خوابم → نمی‌خوابم",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "En nuku.",
+      "example_fa": "می‌خوابم → نمی‌خوابم",
+      "accepted_answers": [
+        "En nuku."
+      ]
+    },
+    "s3-pair-nukun": {
+      "id": "s3-pair-nukun",
+      "surface_form": "Minä nukun. → En nuku.",
+      "lemma": "Minä nukun. → En nuku",
+      "translation_fa": "می‌خوابم → نمی‌خوابم",
+      "item_type": "transformation",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "Minä nukun. → En nuku.",
+      "example_fa": "می‌خوابم → نمی‌خوابم",
+      "accepted_answers": [
+        "Minä nukun. → En nuku."
+      ]
+    },
+    "s3-connegative-opiskelen": {
+      "id": "s3-connegative-opiskelen",
+      "surface_form": "opiskele",
+      "lemma": "opiskele",
+      "translation_fa": "شکل منفیِ فعل opiskelen",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "morphology"
+      ],
+      "example_fi": "En opiskele.",
+      "example_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "accepted_answers": [
+        "opiskele"
+      ]
+    },
+    "s3-negative-opiskelen": {
+      "id": "s3-negative-opiskelen",
+      "surface_form": "En opiskele.",
+      "lemma": "En opiskele",
+      "translation_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "En opiskele.",
+      "example_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "accepted_answers": [
+        "En opiskele."
+      ]
+    },
+    "s3-pair-opiskelen": {
+      "id": "s3-pair-opiskelen",
+      "surface_form": "Minä opiskelen. → En opiskele.",
+      "lemma": "Minä opiskelen. → En opiskele",
+      "translation_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "item_type": "transformation",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "Minä opiskelen. → En opiskele.",
+      "example_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "accepted_answers": [
+        "Minä opiskelen. → En opiskele."
+      ]
+    },
+    "s3-connegative-tyoskentelen": {
+      "id": "s3-connegative-tyoskentelen",
+      "surface_form": "työskentele",
+      "lemma": "työskentele",
+      "translation_fa": "شکل منفیِ فعل työskentelen",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "morphology"
+      ],
+      "example_fi": "En työskentele.",
+      "example_fa": "کار می‌کنم → کار نمی‌کنم",
+      "accepted_answers": [
+        "työskentele"
+      ]
+    },
+    "s3-negative-tyoskentelen": {
+      "id": "s3-negative-tyoskentelen",
+      "surface_form": "En työskentele.",
+      "lemma": "En työskentele",
+      "translation_fa": "کار می‌کنم → کار نمی‌کنم",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "En työskentele.",
+      "example_fa": "کار می‌کنم → کار نمی‌کنم",
+      "accepted_answers": [
+        "En työskentele."
+      ]
+    },
+    "s3-pair-tyoskentelen": {
+      "id": "s3-pair-tyoskentelen",
+      "surface_form": "Minä työskentelen. → En työskentele.",
+      "lemma": "Minä työskentelen. → En työskentele",
+      "translation_fa": "کار می‌کنم → کار نمی‌کنم",
+      "item_type": "transformation",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "negation",
+        "routine"
+      ],
+      "example_fi": "Minä työskentelen. → En työskentele.",
+      "example_fa": "کار می‌کنم → کار نمی‌کنم",
+      "accepted_answers": [
+        "Minä työskentelen. → En työskentele."
+      ]
+    },
+    "s3-aika": {
+      "id": "s3-aika",
+      "surface_form": "aika",
+      "lemma": "aika",
+      "translation_fa": "زمان / وقت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Aika on nyt.",
+      "example_fa": "زمان الان است.",
+      "accepted_answers": [
+        "aika"
+      ]
+    },
+    "s3-milloin": {
+      "id": "s3-milloin",
+      "surface_form": "milloin",
+      "lemma": "milloin",
+      "translation_fa": "چه زمانی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "time"
+      ],
+      "example_fi": "Milloin?",
+      "example_fa": "چه زمانی؟",
+      "accepted_answers": [
+        "milloin"
+      ]
+    },
+    "s3-milloin-expr": {
+      "id": "s3-milloin-expr",
+      "surface_form": "Milloin?",
+      "lemma": "Milloin",
+      "translation_fa": "چه زمانی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "time"
+      ],
+      "example_fi": "Milloin? Tänään.",
+      "example_fa": "چه زمانی؟ امروز.",
+      "accepted_answers": [
+        "Milloin?"
+      ]
+    },
+    "s3-tanaan-short": {
+      "id": "s3-tanaan-short",
+      "surface_form": "Tänään.",
+      "lemma": "Tänään",
+      "translation_fa": "امروز.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Tänään.",
+      "example_fa": "امروز.",
+      "accepted_answers": [
+        "Tänään."
+      ]
+    },
+    "s3-huomenna-short": {
+      "id": "s3-huomenna-short",
+      "surface_form": "Huomenna.",
+      "lemma": "Huomenna",
+      "translation_fa": "فردا.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time"
+      ],
+      "example_fi": "Huomenna.",
+      "example_fa": "فردا.",
+      "accepted_answers": [
+        "Huomenna."
+      ]
+    },
+    "s3-kello-kolme-short": {
+      "id": "s3-kello-kolme-short",
+      "surface_form": "Kello kolme.",
+      "lemma": "Kello kolme",
+      "translation_fa": "ساعت سه.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock",
+        "time"
+      ],
+      "example_fi": "Kello kolme.",
+      "example_fa": "ساعت سه.",
+      "accepted_answers": [
+        "Kello kolme."
+      ]
+    },
+    "s3-frame-aamulla": {
+      "id": "s3-frame-aamulla",
+      "surface_form": "Aamulla …",
+      "lemma": "Aamulla ",
+      "translation_fa": "صبح ...",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Aamulla syön.",
+      "example_fa": "صبح غذا می‌خورم.",
+      "accepted_answers": [
+        "Aamulla …"
+      ]
+    },
+    "s3-frame-paivalla": {
+      "id": "s3-frame-paivalla",
+      "surface_form": "Päivällä …",
+      "lemma": "Päivällä ",
+      "translation_fa": "روز ...",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Päivällä opiskelen.",
+      "example_fa": "روز درس می‌خوانم.",
+      "accepted_answers": [
+        "Päivällä …"
+      ]
+    },
+    "s3-frame-illalla": {
+      "id": "s3-frame-illalla",
+      "surface_form": "Illalla …",
+      "lemma": "Illalla ",
+      "translation_fa": "عصر ...",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Illalla tulen kotiin.",
+      "example_fa": "عصر به خانه می‌آیم.",
+      "accepted_answers": [
+        "Illalla …"
+      ]
+    },
+    "s3-routine-1": {
+      "id": "s3-routine-1",
+      "surface_form": "Aamulla syön.",
+      "lemma": "Aamulla syön",
+      "translation_fa": "صبح غذا می‌خورم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Aamulla syön.",
+      "example_fa": "صبح غذا می‌خورم.",
+      "accepted_answers": [
+        "Aamulla syön."
+      ]
+    },
+    "s3-routine-2": {
+      "id": "s3-routine-2",
+      "surface_form": "Aamulla menen kouluun.",
+      "lemma": "Aamulla menen kouluun",
+      "translation_fa": "صبح به مدرسه می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Aamulla menen kouluun.",
+      "example_fa": "صبح به مدرسه می‌روم.",
+      "accepted_answers": [
+        "Aamulla menen kouluun."
+      ]
+    },
+    "s3-routine-3": {
+      "id": "s3-routine-3",
+      "surface_form": "Päivällä opiskelen.",
+      "lemma": "Päivällä opiskelen",
+      "translation_fa": "روز درس می‌خوانم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Päivällä opiskelen.",
+      "example_fa": "روز درس می‌خوانم.",
+      "accepted_answers": [
+        "Päivällä opiskelen."
+      ]
+    },
+    "s3-routine-4": {
+      "id": "s3-routine-4",
+      "surface_form": "Illalla tulen kotiin.",
+      "lemma": "Illalla tulen kotiin",
+      "translation_fa": "عصر به خانه می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Illalla tulen kotiin.",
+      "example_fa": "عصر به خانه می‌آیم.",
+      "accepted_answers": [
+        "Illalla tulen kotiin."
+      ]
+    },
+    "s3-routine-5": {
+      "id": "s3-routine-5",
+      "surface_form": "Yöllä nukun.",
+      "lemma": "Yöllä nukun",
+      "translation_fa": "شب می‌خوابم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Yöllä nukun.",
+      "example_fa": "شب می‌خوابم.",
+      "accepted_answers": [
+        "Yöllä nukun."
+      ]
+    },
+    "s3-routine-reading": {
+      "id": "s3-routine-reading",
+      "surface_form": "Aamulla syön. Aamulla menen kouluun. Päivällä opiskelen. Illalla tulen kotiin. Yöllä nukun.",
+      "lemma": "Aamulla syön. Aamulla menen kouluun. Päivällä opiskelen. Illalla tulen kotiin. Yöllä nukun",
+      "translation_fa": "صبح غذا می‌خورم. صبح به مدرسه می‌روم. روز درس می‌خوانم. عصر به خانه می‌آیم. شب می‌خوابم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "sequence"
+      ],
+      "example_fi": "Aamulla syön. Aamulla menen kouluun. Päivällä opiskelen. Illalla tulen kotiin. Yöllä nukun.",
+      "example_fa": "صبح غذا می‌خورم. صبح به مدرسه می‌روم. روز درس می‌خوانم. عصر به خانه می‌آیم. شب می‌خوابم.",
+      "accepted_answers": [
+        "Aamulla syön. Aamulla menen kouluun. Päivällä opiskelen. Illalla tulen kotiin. Yöllä nukun."
+      ]
+    },
+    "s3-kahvia": {
+      "id": "s3-kahvia",
+      "surface_form": "kahvia",
+      "lemma": "kahvia",
+      "translation_fa": "قهوه (پارتی‌تیو)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "routine"
+      ],
+      "example_fi": "Minä juon kahvia.",
+      "example_fa": "من قهوه می‌نوشم.",
+      "accepted_answers": [
+        "kahvia"
+      ]
+    },
+    "s3-kotiin": {
+      "id": "s3-kotiin",
+      "surface_form": "kotiin",
+      "lemma": "kotiin",
+      "translation_fa": "به خانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "direction"
+      ],
+      "example_fi": "Menen kotiin.",
+      "example_fa": "به خانه می‌روم.",
+      "accepted_answers": [
+        "kotiin"
+      ]
+    },
+    "s3-kouluun": {
+      "id": "s3-kouluun",
+      "surface_form": "kouluun",
+      "lemma": "kouluun",
+      "translation_fa": "به مدرسه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "school",
+        "direction"
+      ],
+      "example_fi": "Menen kouluun.",
+      "example_fa": "به مدرسه می‌روم.",
+      "accepted_answers": [
+        "kouluun"
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "section-3-lesson-1",
+      "curriculum_id": "a1.1-s3-l01",
+      "order": 1,
+      "title_fa": "امروز و فردا",
+      "objective_fa": "امروز، فردا و دیروز را در جمله‌های ساده تشخیص بده.",
+      "summary_fa": "سه قید زمانی eilen، tänään و huomenna را همراه با دو frame بسیار ساده تمرین می‌کنی.",
+      "grammar_fa": "این سه واژه فعلاً به‌صورت قیدهای زمانی ثابت یاد گرفته می‌شوند و صرفی روی آن‌ها انجام نمی‌دهیم.",
+      "new_targets": [
+        "s3-eilen",
+        "s3-tanaan",
+        "s3-huomenna",
+        "s3-tanaan-on-frame",
+        "s3-huomenna-on-frame"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s3-eilen",
+          "s3-tanaan",
+          "s3-huomenna"
+        ],
+        "expressions": [
+          "s3-tanaan-on-frame",
+          "s3-huomenna-on-frame"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l09"
+      ]
+    },
+    {
+      "id": "section-3-lesson-2",
+      "curriculum_id": "a1.1-s3-l02",
+      "order": 2,
+      "title_fa": "روزهای هفته",
+      "objective_fa": "هفت روز هفته را تشخیص بده، نام ببر و به‌ترتیب بچین.",
+      "summary_fa": "هر هفت روز هفته را می‌بینی و در پایان باید ترتیب کامل هفته و یک روز شنیده‌شده را تشخیص بدهی.",
+      "grammar_fa": "نام روزهای هفته اسم هستند؛ در جمله‌های سادهٔ Tänään on… با فعل olla می‌آیند.",
+      "new_targets": [
+        "s3-maanantai",
+        "s3-tiistai",
+        "s3-keskiviikko",
+        "s3-torstai",
+        "s3-perjantai",
+        "s3-lauantai",
+        "s3-sunnuntai"
+      ],
+      "display_targets": [
+        "s3-maanantai",
+        "s3-tiistai",
+        "s3-keskiviikko",
+        "s3-torstai",
+        "s3-perjantai",
+        "s3-lauantai",
+        "s3-sunnuntai"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s3-maanantai",
+          "s3-tiistai",
+          "s3-keskiviikko",
+          "s3-torstai",
+          "s3-perjantai",
+          "s3-lauantai",
+          "s3-sunnuntai"
+        ],
+        "expressions": [
+          "s3-tanaan-maanantai",
+          "s3-huomenna-tiistai"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l01"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-maanantai"
+        },
+        {
+          "type": "teach",
+          "item": "s3-tiistai"
+        },
+        {
+          "type": "teach",
+          "item": "s3-keskiviikko"
+        },
+        {
+          "type": "teach",
+          "item": "s3-torstai"
+        },
+        {
+          "type": "teach",
+          "item": "s3-perjantai"
+        },
+        {
+          "type": "teach",
+          "item": "s3-lauantai"
+        },
+        {
+          "type": "teach",
+          "item": "s3-sunnuntai"
+        },
+        {
+          "type": "sequence-order",
+          "label_fa": "روزهای هفته را به‌ترتیب بچین.",
+          "items": [
+            "s3-torstai",
+            "s3-maanantai",
+            "s3-sunnuntai",
+            "s3-keskiviikko",
+            "s3-lauantai",
+            "s3-tiistai",
+            "s3-perjantai"
+          ],
+          "answer_order": [
+            1,
+            5,
+            3,
+            0,
+            6,
+            4,
+            2
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-tanaan-maanantai"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-perjantai",
+          "options": [
+            "s3-tiistai",
+            "s3-perjantai",
+            "s3-lauantai",
+            "s3-sunnuntai"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-huomenna-tiistai"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-keskiviikko"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-sunnuntai",
+          "options": [
+            "s3-maanantai",
+            "s3-lauantai",
+            "s3-sunnuntai",
+            "s3-torstai"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-tanaan-maanantai"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-huomenna-tiistai",
+          "options": [
+            "s3-tanaan-maanantai",
+            "s3-huomenna-tiistai",
+            "s3-tanaan",
+            "s3-huomenna"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-3",
+      "curriculum_id": "a1.1-s3-l03",
+      "order": 3,
+      "title_fa": "ساعت‌های کامل",
+      "objective_fa": "چند ساعت کامل ساده را بفهم و بیان کن.",
+      "summary_fa": "الگوی Kello on + عدد را با ساعت‌های ۱ تا ۵ تمرین می‌کنی و چند ساعت را از روی نمایش ساعت تشخیص می‌دهی.",
+      "grammar_fa": "برای ساعت کامل از Kello on + عدد اصلی استفاده می‌کنیم؛ جمله‌های لازم همگی به‌صورت کامل در داده وجود دارند.",
+      "new_targets": [
+        "s3-aamu",
+        "s3-ilta",
+        "s3-kello",
+        "s3-kello-yksi",
+        "s3-kello-kaksi"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s3-aamu",
+          "s3-ilta",
+          "s3-kello"
+        ],
+        "expressions": [
+          "s3-kello-yksi",
+          "s3-kello-kaksi"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l07"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-kello"
+        },
+        {
+          "type": "teach",
+          "item": "s3-aamu"
+        },
+        {
+          "type": "teach",
+          "item": "s3-ilta"
+        },
+        {
+          "type": "teach",
+          "item": "s3-kello-yksi"
+        },
+        {
+          "type": "clock-choice",
+          "hour": 1,
+          "item": "s3-kello-yksi",
+          "options": [
+            "s3-kello-kaksi",
+            "s3-kello-yksi",
+            "s3-kello-kolme",
+            "s3-kello-nelja"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-kello-kaksi"
+        },
+        {
+          "type": "clock-choice",
+          "hour": 2,
+          "item": "s3-kello-kaksi",
+          "options": [
+            "s3-kello-yksi",
+            "s3-kello-kolme",
+            "s3-kello-kaksi",
+            "s3-kello-viisi"
+          ]
+        },
+        {
+          "type": "clock-choice",
+          "hour": 3,
+          "item": "s3-kello-kolme",
+          "options": [
+            "s3-kello-viisi",
+            "s3-kello-kolme",
+            "s3-kello-yksi",
+            "s3-kello-nelja"
+          ]
+        },
+        {
+          "type": "clock-choice",
+          "hour": 4,
+          "item": "s3-kello-nelja",
+          "options": [
+            "s3-kello-kaksi",
+            "s3-kello-viisi",
+            "s3-kello-nelja",
+            "s3-kello-kolme"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-kello-yksi",
+          "options": [
+            "s3-kello-yksi",
+            "s3-kello-kaksi",
+            "s3-kello-kolme",
+            "s3-kello-nelja"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-kello-kaksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-kello-kolme"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-aamu",
+          "options": [
+            "s3-aamu",
+            "s3-ilta",
+            "s3-kello",
+            "s3-kello-yksi"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-ilta",
+          "options": [
+            "s3-kello",
+            "s3-aamu",
+            "s3-ilta",
+            "s3-kello-kaksi"
+          ]
+        },
+        {
+          "type": "clock-choice",
+          "hour": 5,
+          "item": "s3-kello-viisi",
+          "options": [
+            "s3-kello-kolme",
+            "s3-kello-viisi",
+            "s3-kello-kaksi",
+            "s3-kello-nelja"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-4",
+      "curriculum_id": "a1.1-s3-l04",
+      "order": 4,
+      "title_fa": "بخش‌های روز",
+      "objective_fa": "صبح، روز، عصر و شب را در عبارت‌های زمانی ساده تشخیص بده و استفاده کن.",
+      "summary_fa": "aamulla، päivällä، illalla و yöllä را به‌عنوان chunkهای زمانی تمرین می‌کنی و nyt را برای «الان» می‌بینی.",
+      "grammar_fa": "شکل‌های -lla/-llä در این درس به‌صورت chunk کامل یاد گرفته می‌شوند؛ runtime هیچ پسوندی تولید نمی‌کند.",
+      "new_targets": [
+        "s3-nyt",
+        "s3-aamulla",
+        "s3-paivalla",
+        "s3-illalla",
+        "s3-yolla"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s3-nyt"
+        ],
+        "topic": [
+          "s3-aamulla",
+          "s3-paivalla",
+          "s3-illalla",
+          "s3-yolla"
+        ],
+        "expressions": [
+          "s3-aamulla-expr",
+          "s3-paivalla-expr",
+          "s3-illalla-expr",
+          "s3-yolla-expr"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l03"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-nyt"
+        },
+        {
+          "type": "teach",
+          "item": "s3-aamulla"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-aamulla",
+          "options": [
+            "s3-yolla",
+            "s3-aamulla",
+            "s3-illalla",
+            "s3-paivalla"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-paivalla"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-paivalla",
+          "options": [
+            "s3-aamulla",
+            "s3-illalla",
+            "s3-paivalla",
+            "s3-yolla"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-illalla"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-illalla",
+          "options": [
+            "s3-paivalla",
+            "s3-yolla",
+            "s3-aamulla",
+            "s3-illalla"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-yolla"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-yolla",
+          "options": [
+            "s3-yolla",
+            "s3-aamulla",
+            "s3-paivalla",
+            "s3-illalla"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-aamulla-expr"
+        },
+        {
+          "type": "teach",
+          "item": "s3-paivalla-expr"
+        },
+        {
+          "type": "teach",
+          "item": "s3-illalla-expr"
+        },
+        {
+          "type": "teach",
+          "item": "s3-yolla-expr"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-aamulla"
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s3-yolla",
+          "options": [
+            "s3-illalla",
+            "s3-yolla",
+            "s3-paivalla",
+            "s3-aamulla"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-5",
+      "curriculum_id": "a1.1-s3-l05",
+      "order": 5,
+      "title_fa": "کارهای روزمره: من",
+      "objective_fa": "چند کار روزمرهٔ رایج خودت را با شکل اول‌شخص بیان کن.",
+      "summary_fa": "هفت فعل روزمرهٔ پرکاربرد را به‌صورت شکل‌های کامل اول‌شخص تمرین می‌کنی.",
+      "grammar_fa": "syön، juon، nukun، opiskelen، työskentelen، menen و tulen شکل‌های کامل اول‌شخص هستند و از infinitive در runtime ساخته نمی‌شوند.",
+      "new_targets": [
+        "s3-syon",
+        "s3-juon",
+        "s3-nukun",
+        "s3-opiskelen",
+        "s3-tyoskentelen",
+        "s3-menen",
+        "s3-tulen"
+      ],
+      "display_targets": [
+        "s3-syon",
+        "s3-juon",
+        "s3-nukun",
+        "s3-opiskelen",
+        "s3-tyoskentelen",
+        "s3-menen",
+        "s3-tulen"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s3-syon",
+          "s3-juon",
+          "s3-nukun",
+          "s3-opiskelen",
+          "s3-tyoskentelen",
+          "s3-menen",
+          "s3-tulen"
+        ],
+        "expressions": [
+          "s3-mina-syon",
+          "s3-mina-juon-kahvia",
+          "s3-menen-kotiin"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l03",
+        "a1.1-s3-l04"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-syon"
+        },
+        {
+          "type": "teach",
+          "item": "s3-juon"
+        },
+        {
+          "type": "teach",
+          "item": "s3-nukun"
+        },
+        {
+          "type": "teach",
+          "item": "s3-opiskelen"
+        },
+        {
+          "type": "teach",
+          "item": "s3-tyoskentelen"
+        },
+        {
+          "type": "teach",
+          "item": "s3-menen"
+        },
+        {
+          "type": "teach",
+          "item": "s3-tulen"
+        },
+        {
+          "type": "teach",
+          "item": "s3-mina-syon"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-mina-syon"
+        },
+        {
+          "type": "teach",
+          "item": "s3-mina-juon-kahvia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-mina-juon-kahvia"
+        },
+        {
+          "type": "teach",
+          "item": "s3-menen-kotiin"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-menen-kotiin"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-nukun",
+          "options": [
+            "s3-menen",
+            "s3-nukun",
+            "s3-juon",
+            "s3-opiskelen"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s3-tyoskentelen",
+          "options": [
+            "s3-opiskelen",
+            "s3-menen",
+            "s3-tyoskentelen",
+            "s3-tulen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-6",
+      "curriculum_id": "a1.1-s3-l06",
+      "order": 6,
+      "title_fa": "کارهای روزمره: تو",
+      "objective_fa": "دربارهٔ چند کار آشنا از طرف مقابل سؤال کن.",
+      "summary_fa": "Mitä teet? و دو سؤال بله/خیر Opiskeletko? و Työskenteletkö? را به‌صورت chunk کامل تمرین می‌کنی.",
+      "grammar_fa": "شکل دوم‌شخص و سؤال‌های -ko/-kö در این سطح به‌صورت عبارت کامل نگهداری و تمرین می‌شوند.",
+      "new_targets": [
+        "s3-mita",
+        "s3-tyo",
+        "s3-koulu",
+        "s3-teet",
+        "s3-mita-teet",
+        "s3-opiskeletko"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s3-mita"
+        ],
+        "topic": [
+          "s3-tyo",
+          "s3-koulu",
+          "s3-teet"
+        ],
+        "expressions": [
+          "s3-mita-teet",
+          "s3-opiskeletko",
+          "s3-tyoskenteletko"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l05"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-mita"
+        },
+        {
+          "type": "teach",
+          "item": "s3-tyo"
+        },
+        {
+          "type": "teach",
+          "item": "s3-koulu"
+        },
+        {
+          "type": "teach",
+          "item": "s3-teet"
+        },
+        {
+          "type": "teach",
+          "item": "s3-mita-teet"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-mita-teet"
+        },
+        {
+          "type": "teach",
+          "item": "s3-opiskeletko"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-opiskeletko",
+          "options": [
+            "s3-mita-teet",
+            "s3-opiskeletko",
+            "s3-tyoskenteletko",
+            "s3-teet"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-tyoskenteletko"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-tyoskenteletko"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-tyo",
+          "options": [
+            "s3-koulu",
+            "s3-teet",
+            "s3-tyo",
+            "s3-mita"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-koulu",
+          "options": [
+            "s3-koulu",
+            "s3-tyo",
+            "s3-mita",
+            "s3-teet"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s3-teet",
+          "options": [
+            "s3-mita",
+            "s3-teet",
+            "s3-tyo",
+            "s3-koulu"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-mita-teet",
+          "options": [
+            "s3-opiskeletko",
+            "s3-mita-teet",
+            "s3-tyoskenteletko",
+            "s3-teet"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-tyoskenteletko",
+          "options": [
+            "s3-tyoskenteletko",
+            "s3-opiskeletko",
+            "s3-mita-teet",
+            "s3-teet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-7",
+      "curriculum_id": "a1.1-s3-l07",
+      "order": 7,
+      "title_fa": "من ... نمی‌کنم",
+      "objective_fa": "پنج فعل روزمرهٔ آشنا را با شکل منفی اول‌شخص درست کن.",
+      "summary_fa": "هر فعل مثبت با connegative صریح خودش و جملهٔ منفی کامل جفت شده است؛ هیچ تبدیل صرفی در runtime حدس زده نمی‌شود.",
+      "grammar_fa": "ساختار منفی اول‌شخص: en + connegative. جفت‌های syön→syö، juon→juo، nukun→nuku، opiskelen→opiskele و työskentelen→työskentele صریح‌اند.",
+      "new_targets": [
+        "s3-en"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s3-en"
+        ],
+        "topic": [],
+        "expressions": [
+          "s3-pair-syon",
+          "s3-pair-juon",
+          "s3-pair-nukun",
+          "s3-pair-opiskelen",
+          "s3-pair-tyoskentelen"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l07",
+        "a1.1-s3-l05"
+      ],
+      "connegative_pairs": [
+        {
+          "affirmative": "syön",
+          "connegative": "syö",
+          "negative": "En syö."
+        },
+        {
+          "affirmative": "juon",
+          "connegative": "juo",
+          "negative": "En juo."
+        },
+        {
+          "affirmative": "nukun",
+          "connegative": "nuku",
+          "negative": "En nuku."
+        },
+        {
+          "affirmative": "opiskelen",
+          "connegative": "opiskele",
+          "negative": "En opiskele."
+        },
+        {
+          "affirmative": "työskentelen",
+          "connegative": "työskentele",
+          "negative": "En työskentele."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-en"
+        },
+        {
+          "type": "teach",
+          "item": "s3-pair-syon"
+        },
+        {
+          "type": "negative-transform",
+          "affirmative_item": "s3-syon",
+          "negative_item": "s3-negative-syon"
+        },
+        {
+          "type": "teach",
+          "item": "s3-pair-juon"
+        },
+        {
+          "type": "negative-transform",
+          "affirmative_item": "s3-juon",
+          "negative_item": "s3-negative-juon"
+        },
+        {
+          "type": "teach",
+          "item": "s3-pair-nukun"
+        },
+        {
+          "type": "negative-transform",
+          "affirmative_item": "s3-nukun",
+          "negative_item": "s3-negative-nukun"
+        },
+        {
+          "type": "teach",
+          "item": "s3-pair-opiskelen"
+        },
+        {
+          "type": "negative-transform",
+          "affirmative_item": "s3-opiskelen",
+          "negative_item": "s3-negative-opiskelen"
+        },
+        {
+          "type": "teach",
+          "item": "s3-pair-tyoskentelen"
+        },
+        {
+          "type": "negative-transform",
+          "affirmative_item": "s3-tyoskentelen",
+          "negative_item": "s3-negative-tyoskentelen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-negative-syon"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-negative-juon"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-negative-nukun",
+          "options": [
+            "s3-negative-juon",
+            "s3-negative-nukun",
+            "s3-negative-syon",
+            "s3-negative-opiskelen"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-negative-tyoskentelen"
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-8",
+      "curriculum_id": "a1.1-s3-l08",
+      "order": 8,
+      "title_fa": "چه زمانی؟",
+      "objective_fa": "زمان یک رویداد ساده را بپرس و پاسخ کوتاه بده.",
+      "summary_fa": "milloin و aika را همراه با چهار پاسخ/عبارت کوتاه زمانی بازیابی می‌کنی.",
+      "grammar_fa": "Milloin? برای پرسیدن زمان است؛ پاسخ می‌تواند بسیار کوتاه باشد: Tänään. Huomenna. Kello kolme.",
+      "new_targets": [
+        "s3-aika",
+        "s3-milloin",
+        "s3-milloin-expr",
+        "s3-tanaan-short",
+        "s3-huomenna-short",
+        "s3-kello-kolme-short"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s3-aika",
+          "s3-milloin"
+        ],
+        "expressions": [
+          "s3-milloin-expr",
+          "s3-tanaan-short",
+          "s3-huomenna-short",
+          "s3-kello-kolme-short"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l01",
+        "a1.1-s3-l03",
+        "a1.1-s3-l04",
+        "a1.1-s3-l05"
+      ]
+    },
+    {
+      "id": "section-3-lesson-9",
+      "curriculum_id": "a1.1-s3-l09",
+      "order": 9,
+      "title_fa": "روز سادهٔ من",
+      "objective_fa": "یک برنامهٔ روزانهٔ کوتاه را به‌ترتیب بفهم و سه جملهٔ متصل بنویس.",
+      "summary_fa": "پنج رویداد روزانه را مرتب می‌کنی، یک متن کوتاه را می‌خوانی و با سه راهنمای زمانی سه جملهٔ کامل می‌نویسی.",
+      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ قیدهای زمانی و فعل‌های اول‌شخص قبلی در یک توالی کوتاه بازیابی می‌شوند.",
+      "new_targets": [],
+      "practice_targets": [
+        "s3-frame-aamulla",
+        "s3-frame-paivalla",
+        "s3-frame-illalla"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "s3-frame-aamulla",
+          "s3-frame-paivalla",
+          "s3-frame-illalla"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l04",
+        "a1.1-s3-l05",
+        "a1.1-s3-l07",
+        "a1.1-s3-l08"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-frame-aamulla"
+        },
+        {
+          "type": "teach",
+          "item": "s3-frame-paivalla"
+        },
+        {
+          "type": "teach",
+          "item": "s3-frame-illalla"
+        },
+        {
+          "type": "teach",
+          "item": "s3-routine-reading"
+        },
+        {
+          "type": "sequence-order",
+          "label_fa": "پنج رویداد روز را به‌ترتیب بچین.",
+          "items": [
+            "s3-routine-4",
+            "s3-routine-2",
+            "s3-routine-5",
+            "s3-routine-1",
+            "s3-routine-3"
+          ],
+          "answer_order": [
+            3,
+            1,
+            4,
+            0,
+            2
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-routine-1",
+          "options": [
+            "s3-routine-4",
+            "s3-routine-1",
+            "s3-routine-5",
+            "s3-routine-3"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-routine-3",
+          "options": [
+            "s3-routine-2",
+            "s3-routine-4",
+            "s3-routine-3",
+            "s3-routine-5"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-routine-4",
+          "options": [
+            "s3-routine-4",
+            "s3-routine-2",
+            "s3-routine-5",
+            "s3-routine-1"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-routine-1"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-routine-3"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-routine-4"
+        },
+        {
+          "type": "guided-writing",
+          "expected_items": [
+            "s3-routine-1",
+            "s3-routine-3",
+            "s3-routine-4"
+          ]
+        },
+        {
+          "type": "sequence-order",
+          "label_fa": "روتین را دوباره بدون متن راهنما مرتب کن.",
+          "items": [
+            "s3-routine-3",
+            "s3-routine-5",
+            "s3-routine-1",
+            "s3-routine-4",
+            "s3-routine-2"
+          ],
+          "answer_order": [
+            2,
+            4,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-routine-5",
+          "options": [
+            "s3-routine-2",
+            "s3-routine-5",
+            "s3-routine-3",
+            "s3-routine-1"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-routine-reading",
+          "options": [
+            "s3-routine-reading",
+            "s3-routine-1",
+            "s3-frame-aamulla",
+            "s3-frame-illalla"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-3-lesson-10",
+      "curriculum_id": "a1.1-s3-l10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۳",
+      "objective_fa": "دربارهٔ روز، ساعت و برنامهٔ روزانه یک تعامل بسیار هدایت‌شده انجام بده.",
+      "summary_fa": "روزهای هفته، ساعت کامل، بخش‌های روز، افعال روزمره، نفی و Milloin? در یک checkpoint ترکیبی مرور می‌شوند.",
+      "grammar_fa": "مطلب جدیدی اضافه نمی‌شود؛ هدف بازیابی سریع و دقیق محتوای کل بخش است.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.1-s3-l01",
+        "a1.1-s3-l02",
+        "a1.1-s3-l03",
+        "a1.1-s3-l04",
+        "a1.1-s3-l05",
+        "a1.1-s3-l06",
+        "a1.1-s3-l07",
+        "a1.1-s3-l08",
+        "a1.1-s3-l09"
+      ],
+      "checkpoint_targets": [
+        "s3-tanaan",
+        "s3-maanantai",
+        "s3-perjantai",
+        "s3-kello-kaksi",
+        "s3-kello-nelja",
+        "s3-aamulla",
+        "s3-yolla",
+        "s3-syon",
+        "s3-opiskelen",
+        "s3-mita-teet",
+        "s3-negative-syon",
+        "s3-negative-nukun",
+        "s3-milloin-expr",
+        "s3-kello-kolme-short",
+        "s3-routine-3"
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
+      ]
+    }
+  ]
+}
