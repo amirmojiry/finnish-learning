@@ -6,6 +6,22 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-10-03
+
+### Added
+
+- A fully implemented curriculum-driven A1.1 Section 2 covering personal information, people, origin, languages, residence, family, possession, age, numbers 0–20, contact details, and a personal profile.
+- Explicit cross-section recycling dependencies from Section 1 into Section 2.
+- A dedicated learner-facing 0–20 number reference activity with deterministic follow-up practice.
+
+### Changed
+
+- The course runtime now supports multiple implemented sections instead of a single hard-coded section.
+- Section 2 unlocks only after all ten Section 1 lessons are complete; Sections 3–4 remain upcoming.
+- Course hashes, completion flow, and section selection now work across multiple implemented sections while preserving existing Section 1 progress IDs.
+- Required Finnish inflected forms and typed accepted answers remain explicit in static lesson data rather than being generated at runtime.
+
+
 ## [1.7.0] - 2026-10-03
 
 ### Changed
