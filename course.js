@@ -8,6 +8,7 @@
   const STORAGE_KEY = 'fiCourseProgressV1';
   const SCHEMA_VERSION = 1;
   const SECTION_URL = './data/course/a1.1-section-1.json';
+  const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -135,28 +136,46 @@
   }
 
   function buildStandardActivities(targets, previousTargets = []) {
-    if (!Array.isArray(targets) || targets.length !== 5) {
-      throw new Error('A standard sample lesson must define exactly five new targets.');
+    if (!Array.isArray(targets) || targets.length < 1 || targets.length > 6) {
+      throw new Error('A standard lesson must define between one and six practice targets.');
     }
-    const [t1, t2, t3, t4, t5] = targets;
-    const review = previousTargets.length ? previousTargets[previousTargets.length - 1] : t2;
-    return [
-      { type: 'teach', item: t1 },
-      { type: 'choice', mode: 'meaning', item: t1, options: uniqueOptions([t1, t2, t3, t4]) },
-      { type: 'teach', item: t2 },
-      { type: 'choice', mode: 'finnish', item: t2, options: uniqueOptions([t1, t2, t3, t5]) },
-      { type: 'teach', item: t3 },
-      { type: 'choice', mode: 'meaning', item: t3, options: uniqueOptions([t1, t2, t3, t4]) },
-      { type: 'teach', item: t4 },
-      { type: 'choice', mode: 'cloze', item: t4, options: uniqueOptions([t1, t2, t4, t5]) },
-      { type: 'teach', item: t5 },
-      { type: 'type', mode: 'finnish', item: t5 },
-      { type: 'choice', mode: 'listen', item: t1, options: uniqueOptions([t1, t2, t3, t5]) },
-      { type: 'choice', mode: 'cloze', item: t2, options: uniqueOptions([t1, t2, t3, t4]) },
-      { type: 'choice', mode: 'meaning', item: review, options: uniqueOptions([review, t1, t3, t5]) },
-      { type: 'type', mode: 'cloze', item: t4 },
-      { type: 'choice', mode: 'finnish', item: t5, options: uniqueOptions([t2, t3, t4, t5]) },
-    ];
+    const reviewTargets = uniqueOptions(previousTargets.slice().reverse().filter((id) => !targets.includes(id)));
+    const optionPool = uniqueOptions([...targets, ...reviewTargets]);
+    let choiceIndex = 0;
+    const optionsFor = (itemId) => {
+      const alternatives = optionPool.filter((candidate) => candidate !== itemId).slice(0, 3);
+      const options = alternatives.slice();
+      const answerIndex = choiceIndex % Math.min(4, alternatives.length + 1);
+      options.splice(answerIndex, 0, itemId);
+      choiceIndex += 1;
+      return options;
+    };
+
+    const activities = [];
+    for (const target of targets) {
+      activities.push({ type: 'teach', item: target });
+      activities.push({ type: 'choice', mode: 'meaning', item: target, options: optionsFor(target) });
+    }
+
+    const remaining = 15 - activities.length;
+    const gradedModes = remaining <= 3
+      ? [['choice', 'listen'], ['type', 'finnish'], ['type', 'cloze']]
+      : [['choice', 'finnish'], ['choice', 'listen'], ['choice', 'cloze'], ['type', 'finnish'], ['type', 'cloze']];
+    let cursor = 0;
+    while (activities.length < 15) {
+      const useReview = reviewTargets.length && cursor % 3 === 2;
+      const item = useReview
+        ? reviewTargets[cursor % reviewTargets.length]
+        : targets[cursor % targets.length];
+      const [type, mode] = gradedModes[cursor % gradedModes.length];
+      activities.push(
+        type === 'choice'
+          ? { type, mode, item, options: optionsFor(item) }
+          : { type, mode, item },
+      );
+      cursor += 1;
+    }
+    return activities.slice(0, 15);
   }
 
   function buildCheckpointActivities(section, lesson) {
@@ -195,7 +214,10 @@
       if (index === section.lessons.length - 1 && Array.isArray(lesson.checkpoint_targets)) {
         lesson.activities = buildCheckpointActivities(section, lesson);
       } else {
-        lesson.activities = buildStandardActivities(lesson.new_targets, seen);
+        const practiceTargets = Array.isArray(lesson.new_targets) && lesson.new_targets.length
+          ? lesson.new_targets
+          : lesson.practice_targets;
+        lesson.activities = buildStandardActivities(practiceTargets, seen);
       }
       lesson.review_targets = Array.isArray(lesson.review_targets) ? lesson.review_targets : seen.slice(-3);
       seen.push(...(lesson.new_targets || []));
@@ -207,10 +229,18 @@
     const section = prepareSection(rawSection);
     if (section.lessons.length !== 10) throw new Error('The sample section must contain exactly ten lessons.');
     for (const lesson of section.lessons) {
-      if (!lesson.id || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
-        throw new Error(`Lesson ${lesson.id || '?'} must contain exactly fifteen activities.`);
+      if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
+        throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or fifteen deterministic activities.`);
       }
       for (const activity of lesson.activities) {
+        if (activity.type === 'dialogue-order') {
+          if (!Array.isArray(activity.turns) || activity.turns.length !== 4) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
+          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== 4) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
+          for (const itemId of activity.turns) {
+            if (!section.items[itemId]) throw new Error(`Unknown dialogue item: ${itemId}`);
+          }
+          continue;
+        }
         if (!section.items[activity.item]) throw new Error(`Unknown course item: ${activity.item}`);
         for (const optionId of activity.options || []) {
           if (!section.items[optionId]) throw new Error(`Unknown course option: ${optionId}`);
@@ -218,6 +248,38 @@
       }
     }
     return section;
+  }
+
+  function validateSectionAgainstCurriculum(section, curriculum) {
+    if (!curriculum || !Array.isArray(curriculum.sections)) throw new Error('Invalid curriculum data.');
+    const contract = curriculum.sections.find((entry) => entry.id === section.curriculum_section_id);
+    if (!contract) throw new Error('Implemented section is missing from the curriculum.');
+    if (contract.lessons.length !== section.lessons.length) throw new Error('Implemented lesson count does not match the curriculum.');
+
+    const implementedByCurriculumId = new Map(section.lessons.map((lesson) => [lesson.curriculum_id, lesson]));
+    for (const contractLesson of contract.lessons) {
+      const implemented = implementedByCurriculumId.get(contractLesson.id);
+      if (!implemented) throw new Error(`Missing implemented curriculum lesson: ${contractLesson.id}`);
+      if (implemented.order !== contractLesson.order) throw new Error(`Lesson order mismatch: ${contractLesson.id}`);
+      if (!implemented.summary_fa || !implemented.grammar_fa) throw new Error(`Incomplete learner content: ${contractLesson.id}`);
+
+      const refs = implemented.curriculum_target_refs;
+      if (!refs || !Array.isArray(refs.high_frequency) || !Array.isArray(refs.topic) || !Array.isArray(refs.expressions)) {
+        throw new Error(`Missing curriculum target mapping: ${contractLesson.id}`);
+      }
+      const requiredCounts = {
+        high_frequency: contractLesson.high_frequency_targets.length,
+        topic: contractLesson.topic_targets.length,
+        expressions: contractLesson.expressions.length,
+      };
+      for (const [group, count] of Object.entries(requiredCounts)) {
+        if (refs[group].length !== count) throw new Error(`Curriculum target count mismatch for ${contractLesson.id} / ${group}`);
+        for (const itemId of refs[group]) {
+          if (!section.items[itemId]) throw new Error(`Unknown curriculum target item: ${itemId}`);
+        }
+      }
+    }
+    return { ...section, curriculum_contract: contract };
   }
 
   function initializeBrowser(windowObject) {
@@ -241,6 +303,7 @@
     const allPrimaryItems = [...document.querySelectorAll('.bottom-nav-item, .desktop-view-link')];
 
     let section = null;
+    let curriculum = null;
     let progress = loadProgress(windowObject.localStorage);
     let activeLesson = null;
     let activityIndex = 0;
@@ -321,6 +384,30 @@
       if (!section) return renderLoading();
       root.replaceChildren();
 
+      const catalog = document.createElement('section');
+      catalog.className = 'course-section-catalog';
+      const catalogTitle = document.createElement('div');
+      catalogTitle.className = 'course-section-catalog-heading';
+      catalogTitle.innerHTML = '<h1>مسیر A1.1</h1><p>بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند.</p>';
+      catalog.append(catalogTitle);
+      const catalogGrid = document.createElement('div');
+      catalogGrid.className = 'course-section-grid';
+      for (const entry of curriculum?.sections || []) {
+        const card = document.createElement('article');
+        const available = entry.id === section.curriculum_section_id;
+        card.className = `course-section-card ${available ? 'is-available' : 'is-coming'}`;
+        const status = document.createElement('span');
+        status.className = 'course-section-status';
+        status.textContent = available ? 'قابل یادگیری' : 'به‌زودی';
+        const heading = document.createElement('h2');
+        heading.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
+        const goal = document.createElement('p');
+        goal.textContent = entry.goal_fa;
+        card.append(status, heading, goal);
+        catalogGrid.append(card);
+      }
+      catalog.append(catalogGrid);
+
       const header = document.createElement('header');
       header.className = 'course-hero-card';
       const level = document.createElement('span');
@@ -388,6 +475,13 @@
         const objective = document.createElement('p');
         objective.textContent = lesson.objective_fa;
         body.append(heading, objective);
+        const summary = document.createElement('p');
+        summary.className = 'course-lesson-summary';
+        summary.textContent = lesson.summary_fa;
+        const grammar = document.createElement('p');
+        grammar.className = 'course-lesson-grammar';
+        grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
+        body.append(summary, grammar);
 
         const targetList = document.createElement('div');
         targetList.className = 'course-target-list';
@@ -423,15 +517,15 @@
       const footer = document.createElement('div');
       footer.className = 'course-map-footer';
       const note = document.createElement('p');
-      note.textContent = 'این بخش یک نمونهٔ محصولی است. محتوای آن بازبینی اولیه شده، اما هنوز جایگزین یک دورهٔ رسمی CEFR نیست.';
-      const reset = createButton('پاک‌کردن پیشرفت این نمونه', 'course-reset-button', () => {
+      note.textContent = 'بخش ۱ نخستین بخش پیاده‌شدهٔ A1.1 است. بخش‌های بعدی طبق همین قرارداد آموزشی اضافه می‌شوند.';
+      const reset = createButton('پاک‌کردن پیشرفت بخش ۱', 'course-reset-button', () => {
         if (!windowObject.confirm('پیشرفت هر ده درس پاک شود؟')) return;
         progress = saveProgress(windowObject.localStorage, emptyProgress());
         renderSectionMap();
       });
       footer.append(note, reset);
 
-      root.append(header, outcomes, path, footer);
+      root.append(catalog, header, outcomes, path, footer);
       root.scrollTop = 0;
     }
 
@@ -450,6 +544,7 @@
     }
 
     function questionHeading(activity) {
+      if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
       if (activity.mode === 'finnish') return 'گزینهٔ فنلاندی درست را انتخاب کن.';
@@ -462,7 +557,7 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = section.items[activity.item];
+      const item = activity.type === 'dialogue-order' ? null : section.items[activity.item];
       root.replaceChildren();
 
       const shell = document.createElement('section');
@@ -487,6 +582,16 @@
       const title = document.createElement('h1');
       title.textContent = activeLesson.title_fa;
       lessonHeader.append(label, title);
+      if (activityIndex === 0) {
+        const intro = document.createElement('div');
+        intro.className = 'course-lesson-intro';
+        const summary = document.createElement('p');
+        summary.textContent = activeLesson.summary_fa;
+        const grammar = document.createElement('p');
+        grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
+        intro.append(summary, grammar);
+        lessonHeader.append(intro);
+      }
 
       const card = document.createElement('div');
       card.className = 'course-question-card';
@@ -512,7 +617,51 @@
         card.append(example);
       }
 
-      if (activity.type === 'teach') {
+      if (activity.type === 'dialogue-order') {
+        const instruction = document.createElement('p');
+        instruction.className = 'course-dialogue-instruction';
+        instruction.textContent = 'چهار نوبت گفت‌وگو را به ترتیب درست بچین.';
+        card.append(instruction);
+
+        const ordered = [];
+        const turns = document.createElement('div');
+        turns.className = 'course-dialogue-options';
+        activity.turns.forEach((itemId, index) => {
+          const turnItem = section.items[itemId];
+          const button = createButton(turnItem.surface_form, 'course-option', () => {
+            if (answered || ordered.includes(index)) return;
+            ordered.push(index);
+            button.disabled = true;
+            button.dataset.order = String(ordered.length);
+            button.textContent = `${toPersianNumber(ordered.length)}. ${turnItem.surface_form}`;
+            if (ordered.length === 4) {
+              answered = true;
+              sessionGraded += 1;
+              const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+              if (correct) sessionCorrect += 1;
+              const result = document.createElement('div');
+              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+              const title = document.createElement('strong');
+              title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را دوباره مرور کن.';
+              const dialogue = document.createElement('div');
+              dialogue.className = 'course-dialogue-review';
+              for (const answerIndex of activity.answer_order) {
+                const line = document.createElement('p');
+                line.lang = 'fi';
+                line.dir = 'ltr';
+                line.textContent = section.items[activity.turns[answerIndex]].surface_form;
+                dialogue.append(line);
+              }
+              result.append(title, dialogue, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+              card.append(result);
+            }
+          });
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          turns.append(button);
+        });
+        card.append(turns);
+      } else if (activity.type === 'teach') {
         const word = document.createElement('div');
         word.className = 'course-teach-word';
         const surface = document.createElement('strong');
@@ -731,13 +880,18 @@
 
     const version = document.querySelector('meta[name="app-version"]')?.content || Date.now();
     renderLoading();
-    windowObject.fetch(`${SECTION_URL}?v=${version}`, { cache: 'no-store' })
-      .then((response) => {
-        if (!response.ok) throw new Error(String(response.status));
-        return response.json();
+    Promise.all([
+      windowObject.fetch(`${SECTION_URL}?v=${version}`, { cache: 'no-store' }),
+      windowObject.fetch(`${CURRICULUM_URL}?v=${version}`, { cache: 'no-store' }),
+    ])
+      .then(async ([sectionResponse, curriculumResponse]) => {
+        if (!sectionResponse.ok) throw new Error(String(sectionResponse.status));
+        if (!curriculumResponse.ok) throw new Error(String(curriculumResponse.status));
+        return Promise.all([sectionResponse.json(), curriculumResponse.json()]);
       })
-      .then((payload) => {
-        section = validateSection(payload);
+      .then(([payload, curriculumPayload]) => {
+        curriculum = curriculumPayload;
+        section = validateSectionAgainstCurriculum(validateSection(payload), curriculum);
         progress = loadProgress(windowObject.localStorage);
         if (isCourseHash()) syncFromHash();
         else {
@@ -765,6 +919,7 @@
     STORAGE_KEY,
     SCHEMA_VERSION,
     SECTION_URL,
+    CURRICULUM_URL,
     normalizeAnswer,
     emptyProgress,
     sanitizeProgress,
@@ -781,6 +936,7 @@
     buildCheckpointActivities,
     prepareSection,
     validateSection,
+    validateSectionAgainstCurriculum,
     initializeBrowser,
   };
 });

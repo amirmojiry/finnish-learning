@@ -6,6 +6,21 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-10-03
+
+### Added
+
+- A fully implemented curriculum-driven A1.1 Section 1 with ten learner-facing lessons covering first contact and survival Finnish.
+- Learner-facing lesson summaries, concise grammar/help notes, explicit curriculum-target mappings, and deterministic review-only practice.
+- A four-section A1.1 course catalog in the UI, with Section 1 available and Sections 2–4 shown as upcoming.
+
+### Changed
+
+- The course engine now loads and validates the machine-readable curriculum alongside the implemented lesson data.
+- Section 1 progression keeps the existing local lesson IDs for progress compatibility while binding every lesson to its stable curriculum ID.
+- The old prototype topic mix has been replaced by the actual Section 1 sequence: greetings, introductions, wellbeing, simple negation, basic questions, politeness, communication repair, demonstratives, mini-dialogues, and a checkpoint.
+
+
 ## [1.5.0] - 2026-10-03
 
 ### Added
