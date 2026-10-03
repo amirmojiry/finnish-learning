@@ -1648,6 +1648,99 @@
       },
       "recycle_from": [
         "a1.1-s2-l02"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-suomi-lang"
+        },
+        {
+          "type": "teach",
+          "item": "s2-persia"
+        },
+        {
+          "type": "teach",
+          "item": "s2-englanti"
+        },
+        {
+          "type": "teach",
+          "item": "s2-puhun"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-suomi-lang",
+          "options": [
+            "s2-persia",
+            "s2-suomi-lang",
+            "s2-englanti",
+            "s2-puhun"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-puhun-suomea"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-suomea"
+        },
+        {
+          "type": "teach",
+          "item": "s2-puhun-persiaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-persiaa"
+        },
+        {
+          "type": "teach",
+          "item": "s2-puhun-englantia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-englantia"
+        },
+        {
+          "type": "teach",
+          "item": "s2-puhun-vahan-suomea"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-puhun-vahan-suomea",
+          "options": [
+            "s2-puhun-suomea",
+            "s2-puhun-vahan-suomea",
+            "s2-puhun-persiaa",
+            "s2-puhun-englantia"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-puhun-englantia",
+          "options": [
+            "s2-puhun-persiaa",
+            "s2-puhun-englantia",
+            "s2-puhun-suomea",
+            "s2-puhun-vahan-suomea"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s2-puhun-persiaa",
+          "options": [
+            "s2-puhun-englantia",
+            "s2-puhun-suomea",
+            "s2-puhun-persiaa",
+            "s2-puhun-vahan-suomea"
+          ]
+        }
       ]
     },
     {
