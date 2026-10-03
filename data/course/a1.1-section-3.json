@@ -1494,6 +1494,120 @@
       },
       "recycle_from": [
         "a1.1-s2-l09"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-eilen"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-eilen",
+          "options": [
+            "s3-tanaan",
+            "s3-eilen",
+            "s3-huomenna",
+            "s3-aika"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-tanaan"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-tanaan",
+          "options": [
+            "s3-eilen",
+            "s3-huomenna",
+            "s3-tanaan",
+            "s3-milloin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-huomenna"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-huomenna",
+          "options": [
+            "s3-huomenna",
+            "s3-eilen",
+            "s3-tanaan",
+            "s3-aika"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-tanaan-on-frame"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-tanaan-on-frame",
+          "options": [
+            "s3-huomenna-on-frame",
+            "s3-tanaan-on-frame",
+            "s3-huomenna",
+            "s3-tanaan"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s3-huomenna-on-frame"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-huomenna-on-frame",
+          "options": [
+            "s3-tanaan-on-frame",
+            "s3-huomenna",
+            "s3-huomenna-on-frame",
+            "s3-tanaan"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-eilen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-tanaan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-huomenna"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-eilen",
+          "options": [
+            "s3-tanaan",
+            "s3-huomenna",
+            "s3-eilen",
+            "s3-milloin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "s3-tanaan",
+          "options": [
+            "s3-huomenna",
+            "s3-eilen",
+            "s3-tanaan",
+            "s3-milloin"
+          ]
+        }
       ]
     },
     {
@@ -2365,6 +2479,119 @@
         "a1.1-s3-l03",
         "a1.1-s3-l04",
         "a1.1-s3-l05"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s3-aika"
+        },
+        {
+          "type": "teach",
+          "item": "s3-milloin"
+        },
+        {
+          "type": "teach",
+          "item": "s3-milloin-expr"
+        },
+        {
+          "type": "teach",
+          "item": "s3-tanaan-short"
+        },
+        {
+          "type": "teach",
+          "item": "s3-huomenna-short"
+        },
+        {
+          "type": "teach",
+          "item": "s3-kello-kolme-short"
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-opiskelen",
+          "time_item": "s3-tanaan-short",
+          "options": [
+            "s3-huomenna-short",
+            "s3-tanaan-short",
+            "s3-kello-kolme-short",
+            "s3-yolla-expr"
+          ]
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-tyoskentelen",
+          "time_item": "s3-huomenna-short",
+          "options": [
+            "s3-tanaan-short",
+            "s3-aamulla-expr",
+            "s3-huomenna-short",
+            "s3-kello-kolme-short"
+          ]
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-syon",
+          "time_item": "s3-kello-kolme-short",
+          "options": [
+            "s3-kello-kolme-short",
+            "s3-huomenna-short",
+            "s3-illalla-expr",
+            "s3-tanaan-short"
+          ]
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-nukun",
+          "time_item": "s3-yolla-expr",
+          "options": [
+            "s3-aamulla-expr",
+            "s3-yolla-expr",
+            "s3-paivalla-expr",
+            "s3-kello-kolme-short"
+          ]
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-juon",
+          "time_item": "s3-aamulla-expr",
+          "options": [
+            "s3-illalla-expr",
+            "s3-paivalla-expr",
+            "s3-aamulla-expr",
+            "s3-yolla-expr"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s3-milloin-expr",
+          "options": [
+            "s3-tanaan-short",
+            "s3-milloin-expr",
+            "s3-huomenna-short",
+            "s3-kello-kolme-short"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s3-huomenna-short",
+          "options": [
+            "s3-tanaan-short",
+            "s3-yolla-expr",
+            "s3-huomenna-short",
+            "s3-kello-kolme-short"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-tanaan-short"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s3-kello-kolme-short"
+        }
       ]
     },
     {
