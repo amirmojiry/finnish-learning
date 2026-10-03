@@ -19,6 +19,7 @@ const requiredLessonFields = [
   'activity_families',
   'skills',
   'assessment',
+  'lexical_target_count',
 ];
 
 test('A1.1 curriculum defines four ordered ten-lesson sections', () => {
