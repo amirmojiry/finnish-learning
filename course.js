@@ -141,12 +141,13 @@
     }
     const reviewTargets = uniqueOptions(previousTargets.slice().reverse().filter((id) => !targets.includes(id)));
     const optionPool = uniqueOptions([...targets, ...reviewTargets]);
+    let choiceIndex = 0;
     const optionsFor = (itemId) => {
-      const options = [itemId];
-      for (const candidate of optionPool) {
-        if (candidate !== itemId && !options.includes(candidate)) options.push(candidate);
-        if (options.length === 4) break;
-      }
+      const alternatives = optionPool.filter((candidate) => candidate !== itemId).slice(0, 3);
+      const options = alternatives.slice();
+      const answerIndex = choiceIndex % Math.min(4, alternatives.length + 1);
+      options.splice(answerIndex, 0, itemId);
+      choiceIndex += 1;
       return options;
     };
 
@@ -156,13 +157,10 @@
       activities.push({ type: 'choice', mode: 'meaning', item: target, options: optionsFor(target) });
     }
 
-    const gradedModes = [
-      ['choice', 'finnish'],
-      ['choice', 'listen'],
-      ['choice', 'cloze'],
-      ['type', 'finnish'],
-      ['type', 'cloze'],
-    ];
+    const remaining = 15 - activities.length;
+    const gradedModes = remaining <= 3
+      ? [['choice', 'listen'], ['type', 'finnish'], ['type', 'cloze']]
+      : [['choice', 'finnish'], ['choice', 'listen'], ['choice', 'cloze'], ['type', 'finnish'], ['type', 'cloze']];
     let cursor = 0;
     while (activities.length < 15) {
       const useReview = reviewTargets.length && cursor % 3 === 2;
