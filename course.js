@@ -8,6 +8,7 @@
   const STORAGE_KEY = 'fiCourseProgressV1';
   const SCHEMA_VERSION = 1;
   const SECTION_URL = './data/course/a1.1-section-1.json';
+  const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -135,10 +136,12 @@
   }
 
   function buildStandardActivities(targets, previousTargets = []) {
-    if (!Array.isArray(targets) || targets.length !== 5) {
-      throw new Error('A standard sample lesson must define exactly five new targets.');
+    if (!Array.isArray(targets) || targets.length < 1 || targets.length > 6) {
+      throw new Error('A standard lesson must define between one and six practice targets.');
     }
-    const [t1, t2, t3, t4, t5] = targets;
+    const pool = uniqueOptions([...targets, ...previousTargets.slice().reverse()]);
+    while (pool.length < 5) pool.push(targets[pool.length % targets.length]);
+    const [t1, t2, t3, t4, t5] = pool;
     const review = previousTargets.length ? previousTargets[previousTargets.length - 1] : t2;
     return [
       { type: 'teach', item: t1 },
@@ -195,7 +198,10 @@
       if (index === section.lessons.length - 1 && Array.isArray(lesson.checkpoint_targets)) {
         lesson.activities = buildCheckpointActivities(section, lesson);
       } else {
-        lesson.activities = buildStandardActivities(lesson.new_targets, seen);
+        const practiceTargets = Array.isArray(lesson.new_targets) && lesson.new_targets.length
+          ? lesson.new_targets
+          : lesson.practice_targets;
+        lesson.activities = buildStandardActivities(practiceTargets, seen);
       }
       lesson.review_targets = Array.isArray(lesson.review_targets) ? lesson.review_targets : seen.slice(-3);
       seen.push(...(lesson.new_targets || []));
@@ -207,8 +213,8 @@
     const section = prepareSection(rawSection);
     if (section.lessons.length !== 10) throw new Error('The sample section must contain exactly ten lessons.');
     for (const lesson of section.lessons) {
-      if (!lesson.id || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
-        throw new Error(`Lesson ${lesson.id || '?'} must contain exactly fifteen activities.`);
+      if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
+        throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or fifteen deterministic activities.`);
       }
       for (const activity of lesson.activities) {
         if (!section.items[activity.item]) throw new Error(`Unknown course item: ${activity.item}`);
@@ -218,6 +224,22 @@
       }
     }
     return section;
+  }
+
+  function validateSectionAgainstCurriculum(section, curriculum) {
+    if (!curriculum || !Array.isArray(curriculum.sections)) throw new Error('Invalid curriculum data.');
+    const contract = curriculum.sections.find((entry) => entry.id === section.curriculum_section_id);
+    if (!contract) throw new Error('Implemented section is missing from the curriculum.');
+    if (contract.lessons.length !== section.lessons.length) throw new Error('Implemented lesson count does not match the curriculum.');
+
+    const implementedByCurriculumId = new Map(section.lessons.map((lesson) => [lesson.curriculum_id, lesson]));
+    for (const contractLesson of contract.lessons) {
+      const implemented = implementedByCurriculumId.get(contractLesson.id);
+      if (!implemented) throw new Error(`Missing implemented curriculum lesson: ${contractLesson.id}`);
+      if (implemented.order !== contractLesson.order) throw new Error(`Lesson order mismatch: ${contractLesson.id}`);
+      if (!implemented.summary_fa || !implemented.grammar_fa) throw new Error(`Incomplete learner content: ${contractLesson.id}`);
+    }
+    return { ...section, curriculum_contract: contract };
   }
 
   function initializeBrowser(windowObject) {
@@ -241,6 +263,7 @@
     const allPrimaryItems = [...document.querySelectorAll('.bottom-nav-item, .desktop-view-link')];
 
     let section = null;
+    let curriculum = null;
     let progress = loadProgress(windowObject.localStorage);
     let activeLesson = null;
     let activityIndex = 0;
@@ -321,6 +344,30 @@
       if (!section) return renderLoading();
       root.replaceChildren();
 
+      const catalog = document.createElement('section');
+      catalog.className = 'course-section-catalog';
+      const catalogTitle = document.createElement('div');
+      catalogTitle.className = 'course-section-catalog-heading';
+      catalogTitle.innerHTML = '<h1>مسیر A1.1</h1><p>بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند.</p>';
+      catalog.append(catalogTitle);
+      const catalogGrid = document.createElement('div');
+      catalogGrid.className = 'course-section-grid';
+      for (const entry of curriculum?.sections || []) {
+        const card = document.createElement('article');
+        const available = entry.id === section.curriculum_section_id;
+        card.className = `course-section-card ${available ? 'is-available' : 'is-coming'}`;
+        const status = document.createElement('span');
+        status.className = 'course-section-status';
+        status.textContent = available ? 'قابل یادگیری' : 'به‌زودی';
+        const heading = document.createElement('h2');
+        heading.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
+        const goal = document.createElement('p');
+        goal.textContent = entry.goal_fa;
+        card.append(status, heading, goal);
+        catalogGrid.append(card);
+      }
+      catalog.append(catalogGrid);
+
       const header = document.createElement('header');
       header.className = 'course-hero-card';
       const level = document.createElement('span');
@@ -388,6 +435,13 @@
         const objective = document.createElement('p');
         objective.textContent = lesson.objective_fa;
         body.append(heading, objective);
+        const summary = document.createElement('p');
+        summary.className = 'course-lesson-summary';
+        summary.textContent = lesson.summary_fa;
+        const grammar = document.createElement('p');
+        grammar.className = 'course-lesson-grammar';
+        grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
+        body.append(summary, grammar);
 
         const targetList = document.createElement('div');
         targetList.className = 'course-target-list';
@@ -431,7 +485,7 @@
       });
       footer.append(note, reset);
 
-      root.append(header, outcomes, path, footer);
+      root.append(catalog, header, outcomes, path, footer);
       root.scrollTop = 0;
     }
 
@@ -487,6 +541,16 @@
       const title = document.createElement('h1');
       title.textContent = activeLesson.title_fa;
       lessonHeader.append(label, title);
+      if (activityIndex === 0) {
+        const intro = document.createElement('div');
+        intro.className = 'course-lesson-intro';
+        const summary = document.createElement('p');
+        summary.textContent = activeLesson.summary_fa;
+        const grammar = document.createElement('p');
+        grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
+        intro.append(summary, grammar);
+        lessonHeader.append(intro);
+      }
 
       const card = document.createElement('div');
       card.className = 'course-question-card';
@@ -731,13 +795,18 @@
 
     const version = document.querySelector('meta[name="app-version"]')?.content || Date.now();
     renderLoading();
-    windowObject.fetch(`${SECTION_URL}?v=${version}`, { cache: 'no-store' })
-      .then((response) => {
-        if (!response.ok) throw new Error(String(response.status));
-        return response.json();
+    Promise.all([
+      windowObject.fetch(`${SECTION_URL}?v=${version}`, { cache: 'no-store' }),
+      windowObject.fetch(`${CURRICULUM_URL}?v=${version}`, { cache: 'no-store' }),
+    ])
+      .then(async ([sectionResponse, curriculumResponse]) => {
+        if (!sectionResponse.ok) throw new Error(String(sectionResponse.status));
+        if (!curriculumResponse.ok) throw new Error(String(curriculumResponse.status));
+        return Promise.all([sectionResponse.json(), curriculumResponse.json()]);
       })
-      .then((payload) => {
-        section = validateSection(payload);
+      .then(([payload, curriculumPayload]) => {
+        curriculum = curriculumPayload;
+        section = validateSectionAgainstCurriculum(validateSection(payload), curriculum);
         progress = loadProgress(windowObject.localStorage);
         if (isCourseHash()) syncFromHash();
         else {
@@ -765,6 +834,7 @@
     STORAGE_KEY,
     SCHEMA_VERSION,
     SECTION_URL,
+    CURRICULUM_URL,
     normalizeAnswer,
     emptyProgress,
     sanitizeProgress,
@@ -781,6 +851,7 @@
     buildCheckpointActivities,
     prepareSection,
     validateSection,
+    validateSectionAgainstCurriculum,
     initializeBrowser,
   };
 });
