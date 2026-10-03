@@ -1599,7 +1599,151 @@
           "mita-kuuluu",
           "en-ymmarra-uudestaan"
         ]
-      }
+      },
+      "activities": [
+        {
+          "type": "teach",
+          "item": "hei-minun-nimeni-on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hei-minun-nimeni-on",
+          "options": [
+            "hei-minun-nimeni-on",
+            "mita-kuuluu",
+            "en-ymmarra-uudestaan",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "mita-kuuluu"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "mita-kuuluu",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa-kiitos",
+            "kiitos",
+            "en-ymmarra"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "en-ymmarra-uudestaan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "en-ymmarra"
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "hei",
+            "hei-minun-nimeni-on",
+            "mika-sinun-nimesi-on",
+            "minun-nimeni-on"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hyvaa-kiitos",
+          "options": [
+            "hyvaa-kiitos",
+            "ihan-hyvaa",
+            "kiitos",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "hei",
+            "mita-kuuluu",
+            "hyvaa-kiitos",
+            "kiitos"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "en-ymmarra-uudestaan",
+          "options": [
+            "en-ymmarra-uudestaan",
+            "hitaammin",
+            "anteeksi",
+            "ole-hyva"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "uudestaan"
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "minun-nimeni-on",
+          "options": [
+            "minun-nimeni-on",
+            "mita-kuuluu",
+            "kuka-han-on",
+            "mika-tama-on"
+          ]
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "anteeksi",
+            "en-ymmarra",
+            "uudestaan",
+            "kiitos"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hei-minun-nimeni-on"
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "hei",
+            "mita-kuuluu",
+            "en-ymmarra",
+            "uudestaan"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
     },
     {
       "id": "lesson-10",
