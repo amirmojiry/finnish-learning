@@ -240,3 +240,11 @@ test('negation lesson encodes explicit connegative mappings for assessed verbs',
     assert.equal(pair.negative, `En ${connegative}.`);
   }
 });
+
+
+test('When lesson declares routine-action dependency used by its assessment', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const lesson = lessons.find((item) => item.id === 'a1.1-s3-l08');
+  assert.ok(lesson.recycle_from.includes('a1.1-s3-l05'));
+  assert.match(lesson.assessment.criterion_en, /events?/i);
+});
