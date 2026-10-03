@@ -1233,6 +1233,95 @@
       "accepted_answers": [
         "Se on"
       ]
+    },
+    "huomenta": {
+      "id": "huomenta",
+      "surface_form": "huomenta",
+      "lemma": "huomenta",
+      "translation_fa": "صبح (در عبارت صبح بخیر)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "greetings",
+        "time"
+      ],
+      "example_fi": "Hyvää huomenta!",
+      "example_fa": "صبح بخیر!",
+      "accepted_answers": [
+        "huomenta"
+      ]
+    },
+    "hyva": {
+      "id": "hyva",
+      "surface_form": "hyvä",
+      "lemma": "hyvä",
+      "translation_fa": "خوب",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 121,
+      "topics": [
+        "wellbeing"
+      ],
+      "example_fi": "Hyvä!",
+      "example_fa": "خوب!",
+      "accepted_answers": [
+        "hyvä"
+      ]
+    },
+    "hyvaa-kiitos": {
+      "id": "hyvaa-kiitos",
+      "surface_form": "Hyvää, kiitos",
+      "lemma": "Hyvää, kiitos",
+      "translation_fa": "خوبم، متشکرم",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "wellbeing",
+        "conversation"
+      ],
+      "example_fi": "Hyvää, kiitos.",
+      "example_fa": "خوبم، متشکرم.",
+      "accepted_answers": [
+        "Hyvää, kiitos"
+      ]
+    },
+    "hei-minun-nimeni-on": {
+      "id": "hei-minun-nimeni-on",
+      "surface_form": "Hei! Minun nimeni on",
+      "lemma": "Hei! Minun nimeni on",
+      "translation_fa": "سلام! نام من ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "introductions",
+        "conversation"
+      ],
+      "example_fi": "Hei! Minun nimeni on Aino.",
+      "example_fa": "سلام! نام من آینو است.",
+      "accepted_answers": [
+        "Hei! Minun nimeni on"
+      ]
+    },
+    "en-ymmarra-uudestaan": {
+      "id": "en-ymmarra-uudestaan",
+      "surface_form": "En ymmärrä. Uudestaan, kiitos.",
+      "lemma": "En ymmärrä. Uudestaan, kiitos",
+      "translation_fa": "متوجه نمی‌شوم. دوباره، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "repair",
+        "conversation"
+      ],
+      "example_fi": "En ymmärrä. Uudestaan, kiitos.",
+      "example_fa": "متوجه نمی‌شوم. دوباره، لطفاً.",
+      "accepted_answers": [
+        "En ymmärrä. Uudestaan, kiitos."
+      ]
     }
   },
   "lessons": [
@@ -1259,7 +1348,8 @@
         ],
         "topic": [
           "hei",
-          "moi"
+          "moi",
+          "huomenta"
         ],
         "expressions": [
           "hei",
@@ -1317,14 +1407,14 @@
       "curriculum_target_refs": {
         "high_frequency": [
           "mita",
-          "hyvaa"
+          "hyva"
         ],
         "topic": [
           "hyvaa"
         ],
         "expressions": [
           "mita-kuuluu",
-          "hyvaa",
+          "hyvaa-kiitos",
           "ihan-hyvaa"
         ]
       }
@@ -1375,14 +1465,14 @@
       ],
       "curriculum_target_refs": {
         "high_frequency": [
-          "kuka",
           "mika",
           "han",
           "tama"
         ],
         "topic": [
           "ihminen",
-          "esine"
+          "esine",
+          "kuka"
         ],
         "expressions": [
           "kuka-han-on",
@@ -1404,11 +1494,10 @@
         "ole-hyva"
       ],
       "curriculum_target_refs": {
-        "high_frequency": [
-          "kiitos"
-        ],
+        "high_frequency": [],
         "topic": [
-          "anteeksi"
+          "anteeksi",
+          "kiitos"
         ],
         "expressions": [
           "kiitos",
@@ -1506,9 +1595,9 @@
         "high_frequency": [],
         "topic": [],
         "expressions": [
-          "hei",
+          "hei-minun-nimeni-on",
           "mita-kuuluu",
-          "en-ymmarra"
+          "en-ymmarra-uudestaan"
         ]
       }
     },
