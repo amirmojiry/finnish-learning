@@ -1,0 +1,3216 @@
+{
+  "schema_version": 1,
+  "id": "a1.1-section-4",
+  "curriculum_section_id": "a1.1-s4",
+  "level": "A1.1",
+  "title_fa": "بخش ۴: خانه، خوراک و دنیای آشنا",
+  "subtitle_fa": "خانه، مکان‌های آشنا، خوراک و نوشیدنی، نیازهای پایه، حیوانات و توصیف کوتاه",
+  "description_fa": "بخش پایانی A1.1 زبان تمرین‌شدهٔ چهار موقعیت اصلی را جمع‌بندی می‌کند و با آزمون پایانی تمام می‌شود.",
+  "activity_count_per_lesson": 15,
+  "can_do_fa": [
+    "چند مکان و شیء بسیار آشنا در خانه را تشخیص می‌دهم و مکان سادهٔ آن‌ها را می‌گویم.",
+    "چند خوراک و نوشیدنی آشنا و یک خواسته یا نیاز پایه را بیان می‌کنم.",
+    "یک سفارش بسیار ساده و مودبانه در کافه می‌دهم.",
+    "چند حیوان آشنا را نام می‌برم و با یک صفت پایه توصیف می‌کنم.",
+    "چند جملهٔ کوتاه دربارهٔ دنیای آشنای خودم می‌فهمم و تولید می‌کنم."
+  ],
+  "items": {
+    "s4-huone": {
+      "id": "s4-huone",
+      "surface_form": "huone",
+      "lemma": "huone",
+      "translation_fa": "اتاق",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Tämä on huone.",
+      "example_fa": "این یک اتاق است.",
+      "accepted_answers": [
+        "huone"
+      ],
+      "visual": "🚪"
+    },
+    "s4-keittio": {
+      "id": "s4-keittio",
+      "surface_form": "keittiö",
+      "lemma": "keittiö",
+      "translation_fa": "آشپزخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Tämä on keittiö.",
+      "example_fa": "این آشپزخانه است.",
+      "accepted_answers": [
+        "keittiö"
+      ],
+      "visual": "🍳"
+    },
+    "s4-olohuone": {
+      "id": "s4-olohuone",
+      "surface_form": "olohuone",
+      "lemma": "olohuone",
+      "translation_fa": "اتاق نشیمن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Tämä on olohuone.",
+      "example_fa": "این اتاق نشیمن است.",
+      "accepted_answers": [
+        "olohuone"
+      ],
+      "visual": "🛋️"
+    },
+    "s4-makuuhuone": {
+      "id": "s4-makuuhuone",
+      "surface_form": "makuuhuone",
+      "lemma": "makuuhuone",
+      "translation_fa": "اتاق خواب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Tämä on makuuhuone.",
+      "example_fa": "این اتاق خواب است.",
+      "accepted_answers": [
+        "makuuhuone"
+      ],
+      "visual": "🛏️"
+    },
+    "s4-wc": {
+      "id": "s4-wc",
+      "surface_form": "wc",
+      "lemma": "wc",
+      "translation_fa": "دستشویی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Tämä on wc.",
+      "example_fa": "این دستشویی است.",
+      "accepted_answers": [
+        "wc"
+      ],
+      "visual": "🚽"
+    },
+    "s4-koti": {
+      "id": "s4-koti",
+      "surface_form": "koti",
+      "lemma": "koti",
+      "translation_fa": "خانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Olen kotona.",
+      "example_fa": "من در خانه هستم.",
+      "accepted_answers": [
+        "koti"
+      ],
+      "visual": "🏠"
+    },
+    "s4-tama-on-keittio": {
+      "id": "s4-tama-on-keittio",
+      "surface_form": "Tämä on keittiö.",
+      "lemma": "Tämä on keittiö",
+      "translation_fa": "این آشپزخانه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home"
+      ],
+      "example_fi": "Tämä on keittiö.",
+      "example_fa": "این آشپزخانه است.",
+      "accepted_answers": [
+        "Tämä on keittiö."
+      ]
+    },
+    "s4-olen-kotona": {
+      "id": "s4-olen-kotona",
+      "surface_form": "Olen kotona.",
+      "lemma": "Olen kotona",
+      "translation_fa": "من در خانه هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "location"
+      ],
+      "example_fi": "Olen kotona.",
+      "example_fa": "من در خانه هستم.",
+      "accepted_answers": [
+        "Olen kotona."
+      ]
+    },
+    "s4-kotona": {
+      "id": "s4-kotona",
+      "surface_form": "kotona",
+      "lemma": "kotona",
+      "translation_fa": "در خانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "location"
+      ],
+      "example_fi": "Olen kotona.",
+      "example_fa": "من در خانه هستم.",
+      "accepted_answers": [
+        "kotona"
+      ]
+    },
+    "s4-missa": {
+      "id": "s4-missa",
+      "surface_form": "missä",
+      "lemma": "missä",
+      "translation_fa": "کجا / در کجا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "location"
+      ],
+      "example_fi": "Missä puhelin on?",
+      "example_fa": "تلفن کجاست؟",
+      "accepted_answers": [
+        "missä"
+      ]
+    },
+    "s4-on": {
+      "id": "s4-on",
+      "surface_form": "on",
+      "lemma": "on",
+      "translation_fa": "است / هست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Puhelin on pöydällä.",
+      "example_fa": "تلفن روی میز است.",
+      "accepted_answers": [
+        "on"
+      ]
+    },
+    "s4-poyta": {
+      "id": "s4-poyta",
+      "surface_form": "pöytä",
+      "lemma": "pöytä",
+      "translation_fa": "میز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "objects"
+      ],
+      "example_fi": "Puhelin on pöydällä.",
+      "example_fa": "تلفن روی میز است.",
+      "accepted_answers": [
+        "pöytä"
+      ],
+      "visual": "🪑"
+    },
+    "s4-tuoli": {
+      "id": "s4-tuoli",
+      "surface_form": "tuoli",
+      "lemma": "tuoli",
+      "translation_fa": "صندلی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "objects"
+      ],
+      "example_fi": "Kirja on tuolilla.",
+      "example_fa": "کتاب روی صندلی است.",
+      "accepted_answers": [
+        "tuoli"
+      ],
+      "visual": "🪑"
+    },
+    "s4-sanky": {
+      "id": "s4-sanky",
+      "surface_form": "sänky",
+      "lemma": "sänky",
+      "translation_fa": "تخت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "objects"
+      ],
+      "example_fi": "Kissa on sängyllä.",
+      "example_fa": "گربه روی تخت است.",
+      "accepted_answers": [
+        "sänky"
+      ],
+      "visual": "🛏️"
+    },
+    "s4-puhelin": {
+      "id": "s4-puhelin",
+      "surface_form": "puhelin",
+      "lemma": "puhelin",
+      "translation_fa": "تلفن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "objects"
+      ],
+      "example_fi": "Missä puhelin on?",
+      "example_fa": "تلفن کجاست؟",
+      "accepted_answers": [
+        "puhelin"
+      ],
+      "visual": "📱"
+    },
+    "s4-kirja": {
+      "id": "s4-kirja",
+      "surface_form": "kirja",
+      "lemma": "kirja",
+      "translation_fa": "کتاب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "objects"
+      ],
+      "example_fi": "Kirja on tuolilla.",
+      "example_fa": "کتاب روی صندلی است.",
+      "accepted_answers": [
+        "kirja"
+      ],
+      "visual": "📘"
+    },
+    "s4-missa-puhelin": {
+      "id": "s4-missa-puhelin",
+      "surface_form": "Missä puhelin on?",
+      "lemma": "Missä puhelin on",
+      "translation_fa": "تلفن کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "questions"
+      ],
+      "example_fi": "Missä puhelin on?",
+      "example_fa": "تلفن کجاست؟",
+      "accepted_answers": [
+        "Missä puhelin on?"
+      ]
+    },
+    "s4-se-on-poydalla": {
+      "id": "s4-se-on-poydalla",
+      "surface_form": "Se on pöydällä.",
+      "lemma": "Se on pöydällä",
+      "translation_fa": "روی میز است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on pöydällä.",
+      "example_fa": "روی میز است.",
+      "accepted_answers": [
+        "Se on pöydällä."
+      ]
+    },
+    "s4-se-on-huoneessa": {
+      "id": "s4-se-on-huoneessa",
+      "surface_form": "Se on huoneessa.",
+      "lemma": "Se on huoneessa",
+      "translation_fa": "در اتاق است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on huoneessa.",
+      "example_fa": "در اتاق است.",
+      "accepted_answers": [
+        "Se on huoneessa."
+      ]
+    },
+    "s4-se-on-tuolilla": {
+      "id": "s4-se-on-tuolilla",
+      "surface_form": "Se on tuolilla.",
+      "lemma": "Se on tuolilla",
+      "translation_fa": "روی صندلی است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on tuolilla.",
+      "example_fa": "روی صندلی است.",
+      "accepted_answers": [
+        "Se on tuolilla."
+      ]
+    },
+    "s4-se-on-sangylla": {
+      "id": "s4-se-on-sangylla",
+      "surface_form": "Se on sängyllä.",
+      "lemma": "Se on sängyllä",
+      "translation_fa": "روی تخت است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on sängyllä.",
+      "example_fa": "روی تخت است.",
+      "accepted_answers": [
+        "Se on sängyllä."
+      ]
+    },
+    "s4-location-q-phone": {
+      "id": "s4-location-q-phone",
+      "surface_form": "Missä puhelin on?",
+      "lemma": "Missä puhelin on",
+      "translation_fa": "تلفن کجاست؟",
+      "item_type": "prompt",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Missä puhelin on?",
+      "example_fa": "تلفن کجاست؟",
+      "accepted_answers": [
+        "Missä puhelin on?"
+      ]
+    },
+    "s4-location-q-book": {
+      "id": "s4-location-q-book",
+      "surface_form": "Missä kirja on?",
+      "lemma": "Missä kirja on",
+      "translation_fa": "کتاب کجاست؟",
+      "item_type": "prompt",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Missä kirja on?",
+      "example_fa": "کتاب کجاست؟",
+      "accepted_answers": [
+        "Missä kirja on?"
+      ]
+    },
+    "s4-location-q-cat": {
+      "id": "s4-location-q-cat",
+      "surface_form": "Missä kissa on?",
+      "lemma": "Missä kissa on",
+      "translation_fa": "گربه کجاست؟",
+      "item_type": "prompt",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Missä kissa on?",
+      "example_fa": "گربه کجاست؟",
+      "accepted_answers": [
+        "Missä kissa on?"
+      ]
+    },
+    "s4-location-q-home": {
+      "id": "s4-location-q-home",
+      "surface_form": "Missä olet?",
+      "lemma": "Missä olet",
+      "translation_fa": "کجایی؟",
+      "item_type": "prompt",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Missä olet?",
+      "example_fa": "کجایی؟",
+      "accepted_answers": [
+        "Missä olet?"
+      ]
+    },
+    "s4-location-a-home": {
+      "id": "s4-location-a-home",
+      "surface_form": "Olen kotona.",
+      "lemma": "Olen kotona",
+      "translation_fa": "در خانه هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Olen kotona.",
+      "example_fa": "در خانه هستم.",
+      "accepted_answers": [
+        "Olen kotona."
+      ]
+    },
+    "s4-kahvi": {
+      "id": "s4-kahvi",
+      "surface_form": "kahvi",
+      "lemma": "kahvi",
+      "translation_fa": "قهوه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "drink"
+      ],
+      "example_fi": "Tämä on kahvia.",
+      "example_fa": "این قهوه است.",
+      "accepted_answers": [
+        "kahvi"
+      ],
+      "visual": "☕"
+    },
+    "s4-tee": {
+      "id": "s4-tee",
+      "surface_form": "tee",
+      "lemma": "tee",
+      "translation_fa": "چای",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "drink"
+      ],
+      "example_fi": "Tämä on teetä.",
+      "example_fa": "این چای است.",
+      "accepted_answers": [
+        "tee"
+      ],
+      "visual": "🍵"
+    },
+    "s4-maito": {
+      "id": "s4-maito",
+      "surface_form": "maito",
+      "lemma": "maito",
+      "translation_fa": "شیر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "drink"
+      ],
+      "example_fi": "Tämä on maitoa.",
+      "example_fa": "این شیر است.",
+      "accepted_answers": [
+        "maito"
+      ],
+      "visual": "🥛"
+    },
+    "s4-leipa": {
+      "id": "s4-leipa",
+      "surface_form": "leipä",
+      "lemma": "leipä",
+      "translation_fa": "نان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food"
+      ],
+      "example_fi": "Tämä on leipä.",
+      "example_fa": "این نان است.",
+      "accepted_answers": [
+        "leipä"
+      ],
+      "visual": "🍞"
+    },
+    "s4-ruoka": {
+      "id": "s4-ruoka",
+      "surface_form": "ruoka",
+      "lemma": "ruoka",
+      "translation_fa": "غذا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food"
+      ],
+      "example_fi": "Tämä on ruokaa.",
+      "example_fa": "این غذا است.",
+      "accepted_answers": [
+        "ruoka"
+      ],
+      "visual": "🍽️"
+    },
+    "s4-vesi": {
+      "id": "s4-vesi",
+      "surface_form": "vesi",
+      "lemma": "vesi",
+      "translation_fa": "آب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "drink"
+      ],
+      "example_fi": "Tämä on vettä.",
+      "example_fa": "این آب است.",
+      "accepted_answers": [
+        "vesi"
+      ],
+      "visual": "💧"
+    },
+    "s4-kahvia": {
+      "id": "s4-kahvia",
+      "surface_form": "kahvia",
+      "lemma": "kahvia",
+      "translation_fa": "قهوه (پارتی‌تیو)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "morphology"
+      ],
+      "example_fi": "Tämä on kahvia.",
+      "example_fa": "این قهوه است.",
+      "accepted_answers": [
+        "kahvia"
+      ]
+    },
+    "s4-vetta": {
+      "id": "s4-vetta",
+      "surface_form": "vettä",
+      "lemma": "vettä",
+      "translation_fa": "آب (پارتی‌تیو)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "drink",
+        "morphology"
+      ],
+      "example_fi": "Haluan vettä.",
+      "example_fa": "آب می‌خواهم.",
+      "accepted_answers": [
+        "vettä"
+      ]
+    },
+    "s4-tama-on-kahvia": {
+      "id": "s4-tama-on-kahvia",
+      "surface_form": "Tämä on kahvia.",
+      "lemma": "Tämä on kahvia",
+      "translation_fa": "این قهوه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food"
+      ],
+      "example_fi": "Tämä on kahvia.",
+      "example_fa": "این قهوه است.",
+      "accepted_answers": [
+        "Tämä on kahvia."
+      ]
+    },
+    "s4-tama-on-leipa": {
+      "id": "s4-tama-on-leipa",
+      "surface_form": "Tämä on leipä.",
+      "lemma": "Tämä on leipä",
+      "translation_fa": "این نان است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food"
+      ],
+      "example_fi": "Tämä on leipä.",
+      "example_fa": "این نان است.",
+      "accepted_answers": [
+        "Tämä on leipä."
+      ]
+    },
+    "s4-nalka": {
+      "id": "s4-nalka",
+      "surface_form": "nälkä",
+      "lemma": "nälkä",
+      "translation_fa": "گرسنگی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Minulla on nälkä.",
+      "example_fa": "گرسنه‌ام.",
+      "accepted_answers": [
+        "nälkä"
+      ],
+      "visual": "🍽️"
+    },
+    "s4-jano": {
+      "id": "s4-jano",
+      "surface_form": "jano",
+      "lemma": "jano",
+      "translation_fa": "تشنگی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Minulla on jano.",
+      "example_fa": "تشنه‌ام.",
+      "accepted_answers": [
+        "jano"
+      ],
+      "visual": "💧"
+    },
+    "s4-haluan": {
+      "id": "s4-haluan",
+      "surface_form": "haluan",
+      "lemma": "haluan",
+      "translation_fa": "می‌خواهم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs",
+        "verbs"
+      ],
+      "example_fi": "Haluan kahvia.",
+      "example_fa": "قهوه می‌خواهم.",
+      "accepted_answers": [
+        "haluan"
+      ]
+    },
+    "s4-haluan-kahvia": {
+      "id": "s4-haluan-kahvia",
+      "surface_form": "Haluan kahvia.",
+      "lemma": "Haluan kahvia",
+      "translation_fa": "قهوه می‌خواهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs",
+        "food"
+      ],
+      "example_fi": "Haluan kahvia.",
+      "example_fa": "قهوه می‌خواهم.",
+      "accepted_answers": [
+        "Haluan kahvia."
+      ]
+    },
+    "s4-haluan-vetta": {
+      "id": "s4-haluan-vetta",
+      "surface_form": "Haluan vettä.",
+      "lemma": "Haluan vettä",
+      "translation_fa": "آب می‌خواهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs",
+        "drink"
+      ],
+      "example_fi": "Haluan vettä.",
+      "example_fa": "آب می‌خواهم.",
+      "accepted_answers": [
+        "Haluan vettä."
+      ]
+    },
+    "s4-minulla-on-nalka": {
+      "id": "s4-minulla-on-nalka",
+      "surface_form": "Minulla on nälkä.",
+      "lemma": "Minulla on nälkä",
+      "translation_fa": "گرسنه‌ام.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Minulla on nälkä.",
+      "example_fa": "گرسنه‌ام.",
+      "accepted_answers": [
+        "Minulla on nälkä."
+      ]
+    },
+    "s4-minulla-on-jano": {
+      "id": "s4-minulla-on-jano",
+      "surface_form": "Minulla on jano.",
+      "lemma": "Minulla on jano",
+      "translation_fa": "تشنه‌ام.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Minulla on jano.",
+      "example_fa": "تشنه‌ام.",
+      "accepted_answers": [
+        "Minulla on jano."
+      ]
+    },
+    "s4-yksi": {
+      "id": "s4-yksi",
+      "surface_form": "yksi",
+      "lemma": "yksi",
+      "translation_fa": "یک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers",
+        "cafe"
+      ],
+      "example_fi": "Yksi kahvi, kiitos.",
+      "example_fa": "یک قهوه، لطفاً.",
+      "accepted_answers": [
+        "yksi"
+      ]
+    },
+    "s4-kahvila": {
+      "id": "s4-kahvila",
+      "surface_form": "kahvila",
+      "lemma": "kahvila",
+      "translation_fa": "کافه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cafe"
+      ],
+      "example_fi": "Tämä on kahvila.",
+      "example_fa": "این کافه است.",
+      "accepted_answers": [
+        "kahvila"
+      ],
+      "visual": "☕"
+    },
+    "s4-yksi-kahvi-kiitos": {
+      "id": "s4-yksi-kahvi-kiitos",
+      "surface_form": "Yksi kahvi, kiitos.",
+      "lemma": "Yksi kahvi, kiitos",
+      "translation_fa": "یک قهوه، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cafe"
+      ],
+      "example_fi": "Yksi kahvi, kiitos.",
+      "example_fa": "یک قهوه، لطفاً.",
+      "accepted_answers": [
+        "Yksi kahvi, kiitos."
+      ]
+    },
+    "s4-vetta-kiitos": {
+      "id": "s4-vetta-kiitos",
+      "surface_form": "Vettä, kiitos.",
+      "lemma": "Vettä, kiitos",
+      "translation_fa": "آب، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cafe"
+      ],
+      "example_fi": "Vettä, kiitos.",
+      "example_fa": "آب، لطفاً.",
+      "accepted_answers": [
+        "Vettä, kiitos."
+      ]
+    },
+    "s4-ole-hyva": {
+      "id": "s4-ole-hyva",
+      "surface_form": "Ole hyvä.",
+      "lemma": "Ole hyvä",
+      "translation_fa": "بفرمایید / خواهش می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cafe",
+        "politeness"
+      ],
+      "example_fi": "Ole hyvä.",
+      "example_fa": "بفرمایید.",
+      "accepted_answers": [
+        "Ole hyvä."
+      ]
+    },
+    "s4-kiitos": {
+      "id": "s4-kiitos",
+      "surface_form": "Kiitos.",
+      "lemma": "Kiitos",
+      "translation_fa": "متشکرم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cafe",
+        "politeness"
+      ],
+      "example_fi": "Kiitos.",
+      "example_fa": "متشکرم.",
+      "accepted_answers": [
+        "Kiitos."
+      ]
+    },
+    "s4-cafe-tervetuloa": {
+      "id": "s4-cafe-tervetuloa",
+      "surface_form": "Tervetuloa.",
+      "lemma": "Tervetuloa",
+      "translation_fa": "خوش آمدید.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cafe"
+      ],
+      "example_fi": "Tervetuloa.",
+      "example_fa": "خوش آمدید.",
+      "accepted_answers": [
+        "Tervetuloa."
+      ]
+    },
+    "s4-koira": {
+      "id": "s4-koira",
+      "surface_form": "koira",
+      "lemma": "koira",
+      "translation_fa": "سگ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on koira.",
+      "example_fa": "این سگ است.",
+      "accepted_answers": [
+        "koira"
+      ],
+      "visual": "🐕"
+    },
+    "s4-kissa": {
+      "id": "s4-kissa",
+      "surface_form": "kissa",
+      "lemma": "kissa",
+      "translation_fa": "گربه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on kissa.",
+      "example_fa": "این گربه است.",
+      "accepted_answers": [
+        "kissa"
+      ],
+      "visual": "🐈"
+    },
+    "s4-lintu": {
+      "id": "s4-lintu",
+      "surface_form": "lintu",
+      "lemma": "lintu",
+      "translation_fa": "پرنده",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on lintu.",
+      "example_fa": "این پرنده است.",
+      "accepted_answers": [
+        "lintu"
+      ],
+      "visual": "🐦"
+    },
+    "s4-kala": {
+      "id": "s4-kala",
+      "surface_form": "kala",
+      "lemma": "kala",
+      "translation_fa": "ماهی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on kala.",
+      "example_fa": "این ماهی است.",
+      "accepted_answers": [
+        "kala"
+      ],
+      "visual": "🐟"
+    },
+    "s4-hevonen": {
+      "id": "s4-hevonen",
+      "surface_form": "hevonen",
+      "lemma": "hevonen",
+      "translation_fa": "اسب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on hevonen.",
+      "example_fa": "این اسب است.",
+      "accepted_answers": [
+        "hevonen"
+      ],
+      "visual": "🐎"
+    },
+    "s4-tama-on-koira": {
+      "id": "s4-tama-on-koira",
+      "surface_form": "Tämä on koira.",
+      "lemma": "Tämä on koira",
+      "translation_fa": "این سگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on koira.",
+      "example_fa": "این سگ است.",
+      "accepted_answers": [
+        "Tämä on koira."
+      ]
+    },
+    "s4-se-on-kissa": {
+      "id": "s4-se-on-kissa",
+      "surface_form": "Se on kissa.",
+      "lemma": "Se on kissa",
+      "translation_fa": "آن گربه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Se on kissa.",
+      "example_fa": "آن گربه است.",
+      "accepted_answers": [
+        "Se on kissa."
+      ]
+    },
+    "s4-lehma": {
+      "id": "s4-lehma",
+      "surface_form": "lehmä",
+      "lemma": "lehmä",
+      "translation_fa": "گاو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "lehmä on eläin.",
+      "example_fa": "گاو حیوان است.",
+      "accepted_answers": [
+        "lehmä"
+      ],
+      "visual": "🐄"
+    },
+    "s4-lammas": {
+      "id": "s4-lammas",
+      "surface_form": "lammas",
+      "lemma": "lammas",
+      "translation_fa": "گوسفند",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "lammas on eläin.",
+      "example_fa": "گوسفند حیوان است.",
+      "accepted_answers": [
+        "lammas"
+      ],
+      "visual": "🐑"
+    },
+    "s4-karhu": {
+      "id": "s4-karhu",
+      "surface_form": "karhu",
+      "lemma": "karhu",
+      "translation_fa": "خرس",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "karhu on eläin.",
+      "example_fa": "خرس حیوان است.",
+      "accepted_answers": [
+        "karhu"
+      ],
+      "visual": "🐻"
+    },
+    "s4-susi": {
+      "id": "s4-susi",
+      "surface_form": "susi",
+      "lemma": "susi",
+      "translation_fa": "گرگ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "susi on eläin.",
+      "example_fa": "گرگ حیوان است.",
+      "accepted_answers": [
+        "susi"
+      ],
+      "visual": "🐺"
+    },
+    "s4-hirvi": {
+      "id": "s4-hirvi",
+      "surface_form": "hirvi",
+      "lemma": "hirvi",
+      "translation_fa": "گوزن شمالی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "hirvi on eläin.",
+      "example_fa": "گوزن شمالی حیوان است.",
+      "accepted_answers": [
+        "hirvi"
+      ],
+      "visual": "🫎"
+    },
+    "s4-elain": {
+      "id": "s4-elain",
+      "surface_form": "eläin",
+      "lemma": "eläin",
+      "translation_fa": "حیوان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals",
+        "category"
+      ],
+      "example_fi": "Karhu on eläin.",
+      "example_fa": "خرس حیوان است.",
+      "accepted_answers": [
+        "eläin"
+      ],
+      "visual": "🐾"
+    },
+    "s4-karhu-on-elain": {
+      "id": "s4-karhu-on-elain",
+      "surface_form": "Karhu on eläin.",
+      "lemma": "Karhu on eläin",
+      "translation_fa": "خرس حیوان است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Karhu on eläin.",
+      "example_fa": "خرس حیوان است.",
+      "accepted_answers": [
+        "Karhu on eläin."
+      ]
+    },
+    "s4-lehma-on-elain": {
+      "id": "s4-lehma-on-elain",
+      "surface_form": "Lehmä on eläin.",
+      "lemma": "Lehmä on eläin",
+      "translation_fa": "گاو حیوان است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Lehmä on eläin.",
+      "example_fa": "گاو حیوان است.",
+      "accepted_answers": [
+        "Lehmä on eläin."
+      ]
+    },
+    "s4-punainen": {
+      "id": "s4-punainen",
+      "surface_form": "punainen",
+      "lemma": "punainen",
+      "translation_fa": "قرمز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "adjectives",
+        "color"
+      ],
+      "example_fi": "Pallo on punainen.",
+      "example_fa": "توپ قرمز است.",
+      "accepted_answers": [
+        "punainen"
+      ],
+      "visual": "🔴"
+    },
+    "s4-valkoinen": {
+      "id": "s4-valkoinen",
+      "surface_form": "valkoinen",
+      "lemma": "valkoinen",
+      "translation_fa": "سفید",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "adjectives",
+        "color"
+      ],
+      "example_fi": "Kissa on valkoinen.",
+      "example_fa": "گربه سفید است.",
+      "accepted_answers": [
+        "valkoinen"
+      ],
+      "visual": "⚪"
+    },
+    "s4-musta": {
+      "id": "s4-musta",
+      "surface_form": "musta",
+      "lemma": "musta",
+      "translation_fa": "سیاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "adjectives",
+        "color"
+      ],
+      "example_fi": "Koira on musta.",
+      "example_fa": "سگ سیاه است.",
+      "accepted_answers": [
+        "musta"
+      ],
+      "visual": "⚫"
+    },
+    "s4-iso": {
+      "id": "s4-iso",
+      "surface_form": "iso",
+      "lemma": "iso",
+      "translation_fa": "بزرگ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "adjectives",
+        "size"
+      ],
+      "example_fi": "Koira on iso.",
+      "example_fa": "سگ بزرگ است.",
+      "accepted_answers": [
+        "iso"
+      ],
+      "visual": "⬆️"
+    },
+    "s4-pieni": {
+      "id": "s4-pieni",
+      "surface_form": "pieni",
+      "lemma": "pieni",
+      "translation_fa": "کوچک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "adjectives",
+        "size"
+      ],
+      "example_fi": "Kissa on pieni.",
+      "example_fa": "گربه کوچک است.",
+      "accepted_answers": [
+        "pieni"
+      ],
+      "visual": "⬇️"
+    },
+    "s4-koira-on-iso": {
+      "id": "s4-koira-on-iso",
+      "surface_form": "Koira on iso.",
+      "lemma": "Koira on iso",
+      "translation_fa": "سگ بزرگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals",
+        "adjectives"
+      ],
+      "example_fi": "Koira on iso.",
+      "example_fa": "سگ بزرگ است.",
+      "accepted_answers": [
+        "Koira on iso."
+      ]
+    },
+    "s4-kissa-on-pieni": {
+      "id": "s4-kissa-on-pieni",
+      "surface_form": "Kissa on pieni.",
+      "lemma": "Kissa on pieni",
+      "translation_fa": "گربه کوچک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals",
+        "adjectives"
+      ],
+      "example_fi": "Kissa on pieni.",
+      "example_fa": "گربه کوچک است.",
+      "accepted_answers": [
+        "Kissa on pieni."
+      ]
+    },
+    "s4-hevonen-on-iso": {
+      "id": "s4-hevonen-on-iso",
+      "surface_form": "Hevonen on iso.",
+      "lemma": "Hevonen on iso",
+      "translation_fa": "اسب بزرگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals",
+        "adjectives"
+      ],
+      "example_fi": "Hevonen on iso.",
+      "example_fa": "اسب بزرگ است.",
+      "accepted_answers": [
+        "Hevonen on iso."
+      ]
+    },
+    "s4-lintu-on-pieni": {
+      "id": "s4-lintu-on-pieni",
+      "surface_form": "Lintu on pieni.",
+      "lemma": "Lintu on pieni",
+      "translation_fa": "پرنده کوچک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals",
+        "adjectives"
+      ],
+      "example_fi": "Lintu on pieni.",
+      "example_fa": "پرنده کوچک است.",
+      "accepted_answers": [
+        "Lintu on pieni."
+      ]
+    },
+    "s4-tama-on-minun-kotini": {
+      "id": "s4-tama-on-minun-kotini",
+      "surface_form": "Tämä on minun kotini.",
+      "lemma": "Tämä on minun kotini",
+      "translation_fa": "این خانهٔ من است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "profile"
+      ],
+      "example_fi": "Tämä on minun kotini.",
+      "example_fa": "این خانهٔ من است.",
+      "accepted_answers": [
+        "Tämä on minun kotini."
+      ]
+    },
+    "s4-keittiossa-on-frame": {
+      "id": "s4-keittiossa-on-frame",
+      "surface_form": "Keittiössä on …",
+      "lemma": "Keittiössä on ",
+      "translation_fa": "در آشپزخانه ... هست.",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "location"
+      ],
+      "example_fi": "Keittiössä on pöytä.",
+      "example_fa": "در آشپزخانه میز هست.",
+      "accepted_answers": [
+        "Keittiössä on …"
+      ]
+    },
+    "s4-haluan-frame": {
+      "id": "s4-haluan-frame",
+      "surface_form": "Haluan …",
+      "lemma": "Haluan ",
+      "translation_fa": "... می‌خواهم.",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Haluan vettä.",
+      "example_fa": "آب می‌خواهم.",
+      "accepted_answers": [
+        "Haluan …"
+      ]
+    },
+    "s4-minulla-on-frame": {
+      "id": "s4-minulla-on-frame",
+      "surface_form": "Minulla on …",
+      "lemma": "Minulla on ",
+      "translation_fa": "من ... دارم.",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession"
+      ],
+      "example_fi": "Minulla on kissa.",
+      "example_fa": "من گربه دارم.",
+      "accepted_answers": [
+        "Minulla on …"
+      ]
+    },
+    "s4-keittiossa": {
+      "id": "s4-keittiossa",
+      "surface_form": "keittiössä",
+      "lemma": "keittiössä",
+      "translation_fa": "در آشپزخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "location",
+        "morphology"
+      ],
+      "example_fi": "Keittiössä on pöytä.",
+      "example_fa": "در آشپزخانه میز هست.",
+      "accepted_answers": [
+        "keittiössä"
+      ]
+    },
+    "s4-world-1": {
+      "id": "s4-world-1",
+      "surface_form": "Tämä on minun kotini.",
+      "lemma": "Tämä on minun kotini",
+      "translation_fa": "این خانهٔ من است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world"
+      ],
+      "example_fi": "Tämä on minun kotini.",
+      "example_fa": "این خانهٔ من است.",
+      "accepted_answers": [
+        "Tämä on minun kotini."
+      ]
+    },
+    "s4-world-2": {
+      "id": "s4-world-2",
+      "surface_form": "Keittiössä on pöytä.",
+      "lemma": "Keittiössä on pöytä",
+      "translation_fa": "در آشپزخانه میز هست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world"
+      ],
+      "example_fi": "Keittiössä on pöytä.",
+      "example_fa": "در آشپزخانه میز هست.",
+      "accepted_answers": [
+        "Keittiössä on pöytä."
+      ]
+    },
+    "s4-world-3": {
+      "id": "s4-world-3",
+      "surface_form": "Minulla on kissa.",
+      "lemma": "Minulla on kissa",
+      "translation_fa": "من گربه دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world"
+      ],
+      "example_fi": "Minulla on kissa.",
+      "example_fa": "من گربه دارم.",
+      "accepted_answers": [
+        "Minulla on kissa."
+      ]
+    },
+    "s4-world-4": {
+      "id": "s4-world-4",
+      "surface_form": "Haluan kahvia.",
+      "lemma": "Haluan kahvia",
+      "translation_fa": "قهوه می‌خواهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world"
+      ],
+      "example_fi": "Haluan kahvia.",
+      "example_fa": "قهوه می‌خواهم.",
+      "accepted_answers": [
+        "Haluan kahvia."
+      ]
+    },
+    "s4-world-5": {
+      "id": "s4-world-5",
+      "surface_form": "Kissa on pieni.",
+      "lemma": "Kissa on pieni",
+      "translation_fa": "گربه کوچک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world"
+      ],
+      "example_fi": "Kissa on pieni.",
+      "example_fa": "گربه کوچک است.",
+      "accepted_answers": [
+        "Kissa on pieni."
+      ]
+    },
+    "s4-world-reading": {
+      "id": "s4-world-reading",
+      "surface_form": "Tämä on minun kotini. Keittiössä on pöytä. Minulla on kissa. Haluan kahvia. Kissa on pieni.",
+      "lemma": "Tämä on minun kotini. Keittiössä on pöytä. Minulla on kissa. Haluan kahvia. Kissa on pieni",
+      "translation_fa": "این خانهٔ من است. در آشپزخانه میز هست. من گربه دارم. قهوه می‌خواهم. گربه کوچک است.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world"
+      ],
+      "example_fi": "Tämä on minun kotini. Keittiössä on pöytä. Minulla on kissa. Haluan kahvia. Kissa on pieni.",
+      "example_fa": "این خانهٔ من است. در آشپزخانه میز هست. من گربه دارم. قهوه می‌خواهم. گربه کوچک است.",
+      "accepted_answers": [
+        "Tämä on minun kotini. Keittiössä on pöytä. Minulla on kissa. Haluan kahvia. Kissa on pieni."
+      ]
+    },
+    "s4-final-hei": {
+      "id": "s4-final-hei",
+      "surface_form": "Hei!",
+      "lemma": "Hei",
+      "translation_fa": "سلام!",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s1"
+      ],
+      "example_fi": "Hei!",
+      "example_fa": "سلام!",
+      "accepted_answers": [
+        "Hei!"
+      ]
+    },
+    "s4-final-name": {
+      "id": "s4-final-name",
+      "surface_form": "Minun nimeni on Sara.",
+      "lemma": "Minun nimeni on Sara",
+      "translation_fa": "نام من سارا است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s2"
+      ],
+      "example_fi": "Minun nimeni on Sara.",
+      "example_fa": "نام من سارا است.",
+      "accepted_answers": [
+        "Minun nimeni on Sara."
+      ]
+    },
+    "s4-final-origin": {
+      "id": "s4-final-origin",
+      "surface_form": "Olen Iranista.",
+      "lemma": "Olen Iranista",
+      "translation_fa": "من اهل ایران هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s2"
+      ],
+      "example_fi": "Olen Iranista.",
+      "example_fa": "من اهل ایران هستم.",
+      "accepted_answers": [
+        "Olen Iranista."
+      ]
+    },
+    "s4-final-language": {
+      "id": "s4-final-language",
+      "surface_form": "Puhun persiaa.",
+      "lemma": "Puhun persiaa",
+      "translation_fa": "فارسی صحبت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s2"
+      ],
+      "example_fi": "Puhun persiaa.",
+      "example_fa": "فارسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Puhun persiaa."
+      ]
+    },
+    "s4-final-day": {
+      "id": "s4-final-day",
+      "surface_form": "Tänään on maanantai.",
+      "lemma": "Tänään on maanantai",
+      "translation_fa": "امروز دوشنبه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s3"
+      ],
+      "example_fi": "Tänään on maanantai.",
+      "example_fa": "امروز دوشنبه است.",
+      "accepted_answers": [
+        "Tänään on maanantai."
+      ]
+    },
+    "s4-final-clock": {
+      "id": "s4-final-clock",
+      "surface_form": "Kello on kaksi.",
+      "lemma": "Kello on kaksi",
+      "translation_fa": "ساعت دو است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s3"
+      ],
+      "example_fi": "Kello on kaksi.",
+      "example_fa": "ساعت دو است.",
+      "accepted_answers": [
+        "Kello on kaksi."
+      ]
+    },
+    "s4-final-routine": {
+      "id": "s4-final-routine",
+      "surface_form": "Aamulla syön.",
+      "lemma": "Aamulla syön",
+      "translation_fa": "صبح غذا می‌خورم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s3"
+      ],
+      "example_fi": "Aamulla syön.",
+      "example_fa": "صبح غذا می‌خورم.",
+      "accepted_answers": [
+        "Aamulla syön."
+      ]
+    },
+    "s4-final-negative": {
+      "id": "s4-final-negative",
+      "surface_form": "En nuku.",
+      "lemma": "En nuku",
+      "translation_fa": "نمی‌خوابم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s3"
+      ],
+      "example_fi": "En nuku.",
+      "example_fa": "نمی‌خوابم.",
+      "accepted_answers": [
+        "En nuku."
+      ]
+    },
+    "s4-final-home": {
+      "id": "s4-final-home",
+      "surface_form": "Tämä on keittiö.",
+      "lemma": "Tämä on keittiö",
+      "translation_fa": "این آشپزخانه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s4"
+      ],
+      "example_fi": "Tämä on keittiö.",
+      "example_fa": "این آشپزخانه است.",
+      "accepted_answers": [
+        "Tämä on keittiö."
+      ]
+    },
+    "s4-final-want": {
+      "id": "s4-final-want",
+      "surface_form": "Haluan vettä.",
+      "lemma": "Haluan vettä",
+      "translation_fa": "آب می‌خواهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s4"
+      ],
+      "example_fi": "Haluan vettä.",
+      "example_fa": "آب می‌خواهم.",
+      "accepted_answers": [
+        "Haluan vettä."
+      ]
+    },
+    "s4-final-description": {
+      "id": "s4-final-description",
+      "surface_form": "Koira on iso.",
+      "lemma": "Koira on iso",
+      "translation_fa": "سگ بزرگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s4"
+      ],
+      "example_fi": "Koira on iso.",
+      "example_fa": "سگ بزرگ است.",
+      "accepted_answers": [
+        "Koira on iso."
+      ]
+    },
+    "s4-final-live": {
+      "id": "s4-final-live",
+      "surface_form": "Asun Vaasassa.",
+      "lemma": "Asun Vaasassa",
+      "translation_fa": "در واسا زندگی می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "s2"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "Asun Vaasassa."
+      ]
+    },
+    "s4-final-cafe-order": {
+      "id": "s4-final-cafe-order",
+      "surface_form": "Yksi kahvi, kiitos.",
+      "lemma": "Yksi kahvi, kiitos",
+      "translation_fa": "یک قهوه، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "cafe"
+      ],
+      "example_fi": "Yksi kahvi, kiitos.",
+      "example_fa": "یک قهوه، لطفاً.",
+      "accepted_answers": [
+        "Yksi kahvi, kiitos."
+      ]
+    },
+    "s4-final-cafe-give": {
+      "id": "s4-final-cafe-give",
+      "surface_form": "Ole hyvä.",
+      "lemma": "Ole hyvä",
+      "translation_fa": "بفرمایید.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "cafe"
+      ],
+      "example_fi": "Ole hyvä.",
+      "example_fa": "بفرمایید.",
+      "accepted_answers": [
+        "Ole hyvä."
+      ]
+    },
+    "s4-final-cafe-thanks": {
+      "id": "s4-final-cafe-thanks",
+      "surface_form": "Kiitos.",
+      "lemma": "Kiitos",
+      "translation_fa": "متشکرم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "cafe"
+      ],
+      "example_fi": "Kiitos.",
+      "example_fa": "متشکرم.",
+      "accepted_answers": [
+        "Kiitos."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "section-4-lesson-1",
+      "curriculum_id": "a1.1-s4-l01",
+      "order": 1,
+      "title_fa": "خانه و اتاق‌ها",
+      "objective_fa": "چند مکان رایج در خانه را نام ببر و از روی تصویر تشخیص بده.",
+      "summary_fa": "شش واژهٔ پایهٔ خانه را با نشانهٔ تصویری و دو جملهٔ کامل تمرین می‌کنی.",
+      "grammar_fa": "kotona یک شکل مکانی ثابت است و در این سطح به‌صورت chunk کامل در Olen kotona. یاد گرفته می‌شود.",
+      "new_targets": [
+        "s4-huone",
+        "s4-keittio",
+        "s4-olohuone",
+        "s4-makuuhuone",
+        "s4-wc",
+        "s4-koti"
+      ],
+      "display_targets": [
+        "s4-huone",
+        "s4-keittio",
+        "s4-olohuone",
+        "s4-makuuhuone",
+        "s4-wc",
+        "s4-koti"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s4-huone",
+          "s4-keittio",
+          "s4-olohuone",
+          "s4-makuuhuone",
+          "s4-wc",
+          "s4-koti"
+        ],
+        "expressions": [
+          "s4-tama-on-keittio",
+          "s4-olen-kotona"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l08",
+        "a1.1-s2-l04"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-huone"
+        },
+        {
+          "type": "teach",
+          "item": "s4-keittio"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-keittio",
+          "options": [
+            "s4-olohuone",
+            "s4-keittio",
+            "s4-makuuhuone",
+            "s4-wc"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-olohuone"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-olohuone",
+          "options": [
+            "s4-huone",
+            "s4-wc",
+            "s4-olohuone",
+            "s4-koti"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-makuuhuone"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-makuuhuone",
+          "options": [
+            "s4-koti",
+            "s4-makuuhuone",
+            "s4-keittio",
+            "s4-olohuone"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-wc"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-wc",
+          "options": [
+            "s4-wc",
+            "s4-huone",
+            "s4-keittio",
+            "s4-koti"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-koti"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-koti",
+          "options": [
+            "s4-olohuone",
+            "s4-koti",
+            "s4-wc",
+            "s4-makuuhuone"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-tama-on-keittio"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-keittio"
+        },
+        {
+          "type": "teach",
+          "item": "s4-olen-kotona"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-olen-kotona"
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-2",
+      "curriculum_id": "a1.1-s4-l02",
+      "order": 2,
+      "title_fa": "کجاست؟",
+      "objective_fa": "با چند الگوی مکانی ثابت بگو یک شیء آشنا کجاست.",
+      "summary_fa": "Missä? را با pöytä، tuoli و sänky و شکل‌های کامل pöydällä، huoneessa، tuolilla و sängyllä تمرین می‌کنی.",
+      "grammar_fa": "شکل‌های -ssa/-ssä و -lla/-llä فقط به‌صورت عبارت‌های کامل و بازبینی‌شده ذخیره شده‌اند؛ runtime آن‌ها را نمی‌سازد.",
+      "new_targets": [
+        "s4-missa",
+        "s4-on",
+        "s4-poyta",
+        "s4-tuoli",
+        "s4-sanky"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s4-missa",
+          "s4-on"
+        ],
+        "topic": [
+          "s4-poyta",
+          "s4-tuoli",
+          "s4-sanky"
+        ],
+        "expressions": [
+          "s4-missa-puhelin",
+          "s4-se-on-poydalla",
+          "s4-se-on-huoneessa"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l05",
+        "a1.1-s4-l01"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-missa"
+        },
+        {
+          "type": "teach",
+          "item": "s4-poyta"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-poyta",
+          "options": [
+            "s4-tuoli",
+            "s4-poyta",
+            "s4-sanky",
+            "s4-puhelin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-tuoli"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-tuoli",
+          "options": [
+            "s4-sanky",
+            "s4-tuoli",
+            "s4-poyta",
+            "s4-kirja"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-sanky"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-sanky",
+          "options": [
+            "s4-sanky",
+            "s4-tuoli",
+            "s4-poyta",
+            "s4-koti"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-missa-puhelin"
+        },
+        {
+          "type": "prompt-choice",
+          "prompt_item": "s4-location-q-phone",
+          "answer_item": "s4-se-on-poydalla",
+          "options": [
+            "s4-se-on-huoneessa",
+            "s4-se-on-poydalla",
+            "s4-se-on-tuolilla",
+            "s4-se-on-sangylla"
+          ]
+        },
+        {
+          "type": "prompt-choice",
+          "prompt_item": "s4-location-q-book",
+          "answer_item": "s4-se-on-tuolilla",
+          "options": [
+            "s4-se-on-poydalla",
+            "s4-se-on-sangylla",
+            "s4-se-on-tuolilla",
+            "s4-se-on-huoneessa"
+          ]
+        },
+        {
+          "type": "prompt-choice",
+          "prompt_item": "s4-location-q-cat",
+          "answer_item": "s4-se-on-sangylla",
+          "options": [
+            "s4-se-on-huoneessa",
+            "s4-se-on-sangylla",
+            "s4-se-on-poydalla",
+            "s4-se-on-tuolilla"
+          ]
+        },
+        {
+          "type": "prompt-choice",
+          "prompt_item": "s4-location-q-home",
+          "answer_item": "s4-location-a-home",
+          "options": [
+            "s4-se-on-huoneessa",
+            "s4-location-a-home",
+            "s4-se-on-poydalla",
+            "s4-se-on-tuolilla"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-poydalla"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-huoneessa"
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-3",
+      "curriculum_id": "a1.1-s4-l03",
+      "order": 3,
+      "title_fa": "خوراک و نوشیدنی",
+      "objective_fa": "چند خوراک و نوشیدنی بسیار رایج را از روی تصویر و صدا تشخیص بده و نام ببر.",
+      "summary_fa": "قهوه، چای، شیر، نان، غذا و آب را با تصویر، شنیدن و یادآوری تایپی تمرین می‌کنی.",
+      "grammar_fa": "تفاوت mass/count فقط از راه نمونه‌های حفظ‌شدهٔ Tämä on kahvia. و Tämä on leipä. معرفی می‌شود.",
+      "new_targets": [
+        "s4-kahvi",
+        "s4-tee",
+        "s4-maito",
+        "s4-leipa",
+        "s4-ruoka",
+        "s4-vesi"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s4-kahvi",
+          "s4-tee",
+          "s4-maito",
+          "s4-leipa",
+          "s4-ruoka",
+          "s4-vesi"
+        ],
+        "expressions": [
+          "s4-tama-on-kahvia",
+          "s4-tama-on-leipa"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l08"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-kahvi"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-kahvi",
+          "options": [
+            "s4-tee",
+            "s4-kahvi",
+            "s4-maito",
+            "s4-vesi"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-tee"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-tee",
+          "options": [
+            "s4-kahvi",
+            "s4-vesi",
+            "s4-tee",
+            "s4-maito"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-maito"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-maito",
+          "options": [
+            "s4-vesi",
+            "s4-maito",
+            "s4-kahvi",
+            "s4-tee"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-leipa"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-leipa",
+          "options": [
+            "s4-ruoka",
+            "s4-leipa",
+            "s4-kahvi",
+            "s4-vesi"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-ruoka"
+        },
+        {
+          "type": "teach",
+          "item": "s4-vesi"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-vesi",
+          "options": [
+            "s4-maito",
+            "s4-kahvi",
+            "s4-vesi",
+            "s4-tee"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-tama-on-kahvia"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-tama-on-kahvia",
+          "options": [
+            "s4-tama-on-leipa",
+            "s4-tama-on-kahvia",
+            "s4-kahvi",
+            "s4-vesi"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-tama-on-leipa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-leipa"
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-4",
+      "curriculum_id": "a1.1-s4-l04",
+      "order": 4,
+      "title_fa": "من ... می‌خواهم",
+      "objective_fa": "یک خواسته یا نیاز پایه دربارهٔ خوراک و نوشیدنی را بیان کن.",
+      "summary_fa": "haluan، nälkä و jano را با سه عبارت کامل و قابل‌استفاده تمرین می‌کنی.",
+      "grammar_fa": "kahvia و vettä بعد از haluan و Minulla on nälkä به‌صورت chunk کامل ذخیره شده‌اند.",
+      "new_targets": [
+        "s4-nalka",
+        "s4-jano",
+        "s4-haluan"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s4-nalka",
+          "s4-jano",
+          "s4-haluan"
+        ],
+        "expressions": [
+          "s4-haluan-kahvia",
+          "s4-haluan-vetta",
+          "s4-minulla-on-nalka"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l05",
+        "a1.1-s4-l03"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-haluan"
+        },
+        {
+          "type": "teach",
+          "item": "s4-nalka"
+        },
+        {
+          "type": "teach",
+          "item": "s4-jano"
+        },
+        {
+          "type": "teach",
+          "item": "s4-haluan-kahvia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-haluan-kahvia"
+        },
+        {
+          "type": "teach",
+          "item": "s4-haluan-vetta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-haluan-vetta"
+        },
+        {
+          "type": "teach",
+          "item": "s4-minulla-on-nalka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-minulla-on-nalka"
+        },
+        {
+          "type": "teach",
+          "item": "s4-minulla-on-jano"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-minulla-on-jano",
+          "options": [
+            "s4-minulla-on-nalka",
+            "s4-haluan-vetta",
+            "s4-minulla-on-jano",
+            "s4-haluan-kahvia"
+          ]
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-nalka",
+          "options": [
+            "s4-jano",
+            "s4-nalka",
+            "s4-haluan",
+            "s4-vesi"
+          ]
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-jano",
+          "options": [
+            "s4-nalka",
+            "s4-haluan",
+            "s4-jano",
+            "s4-kahvi"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-haluan-vetta",
+          "options": [
+            "s4-haluan-kahvia",
+            "s4-minulla-on-nalka",
+            "s4-haluan-vetta",
+            "s4-minulla-on-jano"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s4-haluan-kahvia",
+          "options": [
+            "s4-haluan-kahvia",
+            "s4-haluan-vetta",
+            "s4-minulla-on-nalka",
+            "s4-minulla-on-jano"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-5",
+      "curriculum_id": "a1.1-s4-l05",
+      "order": 5,
+      "title_fa": "سفارش خیلی ساده در کافه",
+      "objective_fa": "برای یک خوراک یا نوشیدنی آشنا سفارش بسیار ساده و مودبانه بده.",
+      "summary_fa": "دو سفارش کوتاه و پاسخ مودبانه را در گفت‌وگوی سه‌نوبتی تمرین می‌کنی.",
+      "grammar_fa": "عبارت‌های سفارشی بی‌فعل هستند و به‌صورت chunk کامل همراه با kiitos و Ole hyvä یاد گرفته می‌شوند.",
+      "new_targets": [
+        "s4-yksi",
+        "s4-kahvila"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s4-yksi"
+        ],
+        "topic": [
+          "s4-kahvila"
+        ],
+        "expressions": [
+          "s4-yksi-kahvi-kiitos",
+          "s4-vetta-kiitos",
+          "s4-ole-hyva"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l06",
+        "a1.1-s2-l07",
+        "a1.1-s4-l03",
+        "a1.1-s4-l04"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-yksi"
+        },
+        {
+          "type": "teach",
+          "item": "s4-kahvila"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-kahvila",
+          "options": [
+            "s4-kahvila",
+            "s4-keittio",
+            "s4-olohuone",
+            "s4-koti"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-yksi-kahvi-kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-yksi-kahvi-kiitos"
+        },
+        {
+          "type": "teach",
+          "item": "s4-vetta-kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-vetta-kiitos"
+        },
+        {
+          "type": "teach",
+          "item": "s4-ole-hyva"
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "s4-ole-hyva",
+            "s4-yksi-kahvi-kiitos",
+            "s4-kiitos"
+          ],
+          "answer_order": [
+            1,
+            0,
+            2
+          ],
+          "label_fa": "سفارش قهوه را در سه نوبت مرتب کن."
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "s4-kiitos",
+            "s4-vetta-kiitos",
+            "s4-ole-hyva"
+          ],
+          "answer_order": [
+            1,
+            2,
+            0
+          ],
+          "label_fa": "سفارش آب را در سه نوبت مرتب کن."
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-yksi-kahvi-kiitos",
+          "options": [
+            "s4-vetta-kiitos",
+            "s4-yksi-kahvi-kiitos",
+            "s4-ole-hyva",
+            "s4-kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-ole-hyva",
+          "options": [
+            "s4-kiitos",
+            "s4-yksi-kahvi-kiitos",
+            "s4-ole-hyva",
+            "s4-vetta-kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-vetta-kiitos",
+          "options": [
+            "s4-yksi-kahvi-kiitos",
+            "s4-vetta-kiitos",
+            "s4-ole-hyva",
+            "s4-kiitos"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kiitos"
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s4-yksi-kahvi-kiitos",
+          "options": [
+            "s4-yksi-kahvi-kiitos",
+            "s4-vetta-kiitos",
+            "s4-ole-hyva",
+            "s4-kiitos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-6",
+      "curriculum_id": "a1.1-s4-l06",
+      "order": 6,
+      "title_fa": "حیوانات آشنا ۱",
+      "objective_fa": "پنج حیوان رایج را از روی تصویر و صدا تشخیص بده و نام ببر.",
+      "summary_fa": "سگ، گربه، پرنده، ماهی و اسب را با تصویر، شنیدن و جمله‌های معرفی تمرین می‌کنی.",
+      "grammar_fa": "Tämä on و Se on از Section 1 بازیابی می‌شوند و واژهٔ حیوان بدون تغییر بعد از olla می‌آید.",
+      "new_targets": [
+        "s4-koira",
+        "s4-kissa",
+        "s4-lintu",
+        "s4-kala",
+        "s4-hevonen"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s4-koira",
+          "s4-kissa",
+          "s4-lintu",
+          "s4-kala",
+          "s4-hevonen"
+        ],
+        "expressions": [
+          "s4-tama-on-koira",
+          "s4-se-on-kissa"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l08"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-koira"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-koira",
+          "options": [
+            "s4-kissa",
+            "s4-koira",
+            "s4-lintu",
+            "s4-hevonen"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-kissa"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-kissa",
+          "options": [
+            "s4-kala",
+            "s4-lintu",
+            "s4-kissa",
+            "s4-koira"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-lintu"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-lintu",
+          "options": [
+            "s4-koira",
+            "s4-lintu",
+            "s4-kala",
+            "s4-hevonen"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-kala"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-kala",
+          "options": [
+            "s4-hevonen",
+            "s4-kala",
+            "s4-kissa",
+            "s4-lintu"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-hevonen"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-hevonen",
+          "options": [
+            "s4-koira",
+            "s4-kissa",
+            "s4-hevonen",
+            "s4-kala"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-tama-on-koira"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-koira"
+        },
+        {
+          "type": "teach",
+          "item": "s4-se-on-kissa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-kissa"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-hevonen",
+          "options": [
+            "s4-lintu",
+            "s4-kala",
+            "s4-hevonen",
+            "s4-koira"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-7",
+      "curriculum_id": "a1.1-s4-l07",
+      "order": 7,
+      "title_fa": "حیوانات آشنا ۲",
+      "objective_fa": "پنج حیوان آشنای دیگر را تشخیص بده و نمونه‌های آشنا را به‌عنوان حیوان دسته‌بندی کن.",
+      "summary_fa": "گاو، گوسفند، خرس، گرگ و گوزن شمالی را با تصویر و دسته‌بندی ساده تمرین می‌کنی.",
+      "grammar_fa": "الگوی noun + on + eläin یک جملهٔ اسمی بسیار ساده با olla است.",
+      "new_targets": [
+        "s4-lehma",
+        "s4-lammas",
+        "s4-karhu",
+        "s4-susi",
+        "s4-hirvi"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s4-lehma",
+          "s4-lammas",
+          "s4-karhu",
+          "s4-susi",
+          "s4-hirvi"
+        ],
+        "expressions": [
+          "s4-karhu-on-elain",
+          "s4-lehma-on-elain"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l06"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-lehma"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-lehma",
+          "options": [
+            "s4-lammas",
+            "s4-lehma",
+            "s4-karhu",
+            "s4-hirvi"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-lammas"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-lammas",
+          "options": [
+            "s4-susi",
+            "s4-lammas",
+            "s4-lehma",
+            "s4-karhu"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-karhu"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-karhu",
+          "options": [
+            "s4-hirvi",
+            "s4-susi",
+            "s4-karhu",
+            "s4-lammas"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-susi"
+        },
+        {
+          "type": "teach",
+          "item": "s4-hirvi"
+        },
+        {
+          "type": "category-match",
+          "item": "s4-karhu",
+          "answer": "eläin",
+          "options": [
+            "eläin",
+            "ruoka",
+            "huone"
+          ]
+        },
+        {
+          "type": "category-match",
+          "item": "s4-lehma",
+          "answer": "eläin",
+          "options": [
+            "ruoka",
+            "eläin",
+            "huone"
+          ]
+        },
+        {
+          "type": "category-match",
+          "item": "s4-hirvi",
+          "answer": "eläin",
+          "options": [
+            "huone",
+            "ruoka",
+            "eläin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-karhu-on-elain"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-karhu-on-elain"
+        },
+        {
+          "type": "teach",
+          "item": "s4-lehma-on-elain"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-lehma-on-elain"
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-8",
+      "curriculum_id": "a1.1-s4-l08",
+      "order": 8,
+      "title_fa": "توصیف ساده",
+      "objective_fa": "یک شخص، شیء یا حیوان آشنا را با یک صفت پایه توصیف کن.",
+      "summary_fa": "سه رنگ و دو اندازه را می‌آموزی و چهار جملهٔ noun + on + adjective را به‌صورت هدایت‌شده تولید می‌کنی.",
+      "grammar_fa": "صفت خبری بعد از on در جمله‌های بسیار ساده مثل Koira on iso. بدون تغییر اضافی تمرین می‌شود.",
+      "new_targets": [
+        "s4-punainen",
+        "s4-valkoinen",
+        "s4-musta",
+        "s4-iso",
+        "s4-pieni"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s4-punainen",
+          "s4-valkoinen",
+          "s4-musta",
+          "s4-iso",
+          "s4-pieni"
+        ],
+        "expressions": [
+          "s4-koira-on-iso",
+          "s4-kissa-on-pieni"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l06",
+        "a1.1-s4-l07"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-punainen"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-punainen",
+          "options": [
+            "s4-musta",
+            "s4-punainen",
+            "s4-valkoinen",
+            "s4-iso"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-valkoinen"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-valkoinen",
+          "options": [
+            "s4-pieni",
+            "s4-musta",
+            "s4-valkoinen",
+            "s4-punainen"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-musta"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-musta",
+          "options": [
+            "s4-musta",
+            "s4-valkoinen",
+            "s4-punainen",
+            "s4-pieni"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-iso"
+        },
+        {
+          "type": "teach",
+          "item": "s4-pieni"
+        },
+        {
+          "type": "teach",
+          "item": "s4-koira-on-iso"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-koira-on-iso"
+        },
+        {
+          "type": "teach",
+          "item": "s4-kissa-on-pieni"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kissa-on-pieni"
+        },
+        {
+          "type": "guided-writing",
+          "expected_items": [
+            "s4-koira-on-iso",
+            "s4-kissa-on-pieni",
+            "s4-hevonen-on-iso",
+            "s4-lintu-on-pieni"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-iso",
+          "options": [
+            "s4-pieni",
+            "s4-iso",
+            "s4-punainen",
+            "s4-musta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-pieni",
+          "options": [
+            "s4-valkoinen",
+            "s4-pieni",
+            "s4-iso",
+            "s4-punainen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-9",
+      "curriculum_id": "a1.1-s4-l09",
+      "order": 9,
+      "title_fa": "دنیای آشنای من",
+      "objective_fa": "یک متن پنج‌جمله‌ای دربارهٔ خانه و دنیای آشنا را بفهم و چهار جملهٔ هدایت‌شده تولید کن.",
+      "summary_fa": "خانه، آشپزخانه، مالکیت، خواسته و توصیف حیوان در یک متن کوتاه کنار هم قرار می‌گیرند.",
+      "grammar_fa": "گرامر جدیدی نیست؛ فقط الگوهای قبلی بازیابی و در یک متن بسیار کوتاه ترکیب می‌شوند.",
+      "new_targets": [],
+      "practice_targets": [
+        "s4-tama-on-minun-kotini",
+        "s4-keittiossa-on-frame",
+        "s4-haluan-frame",
+        "s4-minulla-on-frame"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "s4-tama-on-minun-kotini",
+          "s4-keittiossa-on-frame",
+          "s4-haluan-frame",
+          "s4-minulla-on-frame"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l05",
+        "a1.1-s4-l01",
+        "a1.1-s4-l02",
+        "a1.1-s4-l03",
+        "a1.1-s4-l04",
+        "a1.1-s4-l08"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s4-tama-on-minun-kotini"
+        },
+        {
+          "type": "teach",
+          "item": "s4-keittiossa-on-frame"
+        },
+        {
+          "type": "teach",
+          "item": "s4-haluan-frame"
+        },
+        {
+          "type": "teach",
+          "item": "s4-minulla-on-frame"
+        },
+        {
+          "type": "short-reading",
+          "item": "s4-world-reading",
+          "question_item": "s4-world-3",
+          "options": [
+            "s4-world-2",
+            "s4-world-3",
+            "s4-world-4",
+            "s4-world-5"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s4-world-reading",
+          "question_item": "s4-world-4",
+          "options": [
+            "s4-world-1",
+            "s4-world-5",
+            "s4-world-4",
+            "s4-world-2"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-world-2",
+          "options": [
+            "s4-world-5",
+            "s4-world-2",
+            "s4-world-4",
+            "s4-world-3"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-world-5",
+          "options": [
+            "s4-world-3",
+            "s4-world-5",
+            "s4-world-2",
+            "s4-world-1"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-world-1"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-world-2"
+        },
+        {
+          "type": "guided-writing",
+          "expected_items": [
+            "s4-world-1",
+            "s4-world-2",
+            "s4-world-3",
+            "s4-world-4"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-world-5"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-tama-on-minun-kotini",
+          "options": [
+            "s4-world-2",
+            "s4-tama-on-minun-kotini",
+            "s4-world-4",
+            "s4-world-5"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-haluan-frame",
+          "options": [
+            "s4-minulla-on-frame",
+            "s4-haluan-frame",
+            "s4-keittiossa-on-frame",
+            "s4-tama-on-minun-kotini"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-minulla-on-frame",
+          "options": [
+            "s4-haluan-frame",
+            "s4-tama-on-minun-kotini",
+            "s4-minulla-on-frame",
+            "s4-keittiossa-on-frame"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4-lesson-10",
+      "curriculum_id": "a1.1-s4-l10",
+      "order": 10,
+      "title_fa": "آزمون پایانی A1.1",
+      "objective_fa": "در موقعیت‌های اصلی A1.1 از زبان بسیار تمرین‌شده استفاده کن و حداقل ۸۰٪ پاسخ درست بگیر.",
+      "summary_fa": "این آزمون از ارتباط اولیه، اطلاعات شخصی، زمان و روتین، خانه و نیازهای پایه نمونه می‌گیرد و یک گفت‌وگو و خروجی چندجمله‌ای دارد.",
+      "grammar_fa": "مطلب جدیدی معرفی نمی‌شود؛ این آزمون سنجش نهایی کل مسیر A1.1 است.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.1-s1-l10",
+        "a1.1-s2-l10",
+        "a1.1-s3-l10",
+        "a1.1-s4-l01",
+        "a1.1-s4-l02",
+        "a1.1-s4-l03",
+        "a1.1-s4-l04",
+        "a1.1-s4-l05",
+        "a1.1-s4-l06",
+        "a1.1-s4-l07",
+        "a1.1-s4-l08",
+        "a1.1-s4-l09"
+      ],
+      "passing_score": 0.8,
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-final-hei",
+          "options": [
+            "s4-final-name",
+            "s4-final-hei",
+            "s4-final-origin",
+            "s4-final-day"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-name"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-final-origin",
+          "options": [
+            "s4-final-language",
+            "s4-final-origin",
+            "s4-final-live",
+            "s4-final-home"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-language"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s4-final-day",
+          "options": [
+            "s4-final-clock",
+            "s4-final-day",
+            "s4-final-routine",
+            "s4-final-negative"
+          ]
+        },
+        {
+          "type": "clock-choice",
+          "hour": 2,
+          "item": "s4-final-clock",
+          "options": [
+            "s4-kello-yksi",
+            "s4-final-clock",
+            "s4-kello-kolme",
+            "s4-kello-nelja"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-routine"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-negative"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-keittio",
+          "options": [
+            "s4-olohuone",
+            "s4-keittio",
+            "s4-makuuhuone",
+            "s4-wc"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-want"
+        },
+        {
+          "type": "visual-choice",
+          "item": "s4-koira",
+          "options": [
+            "s4-kissa",
+            "s4-koira",
+            "s4-karhu",
+            "s4-hirvi"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-description"
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "s4-final-cafe-thanks",
+            "s4-final-cafe-order",
+            "s4-final-cafe-give"
+          ],
+          "answer_order": [
+            1,
+            2,
+            0
+          ],
+          "label_fa": "گفت‌وگوی سه‌نوبتی کافه را مرتب کن."
+        },
+        {
+          "type": "guided-writing",
+          "expected_items": [
+            "s4-final-name",
+            "s4-final-live",
+            "s4-final-routine",
+            "s4-tama-on-minun-kotini"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s4-world-reading",
+          "question_item": "s4-world-5",
+          "options": [
+            "s4-world-2",
+            "s4-world-4",
+            "s4-world-5",
+            "s4-world-3"
+          ]
+        }
+      ]
+    }
+  ]
+}
