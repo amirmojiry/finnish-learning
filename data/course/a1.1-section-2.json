@@ -975,23 +975,6 @@
         "kolme"
       ]
     },
-    "s2-num-neljä": {
-      "id": "s2-num-neljä",
-      "surface_form": "neljä",
-      "lemma": "neljä",
-      "translation_fa": "۴",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on neljä.",
-      "example_fa": "عدد ۴ است.",
-      "accepted_answers": [
-        "neljä"
-      ]
-    },
     "s2-num-viisi": {
       "id": "s2-num-viisi",
       "surface_form": "viisi",
@@ -1026,23 +1009,6 @@
         "kuusi"
       ]
     },
-    "s2-num-seitsemän": {
-      "id": "s2-num-seitsemän",
-      "surface_form": "seitsemän",
-      "lemma": "seitsemän",
-      "translation_fa": "۷",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on seitsemän.",
-      "example_fa": "عدد ۷ است.",
-      "accepted_answers": [
-        "seitsemän"
-      ]
-    },
     "s2-num-kahdeksan": {
       "id": "s2-num-kahdeksan",
       "surface_form": "kahdeksan",
@@ -1058,23 +1024,6 @@
       "example_fa": "عدد ۸ است.",
       "accepted_answers": [
         "kahdeksan"
-      ]
-    },
-    "s2-num-yhdeksän": {
-      "id": "s2-num-yhdeksän",
-      "surface_form": "yhdeksän",
-      "lemma": "yhdeksän",
-      "translation_fa": "۹",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on yhdeksän.",
-      "example_fa": "عدد ۹ است.",
-      "accepted_answers": [
-        "yhdeksän"
       ]
     },
     "s2-num-kymmenen": {
@@ -1145,23 +1094,6 @@
         "kolmetoista"
       ]
     },
-    "s2-num-neljätoista": {
-      "id": "s2-num-neljätoista",
-      "surface_form": "neljätoista",
-      "lemma": "neljätoista",
-      "translation_fa": "۱۴",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on neljätoista.",
-      "example_fa": "عدد ۱۴ است.",
-      "accepted_answers": [
-        "neljätoista"
-      ]
-    },
     "s2-num-viisitoista": {
       "id": "s2-num-viisitoista",
       "surface_form": "viisitoista",
@@ -1196,23 +1128,6 @@
         "kuusitoista"
       ]
     },
-    "s2-num-seitsemäntoista": {
-      "id": "s2-num-seitsemäntoista",
-      "surface_form": "seitsemäntoista",
-      "lemma": "seitsemäntoista",
-      "translation_fa": "۱۷",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on seitsemäntoista.",
-      "example_fa": "عدد ۱۷ است.",
-      "accepted_answers": [
-        "seitsemäntoista"
-      ]
-    },
     "s2-num-kahdeksantoista": {
       "id": "s2-num-kahdeksantoista",
       "surface_form": "kahdeksantoista",
@@ -1228,40 +1143,6 @@
       "example_fa": "عدد ۱۸ است.",
       "accepted_answers": [
         "kahdeksantoista"
-      ]
-    },
-    "s2-num-yhdeksäntoista": {
-      "id": "s2-num-yhdeksäntoista",
-      "surface_form": "yhdeksäntoista",
-      "lemma": "yhdeksäntoista",
-      "translation_fa": "۱۹",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on yhdeksäntoista.",
-      "example_fa": "عدد ۱۹ است.",
-      "accepted_answers": [
-        "yhdeksäntoista"
-      ]
-    },
-    "s2-num-kaksikymmentä": {
-      "id": "s2-num-kaksikymmentä",
-      "surface_form": "kaksikymmentä",
-      "lemma": "kaksikymmentä",
-      "translation_fa": "۲۰",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on kaksikymmentä.",
-      "example_fa": "عدد ۲۰ است.",
-      "accepted_answers": [
-        "kaksikymmentä"
       ]
     },
     "s2-ika": {
@@ -1538,6 +1419,125 @@
       "accepted_answers": [
         "Olen 12-vuotias."
       ]
+    },
+    "s2-num-nelja": {
+      "id": "s2-num-nelja",
+      "surface_form": "neljä",
+      "lemma": "neljä",
+      "translation_fa": "۴",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on neljä.",
+      "example_fa": "عدد ۴ است.",
+      "accepted_answers": [
+        "neljä"
+      ]
+    },
+    "s2-num-seitseman": {
+      "id": "s2-num-seitseman",
+      "surface_form": "seitsemän",
+      "lemma": "seitsemän",
+      "translation_fa": "۷",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on seitsemän.",
+      "example_fa": "عدد ۷ است.",
+      "accepted_answers": [
+        "seitsemän"
+      ]
+    },
+    "s2-num-yhdeksan": {
+      "id": "s2-num-yhdeksan",
+      "surface_form": "yhdeksän",
+      "lemma": "yhdeksän",
+      "translation_fa": "۹",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yhdeksän.",
+      "example_fa": "عدد ۹ است.",
+      "accepted_answers": [
+        "yhdeksän"
+      ]
+    },
+    "s2-num-neljatoista": {
+      "id": "s2-num-neljatoista",
+      "surface_form": "neljätoista",
+      "lemma": "neljätoista",
+      "translation_fa": "۱۴",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on neljätoista.",
+      "example_fa": "عدد ۱۴ است.",
+      "accepted_answers": [
+        "neljätoista"
+      ]
+    },
+    "s2-num-seitsemantoista": {
+      "id": "s2-num-seitsemantoista",
+      "surface_form": "seitsemäntoista",
+      "lemma": "seitsemäntoista",
+      "translation_fa": "۱۷",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on seitsemäntoista.",
+      "example_fa": "عدد ۱۷ است.",
+      "accepted_answers": [
+        "seitsemäntoista"
+      ]
+    },
+    "s2-num-yhdeksantoista": {
+      "id": "s2-num-yhdeksantoista",
+      "surface_form": "yhdeksäntoista",
+      "lemma": "yhdeksäntoista",
+      "translation_fa": "۱۹",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yhdeksäntoista.",
+      "example_fa": "عدد ۱۹ است.",
+      "accepted_answers": [
+        "yhdeksäntoista"
+      ]
+    },
+    "s2-num-kaksikymmenta": {
+      "id": "s2-num-kaksikymmenta",
+      "surface_form": "kaksikymmentä",
+      "lemma": "kaksikymmentä",
+      "translation_fa": "۲۰",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kaksikymmentä.",
+      "example_fa": "عدد ۲۰ است.",
+      "accepted_answers": [
+        "kaksikymmentä"
+      ]
     }
   },
   "lessons": [
@@ -1771,23 +1771,23 @@
         "s2-num-yksi",
         "s2-num-kaksi",
         "s2-num-kolme",
-        "s2-num-neljä",
+        "s2-num-nelja",
         "s2-num-viisi",
         "s2-num-kuusi",
-        "s2-num-seitsemän",
+        "s2-num-seitseman",
         "s2-num-kahdeksan",
-        "s2-num-yhdeksän",
+        "s2-num-yhdeksan",
         "s2-num-kymmenen",
         "s2-num-yksitoista",
         "s2-num-kaksitoista",
         "s2-num-kolmetoista",
-        "s2-num-neljätoista",
+        "s2-num-neljatoista",
         "s2-num-viisitoista",
         "s2-num-kuusitoista",
-        "s2-num-seitsemäntoista",
+        "s2-num-seitsemantoista",
         "s2-num-kahdeksantoista",
-        "s2-num-yhdeksäntoista",
-        "s2-num-kaksikymmentä",
+        "s2-num-yhdeksantoista",
+        "s2-num-kaksikymmenta",
         "s2-ika"
       ],
       "display_targets": [
@@ -1841,23 +1841,23 @@
             "s2-num-yksi",
             "s2-num-kaksi",
             "s2-num-kolme",
-            "s2-num-neljä",
+            "s2-num-nelja",
             "s2-num-viisi",
             "s2-num-kuusi",
-            "s2-num-seitsemän",
+            "s2-num-seitseman",
             "s2-num-kahdeksan",
-            "s2-num-yhdeksän",
+            "s2-num-yhdeksan",
             "s2-num-kymmenen",
             "s2-num-yksitoista",
             "s2-num-kaksitoista",
             "s2-num-kolmetoista",
-            "s2-num-neljätoista",
+            "s2-num-neljatoista",
             "s2-num-viisitoista",
             "s2-num-kuusitoista",
-            "s2-num-seitsemäntoista",
+            "s2-num-seitsemantoista",
             "s2-num-kahdeksantoista",
-            "s2-num-yhdeksäntoista",
-            "s2-num-kaksikymmentä"
+            "s2-num-yhdeksantoista",
+            "s2-num-kaksikymmenta"
           ]
         },
         {
