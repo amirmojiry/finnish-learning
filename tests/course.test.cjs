@@ -18,7 +18,7 @@ test('A1.1 Section 1 contains ten deterministic curriculum-driven fifteen-activi
   assert.equal(section.lessons.length, 10);
   assert.equal(section.activity_count_per_lesson, 15);
   assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
-  assert.equal(Object.keys(section.items).length, 59);
+  assert.equal(Object.keys(section.items).length, 69);
   assert.deepEqual(
     section.lessons.map((lesson) => lesson.curriculum_id),
     curriculum.sections[0].lessons.map((lesson) => lesson.id),
@@ -156,4 +156,20 @@ test('course UI is wired to both curriculum and implemented section data', () =>
   assert.match(source, /به‌زودی/);
   assert.match(styles, /\.course-section-grid/);
   assert.match(styles, /\.course-lesson-intro/);
+});
+
+
+test('every curriculum target group is explicitly mapped to real section items', () => {
+  const contract = curriculum.sections.find((entry) => entry.id === section.curriculum_section_id);
+  for (const contractLesson of contract.lessons) {
+    const lesson = section.lessons.find((entry) => entry.curriculum_id === contractLesson.id);
+    assert.ok(lesson, contractLesson.id);
+    const refs = lesson.curriculum_target_refs;
+    assert.equal(refs.high_frequency.length, contractLesson.high_frequency_targets.length);
+    assert.equal(refs.topic.length, contractLesson.topic_targets.length);
+    assert.equal(refs.expressions.length, contractLesson.expressions.length);
+    for (const itemId of [...refs.high_frequency, ...refs.topic, ...refs.expressions]) {
+      assert.ok(section.items[itemId], `${contractLesson.id} maps to missing item ${itemId}`);
+    }
+  }
 });
