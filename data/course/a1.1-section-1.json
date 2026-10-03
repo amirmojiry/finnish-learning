@@ -1643,16 +1643,16 @@
         {
           "type": "dialogue-order",
           "turns": [
-            "hei",
-            "hei-minun-nimeni-on",
             "mika-sinun-nimesi-on",
-            "minun-nimeni-on"
+            "hei",
+            "minun-nimeni-on",
+            "hei-minun-nimeni-on"
           ],
           "answer_order": [
-            0,
             1,
-            2,
-            3
+            3,
+            0,
+            2
           ]
         },
         {
@@ -1669,16 +1669,16 @@
         {
           "type": "dialogue-order",
           "turns": [
-            "hei",
-            "mita-kuuluu",
             "hyvaa-kiitos",
-            "kiitos"
+            "hei",
+            "kiitos",
+            "mita-kuuluu"
           ],
           "answer_order": [
-            0,
             1,
-            2,
-            3
+            3,
+            0,
+            2
           ]
         },
         {
@@ -1711,16 +1711,16 @@
         {
           "type": "dialogue-order",
           "turns": [
-            "anteeksi",
-            "en-ymmarra",
             "uudestaan",
-            "kiitos"
+            "anteeksi",
+            "kiitos",
+            "en-ymmarra"
           ],
           "answer_order": [
-            0,
             1,
-            2,
-            3
+            3,
+            0,
+            2
           ]
         },
         {
@@ -1731,16 +1731,16 @@
         {
           "type": "dialogue-order",
           "turns": [
-            "hei",
-            "mita-kuuluu",
             "en-ymmarra",
-            "uudestaan"
+            "hei",
+            "uudestaan",
+            "mita-kuuluu"
           ],
           "answer_order": [
-            0,
             1,
-            2,
-            3
+            3,
+            0,
+            2
           ]
         }
       ]
