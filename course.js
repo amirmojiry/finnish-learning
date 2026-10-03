@@ -769,8 +769,12 @@
       if (activity.type === 'sequence-order') return activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
       if (activity.type === 'clock-choice') return 'ساعت درست را به فنلاندی انتخاب کن.';
       if (activity.type === 'negative-transform') return 'جمله را به شکل منفی تبدیل کن.';
-      if (activity.type === 'guided-writing') return 'سه جملهٔ راهنمایی‌شده را به فنلاندی بنویس.';
+      if (activity.type === 'guided-writing') return `${toPersianNumber(activity.expected_items.length)} جملهٔ راهنمایی‌شده را به فنلاندی بنویس.`;
       if (activity.type === 'event-time-match') return 'رویداد را با زمان درست جور کن.';
+      if (activity.type === 'visual-choice') return 'نام درست تصویر را انتخاب کن.';
+      if (activity.type === 'prompt-choice') return 'پاسخ درست را انتخاب کن.';
+      if (activity.type === 'category-match') return 'دستهٔ درست را انتخاب کن.';
+      if (activity.type === 'short-reading') return 'متن کوتاه را بخوان و پاسخ درست را انتخاب کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
@@ -784,7 +788,7 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match'].includes(activity.type)
+      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
         : section.items[activity.item];
       root.replaceChildren();
@@ -1080,10 +1084,140 @@
           options.append(button);
         }
         card.append(eventText, translation, options, feedback);
+      } else if (activity.type === 'visual-choice') {
+        const visualItem = section.items[activity.item];
+        const visual = document.createElement('div');
+        visual.className = 'course-visual-prompt';
+        visual.setAttribute('aria-label', visualItem.translation_fa);
+        visual.textContent = visualItem.visual;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, visualItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(visual, options, feedback);
+      } else if (activity.type === 'prompt-choice') {
+        const promptItem = section.items[activity.prompt_item];
+        const answerItem = section.items[activity.answer_item];
+        const focus = document.createElement('strong');
+        focus.className = 'course-focus-word';
+        focus.lang = 'fi';
+        focus.dir = 'ltr';
+        focus.textContent = promptItem.surface_form;
+        const translation = document.createElement('p');
+        translation.className = 'course-cloze-translation';
+        translation.textContent = promptItem.translation_fa;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.answer_item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.answer_item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, answerItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(focus, translation, options, feedback);
+      } else if (activity.type === 'category-match') {
+        const categoryItem = section.items[activity.item];
+        const visual = document.createElement('div');
+        visual.className = 'course-visual-prompt';
+        visual.textContent = categoryItem.visual || categoryItem.surface_form;
+        const word = document.createElement('strong');
+        word.className = 'course-category-word';
+        word.lang = 'fi';
+        word.dir = 'ltr';
+        word.textContent = categoryItem.surface_form;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const category of activity.options) {
+          const button = createButton(category, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = category === activity.answer;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.category === activity.answer) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            const synthetic = { surface_form: activity.answer, translation_fa: 'دستهٔ درست', example_fi: '', example_fa: '' };
+            showFeedback(feedback, correct, synthetic);
+          });
+          button.dataset.category = category;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(visual, word, options, feedback);
+      } else if (activity.type === 'short-reading') {
+        const reading = section.items[activity.item];
+        const answerItem = section.items[activity.question_item];
+        const passage = document.createElement('p');
+        passage.className = 'course-reading-passage';
+        passage.lang = 'fi';
+        passage.dir = 'ltr';
+        passage.textContent = reading.surface_form;
+        const promptText = document.createElement('p');
+        promptText.className = 'course-reading-question';
+        promptText.textContent = 'کدام جمله در متن آمده است؟';
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.question_item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.question_item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, answerItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(passage, promptText, options, feedback);
       } else if (activity.type === 'dialogue-order') {
         const instruction = document.createElement('p');
         instruction.className = 'course-dialogue-instruction';
-        instruction.textContent = 'چهار نوبت گفت‌وگو را به ترتیب درست بچین.';
+        instruction.textContent = activity.label_fa || `${toPersianNumber(activity.turns.length)} نوبت گفت‌وگو را به ترتیب درست بچین.`;
         card.append(instruction);
 
         const ordered = [];
@@ -1097,7 +1231,7 @@
             button.disabled = true;
             button.dataset.order = String(ordered.length);
             button.textContent = `${toPersianNumber(ordered.length)}. ${turnItem.surface_form}`;
-            if (ordered.length === 4) {
+            if (ordered.length === activity.turns.length) {
               answered = true;
               sessionGraded += 1;
               const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
