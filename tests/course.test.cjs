@@ -173,3 +173,30 @@ test('every curriculum target group is explicitly mapped to real section items',
     }
   }
 });
+
+
+test('standard activity generation teaches only declared new targets', () => {
+  const generated = course.buildStandardActivities(['a','b','c'], ['old-1','old-2']);
+  const taught = generated.filter((activity) => activity.type === 'teach').map((activity) => activity.item);
+  assert.deepEqual(taught, ['a','b','c']);
+  assert.ok(generated.some((activity) => activity.item === 'old-2'));
+  assert.ok(generated.every((activity) => activity.type !== 'teach' || ['a','b','c'].includes(activity.item)));
+});
+
+test('six-target standard lessons teach every declared target exactly once', () => {
+  const generated = course.buildStandardActivities(['a','b','c','d','e','f'], ['old']);
+  const taught = generated.filter((activity) => activity.type === 'teach').map((activity) => activity.item);
+  assert.deepEqual(taught, ['a','b','c','d','e','f']);
+});
+
+test('mini-dialogue lesson implements dialogue ordering and two four-turn assessments', () => {
+  const lesson = section.lessons.find((entry) => entry.curriculum_id === 'a1.1-s1-l09');
+  const dialogues = lesson.activities.filter((activity) => activity.type === 'dialogue-order');
+  assert.ok(dialogues.length >= 2);
+  for (const activity of dialogues) {
+    assert.equal(activity.turns.length, 4);
+    assert.equal(activity.answer_order.length, 4);
+  }
+  assert.ok(lesson.activities.some((activity) => activity.type === 'choice' && activity.mode === 'listen'));
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type'));
+});
