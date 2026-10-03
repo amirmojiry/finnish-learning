@@ -6,6 +6,22 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.10.0] - 2026-10-04
+
+### Added
+
+- A fully implemented curriculum-driven A1.1 Section 4 covering home, fixed familiar locations, food and drink, basic wants and needs, a minimal café order, familiar animals, simple descriptions, and a short familiar-world text.
+- Static pictogram recognition, supported location matching, animal categorization, four-sentence guided writing, and short-reading activities.
+- A real A1.1 final checkpoint spanning first contact, personal information, time/routine, and home/basic-needs content, including a three-turn mini-dialogue and supported multi-sentence output.
+
+### Changed
+
+- The complete A1.1 path now contains all four sections and forty sequential learner-facing lessons.
+- The final A1.1 checkpoint requires at least 80% first-attempt accuracy before it is marked complete.
+- Guided writing now supports two to four sentences and dialogue ordering supports three to five turns.
+- Phase 1 of the course-first roadmap is complete; subsequent work moves to richer A1.1 practice.
+
+
 ## [1.9.0] - 2026-10-04
 
 ### Added
