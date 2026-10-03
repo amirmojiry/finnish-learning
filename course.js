@@ -90,6 +90,13 @@
     return sections.slice(0, sectionIndex).every((entry) => isSectionComplete(entry, progress));
   }
 
+  function passesLessonRequirement(lesson, correct, graded) {
+    const threshold = Number(lesson?.passing_score || 0);
+    if (!threshold) return true;
+    if (!Number.isFinite(graded) || graded <= 0) return false;
+    return Number(correct || 0) / graded >= threshold;
+  }
+
   function recordLessonCompletion(progress, lessonId, correct, graded, now = Date.now()) {
     const clean = sanitizeProgress(progress);
     if (!clean.completedLessons.includes(lessonId)) clean.completedLessons.push(lessonId);
@@ -1408,8 +1415,7 @@
     function completeLesson() {
       if (!activeLesson) return renderSectionMap();
       const passingScore = Number(activeLesson.passing_score || 0);
-      const accuracy = sessionGraded ? sessionCorrect / sessionGraded : 0;
-      const passed = !passingScore || accuracy >= passingScore;
+      const passed = passesLessonRequirement(activeLesson, sessionCorrect, sessionGraded);
       if (passed) {
         progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, sessionGraded);
         progress = saveProgress(windowObject.localStorage, progress);
@@ -1580,6 +1586,7 @@
     isLessonUnlocked,
     isSectionComplete,
     isSectionUnlocked,
+    passesLessonRequirement,
     recordLessonCompletion,
     makeCloze,
     acceptedAnswers,
