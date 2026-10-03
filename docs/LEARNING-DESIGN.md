@@ -420,24 +420,14 @@ Only when GitHub Pages is no longer sufficient:
 - teacher dashboards or shared courses.
 
 
-## 13. Initial A1.1 planning template
+## 13. A1.1 curriculum specification
 
-Before fixing exact vocabulary counts, prepare a curriculum matrix with columns such as:
+The initial planning template has now been materialized as a complete A1.1 curriculum contract:
 
-- section and lesson identifier;
-- CEFR can-do outcome;
-- communicative situation;
-- new frequency targets;
-- curated topic targets;
-- expressions and collocations;
-- morphology or grammar focus;
-- activity types;
-- recycled targets;
-- listening, speaking, reading, and writing coverage;
-- assessment criterion;
-- content source and review status.
+- [Complete A1.1 curriculum](A1.1-CURRICULUM.md)
+- machine-readable matrix: [`data/course/a1.1-curriculum.json`](../data/course/a1.1-curriculum.json)
 
-A1.1 should be prototyped as one complete section before the whole level is populated. This allows validation of lesson length, new-item load, review workload, and learner engagement before scaling.
+The specification defines four sections and forty lessons, maps the existing ten-lesson prototype into the new sequence, tracks frequency vocabulary, topic vocabulary, expressions, grammar, recycling, activity families, four-skill coverage, and completion criteria, and remains a planning contract until each lesson is separately implemented and reviewed.
 
 ## 14. Key sources
 
