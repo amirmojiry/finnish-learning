@@ -1797,6 +1797,60 @@
       "accepted_answers": [
         "Kiitos."
       ]
+    },
+    "s4-final-clock-1": {
+      "id": "s4-final-clock-1",
+      "surface_form": "Kello on yksi.",
+      "lemma": "Kello on yksi",
+      "translation_fa": "ساعت یک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "clock"
+      ],
+      "example_fi": "Kello on yksi.",
+      "example_fa": "ساعت یک است.",
+      "accepted_answers": [
+        "Kello on yksi."
+      ]
+    },
+    "s4-final-clock-3": {
+      "id": "s4-final-clock-3",
+      "surface_form": "Kello on kolme.",
+      "lemma": "Kello on kolme",
+      "translation_fa": "ساعت سه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "clock"
+      ],
+      "example_fi": "Kello on kolme.",
+      "example_fa": "ساعت سه است.",
+      "accepted_answers": [
+        "Kello on kolme."
+      ]
+    },
+    "s4-final-clock-4": {
+      "id": "s4-final-clock-4",
+      "surface_form": "Kello on neljä.",
+      "lemma": "Kello on neljä",
+      "translation_fa": "ساعت چهار است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "final",
+        "clock"
+      ],
+      "example_fi": "Kello on neljä.",
+      "example_fa": "ساعت چهار است.",
+      "accepted_answers": [
+        "Kello on neljä."
+      ]
     }
   },
   "lessons": [
@@ -1981,6 +2035,10 @@
         {
           "type": "teach",
           "item": "s4-poyta"
+        },
+        {
+          "type": "teach",
+          "item": "s4-on"
         },
         {
           "type": "visual-choice",
@@ -3130,10 +3188,10 @@
           "hour": 2,
           "item": "s4-final-clock",
           "options": [
-            "s4-kello-yksi",
+            "s4-final-clock-1",
             "s4-final-clock",
-            "s4-kello-kolme",
-            "s4-kello-nelja"
+            "s4-final-clock-3",
+            "s4-final-clock-4"
           ]
         },
         {
