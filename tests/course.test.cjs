@@ -6,9 +6,12 @@ const path = require('node:path');
 const course = require('../course.js');
 const ROOT = path.resolve(__dirname, '..');
 const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-1.json'), 'utf8'));
+const rawSection2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-2.json'), 'utf8'));
 const curriculum = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-curriculum.json'), 'utf8'));
 const vocabulary = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'common-words.json'), 'utf8'));
-const section = course.validateSectionAgainstCurriculum(course.validateSection(rawSection), curriculum);
+const sections = course.validateImplementedCourse([rawSection, rawSection2], curriculum);
+const section = sections[0];
+const section2 = sections[1];
 
 test('A1.1 Section 1 contains ten deterministic curriculum-driven fifteen-activity lessons', () => {
   const rebuiltSection = course.validateSectionAgainstCurriculum(course.validateSection(rawSection), curriculum);
@@ -228,11 +231,11 @@ test('dialogue ordering activities are presented scrambled', () => {
   }
 });
 
-test('English and Persian feature bullets agree that Section 1 is implemented', () => {
+test('English and Persian feature bullets agree that Sections 1 and 2 are implemented', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /real curriculum-driven A1\.1 Section 1/);
-  assert.match(fa, /بخش اول واقعی و curriculum-driven سطح A1\.1/);
+  assert.match(en, /real curriculum-driven A1\.1 Sections 1 and 2/);
+  assert.match(fa, /بخش‌های اول و دوم واقعی و curriculum-driven سطح A1\.1/);
 });
 
 
@@ -290,4 +293,162 @@ test('legacy home and dictionary hashes route before vocabulary fetch resolves',
   assert.ok(initMatch, 'init must route the current hash before awaiting vocabulary fetch');
   assert.match(app, /if\(h\.startsWith\('#word-'\)\)\{[\s\S]*?showView\('dictionary',\{updateHash:false\}\);return/);
   assert.match(app, /if\(state\.view==='dictionary'\)\{els\.dictionaryList\.replaceChildren\(\);els\.dictionaryEmpty\.hidden=false;els\.dictionaryEmpty\.textContent='بارگذاری واژه‌ها انجام نشد\.'/);
+});
+
+
+test('A1.1 Section 2 contains ten deterministic learner-facing lessons', () => {
+  assert.equal(section2.level, 'A1.1');
+  assert.equal(section2.curriculum_section_id, 'a1.1-s2');
+  assert.equal(section2.lessons.length, 10);
+  assert.equal(section2.activity_count_per_lesson, 15);
+  assert.equal(section2.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.deepEqual(
+    section2.lessons.map((lesson) => lesson.curriculum_id),
+    curriculum.sections[1].lessons.map((lesson) => lesson.id),
+  );
+  for (const lesson of section2.lessons) {
+    assert.ok(lesson.summary_fa, lesson.id);
+    assert.ok(lesson.grammar_fa, lesson.id);
+    assert.match(lesson.id, /^section-2-lesson-\d+$/);
+  }
+});
+
+test('implemented course validates two ordered sections with globally unique lesson IDs', () => {
+  assert.equal(sections.length, 2);
+  assert.deepEqual(sections.map((entry) => entry.curriculum_section_id), ['a1.1-s1', 'a1.1-s2']);
+  const lessonIds = sections.flatMap((entry) => entry.lessons.map((lesson) => lesson.id));
+  assert.equal(new Set(lessonIds).size, 20);
+});
+
+test('Section 2 unlocks only after all legacy Section 1 lesson IDs are complete', () => {
+  let progress = course.emptyProgress();
+  assert.equal(course.isSectionUnlocked(sections, progress, 0), true);
+  assert.equal(course.isSectionUnlocked(sections, progress, 1), false);
+
+  for (const lesson of section.lessons.slice(0, -1)) {
+    progress = course.recordLessonCompletion(progress, lesson.id, 8, 10, 1000);
+  }
+  assert.equal(course.isSectionUnlocked(sections, progress, 1), false);
+
+  progress = course.recordLessonCompletion(progress, section.lessons.at(-1).id, 8, 10, 1000);
+  assert.equal(course.isSectionComplete(section, progress), true);
+  assert.equal(course.isSectionUnlocked(sections, progress, 1), true);
+  assert.ok(progress.completedLessons.includes('lesson-1'));
+  assert.ok(progress.completedLessons.includes('lesson-10'));
+});
+
+test('Section 2 declares exact cross-section recycling dependencies from the curriculum', () => {
+  const contract = curriculum.sections[1];
+  for (const contractLesson of contract.lessons) {
+    const lesson = section2.lessons.find((entry) => entry.curriculum_id === contractLesson.id);
+    assert.deepEqual(lesson.recycle_from, contractLesson.recycle_from, contractLesson.id);
+  }
+  assert.ok(section2.lessons[0].recycle_from.includes('a1.1-s1-l02'));
+  assert.ok(section2.lessons[4].recycle_from.includes('a1.1-s1-l08'));
+});
+
+test('every Section 2 curriculum target maps to a real local course item', () => {
+  const contract = curriculum.sections[1];
+  for (const contractLesson of contract.lessons) {
+    const lesson = section2.lessons.find((entry) => entry.curriculum_id === contractLesson.id);
+    for (const group of ['high_frequency', 'topic', 'expressions']) {
+      const contractTargets = group === 'high_frequency'
+        ? contractLesson.high_frequency_targets
+        : group === 'topic'
+          ? contractLesson.topic_targets
+          : contractLesson.expressions;
+      assert.equal(
+        lesson.curriculum_target_refs[group].length,
+        contractTargets.length,
+        contractLesson.id + ' / ' + group,
+      );
+      for (const itemId of lesson.curriculum_target_refs[group]) {
+        assert.ok(section2.items[itemId], contractLesson.id + ' maps to missing ' + itemId);
+      }
+    }
+  }
+});
+
+test('Section 2 keeps Finnish inflection explicit instead of synthesizing forms at runtime', () => {
+  const surfaces = new Set(Object.values(section2.items).map((item) => item.surface_form));
+  for (const required of [
+    'Olen Suomesta.',
+    'Olen Iranista.',
+    'Puhun suomea.',
+    'Puhun persiaa.',
+    'Puhun englantia.',
+    'Asun Vaasassa.',
+    'Asun Helsingissä.',
+    'Tämä on minun äitini.',
+    'minun nimeni',
+    'sinun nimesi',
+    'Olen 12-vuotias.',
+  ]) {
+    assert.ok(surfaces.has(required), 'Missing explicit Finnish form: ' + required);
+  }
+
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.doesNotMatch(source, /\+\s*['"](?:sta|stä|ssa|ssä|a|ä)['"]/);
+});
+
+test('number lesson exposes the complete 0–20 reference grid and deterministic practice', () => {
+  const lesson = section2.lessons.find((entry) => entry.curriculum_id === 'a1.1-s2-l07');
+  const grid = lesson.activities.find((activity) => activity.type === 'number-grid');
+  assert.ok(grid);
+  assert.equal(grid.items.length, 21);
+  assert.equal(new Set(grid.items).size, 21);
+  assert.equal(section2.items[grid.items[0]].surface_form, 'nolla');
+  assert.equal(section2.items[grid.items.at(-1)].surface_form, 'kaksikymmentä');
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type'));
+  assert.ok(lesson.activities.some((activity) => activity.mode === 'listen'));
+});
+
+test('all Section 2 activity references and typed answers are explicit', () => {
+  for (const lesson of section2.lessons) {
+    for (const activity of lesson.activities) {
+      if (activity.type === 'number-grid') {
+        for (const itemId of activity.items) assert.ok(section2.items[itemId], lesson.id + ': ' + itemId);
+        continue;
+      }
+      if (activity.type === 'dialogue-order') {
+        for (const itemId of activity.turns) assert.ok(section2.items[itemId], lesson.id + ': ' + itemId);
+        continue;
+      }
+      assert.ok(section2.items[activity.item], lesson.id + ': ' + activity.item);
+      for (const option of activity.options || []) assert.ok(section2.items[option], lesson.id + ': ' + option);
+      if (activity.type === 'type') {
+        assert.ok(course.acceptedAnswers(section2.items[activity.item]).length > 0, lesson.id + ': ' + activity.item);
+      }
+    }
+  }
+});
+
+test('course runtime loads both implemented section files and renders multi-section controls', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+
+  assert.match(source, /SECTION_URLS/);
+  assert.match(source, /a1\.1-section-1\.json/);
+  assert.match(source, /a1\.1-section-2\.json/);
+  assert.match(source, /isSectionUnlocked/);
+  assert.match(source, /باز کردن بخش/);
+  assert.match(source, /number-grid/);
+  assert.match(styles, /\.course-section-open/);
+  assert.match(styles, /\.course-number-grid/);
+});
+
+
+test('language lesson practices every declared curriculum expression', () => {
+  const lesson = section2.lessons.find((entry) => entry.curriculum_id === 'a1.1-s2-l03');
+  const practiced = new Set();
+  for (const activity of lesson.activities) {
+    if (activity.item) practiced.add(activity.item);
+    for (const itemId of activity.turns || []) practiced.add(itemId);
+    for (const itemId of activity.items || []) practiced.add(itemId);
+  }
+  for (const itemId of lesson.curriculum_target_refs.expressions) {
+    assert.ok(practiced.has(itemId), 'unpracticed language expression: ' + itemId);
+  }
+  assert.ok(lesson.activities.some((activity) => activity.item === 's2-puhun-englantia' && activity.type === 'type'));
+  assert.ok(lesson.activities.some((activity) => activity.item === 's2-puhun-vahan-suomea' && activity.type !== 'teach'));
 });

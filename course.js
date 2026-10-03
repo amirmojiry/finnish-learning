@@ -7,7 +7,11 @@
 
   const STORAGE_KEY = 'fiCourseProgressV1';
   const SCHEMA_VERSION = 1;
-  const SECTION_URL = './data/course/a1.1-section-1.json';
+  const SECTION_URLS = [
+    './data/course/a1.1-section-1.json',
+    './data/course/a1.1-section-2.json',
+  ];
+  const SECTION_URL = SECTION_URLS[0];
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
 
   function normalizeAnswer(value) {
@@ -70,6 +74,18 @@
     if (lessonIndex === 0) return true;
     const clean = sanitizeProgress(progress);
     return clean.completedLessons.includes(section.lessons[lessonIndex - 1].id);
+  }
+
+  function isSectionComplete(section, progress) {
+    if (!section || !Array.isArray(section.lessons) || !section.lessons.length) return false;
+    const clean = sanitizeProgress(progress);
+    return section.lessons.every((lesson) => clean.completedLessons.includes(lesson.id));
+  }
+
+  function isSectionUnlocked(sections, progress, sectionIndex) {
+    if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
+    if (sectionIndex === 0) return true;
+    return isSectionComplete(sections[sectionIndex - 1], progress);
   }
 
   function recordLessonCompletion(progress, lessonId, correct, graded, now = Date.now()) {
@@ -233,6 +249,13 @@
         throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or fifteen deterministic activities.`);
       }
       for (const activity of lesson.activities) {
+        if (activity.type === 'number-grid') {
+          if (!Array.isArray(activity.items) || activity.items.length < 2) throw new Error(`Invalid number grid in ${lesson.id}`);
+          for (const itemId of activity.items) {
+            if (!section.items[itemId]) throw new Error(`Unknown number-grid item: ${itemId}`);
+          }
+          continue;
+        }
         if (activity.type === 'dialogue-order') {
           if (!Array.isArray(activity.turns) || activity.turns.length !== 4) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
           if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== 4) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
@@ -282,6 +305,48 @@
     return { ...section, curriculum_contract: contract };
   }
 
+  function validateImplementedCourse(rawSections, curriculum) {
+    if (!Array.isArray(rawSections) || !rawSections.length) throw new Error('No implemented course sections.');
+    const validated = rawSections.map((rawSection) => validateSectionAgainstCurriculum(validateSection(rawSection), curriculum));
+    const sectionOrders = validated.map((implemented) => implemented.curriculum_contract.order);
+    const sortedOrders = [...sectionOrders].sort((a, b) => a - b);
+    if (JSON.stringify(sectionOrders) !== JSON.stringify(sortedOrders)) throw new Error('Implemented sections must follow curriculum order.');
+
+    const lessonIds = new Set();
+    const curriculumLessonIds = new Set();
+    for (const implemented of validated) {
+      for (const lesson of implemented.lessons) {
+        if (lessonIds.has(lesson.id)) throw new Error(`Duplicate implemented lesson id: ${lesson.id}`);
+        lessonIds.add(lesson.id);
+        curriculumLessonIds.add(lesson.curriculum_id);
+
+        if (Array.isArray(lesson.recycle_from)) {
+          const contractLesson = implemented.curriculum_contract.lessons.find((entry) => entry.id === lesson.curriculum_id);
+          if (JSON.stringify(lesson.recycle_from) !== JSON.stringify(contractLesson.recycle_from)) {
+            throw new Error(`Recycle dependency mismatch: ${lesson.curriculum_id}`);
+          }
+        }
+
+        for (const activity of lesson.activities) {
+          if (activity.type !== 'type') continue;
+          const typedItem = implemented.items[activity.item];
+          if (!typedItem || !acceptedAnswers(typedItem).length) {
+            throw new Error(`Typed activity lacks explicit accepted answers: ${lesson.id} / ${activity.item}`);
+          }
+        }
+      }
+    }
+
+    for (const implemented of validated) {
+      for (const lesson of implemented.lessons) {
+        for (const dependency of lesson.recycle_from || []) {
+          if (!curriculumLessonIds.has(dependency)) throw new Error(`Unimplemented recycling dependency: ${lesson.curriculum_id} -> ${dependency}`);
+        }
+      }
+    }
+    return validated;
+  }
+
   function initializeBrowser(windowObject) {
     const document = windowObject.document;
     const root = document && document.getElementById('course-root');
@@ -302,6 +367,7 @@
     const regularLinks = [...document.querySelectorAll('[data-view-link], .profile-view-link, .settings-view-link, .about-view-link')];
     const allPrimaryItems = [...document.querySelectorAll('.bottom-nav-item, .desktop-view-link')];
 
+    let sections = [];
     let section = null;
     let curriculum = null;
     let progress = loadProgress(windowObject.localStorage);
@@ -313,12 +379,43 @@
     let answered = false;
 
     function isCourseHash() {
-      return location.hash === '#course' || /^#course-lesson-\d+$/.test(location.hash);
+      return location.hash === '#course' || location.hash.startsWith('#course-');
+    }
+
+    function sectionFromHash() {
+      const value = location.hash.startsWith('#course-') ? location.hash.slice('#course-'.length) : '';
+      return sections.find((entry) => entry.id === value) || null;
     }
 
     function lessonFromHash() {
-      const match = location.hash.match(/^#course-(lesson-\d+)$/);
-      return match && section ? section.lessons.find((lesson) => lesson.id === match[1]) || null : null;
+      const value = location.hash.startsWith('#course-') ? location.hash.slice('#course-'.length) : '';
+      for (const implemented of sections) {
+        const lesson = implemented.lessons.find((entry) => entry.id === value);
+        if (lesson) return { section: implemented, lesson };
+      }
+      return null;
+    }
+
+    function preferredSection() {
+      if (!sections.length) return null;
+      for (let index = 0; index < sections.length; index += 1) {
+        if (!isSectionUnlocked(sections, progress, index)) break;
+        if (!isSectionComplete(sections[index], progress)) return sections[index];
+      }
+      for (let index = sections.length - 1; index >= 0; index -= 1) {
+        if (isSectionUnlocked(sections, progress, index)) return sections[index];
+      }
+      return sections[0];
+    }
+
+    function selectSection(nextSection, { updateHash = true } = {}) {
+      if (!nextSection) return false;
+      const index = sections.indexOf(nextSection);
+      if (index < 0 || !isSectionUnlocked(sections, progress, index)) return false;
+      section = nextSection;
+      activeLesson = null;
+      if (updateHash) setHash(`#course-${section.id}`);
+      return true;
     }
 
     function activateCourseNavigation(active) {
@@ -396,14 +493,15 @@
       root.append(status);
     }
 
-    function completionCount() {
-      if (!section) return 0;
-      return section.lessons.filter((lesson) => progress.completedLessons.includes(lesson.id)).length;
+    function completionCount(targetSection = section) {
+      if (!targetSection) return 0;
+      return targetSection.lessons.filter((lesson) => progress.completedLessons.includes(lesson.id)).length;
     }
 
     function renderSectionMap() {
       activeLesson = null;
-      setHash('#course');
+      if (!section) section = preferredSection();
+      if (section) setHash(`#course-${section.id}`);
       showCourseView();
       if (!section) return renderLoading();
       root.replaceChildren();
@@ -418,11 +516,14 @@
       catalogGrid.className = 'course-section-grid';
       for (const entry of curriculum?.sections || []) {
         const card = document.createElement('article');
-        const available = entry.id === section.curriculum_section_id;
-        card.className = `course-section-card ${available ? 'is-available' : 'is-coming'}`;
+        const implemented = sections.find((candidate) => candidate.curriculum_section_id === entry.id) || null;
+        const implementedIndex = implemented ? sections.indexOf(implemented) : -1;
+        const unlocked = implemented ? isSectionUnlocked(sections, progress, implementedIndex) : false;
+        const current = implemented === section;
+        card.className = `course-section-card${implemented ? ' is-implemented' : ' is-coming'}${unlocked ? ' is-available' : ' is-locked'}${current ? ' is-current' : ''}`;
         const status = document.createElement('span');
         status.className = 'course-section-status';
-        status.textContent = available ? 'قابل یادگیری' : 'به‌زودی';
+        status.textContent = !implemented ? 'به‌زودی' : unlocked ? (current ? 'در حال یادگیری' : 'قابل یادگیری') : 'قفل است';
         const heading = document.createElement('h2');
         heading.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
         const info = createInfoDisclosure((panel) => {
@@ -431,6 +532,18 @@
           panel.append(goal);
         }, `توضیحات بخش ${toPersianNumber(entry.order)}`);
         card.append(status, heading, info);
+        if (implemented) {
+          const open = createButton(
+            current ? 'بخش فعلی' : unlocked ? 'باز کردن بخش' : 'قفل است',
+            'course-section-open',
+            () => {
+              if (!selectSection(implemented)) return;
+              renderSectionMap();
+            },
+          );
+          open.disabled = current || !unlocked;
+          card.append(open);
+        }
         catalogGrid.append(card);
       }
       catalog.append(catalogGrid);
@@ -476,10 +589,11 @@
 
       const path = document.createElement('section');
       path.className = 'course-path';
-      path.setAttribute('aria-label', 'درس‌های بخش اول');
+      path.setAttribute('aria-label', `درس‌های ${section.title_fa}`);
       section.lessons.forEach((lesson, index) => {
         const done = progress.completedLessons.includes(lesson.id);
-        const unlocked = isLessonUnlocked(section, progress, index);
+        const sectionIndex = sections.indexOf(section);
+        const unlocked = isSectionUnlocked(sections, progress, sectionIndex) && isLessonUnlocked(section, progress, index);
         const card = document.createElement('article');
         card.className = `course-lesson-card${done ? ' is-complete' : ''}${unlocked ? ' is-unlocked' : ' is-locked'}`;
 
@@ -514,7 +628,9 @@
 
         const targetList = document.createElement('div');
         targetList.className = 'course-target-list';
-        const targetIds = lesson.new_targets.length ? lesson.new_targets : lesson.review_targets.slice(0, 5);
+        const targetIds = Array.isArray(lesson.display_targets) && lesson.display_targets.length
+          ? lesson.display_targets
+          : lesson.new_targets.length ? lesson.new_targets : lesson.review_targets.slice(0, 5);
         for (const targetId of targetIds) {
           const target = section.items[targetId];
           if (!target) continue;
@@ -548,9 +664,10 @@
 
       const footer = document.createElement('div');
       footer.className = 'course-map-footer';
-      const reset = createButton('پاک‌کردن پیشرفت بخش ۱', 'course-reset-button', () => {
-        if (!windowObject.confirm('پیشرفت هر ده درس پاک شود؟')) return;
+      const reset = createButton('پاک‌کردن پیشرفت دوره', 'course-reset-button', () => {
+        if (!windowObject.confirm('پیشرفت همهٔ بخش‌های دوره پاک شود؟')) return;
         progress = saveProgress(windowObject.localStorage, emptyProgress());
+        section = sections[0] || null;
         renderSectionMap();
       });
       footer.append(reset);
@@ -561,8 +678,9 @@
 
     function startLesson(lesson) {
       if (!section || !lesson) return;
+      const sectionIndex = sections.indexOf(section);
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
-      if (!isLessonUnlocked(section, progress, index)) return;
+      if (!isSectionUnlocked(sections, progress, sectionIndex) || !isLessonUnlocked(section, progress, index)) return;
       activeLesson = lesson;
       activityIndex = 0;
       sessionCorrect = 0;
@@ -574,6 +692,7 @@
     }
 
     function questionHeading(activity) {
+      if (activity.type === 'number-grid') return 'اعداد را ببین و با صدای بلند مرور کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
@@ -587,7 +706,7 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = activity.type === 'dialogue-order' ? null : section.items[activity.item];
+      const item = activity.type === 'dialogue-order' || activity.type === 'number-grid' ? null : section.items[activity.item];
       root.replaceChildren();
 
       const shell = document.createElement('section');
@@ -648,7 +767,27 @@
         card.append(example);
       }
 
-      if (activity.type === 'dialogue-order') {
+      if (activity.type === 'number-grid') {
+        const instruction = document.createElement('p');
+        instruction.className = 'course-number-grid-instruction';
+        instruction.textContent = 'اعداد ۰ تا ۲۰ را یک‌بار از ابتدا تا انتها مرور کن.';
+        const grid = document.createElement('div');
+        grid.className = 'course-number-grid';
+        for (const itemId of activity.items) {
+          const numberItem = section.items[itemId];
+          const cell = document.createElement('div');
+          cell.className = 'course-number-cell';
+          const fi = document.createElement('strong');
+          fi.lang = 'fi';
+          fi.dir = 'ltr';
+          fi.textContent = numberItem.surface_form;
+          const fa = document.createElement('span');
+          fa.textContent = numberItem.translation_fa;
+          cell.append(fi, fa);
+          grid.append(cell);
+        }
+        card.append(instruction, grid, createButton('ادامه', 'primary-button course-next-button', nextActivity));
+      } else if (activity.type === 'dialogue-order') {
         const instruction = document.createElement('p');
         instruction.className = 'course-dialogue-instruction';
         instruction.textContent = 'چهار نوبت گفت‌وگو را به ترتیب درست بچین.';
@@ -862,6 +1001,19 @@
       card.append(badge, title, message, note);
       if (nextLesson) {
         card.append(createButton(`شروع درس ${toPersianNumber(nextLesson.order)}`, 'primary-button', () => startLesson(nextLesson)));
+      } else {
+        const currentSectionIndex = sections.indexOf(section);
+        const nextSection = sections[currentSectionIndex + 1] || null;
+        if (nextSection && isSectionUnlocked(sections, progress, currentSectionIndex + 1)) {
+          card.append(createButton(
+            `شروع بخش ${toPersianNumber(nextSection.curriculum_contract.order)}`,
+            'primary-button',
+            () => {
+              selectSection(nextSection);
+              renderSectionMap();
+            },
+          ));
+        }
       }
       card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
       root.append(card);
@@ -874,20 +1026,36 @@
         return;
       }
       showCourseView();
-      if (!section) return;
-      const lesson = lessonFromHash();
-      if (lesson) {
-        const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
-        if (isLessonUnlocked(section, progress, index)) startLesson(lesson);
-        else renderSectionMap();
-      } else if (!activeLesson) {
-        renderSectionMap();
+      if (!sections.length) return;
+
+      const lessonMatch = lessonFromHash();
+      if (lessonMatch) {
+        const targetSectionIndex = sections.indexOf(lessonMatch.section);
+        const lessonIndex = lessonMatch.section.lessons.findIndex((entry) => entry.id === lessonMatch.lesson.id);
+        if (isSectionUnlocked(sections, progress, targetSectionIndex) && isLessonUnlocked(lessonMatch.section, progress, lessonIndex)) {
+          section = lessonMatch.section;
+          startLesson(lessonMatch.lesson);
+        } else {
+          section = preferredSection();
+          renderSectionMap();
+        }
+        return;
       }
+
+      const targetSection = sectionFromHash();
+      if (targetSection && selectSection(targetSection, { updateHash: false })) {
+        if (!activeLesson) renderSectionMap();
+        return;
+      }
+
+      section = preferredSection();
+      if (!activeLesson) renderSectionMap();
     }
 
     courseLinks.forEach((link) => link.addEventListener('click', (event) => {
       event.preventDefault();
       activeLesson = null;
+      section = preferredSection();
       renderSectionMap();
     }));
     regularLinks.forEach((link) => link.addEventListener('click', hideCourseView));
@@ -912,18 +1080,26 @@
     const version = document.querySelector('meta[name="app-version"]')?.content || Date.now();
     renderLoading();
     Promise.all([
-      windowObject.fetch(`${SECTION_URL}?v=${version}`, { cache: 'no-store' }),
+      ...SECTION_URLS.map((url) => windowObject.fetch(`${url}?v=${version}`, { cache: 'no-store' })),
       windowObject.fetch(`${CURRICULUM_URL}?v=${version}`, { cache: 'no-store' }),
     ])
-      .then(async ([sectionResponse, curriculumResponse]) => {
-        if (!sectionResponse.ok) throw new Error(String(sectionResponse.status));
+      .then(async (responses) => {
+        const curriculumResponse = responses[responses.length - 1];
+        const sectionResponses = responses.slice(0, -1);
+        for (const response of sectionResponses) {
+          if (!response.ok) throw new Error(String(response.status));
+        }
         if (!curriculumResponse.ok) throw new Error(String(curriculumResponse.status));
-        return Promise.all([sectionResponse.json(), curriculumResponse.json()]);
+        return Promise.all([
+          Promise.all(sectionResponses.map((response) => response.json())),
+          curriculumResponse.json(),
+        ]);
       })
-      .then(([payload, curriculumPayload]) => {
+      .then(([sectionPayloads, curriculumPayload]) => {
         curriculum = curriculumPayload;
-        section = validateSectionAgainstCurriculum(validateSection(payload), curriculum);
+        sections = validateImplementedCourse(sectionPayloads, curriculum);
         progress = loadProgress(windowObject.localStorage);
+        section = preferredSection();
         if (isCourseHash()) syncFromHash();
         else {
           courseView.hidden = true;
@@ -949,6 +1125,7 @@
   return {
     STORAGE_KEY,
     SCHEMA_VERSION,
+    SECTION_URLS,
     SECTION_URL,
     CURRICULUM_URL,
     normalizeAnswer,
@@ -957,6 +1134,8 @@
     loadProgress,
     saveProgress,
     isLessonUnlocked,
+    isSectionComplete,
+    isSectionUnlocked,
     recordLessonCompletion,
     makeCloze,
     acceptedAnswers,
@@ -968,6 +1147,7 @@
     prepareSection,
     validateSection,
     validateSectionAgainstCurriculum,
+    validateImplementedCourse,
     initializeBrowser,
   };
 });
