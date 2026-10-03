@@ -1321,7 +1321,8 @@
           "recycle_from": [
             "a1.1-s3-l01",
             "a1.1-s3-l03",
-            "a1.1-s3-l04"
+            "a1.1-s3-l04",
+            "a1.1-s3-l05"
           ],
           "activity_families": [
             "question-answer-match",
