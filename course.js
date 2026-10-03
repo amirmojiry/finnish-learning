@@ -1036,7 +1036,7 @@
           const result = document.createElement('div');
           result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
           const title = document.createElement('strong');
-          title.textContent = correct ? 'هر سه جمله درست بود.' : 'پاسخ‌های نمونه را مرور کن.';
+          title.textContent = correct ? `هر ${toPersianNumber(rows.length)} جمله درست بود.` : 'پاسخ‌های نمونه را مرور کن.';
           const review = document.createElement('div');
           review.className = 'course-guided-writing-review';
           for (const { expected } of rows) {
