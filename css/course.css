@@ -1223,3 +1223,45 @@
     height: 42px;
   }
 }
+
+
+/* Section 4 visual recognition and reading */
+.course-visual-prompt {
+  display: grid;
+  place-items: center;
+  min-height: 132px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface-soft);
+  font-size: clamp(3.2rem, 10vw, 5.4rem);
+  line-height: 1;
+}
+
+.course-category-word {
+  display: block;
+  margin: -4px 0 14px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.course-reading-passage {
+  margin: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-soft);
+  line-height: 2;
+  font-size: 1.05rem;
+}
+
+.course-reading-question {
+  margin: 16px 0 10px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.course-pass-requirement {
+  color: var(--muted);
+  font-weight: 800;
+}
