@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: extract-finnish-ud-data
+  group: extract-finnish-ud-data-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
