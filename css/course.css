@@ -857,3 +857,178 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Course-first learning UI */
+.nav-icon-only {
+  position: relative;
+}
+
+.nav-icon-only > span {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.desktop-view-link.nav-icon-only {
+  width: 44px;
+  min-width: 44px;
+  padding-inline: 0;
+}
+
+.desktop-view-link.nav-icon-only svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.course-info-disclosure {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.course-info-toggle {
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--primary);
+  font: 900 1rem/1 Arial, sans-serif;
+  cursor: pointer;
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+}
+
+.course-info-toggle:hover,
+.course-info-toggle[aria-expanded="true"] {
+  border-color: var(--primary);
+  background: rgba(34, 87, 214, .08);
+}
+
+.course-info-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.course-info-panel {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.course-info-panel > :first-child {
+  margin-top: 0;
+}
+
+.course-info-panel > :last-child {
+  margin-bottom: 0;
+}
+
+.course-info-panel h2 {
+  margin: 12px 0 6px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.course-info-panel ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-inline-start: 22px;
+}
+
+.course-section-card .course-info-disclosure {
+  margin-top: 10px;
+}
+
+.course-section-card .course-info-panel p {
+  margin: 0;
+}
+
+.course-hero-card .course-info-disclosure {
+  margin-top: 16px;
+}
+
+.course-hero-card .course-info-panel {
+  max-width: 680px;
+}
+
+.course-lesson-body .course-info-disclosure {
+  margin-top: 8px;
+}
+
+.course-lesson-objective,
+.course-lesson-summary,
+.course-lesson-grammar {
+  margin: 0;
+}
+
+.course-lesson-summary,
+.course-lesson-grammar {
+  margin-top: 7px;
+}
+
+.course-lesson-action-area {
+  width: 148px;
+  min-width: 148px;
+  display: grid;
+  justify-items: stretch;
+  align-content: center;
+  gap: 7px;
+}
+
+.course-lesson-action {
+  width: 100%;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.course-best-score {
+  margin-top: 0;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.course-map-footer {
+  justify-content: flex-end;
+}
+
+.course-current-lesson .course-info-disclosure {
+  margin-top: 10px;
+}
+
+.course-current-lesson .course-info-panel p {
+  margin: 0;
+}
+
+.course-current-lesson .course-info-panel p + p {
+  margin-top: 7px;
+}
+
+@media (max-width: 720px) {
+  .course-lesson-action-area {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .course-lesson-action {
+    width: 100%;
+  }
+}
