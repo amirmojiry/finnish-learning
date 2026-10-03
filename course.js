@@ -1407,8 +1407,14 @@
 
     function completeLesson() {
       if (!activeLesson) return renderSectionMap();
-      progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, sessionGraded);
-      progress = saveProgress(windowObject.localStorage, progress);
+      const passingScore = Number(activeLesson.passing_score || 0);
+      const accuracy = sessionGraded ? sessionCorrect / sessionGraded : 0;
+      const passed = !passingScore || accuracy >= passingScore;
+      if (passed) {
+        progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, sessionGraded);
+        progress = saveProgress(windowObject.localStorage, progress);
+      }
+
       const currentIndex = section.lessons.findIndex((lesson) => lesson.id === activeLesson.id);
       const nextLesson = section.lessons[currentIndex + 1] || null;
       root.replaceChildren();
@@ -1417,15 +1423,26 @@
       card.className = 'course-completion-card';
       const badge = document.createElement('div');
       badge.className = 'course-completion-badge';
-      badge.textContent = '✓';
+      badge.textContent = passed ? '✓' : '↻';
       const title = document.createElement('h1');
-      title.textContent = 'درس کامل شد';
+      title.textContent = passed ? 'درس کامل شد' : 'برای قبولی دوباره تلاش کن';
       const message = document.createElement('p');
       message.textContent = `${toPersianNumber(sessionCorrect)} پاسخ درست از ${toPersianNumber(sessionGraded)} فعالیت نمره‌دار`;
       const note = document.createElement('p');
       note.className = 'course-completion-note';
-      note.textContent = 'فعالیت‌های معرفی در امتیاز حساب نمی‌شوند. در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد.';
+      note.textContent = passed
+        ? 'فعالیت‌های معرفی در امتیاز حساب نمی‌شوند. در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد.'
+        : `برای قبولی در این آزمون حداقل ${toPersianNumber(Math.round(passingScore * 100))}٪ پاسخ درست لازم است.`;
       card.append(badge, title, message, note);
+
+      if (!passed) {
+        card.append(createButton('تلاش دوباره', 'primary-button', () => startLesson(activeLesson)));
+        card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
+        root.append(card);
+        root.scrollTop = 0;
+        return;
+      }
+
       if (nextLesson) {
         card.append(createButton(`شروع درس ${toPersianNumber(nextLesson.order)}`, 'primary-button', () => startLesson(nextLesson)));
       } else {
