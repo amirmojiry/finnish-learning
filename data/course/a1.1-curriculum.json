@@ -1,0 +1,1908 @@
+{
+  "schema_version": 1,
+  "id": "a1.1-curriculum",
+  "level": "A1.1",
+  "status": "planning",
+  "platform": "github-pages-static",
+  "design_principles": [
+    "Every lesson has a communicative can-do outcome.",
+    "High-frequency vocabulary and curated topic vocabulary are separate curriculum streams.",
+    "Useful expressions and sentence frames are taught as first-class targets.",
+    "Grammar is introduced in service of communicative tasks and recycled later.",
+    "New material is deliberately recycled across later lessons and section checkpoints.",
+    "All four skills are tracked, while receptive and highly controlled production tasks dominate early A1.1."
+  ],
+  "lesson_defaults": {
+    "target_activity_count": 15,
+    "new_lexical_target_range": [
+      3,
+      6
+    ],
+    "required_fields": [
+      "can_do_en",
+      "can_do_fa",
+      "high_frequency_targets",
+      "topic_targets",
+      "expressions",
+      "grammar_focus",
+      "recycle_from",
+      "activity_families",
+      "skills",
+      "assessment"
+    ]
+  },
+  "sections": [
+    {
+      "id": "a1.1-s1",
+      "order": 1,
+      "title_en": "First contact and survival Finnish",
+      "title_fa": "اولین ارتباط و فنلاندیِ ضروری",
+      "goal_en": "Handle a few very common social exchanges with memorized words, short questions and supported responses.",
+      "goal_fa": "چند تعامل اجتماعی بسیار پرتکرار را با واژه‌ها، سؤال‌های کوتاه و پاسخ‌های تمرین‌شده انجام دهد.",
+      "lessons": [
+        {
+          "id": "a1.1-s1-l01",
+          "title_en": "Greetings",
+          "title_fa": "سلام و احوال‌پرسی",
+          "can_do_en": "Greet and say goodbye in a few routine situations.",
+          "can_do_fa": "Greet and say goodbye in a few routine situations.",
+          "high_frequency_targets": [
+            "on",
+            "ja"
+          ],
+          "topic_targets": [
+            "hei",
+            "moi"
+          ],
+          "expressions": [
+            "Hei!",
+            "Moi!",
+            "Näkemiin!"
+          ],
+          "grammar_focus": [
+            "fixed greeting formulas"
+          ],
+          "recycle_from": [],
+          "activity_families": [
+            "meaning-choice",
+            "listen-and-choose",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Choose and produce an appropriate greeting in 4 of 5 routine prompts.",
+            "criterion_fa": "Choose and produce an appropriate greeting in 4 of 5 routine prompts."
+          },
+          "prototype_sources": [
+            "lesson-1"
+          ],
+          "order": 1
+        },
+        {
+          "id": "a1.1-s1-l02",
+          "title_en": "My name",
+          "title_fa": "نام من",
+          "can_do_en": "Say your name and ask another person's name.",
+          "can_do_fa": "Say your name and ask another person's name.",
+          "high_frequency_targets": [
+            "minä",
+            "sinä",
+            "olen"
+          ],
+          "topic_targets": [
+            "nimi"
+          ],
+          "expressions": [
+            "Minun nimeni on …",
+            "Mikä sinun nimesi on?"
+          ],
+          "grammar_focus": [
+            "olla: minä olen / sinä olet"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l01"
+          ],
+          "activity_families": [
+            "dialogue-choice",
+            "typed-frame",
+            "listen-and-choose"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Complete a two-turn introduction without hints.",
+            "criterion_fa": "Complete a two-turn introduction without hints."
+          },
+          "prototype_sources": [
+            "lesson-2",
+            "lesson-3"
+          ],
+          "order": 2
+        },
+        {
+          "id": "a1.1-s1-l03",
+          "title_en": "How are you?",
+          "title_fa": "حالت چطور است؟",
+          "can_do_en": "Ask how someone is and give a short conventional answer.",
+          "can_do_fa": "Ask how someone is and give a short conventional answer.",
+          "high_frequency_targets": [
+            "mitä",
+            "hyvä"
+          ],
+          "topic_targets": [
+            "hyvää"
+          ],
+          "expressions": [
+            "Mitä kuuluu?",
+            "Hyvää, kiitos.",
+            "Ihan hyvää."
+          ],
+          "grammar_focus": [
+            "formulaic partitive in Mitä kuuluu? / hyvää"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l01",
+            "a1.1-s1-l02"
+          ],
+          "activity_families": [
+            "dialogue-choice",
+            "listen-and-choose",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Respond appropriately to three common wellbeing prompts.",
+            "criterion_fa": "Respond appropriately to three common wellbeing prompts."
+          },
+          "prototype_sources": [
+            "lesson-3"
+          ],
+          "order": 3
+        },
+        {
+          "id": "a1.1-s1-l04",
+          "title_en": "Yes, no and simple negation",
+          "title_fa": "بله، نه و منفی ساده",
+          "can_do_en": "Answer yes/no and say that someone or something is not something.",
+          "can_do_fa": "Answer yes/no and say that someone or something is not something.",
+          "high_frequency_targets": [
+            "kyllä",
+            "ei",
+            "ole"
+          ],
+          "topic_targets": [
+            "vastaus"
+          ],
+          "expressions": [
+            "Kyllä.",
+            "Ei.",
+            "Ei ole."
+          ],
+          "grammar_focus": [
+            "negation with ei + ole as a chunk"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l01",
+            "a1.1-s1-l02"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "sentence-completion",
+            "typed-cloze"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Choose and produce affirmative/negative replies in 4 of 5 prompts.",
+            "criterion_fa": "Choose and produce affirmative/negative replies in 4 of 5 prompts."
+          },
+          "prototype_sources": [
+            "lesson-7"
+          ],
+          "order": 4
+        },
+        {
+          "id": "a1.1-s1-l05",
+          "title_en": "Who and what?",
+          "title_fa": "چه کسی و چه چیزی؟",
+          "can_do_en": "Ask who a person is and what a familiar object is.",
+          "can_do_fa": "Ask who a person is and what a familiar object is.",
+          "high_frequency_targets": [
+            "kuka",
+            "mikä",
+            "hän",
+            "tämä"
+          ],
+          "topic_targets": [
+            "ihminen",
+            "esine"
+          ],
+          "expressions": [
+            "Kuka hän on?",
+            "Mikä tämä on?"
+          ],
+          "grammar_focus": [
+            "question words kuka / mikä; tämä + on"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l02",
+            "a1.1-s1-l04"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "question-match",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Form the correct kuka/mikä question for 4 of 5 supported situations.",
+            "criterion_fa": "Form the correct kuka/mikä question for 4 of 5 supported situations."
+          },
+          "prototype_sources": [
+            "lesson-3",
+            "lesson-7"
+          ],
+          "order": 5
+        },
+        {
+          "id": "a1.1-s1-l06",
+          "title_en": "Polite basics",
+          "title_fa": "عبارت‌های مودبانه",
+          "can_do_en": "Thank, apologize and use a basic polite response.",
+          "can_do_fa": "Thank, apologize and use a basic polite response.",
+          "high_frequency_targets": [
+            "kiitos"
+          ],
+          "topic_targets": [
+            "anteeksi"
+          ],
+          "expressions": [
+            "Kiitos.",
+            "Anteeksi.",
+            "Ole hyvä."
+          ],
+          "grammar_focus": [
+            "imperative-like formula ole hyvä as a fixed expression"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l01"
+          ],
+          "activity_families": [
+            "listen-and-choose",
+            "dialogue-choice",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Select the culturally appropriate polite expression in 4 of 5 mini-dialogues.",
+            "criterion_fa": "Select the culturally appropriate polite expression in 4 of 5 mini-dialogues."
+          },
+          "prototype_sources": [
+            "lesson-1"
+          ],
+          "order": 6
+        },
+        {
+          "id": "a1.1-s1-l07",
+          "title_en": "I do not understand",
+          "title_fa": "متوجه نمی‌شوم",
+          "can_do_en": "Signal lack of understanding and ask for repetition or slower speech.",
+          "can_do_fa": "Signal lack of understanding and ask for repetition or slower speech.",
+          "high_frequency_targets": [
+            "en"
+          ],
+          "topic_targets": [
+            "uudestaan",
+            "hitaasti"
+          ],
+          "expressions": [
+            "En ymmärrä.",
+            "Uudestaan, kiitos.",
+            "Hitaammin, kiitos."
+          ],
+          "grammar_focus": [
+            "1st-person negation as a memorized frame"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l04",
+            "a1.1-s1-l06"
+          ],
+          "activity_families": [
+            "dialogue-choice",
+            "listen-and-choose",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Use an appropriate repair phrase in three supported communication breakdowns.",
+            "criterion_fa": "Use an appropriate repair phrase in three supported communication breakdowns."
+          },
+          "prototype_sources": [],
+          "order": 7
+        },
+        {
+          "id": "a1.1-s1-l08",
+          "title_en": "This and that",
+          "title_fa": "این و آن",
+          "can_do_en": "Identify a few familiar objects using this/that.",
+          "can_do_fa": "Identify a few familiar objects using this/that.",
+          "high_frequency_targets": [
+            "tämä",
+            "se",
+            "on"
+          ],
+          "topic_targets": [
+            "kirja",
+            "puhelin",
+            "ovi"
+          ],
+          "expressions": [
+            "Tämä on …",
+            "Se on …"
+          ],
+          "grammar_focus": [
+            "demonstratives tämä / se + olla"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l04",
+            "a1.1-s1-l05"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "sentence-completion",
+            "typed-cloze"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Describe five pictured familiar objects with tämä/se + on.",
+            "criterion_fa": "Describe five pictured familiar objects with tämä/se + on."
+          },
+          "prototype_sources": [
+            "lesson-7"
+          ],
+          "order": 8
+        },
+        {
+          "id": "a1.1-s1-l09",
+          "title_en": "First mini-dialogues",
+          "title_fa": "گفت‌وگوهای کوتاه اول",
+          "can_do_en": "Combine greetings, name, wellbeing and repair phrases in short exchanges.",
+          "can_do_fa": "Combine greetings, name, wellbeing and repair phrases in short exchanges.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [
+            "Hei! Minun nimeni on …",
+            "Mitä kuuluu?",
+            "En ymmärrä. Uudestaan, kiitos."
+          ],
+          "grammar_focus": [
+            "recycling only"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l01",
+            "a1.1-s1-l02",
+            "a1.1-s1-l03",
+            "a1.1-s1-l06",
+            "a1.1-s1-l07"
+          ],
+          "activity_families": [
+            "dialogue-ordering",
+            "listen-and-choose",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Complete two four-turn scripted dialogues with at most one hint.",
+            "criterion_fa": "Complete two four-turn scripted dialogues with at most one hint."
+          },
+          "prototype_sources": [],
+          "order": 9
+        },
+        {
+          "id": "a1.1-s1-l10",
+          "title_en": "Section 1 checkpoint",
+          "title_fa": "ایستگاه مرور بخش ۱",
+          "can_do_en": "Handle a supported first-contact interaction using the section's core language.",
+          "can_do_fa": "Handle a supported first-contact interaction using the section's core language.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [
+            "checkpoint: greetings, olla, question words, simple negation"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l01",
+            "a1.1-s1-l02",
+            "a1.1-s1-l03",
+            "a1.1-s1-l04",
+            "a1.1-s1-l05",
+            "a1.1-s1-l06",
+            "a1.1-s1-l07",
+            "a1.1-s1-l08",
+            "a1.1-s1-l09"
+          ],
+          "activity_families": [
+            "mixed-checkpoint"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks.",
+            "criterion_fa": "Reach at least 80% first-attempt accuracy across mixed section tasks."
+          },
+          "prototype_sources": [
+            "lesson-10"
+          ],
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "a1.1-s2",
+      "order": 2,
+      "title_en": "Me and people around me",
+      "title_fa": "من و آدم‌های اطرافم",
+      "goal_en": "Give a small amount of personal information and identify close people using short practiced sentences.",
+      "goal_fa": "مقدار کمی اطلاعات شخصی بدهد و افراد نزدیک را با جمله‌های کوتاه تمرین‌شده معرفی کند.",
+      "lessons": [
+        {
+          "id": "a1.1-s2-l01",
+          "title_en": "People and pronouns",
+          "title_fa": "افراد و ضمیرها",
+          "can_do_en": "Refer to one or more people with basic personal pronouns.",
+          "can_do_fa": "Refer to one or more people with basic personal pronouns.",
+          "high_frequency_targets": [
+            "hän",
+            "me",
+            "he"
+          ],
+          "topic_targets": [
+            "ystävä"
+          ],
+          "expressions": [
+            "Hän on …",
+            "Me olemme …",
+            "He ovat …"
+          ],
+          "grammar_focus": [
+            "personal pronouns; olla 3sg/1pl/3pl as chunks"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l02"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "picture-choice",
+            "typed-cloze"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Choose the correct pronoun and olla form in 4 of 5 supported sentences.",
+            "criterion_fa": "Choose the correct pronoun and olla form in 4 of 5 supported sentences."
+          },
+          "prototype_sources": [
+            "lesson-4"
+          ],
+          "order": 1
+        },
+        {
+          "id": "a1.1-s2-l02",
+          "title_en": "Country and origin",
+          "title_fa": "کشور و اهل کجا بودن",
+          "can_do_en": "Say where you are from and ask another person.",
+          "can_do_fa": "Say where you are from and ask another person.",
+          "high_frequency_targets": [
+            "mistä",
+            "olen"
+          ],
+          "topic_targets": [
+            "Suomi",
+            "Iran",
+            "maa"
+          ],
+          "expressions": [
+            "Olen Suomesta.",
+            "Olen Iranista.",
+            "Mistä olet?"
+          ],
+          "grammar_focus": [
+            "elative -sta/-stä in memorized origin phrases"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l02",
+            "a1.1-s2-l01"
+          ],
+          "activity_families": [
+            "map-choice",
+            "dialogue-choice",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Ask and answer an origin question with a supported country name.",
+            "criterion_fa": "Ask and answer an origin question with a supported country name."
+          },
+          "prototype_sources": [
+            "lesson-5"
+          ],
+          "order": 2
+        },
+        {
+          "id": "a1.1-s2-l03",
+          "title_en": "Languages",
+          "title_fa": "زبان‌ها",
+          "can_do_en": "Say which language or languages you speak.",
+          "can_do_fa": "Say which language or languages you speak.",
+          "high_frequency_targets": [
+            "puhun"
+          ],
+          "topic_targets": [
+            "suomi",
+            "persia",
+            "englanti"
+          ],
+          "expressions": [
+            "Puhun suomea.",
+            "Puhun vähän suomea."
+          ],
+          "grammar_focus": [
+            "language names in partitive after puhua"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l02"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listen-and-choose",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Produce a correct Puhun + language sentence for two languages.",
+            "criterion_fa": "Produce a correct Puhun + language sentence for two languages."
+          },
+          "prototype_sources": [
+            "lesson-5"
+          ],
+          "order": 3
+        },
+        {
+          "id": "a1.1-s2-l04",
+          "title_en": "Where I live",
+          "title_fa": "کجا زندگی می‌کنم",
+          "can_do_en": "Say where you live and ask where another person lives.",
+          "can_do_fa": "Say where you live and ask where another person lives.",
+          "high_frequency_targets": [
+            "missä",
+            "asun"
+          ],
+          "topic_targets": [
+            "kaupunki",
+            "Vaasa",
+            "Helsinki"
+          ],
+          "expressions": [
+            "Asun Vaasassa.",
+            "Missä asut?"
+          ],
+          "grammar_focus": [
+            "inessive -ssa/-ssä in city names as a pattern"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l02",
+            "a1.1-s2-l03"
+          ],
+          "activity_families": [
+            "map-choice",
+            "dialogue-choice",
+            "typed-cloze"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Ask and answer where someone lives using one familiar city.",
+            "criterion_fa": "Ask and answer where someone lives using one familiar city."
+          },
+          "prototype_sources": [
+            "lesson-5"
+          ],
+          "order": 4
+        },
+        {
+          "id": "a1.1-s2-l05",
+          "title_en": "My family",
+          "title_fa": "خانواده من",
+          "can_do_en": "Name a few close family members.",
+          "can_do_fa": "Name a few close family members.",
+          "high_frequency_targets": [
+            "lapsi"
+          ],
+          "topic_targets": [
+            "perhe",
+            "äiti",
+            "isä",
+            "sisar",
+            "veli"
+          ],
+          "expressions": [
+            "Tämä on minun äitini.",
+            "Minulla on lapsi."
+          ],
+          "grammar_focus": [
+            "basic possession as memorized frames"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l08",
+            "a1.1-s2-l01"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "family-tree-match",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Identify five close family roles and introduce one person.",
+            "criterion_fa": "Identify five close family roles and introduce one person."
+          },
+          "prototype_sources": [
+            "lesson-6"
+          ],
+          "order": 5
+        },
+        {
+          "id": "a1.1-s2-l06",
+          "title_en": "Whose?",
+          "title_fa": "مال چه کسی؟",
+          "can_do_en": "Express very simple possession with my/your.",
+          "can_do_fa": "Express very simple possession with my/your.",
+          "high_frequency_targets": [
+            "minun",
+            "sinun"
+          ],
+          "topic_targets": [
+            "nimi",
+            "koti"
+          ],
+          "expressions": [
+            "minun nimeni",
+            "sinun nimesi",
+            "minun kotini"
+          ],
+          "grammar_focus": [
+            "genitive pronouns minun / sinun; possessive forms as chunks"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l02",
+            "a1.1-s2-l05"
+          ],
+          "activity_families": [
+            "matching",
+            "sentence-completion",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Distinguish and produce minun/sinun in four supported ownership prompts.",
+            "criterion_fa": "Distinguish and produce minun/sinun in four supported ownership prompts."
+          },
+          "prototype_sources": [
+            "lesson-2",
+            "lesson-6"
+          ],
+          "order": 6
+        },
+        {
+          "id": "a1.1-s2-l07",
+          "title_en": "Age and numbers 0–20",
+          "title_fa": "سن و اعداد ۰ تا ۲۰",
+          "can_do_en": "Say your age and understand numbers from zero to twenty.",
+          "can_do_fa": "Say your age and understand numbers from zero to twenty.",
+          "high_frequency_targets": [
+            "yksi",
+            "kaksi",
+            "kolme"
+          ],
+          "topic_targets": [
+            "numero",
+            "ikä"
+          ],
+          "expressions": [
+            "Olen … vuotta.",
+            "Kuinka vanha olet?"
+          ],
+          "grammar_focus": [
+            "cardinal numbers 0–20; age frame"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l02"
+          ],
+          "activity_families": [
+            "number-listening",
+            "number-typing",
+            "dialogue-choice"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Recognize 8 of 10 spoken numbers and state an age correctly.",
+            "criterion_fa": "Recognize 8 of 10 spoken numbers and state an age correctly."
+          },
+          "prototype_sources": [],
+          "order": 7
+        },
+        {
+          "id": "a1.1-s2-l08",
+          "title_en": "Contact details",
+          "title_fa": "اطلاعات تماس",
+          "can_do_en": "Understand and give a very short phone number or address with support.",
+          "can_do_fa": "Understand and give a very short phone number or address with support.",
+          "high_frequency_targets": [
+            "numero"
+          ],
+          "topic_targets": [
+            "puhelinnumero",
+            "osoite",
+            "katu"
+          ],
+          "expressions": [
+            "Mikä sinun puhelinnumerosi on?",
+            "Minun numeroni on …"
+          ],
+          "grammar_focus": [
+            "compound nouns; digit-by-digit production"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l06",
+            "a1.1-s2-l07"
+          ],
+          "activity_families": [
+            "number-listening",
+            "form-completion",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Fill a simple contact card from a slow spoken or written prompt.",
+            "criterion_fa": "Fill a simple contact card from a slow spoken or written prompt."
+          },
+          "prototype_sources": [],
+          "order": 8
+        },
+        {
+          "id": "a1.1-s2-l09",
+          "title_en": "A short personal profile",
+          "title_fa": "پروفایل شخصی کوتاه",
+          "can_do_en": "Understand and produce a few linked sentences about a person.",
+          "can_do_fa": "Understand and produce a few linked sentences about a person.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [
+            "Minun nimeni on …",
+            "Olen …sta.",
+            "Asun …ssa.",
+            "Puhun …a."
+          ],
+          "grammar_focus": [
+            "recycling personal-information frames"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l02",
+            "a1.1-s2-l03",
+            "a1.1-s2-l04",
+            "a1.1-s2-l07",
+            "a1.1-s2-l08"
+          ],
+          "activity_families": [
+            "short-reading",
+            "listen-and-match",
+            "guided-writing"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Extract four facts from a short profile and write a four-sentence supported profile.",
+            "criterion_fa": "Extract four facts from a short profile and write a four-sentence supported profile."
+          },
+          "prototype_sources": [],
+          "order": 9
+        },
+        {
+          "id": "a1.1-s2-l10",
+          "title_en": "Section 2 checkpoint",
+          "title_fa": "ایستگاه مرور بخش ۲",
+          "can_do_en": "Exchange basic personal information and identify close people.",
+          "can_do_fa": "Exchange basic personal information and identify close people.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [
+            "checkpoint: personal information, pronouns, origin, location, family, numbers"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l01",
+            "a1.1-s2-l02",
+            "a1.1-s2-l03",
+            "a1.1-s2-l04",
+            "a1.1-s2-l05",
+            "a1.1-s2-l06",
+            "a1.1-s2-l07",
+            "a1.1-s2-l08",
+            "a1.1-s2-l09"
+          ],
+          "activity_families": [
+            "mixed-checkpoint"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks.",
+            "criterion_fa": "Reach at least 80% first-attempt accuracy across mixed section tasks."
+          },
+          "prototype_sources": [],
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "a1.1-s3",
+      "order": 3,
+      "title_en": "Time and a simple day",
+      "title_fa": "زمان و یک روز ساده",
+      "goal_en": "Understand and produce highly practiced language about days, basic clock times and a simple routine.",
+      "goal_fa": "زبان بسیار تمرین‌شده دربارهٔ روزها، ساعت‌های ساده و برنامهٔ روزانه را بفهمد و تولید کند.",
+      "lessons": [
+        {
+          "id": "a1.1-s3-l01",
+          "title_en": "Today and tomorrow",
+          "title_fa": "امروز و فردا",
+          "can_do_en": "Distinguish today, tomorrow and yesterday in simple statements.",
+          "can_do_fa": "Distinguish today, tomorrow and yesterday in simple statements.",
+          "high_frequency_targets": [
+            "tänään",
+            "huomenna"
+          ],
+          "topic_targets": [
+            "eilen"
+          ],
+          "expressions": [
+            "Tänään on …",
+            "Huomenna on …"
+          ],
+          "grammar_focus": [
+            "time adverbs as fixed items"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l09"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "calendar-match",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Choose the correct day reference in 4 of 5 prompts.",
+            "criterion_fa": "Choose the correct day reference in 4 of 5 prompts."
+          },
+          "prototype_sources": [],
+          "order": 1
+        },
+        {
+          "id": "a1.1-s3-l02",
+          "title_en": "Days of the week",
+          "title_fa": "روزهای هفته",
+          "can_do_en": "Recognize and name the days of the week.",
+          "can_do_fa": "Recognize and name the days of the week.",
+          "high_frequency_targets": [],
+          "topic_targets": [
+            "maanantai",
+            "tiistai",
+            "keskiviikko",
+            "torstai",
+            "perjantai",
+            "lauantai",
+            "sunnuntai"
+          ],
+          "expressions": [
+            "Tänään on maanantai.",
+            "Huomenna on tiistai."
+          ],
+          "grammar_focus": [
+            "weekday nouns; olla in date-like statements"
+          ],
+          "recycle_from": [
+            "a1.1-s3-l01"
+          ],
+          "activity_families": [
+            "calendar-ordering",
+            "listen-and-choose",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Order all seven weekdays and identify a spoken weekday.",
+            "criterion_fa": "Order all seven weekdays and identify a spoken weekday."
+          },
+          "prototype_sources": [],
+          "order": 2
+        },
+        {
+          "id": "a1.1-s3-l03",
+          "title_en": "Whole hours",
+          "title_fa": "ساعت‌های کامل",
+          "can_do_en": "Understand and say simple whole-hour times.",
+          "can_do_fa": "Understand and say simple whole-hour times.",
+          "high_frequency_targets": [
+            "kello"
+          ],
+          "topic_targets": [
+            "aamu",
+            "ilta"
+          ],
+          "expressions": [
+            "Kello on yksi.",
+            "Kello on kaksi."
+          ],
+          "grammar_focus": [
+            "kello + cardinal number"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l07"
+          ],
+          "activity_families": [
+            "clock-choice",
+            "number-listening",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Recognize and state four whole-hour times.",
+            "criterion_fa": "Recognize and state four whole-hour times."
+          },
+          "prototype_sources": [],
+          "order": 3
+        },
+        {
+          "id": "a1.1-s3-l04",
+          "title_en": "Parts of the day",
+          "title_fa": "بخش‌های روز",
+          "can_do_en": "Talk about morning, daytime and evening with simple routine phrases.",
+          "can_do_fa": "Talk about morning, daytime and evening with simple routine phrases.",
+          "high_frequency_targets": [
+            "nyt"
+          ],
+          "topic_targets": [
+            "aamulla",
+            "päivällä",
+            "illalla",
+            "yöllä"
+          ],
+          "expressions": [
+            "Aamulla minä …",
+            "Illalla minä …"
+          ],
+          "grammar_focus": [
+            "adessive time forms as chunks"
+          ],
+          "recycle_from": [
+            "a1.1-s3-l03"
+          ],
+          "activity_families": [
+            "picture-sequence",
+            "sentence-completion",
+            "listen-and-match"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Match four routine events to the correct part of the day.",
+            "criterion_fa": "Match four routine events to the correct part of the day."
+          },
+          "prototype_sources": [],
+          "order": 4
+        },
+        {
+          "id": "a1.1-s3-l05",
+          "title_en": "Common actions: I",
+          "title_fa": "کارهای روزمره: من",
+          "can_do_en": "Say a few common things you do.",
+          "can_do_fa": "Say a few common things you do.",
+          "high_frequency_targets": [
+            "menen",
+            "tulen"
+          ],
+          "topic_targets": [
+            "syön",
+            "juon",
+            "nukun",
+            "opiskelen",
+            "työskentelen"
+          ],
+          "expressions": [
+            "Minä syön.",
+            "Minä juon kahvia.",
+            "Menen kotiin."
+          ],
+          "grammar_focus": [
+            "present tense 1st person singular; selected verb chunks"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l03",
+            "a1.1-s3-l04"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "typed-cloze",
+            "guided-sentence"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Produce four supported minä + present-tense routine sentences.",
+            "criterion_fa": "Produce four supported minä + present-tense routine sentences."
+          },
+          "prototype_sources": [],
+          "order": 5
+        },
+        {
+          "id": "a1.1-s3-l06",
+          "title_en": "Common actions: you",
+          "title_fa": "کارهای روزمره: تو",
+          "can_do_en": "Ask what another person does in a few familiar situations.",
+          "can_do_fa": "Ask what another person does in a few familiar situations.",
+          "high_frequency_targets": [
+            "mitä",
+            "teet"
+          ],
+          "topic_targets": [
+            "työ",
+            "koulu"
+          ],
+          "expressions": [
+            "Mitä teet?",
+            "Opiskeletko?",
+            "Työskenteletkö?"
+          ],
+          "grammar_focus": [
+            "2nd person present; yes/no -ko/-kö questions as chunks"
+          ],
+          "recycle_from": [
+            "a1.1-s3-l05"
+          ],
+          "activity_families": [
+            "question-match",
+            "dialogue-choice",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Ask two practiced routine questions and understand short replies.",
+            "criterion_fa": "Ask two practiced routine questions and understand short replies."
+          },
+          "prototype_sources": [],
+          "order": 6
+        },
+        {
+          "id": "a1.1-s3-l07",
+          "title_en": "I do not …",
+          "title_fa": "من ... نمی‌کنم",
+          "can_do_en": "Negate a few familiar routine verbs.",
+          "can_do_fa": "Negate a few familiar routine verbs.",
+          "high_frequency_targets": [
+            "en"
+          ],
+          "topic_targets": [
+            "negation"
+          ],
+          "expressions": [
+            "En puhu englantia.",
+            "En työskentele tänään."
+          ],
+          "grammar_focus": [
+            "1st person negative: en + connegative form"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l07",
+            "a1.1-s3-l05"
+          ],
+          "activity_families": [
+            "affirmative-negative-match",
+            "typed-cloze",
+            "sentence-transform"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Turn four familiar affirmative minä sentences into negatives.",
+            "criterion_fa": "Turn four familiar affirmative minä sentences into negatives."
+          },
+          "prototype_sources": [],
+          "order": 7
+        },
+        {
+          "id": "a1.1-s3-l08",
+          "title_en": "When?",
+          "title_fa": "چه زمانی؟",
+          "can_do_en": "Ask and answer when a simple event happens.",
+          "can_do_fa": "Ask and answer when a simple event happens.",
+          "high_frequency_targets": [
+            "milloin"
+          ],
+          "topic_targets": [
+            "aika"
+          ],
+          "expressions": [
+            "Milloin?",
+            "Tänään.",
+            "Huomenna.",
+            "Kello kolme."
+          ],
+          "grammar_focus": [
+            "question word milloin; short time answers"
+          ],
+          "recycle_from": [
+            "a1.1-s3-l01",
+            "a1.1-s3-l03",
+            "a1.1-s3-l04"
+          ],
+          "activity_families": [
+            "question-answer-match",
+            "listen-and-choose",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Match five simple events with an appropriate time answer.",
+            "criterion_fa": "Match five simple events with an appropriate time answer."
+          },
+          "prototype_sources": [],
+          "order": 8
+        },
+        {
+          "id": "a1.1-s3-l09",
+          "title_en": "My simple day",
+          "title_fa": "روز سادهٔ من",
+          "can_do_en": "Understand and produce a short sequence describing a routine day.",
+          "can_do_fa": "Understand and produce a short sequence describing a routine day.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [
+            "Aamulla …",
+            "Päivällä …",
+            "Illalla …"
+          ],
+          "grammar_focus": [
+            "sequence with time adverbs; recycling present tense"
+          ],
+          "recycle_from": [
+            "a1.1-s3-l04",
+            "a1.1-s3-l05",
+            "a1.1-s3-l07",
+            "a1.1-s3-l08"
+          ],
+          "activity_families": [
+            "sentence-ordering",
+            "short-reading",
+            "guided-writing"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Order a five-event routine and produce three linked supported sentences.",
+            "criterion_fa": "Order a five-event routine and produce three linked supported sentences."
+          },
+          "prototype_sources": [],
+          "order": 9
+        },
+        {
+          "id": "a1.1-s3-l10",
+          "title_en": "Section 3 checkpoint",
+          "title_fa": "ایستگاه مرور بخش ۳",
+          "can_do_en": "Handle a highly supported exchange about day, time and routine.",
+          "can_do_fa": "Handle a highly supported exchange about day, time and routine.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [
+            "checkpoint: weekdays, whole hours, routine verbs, negation, when"
+          ],
+          "recycle_from": [
+            "a1.1-s3-l01",
+            "a1.1-s3-l02",
+            "a1.1-s3-l03",
+            "a1.1-s3-l04",
+            "a1.1-s3-l05",
+            "a1.1-s3-l06",
+            "a1.1-s3-l07",
+            "a1.1-s3-l08",
+            "a1.1-s3-l09"
+          ],
+          "activity_families": [
+            "mixed-checkpoint"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks.",
+            "criterion_fa": "Reach at least 80% first-attempt accuracy across mixed section tasks."
+          },
+          "prototype_sources": [],
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "a1.1-s4",
+      "order": 4,
+      "title_en": "Home, food and the familiar world",
+      "title_fa": "خانه، خوراک و دنیای آشنا",
+      "goal_en": "Identify familiar things, express a few basic needs, and describe a very small familiar world with practiced language.",
+      "goal_fa": "چیزهای آشنا را تشخیص دهد، چند نیاز پایه را بیان کند و دنیای کوچک آشنای خود را با زبان تمرین‌شده توصیف کند.",
+      "lessons": [
+        {
+          "id": "a1.1-s4-l01",
+          "title_en": "Home and rooms",
+          "title_fa": "خانه و اتاق‌ها",
+          "can_do_en": "Name a few common places in a home.",
+          "can_do_fa": "Name a few common places in a home.",
+          "high_frequency_targets": [
+            "koti"
+          ],
+          "topic_targets": [
+            "huone",
+            "keittiö",
+            "olohuone",
+            "makuuhuone",
+            "wc"
+          ],
+          "expressions": [
+            "Tämä on keittiö.",
+            "Olen kotona."
+          ],
+          "grammar_focus": [
+            "kotona as a fixed location form; tämä on"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l08",
+            "a1.1-s2-l04"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "label-match",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Identify five familiar home locations from pictures.",
+            "criterion_fa": "Identify five familiar home locations from pictures."
+          },
+          "prototype_sources": [
+            "lesson-6"
+          ],
+          "order": 1
+        },
+        {
+          "id": "a1.1-s4-l02",
+          "title_en": "Where is it?",
+          "title_fa": "کجاست؟",
+          "can_do_en": "Say where a familiar object is using a few fixed location patterns.",
+          "can_do_fa": "Say where a familiar object is using a few fixed location patterns.",
+          "high_frequency_targets": [
+            "missä",
+            "on"
+          ],
+          "topic_targets": [
+            "pöytä",
+            "tuoli",
+            "sänky"
+          ],
+          "expressions": [
+            "Missä puhelin on?",
+            "Se on pöydällä.",
+            "Se on huoneessa."
+          ],
+          "grammar_focus": [
+            "limited -ssa/-ssä and -lla/-llä location chunks"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l05",
+            "a1.1-s4-l01"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "sentence-completion",
+            "typed-cloze"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Answer four supported Missä? questions with a practiced location phrase.",
+            "criterion_fa": "Answer four supported Missä? questions with a practiced location phrase."
+          },
+          "prototype_sources": [
+            "lesson-7"
+          ],
+          "order": 2
+        },
+        {
+          "id": "a1.1-s4-l03",
+          "title_en": "Food and drink",
+          "title_fa": "خوراک و نوشیدنی",
+          "can_do_en": "Recognize and name a few very common foods and drinks.",
+          "can_do_fa": "Recognize and name a few very common foods and drinks.",
+          "high_frequency_targets": [
+            "vesi"
+          ],
+          "topic_targets": [
+            "kahvi",
+            "tee",
+            "maito",
+            "leipä",
+            "ruoka"
+          ],
+          "expressions": [
+            "Tämä on kahvia.",
+            "Tämä on leipä."
+          ],
+          "grammar_focus": [
+            "mass/count distinction only through memorized examples"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l08"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "listen-and-choose",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Recognize five common food/drink items in pictures and slow audio.",
+            "criterion_fa": "Recognize five common food/drink items in pictures and slow audio."
+          },
+          "prototype_sources": [],
+          "order": 3
+        },
+        {
+          "id": "a1.1-s4-l04",
+          "title_en": "I want …",
+          "title_fa": "من ... می‌خواهم",
+          "can_do_en": "Express one or two basic wants involving familiar food or drink.",
+          "can_do_fa": "Express one or two basic wants involving familiar food or drink.",
+          "high_frequency_targets": [
+            "haluan"
+          ],
+          "topic_targets": [
+            "nälkä",
+            "jano"
+          ],
+          "expressions": [
+            "Haluan kahvia.",
+            "Haluan vettä.",
+            "Minulla on nälkä."
+          ],
+          "grammar_focus": [
+            "partitive object after haluan as a phrase pattern; minulla on as a chunk"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l05",
+            "a1.1-s4-l03"
+          ],
+          "activity_families": [
+            "dialogue-choice",
+            "typed-frame",
+            "picture-prompt"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": false,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Produce three supported want/need phrases with familiar items.",
+            "criterion_fa": "Produce three supported want/need phrases with familiar items."
+          },
+          "prototype_sources": [],
+          "order": 4
+        },
+        {
+          "id": "a1.1-s4-l05",
+          "title_en": "A very simple café order",
+          "title_fa": "سفارش خیلی ساده در کافه",
+          "can_do_en": "Make a minimal polite order for one familiar item.",
+          "can_do_fa": "Make a minimal polite order for one familiar item.",
+          "high_frequency_targets": [
+            "yksi"
+          ],
+          "topic_targets": [
+            "kahvila"
+          ],
+          "expressions": [
+            "Yksi kahvi, kiitos.",
+            "Vettä, kiitos.",
+            "Ole hyvä."
+          ],
+          "grammar_focus": [
+            "elliptical ordering phrases; recycling politeness"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l06",
+            "a1.1-s2-l07",
+            "a1.1-s4-l03",
+            "a1.1-s4-l04"
+          ],
+          "activity_families": [
+            "dialogue-ordering",
+            "listen-and-choose",
+            "typed-frame"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Complete a three-turn café dialogue for one item.",
+            "criterion_fa": "Complete a three-turn café dialogue for one item."
+          },
+          "prototype_sources": [],
+          "order": 5
+        },
+        {
+          "id": "a1.1-s4-l06",
+          "title_en": "Familiar animals 1",
+          "title_fa": "حیوانات آشنا ۱",
+          "can_do_en": "Recognize and name five common animals.",
+          "can_do_fa": "Recognize and name five common animals.",
+          "high_frequency_targets": [],
+          "topic_targets": [
+            "koira",
+            "kissa",
+            "lintu",
+            "kala",
+            "hevonen"
+          ],
+          "expressions": [
+            "Tämä on koira.",
+            "Se on kissa."
+          ],
+          "grammar_focus": [
+            "recycling demonstratives and olla"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l08"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "listen-and-choose",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Identify and name five common animals.",
+            "criterion_fa": "Identify and name five common animals."
+          },
+          "prototype_sources": [
+            "lesson-8"
+          ],
+          "order": 6
+        },
+        {
+          "id": "a1.1-s4-l07",
+          "title_en": "Familiar animals 2",
+          "title_fa": "حیوانات آشنا ۲",
+          "can_do_en": "Recognize five more familiar animals and group them broadly.",
+          "can_do_fa": "Recognize five more familiar animals and group them broadly.",
+          "high_frequency_targets": [],
+          "topic_targets": [
+            "lehmä",
+            "lammas",
+            "karhu",
+            "susi",
+            "hirvi"
+          ],
+          "expressions": [
+            "Karhu on eläin.",
+            "Lehmä on eläin."
+          ],
+          "grammar_focus": [
+            "simple noun predication with olla"
+          ],
+          "recycle_from": [
+            "a1.1-s4-l06"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "category-match",
+            "typed-recall"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Identify five additional animals and classify familiar examples as animals.",
+            "criterion_fa": "Identify five additional animals and classify familiar examples as animals."
+          },
+          "prototype_sources": [
+            "lesson-9"
+          ],
+          "order": 7
+        },
+        {
+          "id": "a1.1-s4-l08",
+          "title_en": "Simple descriptions",
+          "title_fa": "توصیف ساده",
+          "can_do_en": "Describe a familiar person, object or animal with one basic adjective.",
+          "can_do_fa": "Describe a familiar person, object or animal with one basic adjective.",
+          "high_frequency_targets": [
+            "iso",
+            "pieni"
+          ],
+          "topic_targets": [
+            "punainen",
+            "valkoinen",
+            "musta"
+          ],
+          "expressions": [
+            "Koira on iso.",
+            "Kissa on pieni."
+          ],
+          "grammar_focus": [
+            "adjective predicative with olla"
+          ],
+          "recycle_from": [
+            "a1.1-s4-l06",
+            "a1.1-s4-l07"
+          ],
+          "activity_families": [
+            "picture-choice",
+            "sentence-completion",
+            "guided-sentence"
+          ],
+          "skills": {
+            "listening": false,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Produce four supported noun + on + adjective descriptions.",
+            "criterion_fa": "Produce four supported noun + on + adjective descriptions."
+          },
+          "prototype_sources": [],
+          "order": 8
+        },
+        {
+          "id": "a1.1-s4-l09",
+          "title_en": "My familiar world",
+          "title_fa": "دنیای آشنای من",
+          "can_do_en": "Combine home, food, people and familiar objects in a few very short sentences.",
+          "can_do_fa": "Combine home, food, people and familiar objects in a few very short sentences.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [
+            "Tämä on minun kotini.",
+            "Keittiössä on …",
+            "Haluan …",
+            "Minulla on …"
+          ],
+          "grammar_focus": [
+            "recycling only"
+          ],
+          "recycle_from": [
+            "a1.1-s2-l05",
+            "a1.1-s4-l01",
+            "a1.1-s4-l02",
+            "a1.1-s4-l03",
+            "a1.1-s4-l04",
+            "a1.1-s4-l08"
+          ],
+          "activity_families": [
+            "short-reading",
+            "picture-description",
+            "guided-writing"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Understand a five-sentence familiar-world text and produce four supported sentences.",
+            "criterion_fa": "Understand a five-sentence familiar-world text and produce four supported sentences."
+          },
+          "prototype_sources": [],
+          "order": 9
+        },
+        {
+          "id": "a1.1-s4-l10",
+          "title_en": "A1.1 final checkpoint",
+          "title_fa": "آزمون پایانی A1.1",
+          "can_do_en": "Use memorized and highly practiced language across the core A1.1 situations.",
+          "can_do_fa": "Use memorized and highly practiced language across the core A1.1 situations.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [
+            "final checkpoint: first contact, personal information, time/routine, home/basic needs"
+          ],
+          "recycle_from": [
+            "a1.1-s1-l10",
+            "a1.1-s2-l10",
+            "a1.1-s3-l10",
+            "a1.1-s4-l01",
+            "a1.1-s4-l02",
+            "a1.1-s4-l03",
+            "a1.1-s4-l04",
+            "a1.1-s4-l05",
+            "a1.1-s4-l06",
+            "a1.1-s4-l07",
+            "a1.1-s4-l08",
+            "a1.1-s4-l09"
+          ],
+          "activity_families": [
+            "mixed-checkpoint",
+            "short-reading",
+            "listen-and-match",
+            "guided-writing"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Reach at least 80% first-attempt accuracy and complete one supported mini-dialogue plus one short profile/routine task.",
+            "criterion_fa": "Reach at least 80% first-attempt accuracy and complete one supported mini-dialogue plus one short profile/routine task."
+          },
+          "prototype_sources": [
+            "lesson-10"
+          ],
+          "order": 10
+        }
+      ]
+    }
+  ],
+  "prototype_mapping": {
+    "source": "data/course/a1.1-section-1.json",
+    "notes": "The current ten-lesson prototype remains an implementation testbed. Its useful targets are redistributed into the complete curriculum rather than treated as the final A1.1 sequence.",
+    "mappings": [
+      {
+        "prototype_lesson": "lesson-1",
+        "destinations": [
+          "a1.1-s1-l01",
+          "a1.1-s1-l06"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-2",
+        "destinations": [
+          "a1.1-s1-l02",
+          "a1.1-s2-l06"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-3",
+        "destinations": [
+          "a1.1-s1-l02",
+          "a1.1-s1-l03",
+          "a1.1-s1-l05"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-4",
+        "destinations": [
+          "a1.1-s2-l01"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-5",
+        "destinations": [
+          "a1.1-s2-l02",
+          "a1.1-s2-l03",
+          "a1.1-s2-l04"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-6",
+        "destinations": [
+          "a1.1-s2-l05",
+          "a1.1-s4-l01"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-7",
+        "destinations": [
+          "a1.1-s1-l04",
+          "a1.1-s1-l05",
+          "a1.1-s1-l08",
+          "a1.1-s4-l02"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-8",
+        "destinations": [
+          "a1.1-s4-l06"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-9",
+        "destinations": [
+          "a1.1-s4-l07"
+        ]
+      },
+      {
+        "prototype_lesson": "lesson-10",
+        "destinations": [
+          "a1.1-s1-l10",
+          "a1.1-s4-l10"
+        ]
+      }
+    ]
+  }
+}
