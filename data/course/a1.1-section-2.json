@@ -1,0 +1,2158 @@
+{
+  "schema_version": 1,
+  "id": "a1.1-section-2",
+  "curriculum_section_id": "a1.1-s2",
+  "level": "A1.1",
+  "title_fa": "بخش ۲: من و آدم‌های اطرافم",
+  "subtitle_fa": "اطلاعات شخصی، کشور و زبان، محل زندگی، خانواده، سن و اطلاعات تماس",
+  "description_fa": "بخش دوم A1.1 اطلاعات شخصی و افراد نزدیک را با جمله‌های کوتاه و الگوهای کاملاً صریح تمرین می‌کند.",
+  "activity_count_per_lesson": 15,
+  "can_do_fa": [
+    "اطلاعات شخصی کوتاه دربارهٔ خودم می‌دهم.",
+    "می‌گویم اهل کجا هستم، کجا زندگی می‌کنم و به چه زبان‌هایی صحبت می‌کنم.",
+    "چند عضو خانواده را معرفی می‌کنم.",
+    "سن، شماره تلفن و نشانی کوتاه را با کمک بیان می‌کنم."
+  ],
+  "items": {
+    "s2-hei": {
+      "id": "s2-hei",
+      "surface_form": "Hei!",
+      "lemma": "Hei",
+      "translation_fa": "سلام!",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "recycle",
+        "greetings"
+      ],
+      "example_fi": "Hei! Minun nimeni on Sara.",
+      "example_fa": "سلام! نام من سارا است.",
+      "accepted_answers": [
+        "Hei!"
+      ]
+    },
+    "s2-minun-nimeni-on": {
+      "id": "s2-minun-nimeni-on",
+      "surface_form": "Minun nimeni on",
+      "lemma": "Minun nimeni on",
+      "translation_fa": "نام من ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "recycle",
+        "introductions"
+      ],
+      "example_fi": "Minun nimeni on Sara.",
+      "example_fa": "نام من سارا است.",
+      "accepted_answers": [
+        "Minun nimeni on"
+      ]
+    },
+    "s2-tama": {
+      "id": "s2-tama",
+      "surface_form": "tämä",
+      "lemma": "tämä",
+      "translation_fa": "این",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "recycle",
+        "demonstratives"
+      ],
+      "example_fi": "Tämä on minun äitini.",
+      "example_fa": "این مادر من است.",
+      "accepted_answers": [
+        "tämä"
+      ]
+    },
+    "s2-han": {
+      "id": "s2-han",
+      "surface_form": "hän",
+      "lemma": "hän",
+      "translation_fa": "او",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "pronouns"
+      ],
+      "example_fi": "Hän on ystäväni.",
+      "example_fa": "او دوست من است.",
+      "accepted_answers": [
+        "hän"
+      ]
+    },
+    "s2-me": {
+      "id": "s2-me",
+      "surface_form": "me",
+      "lemma": "me",
+      "translation_fa": "ما",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "pronouns"
+      ],
+      "example_fi": "Me olemme ystäviä.",
+      "example_fa": "ما دوست هستیم.",
+      "accepted_answers": [
+        "me"
+      ]
+    },
+    "s2-he": {
+      "id": "s2-he",
+      "surface_form": "he",
+      "lemma": "he",
+      "translation_fa": "آن‌ها",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "pronouns"
+      ],
+      "example_fi": "He ovat täällä.",
+      "example_fa": "آن‌ها اینجا هستند.",
+      "accepted_answers": [
+        "he"
+      ]
+    },
+    "s2-ystava": {
+      "id": "s2-ystava",
+      "surface_form": "ystävä",
+      "lemma": "ystävä",
+      "translation_fa": "دوست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people"
+      ],
+      "example_fi": "Hän on ystävä.",
+      "example_fa": "او یک دوست است.",
+      "accepted_answers": [
+        "ystävä"
+      ]
+    },
+    "s2-te": {
+      "id": "s2-te",
+      "surface_form": "te",
+      "lemma": "te",
+      "translation_fa": "شما",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "pronouns"
+      ],
+      "example_fi": "Te olette täällä.",
+      "example_fa": "شما اینجا هستید.",
+      "accepted_answers": [
+        "te"
+      ]
+    },
+    "s2-han-on": {
+      "id": "s2-han-on",
+      "surface_form": "Hän on",
+      "lemma": "Hän on",
+      "translation_fa": "او ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "olla"
+      ],
+      "example_fi": "Hän on ystävä.",
+      "example_fa": "او یک دوست است.",
+      "accepted_answers": [
+        "Hän on"
+      ]
+    },
+    "s2-me-olemme": {
+      "id": "s2-me-olemme",
+      "surface_form": "Me olemme",
+      "lemma": "Me olemme",
+      "translation_fa": "ما ... هستیم",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "olla"
+      ],
+      "example_fi": "Me olemme ystäviä.",
+      "example_fa": "ما دوست هستیم.",
+      "accepted_answers": [
+        "Me olemme"
+      ]
+    },
+    "s2-te-olette": {
+      "id": "s2-te-olette",
+      "surface_form": "Te olette",
+      "lemma": "Te olette",
+      "translation_fa": "شما ... هستید",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "olla"
+      ],
+      "example_fi": "Te olette täällä.",
+      "example_fa": "شما اینجا هستید.",
+      "accepted_answers": [
+        "Te olette"
+      ]
+    },
+    "s2-he-ovat": {
+      "id": "s2-he-ovat",
+      "surface_form": "He ovat",
+      "lemma": "He ovat",
+      "translation_fa": "آن‌ها ... هستند",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "olla"
+      ],
+      "example_fi": "He ovat täällä.",
+      "example_fa": "آن‌ها اینجا هستند.",
+      "accepted_answers": [
+        "He ovat"
+      ]
+    },
+    "s2-olen": {
+      "id": "s2-olen",
+      "surface_form": "olen",
+      "lemma": "olen",
+      "translation_fa": "هستم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "origin",
+        "olla"
+      ],
+      "example_fi": "Olen Iranista.",
+      "example_fa": "من اهل ایران هستم.",
+      "accepted_answers": [
+        "olen"
+      ]
+    },
+    "s2-suomi": {
+      "id": "s2-suomi",
+      "surface_form": "Suomi",
+      "lemma": "Suomi",
+      "translation_fa": "فنلاند",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "countries"
+      ],
+      "example_fi": "Suomi on maa.",
+      "example_fa": "فنلاند یک کشور است.",
+      "accepted_answers": [
+        "Suomi"
+      ]
+    },
+    "s2-iran": {
+      "id": "s2-iran",
+      "surface_form": "Iran",
+      "lemma": "Iran",
+      "translation_fa": "ایران",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "countries"
+      ],
+      "example_fi": "Iran on maa.",
+      "example_fa": "ایران یک کشور است.",
+      "accepted_answers": [
+        "Iran"
+      ]
+    },
+    "s2-maa": {
+      "id": "s2-maa",
+      "surface_form": "maa",
+      "lemma": "maa",
+      "translation_fa": "کشور / سرزمین",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "countries"
+      ],
+      "example_fi": "Suomi on maa.",
+      "example_fa": "فنلاند یک کشور است.",
+      "accepted_answers": [
+        "maa"
+      ]
+    },
+    "s2-mista": {
+      "id": "s2-mista",
+      "surface_form": "mistä",
+      "lemma": "mistä",
+      "translation_fa": "از کجا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "origin"
+      ],
+      "example_fi": "Mistä olet?",
+      "example_fa": "اهل کجایی؟",
+      "accepted_answers": [
+        "mistä"
+      ]
+    },
+    "s2-olen-suomesta": {
+      "id": "s2-olen-suomesta",
+      "surface_form": "Olen Suomesta.",
+      "lemma": "Olen Suomesta",
+      "translation_fa": "من اهل فنلاند هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "origin"
+      ],
+      "example_fi": "Olen Suomesta.",
+      "example_fa": "من اهل فنلاند هستم.",
+      "accepted_answers": [
+        "Olen Suomesta."
+      ]
+    },
+    "s2-olen-iranista": {
+      "id": "s2-olen-iranista",
+      "surface_form": "Olen Iranista.",
+      "lemma": "Olen Iranista",
+      "translation_fa": "من اهل ایران هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "origin"
+      ],
+      "example_fi": "Olen Iranista.",
+      "example_fa": "من اهل ایران هستم.",
+      "accepted_answers": [
+        "Olen Iranista."
+      ]
+    },
+    "s2-mista-olet": {
+      "id": "s2-mista-olet",
+      "surface_form": "Mistä olet?",
+      "lemma": "Mistä olet",
+      "translation_fa": "اهل کجایی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "origin",
+        "questions"
+      ],
+      "example_fi": "Mistä olet? Olen Iranista.",
+      "example_fa": "اهل کجایی؟ من اهل ایران هستم.",
+      "accepted_answers": [
+        "Mistä olet?"
+      ]
+    },
+    "s2-suomi-lang": {
+      "id": "s2-suomi-lang",
+      "surface_form": "suomi",
+      "lemma": "suomi",
+      "translation_fa": "زبان فنلاندی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun suomea.",
+      "example_fa": "فنلاندی صحبت می‌کنم.",
+      "accepted_answers": [
+        "suomi"
+      ]
+    },
+    "s2-persia": {
+      "id": "s2-persia",
+      "surface_form": "persia",
+      "lemma": "persia",
+      "translation_fa": "زبان فارسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun persiaa.",
+      "example_fa": "فارسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "persia"
+      ]
+    },
+    "s2-englanti": {
+      "id": "s2-englanti",
+      "surface_form": "englanti",
+      "lemma": "englanti",
+      "translation_fa": "زبان انگلیسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun englantia.",
+      "example_fa": "انگلیسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "englanti"
+      ]
+    },
+    "s2-puhun": {
+      "id": "s2-puhun",
+      "surface_form": "puhun",
+      "lemma": "puhun",
+      "translation_fa": "صحبت می‌کنم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages",
+        "verbs"
+      ],
+      "example_fi": "Puhun vähän suomea.",
+      "example_fa": "کمی فنلاندی صحبت می‌کنم.",
+      "accepted_answers": [
+        "puhun"
+      ]
+    },
+    "s2-puhun-suomea": {
+      "id": "s2-puhun-suomea",
+      "surface_form": "Puhun suomea.",
+      "lemma": "Puhun suomea",
+      "translation_fa": "فنلاندی صحبت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun suomea.",
+      "example_fa": "فنلاندی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Puhun suomea."
+      ]
+    },
+    "s2-puhun-persiaa": {
+      "id": "s2-puhun-persiaa",
+      "surface_form": "Puhun persiaa.",
+      "lemma": "Puhun persiaa",
+      "translation_fa": "فارسی صحبت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun persiaa.",
+      "example_fa": "فارسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Puhun persiaa."
+      ]
+    },
+    "s2-puhun-englantia": {
+      "id": "s2-puhun-englantia",
+      "surface_form": "Puhun englantia.",
+      "lemma": "Puhun englantia",
+      "translation_fa": "انگلیسی صحبت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun englantia.",
+      "example_fa": "انگلیسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Puhun englantia."
+      ]
+    },
+    "s2-puhun-vahan-suomea": {
+      "id": "s2-puhun-vahan-suomea",
+      "surface_form": "Puhun vähän suomea.",
+      "lemma": "Puhun vähän suomea",
+      "translation_fa": "کمی فنلاندی صحبت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun vähän suomea.",
+      "example_fa": "کمی فنلاندی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Puhun vähän suomea."
+      ]
+    },
+    "s2-missa": {
+      "id": "s2-missa",
+      "surface_form": "missä",
+      "lemma": "missä",
+      "translation_fa": "کجا / در کجا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "location"
+      ],
+      "example_fi": "Missä asut?",
+      "example_fa": "کجا زندگی می‌کنی؟",
+      "accepted_answers": [
+        "missä"
+      ]
+    },
+    "s2-kaupunki": {
+      "id": "s2-kaupunki",
+      "surface_form": "kaupunki",
+      "lemma": "kaupunki",
+      "translation_fa": "شهر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Vaasa on kaupunki.",
+      "example_fa": "واسا یک شهر است.",
+      "accepted_answers": [
+        "kaupunki"
+      ]
+    },
+    "s2-vaasa": {
+      "id": "s2-vaasa",
+      "surface_form": "Vaasa",
+      "lemma": "Vaasa",
+      "translation_fa": "واسا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "cities"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "Vaasa"
+      ]
+    },
+    "s2-helsinki": {
+      "id": "s2-helsinki",
+      "surface_form": "Helsinki",
+      "lemma": "Helsinki",
+      "translation_fa": "هلسینکی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "cities"
+      ],
+      "example_fi": "Asun Helsingissä.",
+      "example_fa": "در هلسینکی زندگی می‌کنم.",
+      "accepted_answers": [
+        "Helsinki"
+      ]
+    },
+    "s2-asun": {
+      "id": "s2-asun",
+      "surface_form": "asun",
+      "lemma": "asun",
+      "translation_fa": "زندگی می‌کنم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "verbs"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "asun"
+      ]
+    },
+    "s2-asun-vaasassa": {
+      "id": "s2-asun-vaasassa",
+      "surface_form": "Asun Vaasassa.",
+      "lemma": "Asun Vaasassa",
+      "translation_fa": "در واسا زندگی می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "Asun Vaasassa."
+      ]
+    },
+    "s2-missa-asut": {
+      "id": "s2-missa-asut",
+      "surface_form": "Missä asut?",
+      "lemma": "Missä asut",
+      "translation_fa": "کجا زندگی می‌کنی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "questions"
+      ],
+      "example_fi": "Missä asut? Asun Vaasassa.",
+      "example_fa": "کجا زندگی می‌کنی؟ در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "Missä asut?"
+      ]
+    },
+    "s2-asun-helsingissa": {
+      "id": "s2-asun-helsingissa",
+      "surface_form": "Asun Helsingissä.",
+      "lemma": "Asun Helsingissä",
+      "translation_fa": "در هلسینکی زندگی می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Asun Helsingissä.",
+      "example_fa": "در هلسینکی زندگی می‌کنم.",
+      "accepted_answers": [
+        "Asun Helsingissä."
+      ]
+    },
+    "s2-perhe": {
+      "id": "s2-perhe",
+      "surface_form": "perhe",
+      "lemma": "perhe",
+      "translation_fa": "خانواده",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Minulla on perhe.",
+      "example_fa": "من خانواده دارم.",
+      "accepted_answers": [
+        "perhe"
+      ]
+    },
+    "s2-aiti": {
+      "id": "s2-aiti",
+      "surface_form": "äiti",
+      "lemma": "äiti",
+      "translation_fa": "مادر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Tämä on minun äitini.",
+      "example_fa": "این مادر من است.",
+      "accepted_answers": [
+        "äiti"
+      ]
+    },
+    "s2-isa": {
+      "id": "s2-isa",
+      "surface_form": "isä",
+      "lemma": "isä",
+      "translation_fa": "پدر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Tämä on minun isäni.",
+      "example_fa": "این پدر من است.",
+      "accepted_answers": [
+        "isä"
+      ]
+    },
+    "s2-sisar": {
+      "id": "s2-sisar",
+      "surface_form": "sisar",
+      "lemma": "sisar",
+      "translation_fa": "خواهر / برادر (هم‌نیای مؤنث)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Minulla on sisar.",
+      "example_fa": "من خواهر دارم.",
+      "accepted_answers": [
+        "sisar"
+      ]
+    },
+    "s2-veli": {
+      "id": "s2-veli",
+      "surface_form": "veli",
+      "lemma": "veli",
+      "translation_fa": "برادر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Minulla on veli.",
+      "example_fa": "من برادر دارم.",
+      "accepted_answers": [
+        "veli"
+      ]
+    },
+    "s2-lapsi": {
+      "id": "s2-lapsi",
+      "surface_form": "lapsi",
+      "lemma": "lapsi",
+      "translation_fa": "کودک / فرزند",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Minulla on lapsi.",
+      "example_fa": "من فرزند دارم.",
+      "accepted_answers": [
+        "lapsi"
+      ]
+    },
+    "s2-tama-on-minun-aitini": {
+      "id": "s2-tama-on-minun-aitini",
+      "surface_form": "Tämä on minun äitini.",
+      "lemma": "Tämä on minun äitini",
+      "translation_fa": "این مادر من است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family",
+        "possession"
+      ],
+      "example_fi": "Tämä on minun äitini.",
+      "example_fa": "این مادر من است.",
+      "accepted_answers": [
+        "Tämä on minun äitini."
+      ]
+    },
+    "s2-minulla-on-lapsi": {
+      "id": "s2-minulla-on-lapsi",
+      "surface_form": "Minulla on lapsi.",
+      "lemma": "Minulla on lapsi",
+      "translation_fa": "من فرزند دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family",
+        "possession"
+      ],
+      "example_fi": "Minulla on lapsi.",
+      "example_fa": "من فرزند دارم.",
+      "accepted_answers": [
+        "Minulla on lapsi."
+      ]
+    },
+    "s2-minun": {
+      "id": "s2-minun",
+      "surface_form": "minun",
+      "lemma": "minun",
+      "translation_fa": "مال من / منِ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession"
+      ],
+      "example_fi": "Minun nimeni on Sara.",
+      "example_fa": "نام من سارا است.",
+      "accepted_answers": [
+        "minun"
+      ]
+    },
+    "s2-nimi": {
+      "id": "s2-nimi",
+      "surface_form": "nimi",
+      "lemma": "nimi",
+      "translation_fa": "نام",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "personal-info"
+      ],
+      "example_fi": "Minun nimeni on Sara.",
+      "example_fa": "نام من سارا است.",
+      "accepted_answers": [
+        "nimi"
+      ]
+    },
+    "s2-koti": {
+      "id": "s2-koti",
+      "surface_form": "koti",
+      "lemma": "koti",
+      "translation_fa": "خانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "home",
+        "possession"
+      ],
+      "example_fi": "Minun kotini on Vaasassa.",
+      "example_fa": "خانهٔ من در واسا است.",
+      "accepted_answers": [
+        "koti"
+      ]
+    },
+    "s2-sinun": {
+      "id": "s2-sinun",
+      "surface_form": "sinun",
+      "lemma": "sinun",
+      "translation_fa": "مال تو / توِ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession"
+      ],
+      "example_fi": "Mikä sinun nimesi on?",
+      "example_fa": "نام تو چیست؟",
+      "accepted_answers": [
+        "sinun"
+      ]
+    },
+    "s2-minun-nimeni": {
+      "id": "s2-minun-nimeni",
+      "surface_form": "minun nimeni",
+      "lemma": "minun nimeni",
+      "translation_fa": "نام من",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession",
+        "personal-info"
+      ],
+      "example_fi": "Minun nimeni on Sara.",
+      "example_fa": "نام من سارا است.",
+      "accepted_answers": [
+        "minun nimeni"
+      ]
+    },
+    "s2-sinun-nimesi": {
+      "id": "s2-sinun-nimesi",
+      "surface_form": "sinun nimesi",
+      "lemma": "sinun nimesi",
+      "translation_fa": "نام تو",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession",
+        "personal-info"
+      ],
+      "example_fi": "Sinun nimesi on Leo.",
+      "example_fa": "نام تو لئو است.",
+      "accepted_answers": [
+        "sinun nimesi"
+      ]
+    },
+    "s2-minun-kotini": {
+      "id": "s2-minun-kotini",
+      "surface_form": "minun kotini",
+      "lemma": "minun kotini",
+      "translation_fa": "خانهٔ من",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession",
+        "home"
+      ],
+      "example_fi": "Minun kotini on Vaasassa.",
+      "example_fa": "خانهٔ من در واسا است.",
+      "accepted_answers": [
+        "minun kotini"
+      ]
+    },
+    "s2-num-nolla": {
+      "id": "s2-num-nolla",
+      "surface_form": "nolla",
+      "lemma": "nolla",
+      "translation_fa": "۰",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on nolla.",
+      "example_fa": "عدد ۰ است.",
+      "accepted_answers": [
+        "nolla"
+      ]
+    },
+    "s2-num-yksi": {
+      "id": "s2-num-yksi",
+      "surface_form": "yksi",
+      "lemma": "yksi",
+      "translation_fa": "۱",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yksi.",
+      "example_fa": "عدد ۱ است.",
+      "accepted_answers": [
+        "yksi"
+      ]
+    },
+    "s2-num-kaksi": {
+      "id": "s2-num-kaksi",
+      "surface_form": "kaksi",
+      "lemma": "kaksi",
+      "translation_fa": "۲",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kaksi.",
+      "example_fa": "عدد ۲ است.",
+      "accepted_answers": [
+        "kaksi"
+      ]
+    },
+    "s2-num-kolme": {
+      "id": "s2-num-kolme",
+      "surface_form": "kolme",
+      "lemma": "kolme",
+      "translation_fa": "۳",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kolme.",
+      "example_fa": "عدد ۳ است.",
+      "accepted_answers": [
+        "kolme"
+      ]
+    },
+    "s2-num-neljä": {
+      "id": "s2-num-neljä",
+      "surface_form": "neljä",
+      "lemma": "neljä",
+      "translation_fa": "۴",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on neljä.",
+      "example_fa": "عدد ۴ است.",
+      "accepted_answers": [
+        "neljä"
+      ]
+    },
+    "s2-num-viisi": {
+      "id": "s2-num-viisi",
+      "surface_form": "viisi",
+      "lemma": "viisi",
+      "translation_fa": "۵",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on viisi.",
+      "example_fa": "عدد ۵ است.",
+      "accepted_answers": [
+        "viisi"
+      ]
+    },
+    "s2-num-kuusi": {
+      "id": "s2-num-kuusi",
+      "surface_form": "kuusi",
+      "lemma": "kuusi",
+      "translation_fa": "۶",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kuusi.",
+      "example_fa": "عدد ۶ است.",
+      "accepted_answers": [
+        "kuusi"
+      ]
+    },
+    "s2-num-seitsemän": {
+      "id": "s2-num-seitsemän",
+      "surface_form": "seitsemän",
+      "lemma": "seitsemän",
+      "translation_fa": "۷",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on seitsemän.",
+      "example_fa": "عدد ۷ است.",
+      "accepted_answers": [
+        "seitsemän"
+      ]
+    },
+    "s2-num-kahdeksan": {
+      "id": "s2-num-kahdeksan",
+      "surface_form": "kahdeksan",
+      "lemma": "kahdeksan",
+      "translation_fa": "۸",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kahdeksan.",
+      "example_fa": "عدد ۸ است.",
+      "accepted_answers": [
+        "kahdeksan"
+      ]
+    },
+    "s2-num-yhdeksän": {
+      "id": "s2-num-yhdeksän",
+      "surface_form": "yhdeksän",
+      "lemma": "yhdeksän",
+      "translation_fa": "۹",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yhdeksän.",
+      "example_fa": "عدد ۹ است.",
+      "accepted_answers": [
+        "yhdeksän"
+      ]
+    },
+    "s2-num-kymmenen": {
+      "id": "s2-num-kymmenen",
+      "surface_form": "kymmenen",
+      "lemma": "kymmenen",
+      "translation_fa": "۱۰",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kymmenen.",
+      "example_fa": "عدد ۱۰ است.",
+      "accepted_answers": [
+        "kymmenen"
+      ]
+    },
+    "s2-num-yksitoista": {
+      "id": "s2-num-yksitoista",
+      "surface_form": "yksitoista",
+      "lemma": "yksitoista",
+      "translation_fa": "۱۱",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yksitoista.",
+      "example_fa": "عدد ۱۱ است.",
+      "accepted_answers": [
+        "yksitoista"
+      ]
+    },
+    "s2-num-kaksitoista": {
+      "id": "s2-num-kaksitoista",
+      "surface_form": "kaksitoista",
+      "lemma": "kaksitoista",
+      "translation_fa": "۱۲",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kaksitoista.",
+      "example_fa": "عدد ۱۲ است.",
+      "accepted_answers": [
+        "kaksitoista"
+      ]
+    },
+    "s2-num-kolmetoista": {
+      "id": "s2-num-kolmetoista",
+      "surface_form": "kolmetoista",
+      "lemma": "kolmetoista",
+      "translation_fa": "۱۳",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kolmetoista.",
+      "example_fa": "عدد ۱۳ است.",
+      "accepted_answers": [
+        "kolmetoista"
+      ]
+    },
+    "s2-num-neljätoista": {
+      "id": "s2-num-neljätoista",
+      "surface_form": "neljätoista",
+      "lemma": "neljätoista",
+      "translation_fa": "۱۴",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on neljätoista.",
+      "example_fa": "عدد ۱۴ است.",
+      "accepted_answers": [
+        "neljätoista"
+      ]
+    },
+    "s2-num-viisitoista": {
+      "id": "s2-num-viisitoista",
+      "surface_form": "viisitoista",
+      "lemma": "viisitoista",
+      "translation_fa": "۱۵",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on viisitoista.",
+      "example_fa": "عدد ۱۵ است.",
+      "accepted_answers": [
+        "viisitoista"
+      ]
+    },
+    "s2-num-kuusitoista": {
+      "id": "s2-num-kuusitoista",
+      "surface_form": "kuusitoista",
+      "lemma": "kuusitoista",
+      "translation_fa": "۱۶",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kuusitoista.",
+      "example_fa": "عدد ۱۶ است.",
+      "accepted_answers": [
+        "kuusitoista"
+      ]
+    },
+    "s2-num-seitsemäntoista": {
+      "id": "s2-num-seitsemäntoista",
+      "surface_form": "seitsemäntoista",
+      "lemma": "seitsemäntoista",
+      "translation_fa": "۱۷",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on seitsemäntoista.",
+      "example_fa": "عدد ۱۷ است.",
+      "accepted_answers": [
+        "seitsemäntoista"
+      ]
+    },
+    "s2-num-kahdeksantoista": {
+      "id": "s2-num-kahdeksantoista",
+      "surface_form": "kahdeksantoista",
+      "lemma": "kahdeksantoista",
+      "translation_fa": "۱۸",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kahdeksantoista.",
+      "example_fa": "عدد ۱۸ است.",
+      "accepted_answers": [
+        "kahdeksantoista"
+      ]
+    },
+    "s2-num-yhdeksäntoista": {
+      "id": "s2-num-yhdeksäntoista",
+      "surface_form": "yhdeksäntoista",
+      "lemma": "yhdeksäntoista",
+      "translation_fa": "۱۹",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yhdeksäntoista.",
+      "example_fa": "عدد ۱۹ است.",
+      "accepted_answers": [
+        "yhdeksäntoista"
+      ]
+    },
+    "s2-num-kaksikymmentä": {
+      "id": "s2-num-kaksikymmentä",
+      "surface_form": "kaksikymmentä",
+      "lemma": "kaksikymmentä",
+      "translation_fa": "۲۰",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kaksikymmentä.",
+      "example_fa": "عدد ۲۰ است.",
+      "accepted_answers": [
+        "kaksikymmentä"
+      ]
+    },
+    "s2-ika": {
+      "id": "s2-ika",
+      "surface_form": "ikä",
+      "lemma": "ikä",
+      "translation_fa": "سن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "personal-info",
+        "age"
+      ],
+      "example_fi": "Ikä: 12.",
+      "example_fa": "سن: ۱۲.",
+      "accepted_answers": [
+        "ikä"
+      ]
+    },
+    "s2-age-frame": {
+      "id": "s2-age-frame",
+      "surface_form": "Olen …-vuotias.",
+      "lemma": "Olen …-vuotias",
+      "translation_fa": "من ... ساله هستم.",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "age"
+      ],
+      "example_fi": "Olen 12-vuotias.",
+      "example_fa": "من ۱۲ ساله هستم.",
+      "accepted_answers": [
+        "Olen …-vuotias."
+      ]
+    },
+    "s2-kuinka-vanha": {
+      "id": "s2-kuinka-vanha",
+      "surface_form": "Kuinka vanha olet?",
+      "lemma": "Kuinka vanha olet",
+      "translation_fa": "چند سالت است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "age",
+        "questions"
+      ],
+      "example_fi": "Kuinka vanha olet?",
+      "example_fa": "چند سالت است؟",
+      "accepted_answers": [
+        "Kuinka vanha olet?"
+      ]
+    },
+    "s2-olen-12-vuotias": {
+      "id": "s2-olen-12-vuotias",
+      "surface_form": "Olen 12-vuotias.",
+      "lemma": "Olen 12-vuotias",
+      "translation_fa": "من ۱۲ ساله هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "age"
+      ],
+      "example_fi": "Olen 12-vuotias.",
+      "example_fa": "من ۱۲ ساله هستم.",
+      "accepted_answers": [
+        "Olen 12-vuotias."
+      ]
+    },
+    "s2-numero": {
+      "id": "s2-numero",
+      "surface_form": "numero",
+      "lemma": "numero",
+      "translation_fa": "شماره",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Mikä sinun numerosi on?",
+      "example_fa": "شمارهٔ تو چیست؟",
+      "accepted_answers": [
+        "numero"
+      ]
+    },
+    "s2-puhelinnumero": {
+      "id": "s2-puhelinnumero",
+      "surface_form": "puhelinnumero",
+      "lemma": "puhelinnumero",
+      "translation_fa": "شماره تلفن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Minun puhelinnumeroni on 040…",
+      "example_fa": "شماره تلفن من ۰۴۰... است.",
+      "accepted_answers": [
+        "puhelinnumero"
+      ]
+    },
+    "s2-osoite": {
+      "id": "s2-osoite",
+      "surface_form": "osoite",
+      "lemma": "osoite",
+      "translation_fa": "نشانی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Minun osoitteeni on…",
+      "example_fa": "نشانی من ... است.",
+      "accepted_answers": [
+        "osoite"
+      ]
+    },
+    "s2-katu": {
+      "id": "s2-katu",
+      "surface_form": "katu",
+      "lemma": "katu",
+      "translation_fa": "خیابان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Katu on pitkä.",
+      "example_fa": "خیابان طولانی است.",
+      "accepted_answers": [
+        "katu"
+      ]
+    },
+    "s2-mika-puhelinnumerosi": {
+      "id": "s2-mika-puhelinnumerosi",
+      "surface_form": "Mikä sinun puhelinnumerosi on?",
+      "lemma": "Mikä sinun puhelinnumerosi on",
+      "translation_fa": "شماره تلفن تو چیست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact",
+        "questions"
+      ],
+      "example_fi": "Mikä sinun puhelinnumerosi on?",
+      "example_fa": "شماره تلفن تو چیست؟",
+      "accepted_answers": [
+        "Mikä sinun puhelinnumerosi on?"
+      ]
+    },
+    "s2-minun-numeroni": {
+      "id": "s2-minun-numeroni",
+      "surface_form": "Minun numeroni on",
+      "lemma": "Minun numeroni on",
+      "translation_fa": "شمارهٔ من ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Minun numeroni on 040 123 4567.",
+      "example_fa": "شمارهٔ من ۰۴۰ ۱۲۳ ۴۵۶۷ است.",
+      "accepted_answers": [
+        "Minun numeroni on"
+      ]
+    },
+    "s2-contact-example": {
+      "id": "s2-contact-example",
+      "surface_form": "Minun numeroni on 040 123 4567.",
+      "lemma": "Minun numeroni on 040 123 4567",
+      "translation_fa": "شمارهٔ من ۰۴۰ ۱۲۳ ۴۵۶۷ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Minun numeroni on 040 123 4567.",
+      "example_fa": "شمارهٔ من ۰۴۰ ۱۲۳ ۴۵۶۷ است.",
+      "accepted_answers": [
+        "Minun numeroni on 040 123 4567."
+      ]
+    },
+    "s2-profile-name": {
+      "id": "s2-profile-name",
+      "surface_form": "Minun nimeni on Sara.",
+      "lemma": "Minun nimeni on Sara",
+      "translation_fa": "نام من سارا است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "profile"
+      ],
+      "example_fi": "Minun nimeni on Sara.",
+      "example_fa": "نام من سارا است.",
+      "accepted_answers": [
+        "Minun nimeni on Sara."
+      ]
+    },
+    "s2-profile-origin": {
+      "id": "s2-profile-origin",
+      "surface_form": "Olen Iranista.",
+      "lemma": "Olen Iranista",
+      "translation_fa": "من اهل ایران هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "profile"
+      ],
+      "example_fi": "Olen Iranista.",
+      "example_fa": "من اهل ایران هستم.",
+      "accepted_answers": [
+        "Olen Iranista."
+      ]
+    },
+    "s2-profile-live": {
+      "id": "s2-profile-live",
+      "surface_form": "Asun Vaasassa.",
+      "lemma": "Asun Vaasassa",
+      "translation_fa": "در واسا زندگی می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "profile"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "Asun Vaasassa."
+      ]
+    },
+    "s2-profile-lang": {
+      "id": "s2-profile-lang",
+      "surface_form": "Puhun persiaa.",
+      "lemma": "Puhun persiaa",
+      "translation_fa": "فارسی صحبت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "profile"
+      ],
+      "example_fi": "Puhun persiaa.",
+      "example_fa": "فارسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Puhun persiaa."
+      ]
+    },
+    "s2-profile-age": {
+      "id": "s2-profile-age",
+      "surface_form": "Olen 12-vuotias.",
+      "lemma": "Olen 12-vuotias",
+      "translation_fa": "من ۱۲ ساله هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "profile"
+      ],
+      "example_fi": "Olen 12-vuotias.",
+      "example_fa": "من ۱۲ ساله هستم.",
+      "accepted_answers": [
+        "Olen 12-vuotias."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "section-2-lesson-1",
+      "curriculum_id": "a1.1-s2-l01",
+      "order": 1,
+      "title_fa": "افراد و ضمیرها",
+      "objective_fa": "با ضمیرهای پایه دربارهٔ یک یا چند نفر صحبت کن.",
+      "summary_fa": "hän، me، te و he را همراه با شکل‌های پرکاربرد فعل olla در جمله‌های کوتاه می‌بینی.",
+      "grammar_fa": "در این سطح شکل‌ها را به‌صورت chunk یاد می‌گیری: Hän on، Me olemme، Te olette، He ovat.",
+      "new_targets": [
+        "s2-han",
+        "s2-me",
+        "s2-te",
+        "s2-he",
+        "s2-ystava",
+        "s2-me-olemme"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s2-han",
+          "s2-me",
+          "s2-he"
+        ],
+        "topic": [
+          "s2-ystava",
+          "s2-te"
+        ],
+        "expressions": [
+          "s2-han-on",
+          "s2-me-olemme",
+          "s2-te-olette",
+          "s2-he-ovat"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l02"
+      ]
+    },
+    {
+      "id": "section-2-lesson-2",
+      "curriculum_id": "a1.1-s2-l02",
+      "order": 2,
+      "title_fa": "کشور و اهل کجا بودن",
+      "objective_fa": "بگو اهل کجا هستی و همین سؤال را از دیگری بپرس.",
+      "summary_fa": "دو پاسخ کامل «Olen Suomesta.» و «Olen Iranista.» را همراه با سؤال «Mistä olet?» تمرین می‌کنی.",
+      "grammar_fa": "برای این درس شکل‌های Suomesta و Iranista صریح و کامل یاد گرفته می‌شوند؛ برنامه در زمان اجرا پسوند -sta/-stä را نمی‌سازد.",
+      "new_targets": [
+        "s2-mista",
+        "s2-suomi",
+        "s2-iran",
+        "s2-maa",
+        "s2-olen-suomesta",
+        "s2-olen-iranista"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s2-olen"
+        ],
+        "topic": [
+          "s2-suomi",
+          "s2-iran",
+          "s2-maa",
+          "s2-mista"
+        ],
+        "expressions": [
+          "s2-olen-suomesta",
+          "s2-olen-iranista",
+          "s2-mista-olet"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l02",
+        "a1.1-s2-l01"
+      ]
+    },
+    {
+      "id": "section-2-lesson-3",
+      "curriculum_id": "a1.1-s2-l03",
+      "order": 3,
+      "title_fa": "زبان‌ها",
+      "objective_fa": "بگو به چه زبان یا زبان‌هایی صحبت می‌کنی.",
+      "summary_fa": "نام سه زبان را همراه با جمله‌های کامل Puhun suomea / persiaa / englantia تمرین می‌کنی.",
+      "grammar_fa": "شکل‌های suomea، persiaa و englantia بعد از puhua صریحاً ذخیره شده‌اند و با چسباندن پسوند ساخته نمی‌شوند.",
+      "new_targets": [
+        "s2-suomi-lang",
+        "s2-persia",
+        "s2-englanti",
+        "s2-puhun",
+        "s2-puhun-suomea",
+        "s2-puhun-persiaa"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s2-suomi-lang",
+          "s2-persia",
+          "s2-englanti",
+          "s2-puhun"
+        ],
+        "expressions": [
+          "s2-puhun-suomea",
+          "s2-puhun-persiaa",
+          "s2-puhun-englantia",
+          "s2-puhun-vahan-suomea"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l02"
+      ]
+    },
+    {
+      "id": "section-2-lesson-4",
+      "curriculum_id": "a1.1-s2-l04",
+      "order": 4,
+      "title_fa": "کجا زندگی می‌کنم",
+      "objective_fa": "بگو کجا زندگی می‌کنی و محل زندگی دیگری را بپرس.",
+      "summary_fa": "Missä asut?، Asun Vaasassa. و Asun Helsingissä. را با شکل‌های کامل شهرها تمرین می‌کنی.",
+      "grammar_fa": "Vaasassa و Helsingissä به‌صورت کامل ذخیره شده‌اند؛ UI شکل مکانی را از نام شهر تولید نمی‌کند.",
+      "new_targets": [
+        "s2-missa",
+        "s2-kaupunki",
+        "s2-vaasa",
+        "s2-helsinki",
+        "s2-asun-vaasassa",
+        "s2-missa-asut"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s2-missa"
+        ],
+        "topic": [
+          "s2-kaupunki",
+          "s2-vaasa",
+          "s2-helsinki",
+          "s2-asun"
+        ],
+        "expressions": [
+          "s2-asun-vaasassa",
+          "s2-missa-asut"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l02",
+        "a1.1-s2-l03"
+      ]
+    },
+    {
+      "id": "section-2-lesson-5",
+      "curriculum_id": "a1.1-s2-l05",
+      "order": 5,
+      "title_fa": "خانوادهٔ من",
+      "objective_fa": "چند عضو نزدیک خانواده را نام ببر و یک نفر را معرفی کن.",
+      "summary_fa": "واژه‌های پایهٔ خانواده را یاد می‌گیری و با «Tämä on minun äitini.» و «Minulla on lapsi.» در جمله استفاده می‌کنی.",
+      "grammar_fa": "مالکیت فعلاً با دو الگوی کامل و آماده تمرین می‌شود؛ صرف کامل مالکیت موضوع درس بعدی است.",
+      "new_targets": [
+        "s2-perhe",
+        "s2-aiti",
+        "s2-isa",
+        "s2-sisar",
+        "s2-veli",
+        "s2-lapsi"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s2-perhe",
+          "s2-aiti",
+          "s2-isa",
+          "s2-sisar",
+          "s2-veli",
+          "s2-lapsi"
+        ],
+        "expressions": [
+          "s2-tama-on-minun-aitini",
+          "s2-minulla-on-lapsi"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l08",
+        "a1.1-s2-l01"
+      ]
+    },
+    {
+      "id": "section-2-lesson-6",
+      "curriculum_id": "a1.1-s2-l06",
+      "order": 6,
+      "title_fa": "مال چه کسی؟",
+      "objective_fa": "مالکیت خیلی ساده را با minun و sinun بیان کن.",
+      "summary_fa": "minun / sinun و سه ترکیب کامل minun nimeni، sinun nimesi و minun kotini را تمرین می‌کنی.",
+      "grammar_fa": "شکل‌های nimeni، nimesi و kotini به‌صورت chunk ذخیره شده‌اند و برنامه آن‌ها را در runtime صرف نمی‌کند.",
+      "new_targets": [
+        "s2-minun",
+        "s2-sinun",
+        "s2-nimi",
+        "s2-koti",
+        "s2-minun-nimeni",
+        "s2-sinun-nimesi"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s2-minun"
+        ],
+        "topic": [
+          "s2-nimi",
+          "s2-koti",
+          "s2-sinun"
+        ],
+        "expressions": [
+          "s2-minun-nimeni",
+          "s2-sinun-nimesi",
+          "s2-minun-kotini"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l02",
+        "a1.1-s2-l05"
+      ]
+    },
+    {
+      "id": "section-2-lesson-7",
+      "curriculum_id": "a1.1-s2-l07",
+      "order": 7,
+      "title_fa": "سن و اعداد ۰ تا ۲۰",
+      "objective_fa": "اعداد صفر تا بیست را بفهم و سن خود را با یک الگوی آماده بگو.",
+      "summary_fa": "همهٔ اعداد ۰ تا ۲۰ در یک جدول مرجع دیده می‌شوند و سپس با شنیدن، انتخاب و نوشتن تمرین می‌شوند.",
+      "grammar_fa": "برای سن از الگوی Olen …-vuotias. استفاده می‌کنیم. نمونهٔ کامل Olen 12-vuotias. صریحاً در داده وجود دارد.",
+      "new_targets": [
+        "s2-num-nolla",
+        "s2-num-yksi",
+        "s2-num-kaksi",
+        "s2-num-kolme",
+        "s2-num-neljä",
+        "s2-num-viisi",
+        "s2-num-kuusi",
+        "s2-num-seitsemän",
+        "s2-num-kahdeksan",
+        "s2-num-yhdeksän",
+        "s2-num-kymmenen",
+        "s2-num-yksitoista",
+        "s2-num-kaksitoista",
+        "s2-num-kolmetoista",
+        "s2-num-neljätoista",
+        "s2-num-viisitoista",
+        "s2-num-kuusitoista",
+        "s2-num-seitsemäntoista",
+        "s2-num-kahdeksantoista",
+        "s2-num-yhdeksäntoista",
+        "s2-num-kaksikymmentä",
+        "s2-ika"
+      ],
+      "display_targets": [
+        "s2-num-nolla",
+        "s2-num-yksi",
+        "s2-num-kaksi",
+        "s2-num-kolme",
+        "s2-num-kymmenen",
+        "s2-num-kaksikymmenta"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "s2-num-yksi",
+          "s2-num-kaksi",
+          "s2-num-kolme"
+        ],
+        "topic": [
+          "s2-num-nolla",
+          "s2-num-nelja",
+          "s2-num-viisi",
+          "s2-num-kuusi",
+          "s2-num-seitseman",
+          "s2-num-kahdeksan",
+          "s2-num-yhdeksan",
+          "s2-num-kymmenen",
+          "s2-num-yksitoista",
+          "s2-num-kaksitoista",
+          "s2-num-kolmetoista",
+          "s2-num-neljatoista",
+          "s2-num-viisitoista",
+          "s2-num-kuusitoista",
+          "s2-num-seitsemantoista",
+          "s2-num-kahdeksantoista",
+          "s2-num-yhdeksantoista",
+          "s2-num-kaksikymmenta",
+          "s2-ika"
+        ],
+        "expressions": [
+          "s2-age-frame",
+          "s2-kuinka-vanha"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l02"
+      ],
+      "activities": [
+        {
+          "type": "number-grid",
+          "items": [
+            "s2-num-nolla",
+            "s2-num-yksi",
+            "s2-num-kaksi",
+            "s2-num-kolme",
+            "s2-num-neljä",
+            "s2-num-viisi",
+            "s2-num-kuusi",
+            "s2-num-seitsemän",
+            "s2-num-kahdeksan",
+            "s2-num-yhdeksän",
+            "s2-num-kymmenen",
+            "s2-num-yksitoista",
+            "s2-num-kaksitoista",
+            "s2-num-kolmetoista",
+            "s2-num-neljätoista",
+            "s2-num-viisitoista",
+            "s2-num-kuusitoista",
+            "s2-num-seitsemäntoista",
+            "s2-num-kahdeksantoista",
+            "s2-num-yhdeksäntoista",
+            "s2-num-kaksikymmentä"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-age-frame"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-num-nolla",
+          "options": [
+            "s2-num-kaksi",
+            "s2-num-nolla",
+            "s2-num-viisi",
+            "s2-num-kymmenen"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-num-seitseman",
+          "options": [
+            "s2-num-kuusi",
+            "s2-num-kahdeksan",
+            "s2-num-seitseman",
+            "s2-num-yhdeksan"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kymmenen"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "s2-num-kaksitoista",
+          "options": [
+            "s2-num-yksitoista",
+            "s2-num-kaksitoista",
+            "s2-num-kolmetoista",
+            "s2-num-neljatoista"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-num-kaksikymmenta",
+          "options": [
+            "s2-num-kymmenen",
+            "s2-num-viisitoista",
+            "s2-num-yhdeksantoista",
+            "s2-num-kaksikymmenta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-ika",
+          "options": [
+            "s2-ika",
+            "s2-koti",
+            "s2-nimi",
+            "s2-numero"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-kuinka-vanha"
+        },
+        {
+          "type": "teach",
+          "item": "s2-olen-12-vuotias"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-nelja"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-num-viisitoista",
+          "options": [
+            "s2-num-kaksitoista",
+            "s2-num-viisitoista",
+            "s2-num-kahdeksantoista",
+            "s2-num-kaksikymmenta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-num-kahdeksantoista",
+          "options": [
+            "s2-num-kuusitoista",
+            "s2-num-seitsemantoista",
+            "s2-num-kahdeksantoista",
+            "s2-num-yhdeksantoista"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "s2-olen-12-vuotias"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-kuinka-vanha",
+          "options": [
+            "s2-mista-olet",
+            "s2-missa-asut",
+            "s2-kuinka-vanha",
+            "s2-mika-puhelinnumerosi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2-lesson-8",
+      "curriculum_id": "a1.1-s2-l08",
+      "order": 8,
+      "title_fa": "اطلاعات تماس",
+      "objective_fa": "شماره تلفن یا نشانی خیلی کوتاه را با کمک بفهم و بیان کن.",
+      "summary_fa": "واژه‌های شماره، شماره تلفن، نشانی و خیابان را همراه با سؤال و پاسخ کوتاه تمرین می‌کنی.",
+      "grammar_fa": "شماره تلفن در این سطح می‌تواند رقم‌به‌رقم خوانده شود؛ الگوی سؤال و پاسخ کامل ذخیره شده است.",
+      "new_targets": [
+        "s2-numero",
+        "s2-puhelinnumero",
+        "s2-osoite",
+        "s2-katu",
+        "s2-mika-puhelinnumerosi",
+        "s2-contact-example"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [
+          "s2-numero",
+          "s2-puhelinnumero",
+          "s2-osoite",
+          "s2-katu"
+        ],
+        "expressions": [
+          "s2-mika-puhelinnumerosi",
+          "s2-minun-numeroni"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l06",
+        "a1.1-s2-l07"
+      ]
+    },
+    {
+      "id": "section-2-lesson-9",
+      "curriculum_id": "a1.1-s2-l09",
+      "order": 9,
+      "title_fa": "پروفایل شخصی کوتاه",
+      "objective_fa": "چند جملهٔ کوتاه و پیوسته دربارهٔ یک نفر بفهم و دربارهٔ خودت بساز.",
+      "summary_fa": "نام، کشور، محل زندگی، زبان و سن را در قالب یک پروفایل کوتاه کنار هم می‌گذاری.",
+      "grammar_fa": "این درس گرامر جدید ندارد؛ فقط جمله‌های کامل و بازبینی‌شدهٔ درس‌های قبل را ترکیب می‌کند.",
+      "new_targets": [],
+      "practice_targets": [
+        "s2-profile-name",
+        "s2-profile-origin",
+        "s2-profile-live",
+        "s2-profile-lang",
+        "s2-profile-age"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "s2-minun-nimeni-on",
+          "s2-olen-suomesta",
+          "s2-olen-iranista",
+          "s2-asun-vaasassa",
+          "s2-asun-helsingissa",
+          "s2-puhun-suomea",
+          "s2-puhun-persiaa",
+          "s2-puhun-englantia"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l02",
+        "a1.1-s2-l03",
+        "a1.1-s2-l04",
+        "a1.1-s2-l07",
+        "a1.1-s2-l08"
+      ]
+    },
+    {
+      "id": "section-2-lesson-10",
+      "curriculum_id": "a1.1-s2-l10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۲",
+      "objective_fa": "اطلاعات شخصی پایه را ردوبدل کن و افراد نزدیک را معرفی کن.",
+      "summary_fa": "پایان بخش ۲، اطلاعات شخصی، خانواده، اعداد و چند عبارت بازیابی‌شده از بخش ۱ را با هم مرور می‌کند.",
+      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ هدف بازیابی سریع شکل‌های کامل و درست است.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.1-s2-l01",
+        "a1.1-s2-l02",
+        "a1.1-s2-l03",
+        "a1.1-s2-l04",
+        "a1.1-s2-l05",
+        "a1.1-s2-l06",
+        "a1.1-s2-l07",
+        "a1.1-s2-l08",
+        "a1.1-s2-l09"
+      ],
+      "checkpoint_targets": [
+        "s2-hei",
+        "s2-han",
+        "s2-olen-iranista",
+        "s2-mista-olet",
+        "s2-puhun-persiaa",
+        "s2-asun-vaasassa",
+        "s2-missa-asut",
+        "s2-aiti",
+        "s2-tama-on-minun-aitini",
+        "s2-minun",
+        "s2-num-kaksitoista",
+        "s2-kuinka-vanha",
+        "s2-puhelinnumero",
+        "s2-mika-puhelinnumerosi",
+        "s2-profile-name"
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
+      ]
+    }
+  ]
+}
