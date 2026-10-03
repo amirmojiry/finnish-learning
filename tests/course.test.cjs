@@ -436,3 +436,19 @@ test('course runtime loads both implemented section files and renders multi-sect
   assert.match(styles, /\.course-section-open/);
   assert.match(styles, /\.course-number-grid/);
 });
+
+
+test('language lesson practices every declared curriculum expression', () => {
+  const lesson = section2.lessons.find((entry) => entry.curriculum_id === 'a1.1-s2-l03');
+  const practiced = new Set();
+  for (const activity of lesson.activities) {
+    if (activity.item) practiced.add(activity.item);
+    for (const itemId of activity.turns || []) practiced.add(itemId);
+    for (const itemId of activity.items || []) practiced.add(itemId);
+  }
+  for (const itemId of lesson.curriculum_target_refs.expressions) {
+    assert.ok(practiced.has(itemId), 'unpracticed language expression: ' + itemId);
+  }
+  assert.ok(lesson.activities.some((activity) => activity.item === 's2-puhun-englantia' && activity.type === 'type'));
+  assert.ok(lesson.activities.some((activity) => activity.item === 's2-puhun-vahan-suomea' && activity.type !== 'teach'));
+});
