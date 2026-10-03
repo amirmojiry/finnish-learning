@@ -10,6 +10,7 @@
   const SECTION_URLS = [
     './data/course/a1.1-section-1.json',
     './data/course/a1.1-section-2.json',
+    './data/course/a1.1-section-3.json',
   ];
   const SECTION_URL = SECTION_URLS[0];
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
@@ -253,6 +254,38 @@
           if (!Array.isArray(activity.items) || activity.items.length < 2) throw new Error(`Invalid number grid in ${lesson.id}`);
           for (const itemId of activity.items) {
             if (!section.items[itemId]) throw new Error(`Unknown number-grid item: ${itemId}`);
+          }
+          continue;
+        }
+        if (activity.type === 'sequence-order') {
+          if (!Array.isArray(activity.items) || activity.items.length < 2) throw new Error(`Invalid sequence activity in ${lesson.id}`);
+          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== activity.items.length) throw new Error(`Invalid sequence answer in ${lesson.id}`);
+          const expected = Array.from({ length: activity.items.length }, (_, index) => index).sort((a, b) => a - b);
+          const actual = [...activity.answer_order].sort((a, b) => a - b);
+          if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error(`Sequence answer must be a permutation in ${lesson.id}`);
+          for (const itemId of activity.items) {
+            if (!section.items[itemId]) throw new Error(`Unknown sequence item: ${itemId}`);
+          }
+          continue;
+        }
+        if (activity.type === 'clock-choice') {
+          if (!Number.isInteger(activity.hour) || activity.hour < 0 || activity.hour > 23) throw new Error(`Invalid clock hour in ${lesson.id}`);
+          if (!section.items[activity.item]) throw new Error(`Unknown clock item: ${activity.item}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.item)) throw new Error(`Clock choice must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) {
+            if (!section.items[optionId]) throw new Error(`Unknown clock option: ${optionId}`);
+          }
+          continue;
+        }
+        if (activity.type === 'negative-transform') {
+          if (!section.items[activity.affirmative_item] || !section.items[activity.negative_item]) throw new Error(`Invalid negative transform in ${lesson.id}`);
+          if (!acceptedAnswers(section.items[activity.negative_item]).length) throw new Error(`Negative transform lacks accepted answer in ${lesson.id}`);
+          continue;
+        }
+        if (activity.type === 'guided-writing') {
+          if (!Array.isArray(activity.expected_items) || activity.expected_items.length !== 3) throw new Error(`Guided writing must define three sentences in ${lesson.id}`);
+          for (const itemId of activity.expected_items) {
+            if (!section.items[itemId] || !acceptedAnswers(section.items[itemId]).length) throw new Error(`Invalid guided-writing item: ${itemId}`);
           }
           continue;
         }
@@ -693,6 +726,10 @@
 
     function questionHeading(activity) {
       if (activity.type === 'number-grid') return 'اعداد را ببین و با صدای بلند مرور کن.';
+      if (activity.type === 'sequence-order') return activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
+      if (activity.type === 'clock-choice') return 'ساعت درست را به فنلاندی انتخاب کن.';
+      if (activity.type === 'negative-transform') return 'جمله را به شکل منفی تبدیل کن.';
+      if (activity.type === 'guided-writing') return 'سه جملهٔ راهنمایی‌شده را به فنلاندی بنویس.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
@@ -706,7 +743,9 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = activity.type === 'dialogue-order' || activity.type === 'number-grid' ? null : section.items[activity.item];
+      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing'].includes(activity.type)
+        ? null
+        : section.items[activity.item];
       root.replaceChildren();
 
       const shell = document.createElement('section');
@@ -787,6 +826,185 @@
           grid.append(cell);
         }
         card.append(instruction, grid, createButton('ادامه', 'primary-button course-next-button', nextActivity));
+      } else if (activity.type === 'sequence-order') {
+        const instruction = document.createElement('p');
+        instruction.className = 'course-sequence-instruction';
+        instruction.textContent = activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
+        card.append(instruction);
+
+        const ordered = [];
+        const items = document.createElement('div');
+        items.className = 'course-sequence-options';
+        activity.items.forEach((itemId, index) => {
+          const sequenceItem = section.items[itemId];
+          const button = createButton(sequenceItem.surface_form, 'course-option', () => {
+            if (answered || ordered.includes(index)) return;
+            ordered.push(index);
+            button.disabled = true;
+            button.dataset.order = String(ordered.length);
+            button.textContent = `${toPersianNumber(ordered.length)}. ${sequenceItem.surface_form}`;
+            if (ordered.length === activity.items.length) {
+              answered = true;
+              sessionGraded += 1;
+              const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+              if (correct) sessionCorrect += 1;
+              const result = document.createElement('div');
+              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+              const title = document.createElement('strong');
+              title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را مرور کن.';
+              const review = document.createElement('div');
+              review.className = 'course-sequence-review';
+              for (const answerIndex of activity.answer_order) {
+                const line = document.createElement('p');
+                line.lang = 'fi';
+                line.dir = 'ltr';
+                line.textContent = section.items[activity.items[answerIndex]].surface_form;
+                review.append(line);
+              }
+              result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+              card.append(result);
+            }
+          });
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          items.append(button);
+        });
+        card.append(items);
+      } else if (activity.type === 'clock-choice') {
+        const clock = document.createElement('div');
+        clock.className = 'course-clock-face';
+        clock.setAttribute('role', 'img');
+        clock.setAttribute('aria-label', `ساعت ${toPersianNumber(activity.hour)}`);
+        const twelve = document.createElement('span');
+        twelve.className = 'course-clock-twelve';
+        twelve.textContent = '12';
+        const six = document.createElement('span');
+        six.className = 'course-clock-six';
+        six.textContent = '6';
+        const hand = document.createElement('span');
+        hand.className = 'course-clock-hand';
+        hand.style.transform = `translateX(-50%) rotate(${(activity.hour % 12) * 30}deg)`;
+        clock.append(twelve, six, hand);
+
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, section.items[activity.item]);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(clock, options, feedback);
+      } else if (activity.type === 'negative-transform') {
+        const affirmative = section.items[activity.affirmative_item];
+        const negative = section.items[activity.negative_item];
+        const focus = document.createElement('strong');
+        focus.className = 'course-focus-word';
+        focus.lang = 'fi';
+        focus.dir = 'ltr';
+        focus.textContent = affirmative.surface_form;
+        const hint = document.createElement('p');
+        hint.className = 'course-transform-hint';
+        hint.textContent = 'با en و شکل منفیِ درست بنویس.';
+        const form = document.createElement('form');
+        form.className = 'course-typing-form';
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.lang = 'fi';
+        input.dir = 'ltr';
+        input.autocomplete = 'off';
+        input.autocapitalize = 'none';
+        input.spellcheck = false;
+        input.setAttribute('aria-label', 'جملهٔ منفی فنلاندی');
+        const submit = document.createElement('button');
+        submit.type = 'submit';
+        submit.className = 'primary-button compact';
+        submit.textContent = 'بررسی';
+        form.append(input, submit);
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (answered || !input.value.trim()) return;
+          answered = true;
+          sessionGraded += 1;
+          const correct = isTypedAnswerCorrect(negative, input.value);
+          if (correct) sessionCorrect += 1;
+          input.disabled = true;
+          submit.disabled = true;
+          input.classList.add(correct ? 'correct' : 'wrong');
+          showFeedback(feedback, correct, negative);
+        });
+        card.append(focus, hint, form, feedback);
+        windowObject.setTimeout(() => input.focus(), 0);
+      } else if (activity.type === 'guided-writing') {
+        const form = document.createElement('form');
+        form.className = 'course-guided-writing';
+        const rows = [];
+        activity.expected_items.forEach((itemId, index) => {
+          const expected = section.items[itemId];
+          const row = document.createElement('label');
+          row.className = 'course-guided-writing-row';
+          const promptText = document.createElement('span');
+          promptText.textContent = `${toPersianNumber(index + 1)}. ${expected.translation_fa}`;
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.lang = 'fi';
+          input.dir = 'ltr';
+          input.autocomplete = 'off';
+          input.autocapitalize = 'none';
+          input.spellcheck = false;
+          row.append(promptText, input);
+          form.append(row);
+          rows.push({ input, expected });
+        });
+        const submit = document.createElement('button');
+        submit.type = 'submit';
+        submit.className = 'primary-button compact';
+        submit.textContent = 'بررسی سه جمله';
+        form.append(submit);
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (answered || rows.some(({ input }) => !input.value.trim())) return;
+          answered = true;
+          sessionGraded += 1;
+          const results = rows.map(({ input, expected }) => isTypedAnswerCorrect(expected, input.value));
+          const correct = results.every(Boolean);
+          if (correct) sessionCorrect += 1;
+          rows.forEach(({ input }, index) => {
+            input.disabled = true;
+            input.classList.add(results[index] ? 'correct' : 'wrong');
+          });
+          submit.disabled = true;
+          const result = document.createElement('div');
+          result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+          const title = document.createElement('strong');
+          title.textContent = correct ? 'هر سه جمله درست بود.' : 'پاسخ‌های نمونه را مرور کن.';
+          const review = document.createElement('div');
+          review.className = 'course-guided-writing-review';
+          for (const { expected } of rows) {
+            const line = document.createElement('p');
+            line.lang = 'fi';
+            line.dir = 'ltr';
+            line.textContent = expected.surface_form;
+            review.append(line);
+          }
+          result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+          card.append(result);
+        });
+        card.append(form);
       } else if (activity.type === 'dialogue-order') {
         const instruction = document.createElement('p');
         instruction.className = 'course-dialogue-instruction';
