@@ -145,3 +145,42 @@ test('topic vocabulary contains only learnable Finnish lexical targets', () => {
     assert.ok(!lesson.topic_targets.includes('negation'), `${lesson.id} leaks a grammar label into topic vocabulary`);
   }
 });
+
+
+test('language lesson supplies explicit partitive forms for assessed production', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const lesson = lessons.find((item) => item.id === 'a1.1-s2-l03');
+  for (const expression of ['Puhun suomea.','Puhun persiaa.','Puhun englantia.']) {
+    assert.ok(lesson.expressions.includes(expression), `Missing explicit language expression: ${expression}`);
+  }
+});
+
+test('personal profile uses complete reviewed forms instead of suffix concatenation', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const lesson = lessons.find((item) => item.id === 'a1.1-s2-l09');
+  const serialized = JSON.stringify(lesson);
+  assert.doesNotMatch(serialized, /…sta\.|…ssa\.|…a\./);
+  for (const expression of ['Olen Suomesta.','Olen Iranista.','Asun Vaasassa.','Asun Helsingissä.','Puhun persiaa.']) {
+    assert.ok(lesson.expressions.includes(expression), `Missing complete profile expression: ${expression}`);
+  }
+});
+
+test('prototype mapping agrees with per-lesson prototype sources', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const reverse = new Map();
+
+  for (const lesson of lessons) {
+    for (const source of lesson.prototype_sources) {
+      if (!reverse.has(source)) reverse.set(source, []);
+      reverse.get(source).push(lesson.id);
+    }
+  }
+
+  for (const mapping of curriculum.prototype_mapping.mappings) {
+    assert.deepEqual(
+      [...mapping.destinations].sort(),
+      [...(reverse.get(mapping.prototype_lesson) || [])].sort(),
+      `${mapping.prototype_lesson} has inconsistent prototype lineage`,
+    );
+  }
+});
