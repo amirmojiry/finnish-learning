@@ -45,7 +45,7 @@
           "title_en": "Greetings",
           "title_fa": "سلام و احوال‌پرسی",
           "can_do_en": "Greet and say goodbye in a few routine situations.",
-          "can_do_fa": "Greet and say goodbye in a few routine situations.",
+          "can_do_fa": "در چند موقعیت روزمره سلام کند و خداحافظی کند.",
           "high_frequency_targets": [
             "on",
             "ja"
@@ -75,8 +75,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Choose and produce an appropriate greeting in 4 of 5 routine prompts.",
-            "criterion_fa": "Choose and produce an appropriate greeting in 4 of 5 routine prompts."
+            "criterion_en": "Choose and produce an appropriate greeting in 4 of 5 routine prompts."
           },
           "prototype_sources": [
             "lesson-1"
@@ -88,7 +87,7 @@
           "title_en": "My name",
           "title_fa": "نام من",
           "can_do_en": "Say your name and ask another person's name.",
-          "can_do_fa": "Say your name and ask another person's name.",
+          "can_do_fa": "نام خود را بگوید و نام طرف مقابل را بپرسد.",
           "high_frequency_targets": [
             "minä",
             "sinä",
@@ -119,8 +118,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Complete a two-turn introduction without hints.",
-            "criterion_fa": "Complete a two-turn introduction without hints."
+            "criterion_en": "Complete a two-turn introduction without hints."
           },
           "prototype_sources": [
             "lesson-2",
@@ -133,7 +131,7 @@
           "title_en": "How are you?",
           "title_fa": "حالت چطور است؟",
           "can_do_en": "Ask how someone is and give a short conventional answer.",
-          "can_do_fa": "Ask how someone is and give a short conventional answer.",
+          "can_do_fa": "حال طرف مقابل را بپرسد و یک پاسخ کوتاه و معمول بدهد.",
           "high_frequency_targets": [
             "mitä",
             "hyvä"
@@ -165,8 +163,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Respond appropriately to three common wellbeing prompts.",
-            "criterion_fa": "Respond appropriately to three common wellbeing prompts."
+            "criterion_en": "Respond appropriately to three common wellbeing prompts."
           },
           "prototype_sources": [
             "lesson-3"
@@ -178,7 +175,7 @@
           "title_en": "Yes, no and simple negation",
           "title_fa": "بله، نه و منفی ساده",
           "can_do_en": "Answer yes/no and say that someone or something is not something.",
-          "can_do_fa": "Answer yes/no and say that someone or something is not something.",
+          "can_do_fa": "با بله و نه پاسخ دهد و یک نفی بسیار ساده بسازد.",
           "high_frequency_targets": [
             "kyllä",
             "ei",
@@ -211,8 +208,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Choose and produce affirmative/negative replies in 4 of 5 prompts.",
-            "criterion_fa": "Choose and produce affirmative/negative replies in 4 of 5 prompts."
+            "criterion_en": "Choose and produce affirmative/negative replies in 4 of 5 prompts."
           },
           "prototype_sources": [
             "lesson-7"
@@ -224,7 +220,7 @@
           "title_en": "Who and what?",
           "title_fa": "چه کسی و چه چیزی؟",
           "can_do_en": "Ask who a person is and what a familiar object is.",
-          "can_do_fa": "Ask who a person is and what a familiar object is.",
+          "can_do_fa": "بپرسد یک شخص چه کسی است یا یک شیء آشنا چیست.",
           "high_frequency_targets": [
             "kuka",
             "mikä",
@@ -258,8 +254,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Form the correct kuka/mikä question for 4 of 5 supported situations.",
-            "criterion_fa": "Form the correct kuka/mikä question for 4 of 5 supported situations."
+            "criterion_en": "Form the correct kuka/mikä question for 4 of 5 supported situations."
           },
           "prototype_sources": [
             "lesson-3",
@@ -272,7 +267,7 @@
           "title_en": "Polite basics",
           "title_fa": "عبارت‌های مودبانه",
           "can_do_en": "Thank, apologize and use a basic polite response.",
-          "can_do_fa": "Thank, apologize and use a basic polite response.",
+          "can_do_fa": "تشکر کند، عذرخواهی کند و از پاسخ‌های مودبانهٔ پایه استفاده کند.",
           "high_frequency_targets": [
             "kiitos"
           ],
@@ -302,8 +297,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Select the culturally appropriate polite expression in 4 of 5 mini-dialogues.",
-            "criterion_fa": "Select the culturally appropriate polite expression in 4 of 5 mini-dialogues."
+            "criterion_en": "Select the culturally appropriate polite expression in 4 of 5 mini-dialogues."
           },
           "prototype_sources": [
             "lesson-1"
@@ -315,7 +309,7 @@
           "title_en": "I do not understand",
           "title_fa": "متوجه نمی‌شوم",
           "can_do_en": "Signal lack of understanding and ask for repetition or slower speech.",
-          "can_do_fa": "Signal lack of understanding and ask for repetition or slower speech.",
+          "can_do_fa": "بگوید متوجه نمی‌شود و درخواست تکرار یا آهسته‌تر صحبت‌کردن کند.",
           "high_frequency_targets": [
             "en"
           ],
@@ -347,8 +341,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Use an appropriate repair phrase in three supported communication breakdowns.",
-            "criterion_fa": "Use an appropriate repair phrase in three supported communication breakdowns."
+            "criterion_en": "Use an appropriate repair phrase in three supported communication breakdowns."
           },
           "prototype_sources": [],
           "order": 7
@@ -358,7 +351,7 @@
           "title_en": "This and that",
           "title_fa": "این و آن",
           "can_do_en": "Identify a few familiar objects using this/that.",
-          "can_do_fa": "Identify a few familiar objects using this/that.",
+          "can_do_fa": "چند شیء آشنا را با «این» و «آن» معرفی کند.",
           "high_frequency_targets": [
             "tämä",
             "se",
@@ -392,8 +385,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Describe five pictured familiar objects with tämä/se + on.",
-            "criterion_fa": "Describe five pictured familiar objects with tämä/se + on."
+            "criterion_en": "Describe five pictured familiar objects with tämä/se + on."
           },
           "prototype_sources": [
             "lesson-7"
@@ -405,7 +397,7 @@
           "title_en": "First mini-dialogues",
           "title_fa": "گفت‌وگوهای کوتاه اول",
           "can_do_en": "Combine greetings, name, wellbeing and repair phrases in short exchanges.",
-          "can_do_fa": "Combine greetings, name, wellbeing and repair phrases in short exchanges.",
+          "can_do_fa": "سلام، معرفی، حال‌واحوال و درخواست کمک را در گفت‌وگوهای کوتاه ترکیب کند.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [
@@ -435,8 +427,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Complete two four-turn scripted dialogues with at most one hint.",
-            "criterion_fa": "Complete two four-turn scripted dialogues with at most one hint."
+            "criterion_en": "Complete two four-turn scripted dialogues with at most one hint."
           },
           "prototype_sources": [],
           "order": 9
@@ -446,7 +437,7 @@
           "title_en": "Section 1 checkpoint",
           "title_fa": "ایستگاه مرور بخش ۱",
           "can_do_en": "Handle a supported first-contact interaction using the section's core language.",
-          "can_do_fa": "Handle a supported first-contact interaction using the section's core language.",
+          "can_do_fa": "یک تعامل اولیهٔ کوتاه را با زبان اصلی این بخش انجام دهد.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [],
@@ -474,8 +465,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks.",
-            "criterion_fa": "Reach at least 80% first-attempt accuracy across mixed section tasks."
+            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks."
           },
           "prototype_sources": [
             "lesson-10"
@@ -497,7 +487,7 @@
           "title_en": "People and pronouns",
           "title_fa": "افراد و ضمیرها",
           "can_do_en": "Refer to one or more people with basic personal pronouns.",
-          "can_do_fa": "Refer to one or more people with basic personal pronouns.",
+          "can_do_fa": "با ضمیرهای شخصی پایه دربارهٔ یک یا چند نفر صحبت کند.",
           "high_frequency_targets": [
             "hän",
             "me",
@@ -529,8 +519,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Choose the correct pronoun and olla form in 4 of 5 supported sentences.",
-            "criterion_fa": "Choose the correct pronoun and olla form in 4 of 5 supported sentences."
+            "criterion_en": "Choose the correct pronoun and olla form in 4 of 5 supported sentences."
           },
           "prototype_sources": [
             "lesson-4"
@@ -542,7 +531,7 @@
           "title_en": "Country and origin",
           "title_fa": "کشور و اهل کجا بودن",
           "can_do_en": "Say where you are from and ask another person.",
-          "can_do_fa": "Say where you are from and ask another person.",
+          "can_do_fa": "بگوید اهل کجاست و همین سؤال را از دیگری بپرسد.",
           "high_frequency_targets": [
             "mistä",
             "olen"
@@ -576,8 +565,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Ask and answer an origin question with a supported country name.",
-            "criterion_fa": "Ask and answer an origin question with a supported country name."
+            "criterion_en": "Ask and answer an origin question with a supported country name."
           },
           "prototype_sources": [
             "lesson-5"
@@ -589,7 +577,7 @@
           "title_en": "Languages",
           "title_fa": "زبان‌ها",
           "can_do_en": "Say which language or languages you speak.",
-          "can_do_fa": "Say which language or languages you speak.",
+          "can_do_fa": "بگوید به چه زبان یا زبان‌هایی صحبت می‌کند.",
           "high_frequency_targets": [
             "puhun"
           ],
@@ -620,8 +608,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Produce a correct Puhun + language sentence for two languages.",
-            "criterion_fa": "Produce a correct Puhun + language sentence for two languages."
+            "criterion_en": "Produce a correct Puhun + language sentence for two languages."
           },
           "prototype_sources": [
             "lesson-5"
@@ -633,7 +620,7 @@
           "title_en": "Where I live",
           "title_fa": "کجا زندگی می‌کنم",
           "can_do_en": "Say where you live and ask where another person lives.",
-          "can_do_fa": "Say where you live and ask where another person lives.",
+          "can_do_fa": "بگوید کجا زندگی می‌کند و محل زندگی دیگری را بپرسد.",
           "high_frequency_targets": [
             "missä",
             "asun"
@@ -666,8 +653,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Ask and answer where someone lives using one familiar city.",
-            "criterion_fa": "Ask and answer where someone lives using one familiar city."
+            "criterion_en": "Ask and answer where someone lives using one familiar city."
           },
           "prototype_sources": [
             "lesson-5"
@@ -679,7 +665,7 @@
           "title_en": "My family",
           "title_fa": "خانواده من",
           "can_do_en": "Name a few close family members.",
-          "can_do_fa": "Name a few close family members.",
+          "can_do_fa": "چند عضو نزدیک خانواده را نام ببرد.",
           "high_frequency_targets": [
             "lapsi"
           ],
@@ -713,8 +699,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Identify five close family roles and introduce one person.",
-            "criterion_fa": "Identify five close family roles and introduce one person."
+            "criterion_en": "Identify five close family roles and introduce one person."
           },
           "prototype_sources": [
             "lesson-6"
@@ -726,7 +711,7 @@
           "title_en": "Whose?",
           "title_fa": "مال چه کسی؟",
           "can_do_en": "Express very simple possession with my/your.",
-          "can_do_fa": "Express very simple possession with my/your.",
+          "can_do_fa": "مالکیت بسیار ساده را با «من» و «تو» بیان کند.",
           "high_frequency_targets": [
             "minun",
             "sinun"
@@ -759,8 +744,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Distinguish and produce minun/sinun in four supported ownership prompts.",
-            "criterion_fa": "Distinguish and produce minun/sinun in four supported ownership prompts."
+            "criterion_en": "Distinguish and produce minun/sinun in four supported ownership prompts."
           },
           "prototype_sources": [
             "lesson-2",
@@ -773,7 +757,7 @@
           "title_en": "Age and numbers 0–20",
           "title_fa": "سن و اعداد ۰ تا ۲۰",
           "can_do_en": "Say your age and understand numbers from zero to twenty.",
-          "can_do_fa": "Say your age and understand numbers from zero to twenty.",
+          "can_do_fa": "سن خود را بگوید و اعداد صفر تا بیست را بفهمد.",
           "high_frequency_targets": [
             "yksi",
             "kaksi",
@@ -805,8 +789,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Recognize 8 of 10 spoken numbers and state an age correctly.",
-            "criterion_fa": "Recognize 8 of 10 spoken numbers and state an age correctly."
+            "criterion_en": "Recognize 8 of 10 spoken numbers and state an age correctly."
           },
           "prototype_sources": [],
           "order": 7
@@ -816,7 +799,7 @@
           "title_en": "Contact details",
           "title_fa": "اطلاعات تماس",
           "can_do_en": "Understand and give a very short phone number or address with support.",
-          "can_do_fa": "Understand and give a very short phone number or address with support.",
+          "can_do_fa": "با کمک، شماره تلفن یا نشانی بسیار کوتاه را بفهمد و بیان کند.",
           "high_frequency_targets": [
             "numero"
           ],
@@ -848,8 +831,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Fill a simple contact card from a slow spoken or written prompt.",
-            "criterion_fa": "Fill a simple contact card from a slow spoken or written prompt."
+            "criterion_en": "Fill a simple contact card from a slow spoken or written prompt."
           },
           "prototype_sources": [],
           "order": 8
@@ -859,7 +841,7 @@
           "title_en": "A short personal profile",
           "title_fa": "پروفایل شخصی کوتاه",
           "can_do_en": "Understand and produce a few linked sentences about a person.",
-          "can_do_fa": "Understand and produce a few linked sentences about a person.",
+          "can_do_fa": "چند جملهٔ پیوسته دربارهٔ اطلاعات شخصی یک فرد بفهمد و تولید کند.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [
@@ -890,8 +872,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Extract four facts from a short profile and write a four-sentence supported profile.",
-            "criterion_fa": "Extract four facts from a short profile and write a four-sentence supported profile."
+            "criterion_en": "Extract four facts from a short profile and write a four-sentence supported profile."
           },
           "prototype_sources": [],
           "order": 9
@@ -901,7 +882,7 @@
           "title_en": "Section 2 checkpoint",
           "title_fa": "ایستگاه مرور بخش ۲",
           "can_do_en": "Exchange basic personal information and identify close people.",
-          "can_do_fa": "Exchange basic personal information and identify close people.",
+          "can_do_fa": "اطلاعات شخصی پایه ردوبدل کند و افراد نزدیک را معرفی کند.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [],
@@ -929,8 +910,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks.",
-            "criterion_fa": "Reach at least 80% first-attempt accuracy across mixed section tasks."
+            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks."
           },
           "prototype_sources": [],
           "order": 10
@@ -950,7 +930,7 @@
           "title_en": "Today and tomorrow",
           "title_fa": "امروز و فردا",
           "can_do_en": "Distinguish today, tomorrow and yesterday in simple statements.",
-          "can_do_fa": "Distinguish today, tomorrow and yesterday in simple statements.",
+          "can_do_fa": "امروز، فردا و دیروز را در جمله‌های ساده تشخیص دهد.",
           "high_frequency_targets": [
             "tänään",
             "huomenna"
@@ -980,8 +960,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Choose the correct day reference in 4 of 5 prompts.",
-            "criterion_fa": "Choose the correct day reference in 4 of 5 prompts."
+            "criterion_en": "Choose the correct day reference in 4 of 5 prompts."
           },
           "prototype_sources": [],
           "order": 1
@@ -991,7 +970,7 @@
           "title_en": "Days of the week",
           "title_fa": "روزهای هفته",
           "can_do_en": "Recognize and name the days of the week.",
-          "can_do_fa": "Recognize and name the days of the week.",
+          "can_do_fa": "روزهای هفته را تشخیص دهد و نام ببرد.",
           "high_frequency_targets": [],
           "topic_targets": [
             "maanantai",
@@ -1024,8 +1003,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Order all seven weekdays and identify a spoken weekday.",
-            "criterion_fa": "Order all seven weekdays and identify a spoken weekday."
+            "criterion_en": "Order all seven weekdays and identify a spoken weekday."
           },
           "prototype_sources": [],
           "order": 2
@@ -1035,7 +1013,7 @@
           "title_en": "Whole hours",
           "title_fa": "ساعت‌های کامل",
           "can_do_en": "Understand and say simple whole-hour times.",
-          "can_do_fa": "Understand and say simple whole-hour times.",
+          "can_do_fa": "ساعت‌های کامل ساده را بفهمد و بیان کند.",
           "high_frequency_targets": [
             "kello"
           ],
@@ -1065,8 +1043,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Recognize and state four whole-hour times.",
-            "criterion_fa": "Recognize and state four whole-hour times."
+            "criterion_en": "Recognize and state four whole-hour times."
           },
           "prototype_sources": [],
           "order": 3
@@ -1076,7 +1053,7 @@
           "title_en": "Parts of the day",
           "title_fa": "بخش‌های روز",
           "can_do_en": "Talk about morning, daytime and evening with simple routine phrases.",
-          "can_do_fa": "Talk about morning, daytime and evening with simple routine phrases.",
+          "can_do_fa": "دربارهٔ صبح، روز و شب با عبارت‌های سادهٔ روزمره صحبت کند.",
           "high_frequency_targets": [
             "nyt"
           ],
@@ -1108,8 +1085,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Match four routine events to the correct part of the day.",
-            "criterion_fa": "Match four routine events to the correct part of the day."
+            "criterion_en": "Match four routine events to the correct part of the day."
           },
           "prototype_sources": [],
           "order": 4
@@ -1119,7 +1095,7 @@
           "title_en": "Common actions: I",
           "title_fa": "کارهای روزمره: من",
           "can_do_en": "Say a few common things you do.",
-          "can_do_fa": "Say a few common things you do.",
+          "can_do_fa": "چند کار روزمرهٔ رایج خود را بیان کند.",
           "high_frequency_targets": [
             "menen",
             "tulen"
@@ -1155,8 +1131,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Produce four supported minä + present-tense routine sentences.",
-            "criterion_fa": "Produce four supported minä + present-tense routine sentences."
+            "criterion_en": "Produce four supported minä + present-tense routine sentences."
           },
           "prototype_sources": [],
           "order": 5
@@ -1166,7 +1141,7 @@
           "title_en": "Common actions: you",
           "title_fa": "کارهای روزمره: تو",
           "can_do_en": "Ask what another person does in a few familiar situations.",
-          "can_do_fa": "Ask what another person does in a few familiar situations.",
+          "can_do_fa": "دربارهٔ چند کار آشنا از طرف مقابل سؤال کند.",
           "high_frequency_targets": [
             "mitä",
             "teet"
@@ -1198,8 +1173,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Ask two practiced routine questions and understand short replies.",
-            "criterion_fa": "Ask two practiced routine questions and understand short replies."
+            "criterion_en": "Ask two practiced routine questions and understand short replies."
           },
           "prototype_sources": [],
           "order": 6
@@ -1209,7 +1183,7 @@
           "title_en": "I do not …",
           "title_fa": "من ... نمی‌کنم",
           "can_do_en": "Negate a few familiar routine verbs.",
-          "can_do_fa": "Negate a few familiar routine verbs.",
+          "can_do_fa": "چند فعل روزمرهٔ آشنا را در اول‌شخص منفی کند.",
           "high_frequency_targets": [
             "en"
           ],
@@ -1239,8 +1213,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Turn four familiar affirmative minä sentences into negatives.",
-            "criterion_fa": "Turn four familiar affirmative minä sentences into negatives."
+            "criterion_en": "Turn four familiar affirmative minä sentences into negatives."
           },
           "prototype_sources": [],
           "order": 7
@@ -1250,7 +1223,7 @@
           "title_en": "When?",
           "title_fa": "چه زمانی؟",
           "can_do_en": "Ask and answer when a simple event happens.",
-          "can_do_fa": "Ask and answer when a simple event happens.",
+          "can_do_fa": "زمان یک رویداد ساده را بپرسد و پاسخ کوتاه بدهد.",
           "high_frequency_targets": [
             "milloin"
           ],
@@ -1283,8 +1256,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Match five simple events with an appropriate time answer.",
-            "criterion_fa": "Match five simple events with an appropriate time answer."
+            "criterion_en": "Match five simple events with an appropriate time answer."
           },
           "prototype_sources": [],
           "order": 8
@@ -1294,7 +1266,7 @@
           "title_en": "My simple day",
           "title_fa": "روز سادهٔ من",
           "can_do_en": "Understand and produce a short sequence describing a routine day.",
-          "can_do_fa": "Understand and produce a short sequence describing a routine day.",
+          "can_do_fa": "یک توالی کوتاه از برنامهٔ روزانه را بفهمد و بیان کند.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [
@@ -1323,8 +1295,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Order a five-event routine and produce three linked supported sentences.",
-            "criterion_fa": "Order a five-event routine and produce three linked supported sentences."
+            "criterion_en": "Order a five-event routine and produce three linked supported sentences."
           },
           "prototype_sources": [],
           "order": 9
@@ -1334,7 +1305,7 @@
           "title_en": "Section 3 checkpoint",
           "title_fa": "ایستگاه مرور بخش ۳",
           "can_do_en": "Handle a highly supported exchange about day, time and routine.",
-          "can_do_fa": "Handle a highly supported exchange about day, time and routine.",
+          "can_do_fa": "دربارهٔ روز، ساعت و برنامهٔ روزانه یک گفت‌وگوی بسیار هدایت‌شده انجام دهد.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [],
@@ -1362,8 +1333,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks.",
-            "criterion_fa": "Reach at least 80% first-attempt accuracy across mixed section tasks."
+            "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks."
           },
           "prototype_sources": [],
           "order": 10
@@ -1383,7 +1353,7 @@
           "title_en": "Home and rooms",
           "title_fa": "خانه و اتاق‌ها",
           "can_do_en": "Name a few common places in a home.",
-          "can_do_fa": "Name a few common places in a home.",
+          "can_do_fa": "چند مکان رایج در خانه را نام ببرد.",
           "high_frequency_targets": [
             "koti"
           ],
@@ -1417,8 +1387,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Identify five familiar home locations from pictures.",
-            "criterion_fa": "Identify five familiar home locations from pictures."
+            "criterion_en": "Identify five familiar home locations from pictures."
           },
           "prototype_sources": [
             "lesson-6"
@@ -1430,7 +1399,7 @@
           "title_en": "Where is it?",
           "title_fa": "کجاست؟",
           "can_do_en": "Say where a familiar object is using a few fixed location patterns.",
-          "can_do_fa": "Say where a familiar object is using a few fixed location patterns.",
+          "can_do_fa": "با چند الگوی مکانی ثابت بگوید یک شیء آشنا کجاست.",
           "high_frequency_targets": [
             "missä",
             "on"
@@ -1464,8 +1433,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Answer four supported Missä? questions with a practiced location phrase.",
-            "criterion_fa": "Answer four supported Missä? questions with a practiced location phrase."
+            "criterion_en": "Answer four supported Missä? questions with a practiced location phrase."
           },
           "prototype_sources": [
             "lesson-7"
@@ -1477,7 +1445,7 @@
           "title_en": "Food and drink",
           "title_fa": "خوراک و نوشیدنی",
           "can_do_en": "Recognize and name a few very common foods and drinks.",
-          "can_do_fa": "Recognize and name a few very common foods and drinks.",
+          "can_do_fa": "چند خوراکی و نوشیدنی بسیار رایج را تشخیص دهد و نام ببرد.",
           "high_frequency_targets": [
             "vesi"
           ],
@@ -1510,8 +1478,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Recognize five common food/drink items in pictures and slow audio.",
-            "criterion_fa": "Recognize five common food/drink items in pictures and slow audio."
+            "criterion_en": "Recognize five common food/drink items in pictures and slow audio."
           },
           "prototype_sources": [],
           "order": 3
@@ -1521,7 +1488,7 @@
           "title_en": "I want …",
           "title_fa": "من ... می‌خواهم",
           "can_do_en": "Express one or two basic wants involving familiar food or drink.",
-          "can_do_fa": "Express one or two basic wants involving familiar food or drink.",
+          "can_do_fa": "یکی دو خواسته یا نیاز پایه دربارهٔ خوراک و نوشیدنی را بیان کند.",
           "high_frequency_targets": [
             "haluan"
           ],
@@ -1553,8 +1520,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Produce three supported want/need phrases with familiar items.",
-            "criterion_fa": "Produce three supported want/need phrases with familiar items."
+            "criterion_en": "Produce three supported want/need phrases with familiar items."
           },
           "prototype_sources": [],
           "order": 4
@@ -1564,7 +1530,7 @@
           "title_en": "A very simple café order",
           "title_fa": "سفارش خیلی ساده در کافه",
           "can_do_en": "Make a minimal polite order for one familiar item.",
-          "can_do_fa": "Make a minimal polite order for one familiar item.",
+          "can_do_fa": "در یک کافه سفارش بسیار ساده و مودبانه بدهد.",
           "high_frequency_targets": [
             "yksi"
           ],
@@ -1597,8 +1563,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Complete a three-turn café dialogue for one item.",
-            "criterion_fa": "Complete a three-turn café dialogue for one item."
+            "criterion_en": "Complete a three-turn café dialogue for one item."
           },
           "prototype_sources": [],
           "order": 5
@@ -1608,7 +1573,7 @@
           "title_en": "Familiar animals 1",
           "title_fa": "حیوانات آشنا ۱",
           "can_do_en": "Recognize and name five common animals.",
-          "can_do_fa": "Recognize and name five common animals.",
+          "can_do_fa": "پنج حیوان رایج را تشخیص دهد و نام ببرد.",
           "high_frequency_targets": [],
           "topic_targets": [
             "koira",
@@ -1639,8 +1604,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Identify and name five common animals.",
-            "criterion_fa": "Identify and name five common animals."
+            "criterion_en": "Identify and name five common animals."
           },
           "prototype_sources": [
             "lesson-8"
@@ -1652,7 +1616,7 @@
           "title_en": "Familiar animals 2",
           "title_fa": "حیوانات آشنا ۲",
           "can_do_en": "Recognize five more familiar animals and group them broadly.",
-          "can_do_fa": "Recognize five more familiar animals and group them broadly.",
+          "can_do_fa": "پنج حیوان آشنای دیگر را تشخیص دهد و به‌طور کلی دسته‌بندی کند.",
           "high_frequency_targets": [],
           "topic_targets": [
             "lehmä",
@@ -1683,8 +1647,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Identify five additional animals and classify familiar examples as animals.",
-            "criterion_fa": "Identify five additional animals and classify familiar examples as animals."
+            "criterion_en": "Identify five additional animals and classify familiar examples as animals."
           },
           "prototype_sources": [
             "lesson-9"
@@ -1696,7 +1659,7 @@
           "title_en": "Simple descriptions",
           "title_fa": "توصیف ساده",
           "can_do_en": "Describe a familiar person, object or animal with one basic adjective.",
-          "can_do_fa": "Describe a familiar person, object or animal with one basic adjective.",
+          "can_do_fa": "یک شخص، شیء یا حیوان آشنا را با یک صفت پایه توصیف کند.",
           "high_frequency_targets": [
             "iso",
             "pieni"
@@ -1729,8 +1692,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Produce four supported noun + on + adjective descriptions.",
-            "criterion_fa": "Produce four supported noun + on + adjective descriptions."
+            "criterion_en": "Produce four supported noun + on + adjective descriptions."
           },
           "prototype_sources": [],
           "order": 8
@@ -1740,7 +1702,7 @@
           "title_en": "My familiar world",
           "title_fa": "دنیای آشنای من",
           "can_do_en": "Combine home, food, people and familiar objects in a few very short sentences.",
-          "can_do_fa": "Combine home, food, people and familiar objects in a few very short sentences.",
+          "can_do_fa": "خانه، خوراک، افراد و اشیای آشنا را در چند جملهٔ بسیار کوتاه ترکیب کند.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [
@@ -1772,8 +1734,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Understand a five-sentence familiar-world text and produce four supported sentences.",
-            "criterion_fa": "Understand a five-sentence familiar-world text and produce four supported sentences."
+            "criterion_en": "Understand a five-sentence familiar-world text and produce four supported sentences."
           },
           "prototype_sources": [],
           "order": 9
@@ -1783,7 +1744,7 @@
           "title_en": "A1.1 final checkpoint",
           "title_fa": "آزمون پایانی A1.1",
           "can_do_en": "Use memorized and highly practiced language across the core A1.1 situations.",
-          "can_do_fa": "Use memorized and highly practiced language across the core A1.1 situations.",
+          "can_do_fa": "در موقعیت‌های اصلی A1.1 از زبان حفظ‌شده و بسیار تمرین‌شده استفاده کند.",
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [],
@@ -1817,8 +1778,7 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Reach at least 80% first-attempt accuracy and complete one supported mini-dialogue plus one short profile/routine task.",
-            "criterion_fa": "Reach at least 80% first-attempt accuracy and complete one supported mini-dialogue plus one short profile/routine task."
+            "criterion_en": "Reach at least 80% first-attempt accuracy and complete one supported mini-dialogue plus one short profile/routine task."
           },
           "prototype_sources": [
             "lesson-10"
