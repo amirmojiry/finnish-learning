@@ -762,15 +762,32 @@
             "kolme"
           ],
           "topic_targets": [
-            "numero",
+            "nolla",
+            "neljä",
+            "viisi",
+            "kuusi",
+            "seitsemän",
+            "kahdeksan",
+            "yhdeksän",
+            "kymmenen",
+            "yksitoista",
+            "kaksitoista",
+            "kolmetoista",
+            "neljätoista",
+            "viisitoista",
+            "kuusitoista",
+            "seitsemäntoista",
+            "kahdeksantoista",
+            "yhdeksäntoista",
+            "kaksikymmentä",
             "ikä"
           ],
           "expressions": [
-            "Olen … vuotta.",
+            "Olen …-vuotias.",
             "Kuinka vanha olet?"
           ],
           "grammar_focus": [
-            "cardinal numbers 0–20; age frame"
+            "cardinal numbers 0–20; age frame with -vuotias"
           ],
           "recycle_from": [
             "a1.1-s1-l02"
@@ -1181,9 +1198,7 @@
           "high_frequency_targets": [
             "en"
           ],
-          "topic_targets": [
-            "negation"
-          ],
+          "topic_targets": [],
           "expressions": [
             "En puhu englantia.",
             "En työskentele tänään."
