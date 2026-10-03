@@ -206,3 +206,31 @@ test('mini-dialogue lesson implements dialogue ordering and two four-turn assess
   assert.ok(lesson.activities.some((activity) => activity.type === 'choice' && activity.mode === 'listen'));
   assert.ok(lesson.activities.some((activity) => activity.type === 'type'));
 });
+
+
+test('generated choice activities rotate the correct option position', () => {
+  const generated = course.buildStandardActivities(['a','b','c','d'], ['old-1','old-2']);
+  const choiceActivities = generated.filter((activity) => activity.type === 'choice');
+  const positions = choiceActivities.map((activity) => activity.options.indexOf(activity.item));
+  assert.ok(new Set(positions).size > 1, 'correct answer should not always occupy the same option position');
+});
+
+test('six-target lessons retain typed production practice', () => {
+  const generated = course.buildStandardActivities(['a','b','c','d','e','f'], ['old']);
+  assert.ok(generated.some((activity) => activity.type === 'type' && activity.mode === 'finnish'));
+  assert.ok(generated.some((activity) => activity.type === 'type' && activity.mode === 'cloze'));
+});
+
+test('dialogue ordering activities are presented scrambled', () => {
+  const lesson = section.lessons.find((entry) => entry.curriculum_id === 'a1.1-s1-l09');
+  for (const activity of lesson.activities.filter((entry) => entry.type === 'dialogue-order')) {
+    assert.notDeepEqual(activity.answer_order, [0,1,2,3]);
+  }
+});
+
+test('English and Persian feature bullets agree that Section 1 is implemented', () => {
+  const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
+  const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
+  assert.match(en, /real curriculum-driven A1\.1 Section 1/);
+  assert.match(fa, /بخش اول واقعی و curriculum-driven سطح A1\.1/);
+});
