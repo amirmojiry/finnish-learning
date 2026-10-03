@@ -228,7 +228,7 @@
       "accepted_answers": [
         "pöytä"
       ],
-      "visual": "🪑"
+      "visual": "🟫"
     },
     "s4-tuoli": {
       "id": "s4-tuoli",
@@ -2107,11 +2107,11 @@
         {
           "type": "prompt-choice",
           "prompt_item": "s4-location-q-cat",
-          "answer_item": "s4-se-on-sangylla",
+          "answer_item": "s4-se-on-huoneessa",
           "options": [
+            "s4-se-on-poydalla",
             "s4-se-on-huoneessa",
             "s4-se-on-sangylla",
-            "s4-se-on-poydalla",
             "s4-se-on-tuolilla"
           ]
         },
