@@ -6,26 +6,30 @@ const path = require('node:path');
 const course = require('../course.js');
 const ROOT = path.resolve(__dirname, '..');
 const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-1.json'), 'utf8'));
+const curriculum = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-curriculum.json'), 'utf8'));
 const vocabulary = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'common-words.json'), 'utf8'));
-const section = course.validateSection(rawSection);
+const section = course.validateSectionAgainstCurriculum(course.validateSection(rawSection), curriculum);
 
-test('the sample A1.1 section contains ten deterministic fifteen-activity lessons', () => {
-  const rebuiltSection = course.validateSection(rawSection);
+test('A1.1 Section 1 contains ten deterministic curriculum-driven fifteen-activity lessons', () => {
+  const rebuiltSection = course.validateSectionAgainstCurriculum(course.validateSection(rawSection), curriculum);
   assert.notEqual(section, rawSection);
   assert.equal(section.level, 'A1.1');
+  assert.equal(section.curriculum_section_id, 'a1.1-s1');
   assert.equal(section.lessons.length, 10);
   assert.equal(section.activity_count_per_lesson, 15);
   assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
-  assert.equal(Object.keys(section.items).length, 45);
+  assert.equal(Object.keys(section.items).length, 59);
+  assert.deepEqual(
+    section.lessons.map((lesson) => lesson.curriculum_id),
+    curriculum.sections[0].lessons.map((lesson) => lesson.id),
+  );
   assert.deepEqual(rebuiltSection.lessons.map((lesson) => lesson.activities), section.lessons.map((lesson) => lesson.activities));
 });
 
-test('the section combines curriculum topics with source-aware frequency metadata', () => {
-  const animals = Object.values(section.items).filter((item) => item.topics.includes('animals'));
+test('the implemented section combines course content with source-aware frequency metadata', () => {
   const rankBySurface = new Map(
     vocabulary.words.map((entry) => [entry.word.normalize('NFC').toLocaleLowerCase('fi-FI'), entry.frequency_rank]),
   );
-  assert.equal(animals.length, 10);
   for (const item of Object.values(section.items)) {
     const key = item.surface_form.normalize('NFC').toLocaleLowerCase('fi-FI');
     const expectedRank = rankBySurface.get(key);
@@ -43,7 +47,9 @@ test('the section combines curriculum topics with source-aware frequency metadat
   assert.equal(section.items.sina.frequency_rank, 202);
   assert.equal(section.items.han.frequency_rank, 7);
   assert.equal(section.items.ei.frequency_rank, 3);
-  assert.equal(section.items.hirvi.frequency_status, 'unranked');
+  assert.ok(section.items['en-ymmarra']);
+  assert.ok(section.items['mika-tama-on']);
+  assert.ok(section.items.anteeksi);
   assert.ok(Object.values(section.items).some((item) => item.item_type === 'expression'));
   assert.ok(Object.values(section.items).some((item) => item.item_type === 'sentence_frame'));
 });
@@ -114,4 +120,40 @@ test('desktop and mobile navigation stay contained and focused', () => {
   assert.match(coreStyles, /\/\* Desktop navigation polish \*\/[\s\S]*\.site-header nav/);
   assert.match(courseStyles, /\/\* Five-item mobile navigation fit \*\/[\s\S]*flex-wrap:\s*nowrap/);
   assert.match(courseStyles, /\.bottom-nav-item\s*\{[\s\S]*?max-width:\s*none/);
+});
+
+
+test('each implemented lesson carries learner-facing summary and grammar content', () => {
+  for (const lesson of section.lessons) {
+    assert.ok(lesson.summary_fa, lesson.id);
+    assert.ok(lesson.grammar_fa, lesson.id);
+    assert.match(lesson.curriculum_id, /^a1\.1-s1-l\d{2}$/);
+  }
+});
+
+test('six-target lessons expose every declared target in deterministic activities', () => {
+  for (const lesson of section.lessons.filter((entry) => entry.new_targets.length === 6)) {
+    const practiced = new Set(lesson.activities.map((activity) => activity.item));
+    for (const target of lesson.new_targets) {
+      assert.ok(practiced.has(target), `${lesson.id} never practices ${target}`);
+    }
+  }
+});
+
+test('review-only mini-dialogue lesson is deterministic and introduces no fake new target', () => {
+  const lesson = section.lessons.find((entry) => entry.curriculum_id === 'a1.1-s1-l09');
+  assert.deepEqual(lesson.new_targets, []);
+  assert.equal(lesson.practice_targets.length, 5);
+  assert.equal(lesson.activities.length, 15);
+});
+
+test('course UI is wired to both curriculum and implemented section data', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(source, /CURRICULUM_URL/);
+  assert.match(source, /validateSectionAgainstCurriculum/);
+  assert.match(source, /course-section-catalog/);
+  assert.match(source, /به‌زودی/);
+  assert.match(styles, /\.course-section-grid/);
+  assert.match(styles, /\.course-lesson-intro/);
 });
