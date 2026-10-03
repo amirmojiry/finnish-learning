@@ -15,10 +15,6 @@
   ],
   "lesson_defaults": {
     "target_activity_count": 15,
-    "new_lexical_target_range": [
-      3,
-      6
-    ],
     "required_fields": [
       "can_do_en",
       "can_do_fa",
@@ -30,7 +26,12 @@
       "activity_families",
       "skills",
       "assessment"
-    ]
+    ],
+    "recommended_new_lexical_target_range": [
+      3,
+      6
+    ],
+    "lexical_target_count_policy": "advisory range; each lesson declares and is validated against lexical_target_count"
   },
   "sections": [
     {
@@ -53,11 +54,13 @@
           ],
           "topic_targets": [
             "hei",
-            "moi"
+            "moi",
+            "huomenta"
           ],
           "expressions": [
             "Hei!",
             "Moi!",
+            "Hyvää huomenta!",
             "Näkemiin!"
           ],
           "grammar_focus": [
@@ -81,7 +84,8 @@
           "prototype_sources": [
             "lesson-1"
           ],
-          "order": 1
+          "order": 1,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s1-l02",
@@ -125,7 +129,8 @@
             "lesson-2",
             "lesson-3"
           ],
-          "order": 2
+          "order": 2,
+          "lexical_target_count": 4
         },
         {
           "id": "a1.1-s1-l03",
@@ -169,7 +174,8 @@
           "prototype_sources": [
             "lesson-3"
           ],
-          "order": 3
+          "order": 3,
+          "lexical_target_count": 3
         },
         {
           "id": "a1.1-s1-l04",
@@ -214,7 +220,8 @@
           "prototype_sources": [
             "lesson-7"
           ],
-          "order": 4
+          "order": 4,
+          "lexical_target_count": 4
         },
         {
           "id": "a1.1-s1-l05",
@@ -261,7 +268,8 @@
             "lesson-3",
             "lesson-7"
           ],
-          "order": 5
+          "order": 5,
+          "lexical_target_count": 6
         },
         {
           "id": "a1.1-s1-l06",
@@ -302,7 +310,8 @@
           "prototype_sources": [
             "lesson-1"
           ],
-          "order": 6
+          "order": 6,
+          "lexical_target_count": 2
         },
         {
           "id": "a1.1-s1-l07",
@@ -344,7 +353,8 @@
             "criterion_en": "Use an appropriate repair phrase in three supported communication breakdowns."
           },
           "prototype_sources": [],
-          "order": 7
+          "order": 7,
+          "lexical_target_count": 3
         },
         {
           "id": "a1.1-s1-l08",
@@ -390,7 +400,8 @@
           "prototype_sources": [
             "lesson-7"
           ],
-          "order": 8
+          "order": 8,
+          "lexical_target_count": 6
         },
         {
           "id": "a1.1-s1-l09",
@@ -430,7 +441,8 @@
             "criterion_en": "Complete two four-turn scripted dialogues with at most one hint."
           },
           "prototype_sources": [],
-          "order": 9
+          "order": 9,
+          "lexical_target_count": 0
         },
         {
           "id": "a1.1-s1-l10",
@@ -470,7 +482,8 @@
           "prototype_sources": [
             "lesson-10"
           ],
-          "order": 10
+          "order": 10,
+          "lexical_target_count": 0
         }
       ]
     },
@@ -494,15 +507,17 @@
             "he"
           ],
           "topic_targets": [
-            "ystävä"
+            "ystävä",
+            "te"
           ],
           "expressions": [
             "Hän on …",
             "Me olemme …",
+            "Te olette …",
             "He ovat …"
           ],
           "grammar_focus": [
-            "personal pronouns; olla 3sg/1pl/3pl as chunks"
+            "personal pronouns; olla 3sg/1pl/2pl/3pl as chunks"
           ],
           "recycle_from": [
             "a1.1-s1-l02"
@@ -524,7 +539,8 @@
           "prototype_sources": [
             "lesson-4"
           ],
-          "order": 1
+          "order": 1,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s2-l02",
@@ -570,7 +586,8 @@
           "prototype_sources": [
             "lesson-5"
           ],
-          "order": 2
+          "order": 2,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s2-l03",
@@ -614,7 +631,8 @@
           "prototype_sources": [
             "lesson-5"
           ],
-          "order": 3
+          "order": 3,
+          "lexical_target_count": 4
         },
         {
           "id": "a1.1-s2-l04",
@@ -659,7 +677,8 @@
           "prototype_sources": [
             "lesson-5"
           ],
-          "order": 4
+          "order": 4,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s2-l05",
@@ -704,7 +723,8 @@
           "prototype_sources": [
             "lesson-6"
           ],
-          "order": 5
+          "order": 5,
+          "lexical_target_count": 6
         },
         {
           "id": "a1.1-s2-l06",
@@ -750,7 +770,8 @@
             "lesson-2",
             "lesson-6"
           ],
-          "order": 6
+          "order": 6,
+          "lexical_target_count": 4
         },
         {
           "id": "a1.1-s2-l07",
@@ -809,7 +830,8 @@
             "criterion_en": "Recognize 8 of 10 spoken numbers and state an age correctly."
           },
           "prototype_sources": [],
-          "order": 7
+          "order": 7,
+          "lexical_target_count": 22
         },
         {
           "id": "a1.1-s2-l08",
@@ -850,7 +872,8 @@
             "criterion_en": "Fill a simple contact card from a slow spoken or written prompt."
           },
           "prototype_sources": [],
-          "order": 8
+          "order": 8,
+          "lexical_target_count": 4
         },
         {
           "id": "a1.1-s2-l09",
@@ -895,7 +918,8 @@
             "criterion_en": "Extract four facts from a short profile and write a four-sentence supported profile."
           },
           "prototype_sources": [],
-          "order": 9
+          "order": 9,
+          "lexical_target_count": 0
         },
         {
           "id": "a1.1-s2-l10",
@@ -933,7 +957,8 @@
             "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks."
           },
           "prototype_sources": [],
-          "order": 10
+          "order": 10,
+          "lexical_target_count": 0
         }
       ]
     },
@@ -982,7 +1007,8 @@
             "criterion_en": "Choose the correct day reference in 4 of 5 prompts."
           },
           "prototype_sources": [],
-          "order": 1
+          "order": 1,
+          "lexical_target_count": 3
         },
         {
           "id": "a1.1-s3-l02",
@@ -1025,7 +1051,8 @@
             "criterion_en": "Order all seven weekdays and identify a spoken weekday."
           },
           "prototype_sources": [],
-          "order": 2
+          "order": 2,
+          "lexical_target_count": 7
         },
         {
           "id": "a1.1-s3-l03",
@@ -1064,7 +1091,8 @@
             "criterion_en": "Recognize and state four whole-hour times."
           },
           "prototype_sources": [],
-          "order": 3
+          "order": 3,
+          "lexical_target_count": 3
         },
         {
           "id": "a1.1-s3-l04",
@@ -1106,7 +1134,8 @@
             "criterion_en": "Match four routine events to the correct part of the day."
           },
           "prototype_sources": [],
-          "order": 4
+          "order": 4,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s3-l05",
@@ -1151,7 +1180,8 @@
             "criterion_en": "Produce four supported minä + present-tense routine sentences."
           },
           "prototype_sources": [],
-          "order": 5
+          "order": 5,
+          "lexical_target_count": 7
         },
         {
           "id": "a1.1-s3-l06",
@@ -1193,7 +1223,8 @@
             "criterion_en": "Ask two practiced routine questions and understand short replies."
           },
           "prototype_sources": [],
-          "order": 6
+          "order": 6,
+          "lexical_target_count": 4
         },
         {
           "id": "a1.1-s3-l07",
@@ -1231,7 +1262,8 @@
             "criterion_en": "Turn four familiar affirmative minä sentences into negatives."
           },
           "prototype_sources": [],
-          "order": 7
+          "order": 7,
+          "lexical_target_count": 1
         },
         {
           "id": "a1.1-s3-l08",
@@ -1273,7 +1305,8 @@
             "criterion_en": "Match five simple events with an appropriate time answer."
           },
           "prototype_sources": [],
-          "order": 8
+          "order": 8,
+          "lexical_target_count": 2
         },
         {
           "id": "a1.1-s3-l09",
@@ -1312,7 +1345,8 @@
             "criterion_en": "Order a five-event routine and produce three linked supported sentences."
           },
           "prototype_sources": [],
-          "order": 9
+          "order": 9,
+          "lexical_target_count": 0
         },
         {
           "id": "a1.1-s3-l10",
@@ -1350,7 +1384,8 @@
             "criterion_en": "Reach at least 80% first-attempt accuracy across mixed section tasks."
           },
           "prototype_sources": [],
-          "order": 10
+          "order": 10,
+          "lexical_target_count": 0
         }
       ]
     },
@@ -1405,7 +1440,8 @@
           "prototype_sources": [
             "lesson-6"
           ],
-          "order": 1
+          "order": 1,
+          "lexical_target_count": 6
         },
         {
           "id": "a1.1-s4-l02",
@@ -1451,7 +1487,8 @@
           "prototype_sources": [
             "lesson-7"
           ],
-          "order": 2
+          "order": 2,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s4-l03",
@@ -1493,7 +1530,8 @@
             "criterion_en": "Recognize five common food/drink items in pictures and slow audio."
           },
           "prototype_sources": [],
-          "order": 3
+          "order": 3,
+          "lexical_target_count": 6
         },
         {
           "id": "a1.1-s4-l04",
@@ -1534,7 +1572,8 @@
             "criterion_en": "Produce three supported want/need phrases with familiar items."
           },
           "prototype_sources": [],
-          "order": 4
+          "order": 4,
+          "lexical_target_count": 3
         },
         {
           "id": "a1.1-s4-l05",
@@ -1577,7 +1616,8 @@
             "criterion_en": "Complete a three-turn café dialogue for one item."
           },
           "prototype_sources": [],
-          "order": 5
+          "order": 5,
+          "lexical_target_count": 2
         },
         {
           "id": "a1.1-s4-l06",
@@ -1620,7 +1660,8 @@
           "prototype_sources": [
             "lesson-8"
           ],
-          "order": 6
+          "order": 6,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s4-l07",
@@ -1663,7 +1704,8 @@
           "prototype_sources": [
             "lesson-9"
           ],
-          "order": 7
+          "order": 7,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s4-l08",
@@ -1705,7 +1747,8 @@
             "criterion_en": "Produce four supported noun + on + adjective descriptions."
           },
           "prototype_sources": [],
-          "order": 8
+          "order": 8,
+          "lexical_target_count": 5
         },
         {
           "id": "a1.1-s4-l09",
@@ -1747,7 +1790,8 @@
             "criterion_en": "Understand a five-sentence familiar-world text and produce four supported sentences."
           },
           "prototype_sources": [],
-          "order": 9
+          "order": 9,
+          "lexical_target_count": 0
         },
         {
           "id": "a1.1-s4-l10",
@@ -1793,7 +1837,8 @@
           "prototype_sources": [
             "lesson-10"
           ],
-          "order": 10
+          "order": 10,
+          "lexical_target_count": 0
         }
       ]
     }
