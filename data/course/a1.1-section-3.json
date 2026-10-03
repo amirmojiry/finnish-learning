@@ -1462,6 +1462,101 @@
       "accepted_answers": [
         "kouluun"
       ]
+    },
+    "s3-event-aamulla-syon": {
+      "id": "s3-event-aamulla-syon",
+      "surface_form": "Aamulla syön.",
+      "lemma": "Aamulla syön",
+      "translation_fa": "صبح غذا می‌خورم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "routine",
+        "event-time"
+      ],
+      "example_fi": "Aamulla syön.",
+      "example_fa": "صبح غذا می‌خورم.",
+      "accepted_answers": [
+        "Aamulla syön."
+      ]
+    },
+    "s3-event-paivalla-opiskelen": {
+      "id": "s3-event-paivalla-opiskelen",
+      "surface_form": "Päivällä opiskelen.",
+      "lemma": "Päivällä opiskelen",
+      "translation_fa": "روز درس می‌خوانم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "routine",
+        "event-time"
+      ],
+      "example_fi": "Päivällä opiskelen.",
+      "example_fa": "روز درس می‌خوانم.",
+      "accepted_answers": [
+        "Päivällä opiskelen."
+      ]
+    },
+    "s3-event-illalla-tulen": {
+      "id": "s3-event-illalla-tulen",
+      "surface_form": "Illalla tulen kotiin.",
+      "lemma": "Illalla tulen kotiin",
+      "translation_fa": "عصر به خانه می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "routine",
+        "event-time"
+      ],
+      "example_fi": "Illalla tulen kotiin.",
+      "example_fa": "عصر به خانه می‌آیم.",
+      "accepted_answers": [
+        "Illalla tulen kotiin."
+      ]
+    },
+    "s3-event-yolla-nukun": {
+      "id": "s3-event-yolla-nukun",
+      "surface_form": "Yöllä nukun.",
+      "lemma": "Yöllä nukun",
+      "translation_fa": "شب می‌خوابم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "routine",
+        "event-time"
+      ],
+      "example_fi": "Yöllä nukun.",
+      "example_fa": "شب می‌خوابم.",
+      "accepted_answers": [
+        "Yöllä nukun."
+      ]
+    },
+    "s3-event-syon-kello-kolme": {
+      "id": "s3-event-syon-kello-kolme",
+      "surface_form": "Syön kello kolme.",
+      "lemma": "Syön kello kolme",
+      "translation_fa": "ساعت سه غذا می‌خورم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "routine",
+        "event-time"
+      ],
+      "example_fi": "Syön kello kolme.",
+      "example_fa": "ساعت سه غذا می‌خورم.",
+      "accepted_answers": [
+        "Syön kello kolme."
+      ]
     }
   },
   "lessons": [
@@ -2507,57 +2602,57 @@
         },
         {
           "type": "event-time-match",
-          "event_item": "s3-opiskelen",
-          "time_item": "s3-tanaan-short",
+          "event_item": "s3-event-aamulla-syon",
+          "time_item": "s3-aamulla-expr",
           "options": [
-            "s3-huomenna-short",
-            "s3-tanaan-short",
-            "s3-kello-kolme-short",
-            "s3-yolla-expr"
-          ]
-        },
-        {
-          "type": "event-time-match",
-          "event_item": "s3-tyoskentelen",
-          "time_item": "s3-huomenna-short",
-          "options": [
-            "s3-tanaan-short",
-            "s3-aamulla-expr",
-            "s3-huomenna-short",
-            "s3-kello-kolme-short"
-          ]
-        },
-        {
-          "type": "event-time-match",
-          "event_item": "s3-syon",
-          "time_item": "s3-kello-kolme-short",
-          "options": [
-            "s3-kello-kolme-short",
-            "s3-huomenna-short",
             "s3-illalla-expr",
-            "s3-tanaan-short"
+            "s3-aamulla-expr",
+            "s3-yolla-expr",
+            "s3-paivalla-expr"
           ]
         },
         {
           "type": "event-time-match",
-          "event_item": "s3-nukun",
-          "time_item": "s3-yolla-expr",
+          "event_item": "s3-event-paivalla-opiskelen",
+          "time_item": "s3-paivalla-expr",
           "options": [
             "s3-aamulla-expr",
             "s3-yolla-expr",
             "s3-paivalla-expr",
-            "s3-kello-kolme-short"
+            "s3-illalla-expr"
           ]
         },
         {
           "type": "event-time-match",
-          "event_item": "s3-juon",
-          "time_item": "s3-aamulla-expr",
+          "event_item": "s3-event-illalla-tulen",
+          "time_item": "s3-illalla-expr",
           "options": [
-            "s3-illalla-expr",
+            "s3-yolla-expr",
             "s3-paivalla-expr",
             "s3-aamulla-expr",
-            "s3-yolla-expr"
+            "s3-illalla-expr"
+          ]
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-event-yolla-nukun",
+          "time_item": "s3-yolla-expr",
+          "options": [
+            "s3-illalla-expr",
+            "s3-yolla-expr",
+            "s3-paivalla-expr",
+            "s3-aamulla-expr"
+          ]
+        },
+        {
+          "type": "event-time-match",
+          "event_item": "s3-event-syon-kello-kolme",
+          "time_item": "s3-kello-kolme-short",
+          "options": [
+            "s3-tanaan-short",
+            "s3-kello-kolme-short",
+            "s3-huomenna-short",
+            "s3-aamulla-expr"
           ]
         },
         {
