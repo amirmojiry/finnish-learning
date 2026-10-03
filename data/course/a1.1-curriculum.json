@@ -587,10 +587,12 @@
           ],
           "expressions": [
             "Puhun suomea.",
+            "Puhun persiaa.",
+            "Puhun englantia.",
             "Puhun vähän suomea."
           ],
           "grammar_focus": [
-            "language names in partitive after puhua"
+            "language names use explicit partitive forms after puhua: suomea, persiaa, englantia"
           ],
           "recycle_from": [
             "a1.1-s2-l02"
@@ -860,12 +862,16 @@
           "topic_targets": [],
           "expressions": [
             "Minun nimeni on …",
-            "Olen …sta.",
-            "Asun …ssa.",
-            "Puhun …a."
+            "Olen Suomesta.",
+            "Olen Iranista.",
+            "Asun Vaasassa.",
+            "Asun Helsingissä.",
+            "Puhun suomea.",
+            "Puhun persiaa.",
+            "Puhun englantia."
           ],
           "grammar_focus": [
-            "recycling personal-information frames"
+            "recycling complete reviewed personal-information frames; do not generate case forms by suffix concatenation"
           ],
           "recycle_from": [
             "a1.1-s2-l02",
@@ -1836,6 +1842,7 @@
         "prototype_lesson": "lesson-6",
         "destinations": [
           "a1.1-s2-l05",
+          "a1.1-s2-l06",
           "a1.1-s4-l01"
         ]
       },
