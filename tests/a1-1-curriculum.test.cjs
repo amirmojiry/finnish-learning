@@ -184,3 +184,25 @@ test('prototype mapping agrees with per-lesson prototype sources', () => {
     );
   }
 });
+
+
+test('prototype targets called out by review remain represented in the curriculum', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const greetings = lessons.find((lesson) => lesson.id === 'a1.1-s1-l01');
+  const people = lessons.find((lesson) => lesson.id === 'a1.1-s2-l01');
+
+  assert.ok(greetings.expressions.includes('Hyvää huomenta!'));
+  assert.ok(people.topic_targets.includes('te') || people.high_frequency_targets.includes('te'));
+  assert.ok(people.expressions.includes('Te olette …'));
+});
+
+test('each lesson declares an exact lexical target count', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  assert.deepEqual(curriculum.lesson_defaults.recommended_new_lexical_target_range, [3, 6]);
+  assert.match(curriculum.lesson_defaults.lexical_target_count_policy, /advisory/i);
+
+  for (const lesson of lessons) {
+    const actual = lesson.high_frequency_targets.length + lesson.topic_targets.length;
+    assert.equal(lesson.lexical_target_count, actual, `${lesson.id} has a stale lexical_target_count`);
+  }
+});
