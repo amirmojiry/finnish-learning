@@ -123,3 +123,25 @@ test('curriculum tracks frequency and topic vocabulary separately without fake r
   assert.ok(lessons.some((lesson) => lesson.topic_targets.includes('koira')));
   assert.ok(lessons.some((lesson) => lesson.expressions.includes('Mitä kuuluu?')));
 });
+
+
+test('age lesson supplies the complete 0–20 number contract and a correct age frame', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  const lesson = lessons.find((item) => item.id === 'a1.1-s2-l07');
+  const numbers = [
+    'nolla','yksi','kaksi','kolme','neljä','viisi','kuusi','seitsemän','kahdeksan','yhdeksän',
+    'kymmenen','yksitoista','kaksitoista','kolmetoista','neljätoista','viisitoista',
+    'kuusitoista','seitsemäntoista','kahdeksantoista','yhdeksäntoista','kaksikymmentä',
+  ];
+  const targets = new Set([...lesson.high_frequency_targets, ...lesson.topic_targets]);
+  for (const number of numbers) assert.ok(targets.has(number), `Missing number target: ${number}`);
+  assert.ok(lesson.expressions.includes('Olen …-vuotias.'));
+  assert.doesNotMatch(JSON.stringify(lesson), /Olen … vuotta\./);
+});
+
+test('topic vocabulary contains only learnable Finnish lexical targets', () => {
+  const lessons = curriculum.sections.flatMap((section) => section.lessons);
+  for (const lesson of lessons) {
+    assert.ok(!lesson.topic_targets.includes('negation'), `${lesson.id} leaks a grammar label into topic vocabulary`);
+  }
+});
