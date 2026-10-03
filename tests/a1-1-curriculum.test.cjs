@@ -102,8 +102,24 @@ test('curriculum tracks frequency and topic vocabulary separately without fake r
   const serialized = JSON.stringify(curriculum);
   assert.doesNotMatch(serialized, /frequency_rank/);
 
+  const vocabulary = JSON.parse(
+    fs.readFileSync(path.join(ROOT, 'data', 'common-words.json'), 'utf8'),
+  );
+  const sourceBackedForms = new Set(
+    vocabulary.words.map((row) => String(row.word).toLocaleLowerCase('fi')),
+  );
+
   const lessons = curriculum.sections.flatMap((section) => section.lessons);
-  assert.ok(lessons.some((lesson) => lesson.high_frequency_targets.length > 0));
+  const frequencyTargets = lessons.flatMap((lesson) => lesson.high_frequency_targets);
+
+  assert.ok(frequencyTargets.length > 0);
+  for (const target of frequencyTargets) {
+    assert.ok(
+      sourceBackedForms.has(target.toLocaleLowerCase('fi')),
+      `Frequency target ${target} must exist in the source-backed common vocabulary dataset`,
+    );
+  }
+
   assert.ok(lessons.some((lesson) => lesson.topic_targets.includes('koira')));
   assert.ok(lessons.some((lesson) => lesson.expressions.includes('Mitä kuuluu?')));
 });
