@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.5.0`
+- Version: `1.6.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -127,7 +127,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 
 ### Phase 1 — complete A1.1
 
-- [ ] Define the complete A1.1 curriculum matrix from reviewed CEFR can-do outcomes.
+- [x] Define the complete A1.1 curriculum matrix from reviewed CEFR can-do outcomes.
 - [ ] Turn the current 10-lesson prototype into a coherent A1.1 path.
 - [ ] Ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions/sentence frames, and a grammar or morphology objective.
 - [ ] Add lesson summaries and short explicit grammar explanations where useful.
