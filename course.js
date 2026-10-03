@@ -239,6 +239,22 @@
       if (!implemented) throw new Error(`Missing implemented curriculum lesson: ${contractLesson.id}`);
       if (implemented.order !== contractLesson.order) throw new Error(`Lesson order mismatch: ${contractLesson.id}`);
       if (!implemented.summary_fa || !implemented.grammar_fa) throw new Error(`Incomplete learner content: ${contractLesson.id}`);
+
+      const refs = implemented.curriculum_target_refs;
+      if (!refs || !Array.isArray(refs.high_frequency) || !Array.isArray(refs.topic) || !Array.isArray(refs.expressions)) {
+        throw new Error(`Missing curriculum target mapping: ${contractLesson.id}`);
+      }
+      const requiredCounts = {
+        high_frequency: contractLesson.high_frequency_targets.length,
+        topic: contractLesson.topic_targets.length,
+        expressions: contractLesson.expressions.length,
+      };
+      for (const [group, count] of Object.entries(requiredCounts)) {
+        if (refs[group].length !== count) throw new Error(`Curriculum target count mismatch for ${contractLesson.id} / ${group}`);
+        for (const itemId of refs[group]) {
+          if (!section.items[itemId]) throw new Error(`Unknown curriculum target item: ${itemId}`);
+        }
+      }
     }
     return { ...section, curriculum_contract: contract };
   }
