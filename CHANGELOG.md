@@ -6,6 +6,21 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-10-03
+
+### Changed
+
+- The application now opens on the Course view by default.
+- Course navigation is visually icon-only while retaining the accessible name “دوره”.
+- Section goals, section outcomes, lesson objectives, summaries, and grammar notes are collapsed behind compact info controls by default.
+- “در پایان این بخش می‌توانی” now lives inside the main Section 1 information disclosure instead of a separate card.
+- Lesson and review action buttons use stable desktop sizing independent of explanatory content height.
+
+### Removed
+
+- Learner-facing roadmap and implementation-oriented copy that distracted from the learning flow.
+
+
 ## [1.6.0] - 2026-10-03
 
 ### Added

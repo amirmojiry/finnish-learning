@@ -234,3 +234,60 @@ test('English and Persian feature bullets agree that Section 1 is implemented', 
   assert.match(en, /real curriculum-driven A1\.1 Section 1/);
   assert.match(fa, /بخش اول واقعی و curriculum-driven سطح A1\.1/);
 });
+
+
+test('the application defaults to the course with icon-only accessible course navigation', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
+
+  assert.match(html, /id="home-view" class="app-view home-view" hidden/);
+  assert.match(html, /id="course-view" class="app-view course-view">/);
+  assert.equal((html.match(/aria-label="دوره"/g) || []).length, 2);
+  assert.equal((html.match(/course-view-link nav-icon-only active/g) || []).length, 2);
+  assert.doesNotMatch(html, />دوره A1\.1</);
+  assert.match(app, /if\(!location\.hash\)history\.replaceState\(null,'','#course'\)/);
+  assert.match(app, /view:'course'/);
+  assert.match(app, /h==='#course'\|\|h\.startsWith\('#course-'\)/);
+});
+
+test('course map hides explanatory copy behind accessible info disclosures', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+
+  assert.match(source, /function createInfoDisclosure/);
+  assert.match(source, /aria-expanded/);
+  assert.match(source, /panel\.hidden = true/);
+  assert.match(source, /توضیحات و اهداف بخش/);
+  assert.match(source, /توضیحات درس/);
+  assert.match(source, /در پایان این بخش می‌توانی/);
+  assert.doesNotMatch(source, /بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند/);
+  assert.doesNotMatch(source, /section\.description_fa/);
+  assert.doesNotMatch(source, /بخش ۱ نخستین بخش پیاده‌شدهٔ A1\.1 است/);
+});
+
+test('desktop lesson and review actions use stable fixed action regions', () => {
+  const courseStyles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  const reviewStyles = fs.readFileSync(path.join(ROOT, 'css', 'spaced-repetition.css'), 'utf8');
+
+  assert.match(courseStyles, /\.course-lesson-action-area\s*\{[\s\S]*?width:\s*148px[\s\S]*?min-width:\s*148px/);
+  assert.match(courseStyles, /\.course-lesson-action\s*\{[\s\S]*?min-height:\s*52px/);
+  assert.match(reviewStyles, /\.spaced-review-start\s*\{[\s\S]*?width:\s*148px[\s\S]*?min-height:\s*52px/);
+});
+
+test('course navigation visually hides its label but retains an accessible name', () => {
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+
+  assert.match(styles, /\.nav-icon-only > span/);
+  assert.match(styles, /clip:\s*rect\(0, 0, 0, 0\)/);
+  assert.match(html, /course-view-link nav-icon-only active[^>]+aria-label="دوره"/);
+});
+
+
+test('legacy home and dictionary hashes route before vocabulary fetch resolves', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
+
+  const initMatch = app.match(/async function init\(\)\{([^}]|\}(?!catch))*routeFromHash\(\);try\{const r=await fetch/);
+  assert.ok(initMatch, 'init must route the current hash before awaiting vocabulary fetch');
+  assert.match(app, /if\(h\.startsWith\('#word-'\)\)\{[\s\S]*?showView\('dictionary',\{updateHash:false\}\);return/);
+  assert.match(app, /if\(state\.view==='dictionary'\)\{els\.dictionaryList\.replaceChildren\(\);els\.dictionaryEmpty\.hidden=false;els\.dictionaryEmpty\.textContent='بارگذاری واژه‌ها انجام نشد\.'/);
+});

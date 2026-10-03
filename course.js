@@ -306,6 +306,7 @@
     let curriculum = null;
     let progress = loadProgress(windowObject.localStorage);
     let activeLesson = null;
+    let infoDisclosureId = 0;
     let activityIndex = 0;
     let sessionCorrect = 0;
     let sessionGraded = 0;
@@ -341,7 +342,7 @@
         if (view) view.hidden = name !== 'course';
       }
       activateCourseNavigation(true);
-      if (mobileTitle) mobileTitle.textContent = activeLesson ? activeLesson.title_fa : 'دوره A1.1';
+      if (mobileTitle) mobileTitle.textContent = activeLesson ? activeLesson.title_fa : 'دوره';
       if (updateHash && !isCourseHash()) history.replaceState(null, '', '#course');
     }
 
@@ -362,6 +363,29 @@
       button.textContent = label;
       button.addEventListener('click', onClick);
       return button;
+    }
+
+    function createInfoDisclosure(buildContent, label = 'نمایش توضیحات') {
+      infoDisclosureId += 1;
+      const wrap = document.createElement('div');
+      wrap.className = 'course-info-disclosure';
+      const panelId = `course-info-${infoDisclosureId}`;
+      const toggle = createButton('!', 'course-info-toggle', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        panel.hidden = expanded;
+        wrap.classList.toggle('is-open', !expanded);
+      });
+      toggle.setAttribute('aria-label', label);
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', panelId);
+      const panel = document.createElement('div');
+      panel.id = panelId;
+      panel.className = 'course-info-panel';
+      panel.hidden = true;
+      buildContent(panel);
+      wrap.append(toggle, panel);
+      return wrap;
     }
 
     function renderLoading(message = 'در حال آماده‌کردن بخش آموزشی…') {
@@ -388,7 +412,7 @@
       catalog.className = 'course-section-catalog';
       const catalogTitle = document.createElement('div');
       catalogTitle.className = 'course-section-catalog-heading';
-      catalogTitle.innerHTML = '<h1>مسیر A1.1</h1><p>بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند.</p>';
+      catalogTitle.innerHTML = '<h1>مسیر A1.1</h1>';
       catalog.append(catalogTitle);
       const catalogGrid = document.createElement('div');
       catalogGrid.className = 'course-section-grid';
@@ -401,9 +425,12 @@
         status.textContent = available ? 'قابل یادگیری' : 'به‌زودی';
         const heading = document.createElement('h2');
         heading.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
-        const goal = document.createElement('p');
-        goal.textContent = entry.goal_fa;
-        card.append(status, heading, goal);
+        const info = createInfoDisclosure((panel) => {
+          const goal = document.createElement('p');
+          goal.textContent = entry.goal_fa;
+          panel.append(goal);
+        }, `توضیحات بخش ${toPersianNumber(entry.order)}`);
+        card.append(status, heading, info);
         catalogGrid.append(card);
       }
       catalog.append(catalogGrid);
@@ -415,13 +442,7 @@
       level.textContent = section.level;
       const title = document.createElement('h1');
       title.textContent = section.title_fa;
-      const subtitle = document.createElement('p');
-      subtitle.className = 'course-subtitle';
-      subtitle.textContent = section.subtitle_fa;
-      const description = document.createElement('p');
-      description.className = 'course-description';
-      description.textContent = section.description_fa;
-      header.append(level, title, subtitle, description);
+      header.append(level, title);
 
       const completed = completionCount();
       const progressWrap = document.createElement('div');
@@ -437,17 +458,21 @@
       progressWrap.append(progressText, track);
       header.append(progressWrap);
 
-      const outcomes = document.createElement('section');
-      outcomes.className = 'course-outcomes';
-      const outcomesTitle = document.createElement('h2');
-      outcomesTitle.textContent = 'در پایان این بخش می‌توانی';
-      const outcomesList = document.createElement('ul');
-      for (const outcome of section.can_do_fa || []) {
-        const item = document.createElement('li');
-        item.textContent = outcome;
-        outcomesList.append(item);
-      }
-      outcomes.append(outcomesTitle, outcomesList);
+      const sectionInfo = createInfoDisclosure((panel) => {
+        const subtitle = document.createElement('p');
+        subtitle.className = 'course-subtitle';
+        subtitle.textContent = section.subtitle_fa;
+        const outcomesTitle = document.createElement('h2');
+        outcomesTitle.textContent = 'در پایان این بخش می‌توانی';
+        const outcomesList = document.createElement('ul');
+        for (const outcome of section.can_do_fa || []) {
+          const item = document.createElement('li');
+          item.textContent = outcome;
+          outcomesList.append(item);
+        }
+        panel.append(subtitle, outcomesTitle, outcomesList);
+      }, 'توضیحات و اهداف بخش');
+      header.append(sectionInfo);
 
       const path = document.createElement('section');
       path.className = 'course-path';
@@ -472,16 +497,20 @@
         const lessonTitle = document.createElement('h2');
         lessonTitle.textContent = lesson.title_fa;
         heading.append(lessonLabel, lessonTitle);
-        const objective = document.createElement('p');
-        objective.textContent = lesson.objective_fa;
-        body.append(heading, objective);
-        const summary = document.createElement('p');
-        summary.className = 'course-lesson-summary';
-        summary.textContent = lesson.summary_fa;
-        const grammar = document.createElement('p');
-        grammar.className = 'course-lesson-grammar';
-        grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
-        body.append(summary, grammar);
+        body.append(heading);
+        const lessonInfo = createInfoDisclosure((panel) => {
+          const objective = document.createElement('p');
+          objective.className = 'course-lesson-objective';
+          objective.textContent = lesson.objective_fa;
+          const summary = document.createElement('p');
+          summary.className = 'course-lesson-summary';
+          summary.textContent = lesson.summary_fa;
+          const grammar = document.createElement('p');
+          grammar.className = 'course-lesson-grammar';
+          grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
+          panel.append(objective, summary, grammar);
+        }, `توضیحات درس ${toPersianNumber(lesson.order)}`);
+        body.append(lessonInfo);
 
         const targetList = document.createElement('div');
         targetList.className = 'course-target-list';
@@ -497,35 +526,36 @@
         }
         body.append(targetList);
 
+        const actionArea = document.createElement('div');
+        actionArea.className = 'course-lesson-action-area';
         const action = createButton(
           done ? 'تمرین دوباره' : unlocked ? 'شروع درس' : 'قفل است',
           'course-lesson-action',
           () => startLesson(lesson),
         );
         action.disabled = !unlocked;
+        actionArea.append(action);
         if (done && progress.lessonScores[lesson.id]) {
           const score = progress.lessonScores[lesson.id];
           const scoreLabel = document.createElement('small');
           scoreLabel.className = 'course-best-score';
           scoreLabel.textContent = `بهترین نتیجه: ${toPersianNumber(score.correct)} از ${toPersianNumber(score.graded)}`;
-          body.append(scoreLabel);
+          actionArea.append(scoreLabel);
         }
-        card.append(marker, body, action);
+        card.append(marker, body, actionArea);
         path.append(card);
       });
 
       const footer = document.createElement('div');
       footer.className = 'course-map-footer';
-      const note = document.createElement('p');
-      note.textContent = 'بخش ۱ نخستین بخش پیاده‌شدهٔ A1.1 است. بخش‌های بعدی طبق همین قرارداد آموزشی اضافه می‌شوند.';
       const reset = createButton('پاک‌کردن پیشرفت بخش ۱', 'course-reset-button', () => {
         if (!windowObject.confirm('پیشرفت هر ده درس پاک شود؟')) return;
         progress = saveProgress(windowObject.localStorage, emptyProgress());
         renderSectionMap();
       });
-      footer.append(note, reset);
+      footer.append(reset);
 
-      root.append(catalog, header, outcomes, path, footer);
+      root.append(catalog, header, path, footer);
       root.scrollTop = 0;
     }
 
@@ -583,13 +613,14 @@
       title.textContent = activeLesson.title_fa;
       lessonHeader.append(label, title);
       if (activityIndex === 0) {
-        const intro = document.createElement('div');
-        intro.className = 'course-lesson-intro';
-        const summary = document.createElement('p');
-        summary.textContent = activeLesson.summary_fa;
-        const grammar = document.createElement('p');
-        grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
-        intro.append(summary, grammar);
+        const intro = createInfoDisclosure((panel) => {
+          const summary = document.createElement('p');
+          summary.textContent = activeLesson.summary_fa;
+          const grammar = document.createElement('p');
+          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
+          panel.append(summary, grammar);
+        }, 'توضیحات این درس');
+        intro.classList.add('course-lesson-intro');
         lessonHeader.append(intro);
       }
 
