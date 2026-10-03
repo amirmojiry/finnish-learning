@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
-- a complete prototype A1.1 section with 10 sequential lessons and 15 deterministic activities per lesson
+- a real curriculum-driven A1.1 Section 1 with 10 sequential learner-facing lessons and 15 deterministic activities per lesson
 - focused practice for an individual dictionary word
 - profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
