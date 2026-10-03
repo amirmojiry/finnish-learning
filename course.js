@@ -1018,7 +1018,7 @@
         const submit = document.createElement('button');
         submit.type = 'submit';
         submit.className = 'primary-button compact';
-        submit.textContent = 'بررسی سه جمله';
+        submit.textContent = 'بررسی پاسخ‌ها';
         form.append(submit);
         form.addEventListener('submit', (event) => {
           event.preventDefault();
