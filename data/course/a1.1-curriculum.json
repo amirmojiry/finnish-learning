@@ -25,7 +25,8 @@
       "recycle_from",
       "activity_families",
       "skills",
-      "assessment"
+      "assessment",
+      "lexical_target_count"
     ],
     "recommended_new_lexical_target_range": [
       3,
