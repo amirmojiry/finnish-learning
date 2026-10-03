@@ -142,7 +142,8 @@
     const pool = uniqueOptions([...targets, ...previousTargets.slice().reverse()]);
     while (pool.length < 5) pool.push(targets[pool.length % targets.length]);
     const [t1, t2, t3, t4, t5] = pool;
-    const review = previousTargets.length ? previousTargets[previousTargets.length - 1] : t2;
+    const sixth = targets[5] || null;
+    const review = sixth || (previousTargets.length ? previousTargets[previousTargets.length - 1] : t2);
     return [
       { type: 'teach', item: t1 },
       { type: 'choice', mode: 'meaning', item: t1, options: uniqueOptions([t1, t2, t3, t4]) },
@@ -477,8 +478,8 @@
       const footer = document.createElement('div');
       footer.className = 'course-map-footer';
       const note = document.createElement('p');
-      note.textContent = 'این بخش یک نمونهٔ محصولی است. محتوای آن بازبینی اولیه شده، اما هنوز جایگزین یک دورهٔ رسمی CEFR نیست.';
-      const reset = createButton('پاک‌کردن پیشرفت این نمونه', 'course-reset-button', () => {
+      note.textContent = 'بخش ۱ نخستین بخش پیاده‌شدهٔ A1.1 است. بخش‌های بعدی طبق همین قرارداد آموزشی اضافه می‌شوند.';
+      const reset = createButton('پاک‌کردن پیشرفت بخش ۱', 'course-reset-button', () => {
         if (!windowObject.confirm('پیشرفت هر ده درس پاک شود؟')) return;
         progress = saveProgress(windowObject.localStorage, emptyProgress());
         renderSectionMap();
