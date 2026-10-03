@@ -1099,8 +1099,8 @@
           "id": "a1.1-s3-l04",
           "title_en": "Parts of the day",
           "title_fa": "بخش‌های روز",
-          "can_do_en": "Talk about morning, daytime and evening with simple routine phrases.",
-          "can_do_fa": "دربارهٔ صبح، روز و شب با عبارت‌های سادهٔ روزمره صحبت کند.",
+          "can_do_en": "Identify and use morning, daytime, evening and night expressions in simple time phrases.",
+          "can_do_fa": "عبارت‌های صبح، روز، عصر و شب را در عبارت‌های زمانی ساده تشخیص دهد و به‌کار ببرد.",
           "high_frequency_targets": [
             "nyt"
           ],
@@ -1111,8 +1111,10 @@
             "yöllä"
           ],
           "expressions": [
-            "Aamulla minä …",
-            "Illalla minä …"
+            "Aamulla.",
+            "Päivällä.",
+            "Illalla.",
+            "Yöllä."
           ],
           "grammar_focus": [
             "adessive time forms as chunks"
@@ -1121,7 +1123,7 @@
             "a1.1-s3-l03"
           ],
           "activity_families": [
-            "picture-sequence",
+            "picture-time-match",
             "sentence-completion",
             "listen-and-match"
           ],
@@ -1132,7 +1134,7 @@
             "writing": false
           },
           "assessment": {
-            "criterion_en": "Match four routine events to the correct part of the day."
+            "criterion_en": "Match four time-of-day expressions to the correct pictures or time contexts."
           },
           "prototype_sources": [],
           "order": 4,
@@ -1238,11 +1240,14 @@
           ],
           "topic_targets": [],
           "expressions": [
-            "En puhu englantia.",
-            "En työskentele tänään."
+            "Minä syön. → En syö.",
+            "Minä juon. → En juo.",
+            "Minä nukun. → En nuku.",
+            "Minä opiskelen. → En opiskele.",
+            "Minä työskentelen. → En työskentele."
           ],
           "grammar_focus": [
-            "1st person negative: en + connegative form"
+            "1st person negative: en + explicit connegative form; mappings are encoded in connegative_pairs"
           ],
           "recycle_from": [
             "a1.1-s1-l07",
@@ -1260,11 +1265,38 @@
             "writing": true
           },
           "assessment": {
-            "criterion_en": "Turn four familiar affirmative minä sentences into negatives."
+            "criterion_en": "Transform four of the encoded familiar affirmative routine verbs into their explicit negative forms."
           },
           "prototype_sources": [],
           "order": 7,
-          "lexical_target_count": 1
+          "lexical_target_count": 1,
+          "connegative_pairs": [
+            {
+              "affirmative": "syön",
+              "connegative": "syö",
+              "negative": "En syö."
+            },
+            {
+              "affirmative": "juon",
+              "connegative": "juo",
+              "negative": "En juo."
+            },
+            {
+              "affirmative": "nukun",
+              "connegative": "nuku",
+              "negative": "En nuku."
+            },
+            {
+              "affirmative": "opiskelen",
+              "connegative": "opiskele",
+              "negative": "En opiskele."
+            },
+            {
+              "affirmative": "työskentelen",
+              "connegative": "työskentele",
+              "negative": "En työskentele."
+            }
+          ]
         },
         {
           "id": "a1.1-s3-l08",
