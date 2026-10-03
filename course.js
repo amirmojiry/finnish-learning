@@ -289,6 +289,14 @@
           }
           continue;
         }
+        if (activity.type === 'event-time-match') {
+          if (!section.items[activity.event_item] || !section.items[activity.time_item]) throw new Error(`Invalid event-time match in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.time_item)) throw new Error(`Event-time match must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) {
+            if (!section.items[optionId]) throw new Error(`Unknown event-time option: ${optionId}`);
+          }
+          continue;
+        }
         if (activity.type === 'dialogue-order') {
           if (!Array.isArray(activity.turns) || activity.turns.length !== 4) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
           if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== 4) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
@@ -730,6 +738,7 @@
       if (activity.type === 'clock-choice') return 'ساعت درست را به فنلاندی انتخاب کن.';
       if (activity.type === 'negative-transform') return 'جمله را به شکل منفی تبدیل کن.';
       if (activity.type === 'guided-writing') return 'سه جملهٔ راهنمایی‌شده را به فنلاندی بنویس.';
+      if (activity.type === 'event-time-match') return 'رویداد را با زمان درست جور کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
@@ -743,7 +752,7 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing'].includes(activity.type)
+      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match'].includes(activity.type)
         ? null
         : section.items[activity.item];
       root.replaceChildren();
@@ -1005,6 +1014,40 @@
           card.append(result);
         });
         card.append(form);
+      } else if (activity.type === 'event-time-match') {
+        const eventItem = section.items[activity.event_item];
+        const timeItem = section.items[activity.time_item];
+        const eventText = document.createElement('strong');
+        eventText.className = 'course-focus-word';
+        eventText.lang = 'fi';
+        eventText.dir = 'ltr';
+        eventText.textContent = eventItem.surface_form;
+        const translation = document.createElement('p');
+        translation.className = 'course-cloze-translation';
+        translation.textContent = eventItem.translation_fa;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.time_item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.time_item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, timeItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(eventText, translation, options, feedback);
       } else if (activity.type === 'dialogue-order') {
         const instruction = document.createElement('p');
         instruction.className = 'course-dialogue-instruction';
