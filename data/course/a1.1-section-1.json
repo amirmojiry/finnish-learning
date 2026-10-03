@@ -1060,6 +1060,179 @@
       "accepted_answers": [
         "ovi"
       ]
+    },
+    "nimi": {
+      "id": "nimi",
+      "surface_form": "nimi",
+      "lemma": "nimi",
+      "translation_fa": "نام",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "introductions"
+      ],
+      "example_fi": "Minun nimeni on Aino.",
+      "example_fa": "نام من آینو است.",
+      "accepted_answers": [
+        "nimi"
+      ]
+    },
+    "mita": {
+      "id": "mita",
+      "surface_form": "mitä",
+      "lemma": "mitä",
+      "translation_fa": "چه / چه چیزی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 40,
+      "topics": [
+        "questions"
+      ],
+      "example_fi": "Mitä kuuluu?",
+      "example_fa": "حالت چطور است؟",
+      "accepted_answers": [
+        "mitä"
+      ]
+    },
+    "vastaus": {
+      "id": "vastaus",
+      "surface_form": "vastaus",
+      "lemma": "vastaus",
+      "translation_fa": "پاسخ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "conversation"
+      ],
+      "example_fi": "Vastaus on kyllä.",
+      "example_fa": "پاسخ «بله» است.",
+      "accepted_answers": [
+        "vastaus"
+      ]
+    },
+    "kuka": {
+      "id": "kuka",
+      "surface_form": "kuka",
+      "lemma": "kuka",
+      "translation_fa": "چه کسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "questions",
+        "people"
+      ],
+      "example_fi": "Kuka hän on?",
+      "example_fa": "او کیست؟",
+      "accepted_answers": [
+        "kuka"
+      ]
+    },
+    "mika": {
+      "id": "mika",
+      "surface_form": "mikä",
+      "lemma": "mikä",
+      "translation_fa": "چه چیزی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 98,
+      "topics": [
+        "questions",
+        "objects"
+      ],
+      "example_fi": "Mikä tämä on?",
+      "example_fa": "این چیست؟",
+      "accepted_answers": [
+        "mikä"
+      ]
+    },
+    "ihminen": {
+      "id": "ihminen",
+      "surface_form": "ihminen",
+      "lemma": "ihminen",
+      "translation_fa": "انسان / شخص",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 280,
+      "topics": [
+        "people"
+      ],
+      "example_fi": "Hän on ihminen.",
+      "example_fa": "او یک انسان است.",
+      "accepted_answers": [
+        "ihminen"
+      ]
+    },
+    "esine": {
+      "id": "esine",
+      "surface_form": "esine",
+      "lemma": "esine",
+      "translation_fa": "شیء",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "objects"
+      ],
+      "example_fi": "Tämä on esine.",
+      "example_fa": "این یک شیء است.",
+      "accepted_answers": [
+        "esine"
+      ]
+    },
+    "hitaasti": {
+      "id": "hitaasti",
+      "surface_form": "hitaasti",
+      "lemma": "hitaasti",
+      "translation_fa": "آهسته",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "conversation",
+        "repair"
+      ],
+      "example_fi": "Puhu hitaasti, kiitos.",
+      "example_fa": "لطفاً آهسته صحبت کن.",
+      "accepted_answers": [
+        "hitaasti"
+      ]
+    },
+    "tama-on": {
+      "id": "tama-on",
+      "surface_form": "Tämä on",
+      "lemma": "Tämä on",
+      "translation_fa": "این ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "objects"
+      ],
+      "example_fi": "Tämä on kirja.",
+      "example_fa": "این یک کتاب است.",
+      "accepted_answers": [
+        "Tämä on"
+      ]
+    },
+    "se-on": {
+      "id": "se-on",
+      "surface_form": "Se on",
+      "lemma": "Se on",
+      "translation_fa": "آن ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "objects"
+      ],
+      "example_fi": "Se on puhelin.",
+      "example_fa": "آن یک تلفن است.",
+      "accepted_answers": [
+        "Se on"
+      ]
     }
   },
   "lessons": [
@@ -1078,7 +1251,23 @@
         "nakemiin",
         "on",
         "ja"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "on",
+          "ja"
+        ],
+        "topic": [
+          "hei",
+          "moi"
+        ],
+        "expressions": [
+          "hei",
+          "moi",
+          "hyvaa-huomenta",
+          "nakemiin"
+        ]
+      }
     },
     {
       "id": "lesson-2",
@@ -1095,7 +1284,21 @@
         "olet",
         "minun-nimeni-on",
         "mika-sinun-nimesi-on"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "mina",
+          "sina",
+          "olen"
+        ],
+        "topic": [
+          "nimi"
+        ],
+        "expressions": [
+          "minun-nimeni-on",
+          "mika-sinun-nimesi-on"
+        ]
+      }
     },
     {
       "id": "lesson-3",
@@ -1110,7 +1313,21 @@
         "hyvaa",
         "ihan-hyvaa",
         "kiitos"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "mita",
+          "hyvaa"
+        ],
+        "topic": [
+          "hyvaa"
+        ],
+        "expressions": [
+          "mita-kuuluu",
+          "hyvaa",
+          "ihan-hyvaa"
+        ]
+      }
     },
     {
       "id": "lesson-4",
@@ -1125,7 +1342,22 @@
         "ei",
         "ole",
         "ei-ole"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "kylla",
+          "ei",
+          "ole"
+        ],
+        "topic": [
+          "vastaus"
+        ],
+        "expressions": [
+          "kylla",
+          "ei",
+          "ei-ole"
+        ]
+      }
     },
     {
       "id": "lesson-5",
@@ -1140,7 +1372,23 @@
         "mika-tama-on",
         "han",
         "tama"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "kuka",
+          "mika",
+          "han",
+          "tama"
+        ],
+        "topic": [
+          "ihminen",
+          "esine"
+        ],
+        "expressions": [
+          "kuka-han-on",
+          "mika-tama-on"
+        ]
+      }
     },
     {
       "id": "lesson-6",
@@ -1154,7 +1402,20 @@
         "kiitos",
         "anteeksi",
         "ole-hyva"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "kiitos"
+        ],
+        "topic": [
+          "anteeksi"
+        ],
+        "expressions": [
+          "kiitos",
+          "anteeksi",
+          "ole-hyva"
+        ]
+      }
     },
     {
       "id": "lesson-7",
@@ -1169,7 +1430,21 @@
         "en-ymmarra",
         "uudestaan",
         "hitaammin"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "en"
+        ],
+        "topic": [
+          "uudestaan",
+          "hitaasti"
+        ],
+        "expressions": [
+          "en-ymmarra",
+          "uudestaan",
+          "hitaammin"
+        ]
+      }
     },
     {
       "id": "lesson-8",
@@ -1186,7 +1461,23 @@
         "puhelin",
         "ovi",
         "on"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "tama",
+          "se",
+          "on"
+        ],
+        "topic": [
+          "kirja",
+          "puhelin",
+          "ovi"
+        ],
+        "expressions": [
+          "tama-on",
+          "se-on"
+        ]
+      }
     },
     {
       "id": "lesson-9",
@@ -1210,7 +1501,16 @@
         "mita-kuuluu",
         "kiitos",
         "en-ymmarra"
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "hei",
+          "mita-kuuluu",
+          "en-ymmarra"
+        ]
+      }
     },
     {
       "id": "lesson-10",
@@ -1299,7 +1599,12 @@
           "choice",
           "cloze"
         ]
-      ]
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      }
     }
   ],
   "curriculum_section_id": "a1.1-s1"
