@@ -18,7 +18,7 @@ test('A1.1 Section 1 contains ten deterministic curriculum-driven fifteen-activi
   assert.equal(section.lessons.length, 10);
   assert.equal(section.activity_count_per_lesson, 15);
   assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
-  assert.equal(Object.keys(section.items).length, 69);
+  assert.equal(Object.keys(section.items).length, 74);
   assert.deepEqual(
     section.lessons.map((lesson) => lesson.curriculum_id),
     curriculum.sections[0].lessons.map((lesson) => lesson.id),
