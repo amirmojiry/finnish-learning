@@ -231,11 +231,11 @@ test('dialogue ordering activities are presented scrambled', () => {
   }
 });
 
-test('English and Persian feature bullets agree that Section 1 is implemented', () => {
+test('English and Persian feature bullets agree that Sections 1 and 2 are implemented', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /real curriculum-driven A1\.1 Section 1/);
-  assert.match(fa, /بخش اول واقعی و curriculum-driven سطح A1\.1/);
+  assert.match(en, /real curriculum-driven A1\.1 Sections 1 and 2/);
+  assert.match(fa, /بخش‌های اول و دوم واقعی و curriculum-driven سطح A1\.1/);
 });
 
 
