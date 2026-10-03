@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-10-03
+
+### Added
+
+- A complete machine-readable A1.1 curriculum contract with four sections and forty ordered lessons.
+- English and Persian A1.1 curriculum specifications covering communicative outcomes, frequency vocabulary, topic vocabulary, useful expressions, grammar, recycling, skills, and assessment criteria.
+- Regression coverage for curriculum structure, prototype lineage, explicit Finnish inflection, lexical-target counts, and preservation of prototype learning targets.
+
+### Changed
+
+- The ten-lesson A1.1 prototype is now explicitly mapped into the complete curriculum without silently dropping existing learning targets.
+- Lexical target guidance is advisory, while every lesson declares an exact machine-validated lexical target count.
+
+
 ## [1.4.1] - 2026-08-03
 
 ### Fixed
