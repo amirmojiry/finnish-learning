@@ -56,8 +56,8 @@
       "lemma": "tämä",
       "translation_fa": "این",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 49,
       "topics": [
         "recycle",
         "demonstratives"
@@ -74,8 +74,8 @@
       "lemma": "hän",
       "translation_fa": "او",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 7,
       "topics": [
         "people",
         "pronouns"
@@ -92,8 +92,8 @@
       "lemma": "me",
       "translation_fa": "ما",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 133,
       "topics": [
         "people",
         "pronouns"
@@ -110,8 +110,8 @@
       "lemma": "he",
       "translation_fa": "آن‌ها",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 67,
       "topics": [
         "people",
         "pronouns"
@@ -235,8 +235,8 @@
       "lemma": "olen",
       "translation_fa": "هستم",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 96,
       "topics": [
         "origin",
         "olla"
@@ -253,8 +253,8 @@
       "lemma": "Suomi",
       "translation_fa": "فنلاند",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 144,
       "topics": [
         "countries"
       ],
@@ -374,8 +374,8 @@
       "lemma": "suomi",
       "translation_fa": "زبان فنلاندی",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 144,
       "topics": [
         "languages"
       ],
@@ -511,8 +511,8 @@
       "lemma": "missä",
       "translation_fa": "کجا / در کجا",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 188,
       "topics": [
         "questions",
         "location"
@@ -790,8 +790,8 @@
       "lemma": "minun",
       "translation_fa": "مال من / منِ",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 163,
       "topics": [
         "possession"
       ],
@@ -930,8 +930,8 @@
       "lemma": "yksi",
       "translation_fa": "۱",
       "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 84,
       "topics": [
         "numbers"
       ],
@@ -947,8 +947,8 @@
       "lemma": "kaksi",
       "translation_fa": "۲",
       "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 69,
       "topics": [
         "numbers"
       ],
@@ -964,8 +964,8 @@
       "lemma": "kolme",
       "translation_fa": "۳",
       "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 125,
       "topics": [
         "numbers"
       ],
@@ -1032,8 +1032,8 @@
       "lemma": "kymmenen",
       "translation_fa": "۱۰",
       "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 244,
       "topics": [
         "numbers"
       ],
@@ -1426,8 +1426,8 @@
       "lemma": "neljä",
       "translation_fa": "۴",
       "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 254,
       "topics": [
         "numbers"
       ],
