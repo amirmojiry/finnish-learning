@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.8.0`
+- Version: `1.9.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
-- real curriculum-driven A1.1 Sections 1 and 2 with 20 sequential learner-facing lessons and 15 deterministic activities per lesson
+- real curriculum-driven A1.1 Sections 1–3 with 30 sequential learner-facing lessons and 15 deterministic activities per lesson
 - focused practice for an individual dictionary word
 - profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -55,7 +55,7 @@ The ranking is based on the [Frequency List of Written Finnish Word Forms](https
 ## Important data paths
 
 - `data/common-words.json`: generated vocabulary consumed by the app
-- `data/course/a1.1-section-1.json`: reviewed manifest for the sample A1.1 section
+- `data/course/a1.1-section-1.json` through `data/course/a1.1-section-3.json`: reviewed manifests for the implemented A1.1 sections
 - `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
 - `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
 - `data/ud/`: generated compact and detailed UD analysis files

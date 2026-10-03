@@ -7,11 +7,13 @@ const course = require('../course.js');
 const ROOT = path.resolve(__dirname, '..');
 const rawSection = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-1.json'), 'utf8'));
 const rawSection2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-2.json'), 'utf8'));
+const rawSection3 = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-section-3.json'), 'utf8'));
 const curriculum = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'course', 'a1.1-curriculum.json'), 'utf8'));
 const vocabulary = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'common-words.json'), 'utf8'));
-const sections = course.validateImplementedCourse([rawSection, rawSection2], curriculum);
+const sections = course.validateImplementedCourse([rawSection, rawSection2, rawSection3], curriculum);
 const section = sections[0];
 const section2 = sections[1];
+const section3 = sections[2];
 
 test('A1.1 Section 1 contains ten deterministic curriculum-driven fifteen-activity lessons', () => {
   const rebuiltSection = course.validateSectionAgainstCurriculum(course.validateSection(rawSection), curriculum);
@@ -231,11 +233,11 @@ test('dialogue ordering activities are presented scrambled', () => {
   }
 });
 
-test('English and Persian feature bullets agree that Sections 1 and 2 are implemented', () => {
+test('English and Persian feature bullets agree that Sections 1–3 are implemented', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /real curriculum-driven A1\.1 Sections 1 and 2/);
-  assert.match(fa, /بخش‌های اول و دوم واقعی و curriculum-driven سطح A1\.1/);
+  assert.match(en, /real curriculum-driven A1\.1 Sections 1–3/);
+  assert.match(fa, /بخش‌های اول تا سوم واقعی و curriculum-driven سطح A1\.1/);
 });
 
 
@@ -313,11 +315,11 @@ test('A1.1 Section 2 contains ten deterministic learner-facing lessons', () => {
   }
 });
 
-test('implemented course validates two ordered sections with globally unique lesson IDs', () => {
-  assert.equal(sections.length, 2);
-  assert.deepEqual(sections.map((entry) => entry.curriculum_section_id), ['a1.1-s1', 'a1.1-s2']);
+test('implemented course validates three ordered sections with globally unique lesson IDs', () => {
+  assert.equal(sections.length, 3);
+  assert.deepEqual(sections.map((entry) => entry.curriculum_section_id), ['a1.1-s1', 'a1.1-s2', 'a1.1-s3']);
   const lessonIds = sections.flatMap((entry) => entry.lessons.map((lesson) => lesson.id));
-  assert.equal(new Set(lessonIds).size, 20);
+  assert.equal(new Set(lessonIds).size, 30);
 });
 
 test('Section 2 unlocks only after all legacy Section 1 lesson IDs are complete', () => {
@@ -423,18 +425,26 @@ test('all Section 2 activity references and typed answers are explicit', () => {
   }
 });
 
-test('course runtime loads both implemented section files and renders multi-section controls', () => {
+test('course runtime loads all three implemented section files and renders multi-section controls', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
 
   assert.match(source, /SECTION_URLS/);
   assert.match(source, /a1\.1-section-1\.json/);
   assert.match(source, /a1\.1-section-2\.json/);
+  assert.match(source, /a1\.1-section-3\.json/);
   assert.match(source, /isSectionUnlocked/);
   assert.match(source, /باز کردن بخش/);
   assert.match(source, /number-grid/);
+  assert.match(source, /sequence-order/);
+  assert.match(source, /clock-choice/);
+  assert.match(source, /negative-transform/);
+  assert.match(source, /guided-writing/);
+  assert.match(source, /event-time-match/);
   assert.match(styles, /\.course-section-open/);
   assert.match(styles, /\.course-number-grid/);
+  assert.match(styles, /\.course-clock-face/);
+  assert.match(styles, /\.course-guided-writing/);
 });
 
 
@@ -451,4 +461,223 @@ test('language lesson practices every declared curriculum expression', () => {
   }
   assert.ok(lesson.activities.some((activity) => activity.item === 's2-puhun-englantia' && activity.type === 'type'));
   assert.ok(lesson.activities.some((activity) => activity.item === 's2-puhun-vahan-suomea' && activity.type !== 'teach'));
+});
+
+
+test('A1.1 Section 3 contains ten deterministic learner-facing lessons', () => {
+  assert.equal(section3.level, 'A1.1');
+  assert.equal(section3.curriculum_section_id, 'a1.1-s3');
+  assert.equal(section3.lessons.length, 10);
+  assert.equal(section3.activity_count_per_lesson, 15);
+  assert.equal(section3.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.deepEqual(
+    section3.lessons.map((lesson) => lesson.curriculum_id),
+    curriculum.sections[2].lessons.map((lesson) => lesson.id),
+  );
+  for (const lesson of section3.lessons) {
+    assert.ok(lesson.summary_fa, lesson.id);
+    assert.ok(lesson.grammar_fa, lesson.id);
+    assert.match(lesson.id, /^section-3-lesson-\d+$/);
+  }
+});
+
+test('Section 3 requires both earlier sections and all of Section 2 to be complete', () => {
+  let progress = course.emptyProgress();
+  for (const lesson of section2.lessons) {
+    progress = course.recordLessonCompletion(progress, lesson.id, 8, 10, 1000);
+  }
+  assert.equal(course.isSectionUnlocked(sections, progress, 2), false, 'Section 1 cannot be skipped');
+
+  for (const lesson of section.lessons) {
+    progress = course.recordLessonCompletion(progress, lesson.id, 8, 10, 1000);
+  }
+  assert.equal(course.isSectionUnlocked(sections, progress, 2), true);
+
+  const incomplete = course.emptyProgress();
+  let almost = incomplete;
+  for (const lesson of section.lessons) almost = course.recordLessonCompletion(almost, lesson.id, 8, 10, 1000);
+  for (const lesson of section2.lessons.slice(0, -1)) almost = course.recordLessonCompletion(almost, lesson.id, 8, 10, 1000);
+  assert.equal(course.isSectionUnlocked(sections, almost, 2), false);
+});
+
+test('Section 3 target mappings and recycling dependencies match the curriculum contract', () => {
+  const contract = curriculum.sections[2];
+  for (const contractLesson of contract.lessons) {
+    const lesson = section3.lessons.find((entry) => entry.curriculum_id === contractLesson.id);
+    assert.ok(lesson, contractLesson.id);
+    assert.deepEqual(lesson.recycle_from, contractLesson.recycle_from, contractLesson.id);
+    for (const group of ['high_frequency', 'topic', 'expressions']) {
+      const contractTargets = group === 'high_frequency'
+        ? contractLesson.high_frequency_targets
+        : group === 'topic'
+          ? contractLesson.topic_targets
+          : contractLesson.expressions;
+      assert.equal(lesson.curriculum_target_refs[group].length, contractTargets.length, contractLesson.id + ' / ' + group);
+      for (const itemId of lesson.curriculum_target_refs[group]) {
+        assert.ok(section3.items[itemId], contractLesson.id + ' maps to missing ' + itemId);
+      }
+    }
+  }
+});
+
+test('weekday lesson orders all seven weekdays and assesses listening plus typing', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l02');
+  const ordering = lesson.activities.find((activity) => activity.type === 'sequence-order');
+  assert.ok(ordering);
+  assert.equal(ordering.items.length, 7);
+  assert.equal(new Set(ordering.items).size, 7);
+  assert.equal(ordering.answer_order.length, 7);
+  const orderedSurfaces = ordering.answer_order.map((index) => section3.items[ordering.items[index]].surface_form);
+  assert.deepEqual(orderedSurfaces, ['maanantai','tiistai','keskiviikko','torstai','perjantai','lauantai','sunnuntai']);
+  assert.ok(lesson.activities.some((activity) => activity.mode === 'listen'));
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type'));
+});
+
+test('whole-hour lesson contains multiple real clock-choice activities', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l03');
+  const clocks = lesson.activities.filter((activity) => activity.type === 'clock-choice');
+  assert.ok(clocks.length >= 4);
+  assert.deepEqual([...new Set(clocks.map((activity) => activity.hour))].slice(0, 4), [1,2,3,4]);
+  for (const activity of clocks) {
+    assert.ok(activity.options.includes(activity.item));
+    assert.ok(section3.items[activity.item]);
+  }
+});
+
+test('all five curriculum connegative pairs are explicit and learner-facing', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l07');
+  const contractLesson = curriculum.sections[2].lessons.find((entry) => entry.id === 'a1.1-s3-l07');
+  assert.deepEqual(lesson.connegative_pairs, contractLesson.connegative_pairs);
+
+  const transforms = lesson.activities.filter((activity) => activity.type === 'negative-transform');
+  assert.equal(transforms.length, 5);
+  const negativeSurfaces = transforms.map((activity) => section3.items[activity.negative_item].surface_form);
+  assert.deepEqual(negativeSurfaces, ['En syö.','En juo.','En nuku.','En opiskele.','En työskentele.']);
+
+  for (const pair of contractLesson.connegative_pairs) {
+    assert.ok(Object.values(section3.items).some((item) => item.surface_form === pair.connegative), pair.connegative);
+    assert.ok(Object.values(section3.items).some((item) => item.surface_form === pair.negative), pair.negative);
+  }
+
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.doesNotMatch(source, /\+\s*['"](?:o|ö|e)['"]/);
+});
+
+test('routine-day lesson uses real ordering and guided writing', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l09');
+  const ordering = lesson.activities.filter((activity) => activity.type === 'sequence-order');
+  const writing = lesson.activities.find((activity) => activity.type === 'guided-writing');
+  assert.ok(ordering.length >= 2);
+  assert.ok(ordering.every((activity) => activity.items.length === 5));
+  assert.ok(writing);
+  assert.equal(writing.expected_items.length, 3);
+  assert.deepEqual(
+    writing.expected_items.map((itemId) => section3.items[itemId].surface_form),
+    ['Aamulla syön.','Päivällä opiskelen.','Illalla tulen kotiin.'],
+  );
+});
+
+test('every mapped Section 3 expression appears in learner-facing activity data', () => {
+  for (const lesson of section3.lessons) {
+    const practiced = new Set();
+    for (const activity of lesson.activities) {
+      if (activity.item) practiced.add(activity.item);
+      for (const itemId of activity.items || []) practiced.add(itemId);
+      for (const itemId of activity.turns || []) practiced.add(itemId);
+      for (const itemId of activity.expected_items || []) practiced.add(itemId);
+      if (activity.affirmative_item) practiced.add(activity.affirmative_item);
+      if (activity.negative_item) practiced.add(activity.negative_item);
+    }
+    for (const itemId of lesson.curriculum_target_refs.expressions) {
+      assert.ok(practiced.has(itemId), lesson.curriculum_id + ' unpracticed expression ' + itemId);
+    }
+  }
+});
+
+test('Section 3 checkpoint covers weekdays, whole hours, routine, negation and when', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l10');
+  const surfaces = lesson.checkpoint_targets.map((itemId) => section3.items[itemId].surface_form);
+  assert.ok(surfaces.includes('maanantai'));
+  assert.ok(surfaces.includes('Kello on kaksi.'));
+  assert.ok(surfaces.includes('syön'));
+  assert.ok(surfaces.includes('En syö.'));
+  assert.ok(surfaces.includes('Milloin?'));
+  assert.equal(lesson.activities.length, 15);
+});
+
+test('all Section 3 custom activity references and accepted answers are explicit', () => {
+  for (const lesson of section3.lessons) {
+    for (const activity of lesson.activities) {
+      if (activity.type === 'sequence-order') {
+        assert.equal(activity.items.length, activity.answer_order.length);
+        for (const itemId of activity.items) assert.ok(section3.items[itemId], lesson.id + ': ' + itemId);
+        continue;
+      }
+      if (activity.type === 'negative-transform') {
+        assert.ok(section3.items[activity.affirmative_item]);
+        assert.ok(section3.items[activity.negative_item]);
+        assert.ok(course.acceptedAnswers(section3.items[activity.negative_item]).length);
+        continue;
+      }
+      if (activity.type === 'guided-writing') {
+        assert.equal(activity.expected_items.length, 3);
+        for (const itemId of activity.expected_items) assert.ok(course.acceptedAnswers(section3.items[itemId]).length);
+        continue;
+      }
+      if (activity.type === 'clock-choice') {
+        assert.ok(section3.items[activity.item]);
+        for (const option of activity.options) assert.ok(section3.items[option]);
+        continue;
+      }
+      if (activity.type === 'event-time-match') {
+        assert.ok(section3.items[activity.event_item]);
+        assert.ok(section3.items[activity.time_item]);
+        assert.ok(activity.options.includes(activity.time_item));
+        for (const option of activity.options) assert.ok(section3.items[option]);
+        continue;
+      }
+      if (activity.type === 'number-grid' || activity.type === 'dialogue-order') continue;
+      assert.ok(section3.items[activity.item], lesson.id + ': ' + activity.item);
+      for (const option of activity.options || []) assert.ok(section3.items[option], lesson.id + ': ' + option);
+      if (activity.type === 'type') assert.ok(course.acceptedAnswers(section3.items[activity.item]).length);
+    }
+  }
+});
+
+
+test('day-reference sentence frames are taught without grading the ellipsis placeholder', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l01');
+  const frameIds = new Set(['s3-tanaan-on-frame', 's3-huomenna-on-frame']);
+
+  assert.equal(lesson.activities.length, 15);
+  assert.ok(lesson.activities.some((activity) => activity.type === 'teach' && frameIds.has(activity.item)));
+  assert.ok(lesson.activities.some((activity) => activity.type === 'choice' && frameIds.has(activity.item)));
+  assert.ok(
+    lesson.activities.every((activity) => !(activity.type === 'type' && frameIds.has(activity.item))),
+    'ellipsis sentence frames must not be typed as literal answers',
+  );
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type' && activity.item === 's3-tanaan'));
+  assert.ok(lesson.activities.some((activity) => activity.type === 'type' && activity.item === 's3-huomenna'));
+});
+
+test('when lesson contains five deterministic event-to-time matching assessments', () => {
+  const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l08');
+  const matches = lesson.activities.filter((activity) => activity.type === 'event-time-match');
+
+  assert.equal(matches.length, 5);
+  const pairs = matches.map((activity) => [
+    section3.items[activity.event_item].surface_form,
+    section3.items[activity.time_item].surface_form,
+  ]);
+  assert.deepEqual(pairs, [
+    ['Aamulla syön.', 'Aamulla.'],
+    ['Päivällä opiskelen.', 'Päivällä.'],
+    ['Illalla tulen kotiin.', 'Illalla.'],
+    ['Yöllä nukun.', 'Yöllä.'],
+    ['Syön kello kolme.', 'Kello kolme.'],
+  ]);
+  for (const activity of matches) {
+    assert.ok(activity.options.includes(activity.time_item));
+    assert.equal(new Set(activity.options).size, activity.options.length);
+  }
 });

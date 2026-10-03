@@ -6,6 +6,21 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-10-04
+
+### Added
+
+- A fully implemented curriculum-driven A1.1 Section 3 covering day references, weekdays, whole-hour time, parts of the day, simple routines, practiced questions, explicit negation, asking when, and a short routine sequence.
+- Dedicated learner activities for weekday ordering, analog whole-hour clock choice, explicit affirmative-to-negative transformation, five-event routine ordering, and three-sentence guided writing.
+- Explicit learner-facing coverage of all five reviewed first-person connegative pairs from the Section 3 curriculum contract.
+
+### Changed
+
+- The course runtime now loads A1.1 Sections 1–3 and unlocks Section 3 only after all prior implemented sections are complete.
+- Section 4 remains upcoming while the implemented course path now contains 30 sequential lessons.
+- Section 3 keeps weekday, time, present-tense, question, directional, and negative forms explicit in static course data rather than synthesizing morphology at runtime.
+
+
 ## [1.8.0] - 2026-10-03
 
 ### Added

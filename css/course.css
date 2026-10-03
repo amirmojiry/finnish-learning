@@ -1104,3 +1104,122 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+
+/* Section 3 time, ordering and guided-production activities */
+.course-sequence-instruction,
+.course-transform-hint {
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.course-sequence-options {
+  display: grid;
+  gap: 9px;
+}
+
+.course-sequence-review,
+.course-guided-writing-review {
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.course-sequence-review p,
+.course-guided-writing-review p {
+  margin: 0;
+}
+
+.course-clock-face {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 6px auto 20px;
+  border: 5px solid var(--text);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.course-clock-face::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text);
+  transform: translate(-50%, -50%);
+}
+
+.course-clock-twelve,
+.course-clock-six {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 900;
+  font-size: .86rem;
+}
+
+.course-clock-twelve {
+  top: 7px;
+}
+
+.course-clock-six {
+  bottom: 7px;
+}
+
+.course-clock-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 5px;
+  height: 48px;
+  border-radius: 999px;
+  background: var(--primary);
+  transform-origin: 50% 100%;
+}
+
+.course-guided-writing {
+  display: grid;
+  gap: 12px;
+}
+
+.course-guided-writing-row {
+  display: grid;
+  gap: 6px;
+}
+
+.course-guided-writing-row > span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.course-guided-writing-row input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 11px;
+  font: inherit;
+}
+
+.course-guided-writing-row input:focus {
+  outline: 2px solid rgba(34, 87, 214, .18);
+  border-color: var(--primary);
+}
+
+@media (max-width: 720px) {
+  .course-clock-face {
+    width: 132px;
+    height: 132px;
+  }
+
+  .course-clock-hand {
+    height: 42px;
+  }
+}
