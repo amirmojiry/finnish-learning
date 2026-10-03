@@ -86,7 +86,7 @@
   function isSectionUnlocked(sections, progress, sectionIndex) {
     if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
     if (sectionIndex === 0) return true;
-    return isSectionComplete(sections[sectionIndex - 1], progress);
+    return sections.slice(0, sectionIndex).every((entry) => isSectionComplete(entry, progress));
   }
 
   function recordLessonCompletion(progress, lessonId, correct, graded, now = Date.now()) {
