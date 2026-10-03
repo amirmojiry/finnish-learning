@@ -57,6 +57,12 @@ test('the implemented section combines course content with source-aware frequenc
 test('every activity references existing items and uses unique answer options', () => {
   for (const lesson of section.lessons) {
     for (const activity of lesson.activities) {
+      if (activity.type === 'dialogue-order') {
+        assert.equal(activity.turns.length, 4, `${lesson.id} dialogue must have four turns`);
+        assert.equal(new Set(activity.turns).size, activity.turns.length, `${lesson.id} dialogue has duplicate turns`);
+        for (const itemId of activity.turns) assert.ok(section.items[itemId], `${lesson.id} dialogue item ${itemId} is missing`);
+        continue;
+      }
       assert.ok(section.items[activity.item], `${lesson.id} references ${activity.item}`);
       const options = activity.options || [];
       assert.equal(new Set(options).size, options.length, `${lesson.id} has duplicate options`);
