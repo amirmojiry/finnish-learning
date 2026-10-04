@@ -11,6 +11,7 @@
     './data/course/a1.1-section-1.json',
     './data/course/a1.1-section-2.json',
     './data/course/a1.1-section-3.json',
+    './data/course/a1.1-section-4.json',
   ];
   const SECTION_URL = SECTION_URLS[0];
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
@@ -87,6 +88,13 @@
     if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
     if (sectionIndex === 0) return true;
     return sections.slice(0, sectionIndex).every((entry) => isSectionComplete(entry, progress));
+  }
+
+  function passesLessonRequirement(lesson, correct, graded) {
+    const threshold = Number(lesson?.passing_score || 0);
+    if (!threshold) return true;
+    if (!Number.isFinite(graded) || graded <= 0) return false;
+    return Number(correct || 0) / graded >= threshold;
   }
 
   function recordLessonCompletion(progress, lessonId, correct, graded, now = Date.now()) {
@@ -283,7 +291,9 @@
           continue;
         }
         if (activity.type === 'guided-writing') {
-          if (!Array.isArray(activity.expected_items) || activity.expected_items.length !== 3) throw new Error(`Guided writing must define three sentences in ${lesson.id}`);
+          if (!Array.isArray(activity.expected_items) || activity.expected_items.length < 2 || activity.expected_items.length > 4) {
+            throw new Error(`Guided writing must define two to four sentences in ${lesson.id}`);
+          }
           for (const itemId of activity.expected_items) {
             if (!section.items[itemId] || !acceptedAnswers(section.items[itemId]).length) throw new Error(`Invalid guided-writing item: ${itemId}`);
           }
@@ -297,9 +307,38 @@
           }
           continue;
         }
+
+        if (activity.type === 'visual-choice') {
+          const visualItem = section.items[activity.item];
+          if (!visualItem || !visualItem.visual) throw new Error(`Visual choice lacks pictogram in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.item)) throw new Error(`Visual choice must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) if (!section.items[optionId]) throw new Error(`Unknown visual option: ${optionId}`);
+          continue;
+        }
+        if (activity.type === 'prompt-choice') {
+          if (!section.items[activity.prompt_item] || !section.items[activity.answer_item]) throw new Error(`Invalid prompt choice in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.answer_item)) throw new Error(`Prompt choice must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) if (!section.items[optionId]) throw new Error(`Unknown prompt-choice option: ${optionId}`);
+          continue;
+        }
+        if (activity.type === 'category-match') {
+          if (!section.items[activity.item]) throw new Error(`Unknown category item in ${lesson.id}`);
+          if (!activity.answer || !Array.isArray(activity.options) || !activity.options.includes(activity.answer)) throw new Error(`Invalid category match in ${lesson.id}`);
+          continue;
+        }
+        if (activity.type === 'short-reading') {
+          if (!section.items[activity.item] || section.items[activity.item].item_type !== 'reading') throw new Error(`Invalid short reading in ${lesson.id}`);
+          if (!section.items[activity.question_item]) throw new Error(`Invalid short-reading answer in ${lesson.id}`);
+          if (!Array.isArray(activity.options) || !activity.options.includes(activity.question_item)) throw new Error(`Short reading must include its answer in ${lesson.id}`);
+          for (const optionId of activity.options) if (!section.items[optionId]) throw new Error(`Unknown reading option: ${optionId}`);
+          continue;
+        }
         if (activity.type === 'dialogue-order') {
-          if (!Array.isArray(activity.turns) || activity.turns.length !== 4) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
-          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== 4) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
+          if (!Array.isArray(activity.turns) || activity.turns.length < 3 || activity.turns.length > 5) throw new Error(`Invalid dialogue activity in ${lesson.id}`);
+          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== activity.turns.length) throw new Error(`Invalid dialogue answer in ${lesson.id}`);
+          const expected = Array.from({ length: activity.turns.length }, (_, index) => index).sort((a, b) => a - b);
+          const actual = [...activity.answer_order].sort((a, b) => a - b);
+          if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error(`Dialogue answer must be a permutation in ${lesson.id}`);
           for (const itemId of activity.turns) {
             if (!section.items[itemId]) throw new Error(`Unknown dialogue item: ${itemId}`);
           }
@@ -737,8 +776,12 @@
       if (activity.type === 'sequence-order') return activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
       if (activity.type === 'clock-choice') return 'ساعت درست را به فنلاندی انتخاب کن.';
       if (activity.type === 'negative-transform') return 'جمله را به شکل منفی تبدیل کن.';
-      if (activity.type === 'guided-writing') return 'سه جملهٔ راهنمایی‌شده را به فنلاندی بنویس.';
+      if (activity.type === 'guided-writing') return `${toPersianNumber(activity.expected_items.length)} جملهٔ راهنمایی‌شده را به فنلاندی بنویس.`;
       if (activity.type === 'event-time-match') return 'رویداد را با زمان درست جور کن.';
+      if (activity.type === 'visual-choice') return 'نام درست تصویر را انتخاب کن.';
+      if (activity.type === 'prompt-choice') return 'پاسخ درست را انتخاب کن.';
+      if (activity.type === 'category-match') return 'دستهٔ درست را انتخاب کن.';
+      if (activity.type === 'short-reading') return 'متن کوتاه را بخوان و پاسخ درست را انتخاب کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
@@ -752,7 +795,7 @@
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
       answered = false;
-      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match'].includes(activity.type)
+      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
         : section.items[activity.item];
       root.replaceChildren();
@@ -982,7 +1025,7 @@
         const submit = document.createElement('button');
         submit.type = 'submit';
         submit.className = 'primary-button compact';
-        submit.textContent = 'بررسی سه جمله';
+        submit.textContent = 'بررسی پاسخ‌ها';
         form.append(submit);
         form.addEventListener('submit', (event) => {
           event.preventDefault();
@@ -1000,7 +1043,7 @@
           const result = document.createElement('div');
           result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
           const title = document.createElement('strong');
-          title.textContent = correct ? 'هر سه جمله درست بود.' : 'پاسخ‌های نمونه را مرور کن.';
+          title.textContent = correct ? `هر ${toPersianNumber(rows.length)} جمله درست بود.` : 'پاسخ‌های نمونه را مرور کن.';
           const review = document.createElement('div');
           review.className = 'course-guided-writing-review';
           for (const { expected } of rows) {
@@ -1048,10 +1091,140 @@
           options.append(button);
         }
         card.append(eventText, translation, options, feedback);
+      } else if (activity.type === 'visual-choice') {
+        const visualItem = section.items[activity.item];
+        const visual = document.createElement('div');
+        visual.className = 'course-visual-prompt';
+        visual.setAttribute('aria-label', visualItem.translation_fa);
+        visual.textContent = visualItem.visual;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, visualItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(visual, options, feedback);
+      } else if (activity.type === 'prompt-choice') {
+        const promptItem = section.items[activity.prompt_item];
+        const answerItem = section.items[activity.answer_item];
+        const focus = document.createElement('strong');
+        focus.className = 'course-focus-word';
+        focus.lang = 'fi';
+        focus.dir = 'ltr';
+        focus.textContent = promptItem.surface_form;
+        const translation = document.createElement('p');
+        translation.className = 'course-cloze-translation';
+        translation.textContent = promptItem.translation_fa;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.answer_item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.answer_item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, answerItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(focus, translation, options, feedback);
+      } else if (activity.type === 'category-match') {
+        const categoryItem = section.items[activity.item];
+        const visual = document.createElement('div');
+        visual.className = 'course-visual-prompt';
+        visual.textContent = categoryItem.visual || categoryItem.surface_form;
+        const word = document.createElement('strong');
+        word.className = 'course-category-word';
+        word.lang = 'fi';
+        word.dir = 'ltr';
+        word.textContent = categoryItem.surface_form;
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const category of activity.options) {
+          const button = createButton(category, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = category === activity.answer;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.category === activity.answer) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            const synthetic = { surface_form: activity.answer, translation_fa: 'دستهٔ درست', example_fi: '', example_fa: '' };
+            showFeedback(feedback, correct, synthetic);
+          });
+          button.dataset.category = category;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(visual, word, options, feedback);
+      } else if (activity.type === 'short-reading') {
+        const reading = section.items[activity.item];
+        const answerItem = section.items[activity.question_item];
+        const passage = document.createElement('p');
+        passage.className = 'course-reading-passage';
+        passage.lang = 'fi';
+        passage.dir = 'ltr';
+        passage.textContent = reading.surface_form;
+        const promptText = document.createElement('p');
+        promptText.className = 'course-reading-question';
+        promptText.textContent = 'کدام جمله در متن آمده است؟';
+        const options = document.createElement('div');
+        options.className = 'course-options';
+        for (const optionId of activity.options) {
+          const optionItem = section.items[optionId];
+          const button = createButton(optionItem.surface_form, 'course-option', () => {
+            if (answered) return;
+            answered = true;
+            sessionGraded += 1;
+            const correct = optionId === activity.question_item;
+            if (correct) sessionCorrect += 1;
+            for (const optionButton of options.querySelectorAll('button')) {
+              optionButton.disabled = true;
+              if (optionButton.dataset.itemId === activity.question_item) optionButton.classList.add('correct');
+            }
+            if (!correct) button.classList.add('wrong');
+            showFeedback(feedback, correct, answerItem);
+          });
+          button.dataset.itemId = optionId;
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        }
+        card.append(passage, promptText, options, feedback);
       } else if (activity.type === 'dialogue-order') {
         const instruction = document.createElement('p');
         instruction.className = 'course-dialogue-instruction';
-        instruction.textContent = 'چهار نوبت گفت‌وگو را به ترتیب درست بچین.';
+        instruction.textContent = activity.label_fa || `${toPersianNumber(activity.turns.length)} نوبت گفت‌وگو را به ترتیب درست بچین.`;
         card.append(instruction);
 
         const ordered = [];
@@ -1065,7 +1238,7 @@
             button.disabled = true;
             button.dataset.order = String(ordered.length);
             button.textContent = `${toPersianNumber(ordered.length)}. ${turnItem.surface_form}`;
-            if (ordered.length === 4) {
+            if (ordered.length === activity.turns.length) {
               answered = true;
               sessionGraded += 1;
               const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
@@ -1241,8 +1414,13 @@
 
     function completeLesson() {
       if (!activeLesson) return renderSectionMap();
-      progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, sessionGraded);
-      progress = saveProgress(windowObject.localStorage, progress);
+      const passingScore = Number(activeLesson.passing_score || 0);
+      const passed = passesLessonRequirement(activeLesson, sessionCorrect, sessionGraded);
+      if (passed) {
+        progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, sessionGraded);
+        progress = saveProgress(windowObject.localStorage, progress);
+      }
+
       const currentIndex = section.lessons.findIndex((lesson) => lesson.id === activeLesson.id);
       const nextLesson = section.lessons[currentIndex + 1] || null;
       root.replaceChildren();
@@ -1251,15 +1429,26 @@
       card.className = 'course-completion-card';
       const badge = document.createElement('div');
       badge.className = 'course-completion-badge';
-      badge.textContent = '✓';
+      badge.textContent = passed ? '✓' : '↻';
       const title = document.createElement('h1');
-      title.textContent = 'درس کامل شد';
+      title.textContent = passed ? 'درس کامل شد' : 'برای قبولی دوباره تلاش کن';
       const message = document.createElement('p');
       message.textContent = `${toPersianNumber(sessionCorrect)} پاسخ درست از ${toPersianNumber(sessionGraded)} فعالیت نمره‌دار`;
       const note = document.createElement('p');
       note.className = 'course-completion-note';
-      note.textContent = 'فعالیت‌های معرفی در امتیاز حساب نمی‌شوند. در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد.';
+      note.textContent = passed
+        ? 'فعالیت‌های معرفی در امتیاز حساب نمی‌شوند. در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد.'
+        : `برای قبولی در این آزمون حداقل ${toPersianNumber(Math.round(passingScore * 100))}٪ پاسخ درست لازم است.`;
       card.append(badge, title, message, note);
+
+      if (!passed) {
+        card.append(createButton('تلاش دوباره', 'primary-button', () => startLesson(activeLesson)));
+        card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
+        root.append(card);
+        root.scrollTop = 0;
+        return;
+      }
+
       if (nextLesson) {
         card.append(createButton(`شروع درس ${toPersianNumber(nextLesson.order)}`, 'primary-button', () => startLesson(nextLesson)));
       } else {
@@ -1397,6 +1586,7 @@
     isLessonUnlocked,
     isSectionComplete,
     isSectionUnlocked,
+    passesLessonRequirement,
     recordLessonCompletion,
     makeCloze,
     acceptedAnswers,
