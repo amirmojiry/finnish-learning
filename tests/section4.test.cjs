@@ -202,3 +202,32 @@ test('Section 4 custom activity references are complete', () => {
     }
   }
 });
+
+
+test('Section 4 hirvi uses the correct Persian meaning consistently', () => {
+  assert.equal(section.items['s4-hirvi'].translation_fa, 'گوزن بزرگ / موس');
+  assert.equal(section.items['s4-hirvi'].example_fa, 'گوزن بزرگ / موس حیوان است.');
+  const lesson = section.lessons.find((entry) => entry.id === 'section-4-lesson-7');
+  assert.match(lesson.summary_fa, /گوزن بزرگ \/ موس/);
+  assert.doesNotMatch(JSON.stringify(section), /گوزن شمالی/);
+});
+
+test('cat location prompt agrees with the taught bed example', () => {
+  const lesson = section.lessons.find((entry) => entry.id === 'section-4-lesson-2');
+  const activity = lesson.activities.find((entry) => entry.type === 'prompt-choice' && entry.prompt_item === 's4-location-q-cat');
+  assert.equal(activity.answer_item, 's4-se-on-sangylla');
+});
+
+test('short-reading distractors are absent from the source passage', () => {
+  const passage = section.items['s4-world-reading'].surface_form;
+  for (const lesson of section.lessons) {
+    for (const activity of lesson.activities || []) {
+      if (activity.type !== 'short-reading' || activity.item !== 's4-world-reading') continue;
+      assert.ok(passage.includes(section.items[activity.question_item].surface_form));
+      for (const optionId of activity.options) {
+        if (optionId === activity.question_item) continue;
+        assert.ok(!passage.includes(section.items[optionId].surface_form), `${optionId} unexpectedly appears in the reading`);
+      }
+    }
+  }
+});
