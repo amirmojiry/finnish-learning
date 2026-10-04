@@ -1103,7 +1103,7 @@
       "id": "s4-hirvi",
       "surface_form": "hirvi",
       "lemma": "hirvi",
-      "translation_fa": "گوزن شمالی",
+      "translation_fa": "گوزن بزرگ / موس",
       "item_type": "word",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -1111,7 +1111,7 @@
         "animals"
       ],
       "example_fi": "hirvi on eläin.",
-      "example_fa": "گوزن شمالی حیوان است.",
+      "example_fa": "گوزن بزرگ / موس حیوان است.",
       "accepted_answers": [
         "hirvi"
       ],
@@ -1851,6 +1851,60 @@
       "accepted_answers": [
         "Kello on neljä."
       ]
+    },
+    "s4-world-d1": {
+      "id": "s4-world-d1",
+      "surface_form": "Minulla on koira.",
+      "lemma": "Minulla on koira",
+      "translation_fa": "من سگ دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world",
+        "reading-distractor"
+      ],
+      "example_fi": "Minulla on koira.",
+      "example_fa": "من سگ دارم.",
+      "accepted_answers": [
+        "Minulla on koira."
+      ]
+    },
+    "s4-world-d2": {
+      "id": "s4-world-d2",
+      "surface_form": "Haluan teetä.",
+      "lemma": "Haluan teetä",
+      "translation_fa": "چای می‌خواهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world",
+        "reading-distractor"
+      ],
+      "example_fi": "Haluan teetä.",
+      "example_fa": "چای می‌خواهم.",
+      "accepted_answers": [
+        "Haluan teetä."
+      ]
+    },
+    "s4-world-d3": {
+      "id": "s4-world-d3",
+      "surface_form": "Kissa on suuri.",
+      "lemma": "Kissa on suuri",
+      "translation_fa": "گربه بزرگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "familiar-world",
+        "reading-distractor"
+      ],
+      "example_fi": "Kissa on suuri.",
+      "example_fa": "گربه بزرگ است.",
+      "accepted_answers": [
+        "Kissa on suuri."
+      ]
     }
   },
   "lessons": [
@@ -2107,7 +2161,7 @@
         {
           "type": "prompt-choice",
           "prompt_item": "s4-location-q-cat",
-          "answer_item": "s4-se-on-huoneessa",
+          "answer_item": "s4-se-on-sangylla",
           "options": [
             "s4-se-on-poydalla",
             "s4-se-on-huoneessa",
@@ -2695,7 +2749,7 @@
       "order": 7,
       "title_fa": "حیوانات آشنا ۲",
       "objective_fa": "پنج حیوان آشنای دیگر را تشخیص بده و نمونه‌های آشنا را به‌عنوان حیوان دسته‌بندی کن.",
-      "summary_fa": "گاو، گوسفند، خرس، گرگ و گوزن شمالی را با تصویر و دسته‌بندی ساده تمرین می‌کنی.",
+      "summary_fa": "گاو، گوسفند، خرس، گرگ و گوزن بزرگ / موس را با تصویر و دسته‌بندی ساده تمرین می‌کنی.",
       "grammar_fa": "الگوی noun + on + eläin یک جملهٔ اسمی بسیار ساده با olla است.",
       "new_targets": [
         "s4-lehma",
@@ -3012,10 +3066,10 @@
           "item": "s4-world-reading",
           "question_item": "s4-world-3",
           "options": [
-            "s4-world-2",
+            "s4-world-d1",
             "s4-world-3",
-            "s4-world-4",
-            "s4-world-5"
+            "s4-world-d2",
+            "s4-world-d3"
           ]
         },
         {
@@ -3023,10 +3077,10 @@
           "item": "s4-world-reading",
           "question_item": "s4-world-4",
           "options": [
-            "s4-world-1",
-            "s4-world-5",
+            "s4-world-d1",
             "s4-world-4",
-            "s4-world-2"
+            "s4-world-d2",
+            "s4-world-d3"
           ]
         },
         {
@@ -3262,10 +3316,10 @@
           "item": "s4-world-reading",
           "question_item": "s4-world-5",
           "options": [
-            "s4-world-2",
-            "s4-world-4",
+            "s4-world-d1",
             "s4-world-5",
-            "s4-world-3"
+            "s4-world-d2",
+            "s4-world-d3"
           ]
         }
       ]
