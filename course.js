@@ -387,8 +387,13 @@
       recognitionIndex = lesson.activities.findLastIndex((activity) => (
         activity.type !== 'production'
         && activity.type !== 'dictation'
-        && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
+        && (activity.type === 'choice' || activity.type === 'visual-choice')
         && activity.item === recognitionTargetId
+      ));
+    }
+    if (recognitionIndex < 0) {
+      recognitionIndex = lesson.activities.findLastIndex((activity) => (
+        activity.type === 'type' && activity.item === recognitionTargetId
       ));
     }
     if (recognitionIndex < 0) {
@@ -410,9 +415,16 @@
       index !== recognitionIndex
       && activity.type !== 'production'
       && activity.type !== 'dictation'
-      && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
+      && (activity.type === 'choice' || activity.type === 'visual-choice')
       && activity.item === dictationTargetId
     ));
+    if (dictationIndex < 0) {
+      dictationIndex = lesson.activities.findLastIndex((activity, index) => (
+        index !== recognitionIndex
+        && activity.type === 'type'
+        && activity.item === dictationTargetId
+      ));
+    }
     if (dictationIndex < 0) {
       throw new Error(`Lesson ${lesson.id} has no matching slot for dictation target ${dictationTargetId}.`);
     }
