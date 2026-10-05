@@ -337,9 +337,18 @@
       throw new Error(`Invalid production target: ${lesson.id || '?'} / ${targetId}`);
     }
 
-    const referenced = new Set(lesson.activities.flatMap(activityItemReferences));
-    if (!referenced.has(targetId)) {
-      throw new Error(`Production target must already belong to learner-facing lesson content: ${lesson.id} / ${targetId}`);
+    const declared = new Set([
+      ...(lesson.new_targets || []),
+      ...(lesson.practice_targets || []),
+      ...(lesson.checkpoint_targets || []),
+      ...(lesson.review_targets || []),
+      ...(lesson.curriculum_target_refs?.high_frequency || []),
+      ...(lesson.curriculum_target_refs?.topic || []),
+      ...(lesson.curriculum_target_refs?.expressions || []),
+      ...lesson.activities.flatMap(activityItemReferences),
+    ]);
+    if (!declared.has(targetId)) {
+      throw new Error(`Production target must belong to the explicit lesson scope: ${lesson.id} / ${targetId}`);
     }
 
     let replacementIndex = -1;
