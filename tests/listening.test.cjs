@@ -86,9 +86,9 @@ test('dictation reuses typed grading without exposing the Finnish answer before 
   assert.match(source, /gradeTypedAnswer\(item, input\.value\)/);
   assert.match(source, /showFeedback\(feedback, correct, item, grading\)/);
 
-  const dictationBranch = source.slice(
-    source.indexOf("if (activity.type === 'dictation')"),
-    source.indexOf("} else if (activity.mode === 'cloze')"),
-  );
+  const clozeBranchIndex = source.indexOf("} else if (activity.mode === 'cloze')");
+  const dictationRenderIndex = source.lastIndexOf("if (activity.type === 'dictation')", clozeBranchIndex);
+  const dictationBranch = source.slice(dictationRenderIndex, clozeBranchIndex);
+  assert.ok(dictationRenderIndex >= 0);
   assert.doesNotMatch(dictationBranch, /textContent\s*=\s*item\.surface_form/);
 });
