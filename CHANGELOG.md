@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.12.1] - 2026-10-05
+
+### Changed
+
+- Locked A1.1 sections can now be opened for preview while all of their lessons remain locked until prerequisites are completed.
+- The section selector labels locked destinations as previewable instead of disabling them.
+
+
 ## [1.12.0] - 2026-10-05
 
 ### Added
