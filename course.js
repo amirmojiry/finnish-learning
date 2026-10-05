@@ -697,7 +697,7 @@
         const actions = document.createElement('div');
         actions.className = 'course-lesson-popover-actions';
         const continueButton = createButton(
-          done ? 'تمرین دوباره' : unlocked ? 'ادامه درس' : 'قفل است',
+          unlocked ? 'ادامه درس' : 'قفل است',
           'primary-button course-lesson-continue',
           () => startLesson(lesson),
         );
