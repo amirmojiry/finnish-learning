@@ -1114,6 +1114,64 @@
   line-height: 1.8;
 }
 
+.course-morphology-context {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.course-morphology-base,
+.course-morphology-feature,
+.course-morphology-prompt,
+.course-morphology-frame,
+.course-morphology-answer,
+.course-morphology-explanation {
+  margin: 0;
+}
+
+.course-morphology-base {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.course-morphology-base span,
+.course-morphology-feature {
+  color: var(--muted);
+}
+
+.course-morphology-base strong,
+.course-morphology-frame,
+.course-morphology-answer {
+  font-weight: 900;
+}
+
+.course-morphology-frame {
+  margin-top: 4px;
+  font-size: clamp(1.2rem, 4vw, 1.65rem);
+  text-align: left;
+}
+
+.course-morphology-options .course-option {
+  min-height: 58px;
+}
+
+.course-morphology-answer {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.course-morphology-explanation {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 .course-sequence-options {
   display: grid;
   gap: 9px;
