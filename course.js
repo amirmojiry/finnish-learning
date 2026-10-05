@@ -584,7 +584,7 @@
     function selectSection(nextSection, { updateHash = true } = {}) {
       if (!nextSection) return false;
       const index = sections.indexOf(nextSection);
-      if (index < 0 || !isSectionUnlocked(sections, progress, index)) return false;
+      if (index < 0) return false;
       section = nextSection;
       activeLesson = null;
       if (updateHash) setHash(`#course-${section.id}`);
@@ -768,11 +768,11 @@
         const unlocked = implemented ? isSectionUnlocked(sections, progress, implementedIndex) : false;
         const current = implemented === section;
         const option = createButton('', `course-section-selector-option${current ? ' is-current' : ''}${unlocked ? ' is-unlocked' : ' is-locked'}`, () => {
-          if (!implemented || !unlocked || current) return;
+          if (!implemented || current) return;
           if (!selectSection(implemented)) return;
           renderSectionMap();
         });
-        option.disabled = !implemented || !unlocked || current;
+        option.disabled = !implemented || current;
         const optionTitle = document.createElement('span');
         optionTitle.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
         const optionStatus = document.createElement('small');
