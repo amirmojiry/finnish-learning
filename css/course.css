@@ -1443,14 +1443,6 @@
     margin-inline: auto;
   }
 
-  .course-path-step:nth-of-type(4n + 1) {
-    transform: translateX(-70px);
-  }
-
-  .course-path-step:nth-of-type(4n + 3) {
-    transform: translateX(70px);
-  }
-
   .course-lesson-popover {
     transform: none;
   }
