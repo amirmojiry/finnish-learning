@@ -1709,7 +1709,7 @@
       ],
       "listening_targets": [
         "s3-tanaan",
-        "s3-eilen"
+        "s3-huomenna"
       ]
     },
     {
@@ -2022,8 +2022,8 @@
         "s3-kello-yksi"
       ],
       "listening_targets": [
-        "s3-kello-yksi",
-        "s3-kello-kolme"
+        "s3-aamu",
+        "s3-kello-kaksi"
       ]
     },
     {
@@ -2910,7 +2910,7 @@
         "s3-routine-4"
       ],
       "listening_targets": [
-        "s3-routine-4",
+        "s3-routine-1",
         "s3-routine-3"
       ]
     },
@@ -3023,7 +3023,7 @@
       ],
       "listening_targets": [
         "s3-tanaan",
-        "s3-kello-kaksi"
+        "s3-routine-3"
       ]
     }
   ]
