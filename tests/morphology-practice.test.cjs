@@ -102,6 +102,42 @@ test('morphology manifests are explicit, scoped, and reproduced exactly in prepa
       }
     });
   });
+
+  const choicePositions = rawSections
+    .flatMap((section) => section.lessons)
+    .flatMap((lesson) => lesson.morphology_practice || [])
+    .filter((spec) => spec.type === 'morphology-choice')
+    .map((spec) => spec.options_fi.findIndex((option) => course.normalizeAnswer(option) === course.normalizeAnswer(spec.expected_fi)));
+  assert.ok(choicePositions.every((position) => position >= 0));
+  assert.ok(new Set(choicePositions).size >= 3, `expected varied answer positions, got ${choicePositions.join(', ')}`);
+  assert.ok(choicePositions.some((position) => position !== 0), 'morphology-choice answers must not always be first');
+});
+
+test('morphology production accepts only explicit forms plus keyboard diacritic substitutions', () => {
+  const cases = [
+    { expected: 'suomea', wrong: 'suomen' },
+    { expected: 'sinun', wrong: 'minun' },
+    { expected: 'Vaasassa', wrong: 'Vaasasta' },
+    { expected: 'työskentelen', wrong: 'työskentelet' },
+  ];
+
+  for (const example of cases) {
+    const wrong = course.gradeMorphologyAnswer(
+      { surface_form: example.expected, accepted_answers: [example.expected] },
+      example.wrong,
+    );
+    assert.equal(wrong.accepted, false, `${example.wrong} must not be accepted for ${example.expected}`);
+    assert.equal(wrong.fuzzy, false);
+  }
+
+  const keyboardOnly = course.gradeMorphologyAnswer(
+    { surface_form: 'työskentelen', accepted_answers: ['työskentelen'] },
+    'tyoskentelen',
+  );
+  assert.equal(keyboardOnly.accepted, true);
+  assert.equal(keyboardOnly.exact, false);
+  assert.equal(keyboardOnly.fuzzy, true);
+  assert.equal(keyboardOnly.diacriticAdjusted, true);
 });
 
 test('section checkpoints review explicit morphology without dropping the 15-activity contract', () => {
@@ -269,7 +305,7 @@ test('morphology-choice interaction grades only the explicit expected form', () 
       feature_fa: 'inessiivi',
       prompt_fa: 'شکل درست را انتخاب کن.',
       frame_fi: 'Asun _____.',
-      options_fi: ['Helsingissä', 'Helsingistä', 'Helsinkiin', 'Helsinki'],
+      options_fi: ['Helsingistä', 'Helsinkiin', 'Helsingissä', 'Helsinki'],
       expected_fi: 'Helsingissä',
       explanation_fa: 'Helsinki → Helsingissä.',
     },
@@ -287,13 +323,13 @@ test('morphology-choice interaction grades only the explicit expected form', () 
   const options = card.children[1];
   options.children[1].click();
   assert.deepEqual(results, [false]);
-  assert.equal(options.children[0].classList.contains('correct'), true);
+  assert.equal(options.children[2].classList.contains('correct'), true);
   assert.equal(options.children[1].classList.contains('wrong'), true);
   assert.equal(feedback.hidden, false);
   assert.equal(feedback.children[1].textContent, 'Asun Helsingissä.');
 });
 
-test('inflection-production reuses fuzzy grading and keeps canonical morphology visible', () => {
+test('inflection-production tolerates keyboard diacritics while keeping canonical morphology visible', () => {
   const { document, windowObject, createButton, createTypedDifference } = fakeDomHarness();
   const card = document.createElement('div');
   const feedback = document.createElement('div');
