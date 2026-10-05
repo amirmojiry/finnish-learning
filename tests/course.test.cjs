@@ -681,3 +681,36 @@ test('when lesson contains five deterministic event-to-time matching assessments
     assert.equal(new Set(activity.options).size, activity.options.length);
   }
 });
+
+
+test('section map uses circular numbered lesson nodes and a focused lesson popover', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /course-node-path/);
+  assert.match(source, /course-path-step/);
+  assert.match(source, /course-lesson-node/);
+  assert.match(source, /course-lesson-popover/);
+  assert.match(source, /جزئیات درس/);
+  assert.match(source, /ادامه درس/);
+  assert.match(source, /نکتهٔ زبان:/);
+  assert.doesNotMatch(source, /card\.className = `course-lesson-card/);
+});
+
+test('lesson path styling uses circular nodes and thick dashed connectors', () => {
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(styles, /\.course-lesson-node\s*\{/);
+  assert.match(styles, /border-radius:\s*50%/);
+  assert.match(styles, /\.course-path-step::after/);
+  assert.match(styles, /border-left:\s*8px dashed/);
+  assert.match(styles, /\.course-lesson-popover/);
+  assert.match(styles, /\.course-lesson-popover-details/);
+});
+
+test('lesson path preserves completed current and locked visual states', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(source, /is-complete/);
+  assert.match(source, /is-current/);
+  assert.match(source, /is-locked/);
+  assert.match(styles, /\.course-lesson-node\.is-complete/);
+  assert.match(styles, /\.course-lesson-node\.is-locked/);
+});
