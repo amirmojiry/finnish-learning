@@ -1363,7 +1363,7 @@
       ],
       "listening_targets": [
         "hei",
-        "hyvaa-huomenta"
+        "moi"
       ]
     },
     {
@@ -1401,7 +1401,7 @@
       ],
       "listening_targets": [
         "mina",
-        "mika-sinun-nimesi-on"
+        "sina"
       ]
     },
     {
@@ -1437,7 +1437,7 @@
       ],
       "listening_targets": [
         "hyvaa",
-        "mita-kuuluu"
+        "kiitos"
       ]
     },
     {
@@ -1474,7 +1474,7 @@
       ],
       "listening_targets": [
         "kylla",
-        "ei-ole"
+        "ei"
       ]
     },
     {
@@ -1512,7 +1512,7 @@
       ],
       "listening_targets": [
         "mika-tama-on",
-        "kuka-han-on"
+        "tama"
       ]
     },
     {
@@ -1545,7 +1545,7 @@
       ],
       "listening_targets": [
         "kiitos",
-        "ole-hyva"
+        "anteeksi"
       ]
     },
     {
@@ -1581,7 +1581,7 @@
       ],
       "listening_targets": [
         "en",
-        "en-ymmarra"
+        "hitaammin"
       ]
     },
     {
@@ -1621,7 +1621,7 @@
       ],
       "listening_targets": [
         "se",
-        "tama"
+        "kirja"
       ]
     },
     {
@@ -1804,7 +1804,7 @@
         "mita-kuuluu"
       ],
       "listening_targets": [
-        "mita-kuuluu",
+        "hyvaa-kiitos",
         "hei-minun-nimeni-on"
       ]
     },
@@ -1906,7 +1906,7 @@
       ],
       "listening_targets": [
         "hei",
-        "hyvaa-huomenta"
+        "tama"
       ]
     }
   ],
