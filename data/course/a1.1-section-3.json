@@ -2232,10 +2232,10 @@
           "prompt_fa": "برای گفتن «شب / در شب» شکل درست yö را انتخاب کن.",
           "frame_fi": "_____ nukun.",
           "options_fi": [
-            "yöllä",
             "yöstä",
             "yöhön",
-            "yö"
+            "yö",
+            "yöllä"
           ],
           "expected_fi": "yöllä",
           "explanation_fa": "در این عبارت زمانی، yö به شکل adessiivi یعنی yöllä می‌آید."
@@ -2572,8 +2572,8 @@
           "prompt_fa": "برای سؤال از «تو»، شکل درست tehdä را انتخاب کن.",
           "frame_fi": "Mitä _____?",
           "options_fi": [
-            "teet",
             "teen",
+            "teet",
             "tekee",
             "teemme"
           ],
