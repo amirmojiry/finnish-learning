@@ -1079,6 +1079,17 @@
     return true;
   }
 
+  function activityNeedsFinnishSpeech(activity) {
+    return Boolean(
+      activity
+      && (
+        activity.type === 'teach'
+        || activity.type === 'dictation'
+        || (activity.type === 'choice' && activity.mode === 'listen')
+      )
+    );
+  }
+
   function initializeBrowser(windowObject) {
     const document = windowObject.document;
     const root = document && document.getElementById('course-root');
@@ -1192,6 +1203,28 @@
       button.textContent = label;
       button.addEventListener('click', onClick);
       return button;
+    }
+
+    function createSpeechStatusNotice(status) {
+      const notice = document.createElement('div');
+      notice.className = 'course-audio-unavailable';
+      const title = document.createElement('strong');
+      const detail = document.createElement('p');
+
+      if (status.state === 'loading') {
+        title.textContent = 'در حال بررسی صدای فنلاندی دستگاه…';
+        detail.textContent = 'فهرست صداهای مرورگر هنوز آماده نشده است. اگر چند لحظه بعد صدا بارگذاری نشد، دوباره بررسی کن.';
+      } else if (status.state === 'missing') {
+        title.textContent = 'صدای فنلاندی روی این دستگاه پیدا نشد.';
+        detail.textContent = `برای جلوگیری از تلفظ اشتباه، این تمرین صوتی پخش نمی‌شود. ${speechSettingsGuide(windowObject)}`;
+      } else {
+        title.textContent = 'پخش صوتی فنلاندی در این مرورگر در دسترس نیست.';
+        detail.textContent = `این تمرین در امتیاز حساب نمی‌شود. ${speechSettingsGuide(windowObject)}`;
+      }
+
+      const retry = createButton('بررسی دوبارهٔ صدای فنلاندی', 'course-secondary-button course-audio-retry', renderActivity);
+      notice.append(title, detail, retry);
+      return notice;
     }
 
     function createInfoDisclosure(buildContent, label = 'نمایش توضیحات') {
@@ -2058,9 +2091,13 @@
         surface.lang = 'fi';
         surface.dir = 'ltr';
         surface.textContent = item.surface_form;
-        const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
-        speak.setAttribute('aria-label', `پخش تلفظ ${item.surface_form}`);
-        word.append(surface, speak);
+        const speechStatus = finnishSpeechStatus(windowObject);
+        word.append(surface);
+        if (speechStatus.state === 'ready') {
+          const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
+          speak.setAttribute('aria-label', `پخش تلفظ ${item.surface_form}`);
+          word.append(speak);
+        }
         const meaning = document.createElement('p');
         meaning.className = 'course-teach-meaning';
         meaning.textContent = item.translation_fa;
@@ -2068,7 +2105,8 @@
         addExample();
         card.append(createButton('ادامه', 'primary-button course-next-button', nextActivity));
       } else if (activity.type === 'choice') {
-        const speechUnavailable = activity.mode === 'listen' && !supportsSpeech(windowObject);
+        const speechStatus = activity.mode === 'listen' ? finnishSpeechStatus(windowObject) : null;
+        const speechUnavailable = activity.mode === 'listen' && speechStatus.state !== 'ready';
         if (activity.mode === 'meaning') {
           const focus = document.createElement('strong');
           focus.className = 'course-focus-word';
@@ -2083,10 +2121,7 @@
           card.append(focus);
         } else if (activity.mode === 'listen') {
           if (speechUnavailable) {
-            const unavailable = document.createElement('p');
-            unavailable.className = 'course-audio-unavailable';
-            unavailable.textContent = 'امکان پخش صدای فنلاندی در این مرورگر وجود ندارد. این تمرین در امتیاز حساب نمی‌شود.';
-            card.append(unavailable);
+            card.append(createSpeechStatusNotice(speechStatus));
           } else {
             const listen = createButton('پخش صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
             card.append(listen);
@@ -2134,17 +2169,15 @@
           card.append(createButton('ادامه بدون تمرین شنیداری', 'primary-button course-next-button', nextActivity));
         }
       } else {
-        const speechUnavailable = activity.type === 'dictation' && !supportsSpeech(windowObject);
+        const speechStatus = activity.type === 'dictation' ? finnishSpeechStatus(windowObject) : null;
+        const speechUnavailable = activity.type === 'dictation' && speechStatus.state !== 'ready';
         if (activity.type === 'dictation') {
           const listen = createButton('پخش دوبارهٔ صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
           listen.setAttribute('aria-label', 'پخش دوبارهٔ عبارت برای دیکته');
           listen.disabled = speechUnavailable;
           card.append(listen);
           if (speechUnavailable) {
-            const unavailable = document.createElement('p');
-            unavailable.className = 'course-audio-unavailable';
-            unavailable.textContent = 'امکان پخش صدای فنلاندی در این مرورگر وجود ندارد. این تمرین در امتیاز حساب نمی‌شود.';
-            card.append(unavailable);
+            card.append(createSpeechStatusNotice(speechStatus));
           } else {
             windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
           }
@@ -2213,9 +2246,11 @@
       const fuzzy = Boolean(grading && grading.fuzzy);
       container.className = `course-answer-feedback ${correct ? (fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
       const title = document.createElement('strong');
-      title.textContent = fuzzy
-        ? 'قبول شد؛ پاسخ خیلی نزدیک بود.'
-        : correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
+      title.textContent = grading?.diacriticAdjusted && correct
+        ? 'درست حساب شد؛ املای استاندارد فنلاندی را مرور کن.'
+        : fuzzy
+          ? 'قبول شد؛ پاسخ خیلی نزدیک بود.'
+          : correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
       container.append(title);
       if (grading && !grading.exact) container.append(createTypedDifference(grading));
       const example = document.createElement('div');
@@ -2340,6 +2375,14 @@
       if (isCourseHash() && !activeLesson) renderSectionMap();
     });
 
+    if (windowObject.speechSynthesis && typeof windowObject.speechSynthesis.addEventListener === 'function') {
+      windowObject.speechSynthesis.addEventListener('voiceschanged', () => {
+        if (!activeLesson) return;
+        const currentActivity = activeLesson.activities[activityIndex];
+        if (activityNeedsFinnishSpeech(currentActivity)) renderActivity();
+      });
+    }
+
     if (typeof windowObject.MutationObserver === 'function') {
       const observer = new windowObject.MutationObserver(() => {
         if (!isCourseHash()) return;
@@ -2403,6 +2446,7 @@
     SECTION_URL,
     CURRICULUM_URL,
     normalizeAnswer,
+    foldFinnishDiacritics,
     emptyProgress,
     sanitizeProgress,
     loadProgress,
@@ -2418,7 +2462,13 @@
     answerSimilarity,
     gradeTypedAnswer,
     isTypedAnswerCorrect,
+    speechApiAvailable,
+    findFinnishVoice,
+    finnishSpeechStatus,
+    speechSettingsGuide,
     supportsSpeech,
+    playSpeech,
+    activityNeedsFinnishSpeech,
     STRUCTURED_PRACTICE_TYPES,
     injectStructuredPractice,
     renderStructuredPracticeActivity,
