@@ -101,6 +101,29 @@ test('typed grading accepts answers at 80 percent similarity and distinguishes e
   assert.ok(wrong.similarity < 0.8);
 });
 
+test('typed grading accepts a/ä and o/ö substitutions while preserving canonical feedback', () => {
+  const aa = course.gradeTypedAnswer({ surface_form: 'hyvää' }, 'hyvaa');
+  assert.equal(aa.accepted, true);
+  assert.equal(aa.exact, false);
+  assert.equal(aa.fuzzy, true);
+  assert.equal(aa.diacriticAdjusted, true);
+  assert.equal(aa.similarity, 1);
+  assert.ok(aa.operations.some((operation) => operation.type === 'replace' && operation.entered === 'a' && operation.expected === 'ä'));
+
+  const oo = course.gradeTypedAnswer({ surface_form: 'pöytä' }, 'poyta');
+  assert.equal(oo.accepted, true);
+  assert.equal(oo.diacriticAdjusted, true);
+  assert.ok(oo.operations.some((operation) => operation.type === 'replace' && operation.entered === 'o' && operation.expected === 'ö'));
+
+  const reverse = course.gradeTypedAnswer({ surface_form: 'sana' }, 'sänä');
+  assert.equal(reverse.accepted, true);
+  assert.equal(reverse.diacriticAdjusted, true);
+
+  const unrelated = course.gradeTypedAnswer({ surface_form: 'kissa' }, 'koira');
+  assert.equal(unrelated.accepted, false);
+  assert.equal(unrelated.diacriticAdjusted, false);
+});
+
 test('typed grading returns character-level alignment for substitutions omissions and extras', () => {
   const substitution = course.gradeTypedAnswer({ surface_form: 'hyvää' }, 'hyvaa');
   assert.ok(substitution.operations.some((operation) => operation.type === 'replace'));
