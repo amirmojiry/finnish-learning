@@ -1360,6 +1360,10 @@
       },
       "production_targets": [
         "hyvaa-huomenta"
+      ],
+      "listening_targets": [
+        "hei",
+        "hyvaa-huomenta"
       ]
     },
     {
@@ -1394,6 +1398,10 @@
       },
       "production_targets": [
         "mika-sinun-nimesi-on"
+      ],
+      "listening_targets": [
+        "mina",
+        "mika-sinun-nimesi-on"
       ]
     },
     {
@@ -1425,6 +1433,10 @@
         ]
       },
       "production_targets": [
+        "mita-kuuluu"
+      ],
+      "listening_targets": [
+        "hyvaa",
         "mita-kuuluu"
       ]
     },
@@ -1458,6 +1470,10 @@
         ]
       },
       "production_targets": [
+        "ei-ole"
+      ],
+      "listening_targets": [
+        "kylla",
         "ei-ole"
       ]
     },
@@ -1493,6 +1509,10 @@
       },
       "production_targets": [
         "kuka-han-on"
+      ],
+      "listening_targets": [
+        "mika-tama-on",
+        "kuka-han-on"
       ]
     },
     {
@@ -1521,6 +1541,10 @@
         ]
       },
       "production_targets": [
+        "ole-hyva"
+      ],
+      "listening_targets": [
+        "kiitos",
         "ole-hyva"
       ]
     },
@@ -1553,6 +1577,10 @@
         ]
       },
       "production_targets": [
+        "en-ymmarra"
+      ],
+      "listening_targets": [
+        "en",
         "en-ymmarra"
       ]
     },
@@ -1589,6 +1617,10 @@
         ]
       },
       "production_targets": [
+        "tama"
+      ],
+      "listening_targets": [
+        "se",
         "tama"
       ]
     },
@@ -1770,6 +1802,10 @@
       ],
       "production_targets": [
         "mita-kuuluu"
+      ],
+      "listening_targets": [
+        "hei",
+        "mita-kuuluu"
       ]
     },
     {
@@ -1866,6 +1902,10 @@
         "expressions": []
       },
       "production_targets": [
+        "hyvaa-huomenta"
+      ],
+      "listening_targets": [
+        "hei",
         "hyvaa-huomenta"
       ]
     }
