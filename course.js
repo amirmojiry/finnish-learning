@@ -668,79 +668,109 @@
       header.append(sectionInfo);
 
       const path = document.createElement('section');
-      path.className = 'course-path';
+      path.className = 'course-path course-node-path';
       path.setAttribute('aria-label', `درس‌های ${section.title_fa}`);
-      section.lessons.forEach((lesson, index) => {
-        const done = progress.completedLessons.includes(lesson.id);
-        const sectionIndex = sections.indexOf(section);
-        const unlocked = isSectionUnlocked(sections, progress, sectionIndex) && isLessonUnlocked(section, progress, index);
-        const card = document.createElement('article');
-        card.className = `course-lesson-card${done ? ' is-complete' : ''}${unlocked ? ' is-unlocked' : ' is-locked'}`;
+      const actionPanel = document.createElement('article');
+      actionPanel.className = 'course-lesson-popover';
+      actionPanel.hidden = true;
+      let selectedNode = null;
 
-        const marker = document.createElement('div');
-        marker.className = 'course-lesson-marker';
-        marker.textContent = done ? '✓' : toPersianNumber(lesson.order);
-        marker.setAttribute('aria-hidden', 'true');
-
-        const body = document.createElement('div');
-        body.className = 'course-lesson-body';
-        const heading = document.createElement('div');
-        heading.className = 'course-lesson-heading';
-        const lessonLabel = document.createElement('span');
-        lessonLabel.textContent = `درس ${toPersianNumber(lesson.order)}`;
-        const lessonTitle = document.createElement('h2');
-        lessonTitle.textContent = lesson.title_fa;
-        heading.append(lessonLabel, lessonTitle);
-        body.append(heading);
-        const lessonInfo = createInfoDisclosure((panel) => {
-          const objective = document.createElement('p');
-          objective.className = 'course-lesson-objective';
-          objective.textContent = lesson.objective_fa;
-          const summary = document.createElement('p');
-          summary.className = 'course-lesson-summary';
-          summary.textContent = lesson.summary_fa;
-          const grammar = document.createElement('p');
-          grammar.className = 'course-lesson-grammar';
-          grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
-          panel.append(objective, summary, grammar);
-        }, `توضیحات درس ${toPersianNumber(lesson.order)}`);
-        body.append(lessonInfo);
-
-        const targetList = document.createElement('div');
-        targetList.className = 'course-target-list';
-        const targetIds = Array.isArray(lesson.display_targets) && lesson.display_targets.length
-          ? lesson.display_targets
-          : lesson.new_targets.length ? lesson.new_targets : lesson.review_targets.slice(0, 5);
-        for (const targetId of targetIds) {
-          const target = section.items[targetId];
-          if (!target) continue;
-          const chip = document.createElement('span');
-          chip.lang = 'fi';
-          chip.dir = 'ltr';
-          chip.textContent = target.surface_form;
-          targetList.append(chip);
+      const openLessonPopover = (lesson, node, unlocked, done, step) => {
+        if (selectedNode) {
+          selectedNode.classList.remove('is-selected');
+          selectedNode.setAttribute('aria-expanded', 'false');
         }
-        body.append(targetList);
+        selectedNode = node;
+        node.classList.add('is-selected');
+        node.setAttribute('aria-expanded', 'true');
 
-        const actionArea = document.createElement('div');
-        actionArea.className = 'course-lesson-action-area';
-        const action = createButton(
-          done ? 'تمرین دوباره' : unlocked ? 'شروع درس' : 'قفل است',
-          'course-lesson-action',
+        actionPanel.replaceChildren();
+        actionPanel.hidden = false;
+
+        const eyebrow = document.createElement('span');
+        eyebrow.className = 'course-lesson-popover-label';
+        eyebrow.textContent = `درس ${toPersianNumber(lesson.order)}`;
+
+        const heading = document.createElement('h2');
+        heading.textContent = lesson.title_fa;
+
+        const actions = document.createElement('div');
+        actions.className = 'course-lesson-popover-actions';
+        const continueButton = createButton(
+          done ? 'تمرین دوباره' : unlocked ? 'ادامه درس' : 'قفل است',
+          'primary-button course-lesson-continue',
           () => startLesson(lesson),
         );
-        action.disabled = !unlocked;
-        actionArea.append(action);
+        continueButton.disabled = !unlocked;
+
+        const detailsButton = createButton('جزئیات درس', 'course-secondary-button course-lesson-details-toggle', () => {
+          const expanded = detailsButton.getAttribute('aria-expanded') === 'true';
+          detailsButton.setAttribute('aria-expanded', String(!expanded));
+          details.hidden = expanded;
+          detailsButton.textContent = expanded ? 'جزئیات درس' : 'بستن جزئیات';
+        });
+        detailsButton.setAttribute('aria-expanded', 'false');
+
+        actions.append(continueButton, detailsButton);
+
+        const details = document.createElement('div');
+        details.className = 'course-lesson-popover-details';
+        details.hidden = true;
+        const objective = document.createElement('p');
+        objective.className = 'course-lesson-objective';
+        objective.textContent = lesson.objective_fa;
+        const summary = document.createElement('p');
+        summary.className = 'course-lesson-summary';
+        summary.textContent = lesson.summary_fa;
+        const grammar = document.createElement('p');
+        grammar.className = 'course-lesson-grammar';
+        grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
+        details.append(objective, summary, grammar);
+
+        actionPanel.append(eyebrow, heading, actions, details);
+
         if (done && progress.lessonScores[lesson.id]) {
           const score = progress.lessonScores[lesson.id];
           const scoreLabel = document.createElement('small');
           scoreLabel.className = 'course-best-score';
           scoreLabel.textContent = `بهترین نتیجه: ${toPersianNumber(score.correct)} از ${toPersianNumber(score.graded)}`;
-          actionArea.append(scoreLabel);
+          actionPanel.append(scoreLabel);
         }
-        card.append(marker, body, actionArea);
-        path.append(card);
+
+        step.after(actionPanel);
+      };
+
+      section.lessons.forEach((lesson, index) => {
+        const done = progress.completedLessons.includes(lesson.id);
+        const sectionIndex = sections.indexOf(section);
+        const unlocked = isSectionUnlocked(sections, progress, sectionIndex) && isLessonUnlocked(section, progress, index);
+
+        const step = document.createElement('div');
+        step.className = `course-path-step${index === section.lessons.length - 1 ? ' is-last' : ''}`;
+
+        const node = createButton(toPersianNumber(lesson.order), 'course-lesson-node', () => {
+          openLessonPopover(lesson, node, unlocked, done, step);
+        });
+        node.classList.toggle('is-complete', done);
+        node.classList.toggle('is-current', unlocked && !done);
+        node.classList.toggle('is-locked', !unlocked);
+        node.setAttribute('aria-label', `درس ${toPersianNumber(lesson.order)}: ${lesson.title_fa}`);
+        node.setAttribute('aria-expanded', 'false');
+        if (!unlocked) node.setAttribute('aria-describedby', 'course-locked-lesson-note');
+
+        const state = document.createElement('span');
+        state.className = 'course-lesson-node-state';
+        state.textContent = done ? 'کامل شده' : unlocked ? 'قابل یادگیری' : 'قفل است';
+
+        step.append(node, state);
+        path.append(step);
       });
+
+      const lockedNote = document.createElement('span');
+      lockedNote.id = 'course-locked-lesson-note';
+      lockedNote.className = 'course-sr-only';
+      lockedNote.textContent = 'این درس هنوز قفل است.';
+      path.append(lockedNote);
 
       const footer = document.createElement('div');
       footer.className = 'course-map-footer';
