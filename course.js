@@ -541,6 +541,69 @@
     }
   }
 
+  const MORPHOLOGY_PRACTICE_TYPES = ['morphology-choice', 'inflection-production'];
+
+  function injectMorphologyPractice(section, lesson) {
+    const specs = Array.isArray(lesson.morphology_practice) ? lesson.morphology_practice : [];
+    if (!specs.length) return;
+    const declared = new Set(auditoryLessonScope(lesson));
+    const usedIndices = new Set();
+
+    for (const spec of specs) {
+      if (!MORPHOLOGY_PRACTICE_TYPES.includes(spec.type)) {
+        throw new Error(`Unknown morphology practice type in ${lesson.id}: ${spec.type}`);
+      }
+      if (!section.items[spec.item] || !declared.has(spec.item)) {
+        throw new Error(`Morphology practice target must belong to the explicit lesson scope: ${lesson.id} / ${spec.item}`);
+      }
+
+      const matchesTarget = (activity) => (
+        activity.item === spec.item
+        || activity.negative_item === spec.item
+        || activity.affirmative_item === spec.item
+      );
+
+      let replacementIndex = -1;
+      if (spec.type === 'morphology-choice') {
+        replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+          !usedIndices.has(index)
+          && matchesTarget(activity)
+          && (
+            (activity.type === 'choice' && activity.mode !== 'listen')
+            || activity.type === 'visual-choice'
+            || activity.type === 'negative-transform'
+          )
+        ));
+      } else {
+        replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+          !usedIndices.has(index)
+          && matchesTarget(activity)
+          && activity.type === 'type'
+        ));
+      }
+
+      if (replacementIndex < 0) {
+        replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+          !usedIndices.has(index)
+          && matchesTarget(activity)
+          && (
+            (activity.type === 'choice' && activity.mode !== 'listen')
+            || activity.type === 'visual-choice'
+            || activity.type === 'type'
+            || activity.type === 'negative-transform'
+          )
+        ));
+      }
+
+      if (replacementIndex < 0) {
+        throw new Error(`Lesson ${lesson.id} has no matching slot for morphology practice target ${spec.item}.`);
+      }
+
+      lesson.activities[replacementIndex] = { ...spec };
+      usedIndices.add(replacementIndex);
+    }
+  }
+
   function injectProductionActivity(section, lesson) {
     const targets = Array.isArray(lesson.production_targets) ? lesson.production_targets : [];
     if (targets.length !== 1) throw new Error(`Lesson ${lesson.id || '?'} must declare exactly one production target.`);
@@ -638,6 +701,7 @@
       injectProductionActivity(section, lesson);
       injectListeningActivities(section, lesson);
       injectStructuredPractice(section, lesson);
+      injectMorphologyPractice(section, lesson);
       seen.push(...(lesson.new_targets || []));
     });
     return section;
@@ -683,7 +747,46 @@
         }
       }
 
+      const morphologySpecs = Array.isArray(lesson.morphology_practice) ? lesson.morphology_practice : [];
+      const morphologyActivities = lesson.activities.filter((activity) => MORPHOLOGY_PRACTICE_TYPES.includes(activity.type));
+      if (morphologyActivities.length !== morphologySpecs.length) {
+        throw new Error(`Lesson ${lesson.id} must contain every declared morphology-practice activity.`);
+      }
+      for (const spec of morphologySpecs) {
+        const matches = morphologyActivities.filter((activity) => activity.type === spec.type && activity.item === spec.item);
+        if (matches.length !== 1) throw new Error(`Morphology-practice contract mismatch in ${lesson.id}: ${spec.type} / ${spec.item}`);
+      }
+
       for (const activity of lesson.activities) {
+        if (activity.type === 'morphology-choice') {
+          if (!section.items[activity.item]) throw new Error(`Unknown morphology-choice target in ${lesson.id}`);
+          if (!activity.base_fi || !activity.feature_fa || !activity.prompt_fa || !activity.frame_fi || !activity.frame_fi.includes('_____') || !activity.explanation_fa) {
+            throw new Error(`Morphology choice requires explicit base, feature, prompt, frame and explanation in ${lesson.id}`);
+          }
+          if (!Array.isArray(activity.options_fi) || activity.options_fi.length < 3 || activity.options_fi.some((option) => !String(option).trim())) {
+            throw new Error(`Morphology choice requires at least three explicit Finnish forms in ${lesson.id}`);
+          }
+          if (new Set(activity.options_fi.map(normalizeAnswer)).size !== activity.options_fi.length) {
+            throw new Error(`Morphology choice options must be unique in ${lesson.id}`);
+          }
+          if (!activity.expected_fi || activity.options_fi.filter((option) => normalizeAnswer(option) === normalizeAnswer(activity.expected_fi)).length !== 1) {
+            throw new Error(`Morphology choice must contain exactly one explicit expected form in ${lesson.id}`);
+          }
+          continue;
+        }
+        if (activity.type === 'inflection-production') {
+          if (!section.items[activity.item]) throw new Error(`Unknown inflection-production target in ${lesson.id}`);
+          if (!activity.base_fi || !activity.feature_fa || !activity.prompt_fa || !activity.frame_fi || !activity.frame_fi.includes('_____') || !activity.explanation_fa) {
+            throw new Error(`Inflection production requires explicit base, feature, prompt, frame and explanation in ${lesson.id}`);
+          }
+          if (!activity.expected_fi || !Array.isArray(activity.accepted_answers) || !activity.accepted_answers.length) {
+            throw new Error(`Inflection production requires explicit accepted answers in ${lesson.id}`);
+          }
+          if (!activity.accepted_answers.map(normalizeAnswer).includes(normalizeAnswer(activity.expected_fi))) {
+            throw new Error(`Inflection-production accepted answers must include expected Finnish in ${lesson.id}`);
+          }
+          continue;
+        }
         if (activity.type === 'sentence-order') {
           if (!section.items[activity.item]) throw new Error(`Unknown sentence-order target in ${lesson.id}`);
           if (!Array.isArray(activity.tokens) || activity.tokens.length < 2 || activity.tokens.some((token) => !String(token).trim())) {
@@ -881,7 +984,7 @@
         }
 
         for (const activity of lesson.activities) {
-          if (activity.type === 'expression-completion' || activity.type === 'controlled-production') {
+          if (activity.type === 'expression-completion' || activity.type === 'controlled-production' || activity.type === 'inflection-production') {
             if (!Array.isArray(activity.accepted_answers) || !activity.accepted_answers.length) {
               throw new Error(`Structured typed activity lacks explicit accepted answers: ${lesson.id} / ${activity.item}`);
             }
@@ -1083,6 +1186,136 @@
       showFeedback(feedback, grading.accepted, expected, grading);
     });
     card.append(meaning, cues, form, feedback);
+    windowObject.setTimeout(() => input.focus(), 0);
+    return true;
+  }
+
+  function renderMorphologyPracticeActivity({
+    document,
+    windowObject,
+    activity,
+    card,
+    feedback,
+    createButton,
+    nextActivity,
+    createTypedDifference,
+    recordResult,
+  }) {
+    if (!MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) return false;
+    let answered = false;
+
+    const context = document.createElement('div');
+    context.className = 'course-morphology-context';
+
+    const base = document.createElement('p');
+    base.className = 'course-morphology-base';
+    const baseLabel = document.createElement('span');
+    baseLabel.textContent = 'شکل پایه:';
+    const baseValue = document.createElement('strong');
+    baseValue.lang = 'fi';
+    baseValue.dir = 'ltr';
+    baseValue.textContent = activity.base_fi;
+    base.append(baseLabel, baseValue);
+
+    const feature = document.createElement('p');
+    feature.className = 'course-morphology-feature';
+    feature.textContent = activity.feature_fa;
+
+    const instruction = document.createElement('p');
+    instruction.className = 'course-morphology-prompt';
+    instruction.textContent = activity.prompt_fa;
+
+    const frame = document.createElement('p');
+    frame.className = 'course-morphology-frame';
+    frame.lang = 'fi';
+    frame.dir = 'ltr';
+    frame.textContent = activity.frame_fi;
+    context.append(base, feature, instruction, frame);
+    card.append(context);
+
+    const finish = (correct, grading = null) => {
+      feedback.replaceChildren();
+      feedback.hidden = false;
+      feedback.className = `course-answer-feedback ${correct ? (grading?.fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
+
+      const title = document.createElement('strong');
+      title.textContent = correct
+        ? (grading?.fuzzy ? 'قبول شد؛ شکل درست را هم مرور کن.' : 'آفرین، فرم درست است.')
+        : `شکل درست: ${activity.expected_fi}`;
+      feedback.append(title);
+
+      if (grading && !grading.exact) feedback.append(createTypedDifference(grading));
+
+      const completed = document.createElement('p');
+      completed.className = 'course-morphology-answer';
+      completed.lang = 'fi';
+      completed.dir = 'ltr';
+      completed.textContent = activity.frame_fi.replace('_____', activity.expected_fi);
+
+      const explanation = document.createElement('p');
+      explanation.className = 'course-morphology-explanation';
+      explanation.textContent = activity.explanation_fa;
+
+      feedback.append(completed, explanation, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+    };
+
+    if (activity.type === 'morphology-choice') {
+      const options = document.createElement('div');
+      options.className = 'course-options course-morphology-options';
+      for (const option of activity.options_fi) {
+        const button = createButton(option, 'course-option', () => {
+          if (answered) return;
+          answered = true;
+          const correct = normalizeAnswer(option) === normalizeAnswer(activity.expected_fi);
+          recordResult(correct);
+          for (const optionButton of options.querySelectorAll('button')) {
+            optionButton.disabled = true;
+            if (normalizeAnswer(optionButton.textContent) === normalizeAnswer(activity.expected_fi)) optionButton.classList.add('correct');
+          }
+          if (!correct) button.classList.add('wrong');
+          finish(correct);
+        });
+        button.lang = 'fi';
+        button.dir = 'ltr';
+        options.append(button);
+      }
+      card.append(options, feedback);
+      return true;
+    }
+
+    const form = document.createElement('form');
+    form.className = 'course-typing-form';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.lang = 'fi';
+    input.dir = 'ltr';
+    input.autocomplete = 'off';
+    input.autocapitalize = 'none';
+    input.spellcheck = false;
+    input.setAttribute('aria-label', 'صورت صرف‌شدهٔ فنلاندی');
+    const submit = document.createElement('button');
+    submit.type = 'submit';
+    submit.className = 'primary-button compact';
+    submit.textContent = 'بررسی';
+    form.append(input, submit);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (answered || !input.value.trim()) return;
+      answered = true;
+      const expected = {
+        surface_form: activity.expected_fi,
+        accepted_answers: activity.accepted_answers,
+      };
+      const grading = gradeTypedAnswer(expected, input.value);
+      recordResult(grading.accepted);
+      input.disabled = true;
+      submit.disabled = true;
+      input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+      finish(grading.accepted, grading);
+    });
+
+    card.append(form, feedback);
     windowObject.setTimeout(() => input.focus(), 0);
     return true;
   }
@@ -1585,6 +1818,8 @@
       if (activity.type === 'sentence-order') return 'کلمات را برای ساختن جملهٔ درست مرتب کن.';
       if (activity.type === 'expression-completion') return 'بخش حذف‌شدهٔ عبارت را کامل کن.';
       if (activity.type === 'controlled-production') return 'با راهنماها جملهٔ فنلاندی را بنویس.';
+      if (activity.type === 'morphology-choice') return 'شکل صرفی درست را انتخاب کن.';
+      if (activity.type === 'inflection-production') return 'شکل صرف‌شدهٔ درست را بنویس.';
       if (activity.type === 'production') return 'فارسی را به فنلاندی بنویس.';
       if (activity.type === 'dictation') return 'گوش کن و چیزی را که می‌شنوی به فنلاندی بنویس.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
@@ -1673,6 +1908,22 @@
           createButton,
           nextActivity,
           showFeedback,
+          recordResult(correct) {
+            answered = true;
+            sessionGraded += 1;
+            if (correct) sessionCorrect += 1;
+          },
+        });
+      } else if (MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) {
+        renderMorphologyPracticeActivity({
+          document,
+          windowObject,
+          activity,
+          card,
+          feedback,
+          createButton,
+          nextActivity,
+          createTypedDifference,
           recordResult(correct) {
             answered = true;
             sessionGraded += 1;
@@ -2485,6 +2736,9 @@
     STRUCTURED_PRACTICE_TYPES,
     injectStructuredPractice,
     renderStructuredPracticeActivity,
+    MORPHOLOGY_PRACTICE_TYPES,
+    injectMorphologyPractice,
+    renderMorphologyPracticeActivity,
     optionLabel,
     uniqueOptions,
     buildStandardActivities,
