@@ -360,11 +360,35 @@
       }
     }
     if (replacementIndex < 0) {
-      for (let index = lesson.activities.length - 1; index >= 0; index -= 1) {
-        if (lesson.activities[index].type === 'choice' || lesson.activities[index].type === 'type') {
-          replacementIndex = index;
-          break;
+      const protectedTargets = new Set([
+        ...(lesson.new_targets || []),
+        ...(lesson.practice_targets || []),
+        ...(lesson.checkpoint_targets || []),
+        ...(lesson.curriculum_target_refs?.high_frequency || []),
+        ...(lesson.curriculum_target_refs?.topic || []),
+        ...(lesson.curriculum_target_refs?.expressions || []),
+      ]);
+      const meaningfulReferenceCounts = new Map();
+      for (const activity of lesson.activities) {
+        const refs = [];
+        for (const key of ['item', 'answer_item', 'question_item', 'negative_item', 'affirmative_item', 'event_item', 'time_item']) {
+          if (activity[key]) refs.push(activity[key]);
         }
+        for (const key of ['items', 'turns', 'expected_items']) {
+          if (Array.isArray(activity[key])) refs.push(...activity[key]);
+        }
+        for (const itemId of new Set(refs)) {
+          meaningfulReferenceCounts.set(itemId, (meaningfulReferenceCounts.get(itemId) || 0) + 1);
+        }
+      }
+
+      for (let index = lesson.activities.length - 1; index >= 0; index -= 1) {
+        const activity = lesson.activities[index];
+        if (activity.type !== 'choice' && activity.type !== 'type') continue;
+        const itemId = activity.item;
+        if (protectedTargets.has(itemId) && (meaningfulReferenceCounts.get(itemId) || 0) <= 1) continue;
+        replacementIndex = index;
+        break;
       }
     }
     if (replacementIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for production practice.`);
