@@ -20,6 +20,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 - Morphology exercises replace only an assessment that already references the same declared lesson target.
 - Morphology-choice answer positions are intentionally varied so the correct form is not predictable by button position.
+- Morphology-choice answer positions are intentionally varied so the correct form is not predictable by button position.
 - Finnish stems, suffixes, inflections, distractors, and accepted answers are never generated at runtime.
 - Affected lessons and checkpoints still contain exactly 15 activities.
 
