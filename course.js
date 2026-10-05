@@ -661,128 +661,7 @@
           }
           continue;
         }
-        if (activity.type === 'sentence-order') {
-        const ordered = [];
-        const options = document.createElement('div');
-        options.className = 'course-sequence-options';
-        activity.tokens.forEach((token, index) => {
-          const button = createButton(token, 'course-option', () => {
-            if (answered || ordered.includes(index)) return;
-            ordered.push(index);
-            button.disabled = true;
-            button.dataset.order = String(ordered.length);
-            button.textContent = `${toPersianNumber(ordered.length)}. ${token}`;
-            if (ordered.length === activity.tokens.length) {
-              answered = true;
-              sessionGraded += 1;
-              const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-              if (correct) sessionCorrect += 1;
-              const result = document.createElement('div');
-              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
-              const title = document.createElement('strong');
-              title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
-              const review = document.createElement('p');
-              review.lang = 'fi';
-              review.dir = 'ltr';
-              review.textContent = activity.expected_fi;
-              result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
-              card.append(result);
-            }
-          });
-          button.lang = 'fi';
-          button.dir = 'ltr';
-          options.append(button);
-        });
-        card.append(options);
-      } else if (activity.type === 'expression-completion') {
-        const sentence = document.createElement('p');
-        sentence.className = 'course-cloze-sentence';
-        sentence.lang = 'fi';
-        sentence.dir = 'ltr';
-        sentence.textContent = activity.prompt_fi;
-        const form = document.createElement('form');
-        form.className = 'course-typing-form';
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.lang = 'fi';
-        input.dir = 'ltr';
-        input.autocomplete = 'off';
-        input.autocapitalize = 'none';
-        input.spellcheck = false;
-        input.setAttribute('aria-label', 'بخش حذف‌شدهٔ عبارت فنلاندی');
-        const submit = document.createElement('button');
-        submit.type = 'submit';
-        submit.className = 'primary-button compact';
-        submit.textContent = 'بررسی';
-        form.append(input, submit);
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          if (answered || !input.value.trim()) return;
-          answered = true;
-          sessionGraded += 1;
-          const expected = {
-            ...item,
-            surface_form: activity.accepted_answers[0],
-            accepted_answers: activity.accepted_answers,
-            example_fi: activity.expected_fi,
-          };
-          const grading = gradeTypedAnswer(expected, input.value);
-          const correct = grading.accepted;
-          if (correct) sessionCorrect += 1;
-          input.disabled = true;
-          submit.disabled = true;
-          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
-          showFeedback(feedback, correct, expected, grading);
-        });
-        card.append(sentence, form, feedback);
-        windowObject.setTimeout(() => input.focus(), 0);
-      } else if (activity.type === 'controlled-production') {
-        const meaning = document.createElement('strong');
-        meaning.className = 'course-focus-meaning';
-        meaning.textContent = activity.prompt_fa;
-        const cues = document.createElement('p');
-        cues.className = 'course-transform-hint';
-        cues.lang = 'fi';
-        cues.dir = 'ltr';
-        cues.textContent = `راهنما: ${activity.cues_fi.join(' + ')}`;
-        const form = document.createElement('form');
-        form.className = 'course-typing-form';
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.lang = 'fi';
-        input.dir = 'ltr';
-        input.autocomplete = 'off';
-        input.autocapitalize = 'none';
-        input.spellcheck = false;
-        input.setAttribute('aria-label', 'جملهٔ کنترل‌شدهٔ فنلاندی');
-        const submit = document.createElement('button');
-        submit.type = 'submit';
-        submit.className = 'primary-button compact';
-        submit.textContent = 'بررسی';
-        form.append(input, submit);
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          if (answered || !input.value.trim()) return;
-          answered = true;
-          sessionGraded += 1;
-          const expected = {
-            ...item,
-            surface_form: activity.expected_fi,
-            accepted_answers: activity.accepted_answers,
-            example_fi: activity.expected_fi,
-            example_fa: activity.prompt_fa,
-          };
-          const grading = gradeTypedAnswer(expected, input.value);
-          const correct = grading.accepted;
-          if (correct) sessionCorrect += 1;
-          input.disabled = true;
-          submit.disabled = true;
-          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
-          showFeedback(feedback, correct, expected, grading);
-        });
-        card.append(meaning, cues, form, feedback);
-        windowObject.setTimeout(() => input.focus(), 0);
-      } else if (activity.type === 'number-grid') {
+        if (activity.type === 'number-grid') {
           if (!Array.isArray(activity.items) || activity.items.length < 2) throw new Error(`Invalid number grid in ${lesson.id}`);
           for (const itemId of activity.items) {
             if (!section.items[itemId]) throw new Error(`Unknown number-grid item: ${itemId}`);
@@ -958,6 +837,132 @@
       }
     }
     return validated;
+  }
+
+  function renderStructuredPracticeActivity({
+    document,
+    windowObject,
+    activity,
+    item,
+    card,
+    feedback,
+    createButton,
+    nextActivity,
+    showFeedback,
+    recordResult,
+  }) {
+    if (!STRUCTURED_PRACTICE_TYPES.includes(activity.type)) return false;
+    let answered = false;
+
+    if (activity.type === 'sentence-order') {
+      const ordered = [];
+      const options = document.createElement('div');
+      options.className = 'course-sequence-options';
+      activity.tokens.forEach((token, index) => {
+        const button = createButton(token, 'course-option', () => {
+          if (answered || ordered.includes(index)) return;
+          ordered.push(index);
+          button.disabled = true;
+          button.dataset.order = String(ordered.length);
+          button.textContent = `${toPersianNumber(ordered.length)}. ${token}`;
+          if (ordered.length === activity.tokens.length) {
+            answered = true;
+            const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+            recordResult(correct);
+            const result = document.createElement('div');
+            result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+            const title = document.createElement('strong');
+            title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
+            const review = document.createElement('p');
+            review.lang = 'fi';
+            review.dir = 'ltr';
+            review.textContent = activity.expected_fi;
+            result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+            card.append(result);
+          }
+        });
+        button.lang = 'fi';
+        button.dir = 'ltr';
+        options.append(button);
+      });
+      card.append(options);
+      return true;
+    }
+
+    const form = document.createElement('form');
+    form.className = 'course-typing-form';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.lang = 'fi';
+    input.dir = 'ltr';
+    input.autocomplete = 'off';
+    input.autocapitalize = 'none';
+    input.spellcheck = false;
+    const submit = document.createElement('button');
+    submit.type = 'submit';
+    submit.className = 'primary-button compact';
+    submit.textContent = 'بررسی';
+    form.append(input, submit);
+
+    if (activity.type === 'expression-completion') {
+      const sentence = document.createElement('p');
+      sentence.className = 'course-cloze-sentence';
+      sentence.lang = 'fi';
+      sentence.dir = 'ltr';
+      sentence.textContent = activity.prompt_fi;
+      input.setAttribute('aria-label', 'بخش حذف‌شدهٔ عبارت فنلاندی');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (answered || !input.value.trim()) return;
+        answered = true;
+        const expected = {
+          ...item,
+          surface_form: activity.accepted_answers[0],
+          accepted_answers: activity.accepted_answers,
+          example_fi: activity.expected_fi,
+        };
+        const grading = gradeTypedAnswer(expected, input.value);
+        recordResult(grading.accepted);
+        input.disabled = true;
+        submit.disabled = true;
+        input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+        showFeedback(feedback, grading.accepted, expected, grading);
+      });
+      card.append(sentence, form, feedback);
+      windowObject.setTimeout(() => input.focus(), 0);
+      return true;
+    }
+
+    const meaning = document.createElement('strong');
+    meaning.className = 'course-focus-meaning';
+    meaning.textContent = activity.prompt_fa;
+    const cues = document.createElement('p');
+    cues.className = 'course-transform-hint';
+    cues.lang = 'fi';
+    cues.dir = 'ltr';
+    cues.textContent = `راهنما: ${activity.cues_fi.join(' + ')}`;
+    input.setAttribute('aria-label', 'جملهٔ کنترل‌شدهٔ فنلاندی');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (answered || !input.value.trim()) return;
+      answered = true;
+      const expected = {
+        ...item,
+        surface_form: activity.expected_fi,
+        accepted_answers: activity.accepted_answers,
+        example_fi: activity.expected_fi,
+        example_fa: activity.prompt_fa,
+      };
+      const grading = gradeTypedAnswer(expected, input.value);
+      recordResult(grading.accepted);
+      input.disabled = true;
+      submit.disabled = true;
+      input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+      showFeedback(feedback, grading.accepted, expected, grading);
+    });
+    card.append(meaning, cues, form, feedback);
+    windowObject.setTimeout(() => input.focus(), 0);
+    return true;
   }
 
   function initializeBrowser(windowObject) {
@@ -1498,7 +1503,24 @@
         card.append(example);
       }
 
-      if (activity.type === 'number-grid') {
+      if (STRUCTURED_PRACTICE_TYPES.includes(activity.type)) {
+        renderStructuredPracticeActivity({
+          document,
+          windowObject,
+          activity,
+          item,
+          card,
+          feedback,
+          createButton,
+          nextActivity,
+          showFeedback,
+          recordResult(correct) {
+            answered = true;
+            sessionGraded += 1;
+            if (correct) sessionCorrect += 1;
+          },
+        });
+      } else if (activity.type === 'number-grid') {
         const instruction = document.createElement('p');
         instruction.className = 'course-number-grid-instruction';
         instruction.textContent = 'اعداد ۰ تا ۲۰ را یک‌بار از ابتدا تا انتها مرور کن.';
@@ -2285,6 +2307,7 @@
     supportsSpeech,
     STRUCTURED_PRACTICE_TYPES,
     injectStructuredPractice,
+    renderStructuredPracticeActivity,
     optionLabel,
     uniqueOptions,
     buildStandardActivities,
