@@ -378,7 +378,7 @@
       recognitionIndex = lesson.activities.findLastIndex((activity) => (
         activity.type !== 'production'
         && activity.type !== 'dictation'
-        && (activity.type === 'choice' || activity.type === 'type')
+        && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
         && activity.item === recognitionTargetId
       ));
     }
@@ -386,7 +386,7 @@
       recognitionIndex = lesson.activities.findLastIndex((activity) => (
         activity.type !== 'production'
         && activity.type !== 'dictation'
-        && (activity.type === 'choice' || activity.type === 'type')
+        && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
       ));
     }
     if (recognitionIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for listening recognition.`);
@@ -406,7 +406,7 @@
       index !== recognitionIndex
       && activity.type !== 'production'
       && activity.type !== 'dictation'
-      && (activity.type === 'choice' || activity.type === 'type')
+      && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
       && activity.item === dictationTargetId
     ));
     if (dictationIndex < 0) {
@@ -414,7 +414,7 @@
         index !== recognitionIndex
         && activity.type !== 'production'
         && activity.type !== 'dictation'
-        && (activity.type === 'choice' || activity.type === 'type')
+        && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
       ));
     }
     if (dictationIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for dictation.`);
@@ -447,7 +447,7 @@
     let replacementIndex = -1;
     for (let index = lesson.activities.length - 1; index >= 0; index -= 1) {
       const activity = lesson.activities[index];
-      if (activity.item === targetId && (activity.type === 'choice' || activity.type === 'type')) {
+      if (activity.item === targetId && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')) {
         replacementIndex = index;
         break;
       }
