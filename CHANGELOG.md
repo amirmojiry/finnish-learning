@@ -18,6 +18,8 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 - Each A1.1 lesson still contains exactly 15 activities; auditory practice replaces lower-value recognition/review slots instead of extending lessons.
 - Finnish browser speech synthesis is the current zero-dependency audio backend, while lesson manifests keep auditory targets explicit for future static or build-time-generated audio.
+- Auditory activity injection now preserves unrelated lesson/checkpoint targets instead of replacing an arbitrary fallback slot.
+- Browsers without the Web Speech API show an explicit unavailable-audio state and allow the learner to continue without grading the skipped auditory activity.
 
 
 ## [1.13.0] - 2026-10-05
