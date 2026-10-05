@@ -1709,7 +1709,7 @@
       ],
       "listening_targets": [
         "s3-tanaan",
-        "s3-huomenna"
+        "s3-eilen"
       ]
     },
     {
@@ -1865,7 +1865,7 @@
       ],
       "listening_targets": [
         "s3-perjantai",
-        "s3-keskiviikko"
+        "s3-sunnuntai"
       ]
     },
     {
