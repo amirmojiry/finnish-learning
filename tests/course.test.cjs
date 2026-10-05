@@ -233,11 +233,12 @@ test('dialogue ordering activities are presented scrambled', () => {
   }
 });
 
-test('English and Persian feature bullets agree that Sections 1–3 are implemented', () => {
+test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /real curriculum-driven A1\.1 Sections 1–3/);
-  assert.match(fa, /بخش‌های اول تا سوم واقعی و curriculum-driven سطح A1\.1/);
+  assert.match(en, /Version: `1\.11\.0`/);
+  assert.match(fa, /نسخه: `1\.11\.0`/);
+  assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
 
@@ -262,7 +263,8 @@ test('course map hides explanatory copy behind accessible info disclosures', () 
   assert.match(source, /aria-expanded/);
   assert.match(source, /panel\.hidden = true/);
   assert.match(source, /توضیحات و اهداف بخش/);
-  assert.match(source, /توضیحات درس/);
+  assert.match(source, /جزئیات درس/);
+  assert.match(source, /course-lesson-popover-details/);
   assert.match(source, /در پایان این بخش می‌توانی/);
   assert.doesNotMatch(source, /بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند/);
   assert.doesNotMatch(source, /section\.description_fa/);
