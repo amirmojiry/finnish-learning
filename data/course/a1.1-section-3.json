@@ -2222,6 +2222,24 @@
           ],
           "expected_fi": "Päivällä opiskelen."
         }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "s3-yolla",
+          "base_fi": "yö",
+          "feature_fa": "adessiivi زمانی",
+          "prompt_fa": "برای گفتن «شب / در شب» شکل درست yö را انتخاب کن.",
+          "frame_fi": "_____ nukun.",
+          "options_fi": [
+            "yöllä",
+            "yöstä",
+            "yöhön",
+            "yö"
+          ],
+          "expected_fi": "yöllä",
+          "explanation_fa": "در این عبارت زمانی، yö به شکل adessiivi یعنی yöllä می‌آید."
+        }
       ]
     },
     {
@@ -2366,6 +2384,21 @@
             "juon"
           ],
           "expected_fi": "Minä juon kahvia."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "s3-tyoskentelen",
+          "base_fi": "työskennellä",
+          "feature_fa": "حال ساده، اول‌شخص مفرد",
+          "prompt_fa": "فعل työskennellä را برای «من» در زمان حال بنویس.",
+          "frame_fi": "Minä _____.",
+          "expected_fi": "työskentelen",
+          "accepted_answers": [
+            "työskentelen"
+          ],
+          "explanation_fa": "صورت بازبینی‌شدهٔ اول‌شخص مفرد työskennellä در این درس työskentelen است."
         }
       ]
     },
@@ -2529,6 +2562,24 @@
             "Työ on täällä."
           ]
         }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "s3-teet",
+          "base_fi": "tehdä",
+          "feature_fa": "حال ساده، دوم‌شخص مفرد",
+          "prompt_fa": "برای سؤال از «تو»، شکل درست tehdä را انتخاب کن.",
+          "frame_fi": "Mitä ____?",
+          "options_fi": [
+            "teet",
+            "teen",
+            "tekee",
+            "teemme"
+          ],
+          "expected_fi": "teet",
+          "explanation_fa": "در این سؤال، صورت دوم‌شخص مفرد tehdä برابر teet است: Mitä teet?"
+        }
       ]
     },
     {
@@ -2683,6 +2734,24 @@
             0
           ],
           "expected_fi": "En juo."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "s3-negative-opiskelen",
+          "base_fi": "opiskella",
+          "feature_fa": "منفی اول‌شخص: en + connegative",
+          "prompt_fa": "بعد از En شکل درست opiskella را انتخاب کن.",
+          "frame_fi": "En _____.",
+          "options_fi": [
+            "opiskele",
+            "opiskelen",
+            "opiskelee",
+            "opiskelet"
+          ],
+          "expected_fi": "opiskele",
+          "explanation_fa": "در منفی اول‌شخص، بعد از en صورت connegative می‌آید: opiskelen → En opiskele."
         }
       ]
     },
@@ -3183,6 +3252,21 @@
           "accepted_answers": [
             "Kello on neljä."
           ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "s3-syon",
+          "base_fi": "syödä",
+          "feature_fa": "حال ساده، اول‌شخص مفرد",
+          "prompt_fa": "فعل syödä را برای «من» در زمان حال بنویس.",
+          "frame_fi": "Minä _____.",
+          "expected_fi": "syön",
+          "accepted_answers": [
+            "syön"
+          ],
+          "explanation_fa": "صورت بازبینی‌شدهٔ اول‌شخص مفرد syödä برابر syön است."
         }
       ]
     }
