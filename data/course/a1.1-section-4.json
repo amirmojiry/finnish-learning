@@ -2047,6 +2047,10 @@
       ],
       "production_targets": [
         "s4-tama-on-keittio"
+      ],
+      "listening_targets": [
+        "s4-huone",
+        "s4-tama-on-keittio"
       ]
     },
     {
@@ -2196,6 +2200,10 @@
       ],
       "production_targets": [
         "s4-missa-puhelin"
+      ],
+      "listening_targets": [
+        "s4-missa",
+        "s4-missa-puhelin"
       ]
     },
     {
@@ -2335,6 +2343,10 @@
       ],
       "production_targets": [
         "s4-tama-on-kahvia"
+      ],
+      "listening_targets": [
+        "s4-kahvi",
+        "s4-tama-on-kahvia"
       ]
     },
     {
@@ -2466,6 +2478,10 @@
         }
       ],
       "production_targets": [
+        "s4-haluan-kahvia"
+      ],
+      "listening_targets": [
+        "s4-nalka",
         "s4-haluan-kahvia"
       ]
     },
@@ -2621,6 +2637,10 @@
       ],
       "production_targets": [
         "s4-yksi-kahvi-kiitos"
+      ],
+      "listening_targets": [
+        "s4-yksi",
+        "s4-yksi-kahvi-kiitos"
       ]
     },
     {
@@ -2759,6 +2779,10 @@
       ],
       "production_targets": [
         "s4-tama-on-koira"
+      ],
+      "listening_targets": [
+        "s4-koira",
+        "s4-tama-on-koira"
       ]
     },
     {
@@ -2894,6 +2918,10 @@
         }
       ],
       "production_targets": [
+        "s4-karhu-on-elain"
+      ],
+      "listening_targets": [
+        "s4-lehma",
         "s4-karhu-on-elain"
       ]
     },
@@ -3032,6 +3060,10 @@
         }
       ],
       "production_targets": [
+        "s4-koira-on-iso"
+      ],
+      "listening_targets": [
+        "s4-punainen",
         "s4-koira-on-iso"
       ]
     },
@@ -3188,6 +3220,10 @@
         }
       ],
       "production_targets": [
+        "s4-tama-on-minun-kotini"
+      ],
+      "listening_targets": [
+        "s4-keittiossa-on-frame",
         "s4-tama-on-minun-kotini"
       ]
     },
@@ -3351,6 +3387,10 @@
         }
       ],
       "production_targets": [
+        "s4-final-hei"
+      ],
+      "listening_targets": [
+        "s4-final-name",
         "s4-final-hei"
       ]
     }
