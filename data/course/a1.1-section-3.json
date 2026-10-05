@@ -1887,12 +1887,12 @@
       "structured_practice": [
         {
           "type": "expression-completion",
-          "item": "s3-keskiviikko",
-          "prompt_fi": "Tänään on _____.",
+          "item": "s3-huomenna-tiistai",
+          "prompt_fi": "Huomenna _____ tiistai.",
           "accepted_answers": [
-            "keskiviikko"
+            "on"
           ],
-          "expected_fi": "Tänään on keskiviikko."
+          "expected_fi": "Huomenna on tiistai."
         }
       ]
     },
