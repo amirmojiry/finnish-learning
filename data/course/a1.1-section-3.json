@@ -1710,6 +1710,23 @@
       "listening_targets": [
         "s3-tanaan",
         "s3-huomenna"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s3-tanaan-on-frame",
+          "tokens": [
+            "on",
+            "maanantai.",
+            "Tänään"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tänään on maanantai."
+        }
       ]
     },
     {
@@ -1866,6 +1883,17 @@
       "listening_targets": [
         "s3-perjantai",
         "s3-sunnuntai"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s3-huomenna-tiistai",
+          "prompt_fi": "Huomenna _____ tiistai.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Huomenna on tiistai."
+        }
       ]
     },
     {
@@ -2024,6 +2052,20 @@
       "listening_targets": [
         "s3-aamu",
         "s3-kello-kaksi"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s3-kello-kolme",
+          "prompt_fa": "ساعت سه است.",
+          "cues_fi": [
+            "Kello"
+          ],
+          "expected_fi": "Kello on kolme.",
+          "accepted_answers": [
+            "Kello on kolme."
+          ]
+        }
       ]
     },
     {
@@ -2165,6 +2207,21 @@
       "listening_targets": [
         "s3-illalla",
         "s3-aamulla"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s3-paivalla",
+          "tokens": [
+            "opiskelen.",
+            "Päivällä"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Päivällä opiskelen."
+        }
       ]
     },
     {
@@ -2299,6 +2356,17 @@
       "listening_targets": [
         "s3-nukun",
         "s3-menen-kotiin"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s3-mina-juon-kahvia",
+          "prompt_fi": "Minä _____ kahvia.",
+          "accepted_answers": [
+            "juon"
+          ],
+          "expected_fi": "Minä juon kahvia."
+        }
       ]
     },
     {
@@ -2447,6 +2515,20 @@
       "listening_targets": [
         "s3-opiskeletko",
         "s3-tyoskenteletko"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s3-tyo",
+          "prompt_fa": "کار اینجاست.",
+          "cues_fi": [
+            "työ"
+          ],
+          "expected_fi": "Työ on täällä.",
+          "accepted_answers": [
+            "Työ on täällä."
+          ]
+        }
       ]
     },
     {
@@ -2587,6 +2669,21 @@
       "listening_targets": [
         "s3-negative-nukun",
         "s3-negative-tyoskentelen"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s3-negative-juon",
+          "tokens": [
+            "juo.",
+            "En"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "En juo."
+        }
       ]
     },
     {
@@ -2742,7 +2839,18 @@
       ],
       "listening_targets": [
         "s3-huomenna-short",
-        "s3-kello-kolme-short"
+        "s3-tanaan-short"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s3-kello-kolme-short",
+          "prompt_fi": "Kello _____.",
+          "accepted_answers": [
+            "kolme"
+          ],
+          "expected_fi": "Kello kolme."
+        }
       ]
     },
     {
@@ -2912,6 +3020,20 @@
       "listening_targets": [
         "s3-routine-1",
         "s3-routine-3"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s3-routine-5",
+          "prompt_fa": "شب می‌خوابم.",
+          "cues_fi": [
+            "Yöllä"
+          ],
+          "expected_fi": "Yöllä nukun.",
+          "accepted_answers": [
+            "Yöllä nukun."
+          ]
+        }
       ]
     },
     {
@@ -3024,6 +3146,44 @@
       "listening_targets": [
         "s3-tanaan",
         "s3-routine-3"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s3-maanantai",
+          "tokens": [
+            "on",
+            "maanantai.",
+            "Tänään"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tänään on maanantai."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s3-perjantai",
+          "prompt_fi": "Tänään on _____.",
+          "accepted_answers": [
+            "perjantai"
+          ],
+          "expected_fi": "Tänään on perjantai."
+        },
+        {
+          "type": "controlled-production",
+          "item": "s3-kello-nelja",
+          "prompt_fa": "ساعت چهار است.",
+          "cues_fi": [
+            "Kello"
+          ],
+          "expected_fi": "Kello on neljä.",
+          "accepted_answers": [
+            "Kello on neljä."
+          ]
+        }
       ]
     }
   ]

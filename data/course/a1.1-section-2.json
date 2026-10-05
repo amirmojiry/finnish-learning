@@ -1583,6 +1583,23 @@
       "listening_targets": [
         "s2-me",
         "s2-te"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s2-he",
+          "tokens": [
+            "ovat",
+            "täällä.",
+            "He"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "He ovat täällä."
+        }
       ]
     },
     {
@@ -1627,6 +1644,17 @@
       "listening_targets": [
         "s2-mista",
         "s2-suomi"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s2-iran",
+          "prompt_fi": "_____ on maa.",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "expected_fi": "Iran on maa."
+        }
       ]
     },
     {
@@ -1762,6 +1790,20 @@
       "listening_targets": [
         "s2-suomi-lang",
         "s2-puhun-englantia"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s2-puhun-persiaa",
+          "prompt_fa": "فارسی صحبت می‌کنم.",
+          "cues_fi": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "accepted_answers": [
+            "Puhun persiaa."
+          ]
+        }
       ]
     },
     {
@@ -1805,6 +1847,21 @@
       "listening_targets": [
         "s2-missa",
         "s2-kaupunki"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s2-vaasa",
+          "tokens": [
+            "Vaasassa.",
+            "Asun"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Asun Vaasassa."
+        }
       ]
     },
     {
@@ -1848,6 +1905,17 @@
       "listening_targets": [
         "s2-perhe",
         "s2-lapsi"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s2-aiti",
+          "prompt_fi": "Tämä on minun _____ni.",
+          "accepted_answers": [
+            "äiti"
+          ],
+          "expected_fi": "Tämä on minun äitini."
+        }
       ]
     },
     {
@@ -1891,6 +1959,20 @@
       "listening_targets": [
         "s2-minun",
         "s2-sinun"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s2-nimi",
+          "prompt_fa": "نام من سارا است.",
+          "cues_fi": [
+            "nimi"
+          ],
+          "expected_fi": "Minun nimeni on Sara.",
+          "accepted_answers": [
+            "Minun nimeni on Sara."
+          ]
+        }
       ]
     },
     {
@@ -2117,6 +2199,23 @@
       "listening_targets": [
         "s2-num-seitseman",
         "s2-olen-12-vuotias"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s2-num-nolla",
+          "tokens": [
+            "on",
+            "nolla.",
+            "Numero"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Numero on nolla."
+        }
       ]
     },
     {
@@ -2158,6 +2257,17 @@
       "listening_targets": [
         "s2-numero",
         "s2-puhelinnumero"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s2-katu",
+          "prompt_fi": "_____ on pitkä.",
+          "accepted_answers": [
+            "katu"
+          ],
+          "expected_fi": "Katu on pitkä."
+        }
       ]
     },
     {
@@ -2203,6 +2313,20 @@
       "listening_targets": [
         "s2-profile-name",
         "s2-profile-origin"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s2-profile-live",
+          "prompt_fa": "در واسا زندگی می‌کنم.",
+          "cues_fi": [
+            "Asun"
+          ],
+          "expected_fi": "Asun Vaasassa.",
+          "accepted_answers": [
+            "Asun Vaasassa."
+          ]
+        }
       ]
     },
     {
@@ -2315,6 +2439,42 @@
       "listening_targets": [
         "s2-han",
         "s2-profile-name"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s2-olen-iranista",
+          "tokens": [
+            "Iranista.",
+            "Olen"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Olen Iranista."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-mista-olet",
+          "prompt_fi": "Mistä _____? Olen Iranista.",
+          "accepted_answers": [
+            "olet"
+          ],
+          "expected_fi": "Mistä olet? Olen Iranista."
+        },
+        {
+          "type": "controlled-production",
+          "item": "s2-puhun-persiaa",
+          "prompt_fa": "فارسی صحبت می‌کنم.",
+          "cues_fi": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "accepted_answers": [
+            "Puhun persiaa."
+          ]
+        }
       ]
     }
   ]

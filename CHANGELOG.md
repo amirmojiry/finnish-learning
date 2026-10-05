@@ -6,6 +6,23 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.15.0] - 2026-10-05
+
+### Added
+
+- Reviewed structured-practice manifests across all 40 A1.1 lessons.
+- Sentence-order activities built from explicit Finnish tokens and answer order.
+- Expression-completion activities with explicit Finnish prompts and accepted completions.
+- Controlled sentence-production activities with Persian prompts, Finnish cues, and explicit expected answers.
+- All three structured-practice families in every section checkpoint, including the final A1.1 checkpoint.
+- Regression coverage for target preservation, malformed manifests, checkpoint coverage, and shared fuzzy grading.
+
+### Changed
+
+- A1.1 lessons still contain exactly 15 activities; structured practice replaces only an existing assessment of the same declared target.
+- Structured typed practice reuses the existing >=80% fuzzy typed-answer grading and character-level feedback.
+
+
 ## [1.14.0] - 2026-10-05
 
 ### Added

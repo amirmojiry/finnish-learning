@@ -2051,6 +2051,23 @@
       "listening_targets": [
         "s4-keittio",
         "s4-olen-kotona"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s4-olohuone",
+          "tokens": [
+            "on",
+            "olohuone.",
+            "Tämä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tämä on olohuone."
+        }
       ]
     },
     {
@@ -2204,6 +2221,17 @@
       "listening_targets": [
         "s4-poyta",
         "s4-se-on-huoneessa"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s4-tuoli",
+          "prompt_fi": "Kirja on _____lla.",
+          "accepted_answers": [
+            "tuoli"
+          ],
+          "expected_fi": "Kirja on tuolilla."
+        }
       ]
     },
     {
@@ -2347,6 +2375,20 @@
       "listening_targets": [
         "s4-maito",
         "s4-tama-on-leipa"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s4-kahvi",
+          "prompt_fa": "این قهوه است.",
+          "cues_fi": [
+            "kahvi"
+          ],
+          "expected_fi": "Tämä on kahvia.",
+          "accepted_answers": [
+            "Tämä on kahvia."
+          ]
+        }
       ]
     },
     {
@@ -2483,6 +2525,23 @@
       "listening_targets": [
         "s4-haluan-vetta",
         "s4-minulla-on-nalka"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s4-minulla-on-jano",
+          "tokens": [
+            "on",
+            "jano.",
+            "Minulla"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Minulla on jano."
+        }
       ]
     },
     {
@@ -2641,6 +2700,17 @@
       "listening_targets": [
         "s4-kahvila",
         "s4-kiitos"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s4-vetta-kiitos",
+          "prompt_fi": "Vettä, _____.",
+          "accepted_answers": [
+            "kiitos"
+          ],
+          "expected_fi": "Vettä, kiitos."
+        }
       ]
     },
     {
@@ -2783,6 +2853,20 @@
       "listening_targets": [
         "s4-lintu",
         "s4-se-on-kissa"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s4-koira",
+          "prompt_fa": "این سگ است.",
+          "cues_fi": [
+            "koira"
+          ],
+          "expected_fi": "Tämä on koira.",
+          "accepted_answers": [
+            "Tämä on koira."
+          ]
+        }
       ]
     },
     {
@@ -2923,6 +3007,23 @@
       "listening_targets": [
         "s4-lehma",
         "s4-lehma-on-elain"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s4-lammas",
+          "tokens": [
+            "on",
+            "eläin.",
+            "Lammas"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Lammas on eläin."
+        }
       ]
     },
     {
@@ -3065,6 +3166,17 @@
       "listening_targets": [
         "s4-punainen",
         "s4-kissa-on-pieni"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "s4-valkoinen",
+          "prompt_fi": "Kissa on _____.",
+          "accepted_answers": [
+            "valkoinen"
+          ],
+          "expected_fi": "Kissa on valkoinen."
+        }
       ]
     },
     {
@@ -3225,6 +3337,20 @@
       "listening_targets": [
         "s4-world-2",
         "s4-world-5"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "s4-world-1",
+          "prompt_fa": "این خانهٔ من است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on minun kotini.",
+          "accepted_answers": [
+            "Tämä on minun kotini."
+          ]
+        }
       ]
     },
     {
@@ -3392,6 +3518,46 @@
       "listening_targets": [
         "s4-final-day",
         "s4-final-description"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "s4-final-name",
+          "tokens": [
+            "nimeni",
+            "on",
+            "Sara.",
+            "Minun"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Minun nimeni on Sara."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-final-origin",
+          "prompt_fi": "Olen _____.",
+          "accepted_answers": [
+            "Iranista"
+          ],
+          "expected_fi": "Olen Iranista."
+        },
+        {
+          "type": "controlled-production",
+          "item": "s4-final-language",
+          "prompt_fa": "فارسی صحبت می‌کنم.",
+          "cues_fi": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "accepted_answers": [
+            "Puhun persiaa."
+          ]
+        }
       ]
     }
   ]
