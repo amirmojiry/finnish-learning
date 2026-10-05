@@ -12,13 +12,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 - Reviewed `morphology_practice` manifests for morphology-relevant A1.1 lessons and checkpoints.
 - `morphology-choice` activities with explicit same-pattern Finnish distractor forms.
-- `inflection-production` activities with explicit accepted forms and shared fuzzy typed grading.
+- `inflection-production` activities with explicit accepted forms, strict grammatical-form grading, and tolerance only for Finnish keyboard diacritic substitutions.
 - Introductory practice for selected elative, inessive, partitive, genitive, adessive, present-tense person, and negative/connegative forms.
 - Regression coverage for morphology manifests, safe target replacement, checkpoints, choice interaction, typed inflection, and malformed data.
 
 ### Changed
 
 - Morphology exercises replace only an assessment that already references the same declared lesson target.
+- Morphology-choice answer positions are intentionally varied so the correct form is not predictable by button position.
 - Finnish stems, suffixes, inflections, distractors, and accepted answers are never generated at runtime.
 - Affected lessons and checkpoints still contain exactly 15 activities.
 
