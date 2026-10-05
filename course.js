@@ -776,7 +776,7 @@
         const optionTitle = document.createElement('span');
         optionTitle.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
         const optionStatus = document.createElement('small');
-        optionStatus.textContent = current ? 'بخش فعلی' : unlocked ? 'باز کردن' : 'قفل است';
+        optionStatus.textContent = current ? 'بخش فعلی' : unlocked ? 'باز کردن' : 'مشاهده (قفل)';
         option.append(optionTitle, optionStatus);
         selectorList.append(option);
       }
