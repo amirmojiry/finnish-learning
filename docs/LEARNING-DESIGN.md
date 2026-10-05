@@ -259,18 +259,23 @@ Best for:
 
 It provides the strongest evidence among the current modes. Hint-assisted and unassisted answers must not receive equal learning credit.
 
-### Future activity families
+### Activity-family status
 
-The lesson system should gradually support:
+A1.1 now directly supports Persian-to-Finnish production, listening recognition, dictation, sentence ordering, expression completion, controlled sentence production, short reading comprehension, and several reviewed lesson-specific activity families.
 
-- Persian-to-Finnish lemma production;
+Structured sentence practice is declared in each lesson through a reviewed `structured_practice` manifest. Each entry names an existing lesson target and stores its learner-facing prompt and answer contract explicitly:
+
+- `sentence-order` stores the Finnish tokens, their explicit answer order, and the expected sentence;
+- `expression-completion` stores an explicit Finnish prompt with a blank plus accepted completions;
+- `controlled-production` stores a Persian prompt, explicit Finnish cues, and accepted full-sentence answers.
+
+The runtime may replace only an existing assessment slot for the same declared target. It must not generate new Finnish morphology, inflections, sentences, or accepted answers.
+
+The lesson system should gradually add:
+
 - surface form to lemma identification;
 - lemma plus grammatical feature to inflected-form production;
-- listening recognition and dictation;
-- sentence ordering;
-- collocation and expression completion;
-- short reading comprehension;
-- controlled sentence construction;
+- collocation practice beyond the current reviewed expression-completion contract;
 - pronunciation practice;
 - later, reviewed open-ended writing and speaking tasks.
 
