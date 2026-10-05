@@ -1709,7 +1709,7 @@
       ],
       "listening_targets": [
         "s3-tanaan",
-        "s3-eilen"
+        "s3-huomenna"
       ]
     },
     {
@@ -1864,8 +1864,8 @@
         "s3-tanaan-maanantai"
       ],
       "listening_targets": [
-        "s3-maanantai",
-        "s3-tanaan-maanantai"
+        "s3-perjantai",
+        "s3-keskiviikko"
       ]
     },
     {
@@ -2022,8 +2022,8 @@
         "s3-kello-yksi"
       ],
       "listening_targets": [
-        "s3-aamu",
-        "s3-kello-yksi"
+        "s3-kello-yksi",
+        "s3-kello-kolme"
       ]
     },
     {
@@ -2163,8 +2163,8 @@
         "s3-aamulla-expr"
       ],
       "listening_targets": [
-        "s3-nyt",
-        "s3-aamulla-expr"
+        "s3-illalla",
+        "s3-aamulla"
       ]
     },
     {
@@ -2297,8 +2297,8 @@
         "s3-mina-syon"
       ],
       "listening_targets": [
-        "s3-syon",
-        "s3-mina-syon"
+        "s3-nukun",
+        "s3-menen-kotiin"
       ]
     },
     {
@@ -2445,8 +2445,8 @@
         "s3-mita-teet"
       ],
       "listening_targets": [
-        "s3-mita",
-        "s3-mita-teet"
+        "s3-opiskeletko",
+        "s3-tyoskenteletko"
       ]
     },
     {
@@ -2585,8 +2585,8 @@
         "s3-negative-syon"
       ],
       "listening_targets": [
-        "s3-en",
-        "s3-negative-syon"
+        "s3-negative-nukun",
+        "s3-negative-tyoskentelen"
       ]
     },
     {
@@ -2741,8 +2741,8 @@
         "s3-milloin-expr"
       ],
       "listening_targets": [
-        "s3-aika",
-        "s3-milloin-expr"
+        "s3-huomenna-short",
+        "s3-kello-kolme-short"
       ]
     },
     {
@@ -2910,8 +2910,8 @@
         "s3-routine-4"
       ],
       "listening_targets": [
-        "s3-frame-aamulla",
-        "s3-routine-4"
+        "s3-routine-4",
+        "s3-routine-3"
       ]
     },
     {
