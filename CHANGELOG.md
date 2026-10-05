@@ -6,6 +6,19 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.11.0] - 2026-10-05
+
+### Added
+
+- A circular numbered lesson path for every course section, connected with thick dashed links.
+- A focused lesson action card that opens from a lesson node with a continue action and expandable lesson details.
+
+### Changed
+
+- Section lesson maps no longer expose full lesson cards by default; title, objective, summary, and grammar/help are revealed on demand.
+- Completed, current, and locked lesson states are preserved in the compact path UI on desktop and mobile.
+
+
 ## [1.10.0] - 2026-10-04
 
 ### Added
