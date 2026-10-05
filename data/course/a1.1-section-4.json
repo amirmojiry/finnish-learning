@@ -3568,9 +3568,9 @@
           "prompt_fa": "در جملهٔ منفی «من نمی‌خوابم»، شکل درست nukkua را انتخاب کن.",
           "frame_fi": "En _____.",
           "options_fi": [
-            "nuku",
             "nukun",
             "nukkuu",
+            "nuku",
             "nukut"
           ],
           "expected_fi": "nuku",
