@@ -1826,16 +1826,16 @@
       "morphology_practice": [
         {
           "type": "inflection-production",
-          "item": "s2-puhun-englantia",
-          "base_fi": "englanti",
+          "item": "s2-puhun-vahan-suomea",
+          "base_fi": "suomi",
           "feature_fa": "partitiivi بعد از puhua",
-          "prompt_fa": "شکل درست englanti را بعد از Puhun بنویس.",
-          "frame_fi": "Puhun _____.",
-          "expected_fi": "englantia",
+          "prompt_fa": "شکل درست suomi را در عبارت زیر بنویس.",
+          "frame_fi": "Puhun vähän _____.",
+          "expected_fi": "suomea",
           "accepted_answers": [
-            "englantia"
+            "suomea"
           ],
-          "explanation_fa": "نام زبان بعد از puhua در این الگوی آموزشی به صورت partitiivi می‌آید: englanti → englantia."
+          "explanation_fa": "نام زبان بعد از puhua در این الگوی آموزشی به صورت partitiivi می‌آید: suomi → suomea."
         }
       ]
     },
