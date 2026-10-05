@@ -2570,7 +2570,7 @@
           "base_fi": "tehdä",
           "feature_fa": "حال ساده، دوم‌شخص مفرد",
           "prompt_fa": "برای سؤال از «تو»، شکل درست tehdä را انتخاب کن.",
-          "frame_fi": "Mitä ____?",
+          "frame_fi": "Mitä _____?",
           "options_fi": [
             "teet",
             "teen",
