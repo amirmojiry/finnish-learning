@@ -1582,7 +1582,7 @@
       ],
       "listening_targets": [
         "s2-me",
-        "s2-han"
+        "s2-te"
       ]
     },
     {
@@ -1626,7 +1626,7 @@
       ],
       "listening_targets": [
         "s2-mista",
-        "s2-olen-suomesta"
+        "s2-suomi"
       ]
     },
     {
@@ -1804,7 +1804,7 @@
       ],
       "listening_targets": [
         "s2-missa",
-        "s2-asun-vaasassa"
+        "s2-kaupunki"
       ]
     },
     {
@@ -1847,7 +1847,7 @@
       ],
       "listening_targets": [
         "s2-perhe",
-        "s2-tama-on-minun-aitini"
+        "s2-lapsi"
       ]
     },
     {
@@ -1890,7 +1890,7 @@
       ],
       "listening_targets": [
         "s2-minun",
-        "s2-minun-nimeni"
+        "s2-sinun"
       ]
     },
     {
@@ -2157,7 +2157,7 @@
       ],
       "listening_targets": [
         "s2-numero",
-        "s2-mika-puhelinnumerosi"
+        "s2-puhelinnumero"
       ]
     },
     {
@@ -2202,7 +2202,7 @@
       ],
       "listening_targets": [
         "s2-profile-name",
-        "s2-olen-suomesta"
+        "s2-profile-origin"
       ]
     },
     {
@@ -2314,7 +2314,7 @@
       ],
       "listening_targets": [
         "s2-han",
-        "s2-hei"
+        "s2-profile-name"
       ]
     }
   ]
