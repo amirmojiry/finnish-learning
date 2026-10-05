@@ -131,9 +131,102 @@
     return [...new Set([item && item.surface_form, ...values].map(normalizeAnswer).filter(Boolean))];
   }
 
+  function alignAnswers(enteredValue, expectedValue) {
+    const entered = Array.from(normalizeAnswer(enteredValue));
+    const expected = Array.from(normalizeAnswer(expectedValue));
+    const rows = entered.length + 1;
+    const cols = expected.length + 1;
+    const dp = Array.from({ length: rows }, () => Array(cols).fill(0));
+    for (let i = 0; i < rows; i += 1) dp[i][0] = i;
+    for (let j = 0; j < cols; j += 1) dp[0][j] = j;
+
+    for (let i = 1; i < rows; i += 1) {
+      for (let j = 1; j < cols; j += 1) {
+        const substitution = dp[i - 1][j - 1] + (entered[i - 1] === expected[j - 1] ? 0 : 1);
+        dp[i][j] = Math.min(
+          substitution,
+          dp[i - 1][j] + 1,
+          dp[i][j - 1] + 1,
+        );
+      }
+    }
+
+    const operations = [];
+    let i = entered.length;
+    let j = expected.length;
+    while (i > 0 || j > 0) {
+      if (i > 0 && j > 0 && entered[i - 1] === expected[j - 1] && dp[i][j] === dp[i - 1][j - 1]) {
+        operations.unshift({ type: 'equal', entered: entered[i - 1], expected: expected[j - 1] });
+        i -= 1;
+        j -= 1;
+        continue;
+      }
+      if (i > 0 && j > 0 && dp[i][j] === dp[i - 1][j - 1] + 1) {
+        operations.unshift({ type: 'replace', entered: entered[i - 1], expected: expected[j - 1] });
+        i -= 1;
+        j -= 1;
+        continue;
+      }
+      if (i > 0 && dp[i][j] === dp[i - 1][j] + 1) {
+        operations.unshift({ type: 'delete', entered: entered[i - 1], expected: '' });
+        i -= 1;
+        continue;
+      }
+      operations.unshift({ type: 'insert', entered: '', expected: expected[j - 1] });
+      j -= 1;
+    }
+
+    return { distance: dp[entered.length][expected.length], operations };
+  }
+
+  function answerSimilarity(enteredValue, expectedValue) {
+    const entered = normalizeAnswer(enteredValue);
+    const expected = normalizeAnswer(expectedValue);
+    if (!entered && !expected) return 1;
+    const length = Math.max(Array.from(entered).length, Array.from(expected).length);
+    if (!length) return 0;
+    return Math.max(0, 1 - (alignAnswers(entered, expected).distance / length));
+  }
+
+  function gradeTypedAnswer(item, answer) {
+    const entered = normalizeAnswer(answer);
+    const candidates = acceptedAnswers(item);
+    if (!entered || !candidates.length) {
+      return {
+        accepted: false,
+        exact: false,
+        fuzzy: false,
+        similarity: 0,
+        entered,
+        expected: candidates[0] || '',
+        operations: [],
+      };
+    }
+
+    let best = null;
+    for (const expected of candidates) {
+      const alignment = alignAnswers(entered, expected);
+      const length = Math.max(Array.from(entered).length, Array.from(expected).length);
+      const similarity = length ? Math.max(0, 1 - (alignment.distance / length)) : 1;
+      const candidate = { expected, similarity, operations: alignment.operations };
+      if (!best || candidate.similarity > best.similarity) best = candidate;
+    }
+
+    const exact = best.similarity === 1;
+    const accepted = exact || best.similarity >= 0.8;
+    return {
+      accepted,
+      exact,
+      fuzzy: accepted && !exact,
+      similarity: best.similarity,
+      entered,
+      expected: best.expected,
+      operations: best.operations,
+    };
+  }
+
   function isTypedAnswerCorrect(item, answer) {
-    const normalized = normalizeAnswer(answer);
-    return Boolean(normalized && acceptedAnswers(item).includes(normalized));
+    return gradeTypedAnswer(item, answer).accepted;
   }
 
   function optionLabel(item, mode) {
@@ -565,6 +658,59 @@
       return wrap;
     }
 
+    function createTypedDifference(grading, label = '') {
+      const block = document.createElement('div');
+      block.className = `course-answer-diff${grading.fuzzy ? ' is-near-correct' : ''}`;
+
+      if (label) {
+        const heading = document.createElement('strong');
+        heading.className = 'course-answer-diff-heading';
+        heading.textContent = label;
+        block.append(heading);
+      }
+
+      const buildLine = (lineLabel, side) => {
+        const row = document.createElement('div');
+        row.className = 'course-answer-diff-row';
+        const title = document.createElement('span');
+        title.textContent = lineLabel;
+        const value = document.createElement('b');
+        value.lang = 'fi';
+        value.dir = 'ltr';
+
+        for (const operation of grading.operations) {
+          const character = operation[side];
+          if (!character) {
+            const gap = document.createElement('span');
+            gap.className = 'course-answer-diff-gap';
+            gap.textContent = '□';
+            gap.setAttribute('aria-label', side === 'entered' ? 'حرف جاافتاده' : 'حرف اضافه');
+            value.append(gap);
+            continue;
+          }
+          const span = document.createElement('span');
+          span.textContent = character;
+          if (operation.type !== 'equal') span.className = 'course-answer-diff-char';
+          value.append(span);
+        }
+        row.append(title, value);
+        return row;
+      };
+
+      block.append(
+        buildLine('پاسخ شما:', 'entered'),
+        buildLine('شکل درست:', 'expected'),
+      );
+
+      if (grading.fuzzy) {
+        const similarity = document.createElement('small');
+        similarity.className = 'course-answer-similarity';
+        similarity.textContent = `شباهت ${toPersianNumber(Math.round(grading.similarity * 100))}٪ — پاسخ پذیرفته شد، اما این تفاوت‌ها را مرور کن.`;
+        block.append(similarity);
+      }
+      return block;
+    }
+
     function renderLoading(message = 'در حال آماده‌کردن بخش آموزشی…') {
       root.replaceChildren();
       const status = document.createElement('div');
@@ -587,46 +733,55 @@
       root.replaceChildren();
 
       const catalog = document.createElement('section');
-      catalog.className = 'course-section-catalog';
+      catalog.className = 'course-section-catalog course-section-selector';
       const catalogTitle = document.createElement('div');
       catalogTitle.className = 'course-section-catalog-heading';
       catalogTitle.innerHTML = '<h1>مسیر A1.1</h1>';
       catalog.append(catalogTitle);
-      const catalogGrid = document.createElement('div');
-      catalogGrid.className = 'course-section-grid';
+
+      const currentContract = curriculum?.sections?.find((entry) => entry.id === section.curriculum_section_id) || section.curriculum_contract;
+      const selectorToggle = createButton('', 'course-section-selector-toggle', () => {
+        const expanded = selectorToggle.getAttribute('aria-expanded') === 'true';
+        selectorToggle.setAttribute('aria-expanded', String(!expanded));
+        selectorList.hidden = expanded;
+        catalog.classList.toggle('is-open', !expanded);
+      });
+      selectorToggle.setAttribute('aria-expanded', 'false');
+      selectorToggle.setAttribute('aria-controls', 'course-section-selector-list');
+      const selectorText = document.createElement('span');
+      selectorText.className = 'course-section-selector-current';
+      selectorText.textContent = `بخش ${toPersianNumber(currentContract.order)}: ${currentContract.title_fa}`;
+      const selectorChevron = document.createElement('span');
+      selectorChevron.className = 'course-section-selector-chevron';
+      selectorChevron.setAttribute('aria-hidden', 'true');
+      selectorChevron.textContent = '⌄';
+      selectorToggle.append(selectorText, selectorChevron);
+
+      const selectorList = document.createElement('div');
+      selectorList.id = 'course-section-selector-list';
+      selectorList.className = 'course-section-selector-list';
+      selectorList.hidden = true;
+
       for (const entry of curriculum?.sections || []) {
-        const card = document.createElement('article');
         const implemented = sections.find((candidate) => candidate.curriculum_section_id === entry.id) || null;
         const implementedIndex = implemented ? sections.indexOf(implemented) : -1;
         const unlocked = implemented ? isSectionUnlocked(sections, progress, implementedIndex) : false;
         const current = implemented === section;
-        card.className = `course-section-card${implemented ? ' is-implemented' : ' is-coming'}${unlocked ? ' is-available' : ' is-locked'}${current ? ' is-current' : ''}`;
-        const status = document.createElement('span');
-        status.className = 'course-section-status';
-        status.textContent = !implemented ? 'به‌زودی' : unlocked ? (current ? 'در حال یادگیری' : 'قابل یادگیری') : 'قفل است';
-        const heading = document.createElement('h2');
-        heading.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
-        const info = createInfoDisclosure((panel) => {
-          const goal = document.createElement('p');
-          goal.textContent = entry.goal_fa;
-          panel.append(goal);
-        }, `توضیحات بخش ${toPersianNumber(entry.order)}`);
-        card.append(status, heading, info);
-        if (implemented) {
-          const open = createButton(
-            current ? 'بخش فعلی' : unlocked ? 'باز کردن بخش' : 'قفل است',
-            'course-section-open',
-            () => {
-              if (!selectSection(implemented)) return;
-              renderSectionMap();
-            },
-          );
-          open.disabled = current || !unlocked;
-          card.append(open);
-        }
-        catalogGrid.append(card);
+        const option = createButton('', `course-section-selector-option${current ? ' is-current' : ''}${unlocked ? ' is-unlocked' : ' is-locked'}`, () => {
+          if (!implemented || !unlocked || current) return;
+          if (!selectSection(implemented)) return;
+          renderSectionMap();
+        });
+        option.disabled = !implemented || !unlocked || current;
+        const optionTitle = document.createElement('span');
+        optionTitle.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
+        const optionStatus = document.createElement('small');
+        optionStatus.textContent = current ? 'بخش فعلی' : unlocked ? 'باز کردن' : 'قفل است';
+        option.append(optionTitle, optionStatus);
+        selectorList.append(option);
       }
-      catalog.append(catalogGrid);
+
+      catalog.append(selectorToggle, selectorList);
 
       const header = document.createElement('header');
       header.className = 'course-hero-card';
@@ -674,13 +829,17 @@
       actionPanel.className = 'course-lesson-popover';
       actionPanel.hidden = true;
       let selectedNode = null;
+      let selectedStep = null;
 
       const openLessonPopover = (lesson, node, unlocked, done, step) => {
         if (selectedNode) {
           selectedNode.classList.remove('is-selected');
           selectedNode.setAttribute('aria-expanded', 'false');
         }
+        if (selectedStep) selectedStep.classList.remove('has-open-popover');
         selectedNode = node;
+        selectedStep = step;
+        step.classList.add('has-open-popover');
         node.classList.add('is-selected');
         node.setAttribute('aria-expanded', 'true');
 
@@ -737,7 +896,7 @@
           actionPanel.append(scoreLabel);
         }
 
-        step.after(actionPanel);
+        step.append(actionPanel);
       };
 
       section.lessons.forEach((lesson, index) => {
@@ -764,6 +923,12 @@
 
         step.append(node, state);
         path.append(step);
+        if (index < section.lessons.length - 1) {
+          const connector = document.createElement('div');
+          connector.className = 'course-path-connector';
+          connector.setAttribute('aria-hidden', 'true');
+          path.append(connector);
+        }
       });
 
       const lockedNote = document.createElement('span');
@@ -1022,12 +1187,13 @@
           if (answered || !input.value.trim()) return;
           answered = true;
           sessionGraded += 1;
-          const correct = isTypedAnswerCorrect(negative, input.value);
+          const grading = gradeTypedAnswer(negative, input.value);
+          const correct = grading.accepted;
           if (correct) sessionCorrect += 1;
           input.disabled = true;
           submit.disabled = true;
-          input.classList.add(correct ? 'correct' : 'wrong');
-          showFeedback(feedback, correct, negative);
+          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+          showFeedback(feedback, correct, negative, grading);
         });
         card.append(focus, hint, form, feedback);
         windowObject.setTimeout(() => input.focus(), 0);
@@ -1062,27 +1228,36 @@
           if (answered || rows.some(({ input }) => !input.value.trim())) return;
           answered = true;
           sessionGraded += 1;
-          const results = rows.map(({ input, expected }) => isTypedAnswerCorrect(expected, input.value));
-          const correct = results.every(Boolean);
+          const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
+          const correct = gradings.every((grading) => grading.accepted);
+          const hasFuzzy = gradings.some((grading) => grading.fuzzy);
           if (correct) sessionCorrect += 1;
           rows.forEach(({ input }, index) => {
+            const grading = gradings[index];
             input.disabled = true;
-            input.classList.add(results[index] ? 'correct' : 'wrong');
+            input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
           });
           submit.disabled = true;
           const result = document.createElement('div');
-          result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+          result.className = `course-answer-feedback ${correct ? (hasFuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
           const title = document.createElement('strong');
-          title.textContent = correct ? `هر ${toPersianNumber(rows.length)} جمله درست بود.` : 'پاسخ‌های نمونه را مرور کن.';
+          title.textContent = correct
+            ? hasFuzzy ? 'پاسخ‌ها پذیرفته شدند؛ تفاوت‌های کوچک را مرور کن.' : `هر ${toPersianNumber(rows.length)} جمله درست بود.`
+            : 'پاسخ‌های دارای اختلاف را مرور کن.';
           const review = document.createElement('div');
           review.className = 'course-guided-writing-review';
-          for (const { expected } of rows) {
+          rows.forEach(({ expected }, index) => {
+            const grading = gradings[index];
+            if (!grading.exact) {
+              review.append(createTypedDifference(grading, `جملهٔ ${toPersianNumber(index + 1)}`));
+              return;
+            }
             const line = document.createElement('p');
             line.lang = 'fi';
             line.dir = 'ltr';
             line.textContent = expected.surface_form;
             review.append(line);
-          }
+          });
           result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
           card.append(result);
         });
@@ -1402,12 +1577,13 @@
           if (answered || !input.value.trim()) return;
           answered = true;
           sessionGraded += 1;
-          const correct = isTypedAnswerCorrect(item, input.value);
+          const grading = gradeTypedAnswer(item, input.value);
+          const correct = grading.accepted;
           if (correct) sessionCorrect += 1;
           input.disabled = true;
           submit.disabled = true;
-          input.classList.add(correct ? 'correct' : 'wrong');
-          showFeedback(feedback, correct, item);
+          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+          showFeedback(feedback, correct, item, grading);
         });
         card.append(form, feedback);
         windowObject.setTimeout(() => input.focus(), 0);
@@ -1418,12 +1594,17 @@
       root.scrollTop = 0;
     }
 
-    function showFeedback(container, correct, item) {
+    function showFeedback(container, correct, item, grading = null) {
       container.replaceChildren();
       container.hidden = false;
-      container.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+      const fuzzy = Boolean(grading && grading.fuzzy);
+      container.className = `course-answer-feedback ${correct ? (fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
       const title = document.createElement('strong');
-      title.textContent = correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
+      title.textContent = fuzzy
+        ? 'قبول شد؛ پاسخ خیلی نزدیک بود.'
+        : correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
+      container.append(title);
+      if (grading && !grading.exact) container.append(createTypedDifference(grading));
       const example = document.createElement('div');
       example.className = 'course-feedback-example';
       const fi = document.createElement('p');
@@ -1433,7 +1614,7 @@
       const fa = document.createElement('p');
       fa.textContent = item.example_fa;
       example.append(fi, fa);
-      container.append(title, example, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+      container.append(example, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
     }
 
     function nextActivity() {
@@ -1467,7 +1648,7 @@
       const note = document.createElement('p');
       note.className = 'course-completion-note';
       note.textContent = passed
-        ? 'فعالیت‌های معرفی در امتیاز حساب نمی‌شوند. در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد.'
+        ? 'فعالیت‌های معرفی در امتیاز حساب نمی‌شوند.'
         : `برای قبولی در این آزمون حداقل ${toPersianNumber(Math.round(passingScore * 100))}٪ پاسخ درست لازم است.`;
       card.append(badge, title, message, note);
 
@@ -1620,6 +1801,9 @@
     recordLessonCompletion,
     makeCloze,
     acceptedAnswers,
+    alignAnswers,
+    answerSimilarity,
+    gradeTypedAnswer,
     isTypedAnswerCorrect,
     optionLabel,
     uniqueOptions,

@@ -82,6 +82,36 @@ test('answer normalization accepts Finnish casing, spacing, and trailing punctua
   assert.equal(course.isTypedAnswerCorrect(section.items['hyvaa-huomenta'], 'hyvää iltaa'), false);
 });
 
+test('typed grading accepts answers at 80 percent similarity and distinguishes exact from fuzzy matches', () => {
+  const item = { surface_form: 'abcde', accepted_answers: ['abcde'] };
+  const exact = course.gradeTypedAnswer(item, 'ABCDE!');
+  const fuzzy = course.gradeTypedAnswer(item, 'abcdf');
+  const wrong = course.gradeTypedAnswer(item, 'abxyz');
+
+  assert.equal(exact.accepted, true);
+  assert.equal(exact.exact, true);
+  assert.equal(exact.fuzzy, false);
+
+  assert.equal(fuzzy.similarity, 0.8);
+  assert.equal(fuzzy.accepted, true);
+  assert.equal(fuzzy.exact, false);
+  assert.equal(fuzzy.fuzzy, true);
+
+  assert.equal(wrong.accepted, false);
+  assert.ok(wrong.similarity < 0.8);
+});
+
+test('typed grading returns character-level alignment for substitutions omissions and extras', () => {
+  const substitution = course.gradeTypedAnswer({ surface_form: 'hyvää' }, 'hyvaa');
+  assert.ok(substitution.operations.some((operation) => operation.type === 'replace'));
+
+  const missing = course.alignAnswers('kisa', 'kissa');
+  assert.ok(missing.operations.some((operation) => operation.type === 'insert' && operation.expected === 's'));
+
+  const extra = course.alignAnswers('kisssa', 'kissa');
+  assert.ok(extra.operations.some((operation) => operation.type === 'delete' && operation.entered === 's'));
+});
+
 test('cloze generation replaces a known surface form without changing the source example', () => {
   const item = section.items.kissa;
   const cloze = course.makeCloze(item.example_fi, item.surface_form);
@@ -164,8 +194,9 @@ test('course UI is wired to both curriculum and implemented section data', () =>
   assert.match(source, /CURRICULUM_URL/);
   assert.match(source, /validateSectionAgainstCurriculum/);
   assert.match(source, /course-section-catalog/);
-  assert.match(source, /به‌زودی/);
-  assert.match(styles, /\.course-section-grid/);
+  assert.match(source, /course-section-selector-toggle/);
+  assert.match(source, /قفل است/);
+  assert.match(styles, /\.course-section-selector/);
   assert.match(styles, /\.course-lesson-intro/);
 });
 
@@ -236,8 +267,8 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.11\.0`/);
-  assert.match(fa, /نسخه: `1\.11\.0`/);
+  assert.match(en, /Version: `1\.12\.0`/);
+  assert.match(fa, /نسخه: `1\.12\.0`/);
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
@@ -249,7 +280,10 @@ test('the application defaults to the course with icon-only accessible course na
   assert.match(html, /id="home-view" class="app-view home-view" hidden/);
   assert.match(html, /id="course-view" class="app-view course-view">/);
   assert.equal((html.match(/aria-label="دوره"/g) || []).length, 2);
-  assert.equal((html.match(/course-view-link nav-icon-only active/g) || []).length, 2);
+  const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
+  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 5);
+  assert.equal((desktopHeader.match(/data-tooltip=/g) || []).length, 5);
+  assert.equal((html.match(/course-view-link/g) || []).length, 2);
   assert.doesNotMatch(html, />دوره A1\.1</);
   assert.match(app, /if\(!location\.hash\)history\.replaceState\(null,'','#course'\)/);
   assert.match(app, /view:'course'/);
@@ -271,22 +305,28 @@ test('course map hides explanatory copy behind accessible info disclosures', () 
   assert.doesNotMatch(source, /بخش ۱ نخستین بخش پیاده‌شدهٔ A1\.1 است/);
 });
 
-test('desktop lesson and review actions use stable fixed action regions', () => {
+test('desktop lesson popover keeps a stable large width with equal full-width actions', () => {
   const courseStyles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
-  const reviewStyles = fs.readFileSync(path.join(ROOT, 'css', 'spaced-repetition.css'), 'utf8');
 
-  assert.match(courseStyles, /\.course-lesson-action-area\s*\{[\s\S]*?width:\s*148px[\s\S]*?min-width:\s*148px/);
-  assert.match(courseStyles, /\.course-lesson-action\s*\{[\s\S]*?min-height:\s*52px/);
-  assert.match(reviewStyles, /\.spaced-review-start\s*\{[\s\S]*?width:\s*148px[\s\S]*?min-height:\s*52px/);
+  assert.match(courseStyles, /\.course-lesson-popover\s*\{[\s\S]*?width:\s*520px[\s\S]*?max-width:\s*100%/);
+  assert.match(courseStyles, /\.course-lesson-popover-actions\s*\{[\s\S]*?grid-template-columns:\s*1fr/);
+  assert.match(courseStyles, /\.course-lesson-continue,[\s\S]*?\.course-lesson-details-toggle\s*\{[\s\S]*?width:\s*100%[\s\S]*?min-height:\s*54px/);
 });
 
-test('course navigation visually hides its label but retains an accessible name', () => {
-  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+test('desktop navigation is icon-only and exposes labels through accessible tooltips', () => {
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'styles.css'), 'utf8');
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
 
-  assert.match(styles, /\.nav-icon-only > span/);
-  assert.match(styles, /clip:\s*rect\(0, 0, 0, 0\)/);
-  assert.match(html, /course-view-link nav-icon-only active[^>]+aria-label="دوره"/);
+  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 5);
+  for (const label of ['تمرین‌ها','واژه‌نامه','دوره','پروفایل','تنظیمات']) {
+    assert.match(desktopHeader, new RegExp('aria-label="' + label + '"'));
+    assert.match(desktopHeader, new RegExp('data-tooltip="' + label + '"'));
+  }
+  assert.match(styles, /\.site-header nav \.nav-tooltip::after/);
+  assert.match(styles, /content:\s*attr\(data-tooltip\)/);
+  assert.match(styles, /\.nav-tooltip:hover::after/);
+  assert.match(styles, /\.nav-tooltip:focus::after/);
 });
 
 
@@ -427,7 +467,7 @@ test('all Section 2 activity references and typed answers are explicit', () => {
   }
 });
 
-test('course runtime loads all three implemented section files and renders multi-section controls', () => {
+test('course runtime loads implemented sections and renders the full-width expandable section selector', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
 
@@ -436,14 +476,17 @@ test('course runtime loads all three implemented section files and renders multi
   assert.match(source, /a1\.1-section-2\.json/);
   assert.match(source, /a1\.1-section-3\.json/);
   assert.match(source, /isSectionUnlocked/);
-  assert.match(source, /باز کردن بخش/);
+  assert.match(source, /course-section-selector-toggle/);
+  assert.match(source, /course-section-selector-list/);
+  assert.match(source, /aria-controls/);
   assert.match(source, /number-grid/);
   assert.match(source, /sequence-order/);
   assert.match(source, /clock-choice/);
   assert.match(source, /negative-transform/);
   assert.match(source, /guided-writing/);
   assert.match(source, /event-time-match/);
-  assert.match(styles, /\.course-section-open/);
+  assert.match(styles, /\.course-section-selector-toggle/);
+  assert.match(styles, /\.course-section-selector-option/);
   assert.match(styles, /\.course-number-grid/);
   assert.match(styles, /\.course-clock-face/);
   assert.match(styles, /\.course-guided-writing/);
@@ -701,8 +744,10 @@ test('lesson path styling uses circular nodes and thick dashed connectors', () =
   const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
   assert.match(styles, /\.course-lesson-node\s*\{/);
   assert.match(styles, /border-radius:\s*50%/);
-  assert.match(styles, /\.course-path-step::after/);
-  assert.match(styles, /border-left:\s*8px dashed/);
+  assert.match(styles, /\.course-path-connector/);
+  assert.match(styles, /\.course-path-connector\s*\{[\s\S]*?border-left:\s*8px dashed/);
+  assert.match(styles, /\.course-path-step::after\s*\{[\s\S]*?content:\s*none\s*!important/);
+  assert.match(styles, /\.course-lesson-popover::before/);
   assert.match(styles, /\.course-lesson-popover/);
   assert.match(styles, /\.course-lesson-popover-details/);
 });
@@ -715,4 +760,41 @@ test('lesson path preserves completed current and locked visual states', () => {
   assert.match(source, /is-locked/);
   assert.match(styles, /\.course-lesson-node\.is-complete/);
   assert.match(styles, /\.course-lesson-node\.is-locked/);
+});
+
+
+test('section navigation uses one expandable full-width selector instead of persistent section cards', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(source, /course-section-selector-current/);
+  assert.match(source, /selectorList\.hidden = expanded/);
+  assert.match(styles, /\.course-section-selector\s*\{[\s\S]*?width:\s*100%/);
+  assert.doesNotMatch(source, /catalogGrid\.append/);
+});
+
+test('opened lesson cards use explicit connectors that never continue through the card', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(source, /connector\.className = 'course-path-connector'/);
+  assert.match(source, /step\.append\(actionPanel\)/);
+  assert.match(styles, /\.course-path-step::after\s*\{[\s\S]*?content:\s*none\s*!important/);
+  assert.match(styles, /\.course-path-step\.has-open-popover \.course-lesson-popover::before/);
+});
+
+test('typed-answer feedback renders differing characters and fuzzy-accepted state', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(source, /function createTypedDifference/);
+  assert.match(source, /course-answer-diff-char/);
+  assert.match(source, /شباهت/);
+  assert.match(source, /پاسخ پذیرفته شد/);
+  assert.match(styles, /\.course-answer-diff-char/);
+  assert.match(styles, /text-decoration-line:\s*underline/);
+  assert.match(styles, /\.course-answer-feedback\.is-near-correct/);
+});
+
+test('completion screen no longer promises a future review-algorithm connection', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.doesNotMatch(source, /در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد/);
+  assert.match(source, /فعالیت‌های معرفی در امتیاز حساب نمی‌شوند\./);
 });

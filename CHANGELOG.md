@@ -6,6 +6,22 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.12.0] - 2026-10-05
+
+### Added
+
+- A full-width expandable section selector for switching between unlocked A1.1 sections.
+- Icon-only desktop navigation with accessible hover/focus tooltips.
+- Character-level typed-answer difference feedback, including accepted near-matches at the 80% similarity threshold.
+
+### Changed
+
+- Lesson action cards now keep a stable large width with equal Continue and Details actions.
+- Lesson path connectors are rendered outside opened lesson cards instead of continuing through them.
+- Fuzzy accepted typed answers still surface their exact character differences for review.
+- The obsolete end-of-lesson note about future review-algorithm integration was removed.
+
+
 ## [1.11.0] - 2026-10-05
 
 ### Added

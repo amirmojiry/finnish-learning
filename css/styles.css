@@ -656,3 +656,61 @@ footer { text-align: center; color: var(--muted); padding: 24px; }
   background: rgba(17, 26, 42, .88);
   border-color: rgba(111, 126, 153, .34);
 }
+
+
+/* Icon-only desktop navigation tooltips */
+@media (min-width: 621px) {
+  .site-header nav .nav-icon-only {
+    position: relative;
+    width: 44px;
+    min-width: 44px;
+    padding-inline: 0;
+  }
+
+  .site-header nav .nav-icon-only svg {
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+  }
+
+  .site-header nav .nav-icon-only > span {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .site-header nav .nav-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 9px);
+    left: 50%;
+    z-index: 80;
+    padding: 5px 9px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--text);
+    color: var(--surface);
+    box-shadow: 0 8px 22px rgba(31,42,68,.14);
+    font-size: .76rem;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -3px);
+    transition: opacity 120ms ease, transform 120ms ease;
+  }
+
+  .site-header nav .nav-tooltip:hover::after,
+  .site-header nav .nav-tooltip:focus::after,
+  .site-header nav .nav-tooltip:focus-visible::after {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
