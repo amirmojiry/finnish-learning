@@ -1703,6 +1703,9 @@
             "s3-milloin"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-eilen"
       ]
     },
     {
@@ -1852,6 +1855,9 @@
             "s3-huomenna"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-tanaan-maanantai"
       ]
     },
     {
@@ -2003,6 +2009,9 @@
             "s3-kello-nelja"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-kello-yksi"
       ]
     },
     {
@@ -2137,6 +2146,9 @@
             "s3-aamulla"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-aamulla-expr"
       ]
     },
     {
@@ -2264,6 +2276,9 @@
             "s3-tulen"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-mina-syon"
       ]
     },
     {
@@ -2405,6 +2420,9 @@
             "s3-teet"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-mita-teet"
       ]
     },
     {
@@ -2538,6 +2556,9 @@
           "mode": "finnish",
           "item": "s3-negative-tyoskentelen"
         }
+      ],
+      "production_targets": [
+        "s3-negative-syon"
       ]
     },
     {
@@ -2687,6 +2708,9 @@
           "mode": "finnish",
           "item": "s3-kello-kolme-short"
         }
+      ],
+      "production_targets": [
+        "s3-milloin-expr"
       ]
     },
     {
@@ -2849,6 +2873,9 @@
             "s3-frame-illalla"
           ]
         }
+      ],
+      "production_targets": [
+        "s3-routine-4"
       ]
     },
     {
@@ -2954,6 +2981,9 @@
           "type",
           "finnish"
         ]
+      ],
+      "production_targets": [
+        "s3-kello-kaksi"
       ]
     }
   ]

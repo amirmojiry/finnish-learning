@@ -1576,6 +1576,9 @@
       },
       "recycle_from": [
         "a1.1-s1-l02"
+      ],
+      "production_targets": [
+        "s2-han"
       ]
     },
     {
@@ -1613,6 +1616,9 @@
       "recycle_from": [
         "a1.1-s1-l02",
         "a1.1-s2-l01"
+      ],
+      "production_targets": [
+        "s2-olen-suomesta"
       ]
     },
     {
@@ -1741,6 +1747,9 @@
             "s2-puhun-vahan-suomea"
           ]
         }
+      ],
+      "production_targets": [
+        "s2-puhun-suomea"
       ]
     },
     {
@@ -1777,6 +1786,9 @@
       "recycle_from": [
         "a1.1-s2-l02",
         "a1.1-s2-l03"
+      ],
+      "production_targets": [
+        "s2-asun-vaasassa"
       ]
     },
     {
@@ -1813,6 +1825,9 @@
       "recycle_from": [
         "a1.1-s1-l08",
         "a1.1-s2-l01"
+      ],
+      "production_targets": [
+        "s2-tama-on-minun-aitini"
       ]
     },
     {
@@ -1849,6 +1864,9 @@
       "recycle_from": [
         "a1.1-s1-l02",
         "a1.1-s2-l05"
+      ],
+      "production_targets": [
+        "s2-minun-nimeni"
       ]
     },
     {
@@ -2068,6 +2086,9 @@
             "s2-mika-puhelinnumerosi"
           ]
         }
+      ],
+      "production_targets": [
+        "s2-kuinka-vanha"
       ]
     },
     {
@@ -2102,6 +2123,9 @@
       "recycle_from": [
         "a1.1-s2-l06",
         "a1.1-s2-l07"
+      ],
+      "production_targets": [
+        "s2-mika-puhelinnumerosi"
       ]
     },
     {
@@ -2140,6 +2164,9 @@
         "a1.1-s2-l04",
         "a1.1-s2-l07",
         "a1.1-s2-l08"
+      ],
+      "production_targets": [
+        "s2-olen-suomesta"
       ]
     },
     {
@@ -2245,6 +2272,9 @@
           "type",
           "finnish"
         ]
+      ],
+      "production_targets": [
+        "s2-hei"
       ]
     }
   ]

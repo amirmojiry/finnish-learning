@@ -317,6 +317,87 @@
     });
   }
 
+  function activityItemReferences(activity) {
+    const refs = [];
+    for (const key of ['item', 'answer_item', 'question_item', 'negative_item', 'affirmative_item', 'event_item', 'time_item']) {
+      if (activity[key]) refs.push(activity[key]);
+    }
+    for (const key of ['items', 'turns', 'expected_items', 'options']) {
+      if (Array.isArray(activity[key])) refs.push(...activity[key]);
+    }
+    return refs;
+  }
+
+  function injectProductionActivity(section, lesson) {
+    const targets = Array.isArray(lesson.production_targets) ? lesson.production_targets : [];
+    if (targets.length !== 1) throw new Error(`Lesson ${lesson.id || '?'} must declare exactly one production target.`);
+    const targetId = targets[0];
+    const target = section.items[targetId];
+    if (!target || !target.translation_fa || !acceptedAnswers(target).length) {
+      throw new Error(`Invalid production target: ${lesson.id || '?'} / ${targetId}`);
+    }
+
+    const declared = new Set([
+      ...(lesson.new_targets || []),
+      ...(lesson.practice_targets || []),
+      ...(lesson.checkpoint_targets || []),
+      ...(lesson.review_targets || []),
+      ...(lesson.curriculum_target_refs?.high_frequency || []),
+      ...(lesson.curriculum_target_refs?.topic || []),
+      ...(lesson.curriculum_target_refs?.expressions || []),
+      ...lesson.activities.flatMap(activityItemReferences),
+    ]);
+    if (!declared.has(targetId)) {
+      throw new Error(`Production target must belong to the explicit lesson scope: ${lesson.id} / ${targetId}`);
+    }
+
+    let replacementIndex = -1;
+    for (let index = lesson.activities.length - 1; index >= 0; index -= 1) {
+      const activity = lesson.activities[index];
+      if (activity.item === targetId && (activity.type === 'choice' || activity.type === 'type')) {
+        replacementIndex = index;
+        break;
+      }
+    }
+    if (replacementIndex < 0) {
+      const protectedTargets = new Set([
+        ...(lesson.new_targets || []),
+        ...(lesson.practice_targets || []),
+        ...(lesson.checkpoint_targets || []),
+        ...(lesson.curriculum_target_refs?.high_frequency || []),
+        ...(lesson.curriculum_target_refs?.topic || []),
+        ...(lesson.curriculum_target_refs?.expressions || []),
+      ]);
+      const meaningfulReferenceCounts = new Map();
+      for (const activity of lesson.activities) {
+        const refs = [];
+        for (const key of ['item', 'answer_item', 'question_item', 'negative_item', 'affirmative_item', 'event_item', 'time_item']) {
+          if (activity[key]) refs.push(activity[key]);
+        }
+        for (const key of ['items', 'turns', 'expected_items']) {
+          if (Array.isArray(activity[key])) refs.push(...activity[key]);
+        }
+        for (const itemId of new Set(refs)) {
+          meaningfulReferenceCounts.set(itemId, (meaningfulReferenceCounts.get(itemId) || 0) + 1);
+        }
+      }
+
+      for (let index = lesson.activities.length - 1; index >= 0; index -= 1) {
+        const activity = lesson.activities[index];
+        if (activity.type !== 'choice' && activity.type !== 'type') continue;
+        const itemId = activity.item;
+        if (protectedTargets.has(itemId) && (meaningfulReferenceCounts.get(itemId) || 0) <= 1) continue;
+        replacementIndex = index;
+        break;
+      }
+    }
+    if (replacementIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for production practice.`);
+
+    lesson.activities = lesson.activities.map((activity, index) => (
+      index === replacementIndex ? { type: 'production', item: targetId } : activity
+    ));
+  }
+
   function prepareSection(rawSection) {
     if (!rawSection || rawSection.schema_version !== 1 || !rawSection.items || !Array.isArray(rawSection.lessons)) {
       throw new Error('Invalid course section data.');
@@ -328,16 +409,20 @@
     };
     const seen = [];
     section.lessons.forEach((lesson, index) => {
-      if (Array.isArray(lesson.activities)) return;
-      if (index === section.lessons.length - 1 && Array.isArray(lesson.checkpoint_targets)) {
-        lesson.activities = buildCheckpointActivities(section, lesson);
+      if (!Array.isArray(lesson.activities)) {
+        if (index === section.lessons.length - 1 && Array.isArray(lesson.checkpoint_targets)) {
+          lesson.activities = buildCheckpointActivities(section, lesson);
+        } else {
+          const practiceTargets = Array.isArray(lesson.new_targets) && lesson.new_targets.length
+            ? lesson.new_targets
+            : lesson.practice_targets;
+          lesson.activities = buildStandardActivities(practiceTargets, seen);
+        }
       } else {
-        const practiceTargets = Array.isArray(lesson.new_targets) && lesson.new_targets.length
-          ? lesson.new_targets
-          : lesson.practice_targets;
-        lesson.activities = buildStandardActivities(practiceTargets, seen);
+        lesson.activities = lesson.activities.map((activity) => ({ ...activity }));
       }
       lesson.review_targets = Array.isArray(lesson.review_targets) ? lesson.review_targets : seen.slice(-3);
+      injectProductionActivity(section, lesson);
       seen.push(...(lesson.new_targets || []));
     });
     return section;
@@ -350,7 +435,18 @@
       if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
         throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or fifteen deterministic activities.`);
       }
+      const productionActivities = lesson.activities.filter((activity) => activity.type === 'production');
+      if (productionActivities.length !== 1 || productionActivities[0].item !== lesson.production_targets[0]) {
+        throw new Error(`Lesson ${lesson.id} must contain exactly one declared Persian-to-Finnish production activity.`);
+      }
       for (const activity of lesson.activities) {
+        if (activity.type === 'production') {
+          const productionItem = section.items[activity.item];
+          if (!productionItem || !productionItem.translation_fa || !acceptedAnswers(productionItem).length) {
+            throw new Error(`Invalid production activity in ${lesson.id}`);
+          }
+          continue;
+        }
         if (activity.type === 'number-grid') {
           if (!Array.isArray(activity.items) || activity.items.length < 2) throw new Error(`Invalid number grid in ${lesson.id}`);
           for (const itemId of activity.items) {
@@ -501,10 +597,13 @@
         }
 
         for (const activity of lesson.activities) {
-          if (activity.type !== 'type') continue;
+          if (activity.type !== 'type' && activity.type !== 'production') continue;
           const typedItem = implemented.items[activity.item];
           if (!typedItem || !acceptedAnswers(typedItem).length) {
             throw new Error(`Typed activity lacks explicit accepted answers: ${lesson.id} / ${activity.item}`);
+          }
+          if (activity.type === 'production' && !typedItem.translation_fa) {
+            throw new Error(`Production activity lacks a Persian prompt: ${lesson.id} / ${activity.item}`);
           }
         }
       }
@@ -978,6 +1077,7 @@
       if (activity.type === 'category-match') return 'دستهٔ درست را انتخاب کن.';
       if (activity.type === 'short-reading') return 'متن کوتاه را بخوان و پاسخ درست را انتخاب کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
+      if (activity.type === 'production') return 'فارسی را به فنلاندی بنویس.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
       if (activity.mode === 'finnish') return 'گزینهٔ فنلاندی درست را انتخاب کن.';

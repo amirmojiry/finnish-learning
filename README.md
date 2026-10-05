@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.12.1`
+- Version: `1.13.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
-- complete 40-lesson A1.1 path with circular lesson maps, expandable section switching, and 15 deterministic activities per lesson
+- complete 40-lesson A1.1 path with circular lesson maps, expandable section switching, and Persian-to-Finnish productive recall
 - focused practice for an individual dictionary word
 - profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -136,7 +136,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 
 ### Phase 2 — richer A1.1 practice
 
-- [ ] Add Persian-to-Finnish production.
+- [x] Add Persian-to-Finnish production.
 - [ ] Add listening and dictation using static or build-time-generated audio where practical.
 - [ ] Add sentence ordering, expression completion, and controlled sentence production.
 - [ ] Add morphology-aware distractors and introductory inflection exercises.

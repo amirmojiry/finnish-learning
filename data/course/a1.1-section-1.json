@@ -1357,7 +1357,10 @@
           "hyvaa-huomenta",
           "nakemiin"
         ]
-      }
+      },
+      "production_targets": [
+        "hyvaa-huomenta"
+      ]
     },
     {
       "id": "lesson-2",
@@ -1388,7 +1391,10 @@
           "minun-nimeni-on",
           "mika-sinun-nimesi-on"
         ]
-      }
+      },
+      "production_targets": [
+        "mika-sinun-nimesi-on"
+      ]
     },
     {
       "id": "lesson-3",
@@ -1417,7 +1423,10 @@
           "hyvaa-kiitos",
           "ihan-hyvaa"
         ]
-      }
+      },
+      "production_targets": [
+        "mita-kuuluu"
+      ]
     },
     {
       "id": "lesson-4",
@@ -1447,7 +1456,10 @@
           "ei",
           "ei-ole"
         ]
-      }
+      },
+      "production_targets": [
+        "ei-ole"
+      ]
     },
     {
       "id": "lesson-5",
@@ -1478,7 +1490,10 @@
           "kuka-han-on",
           "mika-tama-on"
         ]
-      }
+      },
+      "production_targets": [
+        "kuka-han-on"
+      ]
     },
     {
       "id": "lesson-6",
@@ -1504,7 +1519,10 @@
           "anteeksi",
           "ole-hyva"
         ]
-      }
+      },
+      "production_targets": [
+        "ole-hyva"
+      ]
     },
     {
       "id": "lesson-7",
@@ -1533,7 +1551,10 @@
           "uudestaan",
           "hitaammin"
         ]
-      }
+      },
+      "production_targets": [
+        "en-ymmarra"
+      ]
     },
     {
       "id": "lesson-8",
@@ -1566,7 +1587,10 @@
           "tama-on",
           "se-on"
         ]
-      }
+      },
+      "production_targets": [
+        "tama"
+      ]
     },
     {
       "id": "lesson-9",
@@ -1743,6 +1767,9 @@
             2
           ]
         }
+      ],
+      "production_targets": [
+        "mita-kuuluu"
       ]
     },
     {
@@ -1837,7 +1864,10 @@
         "high_frequency": [],
         "topic": [],
         "expressions": []
-      }
+      },
+      "production_targets": [
+        "hyvaa-huomenta"
+      ]
     }
   ],
   "curriculum_section_id": "a1.1-s1"
