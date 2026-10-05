@@ -154,10 +154,17 @@ test('Finnish speech requires an installed fi voice and never falls back to anot
   assert.equal(course.activityNeedsFinnishSpeech({ type: 'choice', mode: 'listen' }), true);
   assert.equal(course.activityNeedsFinnishSpeech({ type: 'dictation' }), true);
   assert.equal(course.activityNeedsFinnishSpeech({ type: 'choice', mode: 'meaning' }), false);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'dictation' }, false), true);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'choice', mode: 'listen' }, false), true);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'dictation' }, true), false);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'choice', mode: 'meaning' }, false), false);
 
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.match(source, /speechSynthesis\.addEventListener\('voiceschanged'/);
   assert.match(source, /صدای فنلاندی روی این دستگاه پیدا نشد/);
+  assert.match(source, /اگر این وضعیت ادامه پیدا کرد، احتمالاً voice فنلاندی نصب نیست/);
+  assert.match(source, /speechSettingsGuide\(windowObject\)/);
+  assert.match(source, /shouldRefreshSpeechActivity\(currentActivity, answered\)/);
   assert.match(source, /Text-to-speech/);
   assert.match(source, /ادامه بدون تمرین شنیداری/);
   assert.match(source, /ادامه بدون دیکته/);
