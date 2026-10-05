@@ -3558,6 +3558,24 @@
             "Puhun persiaa."
           ]
         }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "s4-final-negative",
+          "base_fi": "nukkua",
+          "feature_fa": "منفی اول‌شخص: en + connegative",
+          "prompt_fa": "در جملهٔ منفی «من نمی‌خوابم»، شکل درست nukkua را انتخاب کن.",
+          "frame_fi": "En _____.",
+          "options_fi": [
+            "nuku",
+            "nukun",
+            "nukkuu",
+            "nukut"
+          ],
+          "expected_fi": "nuku",
+          "explanation_fa": "بعد از en، صورت connegative فعل می‌آید: nukun → En nuku."
+        }
       ]
     }
   ]
