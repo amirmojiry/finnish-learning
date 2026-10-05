@@ -194,8 +194,9 @@ test('course UI is wired to both curriculum and implemented section data', () =>
   assert.match(source, /CURRICULUM_URL/);
   assert.match(source, /validateSectionAgainstCurriculum/);
   assert.match(source, /course-section-catalog/);
-  assert.match(source, /به‌زودی/);
-  assert.match(styles, /\.course-section-grid/);
+  assert.match(source, /course-section-selector-toggle/);
+  assert.match(source, /قفل است/);
+  assert.match(styles, /\.course-section-selector/);
   assert.match(styles, /\.course-lesson-intro/);
 });
 
@@ -266,8 +267,8 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.11\.0`/);
-  assert.match(fa, /نسخه: `1\.11\.0`/);
+  assert.match(en, /Version: `1\.12\.0`/);
+  assert.match(fa, /نسخه: `1\.12\.0`/);
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
