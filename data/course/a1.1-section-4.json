@@ -2047,6 +2047,10 @@
       ],
       "production_targets": [
         "s4-tama-on-keittio"
+      ],
+      "listening_targets": [
+        "s4-keittio",
+        "s4-olen-kotona"
       ]
     },
     {
@@ -2196,6 +2200,10 @@
       ],
       "production_targets": [
         "s4-missa-puhelin"
+      ],
+      "listening_targets": [
+        "s4-poyta",
+        "s4-se-on-huoneessa"
       ]
     },
     {
@@ -2335,6 +2343,10 @@
       ],
       "production_targets": [
         "s4-tama-on-kahvia"
+      ],
+      "listening_targets": [
+        "s4-maito",
+        "s4-tama-on-leipa"
       ]
     },
     {
@@ -2467,6 +2479,10 @@
       ],
       "production_targets": [
         "s4-haluan-kahvia"
+      ],
+      "listening_targets": [
+        "s4-haluan-vetta",
+        "s4-minulla-on-nalka"
       ]
     },
     {
@@ -2621,6 +2637,10 @@
       ],
       "production_targets": [
         "s4-yksi-kahvi-kiitos"
+      ],
+      "listening_targets": [
+        "s4-kahvila",
+        "s4-kiitos"
       ]
     },
     {
@@ -2759,6 +2779,10 @@
       ],
       "production_targets": [
         "s4-tama-on-koira"
+      ],
+      "listening_targets": [
+        "s4-lintu",
+        "s4-se-on-kissa"
       ]
     },
     {
@@ -2895,6 +2919,10 @@
       ],
       "production_targets": [
         "s4-karhu-on-elain"
+      ],
+      "listening_targets": [
+        "s4-lehma",
+        "s4-lehma-on-elain"
       ]
     },
     {
@@ -3033,6 +3061,10 @@
       ],
       "production_targets": [
         "s4-koira-on-iso"
+      ],
+      "listening_targets": [
+        "s4-punainen",
+        "s4-kissa-on-pieni"
       ]
     },
     {
@@ -3189,6 +3221,10 @@
       ],
       "production_targets": [
         "s4-tama-on-minun-kotini"
+      ],
+      "listening_targets": [
+        "s4-world-2",
+        "s4-world-5"
       ]
     },
     {
@@ -3352,6 +3388,10 @@
       ],
       "production_targets": [
         "s4-final-hei"
+      ],
+      "listening_targets": [
+        "s4-final-day",
+        "s4-final-description"
       ]
     }
   ]

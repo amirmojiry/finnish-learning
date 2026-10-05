@@ -1360,6 +1360,10 @@
       },
       "production_targets": [
         "hyvaa-huomenta"
+      ],
+      "listening_targets": [
+        "hei",
+        "moi"
       ]
     },
     {
@@ -1394,6 +1398,10 @@
       },
       "production_targets": [
         "mika-sinun-nimesi-on"
+      ],
+      "listening_targets": [
+        "mina",
+        "sina"
       ]
     },
     {
@@ -1426,6 +1434,10 @@
       },
       "production_targets": [
         "mita-kuuluu"
+      ],
+      "listening_targets": [
+        "hyvaa",
+        "kiitos"
       ]
     },
     {
@@ -1459,6 +1471,10 @@
       },
       "production_targets": [
         "ei-ole"
+      ],
+      "listening_targets": [
+        "kylla",
+        "ei"
       ]
     },
     {
@@ -1493,6 +1509,10 @@
       },
       "production_targets": [
         "kuka-han-on"
+      ],
+      "listening_targets": [
+        "mika-tama-on",
+        "tama"
       ]
     },
     {
@@ -1522,6 +1542,10 @@
       },
       "production_targets": [
         "ole-hyva"
+      ],
+      "listening_targets": [
+        "kiitos",
+        "anteeksi"
       ]
     },
     {
@@ -1554,6 +1578,10 @@
       },
       "production_targets": [
         "en-ymmarra"
+      ],
+      "listening_targets": [
+        "en",
+        "hitaammin"
       ]
     },
     {
@@ -1590,6 +1618,10 @@
       },
       "production_targets": [
         "tama"
+      ],
+      "listening_targets": [
+        "se",
+        "kirja"
       ]
     },
     {
@@ -1770,6 +1802,10 @@
       ],
       "production_targets": [
         "mita-kuuluu"
+      ],
+      "listening_targets": [
+        "hyvaa-kiitos",
+        "hei-minun-nimeni-on"
       ]
     },
     {
@@ -1867,6 +1903,10 @@
       },
       "production_targets": [
         "hyvaa-huomenta"
+      ],
+      "listening_targets": [
+        "hei",
+        "tama"
       ]
     }
   ],
