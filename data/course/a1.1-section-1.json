@@ -1620,14 +1620,14 @@
       "structured_practice": [
         {
           "type": "controlled-production",
-          "item": "mika-tama-on",
-          "prompt_fa": "این چیست؟ این یک کتاب است.",
+          "item": "kiitos",
+          "prompt_fa": "برای کمک متشکرم.",
           "cues_fi": [
-            "Mikä"
+            "Kiitos"
           ],
-          "expected_fi": "Mikä tämä on? Tämä on kirja.",
+          "expected_fi": "Kiitos avusta.",
           "accepted_answers": [
-            "Mikä tämä on? Tämä on kirja."
+            "Kiitos avusta."
           ]
         }
       ]
