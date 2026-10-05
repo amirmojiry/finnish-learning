@@ -431,6 +431,46 @@
     lesson.activities[dictationIndex] = { type: 'dictation', item: dictationTargetId };
   }
 
+  const STRUCTURED_PRACTICE_TYPES = ['sentence-order', 'expression-completion', 'controlled-production'];
+
+  function injectStructuredPractice(section, lesson) {
+    const specs = Array.isArray(lesson.structured_practice) ? lesson.structured_practice : [];
+    if (!specs.length) throw new Error(`Lesson ${lesson.id || '?'} must declare structured practice.`);
+    const declared = new Set(auditoryLessonScope(lesson));
+    const usedIndices = new Set();
+
+    for (const spec of specs) {
+      if (!STRUCTURED_PRACTICE_TYPES.includes(spec.type)) {
+        throw new Error(`Unknown structured practice type in ${lesson.id}: ${spec.type}`);
+      }
+      if (!section.items[spec.item] || !declared.has(spec.item)) {
+        throw new Error(`Structured practice target must belong to the explicit lesson scope: ${lesson.id} / ${spec.item}`);
+      }
+
+      let replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+        !usedIndices.has(index)
+        && activity.item === spec.item
+        && (
+          (activity.type === 'choice' && activity.mode !== 'listen')
+          || activity.type === 'visual-choice'
+        )
+      ));
+      if (replacementIndex < 0) {
+        replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+          !usedIndices.has(index)
+          && activity.item === spec.item
+          && activity.type === 'type'
+        ));
+      }
+      if (replacementIndex < 0) {
+        throw new Error(`Lesson ${lesson.id} has no matching slot for structured practice target ${spec.item}.`);
+      }
+
+      lesson.activities[replacementIndex] = { ...spec };
+      usedIndices.add(replacementIndex);
+    }
+  }
+
   function injectProductionActivity(section, lesson) {
     const targets = Array.isArray(lesson.production_targets) ? lesson.production_targets : [];
     if (targets.length !== 1) throw new Error(`Lesson ${lesson.id || '?'} must declare exactly one production target.`);
@@ -527,6 +567,7 @@
       lesson.review_targets = Array.isArray(lesson.review_targets) ? lesson.review_targets : seen.slice(-3);
       injectProductionActivity(section, lesson);
       injectListeningActivities(section, lesson);
+      injectStructuredPractice(section, lesson);
       seen.push(...(lesson.new_targets || []));
     });
     return section;
@@ -555,7 +596,63 @@
       ) {
         throw new Error(`Lesson ${lesson.id} must contain one declared listening-recognition activity and one declared dictation activity.`);
       }
+      const structuredSpecs = Array.isArray(lesson.structured_practice) ? lesson.structured_practice : [];
+      const structuredActivities = lesson.activities.filter((activity) => STRUCTURED_PRACTICE_TYPES.includes(activity.type));
+      if (!structuredSpecs.length || structuredActivities.length !== structuredSpecs.length) {
+        throw new Error(`Lesson ${lesson.id} must contain every declared structured-practice activity.`);
+      }
+      for (const spec of structuredSpecs) {
+        const matches = structuredActivities.filter((activity) => activity.type === spec.type && activity.item === spec.item);
+        if (matches.length !== 1) throw new Error(`Structured-practice contract mismatch in ${lesson.id}: ${spec.type} / ${spec.item}`);
+      }
+      if (lesson.order === 10) {
+        for (const type of STRUCTURED_PRACTICE_TYPES) {
+          if (!structuredActivities.some((activity) => activity.type === type)) {
+            throw new Error(`Checkpoint ${lesson.id} must assess ${type}.`);
+          }
+        }
+      }
+
       for (const activity of lesson.activities) {
+        if (activity.type === 'sentence-order') {
+          if (!section.items[activity.item]) throw new Error(`Unknown sentence-order target in ${lesson.id}`);
+          if (!Array.isArray(activity.tokens) || activity.tokens.length < 2 || activity.tokens.some((token) => !String(token).trim())) {
+            throw new Error(`Sentence ordering requires explicit tokens in ${lesson.id}`);
+          }
+          if (!Array.isArray(activity.answer_order) || activity.answer_order.length !== activity.tokens.length) {
+            throw new Error(`Sentence ordering requires an explicit answer order in ${lesson.id}`);
+          }
+          const expectedOrder = Array.from({ length: activity.tokens.length }, (_, index) => index).sort((a, b) => a - b);
+          const actualOrder = [...activity.answer_order].sort((a, b) => a - b);
+          if (JSON.stringify(expectedOrder) !== JSON.stringify(actualOrder)) throw new Error(`Sentence-order answer must be a permutation in ${lesson.id}`);
+          const reconstructed = activity.answer_order.map((index) => activity.tokens[index]).join(' ');
+          if (!activity.expected_fi || reconstructed !== activity.expected_fi) throw new Error(`Sentence-order expected Finnish must match its explicit token order in ${lesson.id}`);
+          continue;
+        }
+        if (activity.type === 'expression-completion') {
+          if (!section.items[activity.item]) throw new Error(`Unknown expression-completion target in ${lesson.id}`);
+          if (!activity.prompt_fi || !activity.prompt_fi.includes('_____')) throw new Error(`Expression completion requires an explicit blank prompt in ${lesson.id}`);
+          if (!Array.isArray(activity.accepted_answers) || !activity.accepted_answers.length || activity.accepted_answers.some((answer) => !String(answer).trim())) {
+            throw new Error(`Expression completion requires explicit accepted answers in ${lesson.id}`);
+          }
+          if (!activity.expected_fi || activity.prompt_fi.replace('_____', activity.accepted_answers[0]) !== activity.expected_fi) {
+            throw new Error(`Expression completion must reconstruct its explicit Finnish sentence in ${lesson.id}`);
+          }
+          continue;
+        }
+        if (activity.type === 'controlled-production') {
+          if (!section.items[activity.item]) throw new Error(`Unknown controlled-production target in ${lesson.id}`);
+          if (!activity.prompt_fa || !Array.isArray(activity.cues_fi) || !activity.cues_fi.length || activity.cues_fi.some((cue) => !String(cue).trim())) {
+            throw new Error(`Controlled production requires a Persian prompt and explicit Finnish cues in ${lesson.id}`);
+          }
+          if (!activity.expected_fi || !Array.isArray(activity.accepted_answers) || !activity.accepted_answers.length) {
+            throw new Error(`Controlled production requires an explicit expected Finnish answer in ${lesson.id}`);
+          }
+          if (!activity.accepted_answers.map(normalizeAnswer).includes(normalizeAnswer(activity.expected_fi))) {
+            throw new Error(`Controlled production accepted answers must include expected Finnish in ${lesson.id}`);
+          }
+          continue;
+        }
         if (activity.type === 'production') {
           const productionItem = section.items[activity.item];
           if (!productionItem || !productionItem.translation_fa || !acceptedAnswers(productionItem).length) {
@@ -563,7 +660,128 @@
           }
           continue;
         }
-        if (activity.type === 'number-grid') {
+        if (activity.type === 'sentence-order') {
+        const ordered = [];
+        const options = document.createElement('div');
+        options.className = 'course-sequence-options';
+        activity.tokens.forEach((token, index) => {
+          const button = createButton(token, 'course-option', () => {
+            if (answered || ordered.includes(index)) return;
+            ordered.push(index);
+            button.disabled = true;
+            button.dataset.order = String(ordered.length);
+            button.textContent = `${toPersianNumber(ordered.length)}. ${token}`;
+            if (ordered.length === activity.tokens.length) {
+              answered = true;
+              sessionGraded += 1;
+              const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+              if (correct) sessionCorrect += 1;
+              const result = document.createElement('div');
+              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+              const title = document.createElement('strong');
+              title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
+              const review = document.createElement('p');
+              review.lang = 'fi';
+              review.dir = 'ltr';
+              review.textContent = activity.expected_fi;
+              result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+              card.append(result);
+            }
+          });
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          options.append(button);
+        });
+        card.append(options);
+      } else if (activity.type === 'expression-completion') {
+        const sentence = document.createElement('p');
+        sentence.className = 'course-cloze-sentence';
+        sentence.lang = 'fi';
+        sentence.dir = 'ltr';
+        sentence.textContent = activity.prompt_fi;
+        const form = document.createElement('form');
+        form.className = 'course-typing-form';
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.lang = 'fi';
+        input.dir = 'ltr';
+        input.autocomplete = 'off';
+        input.autocapitalize = 'none';
+        input.spellcheck = false;
+        input.setAttribute('aria-label', 'بخش حذف‌شدهٔ عبارت فنلاندی');
+        const submit = document.createElement('button');
+        submit.type = 'submit';
+        submit.className = 'primary-button compact';
+        submit.textContent = 'بررسی';
+        form.append(input, submit);
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (answered || !input.value.trim()) return;
+          answered = true;
+          sessionGraded += 1;
+          const expected = {
+            ...item,
+            surface_form: activity.accepted_answers[0],
+            accepted_answers: activity.accepted_answers,
+            example_fi: activity.expected_fi,
+          };
+          const grading = gradeTypedAnswer(expected, input.value);
+          const correct = grading.accepted;
+          if (correct) sessionCorrect += 1;
+          input.disabled = true;
+          submit.disabled = true;
+          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+          showFeedback(feedback, correct, expected, grading);
+        });
+        card.append(sentence, form, feedback);
+        windowObject.setTimeout(() => input.focus(), 0);
+      } else if (activity.type === 'controlled-production') {
+        const meaning = document.createElement('strong');
+        meaning.className = 'course-focus-meaning';
+        meaning.textContent = activity.prompt_fa;
+        const cues = document.createElement('p');
+        cues.className = 'course-transform-hint';
+        cues.lang = 'fi';
+        cues.dir = 'ltr';
+        cues.textContent = `راهنما: ${activity.cues_fi.join(' + ')}`;
+        const form = document.createElement('form');
+        form.className = 'course-typing-form';
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.lang = 'fi';
+        input.dir = 'ltr';
+        input.autocomplete = 'off';
+        input.autocapitalize = 'none';
+        input.spellcheck = false;
+        input.setAttribute('aria-label', 'جملهٔ کنترل‌شدهٔ فنلاندی');
+        const submit = document.createElement('button');
+        submit.type = 'submit';
+        submit.className = 'primary-button compact';
+        submit.textContent = 'بررسی';
+        form.append(input, submit);
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (answered || !input.value.trim()) return;
+          answered = true;
+          sessionGraded += 1;
+          const expected = {
+            ...item,
+            surface_form: activity.expected_fi,
+            accepted_answers: activity.accepted_answers,
+            example_fi: activity.expected_fi,
+            example_fa: activity.prompt_fa,
+          };
+          const grading = gradeTypedAnswer(expected, input.value);
+          const correct = grading.accepted;
+          if (correct) sessionCorrect += 1;
+          input.disabled = true;
+          submit.disabled = true;
+          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+          showFeedback(feedback, correct, expected, grading);
+        });
+        card.append(meaning, cues, form, feedback);
+        windowObject.setTimeout(() => input.focus(), 0);
+      } else if (activity.type === 'number-grid') {
           if (!Array.isArray(activity.items) || activity.items.length < 2) throw new Error(`Invalid number grid in ${lesson.id}`);
           for (const itemId of activity.items) {
             if (!section.items[itemId]) throw new Error(`Unknown number-grid item: ${itemId}`);
@@ -713,6 +931,12 @@
         }
 
         for (const activity of lesson.activities) {
+          if (activity.type === 'expression-completion' || activity.type === 'controlled-production') {
+            if (!Array.isArray(activity.accepted_answers) || !activity.accepted_answers.length) {
+              throw new Error(`Structured typed activity lacks explicit accepted answers: ${lesson.id} / ${activity.item}`);
+            }
+            continue;
+          }
           if (activity.type !== 'type' && activity.type !== 'production' && activity.type !== 'dictation') continue;
           const typedItem = implemented.items[activity.item];
           if (!typedItem || !acceptedAnswers(typedItem).length) {
@@ -1193,6 +1417,9 @@
       if (activity.type === 'category-match') return 'دستهٔ درست را انتخاب کن.';
       if (activity.type === 'short-reading') return 'متن کوتاه را بخوان و پاسخ درست را انتخاب کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
+      if (activity.type === 'sentence-order') return 'کلمات را برای ساختن جملهٔ درست مرتب کن.';
+      if (activity.type === 'expression-completion') return 'بخش حذف‌شدهٔ عبارت را کامل کن.';
+      if (activity.type === 'controlled-production') return 'با راهنماها جملهٔ فنلاندی را بنویس.';
       if (activity.type === 'production') return 'فارسی را به فنلاندی بنویس.';
       if (activity.type === 'dictation') return 'گوش کن و چیزی را که می‌شنوی به فنلاندی بنویس.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
@@ -2055,6 +2282,8 @@
     gradeTypedAnswer,
     isTypedAnswerCorrect,
     supportsSpeech,
+    STRUCTURED_PRACTICE_TYPES,
+    injectStructuredPractice,
     optionLabel,
     uniqueOptions,
     buildStandardActivities,
