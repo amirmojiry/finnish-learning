@@ -926,36 +926,80 @@
 
     if (activity.type === 'sentence-order') {
       const ordered = [];
-      const options = document.createElement('div');
-      options.className = 'course-sequence-options';
-      activity.tokens.forEach((token, index) => {
-        const button = createButton(token, 'course-option', () => {
-          if (answered || ordered.includes(index)) return;
-          ordered.push(index);
-          button.disabled = true;
-          button.dataset.order = String(ordered.length);
-          button.textContent = `${toPersianNumber(ordered.length)}. ${token}`;
-          if (ordered.length === activity.tokens.length) {
-            answered = true;
-            const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-            recordResult(correct);
-            const result = document.createElement('div');
-            result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
-            const title = document.createElement('strong');
-            title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
-            const review = document.createElement('p');
-            review.lang = 'fi';
-            review.dir = 'ltr';
-            review.textContent = activity.expected_fi;
-            result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
-            card.append(result);
-          }
-        });
-        button.lang = 'fi';
-        button.dir = 'ltr';
-        options.append(button);
+      const answerBox = document.createElement('div');
+      answerBox.className = 'course-sentence-answer-box';
+      answerBox.lang = 'fi';
+      answerBox.dir = 'ltr';
+      answerBox.setAttribute('role', 'group');
+      answerBox.setAttribute('aria-label', 'جملهٔ ساخته‌شده');
+
+      const tokenPool = document.createElement('div');
+      tokenPool.className = 'course-sentence-token-pool';
+      tokenPool.setAttribute('aria-label', 'کلمات باقی‌مانده');
+
+      const submit = createButton('ثبت پاسخ', 'primary-button course-sentence-submit', () => {
+        if (answered || ordered.length !== activity.tokens.length) return;
+        answered = true;
+        const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+        recordResult(correct);
+        renderSelection();
+        const result = document.createElement('div');
+        result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+        const title = document.createElement('strong');
+        title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
+        const review = document.createElement('p');
+        review.lang = 'fi';
+        review.dir = 'ltr';
+        review.textContent = activity.expected_fi;
+        result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+        card.append(result);
       });
-      card.append(options);
+      submit.disabled = true;
+
+      function renderSelection() {
+        answerBox.replaceChildren();
+        tokenPool.replaceChildren();
+
+        if (!ordered.length) {
+          const placeholder = document.createElement('span');
+          placeholder.className = 'course-sentence-answer-placeholder';
+          placeholder.textContent = 'کلمات انتخاب‌شده اینجا قرار می‌گیرند';
+          answerBox.append(placeholder);
+        } else {
+          ordered.forEach((tokenIndex, selectedPosition) => {
+            const token = activity.tokens[tokenIndex];
+            const selected = createButton(token, 'course-sentence-selected-token', () => {
+              if (answered) return;
+              ordered.splice(selectedPosition, 1);
+              renderSelection();
+            });
+            selected.lang = 'fi';
+            selected.dir = 'ltr';
+            selected.disabled = answered;
+            selected.setAttribute('aria-label', `برگرداندن ${token} به فهرست کلمات`);
+            answerBox.append(selected);
+          });
+        }
+
+        activity.tokens.forEach((token, index) => {
+          if (ordered.includes(index)) return;
+          const button = createButton(token, 'course-sentence-source-token', () => {
+            if (answered || ordered.includes(index)) return;
+            ordered.push(index);
+            renderSelection();
+          });
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          button.disabled = answered;
+          button.setAttribute('aria-label', `افزودن ${token} به جمله`);
+          tokenPool.append(button);
+        });
+
+        submit.disabled = answered || ordered.length !== activity.tokens.length;
+      }
+
+      renderSelection();
+      card.append(answerBox, tokenPool, submit);
       return true;
     }
 
