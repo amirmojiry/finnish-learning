@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.15.0`
+- Version: `1.16.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - three exercise modes: translation, multiple-choice cloze, and typed cloze
-- complete 40-lesson A1.1 path with circular lesson maps, expandable section switching, Persian-to-Finnish productive recall, listening recognition, dictation, and structured sentence-building practice
+- complete 40-lesson A1.1 path with circular lesson maps, expandable section switching, Persian-to-Finnish productive recall, Finnish-voice-gated listening and dictation, and structured sentence-building practice
 - focused practice for an individual dictionary word
 - profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -36,6 +36,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - persistent local review scheduling, answer counts, lapses, and mastery status for each started word
 - separate Profile page for review progress and Settings page for appearance controls and About access
 - progressive hints and a compact Finnish letter keyboard
+- typed grading accepts a/ä and o/ö keyboard substitutions as near-correct while still showing the canonical Finnish spelling
 - linked dictionary words inside examples
 - light and dark themes
 - locally saved score, exercise mode, theme, and review progress
@@ -137,7 +138,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 ### Phase 2 — richer A1.1 practice
 
 - [x] Add Persian-to-Finnish production.
-- [x] Add listening and dictation using browser Finnish speech synthesis now, with the course contract ready for future static or build-time-generated audio.
+- [x] Add listening and dictation using an explicitly detected installed Finnish browser speech voice, with a no-penalty fallback when Finnish TTS is unavailable and a course contract ready for future static or build-time-generated audio.
 - [x] Add sentence ordering, expression completion, and controlled sentence production.
 - [ ] Add morphology-aware distractors and introductory inflection exercises.
 - [ ] Add focused practice for weak or frequently missed course targets.
