@@ -3015,14 +3015,14 @@
           "tokens": [
             "on",
             "eläin.",
-            "lammas"
+            "Lammas"
           ],
           "answer_order": [
             2,
             0,
             1
           ],
-          "expected_fi": "lammas on eläin."
+          "expected_fi": "Lammas on eläin."
         }
       ]
     },
