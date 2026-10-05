@@ -216,3 +216,205 @@ test('typed structured practice reuses fuzzy grading and character-level feedbac
   assert.match(source, /gradeTypedAnswer\(expected, input\.value\)/);
   assert.match(source, /createTypedDifference/);
 });
+
+
+class FakeElement {
+  constructor(tagName) {
+    this.tagName = tagName;
+    this.children = [];
+    this.listeners = {};
+    this.attributes = {};
+    this.dataset = {};
+    this.className = '';
+    this.textContent = '';
+    this.hidden = false;
+    this.disabled = false;
+    this.value = '';
+    this.lang = '';
+    this.dir = '';
+    this.type = '';
+    this.classList = {
+      values: new Set(),
+      add: (...names) => names.forEach((name) => this.classList.values.add(name)),
+      contains: (name) => this.classList.values.has(name),
+    };
+  }
+
+  append(...nodes) {
+    this.children.push(...nodes);
+  }
+
+  replaceChildren(...nodes) {
+    this.children = [...nodes];
+  }
+
+  setAttribute(name, value) {
+    this.attributes[name] = String(value);
+  }
+
+  addEventListener(type, handler) {
+    this.listeners[type] = handler;
+  }
+
+  click() {
+    this.listeners.click?.({ preventDefault() {} });
+  }
+
+  submit() {
+    this.listeners.submit?.({ preventDefault() {} });
+  }
+
+  focus() {
+    this.focused = true;
+  }
+}
+
+function fakeDomHarness() {
+  const document = {
+    createElement(tagName) {
+      return new FakeElement(tagName);
+    },
+  };
+  const windowObject = {
+    setTimeout(callback) {
+      callback();
+      return 1;
+    },
+  };
+  const createButton = (label, className, onClick) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = label;
+    button.className = className;
+    button.addEventListener('click', onClick);
+    return button;
+  };
+  return { document, windowObject, createButton };
+}
+
+test('structured-practice DOM renderer handles ordering and typed interactions', () => {
+  const { document, windowObject, createButton } = fakeDomHarness();
+
+  {
+    const card = document.createElement('div');
+    const feedback = document.createElement('div');
+    const results = [];
+    const activity = {
+      type: 'sentence-order',
+      item: 's4-lammas',
+      tokens: ['on', 'eläin.', 'Lammas'],
+      answer_order: [2, 0, 1],
+      expected_fi: 'Lammas on eläin.',
+    };
+    const handled = course.renderStructuredPracticeActivity({
+      document,
+      windowObject,
+      activity,
+      item: { surface_form: 'lammas' },
+      card,
+      feedback,
+      createButton,
+      nextActivity() {},
+      showFeedback() {},
+      recordResult(correct) {
+        results.push(correct);
+      },
+    });
+    assert.equal(handled, true);
+    const options = card.children[0];
+    options.children[2].click();
+    options.children[0].click();
+    options.children[1].click();
+    assert.deepEqual(results, [true]);
+    assert.equal(card.children.at(-1).children[1].textContent, 'Lammas on eläin.');
+  }
+
+  {
+    const card = document.createElement('div');
+    const feedback = document.createElement('div');
+    const results = [];
+    let shown = null;
+    course.renderStructuredPracticeActivity({
+      document,
+      windowObject,
+      activity: {
+        type: 'expression-completion',
+        item: 'name',
+        prompt_fi: 'Mikä sinun _____ on?',
+        accepted_answers: ['nimesi'],
+        expected_fi: 'Mikä sinun nimesi on?',
+      },
+      item: {
+        surface_form: 'nimesi',
+        translation_fa: 'نام تو',
+        example_fi: 'Mikä sinun nimesi on?',
+        example_fa: 'نام تو چیست؟',
+      },
+      card,
+      feedback,
+      createButton,
+      nextActivity() {},
+      showFeedback(container, correct, item, grading) {
+        container.hidden = false;
+        shown = { correct, item, grading };
+      },
+      recordResult(correct) {
+        results.push(correct);
+      },
+    });
+    const form = card.children[1];
+    const input = form.children[0];
+    input.value = 'nimes';
+    form.submit();
+    assert.deepEqual(results, [true]);
+    assert.equal(shown.correct, true);
+    assert.equal(shown.grading.fuzzy, true);
+    assert.equal(input.disabled, true);
+    assert.equal(input.focused, true);
+  }
+
+  {
+    const card = document.createElement('div');
+    const feedback = document.createElement('div');
+    const results = [];
+    let shown = null;
+    course.renderStructuredPracticeActivity({
+      document,
+      windowObject,
+      activity: {
+        type: 'controlled-production',
+        item: 'drink',
+        prompt_fa: 'آب می‌خواهم.',
+        cues_fi: ['Haluan'],
+        expected_fi: 'Haluan vettä.',
+        accepted_answers: ['Haluan vettä.'],
+      },
+      item: {
+        surface_form: 'Haluan vettä.',
+        translation_fa: 'آب می‌خواهم.',
+        example_fi: 'Haluan vettä.',
+        example_fa: 'آب می‌خواهم.',
+      },
+      card,
+      feedback,
+      createButton,
+      nextActivity() {},
+      showFeedback(container, correct, item, grading) {
+        container.hidden = false;
+        shown = { correct, item, grading };
+      },
+      recordResult(correct) {
+        results.push(correct);
+      },
+    });
+    const form = card.children[2];
+    const input = form.children[0];
+    input.value = 'Haluan vettä.';
+    form.submit();
+    assert.deepEqual(results, [true]);
+    assert.equal(shown.correct, true);
+    assert.equal(shown.item.surface_form, 'Haluan vettä.');
+    assert.equal(input.disabled, true);
+    assert.equal(input.focused, true);
+  }
+});
