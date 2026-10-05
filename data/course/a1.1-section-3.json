@@ -1709,7 +1709,7 @@
       ],
       "listening_targets": [
         "s3-tanaan",
-        "s3-huomenna"
+        "s3-tanaan"
       ]
     },
     {
