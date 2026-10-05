@@ -233,11 +233,12 @@ test('dialogue ordering activities are presented scrambled', () => {
   }
 });
 
-test('English and Persian feature bullets agree that Sections 1–3 are implemented', () => {
+test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /real curriculum-driven A1\.1 Sections 1–3/);
-  assert.match(fa, /بخش‌های اول تا سوم واقعی و curriculum-driven سطح A1\.1/);
+  assert.match(en, /Version: `1\.11\.0`/);
+  assert.match(fa, /نسخه: `1\.11\.0`/);
+  assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
 
@@ -262,7 +263,8 @@ test('course map hides explanatory copy behind accessible info disclosures', () 
   assert.match(source, /aria-expanded/);
   assert.match(source, /panel\.hidden = true/);
   assert.match(source, /توضیحات و اهداف بخش/);
-  assert.match(source, /توضیحات درس/);
+  assert.match(source, /جزئیات درس/);
+  assert.match(source, /course-lesson-popover-details/);
   assert.match(source, /در پایان این بخش می‌توانی/);
   assert.doesNotMatch(source, /بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند/);
   assert.doesNotMatch(source, /section\.description_fa/);
@@ -680,4 +682,37 @@ test('when lesson contains five deterministic event-to-time matching assessments
     assert.ok(activity.options.includes(activity.time_item));
     assert.equal(new Set(activity.options).size, activity.options.length);
   }
+});
+
+
+test('section map uses circular numbered lesson nodes and a focused lesson popover', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /course-node-path/);
+  assert.match(source, /course-path-step/);
+  assert.match(source, /course-lesson-node/);
+  assert.match(source, /course-lesson-popover/);
+  assert.match(source, /جزئیات درس/);
+  assert.match(source, /ادامه درس/);
+  assert.match(source, /نکتهٔ زبان:/);
+  assert.doesNotMatch(source, /card\.className = `course-lesson-card/);
+});
+
+test('lesson path styling uses circular nodes and thick dashed connectors', () => {
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(styles, /\.course-lesson-node\s*\{/);
+  assert.match(styles, /border-radius:\s*50%/);
+  assert.match(styles, /\.course-path-step::after/);
+  assert.match(styles, /border-left:\s*8px dashed/);
+  assert.match(styles, /\.course-lesson-popover/);
+  assert.match(styles, /\.course-lesson-popover-details/);
+});
+
+test('lesson path preserves completed current and locked visual states', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+  assert.match(source, /is-complete/);
+  assert.match(source, /is-current/);
+  assert.match(source, /is-locked/);
+  assert.match(styles, /\.course-lesson-node\.is-complete/);
+  assert.match(styles, /\.course-lesson-node\.is-locked/);
 });

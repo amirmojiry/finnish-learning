@@ -1265,3 +1265,214 @@
   color: var(--muted);
   font-weight: 800;
 }
+
+
+/* Duolingo-style lesson path */
+.course-node-path {
+  display: grid;
+  gap: 0;
+  padding: 8px 0 12px;
+}
+
+.course-node-path::before {
+  content: none;
+}
+
+.course-path-step {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  min-height: 128px;
+  padding-bottom: 46px;
+}
+
+.course-path-step::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  border-left: 8px dashed rgba(34, 87, 214, .28);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.course-path-step.is-last {
+  min-height: auto;
+  padding-bottom: 14px;
+}
+
+.course-path-step.is-last::after {
+  display: none;
+}
+
+.course-lesson-node {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 7px solid var(--surface);
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  box-shadow:
+    0 0 0 3px rgba(34, 87, 214, .18),
+    0 8px 0 rgba(24, 67, 168, .22),
+    0 12px 28px rgba(31, 42, 68, .10);
+  font: 900 1.4rem/1 "Vazirmatn", Tahoma, Arial, sans-serif;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+}
+
+.course-lesson-node:hover {
+  transform: translateY(-2px);
+}
+
+.course-lesson-node:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 0 0 3px rgba(34, 87, 214, .18),
+    0 3px 0 rgba(24, 67, 168, .22),
+    0 8px 18px rgba(31, 42, 68, .08);
+}
+
+.course-lesson-node.is-selected {
+  box-shadow:
+    0 0 0 5px rgba(34, 87, 214, .20),
+    0 8px 0 rgba(24, 67, 168, .22),
+    0 14px 32px rgba(31, 42, 68, .14);
+}
+
+.course-lesson-node.is-complete {
+  background: var(--success);
+  box-shadow:
+    0 0 0 3px rgba(19, 122, 69, .18),
+    0 8px 0 rgba(19, 122, 69, .22),
+    0 12px 28px rgba(31, 42, 68, .08);
+}
+
+.course-lesson-node.is-locked {
+  background: var(--surface-soft);
+  color: var(--muted);
+  box-shadow:
+    0 0 0 3px var(--border),
+    0 6px 0 rgba(102, 112, 133, .10);
+}
+
+.course-lesson-node-state {
+  position: relative;
+  z-index: 1;
+  min-height: 22px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.course-lesson-popover {
+  width: min(100%, 520px);
+  margin: -24px auto 38px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 14px 34px rgba(31, 42, 68, .10);
+}
+
+.course-lesson-popover-label {
+  color: var(--primary);
+  font-size: .8rem;
+  font-weight: 900;
+}
+
+.course-lesson-popover h2 {
+  margin: 4px 0 14px;
+  font-size: 1.2rem;
+}
+
+.course-lesson-popover-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.course-lesson-continue,
+.course-lesson-details-toggle {
+  min-height: 44px;
+}
+
+.course-lesson-popover-details {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.course-lesson-popover-details p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.course-lesson-popover-details p + p {
+  margin-top: 8px;
+}
+
+.course-lesson-popover .course-best-score {
+  margin-top: 12px;
+  text-align: start;
+}
+
+.course-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (min-width: 760px) {
+  .course-node-path {
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .course-lesson-popover {
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .course-path-step {
+    min-height: 118px;
+    padding-bottom: 40px;
+  }
+
+  .course-path-step::after {
+    top: 74px;
+    border-left-width: 7px;
+  }
+
+  .course-lesson-node {
+    width: 74px;
+    height: 74px;
+    border-width: 6px;
+    font-size: 1.25rem;
+  }
+
+  .course-lesson-popover {
+    margin-top: -18px;
+    padding: 16px;
+  }
+
+  .course-lesson-popover-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
