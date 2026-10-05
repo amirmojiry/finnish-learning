@@ -247,7 +247,7 @@ Best for:
 - recognizing morphology and syntactic fit;
 - distinguishing related forms.
 
-Distractors should eventually be morphology-aware and confusion-aware, not selected mainly by character length.
+Morphology-focused distractors are now supported through reviewed lesson manifests. They are explicit alternative Finnish forms for the same grammatical decision, not runtime-generated suffix combinations or unrelated vocabulary.
 
 ### Typed cloze
 
@@ -271,10 +271,16 @@ Structured sentence practice is declared in each lesson through a reviewed `stru
 
 The runtime may replace only an existing assessment slot for the same declared target. It must not generate new Finnish morphology, inflections, sentences, or accepted answers.
 
+Introductory morphology practice is declared through an optional reviewed `morphology_practice` manifest on morphology-relevant lessons:
+
+- `morphology-choice` stores the base form, grammatical cue, sentence frame, explicit Finnish form options, one explicit expected form, and a short explanation;
+- `inflection-production` stores the base form, grammatical cue, sentence frame, explicit accepted answer forms, and a short explanation.
+
+A1.1 uses this contract only for patterns already reviewed in the curriculum, including selected elative, inessive, partitive, genitive, adessive, present-tense person, and negative/connegative forms. Distractors and inflections are authored data; the browser never derives a stem or concatenates a suffix.
+
 The lesson system should gradually add:
 
 - surface form to lemma identification;
-- lemma plus grammatical feature to inflected-form production;
 - collocation practice beyond the current reviewed expression-completion contract;
 - pronunciation practice;
 - later, reviewed open-ended writing and speaking tasks.
