@@ -250,6 +250,62 @@
     };
   }
 
+  function gradeMorphologyAnswer(item, answer) {
+    const entered = normalizeAnswer(answer);
+    const candidates = acceptedAnswers(item);
+    if (!entered || !candidates.length) {
+      return {
+        accepted: false,
+        exact: false,
+        fuzzy: false,
+        diacriticAdjusted: false,
+        similarity: 0,
+        entered,
+        expected: candidates[0] || '',
+        operations: [],
+      };
+    }
+
+    const exactExpected = candidates.find((expected) => entered === expected);
+    if (exactExpected) {
+      return {
+        accepted: true,
+        exact: true,
+        fuzzy: false,
+        diacriticAdjusted: false,
+        similarity: 1,
+        entered,
+        expected: exactExpected,
+        operations: alignAnswers(entered, exactExpected).operations,
+      };
+    }
+
+    const diacriticExpected = candidates.find((expected) => (
+      foldFinnishDiacritics(entered) === foldFinnishDiacritics(expected)
+    ));
+    if (diacriticExpected) {
+      return {
+        accepted: true,
+        exact: false,
+        fuzzy: true,
+        diacriticAdjusted: true,
+        similarity: 1,
+        entered,
+        expected: diacriticExpected,
+        operations: alignAnswers(entered, diacriticExpected).operations,
+      };
+    }
+
+    const nearest = gradeTypedAnswer(item, answer);
+    return {
+      ...nearest,
+      accepted: false,
+      exact: false,
+      fuzzy: false,
+      diacriticAdjusted: false,
+    };
+  }
+
   function isTypedAnswerCorrect(item, answer) {
     return gradeTypedAnswer(item, answer).accepted;
   }
@@ -1307,7 +1363,7 @@
         surface_form: activity.expected_fi,
         accepted_answers: activity.accepted_answers,
       };
-      const grading = gradeTypedAnswer(expected, input.value);
+      const grading = gradeMorphologyAnswer(expected, input.value);
       recordResult(grading.accepted);
       input.disabled = true;
       submit.disabled = true;
@@ -2724,6 +2780,7 @@
     alignAnswers,
     answerSimilarity,
     gradeTypedAnswer,
+    gradeMorphologyAnswer,
     isTypedAnswerCorrect,
     speechApiAvailable,
     findFinnishVoice,
