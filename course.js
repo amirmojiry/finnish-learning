@@ -1692,6 +1692,7 @@
         addExample();
         card.append(createButton('ادامه', 'primary-button course-next-button', nextActivity));
       } else if (activity.type === 'choice') {
+        const speechUnavailable = activity.mode === 'listen' && !supportsSpeech(windowObject);
         if (activity.mode === 'meaning') {
           const focus = document.createElement('strong');
           focus.className = 'course-focus-word';
@@ -1705,9 +1706,16 @@
           focus.textContent = item.translation_fa;
           card.append(focus);
         } else if (activity.mode === 'listen') {
-          const listen = createButton('پخش صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
-          card.append(listen);
-          windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
+          if (speechUnavailable) {
+            const unavailable = document.createElement('p');
+            unavailable.className = 'course-audio-unavailable';
+            unavailable.textContent = 'امکان پخش صدای فنلاندی در این مرورگر وجود ندارد. این تمرین در امتیاز حساب نمی‌شود.';
+            card.append(unavailable);
+          } else {
+            const listen = createButton('پخش صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
+            card.append(listen);
+            windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
+          }
         } else {
           const sentence = document.createElement('p');
           sentence.className = 'course-cloze-sentence';
@@ -1738,6 +1746,7 @@
             showFeedback(feedback, correct, item);
           });
           button.dataset.itemId = optionId;
+          button.disabled = speechUnavailable;
           if (activity.mode !== 'meaning' && activity.mode !== 'listen') {
             button.lang = 'fi';
             button.dir = 'ltr';
@@ -1745,12 +1754,24 @@
           options.append(button);
         }
         card.append(options, feedback);
+        if (speechUnavailable) {
+          card.append(createButton('ادامه بدون تمرین شنیداری', 'primary-button course-next-button', nextActivity));
+        }
       } else {
+        const speechUnavailable = activity.type === 'dictation' && !supportsSpeech(windowObject);
         if (activity.type === 'dictation') {
           const listen = createButton('پخش دوبارهٔ صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
           listen.setAttribute('aria-label', 'پخش دوبارهٔ عبارت برای دیکته');
+          listen.disabled = speechUnavailable;
           card.append(listen);
-          windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
+          if (speechUnavailable) {
+            const unavailable = document.createElement('p');
+            unavailable.className = 'course-audio-unavailable';
+            unavailable.textContent = 'امکان پخش صدای فنلاندی در این مرورگر وجود ندارد. این تمرین در امتیاز حساب نمی‌شود.';
+            card.append(unavailable);
+          } else {
+            windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
+          }
         } else if (activity.mode === 'cloze') {
           const sentence = document.createElement('p');
           sentence.className = 'course-cloze-sentence';
@@ -1777,10 +1798,12 @@
         input.autocapitalize = 'none';
         input.spellcheck = false;
         input.setAttribute('aria-label', activity.type === 'dictation' ? 'پاسخ دیکته به فنلاندی' : 'پاسخ فنلاندی');
+        input.disabled = speechUnavailable;
         const submit = document.createElement('button');
         submit.type = 'submit';
         submit.className = 'primary-button compact';
         submit.textContent = 'بررسی';
+        submit.disabled = speechUnavailable;
         form.append(input, submit);
         form.addEventListener('submit', (event) => {
           event.preventDefault();
@@ -1796,7 +1819,11 @@
           showFeedback(feedback, correct, item, grading);
         });
         card.append(form, feedback);
-        windowObject.setTimeout(() => input.focus(), 0);
+        if (speechUnavailable) {
+          card.append(createButton('ادامه بدون دیکته', 'primary-button course-next-button', nextActivity));
+        } else {
+          windowObject.setTimeout(() => input.focus(), 0);
+        }
       }
 
       shell.append(top, track, lessonHeader, card);
