@@ -1655,6 +1655,24 @@
           ],
           "expected_fi": "Iran on maa."
         }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "s2-olen-iranista",
+          "base_fi": "Iran",
+          "feature_fa": "elatiivi: مبدأ / «از»",
+          "prompt_fa": "برای گفتن «از ایران / اهل ایران» شکل درست Iran را انتخاب کن.",
+          "frame_fi": "Olen _____.",
+          "options_fi": [
+            "Iranista",
+            "Iranissa",
+            "Iraniin",
+            "Iranin"
+          ],
+          "expected_fi": "Iranista",
+          "explanation_fa": "برای بیان مبدأ در این عبارت از elatiivi استفاده می‌شود: Iran → Iranista."
+        }
       ]
     },
     {
@@ -1804,6 +1822,21 @@
             "Puhun persiaa."
           ]
         }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "s2-puhun-englantia",
+          "base_fi": "englanti",
+          "feature_fa": "partitiivi بعد از puhua",
+          "prompt_fa": "شکل درست englanti را بعد از Puhun بنویس.",
+          "frame_fi": "Puhun _____.",
+          "expected_fi": "englantia",
+          "accepted_answers": [
+            "englantia"
+          ],
+          "explanation_fa": "نام زبان بعد از puhua در این الگوی آموزشی به صورت partitiivi می‌آید: englanti → englantia."
+        }
       ]
     },
     {
@@ -1861,6 +1894,24 @@
             0
           ],
           "expected_fi": "Asun Vaasassa."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "s2-helsinki",
+          "base_fi": "Helsinki",
+          "feature_fa": "inessiivi: «در» یک مکان",
+          "prompt_fa": "برای گفتن «در هلسینکی» شکل درست Helsinki را انتخاب کن.",
+          "frame_fi": "Asun _____.",
+          "options_fi": [
+            "Helsingissä",
+            "Helsingistä",
+            "Helsinkiin",
+            "Helsinki"
+          ],
+          "expected_fi": "Helsingissä",
+          "explanation_fa": "برای بیان محل زندگی در این مثال از inessiivi استفاده می‌شود: Helsinki → Helsingissä."
         }
       ]
     },
@@ -1972,6 +2023,21 @@
           "accepted_answers": [
             "Minun nimeni on Sara."
           ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "s2-sinun",
+          "base_fi": "sinä",
+          "feature_fa": "genetiivi ضمیر «تو»",
+          "prompt_fa": "شکل ملکیِ sinä را در عبارت زیر بنویس.",
+          "frame_fi": "_____ nimesi",
+          "expected_fi": "sinun",
+          "accepted_answers": [
+            "sinun"
+          ],
+          "explanation_fa": "genetiivi ضمیر sinä در این عبارت sinun است: sinun nimesi."
         }
       ]
     },
@@ -2474,6 +2540,21 @@
           "accepted_answers": [
             "Puhun persiaa."
           ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "s2-asun-vaasassa",
+          "base_fi": "Vaasa",
+          "feature_fa": "inessiivi: «در واسا»",
+          "prompt_fa": "شکل درست Vaasa را برای بیان محل زندگی بنویس.",
+          "frame_fi": "Asun _____.",
+          "expected_fi": "Vaasassa",
+          "accepted_answers": [
+            "Vaasassa"
+          ],
+          "explanation_fa": "در این جمله Vaasa به صورت inessiivi می‌آید: Vaasa → Vaasassa."
         }
       ]
     }
