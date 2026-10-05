@@ -328,6 +328,94 @@
     return refs;
   }
 
+  function auditoryLessonScope(lesson) {
+    return uniqueOptions([
+      ...(lesson.new_targets || []),
+      ...(lesson.practice_targets || []),
+      ...(lesson.checkpoint_targets || []),
+      ...(lesson.review_targets || []),
+      ...(lesson.curriculum_target_refs?.high_frequency || []),
+      ...(lesson.curriculum_target_refs?.topic || []),
+      ...(lesson.curriculum_target_refs?.expressions || []),
+      ...lesson.activities.flatMap(activityItemReferences),
+    ]);
+  }
+
+  function listeningOptionsFor(section, lesson, targetId) {
+    const candidates = auditoryLessonScope(lesson)
+      .filter((itemId) => itemId !== targetId && section.items[itemId]);
+    if (candidates.length < 3) {
+      for (const itemId of Object.keys(section.items)) {
+        if (itemId !== targetId && !candidates.includes(itemId)) candidates.push(itemId);
+        if (candidates.length >= 3) break;
+      }
+    }
+    const options = candidates.slice(0, 3);
+    options.splice((lesson.order - 1) % Math.min(4, options.length + 1), 0, targetId);
+    return options;
+  }
+
+  function injectListeningActivities(section, lesson) {
+    const targets = Array.isArray(lesson.listening_targets) ? lesson.listening_targets : [];
+    if (targets.length !== 2) throw new Error(`Lesson ${lesson.id || '?'} must declare exactly two listening targets.`);
+    const [recognitionTargetId, dictationTargetId] = targets;
+    const declared = new Set(auditoryLessonScope(lesson));
+
+    for (const targetId of targets) {
+      const target = section.items[targetId];
+      if (!target || !target.surface_form || !acceptedAnswers(target).length) {
+        throw new Error(`Invalid listening target: ${lesson.id || '?'} / ${targetId}`);
+      }
+      if (!declared.has(targetId)) {
+        throw new Error(`Listening target must belong to the explicit lesson scope: ${lesson.id} / ${targetId}`);
+      }
+    }
+
+    let recognitionIndex = lesson.activities.findIndex((activity) => (
+      activity.type === 'choice' && activity.mode === 'listen' && activity.item === recognitionTargetId
+    ));
+    if (recognitionIndex < 0) {
+      recognitionIndex = lesson.activities.findLastIndex((activity) => (
+        activity.type !== 'production'
+        && activity.type !== 'dictation'
+        && (activity.type === 'choice' || activity.type === 'type')
+        && activity.item === recognitionTargetId
+      ));
+    }
+    if (recognitionIndex < 0) {
+      recognitionIndex = lesson.activities.findLastIndex((activity) => (
+        activity.type !== 'production'
+        && activity.type !== 'dictation'
+        && (activity.type === 'choice' || activity.type === 'type')
+      ));
+    }
+    if (recognitionIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for listening recognition.`);
+    lesson.activities[recognitionIndex] = {
+      type: 'choice',
+      mode: 'listen',
+      item: recognitionTargetId,
+      options: listeningOptionsFor(section, lesson, recognitionTargetId),
+    };
+
+    let dictationIndex = lesson.activities.findLastIndex((activity, index) => (
+      index !== recognitionIndex
+      && activity.type !== 'production'
+      && activity.type !== 'dictation'
+      && (activity.type === 'choice' || activity.type === 'type')
+      && activity.item === dictationTargetId
+    ));
+    if (dictationIndex < 0) {
+      dictationIndex = lesson.activities.findLastIndex((activity, index) => (
+        index !== recognitionIndex
+        && activity.type !== 'production'
+        && activity.type !== 'dictation'
+        && (activity.type === 'choice' || activity.type === 'type')
+      ));
+    }
+    if (dictationIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for dictation.`);
+    lesson.activities[dictationIndex] = { type: 'dictation', item: dictationTargetId };
+  }
+
   function injectProductionActivity(section, lesson) {
     const targets = Array.isArray(lesson.production_targets) ? lesson.production_targets : [];
     if (targets.length !== 1) throw new Error(`Lesson ${lesson.id || '?'} must declare exactly one production target.`);
@@ -423,6 +511,7 @@
       }
       lesson.review_targets = Array.isArray(lesson.review_targets) ? lesson.review_targets : seen.slice(-3);
       injectProductionActivity(section, lesson);
+      injectListeningActivities(section, lesson);
       seen.push(...(lesson.new_targets || []));
     });
     return section;
@@ -438,6 +527,18 @@
       const productionActivities = lesson.activities.filter((activity) => activity.type === 'production');
       if (productionActivities.length !== 1 || productionActivities[0].item !== lesson.production_targets[0]) {
         throw new Error(`Lesson ${lesson.id} must contain exactly one declared Persian-to-Finnish production activity.`);
+      }
+      const listeningTargets = Array.isArray(lesson.listening_targets) ? lesson.listening_targets : [];
+      const listeningActivities = lesson.activities.filter((activity) => activity.type === 'choice' && activity.mode === 'listen');
+      const dictationActivities = lesson.activities.filter((activity) => activity.type === 'dictation');
+      if (
+        listeningTargets.length !== 2
+        || listeningActivities.length !== 1
+        || dictationActivities.length !== 1
+        || listeningActivities[0].item !== listeningTargets[0]
+        || dictationActivities[0].item !== listeningTargets[1]
+      ) {
+        throw new Error(`Lesson ${lesson.id} must contain one declared listening-recognition activity and one declared dictation activity.`);
       }
       for (const activity of lesson.activities) {
         if (activity.type === 'production') {
@@ -597,7 +698,7 @@
         }
 
         for (const activity of lesson.activities) {
-          if (activity.type !== 'type' && activity.type !== 'production') continue;
+          if (activity.type !== 'type' && activity.type !== 'production' && activity.type !== 'dictation') continue;
           const typedItem = implemented.items[activity.item];
           if (!typedItem || !acceptedAnswers(typedItem).length) {
             throw new Error(`Typed activity lacks explicit accepted answers: ${lesson.id} / ${activity.item}`);
@@ -1078,6 +1179,7 @@
       if (activity.type === 'short-reading') return 'متن کوتاه را بخوان و پاسخ درست را انتخاب کن.';
       if (activity.type === 'dialogue-order') return 'گفت‌وگوی کوتاه را مرتب کن.';
       if (activity.type === 'production') return 'فارسی را به فنلاندی بنویس.';
+      if (activity.type === 'dictation') return 'گوش کن و چیزی را که می‌شنوی به فنلاندی بنویس.';
       if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
       if (activity.mode === 'finnish') return 'گزینهٔ فنلاندی درست را انتخاب کن.';
@@ -1641,7 +1743,12 @@
         }
         card.append(options, feedback);
       } else {
-        if (activity.mode === 'cloze') {
+        if (activity.type === 'dictation') {
+          const listen = createButton('پخش دوبارهٔ صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
+          listen.setAttribute('aria-label', 'پخش دوبارهٔ عبارت برای دیکته');
+          card.append(listen);
+          windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
+        } else if (activity.mode === 'cloze') {
           const sentence = document.createElement('p');
           sentence.className = 'course-cloze-sentence';
           sentence.lang = 'fi';
@@ -1666,7 +1773,7 @@
         input.autocomplete = 'off';
         input.autocapitalize = 'none';
         input.spellcheck = false;
-        input.setAttribute('aria-label', 'پاسخ فنلاندی');
+        input.setAttribute('aria-label', activity.type === 'dictation' ? 'پاسخ دیکته به فنلاندی' : 'پاسخ فنلاندی');
         const submit = document.createElement('button');
         submit.type = 'submit';
         submit.className = 'primary-button compact';
