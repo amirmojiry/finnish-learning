@@ -658,6 +658,59 @@
       return wrap;
     }
 
+    function createTypedDifference(grading, label = '') {
+      const block = document.createElement('div');
+      block.className = `course-answer-diff${grading.fuzzy ? ' is-near-correct' : ''}`;
+
+      if (label) {
+        const heading = document.createElement('strong');
+        heading.className = 'course-answer-diff-heading';
+        heading.textContent = label;
+        block.append(heading);
+      }
+
+      const buildLine = (lineLabel, side) => {
+        const row = document.createElement('div');
+        row.className = 'course-answer-diff-row';
+        const title = document.createElement('span');
+        title.textContent = lineLabel;
+        const value = document.createElement('b');
+        value.lang = 'fi';
+        value.dir = 'ltr';
+
+        for (const operation of grading.operations) {
+          const character = operation[side];
+          if (!character) {
+            const gap = document.createElement('span');
+            gap.className = 'course-answer-diff-gap';
+            gap.textContent = '□';
+            gap.setAttribute('aria-label', side === 'entered' ? 'حرف جاافتاده' : 'حرف اضافه');
+            value.append(gap);
+            continue;
+          }
+          const span = document.createElement('span');
+          span.textContent = character;
+          if (operation.type !== 'equal') span.className = 'course-answer-diff-char';
+          value.append(span);
+        }
+        row.append(title, value);
+        return row;
+      };
+
+      block.append(
+        buildLine('پاسخ شما:', 'entered'),
+        buildLine('شکل درست:', 'expected'),
+      );
+
+      if (grading.fuzzy) {
+        const similarity = document.createElement('small');
+        similarity.className = 'course-answer-similarity';
+        similarity.textContent = `شباهت ${toPersianNumber(Math.round(grading.similarity * 100))}٪ — پاسخ پذیرفته شد، اما این تفاوت‌ها را مرور کن.`;
+        block.append(similarity);
+      }
+      return block;
+    }
+
     function renderLoading(message = 'در حال آماده‌کردن بخش آموزشی…') {
       root.replaceChildren();
       const status = document.createElement('div');
@@ -1134,12 +1187,13 @@
           if (answered || !input.value.trim()) return;
           answered = true;
           sessionGraded += 1;
-          const correct = isTypedAnswerCorrect(negative, input.value);
+          const grading = gradeTypedAnswer(negative, input.value);
+          const correct = grading.accepted;
           if (correct) sessionCorrect += 1;
           input.disabled = true;
           submit.disabled = true;
-          input.classList.add(correct ? 'correct' : 'wrong');
-          showFeedback(feedback, correct, negative);
+          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+          showFeedback(feedback, correct, negative, grading);
         });
         card.append(focus, hint, form, feedback);
         windowObject.setTimeout(() => input.focus(), 0);
@@ -1174,27 +1228,36 @@
           if (answered || rows.some(({ input }) => !input.value.trim())) return;
           answered = true;
           sessionGraded += 1;
-          const results = rows.map(({ input, expected }) => isTypedAnswerCorrect(expected, input.value));
-          const correct = results.every(Boolean);
+          const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
+          const correct = gradings.every((grading) => grading.accepted);
+          const hasFuzzy = gradings.some((grading) => grading.fuzzy);
           if (correct) sessionCorrect += 1;
           rows.forEach(({ input }, index) => {
+            const grading = gradings[index];
             input.disabled = true;
-            input.classList.add(results[index] ? 'correct' : 'wrong');
+            input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
           });
           submit.disabled = true;
           const result = document.createElement('div');
-          result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+          result.className = `course-answer-feedback ${correct ? (hasFuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
           const title = document.createElement('strong');
-          title.textContent = correct ? `هر ${toPersianNumber(rows.length)} جمله درست بود.` : 'پاسخ‌های نمونه را مرور کن.';
+          title.textContent = correct
+            ? hasFuzzy ? 'پاسخ‌ها پذیرفته شدند؛ تفاوت‌های کوچک را مرور کن.' : `هر ${toPersianNumber(rows.length)} جمله درست بود.`
+            : 'پاسخ‌های دارای اختلاف را مرور کن.';
           const review = document.createElement('div');
           review.className = 'course-guided-writing-review';
-          for (const { expected } of rows) {
+          rows.forEach(({ expected }, index) => {
+            const grading = gradings[index];
+            if (!grading.exact) {
+              review.append(createTypedDifference(grading, `جملهٔ ${toPersianNumber(index + 1)}`));
+              return;
+            }
             const line = document.createElement('p');
             line.lang = 'fi';
             line.dir = 'ltr';
             line.textContent = expected.surface_form;
             review.append(line);
-          }
+          });
           result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
           card.append(result);
         });
@@ -1514,12 +1577,13 @@
           if (answered || !input.value.trim()) return;
           answered = true;
           sessionGraded += 1;
-          const correct = isTypedAnswerCorrect(item, input.value);
+          const grading = gradeTypedAnswer(item, input.value);
+          const correct = grading.accepted;
           if (correct) sessionCorrect += 1;
           input.disabled = true;
           submit.disabled = true;
-          input.classList.add(correct ? 'correct' : 'wrong');
-          showFeedback(feedback, correct, item);
+          input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
+          showFeedback(feedback, correct, item, grading);
         });
         card.append(form, feedback);
         windowObject.setTimeout(() => input.focus(), 0);
@@ -1530,12 +1594,17 @@
       root.scrollTop = 0;
     }
 
-    function showFeedback(container, correct, item) {
+    function showFeedback(container, correct, item, grading = null) {
       container.replaceChildren();
       container.hidden = false;
-      container.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+      const fuzzy = Boolean(grading && grading.fuzzy);
+      container.className = `course-answer-feedback ${correct ? (fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
       const title = document.createElement('strong');
-      title.textContent = correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
+      title.textContent = fuzzy
+        ? 'قبول شد؛ پاسخ خیلی نزدیک بود.'
+        : correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
+      container.append(title);
+      if (grading && !grading.exact) container.append(createTypedDifference(grading));
       const example = document.createElement('div');
       example.className = 'course-feedback-example';
       const fi = document.createElement('p');
@@ -1545,7 +1614,7 @@
       const fa = document.createElement('p');
       fa.textContent = item.example_fa;
       example.append(fi, fa);
-      container.append(title, example, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+      container.append(example, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
     }
 
     function nextActivity() {
