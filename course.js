@@ -635,7 +635,8 @@
           if (!Array.isArray(activity.accepted_answers) || !activity.accepted_answers.length || activity.accepted_answers.some((answer) => !String(answer).trim())) {
             throw new Error(`Expression completion requires explicit accepted answers in ${lesson.id}`);
           }
-          if (!activity.expected_fi || activity.prompt_fi.replace('_____', activity.accepted_answers[0]) !== activity.expected_fi) {
+          const reconstructed = activity.prompt_fi.replace('_____', activity.accepted_answers[0]);
+          if (!activity.expected_fi || normalizeAnswer(reconstructed) !== normalizeAnswer(activity.expected_fi)) {
             throw new Error(`Expression completion must reconstruct its explicit Finnish sentence in ${lesson.id}`);
           }
           continue;
