@@ -267,8 +267,8 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.12\.0`/);
-  assert.match(fa, /نسخه: `1\.12\.0`/);
+  assert.match(en, /Version: `1\.12\.1`/);
+  assert.match(fa, /نسخه: `1\.12\.1`/);
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
@@ -797,4 +797,34 @@ test('completion screen no longer promises a future review-algorithm connection'
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.doesNotMatch(source, /در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد/);
   assert.match(source, /فعالیت‌های معرفی در امتیاز حساب نمی‌شوند\./);
+});
+
+
+test('locked sections are previewable without unlocking their lessons', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+
+  const selectSectionBlock = source.match(/function selectSection\([\s\S]*?return true;\n\s*\}/)?.[0] || '';
+  assert.match(selectSectionBlock, /if \(index < 0\) return false;/);
+  assert.doesNotMatch(selectSectionBlock, /isSectionUnlocked/);
+
+  assert.match(source, /option\.disabled = !implemented \|\| current;/);
+  assert.match(source, /مشاهده \(قفل\)/);
+
+  assert.match(
+    source,
+    /const unlocked = isSectionUnlocked\(sections, progress, sectionIndex\) && isLessonUnlocked\(section, progress, index\);/,
+  );
+  assert.match(
+    source,
+    /if \(!isSectionUnlocked\(sections, progress, sectionIndex\) \|\| !isLessonUnlocked\(section, progress, index\)\) return;/,
+  );
+
+  assert.match(source, /targetSection && selectSection\(targetSection, \{ updateHash: false \}\)/);
+});
+
+test('locked lesson previews keep details available while disabling Continue', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /const continueButton = createButton\([\s\S]*?unlocked \? 'ادامه درس' : 'قفل است'/);
+  assert.match(source, /continueButton\.disabled = !unlocked/);
+  assert.match(source, /createButton\('جزئیات درس'/);
 });
