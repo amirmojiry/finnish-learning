@@ -2044,6 +2044,9 @@
           "mode": "finnish",
           "item": "s4-olen-kotona"
         }
+      ],
+      "production_targets": [
+        "s4-tama-on-keittio"
       ]
     },
     {
@@ -2190,6 +2193,9 @@
           "mode": "finnish",
           "item": "s4-se-on-huoneessa"
         }
+      ],
+      "production_targets": [
+        "s4-missa-puhelin"
       ]
     },
     {
@@ -2326,6 +2332,9 @@
           "mode": "finnish",
           "item": "s4-tama-on-leipa"
         }
+      ],
+      "production_targets": [
+        "s4-tama-on-kahvia"
       ]
     },
     {
@@ -2455,6 +2464,9 @@
             "s4-minulla-on-jano"
           ]
         }
+      ],
+      "production_targets": [
+        "s4-haluan-kahvia"
       ]
     },
     {
@@ -2606,6 +2618,9 @@
             "s4-kiitos"
           ]
         }
+      ],
+      "production_targets": [
+        "s4-yksi-kahvi-kiitos"
       ]
     },
     {
@@ -2741,6 +2756,9 @@
             "s4-koira"
           ]
         }
+      ],
+      "production_targets": [
+        "s4-tama-on-koira"
       ]
     },
     {
@@ -2874,6 +2892,9 @@
           "mode": "finnish",
           "item": "s4-lehma-on-elain"
         }
+      ],
+      "production_targets": [
+        "s4-karhu-on-elain"
       ]
     },
     {
@@ -3009,6 +3030,9 @@
             "s4-punainen"
           ]
         }
+      ],
+      "production_targets": [
+        "s4-koira-on-iso"
       ]
     },
     {
@@ -3162,6 +3186,9 @@
             "s4-keittiossa-on-frame"
           ]
         }
+      ],
+      "production_targets": [
+        "s4-tama-on-minun-kotini"
       ]
     },
     {
@@ -3322,6 +3349,9 @@
             "s4-world-d3"
           ]
         }
+      ],
+      "production_targets": [
+        "s4-final-hei"
       ]
     }
   ]
