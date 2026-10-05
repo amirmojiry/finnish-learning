@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.13.0] - 2026-10-05
+
+### Added
+
+- Persian-to-Finnish productive recall across all 40 A1.1 lessons.
+- One explicit production target per lesson, including every section checkpoint and the final A1.1 checkpoint.
+- Deterministic validation ensuring production prompts, accepted answers, and lesson scope are explicit and reviewed.
+
+### Changed
+
+- Selected recognition/review slots are replaced by productive recall while preserving the 15-activity-per-lesson contract.
+- Production uses the existing 80% fuzzy-acceptance threshold and character-level typo feedback.
+
+
 ## [1.12.1] - 2026-10-05
 
 ### Changed
