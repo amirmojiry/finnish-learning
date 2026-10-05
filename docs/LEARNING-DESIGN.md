@@ -327,6 +327,10 @@ All four skills should eventually receive direct practice:
 
 Vocabulary learning supports all four skills, but skill transfer requires modality-specific practice. Written recognition is not evidence of listening recognition or spoken production.
 
+Typed Finnish grading may tolerate keyboard-only substitutions between a/ä and o/ö for acceptance, but canonical Finnish orthography remains authoritative. Such answers are reported as near-correct and the character-level difference must remain visible to the learner.
+
+Browser speech synthesis is usable only when the browser exposes an installed voice whose BCP-47 language tag starts with `fi`. The runtime explicitly selects that Finnish voice; it must not fall back silently to a non-Finnish default voice. If the voice list is still loading, the app waits for `voiceschanged`; if no Finnish voice is installed, listening and dictation are skipped without a score penalty and the learner receives device-specific setup guidance.
+
 ## 11. GitHub Pages architecture
 
 GitHub Pages can support a substantial first version because it can deliver HTML, CSS, JavaScript, JSON, audio, and other static assets. The browser can perform:
