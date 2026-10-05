@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.14.0] - 2026-10-05
+
+### Added
+
+- Explicit listening-recognition and dictation targets across all 40 A1.1 lessons, including every section checkpoint and the final checkpoint.
+- Deterministic auditory-practice validation and regression coverage.
+- Dictation playback that reuses the existing typed-answer fuzzy grading and character-level feedback.
+
+### Changed
+
+- Each A1.1 lesson still contains exactly 15 activities; auditory practice replaces lower-value recognition/review slots instead of extending lessons.
+- Finnish browser speech synthesis is the current zero-dependency audio backend, while lesson manifests keep auditory targets explicit for future static or build-time-generated audio.
+
+
 ## [1.13.0] - 2026-10-05
 
 ### Added
