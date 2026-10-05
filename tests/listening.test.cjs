@@ -102,16 +102,70 @@ test('auditory injection preserves every checkpoint target and avoids the produc
   });
 });
 
-test('speech support detection and unavailable-audio UI are explicit', () => {
-  assert.equal(course.supportsSpeech({}), false);
-  assert.equal(course.supportsSpeech({ speechSynthesis: { speak() {} } }), false);
-  assert.equal(course.supportsSpeech({
-    speechSynthesis: { speak() {}, cancel() {} },
-    SpeechSynthesisUtterance: function SpeechSynthesisUtterance() {},
-  }), true);
+test('Finnish speech requires an installed fi voice and never falls back to another language', () => {
+  const finnishVoice = { name: 'Finnish Test Voice', lang: 'fi-FI', localService: true };
+  const englishVoice = { name: 'English Test Voice', lang: 'en-US', localService: true };
+  let spoken = null;
+  function SpeechSynthesisUtterance(text) {
+    this.text = text;
+  }
+  const windowObject = {
+    navigator: { userAgent: 'Windows NT 10.0' },
+    speechSynthesis: {
+      getVoices: () => [englishVoice, finnishVoice],
+      cancel() {},
+      speak(utterance) {
+        spoken = utterance;
+      },
+      addEventListener() {},
+    },
+    SpeechSynthesisUtterance,
+  };
+
+  assert.equal(course.speechApiAvailable(windowObject), true);
+  assert.equal(course.findFinnishVoice(windowObject), finnishVoice);
+  assert.equal(course.finnishSpeechStatus(windowObject).state, 'ready');
+  assert.equal(course.supportsSpeech(windowObject), true);
+  assert.equal(course.playSpeech(windowObject, 'Hyvää huomenta'), true);
+  assert.equal(spoken.voice, finnishVoice);
+  assert.equal(spoken.lang, 'fi-FI');
+
+  const missing = {
+    ...windowObject,
+    speechSynthesis: {
+      ...windowObject.speechSynthesis,
+      getVoices: () => [englishVoice],
+    },
+  };
+  assert.equal(course.finnishSpeechStatus(missing).state, 'missing');
+  assert.equal(course.supportsSpeech(missing), false);
+  assert.equal(course.playSpeech(missing, 'Hyvää huomenta'), false);
+
+  const loading = {
+    ...windowObject,
+    speechSynthesis: {
+      ...windowObject.speechSynthesis,
+      getVoices: () => [],
+    },
+  };
+  assert.equal(course.finnishSpeechStatus(loading).state, 'loading');
+
+  assert.match(course.speechSettingsGuide(windowObject), /Settings.*Time & language.*Finnish/s);
+  assert.equal(course.activityNeedsFinnishSpeech({ type: 'choice', mode: 'listen' }), true);
+  assert.equal(course.activityNeedsFinnishSpeech({ type: 'dictation' }), true);
+  assert.equal(course.activityNeedsFinnishSpeech({ type: 'choice', mode: 'meaning' }), false);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'dictation' }, false), true);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'choice', mode: 'listen' }, false), true);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'dictation' }, true), false);
+  assert.equal(course.shouldRefreshSpeechActivity({ type: 'choice', mode: 'meaning' }, false), false);
 
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
-  assert.match(source, /امکان پخش صدای فنلاندی در این مرورگر وجود ندارد/);
+  assert.match(source, /speechSynthesis\.addEventListener\('voiceschanged'/);
+  assert.match(source, /صدای فنلاندی روی این دستگاه پیدا نشد/);
+  assert.match(source, /اگر این وضعیت ادامه پیدا کرد، احتمالاً voice فنلاندی نصب نیست/);
+  assert.match(source, /speechSettingsGuide\(windowObject\)/);
+  assert.match(source, /shouldRefreshSpeechActivity\(currentActivity, answered\)/);
+  assert.match(source, /Text-to-speech/);
   assert.match(source, /ادامه بدون تمرین شنیداری/);
   assert.match(source, /ادامه بدون دیکته/);
   assert.match(source, /input\.disabled = speechUnavailable/);

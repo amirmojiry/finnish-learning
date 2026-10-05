@@ -6,6 +6,21 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.16.0] - 2026-10-05
+
+### Added
+
+- Device-level Finnish speech-voice detection using `speechSynthesis.getVoices()` and `voiceschanged`.
+- Platform-aware guidance when Finnish text-to-speech is not installed.
+
+### Changed
+
+- Sentence-order practice now uses an answer box, a source-token pool, undo before grading, and an explicit submit action.
+- Typed grading treats a/ä and o/ö substitutions as acceptable near-correct answers while retaining canonical Finnish spelling feedback.
+- Listening and dictation explicitly select an installed `fi-*` speech voice and never silently fall back to another language.
+- Audio activities remain skippable without a score penalty when a Finnish voice is unavailable.
+
+
 ## [1.15.0] - 2026-10-05
 
 ### Added

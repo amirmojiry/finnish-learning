@@ -131,6 +131,12 @@
     return [...new Set([item && item.surface_form, ...values].map(normalizeAnswer).filter(Boolean))];
   }
 
+  function foldFinnishDiacritics(value) {
+    return normalizeAnswer(value)
+      .replace(/ä/g, 'a')
+      .replace(/ö/g, 'o');
+  }
+
   function alignAnswers(enteredValue, expectedValue) {
     const entered = Array.from(normalizeAnswer(enteredValue));
     const expected = Array.from(normalizeAnswer(expectedValue));
@@ -180,8 +186,8 @@
   }
 
   function answerSimilarity(enteredValue, expectedValue) {
-    const entered = normalizeAnswer(enteredValue);
-    const expected = normalizeAnswer(expectedValue);
+    const entered = foldFinnishDiacritics(enteredValue);
+    const expected = foldFinnishDiacritics(expectedValue);
     if (!entered && !expected) return 1;
     const length = Math.max(Array.from(entered).length, Array.from(expected).length);
     if (!length) return 0;
@@ -196,6 +202,7 @@
         accepted: false,
         exact: false,
         fuzzy: false,
+        diacriticAdjusted: false,
         similarity: 0,
         entered,
         expected: candidates[0] || '',
@@ -206,18 +213,36 @@
     let best = null;
     for (const expected of candidates) {
       const alignment = alignAnswers(entered, expected);
-      const length = Math.max(Array.from(entered).length, Array.from(expected).length);
-      const similarity = length ? Math.max(0, 1 - (alignment.distance / length)) : 1;
-      const candidate = { expected, similarity, operations: alignment.operations };
-      if (!best || candidate.similarity > best.similarity) best = candidate;
+      const foldedEntered = foldFinnishDiacritics(entered);
+      const foldedExpected = foldFinnishDiacritics(expected);
+      const foldedAlignment = alignAnswers(foldedEntered, foldedExpected);
+      const length = Math.max(Array.from(foldedEntered).length, Array.from(foldedExpected).length);
+      const similarity = length ? Math.max(0, 1 - (foldedAlignment.distance / length)) : 1;
+      const rawLength = Math.max(Array.from(entered).length, Array.from(expected).length);
+      const rawSimilarity = rawLength ? Math.max(0, 1 - (alignment.distance / rawLength)) : 1;
+      const candidate = {
+        expected,
+        similarity,
+        rawSimilarity,
+        operations: alignment.operations,
+        diacriticAdjusted: alignment.distance !== foldedAlignment.distance,
+      };
+      if (
+        !best
+        || candidate.similarity > best.similarity
+        || (candidate.similarity === best.similarity && candidate.rawSimilarity > best.rawSimilarity)
+      ) {
+        best = candidate;
+      }
     }
 
-    const exact = best.similarity === 1;
+    const exact = entered === best.expected;
     const accepted = exact || best.similarity >= 0.8;
     return {
       accepted,
       exact,
       fuzzy: accepted && !exact,
+      diacriticAdjusted: accepted && best.diacriticAdjusted,
       similarity: best.similarity,
       entered,
       expected: best.expected,
@@ -238,7 +263,7 @@
     return new Intl.NumberFormat('fa-IR').format(value);
   }
 
-  function supportsSpeech(windowObject) {
+  function speechApiAvailable(windowObject) {
     return Boolean(
       windowObject
       && windowObject.speechSynthesis
@@ -247,11 +272,56 @@
     );
   }
 
+  function findFinnishVoice(windowObject) {
+    if (!speechApiAvailable(windowObject) || typeof windowObject.speechSynthesis.getVoices !== 'function') return null;
+    let voices = [];
+    try {
+      voices = windowObject.speechSynthesis.getVoices() || [];
+    } catch {
+      return null;
+    }
+    return voices
+      .filter((voice) => /^fi(?:-|$)/i.test(String(voice && voice.lang || '')))
+      .sort((left, right) => Number(Boolean(right.localService)) - Number(Boolean(left.localService)))[0] || null;
+  }
+
+  function finnishSpeechStatus(windowObject) {
+    if (!speechApiAvailable(windowObject)) return { state: 'unsupported', voice: null };
+    if (typeof windowObject.speechSynthesis.getVoices !== 'function') return { state: 'unsupported', voice: null };
+    let voices = [];
+    try {
+      voices = windowObject.speechSynthesis.getVoices() || [];
+    } catch {
+      return { state: 'unsupported', voice: null };
+    }
+    if (!voices.length) return { state: 'loading', voice: null };
+    const voice = findFinnishVoice(windowObject);
+    return voice ? { state: 'ready', voice } : { state: 'missing', voice: null };
+  }
+
+  function speechSettingsGuide(windowObject) {
+    const userAgent = String(windowObject?.navigator?.userAgent || '');
+    if (/Windows/i.test(userAgent)) {
+      return 'در Windows به Settings → Time & language → Language & region برو، Finnish را اضافه کن و در Language options بخش Text-to-speech را نصب کن. راه دیگر: Win+Ctrl+N → Add legacy voices → Add voices → Finnish. سپس مرورگر را کامل ببند و دوباره باز کن.';
+    }
+    if (/Macintosh|Mac OS X/i.test(userAgent)) {
+      return 'در macOS به System Settings → Accessibility → Read & Speak برو، کنار System voice صداهای بیشتر را باز کن و یک صدای Finnish را دانلود کن. سپس مرورگر را دوباره باز کن.';
+    }
+    return 'در تنظیمات Text-to-Speech دستگاه، یک صدای Finnish / fi-FI را نصب یا فعال کن و بعد مرورگر را دوباره باز کن.';
+  }
+
+  function supportsSpeech(windowObject) {
+    return finnishSpeechStatus(windowObject).state === 'ready';
+  }
+
   function playSpeech(windowObject, text) {
-    if (!text || !supportsSpeech(windowObject)) return false;
+    if (!text) return false;
+    const status = finnishSpeechStatus(windowObject);
+    if (status.state !== 'ready' || !status.voice) return false;
     windowObject.speechSynthesis.cancel();
     const utterance = new windowObject.SpeechSynthesisUtterance(text);
-    utterance.lang = 'fi-FI';
+    utterance.voice = status.voice;
+    utterance.lang = status.voice.lang || 'fi-FI';
     utterance.rate = 0.82;
     windowObject.speechSynthesis.speak(utterance);
     return true;
@@ -856,36 +926,88 @@
 
     if (activity.type === 'sentence-order') {
       const ordered = [];
-      const options = document.createElement('div');
-      options.className = 'course-sequence-options';
-      activity.tokens.forEach((token, index) => {
-        const button = createButton(token, 'course-option', () => {
-          if (answered || ordered.includes(index)) return;
-          ordered.push(index);
-          button.disabled = true;
-          button.dataset.order = String(ordered.length);
-          button.textContent = `${toPersianNumber(ordered.length)}. ${token}`;
-          if (ordered.length === activity.tokens.length) {
-            answered = true;
-            const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-            recordResult(correct);
-            const result = document.createElement('div');
-            result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
-            const title = document.createElement('strong');
-            title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
-            const review = document.createElement('p');
-            review.lang = 'fi';
-            review.dir = 'ltr';
-            review.textContent = activity.expected_fi;
-            result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
-            card.append(result);
-          }
-        });
-        button.lang = 'fi';
-        button.dir = 'ltr';
-        options.append(button);
+      const answerBox = document.createElement('div');
+      answerBox.className = 'course-sentence-answer-box';
+      answerBox.lang = 'fi';
+      answerBox.dir = 'ltr';
+      answerBox.setAttribute('role', 'group');
+      answerBox.setAttribute('aria-label', 'جملهٔ ساخته‌شده');
+
+      const tokenPool = document.createElement('div');
+      tokenPool.className = 'course-sentence-token-pool';
+      tokenPool.setAttribute('aria-label', 'کلمات باقی‌مانده');
+
+      const submit = createButton('ثبت پاسخ', 'primary-button course-sentence-submit', () => {
+        if (answered || ordered.length !== activity.tokens.length) return;
+        answered = true;
+        const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+        recordResult(correct);
+        renderSelection();
+        const result = document.createElement('div');
+        result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+        const title = document.createElement('strong');
+        title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
+        const review = document.createElement('p');
+        review.lang = 'fi';
+        review.dir = 'ltr';
+        review.textContent = activity.expected_fi;
+        result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+        card.append(result);
       });
-      card.append(options);
+      submit.disabled = true;
+
+      function renderSelection(focusRequest = null) {
+        answerBox.replaceChildren();
+        tokenPool.replaceChildren();
+        const sourceButtons = new Map();
+
+        if (!ordered.length) {
+          const placeholder = document.createElement('span');
+          placeholder.className = 'course-sentence-answer-placeholder';
+          placeholder.textContent = 'کلمات انتخاب‌شده اینجا قرار می‌گیرند';
+          answerBox.append(placeholder);
+        } else {
+          ordered.forEach((tokenIndex, selectedPosition) => {
+            const token = activity.tokens[tokenIndex];
+            const selected = createButton(token, 'course-sentence-selected-token', () => {
+              if (answered) return;
+              ordered.splice(selectedPosition, 1);
+              renderSelection({ type: 'source', index: tokenIndex });
+            });
+            selected.lang = 'fi';
+            selected.dir = 'ltr';
+            selected.disabled = answered;
+            selected.setAttribute('aria-label', `برگرداندن ${token} به فهرست کلمات`);
+            answerBox.append(selected);
+          });
+        }
+
+        activity.tokens.forEach((token, index) => {
+          if (ordered.includes(index)) return;
+          const button = createButton(token, 'course-sentence-source-token', () => {
+            if (answered || ordered.includes(index)) return;
+            ordered.push(index);
+            const remainingIndex = activity.tokens.findIndex((_, candidateIndex) => !ordered.includes(candidateIndex));
+            renderSelection(remainingIndex >= 0 ? { type: 'source', index: remainingIndex } : { type: 'submit' });
+          });
+          button.lang = 'fi';
+          button.dir = 'ltr';
+          button.disabled = answered;
+          button.setAttribute('aria-label', `افزودن ${token} به جمله`);
+          sourceButtons.set(index, button);
+          tokenPool.append(button);
+        });
+
+        submit.disabled = answered || ordered.length !== activity.tokens.length;
+        if (focusRequest?.type === 'source') {
+          sourceButtons.get(focusRequest.index)?.focus();
+        } else if (focusRequest?.type === 'submit' && !submit.disabled) {
+          submit.focus();
+        }
+      }
+
+      renderSelection();
+      card.append(answerBox, tokenPool, submit);
       return true;
     }
 
@@ -963,6 +1085,21 @@
     card.append(meaning, cues, form, feedback);
     windowObject.setTimeout(() => input.focus(), 0);
     return true;
+  }
+
+  function activityNeedsFinnishSpeech(activity) {
+    return Boolean(
+      activity
+      && (
+        activity.type === 'teach'
+        || activity.type === 'dictation'
+        || (activity.type === 'choice' && activity.mode === 'listen')
+      )
+    );
+  }
+
+  function shouldRefreshSpeechActivity(activity, answered) {
+    return activityNeedsFinnishSpeech(activity) && !answered;
   }
 
   function initializeBrowser(windowObject) {
@@ -1078,6 +1215,28 @@
       button.textContent = label;
       button.addEventListener('click', onClick);
       return button;
+    }
+
+    function createSpeechStatusNotice(status) {
+      const notice = document.createElement('div');
+      notice.className = 'course-audio-unavailable';
+      const title = document.createElement('strong');
+      const detail = document.createElement('p');
+
+      if (status.state === 'loading') {
+        title.textContent = 'در حال بررسی صدای فنلاندی دستگاه…';
+        detail.textContent = `فهرست صداهای مرورگر هنوز آماده نشده است. اگر این وضعیت ادامه پیدا کرد، احتمالاً voice فنلاندی نصب نیست. ${speechSettingsGuide(windowObject)}`;
+      } else if (status.state === 'missing') {
+        title.textContent = 'صدای فنلاندی روی این دستگاه پیدا نشد.';
+        detail.textContent = `برای جلوگیری از تلفظ اشتباه، این تمرین صوتی پخش نمی‌شود. ${speechSettingsGuide(windowObject)}`;
+      } else {
+        title.textContent = 'پخش صوتی فنلاندی در این مرورگر در دسترس نیست.';
+        detail.textContent = `این تمرین در امتیاز حساب نمی‌شود. ${speechSettingsGuide(windowObject)}`;
+      }
+
+      const retry = createButton('بررسی دوبارهٔ صدای فنلاندی', 'course-secondary-button course-audio-retry', renderActivity);
+      notice.append(title, detail, retry);
+      return notice;
     }
 
     function createInfoDisclosure(buildContent, label = 'نمایش توضیحات') {
@@ -1944,9 +2103,13 @@
         surface.lang = 'fi';
         surface.dir = 'ltr';
         surface.textContent = item.surface_form;
-        const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
-        speak.setAttribute('aria-label', `پخش تلفظ ${item.surface_form}`);
-        word.append(surface, speak);
+        const speechStatus = finnishSpeechStatus(windowObject);
+        word.append(surface);
+        if (speechStatus.state === 'ready') {
+          const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
+          speak.setAttribute('aria-label', `پخش تلفظ ${item.surface_form}`);
+          word.append(speak);
+        }
         const meaning = document.createElement('p');
         meaning.className = 'course-teach-meaning';
         meaning.textContent = item.translation_fa;
@@ -1954,7 +2117,8 @@
         addExample();
         card.append(createButton('ادامه', 'primary-button course-next-button', nextActivity));
       } else if (activity.type === 'choice') {
-        const speechUnavailable = activity.mode === 'listen' && !supportsSpeech(windowObject);
+        const speechStatus = activity.mode === 'listen' ? finnishSpeechStatus(windowObject) : null;
+        const speechUnavailable = activity.mode === 'listen' && speechStatus.state !== 'ready';
         if (activity.mode === 'meaning') {
           const focus = document.createElement('strong');
           focus.className = 'course-focus-word';
@@ -1969,10 +2133,7 @@
           card.append(focus);
         } else if (activity.mode === 'listen') {
           if (speechUnavailable) {
-            const unavailable = document.createElement('p');
-            unavailable.className = 'course-audio-unavailable';
-            unavailable.textContent = 'امکان پخش صدای فنلاندی در این مرورگر وجود ندارد. این تمرین در امتیاز حساب نمی‌شود.';
-            card.append(unavailable);
+            card.append(createSpeechStatusNotice(speechStatus));
           } else {
             const listen = createButton('پخش صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
             card.append(listen);
@@ -2020,17 +2181,15 @@
           card.append(createButton('ادامه بدون تمرین شنیداری', 'primary-button course-next-button', nextActivity));
         }
       } else {
-        const speechUnavailable = activity.type === 'dictation' && !supportsSpeech(windowObject);
+        const speechStatus = activity.type === 'dictation' ? finnishSpeechStatus(windowObject) : null;
+        const speechUnavailable = activity.type === 'dictation' && speechStatus.state !== 'ready';
         if (activity.type === 'dictation') {
           const listen = createButton('پخش دوبارهٔ صدا', 'course-listen-button', () => playSpeech(windowObject, item.surface_form));
           listen.setAttribute('aria-label', 'پخش دوبارهٔ عبارت برای دیکته');
           listen.disabled = speechUnavailable;
           card.append(listen);
           if (speechUnavailable) {
-            const unavailable = document.createElement('p');
-            unavailable.className = 'course-audio-unavailable';
-            unavailable.textContent = 'امکان پخش صدای فنلاندی در این مرورگر وجود ندارد. این تمرین در امتیاز حساب نمی‌شود.';
-            card.append(unavailable);
+            card.append(createSpeechStatusNotice(speechStatus));
           } else {
             windowObject.setTimeout(() => playSpeech(windowObject, item.surface_form), 180);
           }
@@ -2099,9 +2258,11 @@
       const fuzzy = Boolean(grading && grading.fuzzy);
       container.className = `course-answer-feedback ${correct ? (fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
       const title = document.createElement('strong');
-      title.textContent = fuzzy
-        ? 'قبول شد؛ پاسخ خیلی نزدیک بود.'
-        : correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
+      title.textContent = grading?.diacriticAdjusted && correct
+        ? 'درست حساب شد؛ املای استاندارد فنلاندی را مرور کن.'
+        : fuzzy
+          ? 'قبول شد؛ پاسخ خیلی نزدیک بود.'
+          : correct ? 'آفرین، درست بود.' : `پاسخ درست: ${item.surface_form}`;
       container.append(title);
       if (grading && !grading.exact) container.append(createTypedDifference(grading));
       const example = document.createElement('div');
@@ -2226,6 +2387,14 @@
       if (isCourseHash() && !activeLesson) renderSectionMap();
     });
 
+    if (windowObject.speechSynthesis && typeof windowObject.speechSynthesis.addEventListener === 'function') {
+      windowObject.speechSynthesis.addEventListener('voiceschanged', () => {
+        if (!activeLesson) return;
+        const currentActivity = activeLesson.activities[activityIndex];
+        if (shouldRefreshSpeechActivity(currentActivity, answered)) renderActivity();
+      });
+    }
+
     if (typeof windowObject.MutationObserver === 'function') {
       const observer = new windowObject.MutationObserver(() => {
         if (!isCourseHash()) return;
@@ -2289,6 +2458,7 @@
     SECTION_URL,
     CURRICULUM_URL,
     normalizeAnswer,
+    foldFinnishDiacritics,
     emptyProgress,
     sanitizeProgress,
     loadProgress,
@@ -2304,7 +2474,14 @@
     answerSimilarity,
     gradeTypedAnswer,
     isTypedAnswerCorrect,
+    speechApiAvailable,
+    findFinnishVoice,
+    finnishSpeechStatus,
+    speechSettingsGuide,
     supportsSpeech,
+    playSpeech,
+    activityNeedsFinnishSpeech,
+    shouldRefreshSpeechActivity,
     STRUCTURED_PRACTICE_TYPES,
     injectStructuredPractice,
     renderStructuredPracticeActivity,
