@@ -1364,6 +1364,25 @@
       "listening_targets": [
         "hei",
         "moi"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "nakemiin",
+          "tokens": [
+            "ja",
+            "hyvää",
+            "päivänjatkoa!",
+            "Näkemiin"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Näkemiin ja hyvää päivänjatkoa!"
+        }
       ]
     },
     {
@@ -1402,6 +1421,17 @@
       "listening_targets": [
         "mina",
         "sina"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "olen",
+          "prompt_fi": "Minä _____ Suomessa.",
+          "accepted_answers": [
+            "olen"
+          ],
+          "expected_fi": "Minä olen Suomessa."
+        }
       ]
     },
     {
@@ -1438,6 +1468,20 @@
       "listening_targets": [
         "hyvaa",
         "kiitos"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "ihan-hyvaa",
+          "prompt_fa": "بد نیستم، تو چطور؟",
+          "cues_fi": [
+            "Ihan"
+          ],
+          "expected_fi": "Ihan hyvää, entä sinulle?",
+          "accepted_answers": [
+            "Ihan hyvää, entä sinulle?"
+          ]
+        }
       ]
     },
     {
@@ -1475,6 +1519,21 @@
       "listening_targets": [
         "kylla",
         "ei"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "ole",
+          "tokens": [
+            "hyvä.",
+            "Ole"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Ole hyvä."
+        }
       ]
     },
     {
@@ -1513,6 +1572,17 @@
       "listening_targets": [
         "mika-tama-on",
         "tama"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "han",
+          "prompt_fi": "_____ asuu Vaasassa.",
+          "accepted_answers": [
+            "hän"
+          ],
+          "expected_fi": "Hän asuu Vaasassa."
+        }
       ]
     },
     {
@@ -1546,6 +1616,20 @@
       "listening_targets": [
         "kiitos",
         "anteeksi"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "mika-tama-on",
+          "prompt_fa": "این چیست؟ این یک کتاب است.",
+          "cues_fi": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä tämä on? Tämä on kirja.",
+          "accepted_answers": [
+            "Mikä tämä on? Tämä on kirja."
+          ]
+        }
       ]
     },
     {
@@ -1582,6 +1666,21 @@
       "listening_targets": [
         "en",
         "hitaammin"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "uudestaan",
+          "tokens": [
+            "kiitos.",
+            "Uudestaan,"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Uudestaan, kiitos."
+        }
       ]
     },
     {
@@ -1622,6 +1721,17 @@
       "listening_targets": [
         "se",
         "kirja"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "puhelin",
+          "prompt_fi": "Se on _____.",
+          "accepted_answers": [
+            "puhelin"
+          ],
+          "expected_fi": "Se on puhelin."
+        }
       ]
     },
     {
@@ -1806,6 +1916,20 @@
       "listening_targets": [
         "hyvaa-kiitos",
         "hei-minun-nimeni-on"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "en-ymmarra",
+          "prompt_fa": "ببخشید، متوجه نمی‌شوم.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "Anteeksi, en ymmärrä.",
+          "accepted_answers": [
+            "Anteeksi, en ymmärrä."
+          ]
+        }
       ]
     },
     {
@@ -1907,6 +2031,46 @@
       "listening_targets": [
         "hei",
         "tama"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "minun-nimeni-on",
+          "tokens": [
+            "nimeni",
+            "on",
+            "Leila.",
+            "Minun"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Minun nimeni on Leila."
+        },
+        {
+          "type": "expression-completion",
+          "item": "mika-sinun-nimesi-on",
+          "prompt_fi": "Mikä sinun _____ on?",
+          "accepted_answers": [
+            "nimesi"
+          ],
+          "expected_fi": "Mikä sinun nimesi on?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "mita-kuuluu",
+          "prompt_fa": "امروز حالت چطور است؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä kuuluu tänään?",
+          "accepted_answers": [
+            "Mitä kuuluu tänään?"
+          ]
+        }
       ]
     }
   ],
