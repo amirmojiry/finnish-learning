@@ -1761,7 +1761,7 @@
       ],
       "listening_targets": [
         "s2-suomi-lang",
-        "s2-puhun-suomea"
+        "s2-puhun-englantia"
       ]
     },
     {
@@ -2115,8 +2115,8 @@
         "s2-kuinka-vanha"
       ],
       "listening_targets": [
-        "s2-num-nolla",
-        "s2-kuinka-vanha"
+        "s2-num-seitseman",
+        "s2-olen-12-vuotias"
       ]
     },
     {
