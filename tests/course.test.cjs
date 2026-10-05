@@ -798,3 +798,33 @@ test('completion screen no longer promises a future review-algorithm connection'
   assert.doesNotMatch(source, /در نسخه‌های بعدی نتیجهٔ هر نوع تمرین به الگوریتم مرور متصل خواهد شد/);
   assert.match(source, /فعالیت‌های معرفی در امتیاز حساب نمی‌شوند\./);
 });
+
+
+test('locked sections are previewable without unlocking their lessons', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+
+  const selectSectionBlock = source.match(/function selectSection\([\s\S]*?return true;\n\s*\}/)?.[0] || '';
+  assert.match(selectSectionBlock, /if \(index < 0\) return false;/);
+  assert.doesNotMatch(selectSectionBlock, /isSectionUnlocked/);
+
+  assert.match(source, /option\.disabled = !implemented \|\| current;/);
+  assert.match(source, /مشاهده \(قفل\)/);
+
+  assert.match(
+    source,
+    /const unlocked = isSectionUnlocked\(sections, progress, sectionIndex\) && isLessonUnlocked\(section, progress, index\);/,
+  );
+  assert.match(
+    source,
+    /if \(!isSectionUnlocked\(sections, progress, sectionIndex\) \|\| !isLessonUnlocked\(section, progress, index\)\) return;/,
+  );
+
+  assert.match(source, /targetSection && selectSection\(targetSection, \{ updateHash: false \}\)/);
+});
+
+test('locked lesson previews keep details available while disabling Continue', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /const continueButton = createButton\([\s\S]*?unlocked \? 'ادامه درس' : 'قفل است'/);
+  assert.match(source, /continueButton\.disabled = !unlocked/);
+  assert.match(source, /createButton\('جزئیات درس'/);
+});
