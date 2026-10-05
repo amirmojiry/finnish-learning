@@ -267,8 +267,8 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.13\.0`/);
-  assert.match(fa, /نسخه: `1\.13\.0`/);
+  assert.match(en, /Version: `1\.14\.0`/);
+  assert.match(fa, /نسخه: `1\.14\.0`/);
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
