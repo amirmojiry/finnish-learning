@@ -1706,6 +1706,10 @@
       ],
       "production_targets": [
         "s3-eilen"
+      ],
+      "listening_targets": [
+        "s3-tanaan",
+        "s3-eilen"
       ]
     },
     {
@@ -1857,6 +1861,10 @@
         }
       ],
       "production_targets": [
+        "s3-tanaan-maanantai"
+      ],
+      "listening_targets": [
+        "s3-maanantai",
         "s3-tanaan-maanantai"
       ]
     },
@@ -2012,6 +2020,10 @@
       ],
       "production_targets": [
         "s3-kello-yksi"
+      ],
+      "listening_targets": [
+        "s3-aamu",
+        "s3-kello-yksi"
       ]
     },
     {
@@ -2149,6 +2161,10 @@
       ],
       "production_targets": [
         "s3-aamulla-expr"
+      ],
+      "listening_targets": [
+        "s3-nyt",
+        "s3-aamulla-expr"
       ]
     },
     {
@@ -2278,6 +2294,10 @@
         }
       ],
       "production_targets": [
+        "s3-mina-syon"
+      ],
+      "listening_targets": [
+        "s3-syon",
         "s3-mina-syon"
       ]
     },
@@ -2423,6 +2443,10 @@
       ],
       "production_targets": [
         "s3-mita-teet"
+      ],
+      "listening_targets": [
+        "s3-mita",
+        "s3-mita-teet"
       ]
     },
     {
@@ -2558,6 +2582,10 @@
         }
       ],
       "production_targets": [
+        "s3-negative-syon"
+      ],
+      "listening_targets": [
+        "s3-en",
         "s3-negative-syon"
       ]
     },
@@ -2710,6 +2738,10 @@
         }
       ],
       "production_targets": [
+        "s3-milloin-expr"
+      ],
+      "listening_targets": [
+        "s3-aika",
         "s3-milloin-expr"
       ]
     },
@@ -2876,6 +2908,10 @@
       ],
       "production_targets": [
         "s3-routine-4"
+      ],
+      "listening_targets": [
+        "s3-frame-aamulla",
+        "s3-routine-4"
       ]
     },
     {
@@ -2983,6 +3019,10 @@
         ]
       ],
       "production_targets": [
+        "s3-kello-kaksi"
+      ],
+      "listening_targets": [
+        "s3-tanaan",
         "s3-kello-kaksi"
       ]
     }
