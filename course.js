@@ -238,8 +238,17 @@
     return new Intl.NumberFormat('fa-IR').format(value);
   }
 
+  function supportsSpeech(windowObject) {
+    return Boolean(
+      windowObject
+      && windowObject.speechSynthesis
+      && typeof windowObject.speechSynthesis.speak === 'function'
+      && typeof windowObject.SpeechSynthesisUtterance === 'function'
+    );
+  }
+
   function playSpeech(windowObject, text) {
-    if (!text || !windowObject || !('speechSynthesis' in windowObject)) return false;
+    if (!text || !supportsSpeech(windowObject)) return false;
     windowObject.speechSynthesis.cancel();
     const utterance = new windowObject.SpeechSynthesisUtterance(text);
     utterance.lang = 'fi-FI';
@@ -383,13 +392,8 @@
       ));
     }
     if (recognitionIndex < 0) {
-      recognitionIndex = lesson.activities.findLastIndex((activity) => (
-        activity.type !== 'production'
-        && activity.type !== 'dictation'
-        && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
-      ));
+      throw new Error(`Lesson ${lesson.id} has no matching slot for listening target ${recognitionTargetId}.`);
     }
-    if (recognitionIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for listening recognition.`);
     lesson.activities[recognitionIndex] = {
       type: 'choice',
       mode: 'listen',
@@ -410,14 +414,8 @@
       && activity.item === dictationTargetId
     ));
     if (dictationIndex < 0) {
-      dictationIndex = lesson.activities.findLastIndex((activity, index) => (
-        index !== recognitionIndex
-        && activity.type !== 'production'
-        && activity.type !== 'dictation'
-        && (activity.type === 'choice' || activity.type === 'type' || activity.type === 'visual-choice')
-      ));
+      throw new Error(`Lesson ${lesson.id} has no matching slot for dictation target ${dictationTargetId}.`);
     }
-    if (dictationIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for dictation.`);
     lesson.activities[dictationIndex] = { type: 'dictation', item: dictationTargetId };
   }
 
@@ -2017,6 +2015,7 @@
     answerSimilarity,
     gradeTypedAnswer,
     isTypedAnswerCorrect,
+    supportsSpeech,
     optionLabel,
     uniqueOptions,
     buildStandardActivities,
