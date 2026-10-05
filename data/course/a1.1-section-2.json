@@ -1665,8 +1665,8 @@
           "prompt_fa": "برای گفتن «از ایران / اهل ایران» شکل درست Iran را انتخاب کن.",
           "frame_fi": "Olen _____.",
           "options_fi": [
-            "Iranista",
             "Iranissa",
+            "Iranista",
             "Iraniin",
             "Iranin"
           ],
@@ -1905,9 +1905,9 @@
           "prompt_fa": "برای گفتن «در هلسینکی» شکل درست Helsinki را انتخاب کن.",
           "frame_fi": "Asun _____.",
           "options_fi": [
-            "Helsingissä",
             "Helsingistä",
             "Helsinkiin",
+            "Helsingissä",
             "Helsinki"
           ],
           "expected_fi": "Helsingissä",
