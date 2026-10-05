@@ -78,6 +78,48 @@ test('every section checkpoint including the final A1.1 checkpoint contains list
   }
 });
 
+test('auditory injection preserves every checkpoint target and avoids the production slot', () => {
+  sections.forEach((section, sectionIndex) => {
+    const checkpoint = section.lessons.at(-1);
+    const rawCheckpoint = rawSections[sectionIndex].lessons.at(-1);
+    const practiced = new Set();
+
+    for (const activity of checkpoint.activities) {
+      for (const key of ['item', 'answer_item', 'question_item', 'negative_item', 'affirmative_item', 'event_item', 'time_item']) {
+        if (activity[key]) practiced.add(activity[key]);
+      }
+      for (const key of ['items', 'turns', 'expected_items']) {
+        for (const itemId of activity[key] || []) practiced.add(itemId);
+      }
+    }
+
+    for (const targetId of rawCheckpoint.checkpoint_targets || []) {
+      assert.ok(practiced.has(targetId), `${checkpoint.id}: checkpoint target was displaced: ${targetId}`);
+    }
+    for (const targetId of checkpoint.listening_targets) {
+      assert.notEqual(targetId, checkpoint.production_targets[0], `${checkpoint.id}: auditory target collides with production`);
+    }
+  });
+});
+
+test('speech support detection and unavailable-audio UI are explicit', () => {
+  assert.equal(course.supportsSpeech({}), false);
+  assert.equal(course.supportsSpeech({ speechSynthesis: { speak() {} } }), false);
+  assert.equal(course.supportsSpeech({
+    speechSynthesis: { speak() {}, cancel() {} },
+    SpeechSynthesisUtterance: function SpeechSynthesisUtterance() {},
+  }), true);
+
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /امکان پخش صدای فنلاندی در این مرورگر وجود ندارد/);
+  assert.match(source, /ادامه بدون تمرین شنیداری/);
+  assert.match(source, /ادامه بدون دیکته/);
+  assert.match(source, /input\.disabled = speechUnavailable/);
+  assert.match(source, /button\.disabled = speechUnavailable/);
+  assert.match(source, /no matching slot for listening target/);
+  assert.match(source, /no matching slot for dictation target/);
+});
+
 test('dictation reuses typed grading without exposing the Finnish answer before submission', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.match(source, /activity\.type === 'dictation'/);
