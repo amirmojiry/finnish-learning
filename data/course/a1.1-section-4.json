@@ -2639,7 +2639,7 @@
         "s4-yksi-kahvi-kiitos"
       ],
       "listening_targets": [
-        "s4-yksi-kahvi-kiitos",
+        "s4-kahvila",
         "s4-kiitos"
       ]
     },
@@ -3390,7 +3390,7 @@
         "s4-final-hei"
       ],
       "listening_targets": [
-        "s4-final-hei",
+        "s4-final-day",
         "s4-final-description"
       ]
     }
