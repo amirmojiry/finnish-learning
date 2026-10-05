@@ -2735,24 +2735,6 @@
           ],
           "expected_fi": "En juo."
         }
-      ],
-      "morphology_practice": [
-        {
-          "type": "morphology-choice",
-          "item": "s3-negative-opiskelen",
-          "base_fi": "opiskella",
-          "feature_fa": "منفی اول‌شخص: en + connegative",
-          "prompt_fa": "بعد از En شکل درست opiskella را انتخاب کن.",
-          "frame_fi": "En _____.",
-          "options_fi": [
-            "opiskele",
-            "opiskelen",
-            "opiskelee",
-            "opiskelet"
-          ],
-          "expected_fi": "opiskele",
-          "explanation_fa": "در منفی اول‌شخص، بعد از en صورت connegative می‌آید: opiskelen → En opiskele."
-        }
       ]
     },
     {
