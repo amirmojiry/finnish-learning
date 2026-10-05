@@ -131,6 +131,12 @@
     return [...new Set([item && item.surface_form, ...values].map(normalizeAnswer).filter(Boolean))];
   }
 
+  function foldFinnishDiacritics(value) {
+    return normalizeAnswer(value)
+      .replace(/ä/g, 'a')
+      .replace(/ö/g, 'o');
+  }
+
   function alignAnswers(enteredValue, expectedValue) {
     const entered = Array.from(normalizeAnswer(enteredValue));
     const expected = Array.from(normalizeAnswer(expectedValue));
@@ -180,8 +186,8 @@
   }
 
   function answerSimilarity(enteredValue, expectedValue) {
-    const entered = normalizeAnswer(enteredValue);
-    const expected = normalizeAnswer(expectedValue);
+    const entered = foldFinnishDiacritics(enteredValue);
+    const expected = foldFinnishDiacritics(expectedValue);
     if (!entered && !expected) return 1;
     const length = Math.max(Array.from(entered).length, Array.from(expected).length);
     if (!length) return 0;
@@ -196,6 +202,7 @@
         accepted: false,
         exact: false,
         fuzzy: false,
+        diacriticAdjusted: false,
         similarity: 0,
         entered,
         expected: candidates[0] || '',
@@ -206,18 +213,36 @@
     let best = null;
     for (const expected of candidates) {
       const alignment = alignAnswers(entered, expected);
-      const length = Math.max(Array.from(entered).length, Array.from(expected).length);
-      const similarity = length ? Math.max(0, 1 - (alignment.distance / length)) : 1;
-      const candidate = { expected, similarity, operations: alignment.operations };
-      if (!best || candidate.similarity > best.similarity) best = candidate;
+      const foldedEntered = foldFinnishDiacritics(entered);
+      const foldedExpected = foldFinnishDiacritics(expected);
+      const foldedAlignment = alignAnswers(foldedEntered, foldedExpected);
+      const length = Math.max(Array.from(foldedEntered).length, Array.from(foldedExpected).length);
+      const similarity = length ? Math.max(0, 1 - (foldedAlignment.distance / length)) : 1;
+      const rawLength = Math.max(Array.from(entered).length, Array.from(expected).length);
+      const rawSimilarity = rawLength ? Math.max(0, 1 - (alignment.distance / rawLength)) : 1;
+      const candidate = {
+        expected,
+        similarity,
+        rawSimilarity,
+        operations: alignment.operations,
+        diacriticAdjusted: alignment.distance !== foldedAlignment.distance,
+      };
+      if (
+        !best
+        || candidate.similarity > best.similarity
+        || (candidate.similarity === best.similarity && candidate.rawSimilarity > best.rawSimilarity)
+      ) {
+        best = candidate;
+      }
     }
 
-    const exact = best.similarity === 1;
+    const exact = entered === best.expected;
     const accepted = exact || best.similarity >= 0.8;
     return {
       accepted,
       exact,
       fuzzy: accepted && !exact,
+      diacriticAdjusted: accepted && best.diacriticAdjusted,
       similarity: best.similarity,
       entered,
       expected: best.expected,
@@ -238,7 +263,7 @@
     return new Intl.NumberFormat('fa-IR').format(value);
   }
 
-  function supportsSpeech(windowObject) {
+  function speechApiAvailable(windowObject) {
     return Boolean(
       windowObject
       && windowObject.speechSynthesis
@@ -247,11 +272,56 @@
     );
   }
 
+  function findFinnishVoice(windowObject) {
+    if (!speechApiAvailable(windowObject) || typeof windowObject.speechSynthesis.getVoices !== 'function') return null;
+    let voices = [];
+    try {
+      voices = windowObject.speechSynthesis.getVoices() || [];
+    } catch {
+      return null;
+    }
+    return voices
+      .filter((voice) => /^fi(?:-|$)/i.test(String(voice && voice.lang || '')))
+      .sort((left, right) => Number(Boolean(right.localService)) - Number(Boolean(left.localService)))[0] || null;
+  }
+
+  function finnishSpeechStatus(windowObject) {
+    if (!speechApiAvailable(windowObject)) return { state: 'unsupported', voice: null };
+    if (typeof windowObject.speechSynthesis.getVoices !== 'function') return { state: 'unsupported', voice: null };
+    let voices = [];
+    try {
+      voices = windowObject.speechSynthesis.getVoices() || [];
+    } catch {
+      return { state: 'unsupported', voice: null };
+    }
+    if (!voices.length) return { state: 'loading', voice: null };
+    const voice = findFinnishVoice(windowObject);
+    return voice ? { state: 'ready', voice } : { state: 'missing', voice: null };
+  }
+
+  function speechSettingsGuide(windowObject) {
+    const userAgent = String(windowObject?.navigator?.userAgent || '');
+    if (/Windows/i.test(userAgent)) {
+      return 'در Windows به Settings → Time & language → Language & region برو، Finnish را اضافه کن و در Language options بخش Text-to-speech را نصب کن. راه دیگر: Win+Ctrl+N → Add legacy voices → Add voices → Finnish. سپس مرورگر را کامل ببند و دوباره باز کن.';
+    }
+    if (/Macintosh|Mac OS X/i.test(userAgent)) {
+      return 'در macOS به System Settings → Accessibility → Read & Speak برو، کنار System voice صداهای بیشتر را باز کن و یک صدای Finnish را دانلود کن. سپس مرورگر را دوباره باز کن.';
+    }
+    return 'در تنظیمات Text-to-Speech دستگاه، یک صدای Finnish / fi-FI را نصب یا فعال کن و بعد مرورگر را دوباره باز کن.';
+  }
+
+  function supportsSpeech(windowObject) {
+    return finnishSpeechStatus(windowObject).state === 'ready';
+  }
+
   function playSpeech(windowObject, text) {
-    if (!text || !supportsSpeech(windowObject)) return false;
+    if (!text) return false;
+    const status = finnishSpeechStatus(windowObject);
+    if (status.state !== 'ready' || !status.voice) return false;
     windowObject.speechSynthesis.cancel();
     const utterance = new windowObject.SpeechSynthesisUtterance(text);
-    utterance.lang = 'fi-FI';
+    utterance.voice = status.voice;
+    utterance.lang = status.voice.lang || 'fi-FI';
     utterance.rate = 0.82;
     windowObject.speechSynthesis.speak(utterance);
     return true;
