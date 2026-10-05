@@ -2049,8 +2049,8 @@
         "s4-tama-on-keittio"
       ],
       "listening_targets": [
-        "s4-huone",
-        "s4-tama-on-keittio"
+        "s4-keittio",
+        "s4-olen-kotona"
       ]
     },
     {
@@ -2202,8 +2202,8 @@
         "s4-missa-puhelin"
       ],
       "listening_targets": [
-        "s4-missa",
-        "s4-missa-puhelin"
+        "s4-poyta",
+        "s4-se-on-huoneessa"
       ]
     },
     {
@@ -2345,8 +2345,8 @@
         "s4-tama-on-kahvia"
       ],
       "listening_targets": [
-        "s4-kahvi",
-        "s4-tama-on-kahvia"
+        "s4-maito",
+        "s4-tama-on-leipa"
       ]
     },
     {
@@ -2481,8 +2481,8 @@
         "s4-haluan-kahvia"
       ],
       "listening_targets": [
-        "s4-nalka",
-        "s4-haluan-kahvia"
+        "s4-haluan-vetta",
+        "s4-minulla-on-nalka"
       ]
     },
     {
@@ -2639,8 +2639,8 @@
         "s4-yksi-kahvi-kiitos"
       ],
       "listening_targets": [
-        "s4-yksi",
-        "s4-yksi-kahvi-kiitos"
+        "s4-yksi-kahvi-kiitos",
+        "s4-kiitos"
       ]
     },
     {
@@ -2781,8 +2781,8 @@
         "s4-tama-on-koira"
       ],
       "listening_targets": [
-        "s4-koira",
-        "s4-tama-on-koira"
+        "s4-lintu",
+        "s4-se-on-kissa"
       ]
     },
     {
@@ -2922,7 +2922,7 @@
       ],
       "listening_targets": [
         "s4-lehma",
-        "s4-karhu-on-elain"
+        "s4-lehma-on-elain"
       ]
     },
     {
@@ -3064,7 +3064,7 @@
       ],
       "listening_targets": [
         "s4-punainen",
-        "s4-koira-on-iso"
+        "s4-kissa-on-pieni"
       ]
     },
     {
@@ -3223,8 +3223,8 @@
         "s4-tama-on-minun-kotini"
       ],
       "listening_targets": [
-        "s4-keittiossa-on-frame",
-        "s4-tama-on-minun-kotini"
+        "s4-world-2",
+        "s4-world-5"
       ]
     },
     {
@@ -3390,8 +3390,8 @@
         "s4-final-hei"
       ],
       "listening_targets": [
-        "s4-final-name",
-        "s4-final-hei"
+        "s4-final-hei",
+        "s4-final-description"
       ]
     }
   ]
