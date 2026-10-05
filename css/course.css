@@ -1119,6 +1119,84 @@
   gap: 9px;
 }
 
+.course-sentence-answer-box {
+  min-height: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  margin: 4px 0 14px;
+  padding: 14px;
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.course-sentence-answer-placeholder {
+  align-self: center;
+  width: 100%;
+  color: var(--muted);
+  text-align: center;
+}
+
+.course-sentence-token-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  min-height: 48px;
+  margin-bottom: 14px;
+}
+
+.course-sentence-source-token,
+.course-sentence-selected-token {
+  min-height: 44px;
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.course-sentence-selected-token {
+  border-color: var(--primary);
+  background: rgba(34,87,214,.08);
+}
+
+.course-sentence-source-token:hover:not(:disabled),
+.course-sentence-selected-token:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+
+.course-sentence-submit {
+  align-self: center;
+  min-width: 150px;
+}
+
+.course-audio-unavailable {
+  margin: 10px 0 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  line-height: 1.75;
+}
+
+.course-audio-unavailable strong,
+.course-audio-unavailable p {
+  display: block;
+  margin: 0;
+}
+
+.course-audio-unavailable p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.course-audio-retry {
+  margin-top: 10px;
+}
+
 .course-sequence-review,
 .course-guided-writing-review {
   display: grid;
