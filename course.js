@@ -396,6 +396,11 @@
       item: recognitionTargetId,
       options: listeningOptionsFor(section, lesson, recognitionTargetId),
     };
+    lesson.activities = lesson.activities.map((activity, index) => (
+      index !== recognitionIndex && activity.type === 'choice' && activity.mode === 'listen'
+        ? { ...activity, mode: 'finnish' }
+        : activity
+    ));
 
     let dictationIndex = lesson.activities.findLastIndex((activity, index) => (
       index !== recognitionIndex
