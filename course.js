@@ -956,9 +956,10 @@
       });
       submit.disabled = true;
 
-      function renderSelection() {
+      function renderSelection(focusRequest = null) {
         answerBox.replaceChildren();
         tokenPool.replaceChildren();
+        const sourceButtons = new Map();
 
         if (!ordered.length) {
           const placeholder = document.createElement('span');
@@ -971,7 +972,7 @@
             const selected = createButton(token, 'course-sentence-selected-token', () => {
               if (answered) return;
               ordered.splice(selectedPosition, 1);
-              renderSelection();
+              renderSelection({ type: 'source', index: tokenIndex });
             });
             selected.lang = 'fi';
             selected.dir = 'ltr';
@@ -986,16 +987,23 @@
           const button = createButton(token, 'course-sentence-source-token', () => {
             if (answered || ordered.includes(index)) return;
             ordered.push(index);
-            renderSelection();
+            const remainingIndex = activity.tokens.findIndex((_, candidateIndex) => !ordered.includes(candidateIndex));
+            renderSelection(remainingIndex >= 0 ? { type: 'source', index: remainingIndex } : { type: 'submit' });
           });
           button.lang = 'fi';
           button.dir = 'ltr';
           button.disabled = answered;
           button.setAttribute('aria-label', `افزودن ${token} به جمله`);
+          sourceButtons.set(index, button);
           tokenPool.append(button);
         });
 
         submit.disabled = answered || ordered.length !== activity.tokens.length;
+        if (focusRequest?.type === 'source') {
+          sourceButtons.get(focusRequest.index)?.focus();
+        } else if (focusRequest?.type === 'submit' && !submit.disabled) {
+          submit.focus();
+        }
       }
 
       renderSelection();
@@ -1088,6 +1096,10 @@
         || (activity.type === 'choice' && activity.mode === 'listen')
       )
     );
+  }
+
+  function shouldRefreshSpeechActivity(activity, answered) {
+    return activityNeedsFinnishSpeech(activity) && !answered;
   }
 
   function initializeBrowser(windowObject) {
@@ -1213,7 +1225,7 @@
 
       if (status.state === 'loading') {
         title.textContent = 'در حال بررسی صدای فنلاندی دستگاه…';
-        detail.textContent = 'فهرست صداهای مرورگر هنوز آماده نشده است. اگر چند لحظه بعد صدا بارگذاری نشد، دوباره بررسی کن.';
+        detail.textContent = `فهرست صداهای مرورگر هنوز آماده نشده است. اگر این وضعیت ادامه پیدا کرد، احتمالاً voice فنلاندی نصب نیست. ${speechSettingsGuide(windowObject)}`;
       } else if (status.state === 'missing') {
         title.textContent = 'صدای فنلاندی روی این دستگاه پیدا نشد.';
         detail.textContent = `برای جلوگیری از تلفظ اشتباه، این تمرین صوتی پخش نمی‌شود. ${speechSettingsGuide(windowObject)}`;
@@ -2379,7 +2391,7 @@
       windowObject.speechSynthesis.addEventListener('voiceschanged', () => {
         if (!activeLesson) return;
         const currentActivity = activeLesson.activities[activityIndex];
-        if (activityNeedsFinnishSpeech(currentActivity)) renderActivity();
+        if (shouldRefreshSpeechActivity(currentActivity, answered)) renderActivity();
       });
     }
 
@@ -2469,6 +2481,7 @@
     supportsSpeech,
     playSpeech,
     activityNeedsFinnishSpeech,
+    shouldRefreshSpeechActivity,
     STRUCTURED_PRACTICE_TYPES,
     injectStructuredPractice,
     renderStructuredPracticeActivity,
