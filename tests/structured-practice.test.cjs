@@ -331,22 +331,32 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
     assert.deepEqual(results, []);
 
     tokenPool.children[2].click();
+    assert.equal(tokenPool.children[0].textContent, 'on');
+    assert.equal(tokenPool.children[0].focused, true);
+
     tokenPool.children[0].click();
+    assert.equal(tokenPool.children[0].textContent, 'eläin.');
+    assert.equal(tokenPool.children[0].focused, true);
+
     tokenPool.children[0].click();
 
     assert.equal(answerBox.children.length, 3);
     assert.equal(tokenPool.children.length, 0);
     assert.equal(submit.disabled, false);
+    assert.equal(submit.focused, true);
     assert.deepEqual(results, []);
 
     answerBox.children[2].click();
     assert.equal(answerBox.children.length, 2);
     assert.equal(tokenPool.children.length, 1);
+    assert.equal(tokenPool.children[0].textContent, 'eläin.');
+    assert.equal(tokenPool.children[0].focused, true);
     assert.equal(submit.disabled, true);
     assert.deepEqual(results, []);
 
     tokenPool.children[0].click();
     assert.equal(submit.disabled, false);
+    assert.equal(submit.focused, true);
     submit.click();
 
     assert.deepEqual(results, [true]);
