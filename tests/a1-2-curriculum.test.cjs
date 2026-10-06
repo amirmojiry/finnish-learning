@@ -138,6 +138,14 @@ test('each A1.2 section ends with a mixed checkpoint and no new lexical targets'
   }
 });
 
+test('complete shopping exchange explicitly recycles and exposes the greeting frame', () => {
+  const lesson = a12Lessons.find((entry) => entry.id === 'a1.2-s1-l09');
+  assert.ok(lesson, 'Missing complete shopping exchange lesson');
+  assert.ok(lesson.recycle_from.includes('a1.1-s1-l01'));
+  assert.ok(lesson.expressions.includes('Hei!'));
+  assert.match(lesson.can_do_en, /greeting/i);
+});
+
 test('A1.2 final checkpoint samples all earlier section checkpoints', () => {
   const finalCheckpoint = a12.sections[3].lessons[9];
   for (const dependency of ['a1.2-s1-l10', 'a1.2-s2-l10', 'a1.2-s3-l10']) {
