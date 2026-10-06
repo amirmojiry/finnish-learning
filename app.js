@@ -406,6 +406,7 @@ async function init() {
     state.wordMap = new Map(state.words.map((word) => [normalize(word.word), word]));
     populatePosFilter();
     routeFromHash();
+    window.dispatchEvent(new CustomEvent('finnish-word-review-ready'));
   } catch (error) {
     console.error(error);
     if (els.practiceError) {
