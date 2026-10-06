@@ -1,0 +1,252 @@
+[
+  {
+    "word": "tulla",
+    "translation_fa": "آمدن؛ شدن",
+    "example_fi": "Haluan tulla mukaan.",
+    "example_fa": "می‌توانی فردا بیایی.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "tulla",
+    "example_2_fi": "Voit tulla huomenna."
+  },
+  {
+    "word": "miljardia",
+    "translation_fa": "میلیارد؛ چند میلیارد",
+    "example_fi": "Hanke maksaa kaksi miljardia euroa.",
+    "example_fa": "در جهان میلیاردها نفر بیشتر از گذشته زندگی می‌کنند.",
+    "part_of_speech": "Numeral",
+    "part_of_speech_fa": "عدد",
+    "lemma": "miljardi",
+    "example_2_fi": "Maailmassa on miljardia ihmistä enemmän kuin ennen."
+  },
+  {
+    "word": "uudelleen",
+    "translation_fa": "دوباره؛ از نو",
+    "example_fi": "Yritä uudelleen myöhemmin.",
+    "example_fa": "پیام را دوباره خواندم.",
+    "part_of_speech": "Adverb",
+    "part_of_speech_fa": "قید",
+    "lemma": "uudelleen",
+    "example_2_fi": "Luin viestin uudelleen."
+  },
+  {
+    "word": "ihmistä",
+    "translation_fa": "انسان؛ نفر؛ مردم",
+    "example_fi": "Huoneessa on kymmenen ihmistä.",
+    "example_fa": "در خیابان افراد زیادی دیدم.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "ihminen",
+    "example_2_fi": "Näin kadulla monta ihmistä."
+  },
+  {
+    "word": "vuosina",
+    "translation_fa": "در سال‌ها؛ طی سال‌های",
+    "example_fi": "Asuin Suomessa vuosina 2020–2024.",
+    "example_fa": "او در سال‌های جوانی در خارج از کشور درس خواند.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "vuosi",
+    "example_2_fi": "Hän opiskeli ulkomailla nuorina vuosina."
+  },
+  {
+    "word": "kokonaan",
+    "translation_fa": "کاملاً؛ به‌طور کامل",
+    "example_fi": "Tehtävä on kokonaan valmis.",
+    "example_fa": "کتاب را به‌طور کامل خواندیم.",
+    "part_of_speech": "Adverb",
+    "part_of_speech_fa": "قید",
+    "lemma": "kokonaan",
+    "example_2_fi": "Luimme kirjan kokonaan."
+  },
+  {
+    "word": "sanoa",
+    "translation_fa": "گفتن",
+    "example_fi": "Haluan sanoa jotain.",
+    "example_fa": "می‌توانی آن را دوباره بگویی؟",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "sanoa",
+    "example_2_fi": "Voitko sanoa sen uudestaan?"
+  },
+  {
+    "word": "maksaa",
+    "translation_fa": "پرداخت کردن؛ قیمت داشتن",
+    "example_fi": "Paljonko tämä maksaa?",
+    "example_fa": "می‌خواهم با کارت پرداخت کنم.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "maksaa",
+    "example_2_fi": "Haluan maksaa kortilla."
+  },
+  {
+    "word": "kävi",
+    "translation_fa": "رفت؛ سر زد؛ اتفاق افتاد",
+    "example_fi": "Hän kävi eilen kaupassa.",
+    "example_fa": "آنجا چه اتفاقی افتاد؟",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "käydä",
+    "example_2_fi": "Mitä siellä kävi?"
+  },
+  {
+    "word": "paitsi",
+    "translation_fa": "به‌جز؛ علاوه بر",
+    "example_fi": "Kaikki tulivat paitsi Kari.",
+    "example_fa": "همهٔ میوه‌ها را دوست دارم به‌جز موز.",
+    "part_of_speech": "Adposition",
+    "part_of_speech_fa": "حرف اضافه",
+    "lemma": "paitsi",
+    "example_2_fi": "Pidän kaikista hedelmistä paitsi banaaneista."
+  },
+  {
+    "word": "ihmisiä",
+    "translation_fa": "انسان‌ها؛ مردم",
+    "example_fi": "Puistossa on paljon ihmisiä.",
+    "example_fa": "در دوره با افراد جدیدی آشنا شدم.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "ihminen",
+    "example_2_fi": "Tapasin uusia ihmisiä kurssilla."
+  },
+  {
+    "word": "työtä",
+    "translation_fa": "کار؛ مقداری کار",
+    "example_fi": "Minulla on paljon työtä.",
+    "example_fa": "دنبال کار جدید می‌گردم.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "työ",
+    "example_2_fi": "Etsin uutta työtä."
+  },
+  {
+    "word": "miljoonan",
+    "translation_fa": "یک میلیون؛ متعلق به میلیون",
+    "example_fi": "Kaupungissa asuu yli miljoonan ihmisen väestö.",
+    "example_fa": "شرکت یک سرمایه‌گذاری یک‌میلیون یورویی انجام داد.",
+    "part_of_speech": "Numeral",
+    "part_of_speech_fa": "عدد",
+    "lemma": "miljoona",
+    "example_2_fi": "Yritys teki miljoonan euron investoinnin."
+  },
+  {
+    "word": "pieni",
+    "translation_fa": "کوچک",
+    "example_fi": "Asun pienessä, mutta tämä huone on pieni.",
+    "example_fa": "به اندازهٔ کوچک نیاز دارم.",
+    "part_of_speech": "Adjective",
+    "part_of_speech_fa": "صفت",
+    "lemma": "pieni",
+    "example_2_fi": "Tarvitsen pieni koko."
+  },
+  {
+    "word": "saavat",
+    "translation_fa": "می‌گیرند؛ دریافت می‌کنند؛ اجازه دارند",
+    "example_fi": "Opiskelijat saavat tehtävän tänään.",
+    "example_fa": "کودکان اجازه دارند بیرون بازی کنند.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "saada",
+    "example_2_fi": "Lapset saavat leikkiä ulkona."
+  },
+  {
+    "word": "emme",
+    "translation_fa": "ما ... نمی‌کنیم / نیستیم",
+    "example_fi": "Emme mene tänään ulos.",
+    "example_fa": "هنوز آماده نیستیم.",
+    "part_of_speech": "negative verb",
+    "part_of_speech_fa": "فعل منفی",
+    "lemma": "ei",
+    "example_2_fi": "Emme ole vielä valmiita."
+  },
+  {
+    "word": "ainoa",
+    "translation_fa": "تنها؛ یگانه",
+    "example_fi": "Tämä on ainoa vaihtoehto.",
+    "example_fa": "او تنها دانشجوی اینجاست.",
+    "part_of_speech": "Adjective",
+    "part_of_speech_fa": "صفت",
+    "lemma": "ainoa",
+    "example_2_fi": "Hän on ainoa opiskelija täällä."
+  },
+  {
+    "word": "miehet",
+    "translation_fa": "مردان",
+    "example_fi": "Miehet odottavat bussia.",
+    "example_fa": "آن مردان با هم کار می‌کنند.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "mies",
+    "example_2_fi": "Nuo miehet työskentelevät yhdessä."
+  },
+  {
+    "word": "saksan",
+    "translation_fa": "آلمان؛ آلمانی؛ متعلق به آلمان یا زبان آلمانی",
+    "example_fi": "Saksan pääkaupunki on Berliini.",
+    "example_fa": "زبان آلمانی می‌خوانم.",
+    "part_of_speech": "Proper noun",
+    "part_of_speech_fa": "اسم خاص",
+    "lemma": "Saksa",
+    "example_2_fi": "Opiskelen saksan kieltä."
+  },
+  {
+    "word": "kai",
+    "translation_fa": "احتمالاً؛ گویا؛ مگر نه",
+    "example_fi": "Hän tulee kai huomenna.",
+    "example_fa": "این احتمالاً اتوبوس درست است.",
+    "part_of_speech": "Adverb",
+    "part_of_speech_fa": "قید",
+    "lemma": "kai",
+    "example_2_fi": "Tämä on kai oikea bussi."
+  },
+  {
+    "word": "löytyy",
+    "translation_fa": "پیدا می‌شود؛ وجود دارد",
+    "example_fi": "Apteekki löytyy keskustasta.",
+    "example_fa": "اطلاعات در وب‌سایت پیدا می‌شود.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "löytyä",
+    "example_2_fi": "Tieto löytyy verkkosivulta."
+  },
+  {
+    "word": "tehdään",
+    "translation_fa": "انجام می‌شود؛ انجام می‌دهیم",
+    "example_fi": "Tämä tehdään yhdessä.",
+    "example_fa": "فردا چه کار کنیم؟",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "tehdä",
+    "example_2_fi": "Mitä tehdään huomenna?"
+  },
+  {
+    "word": "tuntuu",
+    "translation_fa": "به نظر می‌رسد؛ احساس می‌شود",
+    "example_fi": "Tämä tuntuu hyvältä.",
+    "example_fa": "تکلیف سخت به نظر می‌رسد.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "tuntua",
+    "example_2_fi": "Tehtävä tuntuu vaikealta."
+  },
+  {
+    "word": "puolesta",
+    "translation_fa": "از طرفِ؛ به نفعِ",
+    "example_fi": "Puhun ryhmän puolesta.",
+    "example_fa": "از طرف من تشکر کن.",
+    "part_of_speech": "Adposition",
+    "part_of_speech_fa": "پس‌اضافه",
+    "lemma": "puolesta",
+    "example_2_fi": "Kiitos minun puolesta."
+  },
+  {
+    "word": "minulla",
+    "translation_fa": "من دارم؛ نزد من",
+    "example_fi": "Minulla on aikaa huomenna.",
+    "example_fa": "پول نقد ندارم.",
+    "part_of_speech": "Pronoun",
+    "part_of_speech_fa": "ضمیر",
+    "lemma": "minä",
+    "example_2_fi": "Minulla ei ole käteistä."
+  }
+]
