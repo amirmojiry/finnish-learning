@@ -195,3 +195,21 @@ test('source-code comments do not contain Persian characters', () => {
   walk(root);
   assert.deepEqual(violations, [], `Persian source comments found: ${violations.join(', ')}`);
 });
+
+
+test('About page describes the current structured learning experience', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const about = html.match(/<div id="about-view"[\s\S]*?<div id="settings-view"/)?.[0] || '';
+
+  assert.match(about, /دورهٔ ساختاریافتهٔ فنلاندی برای فارسی‌زبانان/);
+  assert.match(about, /۴۰ درس/);
+  assert.match(about, /۱۵ فعالیت/);
+  assert.match(about, /۳۰۰/);
+  assert.match(about, /تمرین واژه/);
+  assert.match(about, /مرور هوشمند/);
+  assert.match(about, /صدای واقعی فنلاندی/);
+  assert.match(about, /Kielipankki/);
+  assert.match(about, /1\.18\.1/);
+  assert.doesNotMatch(about, /تمرین ساده و روزانه واژگان/);
+  assert.doesNotMatch(about, /سه تمرین|۳ نوع تمرین/);
+});
