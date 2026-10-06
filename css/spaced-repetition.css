@@ -1,4 +1,4 @@
-.profile-review-slot {
+.word-practice-review-slot {
   margin-bottom: 20px;
 }
 
@@ -248,7 +248,7 @@
 }
 
 @media (max-width: 620px) {
-  .profile-review-slot {
+  .word-practice-review-slot {
     margin-bottom: 14px;
   }
 

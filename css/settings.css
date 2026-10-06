@@ -318,3 +318,50 @@ html[data-theme="dark"] .word-detail-speak {
     font-size: .7rem;
   }
 }
+
+
+.speech-settings-card {
+  padding: 15px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-soft);
+}
+
+.speech-settings-card strong,
+.speech-settings-card p {
+  display: block;
+  margin: 0;
+}
+
+.speech-settings-card[data-state="ready"] {
+  border-color: color-mix(in srgb, var(--success) 55%, var(--border));
+  background: color-mix(in srgb, var(--success) 8%, var(--surface));
+}
+
+.speech-settings-card[data-state="missing"],
+.speech-settings-card[data-state="unsupported"] {
+  border-color: color-mix(in srgb, var(--danger) 42%, var(--border));
+}
+
+#finnish-speech-voice {
+  margin-top: 6px;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+#finnish-speech-guide {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.75;
+}
+
+#finnish-speech-retry {
+  margin-top: 12px;
+}
+
+@media (max-width: 620px) {
+  .speech-settings-card {
+    padding: 13px;
+  }
+}

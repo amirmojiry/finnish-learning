@@ -1,46 +1,463 @@
-const MODES={TRANSLATION:'translation',CLOZE_CHOICE:'cloze-choice',CLOZE_INPUT:'cloze-input'};
-const FINNISH_LETTERS=[...'abcdefghijklmnopqrstuvwxyzåäö'];
-if(!location.hash)history.replaceState(null,'','#course');
-const state={words:[],wordMap:new Map(),current:null,currentExample:null,focusedRank:null,answered:false,mode:localStorage.getItem('fiQuizMode')||MODES.TRANSLATION,view:'course',detailWord:null,revealedHintPositions:new Set(),correct:Number(localStorage.getItem('fiQuizCorrect')||0),total:Number(localStorage.getItem('fiQuizTotal')||0)};
-const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
-const els={home:$('#home-view'),dictionary:$('#dictionary-view'),mobileTitle:$('#mobile-view-title'),viewLinks:$$('[data-view-link]'),loading:$('#loading'),error:$('#error'),content:$('#quiz-content'),questionLabel:$('#quiz-title'),wordRow:$('#word-row'),word:$('#word'),rank:$('#rank'),sentencePanel:$('#sentence-panel'),clozeSentence:$('#cloze-sentence'),clozeTranslation:$('#cloze-translation'),options:$('#options'),typingForm:$('#typing-form'),typedAnswer:$('#typed-answer'),letterKeyboard:$('#letter-keyboard'),keyboardBackspace:$('#keyboard-backspace'),keyboardClear:$('#keyboard-clear'),hintButtons:$$('.hint-button'),hintPattern:$('#hint-pattern'),modeButtons:$$('.mode-button'),feedback:$('#feedback'),feedbackBackdrop:$('#feedback-backdrop'),feedbackStatusIcon:$('#feedback-status-icon'),answerEffect:$('#answer-effect'),result:$('#result-message'),exampleFi:$('#example-fi'),exampleFa:$('#example-fa'),next:$('#next-word'),correctCount:$('#correct-count'),totalCount:$('#total-count'),reset:$('#reset-score'),speak:$('#speak-word'),dictionaryListPanel:$('#dictionary-list-panel'),dictionaryDetail:$('#dictionary-detail'),dictionarySearch:$('#dictionary-search'),dictionarySort:$('#dictionary-sort'),dictionaryPosFilter:$('#dictionary-pos-filter'),dictionaryList:$('#dictionary-list'),dictionaryEmpty:$('#dictionary-empty'),dictionaryCount:$('#dictionary-count'),dictionaryBack:$('#dictionary-back'),detailWord:$('#detail-word'),detailTranslation:$('#detail-translation'),detailRank:$('#detail-rank'),detailPos:$('#detail-pos'),detailLemma:$('#detail-lemma'),detailExamples:$('#detail-examples'),detailSpeak:$('#detail-speak'),practiceButtons:$$('[data-practice-mode]')};
-const faNumber=n=>new Intl.NumberFormat('fa-IR').format(n);const normalize=v=>v.trim().normalize('NFC').toLocaleLowerCase('fi-FI');const wordLength=w=>[...w].length;
-function updateScore(){els.correctCount.textContent=faNumber(state.correct);els.totalCount.textContent=faNumber(state.total);localStorage.setItem('fiQuizCorrect',state.correct);localStorage.setItem('fiQuizTotal',state.total)}
-function shuffle(a){const c=[...a];for(let i=c.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[c[i],c[j]]=[c[j],c[i]]}return c}
-function getExamples(w){return[{fi:w.example_fi,fa:w.example_fa},{fi:w.example_2_fi,fa:w.example_2_fa}].filter(x=>x.fi&&x.fa)}
-function randomExample(w){const a=getExamples(w);return a[Math.floor(Math.random()*a.length)]}
-function getRandomWord(except=null){if(state.focusedRank){const w=state.words.find(x=>x.rank===state.focusedRank);state.focusedRank=null;if(w)return w}const p=state.words.filter(x=>x.rank!==except);return p[Math.floor(Math.random()*p.length)]}
-function makeTranslationOptions(w){return shuffle([w,...shuffle(state.words.filter(x=>x.rank!==w.rank)).slice(0,3)])}
-function makeFinnishOptions(w){const len=wordLength(w.word);const c=shuffle(state.words.filter(x=>x.rank!==w.rank)).sort((a,b)=>Math.abs(wordLength(a.word)-len)-Math.abs(wordLength(b.word)-len));return shuffle([w,...c.slice(0,3)])}
-function escapeRegExp(v){return v.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
-function makeBlank(w){return '＿'.repeat(Math.max(3,wordLength(w)))}
-function updateModeButtons(){els.modeButtons.forEach(b=>{const on=b.dataset.mode===state.mode;b.classList.toggle('active',on);b.setAttribute('aria-selected',on)})}
-function resetHints(){state.revealedHintPositions=new Set();els.hintPattern.hidden=true;els.hintPattern.textContent='';els.hintButtons.forEach((b,i)=>{b.disabled=i!==0;b.classList.remove('used')})}
-function revealHint(i){if(state.answered||state.mode!==MODES.CLOZE_INPUT)return;const letters=[...state.current.word];const pos=i===0?0:i===1?letters.length-1:Math.min(1,letters.length-1);state.revealedHintPositions.add(pos);els.hintPattern.textContent=letters.map((l,n)=>state.revealedHintPositions.has(n)?l:'ـ').join(' ');els.hintPattern.hidden=false;els.hintButtons[i].disabled=true;els.hintButtons[i].classList.add('used');if(els.hintButtons[i+1])els.hintButtons[i+1].disabled=false}
-function optionSize(t){const n=[...t.trim()].length;return n<=10?'option-text-short':n<=22?'option-text-medium':n<=42?'option-text-long':'option-text-extra-long'}
-function renderChoiceOptions(options,label,isFinnish=false){els.options.replaceChildren();els.options.hidden=false;options.forEach(w=>{const text=label(w),b=document.createElement('button');b.type='button';b.className=['option',isFinnish?'finnish-option':'',optionSize(text)].filter(Boolean).join(' ');b.textContent=text;b.dataset.rank=w.rank;b.addEventListener('click',()=>answerChoice(b,w));els.options.append(b)})}
-function makeLetterKeyboard(word){const letters=[...new Set([...normalize(word)])];const count=Math.max(10,letters.length);const extras=shuffle(FINNISH_LETTERS.filter(l=>!letters.includes(l))).slice(0,count-letters.length);return shuffle([...letters,...extras])}
-function setKeyboardDisabled(v){els.letterKeyboard.querySelectorAll('.letter-key').forEach(b=>b.disabled=v);els.keyboardBackspace.disabled=v;els.keyboardClear.disabled=v}
-function moveCaretEnd(){const n=els.typedAnswer.value.length;els.typedAnswer.setSelectionRange(n,n)}
-function insertLetter(l){if(state.answered||state.mode!==MODES.CLOZE_INPUT)return;els.typedAnswer.value+=l;moveCaretEnd()}
-function removeLastLetter(){if(state.answered)return;const a=[...els.typedAnswer.value];a.pop();els.typedAnswer.value=a.join('');moveCaretEnd()}
-function clearTyped(){if(state.answered)return;els.typedAnswer.value='';moveCaretEnd()}
-function renderLetterKeyboard(word){els.letterKeyboard.replaceChildren();makeLetterKeyboard(word).forEach(l=>{const b=document.createElement('button');b.type='button';b.className='letter-key';b.textContent=l;b.addEventListener('click',()=>{insertLetter(l);b.classList.add('pressed');setTimeout(()=>b.classList.remove('pressed'),120)});els.letterKeyboard.append(b)});setKeyboardDisabled(false)}
-function hideFeedback(){els.feedback.hidden=true;els.feedbackBackdrop.hidden=true;els.feedbackStatusIcon.className='feedback-status-icon'}
-function playEffect(ok){const c=ok?'correct':'wrong';els.answerEffect.className=`answer-effect ${c}`;void els.answerEffect.offsetWidth;els.answerEffect.classList.add('show');setTimeout(()=>els.answerEffect.className='answer-effect',720)}
-function makeWordLink(word,text=word.word){const b=document.createElement('button');b.type='button';b.className='dictionary-word-link';b.textContent=text;b.dataset.rank=word.rank;b.addEventListener('click',()=>openWordDetail(word));return b}
-function renderLinkedSentence(container,sentence,blankWord=null){container.replaceChildren();const parts=sentence.split(/([\p{L}\p{N}]+)/gu);let blanked=false;parts.forEach(part=>{if(!part)return;const key=normalize(part);if(blankWord&&!blanked&&key===normalize(blankWord.word)){const span=document.createElement('span');span.className='cloze-blank';span.textContent=makeBlank(blankWord.word);container.append(span);blanked=true;return}const found=state.wordMap.get(key);container.append(found?makeWordLink(found,part):document.createTextNode(part))})}
-function renderQuestion(){const prev=state.current?.rank??null;state.current=getRandomWord(prev);state.currentExample=randomExample(state.current);state.answered=false;hideFeedback();els.typingForm.hidden=true;els.options.hidden=true;els.options.replaceChildren();els.typedAnswer.blur();els.typedAnswer.value='';els.typedAnswer.disabled=false;els.typedAnswer.classList.remove('correct','wrong');els.letterKeyboard.replaceChildren();resetHints();updateModeButtons();if(state.mode===MODES.TRANSLATION){els.questionLabel.textContent='ترجمه این واژه چیست؟';els.wordRow.hidden=false;els.sentencePanel.hidden=true;els.word.textContent=state.current.word;els.rank.textContent=`#${state.current.rank}`;renderChoiceOptions(makeTranslationOptions(state.current),x=>x.translation_fa);return}els.wordRow.hidden=true;els.sentencePanel.hidden=false;renderLinkedSentence(els.clozeSentence,state.currentExample.fi,state.current);els.clozeTranslation.textContent=state.currentExample.fa;if(state.mode===MODES.CLOZE_CHOICE){els.questionLabel.textContent='کدام واژه جای خالی را کامل می‌کند؟';renderChoiceOptions(makeFinnishOptions(state.current),x=>x.word,true);return}els.questionLabel.textContent='واژه مناسب را در جای خالی بنویس.';els.typingForm.hidden=false;renderLetterKeyboard(state.current.word)}
-function finishAnswer(ok){state.answered=true;state.total++;if(ok)state.correct++;const c=ok?'correct':'wrong';els.result.textContent=ok?'آفرین! پاسخ درست است.':state.mode===MODES.TRANSLATION?`پاسخ درست: ${state.current.translation_fa}`:`پاسخ درست: ${state.current.word} — ${state.current.translation_fa}`;els.result.className=`result-message ${c}`;els.feedbackStatusIcon.className=`feedback-status-icon ${c}`;renderLinkedSentence(els.exampleFi,state.currentExample.fi);els.exampleFa.textContent=state.currentExample.fa;els.feedbackBackdrop.hidden=false;els.feedback.hidden=false;updateScore();playEffect(ok)}
-function answerChoice(button,w){if(state.answered)return;const ok=w.rank===state.current.rank;els.options.querySelectorAll('.option').forEach(b=>{b.disabled=true;if(Number(b.dataset.rank)===state.current.rank)b.classList.add('correct')});if(!ok)button.classList.add('wrong');finishAnswer(ok)}
-function answerTyped(e){e.preventDefault();if(state.answered)return;const a=normalize(els.typedAnswer.value);if(!a)return;const ok=a===normalize(state.current.word);els.typedAnswer.blur();els.typedAnswer.disabled=true;els.typedAnswer.classList.add(ok?'correct':'wrong');els.hintButtons.forEach(b=>b.disabled=true);setKeyboardDisabled(true);finishAnswer(ok)}
-function speak(word){if(!word||!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(word.word||word);u.lang='fi-FI';u.rate=.85;speechSynthesis.speak(u)}
-function showView(view,{updateHash=true}={}){state.view=view;els.home.hidden=view!=='home';els.dictionary.hidden=view!=='dictionary';els.mobileTitle.textContent=view==='home'?'تمرین واژه‌ها':state.detailWord?`واژه: ${state.detailWord.word}`:'واژه‌نامه';els.viewLinks.forEach(a=>{const on=a.dataset.viewLink===view;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});if(view==='dictionary'&&!state.detailWord)renderDictionaryList();if(updateHash)history.replaceState(null,'',view==='home'?'#home':'#dictionary')}
-function populatePosFilter(){const map=new Map();state.words.forEach(w=>map.set(w.part_of_speech_fa||w.part_of_speech,w.part_of_speech_fa||w.part_of_speech));[...map.keys()].sort((a,b)=>a.localeCompare(b,'fa')).forEach(pos=>{const o=document.createElement('option');o.value=pos;o.textContent=pos;els.dictionaryPosFilter.append(o)})}
-function filteredWords(){const q=normalize(els.dictionarySearch.value);const pos=els.dictionaryPosFilter.value;let list=state.words.filter(w=>{const hay=normalize([w.word,w.translation_fa,w.lemma,w.part_of_speech_fa,w.part_of_speech].join(' '));return(!q||hay.includes(q))&&(pos==='all'||(w.part_of_speech_fa||w.part_of_speech)===pos)});if(els.dictionarySort.value==='alphabetical')list.sort((a,b)=>a.word.localeCompare(b.word,'fi'));else list.sort((a,b)=>a.rank-b.rank);return list}
-function renderDictionaryList(){state.detailWord=null;els.dictionaryDetail.hidden=true;els.dictionaryListPanel.hidden=false;els.mobileTitle.textContent='واژه‌نامه';const list=filteredWords();els.dictionaryList.replaceChildren();els.dictionaryCount.textContent=`${faNumber(list.length)} واژه`;els.dictionaryEmpty.hidden=list.length>0;list.forEach(w=>{const b=document.createElement('button');b.type='button';b.className='dictionary-list-item';b.innerHTML=`<span class="dictionary-rank">#${w.rank}</span><span class="dictionary-item-main"><strong class="dictionary-item-word" lang="fi">${w.word}</strong><span class="dictionary-item-translation">${w.translation_fa}</span></span><span class="dictionary-item-pos">${w.part_of_speech_fa||w.part_of_speech}</span>`;b.addEventListener('click',()=>openWordDetail(w));els.dictionaryList.append(b)})}
-function openWordDetail(word){hideFeedback();state.detailWord=word;showView('dictionary');els.dictionaryListPanel.hidden=true;els.dictionaryDetail.hidden=false;els.mobileTitle.textContent=`واژه: ${word.word}`;els.detailWord.textContent=word.word;els.detailTranslation.textContent=word.translation_fa;els.detailRank.textContent=`#${word.rank}`;els.detailPos.textContent=word.part_of_speech_fa||word.part_of_speech;els.detailLemma.textContent=word.lemma;els.detailExamples.replaceChildren();getExamples(word).forEach(ex=>{const d=document.createElement('div');d.className='word-example-card';const p1=document.createElement('p');p1.className='word-example-fi';renderLinkedSentence(p1,ex.fi);const p2=document.createElement('p');p2.className='word-example-fa';p2.textContent=ex.fa;d.append(p1,p2);els.detailExamples.append(d)});history.replaceState(null,'',`#word-${word.rank}`);els.dictionaryDetail.scrollTop=0}
-function startFocusedPractice(mode){if(!state.detailWord)return;state.mode=mode;state.focusedRank=state.detailWord.rank;localStorage.setItem('fiQuizMode',mode);showView('home');renderQuestion()}
-function routeFromHash(){const h=location.hash;if(h==='#course'||h.startsWith('#course-'))return;if(h.startsWith('#word-')){if(state.words.length){const rank=Number(h.slice(6)),w=state.words.find(x=>x.rank===rank);if(w){openWordDetail(w);return}}showView('dictionary',{updateHash:false});return}showView(h==='#dictionary'?'dictionary':'home',{updateHash:false})}
-async function init(){updateScore();routeFromHash();try{const r=await fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' });if(!r.ok)throw new Error(r.status);const d=await r.json();if(!Array.isArray(d.words)||d.words.length<4)throw new Error('invalid data');state.words=d.words;state.wordMap=new Map(state.words.map(w=>[normalize(w.word),w]));populatePosFilter();els.loading.hidden=true;els.content.hidden=false;renderQuestion();routeFromHash()}catch(e){console.error(e);els.loading.hidden=true;els.error.hidden=false;els.error.textContent='بارگذاری واژه‌ها انجام نشد.';if(state.view==='dictionary'){els.dictionaryList.replaceChildren();els.dictionaryEmpty.hidden=false;els.dictionaryEmpty.textContent='بارگذاری واژه‌ها انجام نشد.'}}}
-els.next.addEventListener('click',renderQuestion);els.feedbackBackdrop.addEventListener('click',renderQuestion);els.speak.addEventListener('click',()=>speak(state.current));els.typingForm.addEventListener('submit',answerTyped);els.keyboardBackspace.addEventListener('click',removeLastLetter);els.keyboardClear.addEventListener('click',clearTyped);els.modeButtons.forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode===state.mode)return;state.mode=b.dataset.mode;localStorage.setItem('fiQuizMode',state.mode);renderQuestion()}));els.hintButtons.forEach((b,i)=>b.addEventListener('click',()=>revealHint(i)));els.reset.addEventListener('click',()=>{state.correct=0;state.total=0;updateScore()});els.viewLinks.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();state.detailWord=null;showView(a.dataset.viewLink)}));els.dictionarySearch.addEventListener('input',renderDictionaryList);els.dictionarySort.addEventListener('change',renderDictionaryList);els.dictionaryPosFilter.addEventListener('change',renderDictionaryList);els.dictionaryBack.addEventListener('click',()=>{state.detailWord=null;history.replaceState(null,'','#dictionary');renderDictionaryList()});els.detailSpeak.addEventListener('click',()=>speak(state.detailWord));els.practiceButtons.forEach(b=>b.addEventListener('click',()=>startFocusedPractice(b.dataset.practiceMode)));window.addEventListener('hashchange',routeFromHash);document.addEventListener('keydown',e=>{if(!state.answered&&[MODES.TRANSLATION,MODES.CLOZE_CHOICE].includes(state.mode)&&['1','2','3','4'].includes(e.key)){els.options.querySelectorAll('.option')[Number(e.key)-1]?.click()}});init();
+const MODES = {
+  TRANSLATION: 'translation',
+  CLOZE_CHOICE: 'cloze-choice',
+  CLOZE_INPUT: 'cloze-input',
+};
+
+if (!location.hash) history.replaceState(null, '', '#course');
+
+const state = {
+  words: [],
+  wordMap: new Map(),
+  current: null,
+  currentExample: null,
+  answered: false,
+  mode: MODES.TRANSLATION,
+  view: 'course',
+  detailWord: null,
+};
+
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => [...document.querySelectorAll(selector)];
+
+const els = {
+  practice: $('#practice-view'),
+  dictionary: $('#dictionary-view'),
+  mobileTitle: $('#mobile-view-title'),
+  viewLinks: $$('[data-view-link]'),
+  reviewQuiz: $('#review-quiz'),
+  practiceError: $('#practice-load-error'),
+  questionLabel: $('#quiz-title'),
+  wordRow: $('#word-row'),
+  word: $('#word'),
+  rank: $('#rank'),
+  sentencePanel: $('#sentence-panel'),
+  clozeSentence: $('#cloze-sentence'),
+  clozeTranslation: $('#cloze-translation'),
+  options: $('#options'),
+  typingForm: $('#typing-form'),
+  typedAnswer: $('#typed-answer'),
+  feedback: $('#feedback'),
+  feedbackStatusIcon: $('#feedback-status-icon'),
+  result: $('#result-message'),
+  exampleFi: $('#example-fi'),
+  exampleFa: $('#example-fa'),
+  next: $('#next-word'),
+  speak: $('#speak-word'),
+  dictionaryListPanel: $('#dictionary-list-panel'),
+  dictionaryDetail: $('#dictionary-detail'),
+  dictionarySearch: $('#dictionary-search'),
+  dictionarySort: $('#dictionary-sort'),
+  dictionaryPosFilter: $('#dictionary-pos-filter'),
+  dictionaryList: $('#dictionary-list'),
+  dictionaryEmpty: $('#dictionary-empty'),
+  dictionaryCount: $('#dictionary-count'),
+  dictionaryBack: $('#dictionary-back'),
+  detailWord: $('#detail-word'),
+  detailTranslation: $('#detail-translation'),
+  detailRank: $('#detail-rank'),
+  detailPos: $('#detail-pos'),
+  detailLemma: $('#detail-lemma'),
+  detailExamples: $('#detail-examples'),
+  detailSpeak: $('#detail-speak'),
+};
+
+const faNumber = (value) => new Intl.NumberFormat('fa-IR').format(value);
+const normalize = (value) => String(value || '').trim().normalize('NFC').toLocaleLowerCase('fi-FI');
+const wordLength = (word) => [...String(word || '')].length;
+
+function shuffle(values) {
+  const copy = [...values];
+  for (let index = copy.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+  }
+  return copy;
+}
+
+function getExamples(word) {
+  return [
+    { fi: word.example_fi, fa: word.example_fa },
+    { fi: word.example_2_fi, fa: word.example_2_fa },
+  ].filter((entry) => entry.fi && entry.fa);
+}
+
+function reviewExample(word) {
+  const examples = getExamples(word);
+  if (!examples.length) return { fi: word.word, fa: word.translation_fa };
+  return examples[(Number(word.rank) || 1) % examples.length];
+}
+
+function makeTranslationOptions(word) {
+  return shuffle([
+    word,
+    ...shuffle(state.words.filter((candidate) => candidate.rank !== word.rank)).slice(0, 3),
+  ]);
+}
+
+function makeFinnishOptions(word) {
+  const length = wordLength(word.word);
+  const candidates = shuffle(state.words.filter((candidate) => candidate.rank !== word.rank))
+    .sort((left, right) => Math.abs(wordLength(left.word) - length) - Math.abs(wordLength(right.word) - length));
+  return shuffle([word, ...candidates.slice(0, 3)]);
+}
+
+function makeBlank(word) {
+  return '＿'.repeat(Math.max(3, wordLength(word)));
+}
+
+function makeWordLink(word, text = word.word) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'dictionary-word-link';
+  button.textContent = text;
+  button.dataset.rank = word.rank;
+  button.addEventListener('click', () => openWordDetail(word));
+  return button;
+}
+
+function renderLinkedSentence(container, sentence, blankWord = null) {
+  container.replaceChildren();
+  const parts = String(sentence || '').split(/([\p{L}\p{N}]+)/gu);
+  let blanked = false;
+  for (const part of parts) {
+    if (!part) continue;
+    const key = normalize(part);
+    if (blankWord && !blanked && key === normalize(blankWord.word)) {
+      const span = document.createElement('span');
+      span.className = 'cloze-blank';
+      span.textContent = makeBlank(blankWord.word);
+      container.append(span);
+      blanked = true;
+      continue;
+    }
+    const found = state.wordMap.get(key);
+    container.append(found ? makeWordLink(found, part) : document.createTextNode(part));
+  }
+}
+
+function optionSize(text) {
+  const length = [...String(text || '').trim()].length;
+  if (length <= 10) return 'option-text-short';
+  if (length <= 22) return 'option-text-medium';
+  if (length <= 42) return 'option-text-long';
+  return 'option-text-extra-long';
+}
+
+function hideReviewFeedback() {
+  if (!els.feedback) return;
+  els.feedback.hidden = true;
+  els.feedbackStatusIcon.className = 'feedback-status-icon';
+}
+
+function closeReviewQuiz() {
+  state.current = null;
+  state.currentExample = null;
+  state.answered = false;
+  hideReviewFeedback();
+  if (els.reviewQuiz) els.reviewQuiz.hidden = true;
+}
+
+function notifyReviewAnswer(correct) {
+  window.dispatchEvent(new CustomEvent('finnish-review-answer', {
+    detail: { correct: Boolean(correct), rank: state.current?.rank || null },
+  }));
+}
+
+function finishReviewAnswer(correct) {
+  if (state.answered || !state.current) return;
+  state.answered = true;
+  const cssClass = correct ? 'correct' : 'wrong';
+  els.result.textContent = correct
+    ? 'آفرین! پاسخ درست است.'
+    : state.mode === MODES.TRANSLATION
+      ? `پاسخ درست: ${state.current.translation_fa}`
+      : `پاسخ درست: ${state.current.word} — ${state.current.translation_fa}`;
+  els.result.className = `result-message ${cssClass}`;
+  els.feedbackStatusIcon.className = `feedback-status-icon ${cssClass}`;
+  renderLinkedSentence(els.exampleFi, state.currentExample.fi);
+  els.exampleFa.textContent = state.currentExample.fa;
+  els.feedback.hidden = false;
+  notifyReviewAnswer(correct);
+}
+
+function renderChoiceOptions(options, label, isFinnish = false) {
+  els.options.replaceChildren();
+  els.options.hidden = false;
+  for (const word of options) {
+    const text = label(word);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = ['option', isFinnish ? 'finnish-option' : '', optionSize(text)].filter(Boolean).join(' ');
+    button.textContent = text;
+    button.dataset.rank = word.rank;
+    button.addEventListener('click', () => {
+      if (state.answered) return;
+      const correct = word.rank === state.current.rank;
+      for (const option of els.options.querySelectorAll('.option')) {
+        option.disabled = true;
+        if (Number(option.dataset.rank) === state.current.rank) option.classList.add('correct');
+      }
+      if (!correct) button.classList.add('wrong');
+      finishReviewAnswer(correct);
+    });
+    els.options.append(button);
+  }
+}
+
+function startReviewPractice(word, mode = MODES.TRANSLATION) {
+  if (!word) return;
+  state.current = word;
+  state.currentExample = reviewExample(word);
+  state.mode = Object.values(MODES).includes(mode) ? mode : MODES.TRANSLATION;
+  state.answered = false;
+  showView('practice');
+  els.reviewQuiz.hidden = false;
+  window.setTimeout(() => els.reviewQuiz.scrollIntoView({ block: 'start', behavior: 'smooth' }), 0);
+  hideReviewFeedback();
+  els.typingForm.hidden = true;
+  els.options.hidden = true;
+  els.options.replaceChildren();
+  els.typedAnswer.value = '';
+  els.typedAnswer.disabled = false;
+  els.typedAnswer.classList.remove('correct', 'wrong', 'near-correct');
+
+  if (state.mode === MODES.TRANSLATION) {
+    els.questionLabel.textContent = 'ترجمه این واژه چیست؟';
+    els.wordRow.hidden = false;
+    els.sentencePanel.hidden = true;
+    els.word.textContent = word.word;
+    els.rank.textContent = `#${word.rank}`;
+    renderChoiceOptions(makeTranslationOptions(word), (candidate) => candidate.translation_fa);
+    return;
+  }
+
+  els.wordRow.hidden = true;
+  els.sentencePanel.hidden = false;
+  renderLinkedSentence(els.clozeSentence, state.currentExample.fi, word);
+  els.clozeTranslation.textContent = state.currentExample.fa;
+
+  if (state.mode === MODES.CLOZE_CHOICE) {
+    els.questionLabel.textContent = 'کدام واژه جای خالی را کامل می‌کند؟';
+    renderChoiceOptions(makeFinnishOptions(word), (candidate) => candidate.word, true);
+    return;
+  }
+
+  els.questionLabel.textContent = 'واژه مناسب را در جای خالی بنویس.';
+  els.typingForm.hidden = false;
+  window.setTimeout(() => els.typedAnswer.focus(), 0);
+}
+
+function answerTyped(event) {
+  event.preventDefault();
+  if (state.answered || !state.current) return;
+  const entered = normalize(els.typedAnswer.value);
+  if (!entered) return;
+  const grading = window.FinnishCourse?.gradeTypedAnswer
+    ? window.FinnishCourse.gradeTypedAnswer({ surface_form: state.current.word }, entered)
+    : { accepted: entered === normalize(state.current.word), exact: entered === normalize(state.current.word) };
+  els.typedAnswer.disabled = true;
+  els.typedAnswer.classList.add(grading.exact ? 'correct' : grading.accepted ? 'near-correct' : 'wrong');
+  finishReviewAnswer(grading.accepted);
+}
+
+function speakFinnish(text) {
+  if (!text) return false;
+  return Boolean(window.FinnishCourse?.playSpeech?.(window, text));
+}
+
+function showView(view, { updateHash = true } = {}) {
+  if (!['practice', 'dictionary'].includes(view)) return;
+  state.view = view;
+  if (els.practice) els.practice.hidden = view !== 'practice';
+  if (els.dictionary) els.dictionary.hidden = view !== 'dictionary';
+  if (els.mobileTitle) els.mobileTitle.textContent = view === 'practice'
+    ? 'تمرین واژه'
+    : state.detailWord ? `واژه: ${state.detailWord.word}` : 'واژه‌نامه';
+
+  for (const link of els.viewLinks) {
+    const active = link.dataset.viewLink === view;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  }
+
+  if (view === 'dictionary' && !state.detailWord) renderDictionaryList();
+  if (updateHash) history.replaceState(null, '', view === 'practice' ? '#practice' : '#dictionary');
+}
+
+function populatePosFilter() {
+  const labels = [...new Set(state.words
+    .map((word) => word.part_of_speech_fa || word.part_of_speech)
+    .filter(Boolean))]
+    .sort((left, right) => left.localeCompare(right, 'fa'));
+
+  els.dictionaryPosFilter.replaceChildren();
+  const all = document.createElement('option');
+  all.value = 'all';
+  all.textContent = 'همه انواع واژه';
+  els.dictionaryPosFilter.append(all);
+  for (const label of labels) {
+    const option = document.createElement('option');
+    option.value = label;
+    option.textContent = label;
+    els.dictionaryPosFilter.append(option);
+  }
+  els.dictionaryPosFilter.value = 'all';
+}
+
+function filteredWords() {
+  const query = normalize(els.dictionarySearch.value);
+  const pos = els.dictionaryPosFilter.value;
+  const list = state.words.filter((word) => {
+    const haystack = normalize([
+      word.word,
+      word.translation_fa,
+      word.lemma,
+      word.part_of_speech_fa,
+      word.part_of_speech,
+    ].join(' '));
+    return (!query || haystack.includes(query))
+      && (pos === 'all' || (word.part_of_speech_fa || word.part_of_speech) === pos);
+  });
+  if (els.dictionarySort.value === 'alphabetical') list.sort((a, b) => a.word.localeCompare(b.word, 'fi'));
+  else list.sort((a, b) => a.rank - b.rank);
+  return list;
+}
+
+function renderDictionaryList() {
+  state.detailWord = null;
+  els.dictionaryDetail.hidden = true;
+  els.dictionaryListPanel.hidden = false;
+  if (els.mobileTitle) els.mobileTitle.textContent = 'واژه‌نامه';
+  const list = filteredWords();
+  els.dictionaryList.replaceChildren();
+  els.dictionaryCount.textContent = `${faNumber(list.length)} واژه`;
+  els.dictionaryEmpty.hidden = list.length > 0;
+
+  for (const word of list) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'dictionary-list-item';
+    button.innerHTML = `<span class="dictionary-rank">#${word.rank}</span><span class="dictionary-item-main"><strong class="dictionary-item-word" lang="fi">${word.word}</strong><span class="dictionary-item-translation">${word.translation_fa}</span></span><span class="dictionary-item-pos">${word.part_of_speech_fa || word.part_of_speech}</span>`;
+    button.addEventListener('click', () => openWordDetail(word));
+    els.dictionaryList.append(button);
+  }
+}
+
+function openWordDetail(word) {
+  if (!word) return;
+  state.detailWord = word;
+  showView('dictionary');
+  els.dictionaryListPanel.hidden = true;
+  els.dictionaryDetail.hidden = false;
+  if (els.mobileTitle) els.mobileTitle.textContent = `واژه: ${word.word}`;
+  els.detailWord.textContent = word.word;
+  els.detailTranslation.textContent = word.translation_fa;
+  els.detailRank.textContent = `#${word.rank}`;
+  els.detailPos.textContent = word.part_of_speech_fa || word.part_of_speech;
+  els.detailLemma.textContent = word.lemma;
+  els.detailExamples.replaceChildren();
+
+  for (const example of getExamples(word)) {
+    const card = document.createElement('div');
+    card.className = 'word-example-card';
+    const fi = document.createElement('p');
+    fi.className = 'word-example-fi';
+    renderLinkedSentence(fi, example.fi);
+    const fa = document.createElement('p');
+    fa.className = 'word-example-fa';
+    fa.textContent = example.fa;
+    card.append(fi, fa);
+    els.detailExamples.append(card);
+  }
+
+  history.replaceState(null, '', `#word-${word.rank}`);
+  els.dictionaryDetail.scrollTop = 0;
+}
+
+function routeFromHash() {
+  const hash = location.hash;
+  if (hash === '#course' || hash.startsWith('#course-') || hash === '#settings' || hash === '#about') return;
+
+  if (hash.startsWith('#word-')) {
+    if (state.words.length) {
+      const rank = Number(hash.slice(6));
+      const word = state.words.find((entry) => entry.rank === rank);
+      if (word) {
+        openWordDetail(word);
+        return;
+      }
+    }
+    showView('dictionary', { updateHash: false });
+    return;
+  }
+
+  showView(hash === '#dictionary' ? 'dictionary' : 'practice', { updateHash: false });
+}
+
+async function init() {
+  routeFromHash();
+  try {
+    const response = await fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error(String(response.status));
+    const payload = await response.json();
+    if (!Array.isArray(payload.words) || payload.words.length < 4) throw new Error('invalid data');
+    state.words = payload.words;
+    state.wordMap = new Map(state.words.map((word) => [normalize(word.word), word]));
+    populatePosFilter();
+    routeFromHash();
+    window.dispatchEvent(new CustomEvent('finnish-word-review-ready'));
+  } catch (error) {
+    console.error(error);
+    if (els.practiceError) {
+      els.practiceError.hidden = false;
+      els.practiceError.textContent = 'بارگذاری واژه‌ها انجام نشد.';
+    }
+    if (state.view === 'dictionary') {
+      els.dictionaryList.replaceChildren();
+      els.dictionaryEmpty.hidden = false;
+      els.dictionaryEmpty.textContent = 'بارگذاری واژه‌ها انجام نشد.';
+    }
+  }
+}
+
+els.next?.addEventListener('click', () => {
+  window.dispatchEvent(new CustomEvent('finnish-review-next'));
+});
+els.speak?.addEventListener('click', () => speakFinnish(state.current?.word));
+els.typingForm?.addEventListener('submit', answerTyped);
+els.viewLinks.forEach((link) => link.addEventListener('click', (event) => {
+  event.preventDefault();
+  state.detailWord = null;
+  showView(link.dataset.viewLink);
+}));
+els.dictionarySearch?.addEventListener('input', renderDictionaryList);
+els.dictionarySort?.addEventListener('change', renderDictionaryList);
+els.dictionaryPosFilter?.addEventListener('change', renderDictionaryList);
+els.dictionaryBack?.addEventListener('click', () => {
+  state.detailWord = null;
+  history.replaceState(null, '', '#dictionary');
+  renderDictionaryList();
+});
+els.detailSpeak?.addEventListener('click', () => speakFinnish(state.detailWord?.word));
+
+window.addEventListener('hashchange', routeFromHash);
+document.addEventListener('keydown', (event) => {
+  if (
+    state.current
+    && !state.answered
+    && [MODES.TRANSLATION, MODES.CLOZE_CHOICE].includes(state.mode)
+    && ['1', '2', '3', '4'].includes(event.key)
+  ) {
+    els.options.querySelectorAll('.option')[Number(event.key) - 1]?.click();
+  }
+});
+
+window.openWordDetail = openWordDetail;
+window.startReviewPractice = startReviewPractice;
+window.hideReviewFeedback = hideReviewFeedback;
+window.closeReviewQuiz = closeReviewQuiz;
+window.wordReviewReady = () => state.words.length >= 4;
+
+init();

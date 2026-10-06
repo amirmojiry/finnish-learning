@@ -169,7 +169,7 @@ test('the new course view and assets are integrated exactly once', () => {
   assert.equal((html.match(/id="course-view"/g) || []).length, 1);
   assert.equal((html.match(/id="course-root"/g) || []).length, 1);
   assert.equal((html.match(/desktop-view-link course-view-link/g) || []).length, 1);
-  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 5);
+  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 4);
   assert.match(bottomNav, /course-view-link/);
   assert.ok(html.indexOf('settings.js') < html.indexOf('course.js'));
 });
@@ -182,7 +182,7 @@ test('desktop and mobile navigation stay contained and focused', () => {
   const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
   assert.doesNotMatch(desktopHeader, /data\/common-words\.json/);
   assert.match(coreStyles, /\/\* Desktop navigation polish \*\/[\s\S]*\.site-header nav/);
-  assert.match(courseStyles, /\/\* Five-item mobile navigation fit \*\/[\s\S]*flex-wrap:\s*nowrap/);
+  assert.match(courseStyles, /\/\* Four-item icon-only mobile navigation fit \*\/[\s\S]*flex-wrap:\s*nowrap/);
   assert.match(courseStyles, /\.bottom-nav-item\s*\{[\s\S]*?max-width:\s*none/);
 });
 
@@ -290,8 +290,8 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.17\.0`/);
-  assert.match(fa, /نسخه: `1\.17\.0`/);
+  assert.match(en, /Version: `1\.18\.0`/);
+  assert.match(fa, /نسخه: `1\.18\.0`/);
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
@@ -300,17 +300,38 @@ test('the application defaults to the course with icon-only accessible course na
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
 
-  assert.match(html, /id="home-view" class="app-view home-view" hidden/);
+  assert.match(html, /id="practice-view" class="app-view practice-view" hidden/);
+  assert.doesNotMatch(html, /id="home-view"/);
+  assert.doesNotMatch(html, /id="profile-view"/);
   assert.match(html, /id="course-view" class="app-view course-view">/);
   assert.equal((html.match(/aria-label="دوره"/g) || []).length, 2);
   const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
-  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 5);
-  assert.equal((desktopHeader.match(/data-tooltip=/g) || []).length, 5);
+  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 4);
+  assert.equal((desktopHeader.match(/data-tooltip=/g) || []).length, 4);
   assert.equal((html.match(/course-view-link/g) || []).length, 2);
   assert.doesNotMatch(html, />دوره A1\.1</);
-  assert.match(app, /if\(!location\.hash\)history\.replaceState\(null,'','#course'\)/);
-  assert.match(app, /view:'course'/);
-  assert.match(app, /h==='#course'\|\|h\.startsWith\('#course-'\)/);
+  assert.match(app, /if \(!location\.hash\) history\.replaceState\(null, '', '#course'\)/);
+  assert.match(app, /view: 'course'/);
+  assert.match(app, /hash === '#course' \|\| hash\.startsWith\('#course-'\)/);
+});
+
+
+test('active lessons use distraction-free chrome and viewport feedback', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+
+  assert.match(source, /classList\.toggle\('course-lesson-active'/);
+  assert.match(source, /createButton\('×', 'course-lesson-close', renderSectionMap\)/);
+  assert.match(source, /aria-label', 'بستن درس و بازگشت به فهرست درس‌ها'/);
+  assert.match(source, /course-activity-progress-count/);
+  assert.doesNotMatch(source, /createButton\('بازگشت به درس‌ها'/);
+  assert.doesNotMatch(source, /shell\.append\(top, track, lessonHeader, card\)/);
+  assert.match(source, /course-primary-feedback/);
+  assert.match(styles, /body\.course-lesson-active \.site-header/);
+  assert.match(styles, /body\.course-lesson-active \.mobile-app-bar/);
+  assert.match(styles, /body\.course-lesson-active \.bottom-nav/);
+  assert.match(styles, /\.course-primary-feedback:not\(\[hidden\]\)\s*\{[\s\S]*position:\s*fixed/);
+  assert.match(styles, /\.course-activity-progress-count/);
 });
 
 test('course map hides explanatory copy behind accessible info disclosures', () => {
@@ -341,11 +362,12 @@ test('desktop navigation is icon-only and exposes labels through accessible tool
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
 
-  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 5);
-  for (const label of ['تمرین‌ها','واژه‌نامه','دوره','پروفایل','تنظیمات']) {
+  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 4);
+  for (const label of ['تمرین واژه','واژه‌نامه','دوره','تنظیمات']) {
     assert.match(desktopHeader, new RegExp('aria-label="' + label + '"'));
     assert.match(desktopHeader, new RegExp('data-tooltip="' + label + '"'));
   }
+  assert.doesNotMatch(desktopHeader, /پروفایل|تمرین‌ها/);
   assert.match(styles, /\.site-header nav \.nav-tooltip::after/);
   assert.match(styles, /content:\s*attr\(data-tooltip\)/);
   assert.match(styles, /\.nav-tooltip:hover::after/);
@@ -353,13 +375,13 @@ test('desktop navigation is icon-only and exposes labels through accessible tool
 });
 
 
-test('legacy home and dictionary hashes route before vocabulary fetch resolves', () => {
+test('word-practice and dictionary hashes route before vocabulary fetch resolves', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
 
-  const initMatch = app.match(/async function init\(\)\{([^}]|\}(?!catch))*routeFromHash\(\);try\{const r=await fetch/);
-  assert.ok(initMatch, 'init must route the current hash before awaiting vocabulary fetch');
-  assert.match(app, /if\(h\.startsWith\('#word-'\)\)\{[\s\S]*?showView\('dictionary',\{updateHash:false\}\);return/);
-  assert.match(app, /if\(state\.view==='dictionary'\)\{els\.dictionaryList\.replaceChildren\(\);els\.dictionaryEmpty\.hidden=false;els\.dictionaryEmpty\.textContent='بارگذاری واژه‌ها انجام نشد\.'/);
+  assert.match(app, /async function init\(\)\s*\{[\s\S]*?routeFromHash\(\);[\s\S]*?await fetch/);
+  assert.match(app, /if \(hash\.startsWith\('#word-'\)\)[\s\S]*?showView\('dictionary', \{ updateHash: false \}\)/);
+  assert.match(app, /showView\(hash === '#dictionary' \? 'dictionary' : 'practice', \{ updateHash: false \}\)/);
+  assert.match(app, /els\.practiceError\.textContent = 'بارگذاری واژه‌ها انجام نشد\.'/);
 });
 
 

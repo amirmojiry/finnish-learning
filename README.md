@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.17.0`
+- Version: `1.18.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -26,20 +26,19 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - dominant part of speech and morphological analysis derived from Universal Dependencies
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
-- three exercise modes: translation, multiple-choice cloze, and typed cloze
+- a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
 - complete 40-lesson A1.1 path with circular lesson maps, expandable section switching, Persian-to-Finnish productive recall, Finnish-voice-gated listening and dictation, structured sentence-building, and reviewed introductory morphology practice
-- focused practice for an individual dictionary word
-- profile-based spaced-repetition review queue with due-word priority and a ten-new-word daily limit
+- distraction-free active lessons with hidden global navigation, compact integrated progress, and in-viewport answer feedback
+- Word Practice spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
 - per-word review status on dictionary detail pages
 - approximate reviewed and mastered token coverage derived from Parole frequency percentages
 - persistent local review scheduling, answer counts, lapses, and mastery status for each started word
-- separate Profile page for review progress and Settings page for appearance controls and About access
-- progressive hints and a compact Finnish letter keyboard
+- four-destination navigation: Course, Dictionary, Word Practice, and Settings; legacy Home/Profile surfaces are removed
 - typed grading accepts a/ä and o/ö keyboard substitutions as near-correct while still showing the canonical Finnish spelling
 - linked dictionary words inside examples
-- light and dark themes
-- locally saved score, exercise mode, theme, and review progress
+- Settings shows live Finnish speech-voice availability and device-specific installation guidance alongside light and dark themes
+- locally saved course progress, theme, review scheduling, answer history, and mastery state
 
 The coverage percentage is an estimate of how much of the written Parole corpus is represented by reviewed surface forms. It is not a literal measurement of complete Finnish comprehension or communicative ability.
 

@@ -714,3 +714,65 @@ footer { text-align: center; color: var(--muted); padding: 24px; }
     transform: translate(-50%, 0);
   }
 }
+
+
+/* Dedicated word-practice surface */
+.word-practice-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.word-practice-header {
+  text-align: center;
+}
+
+.word-practice-header h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+.word-practice-header > p:last-child {
+  max-width: 620px;
+  margin: 8px auto 0;
+  color: var(--muted);
+}
+
+.review-quiz {
+  scroll-margin-top: 14px;
+}
+
+@media (max-width: 620px) {
+  .practice-view {
+    height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .word-practice-shell {
+    min-height: 100%;
+    gap: 12px;
+  }
+
+  .word-practice-header {
+    padding: 6px 6px 0;
+  }
+
+  .word-practice-header h1 {
+    font-size: 1.45rem;
+  }
+
+  .word-practice-header > p:last-child {
+    font-size: .82rem;
+    line-height: 1.7;
+  }
+
+  .review-quiz {
+    height: auto;
+    min-height: calc(100dvh - 58px - var(--bottom-nav-height) - 20px);
+    overflow: visible;
+  }
+
+  .review-quiz #quiz-content {
+    min-height: 0;
+  }
+}

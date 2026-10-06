@@ -1,19 +1,26 @@
 (() => {
   const THEME_KEY = 'fiAppTheme';
-  const profileView = document.querySelector('#profile-view');
+
+  const practiceView = document.querySelector('#practice-view');
+  const dictionaryView = document.querySelector('#dictionary-view');
+  const courseView = document.querySelector('#course-view');
   const settingsView = document.querySelector('#settings-view');
   const aboutView = document.querySelector('#about-view');
-  const homeView = document.querySelector('#home-view');
-  const dictionaryView = document.querySelector('#dictionary-view');
   const mobileTitle = document.querySelector('#mobile-view-title');
   const themeLabel = document.querySelector('#current-theme-label');
   const themeButtons = [...document.querySelectorAll('[data-theme-choice]')];
-  const profileLinks = [...document.querySelectorAll('.profile-view-link')];
   const settingsLinks = [...document.querySelectorAll('.settings-view-link')];
   const aboutLinks = [...document.querySelectorAll('.about-view-link')];
-  const regularViewLinks = [...document.querySelectorAll('[data-view-link]')];
+  const regularViewLinks = [...document.querySelectorAll('[data-view-link], .course-view-link')];
   const allNavItems = [...document.querySelectorAll('.bottom-nav-item, .desktop-view-link')];
   const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  const speechState = document.querySelector('#finnish-speech-state');
+  const speechCard = document.querySelector('#finnish-speech-card');
+  const speechMessage = document.querySelector('#finnish-speech-message');
+  const speechVoice = document.querySelector('#finnish-speech-voice');
+  const speechGuide = document.querySelector('#finnish-speech-guide');
+  const speechRetry = document.querySelector('#finnish-speech-retry');
 
   function currentTheme() {
     return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
@@ -22,7 +29,6 @@
   function applyTheme(theme, persist = true) {
     const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
     document.documentElement.dataset.theme = resolvedTheme;
-
     if (persist) localStorage.setItem(THEME_KEY, resolvedTheme);
     if (themeMeta) themeMeta.content = resolvedTheme === 'dark' ? '#111a2a' : '#f7f8fc';
     if (themeLabel) themeLabel.textContent = resolvedTheme === 'dark' ? 'تیره' : 'روشن';
@@ -33,7 +39,6 @@
   }
 
   function specialViewFromHash() {
-    if (location.hash === '#profile') return 'profile';
     if (location.hash === '#settings') return 'settings';
     if (location.hash === '#about') return 'about';
     return null;
@@ -50,15 +55,15 @@
   }
 
   function showSpecialView(view, { updateHash = true } = {}) {
-    if (!profileView || !settingsView || !aboutView) return;
+    if (!settingsView || !aboutView) return;
 
-    homeView.hidden = true;
-    dictionaryView.hidden = true;
-    profileView.hidden = view !== 'profile';
+    if (practiceView) practiceView.hidden = true;
+    if (dictionaryView) dictionaryView.hidden = true;
+    if (courseView) courseView.hidden = true;
     settingsView.hidden = view !== 'settings';
     aboutView.hidden = view !== 'about';
 
-    const titles = { profile: 'پروفایل', settings: 'تنظیمات', about: 'درباره' };
+    const titles = { settings: 'تنظیمات', about: 'درباره' };
     if (mobileTitle) mobileTitle.textContent = titles[view];
     activateSpecialNavigation(view);
 
@@ -67,12 +72,10 @@
   }
 
   function leaveSpecialViews() {
-    if (profileView) profileView.hidden = true;
     if (settingsView) settingsView.hidden = true;
     if (aboutView) aboutView.hidden = true;
-
     for (const item of allNavItems) {
-      if (!item.classList.contains('profile-view-link') && !item.classList.contains('settings-view-link')) continue;
+      if (!item.classList.contains('settings-view-link')) continue;
       item.classList.remove('active');
       item.removeAttribute('aria-current');
     }
@@ -84,37 +87,68 @@
     else leaveSpecialViews();
   }
 
+  function renderFinnishSpeechStatus() {
+    if (!speechCard || !speechState || !speechMessage || !speechVoice || !speechGuide) return;
+    const api = window.FinnishCourse;
+
+    if (!api?.finnishSpeechStatus || !api?.speechSettingsGuide) {
+      speechCard.dataset.state = 'loading';
+      speechState.textContent = 'در حال بررسی';
+      speechMessage.textContent = 'در حال آماده‌کردن بررسی صدای فنلاندی…';
+      speechVoice.textContent = '';
+      speechGuide.textContent = '';
+      return;
+    }
+
+    const status = api.finnishSpeechStatus(window);
+    speechCard.dataset.state = status.state;
+
+    if (status.state === 'ready') {
+      speechState.textContent = 'فعال';
+      speechMessage.textContent = 'صدای فنلاندی روی این دستگاه تشخیص داده شد.';
+      speechVoice.textContent = status.voice?.name
+        ? `${status.voice.name} · ${status.voice.lang || 'fi'}`
+        : status.voice?.lang || 'fi';
+      speechGuide.textContent = 'تمرین‌های شنیداری و دیکته می‌توانند از همین صدای فنلاندی استفاده کنند.';
+      return;
+    }
+
+    speechVoice.textContent = '';
+    speechGuide.textContent = api.speechSettingsGuide(window);
+
+    if (status.state === 'loading') {
+      speechState.textContent = 'در حال بررسی';
+      speechMessage.textContent = 'فهرست صداهای مرورگر هنوز بارگذاری نشده است. می‌توانی چند لحظه بعد دوباره بررسی کنی.';
+    } else if (status.state === 'missing') {
+      speechState.textContent = 'پیدا نشد';
+      speechMessage.textContent = 'صدای فنلاندی روی این دستگاه پیدا نشد. تا زمان نصب آن، تمرین‌های صوتی بدون جریمه قابل ردکردن هستند.';
+    } else {
+      speechState.textContent = 'پشتیبانی نمی‌شود';
+      speechMessage.textContent = 'این مرورگر یا دستگاه Speech Synthesis قابل استفاده برای صدای فنلاندی ارائه نمی‌دهد.';
+    }
+  }
+
   themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice)));
-  profileLinks.forEach((link) => link.addEventListener('click', (event) => {
-    event.preventDefault();
-    showSpecialView('profile');
-  }));
   settingsLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
     showSpecialView('settings');
+    renderFinnishSpeechStatus();
   }));
   aboutLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
     showSpecialView('about');
   }));
   regularViewLinks.forEach((link) => link.addEventListener('click', leaveSpecialViews));
+  speechRetry?.addEventListener('click', renderFinnishSpeechStatus);
   window.addEventListener('hashchange', syncSpecialViewFromHash);
-
-  const viewObserver = new MutationObserver(() => {
-    const view = specialViewFromHash();
-    if (!view) return;
-
-    const targetViews = { profile: profileView, settings: settingsView, about: aboutView };
-    const targetView = targetViews[view];
-    if (targetView.hidden || !homeView.hidden || !dictionaryView.hidden) {
-      showSpecialView(view, { updateHash: false });
-    }
-  });
-
-  for (const view of [homeView, dictionaryView, profileView, settingsView, aboutView]) {
-    if (view) viewObserver.observe(view, { attributes: true, attributeFilter: ['hidden'] });
-  }
 
   applyTheme(currentTheme(), false);
   syncSpecialViewFromHash();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    renderFinnishSpeechStatus();
+    if (window.speechSynthesis && typeof window.speechSynthesis.addEventListener === 'function') {
+      window.speechSynthesis.addEventListener('voiceschanged', renderFinnishSpeechStatus);
+    }
+  }, { once: true });
 })();
