@@ -3,8 +3,8 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.22.0`
-- Vocabulary entries: **300**
+- Version: `1.23.0`
+- Vocabulary entries: **400**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
 
@@ -19,7 +19,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 
 ## Current features
 
-- 300 high-frequency written Finnish word forms with Persian translations
+- 400 high-frequency written Finnish word forms with Persian translations
 - exact Parole source rank, corpus occurrence count, and occurrence percentage
 - dictionary search and alphabetical or frequency sorting
 - part-of-speech filters generated only from categories present in the current vocabulary
@@ -63,7 +63,7 @@ The ranking is based on the [Frequency List of Written Finnish Word Forms](https
 - `data/course/a1.3-curriculum.json`: reviewed 40-lesson A1.3 curriculum contract completing the planned A1 subdivision model
 - `data/course/a1.2-vocabulary-gap.json`: generated A1.2 lexical coverage and source-gap report
 - `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
-- `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
+- `data/vocabulary-details/`: reviewed detail bundles for source-backed vocabulary ranges, including positions 301–400
 - `data/ud/`: generated compact and detailed UD analysis files
 - `ud-import-2.18/`: CoNLL-U source treebanks used by the UD pipeline
 - `scripts/build-vocabulary.mjs`: reproducible vocabulary builder
@@ -164,7 +164,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 ### Phase 3 — expand the structured course
 
 - [x] Build A1.2 and A1.3 with the same reviewed curriculum model at the curriculum-contract layer; playable later-stage manifests remain sequenced after vocabulary expansion.
-- [ ] Expand high-frequency vocabulary while preserving curated topic vocabulary.
+- [x] Expand high-frequency vocabulary with the reviewed Parole positions 301–400 tranche while preserving curated topic vocabulary; later source-backed tranches remain analyzer-driven.
 - [ ] Add practical domains such as shopping, transport, home, work, weather, appointments, and health.
 - [ ] Expand grammar in pedagogical order.
 - [ ] Add short dialogues, readings, and listening passages that recycle earlier material.
