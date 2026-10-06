@@ -52,11 +52,17 @@ These values estimate token coverage in the written Finnish Parole corpus. They 
 
 ## Browser integration
 
-The review panel is mounted directly in the Profile view. Profile contains the review queue, reviewed-word history, per-word progress summary, and frequency coverage.
+The review panel is mounted directly in the dedicated Word Practice view at `#practice`. Word Practice owns the review queue, reviewed-word history, per-word progress summary, frequency coverage, and the transient review question surface. It is intentionally separate from the structured Course flow.
 
-Settings is a separate view containing only the light/dark appearance controls and a compact link to About. The bottom navigation contains Home, Dictionary, Profile, and Settings; About is not a primary navigation item.
+Primary navigation contains Course, Dictionary, Word Practice, and Settings. The legacy Home and Profile views are not part of the current application architecture. Settings owns appearance controls, Finnish speech-voice availability/setup guidance, and the link to About.
 
-Starting a review uses the existing focused-practice functions, so all three exercise modes keep their current answer rendering and feedback behavior. Only answers submitted while a review session is active update the spaced-repetition schedule; normal free practice continues to update the general score without altering review timing.
+`spaced-repetition.js` owns session state and scheduling. It starts each queued item through the public `startReviewPractice(word, mode)` bridge in `app.js`, and the app reports answers and next-item requests through the `finnish-review-answer` and `finnish-review-next` events. The review controller rotates deterministically through translation, multiple-choice cloze, and typed cloze; there is no user-facing free-practice mode selector.
+
+Only answers submitted while a Smart Review session is active update the spaced-repetition schedule. The stored `fiSrsProgressV1` schema remains independent of navigation and survives route changes and reloads.
+
+An active Smart Review must also survive temporary navigation. Opening Dictionary or a reviewed word hides the Word Practice view through normal view routing, but the current review quiz and `currentWord` stay intact. Returning to Word Practice reveals the same unanswered or answered question. The quiz is cleared only when the review controller explicitly stops or completes the session via `closeReviewQuiz()`.
+
+Dictionary detail pages may display the current spaced-repetition status for a word, but they do not provide a per-word “practice this word” entry point.
 
 ## Required validation
 
@@ -66,4 +72,4 @@ Run:
 npm test
 ```
 
-The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, separate Profile and Settings placement, navigation contracts, asset loading order, and the public app functions used by the integration.
+The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, Word Practice and Settings ownership, four-destination navigation, active-review state preservation across navigation, asset loading order, and the public app/event contracts used by the integration.
