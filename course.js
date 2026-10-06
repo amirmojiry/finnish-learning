@@ -18,6 +18,7 @@
   const WEAK_TARGET_ACCURACY = 0.8;
   const FOCUSED_PRACTICE_LIMIT = 10;
   const ANSWER_HISTORY_LIMIT = 5000;
+  const ANSWER_HISTORY_MAX_BYTES = 1000000;
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -31,6 +32,34 @@
 
   function historyString(value) {
     return typeof value === 'string' && value.trim() ? value.trim() : null;
+  }
+
+  function utf8ByteLength(value) {
+    const text = typeof value === 'string' ? value : JSON.stringify(value);
+    let bytes = 0;
+    for (const character of text) {
+      const codePoint = character.codePointAt(0);
+      if (codePoint <= 0x7f) bytes += 1;
+      else if (codePoint <= 0x7ff) bytes += 2;
+      else if (codePoint <= 0xffff) bytes += 3;
+      else bytes += 4;
+    }
+    return bytes;
+  }
+
+  function trimAnswerHistoryToBudget(history) {
+    let retained = Array.isArray(history) ? history.slice(-ANSWER_HISTORY_LIMIT) : [];
+    if (!retained.length || utf8ByteLength(retained) <= ANSWER_HISTORY_MAX_BYTES) return retained;
+
+    let low = 0;
+    let high = retained.length;
+    while (low < high) {
+      const midpoint = Math.floor((low + high) / 2);
+      if (utf8ByteLength(retained.slice(midpoint)) <= ANSWER_HISTORY_MAX_BYTES) high = midpoint;
+      else low = midpoint + 1;
+    }
+    retained = retained.slice(low);
+    return utf8ByteLength(retained) <= ANSWER_HISTORY_MAX_BYTES ? retained : [];
   }
 
   function sanitizeAnswerHistoryEvent(event, fallbackSequence = 1) {
@@ -108,11 +137,12 @@
       };
     }
     const answerHistory = Array.isArray(progress.answerHistory) ? progress.answerHistory : [];
-    clean.answerHistory = answerHistory
-      .map((entry, index) => sanitizeAnswerHistoryEvent(entry, index + 1))
-      .filter(Boolean)
-      .sort((left, right) => left.sequence - right.sequence || left.answeredAt - right.answeredAt)
-      .slice(-ANSWER_HISTORY_LIMIT);
+    clean.answerHistory = trimAnswerHistoryToBudget(
+      answerHistory
+        .map((entry, index) => sanitizeAnswerHistoryEvent(entry, index + 1))
+        .filter(Boolean)
+        .sort((left, right) => left.sequence - right.sequence || left.answeredAt - right.answeredAt),
+    );
     clean.lastLessonId = typeof progress.lastLessonId === 'string' ? progress.lastLessonId : null;
     return clean;
   }
@@ -129,10 +159,36 @@
 
   function saveProgress(storage, progress) {
     const clean = sanitizeProgress(progress);
-    if (storage && typeof storage.setItem === 'function') {
+    if (!storage || typeof storage.setItem !== 'function') return clean;
+
+    try {
       storage.setItem(STORAGE_KEY, JSON.stringify(clean));
+      return clean;
+    } catch {
+      const history = clean.answerHistory;
+      const withoutHistory = { ...clean, answerHistory: [] };
+      try {
+        storage.setItem(STORAGE_KEY, JSON.stringify(withoutHistory));
+      } catch {
+        return clean;
+      }
+
+      let best = withoutHistory;
+      let low = 1;
+      let high = history.length;
+      while (low <= high) {
+        const count = Math.floor((low + high) / 2);
+        const candidate = { ...clean, answerHistory: history.slice(-count) };
+        try {
+          storage.setItem(STORAGE_KEY, JSON.stringify(candidate));
+          best = candidate;
+          low = count + 1;
+        } catch {
+          high = count - 1;
+        }
+      }
+      return best;
     }
-    return clean;
   }
 
   function isLessonUnlocked(section, progress, lessonIndex) {
@@ -231,9 +287,7 @@
     const normalized = sanitizeAnswerHistoryEvent({ ...event, sequence: lastSequence + 1 }, lastSequence + 1);
     if (!normalized) return clean;
     clean.answerHistory.push(normalized);
-    if (clean.answerHistory.length > ANSWER_HISTORY_LIMIT) {
-      clean.answerHistory = clean.answerHistory.slice(-ANSWER_HISTORY_LIMIT);
-    }
+    clean.answerHistory = trimAnswerHistoryToBudget(clean.answerHistory);
     return clean;
   }
 
@@ -3329,6 +3383,9 @@
     WEAK_TARGET_ACCURACY,
     FOCUSED_PRACTICE_LIMIT,
     ANSWER_HISTORY_LIMIT,
+    ANSWER_HISTORY_MAX_BYTES,
+    utf8ByteLength,
+    trimAnswerHistoryToBudget,
     normalizeAnswer,
     foldFinnishDiacritics,
     emptyProgress,
