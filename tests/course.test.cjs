@@ -161,14 +161,17 @@ test('each section exposes its first lesson as a jump and later-section entry un
 
   assert.equal(course.isCourseLessonAccessible(sections, progress, 0, 0), true);
   assert.equal(course.isCourseLessonAccessible(sections, progress, 1, 0), true);
+  assert.equal(course.isSectionAccessible(sections, progress, 1), false);
   assert.equal(course.isCourseLessonAccessible(sections, progress, 1, 1), false);
   assert.equal(course.isCourseLessonAccessible(sections, progress, 0, 5), false);
 
   progress = course.recordLessonCompletion(progress, sections[1].lessons[0].id, 8, 10, 1000);
 
   assert.equal(course.isSectionStarted(sections[1], progress), true);
+  assert.equal(course.isSectionAccessible(sections, progress, 1), true);
   assert.equal(course.isCourseLessonAccessible(sections, progress, 1, 1), true);
   assert.equal(course.isBackfillSectionUnlocked(sections, progress, 0), true);
+  assert.equal(course.isSectionAccessible(sections, progress, 0), true);
   assert.equal(course.isCourseLessonAccessible(sections, progress, 0, 5), true);
   assert.equal(progress.completedLessons.includes(sections[0].lessons[5].id), false);
 });
@@ -888,6 +891,7 @@ test('locked sections remain previewable while their first lesson is a jump entr
 
   assert.match(source, /option\.disabled = !implemented \|\| current;/);
   assert.match(source, /مشاهده \(قفل\)/);
+  assert.match(source, /const unlocked = implemented \? isSectionAccessible\(sections, progress, implementedIndex\) : false;/);
   assert.match(source, /isCourseLessonAccessible\(sections, progress, sectionIndex, index\)/);
   assert.match(source, /jumpAvailable = index === 0/);
   assert.match(source, /پرش به این درس/);
