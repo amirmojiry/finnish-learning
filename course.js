@@ -17,6 +17,8 @@
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
   const WEAK_TARGET_ACCURACY = 0.8;
   const FOCUSED_PRACTICE_LIMIT = 10;
+  const ANSWER_HISTORY_LIMIT = 5000;
+  const ANSWER_HISTORY_MAX_BYTES = 1000000;
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -28,12 +30,80 @@
       .trim();
   }
 
+  function historyString(value) {
+    return typeof value === 'string' && value.trim() ? value.trim() : null;
+  }
+
+  function utf8ByteLength(value) {
+    const text = typeof value === 'string' ? value : JSON.stringify(value);
+    let bytes = 0;
+    for (const character of text) {
+      const codePoint = character.codePointAt(0);
+      if (codePoint <= 0x7f) bytes += 1;
+      else if (codePoint <= 0x7ff) bytes += 2;
+      else if (codePoint <= 0xffff) bytes += 3;
+      else bytes += 4;
+    }
+    return bytes;
+  }
+
+  function trimAnswerHistoryToBudget(history) {
+    let retained = Array.isArray(history) ? history.slice(-ANSWER_HISTORY_LIMIT) : [];
+    if (!retained.length || utf8ByteLength(retained) <= ANSWER_HISTORY_MAX_BYTES) return retained;
+
+    let low = 0;
+    let high = retained.length;
+    while (low < high) {
+      const midpoint = Math.floor((low + high) / 2);
+      if (utf8ByteLength(retained.slice(midpoint)) <= ANSWER_HISTORY_MAX_BYTES) high = midpoint;
+      else low = midpoint + 1;
+    }
+    retained = retained.slice(low);
+    return utf8ByteLength(retained) <= ANSWER_HISTORY_MAX_BYTES ? retained : [];
+  }
+
+  function sanitizeAnswerHistoryEvent(event, fallbackSequence = 1) {
+    if (!event || typeof event !== 'object') return null;
+    const sessionId = historyString(event.sessionId);
+    const sectionId = historyString(event.sectionId);
+    const activityType = historyString(event.activityType);
+    const answeredAt = Number(event.answeredAt);
+    if (!sessionId || !sectionId || !activityType || !Number.isFinite(answeredAt) || answeredAt < 0) return null;
+
+    const rawSequence = Math.floor(Number(event.sequence) || fallbackSequence);
+    const sessionStartedAt = Number(event.sessionStartedAt);
+    const responseMs = Math.max(0, Math.floor(Number(event.responseMs) || 0));
+    return {
+      sequence: Math.max(1, rawSequence),
+      answeredAt,
+      sessionId,
+      sessionStartedAt: Number.isFinite(sessionStartedAt) && sessionStartedAt >= 0 ? sessionStartedAt : answeredAt,
+      sessionType: event.sessionType === 'focused' ? 'focused' : 'lesson',
+      sectionId,
+      lessonId: historyString(event.lessonId),
+      sourceLessonId: historyString(event.sourceLessonId),
+      targetId: historyString(event.targetId),
+      activityType,
+      mode: historyString(event.mode),
+      correct: event.correct === true,
+      productive: event.productive === true,
+      guided: event.guided === true,
+      direction: historyString(event.direction),
+      firstAttempt: event.firstAttempt !== false,
+      responseMs,
+      exact: typeof event.exact === 'boolean' ? event.exact : null,
+      fuzzy: event.fuzzy === true,
+      diacriticAdjusted: event.diacriticAdjusted === true,
+    };
+  }
+
   function emptyProgress() {
     return {
       version: SCHEMA_VERSION,
       completedLessons: [],
       lessonScores: {},
       targetPerformance: {},
+      answerHistory: [],
       lastLessonId: null,
     };
   }
@@ -66,6 +136,13 @@
         lastAttemptAt: Number.isFinite(stats.lastAttemptAt) ? stats.lastAttemptAt : 0,
       };
     }
+    const answerHistory = Array.isArray(progress.answerHistory) ? progress.answerHistory : [];
+    clean.answerHistory = trimAnswerHistoryToBudget(
+      answerHistory
+        .map((entry, index) => sanitizeAnswerHistoryEvent(entry, index + 1))
+        .filter(Boolean)
+        .sort((left, right) => left.sequence - right.sequence || left.answeredAt - right.answeredAt),
+    );
     clean.lastLessonId = typeof progress.lastLessonId === 'string' ? progress.lastLessonId : null;
     return clean;
   }
@@ -82,10 +159,36 @@
 
   function saveProgress(storage, progress) {
     const clean = sanitizeProgress(progress);
-    if (storage && typeof storage.setItem === 'function') {
+    if (!storage || typeof storage.setItem !== 'function') return clean;
+
+    try {
       storage.setItem(STORAGE_KEY, JSON.stringify(clean));
+      return clean;
+    } catch {
+      const history = clean.answerHistory;
+      const withoutHistory = { ...clean, answerHistory: [] };
+      try {
+        storage.setItem(STORAGE_KEY, JSON.stringify(withoutHistory));
+      } catch {
+        return clean;
+      }
+
+      let best = withoutHistory;
+      let low = 1;
+      let high = history.length;
+      while (low <= high) {
+        const count = Math.floor((low + high) / 2);
+        const candidate = { ...clean, answerHistory: history.slice(-count) };
+        try {
+          storage.setItem(STORAGE_KEY, JSON.stringify(candidate));
+          best = candidate;
+          low = count + 1;
+        } catch {
+          high = count - 1;
+        }
+      }
+      return best;
     }
-    return clean;
   }
 
   function isLessonUnlocked(section, progress, lessonIndex) {
@@ -178,6 +281,34 @@
     return clean;
   }
 
+  function recordAnswerHistoryEvent(progress, event) {
+    const clean = sanitizeProgress(progress);
+    const lastSequence = clean.answerHistory.reduce((highest, entry) => Math.max(highest, entry.sequence), 0);
+    const normalized = sanitizeAnswerHistoryEvent({ ...event, sequence: lastSequence + 1 }, lastSequence + 1);
+    if (!normalized) return clean;
+    clean.answerHistory.push(normalized);
+    clean.answerHistory = trimAnswerHistoryToBudget(clean.answerHistory);
+    return clean;
+  }
+
+  function answerHistoryForTarget(progress, sectionId, targetId) {
+    const sectionKey = historyString(sectionId);
+    const targetKey = historyString(targetId);
+    if (!sectionKey || !targetKey) return [];
+    return sanitizeProgress(progress).answerHistory.filter((entry) => (
+      entry.sectionId === sectionKey && entry.targetId === targetKey
+    ));
+  }
+
+  function courseSessionId(sectionId, sessionType, lessonId, startedAt, ordinal = 1) {
+    const sectionKey = historyString(sectionId) || 'course';
+    const lessonKey = historyString(lessonId) || 'session';
+    const type = sessionType === 'focused' ? 'focused' : 'lesson';
+    const started = Number.isFinite(Number(startedAt)) ? Math.max(0, Math.floor(Number(startedAt))) : 0;
+    const sequence = Math.max(1, Math.floor(Number(ordinal) || 1));
+    return `${sectionKey}:${type}:${lessonKey}:${started}:${sequence}`;
+  }
+
   function activityPrimaryTargetId(activity) {
     if (!activity || typeof activity !== 'object') return null;
     if (activity.type === 'negative-transform') return activity.negative_item || null;
@@ -186,6 +317,40 @@
     if (activity.type === 'short-reading') return activity.question_item || null;
     if (activity.type === 'teach' || activity.type === 'number-grid') return null;
     return activity.item || null;
+  }
+
+  function isProductiveCourseActivity(activity) {
+    return Boolean(activity && [
+      'type',
+      'production',
+      'dictation',
+      'expression-completion',
+      'controlled-production',
+      'inflection-production',
+      'negative-transform',
+      'guided-writing',
+    ].includes(activity.type));
+  }
+
+  function courseActivityDirection(activity) {
+    if (!activity) return null;
+    if (activity.type === 'dictation') return 'audio-to-fi';
+    if (activity.type === 'production' || activity.type === 'controlled-production' || activity.type === 'guided-writing') return 'fa-to-fi';
+    if (activity.type === 'type') return activity.mode === 'cloze' ? 'context-to-fi' : 'fa-to-fi';
+    if (activity.type === 'choice') {
+      if (activity.mode === 'listen') return 'audio-to-fa';
+      if (activity.mode === 'meaning') return 'fi-to-fa';
+      return 'context-to-fi';
+    }
+    if (activity.type === 'expression-completion') return 'context-to-fi';
+    if (activity.type === 'morphology-choice' || activity.type === 'inflection-production') return 'morphology-to-fi';
+    if (activity.type === 'negative-transform') return 'fi-transform';
+    if (activity.type === 'sentence-order') return 'fi-structure';
+    return null;
+  }
+
+  function isGuidedCourseActivity(activity) {
+    return Boolean(activity && ['controlled-production', 'guided-writing'].includes(activity.type));
   }
 
   function weakTargetsForSection(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
@@ -245,6 +410,7 @@
         candidates.get(targetId).push({
           activity,
           strength: focusedActivityStrength(activity),
+          lessonId: lesson.id,
           lessonIndex,
           activityIndex,
         });
@@ -264,7 +430,7 @@
       for (const target of weakTargets) {
         const candidate = candidates.get(target.itemId)?.[round];
         if (!candidate) continue;
-        selected.push({ ...candidate.activity });
+        selected.push({ ...candidate.activity, source_lesson_id: candidate.lessonId });
         if (selected.length >= max) break;
       }
     }
@@ -1361,7 +1527,7 @@
           example_fi: activity.expected_fi,
         };
         const grading = gradeTypedAnswer(expected, input.value);
-        recordResult(grading.accepted);
+        recordResult(grading.accepted, grading);
         input.disabled = true;
         submit.disabled = true;
         input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -1393,7 +1559,7 @@
         example_fa: activity.prompt_fa,
       };
       const grading = gradeTypedAnswer(expected, input.value);
-      recordResult(grading.accepted);
+      recordResult(grading.accepted, grading);
       input.disabled = true;
       submit.disabled = true;
       input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -1522,7 +1688,7 @@
         accepted_answers: activity.accepted_answers,
       };
       const grading = gradeMorphologyAnswer(expected, input.value);
-      recordResult(grading.accepted);
+      recordResult(grading.accepted, grading);
       input.disabled = true;
       submit.disabled = true;
       input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -1578,6 +1744,11 @@
     let activityIndex = 0;
     let sessionCorrect = 0;
     let sessionGraded = 0;
+    let sessionSequence = 0;
+    let activeSessionId = null;
+    let sessionStartedAt = 0;
+    let activityStartedAt = 0;
+    let activityTimingIndex = -1;
     let answered = false;
 
     function isCourseHash() {
@@ -1670,13 +1841,46 @@
       return button;
     }
 
-    function recordActivityResult(activity, correct) {
+    function beginCourseSession(sessionType, lessonId) {
+      sessionSequence += 1;
+      sessionStartedAt = Date.now();
+      activeSessionId = courseSessionId(section?.id, sessionType, lessonId, sessionStartedAt, sessionSequence);
+      activityStartedAt = 0;
+      activityTimingIndex = -1;
+    }
+
+    function recordActivityResult(activity, correct, grading = null) {
       answered = true;
       sessionGraded += 1;
       if (correct) sessionCorrect += 1;
+      if (!section) return;
+
+      const answeredAt = Date.now();
       const targetId = activityPrimaryTargetId(activity);
-      if (!targetId || !section) return;
-      progress = recordTargetAttempt(progress, section.id, targetId, correct);
+      if (targetId) {
+        progress = recordTargetAttempt(progress, section.id, targetId, correct, answeredAt);
+      }
+      progress = recordAnswerHistoryEvent(progress, {
+        answeredAt,
+        sessionId: activeSessionId || courseSessionId(section.id, 'lesson', activeLesson?.id, answeredAt, 1),
+        sessionStartedAt: sessionStartedAt || answeredAt,
+        sessionType: activeLesson?.focused_practice ? 'focused' : 'lesson',
+        sectionId: section.id,
+        lessonId: activeLesson?.id || null,
+        sourceLessonId: activity.source_lesson_id || (activeLesson?.focused_practice ? null : activeLesson?.id || null),
+        targetId,
+        activityType: activity.type || 'unknown',
+        mode: activity.mode || null,
+        correct,
+        productive: isProductiveCourseActivity(activity),
+        guided: isGuidedCourseActivity(activity),
+        direction: courseActivityDirection(activity),
+        firstAttempt: true,
+        responseMs: activityStartedAt ? Math.max(0, answeredAt - activityStartedAt) : 0,
+        exact: typeof grading?.exact === 'boolean' ? grading.exact : null,
+        fuzzy: Boolean(grading?.fuzzy),
+        diacriticAdjusted: Boolean(grading?.diacriticAdjusted),
+      });
       progress = saveProgress(windowObject.localStorage, progress);
     }
 
@@ -2170,6 +2374,7 @@
       sessionCorrect = 0;
       sessionGraded = 0;
       answered = false;
+      beginCourseSession('lesson', lesson.id);
       setHash(`#course-${lesson.id}`);
       showCourseView();
       renderActivity();
@@ -2193,6 +2398,7 @@
       sessionCorrect = 0;
       sessionGraded = 0;
       answered = false;
+      beginCourseSession('focused', activeLesson.id);
       setHash(`#course-${section.id}`);
       showCourseView();
       renderActivity();
@@ -2228,6 +2434,10 @@
       if (!activeLesson) return renderSectionMap();
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
+      if (activityTimingIndex !== activityIndex) {
+        activityTimingIndex = activityIndex;
+        activityStartedAt = Date.now();
+      }
       answered = false;
       const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
@@ -2311,8 +2521,8 @@
           createButton,
           nextActivity,
           showFeedback,
-          recordResult(correct) {
-            recordActivityResult(activity, correct);
+          recordResult(correct, grading = null) {
+            recordActivityResult(activity, correct, grading);
           },
         });
       } else if (MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) {
@@ -2325,8 +2535,8 @@
           createButton,
           nextActivity,
           createTypedDifference,
-          recordResult(correct) {
-            recordActivityResult(activity, correct);
+          recordResult(correct, grading = null) {
+            recordActivityResult(activity, correct, grading);
           },
         });
       } else if (activity.type === 'number-grid') {
@@ -2513,7 +2723,7 @@
           if (answered || !input.value.trim()) return;
           const grading = gradeTypedAnswer(negative, input.value);
           const correct = grading.accepted;
-          recordActivityResult(activity, correct);
+          recordActivityResult(activity, correct, grading);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -2553,7 +2763,11 @@
           const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
           const correct = gradings.every((grading) => grading.accepted);
           const hasFuzzy = gradings.some((grading) => grading.fuzzy);
-          recordActivityResult(activity, correct);
+          recordActivityResult(activity, correct, {
+            exact: gradings.every((grading) => grading.exact),
+            fuzzy: hasFuzzy,
+            diacriticAdjusted: gradings.some((grading) => grading.diacriticAdjusted),
+          });
           rows.forEach(({ input }, index) => {
             const grading = gradings[index];
             input.disabled = true;
@@ -2913,7 +3127,7 @@
           if (answered || !input.value.trim()) return;
           const grading = gradeTypedAnswer(item, input.value);
           const correct = grading.accepted;
-          recordActivityResult(activity, correct);
+          recordActivityResult(activity, correct, grading);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -3168,6 +3382,10 @@
     CURRICULUM_URL,
     WEAK_TARGET_ACCURACY,
     FOCUSED_PRACTICE_LIMIT,
+    ANSWER_HISTORY_LIMIT,
+    ANSWER_HISTORY_MAX_BYTES,
+    utf8ByteLength,
+    trimAnswerHistoryToBudget,
     normalizeAnswer,
     foldFinnishDiacritics,
     emptyProgress,
@@ -3185,7 +3403,13 @@
     recordLessonCompletion,
     targetPerformanceKey,
     recordTargetAttempt,
+    recordAnswerHistoryEvent,
+    answerHistoryForTarget,
+    courseSessionId,
     activityPrimaryTargetId,
+    isProductiveCourseActivity,
+    courseActivityDirection,
+    isGuidedCourseActivity,
     weakTargetsForSection,
     buildFocusedPracticeActivities,
     makeCloze,

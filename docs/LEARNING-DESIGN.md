@@ -209,7 +209,7 @@ Long-term
 - successful retrieval after a gap of roughly 45–90 days
 ```
 
-The current A1.1 implementation now keeps a lightweight aggregate of correct and incorrect attempts for explicit course targets, scoped by section. When a target has at least one miss and aggregate accuracy below 80%, the section can offer focused practice built only from reviewed graded activities in lessons the learner has already completed. This aggregate is intentionally not a chronological answer history and is not sufficient for the stronger mastery-evidence model below.
+The current A1.1 implementation keeps the lightweight section-scoped aggregate used by focused practice and also records a bounded chronological answer history. Each graded course answer receives stable sequence order and a timestamp plus session identity/start time, lesson and source-lesson provenance, target ID when one exists, activity type/mode and retrieval direction, correctness, productive-vs-recognition evidence, whether the task contains built-in guidance, response time, first-attempt status, and exact/fuzzy/diacritic-adjusted typed-grading evidence when available. The browser retains at most the newest 5,000 course-answer events and also caps the serialized history near 1 MB. If the browser still rejects a local-storage write, the app progressively evicts older history and continues the graded interaction instead of surfacing a storage exception. This history supplies evidence for future mastery rules; it does not itself declare a target mastered.
 
 The scheduler should record:
 
