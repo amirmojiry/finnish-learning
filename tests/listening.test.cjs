@@ -102,7 +102,7 @@ test('auditory injection preserves every checkpoint target and avoids the produc
   });
 });
 
-test('Finnish speech requires an installed fi voice and never falls back to another language', () => {
+test('Finnish speech prefers an exposed fi voice and falls back to fi-FI language routing', () => {
   const finnishVoice = { name: 'Finnish Test Voice', lang: 'fi-FI', localService: true };
   const englishVoice = { name: 'English Test Voice', lang: 'en-US', localService: true };
   let spoken = null;
@@ -124,31 +124,45 @@ test('Finnish speech requires an installed fi voice and never falls back to anot
 
   assert.equal(course.speechApiAvailable(windowObject), true);
   assert.equal(course.findFinnishVoice(windowObject), finnishVoice);
-  assert.equal(course.finnishSpeechStatus(windowObject).state, 'ready');
+  assert.deepEqual(course.finnishSpeechStatus(windowObject), { state: 'ready', voice: finnishVoice, strategy: 'voice' });
   assert.equal(course.supportsSpeech(windowObject), true);
   assert.equal(course.playSpeech(windowObject, 'Hyvää huomenta'), true);
   assert.equal(spoken.voice, finnishVoice);
   assert.equal(spoken.lang, 'fi-FI');
 
-  const missing = {
+  const browserHidesFinnish = {
     ...windowObject,
     speechSynthesis: {
       ...windowObject.speechSynthesis,
       getVoices: () => [englishVoice],
     },
   };
-  assert.equal(course.finnishSpeechStatus(missing).state, 'missing');
-  assert.equal(course.supportsSpeech(missing), false);
-  assert.equal(course.playSpeech(missing, 'Hyvää huomenta'), false);
+  assert.deepEqual(course.finnishSpeechStatus(browserHidesFinnish), { state: 'ready', voice: null, strategy: 'language' });
+  assert.equal(course.supportsSpeech(browserHidesFinnish), true);
+  assert.equal(course.playSpeech(browserHidesFinnish, 'Hyvää huomenta'), true);
+  assert.equal(spoken.voice, undefined);
+  assert.equal(spoken.lang, 'fi-FI');
 
-  const loading = {
+  const emptyVoiceList = {
     ...windowObject,
     speechSynthesis: {
       ...windowObject.speechSynthesis,
       getVoices: () => [],
     },
   };
-  assert.equal(course.finnishSpeechStatus(loading).state, 'loading');
+  assert.deepEqual(course.finnishSpeechStatus(emptyVoiceList), { state: 'ready', voice: null, strategy: 'language' });
+  assert.equal(course.playSpeech(emptyVoiceList, 'Hyvää huomenta'), true);
+  assert.equal(spoken.voice, undefined);
+  assert.equal(spoken.lang, 'fi-FI');
+
+  const unsupported = {
+    navigator: { userAgent: 'Test Browser' },
+    speechSynthesis: null,
+    SpeechSynthesisUtterance,
+  };
+  assert.deepEqual(course.finnishSpeechStatus(unsupported), { state: 'unsupported', voice: null, strategy: 'none' });
+  assert.equal(course.supportsSpeech(unsupported), false);
+  assert.equal(course.playSpeech(unsupported, 'Hyvää huomenta'), false);
 
   assert.match(course.speechSettingsGuide(windowObject), /Settings.*Time & language.*Finnish/s);
   assert.equal(course.activityNeedsFinnishSpeech({ type: 'choice', mode: 'listen' }), true);
@@ -161,8 +175,8 @@ test('Finnish speech requires an installed fi voice and never falls back to anot
 
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.match(source, /speechSynthesis\.addEventListener\('voiceschanged'/);
-  assert.match(source, /صدای فنلاندی روی این دستگاه پیدا نشد/);
-  assert.match(source, /اگر این وضعیت ادامه پیدا کرد، احتمالاً voice فنلاندی نصب نیست/);
+  assert.match(source, /if \(status\.voice\) utterance\.voice = status\.voice/);
+  assert.match(source, /utterance\.lang = 'fi-FI'/);
   assert.match(source, /speechSettingsGuide\(windowObject\)/);
   assert.match(source, /shouldRefreshSpeechActivity\(currentActivity, answered\)/);
   assert.match(source, /Text-to-speech/);

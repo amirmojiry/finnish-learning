@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.21.1] - 2026-10-06
+
+### Fixed
+
+- Android and Samsung TTS no longer report a false missing-Finnish-voice state when Chrome supports speech synthesis but does not enumerate the installed Finnish voice.
+- Finnish playback now prefers an explicitly exposed `fi-*` voice and otherwise requests `fi-FI` directly from the browser/OS speech engine without assigning a non-Finnish voice.
+- Settings now distinguishes an explicitly detected Finnish browser voice from automatic `fi-FI` browser/device language routing.
+
+
 ## [1.21.0] - 2026-10-06
 
 ### Added

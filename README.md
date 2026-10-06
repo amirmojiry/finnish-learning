@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.21.0`
+- Version: `1.21.1`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
-- complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-voice-gated listening and dictation, structured sentence-building, and reviewed introductory morphology practice
+- complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-language listening and dictation with explicit fi-voice preference and browser/OS language fallback, structured sentence-building, and reviewed introductory morphology practice
 - section-scoped focused practice that tracks aggregate target accuracy and reuses reviewed activities for course targets below 80% accuracy
 - bounded chronological A1.1 answer history with stable sequence order, session identity, response timing, productive-vs-recognition evidence, and typed-grading quality for future mastery decisions
 - distraction-free active lessons with hidden global navigation, compact integrated progress, and in-viewport answer feedback
@@ -39,7 +39,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - four-destination navigation: Course, Dictionary, Word Practice, and Settings; legacy Home/Profile surfaces are removed
 - typed grading accepts a/ä and o/ö keyboard substitutions as near-correct while still showing the canonical Finnish spelling
 - linked dictionary words inside examples
-- Settings shows live Finnish speech-voice availability and device-specific installation guidance alongside light and dark themes
+- Settings shows whether Finnish speech uses an explicitly exposed fi voice or fi-FI browser/OS language routing, plus device-specific TTS guidance alongside light and dark themes
 - locally saved course progress, theme, review scheduling, answer history, and mastery state
 
 The coverage percentage is an estimate of how much of the written Parole corpus is represented by reviewed surface forms. It is not a literal measurement of complete Finnish comprehension or communicative ability.
@@ -153,7 +153,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 ### Phase 2 — richer A1.1 practice
 
 - [x] Add Persian-to-Finnish production.
-- [x] Add listening and dictation using an explicitly detected installed Finnish browser speech voice, with a no-penalty fallback when Finnish TTS is unavailable and a course contract ready for future static or build-time-generated audio.
+- [x] Add listening and dictation that prefer an explicitly exposed Finnish browser voice and otherwise request `fi-FI` directly from the browser/OS speech engine, with a no-penalty fallback only when speech synthesis itself is unavailable and a course contract ready for future static or build-time-generated audio.
 - [x] Add sentence ordering, expression completion, and controlled sentence production.
 - [x] Add morphology-aware distractors and introductory inflection exercises from explicit reviewed forms.
 - [x] Add focused practice for weak or frequently missed course targets.
