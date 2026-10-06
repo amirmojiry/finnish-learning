@@ -724,7 +724,7 @@
           "title_en": "Contacting maintenance",
           "title_fa": "تماس با خدمات تعمیر و نگهداری",
           "can_do_en": "Make a short request for routine home maintenance and give one useful detail.",
-          "can_do_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک جزئیات مفید ارائه کند.",
+          "can_do_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
           "high_frequency_targets": [
             "voi",
             "heti",
@@ -1238,7 +1238,7 @@
           "title_en": "A short email or message",
           "title_fa": "یک ایمیل یا پیام کوتاه",
           "can_do_en": "Write a short familiar email or message that states one request or piece of information.",
-          "can_do_fa": "یک ایمیل یا پیام کوتاه و آشنا بنویسد که یک درخواست یا یک اطلاعات را بیان کند.",
+          "can_do_fa": "یک ایمیل یا پیام کوتاه و آشنا بنویسد که یک درخواست یا یک نکتهٔ اطلاعاتی را بیان کند.",
           "high_frequency_targets": [
             "minulle",
             "sinä",
