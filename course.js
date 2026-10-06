@@ -90,6 +90,26 @@
     return sections.slice(0, sectionIndex).every((entry) => isSectionComplete(entry, progress));
   }
 
+  function isSectionStarted(section, progress) {
+    if (!section || !Array.isArray(section.lessons) || !section.lessons.length) return false;
+    return sanitizeProgress(progress).completedLessons.includes(section.lessons[0].id);
+  }
+
+  function isBackfillSectionUnlocked(sections, progress, sectionIndex) {
+    if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
+    return sections.slice(sectionIndex + 1).some((entry) => isSectionStarted(entry, progress));
+  }
+
+  function isCourseLessonAccessible(sections, progress, sectionIndex, lessonIndex) {
+    if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
+    const targetSection = sections[sectionIndex];
+    if (!targetSection || !Array.isArray(targetSection.lessons) || lessonIndex < 0 || lessonIndex >= targetSection.lessons.length) return false;
+    if (lessonIndex === 0) return true;
+    if (isBackfillSectionUnlocked(sections, progress, sectionIndex)) return true;
+    const sectionAvailable = isSectionUnlocked(sections, progress, sectionIndex) || isSectionStarted(targetSection, progress);
+    return sectionAvailable && isLessonUnlocked(targetSection, progress, lessonIndex);
+  }
+
   function passesLessonRequirement(lesson, correct, graded) {
     const threshold = Number(lesson?.passing_score || 0);
     if (!threshold) return true;
@@ -1416,6 +1436,7 @@
     let progress = loadProgress(windowObject.localStorage);
     let activeLesson = null;
     let infoDisclosureId = 0;
+    let mapNavigationCleanup = null;
     let activityIndex = 0;
     let sessionCorrect = 0;
     let sessionGraded = 0;
@@ -1623,6 +1644,10 @@
     }
 
     function renderSectionMap() {
+      if (mapNavigationCleanup) {
+        mapNavigationCleanup();
+        mapNavigationCleanup = null;
+      }
       activeLesson = null;
       setLessonFocusMode(false);
       if (!section) section = preferredSection();
@@ -1672,11 +1697,33 @@
           renderSectionMap();
         });
         option.disabled = !implemented || current;
+
+        const optionMain = document.createElement('span');
+        optionMain.className = 'course-section-selector-main';
         const optionTitle = document.createElement('span');
+        optionTitle.className = 'course-section-selector-title';
         optionTitle.textContent = `بخش ${toPersianNumber(entry.order)}: ${entry.title_fa}`;
+        optionMain.append(optionTitle);
+
+        if (implemented) {
+          const sectionCompleted = completionCount(implemented);
+          const sectionTotal = implemented.lessons.length;
+          const optionProgress = document.createElement('span');
+          optionProgress.className = 'course-section-selector-progress';
+          optionProgress.setAttribute('role', 'progressbar');
+          optionProgress.setAttribute('aria-label', `پیشرفت بخش ${toPersianNumber(entry.order)}`);
+          optionProgress.setAttribute('aria-valuemin', '0');
+          optionProgress.setAttribute('aria-valuemax', String(sectionTotal));
+          optionProgress.setAttribute('aria-valuenow', String(sectionCompleted));
+          const optionProgressBar = document.createElement('span');
+          optionProgressBar.style.width = `${sectionTotal ? (sectionCompleted / sectionTotal) * 100 : 0}%`;
+          optionProgress.append(optionProgressBar);
+          optionMain.append(optionProgress);
+        }
+
         const optionStatus = document.createElement('small');
         optionStatus.textContent = current ? 'بخش فعلی' : unlocked ? 'باز کردن' : 'مشاهده (قفل)';
-        option.append(optionTitle, optionStatus);
+        option.append(optionMain, optionStatus);
         selectorList.append(option);
       }
 
@@ -1726,11 +1773,12 @@
       path.setAttribute('aria-label', `درس‌های ${section.title_fa}`);
       const actionPanel = document.createElement('article');
       actionPanel.className = 'course-lesson-popover';
+      const lessonSteps = [];
       actionPanel.hidden = true;
       let selectedNode = null;
       let selectedStep = null;
 
-      const openLessonPopover = (lesson, node, unlocked, done, step) => {
+      const openLessonPopover = (lesson, node, unlocked, done, step, jumpAvailable = false) => {
         if (selectedNode) {
           selectedNode.classList.remove('is-selected');
           selectedNode.setAttribute('aria-expanded', 'false');
@@ -1755,7 +1803,7 @@
         const actions = document.createElement('div');
         actions.className = 'course-lesson-popover-actions';
         const continueButton = createButton(
-          unlocked ? 'ادامه درس' : 'قفل است',
+          jumpAvailable ? 'پرش به این درس' : unlocked ? 'ادامه درس' : 'قفل است',
           'primary-button course-lesson-continue',
           () => startLesson(lesson),
         );
@@ -1801,16 +1849,19 @@
       section.lessons.forEach((lesson, index) => {
         const done = progress.completedLessons.includes(lesson.id);
         const sectionIndex = sections.indexOf(section);
-        const unlocked = isSectionUnlocked(sections, progress, sectionIndex) && isLessonUnlocked(section, progress, index);
+        const normalUnlocked = isSectionUnlocked(sections, progress, sectionIndex) && isLessonUnlocked(section, progress, index);
+        const unlocked = isCourseLessonAccessible(sections, progress, sectionIndex, index);
+        const jumpAvailable = index === 0 && unlocked && !normalUnlocked && !done;
 
         const step = document.createElement('div');
         step.className = `course-path-step${index === section.lessons.length - 1 ? ' is-last' : ''}`;
 
         const node = createButton(toPersianNumber(lesson.order), 'course-lesson-node', () => {
-          openLessonPopover(lesson, node, unlocked, done, step);
+          openLessonPopover(lesson, node, unlocked, done, step, jumpAvailable);
         });
         node.classList.toggle('is-complete', done);
         node.classList.toggle('is-current', unlocked && !done);
+        node.classList.toggle('is-jump', jumpAvailable);
         node.classList.toggle('is-locked', !unlocked);
         node.setAttribute('aria-label', `درس ${toPersianNumber(lesson.order)}: ${lesson.title_fa}`);
         node.setAttribute('aria-expanded', 'false');
@@ -1818,9 +1869,10 @@
 
         const state = document.createElement('span');
         state.className = 'course-lesson-node-state';
-        state.textContent = done ? 'کامل شده' : unlocked ? 'قابل یادگیری' : 'قفل است';
+        state.textContent = done ? 'کامل شده' : jumpAvailable ? 'قابل پرش' : unlocked ? 'قابل یادگیری' : 'قفل است';
 
         step.append(node, state);
+        lessonSteps.push(step);
         path.append(step);
         if (index < section.lessons.length - 1) {
           const connector = document.createElement('div');
@@ -1847,6 +1899,50 @@
       footer.append(reset);
 
       root.append(catalog, header, path, footer);
+
+      const sectionIndex = sections.indexOf(section);
+      const targetLessonIndex = completed === 0
+        ? 0
+        : section.lessons.findIndex((lesson, index) => (
+          !progress.completedLessons.includes(lesson.id)
+          && isCourseLessonAccessible(sections, progress, sectionIndex, index)
+        ));
+      if (targetLessonIndex >= 0 && lessonSteps[targetLessonIndex]) {
+        const targetStep = lessonSteps[targetLessonIndex];
+        const jumpButton = createButton('↓', 'course-current-lesson-jump', () => {
+          targetStep.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        jumpButton.setAttribute('aria-label', 'رفتن به درس قابل یادگیری');
+        root.append(jumpButton);
+
+        const updateJumpButton = () => {
+          const targetRect = targetStep.getBoundingClientRect();
+          const viewRect = courseView.getBoundingClientRect();
+          const visibleTop = Math.max(0, viewRect.top);
+          const visibleBottom = Math.min(windowObject.innerHeight || document.documentElement.clientHeight, viewRect.bottom);
+          const targetVisible = targetRect.top >= visibleTop && targetRect.bottom <= visibleBottom;
+          jumpButton.hidden = targetVisible;
+          if (targetVisible) return;
+          const direction = targetRect.bottom < visibleTop ? 'up' : 'down';
+          jumpButton.textContent = direction === 'up' ? '↑' : '↓';
+          jumpButton.setAttribute(
+            'aria-label',
+            direction === 'up' ? 'رفتن به درس قابل یادگیری در بالا' : 'رفتن به درس قابل یادگیری در پایین',
+          );
+        };
+
+        const onScroll = () => windowObject.requestAnimationFrame(updateJumpButton);
+        windowObject.addEventListener('scroll', onScroll, { passive: true });
+        courseView.addEventListener('scroll', onScroll, { passive: true });
+        windowObject.addEventListener('resize', onScroll);
+        mapNavigationCleanup = () => {
+          windowObject.removeEventListener('scroll', onScroll);
+          courseView.removeEventListener('scroll', onScroll);
+          windowObject.removeEventListener('resize', onScroll);
+        };
+        windowObject.requestAnimationFrame(updateJumpButton);
+      }
+
       root.scrollTop = 0;
     }
 
@@ -1854,7 +1950,7 @@
       if (!section || !lesson) return;
       const sectionIndex = sections.indexOf(section);
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
-      if (!isSectionUnlocked(sections, progress, sectionIndex) || !isLessonUnlocked(section, progress, index)) return;
+      if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
       activeLesson = lesson;
       setLessonFocusMode(true);
       activityIndex = 0;
@@ -2675,7 +2771,7 @@
       if (lessonMatch) {
         const targetSectionIndex = sections.indexOf(lessonMatch.section);
         const lessonIndex = lessonMatch.section.lessons.findIndex((entry) => entry.id === lessonMatch.lesson.id);
-        if (isSectionUnlocked(sections, progress, targetSectionIndex) && isLessonUnlocked(lessonMatch.section, progress, lessonIndex)) {
+        if (isCourseLessonAccessible(sections, progress, targetSectionIndex, lessonIndex)) {
           section = lessonMatch.section;
           startLesson(lessonMatch.lesson);
         } else {
@@ -2788,6 +2884,9 @@
     isLessonUnlocked,
     isSectionComplete,
     isSectionUnlocked,
+    isSectionStarted,
+    isBackfillSectionUnlocked,
+    isCourseLessonAccessible,
     passesLessonRequirement,
     recordLessonCompletion,
     makeCloze,
