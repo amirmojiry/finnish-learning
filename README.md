@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.21.1`
+- Version: `1.22.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -30,6 +30,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-language listening and dictation with explicit fi-voice preference and browser/OS language fallback, structured sentence-building, and reviewed introductory morphology practice
 - section-scoped focused practice that tracks aggregate target accuracy and reuses reviewed activities for course targets below 80% accuracy
 - bounded chronological A1.1 answer history with stable sequence order, session identity, response timing, productive-vs-recognition evidence, and typed-grading quality for future mastery decisions
+- reviewed 40-lesson A1.2 and 40-lesson A1.3 curriculum matrices that define the rest of the A1 progression before later-stage playable manifests are published
 - distraction-free active lessons with hidden global navigation, compact integrated progress, and in-viewport answer feedback
 - Word Practice spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -58,7 +59,8 @@ The ranking is based on the [Frequency List of Written Finnish Word Forms](https
 
 - `data/common-words.json`: generated vocabulary consumed by the app
 - `data/course/a1.1-section-1.json` through `data/course/a1.1-section-4.json`: reviewed manifests for the complete A1.1 path
-- `data/course/a1.2-curriculum.json`: reviewed A1.2 curriculum targets used by the vocabulary-gap analysis
+- `data/course/a1.2-curriculum.json`: reviewed 40-lesson A1.2 curriculum contract used by the vocabulary-gap analysis
+- `data/course/a1.3-curriculum.json`: reviewed 40-lesson A1.3 curriculum contract completing the planned A1 subdivision model
 - `data/course/a1.2-vocabulary-gap.json`: generated A1.2 lexical coverage and source-gap report
 - `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
 - `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
@@ -161,7 +163,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 
 ### Phase 3 — expand the structured course
 
-- [ ] Build A1.2 and A1.3 with the same reviewed curriculum model.
+- [x] Build A1.2 and A1.3 with the same reviewed curriculum model at the curriculum-contract layer; playable later-stage manifests remain sequenced after vocabulary expansion.
 - [ ] Expand high-frequency vocabulary while preserving curated topic vocabulary.
 - [ ] Add practical domains such as shopping, transport, home, work, weather, appointments, and health.
 - [ ] Expand grammar in pedagogical order.
