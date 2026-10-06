@@ -105,7 +105,7 @@ def sync_index() -> None:
         count=1,
     )
     content = re.sub(
-        r'(<div class="about-stat"><strong>)[۰-۹0-9]+(</strong><span>واژه پرتکرار</span></div>)',
+        r'(<div class="about-stat"><strong>)[۰-۹0-9]+(</strong><span>واژه(?:ٔ)? پرتکرار</span></div>)',
         rf'\g<1>{persian_count}\g<2>',
         content,
         count=1,
