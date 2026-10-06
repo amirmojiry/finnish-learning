@@ -59,6 +59,8 @@ test('answer history records stable sequence order and target queries stay chron
     mode: 'finnish',
     correct: true,
     productive: true,
+    guided: false,
+    direction: 'fa-to-fi',
     firstAttempt: true,
     responseMs: 450,
     exact: false,
@@ -70,6 +72,8 @@ test('answer history records stable sequence order and target queries stay chron
   const alpha = course.answerHistoryForTarget(progress, 'section-1', 'alpha');
   assert.deepEqual(alpha.map((entry) => entry.sessionId), ['s1', 's2']);
   assert.equal(alpha[1].productive, true);
+  assert.equal(alpha[1].guided, false);
+  assert.equal(alpha[1].direction, 'fa-to-fi');
   assert.equal(alpha[1].fuzzy, true);
   assert.equal(alpha[1].diacriticAdjusted, true);
 });
@@ -134,6 +138,18 @@ test('course session IDs distinguish lesson and focused-practice sessions', () =
   assert.match(focused, /:focused:/);
 });
 
+test('course activity evidence records direction and built-in guidance separately', () => {
+  assert.equal(course.courseActivityDirection({ type: 'choice', mode: 'meaning' }), 'fi-to-fa');
+  assert.equal(course.courseActivityDirection({ type: 'choice', mode: 'listen' }), 'audio-to-fa');
+  assert.equal(course.courseActivityDirection({ type: 'type', mode: 'finnish' }), 'fa-to-fi');
+  assert.equal(course.courseActivityDirection({ type: 'type', mode: 'cloze' }), 'context-to-fi');
+  assert.equal(course.courseActivityDirection({ type: 'dictation' }), 'audio-to-fi');
+  assert.equal(course.courseActivityDirection({ type: 'negative-transform' }), 'fi-transform');
+  assert.equal(course.isGuidedCourseActivity({ type: 'controlled-production' }), true);
+  assert.equal(course.isGuidedCourseActivity({ type: 'guided-writing' }), true);
+  assert.equal(course.isGuidedCourseActivity({ type: 'type' }), false);
+});
+
 test('productive evidence is limited to activities that require Finnish production', () => {
   assert.equal(course.isProductiveCourseActivity({ type: 'type' }), true);
   assert.equal(course.isProductiveCourseActivity({ type: 'production' }), true);
@@ -178,5 +194,7 @@ test('browser course wiring records session, timing, target, and typed-grading e
   assert.match(source, /responseMs: activityStartedAt \? Math\.max\(0, answeredAt - activityStartedAt\) : 0/);
   assert.match(source, /progress = recordAnswerHistoryEvent\(progress, \{/);
   assert.match(source, /sourceLessonId: activity\.source_lesson_id/);
+  assert.match(source, /direction: courseActivityDirection\(activity\)/);
+  assert.match(source, /guided: isGuidedCourseActivity\(activity\)/);
   assert.match(source, /recordActivityResult\(activity, correct, grading\)/);
 });
