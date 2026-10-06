@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="app-version" content="1.18.0">
+  <meta name="app-version" content="1.18.1">
   <meta name="theme-color" content="#f7f8fc">
   <meta name="description" content="تمرین و واژه‌نامه تعاملی زبان فنلاندی با ترجمه فارسی">
   <title>یادگیری فنلاندی</title>
@@ -18,17 +18,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.18.0">
-  <link rel="stylesheet" href="css/option-sizing.css?v=1.18.0">
-  <link rel="stylesheet" href="css/typing-keyboard.css?v=1.18.0">
-  <link rel="stylesheet" href="css/dictionary.css?v=1.18.0">
-  <link rel="stylesheet" href="css/ud-analysis.css?v=1.18.0">
-  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=1.18.0">
-  <link rel="stylesheet" href="css/ud-analysis-collapse.css?v=1.18.0">
-  <link rel="stylesheet" href="css/settings.css?v=1.18.0">
-  <link rel="stylesheet" href="css/about.css?v=1.18.0">
-  <link rel="stylesheet" href="css/spaced-repetition.css?v=1.18.0">
-  <link rel="stylesheet" href="css/course.css?v=1.18.0">
+  <link rel="stylesheet" href="css/styles.css?v=1.18.1">
+  <link rel="stylesheet" href="css/option-sizing.css?v=1.18.1">
+  <link rel="stylesheet" href="css/typing-keyboard.css?v=1.18.1">
+  <link rel="stylesheet" href="css/dictionary.css?v=1.18.1">
+  <link rel="stylesheet" href="css/ud-analysis.css?v=1.18.1">
+  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=1.18.1">
+  <link rel="stylesheet" href="css/ud-analysis-collapse.css?v=1.18.1">
+  <link rel="stylesheet" href="css/settings.css?v=1.18.1">
+  <link rel="stylesheet" href="css/about.css?v=1.18.1">
+  <link rel="stylesheet" href="css/spaced-repetition.css?v=1.18.1">
+  <link rel="stylesheet" href="css/course.css?v=1.18.1">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -112,10 +112,58 @@
 
     <div id="about-view" class="app-view about-view" hidden>
       <section class="about-shell">
-        <header class="about-page-header"><div class="about-app-mark" aria-hidden="true">FI</div><div><h1>درباره Finnish Learning</h1><p>تمرین ساده و روزانه واژگان فنلاندی برای فارسی‌زبانان</p></div></header>
-        <section class="about-section"><h2>درباره برنامه</h2><p>Finnish Learning یک برنامه وب سبک و مناسب موبایل برای یادگیری صورت‌های واژگانی پرتکرار زبان فنلاندی است. برنامه مسیر ساختاریافتهٔ دوره را با واژه‌نامه و یک بخش مستقل «تمرین واژه» برای مرور هوشمند واژگان ترکیب می‌کند.</p><div class="about-stats" aria-label="مشخصات برنامه"><div class="about-stat"><strong>۳۰۰</strong><span>واژه پرتکرار</span></div><div class="about-stat"><strong>۱</strong><span>مرور هوشمند واژه</span></div><div class="about-stat"><strong>۲</strong><span>مثال برای هر واژه</span></div></div></section>
-        <section class="about-section"><h2>منبع واژه‌ها</h2><p>ترتیب واژه‌ها بر اساس فهرست بسامد صورت‌های واژگانی زبان نوشتاری فنلاندی است که Kotus از طریق Kielipankki منتشر کرده است. این فهرست از پیکره نوشتاری Parole با حدود ۱۷ میلیون توکن استخراج شده است.</p></section>
-        <section class="about-section"><h2>سازنده</h2><div class="creator-card"><div class="creator-avatar" aria-hidden="true">AM</div><div class="creator-info"><strong>امیر مجیری</strong><span>توسعه‌دهنده نرم‌افزار با تمرکز بر توسعه وب و نرم‌افزارهای ابری. این برنامه ابتدا برای پاسخ به نیازهای واقعی او در مسیر یادگیری زبان فنلاندی ساخته شد و به‌تدریج توسعه پیدا می‌کند.</span></div></div><div class="about-links"><a class="about-link" href="https://github.com/amirmojiry/finnish-learning" target="_blank" rel="noopener noreferrer">کد منبع برنامه</a><a class="about-link" href="https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/" target="_blank" rel="noopener noreferrer">منبع فهرست واژه‌ها</a></div></section>
+        <header class="about-page-header">
+          <div class="about-app-mark" aria-hidden="true">FI</div>
+          <div>
+            <h1>درباره Finnish Learning</h1>
+            <p>دورهٔ ساختاریافتهٔ فنلاندی برای فارسی‌زبانان</p>
+          </div>
+        </header>
+
+        <section class="about-section">
+          <h2>درباره برنامه</h2>
+          <p>Finnish Learning یک برنامهٔ وب سبک و مناسب موبایل برای یادگیری فنلاندی است که «دوره» را مسیر اصلی یادگیری قرار می‌دهد. نسخهٔ فعلی یک مسیر کامل A1.1 با ۴۰ درس دارد و در هر درس ۱۵ فعالیت بازبینی‌شده ارائه می‌کند؛ از یادگیری واژه و درک جمله تا تولید فارسی‌به‌فنلاندی، شنیدن و دیکته، ساخت جمله و تمرین‌های مقدماتی صرف.</p>
+          <div class="about-stats" aria-label="مشخصات برنامه">
+            <div class="about-stat"><strong>۴۰</strong><span>درس A1.1</span></div>
+            <div class="about-stat"><strong>۱۵</strong><span>فعالیت در هر درس</span></div>
+            <div class="about-stat"><strong>۳۰۰</strong><span>واژهٔ پرتکرار</span></div>
+          </div>
+        </section>
+
+        <section class="about-section">
+          <h2>بخش‌های برنامه</h2>
+          <p>«دوره» مسیر آموزشی اصلی و مرحله‌به‌مرحله است. «واژه‌نامه» برای دیدن معنی، شکل پایه، نوع واژه، مثال‌ها و اطلاعات زبانی استفاده می‌شود. «تمرین واژه» از دوره جداست و مرور هوشمند واژه‌ها را با مرور فاصله‌دار، واژه‌های موعددار، تاریخچهٔ پاسخ‌ها و وضعیت یادگیری مدیریت می‌کند.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>تمرین شنیداری و تلفظ</h2>
+          <p>برای جلوگیری از تلفظ نادرست، تمرین‌های شنیداری فقط زمانی از گفتار مصنوعی دستگاه استفاده می‌کنند که یک صدای واقعی فنلاندی با زبان fi روی دستگاه تشخیص داده شود. وضعیت این صدا و راهنمای نصب آن در «تنظیمات» قابل مشاهده است؛ اگر صدای فنلاندی در دسترس نباشد، تمرین صوتی بدون جریمه قابل ردکردن است.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>منبع واژه‌ها</h2>
+          <p>ترتیب واژه‌های واژه‌نامه بر اساس فهرست بسامد صورت‌های واژگانی زبان نوشتاری فنلاندی است که Kotus از طریق Kielipankki منتشر کرده است. این فهرست از پیکرهٔ نوشتاری Parole با حدود ۱۷ میلیون توکن استخراج شده است. محتوای آموزشی دوره، مثال‌ها و پاسخ‌های پذیرفتنی به‌صورت صریح در داده‌های پروژه نگه‌داری و بازبینی می‌شوند.</p>
+        </section>
+
+        <section class="about-section">
+          <h2>نسخه</h2>
+          <p>نسخهٔ فعلی برنامه: <strong dir="ltr">1.18.1</strong></p>
+        </section>
+
+        <section class="about-section">
+          <h2>سازنده</h2>
+          <div class="creator-card">
+            <div class="creator-avatar" aria-hidden="true">AM</div>
+            <div class="creator-info">
+              <strong>امیر مجیری</strong>
+              <span>توسعه‌دهندهٔ نرم‌افزار با تمرکز بر توسعهٔ وب و نرم‌افزارهای ابری. این برنامه ابتدا برای پاسخ به نیازهای واقعی او در مسیر یادگیری زبان فنلاندی ساخته شد و به‌تدریج بر اساس یک طراحی آموزشی ساختاریافته توسعه پیدا کرده است.</span>
+            </div>
+          </div>
+          <div class="about-links">
+            <a class="about-link" href="https://github.com/amirmojiry/finnish-learning" target="_blank" rel="noopener noreferrer">کد منبع برنامه</a>
+            <a class="about-link" href="https://www.kielipankki.fi/lexical-conceptual-resources/parole-taajuuslista/" target="_blank" rel="noopener noreferrer">منبع فهرست واژه‌ها</a>
+          </div>
+        </section>
       </section>
     </div>
 
@@ -154,12 +202,12 @@
   </nav>
 
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
-  <script src="app.js?v=1.18.0" defer></script>
-  <script src="dictionary-pos.js?v=1.18.0" defer></script>
-  <script src="settings.js?v=1.18.0" defer></script>
-  <script src="course.js?v=1.18.0" defer></script>
-  <script src="ud-analysis.js?v=1.18.0" defer></script>
-  <script src="ud-analysis-collapse.js?v=1.18.0" defer></script>
-  <script src="spaced-repetition.js?v=1.18.0" defer></script>
+  <script src="app.js?v=1.18.1" defer></script>
+  <script src="dictionary-pos.js?v=1.18.1" defer></script>
+  <script src="settings.js?v=1.18.1" defer></script>
+  <script src="course.js?v=1.18.1" defer></script>
+  <script src="ud-analysis.js?v=1.18.1" defer></script>
+  <script src="ud-analysis-collapse.js?v=1.18.1" defer></script>
+  <script src="spaced-repetition.js?v=1.18.1" defer></script>
 </body>
 </html>

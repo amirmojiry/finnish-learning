@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.18.1] - 2026-10-06
+
+### Changed
+
+- Refresh the Persian About page to describe the current structured A1.1 course, Word Practice / Smart Review, Dictionary, Finnish speech requirements, and current release statistics.
+- Replace legacy vocabulary-practice framing and outdated About-page statistics with the current 40-lesson, 15-activity-per-lesson experience.
+
+
 ## [1.18.0] - 2026-10-06
 
 ### Added
