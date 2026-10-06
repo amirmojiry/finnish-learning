@@ -144,6 +144,19 @@ test('word practice owns smart review while settings owns appearance speech and 
   assert.match(navigation, /voiceschanged/);
 });
 
+test('spaced-repetition documentation matches the Word Practice integration', () => {
+  const docs = fs.readFileSync(path.join(ROOT, 'docs', 'SPACED_REPETITION.md'), 'utf8');
+
+  assert.match(docs, /dedicated Word Practice view/);
+  assert.match(docs, /startReviewPractice\(word, mode\)/);
+  assert.match(docs, /finnish-review-answer/);
+  assert.match(docs, /finnish-review-next/);
+  assert.match(docs, /survive temporary navigation/);
+  assert.doesNotMatch(docs, /mounted directly in the Profile view/);
+  assert.doesNotMatch(docs, /startFocusedPractice/);
+  assert.doesNotMatch(docs, /normal free practice/);
+});
+
 test('navigation preserves an active smart-review question for return to Word Practice', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
   const navigationHandler = app.match(/els\.viewLinks\.forEach\([\s\S]*?\}\)\);/)?.[0] || '';
