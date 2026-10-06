@@ -15,6 +15,8 @@
   ];
   const SECTION_URL = SECTION_URLS[0];
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
+  const WEAK_TARGET_ACCURACY = 0.8;
+  const FOCUSED_PRACTICE_LIMIT = 10;
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -31,6 +33,7 @@
       version: SCHEMA_VERSION,
       completedLessons: [],
       lessonScores: {},
+      targetPerformance: {},
       lastLessonId: null,
     };
   }
@@ -47,6 +50,20 @@
         correct: Math.max(0, Math.floor(Number(score.correct) || 0)),
         graded: Math.max(0, Math.floor(Number(score.graded) || 0)),
         completedAt: Number.isFinite(score.completedAt) ? score.completedAt : 0,
+      };
+    }
+    const targetPerformance = progress.targetPerformance && typeof progress.targetPerformance === 'object'
+      ? progress.targetPerformance
+      : {};
+    for (const [targetKey, stats] of Object.entries(targetPerformance)) {
+      if (!targetKey || !stats || typeof stats !== 'object') continue;
+      const attempts = Math.max(0, Math.floor(Number(stats.attempts) || 0));
+      if (!attempts) continue;
+      const correct = Math.min(attempts, Math.max(0, Math.floor(Number(stats.correct) || 0)));
+      clean.targetPerformance[targetKey] = {
+        attempts,
+        correct,
+        lastAttemptAt: Number.isFinite(stats.lastAttemptAt) ? stats.lastAttemptAt : 0,
       };
     }
     clean.lastLessonId = typeof progress.lastLessonId === 'string' ? progress.lastLessonId : null;
@@ -140,6 +157,118 @@
     }
     clean.lastLessonId = lessonId;
     return clean;
+  }
+
+  function targetPerformanceKey(sectionId, targetId) {
+    const sectionKey = String(sectionId || '').trim();
+    const targetKey = String(targetId || '').trim();
+    return sectionKey && targetKey ? `${sectionKey}::${targetKey}` : '';
+  }
+
+  function recordTargetAttempt(progress, sectionId, targetId, correct, now = Date.now()) {
+    const clean = sanitizeProgress(progress);
+    const key = targetPerformanceKey(sectionId, targetId);
+    if (!key) return clean;
+    const previous = clean.targetPerformance[key] || { attempts: 0, correct: 0, lastAttemptAt: 0 };
+    clean.targetPerformance[key] = {
+      attempts: previous.attempts + 1,
+      correct: previous.correct + (correct ? 1 : 0),
+      lastAttemptAt: Number.isFinite(now) ? now : Date.now(),
+    };
+    return clean;
+  }
+
+  function activityPrimaryTargetId(activity) {
+    if (!activity || typeof activity !== 'object') return null;
+    if (activity.type === 'negative-transform') return activity.negative_item || null;
+    if (activity.type === 'event-time-match') return activity.time_item || null;
+    if (activity.type === 'prompt-choice') return activity.answer_item || null;
+    if (activity.type === 'short-reading') return activity.question_item || null;
+    if (activity.type === 'teach' || activity.type === 'number-grid') return null;
+    return activity.item || null;
+  }
+
+  function weakTargetsForSection(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
+    if (!section || !section.id || !section.items || typeof section.items !== 'object') return [];
+    const clean = sanitizeProgress(progress);
+    const targets = [];
+    for (const itemId of Object.keys(section.items)) {
+      const stats = clean.targetPerformance[targetPerformanceKey(section.id, itemId)];
+      if (!stats || stats.attempts < 1) continue;
+      const missed = stats.attempts - stats.correct;
+      const accuracy = stats.correct / stats.attempts;
+      if (missed < 1 || accuracy >= WEAK_TARGET_ACCURACY) continue;
+      targets.push({
+        itemId,
+        attempts: stats.attempts,
+        correct: stats.correct,
+        missed,
+        accuracy,
+        lastAttemptAt: stats.lastAttemptAt,
+      });
+    }
+    targets.sort((left, right) => (
+      left.accuracy - right.accuracy
+      || right.attempts - left.attempts
+      || right.lastAttemptAt - left.lastAttemptAt
+      || left.itemId.localeCompare(right.itemId)
+    ));
+    const max = Number.isFinite(limit) ? Math.max(0, Math.floor(limit)) : targets.length;
+    return targets.slice(0, max);
+  }
+
+  function focusedActivityStrength(activity) {
+    if (!activity) return 0;
+    if (['production', 'dictation', 'controlled-production', 'inflection-production', 'negative-transform'].includes(activity.type)) return 5;
+    if (activity.type === 'type' || activity.type === 'expression-completion') return 4;
+    if (activity.type === 'sentence-order' || activity.type === 'morphology-choice') return 3;
+    if (activity.type === 'choice' && activity.mode === 'listen') return 1;
+    return 2;
+  }
+
+  function buildFocusedPracticeActivities(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
+    if (!section || !Array.isArray(section.lessons)) return [];
+    const max = Number.isFinite(limit) ? Math.max(0, Math.floor(limit)) : FOCUSED_PRACTICE_LIMIT;
+    if (!max) return [];
+
+    const weakTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
+    if (!weakTargets.length) return [];
+    const weakIds = new Set(weakTargets.map((entry) => entry.itemId));
+    const completed = new Set(sanitizeProgress(progress).completedLessons);
+    const candidates = new Map(weakTargets.map((entry) => [entry.itemId, []]));
+
+    section.lessons.forEach((lesson, lessonIndex) => {
+      if (!completed.has(lesson.id)) return;
+      lesson.activities.forEach((activity, activityIndex) => {
+        const targetId = activityPrimaryTargetId(activity);
+        if (!targetId || !weakIds.has(targetId)) return;
+        candidates.get(targetId).push({
+          activity,
+          strength: focusedActivityStrength(activity),
+          lessonIndex,
+          activityIndex,
+        });
+      });
+    });
+
+    for (const entries of candidates.values()) {
+      entries.sort((left, right) => (
+        right.strength - left.strength
+        || right.lessonIndex - left.lessonIndex
+        || left.activityIndex - right.activityIndex
+      ));
+    }
+
+    const selected = [];
+    for (let round = 0; round < 2 && selected.length < max; round += 1) {
+      for (const target of weakTargets) {
+        const candidate = candidates.get(target.itemId)?.[round];
+        if (!candidate) continue;
+        selected.push({ ...candidate.activity });
+        if (selected.length >= max) break;
+      }
+    }
+    return selected;
   }
 
   function escapeRegExp(value) {
