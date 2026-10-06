@@ -128,9 +128,13 @@ test('recommended next vocabulary tranche is derived from the best practical cap
 
   const useful = recommendation.candidate_endpoints.filter((candidate) => candidate.captured_target_count > 0);
   const best = useful.reduce((winner, candidate) => {
-    if (!winner || candidate.capture_density > winner.capture_density) return candidate;
+    if (!winner) return candidate;
+
+    const candidateYield = candidate.captured_target_count * winner.additional_source_forms;
+    const winnerYield = winner.captured_target_count * candidate.additional_source_forms;
+    if (candidateYield > winnerYield) return candidate;
     if (
-      candidate.capture_density === winner.capture_density
+      candidateYield === winnerYield
       && candidate.additional_source_forms < winner.additional_source_forms
     ) {
       return candidate;
