@@ -20,7 +20,7 @@ Each entry must use this schema:
 }
 ```
 
-For positions 201–300, use a descriptive file such as `201-300.json`. The builder locates each form in the original Parole file, rejects missing or duplicate forms, and requires a complete consecutive range.
+Use descriptive consecutive-range files and split large expansions into reviewable chunks, for example `301-325.json` through `376-400.json`. The builder locates each form in the original Parole file, rejects missing or duplicate forms, and requires a complete consecutive range.
 
 After adding a bundle, run:
 
