@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.19.1] - 2026-10-06
+
+### Fixed
+
+- Replace the legacy A1.1 week-day sequence interaction with the reversible answer-builder pattern and explicit submission.
+- Dismiss an open lesson popover when the learner clicks elsewhere on the section page while preserving clicks inside the lesson node or popover.
+- Keep the first row of the 0–20 reference grid fully visible on mobile by top-aligning long scrollable lesson content.
+
+
 ## [1.19.0] - 2026-10-06
 
 ### Added

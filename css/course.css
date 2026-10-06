@@ -1955,6 +1955,10 @@ body.course-lesson-active .course-question-card {
   overscroll-behavior: contain;
 }
 
+body.course-lesson-active .course-question-card.is-long-content {
+  justify-content: flex-start;
+}
+
 .course-primary-feedback:not([hidden]) {
   position: fixed;
   inset-inline: 12px;

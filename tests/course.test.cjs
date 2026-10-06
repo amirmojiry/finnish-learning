@@ -310,8 +310,9 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.19\.0`/);
-  assert.match(fa, /نسخه: `1\.19\.0`/);
+  const version = fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim();
+  assert.ok(en.includes(`Version: \`${version}\``));
+  assert.ok(fa.includes(`نسخه: \`${version}\``));
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
@@ -904,4 +905,38 @@ test('locked lesson previews keep details available while unavailable lessons di
   assert.match(source, /jumpAvailable \? 'پرش به این درس' : unlocked \? 'ادامه درس' : 'قفل است'/);
   assert.match(source, /continueButton\.disabled = !unlocked/);
   assert.match(source, /createButton\('جزئیات درس'/);
+});
+
+
+test('sequence-order uses reversible selection and explicit submission', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const sequenceBranch = source.match(/else if \(activity\.type === 'sequence-order'\) \{[\s\S]*?\n      \} else if \(activity\.type === 'clock-choice'\)/)?.[0] || '';
+
+  assert.match(sequenceBranch, /course-sentence-answer-box/);
+  assert.match(sequenceBranch, /course-sentence-token-pool/);
+  assert.match(sequenceBranch, /ordered\.splice\(selectedPosition, 1\)/);
+  assert.match(sequenceBranch, /course-sentence-submit/);
+  assert.match(sequenceBranch, /submit\.disabled = answered \|\| ordered\.length !== activity\.items\.length/);
+  assert.doesNotMatch(sequenceBranch, /if \(ordered\.length === activity\.items\.length\) \{/);
+});
+
+test('lesson popover dismisses when the learner clicks outside it', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+
+  assert.match(source, /const closeLessonPopover = \(\) => \{/);
+  assert.match(source, /document\.addEventListener\('click', onPageClick\)/);
+  assert.match(source, /target\.closest\('\.course-lesson-node, \.course-lesson-popover'\)/);
+  assert.match(source, /closeLessonPopover\(\)/);
+  assert.match(source, /document\.removeEventListener\('click', onPageClick\)/);
+});
+
+test('long mobile lesson content starts at the top of its scrollable card', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+
+  assert.match(source, /activity\.type === 'number-grid'[\s\S]*?card\.classList\.add\('is-long-content'\)/);
+  assert.match(
+    styles,
+    /body\.course-lesson-active \.course-question-card\.is-long-content\s*\{[\s\S]*?justify-content:\s*flex-start/,
+  );
 });
