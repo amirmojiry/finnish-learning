@@ -1726,11 +1726,11 @@
           "can_do_en": "Ask for a simple appointment time and understand a short proposed time.",
           "can_do_fa": "یک وقت ساده درخواست کند و زمان پیشنهادی کوتاه را بفهمد.",
           "high_frequency_targets": [
-            "aika",
-            "milloin",
-            "huomenna"
+            "aika"
           ],
           "topic_targets": [
+            "milloin",
+            "huomenna",
             "lääkäri",
             "terveysasema",
             "ajanvaraus",
