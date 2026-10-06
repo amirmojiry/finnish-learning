@@ -156,6 +156,23 @@ test('course progression unlocks lessons sequentially and preserves best scores'
   assert.deepEqual(progress.completedLessons, ['lesson-1']);
 });
 
+test('each section exposes its first lesson as a jump and later-section entry unlocks backfill', () => {
+  let progress = course.emptyProgress();
+
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 0, 0), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 1, 0), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 1, 1), false);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 0, 5), false);
+
+  progress = course.recordLessonCompletion(progress, sections[1].lessons[0].id, 8, 10, 1000);
+
+  assert.equal(course.isSectionStarted(sections[1], progress), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 1, 1), true);
+  assert.equal(course.isBackfillSectionUnlocked(sections, progress, 0), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 0, 5), true);
+  assert.equal(progress.completedLessons.includes(sections[0].lessons[5].id), false);
+});
+
 test('invalid stored course data falls back to a safe empty progress schema', () => {
   const storage = { getItem: () => '{bad json', setItem: () => {} };
   assert.deepEqual(course.loadProgress(storage), course.emptyProgress());
@@ -290,8 +307,8 @@ test('dialogue ordering activities are presented scrambled', () => {
 test('English and Persian project status agree on the current release', () => {
   const en = fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(ROOT, 'README.fa.md'), 'utf8');
-  assert.match(en, /Version: `1\.18\.1`/);
-  assert.match(fa, /نسخه: `1\.18\.1`/);
+  assert.match(en, /Version: `1\.19\.0`/);
+  assert.match(fa, /نسخه: `1\.19\.0`/);
   assert.match(en, /complete 40-lesson A1\.1 path/);
 });
 
@@ -808,13 +825,30 @@ test('lesson path preserves completed current and locked visual states', () => {
 });
 
 
-test('section navigation uses one expandable full-width selector instead of persistent section cards', () => {
+test('section navigation uses one expandable full-width selector with per-section progress', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
   assert.match(source, /course-section-selector-current/);
   assert.match(source, /selectorList\.hidden = expanded/);
+  assert.match(source, /course-section-selector-progress/);
+  assert.match(source, /aria-valuenow/);
   assert.match(styles, /\.course-section-selector\s*\{[\s\S]*?width:\s*100%/);
+  assert.match(styles, /\.course-section-selector-progress/);
   assert.doesNotMatch(source, /catalogGrid\.append/);
+});
+
+
+test('section map exposes a visibility-aware jump button for the current learnable lesson', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+
+  assert.match(source, /course-current-lesson-jump/);
+  assert.match(source, /scrollIntoView\(\{ behavior: 'smooth', block: 'center' \}\)/);
+  assert.match(source, /targetVisible/);
+  assert.match(source, /targetRect\.bottom < visibleTop \? 'up' : 'down'/);
+  assert.match(source, /completed === 0\s*\? 0/);
+  assert.match(styles, /\.course-current-lesson-jump\s*\{[\s\S]*?position:\s*fixed/);
+  assert.match(styles, /bottom:\s*calc\(68px \+ env\(safe-area-inset-bottom\)\)/);
 });
 
 test('opened lesson cards use explicit connectors that never continue through the card', () => {
@@ -845,7 +879,7 @@ test('completion screen no longer promises a future review-algorithm connection'
 });
 
 
-test('locked sections are previewable without unlocking their lessons', () => {
+test('locked sections remain previewable while their first lesson is a jump entry point', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
 
   const selectSectionBlock = source.match(/function selectSection\([\s\S]*?return true;\n\s*\}/)?.[0] || '';
@@ -854,22 +888,16 @@ test('locked sections are previewable without unlocking their lessons', () => {
 
   assert.match(source, /option\.disabled = !implemented \|\| current;/);
   assert.match(source, /مشاهده \(قفل\)/);
-
-  assert.match(
-    source,
-    /const unlocked = isSectionUnlocked\(sections, progress, sectionIndex\) && isLessonUnlocked\(section, progress, index\);/,
-  );
-  assert.match(
-    source,
-    /if \(!isSectionUnlocked\(sections, progress, sectionIndex\) \|\| !isLessonUnlocked\(section, progress, index\)\) return;/,
-  );
-
+  assert.match(source, /isCourseLessonAccessible\(sections, progress, sectionIndex, index\)/);
+  assert.match(source, /jumpAvailable = index === 0/);
+  assert.match(source, /پرش به این درس/);
+  assert.match(source, /if \(!isCourseLessonAccessible\(sections, progress, sectionIndex, index\)\) return;/);
   assert.match(source, /targetSection && selectSection\(targetSection, \{ updateHash: false \}\)/);
 });
 
-test('locked lesson previews keep details available while disabling Continue', () => {
+test('locked lesson previews keep details available while unavailable lessons disable Continue', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
-  assert.match(source, /const continueButton = createButton\([\s\S]*?unlocked \? 'ادامه درس' : 'قفل است'/);
+  assert.match(source, /jumpAvailable \? 'پرش به این درس' : unlocked \? 'ادامه درس' : 'قفل است'/);
   assert.match(source, /continueButton\.disabled = !unlocked/);
   assert.match(source, /createButton\('جزئیات درس'/);
 });
