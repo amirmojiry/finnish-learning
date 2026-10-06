@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.20.0`
+- Version: `1.21.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -29,6 +29,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
 - complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-voice-gated listening and dictation, structured sentence-building, and reviewed introductory morphology practice
 - section-scoped focused practice that tracks aggregate target accuracy and reuses reviewed activities for course targets below 80% accuracy
+- bounded chronological A1.1 answer history with stable sequence order, session identity, response timing, productive-vs-recognition evidence, and typed-grading quality for future mastery decisions
 - distraction-free active lessons with hidden global navigation, compact integrated progress, and in-viewport answer feedback
 - Word Practice spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
@@ -156,7 +157,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 - [x] Add sentence ordering, expression completion, and controlled sentence production.
 - [x] Add morphology-aware distractors and introductory inflection exercises from explicit reviewed forms.
 - [x] Add focused practice for weak or frequently missed course targets.
-- [ ] Record chronological answer history needed for stronger mastery decisions.
+- [x] Record chronological answer history needed for stronger mastery decisions.
 
 ### Phase 3 — expand the structured course
 
