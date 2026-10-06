@@ -1931,7 +1931,14 @@
           );
         };
 
-        const onScroll = () => windowObject.requestAnimationFrame(updateJumpButton);
+        const scheduleJumpUpdate = () => {
+          if (typeof windowObject.requestAnimationFrame === 'function') {
+            windowObject.requestAnimationFrame(updateJumpButton);
+          } else {
+            windowObject.setTimeout(updateJumpButton, 0);
+          }
+        };
+        const onScroll = scheduleJumpUpdate;
         windowObject.addEventListener('scroll', onScroll, { passive: true });
         courseView.addEventListener('scroll', onScroll, { passive: true });
         windowObject.addEventListener('resize', onScroll);
@@ -1940,7 +1947,7 @@
           courseView.removeEventListener('scroll', onScroll);
           windowObject.removeEventListener('resize', onScroll);
         };
-        windowObject.requestAnimationFrame(updateJumpButton);
+        scheduleJumpUpdate();
       }
 
       root.scrollTop = 0;
