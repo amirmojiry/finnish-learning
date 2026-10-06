@@ -17,6 +17,7 @@
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
   const WEAK_TARGET_ACCURACY = 0.8;
   const FOCUSED_PRACTICE_LIMIT = 10;
+  const ANSWER_HISTORY_LIMIT = 5000;
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -28,12 +29,50 @@
       .trim();
   }
 
+  function historyString(value) {
+    return typeof value === 'string' && value.trim() ? value.trim() : null;
+  }
+
+  function sanitizeAnswerHistoryEvent(event, fallbackSequence = 1) {
+    if (!event || typeof event !== 'object') return null;
+    const sessionId = historyString(event.sessionId);
+    const sectionId = historyString(event.sectionId);
+    const activityType = historyString(event.activityType);
+    const answeredAt = Number(event.answeredAt);
+    if (!sessionId || !sectionId || !activityType || !Number.isFinite(answeredAt) || answeredAt < 0) return null;
+
+    const rawSequence = Math.floor(Number(event.sequence) || fallbackSequence);
+    const sessionStartedAt = Number(event.sessionStartedAt);
+    const responseMs = Math.max(0, Math.floor(Number(event.responseMs) || 0));
+    return {
+      sequence: Math.max(1, rawSequence),
+      answeredAt,
+      sessionId,
+      sessionStartedAt: Number.isFinite(sessionStartedAt) && sessionStartedAt >= 0 ? sessionStartedAt : answeredAt,
+      sessionType: event.sessionType === 'focused' ? 'focused' : 'lesson',
+      sectionId,
+      lessonId: historyString(event.lessonId),
+      sourceLessonId: historyString(event.sourceLessonId),
+      targetId: historyString(event.targetId),
+      activityType,
+      mode: historyString(event.mode),
+      correct: Boolean(event.correct),
+      productive: Boolean(event.productive),
+      firstAttempt: event.firstAttempt !== false,
+      responseMs,
+      exact: typeof event.exact === 'boolean' ? event.exact : null,
+      fuzzy: Boolean(event.fuzzy),
+      diacriticAdjusted: Boolean(event.diacriticAdjusted),
+    };
+  }
+
   function emptyProgress() {
     return {
       version: SCHEMA_VERSION,
       completedLessons: [],
       lessonScores: {},
       targetPerformance: {},
+      answerHistory: [],
       lastLessonId: null,
     };
   }
@@ -66,6 +105,12 @@
         lastAttemptAt: Number.isFinite(stats.lastAttemptAt) ? stats.lastAttemptAt : 0,
       };
     }
+    const answerHistory = Array.isArray(progress.answerHistory) ? progress.answerHistory : [];
+    clean.answerHistory = answerHistory
+      .map((entry, index) => sanitizeAnswerHistoryEvent(entry, index + 1))
+      .filter(Boolean)
+      .sort((left, right) => left.sequence - right.sequence || left.answeredAt - right.answeredAt)
+      .slice(-ANSWER_HISTORY_LIMIT);
     clean.lastLessonId = typeof progress.lastLessonId === 'string' ? progress.lastLessonId : null;
     return clean;
   }
@@ -178,6 +223,36 @@
     return clean;
   }
 
+  function recordAnswerHistoryEvent(progress, event) {
+    const clean = sanitizeProgress(progress);
+    const lastSequence = clean.answerHistory.reduce((highest, entry) => Math.max(highest, entry.sequence), 0);
+    const normalized = sanitizeAnswerHistoryEvent({ ...event, sequence: lastSequence + 1 }, lastSequence + 1);
+    if (!normalized) return clean;
+    clean.answerHistory.push(normalized);
+    if (clean.answerHistory.length > ANSWER_HISTORY_LIMIT) {
+      clean.answerHistory = clean.answerHistory.slice(-ANSWER_HISTORY_LIMIT);
+    }
+    return clean;
+  }
+
+  function answerHistoryForTarget(progress, sectionId, targetId) {
+    const sectionKey = historyString(sectionId);
+    const targetKey = historyString(targetId);
+    if (!sectionKey || !targetKey) return [];
+    return sanitizeProgress(progress).answerHistory.filter((entry) => (
+      entry.sectionId === sectionKey && entry.targetId === targetKey
+    ));
+  }
+
+  function courseSessionId(sectionId, sessionType, lessonId, startedAt, ordinal = 1) {
+    const sectionKey = historyString(sectionId) || 'course';
+    const lessonKey = historyString(lessonId) || 'session';
+    const type = sessionType === 'focused' ? 'focused' : 'lesson';
+    const started = Number.isFinite(Number(startedAt)) ? Math.max(0, Math.floor(Number(startedAt))) : 0;
+    const sequence = Math.max(1, Math.floor(Number(ordinal) || 1));
+    return `${sectionKey}:${type}:${lessonKey}:${started}:${sequence}`;
+  }
+
   function activityPrimaryTargetId(activity) {
     if (!activity || typeof activity !== 'object') return null;
     if (activity.type === 'negative-transform') return activity.negative_item || null;
@@ -186,6 +261,19 @@
     if (activity.type === 'short-reading') return activity.question_item || null;
     if (activity.type === 'teach' || activity.type === 'number-grid') return null;
     return activity.item || null;
+  }
+
+  function isProductiveCourseActivity(activity) {
+    return Boolean(activity && [
+      'type',
+      'production',
+      'dictation',
+      'expression-completion',
+      'controlled-production',
+      'inflection-production',
+      'negative-transform',
+      'guided-writing',
+    ].includes(activity.type));
   }
 
   function weakTargetsForSection(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
@@ -245,6 +333,7 @@
         candidates.get(targetId).push({
           activity,
           strength: focusedActivityStrength(activity),
+          lessonId: lesson.id,
           lessonIndex,
           activityIndex,
         });
@@ -264,7 +353,7 @@
       for (const target of weakTargets) {
         const candidate = candidates.get(target.itemId)?.[round];
         if (!candidate) continue;
-        selected.push({ ...candidate.activity });
+        selected.push({ ...candidate.activity, source_lesson_id: candidate.lessonId });
         if (selected.length >= max) break;
       }
     }
