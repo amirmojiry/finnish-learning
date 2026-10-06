@@ -361,6 +361,7 @@
     elements.historyClose.addEventListener('click', closeHistory);
     windowObject.addEventListener('finnish-review-answer', (event) => persistAnswer(Boolean(event.detail?.correct)));
     windowObject.addEventListener('finnish-review-next', () => launchNext());
+    windowObject.addEventListener('finnish-word-review-ready', updatePanel);
     windowObject.addEventListener('storage', (event) => { if (event.key === STORAGE_KEY) { progress = loadProgress(windowObject.localStorage); updatePanel(); } });
     const detailWord = document.getElementById('detail-word'); if (detailWord && typeof windowObject.MutationObserver === 'function') new windowObject.MutationObserver(renderDetailReviewStatus).observe(detailWord, { childList: true, characterData: true, subtree: true });
     windowObject.fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' }).then((response) => { if (!response.ok) throw new Error(String(response.status)); return response.json(); }).then((payload) => { words = Array.isArray(payload.words) ? payload.words : []; wordMap = new Map(words.map((word) => [normalizeWord(word.word), word])); progress = loadProgress(windowObject.localStorage); updatePanel(); }).catch(() => { elements.message.textContent = 'بارگذاری صف مرور انجام نشد.'; elements.start.disabled = true; });
