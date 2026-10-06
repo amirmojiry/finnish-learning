@@ -2060,7 +2060,8 @@
       footer.append(reset);
 
       const focusedActivities = buildFocusedPracticeActivities(section, progress);
-      const focusedTargetIds = uniqueOptions(focusedActivities.map(activityPrimaryTargetId));
+      const weakTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
+      const focusedTargetIds = weakTargets.map((target) => target.itemId);
       let focusedCard = null;
       if (focusedActivities.length && focusedTargetIds.length) {
         focusedCard = document.createElement('section');
@@ -2966,7 +2967,7 @@
       if (!activeLesson) return renderSectionMap();
       if (activeLesson.focused_practice) {
         const remainingActivities = buildFocusedPracticeActivities(section, progress);
-        const remainingTargets = uniqueOptions(remainingActivities.map(activityPrimaryTargetId));
+        const remainingTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
         root.replaceChildren();
 
         const card = document.createElement('section');
