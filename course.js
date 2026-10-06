@@ -1450,7 +1450,7 @@
           example_fi: activity.expected_fi,
         };
         const grading = gradeTypedAnswer(expected, input.value);
-        recordResult(grading.accepted);
+        recordResult(grading.accepted, grading);
         input.disabled = true;
         submit.disabled = true;
         input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -1482,7 +1482,7 @@
         example_fa: activity.prompt_fa,
       };
       const grading = gradeTypedAnswer(expected, input.value);
-      recordResult(grading.accepted);
+      recordResult(grading.accepted, grading);
       input.disabled = true;
       submit.disabled = true;
       input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -1611,7 +1611,7 @@
         accepted_answers: activity.accepted_answers,
       };
       const grading = gradeMorphologyAnswer(expected, input.value);
-      recordResult(grading.accepted);
+      recordResult(grading.accepted, grading);
       input.disabled = true;
       submit.disabled = true;
       input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -2442,8 +2442,8 @@
           createButton,
           nextActivity,
           showFeedback,
-          recordResult(correct) {
-            recordActivityResult(activity, correct);
+          recordResult(correct, grading = null) {
+            recordActivityResult(activity, correct, grading);
           },
         });
       } else if (MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) {
@@ -2456,8 +2456,8 @@
           createButton,
           nextActivity,
           createTypedDifference,
-          recordResult(correct) {
-            recordActivityResult(activity, correct);
+          recordResult(correct, grading = null) {
+            recordActivityResult(activity, correct, grading);
           },
         });
       } else if (activity.type === 'number-grid') {
@@ -2644,7 +2644,7 @@
           if (answered || !input.value.trim()) return;
           const grading = gradeTypedAnswer(negative, input.value);
           const correct = grading.accepted;
-          recordActivityResult(activity, correct);
+          recordActivityResult(activity, correct, grading);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -2684,7 +2684,11 @@
           const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
           const correct = gradings.every((grading) => grading.accepted);
           const hasFuzzy = gradings.some((grading) => grading.fuzzy);
-          recordActivityResult(activity, correct);
+          recordActivityResult(activity, correct, {
+            exact: gradings.every((grading) => grading.exact),
+            fuzzy: hasFuzzy,
+            diacriticAdjusted: gradings.some((grading) => grading.diacriticAdjusted),
+          });
           rows.forEach(({ input }, index) => {
             const grading = gradings[index];
             input.disabled = true;
@@ -3044,7 +3048,7 @@
           if (answered || !input.value.trim()) return;
           const grading = gradeTypedAnswer(item, input.value);
           const correct = grading.accepted;
-          recordActivityResult(activity, correct);
+          recordActivityResult(activity, correct, grading);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
