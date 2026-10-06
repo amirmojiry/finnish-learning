@@ -3,250 +3,275 @@
     "word": "4",
     "translation_fa": "چهار",
     "example_fi": "Bussi numero 4 pysähtyy tässä.",
-    "example_fa": "من ۴ بلیت نیاز دارم.",
+    "example_fa": "اتوبوس شمارهٔ ۴ اینجا توقف می‌کند.",
     "part_of_speech": "Numeral",
     "part_of_speech_fa": "عدد",
     "lemma": "4",
-    "example_2_fi": "Tarvitsen 4 lippua."
+    "example_2_fi": "Tarvitsen 4 lippua.",
+    "example_2_fa": "من ۴ بلیت نیاز دارم."
   },
   {
     "word": "tilanne",
     "translation_fa": "وضعیت؛ موقعیت",
     "example_fi": "Tilanne on nyt rauhallinen.",
-    "example_fa": "این موقعیت برای من تازه است.",
+    "example_fa": "وضعیت اکنون آرام است.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "tilanne",
-    "example_2_fi": "Tämä tilanne on minulle uusi."
+    "example_2_fi": "Tämä tilanne on minulle uusi.",
+    "example_2_fa": "این موقعیت برای من تازه است."
   },
   {
     "word": "kolmen",
     "translation_fa": "سه؛ متعلق به سه",
     "example_fi": "Kokous kestää kolmen tunnin ajan.",
-    "example_fa": "بلیت سه‌روزه ارزان‌تر است.",
+    "example_fa": "جلسه سه ساعت طول می‌کشد.",
     "part_of_speech": "Numeral",
     "part_of_speech_fa": "عدد",
     "lemma": "kolme",
-    "example_2_fi": "Kolmen päivän lippu on halvempi."
+    "example_2_fi": "Kolmen päivän lippu on halvempi.",
+    "example_2_fa": "بلیت سه‌روزه ارزان‌تر است."
   },
   {
     "word": "tänään",
     "translation_fa": "امروز",
     "example_fi": "Tänään on maanantai.",
-    "example_fa": "امروز در خانه هستم.",
+    "example_fa": "امروز دوشنبه است.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "tänään",
-    "example_2_fi": "Olen tänään kotona."
+    "example_2_fi": "Olen tänään kotona.",
+    "example_2_fa": "امروز در خانه هستم."
   },
   {
     "word": "mistä",
     "translation_fa": "از کجا؛ از چه",
     "example_fi": "Mistä tulet?",
-    "example_fa": "این اتوبوس از کجا حرکت می‌کند؟",
+    "example_fa": "از کجا می‌آیی؟",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر پرسشی",
     "lemma": "mikä",
-    "example_2_fi": "Mistä tämä bussi lähtee?"
+    "example_2_fi": "Mistä tämä bussi lähtee?",
+    "example_2_fa": "این اتوبوس از کجا حرکت می‌کند؟"
   },
   {
     "word": "läpi",
     "translation_fa": "از میان؛ از داخل؛ در سراسر",
     "example_fi": "Kävelimme puiston läpi.",
-    "example_fa": "کار در تمام شب ادامه داشت.",
+    "example_fa": "از میان پارک عبور کردیم.",
     "part_of_speech": "Adposition",
     "part_of_speech_fa": "پس‌اضافه",
     "lemma": "läpi",
-    "example_2_fi": "Työ jatkui yön läpi."
+    "example_2_fi": "Työ jatkui yön läpi.",
+    "example_2_fa": "کار در تمام شب ادامه داشت."
   },
   {
     "word": "aiemmin",
     "translation_fa": "پیش‌تر؛ قبلاً",
     "example_fi": "Olen käynyt täällä aiemmin.",
-    "example_fa": "او زودتر از من آمد.",
+    "example_fa": "قبلاً اینجا بوده‌ام.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "aiemmin",
-    "example_2_fi": "Hän tuli aiemmin kuin minä."
+    "example_2_fi": "Hän tuli aiemmin kuin minä.",
+    "example_2_fa": "او زودتر از من آمد."
   },
   {
     "word": "sama",
     "translation_fa": "همان؛ یکسان",
     "example_fi": "Meillä on sama osoite.",
-    "example_fa": "این همان کتاب دیروز است.",
+    "example_fa": "ما همان آدرس را داریم.",
     "part_of_speech": "Adjective",
     "part_of_speech_fa": "صفت",
     "lemma": "sama",
-    "example_2_fi": "Tämä on sama kirja kuin eilen."
+    "example_2_fi": "Tämä on sama kirja kuin eilen.",
+    "example_2_fa": "این همان کتاب دیروز است."
   },
   {
     "word": "30",
     "translation_fa": "سی",
     "example_fi": "Lippu maksaa 30 euroa.",
-    "example_fa": "سفر ۳۰ دقیقه طول می‌کشد.",
+    "example_fa": "بلیت ۳۰ یورو قیمت دارد.",
     "part_of_speech": "Numeral",
     "part_of_speech_fa": "عدد",
     "lemma": "30",
-    "example_2_fi": "Matka kestää 30 minuuttia."
+    "example_2_fi": "Matka kestää 30 minuuttia.",
+    "example_2_fa": "سفر ۳۰ دقیقه طول می‌کشد."
   },
   {
     "word": "pitkään",
     "translation_fa": "مدت طولانی؛ طولانی‌مدت",
     "example_fi": "Odotimme pitkään bussia.",
-    "example_fa": "او مدت زیادی در فنلاند زندگی کرده است.",
+    "example_fa": "مدت زیادی منتظر اتوبوس ماندیم.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "pitkään",
-    "example_2_fi": "Hän on asunut Suomessa pitkään."
+    "example_2_fi": "Hän on asunut Suomessa pitkään.",
+    "example_2_fa": "او مدت زیادی در فنلاند زندگی کرده است."
   },
   {
     "word": "kovin",
     "translation_fa": "خیلی؛ بسیار",
     "example_fi": "En ole kovin väsynyt.",
-    "example_fa": "این خیلی سخت نیست.",
+    "example_fa": "خیلی خسته نیستم.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "kovin",
-    "example_2_fi": "Tämä ei ole kovin vaikea."
+    "example_2_fi": "Tämä ei ole kovin vaikea.",
+    "example_2_fa": "این خیلی سخت نیست."
   },
   {
     "word": "kaikkien",
     "translation_fa": "همه؛ متعلق به همه",
     "example_fi": "Kaikkien pitää odottaa vuoroaan.",
-    "example_fa": "نام همه در فهرست است.",
+    "example_fa": "همه باید نوبت خود را منتظر بمانند.",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر",
     "lemma": "kaikki",
-    "example_2_fi": "Kaikkien nimet ovat listassa."
+    "example_2_fi": "Kaikkien nimet ovat listassa.",
+    "example_2_fa": "نام همه در فهرست است."
   },
   {
     "word": "5",
     "translation_fa": "پنج",
     "example_fi": "Bussi numero 5 menee asemalle.",
-    "example_fa": "جلسه ساعت ۵ شروع می‌شود.",
+    "example_fa": "اتوبوس شمارهٔ ۵ به ایستگاه می‌رود.",
     "part_of_speech": "Numeral",
     "part_of_speech_fa": "عدد",
     "lemma": "5",
-    "example_2_fi": "Kokous alkaa kello 5."
+    "example_2_fi": "Kokous alkaa kello 5.",
+    "example_2_fa": "جلسه ساعت ۵ شروع می‌شود."
   },
   {
     "word": "hänellä",
     "translation_fa": "او دارد؛ نزد او",
     "example_fi": "Hänellä on uusi työpaikka.",
-    "example_fa": "او امروز وقت ندارد.",
+    "example_fa": "او محل کار جدیدی دارد.",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر",
     "lemma": "hän",
-    "example_2_fi": "Hänellä ei ole aikaa tänään."
+    "example_2_fi": "Hänellä ei ole aikaa tänään.",
+    "example_2_fa": "او امروز وقت ندارد."
   },
   {
     "word": "käy",
     "translation_fa": "می‌رود؛ سر می‌زند؛ مناسب است",
     "example_fi": "Hän käy kaupassa joka päivä.",
-    "example_fa": "ساعت شش مناسب است؟ برای من خوب است.",
+    "example_fa": "او هر روز به فروشگاه می‌رود.",
     "part_of_speech": "Verb",
     "part_of_speech_fa": "فعل",
     "lemma": "käydä",
-    "example_2_fi": "Sopiiko kuusi? Se käy minulle."
+    "example_2_fi": "Sopiiko kuusi? Se käy minulle.",
+    "example_2_fa": "ساعت شش مناسب است؟ برای من خوب است."
   },
   {
     "word": "ns",
     "translation_fa": "به‌اصطلاح؛ مخفف «niin sanottu»",
-    "example_fi": "Lyhenne ns tarkoittaa niin sanottua.",
-    "example_fa": "در متن ns نشان می‌دهد که منظور یک مفهوم به‌اصطلاح است.",
+    "example_fi": "Lyhenne ns tarkoittaa ilmausta \"niin sanottu\".",
+    "example_fa": "مخفف ns به عبارت «به‌اصطلاح» اشاره دارد.",
     "part_of_speech": "abbreviation",
     "part_of_speech_fa": "مخفف",
     "lemma": "niin sanottu",
-    "example_2_fi": "Tekstissä ns ilmaisee, että kyse on niin sanotusta käsitteestä."
+    "example_2_fi": "Tekstissä ns ilmaisee, että kyse on niin sanotusta käsitteestä.",
+    "example_2_fa": "در متن ns نشان می‌دهد که منظور یک مفهوم به‌اصطلاح است."
   },
   {
     "word": "tapauksessa",
     "translation_fa": "در مورد؛ در حالت؛ در آن صورت",
     "example_fi": "Tässä tapauksessa odotamme huomiseen.",
-    "example_fa": "در آن صورت به من زنگ بزن.",
+    "example_fa": "در این مورد تا فردا صبر می‌کنیم.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "tapaus",
-    "example_2_fi": "Siinä tapauksessa soita minulle."
+    "example_2_fi": "Siinä tapauksessa soita minulle.",
+    "example_2_fa": "در آن صورت به من زنگ بزن."
   },
   {
     "word": "the",
     "translation_fa": "حرف تعریف انگلیسی «the»",
     "example_fi": "Sana the on englannin määräinen artikkeli.",
-    "example_fa": "در متن واژهٔ انگلیسی the دیده می‌شود.",
+    "example_fa": "واژهٔ the حرف تعریف معین در انگلیسی است.",
     "part_of_speech": "determiner",
     "part_of_speech_fa": "تعیین‌گر",
     "lemma": "the",
-    "example_2_fi": "Tekstissä esiintyy englannin sana the."
+    "example_2_fi": "Tekstissä esiintyy englannin sana the.",
+    "example_2_fa": "در متن واژهٔ انگلیسی the دیده می‌شود."
   },
   {
     "word": "kysymys",
     "translation_fa": "پرسش؛ سؤال",
     "example_fi": "Minulla on yksi kysymys.",
-    "example_fa": "این پرسش مهم است.",
+    "example_fa": "من یک سؤال دارم.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "kysymys",
-    "example_2_fi": "Tämä kysymys on tärkeä."
+    "example_2_fi": "Tämä kysymys on tärkeä.",
+    "example_2_fa": "این پرسش مهم است."
   },
   {
     "word": "hetkellä",
     "translation_fa": "در لحظه؛ در حال حاضر",
     "example_fi": "Olen tällä hetkellä töissä.",
-    "example_fa": "در همان لحظه تلفن زنگ خورد.",
+    "example_fa": "در حال حاضر سر کار هستم.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "hetki",
-    "example_2_fi": "Juuri sillä hetkellä puhelin soi."
+    "example_2_fi": "Juuri sillä hetkellä puhelin soi.",
+    "example_2_fa": "در همان لحظه تلفن زنگ خورد."
   },
   {
     "word": "ihmisten",
     "translation_fa": "مردم؛ متعلق به انسان‌ها",
     "example_fi": "Ihmisten tarpeet ovat erilaisia.",
-    "example_fa": "تعداد مردم به‌سرعت افزایش یافت.",
+    "example_fa": "نیازهای مردم متفاوت است.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "ihminen",
-    "example_2_fi": "Ihmisten määrä kasvoi nopeasti."
+    "example_2_fi": "Ihmisten määrä kasvoi nopeasti.",
+    "example_2_fa": "تعداد مردم به‌سرعت افزایش یافت."
   },
   {
     "word": "takana",
     "translation_fa": "پشت؛ در پشتِ",
     "example_fi": "Auto on talon takana.",
-    "example_fa": "گربه به اتاقی که پشت در بود پنهان شد.",
+    "example_fa": "ماشین پشت خانه است.",
     "part_of_speech": "Adposition",
     "part_of_speech_fa": "پس‌اضافه",
     "lemma": "takana",
-    "example_2_fi": "Kissa piiloutui oven takana olevaan huoneeseen."
+    "example_2_fi": "Puutarha on rakennuksen takana.",
+    "example_2_fa": "باغ پشت ساختمان است."
   },
   {
     "word": "johtaja",
     "translation_fa": "مدیر؛ رهبر",
     "example_fi": "Johtaja tulee kokoukseen.",
-    "example_fa": "مدیر جدید هفتهٔ آینده کار را شروع می‌کند.",
+    "example_fa": "مدیر به جلسه می‌آید.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "johtaja",
-    "example_2_fi": "Uusi johtaja aloittaa ensi viikolla."
+    "example_2_fi": "Uusi johtaja aloittaa ensi viikolla.",
+    "example_2_fa": "مدیر جدید هفتهٔ آینده کار را شروع می‌کند."
   },
   {
     "word": "siten",
     "translation_fa": "بدین ترتیب؛ بنابراین",
     "example_fi": "Teemme sen siten, että kaikki ymmärtävät.",
-    "example_fa": "بدین ترتیب می‌توانیم در وقت صرفه‌جویی کنیم.",
+    "example_fa": "این کار را طوری انجام می‌دهیم که همه بفهمند.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "siten",
-    "example_2_fi": "Siten voimme säästää aikaa."
+    "example_2_fi": "Siten voimme säästää aikaa.",
+    "example_2_fa": "بدین ترتیب می‌توانیم در وقت صرفه‌جویی کنیم."
   },
   {
     "word": "vuosi",
     "translation_fa": "سال",
     "example_fi": "Tämä vuosi on ollut kiireinen.",
-    "example_fa": "یک سال به‌سرعت گذشت.",
+    "example_fa": "امسال پرمشغله بوده است.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "vuosi",
-    "example_2_fi": "Yksi vuosi kului nopeasti."
+    "example_2_fi": "Yksi vuosi kului nopeasti.",
+    "example_2_fa": "یک سال به‌سرعت گذشت."
   }
 ]
