@@ -112,6 +112,75 @@ test('sanitized answer history keeps stable sequence order even when stored inpu
   assert.deepEqual(clean.answerHistory.map((entry) => entry.answeredAt), [1000, 2000, 3000]);
 });
 
+test('answer history also stays within a serialized byte budget', () => {
+  const progress = course.emptyProgress();
+  progress.answerHistory = Array.from({ length: 80 }, (_, index) => ({
+    sequence: index + 1,
+    answeredAt: index + 1000,
+    sessionId: `session-${index + 1}`,
+    sectionId: 'section-1',
+    activityType: 'type',
+    mode: 'x'.repeat(25000),
+    correct: true,
+  }));
+
+  const clean = course.sanitizeProgress(progress);
+  assert.ok(clean.answerHistory.length < 80);
+  assert.ok(course.utf8ByteLength(clean.answerHistory) <= course.ANSWER_HISTORY_MAX_BYTES);
+  assert.equal(clean.answerHistory.at(-1).sequence, 80);
+});
+
+test('saveProgress evicts oldest answer history when storage rejects the full payload', () => {
+  const progress = course.emptyProgress();
+  progress.answerHistory = Array.from({ length: 20 }, (_, index) => ({
+    sequence: index + 1,
+    answeredAt: index + 1000,
+    sessionId: `session-${index + 1}`,
+    sectionId: 'section-1',
+    activityType: 'type',
+    mode: 'x'.repeat(1000),
+    correct: true,
+  }));
+
+  let stored = null;
+  const storage = {
+    setItem(key, value) {
+      assert.equal(key, course.STORAGE_KEY);
+      if (course.utf8ByteLength(value) > 9000) {
+        const error = new Error('quota');
+        error.name = 'QuotaExceededError';
+        throw error;
+      }
+      stored = value;
+    },
+  };
+
+  const saved = course.saveProgress(storage, progress);
+  assert.ok(saved.answerHistory.length > 0);
+  assert.ok(saved.answerHistory.length < progress.answerHistory.length);
+  assert.equal(saved.answerHistory.at(-1).sequence, 20);
+  assert.ok(stored);
+  assert.deepEqual(JSON.parse(stored).answerHistory, saved.answerHistory);
+});
+
+test('saveProgress does not block grading when storage cannot persist even empty history', () => {
+  const progress = course.recordAnswerHistoryEvent(course.emptyProgress(), {
+    answeredAt: 1000,
+    sessionId: 's1',
+    sectionId: 'section-1',
+    activityType: 'choice',
+    correct: true,
+  });
+  const storage = {
+    setItem() {
+      throw new Error('storage unavailable');
+    },
+  };
+
+  assert.doesNotThrow(() => course.saveProgress(storage, progress));
+  assert.equal(course.saveProgress(storage, progress).answerHistory.length, 1);
+});
+
 test('answer history is bounded and retains the newest chronological evidence', () => {
   const progress = course.emptyProgress();
   progress.answerHistory = Array.from({ length: course.ANSWER_HISTORY_LIMIT + 3 }, (_, index) => ({
