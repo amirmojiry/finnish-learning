@@ -194,3 +194,10 @@ test('A1.3 recent-event morphology is explicit instead of runtime-generated', ()
   assert.match(lesson.grammar_focus.join(' '), /explicit/i);
   assert.match(lesson.grammar_focus.join(' '), /no productive past-tense rule generation/i);
 });
+
+
+test('A1.3 Persian can-do outcomes avoid plural nouns after the singular numeral', () => {
+  const serialized = JSON.stringify(a13);
+  assert.doesNotMatch(serialized, /یک جزئیات/);
+  assert.doesNotMatch(serialized, /یک اطلاعات/);
+});
