@@ -1787,6 +1787,19 @@
       let selectedNode = null;
       let selectedStep = null;
 
+      const closeLessonPopover = () => {
+        if (selectedNode) {
+          selectedNode.classList.remove('is-selected');
+          selectedNode.setAttribute('aria-expanded', 'false');
+        }
+        if (selectedStep) selectedStep.classList.remove('has-open-popover');
+        selectedNode = null;
+        selectedStep = null;
+        actionPanel.hidden = true;
+        actionPanel.replaceChildren();
+        actionPanel.remove();
+      };
+
       const openLessonPopover = (lesson, node, unlocked, done, step, jumpAvailable = false) => {
         if (selectedNode) {
           selectedNode.classList.remove('is-selected');
@@ -1909,6 +1922,17 @@
 
       root.append(catalog, header, path, footer);
 
+      const onPageClick = (event) => {
+        if (!selectedNode) return;
+        const target = event.target;
+        if (target instanceof Element && target.closest('.course-lesson-node, .course-lesson-popover')) return;
+        closeLessonPopover();
+      };
+      document.addEventListener('click', onPageClick);
+      mapNavigationCleanup = () => {
+        document.removeEventListener('click', onPageClick);
+      };
+
       const sectionIndex = sections.indexOf(section);
       const targetLessonIndex = completed === 0
         ? 0
@@ -1951,7 +1975,9 @@
         windowObject.addEventListener('scroll', onScroll, { passive: true });
         courseView.addEventListener('scroll', onScroll, { passive: true });
         windowObject.addEventListener('resize', onScroll);
+        const previousMapCleanup = mapNavigationCleanup;
         mapNavigationCleanup = () => {
+          previousMapCleanup?.();
           windowObject.removeEventListener('scroll', onScroll);
           courseView.removeEventListener('scroll', onScroll);
           windowObject.removeEventListener('resize', onScroll);
@@ -2114,6 +2140,7 @@
           },
         });
       } else if (activity.type === 'number-grid') {
+        card.classList.add('is-long-content');
         const instruction = document.createElement('p');
         instruction.className = 'course-number-grid-instruction';
         instruction.textContent = 'اعداد ۰ تا ۲۰ را یک‌بار از ابتدا تا انتها مرور کن.';
@@ -2140,43 +2167,96 @@
         card.append(instruction);
 
         const ordered = [];
-        const items = document.createElement('div');
-        items.className = 'course-sequence-options';
-        activity.items.forEach((itemId, index) => {
-          const sequenceItem = section.items[itemId];
-          const button = createButton(sequenceItem.surface_form, 'course-option', () => {
-            if (answered || ordered.includes(index)) return;
-            ordered.push(index);
-            button.disabled = true;
-            button.dataset.order = String(ordered.length);
-            button.textContent = `${toPersianNumber(ordered.length)}. ${sequenceItem.surface_form}`;
-            if (ordered.length === activity.items.length) {
-              answered = true;
-              sessionGraded += 1;
-              const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-              if (correct) sessionCorrect += 1;
-              const result = document.createElement('div');
-              result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
-              const title = document.createElement('strong');
-              title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را مرور کن.';
-              const review = document.createElement('div');
-              review.className = 'course-sequence-review';
-              for (const answerIndex of activity.answer_order) {
-                const line = document.createElement('p');
-                line.lang = 'fi';
-                line.dir = 'ltr';
-                line.textContent = section.items[activity.items[answerIndex]].surface_form;
-                review.append(line);
-              }
-              result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
-              card.append(result);
-            }
-          });
-          button.lang = 'fi';
-          button.dir = 'ltr';
-          items.append(button);
+        const answerBox = document.createElement('div');
+        answerBox.className = 'course-sentence-answer-box';
+        answerBox.lang = 'fi';
+        answerBox.dir = 'ltr';
+        answerBox.setAttribute('role', 'group');
+        answerBox.setAttribute('aria-label', 'ترتیب انتخاب‌شده');
+
+        const itemPool = document.createElement('div');
+        itemPool.className = 'course-sentence-token-pool';
+        itemPool.setAttribute('aria-label', 'موارد باقی‌مانده');
+
+        const submit = createButton('ثبت پاسخ', 'primary-button course-sentence-submit', () => {
+          if (answered || ordered.length !== activity.items.length) return;
+          answered = true;
+          sessionGraded += 1;
+          const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
+          if (correct) sessionCorrect += 1;
+          renderSelection();
+
+          const result = document.createElement('div');
+          result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+          const title = document.createElement('strong');
+          title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را مرور کن.';
+          const review = document.createElement('div');
+          review.className = 'course-sequence-review';
+          for (const answerIndex of activity.answer_order) {
+            const line = document.createElement('p');
+            line.lang = 'fi';
+            line.dir = 'ltr';
+            line.textContent = section.items[activity.items[answerIndex]].surface_form;
+            review.append(line);
+          }
+          result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+          card.append(result);
         });
-        card.append(items);
+        submit.disabled = true;
+
+        function renderSelection(focusRequest = null) {
+          answerBox.replaceChildren();
+          itemPool.replaceChildren();
+          const sourceButtons = new Map();
+
+          if (!ordered.length) {
+            const placeholder = document.createElement('span');
+            placeholder.className = 'course-sentence-answer-placeholder';
+            placeholder.textContent = 'موارد انتخاب‌شده اینجا قرار می‌گیرند';
+            answerBox.append(placeholder);
+          } else {
+            ordered.forEach((itemIndex, selectedPosition) => {
+              const sequenceItem = section.items[activity.items[itemIndex]];
+              const selected = createButton(sequenceItem.surface_form, 'course-sentence-selected-token', () => {
+                if (answered) return;
+                ordered.splice(selectedPosition, 1);
+                renderSelection({ type: 'source', index: itemIndex });
+              });
+              selected.lang = 'fi';
+              selected.dir = 'ltr';
+              selected.disabled = answered;
+              selected.setAttribute('aria-label', `برگرداندن ${sequenceItem.surface_form} به فهرست`);
+              answerBox.append(selected);
+            });
+          }
+
+          activity.items.forEach((itemId, index) => {
+            if (ordered.includes(index)) return;
+            const sequenceItem = section.items[itemId];
+            const button = createButton(sequenceItem.surface_form, 'course-sentence-source-token', () => {
+              if (answered || ordered.includes(index)) return;
+              ordered.push(index);
+              const remainingIndex = activity.items.findIndex((_, candidateIndex) => !ordered.includes(candidateIndex));
+              renderSelection(remainingIndex >= 0 ? { type: 'source', index: remainingIndex } : { type: 'submit' });
+            });
+            button.lang = 'fi';
+            button.dir = 'ltr';
+            button.disabled = answered;
+            button.setAttribute('aria-label', `افزودن ${sequenceItem.surface_form} به ترتیب`);
+            sourceButtons.set(index, button);
+            itemPool.append(button);
+          });
+
+          submit.disabled = answered || ordered.length !== activity.items.length;
+          if (focusRequest?.type === 'source') {
+            sourceButtons.get(focusRequest.index)?.focus();
+          } else if (focusRequest?.type === 'submit' && !submit.disabled) {
+            submit.focus();
+          }
+        }
+
+        renderSelection();
+        card.append(answerBox, itemPool, submit);
       } else if (activity.type === 'clock-choice') {
         const clock = document.createElement('div');
         clock.className = 'course-clock-face';
