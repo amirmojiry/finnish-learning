@@ -1670,6 +1670,16 @@
       return button;
     }
 
+    function recordActivityResult(activity, correct) {
+      answered = true;
+      sessionGraded += 1;
+      if (correct) sessionCorrect += 1;
+      const targetId = activityPrimaryTargetId(activity);
+      if (!targetId || !section) return;
+      progress = recordTargetAttempt(progress, section.id, targetId, correct);
+      progress = saveProgress(windowObject.localStorage, progress);
+    }
+
     function createSpeechStatusNotice(status) {
       const notice = document.createElement('div');
       notice.className = 'course-audio-unavailable';
@@ -2247,9 +2257,7 @@
           nextActivity,
           showFeedback,
           recordResult(correct) {
-            answered = true;
-            sessionGraded += 1;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
           },
         });
       } else if (MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) {
@@ -2263,9 +2271,7 @@
           nextActivity,
           createTypedDifference,
           recordResult(correct) {
-            answered = true;
-            sessionGraded += 1;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
           },
         });
       } else if (activity.type === 'number-grid') {
@@ -2309,10 +2315,8 @@
 
         const submit = createButton('ثبت پاسخ', 'primary-button course-sentence-submit', () => {
           if (answered || ordered.length !== activity.items.length) return;
-          answered = true;
-          sessionGraded += 1;
           const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           renderSelection();
 
           const result = document.createElement('div');
@@ -2408,10 +2412,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
@@ -2454,11 +2456,9 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          answered = true;
-          sessionGraded += 1;
           const grading = gradeTypedAnswer(negative, input.value);
           const correct = grading.accepted;
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -2495,12 +2495,10 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || rows.some(({ input }) => !input.value.trim())) return;
-          answered = true;
-          sessionGraded += 1;
           const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
           const correct = gradings.every((grading) => grading.accepted);
           const hasFuzzy = gradings.some((grading) => grading.fuzzy);
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           rows.forEach(({ input }, index) => {
             const grading = gradings[index];
             input.disabled = true;
@@ -2548,10 +2546,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.time_item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.time_item) optionButton.classList.add('correct');
@@ -2577,10 +2573,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
@@ -2611,10 +2605,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.answer_item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.answer_item) optionButton.classList.add('correct');
@@ -2643,10 +2635,8 @@
         for (const category of activity.options) {
           const button = createButton(category, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = category === activity.answer;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.category === activity.answer) optionButton.classList.add('correct');
@@ -2678,10 +2668,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.question_item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.question_item) optionButton.classList.add('correct');
@@ -2713,10 +2701,8 @@
             button.dataset.order = String(ordered.length);
             button.textContent = `${toPersianNumber(ordered.length)}. ${turnItem.surface_form}`;
             if (ordered.length === activity.turns.length) {
-              answered = true;
-              sessionGraded += 1;
               const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-              if (correct) sessionCorrect += 1;
+              recordActivityResult(activity, correct);
               const result = document.createElement('div');
               result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
               const title = document.createElement('strong');
@@ -2800,10 +2786,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionLabel(optionItem, activity.mode), 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
@@ -2872,11 +2856,9 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          answered = true;
-          sessionGraded += 1;
           const grading = gradeTypedAnswer(item, input.value);
           const correct = grading.accepted;
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
