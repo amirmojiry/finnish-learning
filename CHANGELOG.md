@@ -16,7 +16,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ### Changed
 
-- Course progress remains backward compatible while retaining the newest 5,000 answer events in local storage to prevent unbounded growth.
+- Course progress remains backward compatible while retaining at most the newest 5,000 answer events, capping serialized course-answer history near 1 MB, and evicting older history if a browser storage quota is still exceeded.
 - The Phase 2 A1.1 richer-practice roadmap is now complete.
 
 
