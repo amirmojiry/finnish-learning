@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.19.0] - 2026-10-06
+
+### Added
+
+- First-lesson jump entry points for every implemented A1.1 section, even when earlier sections are incomplete.
+- Per-section progress bars inside the expandable section selector.
+- A visibility-aware floating control that scrolls to the current learnable lesson and points up or down toward it.
+
+### Changed
+
+- Completing a jumped-to section entry lesson unlocks earlier sections for backfill without marking skipped lessons complete.
+- Once a section has been started through its jump entry point, its later lessons continue to unlock sequentially from completed prerequisites.
+
+
 ## [1.18.1] - 2026-10-06
 
 ### Changed
