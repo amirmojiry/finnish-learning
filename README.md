@@ -56,14 +56,28 @@ The ranking is based on the [Frequency List of Written Finnish Word Forms](https
 
 - `data/common-words.json`: generated vocabulary consumed by the app
 - `data/course/a1.1-section-1.json` through `data/course/a1.1-section-4.json`: reviewed manifests for the complete A1.1 path
+- `data/course/a1.2-curriculum.json`: reviewed A1.2 curriculum targets used by the vocabulary-gap analysis
+- `data/course/a1.2-vocabulary-gap.json`: generated A1.2 lexical coverage and source-gap report
 - `data/parole_frek_3.txt`: original Latin-1 Parole frequency list
 - `data/vocabulary-details/`: reviewed detail bundles for future vocabulary ranges
 - `data/ud/`: generated compact and detailed UD analysis files
 - `ud-import-2.18/`: CoNLL-U source treebanks used by the UD pipeline
 - `scripts/build-vocabulary.mjs`: reproducible vocabulary builder
+- `scripts/analyze-a1-2-vocabulary.mjs`: deterministic A1.2 gap analyzer
 - `tools/ud-import/`: UD extraction and browser-summary generators
 
-Generated UD JSON files must not be edited manually.
+Generated UD JSON files and `data/course/a1.2-vocabulary-gap.json` must not be edited manually.
+
+## Regenerate the A1.2 vocabulary-gap report
+
+The A1.2 gap report compares the lexical targets in `data/course/a1.2-curriculum.json` with the current generated vocabulary in `data/common-words.json` and the original Parole source file referenced by the vocabulary metadata.
+
+```bash
+node scripts/analyze-a1-2-vocabulary.mjs
+node scripts/analyze-a1-2-vocabulary.mjs --check
+```
+
+Run the first command after A1.2 curriculum targets, the current vocabulary, or the underlying Parole source changes. The `--check` form is the reproducibility guard used by tests and fails when the committed report is stale.
 
 ## Add a vocabulary range
 

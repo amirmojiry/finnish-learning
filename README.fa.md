@@ -58,14 +58,28 @@
 
 - `data/common-words.json`: واژه‌نامه تولیدشده‌ای که اپ مصرف می‌کند
 - `data/course/a1.1-section-1.json` تا `data/course/a1.1-section-4.json`: manifestهای بازبینی‌شدهٔ مسیر کامل A1.1
+- `data/course/a1.2-curriculum.json`: اهداف بازبینی‌شدهٔ A1.2 که ورودی تحلیل شکاف واژگان هستند
+- `data/course/a1.2-vocabulary-gap.json`: گزارش تولیدشدهٔ پوشش واژگانی و شکاف منبع A1.2
 - `data/parole_frek_3.txt`: فایل اصلی Latin-1 فهرست بسامد Parole
 - `data/vocabulary-details/`: بسته‌های بازبینی‌شده برای بازه‌های بعدی واژه‌ها
 - `data/ud/`: فایل‌های تولیدشده تحلیل کامل و خلاصه UD
 - `ud-import-2.18/`: فایل‌های CoNLL-U ورودی pipeline تحلیل UD
 - `scripts/build-vocabulary.mjs`: سازنده قابل‌بازتولید واژه‌نامه
+- `scripts/analyze-a1-2-vocabulary.mjs`: تحلیلگر قطعی و قابل‌بازتولید شکاف واژگان A1.2
 - `tools/ud-import/`: ابزارهای استخراج UD و ساخت خلاصه مخصوص مرورگر
 
-فایل‌های JSON تولیدشده در `data/ud/` نباید دستی ویرایش شوند.
+فایل‌های JSON تولیدشده در `data/ud/` و فایل `data/course/a1.2-vocabulary-gap.json` نباید دستی ویرایش شوند.
+
+## بازتولید گزارش شکاف واژگان A1.2
+
+این گزارش اهداف واژگانی `data/course/a1.2-curriculum.json` را با واژه‌نامهٔ فعلی در `data/common-words.json` و فایل اصلی Parole که در metadata واژه‌نامه معرفی شده مقایسه می‌کند.
+
+```bash
+node scripts/analyze-a1-2-vocabulary.mjs
+node scripts/analyze-a1-2-vocabulary.mjs --check
+```
+
+پس از تغییر اهداف A1.2، واژه‌نامهٔ فعلی یا منبع Parole فرمان اول را اجرا کنید. حالت `--check` نگهبان بازتولیدپذیری در تست‌هاست و اگر گزارش commitشده قدیمی باشد با خطا متوقف می‌شود.
 
 ## افزودن یک بازه واژه
 
