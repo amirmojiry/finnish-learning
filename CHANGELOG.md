@@ -6,6 +6,21 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.23.0] - 2026-10-07
+
+### Added
+
+- Reviewed learner-content bundles for Parole source positions 301–400, including Persian translations, learner-facing lemmas, fallback parts of speech, and two bilingual examples per form.
+- Regression coverage confirming that the nine A1.2 lexical targets captured by the planned 301–400 tranche are now source-backed.
+
+### Changed
+
+- Expand the generated common vocabulary from 300 to 400 consecutive Parole surface forms while preserving exact source ranks, counts, spellings, and percentages.
+- Raise A1.2 current source-backed lexical coverage from 66/194 targets (34.0%) to 75/194 targets (38.7%) and advance the analyzer recommendation beyond position 400.
+- Regenerate UD-derived vocabulary analysis for all 400 forms and synchronize user-facing counts, cache keys, and deployment metadata.
+- Mark the planned Phase 3 high-frequency vocabulary expansion tranche complete while keeping later source-backed growth analyzer-driven.
+
+
 ## [1.22.0] - 2026-10-06
 
 ### Added
