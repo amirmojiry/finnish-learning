@@ -1,0 +1,258 @@
+[
+  {
+    "word": "perjantaina",
+    "translation_fa": "روز جمعه",
+    "example_fi": "Tapaamme perjantaina kirjastossa.",
+    "example_fa": "جمعه در کتابخانه همدیگر را می‌بینیم.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "perjantai",
+    "example_2_fi": "Kurssi päättyy perjantaina.",
+    "example_2_fa": "دوره روز جمعه تمام می‌شود."
+  },
+  {
+    "word": "haluaa",
+    "translation_fa": "می‌خواهد",
+    "example_fi": "Hän haluaa kahvia.",
+    "example_fa": "او قهوه می‌خواهد.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "haluta",
+    "example_2_fi": "Lapsi haluaa mennä ulos.",
+    "example_2_fa": "کودک می‌خواهد بیرون برود."
+  },
+  {
+    "word": "sunnuntaina",
+    "translation_fa": "روز یکشنبه",
+    "example_fi": "Kauppa on kiinni sunnuntaina.",
+    "example_fa": "فروشگاه یکشنبه بسته است.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "sunnuntai",
+    "example_2_fi": "Menemme puistoon sunnuntaina.",
+    "example_2_fa": "یکشنبه به پارک می‌رویم."
+  },
+  {
+    "word": "olemme",
+    "translation_fa": "هستیم",
+    "example_fi": "Me olemme kotona.",
+    "example_fa": "ما در خانه هستیم.",
+    "part_of_speech": "Auxiliary verb",
+    "part_of_speech_fa": "فعل کمکی",
+    "lemma": "olla",
+    "example_2_fi": "Olemme valmiita lähtemään.",
+    "example_2_fa": "ما آمادهٔ رفتن هستیم."
+  },
+  {
+    "word": "tietää",
+    "translation_fa": "دانستن؛ اطلاع داشتن",
+    "example_fi": "Haluan tietää vastauksen.",
+    "example_fa": "می‌خواهم پاسخ را بدانم.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "tietää",
+    "example_2_fi": "On hyvä tietää aikataulu etukäteen.",
+    "example_2_fa": "خوب است برنامهٔ زمانی را از قبل بدانیم."
+  },
+  {
+    "word": "joista",
+    "translation_fa": "که از آن‌ها؛ از میان آن‌ها",
+    "example_fi": "Tässä on kolme kirjaa, joista pidän.",
+    "example_fa": "اینجا سه کتاب است که آن‌ها را دوست دارم.",
+    "part_of_speech": "Pronoun",
+    "part_of_speech_fa": "ضمیر",
+    "lemma": "joka",
+    "example_2_fi": "Valitsin kaksi vaihtoehtoa, joista toinen on halvempi.",
+    "example_2_fa": "دو گزینه انتخاب کردم که یکی از آن‌ها ارزان‌تر است."
+  },
+  {
+    "word": "tulisi",
+    "translation_fa": "می‌آمد؛ باید بیاید؛ می‌شد",
+    "example_fi": "Hänen tulisi tulla ajoissa.",
+    "example_fa": "خوب می‌شد اگر اتوبوس زود می‌آمد.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "tulla",
+    "example_2_fi": "Olisi hyvä, jos bussi tulisi pian."
+  },
+  {
+    "word": "12",
+    "translation_fa": "دوازده",
+    "example_fi": "Bussi numero 12 menee keskustaan.",
+    "example_fa": "ساعت ۱۲ است.",
+    "part_of_speech": "Numeral",
+    "part_of_speech_fa": "عدد",
+    "lemma": "12",
+    "example_2_fi": "Kello on 12."
+  },
+  {
+    "word": "tehty",
+    "translation_fa": "انجام‌شده؛ ساخته‌شده",
+    "example_fi": "Työ on tehty valmiiksi.",
+    "example_fa": "تصمیم با هم گرفته شده است.",
+    "part_of_speech": "participle",
+    "part_of_speech_fa": "وجه وصفی / اسم مفعول",
+    "lemma": "tehdä",
+    "example_2_fi": "Päätös on tehty yhdessä."
+  },
+  {
+    "word": "v",
+    "translation_fa": "مخففِ سال",
+    "example_fi": "Lyhenne v tarkoittaa tässä vuotta.",
+    "example_fa": "در متن v به واژهٔ «سال» اشاره دارد.",
+    "part_of_speech": "abbreviation",
+    "part_of_speech_fa": "مخفف",
+    "lemma": "vuosi",
+    "example_2_fi": "Tekstissä v viittaa sanaan vuosi."
+  },
+  {
+    "word": "päästä",
+    "translation_fa": "رسیدن؛ رها شدن؛ توانستن وارد شدن",
+    "example_fi": "Haluan päästä kotiin ajoissa.",
+    "example_fa": "از اینجا می‌توان با اتوبوس به ایستگاه رسید.",
+    "part_of_speech": "Verb",
+    "part_of_speech_fa": "فعل",
+    "lemma": "päästä",
+    "example_2_fi": "Tästä voi päästä asemalle bussilla."
+  },
+  {
+    "word": "perusteella",
+    "translation_fa": "بر اساسِ؛ بنا بر",
+    "example_fi": "Päätös tehtiin tietojen perusteella.",
+    "example_fa": "بر اساس هوا، کت را با خودم می‌برم.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "peruste",
+    "example_2_fi": "Sään perusteella otan takin mukaan."
+  },
+  {
+    "word": "joissa",
+    "translation_fa": "که در آن‌ها",
+    "example_fi": "Pidän kaupungeista, joissa on paljon puistoja.",
+    "example_fa": "این‌ها اتاق‌هایی هستند که دانشجویان در آن‌ها کار می‌کنند.",
+    "part_of_speech": "Pronoun",
+    "part_of_speech_fa": "ضمیر",
+    "lemma": "joka",
+    "example_2_fi": "Tässä ovat huoneet, joissa opiskelijat työskentelevät."
+  },
+  {
+    "word": "jyväskylän",
+    "translation_fa": "یووسکوله؛ متعلق به شهر یووسکوله",
+    "example_fi": "Jyväskylän keskusta on järven lähellä.",
+    "example_fa": "دانشگاه یووسکوله در فنلاند شناخته‌شده است.",
+    "part_of_speech": "Proper noun",
+    "part_of_speech_fa": "اسم خاص",
+    "lemma": "Jyväskylä",
+    "example_2_fi": "Jyväskylän yliopisto on tunnettu Suomessa."
+  },
+  {
+    "word": "hieman",
+    "translation_fa": "کمی؛ اندکی",
+    "example_fi": "Puhu hieman hitaammin.",
+    "example_fa": "امروز کمی خسته‌ام.",
+    "part_of_speech": "Adverb",
+    "part_of_speech_fa": "قید",
+    "lemma": "hieman",
+    "example_2_fi": "Olen hieman väsynyt tänään."
+  },
+  {
+    "word": "tuo",
+    "translation_fa": "آن؛ آن یکی",
+    "example_fi": "Tuo talo on vanha.",
+    "example_fa": "می‌توانی آن کتاب را به من بدهی؟",
+    "part_of_speech": "Pronoun",
+    "part_of_speech_fa": "ضمیر",
+    "lemma": "tuo",
+    "example_2_fi": "Voitko antaa minulle tuo kirja?"
+  },
+  {
+    "word": "jotta",
+    "translation_fa": "تا؛ برای اینکه",
+    "example_fi": "Lähden aikaisin, jotta ehdin bussiin.",
+    "example_fa": "واضح صحبت کن تا همه بفهمند.",
+    "part_of_speech": "Conjunction",
+    "part_of_speech_fa": "حرف ربط",
+    "lemma": "jotta",
+    "example_2_fi": "Puhu selvästi, jotta kaikki ymmärtävät."
+  },
+  {
+    "word": "viisi",
+    "translation_fa": "پنج",
+    "example_fi": "Minulla on viisi euroa.",
+    "example_fa": "اتوبوس پنج دقیقه دیر می‌رسد.",
+    "part_of_speech": "Numeral",
+    "part_of_speech_fa": "عدد",
+    "lemma": "viisi",
+    "example_2_fi": "Bussi tulee viisi minuuttia myöhässä."
+  },
+  {
+    "word": "saakka",
+    "translation_fa": "تا؛ تا زمان یا مکانِ",
+    "example_fi": "Kirjasto on auki kuuteen saakka.",
+    "example_fa": "تا ایستگاه پیاده رفتیم.",
+    "part_of_speech": "Adposition",
+    "part_of_speech_fa": "پس‌اضافه",
+    "lemma": "saakka",
+    "example_2_fi": "Kävelimme asemalle saakka."
+  },
+  {
+    "word": "hänelle",
+    "translation_fa": "به او؛ برای او",
+    "example_fi": "Annoin kirjan hänelle.",
+    "example_fa": "می‌توانی فردا به او زنگ بزنی؟",
+    "part_of_speech": "Pronoun",
+    "part_of_speech_fa": "ضمیر",
+    "lemma": "hän",
+    "example_2_fi": "Voitko soittaa hänelle huomenna?"
+  },
+  {
+    "word": "tosin",
+    "translation_fa": "البته؛ هرچند",
+    "example_fi": "Se on hyvä, tosin hieman kallis.",
+    "example_fa": "می‌توانم بیایم، البته فقط عصر.",
+    "part_of_speech": "Adverb",
+    "part_of_speech_fa": "قید",
+    "lemma": "tosin",
+    "example_2_fi": "Voin tulla, tosin vasta illalla."
+  },
+  {
+    "word": "viikon",
+    "translation_fa": "هفته؛ متعلق به هفته",
+    "example_fi": "Olen täällä viikon.",
+    "example_fa": "برنامهٔ هفته آماده است.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "viikko",
+    "example_2_fi": "Viikon ohjelma on jo valmis."
+  },
+  {
+    "word": "keskiviikkona",
+    "translation_fa": "روز چهارشنبه",
+    "example_fi": "Tapaamme keskiviikkona koululla.",
+    "example_fa": "دوره روز چهارشنبه شروع می‌شود.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "keskiviikko",
+    "example_2_fi": "Kurssi alkaa keskiviikkona."
+  },
+  {
+    "word": "mk",
+    "translation_fa": "مخفف مارک فنلاند؛ واحد پول قدیمی فنلاند",
+    "example_fi": "Vanha hinta oli 50 mk.",
+    "example_fa": "در روزنامه قیمت محصول ۲۰ مارک نوشته شده بود.",
+    "part_of_speech": "abbreviation",
+    "part_of_speech_fa": "مخفف",
+    "lemma": "markka",
+    "example_2_fi": "Lehdessä tuotteen hinnaksi oli merkitty 20 mk."
+  },
+  {
+    "word": "avulla",
+    "translation_fa": "با کمکِ؛ به‌وسیلهٔ",
+    "example_fi": "Opin sanat kuvien avulla.",
+    "example_fa": "با کمک نقشه راه را پیدا می‌کنیم.",
+    "part_of_speech": "Noun",
+    "part_of_speech_fa": "اسم",
+    "lemma": "apu",
+    "example_2_fi": "Karttan avulla löydämme perille."
+  }
+]
