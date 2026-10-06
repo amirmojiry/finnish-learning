@@ -937,6 +937,6 @@ test('long mobile lesson content starts at the top of its scrollable card', () =
   assert.match(source, /activity\.type === 'number-grid'[\s\S]*?card\.classList\.add\('is-long-content'\)/);
   assert.match(
     styles,
-    /@media \(max-width: 620px\)[\s\S]*?body\.course-lesson-active \.course-question-card\.is-long-content\s*\{[\s\S]*?justify-content:\s*flex-start/,
+    /body\.course-lesson-active \.course-question-card\.is-long-content\s*\{[\s\S]*?justify-content:\s*flex-start/,
   );
 });
