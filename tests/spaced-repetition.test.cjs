@@ -103,44 +103,53 @@ test('the browser integration assets are present exactly once and load after the
   assert.ok(html.indexOf('app.js') < html.indexOf('spaced-repetition.js'));
 });
 
-test('profile owns review while settings owns appearance and the about link', () => {
+test('word practice owns smart review while settings owns appearance speech and about', () => {
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const source = fs.readFileSync(path.join(ROOT, 'spaced-repetition.js'), 'utf8');
   const css = fs.readFileSync(path.join(ROOT, 'css', 'spaced-repetition.css'), 'utf8');
   const navigation = fs.readFileSync(path.join(ROOT, 'settings.js'), 'utf8');
   const bottomNav = html.match(/<nav class="bottom-nav"[\s\S]*?<\/nav>/)?.[0] || '';
-  const profileView = html.match(/<div id="profile-view"[\s\S]*?<div id="settings-view"/)?.[0] || '';
+  const practiceView = html.match(/<div id="practice-view"[\s\S]*?<div id="dictionary-view"/)?.[0] || '';
   const settingsView = html.match(/<div id="settings-view"[\s\S]*?<\/main>/)?.[0] || '';
 
-  assert.match(html, /id="profile-view"/);
-  assert.match(html, /id="settings-view"/);
-  assert.match(profileView, /id="spaced-review-slot"/);
-  assert.doesNotMatch(profileView, /data-theme-choice=/);
-  assert.doesNotMatch(profileView, /about-view-link/);
+  assert.match(html, /id="practice-view"/);
+  assert.doesNotMatch(html, /id="home-view"/);
+  assert.doesNotMatch(html, /id="profile-view"/);
+  assert.match(practiceView, /id="spaced-review-slot"/);
+  assert.match(practiceView, /id="review-quiz"/);
+  assert.doesNotMatch(practiceView, /class="mode-switcher"/);
+  assert.doesNotMatch(html, /تمرین همین واژه/);
   assert.match(settingsView, /data-theme-choice="light"/);
   assert.match(settingsView, /data-theme-choice="dark"/);
+  assert.match(settingsView, /id="finnish-speech-card"/);
   assert.match(settingsView, /class="[^"]*about-view-link/);
   assert.doesNotMatch(settingsView, /id="spaced-review-slot"/);
-  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 5);
+  assert.equal((bottomNav.match(/bottom-nav-item/g) || []).length, 4);
+  assert.match(bottomNav, /practice-view-link/);
   assert.match(bottomNav, /course-view-link/);
-  assert.match(bottomNav, /profile-view-link/);
   assert.match(bottomNav, /settings-view-link/);
-  assert.doesNotMatch(bottomNav, /about-view-link/);
+  assert.doesNotMatch(bottomNav, /profile-view-link/);
+  assert.doesNotMatch(bottomNav, /href="#home"/);
   assert.match(source, /getElementById\('spaced-review-slot'\)/);
-  assert.doesNotMatch(source, /insertAdjacentElement\('afterend'/);
+  assert.match(source, /finnish-review-answer/);
+  assert.match(source, /finnish-review-next/);
   assert.match(source, /spaced-review-history/);
   assert.match(source, /detail-review-status/);
   assert.match(source, /calculateCoverage/);
-  assert.match(css, /\.profile-review-slot/);
-  assert.doesNotMatch(css, /\.settings-review-slot/);
-  assert.doesNotMatch(css, /\.home-view\s*\{[^}]*overflow-y:\s*auto/s);
+  assert.match(css, /\.word-practice-review-slot/);
+  assert.doesNotMatch(css, /\.profile-review-slot/);
   assert.match(navigation, /location\.hash === '#settings'/);
-  assert.match(navigation, /location\.hash === '#profile'/);
+  assert.doesNotMatch(navigation, /location\.hash === '#profile'/);
+  assert.match(navigation, /finnishSpeechStatus/);
+  assert.match(navigation, /voiceschanged/);
 });
 
 test('the review integration keeps its required public app contracts', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
-  for (const functionName of ['openWordDetail', 'startFocusedPractice', 'hideFeedback', 'renderQuestion']) {
+  for (const functionName of ['openWordDetail', 'startReviewPractice', 'hideReviewFeedback', 'closeReviewQuiz']) {
     assert.match(app, new RegExp(`function ${functionName}\\(`));
   }
+  assert.match(app, /window\.wordReviewReady/);
+  assert.doesNotMatch(app, /function startFocusedPractice/);
+  assert.doesNotMatch(app, /fiQuizMode/);
 });
