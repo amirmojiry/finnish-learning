@@ -905,3 +905,37 @@ test('locked lesson previews keep details available while unavailable lessons di
   assert.match(source, /continueButton\.disabled = !unlocked/);
   assert.match(source, /createButton\('جزئیات درس'/);
 });
+
+
+test('sequence-order uses reversible selection and explicit submission', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const sequenceBranch = source.match(/else if \(activity\.type === 'sequence-order'\) \{[\s\S]*?\n      \} else if \(activity\.type === 'clock-choice'\)/)?.[0] || '';
+
+  assert.match(sequenceBranch, /course-sentence-answer-box/);
+  assert.match(sequenceBranch, /course-sentence-token-pool/);
+  assert.match(sequenceBranch, /ordered\.splice\(selectedPosition, 1\)/);
+  assert.match(sequenceBranch, /course-sentence-submit/);
+  assert.match(sequenceBranch, /submit\.disabled = answered \|\| ordered\.length !== activity\.items\.length/);
+  assert.doesNotMatch(sequenceBranch, /if \(ordered\.length === activity\.items\.length\) \{/);
+});
+
+test('lesson popover dismisses when the learner clicks outside it', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+
+  assert.match(source, /const closeLessonPopover = \(\) => \{/);
+  assert.match(source, /document\.addEventListener\('click', onPageClick\)/);
+  assert.match(source, /target\.closest\('\.course-lesson-node, \.course-lesson-popover'\)/);
+  assert.match(source, /closeLessonPopover\(\)/);
+  assert.match(source, /document\.removeEventListener\('click', onPageClick\)/);
+});
+
+test('long mobile lesson content starts at the top of its scrollable card', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
+
+  assert.match(source, /activity\.type === 'number-grid'[\s\S]*?card\.classList\.add\('is-long-content'\)/);
+  assert.match(
+    styles,
+    /@media \(max-width: 620px\)[\s\S]*?body\.course-lesson-active \.course-question-card\.is-long-content\s*\{[\s\S]*?justify-content:\s*flex-start/,
+  );
+});
