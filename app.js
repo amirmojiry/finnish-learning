@@ -430,7 +430,6 @@ els.typingForm?.addEventListener('submit', answerTyped);
 els.viewLinks.forEach((link) => link.addEventListener('click', (event) => {
   event.preventDefault();
   state.detailWord = null;
-  closeReviewQuiz();
   showView(link.dataset.viewLink);
 }));
 els.dictionarySearch?.addEventListener('input', renderDictionaryList);
