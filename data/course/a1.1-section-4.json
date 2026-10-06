@@ -1252,8 +1252,8 @@
       "lemma": "pieni",
       "translation_fa": "کوچک",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 389,
       "topics": [
         "adjectives",
         "size"
