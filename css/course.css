@@ -1955,6 +1955,10 @@ body.course-lesson-active .course-question-card {
   overscroll-behavior: contain;
 }
 
+body.course-lesson-active .course-question-card.is-long-content {
+  justify-content: flex-start;
+}
+
 .course-primary-feedback:not([hidden]) {
   position: fixed;
   inset-inline: 12px;
@@ -1980,10 +1984,6 @@ body.course-lesson-active .course-question-card {
 @media (max-width: 620px) {
   body.course-lesson-active main {
     height: 100dvh;
-  }
-
-  body.course-lesson-active .course-question-card.is-long-content {
-    justify-content: flex-start;
   }
 
   body.course-lesson-active .course-activity-shell {
