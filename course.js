@@ -1103,7 +1103,7 @@
         recordResult(correct);
         renderSelection();
         const result = document.createElement('div');
-        result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+        result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
         const title = document.createElement('strong');
         title.textContent = correct ? 'جمله درست ساخته شد.' : 'ترتیب درست جمله را مرور کن.';
         const review = document.createElement('p');
@@ -1292,7 +1292,7 @@
     const finish = (correct, grading = null) => {
       feedback.replaceChildren();
       feedback.hidden = false;
-      feedback.className = `course-answer-feedback ${correct ? (grading?.fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
+      feedback.className = `course-answer-feedback course-primary-feedback ${correct ? (grading?.fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
 
       const title = document.createElement('strong');
       title.textContent = correct
@@ -1399,16 +1399,15 @@
     courseView.dataset.initialized = 'true';
 
     const views = {
-      home: document.getElementById('home-view'),
+      practice: document.getElementById('practice-view'),
       dictionary: document.getElementById('dictionary-view'),
-      profile: document.getElementById('profile-view'),
       settings: document.getElementById('settings-view'),
       about: document.getElementById('about-view'),
       course: courseView,
     };
     const mobileTitle = document.getElementById('mobile-view-title');
     const courseLinks = [...document.querySelectorAll('.course-view-link')];
-    const regularLinks = [...document.querySelectorAll('[data-view-link], .profile-view-link, .settings-view-link, .about-view-link')];
+    const regularLinks = [...document.querySelectorAll('[data-view-link], .settings-view-link, .about-view-link')];
     const allPrimaryItems = [...document.querySelectorAll('.bottom-nav-item, .desktop-view-link')];
 
     let sections = [];
@@ -1478,10 +1477,15 @@
       }
     }
 
+    function setLessonFocusMode(active) {
+      document.body?.classList.toggle('course-lesson-active', Boolean(active));
+    }
+
     function showCourseView({ updateHash = false } = {}) {
       for (const [name, view] of Object.entries(views)) {
         if (view) view.hidden = name !== 'course';
       }
+      setLessonFocusMode(Boolean(activeLesson));
       activateCourseNavigation(true);
       if (mobileTitle) mobileTitle.textContent = activeLesson ? activeLesson.title_fa : 'دوره';
       if (updateHash && !isCourseHash()) history.replaceState(null, '', '#course');
@@ -1489,6 +1493,7 @@
 
     function hideCourseView() {
       courseView.hidden = true;
+      setLessonFocusMode(false);
       activateCourseNavigation(false);
     }
 
@@ -1619,6 +1624,7 @@
 
     function renderSectionMap() {
       activeLesson = null;
+      setLessonFocusMode(false);
       if (!section) section = preferredSection();
       if (section) setHash(`#course-${section.id}`);
       showCourseView();
@@ -1850,6 +1856,7 @@
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
       if (!isSectionUnlocked(sections, progress, sectionIndex) || !isLessonUnlocked(section, progress, index)) return;
       activeLesson = lesson;
+      setLessonFocusMode(true);
       activityIndex = 0;
       sessionCorrect = 0;
       sessionGraded = 0;
@@ -1899,35 +1906,30 @@
       shell.className = 'course-activity-shell';
       const top = document.createElement('header');
       top.className = 'course-activity-top';
-      const back = createButton('بازگشت به درس‌ها', 'course-back-button', renderSectionMap);
-      const counter = document.createElement('span');
-      counter.textContent = `${toPersianNumber(activityIndex + 1)} از ${toPersianNumber(activeLesson.activities.length)}`;
-      top.append(back, counter);
 
+      const close = createButton('×', 'course-lesson-close', renderSectionMap);
+      close.setAttribute('aria-label', 'بستن درس و بازگشت به فهرست درس‌ها');
+
+      const progressWrap = document.createElement('div');
+      progressWrap.className = 'course-activity-progress-wrap';
       const track = document.createElement('div');
       track.className = 'course-activity-progress';
-      const bar = document.createElement('span');
-      bar.style.width = `${((activityIndex + 1) / activeLesson.activities.length) * 100}%`;
-      track.append(bar);
+      track.setAttribute('role', 'progressbar');
+      track.setAttribute('aria-valuemin', '1');
+      track.setAttribute('aria-valuemax', String(activeLesson.activities.length));
+      track.setAttribute('aria-valuenow', String(activityIndex + 1));
+      track.setAttribute('aria-label', `فعالیت ${toPersianNumber(activityIndex + 1)} از ${toPersianNumber(activeLesson.activities.length)}`);
 
-      const lessonHeader = document.createElement('div');
-      lessonHeader.className = 'course-current-lesson';
-      const label = document.createElement('span');
-      label.textContent = `درس ${toPersianNumber(activeLesson.order)}`;
-      const title = document.createElement('h1');
-      title.textContent = activeLesson.title_fa;
-      lessonHeader.append(label, title);
-      if (activityIndex === 0) {
-        const intro = createInfoDisclosure((panel) => {
-          const summary = document.createElement('p');
-          summary.textContent = activeLesson.summary_fa;
-          const grammar = document.createElement('p');
-          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
-          panel.append(summary, grammar);
-        }, 'توضیحات این درس');
-        intro.classList.add('course-lesson-intro');
-        lessonHeader.append(intro);
-      }
+      const bar = document.createElement('span');
+      bar.className = 'course-activity-progress-bar';
+      bar.style.width = `${((activityIndex + 1) / activeLesson.activities.length) * 100}%`;
+
+      const counter = document.createElement('strong');
+      counter.className = 'course-activity-progress-count';
+      counter.textContent = `${toPersianNumber(activityIndex + 1)} / ${toPersianNumber(activeLesson.activities.length)}`;
+      track.append(bar, counter);
+      progressWrap.append(track);
+      top.append(close, progressWrap);
 
       const card = document.createElement('div');
       card.className = 'course-question-card';
@@ -1937,7 +1939,8 @@
       card.append(prompt);
 
       const feedback = document.createElement('div');
-      feedback.className = 'course-answer-feedback';
+      feedback.className = 'course-answer-feedback course-primary-feedback';
+      feedback.setAttribute('role', 'status');
       feedback.hidden = true;
 
       function addExample() {
@@ -2029,7 +2032,7 @@
               const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
               if (correct) sessionCorrect += 1;
               const result = document.createElement('div');
-              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+              result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
               const title = document.createElement('strong');
               title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را مرور کن.';
               const review = document.createElement('div');
@@ -2172,7 +2175,7 @@
           });
           submit.disabled = true;
           const result = document.createElement('div');
-          result.className = `course-answer-feedback ${correct ? (hasFuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
+          result.className = `course-answer-feedback course-primary-feedback ${correct ? (hasFuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
           const title = document.createElement('strong');
           title.textContent = correct
             ? hasFuzzy ? 'پاسخ‌ها پذیرفته شدند؛ تفاوت‌های کوچک را مرور کن.' : `هر ${toPersianNumber(rows.length)} جمله درست بود.`
@@ -2382,7 +2385,7 @@
               const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
               if (correct) sessionCorrect += 1;
               const result = document.createElement('div');
-              result.className = `course-answer-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
+              result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
               const title = document.createElement('strong');
               title.textContent = correct ? 'ترتیب درست بود.' : 'ترتیب درست را دوباره مرور کن.';
               const dialogue = document.createElement('div');
@@ -2554,7 +2557,7 @@
         }
       }
 
-      shell.append(top, track, lessonHeader, card);
+      shell.append(top, card);
       root.append(shell);
       root.scrollTop = 0;
     }
@@ -2563,7 +2566,7 @@
       container.replaceChildren();
       container.hidden = false;
       const fuzzy = Boolean(grading && grading.fuzzy);
-      container.className = `course-answer-feedback ${correct ? (fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
+      container.className = `course-answer-feedback course-primary-feedback ${correct ? (fuzzy ? 'is-near-correct' : 'is-correct') : 'is-wrong'}`;
       const title = document.createElement('strong');
       title.textContent = grading?.diacriticAdjusted && correct
         ? 'درست حساب شد؛ املای استاندارد فنلاندی را مرور کن.'
