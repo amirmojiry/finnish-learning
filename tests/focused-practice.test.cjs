@@ -123,3 +123,41 @@ test('focused practice UI is section-scoped and does not complete lessons', () =
   );
   assert.match(styles, /\.course-focused-practice-card/);
 });
+
+
+test('weak-target totals are independent from the focused-session activity cap', () => {
+  const itemIds = Array.from({ length: 12 }, (_, index) => `target-${index + 1}`);
+  const section = {
+    id: 'large-weak-section',
+    items: Object.fromEntries(itemIds.map((itemId) => [itemId, { surface_form: itemId }])),
+    lessons: [
+      {
+        id: 'large-lesson',
+        order: 1,
+        activities: itemIds.map((itemId) => ({ type: 'type', mode: 'finnish', item: itemId })),
+      },
+    ],
+  };
+
+  let progress = course.emptyProgress();
+  progress.completedLessons = ['large-lesson'];
+  for (let index = 0; index < itemIds.length; index += 1) {
+    progress = course.recordTargetAttempt(progress, section.id, itemIds[index], false, 1000 + index);
+  }
+
+  const allWeak = course.weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
+  const focused = course.buildFocusedPracticeActivities(section, progress);
+
+  assert.equal(allWeak.length, 12);
+  assert.equal(focused.length, course.FOCUSED_PRACTICE_LIMIT);
+
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(
+    source,
+    /const weakTargets = weakTargetsForSection\(section, progress, Number\.POSITIVE_INFINITY\);[\s\S]*?const focusedTargetIds = weakTargets\.map/,
+  );
+  assert.match(
+    source,
+    /const remainingTargets = weakTargetsForSection\(section, progress, Number\.POSITIVE_INFINITY\)/,
+  );
+});
