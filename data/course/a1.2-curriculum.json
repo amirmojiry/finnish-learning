@@ -446,6 +446,7 @@
           "high_frequency_targets": [],
           "topic_targets": [],
           "expressions": [
+            "Hei!",
             "Haluaisin tämän, kiitos.",
             "Paljonko tämä maksaa?",
             "Voinko maksaa kortilla?",
@@ -455,6 +456,7 @@
             "recycling only; preserve complete reviewed transaction frames"
           ],
           "recycle_from": [
+            "a1.1-s1-l01",
             "a1.2-s1-l01",
             "a1.2-s1-l03",
             "a1.2-s1-l04",
