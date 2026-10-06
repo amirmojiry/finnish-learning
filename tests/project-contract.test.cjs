@@ -198,7 +198,7 @@ test('source-code comments do not contain Persian characters', () => {
 
 
 test('About page describes the current structured learning experience', () => {
-  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const about = html.match(/<div id="about-view"[\s\S]*?<div id="settings-view"/)?.[0] || '';
 
   assert.match(about, /دورهٔ ساختاریافتهٔ فنلاندی برای فارسی‌زبانان/);
