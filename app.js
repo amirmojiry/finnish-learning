@@ -457,5 +457,6 @@ window.openWordDetail = openWordDetail;
 window.startReviewPractice = startReviewPractice;
 window.hideReviewFeedback = hideReviewFeedback;
 window.closeReviewQuiz = closeReviewQuiz;
+window.wordReviewReady = () => state.words.length >= 4;
 
 init();
