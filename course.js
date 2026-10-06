@@ -1938,6 +1938,18 @@
       prompt.textContent = questionHeading(activity);
       card.append(prompt);
 
+      if (activityIndex === 0) {
+        const intro = createInfoDisclosure((panel) => {
+          const summary = document.createElement('p');
+          summary.textContent = activeLesson.summary_fa;
+          const grammar = document.createElement('p');
+          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
+          panel.append(summary, grammar);
+        }, 'توضیحات این درس');
+        intro.classList.add('course-lesson-inline-info');
+        card.append(intro);
+      }
+
       const feedback = document.createElement('div');
       feedback.className = 'course-answer-feedback course-primary-feedback';
       feedback.setAttribute('role', 'status');
