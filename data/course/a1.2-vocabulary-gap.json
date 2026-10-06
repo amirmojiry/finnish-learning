@@ -1,0 +1,5337 @@
+{
+  "schema_version": 1,
+  "curriculum_id": "a1.2-curriculum",
+  "curriculum_level": "A1.2",
+  "current_vocabulary_size": 300,
+  "source_file": "data/parole_frek_3.txt",
+  "classification_policy": {
+    "current_source_backed": "The exact surface form already exists in data/common-words.json.",
+    "source_ranked_gap": "The exact surface form exists in the original Parole source but is outside the current common vocabulary range.",
+    "curated_unranked": "No exact Parole surface-form match exists; keep the target curriculum-owned and do not fabricate frequency metadata."
+  },
+  "summary": {
+    "unique_lexical_target_count": 194,
+    "current_source_backed_count": 66,
+    "source_ranked_gap_count": 126,
+    "curated_unranked_count": 2,
+    "current_coverage_percent": 34,
+    "exact_parole_match_percent": 99
+  },
+  "recommendation": {
+    "strategy": "next_consecutive_parole_tranche",
+    "start_position": 301,
+    "end_position": 400,
+    "additional_source_forms": 100,
+    "captured_target_count": 9,
+    "captured_targets": [
+      "perjantaina",
+      "sunnuntaina",
+      "keskiviikkona",
+      "mistä",
+      "suoraan",
+      "yliopisto",
+      "tulla",
+      "maksaa",
+      "pieni"
+    ],
+    "remaining_source_ranked_gap_count": 117,
+    "candidate_endpoints": [
+      {
+        "end_position": 350,
+        "additional_source_forms": 50,
+        "captured_target_count": 4,
+        "capture_density": 0.08
+      },
+      {
+        "end_position": 400,
+        "additional_source_forms": 100,
+        "captured_target_count": 9,
+        "capture_density": 0.09
+      },
+      {
+        "end_position": 450,
+        "additional_source_forms": 150,
+        "captured_target_count": 10,
+        "capture_density": 0.0667
+      },
+      {
+        "end_position": 500,
+        "additional_source_forms": 200,
+        "captured_target_count": 11,
+        "capture_density": 0.055
+      },
+      {
+        "end_position": 550,
+        "additional_source_forms": 250,
+        "captured_target_count": 14,
+        "capture_density": 0.056
+      },
+      {
+        "end_position": 600,
+        "additional_source_forms": 300,
+        "captured_target_count": 14,
+        "capture_density": 0.0467
+      },
+      {
+        "end_position": 650,
+        "additional_source_forms": 350,
+        "captured_target_count": 16,
+        "capture_density": 0.0457
+      },
+      {
+        "end_position": 700,
+        "additional_source_forms": 400,
+        "captured_target_count": 19,
+        "capture_density": 0.0475
+      },
+      {
+        "end_position": 750,
+        "additional_source_forms": 450,
+        "captured_target_count": 20,
+        "capture_density": 0.0444
+      },
+      {
+        "end_position": 800,
+        "additional_source_forms": 500,
+        "captured_target_count": 22,
+        "capture_density": 0.044
+      },
+      {
+        "end_position": 850,
+        "additional_source_forms": 550,
+        "captured_target_count": 23,
+        "capture_density": 0.0418
+      },
+      {
+        "end_position": 900,
+        "additional_source_forms": 600,
+        "captured_target_count": 23,
+        "capture_density": 0.0383
+      },
+      {
+        "end_position": 950,
+        "additional_source_forms": 650,
+        "captured_target_count": 23,
+        "capture_density": 0.0354
+      },
+      {
+        "end_position": 1000,
+        "additional_source_forms": 700,
+        "captured_target_count": 23,
+        "capture_density": 0.0329
+      },
+      {
+        "end_position": 1050,
+        "additional_source_forms": 750,
+        "captured_target_count": 24,
+        "capture_density": 0.032
+      },
+      {
+        "end_position": 1100,
+        "additional_source_forms": 800,
+        "captured_target_count": 25,
+        "capture_density": 0.0313
+      },
+      {
+        "end_position": 1150,
+        "additional_source_forms": 850,
+        "captured_target_count": 27,
+        "capture_density": 0.0318
+      },
+      {
+        "end_position": 1200,
+        "additional_source_forms": 900,
+        "captured_target_count": 27,
+        "capture_density": 0.03
+      },
+      {
+        "end_position": 1250,
+        "additional_source_forms": 950,
+        "captured_target_count": 27,
+        "capture_density": 0.0284
+      },
+      {
+        "end_position": 1300,
+        "additional_source_forms": 1000,
+        "captured_target_count": 27,
+        "capture_density": 0.027
+      },
+      {
+        "end_position": 1350,
+        "additional_source_forms": 1050,
+        "captured_target_count": 27,
+        "capture_density": 0.0257
+      },
+      {
+        "end_position": 1400,
+        "additional_source_forms": 1100,
+        "captured_target_count": 28,
+        "capture_density": 0.0255
+      },
+      {
+        "end_position": 1450,
+        "additional_source_forms": 1150,
+        "captured_target_count": 28,
+        "capture_density": 0.0243
+      },
+      {
+        "end_position": 1500,
+        "additional_source_forms": 1200,
+        "captured_target_count": 30,
+        "capture_density": 0.025
+      },
+      {
+        "end_position": 1550,
+        "additional_source_forms": 1250,
+        "captured_target_count": 30,
+        "capture_density": 0.024
+      },
+      {
+        "end_position": 1600,
+        "additional_source_forms": 1300,
+        "captured_target_count": 30,
+        "capture_density": 0.0231
+      },
+      {
+        "end_position": 1650,
+        "additional_source_forms": 1350,
+        "captured_target_count": 31,
+        "capture_density": 0.023
+      },
+      {
+        "end_position": 1700,
+        "additional_source_forms": 1400,
+        "captured_target_count": 32,
+        "capture_density": 0.0229
+      },
+      {
+        "end_position": 1750,
+        "additional_source_forms": 1450,
+        "captured_target_count": 34,
+        "capture_density": 0.0234
+      },
+      {
+        "end_position": 1800,
+        "additional_source_forms": 1500,
+        "captured_target_count": 34,
+        "capture_density": 0.0227
+      },
+      {
+        "end_position": 1850,
+        "additional_source_forms": 1550,
+        "captured_target_count": 35,
+        "capture_density": 0.0226
+      },
+      {
+        "end_position": 1900,
+        "additional_source_forms": 1600,
+        "captured_target_count": 35,
+        "capture_density": 0.0219
+      },
+      {
+        "end_position": 1950,
+        "additional_source_forms": 1650,
+        "captured_target_count": 38,
+        "capture_density": 0.023
+      },
+      {
+        "end_position": 2000,
+        "additional_source_forms": 1700,
+        "captured_target_count": 38,
+        "capture_density": 0.0224
+      }
+    ],
+    "rationale": "Choose the standard 50-entry endpoint up to source position 2000 with the highest cumulative exact A1.2 target yield per added Parole form. This keeps the next source-backed expansion small and avoids inflating the common vocabulary merely to absorb low-frequency topic forms."
+  },
+  "curated_unranked_targets": [
+    "joka päivä",
+    "meno-paluu"
+  ],
+  "targets": [
+    {
+      "target": "ei",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 3,
+      "source_word": "ei",
+      "frequency_rank": 3,
+      "frequency_count": 164098,
+      "frequency_percent": 0.9321
+    },
+    {
+      "target": "jos",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 22,
+      "source_word": "jos",
+      "frequency_rank": 22,
+      "frequency_count": 37637,
+      "frequency_percent": 0.2137
+    },
+    {
+      "target": "nyt",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l08",
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s3",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 23,
+      "source_word": "nyt",
+      "frequency_rank": 23,
+      "frequency_count": 37635,
+      "frequency_percent": 0.2137
+    },
+    {
+      "target": "voi",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l07",
+        "a1.2-s3-l05",
+        "a1.2-s4-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s3",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 25,
+      "source_word": "voi",
+      "frequency_rank": 25,
+      "frequency_count": 31901,
+      "frequency_percent": 0.1812
+    },
+    {
+      "target": "sitten",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l05"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 31,
+      "source_word": "sitten",
+      "frequency_rank": 31,
+      "frequency_count": 26262,
+      "frequency_percent": 0.1491
+    },
+    {
+      "target": "siitä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l04"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 32,
+      "source_word": "siitä",
+      "frequency_rank": 32,
+      "frequency_count": 25439,
+      "frequency_percent": 0.1444
+    },
+    {
+      "target": "kanssa",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l05",
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2",
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 33,
+      "source_word": "kanssa",
+      "frequency_rank": 33,
+      "frequency_count": 25436,
+      "frequency_percent": 0.1444
+    },
+    {
+      "target": "jälkeen",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 36,
+      "source_word": "jälkeen",
+      "frequency_rank": 36,
+      "frequency_count": 24328,
+      "frequency_percent": 0.1381
+    },
+    {
+      "target": "viime",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 39,
+      "source_word": "viime",
+      "frequency_rank": 39,
+      "frequency_count": 22962,
+      "frequency_percent": 0.1304
+    },
+    {
+      "target": "mitä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l03",
+        "a1.2-s4-l05"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 40,
+      "source_word": "mitä",
+      "frequency_rank": 40,
+      "frequency_count": 22876,
+      "frequency_percent": 0.1299
+    },
+    {
+      "target": "tämä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l06",
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 49,
+      "source_word": "tämä",
+      "frequency_rank": 49,
+      "frequency_count": 19340,
+      "frequency_percent": 0.1098
+    },
+    {
+      "target": "ennen",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 50,
+      "source_word": "ennen",
+      "frequency_rank": 50,
+      "frequency_count": 19147,
+      "frequency_percent": 0.1087
+    },
+    {
+      "target": "hyvin",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01",
+        "a1.2-s4-l02",
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 58,
+      "source_word": "hyvin",
+      "frequency_rank": 58,
+      "frequency_count": 16886,
+      "frequency_percent": 0.0959
+    },
+    {
+      "target": "tulee",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03",
+        "a1.2-s2-l04",
+        "a1.2-s2-l05",
+        "a1.2-s3-l01"
+      ],
+      "section_ids": [
+        "a1.2-s2",
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 59,
+      "source_word": "tulee",
+      "frequency_rank": 59,
+      "frequency_count": 16510,
+      "frequency_percent": 0.0937
+    },
+    {
+      "target": "paljon",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l01",
+        "a1.2-s1-l04",
+        "a1.2-s3-l04",
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s3",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 60,
+      "source_word": "paljon",
+      "frequency_rank": 60,
+      "frequency_count": 16482,
+      "frequency_percent": 0.0936
+    },
+    {
+      "target": "saa",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l05"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 61,
+      "source_word": "saa",
+      "frequency_rank": 61,
+      "frequency_count": 16327,
+      "frequency_percent": 0.0927
+    },
+    {
+      "target": "kaksi",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 69,
+      "source_word": "kaksi",
+      "frequency_rank": 69,
+      "frequency_count": 15209,
+      "frequency_percent": 0.0863
+    },
+    {
+      "target": "pitää",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 70,
+      "source_word": "pitää",
+      "frequency_rank": 70,
+      "frequency_count": 14900,
+      "frequency_percent": 0.0846
+    },
+    {
+      "target": "mitään",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 74,
+      "source_word": "mitään",
+      "frequency_rank": 74,
+      "frequency_count": 14613,
+      "frequency_percent": 0.083
+    },
+    {
+      "target": "aina",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l02"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 76,
+      "source_word": "aina",
+      "frequency_rank": 76,
+      "frequency_count": 14323,
+      "frequency_percent": 0.0813
+    },
+    {
+      "target": "siihen",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 78,
+      "source_word": "siihen",
+      "frequency_rank": 78,
+      "frequency_count": 14004,
+      "frequency_percent": 0.0795
+    },
+    {
+      "target": "aikana",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 82,
+      "source_word": "aikana",
+      "frequency_rank": 82,
+      "frequency_count": 13340,
+      "frequency_percent": 0.0757
+    },
+    {
+      "target": "yksi",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l01",
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 84,
+      "source_word": "yksi",
+      "frequency_rank": 84,
+      "frequency_count": 12240,
+      "frequency_percent": 0.0695
+    },
+    {
+      "target": "miten",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 85,
+      "source_word": "miten",
+      "frequency_rank": 85,
+      "frequency_count": 12217,
+      "frequency_percent": 0.0693
+    },
+    {
+      "target": "ensi",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 86,
+      "source_word": "ensi",
+      "frequency_rank": 86,
+      "frequency_count": 12106,
+      "frequency_percent": 0.0687
+    },
+    {
+      "target": "olen",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 96,
+      "source_word": "olen",
+      "frequency_rank": 96,
+      "frequency_count": 11132,
+      "frequency_percent": 0.0632
+    },
+    {
+      "target": "kyllä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 116,
+      "source_word": "kyllä",
+      "frequency_rank": 116,
+      "frequency_count": 9064,
+      "frequency_percent": 0.0514
+    },
+    {
+      "target": "toinen",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l06"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 119,
+      "source_word": "toinen",
+      "frequency_rank": 119,
+      "frequency_count": 8941,
+      "frequency_percent": 0.0507
+    },
+    {
+      "target": "ehkä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l05",
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s3",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 124,
+      "source_word": "ehkä",
+      "frequency_rank": 124,
+      "frequency_count": 8741,
+      "frequency_percent": 0.0496
+    },
+    {
+      "target": "tehdä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 138,
+      "source_word": "tehdä",
+      "frequency_rank": 138,
+      "frequency_count": 8096,
+      "frequency_percent": 0.0459
+    },
+    {
+      "target": "vähän",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l04",
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 139,
+      "source_word": "vähän",
+      "frequency_rank": 139,
+      "frequency_count": 8080,
+      "frequency_percent": 0.0458
+    },
+    {
+      "target": "heti",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l08",
+        "a1.2-s4-l07",
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s3",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 141,
+      "source_word": "heti",
+      "frequency_rank": 141,
+      "frequency_count": 7993,
+      "frequency_percent": 0.0454
+    },
+    {
+      "target": "klo",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 148,
+      "source_word": "klo",
+      "frequency_rank": 148,
+      "frequency_count": 7740,
+      "frequency_percent": 0.0439
+    },
+    {
+      "target": "siellä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l05",
+        "a1.2-s2-l01"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 149,
+      "source_word": "siellä",
+      "frequency_rank": 149,
+      "frequency_count": 7612,
+      "frequency_percent": 0.0432
+    },
+    {
+      "target": "aika",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 151,
+      "source_word": "aika",
+      "frequency_rank": 151,
+      "frequency_count": 7561,
+      "frequency_percent": 0.0429
+    },
+    {
+      "target": "aikaa",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 153,
+      "source_word": "aikaa",
+      "frequency_rank": 153,
+      "frequency_count": 7468,
+      "frequency_percent": 0.0424
+    },
+    {
+      "target": "maan",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 155,
+      "source_word": "maan",
+      "frequency_rank": 155,
+      "frequency_count": 7377,
+      "frequency_percent": 0.0419
+    },
+    {
+      "target": "pois",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l02"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 157,
+      "source_word": "pois",
+      "frequency_rank": 157,
+      "frequency_count": 7225,
+      "frequency_percent": 0.041
+    },
+    {
+      "target": "minun",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 163,
+      "source_word": "minun",
+      "frequency_rank": 163,
+      "frequency_count": 6875,
+      "frequency_percent": 0.039
+    },
+    {
+      "target": "antaa",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l03",
+        "a1.2-s1-l07",
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 164,
+      "source_word": "antaa",
+      "frequency_rank": 164,
+      "frequency_count": 6816,
+      "frequency_percent": 0.0387
+    },
+    {
+      "target": "liian",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l06",
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 166,
+      "source_word": "liian",
+      "frequency_rank": 166,
+      "frequency_count": 6787,
+      "frequency_percent": 0.0385
+    },
+    {
+      "target": "tähän",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 170,
+      "source_word": "tähän",
+      "frequency_rank": 170,
+      "frequency_count": 6627,
+      "frequency_percent": 0.0376
+    },
+    {
+      "target": "kuinka",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 173,
+      "source_word": "kuinka",
+      "frequency_rank": 173,
+      "frequency_count": 6553,
+      "frequency_percent": 0.0372
+    },
+    {
+      "target": "usein",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l05",
+        "a1.2-s3-l02"
+      ],
+      "section_ids": [
+        "a1.2-s2",
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 176,
+      "source_word": "usein",
+      "frequency_rank": 176,
+      "frequency_count": 6401,
+      "frequency_percent": 0.0363
+    },
+    {
+      "target": "kaupungin",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 184,
+      "source_word": "kaupungin",
+      "frequency_rank": 184,
+      "frequency_count": 6096,
+      "frequency_percent": 0.0346
+    },
+    {
+      "target": "missä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l05",
+        "a1.2-s2-l01",
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 188,
+      "source_word": "missä",
+      "frequency_rank": 188,
+      "frequency_count": 6027,
+      "frequency_percent": 0.0342
+    },
+    {
+      "target": "lisää",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l04"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 189,
+      "source_word": "lisää",
+      "frequency_rank": 189,
+      "frequency_count": 6003,
+      "frequency_percent": 0.034
+    },
+    {
+      "target": "ottaa",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l03",
+        "a1.2-s4-l05"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 192,
+      "source_word": "ottaa",
+      "frequency_rank": 192,
+      "frequency_count": 5941,
+      "frequency_percent": 0.0337
+    },
+    {
+      "target": "välillä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 200,
+      "source_word": "välillä",
+      "frequency_rank": 200,
+      "frequency_count": 5795,
+      "frequency_percent": 0.0329
+    },
+    {
+      "target": "takaisin",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08",
+        "a1.2-s2-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 224,
+      "source_word": "takaisin",
+      "frequency_rank": 224,
+      "frequency_count": 5315,
+      "frequency_percent": 0.0301
+    },
+    {
+      "target": "myöhemmin",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l08"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 227,
+      "source_word": "myöhemmin",
+      "frequency_rank": 227,
+      "frequency_count": 5268,
+      "frequency_percent": 0.0299
+    },
+    {
+      "target": "20",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 228,
+      "source_word": "20",
+      "frequency_rank": 228,
+      "frequency_count": 5254,
+      "frequency_percent": 0.0298
+    },
+    {
+      "target": "täällä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l05",
+        "a1.2-s2-l01",
+        "a1.2-s4-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2",
+        "a1.2-s4"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 229,
+      "source_word": "täällä",
+      "frequency_rank": 229,
+      "frequency_count": 5242,
+      "frequency_percent": 0.0297
+    },
+    {
+      "target": "tästä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l04"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 235,
+      "source_word": "tästä",
+      "frequency_rank": 235,
+      "frequency_count": 5185,
+      "frequency_percent": 0.0294
+    },
+    {
+      "target": "50",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 241,
+      "source_word": "50",
+      "frequency_rank": 241,
+      "frequency_count": 5077,
+      "frequency_percent": 0.0288
+    },
+    {
+      "target": "joskus",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l02"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 243,
+      "source_word": "joskus",
+      "frequency_rank": 243,
+      "frequency_count": 5050,
+      "frequency_percent": 0.0286
+    },
+    {
+      "target": "10",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 256,
+      "source_word": "10",
+      "frequency_rank": 256,
+      "frequency_count": 4904,
+      "frequency_percent": 0.0278
+    },
+    {
+      "target": "maanantaina",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 260,
+      "source_word": "maanantaina",
+      "frequency_rank": 260,
+      "frequency_count": 4857,
+      "frequency_percent": 0.0275
+    },
+    {
+      "target": "yhdessä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04",
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 269,
+      "source_word": "yhdessä",
+      "frequency_rank": 269,
+      "frequency_count": 4743,
+      "frequency_percent": 0.0269
+    },
+    {
+      "target": "tekee",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l01"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 272,
+      "source_word": "tekee",
+      "frequency_rank": 272,
+      "frequency_count": 4732,
+      "frequency_percent": 0.0268
+    },
+    {
+      "target": "yleensä",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l02"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 274,
+      "source_word": "yleensä",
+      "frequency_rank": 274,
+      "frequency_count": 4713,
+      "frequency_percent": 0.0267
+    },
+    {
+      "target": "käyttää",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l01"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 281,
+      "source_word": "käyttää",
+      "frequency_rank": 281,
+      "frequency_count": 4583,
+      "frequency_percent": 0.026
+    },
+    {
+      "target": "kohti",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l02"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 285,
+      "source_word": "kohti",
+      "frequency_rank": 285,
+      "frequency_count": 4430,
+      "frequency_percent": 0.0251
+    },
+    {
+      "target": "tiistaina",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 291,
+      "source_word": "tiistaina",
+      "frequency_rank": 291,
+      "frequency_count": 4351,
+      "frequency_percent": 0.0247
+    },
+    {
+      "target": "rahaa",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l01",
+        "a1.2-s1-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 297,
+      "source_word": "rahaa",
+      "frequency_rank": 297,
+      "frequency_count": 4295,
+      "frequency_percent": 0.0243
+    },
+    {
+      "target": "torstaina",
+      "streams": [
+        "high_frequency"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "current_source_backed",
+      "source_position": 298,
+      "source_word": "torstaina",
+      "frequency_rank": 298,
+      "frequency_count": 4290,
+      "frequency_percent": 0.0243
+    },
+    {
+      "target": "perjantaina",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 301,
+      "source_word": "perjantaina",
+      "frequency_rank": 301,
+      "frequency_count": 4260,
+      "frequency_percent": 0.0241
+    },
+    {
+      "target": "sunnuntaina",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 303,
+      "source_word": "sunnuntaina",
+      "frequency_rank": 303,
+      "frequency_count": 4255,
+      "frequency_percent": 0.0241
+    },
+    {
+      "target": "keskiviikkona",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 323,
+      "source_word": "keskiviikkona",
+      "frequency_rank": 323,
+      "frequency_count": 4072,
+      "frequency_percent": 0.0231
+    },
+    {
+      "target": "mistä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l04"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 330,
+      "source_word": "mistä",
+      "frequency_rank": 329,
+      "frequency_count": 4017,
+      "frequency_percent": 0.0228
+    },
+    {
+      "target": "suoraan",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l02"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 360,
+      "source_word": "suoraan",
+      "frequency_rank": 360,
+      "frequency_count": 3785,
+      "frequency_percent": 0.0214
+    },
+    {
+      "target": "yliopisto",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 365,
+      "source_word": "yliopisto",
+      "frequency_rank": 364,
+      "frequency_count": 3726,
+      "frequency_percent": 0.0211
+    },
+    {
+      "target": "tulla",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 376,
+      "source_word": "tulla",
+      "frequency_rank": 376,
+      "frequency_count": 3674,
+      "frequency_percent": 0.0208
+    },
+    {
+      "target": "maksaa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 383,
+      "source_word": "maksaa",
+      "frequency_rank": 383,
+      "frequency_count": 3570,
+      "frequency_percent": 0.0202
+    },
+    {
+      "target": "pieni",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l06"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 389,
+      "source_word": "pieni",
+      "frequency_rank": 389,
+      "frequency_count": 3539,
+      "frequency_percent": 0.0201
+    },
+    {
+      "target": "lauantaina",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l06"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 416,
+      "source_word": "lauantaina",
+      "frequency_rank": 416,
+      "frequency_count": 3306,
+      "frequency_percent": 0.0187
+    },
+    {
+      "target": "mihin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 494,
+      "source_word": "mihin",
+      "frequency_rank": 494,
+      "frequency_count": 2927,
+      "frequency_percent": 0.0166
+    },
+    {
+      "target": "kauan",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 518,
+      "source_word": "kauan",
+      "frequency_rank": 518,
+      "frequency_count": 2835,
+      "frequency_percent": 0.0161
+    },
+    {
+      "target": "lähellä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 523,
+      "source_word": "lähellä",
+      "frequency_rank": 523,
+      "frequency_count": 2817,
+      "frequency_percent": 0.016
+    },
+    {
+      "target": "puoli",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l04"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 544,
+      "source_word": "puoli",
+      "frequency_rank": 544,
+      "frequency_count": 2745,
+      "frequency_percent": 0.0155
+    },
+    {
+      "target": "sisällä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 619,
+      "source_word": "sisällä",
+      "frequency_rank": 619,
+      "frequency_count": 2505,
+      "frequency_percent": 0.0142
+    },
+    {
+      "target": "toimi",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 635,
+      "source_word": "toimi",
+      "frequency_rank": 635,
+      "frequency_count": 2444,
+      "frequency_percent": 0.0138
+    },
+    {
+      "target": "kotiin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 670,
+      "source_word": "kotiin",
+      "frequency_rank": 670,
+      "frequency_count": 2339,
+      "frequency_percent": 0.0132
+    },
+    {
+      "target": "hinta",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l01"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 690,
+      "source_word": "hinta",
+      "frequency_rank": 690,
+      "frequency_count": 2312,
+      "frequency_percent": 0.0131
+    },
+    {
+      "target": "lähtee",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 698,
+      "source_word": "lähtee",
+      "frequency_rank": 698,
+      "frequency_count": 2269,
+      "frequency_percent": 0.0128
+    },
+    {
+      "target": "ongelma",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 739,
+      "source_word": "ongelma",
+      "frequency_rank": 739,
+      "frequency_count": 2149,
+      "frequency_percent": 0.0122
+    },
+    {
+      "target": "kauppa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l05",
+        "a1.2-s2-l01"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 754,
+      "source_word": "kauppa",
+      "frequency_rank": 754,
+      "frequency_count": 2118,
+      "frequency_percent": 0.012
+    },
+    {
+      "target": "milloin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 765,
+      "source_word": "milloin",
+      "frequency_rank": 764,
+      "frequency_count": 2082,
+      "frequency_percent": 0.0118
+    },
+    {
+      "target": "iso",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l06"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 815,
+      "source_word": "iso",
+      "frequency_rank": 815,
+      "frequency_count": 1994,
+      "frequency_percent": 0.0113
+    },
+    {
+      "target": "sata",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1041,
+      "source_word": "sata",
+      "frequency_rank": 1039,
+      "frequency_count": 1625,
+      "frequency_percent": 0.0092
+    },
+    {
+      "target": "asema",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l01"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1088,
+      "source_word": "asema",
+      "frequency_rank": 1088,
+      "frequency_count": 1550,
+      "frequency_percent": 0.0088
+    },
+    {
+      "target": "sopii",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l08"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1106,
+      "source_word": "sopii",
+      "frequency_rank": 1106,
+      "frequency_count": 1530,
+      "frequency_percent": 0.0086
+    },
+    {
+      "target": "auttaa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l07"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1116,
+      "source_word": "auttaa",
+      "frequency_rank": 1115,
+      "frequency_count": 1507,
+      "frequency_percent": 0.0085
+    },
+    {
+      "target": "kaukana",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1377,
+      "source_word": "kaukana",
+      "frequency_rank": 1377,
+      "frequency_count": 1244,
+      "frequency_percent": 0.007
+    },
+    {
+      "target": "keskusta",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l01"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1482,
+      "source_word": "keskusta",
+      "frequency_rank": 1482,
+      "frequency_count": 1163,
+      "frequency_percent": 0.0066
+    },
+    {
+      "target": "katsoa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1493,
+      "source_word": "katsoa",
+      "frequency_rank": 1493,
+      "frequency_count": 1158,
+      "frequency_percent": 0.0065
+    },
+    {
+      "target": "musiikki",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1605,
+      "source_word": "musiikki",
+      "frequency_rank": 1603,
+      "frequency_count": 1085,
+      "frequency_percent": 0.0061
+    },
+    {
+      "target": "lukea",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1700,
+      "source_word": "lukea",
+      "frequency_rank": 1698,
+      "frequency_count": 1028,
+      "frequency_percent": 0.0058
+    },
+    {
+      "target": "harvoin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l02"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1705,
+      "source_word": "harvoin",
+      "frequency_rank": 1704,
+      "frequency_count": 1025,
+      "frequency_percent": 0.0058
+    },
+    {
+      "target": "pää",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1732,
+      "source_word": "pää",
+      "frequency_rank": 1730,
+      "frequency_count": 1010,
+      "frequency_percent": 0.0057
+    },
+    {
+      "target": "huomenna",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1841,
+      "source_word": "huomenna",
+      "frequency_rank": 1841,
+      "frequency_count": 951,
+      "frequency_percent": 0.0054
+    },
+    {
+      "target": "tuuli",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1909,
+      "source_word": "tuuli",
+      "frequency_rank": 1909,
+      "frequency_count": 915,
+      "frequency_percent": 0.0051
+    },
+    {
+      "target": "käsi",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1924,
+      "source_word": "käsi",
+      "frequency_rank": 1923,
+      "frequency_count": 909,
+      "frequency_percent": 0.0051
+    },
+    {
+      "target": "ota",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 1934,
+      "source_word": "ota",
+      "frequency_rank": 1934,
+      "frequency_count": 904,
+      "frequency_percent": 0.0051
+    },
+    {
+      "target": "mennään",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2088,
+      "source_word": "mennään",
+      "frequency_rank": 2086,
+      "frequency_count": 847,
+      "frequency_percent": 0.0048
+    },
+    {
+      "target": "lääkäri",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2104,
+      "source_word": "lääkäri",
+      "frequency_rank": 2102,
+      "frequency_count": 841,
+      "frequency_percent": 0.0047
+    },
+    {
+      "target": "aurinko",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2163,
+      "source_word": "aurinko",
+      "frequency_rank": 2163,
+      "frequency_count": 822,
+      "frequency_percent": 0.0046
+    },
+    {
+      "target": "koulu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2259,
+      "source_word": "koulu",
+      "frequency_rank": 2259,
+      "frequency_count": 790,
+      "frequency_percent": 0.0044
+    },
+    {
+      "target": "viesti",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l08"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2709,
+      "source_word": "viesti",
+      "frequency_rank": 2707,
+      "frequency_count": 668,
+      "frequency_percent": 0.0037
+    },
+    {
+      "target": "ulkona",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2735,
+      "source_word": "ulkona",
+      "frequency_rank": 2734,
+      "frequency_count": 661,
+      "frequency_percent": 0.0037
+    },
+    {
+      "target": "opiskelija",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2768,
+      "source_word": "opiskelija",
+      "frequency_rank": 2763,
+      "frequency_count": 655,
+      "frequency_percent": 0.0037
+    },
+    {
+      "target": "sopiva",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l06"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 2856,
+      "source_word": "sopiva",
+      "frequency_rank": 2853,
+      "frequency_count": 638,
+      "frequency_percent": 0.0036
+    },
+    {
+      "target": "kesä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 3038,
+      "source_word": "kesä",
+      "frequency_rank": 3034,
+      "frequency_count": 609,
+      "frequency_percent": 0.0034
+    },
+    {
+      "target": "saapuu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 3073,
+      "source_word": "saapuu",
+      "frequency_rank": 3072,
+      "frequency_count": 602,
+      "frequency_percent": 0.0034
+    },
+    {
+      "target": "kylmä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 3237,
+      "source_word": "kylmä",
+      "frequency_rank": 3236,
+      "frequency_count": 575,
+      "frequency_percent": 0.0032
+    },
+    {
+      "target": "sää",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 3387,
+      "source_word": "sää",
+      "frequency_rank": 3386,
+      "frequency_count": 552,
+      "frequency_percent": 0.0031
+    },
+    {
+      "target": "lämmin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 3689,
+      "source_word": "lämmin",
+      "frequency_rank": 3688,
+      "frequency_count": 512,
+      "frequency_percent": 0.0029
+    },
+    {
+      "target": "ajoissa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 3733,
+      "source_word": "ajoissa",
+      "frequency_rank": 3729,
+      "frequency_count": 505,
+      "frequency_percent": 0.0028
+    },
+    {
+      "target": "väärä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 4277,
+      "source_word": "väärä",
+      "frequency_rank": 4263,
+      "frequency_count": 449,
+      "frequency_percent": 0.0025
+    },
+    {
+      "target": "tavata",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l05"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 4307,
+      "source_word": "tavata",
+      "frequency_rank": 4300,
+      "frequency_count": 446,
+      "frequency_percent": 0.0025
+    },
+    {
+      "target": "keskustaan",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 4389,
+      "source_word": "keskustaan",
+      "frequency_rank": 4381,
+      "frequency_count": 438,
+      "frequency_percent": 0.0024
+    },
+    {
+      "target": "sopia",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l05"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 4521,
+      "source_word": "sopia",
+      "frequency_rank": 4521,
+      "frequency_count": 425,
+      "frequency_percent": 0.0024
+    },
+    {
+      "target": "haluaisin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l03"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 4672,
+      "source_word": "haluaisin",
+      "frequency_rank": 4668,
+      "frequency_count": 412,
+      "frequency_percent": 0.0023
+    },
+    {
+      "target": "talvi",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 4908,
+      "source_word": "talvi",
+      "frequency_rank": 4908,
+      "frequency_count": 394,
+      "frequency_percent": 0.0022
+    },
+    {
+      "target": "oikealle",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l02"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5001,
+      "source_word": "oikealle",
+      "frequency_rank": 5001,
+      "frequency_count": 386,
+      "frequency_percent": 0.0021
+    },
+    {
+      "target": "jalka",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5436,
+      "source_word": "jalka",
+      "frequency_rank": 5434,
+      "frequency_count": 357,
+      "frequency_percent": 0.002
+    },
+    {
+      "target": "kaupasta",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l04"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5461,
+      "source_word": "kaupasta",
+      "frequency_rank": 5452,
+      "frequency_count": 356,
+      "frequency_percent": 0.002
+    },
+    {
+      "target": "osasto",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l05"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5589,
+      "source_word": "osasto",
+      "frequency_rank": 5578,
+      "frequency_count": 349,
+      "frequency_percent": 0.0019
+    },
+    {
+      "target": "rikki",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5789,
+      "source_word": "rikki",
+      "frequency_rank": 5784,
+      "frequency_count": 337,
+      "frequency_percent": 0.0019
+    },
+    {
+      "target": "lähden",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l01"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5851,
+      "source_word": "lähden",
+      "frequency_rank": 5847,
+      "frequency_count": 334,
+      "frequency_percent": 0.0018
+    },
+    {
+      "target": "apu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l08",
+        "a1.2-s4-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1",
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5863,
+      "source_word": "apu",
+      "frequency_rank": 5862,
+      "frequency_count": 333,
+      "frequency_percent": 0.0018
+    },
+    {
+      "target": "kevät",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 5896,
+      "source_word": "kevät",
+      "frequency_rank": 5892,
+      "frequency_count": 331,
+      "frequency_percent": 0.0018
+    },
+    {
+      "target": "myöhässä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l07",
+        "a1.2-s3-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2",
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6078,
+      "source_word": "myöhässä",
+      "frequency_rank": 6069,
+      "frequency_count": 322,
+      "frequency_percent": 0.0018
+    },
+    {
+      "target": "juna",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l05"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6126,
+      "source_word": "juna",
+      "frequency_rank": 6108,
+      "frequency_count": 320,
+      "frequency_percent": 0.0018
+    },
+    {
+      "target": "kotoa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l04"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6639,
+      "source_word": "kotoa",
+      "frequency_rank": 6614,
+      "frequency_count": 297,
+      "frequency_percent": 0.0016
+    },
+    {
+      "target": "harrastus",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6666,
+      "source_word": "harrastus",
+      "frequency_rank": 6666,
+      "frequency_count": 295,
+      "frequency_percent": 0.0016
+    },
+    {
+      "target": "vasemmalle",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l02"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6701,
+      "source_word": "vasemmalle",
+      "frequency_rank": 6690,
+      "frequency_count": 294,
+      "frequency_percent": 0.0016
+    },
+    {
+      "target": "toimisto",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6848,
+      "source_word": "toimisto",
+      "frequency_rank": 6840,
+      "frequency_count": 288,
+      "frequency_percent": 0.0016
+    },
+    {
+      "target": "liikunta",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l04"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 6921,
+      "source_word": "liikunta",
+      "frequency_rank": 6917,
+      "frequency_count": 285,
+      "frequency_percent": 0.0016
+    },
+    {
+      "target": "työpaikka",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l03"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 7035,
+      "source_word": "työpaikka",
+      "frequency_rank": 7028,
+      "frequency_count": 280,
+      "frequency_percent": 0.0015
+    },
+    {
+      "target": "kengät",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 7103,
+      "source_word": "kengät",
+      "frequency_rank": 7100,
+      "frequency_count": 277,
+      "frequency_percent": 0.0015
+    },
+    {
+      "target": "kolmekymmentä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 7336,
+      "source_word": "kolmekymmentä",
+      "frequency_rank": 7329,
+      "frequency_count": 269,
+      "frequency_percent": 0.0015
+    },
+    {
+      "target": "sairas",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 7927,
+      "source_word": "sairas",
+      "frequency_rank": 7899,
+      "frequency_count": 248,
+      "frequency_percent": 0.0014
+    },
+    {
+      "target": "juo",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 8069,
+      "source_word": "juo",
+      "frequency_rank": 8062,
+      "frequency_count": 243,
+      "frequency_percent": 0.0013
+    },
+    {
+      "target": "sade",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l01"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 8279,
+      "source_word": "sade",
+      "frequency_rank": 8271,
+      "frequency_count": 237,
+      "frequency_percent": 0.0013
+    },
+    {
+      "target": "syksy",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 8599,
+      "source_word": "syksy",
+      "frequency_rank": 8584,
+      "frequency_count": 228,
+      "frequency_percent": 0.0012
+    },
+    {
+      "target": "lippu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 8776,
+      "source_word": "lippu",
+      "frequency_rank": 8776,
+      "frequency_count": 223,
+      "frequency_percent": 0.0012
+    },
+    {
+      "target": "kipu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l05"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 9710,
+      "source_word": "kipu",
+      "frequency_rank": 9672,
+      "frequency_count": 201,
+      "frequency_percent": 0.0011
+    },
+    {
+      "target": "lääke",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l05"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 9880,
+      "source_word": "lääke",
+      "frequency_rank": 9848,
+      "frequency_count": 197,
+      "frequency_percent": 0.0011
+    },
+    {
+      "target": "kortti",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 10123,
+      "source_word": "kortti",
+      "frequency_rank": 10105,
+      "frequency_count": 192,
+      "frequency_percent": 0.001
+    },
+    {
+      "target": "hätä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l07"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 11178,
+      "source_word": "hätä",
+      "frequency_rank": 11159,
+      "frequency_count": 172,
+      "frequency_percent": 0.0009
+    },
+    {
+      "target": "varata",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 11193,
+      "source_word": "varata",
+      "frequency_rank": 11159,
+      "frequency_count": 172,
+      "frequency_percent": 0.0009
+    },
+    {
+      "target": "bussi",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l05"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 11212,
+      "source_word": "bussi",
+      "frequency_rank": 11209,
+      "frequency_count": 171,
+      "frequency_percent": 0.0009
+    },
+    {
+      "target": "annos",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l03"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 11667,
+      "source_word": "annos",
+      "frequency_rank": 11658,
+      "frequency_count": 164,
+      "frequency_percent": 0.0009
+    },
+    {
+      "target": "takki",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l02"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 11896,
+      "source_word": "takki",
+      "frequency_rank": 11849,
+      "frequency_count": 161,
+      "frequency_percent": 0.0009
+    },
+    {
+      "target": "kipeä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 12411,
+      "source_word": "kipeä",
+      "frequency_rank": 12397,
+      "frequency_count": 153,
+      "frequency_percent": 0.0008
+    },
+    {
+      "target": "asemalle",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l03"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 13273,
+      "source_word": "asemalle",
+      "frequency_rank": 13255,
+      "frequency_count": 143,
+      "frequency_percent": 0.0008
+    },
+    {
+      "target": "lepää",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l08"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 13652,
+      "source_word": "lepää",
+      "frequency_rank": 13606,
+      "frequency_count": 139,
+      "frequency_percent": 0.0007
+    },
+    {
+      "target": "taksi",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l05"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 14409,
+      "source_word": "taksi",
+      "frequency_rank": 14344,
+      "frequency_count": 131,
+      "frequency_percent": 0.0007
+    },
+    {
+      "target": "pyörä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l05"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 14651,
+      "source_word": "pyörä",
+      "frequency_rank": 14634,
+      "frequency_count": 128,
+      "frequency_percent": 0.0007
+    },
+    {
+      "target": "minuutti",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l08"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 15415,
+      "source_word": "minuutti",
+      "frequency_rank": 15335,
+      "frequency_count": 122,
+      "frequency_percent": 0.0006
+    },
+    {
+      "target": "palaan",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l01"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 15594,
+      "source_word": "palaan",
+      "frequency_rank": 15562,
+      "frequency_count": 120,
+      "frequency_percent": 0.0006
+    },
+    {
+      "target": "neljäkymmentä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 15961,
+      "source_word": "neljäkymmentä",
+      "frequency_rank": 15900,
+      "frequency_count": 117,
+      "frequency_percent": 0.0006
+    },
+    {
+      "target": "saanko",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l03"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 16356,
+      "source_word": "saanko",
+      "frequency_rank": 16267,
+      "frequency_count": 114,
+      "frequency_percent": 0.0006
+    },
+    {
+      "target": "vatsa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 16530,
+      "source_word": "vatsa",
+      "frequency_rank": 16388,
+      "frequency_count": 113,
+      "frequency_percent": 0.0006
+    },
+    {
+      "target": "tarvitsen",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l05",
+        "a1.2-s4-l07"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 17606,
+      "source_word": "tarvitsen",
+      "frequency_rank": 17553,
+      "frequency_count": 105,
+      "frequency_percent": 0.0005
+    },
+    {
+      "target": "elokuviin",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 17816,
+      "source_word": "elokuviin",
+      "frequency_rank": 17719,
+      "frequency_count": 104,
+      "frequency_percent": 0.0005
+    },
+    {
+      "target": "apteekki",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l01",
+        "a1.2-s4-l05"
+      ],
+      "section_ids": [
+        "a1.2-s2",
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 18159,
+      "source_word": "apteekki",
+      "frequency_rank": 18032,
+      "frequency_count": 102,
+      "frequency_percent": 0.0005
+    },
+    {
+      "target": "perun",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l08"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 18793,
+      "source_word": "perun",
+      "frequency_rank": 18667,
+      "frequency_count": 98,
+      "frequency_percent": 0.0005
+    },
+    {
+      "target": "kilo",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l04"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 19051,
+      "source_word": "kilo",
+      "frequency_rank": 19008,
+      "frequency_count": 96,
+      "frequency_percent": 0.0005
+    },
+    {
+      "target": "kahville",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l07"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 22099,
+      "source_word": "kahville",
+      "frequency_rank": 22076,
+      "frequency_count": 81,
+      "frequency_percent": 0.0004
+    },
+    {
+      "target": "asemalta",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l04"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 22460,
+      "source_word": "asemalta",
+      "frequency_rank": 22326,
+      "frequency_count": 80,
+      "frequency_percent": 0.0004
+    },
+    {
+      "target": "kuume",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 23219,
+      "source_word": "kuume",
+      "frequency_rank": 23104,
+      "frequency_count": 77,
+      "frequency_percent": 0.0004
+    },
+    {
+      "target": "kuusikymmentä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 24410,
+      "source_word": "kuusikymmentä",
+      "frequency_rank": 24175,
+      "frequency_count": 73,
+      "frequency_percent": 0.0004
+    },
+    {
+      "target": "kurkku",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l03"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 26967,
+      "source_word": "kurkku",
+      "frequency_rank": 26760,
+      "frequency_count": 65,
+      "frequency_percent": 0.0003
+    },
+    {
+      "target": "kassa",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l05"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 27590,
+      "source_word": "kassa",
+      "frequency_rank": 27463,
+      "frequency_count": 63,
+      "frequency_percent": 0.0003
+    },
+    {
+      "target": "sopiiko",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l05"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 30932,
+      "source_word": "sopiiko",
+      "frequency_rank": 30852,
+      "frequency_count": 55,
+      "frequency_percent": 0.0003
+    },
+    {
+      "target": "kuitti",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 31382,
+      "source_word": "kuitti",
+      "frequency_rank": 31354,
+      "frequency_count": 54,
+      "frequency_percent": 0.0003
+    },
+    {
+      "target": "automaatti",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 31484,
+      "source_word": "automaatti",
+      "frequency_rank": 31354,
+      "frequency_count": 54,
+      "frequency_percent": 0.0003
+    },
+    {
+      "target": "euro",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l01"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 31648,
+      "source_word": "euro",
+      "frequency_rank": 31354,
+      "frequency_count": 54,
+      "frequency_percent": 0.0003
+    },
+    {
+      "target": "litra",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l04"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 33455,
+      "source_word": "litra",
+      "frequency_rank": 32942,
+      "frequency_count": 51,
+      "frequency_percent": 0.0002
+    },
+    {
+      "target": "herään",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l01"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 33974,
+      "source_word": "herään",
+      "frequency_rank": 33528,
+      "frequency_count": 50,
+      "frequency_percent": 0.0002
+    },
+    {
+      "target": "seitsemänkymmentä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 48340,
+      "source_word": "seitsemänkymmentä",
+      "frequency_rank": 47164,
+      "frequency_count": 33,
+      "frequency_percent": 0.0001
+    },
+    {
+      "target": "kahdeksankymmentä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 57064,
+      "source_word": "kahdeksankymmentä",
+      "frequency_rank": 55572,
+      "frequency_count": 27,
+      "frequency_percent": 0.0001
+    },
+    {
+      "target": "terveysasema",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 61916,
+      "source_word": "terveysasema",
+      "frequency_rank": 61116,
+      "frequency_count": 24,
+      "frequency_percent": 0.0001
+    },
+    {
+      "target": "sentti",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l01"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 66478,
+      "source_word": "sentti",
+      "frequency_rank": 65454,
+      "frequency_count": 22,
+      "frequency_percent": 0.0001
+    },
+    {
+      "target": "yhdeksänkymmentä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l02"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 76601,
+      "source_word": "yhdeksänkymmentä",
+      "frequency_rank": 76570,
+      "frequency_count": 18,
+      "frequency_percent": 0.0001
+    },
+    {
+      "target": "pysäkki",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l01"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 87141,
+      "source_word": "pysäkki",
+      "frequency_rank": 83991,
+      "frequency_count": 16,
+      "frequency_percent": 0.000090883
+    },
+    {
+      "target": "yskä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l04"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 87908,
+      "source_word": "yskä",
+      "frequency_rank": 83991,
+      "frequency_count": 16,
+      "frequency_percent": 0.000090883
+    },
+    {
+      "target": "menolippu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 164240,
+      "source_word": "menolippu",
+      "frequency_rank": 156307,
+      "frequency_count": 7,
+      "frequency_percent": 0.000039761
+    },
+    {
+      "target": "käteinen",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s1-l07"
+      ],
+      "section_ids": [
+        "a1.2-s1"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 182485,
+      "source_word": "käteinen",
+      "frequency_rank": 174303,
+      "frequency_count": 6,
+      "frequency_percent": 0.000034081
+    },
+    {
+      "target": "ajanvaraus",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s4-l06"
+      ],
+      "section_ids": [
+        "a1.2-s4"
+      ],
+      "classification": "source_ranked_gap",
+      "source_position": 261206,
+      "source_word": "ajanvaraus",
+      "frequency_rank": 230650,
+      "frequency_count": 4,
+      "frequency_percent": 0.00002272
+    },
+    {
+      "target": "joka päivä",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s3-l02"
+      ],
+      "section_ids": [
+        "a1.2-s3"
+      ],
+      "classification": "curated_unranked",
+      "source_position": null,
+      "source_word": null,
+      "frequency_rank": null,
+      "frequency_count": null,
+      "frequency_percent": null
+    },
+    {
+      "target": "meno-paluu",
+      "streams": [
+        "topic"
+      ],
+      "lesson_ids": [
+        "a1.2-s2-l06"
+      ],
+      "section_ids": [
+        "a1.2-s2"
+      ],
+      "classification": "curated_unranked",
+      "source_position": null,
+      "source_word": null,
+      "frequency_rank": null,
+      "frequency_count": null,
+      "frequency_percent": null
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "a1.2-s1",
+      "lessons": [
+        {
+          "lesson_id": "a1.2-s1-l01",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "paljon",
+              "classification": "current_source_backed",
+              "source_position": 60
+            },
+            {
+              "target": "rahaa",
+              "classification": "current_source_backed",
+              "source_position": 297
+            },
+            {
+              "target": "yksi",
+              "classification": "current_source_backed",
+              "source_position": 84
+            },
+            {
+              "target": "hinta",
+              "classification": "source_ranked_gap",
+              "source_position": 690
+            },
+            {
+              "target": "euro",
+              "classification": "source_ranked_gap",
+              "source_position": 31648
+            },
+            {
+              "target": "sentti",
+              "classification": "source_ranked_gap",
+              "source_position": 66478
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l02",
+          "lexical_target_count": 10,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 7,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "10",
+              "classification": "current_source_backed",
+              "source_position": 256
+            },
+            {
+              "target": "20",
+              "classification": "current_source_backed",
+              "source_position": 228
+            },
+            {
+              "target": "50",
+              "classification": "current_source_backed",
+              "source_position": 241
+            },
+            {
+              "target": "kolmekymmentä",
+              "classification": "source_ranked_gap",
+              "source_position": 7336
+            },
+            {
+              "target": "neljäkymmentä",
+              "classification": "source_ranked_gap",
+              "source_position": 15961
+            },
+            {
+              "target": "kuusikymmentä",
+              "classification": "source_ranked_gap",
+              "source_position": 24410
+            },
+            {
+              "target": "seitsemänkymmentä",
+              "classification": "source_ranked_gap",
+              "source_position": 48340
+            },
+            {
+              "target": "kahdeksankymmentä",
+              "classification": "source_ranked_gap",
+              "source_position": 57064
+            },
+            {
+              "target": "yhdeksänkymmentä",
+              "classification": "source_ranked_gap",
+              "source_position": 76601
+            },
+            {
+              "target": "sata",
+              "classification": "source_ranked_gap",
+              "source_position": 1041
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l03",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "mitä",
+              "classification": "current_source_backed",
+              "source_position": 40
+            },
+            {
+              "target": "ottaa",
+              "classification": "current_source_backed",
+              "source_position": 192
+            },
+            {
+              "target": "antaa",
+              "classification": "current_source_backed",
+              "source_position": 164
+            },
+            {
+              "target": "haluaisin",
+              "classification": "source_ranked_gap",
+              "source_position": 4672
+            },
+            {
+              "target": "saanko",
+              "classification": "source_ranked_gap",
+              "source_position": 16356
+            },
+            {
+              "target": "annos",
+              "classification": "source_ranked_gap",
+              "source_position": 11667
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l04",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "vähän",
+              "classification": "current_source_backed",
+              "source_position": 139
+            },
+            {
+              "target": "paljon",
+              "classification": "current_source_backed",
+              "source_position": 60
+            },
+            {
+              "target": "lisää",
+              "classification": "current_source_backed",
+              "source_position": 189
+            },
+            {
+              "target": "kilo",
+              "classification": "source_ranked_gap",
+              "source_position": 19051
+            },
+            {
+              "target": "litra",
+              "classification": "source_ranked_gap",
+              "source_position": 33455
+            },
+            {
+              "target": "puoli",
+              "classification": "source_ranked_gap",
+              "source_position": 544
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l05",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "missä",
+              "classification": "current_source_backed",
+              "source_position": 188
+            },
+            {
+              "target": "täällä",
+              "classification": "current_source_backed",
+              "source_position": 229
+            },
+            {
+              "target": "siellä",
+              "classification": "current_source_backed",
+              "source_position": 149
+            },
+            {
+              "target": "kauppa",
+              "classification": "source_ranked_gap",
+              "source_position": 754
+            },
+            {
+              "target": "kassa",
+              "classification": "source_ranked_gap",
+              "source_position": 27590
+            },
+            {
+              "target": "osasto",
+              "classification": "source_ranked_gap",
+              "source_position": 5589
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l06",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "liian",
+              "classification": "current_source_backed",
+              "source_position": 166
+            },
+            {
+              "target": "tämä",
+              "classification": "current_source_backed",
+              "source_position": 49
+            },
+            {
+              "target": "toinen",
+              "classification": "current_source_backed",
+              "source_position": 119
+            },
+            {
+              "target": "iso",
+              "classification": "source_ranked_gap",
+              "source_position": 815
+            },
+            {
+              "target": "pieni",
+              "classification": "source_ranked_gap",
+              "source_position": 389
+            },
+            {
+              "target": "sopiva",
+              "classification": "source_ranked_gap",
+              "source_position": 2856
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l07",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "voi",
+              "classification": "current_source_backed",
+              "source_position": 25
+            },
+            {
+              "target": "antaa",
+              "classification": "current_source_backed",
+              "source_position": 164
+            },
+            {
+              "target": "rahaa",
+              "classification": "current_source_backed",
+              "source_position": 297
+            },
+            {
+              "target": "maksaa",
+              "classification": "source_ranked_gap",
+              "source_position": 383
+            },
+            {
+              "target": "kortti",
+              "classification": "source_ranked_gap",
+              "source_position": 10123
+            },
+            {
+              "target": "käteinen",
+              "classification": "source_ranked_gap",
+              "source_position": 182485
+            },
+            {
+              "target": "kuitti",
+              "classification": "source_ranked_gap",
+              "source_position": 31382
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l08",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 5,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "ei",
+              "classification": "current_source_backed",
+              "source_position": 3
+            },
+            {
+              "target": "mitään",
+              "classification": "current_source_backed",
+              "source_position": 74
+            },
+            {
+              "target": "takaisin",
+              "classification": "current_source_backed",
+              "source_position": 224
+            },
+            {
+              "target": "ongelma",
+              "classification": "source_ranked_gap",
+              "source_position": 739
+            },
+            {
+              "target": "rikki",
+              "classification": "source_ranked_gap",
+              "source_position": 5789
+            },
+            {
+              "target": "väärä",
+              "classification": "source_ranked_gap",
+              "source_position": 4277
+            },
+            {
+              "target": "toimi",
+              "classification": "source_ranked_gap",
+              "source_position": 635
+            },
+            {
+              "target": "apu",
+              "classification": "source_ranked_gap",
+              "source_position": 5863
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s1-l09",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        },
+        {
+          "lesson_id": "a1.2-s1-l10",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "section_id": "a1.2-s2",
+      "lessons": [
+        {
+          "lesson_id": "a1.2-s2-l01",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 5,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "missä",
+              "classification": "current_source_backed",
+              "source_position": 188
+            },
+            {
+              "target": "täällä",
+              "classification": "current_source_backed",
+              "source_position": 229
+            },
+            {
+              "target": "siellä",
+              "classification": "current_source_backed",
+              "source_position": 149
+            },
+            {
+              "target": "asema",
+              "classification": "source_ranked_gap",
+              "source_position": 1088
+            },
+            {
+              "target": "pysäkki",
+              "classification": "source_ranked_gap",
+              "source_position": 87141
+            },
+            {
+              "target": "apteekki",
+              "classification": "source_ranked_gap",
+              "source_position": 18159
+            },
+            {
+              "target": "kauppa",
+              "classification": "source_ranked_gap",
+              "source_position": 754
+            },
+            {
+              "target": "keskusta",
+              "classification": "source_ranked_gap",
+              "source_position": 1482
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l02",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "kohti",
+              "classification": "current_source_backed",
+              "source_position": 285
+            },
+            {
+              "target": "takaisin",
+              "classification": "current_source_backed",
+              "source_position": 224
+            },
+            {
+              "target": "pois",
+              "classification": "current_source_backed",
+              "source_position": 157
+            },
+            {
+              "target": "suoraan",
+              "classification": "source_ranked_gap",
+              "source_position": 360
+            },
+            {
+              "target": "vasemmalle",
+              "classification": "source_ranked_gap",
+              "source_position": 6701
+            },
+            {
+              "target": "oikealle",
+              "classification": "source_ranked_gap",
+              "source_position": 5001
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l03",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "tähän",
+              "classification": "current_source_backed",
+              "source_position": 170
+            },
+            {
+              "target": "siihen",
+              "classification": "current_source_backed",
+              "source_position": 78
+            },
+            {
+              "target": "tulee",
+              "classification": "current_source_backed",
+              "source_position": 59
+            },
+            {
+              "target": "mihin",
+              "classification": "source_ranked_gap",
+              "source_position": 494
+            },
+            {
+              "target": "kotiin",
+              "classification": "source_ranked_gap",
+              "source_position": 670
+            },
+            {
+              "target": "keskustaan",
+              "classification": "source_ranked_gap",
+              "source_position": 4389
+            },
+            {
+              "target": "asemalle",
+              "classification": "source_ranked_gap",
+              "source_position": 13273
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l04",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "tästä",
+              "classification": "current_source_backed",
+              "source_position": 235
+            },
+            {
+              "target": "siitä",
+              "classification": "current_source_backed",
+              "source_position": 32
+            },
+            {
+              "target": "tulee",
+              "classification": "current_source_backed",
+              "source_position": 59
+            },
+            {
+              "target": "mistä",
+              "classification": "source_ranked_gap",
+              "source_position": 330
+            },
+            {
+              "target": "asemalta",
+              "classification": "source_ranked_gap",
+              "source_position": 22460
+            },
+            {
+              "target": "kaupasta",
+              "classification": "source_ranked_gap",
+              "source_position": 5461
+            },
+            {
+              "target": "kotoa",
+              "classification": "source_ranked_gap",
+              "source_position": 6639
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l05",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "tulee",
+              "classification": "current_source_backed",
+              "source_position": 59
+            },
+            {
+              "target": "kanssa",
+              "classification": "current_source_backed",
+              "source_position": 33
+            },
+            {
+              "target": "usein",
+              "classification": "current_source_backed",
+              "source_position": 176
+            },
+            {
+              "target": "bussi",
+              "classification": "source_ranked_gap",
+              "source_position": 11212
+            },
+            {
+              "target": "juna",
+              "classification": "source_ranked_gap",
+              "source_position": 6126
+            },
+            {
+              "target": "taksi",
+              "classification": "source_ranked_gap",
+              "source_position": 14409
+            },
+            {
+              "target": "pyörä",
+              "classification": "source_ranked_gap",
+              "source_position": 14651
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l06",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 1,
+          "targets": [
+            {
+              "target": "yksi",
+              "classification": "current_source_backed",
+              "source_position": 84
+            },
+            {
+              "target": "kaksi",
+              "classification": "current_source_backed",
+              "source_position": 69
+            },
+            {
+              "target": "antaa",
+              "classification": "current_source_backed",
+              "source_position": 164
+            },
+            {
+              "target": "lippu",
+              "classification": "source_ranked_gap",
+              "source_position": 8776
+            },
+            {
+              "target": "menolippu",
+              "classification": "source_ranked_gap",
+              "source_position": 164240
+            },
+            {
+              "target": "meno-paluu",
+              "classification": "curated_unranked",
+              "source_position": null
+            },
+            {
+              "target": "automaatti",
+              "classification": "source_ranked_gap",
+              "source_position": 31484
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l07",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "klo",
+              "classification": "current_source_backed",
+              "source_position": 148
+            },
+            {
+              "target": "ennen",
+              "classification": "current_source_backed",
+              "source_position": 50
+            },
+            {
+              "target": "jälkeen",
+              "classification": "current_source_backed",
+              "source_position": 36
+            },
+            {
+              "target": "välillä",
+              "classification": "current_source_backed",
+              "source_position": 200
+            },
+            {
+              "target": "lähtee",
+              "classification": "source_ranked_gap",
+              "source_position": 698
+            },
+            {
+              "target": "saapuu",
+              "classification": "source_ranked_gap",
+              "source_position": 3073
+            },
+            {
+              "target": "myöhässä",
+              "classification": "source_ranked_gap",
+              "source_position": 6078
+            },
+            {
+              "target": "ajoissa",
+              "classification": "source_ranked_gap",
+              "source_position": 3733
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l08",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "kuinka",
+              "classification": "current_source_backed",
+              "source_position": 173
+            },
+            {
+              "target": "miten",
+              "classification": "current_source_backed",
+              "source_position": 85
+            },
+            {
+              "target": "aikaa",
+              "classification": "current_source_backed",
+              "source_position": 153
+            },
+            {
+              "target": "kauan",
+              "classification": "source_ranked_gap",
+              "source_position": 518
+            },
+            {
+              "target": "lähellä",
+              "classification": "source_ranked_gap",
+              "source_position": 523
+            },
+            {
+              "target": "kaukana",
+              "classification": "source_ranked_gap",
+              "source_position": 1377
+            },
+            {
+              "target": "minuutti",
+              "classification": "source_ranked_gap",
+              "source_position": 15415
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s2-l09",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        },
+        {
+          "lesson_id": "a1.2-s2-l10",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "section_id": "a1.2-s3",
+      "lessons": [
+        {
+          "lesson_id": "a1.2-s3-l01",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "tekee",
+              "classification": "current_source_backed",
+              "source_position": 272
+            },
+            {
+              "target": "tulee",
+              "classification": "current_source_backed",
+              "source_position": 59
+            },
+            {
+              "target": "käyttää",
+              "classification": "current_source_backed",
+              "source_position": 281
+            },
+            {
+              "target": "herään",
+              "classification": "source_ranked_gap",
+              "source_position": 33974
+            },
+            {
+              "target": "lähden",
+              "classification": "source_ranked_gap",
+              "source_position": 5851
+            },
+            {
+              "target": "palaan",
+              "classification": "source_ranked_gap",
+              "source_position": 15594
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l02",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 1,
+          "curated_unranked_count": 1,
+          "targets": [
+            {
+              "target": "aina",
+              "classification": "current_source_backed",
+              "source_position": 76
+            },
+            {
+              "target": "usein",
+              "classification": "current_source_backed",
+              "source_position": 176
+            },
+            {
+              "target": "joskus",
+              "classification": "current_source_backed",
+              "source_position": 243
+            },
+            {
+              "target": "yleensä",
+              "classification": "current_source_backed",
+              "source_position": 274
+            },
+            {
+              "target": "harvoin",
+              "classification": "source_ranked_gap",
+              "source_position": 1705
+            },
+            {
+              "target": "joka päivä",
+              "classification": "curated_unranked",
+              "source_position": null
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l03",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 5,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "tehdä",
+              "classification": "current_source_backed",
+              "source_position": 138
+            },
+            {
+              "target": "maan",
+              "classification": "current_source_backed",
+              "source_position": 155
+            },
+            {
+              "target": "kaupungin",
+              "classification": "current_source_backed",
+              "source_position": 184
+            },
+            {
+              "target": "työpaikka",
+              "classification": "source_ranked_gap",
+              "source_position": 7035
+            },
+            {
+              "target": "koulu",
+              "classification": "source_ranked_gap",
+              "source_position": 2259
+            },
+            {
+              "target": "yliopisto",
+              "classification": "source_ranked_gap",
+              "source_position": 365
+            },
+            {
+              "target": "toimisto",
+              "classification": "source_ranked_gap",
+              "source_position": 6848
+            },
+            {
+              "target": "opiskelija",
+              "classification": "source_ranked_gap",
+              "source_position": 2768
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l04",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 5,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "yhdessä",
+              "classification": "current_source_backed",
+              "source_position": 269
+            },
+            {
+              "target": "paljon",
+              "classification": "current_source_backed",
+              "source_position": 60
+            },
+            {
+              "target": "pitää",
+              "classification": "current_source_backed",
+              "source_position": 70
+            },
+            {
+              "target": "harrastus",
+              "classification": "source_ranked_gap",
+              "source_position": 6666
+            },
+            {
+              "target": "musiikki",
+              "classification": "source_ranked_gap",
+              "source_position": 1605
+            },
+            {
+              "target": "liikunta",
+              "classification": "source_ranked_gap",
+              "source_position": 6921
+            },
+            {
+              "target": "lukea",
+              "classification": "source_ranked_gap",
+              "source_position": 1700
+            },
+            {
+              "target": "katsoa",
+              "classification": "source_ranked_gap",
+              "source_position": 1493
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l05",
+          "lexical_target_count": 6,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 3,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "voi",
+              "classification": "current_source_backed",
+              "source_position": 25
+            },
+            {
+              "target": "sitten",
+              "classification": "current_source_backed",
+              "source_position": 31
+            },
+            {
+              "target": "ehkä",
+              "classification": "current_source_backed",
+              "source_position": 124
+            },
+            {
+              "target": "tavata",
+              "classification": "source_ranked_gap",
+              "source_position": 4307
+            },
+            {
+              "target": "sopia",
+              "classification": "source_ranked_gap",
+              "source_position": 4521
+            },
+            {
+              "target": "sopiiko",
+              "classification": "source_ranked_gap",
+              "source_position": 30932
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l06",
+          "lexical_target_count": 9,
+          "current_source_backed_count": 5,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "maanantaina",
+              "classification": "current_source_backed",
+              "source_position": 260
+            },
+            {
+              "target": "tiistaina",
+              "classification": "current_source_backed",
+              "source_position": 291
+            },
+            {
+              "target": "torstaina",
+              "classification": "current_source_backed",
+              "source_position": 298
+            },
+            {
+              "target": "ensi",
+              "classification": "current_source_backed",
+              "source_position": 86
+            },
+            {
+              "target": "viime",
+              "classification": "current_source_backed",
+              "source_position": 39
+            },
+            {
+              "target": "keskiviikkona",
+              "classification": "source_ranked_gap",
+              "source_position": 323
+            },
+            {
+              "target": "perjantaina",
+              "classification": "source_ranked_gap",
+              "source_position": 301
+            },
+            {
+              "target": "lauantaina",
+              "classification": "source_ranked_gap",
+              "source_position": 416
+            },
+            {
+              "target": "sunnuntaina",
+              "classification": "source_ranked_gap",
+              "source_position": 303
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l07",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "kanssa",
+              "classification": "current_source_backed",
+              "source_position": 33
+            },
+            {
+              "target": "yhdessä",
+              "classification": "current_source_backed",
+              "source_position": 269
+            },
+            {
+              "target": "kyllä",
+              "classification": "current_source_backed",
+              "source_position": 116
+            },
+            {
+              "target": "tulla",
+              "classification": "source_ranked_gap",
+              "source_position": 376
+            },
+            {
+              "target": "mennään",
+              "classification": "source_ranked_gap",
+              "source_position": 2088
+            },
+            {
+              "target": "kahville",
+              "classification": "source_ranked_gap",
+              "source_position": 22099
+            },
+            {
+              "target": "elokuviin",
+              "classification": "source_ranked_gap",
+              "source_position": 17816
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l08",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "nyt",
+              "classification": "current_source_backed",
+              "source_position": 23
+            },
+            {
+              "target": "myöhemmin",
+              "classification": "current_source_backed",
+              "source_position": 227
+            },
+            {
+              "target": "heti",
+              "classification": "current_source_backed",
+              "source_position": 141
+            },
+            {
+              "target": "viesti",
+              "classification": "source_ranked_gap",
+              "source_position": 2709
+            },
+            {
+              "target": "myöhässä",
+              "classification": "source_ranked_gap",
+              "source_position": 6078
+            },
+            {
+              "target": "perun",
+              "classification": "source_ranked_gap",
+              "source_position": 18793
+            },
+            {
+              "target": "sopii",
+              "classification": "source_ranked_gap",
+              "source_position": 1106
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s3-l09",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        },
+        {
+          "lesson_id": "a1.2-s3-l10",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "section_id": "a1.2-s4",
+      "lessons": [
+        {
+          "lesson_id": "a1.2-s4-l01",
+          "lexical_target_count": 9,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 6,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "nyt",
+              "classification": "current_source_backed",
+              "source_position": 23
+            },
+            {
+              "target": "hyvin",
+              "classification": "current_source_backed",
+              "source_position": 58
+            },
+            {
+              "target": "paljon",
+              "classification": "current_source_backed",
+              "source_position": 60
+            },
+            {
+              "target": "sää",
+              "classification": "source_ranked_gap",
+              "source_position": 3387
+            },
+            {
+              "target": "aurinko",
+              "classification": "source_ranked_gap",
+              "source_position": 2163
+            },
+            {
+              "target": "sade",
+              "classification": "source_ranked_gap",
+              "source_position": 8279
+            },
+            {
+              "target": "tuuli",
+              "classification": "source_ranked_gap",
+              "source_position": 1909
+            },
+            {
+              "target": "kylmä",
+              "classification": "source_ranked_gap",
+              "source_position": 3237
+            },
+            {
+              "target": "lämmin",
+              "classification": "source_ranked_gap",
+              "source_position": 3689
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l02",
+          "lexical_target_count": 9,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 6,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "aikana",
+              "classification": "current_source_backed",
+              "source_position": 82
+            },
+            {
+              "target": "liian",
+              "classification": "current_source_backed",
+              "source_position": 166
+            },
+            {
+              "target": "hyvin",
+              "classification": "current_source_backed",
+              "source_position": 58
+            },
+            {
+              "target": "talvi",
+              "classification": "source_ranked_gap",
+              "source_position": 4908
+            },
+            {
+              "target": "kesä",
+              "classification": "source_ranked_gap",
+              "source_position": 3038
+            },
+            {
+              "target": "syksy",
+              "classification": "source_ranked_gap",
+              "source_position": 8599
+            },
+            {
+              "target": "kevät",
+              "classification": "source_ranked_gap",
+              "source_position": 5896
+            },
+            {
+              "target": "takki",
+              "classification": "source_ranked_gap",
+              "source_position": 11896
+            },
+            {
+              "target": "kengät",
+              "classification": "source_ranked_gap",
+              "source_position": 7103
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l03",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 5,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "tämä",
+              "classification": "current_source_backed",
+              "source_position": 49
+            },
+            {
+              "target": "minun",
+              "classification": "current_source_backed",
+              "source_position": 163
+            },
+            {
+              "target": "missä",
+              "classification": "current_source_backed",
+              "source_position": 188
+            },
+            {
+              "target": "pää",
+              "classification": "source_ranked_gap",
+              "source_position": 1732
+            },
+            {
+              "target": "käsi",
+              "classification": "source_ranked_gap",
+              "source_position": 1924
+            },
+            {
+              "target": "jalka",
+              "classification": "source_ranked_gap",
+              "source_position": 5436
+            },
+            {
+              "target": "vatsa",
+              "classification": "source_ranked_gap",
+              "source_position": 16530
+            },
+            {
+              "target": "kurkku",
+              "classification": "source_ranked_gap",
+              "source_position": 26967
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l04",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "hyvin",
+              "classification": "current_source_backed",
+              "source_position": 58
+            },
+            {
+              "target": "vähän",
+              "classification": "current_source_backed",
+              "source_position": 139
+            },
+            {
+              "target": "olen",
+              "classification": "current_source_backed",
+              "source_position": 96
+            },
+            {
+              "target": "sairas",
+              "classification": "source_ranked_gap",
+              "source_position": 7927
+            },
+            {
+              "target": "kipeä",
+              "classification": "source_ranked_gap",
+              "source_position": 12411
+            },
+            {
+              "target": "kuume",
+              "classification": "source_ranked_gap",
+              "source_position": 23219
+            },
+            {
+              "target": "yskä",
+              "classification": "source_ranked_gap",
+              "source_position": 87908
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l05",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "mitä",
+              "classification": "current_source_backed",
+              "source_position": 40
+            },
+            {
+              "target": "saa",
+              "classification": "current_source_backed",
+              "source_position": 61
+            },
+            {
+              "target": "ottaa",
+              "classification": "current_source_backed",
+              "source_position": 192
+            },
+            {
+              "target": "apteekki",
+              "classification": "source_ranked_gap",
+              "source_position": 18159
+            },
+            {
+              "target": "lääke",
+              "classification": "source_ranked_gap",
+              "source_position": 9880
+            },
+            {
+              "target": "kipu",
+              "classification": "source_ranked_gap",
+              "source_position": 9710
+            },
+            {
+              "target": "tarvitsen",
+              "classification": "source_ranked_gap",
+              "source_position": 17606
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l06",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 1,
+          "source_ranked_gap_count": 6,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "aika",
+              "classification": "current_source_backed",
+              "source_position": 151
+            },
+            {
+              "target": "milloin",
+              "classification": "source_ranked_gap",
+              "source_position": 765
+            },
+            {
+              "target": "huomenna",
+              "classification": "source_ranked_gap",
+              "source_position": 1841
+            },
+            {
+              "target": "lääkäri",
+              "classification": "source_ranked_gap",
+              "source_position": 2104
+            },
+            {
+              "target": "terveysasema",
+              "classification": "source_ranked_gap",
+              "source_position": 61916
+            },
+            {
+              "target": "ajanvaraus",
+              "classification": "source_ranked_gap",
+              "source_position": 261206
+            },
+            {
+              "target": "varata",
+              "classification": "source_ranked_gap",
+              "source_position": 11193
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l07",
+          "lexical_target_count": 7,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 4,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "heti",
+              "classification": "current_source_backed",
+              "source_position": 141
+            },
+            {
+              "target": "täällä",
+              "classification": "current_source_backed",
+              "source_position": 229
+            },
+            {
+              "target": "voi",
+              "classification": "current_source_backed",
+              "source_position": 25
+            },
+            {
+              "target": "apu",
+              "classification": "source_ranked_gap",
+              "source_position": 5863
+            },
+            {
+              "target": "auttaa",
+              "classification": "source_ranked_gap",
+              "source_position": 1116
+            },
+            {
+              "target": "hätä",
+              "classification": "source_ranked_gap",
+              "source_position": 11178
+            },
+            {
+              "target": "tarvitsen",
+              "classification": "source_ranked_gap",
+              "source_position": 17606
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l08",
+          "lexical_target_count": 8,
+          "current_source_backed_count": 3,
+          "source_ranked_gap_count": 5,
+          "curated_unranked_count": 0,
+          "targets": [
+            {
+              "target": "jos",
+              "classification": "current_source_backed",
+              "source_position": 22
+            },
+            {
+              "target": "ehkä",
+              "classification": "current_source_backed",
+              "source_position": 124
+            },
+            {
+              "target": "heti",
+              "classification": "current_source_backed",
+              "source_position": 141
+            },
+            {
+              "target": "ota",
+              "classification": "source_ranked_gap",
+              "source_position": 1934
+            },
+            {
+              "target": "juo",
+              "classification": "source_ranked_gap",
+              "source_position": 8069
+            },
+            {
+              "target": "lepää",
+              "classification": "source_ranked_gap",
+              "source_position": 13652
+            },
+            {
+              "target": "sisällä",
+              "classification": "source_ranked_gap",
+              "source_position": 619
+            },
+            {
+              "target": "ulkona",
+              "classification": "source_ranked_gap",
+              "source_position": 2735
+            }
+          ]
+        },
+        {
+          "lesson_id": "a1.2-s4-l09",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        },
+        {
+          "lesson_id": "a1.2-s4-l10",
+          "lexical_target_count": 0,
+          "current_source_backed_count": 0,
+          "source_ranked_gap_count": 0,
+          "curated_unranked_count": 0,
+          "targets": []
+        }
+      ]
+    }
+  ]
+}
