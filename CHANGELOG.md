@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.21.0] - 2026-10-06
+
+### Added
+
+- Bounded chronological A1.1 course-answer history with stable sequence numbers, timestamps, and separate session identity.
+- Per-answer mastery evidence for activity type/mode, productive-vs-recognition retrieval, response time, source lesson, and typed exact/fuzzy/diacritic-adjusted grading when available.
+- Deterministic target-history queries and focused-practice source-lesson provenance for future mastery logic.
+
+### Changed
+
+- Course progress remains backward compatible while retaining the newest 5,000 answer events in local storage to prevent unbounded growth.
+- The Phase 2 A1.1 richer-practice roadmap is now complete.
+
+
 ## [1.20.0] - 2026-10-06
 
 ### Added
