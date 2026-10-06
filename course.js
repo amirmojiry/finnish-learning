@@ -666,17 +666,12 @@
   }
 
   function finnishSpeechStatus(windowObject) {
-    if (!speechApiAvailable(windowObject)) return { state: 'unsupported', voice: null };
-    if (typeof windowObject.speechSynthesis.getVoices !== 'function') return { state: 'unsupported', voice: null };
-    let voices = [];
-    try {
-      voices = windowObject.speechSynthesis.getVoices() || [];
-    } catch {
-      return { state: 'unsupported', voice: null };
+    if (!speechApiAvailable(windowObject)) {
+      return { state: 'unsupported', voice: null, strategy: 'none' };
     }
-    if (!voices.length) return { state: 'loading', voice: null };
     const voice = findFinnishVoice(windowObject);
-    return voice ? { state: 'ready', voice } : { state: 'missing', voice: null };
+    if (voice) return { state: 'ready', voice, strategy: 'voice' };
+    return { state: 'ready', voice: null, strategy: 'language' };
   }
 
   function speechSettingsGuide(windowObject) {
@@ -697,14 +692,18 @@
   function playSpeech(windowObject, text) {
     if (!text) return false;
     const status = finnishSpeechStatus(windowObject);
-    if (status.state !== 'ready' || !status.voice) return false;
-    windowObject.speechSynthesis.cancel();
-    const utterance = new windowObject.SpeechSynthesisUtterance(text);
-    utterance.voice = status.voice;
-    utterance.lang = status.voice.lang || 'fi-FI';
-    utterance.rate = 0.82;
-    windowObject.speechSynthesis.speak(utterance);
-    return true;
+    if (status.state !== 'ready') return false;
+    try {
+      windowObject.speechSynthesis.cancel();
+      const utterance = new windowObject.SpeechSynthesisUtterance(text);
+      if (status.voice) utterance.voice = status.voice;
+      utterance.lang = 'fi-FI';
+      utterance.rate = 0.82;
+      windowObject.speechSynthesis.speak(utterance);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
 
