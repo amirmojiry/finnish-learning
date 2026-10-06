@@ -112,7 +112,7 @@ Do not weaken an assertion merely to make CI pass. Change a test contract only a
 - Escape corpus text before injecting it into HTML.
 - Do not load large source-analysis files in the browser when a compact generated summary can provide the required UI data.
 - Interactive statistics must use semantic buttons and expose expanded state and controlled regions when they reveal details.
-- Profile owns spaced repetition, reviewed-word history, learning coverage, and progress summaries. Settings owns only appearance controls and the link to About. Do not merge these views without an explicit product decision and matching tests and documentation.
+- Word Practice owns spaced repetition, reviewed-word history, learning coverage, and smart-review sessions. Settings owns appearance controls, Finnish speech-voice status/setup guidance, and the link to About. Home/Profile legacy practice surfaces are not primary views. Change this ownership only with an explicit product decision and matching tests and documentation.
 
 ## 8. Documentation synchronization
 
