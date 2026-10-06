@@ -1,3 +1,3 @@
 Finnish Learning deployment
-Application version: 1.18.1
+Application version: 1.19.0
 Vocabulary entries: 300
