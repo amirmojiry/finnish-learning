@@ -1982,6 +1982,10 @@ body.course-lesson-active .course-question-card {
     height: 100dvh;
   }
 
+  body.course-lesson-active .course-question-card.is-long-content {
+    justify-content: flex-start;
+  }
+
   body.course-lesson-active .course-activity-shell {
     padding: max(8px, env(safe-area-inset-top)) 8px max(8px, env(safe-area-inset-bottom));
     border-radius: 0;
