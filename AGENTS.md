@@ -95,7 +95,7 @@ The suite must cover at least:
 - dominant-UPOS ordering and the known `ovat` AUX/indicative regression fixture
 - dictionary POS option generation, stale-option removal, valid-selection preservation, and invalid-selection reset
 - spaced-repetition queue behavior, reviewed-word ordering, per-word status, and reviewed/mastered frequency coverage
-- separate Profile and Settings view ownership and primary navigation contracts
+- separate Word Practice and Settings view ownership plus primary navigation contracts
 - required script order and UI integration contracts
 - synchronized English and Persian README status facts
 - English-only source-code comments
