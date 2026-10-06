@@ -213,6 +213,7 @@ function startReviewPractice(word, mode = MODES.TRANSLATION) {
   state.answered = false;
   showView('practice');
   els.reviewQuiz.hidden = false;
+  window.setTimeout(() => els.reviewQuiz.scrollIntoView({ block: 'start', behavior: 'smooth' }), 0);
   hideReviewFeedback();
   els.typingForm.hidden = true;
   els.options.hidden = true;
