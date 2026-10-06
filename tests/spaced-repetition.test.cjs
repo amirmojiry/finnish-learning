@@ -144,6 +144,15 @@ test('word practice owns smart review while settings owns appearance speech and 
   assert.match(navigation, /voiceschanged/);
 });
 
+test('navigation preserves an active smart-review question for return to Word Practice', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
+  const navigationHandler = app.match(/els\.viewLinks\.forEach\([\s\S]*?\}\)\);/)?.[0] || '';
+
+  assert.match(navigationHandler, /showView\(link\.dataset\.viewLink\)/);
+  assert.doesNotMatch(navigationHandler, /closeReviewQuiz\(\)/);
+  assert.match(app, /function closeReviewQuiz\(\)/);
+});
+
 test('the review integration keeps its required public app contracts', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
   for (const functionName of ['openWordDetail', 'startReviewPractice', 'hideReviewFeedback', 'closeReviewQuiz']) {
