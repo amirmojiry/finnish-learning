@@ -105,11 +105,17 @@
 
     if (status.state === 'ready') {
       speechState.textContent = 'فعال';
-      speechMessage.textContent = 'صدای فنلاندی روی این دستگاه تشخیص داده شد.';
-      speechVoice.textContent = status.voice?.name
-        ? `${status.voice.name} · ${status.voice.lang || 'fi'}`
-        : status.voice?.lang || 'fi';
-      speechGuide.textContent = 'تمرین‌های شنیداری و دیکته می‌توانند از همین صدای فنلاندی استفاده کنند.';
+      if (status.voice) {
+        speechMessage.textContent = 'صدای فنلاندی مرورگر تشخیص داده شد.';
+        speechVoice.textContent = status.voice.name
+          ? `${status.voice.name} · ${status.voice.lang || 'fi-FI'}`
+          : status.voice.lang || 'fi-FI';
+        speechGuide.textContent = 'تمرین‌های شنیداری و دیکته از همین صدای فنلاندی استفاده می‌کنند.';
+      } else {
+        speechMessage.textContent = 'پخش فنلاندی از طریق موتور گفتار دستگاه فعال است.';
+        speechVoice.textContent = 'fi-FI · انتخاب خودکار مرورگر/دستگاه';
+        speechGuide.textContent = 'مرورگر صدای فنلاندی را در فهرست voiceها نشان نمی‌دهد؛ برنامه زبان fi-FI را مستقیم درخواست می‌کند. اگر تلفظ فنلاندی نبود، تنظیمات Text-to-Speech دستگاه را بررسی کن.';
+      }
       return;
     }
 
