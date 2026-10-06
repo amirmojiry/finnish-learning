@@ -6,6 +6,28 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.18.0] - 2026-10-06
+
+### Added
+
+- A dedicated Word Practice destination that owns Smart Review, reviewed-word history, coverage, and mastery summaries.
+- Live Finnish speech-voice status in Settings, including detected voice name, retry, `voiceschanged` refresh, and device-specific setup guidance.
+- Distraction-free lesson mode with a compact close control, integrated progress count, and viewport-fixed primary answer feedback.
+
+### Changed
+
+- Primary navigation is now Course, Dictionary, Word Practice, and Settings.
+- Mobile bottom navigation is icon-only; labels remain available through accessible names.
+- Smart Review rotates internally across translation, multiple-choice cloze, and typed cloze instead of exposing the legacy free-practice mode selector.
+- Lesson activity count is shown inside the progress bar and the separate lesson header/back button is removed.
+
+### Removed
+
+- Legacy Home and Profile destinations.
+- Per-word “practice this word” actions from dictionary detail pages.
+- Legacy user-selectable free-practice mode UI.
+
+
 ## [1.17.0] - 2026-10-05
 
 ### Added
