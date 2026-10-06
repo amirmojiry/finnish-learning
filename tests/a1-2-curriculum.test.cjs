@@ -33,7 +33,7 @@ const a12Lessons = a12.sections.flatMap((section) => section.lessons);
 
 test('A1.2 curriculum defines four ordered ten-lesson sections', () => {
   assert.equal(a12.level, 'A1.2');
-  assert.equal(a12.status, 'planning');
+  assert.equal(a12.status, 'reviewed');
   assert.equal(a12.sections.length, 4);
   assert.deepEqual(a12.sections.map((section) => section.order), [1, 2, 3, 4]);
   assert.equal(a12Lessons.length, 40);

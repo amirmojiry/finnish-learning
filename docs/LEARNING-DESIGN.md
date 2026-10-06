@@ -437,14 +437,18 @@ Only when GitHub Pages is no longer sufficient:
 - teacher dashboards or shared courses.
 
 
-## 13. A1.1 curriculum specification
+## 13. A1 curriculum specifications
 
-The initial planning template has now been materialized as a complete A1.1 curriculum contract:
+The A1 curriculum model is now defined across all three Finnish implementation subdivisions:
 
 - [Complete A1.1 curriculum](A1.1-CURRICULUM.md)
-- machine-readable matrix: [`data/course/a1.1-curriculum.json`](../data/course/a1.1-curriculum.json)
+- machine-readable A1.1 matrix: [`data/course/a1.1-curriculum.json`](../data/course/a1.1-curriculum.json)
+- reviewed A1.2 matrix: [`data/course/a1.2-curriculum.json`](../data/course/a1.2-curriculum.json)
+- reviewed A1.3 matrix: [`data/course/a1.3-curriculum.json`](../data/course/a1.3-curriculum.json)
 
-The specification defines four sections and forty lessons, maps the existing ten-lesson prototype into the new sequence, tracks frequency vocabulary, topic vocabulary, expressions, grammar, recycling, activity families, four-skill coverage, and completion criteria, and remains a planning contract until each lesson is separately implemented and reviewed.
+Each stage contains four sections and forty lessons under the same planning contract: communicative can-do outcomes, source-backed high-frequency targets, separate curated topic targets, explicit expressions, grammar or morphology focus, backward-only recycling, activity families, four-skill coverage, assessment criteria, and exact lexical target counts. A1.3 deliberately strengthens familiar social interaction, short messages and texts, routine study/work communication, home and neighborhood problems, and a small set of explicit recent-event forms while remaining inside CEFR A1.
+
+These matrices define reviewed curriculum targets. Only A1.1 currently has complete playable lesson manifests in the application; A1.2/A1.3 playable manifests remain intentionally sequenced after source-backed vocabulary expansion and content validation.
 
 ## 14. Key sources
 

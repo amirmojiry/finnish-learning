@@ -6,6 +6,19 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.22.0] - 2026-10-06
+
+### Added
+
+- Reviewed 40-lesson A1.3 curriculum matrix covering social contact, home/neighborhood problems, study/work responsibilities, recent events, plans, short texts, and integrated A1 communication.
+- Deterministic A1.3 validation for lesson contracts, source-backed high-frequency targets, backward-only cross-stage recycling, checkpoints, lexical counts, and explicit reviewed past forms.
+
+### Changed
+
+- Promote the existing 40-lesson A1.2 curriculum contract from planning to reviewed status.
+- Complete the first Phase 3 curriculum-model milestone while keeping A1.2/A1.3 playable manifests explicitly deferred until vocabulary expansion and content validation.
+
+
 ## [1.21.1] - 2026-10-06
 
 ### Fixed
