@@ -362,11 +362,12 @@ test('desktop navigation is icon-only and exposes labels through accessible tool
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const desktopHeader = html.match(/<header class="site-header">[\s\S]*?<\/header>/)?.[0] || '';
 
-  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 5);
-  for (const label of ['تمرین‌ها','واژه‌نامه','دوره','پروفایل','تنظیمات']) {
+  assert.equal((desktopHeader.match(/nav-icon-only nav-tooltip/g) || []).length, 4);
+  for (const label of ['تمرین واژه','واژه‌نامه','دوره','تنظیمات']) {
     assert.match(desktopHeader, new RegExp('aria-label="' + label + '"'));
     assert.match(desktopHeader, new RegExp('data-tooltip="' + label + '"'));
   }
+  assert.doesNotMatch(desktopHeader, /پروفایل|تمرین‌ها/);
   assert.match(styles, /\.site-header nav \.nav-tooltip::after/);
   assert.match(styles, /content:\s*attr\(data-tooltip\)/);
   assert.match(styles, /\.nav-tooltip:hover::after/);
@@ -374,13 +375,13 @@ test('desktop navigation is icon-only and exposes labels through accessible tool
 });
 
 
-test('legacy home and dictionary hashes route before vocabulary fetch resolves', () => {
+test('word-practice and dictionary hashes route before vocabulary fetch resolves', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
 
-  const initMatch = app.match(/async function init\(\)\{([^}]|\}(?!catch))*routeFromHash\(\);try\{const r=await fetch/);
-  assert.ok(initMatch, 'init must route the current hash before awaiting vocabulary fetch');
-  assert.match(app, /if\(h\.startsWith\('#word-'\)\)\{[\s\S]*?showView\('dictionary',\{updateHash:false\}\);return/);
-  assert.match(app, /if\(state\.view==='dictionary'\)\{els\.dictionaryList\.replaceChildren\(\);els\.dictionaryEmpty\.hidden=false;els\.dictionaryEmpty\.textContent='بارگذاری واژه‌ها انجام نشد\.'/);
+  assert.match(app, /async function init\(\)\s*\{[\s\S]*?routeFromHash\(\);[\s\S]*?await fetch/);
+  assert.match(app, /if \(hash\.startsWith\('#word-'\)\)[\s\S]*?showView\('dictionary', \{ updateHash: false \}\)/);
+  assert.match(app, /showView\(hash === '#dictionary' \? 'dictionary' : 'practice', \{ updateHash: false \}\)/);
+  assert.match(app, /els\.practiceError\.textContent = 'بارگذاری واژه‌ها انجام نشد\.'/);
 });
 
 
