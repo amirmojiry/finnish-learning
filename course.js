@@ -2059,7 +2059,38 @@
       });
       footer.append(reset);
 
-      root.append(catalog, header, path, footer);
+      const focusedActivities = buildFocusedPracticeActivities(section, progress);
+      const focusedTargetIds = uniqueOptions(focusedActivities.map(activityPrimaryTargetId));
+      let focusedCard = null;
+      if (focusedActivities.length && focusedTargetIds.length) {
+        focusedCard = document.createElement('section');
+        focusedCard.className = 'course-focused-practice-card';
+        const focusedCopy = document.createElement('div');
+        focusedCopy.className = 'course-focused-practice-copy';
+        const focusedLabel = document.createElement('span');
+        focusedLabel.className = 'course-focused-practice-label';
+        focusedLabel.textContent = 'مرور شخصی';
+        const focusedTitle = document.createElement('h2');
+        focusedTitle.textContent = 'تمرین نقاط ضعف';
+        const focusedDescription = document.createElement('p');
+        focusedDescription.textContent = `${toPersianNumber(focusedTargetIds.length)} هدف این بخش هنوز به مرور هدفمند نیاز دارد.`;
+        const focusedTargets = document.createElement('div');
+        focusedTargets.className = 'course-focused-practice-targets';
+        for (const targetId of focusedTargetIds.slice(0, 4)) {
+          const chip = document.createElement('span');
+          chip.lang = 'fi';
+          chip.dir = 'ltr';
+          chip.textContent = section.items[targetId]?.surface_form || targetId;
+          focusedTargets.append(chip);
+        }
+        focusedCopy.append(focusedLabel, focusedTitle, focusedDescription, focusedTargets);
+        const focusedStart = createButton('شروع تمرین هدفمند', 'primary-button course-focused-practice-start', startFocusedPractice);
+        focusedCard.append(focusedCopy, focusedStart);
+      }
+
+      root.append(catalog, header);
+      if (focusedCard) root.append(focusedCard);
+      root.append(path, footer);
 
       const onPageClick = (event) => {
         if (!selectedNode) return;
@@ -2139,6 +2170,29 @@
       sessionGraded = 0;
       answered = false;
       setHash(`#course-${lesson.id}`);
+      showCourseView();
+      renderActivity();
+    }
+
+    function startFocusedPractice() {
+      if (!section) return;
+      const activities = buildFocusedPracticeActivities(section, progress);
+      if (!activities.length) return renderSectionMap();
+      activeLesson = {
+        id: `focused-practice-${section.id}`,
+        order: 0,
+        title_fa: 'تمرین نقاط ضعف',
+        summary_fa: 'این جلسه فقط از تمرین‌های بازبینی‌شدهٔ همین بخش ساخته شده و روی هدف‌هایی تمرکز می‌کند که در پاسخ‌های قبلی ضعیف‌تر بوده‌اند.',
+        grammar_fa: 'با پاسخ‌های درست، دقت هر هدف به‌روز می‌شود و پس از رسیدن به آستانهٔ لازم از فهرست تمرین هدفمند خارج خواهد شد.',
+        activities,
+        focused_practice: true,
+      };
+      setLessonFocusMode(true);
+      activityIndex = 0;
+      sessionCorrect = 0;
+      sessionGraded = 0;
+      answered = false;
+      setHash(`#course-${section.id}`);
       showCourseView();
       renderActivity();
     }
@@ -2910,6 +2964,35 @@
 
     function completeLesson() {
       if (!activeLesson) return renderSectionMap();
+      if (activeLesson.focused_practice) {
+        const remainingActivities = buildFocusedPracticeActivities(section, progress);
+        const remainingTargets = uniqueOptions(remainingActivities.map(activityPrimaryTargetId));
+        root.replaceChildren();
+
+        const card = document.createElement('section');
+        card.className = 'course-completion-card';
+        const badge = document.createElement('div');
+        badge.className = 'course-completion-badge';
+        badge.textContent = '✓';
+        const title = document.createElement('h1');
+        title.textContent = 'تمرین هدفمند تمام شد';
+        const message = document.createElement('p');
+        message.textContent = `${toPersianNumber(sessionCorrect)} پاسخ درست از ${toPersianNumber(sessionGraded)} فعالیت نمره‌دار`;
+        const note = document.createElement('p');
+        note.className = 'course-completion-note';
+        note.textContent = remainingTargets.length
+          ? `${toPersianNumber(remainingTargets.length)} هدف در این بخش هنوز زیر آستانهٔ دقت تمرین هدفمند است.`
+          : 'فعلاً هدف ضعیفی در این بخش باقی نمانده است.';
+        card.append(badge, title, message, note);
+        if (remainingActivities.length) {
+          card.append(createButton('یک دور دیگر', 'primary-button', startFocusedPractice));
+        }
+        card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
+        root.append(card);
+        root.scrollTop = 0;
+        return;
+      }
+
       const passingScore = Number(activeLesson.passing_score || 0);
       const passed = passesLessonRequirement(activeLesson, sessionCorrect, sessionGraded);
       if (passed) {
