@@ -15,6 +15,8 @@
   ];
   const SECTION_URL = SECTION_URLS[0];
   const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
+  const WEAK_TARGET_ACCURACY = 0.8;
+  const FOCUSED_PRACTICE_LIMIT = 10;
 
   function normalizeAnswer(value) {
     return String(value || '')
@@ -31,6 +33,7 @@
       version: SCHEMA_VERSION,
       completedLessons: [],
       lessonScores: {},
+      targetPerformance: {},
       lastLessonId: null,
     };
   }
@@ -47,6 +50,20 @@
         correct: Math.max(0, Math.floor(Number(score.correct) || 0)),
         graded: Math.max(0, Math.floor(Number(score.graded) || 0)),
         completedAt: Number.isFinite(score.completedAt) ? score.completedAt : 0,
+      };
+    }
+    const targetPerformance = progress.targetPerformance && typeof progress.targetPerformance === 'object'
+      ? progress.targetPerformance
+      : {};
+    for (const [targetKey, stats] of Object.entries(targetPerformance)) {
+      if (!targetKey || !stats || typeof stats !== 'object') continue;
+      const attempts = Math.max(0, Math.floor(Number(stats.attempts) || 0));
+      if (!attempts) continue;
+      const correct = Math.min(attempts, Math.max(0, Math.floor(Number(stats.correct) || 0)));
+      clean.targetPerformance[targetKey] = {
+        attempts,
+        correct,
+        lastAttemptAt: Number.isFinite(stats.lastAttemptAt) ? stats.lastAttemptAt : 0,
       };
     }
     clean.lastLessonId = typeof progress.lastLessonId === 'string' ? progress.lastLessonId : null;
@@ -140,6 +157,118 @@
     }
     clean.lastLessonId = lessonId;
     return clean;
+  }
+
+  function targetPerformanceKey(sectionId, targetId) {
+    const sectionKey = String(sectionId || '').trim();
+    const targetKey = String(targetId || '').trim();
+    return sectionKey && targetKey ? `${sectionKey}::${targetKey}` : '';
+  }
+
+  function recordTargetAttempt(progress, sectionId, targetId, correct, now = Date.now()) {
+    const clean = sanitizeProgress(progress);
+    const key = targetPerformanceKey(sectionId, targetId);
+    if (!key) return clean;
+    const previous = clean.targetPerformance[key] || { attempts: 0, correct: 0, lastAttemptAt: 0 };
+    clean.targetPerformance[key] = {
+      attempts: previous.attempts + 1,
+      correct: previous.correct + (correct ? 1 : 0),
+      lastAttemptAt: Number.isFinite(now) ? now : Date.now(),
+    };
+    return clean;
+  }
+
+  function activityPrimaryTargetId(activity) {
+    if (!activity || typeof activity !== 'object') return null;
+    if (activity.type === 'negative-transform') return activity.negative_item || null;
+    if (activity.type === 'event-time-match') return activity.time_item || null;
+    if (activity.type === 'prompt-choice') return activity.answer_item || null;
+    if (activity.type === 'short-reading') return activity.question_item || null;
+    if (activity.type === 'teach' || activity.type === 'number-grid') return null;
+    return activity.item || null;
+  }
+
+  function weakTargetsForSection(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
+    if (!section || !section.id || !section.items || typeof section.items !== 'object') return [];
+    const clean = sanitizeProgress(progress);
+    const targets = [];
+    for (const itemId of Object.keys(section.items)) {
+      const stats = clean.targetPerformance[targetPerformanceKey(section.id, itemId)];
+      if (!stats || stats.attempts < 1) continue;
+      const missed = stats.attempts - stats.correct;
+      const accuracy = stats.correct / stats.attempts;
+      if (missed < 1 || accuracy >= WEAK_TARGET_ACCURACY) continue;
+      targets.push({
+        itemId,
+        attempts: stats.attempts,
+        correct: stats.correct,
+        missed,
+        accuracy,
+        lastAttemptAt: stats.lastAttemptAt,
+      });
+    }
+    targets.sort((left, right) => (
+      left.accuracy - right.accuracy
+      || right.attempts - left.attempts
+      || right.lastAttemptAt - left.lastAttemptAt
+      || left.itemId.localeCompare(right.itemId)
+    ));
+    const max = Number.isFinite(limit) ? Math.max(0, Math.floor(limit)) : targets.length;
+    return targets.slice(0, max);
+  }
+
+  function focusedActivityStrength(activity) {
+    if (!activity) return 0;
+    if (['production', 'dictation', 'controlled-production', 'inflection-production', 'negative-transform'].includes(activity.type)) return 5;
+    if (activity.type === 'type' || activity.type === 'expression-completion') return 4;
+    if (activity.type === 'sentence-order' || activity.type === 'morphology-choice') return 3;
+    if (activity.type === 'choice' && activity.mode === 'listen') return 1;
+    return 2;
+  }
+
+  function buildFocusedPracticeActivities(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
+    if (!section || !Array.isArray(section.lessons)) return [];
+    const max = Number.isFinite(limit) ? Math.max(0, Math.floor(limit)) : FOCUSED_PRACTICE_LIMIT;
+    if (!max) return [];
+
+    const weakTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
+    if (!weakTargets.length) return [];
+    const weakIds = new Set(weakTargets.map((entry) => entry.itemId));
+    const completed = new Set(sanitizeProgress(progress).completedLessons);
+    const candidates = new Map(weakTargets.map((entry) => [entry.itemId, []]));
+
+    section.lessons.forEach((lesson, lessonIndex) => {
+      if (!completed.has(lesson.id)) return;
+      lesson.activities.forEach((activity, activityIndex) => {
+        const targetId = activityPrimaryTargetId(activity);
+        if (!targetId || !weakIds.has(targetId)) return;
+        candidates.get(targetId).push({
+          activity,
+          strength: focusedActivityStrength(activity),
+          lessonIndex,
+          activityIndex,
+        });
+      });
+    });
+
+    for (const entries of candidates.values()) {
+      entries.sort((left, right) => (
+        right.strength - left.strength
+        || right.lessonIndex - left.lessonIndex
+        || left.activityIndex - right.activityIndex
+      ));
+    }
+
+    const selected = [];
+    for (let round = 0; round < 2 && selected.length < max; round += 1) {
+      for (const target of weakTargets) {
+        const candidate = candidates.get(target.itemId)?.[round];
+        if (!candidate) continue;
+        selected.push({ ...candidate.activity });
+        if (selected.length >= max) break;
+      }
+    }
+    return selected;
   }
 
   function escapeRegExp(value) {
@@ -1541,6 +1670,16 @@
       return button;
     }
 
+    function recordActivityResult(activity, correct) {
+      answered = true;
+      sessionGraded += 1;
+      if (correct) sessionCorrect += 1;
+      const targetId = activityPrimaryTargetId(activity);
+      if (!targetId || !section) return;
+      progress = recordTargetAttempt(progress, section.id, targetId, correct);
+      progress = saveProgress(windowObject.localStorage, progress);
+    }
+
     function createSpeechStatusNotice(status) {
       const notice = document.createElement('div');
       notice.className = 'course-audio-unavailable';
@@ -1920,7 +2059,39 @@
       });
       footer.append(reset);
 
-      root.append(catalog, header, path, footer);
+      const focusedActivities = buildFocusedPracticeActivities(section, progress);
+      const weakTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
+      const focusedTargetIds = weakTargets.map((target) => target.itemId);
+      let focusedCard = null;
+      if (focusedActivities.length && focusedTargetIds.length) {
+        focusedCard = document.createElement('section');
+        focusedCard.className = 'course-focused-practice-card';
+        const focusedCopy = document.createElement('div');
+        focusedCopy.className = 'course-focused-practice-copy';
+        const focusedLabel = document.createElement('span');
+        focusedLabel.className = 'course-focused-practice-label';
+        focusedLabel.textContent = 'مرور شخصی';
+        const focusedTitle = document.createElement('h2');
+        focusedTitle.textContent = 'تمرین نقاط ضعف';
+        const focusedDescription = document.createElement('p');
+        focusedDescription.textContent = `${toPersianNumber(focusedTargetIds.length)} هدف این بخش هنوز به مرور هدفمند نیاز دارد.`;
+        const focusedTargets = document.createElement('div');
+        focusedTargets.className = 'course-focused-practice-targets';
+        for (const targetId of focusedTargetIds.slice(0, 4)) {
+          const chip = document.createElement('span');
+          chip.lang = 'fi';
+          chip.dir = 'ltr';
+          chip.textContent = section.items[targetId]?.surface_form || targetId;
+          focusedTargets.append(chip);
+        }
+        focusedCopy.append(focusedLabel, focusedTitle, focusedDescription, focusedTargets);
+        const focusedStart = createButton('شروع تمرین هدفمند', 'primary-button course-focused-practice-start', startFocusedPractice);
+        focusedCard.append(focusedCopy, focusedStart);
+      }
+
+      root.append(catalog, header);
+      if (focusedCard) root.append(focusedCard);
+      root.append(path, footer);
 
       const onPageClick = (event) => {
         if (!selectedNode) return;
@@ -2000,6 +2171,29 @@
       sessionGraded = 0;
       answered = false;
       setHash(`#course-${lesson.id}`);
+      showCourseView();
+      renderActivity();
+    }
+
+    function startFocusedPractice() {
+      if (!section) return;
+      const activities = buildFocusedPracticeActivities(section, progress);
+      if (!activities.length) return renderSectionMap();
+      activeLesson = {
+        id: `focused-practice-${section.id}`,
+        order: 0,
+        title_fa: 'تمرین نقاط ضعف',
+        summary_fa: 'این جلسه فقط از تمرین‌های بازبینی‌شدهٔ همین بخش ساخته شده و روی هدف‌هایی تمرکز می‌کند که در پاسخ‌های قبلی ضعیف‌تر بوده‌اند.',
+        grammar_fa: 'با پاسخ‌های درست، دقت هر هدف به‌روز می‌شود و پس از رسیدن به آستانهٔ لازم از فهرست تمرین هدفمند خارج خواهد شد.',
+        activities,
+        focused_practice: true,
+      };
+      setLessonFocusMode(true);
+      activityIndex = 0;
+      sessionCorrect = 0;
+      sessionGraded = 0;
+      answered = false;
+      setHash(`#course-${section.id}`);
       showCourseView();
       renderActivity();
     }
@@ -2118,9 +2312,7 @@
           nextActivity,
           showFeedback,
           recordResult(correct) {
-            answered = true;
-            sessionGraded += 1;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
           },
         });
       } else if (MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) {
@@ -2134,9 +2326,7 @@
           nextActivity,
           createTypedDifference,
           recordResult(correct) {
-            answered = true;
-            sessionGraded += 1;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
           },
         });
       } else if (activity.type === 'number-grid') {
@@ -2180,10 +2370,8 @@
 
         const submit = createButton('ثبت پاسخ', 'primary-button course-sentence-submit', () => {
           if (answered || ordered.length !== activity.items.length) return;
-          answered = true;
-          sessionGraded += 1;
           const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           renderSelection();
 
           const result = document.createElement('div');
@@ -2279,10 +2467,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
@@ -2325,11 +2511,9 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          answered = true;
-          sessionGraded += 1;
           const grading = gradeTypedAnswer(negative, input.value);
           const correct = grading.accepted;
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -2366,12 +2550,10 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || rows.some(({ input }) => !input.value.trim())) return;
-          answered = true;
-          sessionGraded += 1;
           const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
           const correct = gradings.every((grading) => grading.accepted);
           const hasFuzzy = gradings.some((grading) => grading.fuzzy);
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           rows.forEach(({ input }, index) => {
             const grading = gradings[index];
             input.disabled = true;
@@ -2419,10 +2601,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.time_item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.time_item) optionButton.classList.add('correct');
@@ -2448,10 +2628,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
@@ -2482,10 +2660,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.answer_item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.answer_item) optionButton.classList.add('correct');
@@ -2514,10 +2690,8 @@
         for (const category of activity.options) {
           const button = createButton(category, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = category === activity.answer;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.category === activity.answer) optionButton.classList.add('correct');
@@ -2549,10 +2723,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionItem.surface_form, 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.question_item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.question_item) optionButton.classList.add('correct');
@@ -2584,10 +2756,8 @@
             button.dataset.order = String(ordered.length);
             button.textContent = `${toPersianNumber(ordered.length)}. ${turnItem.surface_form}`;
             if (ordered.length === activity.turns.length) {
-              answered = true;
-              sessionGraded += 1;
               const correct = ordered.every((value, orderIndex) => value === activity.answer_order[orderIndex]);
-              if (correct) sessionCorrect += 1;
+              recordActivityResult(activity, correct);
               const result = document.createElement('div');
               result.className = `course-answer-feedback course-primary-feedback ${correct ? 'is-correct' : 'is-wrong'}`;
               const title = document.createElement('strong');
@@ -2671,10 +2841,8 @@
           const optionItem = section.items[optionId];
           const button = createButton(optionLabel(optionItem, activity.mode), 'course-option', () => {
             if (answered) return;
-            answered = true;
-            sessionGraded += 1;
             const correct = optionId === activity.item;
-            if (correct) sessionCorrect += 1;
+            recordActivityResult(activity, correct);
             for (const optionButton of options.querySelectorAll('button')) {
               optionButton.disabled = true;
               if (optionButton.dataset.itemId === activity.item) optionButton.classList.add('correct');
@@ -2743,11 +2911,9 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          answered = true;
-          sessionGraded += 1;
           const grading = gradeTypedAnswer(item, input.value);
           const correct = grading.accepted;
-          if (correct) sessionCorrect += 1;
+          recordActivityResult(activity, correct);
           input.disabled = true;
           submit.disabled = true;
           input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
@@ -2799,6 +2965,35 @@
 
     function completeLesson() {
       if (!activeLesson) return renderSectionMap();
+      if (activeLesson.focused_practice) {
+        const remainingActivities = buildFocusedPracticeActivities(section, progress);
+        const remainingTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
+        root.replaceChildren();
+
+        const card = document.createElement('section');
+        card.className = 'course-completion-card';
+        const badge = document.createElement('div');
+        badge.className = 'course-completion-badge';
+        badge.textContent = '✓';
+        const title = document.createElement('h1');
+        title.textContent = 'تمرین هدفمند تمام شد';
+        const message = document.createElement('p');
+        message.textContent = `${toPersianNumber(sessionCorrect)} پاسخ درست از ${toPersianNumber(sessionGraded)} فعالیت نمره‌دار`;
+        const note = document.createElement('p');
+        note.className = 'course-completion-note';
+        note.textContent = remainingTargets.length
+          ? `${toPersianNumber(remainingTargets.length)} هدف در این بخش هنوز زیر آستانهٔ دقت تمرین هدفمند است.`
+          : 'فعلاً هدف ضعیفی در این بخش باقی نمانده است.';
+        card.append(badge, title, message, note);
+        if (remainingActivities.length) {
+          card.append(createButton('یک دور دیگر', 'primary-button', startFocusedPractice));
+        }
+        card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
+        root.append(card);
+        root.scrollTop = 0;
+        return;
+      }
+
       const passingScore = Number(activeLesson.passing_score || 0);
       const passed = passesLessonRequirement(activeLesson, sessionCorrect, sessionGraded);
       if (passed) {
@@ -2971,6 +3166,8 @@
     SECTION_URLS,
     SECTION_URL,
     CURRICULUM_URL,
+    WEAK_TARGET_ACCURACY,
+    FOCUSED_PRACTICE_LIMIT,
     normalizeAnswer,
     foldFinnishDiacritics,
     emptyProgress,
@@ -2986,6 +3183,11 @@
     isCourseLessonAccessible,
     passesLessonRequirement,
     recordLessonCompletion,
+    targetPerformanceKey,
+    recordTargetAttempt,
+    activityPrimaryTargetId,
+    weakTargetsForSection,
+    buildFocusedPracticeActivities,
     makeCloze,
     acceptedAnswers,
     alignAnswers,

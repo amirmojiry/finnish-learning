@@ -209,6 +209,8 @@ Long-term
 - successful retrieval after a gap of roughly 45–90 days
 ```
 
+The current A1.1 implementation now keeps a lightweight aggregate of correct and incorrect attempts for explicit course targets, scoped by section. When a target has at least one miss and aggregate accuracy below 80%, the section can offer focused practice built only from reviewed graded activities in lessons the learner has already completed. This aggregate is intentionally not a chronological answer history and is not sufficient for the stronger mastery-evidence model below.
+
 The scheduler should record:
 
 - successful and failed retrievals;

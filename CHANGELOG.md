@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.20.0] - 2026-10-06
+
+### Added
+
+- Aggregate per-target A1.1 course performance tracking, scoped by section and stored with existing local course progress.
+- Section-level focused practice for targets below 80% aggregate accuracy, built only from existing reviewed graded activities in completed lessons.
+- A focused-practice card that surfaces the weak-target count and a small preview of the Finnish targets selected for review.
+
+### Changed
+
+- Graded course activities now update target-level correctness aggregates while preserving the existing lesson score and unlocking behavior.
+- Focused-practice sessions update weak-target evidence but never complete or unlock lessons.
+
+
 ## [1.19.1] - 2026-10-06
 
 ### Fixed
