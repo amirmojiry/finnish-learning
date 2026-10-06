@@ -159,11 +159,11 @@
     "word": "tuo",
     "translation_fa": "آن؛ آن یکی",
     "example_fi": "Tuo talo on vanha.",
-    "example_fa": "می‌توانی آن کتاب را به من بدهی؟",
+    "example_fa": "آن کتاب برای من مهم است.",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر",
     "lemma": "tuo",
-    "example_2_fi": "Voitko antaa minulle tuo kirja?"
+    "example_2_fi": "Tuo kirja on minulle tärkeä."
   },
   {
     "word": "jotta",
@@ -253,6 +253,6 @@
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "apu",
-    "example_2_fi": "Karttan avulla löydämme perille."
+    "example_2_fi": "Kartan avulla löydämme perille."
   }
 ]
