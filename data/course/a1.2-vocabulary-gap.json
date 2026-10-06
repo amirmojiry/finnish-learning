@@ -2,7 +2,7 @@
   "schema_version": 1,
   "curriculum_id": "a1.2-curriculum",
   "curriculum_level": "A1.2",
-  "current_vocabulary_size": 300,
+  "current_vocabulary_size": 400,
   "source_file": "data/parole_frek_3.txt",
   "classification_policy": {
     "current_source_backed": "The exact surface form already exists in data/common-words.json.",
@@ -11,234 +11,218 @@
   },
   "summary": {
     "unique_lexical_target_count": 194,
-    "current_source_backed_count": 66,
-    "source_ranked_gap_count": 126,
+    "current_source_backed_count": 75,
+    "source_ranked_gap_count": 117,
     "curated_unranked_count": 2,
-    "current_coverage_percent": 34,
+    "current_coverage_percent": 38.7,
     "exact_parole_match_percent": 99
   },
   "recommendation": {
     "strategy": "next_consecutive_parole_tranche",
-    "start_position": 301,
-    "end_position": 400,
-    "additional_source_forms": 100,
-    "captured_target_count": 9,
+    "start_position": 401,
+    "end_position": 550,
+    "additional_source_forms": 150,
+    "captured_target_count": 5,
     "captured_targets": [
-      "perjantaina",
-      "sunnuntaina",
-      "keskiviikkona",
-      "mistä",
-      "suoraan",
-      "yliopisto",
-      "tulla",
-      "maksaa",
-      "pieni"
+      "lauantaina",
+      "mihin",
+      "kauan",
+      "lähellä",
+      "puoli"
     ],
-    "remaining_source_ranked_gap_count": 117,
+    "remaining_source_ranked_gap_count": 112,
     "candidate_endpoints": [
       {
-        "end_position": 350,
-        "additional_source_forms": 50,
-        "captured_target_count": 4,
-        "capture_density": 0.08
-      },
-      {
-        "end_position": 400,
-        "additional_source_forms": 100,
-        "captured_target_count": 9,
-        "capture_density": 0.09
-      },
-      {
         "end_position": 450,
-        "additional_source_forms": 150,
-        "captured_target_count": 10,
-        "capture_density": 0.0667
+        "additional_source_forms": 50,
+        "captured_target_count": 1,
+        "capture_density": 0.02
       },
       {
         "end_position": 500,
-        "additional_source_forms": 200,
-        "captured_target_count": 11,
-        "capture_density": 0.055
+        "additional_source_forms": 100,
+        "captured_target_count": 2,
+        "capture_density": 0.02
       },
       {
         "end_position": 550,
-        "additional_source_forms": 250,
-        "captured_target_count": 14,
-        "capture_density": 0.056
+        "additional_source_forms": 150,
+        "captured_target_count": 5,
+        "capture_density": 0.0333
       },
       {
         "end_position": 600,
-        "additional_source_forms": 300,
-        "captured_target_count": 14,
-        "capture_density": 0.0467
-      },
-      {
-        "end_position": 650,
-        "additional_source_forms": 350,
-        "captured_target_count": 16,
-        "capture_density": 0.0457
-      },
-      {
-        "end_position": 700,
-        "additional_source_forms": 400,
-        "captured_target_count": 19,
-        "capture_density": 0.0475
-      },
-      {
-        "end_position": 750,
-        "additional_source_forms": 450,
-        "captured_target_count": 20,
-        "capture_density": 0.0444
-      },
-      {
-        "end_position": 800,
-        "additional_source_forms": 500,
-        "captured_target_count": 22,
-        "capture_density": 0.044
-      },
-      {
-        "end_position": 850,
-        "additional_source_forms": 550,
-        "captured_target_count": 23,
-        "capture_density": 0.0418
-      },
-      {
-        "end_position": 900,
-        "additional_source_forms": 600,
-        "captured_target_count": 23,
-        "capture_density": 0.0383
-      },
-      {
-        "end_position": 950,
-        "additional_source_forms": 650,
-        "captured_target_count": 23,
-        "capture_density": 0.0354
-      },
-      {
-        "end_position": 1000,
-        "additional_source_forms": 700,
-        "captured_target_count": 23,
-        "capture_density": 0.0329
-      },
-      {
-        "end_position": 1050,
-        "additional_source_forms": 750,
-        "captured_target_count": 24,
-        "capture_density": 0.032
-      },
-      {
-        "end_position": 1100,
-        "additional_source_forms": 800,
-        "captured_target_count": 25,
-        "capture_density": 0.0313
-      },
-      {
-        "end_position": 1150,
-        "additional_source_forms": 850,
-        "captured_target_count": 27,
-        "capture_density": 0.0318
-      },
-      {
-        "end_position": 1200,
-        "additional_source_forms": 900,
-        "captured_target_count": 27,
-        "capture_density": 0.03
-      },
-      {
-        "end_position": 1250,
-        "additional_source_forms": 950,
-        "captured_target_count": 27,
-        "capture_density": 0.0284
-      },
-      {
-        "end_position": 1300,
-        "additional_source_forms": 1000,
-        "captured_target_count": 27,
-        "capture_density": 0.027
-      },
-      {
-        "end_position": 1350,
-        "additional_source_forms": 1050,
-        "captured_target_count": 27,
-        "capture_density": 0.0257
-      },
-      {
-        "end_position": 1400,
-        "additional_source_forms": 1100,
-        "captured_target_count": 28,
-        "capture_density": 0.0255
-      },
-      {
-        "end_position": 1450,
-        "additional_source_forms": 1150,
-        "captured_target_count": 28,
-        "capture_density": 0.0243
-      },
-      {
-        "end_position": 1500,
-        "additional_source_forms": 1200,
-        "captured_target_count": 30,
+        "additional_source_forms": 200,
+        "captured_target_count": 5,
         "capture_density": 0.025
       },
       {
-        "end_position": 1550,
-        "additional_source_forms": 1250,
-        "captured_target_count": 30,
-        "capture_density": 0.024
+        "end_position": 650,
+        "additional_source_forms": 250,
+        "captured_target_count": 7,
+        "capture_density": 0.028
       },
       {
-        "end_position": 1600,
-        "additional_source_forms": 1300,
-        "captured_target_count": 30,
+        "end_position": 700,
+        "additional_source_forms": 300,
+        "captured_target_count": 10,
+        "capture_density": 0.0333
+      },
+      {
+        "end_position": 750,
+        "additional_source_forms": 350,
+        "captured_target_count": 11,
+        "capture_density": 0.0314
+      },
+      {
+        "end_position": 800,
+        "additional_source_forms": 400,
+        "captured_target_count": 13,
+        "capture_density": 0.0325
+      },
+      {
+        "end_position": 850,
+        "additional_source_forms": 450,
+        "captured_target_count": 14,
+        "capture_density": 0.0311
+      },
+      {
+        "end_position": 900,
+        "additional_source_forms": 500,
+        "captured_target_count": 14,
+        "capture_density": 0.028
+      },
+      {
+        "end_position": 950,
+        "additional_source_forms": 550,
+        "captured_target_count": 14,
+        "capture_density": 0.0255
+      },
+      {
+        "end_position": 1000,
+        "additional_source_forms": 600,
+        "captured_target_count": 14,
+        "capture_density": 0.0233
+      },
+      {
+        "end_position": 1050,
+        "additional_source_forms": 650,
+        "captured_target_count": 15,
         "capture_density": 0.0231
       },
       {
-        "end_position": 1650,
-        "additional_source_forms": 1350,
-        "captured_target_count": 31,
-        "capture_density": 0.023
-      },
-      {
-        "end_position": 1700,
-        "additional_source_forms": 1400,
-        "captured_target_count": 32,
+        "end_position": 1100,
+        "additional_source_forms": 700,
+        "captured_target_count": 16,
         "capture_density": 0.0229
       },
       {
+        "end_position": 1150,
+        "additional_source_forms": 750,
+        "captured_target_count": 18,
+        "capture_density": 0.024
+      },
+      {
+        "end_position": 1200,
+        "additional_source_forms": 800,
+        "captured_target_count": 18,
+        "capture_density": 0.0225
+      },
+      {
+        "end_position": 1250,
+        "additional_source_forms": 850,
+        "captured_target_count": 18,
+        "capture_density": 0.0212
+      },
+      {
+        "end_position": 1300,
+        "additional_source_forms": 900,
+        "captured_target_count": 18,
+        "capture_density": 0.02
+      },
+      {
+        "end_position": 1350,
+        "additional_source_forms": 950,
+        "captured_target_count": 18,
+        "capture_density": 0.0189
+      },
+      {
+        "end_position": 1400,
+        "additional_source_forms": 1000,
+        "captured_target_count": 19,
+        "capture_density": 0.019
+      },
+      {
+        "end_position": 1450,
+        "additional_source_forms": 1050,
+        "captured_target_count": 19,
+        "capture_density": 0.0181
+      },
+      {
+        "end_position": 1500,
+        "additional_source_forms": 1100,
+        "captured_target_count": 21,
+        "capture_density": 0.0191
+      },
+      {
+        "end_position": 1550,
+        "additional_source_forms": 1150,
+        "captured_target_count": 21,
+        "capture_density": 0.0183
+      },
+      {
+        "end_position": 1600,
+        "additional_source_forms": 1200,
+        "captured_target_count": 21,
+        "capture_density": 0.0175
+      },
+      {
+        "end_position": 1650,
+        "additional_source_forms": 1250,
+        "captured_target_count": 22,
+        "capture_density": 0.0176
+      },
+      {
+        "end_position": 1700,
+        "additional_source_forms": 1300,
+        "captured_target_count": 23,
+        "capture_density": 0.0177
+      },
+      {
         "end_position": 1750,
-        "additional_source_forms": 1450,
-        "captured_target_count": 34,
-        "capture_density": 0.0234
+        "additional_source_forms": 1350,
+        "captured_target_count": 25,
+        "capture_density": 0.0185
       },
       {
         "end_position": 1800,
-        "additional_source_forms": 1500,
-        "captured_target_count": 34,
-        "capture_density": 0.0227
+        "additional_source_forms": 1400,
+        "captured_target_count": 25,
+        "capture_density": 0.0179
       },
       {
         "end_position": 1850,
-        "additional_source_forms": 1550,
-        "captured_target_count": 35,
-        "capture_density": 0.0226
+        "additional_source_forms": 1450,
+        "captured_target_count": 26,
+        "capture_density": 0.0179
       },
       {
         "end_position": 1900,
-        "additional_source_forms": 1600,
-        "captured_target_count": 35,
-        "capture_density": 0.0219
+        "additional_source_forms": 1500,
+        "captured_target_count": 26,
+        "capture_density": 0.0173
       },
       {
         "end_position": 1950,
-        "additional_source_forms": 1650,
-        "captured_target_count": 38,
-        "capture_density": 0.023
+        "additional_source_forms": 1550,
+        "captured_target_count": 29,
+        "capture_density": 0.0187
       },
       {
         "end_position": 2000,
-        "additional_source_forms": 1700,
-        "captured_target_count": 38,
-        "capture_density": 0.0224
+        "additional_source_forms": 1600,
+        "captured_target_count": 29,
+        "capture_density": 0.0181
       }
     ],
     "rationale": "Choose the standard 50-entry endpoint up to source position 2000 with the highest cumulative exact A1.2 target yield per added Parole form. This keeps the next source-backed expansion small and avoids inflating the common vocabulary merely to absorb low-frequency topic forms."
@@ -1502,7 +1486,7 @@
       "section_ids": [
         "a1.2-s3"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 301,
       "source_word": "perjantaina",
       "frequency_rank": 301,
@@ -1520,7 +1504,7 @@
       "section_ids": [
         "a1.2-s3"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 303,
       "source_word": "sunnuntaina",
       "frequency_rank": 303,
@@ -1538,7 +1522,7 @@
       "section_ids": [
         "a1.2-s3"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 323,
       "source_word": "keskiviikkona",
       "frequency_rank": 323,
@@ -1556,7 +1540,7 @@
       "section_ids": [
         "a1.2-s2"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 330,
       "source_word": "mistä",
       "frequency_rank": 329,
@@ -1574,7 +1558,7 @@
       "section_ids": [
         "a1.2-s2"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 360,
       "source_word": "suoraan",
       "frequency_rank": 360,
@@ -1592,7 +1576,7 @@
       "section_ids": [
         "a1.2-s3"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 365,
       "source_word": "yliopisto",
       "frequency_rank": 364,
@@ -1610,7 +1594,7 @@
       "section_ids": [
         "a1.2-s3"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 376,
       "source_word": "tulla",
       "frequency_rank": 376,
@@ -1628,7 +1612,7 @@
       "section_ids": [
         "a1.2-s1"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 383,
       "source_word": "maksaa",
       "frequency_rank": 383,
@@ -1646,7 +1630,7 @@
       "section_ids": [
         "a1.2-s1"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 389,
       "source_word": "pieni",
       "frequency_rank": 389,
@@ -4027,8 +4011,8 @@
         {
           "lesson_id": "a1.2-s1-l06",
           "lexical_target_count": 6,
-          "current_source_backed_count": 3,
-          "source_ranked_gap_count": 3,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 2,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4053,7 +4037,7 @@
             },
             {
               "target": "pieni",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 389
             },
             {
@@ -4066,8 +4050,8 @@
         {
           "lesson_id": "a1.2-s1-l07",
           "lexical_target_count": 7,
-          "current_source_backed_count": 3,
-          "source_ranked_gap_count": 4,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 3,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4087,7 +4071,7 @@
             },
             {
               "target": "maksaa",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 383
             },
             {
@@ -4229,8 +4213,8 @@
         {
           "lesson_id": "a1.2-s2-l02",
           "lexical_target_count": 6,
-          "current_source_backed_count": 3,
-          "source_ranked_gap_count": 3,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 2,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4250,7 +4234,7 @@
             },
             {
               "target": "suoraan",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 360
             },
             {
@@ -4312,8 +4296,8 @@
         {
           "lesson_id": "a1.2-s2-l04",
           "lexical_target_count": 7,
-          "current_source_backed_count": 3,
-          "source_ranked_gap_count": 4,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 3,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4333,7 +4317,7 @@
             },
             {
               "target": "mistä",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 330
             },
             {
@@ -4636,8 +4620,8 @@
         {
           "lesson_id": "a1.2-s3-l03",
           "lexical_target_count": 8,
-          "current_source_backed_count": 3,
-          "source_ranked_gap_count": 5,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 4,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4667,7 +4651,7 @@
             },
             {
               "target": "yliopisto",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 365
             },
             {
@@ -4773,8 +4757,8 @@
         {
           "lesson_id": "a1.2-s3-l06",
           "lexical_target_count": 9,
-          "current_source_backed_count": 5,
-          "source_ranked_gap_count": 4,
+          "current_source_backed_count": 8,
+          "source_ranked_gap_count": 1,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4804,12 +4788,12 @@
             },
             {
               "target": "keskiviikkona",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 323
             },
             {
               "target": "perjantaina",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 301
             },
             {
@@ -4819,7 +4803,7 @@
             },
             {
               "target": "sunnuntaina",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 303
             }
           ]
@@ -4827,8 +4811,8 @@
         {
           "lesson_id": "a1.2-s3-l07",
           "lexical_target_count": 7,
-          "current_source_backed_count": 3,
-          "source_ranked_gap_count": 4,
+          "current_source_backed_count": 4,
+          "source_ranked_gap_count": 3,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4848,7 +4832,7 @@
             },
             {
               "target": "tulla",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 376
             },
             {
