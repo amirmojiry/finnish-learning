@@ -182,6 +182,12 @@ test('saveProgress does not block grading when storage cannot persist even empty
 });
 
 test('answer history is bounded and retains the newest chronological evidence', () => {
+  const compact = course.trimAnswerHistoryToBudget(
+    Array.from({ length: course.ANSWER_HISTORY_LIMIT + 3 }, (_, index) => index + 1),
+  );
+  assert.equal(compact.length, course.ANSWER_HISTORY_LIMIT);
+  assert.equal(compact[0], 4);
+
   const progress = course.emptyProgress();
   progress.answerHistory = Array.from({ length: course.ANSWER_HISTORY_LIMIT + 3 }, (_, index) => ({
     sequence: index + 1,
@@ -193,8 +199,8 @@ test('answer history is bounded and retains the newest chronological evidence', 
   }));
 
   const clean = course.sanitizeProgress(progress);
-  assert.equal(clean.answerHistory.length, course.ANSWER_HISTORY_LIMIT);
-  assert.equal(clean.answerHistory[0].sequence, 4);
+  assert.ok(clean.answerHistory.length <= course.ANSWER_HISTORY_LIMIT);
+  assert.ok(course.utf8ByteLength(clean.answerHistory) <= course.ANSWER_HISTORY_MAX_BYTES);
   assert.equal(clean.answerHistory.at(-1).sequence, course.ANSWER_HISTORY_LIMIT + 3);
 });
 
