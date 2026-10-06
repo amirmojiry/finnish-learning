@@ -87,9 +87,13 @@ function chooseRecommendation(sourceRankedGaps, currentSize) {
 
   const useful = candidates.filter((candidate) => candidate.captured_target_count > 0);
   const bestDensity = useful.reduce((best, candidate) => {
-    if (!best || candidate.capture_density > best.capture_density) return candidate;
+    if (!best) return candidate;
+
+    const candidateYield = candidate.captured_target_count * best.additional_source_forms;
+    const bestYield = best.captured_target_count * candidate.additional_source_forms;
+    if (candidateYield > bestYield) return candidate;
     if (
-      candidate.capture_density === best.capture_density
+      candidateYield === bestYield
       && candidate.additional_source_forms < best.additional_source_forms
     ) {
       return candidate;
