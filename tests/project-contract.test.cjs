@@ -210,7 +210,7 @@ test('About page describes the current structured learning experience', () => {
   assert.match(about, /fi-FI/);
   assert.match(about, /voice صریح فنلاندی/);
   assert.match(about, /Kielipankki/);
-  assert.match(about, new RegExp(read('VERSION').trim().replaceAll('.', '\\\\.')));
+  assert.ok(about.includes(read('VERSION').trim()));
   assert.doesNotMatch(about, /تمرین ساده و روزانه واژگان/);
   assert.doesNotMatch(about, /سه تمرین|۳ نوع تمرین/);
 });
