@@ -321,7 +321,7 @@ test('active lessons use distraction-free chrome and viewport feedback', () => {
   const styles = fs.readFileSync(path.join(ROOT, 'css', 'course.css'), 'utf8');
 
   assert.match(source, /classList\.toggle\('course-lesson-active'/);
-  assert.match(source, /className = 'course-lesson-close'/);
+  assert.match(source, /createButton\('×', 'course-lesson-close', renderSectionMap\)/);
   assert.match(source, /aria-label', 'بستن درس و بازگشت به فهرست درس‌ها'/);
   assert.match(source, /course-activity-progress-count/);
   assert.doesNotMatch(source, /createButton\('بازگشت به درس‌ها'/);
