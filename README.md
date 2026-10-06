@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.18.1`
+- Version: `1.19.0`
 - Vocabulary entries: **300**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples, including examples tied to specific morphological values
 - word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
 - a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
-- complete 40-lesson A1.1 path with circular lesson maps, expandable section switching, Persian-to-Finnish productive recall, Finnish-voice-gated listening and dictation, structured sentence-building, and reviewed introductory morphology practice
+- complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-voice-gated listening and dictation, structured sentence-building, and reviewed introductory morphology practice
 - distraction-free active lessons with hidden global navigation, compact integrated progress, and in-viewport answer feedback
 - Word Practice spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
