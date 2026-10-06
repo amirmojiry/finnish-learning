@@ -56,13 +56,15 @@
       targetId: historyString(event.targetId),
       activityType,
       mode: historyString(event.mode),
-      correct: Boolean(event.correct),
-      productive: Boolean(event.productive),
+      correct: event.correct === true,
+      productive: event.productive === true,
+      guided: event.guided === true,
+      direction: historyString(event.direction),
       firstAttempt: event.firstAttempt !== false,
       responseMs,
       exact: typeof event.exact === 'boolean' ? event.exact : null,
-      fuzzy: Boolean(event.fuzzy),
-      diacriticAdjusted: Boolean(event.diacriticAdjusted),
+      fuzzy: event.fuzzy === true,
+      diacriticAdjusted: event.diacriticAdjusted === true,
     };
   }
 
@@ -274,6 +276,27 @@
       'negative-transform',
       'guided-writing',
     ].includes(activity.type));
+  }
+
+  function courseActivityDirection(activity) {
+    if (!activity) return null;
+    if (activity.type === 'dictation') return 'audio-to-fi';
+    if (activity.type === 'production' || activity.type === 'controlled-production' || activity.type === 'guided-writing') return 'fa-to-fi';
+    if (activity.type === 'type') return activity.mode === 'cloze' ? 'context-to-fi' : 'fa-to-fi';
+    if (activity.type === 'choice') {
+      if (activity.mode === 'listen') return 'audio-to-fa';
+      if (activity.mode === 'meaning') return 'fi-to-fa';
+      return 'context-to-fi';
+    }
+    if (activity.type === 'expression-completion') return 'context-to-fi';
+    if (activity.type === 'morphology-choice' || activity.type === 'inflection-production') return 'morphology-to-fi';
+    if (activity.type === 'negative-transform') return 'fi-transform';
+    if (activity.type === 'sentence-order') return 'fi-structure';
+    return null;
+  }
+
+  function isGuidedCourseActivity(activity) {
+    return Boolean(activity && ['controlled-production', 'guided-writing'].includes(activity.type));
   }
 
   function weakTargetsForSection(section, progress, limit = FOCUSED_PRACTICE_LIMIT) {
@@ -1796,6 +1819,8 @@
         mode: activity.mode || null,
         correct,
         productive: isProductiveCourseActivity(activity),
+        guided: isGuidedCourseActivity(activity),
+        direction: courseActivityDirection(activity),
         firstAttempt: true,
         responseMs: activityStartedAt ? Math.max(0, answeredAt - activityStartedAt) : 0,
         exact: typeof grading?.exact === 'boolean' ? grading.exact : null,
@@ -3326,6 +3351,8 @@
     courseSessionId,
     activityPrimaryTargetId,
     isProductiveCourseActivity,
+    courseActivityDirection,
+    isGuidedCourseActivity,
     weakTargetsForSection,
     buildFocusedPracticeActivities,
     makeCloze,
