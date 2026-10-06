@@ -1118,8 +1118,8 @@
       "lemma": "kuka",
       "translation_fa": "چه کسی",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 356,
       "topics": [
         "questions",
         "people"
