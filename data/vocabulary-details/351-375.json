@@ -3,250 +3,275 @@
     "word": "puolestaan",
     "translation_fa": "به نوبهٔ خود؛ از طرف دیگر",
     "example_fi": "Minä pidän kahvista, hän puolestaan teestä.",
-    "example_fa": "این یکی ارزان است و دیگری از طرف دیگر سریع‌تر است.",
+    "example_fa": "من قهوه دوست دارم و او به نوبهٔ خود چای دوست دارد.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "puolestaan",
-    "example_2_fi": "Tämä on halpa, toinen puolestaan nopeampi."
+    "example_2_fi": "Tämä on halpa, toinen on puolestaan nopeampi.",
+    "example_2_fa": "این یکی ارزان است و دیگری از طرف دیگر سریع‌تر است."
   },
   {
     "word": "tietysti",
     "translation_fa": "البته؛ طبیعتاً",
     "example_fi": "Tietysti voin auttaa sinua.",
-    "example_fa": "البته می‌توانی همراه بیایی.",
+    "example_fa": "البته می‌توانم به تو کمک کنم.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "tietysti",
-    "example_2_fi": "Voit tietysti tulla mukaan."
+    "example_2_fi": "Voit tietysti tulla mukaan.",
+    "example_2_fa": "البته می‌توانی همراه بیایی."
   },
   {
     "word": "todella",
     "translation_fa": "واقعاً؛ بسیار",
     "example_fi": "Tämä ruoka on todella hyvää.",
-    "example_fa": "امروز واقعاً خسته‌ام.",
+    "example_fa": "این غذا واقعاً خوب است.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "todella",
-    "example_2_fi": "Olen todella väsynyt tänään."
+    "example_2_fi": "Olen todella väsynyt tänään.",
+    "example_2_fa": "امروز واقعاً خسته‌ام."
   },
   {
     "word": "kari",
     "translation_fa": "کاری؛ نام مردانهٔ فنلاندی",
     "example_fi": "Kari tulee kokoukseen huomenna.",
-    "example_fa": "به کاری زنگ زدم، اما کاری پاسخ نداد.",
+    "example_fa": "کاری فردا به جلسه می‌آید.",
     "part_of_speech": "Proper noun",
     "part_of_speech_fa": "اسم خاص",
     "lemma": "Kari",
-    "example_2_fi": "Soitin Karille, mutta Kari ei vastannut."
+    "example_2_fi": "Soitin Karille, mutta Kari ei vastannut.",
+    "example_2_fa": "به کاری زنگ زدم، اما کاری پاسخ نداد."
   },
   {
     "word": "mahdollista",
     "translation_fa": "ممکن؛ امکان‌پذیر",
     "example_fi": "Onko tämä mahdollista tänään?",
-    "example_fa": "همه‌چیز فوراً امکان‌پذیر نیست.",
+    "example_fa": "آیا این امروز ممکن است؟",
     "part_of_speech": "Adjective",
     "part_of_speech_fa": "صفت",
     "lemma": "mahdollinen",
-    "example_2_fi": "Kaikki ei ole mahdollista heti."
+    "example_2_fi": "Kaikki ei ole mahdollista heti.",
+    "example_2_fa": "همه‌چیز فوراً امکان‌پذیر نیست."
   },
   {
     "word": "kuka",
     "translation_fa": "چه کسی",
     "example_fi": "Kuka hän on?",
-    "example_fa": "چه کسی همراه می‌آید؟",
+    "example_fa": "او چه کسی است؟",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر پرسشی",
     "lemma": "kuka",
-    "example_2_fi": "Kuka tulee mukaan?"
+    "example_2_fi": "Kuka tulee mukaan?",
+    "example_2_fa": "چه کسی همراه می‌آید؟"
   },
   {
     "word": "edessä",
     "translation_fa": "جلوی؛ در مقابلِ",
     "example_fi": "Bussi pysähtyy talon edessä.",
-    "example_fa": "ایستگاه درست جلوی ماست.",
+    "example_fa": "اتوبوس جلوی خانه توقف می‌کند.",
     "part_of_speech": "Adposition",
     "part_of_speech_fa": "پس‌اضافه",
     "lemma": "edessä",
-    "example_2_fi": "Asema on aivan meidän edessä."
+    "example_2_fi": "Bussi odottaa aivan aseman edessä.",
+    "example_2_fa": "اتوبوس درست جلوی ایستگاه منتظر است."
   },
   {
     "word": "jatkaa",
     "translation_fa": "ادامه دادن",
     "example_fi": "Voimme jatkaa huomenna.",
-    "example_fa": "او می‌خواهد به تحصیلش ادامه دهد.",
+    "example_fa": "می‌توانیم فردا ادامه دهیم.",
     "part_of_speech": "Verb",
     "part_of_speech_fa": "فعل",
     "lemma": "jatkaa",
-    "example_2_fi": "Hän haluaa jatkaa opintojaan."
+    "example_2_fi": "Hän haluaa jatkaa opintojaan.",
+    "example_2_fa": "او می‌خواهد به تحصیلش ادامه دهد."
   },
   {
     "word": "varmasti",
     "translation_fa": "حتماً؛ مطمئناً",
     "example_fi": "Bussi tulee varmasti pian.",
-    "example_fa": "این را حتماً به یاد می‌آورم.",
+    "example_fa": "اتوبوس حتماً به‌زودی می‌آید.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "varmasti",
-    "example_2_fi": "Muistan tämän varmasti."
+    "example_2_fi": "Muistan tämän varmasti.",
+    "example_2_fa": "این را حتماً به یاد می‌آورم."
   },
   {
     "word": "suoraan",
     "translation_fa": "مستقیم؛ مستقیماً",
     "example_fi": "Mene suoraan ja käänny sitten vasemmalle.",
-    "example_fa": "اتوبوس مستقیم به مرکز شهر می‌رود.",
+    "example_fa": "مستقیم برو و بعد به چپ بپیچ.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "suoraan",
-    "example_2_fi": "Bussi menee suoraan keskustaan."
+    "example_2_fi": "Bussi menee suoraan keskustaan.",
+    "example_2_fa": "اتوبوس مستقیم به مرکز شهر می‌رود."
   },
   {
     "word": "johon",
     "translation_fa": "که به آن؛ به جایی که",
     "example_fi": "Tämä on talo, johon muutamme.",
-    "example_fa": "دوره‌ای را که می‌خواستم در آن شرکت کنم انتخاب کردم.",
+    "example_fa": "این خانه‌ای است که به آن نقل مکان می‌کنیم.",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر موصولی",
     "lemma": "joka",
-    "example_2_fi": "Valitsin kurssin, johon halusin."
+    "example_2_fi": "Valitsin kurssin, johon halusin osallistua.",
+    "example_2_fa": "دوره‌ای را انتخاب کردم که می‌خواستم در آن شرکت کنم."
   },
   {
     "word": "vaikea",
     "translation_fa": "سخت؛ دشوار",
     "example_fi": "Tämä tehtävä on vaikea.",
-    "example_fa": "زبان فنلاندی ممکن است در ابتدا دشوار باشد.",
+    "example_fa": "این تکلیف دشوار است.",
     "part_of_speech": "Adjective",
     "part_of_speech_fa": "صفت",
     "lemma": "vaikea",
-    "example_2_fi": "Suomen kieli voi olla aluksi vaikea."
+    "example_2_fi": "Suomen kieli voi olla aluksi vaikea.",
+    "example_2_fa": "زبان فنلاندی ممکن است در ابتدا دشوار باشد."
   },
   {
     "word": "samaan",
     "translation_fa": "به همان؛ به یکسان",
     "example_fi": "Menemme samaan kauppaan.",
-    "example_fa": "در همان زمان رسیدیم.",
+    "example_fa": "به همان فروشگاه می‌رویم.",
     "part_of_speech": "Adjective",
     "part_of_speech_fa": "صفت",
     "lemma": "sama",
-    "example_2_fi": "Tulimme samaan aikaan."
+    "example_2_fi": "Tulimme samaan aikaan.",
+    "example_2_fa": "در همان زمان رسیدیم."
   },
   {
     "word": "pääministeri",
     "translation_fa": "نخست‌وزیر",
     "example_fi": "Pääministeri puhui eduskunnassa.",
-    "example_fa": "نخست‌وزیر جدید کار خود را آغاز کرد.",
+    "example_fa": "نخست‌وزیر در پارلمان سخن گفت.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "pääministeri",
-    "example_2_fi": "Uusi pääministeri aloitti työnsä."
+    "example_2_fi": "Uusi pääministeri aloitti työnsä.",
+    "example_2_fa": "نخست‌وزیر جدید کار خود را آغاز کرد."
   },
   {
     "word": "yliopisto",
     "translation_fa": "دانشگاه",
     "example_fi": "Tämä yliopisto on suuri.",
-    "example_fa": "دانشگاه در مرکز شهر قرار دارد.",
+    "example_fa": "این دانشگاه بزرگ است.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "yliopisto",
-    "example_2_fi": "Yliopisto sijaitsee keskustassa."
+    "example_2_fi": "Yliopisto sijaitsee keskustassa.",
+    "example_2_fa": "دانشگاه در مرکز شهر قرار دارد."
   },
   {
     "word": "lähinnä",
     "translation_fa": "عمدتاً؛ بیشتر؛ نزدیک‌تر",
     "example_fi": "Käytän bussia lähinnä talvella.",
-    "example_fa": "این موضوع عمدتاً به دانشجویان جدید مربوط می‌شود.",
+    "example_fa": "من بیشتر در زمستان از اتوبوس استفاده می‌کنم.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "lähinnä",
-    "example_2_fi": "Tämä koskee lähinnä uusia opiskelijoita."
+    "example_2_fi": "Tämä koskee lähinnä uusia opiskelijoita.",
+    "example_2_fa": "این موضوع عمدتاً به دانشجویان جدید مربوط می‌شود."
   },
   {
     "word": "q",
     "translation_fa": "حرف q",
     "example_fi": "Kirjain q on harvinainen suomen sanoissa.",
-    "example_fa": "یک واژه می‌تواند حرف q داشته باشد.",
+    "example_fa": "حرف q در واژه‌های فنلاندی کم‌کاربرد است.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "q",
-    "example_2_fi": "Sana voi sisältää kirjaimen q."
+    "example_2_fi": "Sana voi sisältää kirjaimen q.",
+    "example_2_fa": "یک واژه می‌تواند حرف q داشته باشد."
   },
   {
     "word": "jälleen",
     "translation_fa": "دوباره؛ بار دیگر",
     "example_fi": "Nähdään jälleen huomenna.",
-    "example_fa": "فروشگاه دوباره باز است.",
+    "example_fa": "فردا دوباره همدیگر را می‌بینیم.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "jälleen",
-    "example_2_fi": "Kauppa on jälleen auki."
+    "example_2_fi": "Kauppa on jälleen auki.",
+    "example_2_fa": "فروشگاه دوباره باز است."
   },
   {
     "word": "itsensä",
     "translation_fa": "خودش؛ خودِ او",
     "example_fi": "Hän esitteli itsensä ryhmälle.",
-    "example_fa": "او خودش را در آینه دید.",
+    "example_fa": "او خودش را به گروه معرفی کرد.",
     "part_of_speech": "Pronoun",
     "part_of_speech_fa": "ضمیر",
     "lemma": "itse",
-    "example_2_fi": "Hän näki itsensä peilistä."
+    "example_2_fi": "Hän näki itsensä peilistä.",
+    "example_2_fa": "او خودش را در آینه دید."
   },
   {
     "word": "muuten",
     "translation_fa": "در غیر این صورت؛ راستی؛ به‌جز این",
     "example_fi": "Lähde nyt, muuten myöhästyt.",
-    "example_fa": "راستی، فردا چه کار می‌کنی؟",
+    "example_fa": "الان برو، وگرنه دیر می‌رسی.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "muuten",
-    "example_2_fi": "Muuten, mitä teet huomenna?"
+    "example_2_fi": "Muuten, mitä teet huomenna?",
+    "example_2_fa": "راستی، فردا چه کار می‌کنی؟"
   },
   {
     "word": "vuodessa",
     "translation_fa": "در سال؛ طی یک سال",
     "example_fi": "Käyn Iranissa kerran vuodessa.",
-    "example_fa": "در یک سال دوازده ماه وجود دارد.",
+    "example_fa": "سالانه یک بار به ایران می‌روم.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "vuosi",
-    "example_2_fi": "Vuodessa on kaksitoista kuukautta."
+    "example_2_fi": "Vuodessa on kaksitoista kuukautta.",
+    "example_2_fa": "در یک سال دوازده ماه وجود دارد."
   },
   {
     "word": "erittäin",
     "translation_fa": "بسیار؛ فوق‌العاده",
     "example_fi": "Tämä on erittäin tärkeää.",
-    "example_fa": "او بسیار واضح صحبت می‌کند.",
+    "example_fa": "این بسیار مهم است.",
     "part_of_speech": "Adverb",
     "part_of_speech_fa": "قید",
     "lemma": "erittäin",
-    "example_2_fi": "Hän puhuu erittäin selvästi."
+    "example_2_fi": "Hän puhuu erittäin selvästi.",
+    "example_2_fa": "او بسیار واضح صحبت می‌کند."
   },
   {
     "word": "voinut",
     "translation_fa": "توانسته؛ ممکن بوده",
     "example_fi": "En ole voinut tulla aiemmin.",
-    "example_fa": "او نتوانسته خوب بخوابد.",
+    "example_fa": "نتوانسته‌ام زودتر بیایم.",
     "part_of_speech": "participle",
     "part_of_speech_fa": "وجه وصفی / اسم مفعول",
     "lemma": "voida",
-    "example_2_fi": "Hän ei ole voinut nukkua hyvin."
+    "example_2_fi": "Hän ei ole voinut nukkua hyvin.",
+    "example_2_fa": "او نتوانسته خوب بخوابد."
   },
   {
     "word": "suomeen",
     "translation_fa": "به فنلاند",
     "example_fi": "Muutin Suomeen viime vuonna.",
-    "example_fa": "چه زمانی به فنلاند آمدی؟",
+    "example_fa": "سال گذشته به فنلاند نقل مکان کردم.",
     "part_of_speech": "Proper noun",
     "part_of_speech_fa": "اسم خاص",
     "lemma": "Suomi",
-    "example_2_fi": "Milloin tulit Suomeen?"
+    "example_2_fi": "Milloin tulit Suomeen?",
+    "example_2_fa": "چه زمانی به فنلاند آمدی؟"
   },
   {
     "word": "yhteydessä",
     "translation_fa": "در ارتباط؛ در رابطه با؛ هنگام",
     "example_fi": "Ota minuun yhteyttä ongelman yhteydessä.",
-    "example_fa": "هنگام اسباب‌کشی باید آدرس را به‌روزرسانی کرد.",
+    "example_fa": "در رابطه با مشکل با من تماس بگیر.",
     "part_of_speech": "Noun",
     "part_of_speech_fa": "اسم",
     "lemma": "yhteys",
-    "example_2_fi": "Muuton yhteydessä osoite pitää päivittää."
+    "example_2_fi": "Muuton yhteydessä osoite pitää päivittää.",
+    "example_2_fa": "هنگام اسباب‌کشی باید آدرس را به‌روزرسانی کرد."
   }
 ]
