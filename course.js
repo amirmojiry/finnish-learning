@@ -100,14 +100,23 @@
     return sections.slice(sectionIndex + 1).some((entry) => isSectionStarted(entry, progress));
   }
 
+  function isSectionAccessible(sections, progress, sectionIndex) {
+    if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
+    return (
+      isSectionUnlocked(sections, progress, sectionIndex)
+      || isSectionStarted(sections[sectionIndex], progress)
+      || isBackfillSectionUnlocked(sections, progress, sectionIndex)
+    );
+  }
+
   function isCourseLessonAccessible(sections, progress, sectionIndex, lessonIndex) {
     if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
     const targetSection = sections[sectionIndex];
     if (!targetSection || !Array.isArray(targetSection.lessons) || lessonIndex < 0 || lessonIndex >= targetSection.lessons.length) return false;
     if (lessonIndex === 0) return true;
     if (isBackfillSectionUnlocked(sections, progress, sectionIndex)) return true;
-    const sectionAvailable = isSectionUnlocked(sections, progress, sectionIndex) || isSectionStarted(targetSection, progress);
-    return sectionAvailable && isLessonUnlocked(targetSection, progress, lessonIndex);
+    return isSectionAccessible(sections, progress, sectionIndex)
+      && isLessonUnlocked(targetSection, progress, lessonIndex);
   }
 
   function passesLessonRequirement(lesson, correct, graded) {
@@ -1689,7 +1698,7 @@
       for (const entry of curriculum?.sections || []) {
         const implemented = sections.find((candidate) => candidate.curriculum_section_id === entry.id) || null;
         const implementedIndex = implemented ? sections.indexOf(implemented) : -1;
-        const unlocked = implemented ? isSectionUnlocked(sections, progress, implementedIndex) : false;
+        const unlocked = implemented ? isSectionAccessible(sections, progress, implementedIndex) : false;
         const current = implemented === section;
         const option = createButton('', `course-section-selector-option${current ? ' is-current' : ''}${unlocked ? ' is-unlocked' : ' is-locked'}`, () => {
           if (!implemented || current) return;
@@ -2893,6 +2902,7 @@
     isSectionUnlocked,
     isSectionStarted,
     isBackfillSectionUnlocked,
+    isSectionAccessible,
     isCourseLessonAccessible,
     passesLessonRequirement,
     recordLessonCompletion,
