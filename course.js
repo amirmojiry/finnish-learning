@@ -1667,6 +1667,11 @@
     let activityIndex = 0;
     let sessionCorrect = 0;
     let sessionGraded = 0;
+    let sessionSequence = 0;
+    let activeSessionId = null;
+    let sessionStartedAt = 0;
+    let activityStartedAt = 0;
+    let activityTimingIndex = -1;
     let answered = false;
 
     function isCourseHash() {
@@ -1759,13 +1764,44 @@
       return button;
     }
 
-    function recordActivityResult(activity, correct) {
+    function beginCourseSession(sessionType, lessonId) {
+      sessionSequence += 1;
+      sessionStartedAt = Date.now();
+      activeSessionId = courseSessionId(section?.id, sessionType, lessonId, sessionStartedAt, sessionSequence);
+      activityStartedAt = 0;
+      activityTimingIndex = -1;
+    }
+
+    function recordActivityResult(activity, correct, grading = null) {
       answered = true;
       sessionGraded += 1;
       if (correct) sessionCorrect += 1;
+      if (!section) return;
+
+      const answeredAt = Date.now();
       const targetId = activityPrimaryTargetId(activity);
-      if (!targetId || !section) return;
-      progress = recordTargetAttempt(progress, section.id, targetId, correct);
+      if (targetId) {
+        progress = recordTargetAttempt(progress, section.id, targetId, correct, answeredAt);
+      }
+      progress = recordAnswerHistoryEvent(progress, {
+        answeredAt,
+        sessionId: activeSessionId || courseSessionId(section.id, 'lesson', activeLesson?.id, answeredAt, 1),
+        sessionStartedAt: sessionStartedAt || answeredAt,
+        sessionType: activeLesson?.focused_practice ? 'focused' : 'lesson',
+        sectionId: section.id,
+        lessonId: activeLesson?.id || null,
+        sourceLessonId: activity.source_lesson_id || (activeLesson?.focused_practice ? null : activeLesson?.id || null),
+        targetId,
+        activityType: activity.type || 'unknown',
+        mode: activity.mode || null,
+        correct,
+        productive: isProductiveCourseActivity(activity),
+        firstAttempt: true,
+        responseMs: activityStartedAt ? Math.max(0, answeredAt - activityStartedAt) : 0,
+        exact: typeof grading?.exact === 'boolean' ? grading.exact : null,
+        fuzzy: Boolean(grading?.fuzzy),
+        diacriticAdjusted: Boolean(grading?.diacriticAdjusted),
+      });
       progress = saveProgress(windowObject.localStorage, progress);
     }
 
@@ -2259,6 +2295,7 @@
       sessionCorrect = 0;
       sessionGraded = 0;
       answered = false;
+      beginCourseSession('lesson', lesson.id);
       setHash(`#course-${lesson.id}`);
       showCourseView();
       renderActivity();
@@ -2282,6 +2319,7 @@
       sessionCorrect = 0;
       sessionGraded = 0;
       answered = false;
+      beginCourseSession('focused', activeLesson.id);
       setHash(`#course-${section.id}`);
       showCourseView();
       renderActivity();
@@ -2317,6 +2355,10 @@
       if (!activeLesson) return renderSectionMap();
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
+      if (activityTimingIndex !== activityIndex) {
+        activityTimingIndex = activityIndex;
+        activityStartedAt = Date.now();
+      }
       answered = false;
       const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
