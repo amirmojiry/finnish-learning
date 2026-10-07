@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.26.0] - 2026-10-07
+
+### Added
+
+- Playable A1.2 Section 2 with ten reviewed travel lessons and 150 deterministic activities covering town places, directions, source/destination, transport, tickets, timetables, distance/duration, and an integrated short trip.
+- Travel-specific visual choices, an explicit timetable clock task, short readings, dialogue ordering, listening/dictation, and an 80% mixed checkpoint.
+- Regression coverage for A1.2 Section 2 curriculum mapping, source-backed frequency provenance, explicit Finnish morphology, section jump access, integrated travel tasks, and the 150-activity contract.
+
+### Changed
+
+- Expand the playable A1.2 path from 10 to 20 lessons by loading Section 2 after Shopping and everyday services.
+- Keep destination, source, transport, ticket, and duration inflections as explicit reviewed forms rather than runtime suffix generation.
+
+
 ## [1.25.1] - 2026-10-07
 
 ### Changed
