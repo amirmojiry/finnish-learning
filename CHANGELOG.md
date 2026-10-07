@@ -6,6 +6,19 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.24.0] - 2026-10-07
+
+### Added
+
+- Finnish sentence-audio controls for both curated dictionary examples, real UD corpus examples, and morphology feature examples.
+- Local Persian translations for every displayed real UD corpus example, with no runtime translation-service dependency.
+- A destructive course-progress control in Settings with SweetAlert2 confirmation and cancellation protection.
+
+### Changed
+
+- Move course progress reset out of the course map and keep the course state synchronized after a confirmed reset from Settings.
+
+
 ## [1.23.0] - 2026-10-07
 
 ### Added
