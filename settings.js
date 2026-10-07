@@ -21,6 +21,7 @@
   const speechVoice = document.querySelector('#finnish-speech-voice');
   const speechGuide = document.querySelector('#finnish-speech-guide');
   const speechRetry = document.querySelector('#finnish-speech-retry');
+  const courseProgressReset = document.querySelector('#course-progress-reset');
 
   function currentTheme() {
     return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
@@ -134,6 +135,33 @@
     }
   }
 
+  async function confirmCourseProgressReset() {
+    const courseApi = window.FinnishCourse;
+    if (!courseApi?.resetProgress || !window.Swal?.fire) return false;
+
+    const result = await window.Swal.fire({
+      title: 'پیشرفت دوره پاک شود؟',
+      text: 'این کار همهٔ درس‌های کامل‌شده، امتیازها، تمرین نقاط ضعف و تاریخچهٔ پاسخ‌های دوره را پاک می‌کند و قابل بازگشت نیست.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'بله، پاک شود',
+      cancelButtonText: 'لغو',
+      reverseButtons: true,
+      focusCancel: true,
+    });
+
+    if (!result.isConfirmed) return false;
+
+    courseApi.resetProgress(localStorage);
+    window.dispatchEvent(new CustomEvent('finnish-course-progress-reset'));
+    await window.Swal.fire({
+      title: 'پیشرفت دوره پاک شد',
+      icon: 'success',
+      confirmButtonText: 'باشه',
+    });
+    return true;
+  }
+
   themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice)));
   settingsLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -146,6 +174,7 @@
   }));
   regularViewLinks.forEach((link) => link.addEventListener('click', leaveSpecialViews));
   speechRetry?.addEventListener('click', renderFinnishSpeechStatus);
+  courseProgressReset?.addEventListener('click', confirmCourseProgressReset);
   window.addEventListener('hashchange', syncSpecialViewFromHash);
 
   applyTheme(currentTheme(), false);
