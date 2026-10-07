@@ -20,6 +20,11 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
 
+      - name: Synchronize branch before generation
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: git pull --rebase origin "$HEAD_BRANCH"
+
       - name: Add missing morphology-example translations
         run: |
           python3 - <<'PY'
@@ -104,7 +109,6 @@ jobs:
         env:
           HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |
-          git pull --rebase origin "$HEAD_BRANCH"
           if git diff --quiet -- data/corpus-example-translations-fa.json; then
             echo "No translation changes."
             exit 0
