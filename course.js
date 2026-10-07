@@ -553,6 +553,22 @@
       };
     }
 
+    const rejected = Array.isArray(item?.rejected_answers)
+      ? item.rejected_answers.map(normalizeAnswer).filter(Boolean)
+      : [];
+    if (rejected.includes(entered)) {
+      return {
+        accepted: false,
+        exact: false,
+        fuzzy: false,
+        diacriticAdjusted: false,
+        similarity: 0,
+        entered,
+        expected: candidates[0] || '',
+        operations: [],
+      };
+    }
+
     let best = null;
     for (const expected of candidates) {
       const alignment = alignAnswers(entered, expected);
