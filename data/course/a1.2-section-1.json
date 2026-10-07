@@ -2207,15 +2207,9 @@
           "item": "a12s1-hf-mitaan"
         },
         {
-          "type": "choice",
+          "type": "type",
           "mode": "finnish",
-          "item": "a12s1-hf-takaisin",
-          "options": [
-            "a12s1-hf-ei",
-            "a12s1-hf-mitaan",
-            "a12s1-hf-takaisin",
-            "a12s1-topic-ongelma"
-          ]
+          "item": "a12s1-expr-tarvitsen-apua-77"
         },
         {
           "type": "choice",
