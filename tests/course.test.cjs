@@ -513,6 +513,23 @@ test('number lesson exposes the complete 0–20 reference grid and deterministic
   assert.ok(lesson.activities.some((activity) => activity.mode === 'listen'));
 });
 
+test('Section 2 family and age answers use learner-friendly reviewed forms', () => {
+  assert.equal(section2.items['s2-sisar'].translation_fa, 'خواهر');
+
+  const lesson = section2.lessons.find((entry) => entry.curriculum_id === 'a1.1-s2-l07');
+  const grid = lesson.activities.find((activity) => activity.type === 'number-grid');
+  grid.items.forEach((itemId, number) => {
+    const item = section2.items[itemId];
+    assert.equal(course.isTypedAnswerCorrect(item, item.surface_form), true, itemId);
+    assert.equal(course.isTypedAnswerCorrect(item, String(number)), true, itemId);
+  });
+
+  const age = section2.items['s2-olen-12-vuotias'];
+  assert.equal(course.isTypedAnswerCorrect(age, 'Olen 12-vuotias.'), true);
+  assert.equal(course.isTypedAnswerCorrect(age, 'Olen kaksitoistavuotias.'), true);
+  assert.equal(course.isTypedAnswerCorrect(age, 'Olen kaksitoista vuotta vanha.'), true);
+});
+
 test('all Section 2 activity references and typed answers are explicit', () => {
   for (const lesson of section2.lessons) {
     for (const activity of lesson.activities) {
