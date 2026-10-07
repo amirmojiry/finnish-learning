@@ -85,8 +85,10 @@ test('structured-practice manifests are explicit and stay inside reviewed lesson
         assert.equal(prepared.length, 1, `${lesson.id}: ${spec.type} / ${spec.item}`);
         if (spec.type === 'sentence-order') {
           assert.ok(prepared[0].expected_fa, `${lesson.id}: sentence order needs Persian feedback`);
-          const { expected_fa: _expectedFa, ...preparedSpec } = prepared[0];
-          assert.deepEqual(preparedSpec, spec);
+          const { expected_fa: _preparedExpectedFa, ...preparedSpec } = prepared[0];
+          const { expected_fa: _specExpectedFa, ...rawSpec } = spec;
+          assert.deepEqual(preparedSpec, rawSpec);
+          if (spec.expected_fa) assert.equal(prepared[0].expected_fa, spec.expected_fa);
         } else {
           assert.deepEqual(prepared[0], spec);
         }
