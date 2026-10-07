@@ -26,7 +26,9 @@ test('UD corpus and morphology examples share an accessible Finnish audio contro
 test('UD corpus rendering loads and displays local Persian translations', () => {
   const source = read('ud-analysis.js');
   assert.match(source, /EXAMPLE_TRANSLATIONS_URL = 'data\/corpus-example-translations-fa\.json'/);
-  assert.match(source, /udState\.exampleTranslations = new Map\(Object\.entries\(translations\.translations\)\)/);
+  assert.ok(
+    source.includes('udState.exampleTranslations = new Map(Object.entries(translations?.translations || {}));'),
+  );
   assert.match(source, /class="ud-example-translation"/);
   assert.doesNotMatch(source, /translate\.googleapis|mymemory|libretranslate/i);
 });
