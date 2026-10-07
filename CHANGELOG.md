@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.25.1] - 2026-10-07
+
+### Changed
+
+- Keep implemented A1 stages browseable before earlier stages are complete so learners can inspect lesson titles, goals, summaries, and grammar notes.
+- Restore the same first-lesson jump entry behavior across the A1.1/A1.2 stage boundary while preserving sequential unlocking for later lessons inside the selected section.
+
+
 ## [1.25.0] - 2026-10-07
 
 ### Added
