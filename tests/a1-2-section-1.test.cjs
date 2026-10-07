@@ -94,6 +94,19 @@ test('already-started A1.2 remains accessible for backfill-safe existing progres
   assert.equal(course.isCourseLessonAccessible(sections, progress, 4, 0), true);
 });
 
+test('complete shopping production evidence is attributed to the Haluaisin expression', () => {
+  const lesson = a12Section1.lessons.find((entry) => entry.curriculum_id === 'a1.2-s1-l09');
+  assert.ok(lesson);
+  const requestId = lesson.curriculum_target_refs.expressions.find((itemId) => (
+    a12Section1.items[itemId]?.surface_form === 'Haluaisin tämän, kiitos.'
+  ));
+  assert.ok(requestId);
+  assert.deepEqual(lesson.production_targets, [requestId]);
+  assert.equal(lesson.structured_practice[0].item, requestId);
+  assert.equal(lesson.structured_practice[0].expected_fi, 'Haluaisin tämän, kiitos.');
+  assert.ok(lesson.structured_practice[0].accepted_answers.includes('Haluaisin tämän, kiitos.'));
+});
+
 test('A1.2 Section 1 keeps curriculum target mappings exact', () => {
   const contract = a12Curriculum.sections[0];
   for (const contractLesson of contract.lessons) {
@@ -152,6 +165,13 @@ test('course UI contains compact A1.1/A1.2 level tabs and no A1.3 tab', () => {
   assert.match(source, /COURSE_STAGES/);
   assert.match(source, /preferredSectionForLevel/);
   assert.match(source, /currentCurriculum = curricula\.get\(section\.level\)/);
+  assert.match(source, /tab\.tabIndex = current \? 0 : -1/);
+  assert.match(source, /tab\.disabled = !stageSections\.length \|\| \(!accessible && !current\)/);
+  assert.match(source, /levelTabs\.addEventListener\('keydown'/);
+  assert.match(source, /event\.key === 'ArrowRight'/);
+  assert.match(source, /event\.key === 'ArrowLeft'/);
+  assert.match(source, /event\.key === 'Home'/);
+  assert.match(source, /event\.key === 'End'/);
   assert.match(styles, /\.course-level-tabs/);
   assert.match(styles, /\.course-level-tab\.is-current/);
 });
