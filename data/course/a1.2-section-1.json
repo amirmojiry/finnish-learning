@@ -1617,8 +1617,9 @@
           "item": "a12s1-topic-yhdeksankymmenta"
         },
         {
-          "type": "teach",
-          "item": "a12s1-topic-sata"
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-20"
         },
         {
           "type": "choice",
