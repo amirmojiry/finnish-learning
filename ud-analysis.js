@@ -4,7 +4,7 @@
   const SUMMARY_URL = 'data/ud/word-summary.json?v=20260731-2';
   const LABELS_URL = 'data/ud/labels-fa.json?v=20260731-2';
   const VOCABULARY_URL = 'data/common-words.json?v=20260731-8';
-  const EXAMPLE_TRANSLATIONS_URL = 'data/ud/example-translations-fa.json';
+  const EXAMPLE_TRANSLATIONS_URL = 'data/corpus-example-translations-fa.json';
   const SECTION_ID = 'ud-analysis-section';
 
   const numberFormatter = new Intl.NumberFormat('fa-IR');
