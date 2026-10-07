@@ -2645,7 +2645,7 @@
         card.classList.add('is-long-content');
         const instruction = document.createElement('p');
         instruction.className = 'course-number-grid-instruction';
-        instruction.textContent = 'اعداد ۰ تا ۲۰ را یک‌بار از ابتدا تا انتها مرور کن.';
+        instruction.textContent = activity.label_fa || 'اعداد این درس را یک‌بار از ابتدا تا انتها مرور کن.';
         const grid = document.createElement('div');
         grid.className = 'course-number-grid';
         for (const itemId of activity.items) {
