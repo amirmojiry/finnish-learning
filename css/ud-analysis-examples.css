@@ -96,13 +96,61 @@
   padding: 9px 10px;
 }
 
+.ud-example-sentence-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  direction: ltr;
+}
+
 .ud-example blockquote {
+  flex: 1;
+  min-width: 0;
   margin: 0;
   color: var(--text);
   font-family: Arial, sans-serif;
   font-size: .78rem;
   line-height: 1.65;
   text-align: left;
+}
+
+.ud-speak-button {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, var(--border));
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary) 7%, var(--surface));
+  color: var(--primary);
+  padding: 0;
+  cursor: pointer;
+}
+
+.ud-speak-button:hover,
+.ud-speak-button:focus-visible {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 14%, var(--surface));
+  outline: none;
+}
+
+.ud-speak-button:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+.ud-speak-button svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.ud-example-translation {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: .74rem;
+  line-height: 1.75;
+  text-align: right;
 }
 
 .ud-example mark {
@@ -151,6 +199,20 @@
 
 .ud-example.is-compact blockquote {
   font-size: .72rem;
+}
+
+.ud-example.is-compact .ud-speak-button {
+  width: 27px;
+  height: 27px;
+}
+
+.ud-example.is-compact .ud-speak-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ud-example.is-compact .ud-example-translation {
+  font-size: .68rem;
 }
 
 .ud-example.is-compact figcaption {
