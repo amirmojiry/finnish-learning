@@ -112,6 +112,7 @@ test('sentence ordering, expression completion, and controlled production keep e
           lesson.id,
         );
         assert.ok(activity.expected_fa, `${lesson.id}: missing Persian sentence translation`);
+        if (lesson.id === 'section-3-lesson-7') assert.equal(activity.expected_fa, 'نمی‌نوشم.');
       } else if (activity.type === 'expression-completion') {
         assert.ok(activity.prompt_fi.includes('_____'), lesson.id);
         assert.ok(activity.accepted_answers.length >= 1, lesson.id);
