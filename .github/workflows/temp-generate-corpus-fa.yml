@@ -1,10 +1,7 @@
 name: Temporary generate Persian corpus example translations
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - '.github/workflows/temp-generate-corpus-fa.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
