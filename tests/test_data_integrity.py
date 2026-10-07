@@ -149,12 +149,19 @@ class UdSummaryIntegrityTests(unittest.TestCase):
 
     def test_every_displayed_corpus_example_has_a_local_persian_translation(self):
         translations = self.example_translations.get("translations", {})
-        expected_ids = {
-            example["sentence_id"]
-            for row in self.summary["words"]
-            for example in row.get("examples", [])
-            if str(example.get("sentence_id", "")).strip()
-        }
+        expected_ids = set()
+        for row in self.summary["words"]:
+            for example in row.get("examples", []):
+                sentence_id = str(example.get("sentence_id", "")).strip()
+                if sentence_id:
+                    expected_ids.add(sentence_id)
+            for feature in row.get("features", []):
+                for value in feature.get("values", []):
+                    example = value.get("example")
+                    sentence_id = str((example or {}).get("sentence_id", "")).strip()
+                    if sentence_id:
+                        expected_ids.add(sentence_id)
+
         self.assertGreater(len(expected_ids), 0)
         self.assertEqual(set(translations), expected_ids)
         for sentence_id in expected_ids:
