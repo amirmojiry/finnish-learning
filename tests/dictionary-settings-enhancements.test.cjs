@@ -39,7 +39,11 @@ test('course reset lives in Settings and requires SweetAlert2 confirmation', () 
   const courseSource = read('course.js');
 
   assert.match(html, /id="course-progress-reset"/);
-  assert.match(html, /cdn\.jsdelivr\.net\/npm\/sweetalert2@11/);
+  assert.match(html, /cdn\.jsdelivr\.net\/npm\/sweetalert2@11" async/);
+  assert.ok(
+    html.indexOf('app.js?v=1.24.0') < html.indexOf('cdn.jsdelivr.net/npm/sweetalert2@11'),
+    'external SweetAlert must not gate local app scripts',
+  );
   assert.doesNotMatch(courseSource, /course-reset-button/);
   assert.doesNotMatch(courseSource, /پاک‌کردن پیشرفت دوره/);
 
@@ -47,6 +51,7 @@ test('course reset lives in Settings and requires SweetAlert2 confirmation', () 
   assert.match(settings, /showCancelButton: true/);
   assert.match(settings, /focusCancel: true/);
   assert.match(settings, /if \(!result\.isConfirmed\) return false/);
+  assert.match(settings, /window\.confirm/);
   assert.match(settings, /courseApi\.resetProgress\(localStorage\)/);
   assert.match(settings, /finnish-course-progress-reset/);
 });
