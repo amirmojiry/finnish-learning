@@ -70,12 +70,15 @@ When adding entries such as positions 201–300:
 2. Build `data/common-words.json` from the original Latin-1 Parole file and curated details; do not manually type source ranks, counts, forms, or percentages into the generated output.
 3. Confirm `position` and display `rank` remain unique and sequential while `frequency_rank` preserves source ties.
 4. Regenerate all UD analysis and compact browser-summary files.
-5. Confirm every vocabulary form has a corresponding UD summary row, including forms with no simple-token UPOS evidence.
-6. Confirm dominant UPOS ordering, percentages, feature-specific examples, and source coverage.
-7. Confirm the hero count, about-page count, dictionary count, quiz pool, search, sorting, detail view, all practice modes, linked-word behavior, and frequency popover use the enlarged data set.
-8. Confirm POS filter options are derived from currently loaded words after dominant UD POS synchronization. Empty categories are forbidden.
-9. Run `npm run sync` so `index.html`, `deploy-version.txt`, `README.md`, and `README.fa.md` show the new count and current version.
-10. Use a MINOR version bump, update `CHANGELOG.md`, and run `npm test`.
+5. Refresh `data/corpus-example-translations-fa.json` after the UD/browser summary is regenerated. The required translation keys are the exact union of every non-empty sentence ID rendered from `words[].examples[].sentence_id` and `words[].features[].values[].example.sentence_id` in `data/ud/word-summary.json`.
+6. Preserve Persian translations for unchanged sentence IDs, add a non-empty Persian translation for every new sentence ID, and remove translation entries whose sentence IDs are no longer rendered. Translation may be generated or reviewed during development, but the final Persian text must be committed locally; the shipped browser app must not call a runtime translation service.
+7. Keep corpus and morphology example audio on the shared UD example renderer. No per-sentence audio asset or metadata is required: any Finnish sentence rendered through `renderUdExample()` receives the existing Finnish TTS control automatically. Do not bypass that renderer when introducing a new displayed UD-example surface.
+8. Confirm every vocabulary form has a corresponding UD summary row, including forms with no simple-token UPOS evidence.
+9. Confirm dominant UPOS ordering, percentages, feature-specific examples, and source coverage.
+10. Confirm the hero count, about-page count, dictionary count, quiz pool, search, sorting, detail view, all practice modes, linked-word behavior, and frequency popover use the enlarged data set.
+11. Confirm POS filter options are derived from currently loaded words after dominant UD POS synchronization. Empty categories are forbidden.
+12. Run `npm run sync` so `index.html`, `deploy-version.txt`, `README.md`, and `README.fa.md` show the new count and current version.
+13. Use a MINOR version bump, update `CHANGELOG.md`, and run `npm test`. The data-integrity suite must pass the exact corpus-translation coverage check for both top-level UD examples and morphology feature examples before merge.
 
 Never hardcode a vocabulary total in application logic, generators, workflows, or tests. Derive it from `data/common-words.json`. A current count may appear only in synchronized user-facing output.
 
@@ -93,6 +96,7 @@ The suite must cover at least:
 - exact alignment of all frequency fields with the original Parole file
 - vocabulary schema, uniqueness, sequential positions, translations, lemmas, and both bilingual examples
 - alignment between vocabulary and the UD browser summary
+- exact Persian translation coverage for every rendered UD sentence ID, including both top-level corpus examples and morphology feature examples
 - dominant-UPOS ordering and the known `ovat` AUX/indicative regression fixture
 - dictionary POS option generation, stale-option removal, valid-selection preservation, and invalid-selection reset
 - spaced-repetition queue behavior, reviewed-word ordering, per-word status, and reviewed/mastered frequency coverage
