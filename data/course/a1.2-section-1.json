@@ -2448,7 +2448,7 @@
         }
       ],
       "production_targets": [
-        "a12s1-expr-hei-78"
+        "a12s1-expr-haluaisin-taman-kiitos-28"
       ],
       "listening_targets": [
         "a12s1-expr-paljonko-tama-maksaa-6",
@@ -2457,7 +2457,7 @@
       "structured_practice": [
         {
           "type": "controlled-production",
-          "item": "a12s1-expr-hei-78",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
           "prompt_fa": "این را می‌خواهم، متشکرم.",
           "cues_fi": [
             "Haluaisin",
