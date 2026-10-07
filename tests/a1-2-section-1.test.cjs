@@ -11,6 +11,7 @@ const a11Curriculum = readJson('data/course/a1.1-curriculum.json');
 const a12Curriculum = readJson('data/course/a1.2-curriculum.json');
 const a11Sections = [1,2,3,4].map((number) => readJson(`data/course/a1.1-section-${number}.json`));
 const a12Section1 = readJson('data/course/a1.2-section-1.json');
+const vocabulary = readJson('data/common-words.json');
 
 test('course stage configuration exposes playable A1.1 and A1.2 only', () => {
   assert.deepEqual(course.COURSE_STAGES.map((stage) => stage.level), ['A1.1', 'A1.2']);
@@ -107,6 +108,24 @@ test('complete shopping production evidence is attributed to the Haluaisin expre
   assert.ok(lesson.structured_practice[0].accepted_answers.includes('Haluaisin tämän, kiitos.'));
 });
 
+test('A1.2 manifest preserves Parole rank metadata for every source-backed form', () => {
+  const sourceBySurface = new Map(
+    vocabulary.words.map((entry) => [
+      String(entry.word).normalize('NFC').toLocaleLowerCase('fi-FI'),
+      entry,
+    ]),
+  );
+
+  for (const item of Object.values(a12Section1.items)) {
+    const sourceEntry = sourceBySurface.get(
+      String(item.surface_form).normalize('NFC').toLocaleLowerCase('fi-FI'),
+    );
+    if (!sourceEntry) continue;
+    assert.equal(item.frequency_status, 'ranked', item.id);
+    assert.equal(item.frequency_rank, sourceEntry.frequency_rank, item.id);
+  }
+});
+
 test('A1.2 Section 1 keeps curriculum target mappings exact', () => {
   const contract = a12Curriculum.sections[0];
   for (const contractLesson of contract.lessons) {
@@ -196,6 +215,8 @@ test('course UI contains compact A1.1/A1.2 level tabs and no A1.3 tab', () => {
   assert.match(source, /preferredSectionForLevel/);
   assert.match(source, /currentCurriculum = curricula\.get\(section\.level\)/);
   assert.match(source, /tab\.tabIndex = current \? 0 : -1/);
+  assert.match(source, /const restoreFocus = document\.activeElement === tab/);
+  assert.match(source, /root\.querySelector\('\.course-level-tab\.is-current'\)\?\.focus\(\)/);
   assert.match(source, /tab\.disabled = !stageSections\.length \|\| \(!accessible && !current\)/);
   assert.match(source, /levelTabs\.addEventListener\('keydown'/);
   assert.match(source, /event\.key === 'ArrowRight'/);
