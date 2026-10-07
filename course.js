@@ -191,6 +191,10 @@
     }
   }
 
+  function resetProgress(storage) {
+    return saveProgress(storage, emptyProgress());
+  }
+
   function isLessonUnlocked(section, progress, lessonIndex) {
     if (!section || !Array.isArray(section.lessons) || lessonIndex < 0 || lessonIndex >= section.lessons.length) return false;
     if (lessonIndex === 0) return true;
@@ -2252,16 +2256,6 @@
       lockedNote.textContent = 'این درس هنوز قفل است.';
       path.append(lockedNote);
 
-      const footer = document.createElement('div');
-      footer.className = 'course-map-footer';
-      const reset = createButton('پاک‌کردن پیشرفت دوره', 'course-reset-button', () => {
-        if (!windowObject.confirm('پیشرفت همهٔ بخش‌های دوره پاک شود؟')) return;
-        progress = saveProgress(windowObject.localStorage, emptyProgress());
-        section = sections[0] || null;
-        renderSectionMap();
-      });
-      footer.append(reset);
-
       const focusedActivities = buildFocusedPracticeActivities(section, progress);
       const weakTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
       const focusedTargetIds = weakTargets.map((target) => target.itemId);
@@ -2294,7 +2288,7 @@
 
       root.append(catalog, header);
       if (focusedCard) root.append(focusedCard);
-      root.append(path, footer);
+      root.append(path);
 
       const onPageClick = (event) => {
         if (!selectedNode) return;
@@ -3309,6 +3303,13 @@
       if (isCourseHash() && !activeLesson) renderSectionMap();
     });
 
+    windowObject.addEventListener('finnish-course-progress-reset', () => {
+      progress = loadProgress(windowObject.localStorage);
+      activeLesson = null;
+      section = sections[0] || null;
+      if (isCourseHash()) renderSectionMap();
+    });
+
     if (windowObject.speechSynthesis && typeof windowObject.speechSynthesis.addEventListener === 'function') {
       windowObject.speechSynthesis.addEventListener('voiceschanged', () => {
         if (!activeLesson) return;
@@ -3391,6 +3392,7 @@
     sanitizeProgress,
     loadProgress,
     saveProgress,
+    resetProgress,
     isLessonUnlocked,
     isSectionComplete,
     isSectionUnlocked,
