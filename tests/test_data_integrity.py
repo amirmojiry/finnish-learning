@@ -164,6 +164,8 @@ class UdSummaryIntegrityTests(unittest.TestCase):
 
         self.assertGreater(len(expected_ids), 0)
         self.assertEqual(set(translations), expected_ids)
+        self.assertEqual(self.example_translations.get("example_count"), len(expected_ids))
+        self.assertEqual(self.example_translations.get("example_count"), len(translations))
         for sentence_id in expected_ids:
             with self.subTest(sentence_id=sentence_id):
                 self.assertIsInstance(translations[sentence_id], str)
