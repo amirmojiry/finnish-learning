@@ -328,22 +328,24 @@
       fetch(SUMMARY_URL, { cache: 'no-cache' }),
       fetch(LABELS_URL, { cache: 'no-cache' }),
       fetch(VOCABULARY_URL),
-      fetch(EXAMPLE_TRANSLATIONS_URL, { cache: 'no-cache' }),
+      fetch(EXAMPLE_TRANSLATIONS_URL, { cache: 'no-cache' }).catch(() => null),
     ]).then(async ([summaryResponse, labelsResponse, vocabularyResponse, translationsResponse]) => {
-      if (!summaryResponse.ok || !labelsResponse.ok || !vocabularyResponse.ok || !translationsResponse.ok) {
-        throw new Error('UD, vocabulary, or corpus translation data request failed');
+      if (!summaryResponse.ok || !labelsResponse.ok || !vocabularyResponse.ok) {
+        throw new Error('UD or vocabulary data request failed');
       }
-      const [summary, labels, vocabulary, translations] = await Promise.all([
+      const [summary, labels, vocabulary] = await Promise.all([
         summaryResponse.json(),
         labelsResponse.json(),
         vocabularyResponse.json(),
-        translationsResponse.json(),
       ]);
-      if (!Array.isArray(summary.words) || !Array.isArray(vocabulary.words) || !translations?.translations) {
-        throw new Error('Invalid UD, vocabulary, or corpus translation schema');
+      const translations = translationsResponse?.ok
+        ? await translationsResponse.json()
+        : { translations: {} };
+      if (!Array.isArray(summary.words) || !Array.isArray(vocabulary.words)) {
+        throw new Error('Invalid UD or vocabulary schema');
       }
       udState.labels = labels;
-      udState.exampleTranslations = new Map(Object.entries(translations.translations));
+      udState.exampleTranslations = new Map(Object.entries(translations?.translations || {}));
       udState.wordsByForm = new Map(
         summary.words.map((row) => [normalizeWord(row.word), row]),
       );
