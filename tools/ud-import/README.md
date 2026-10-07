@@ -38,7 +38,8 @@ The required Persian translation set in `data/corpus-example-translations-fa.jso
 1. Preserve the existing Persian translation for every unchanged sentence ID.
 2. Add a non-empty Persian translation for every newly rendered sentence ID.
 3. Remove translation entries for sentence IDs that are no longer rendered.
-4. Commit the resulting `data/corpus-example-translations-fa.json` file with the same vocabulary/UD pull request.
+4. Set the top-level `example_count` to the exact number of keys in the final `translations` map.
+5. Commit the resulting `data/corpus-example-translations-fa.json` file with the same vocabulary/UD pull request.
 
 Persian translation is development-time curated application data. It may be produced with tooling and then reviewed, but the shipped browser application must not depend on a runtime translation API.
 
