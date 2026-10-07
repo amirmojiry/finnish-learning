@@ -1578,7 +1578,8 @@
             "a12s1-topic-kahdeksankymmenta",
             "a12s1-topic-yhdeksankymmenta",
             "a12s1-topic-sata"
-          ]
+          ],
+          "label_fa": "عددهای دهگان ۱۰ تا ۱۰۰ را یک‌بار از ابتدا تا انتها مرور کن."
         },
         {
           "type": "teach",
@@ -2353,7 +2354,7 @@
             "a12s1-expr-se-maksaa-viisi-euroa-7",
             "a12s1-expr-paljonko-tama-maksaa-6",
             "a12s1-expr-tama-on-rikki-74",
-            "a12s1-expr-kuitti-kiitos-65"
+            "a12s1-expr-missa-maito-on-45"
           ]
         },
         {
@@ -2361,7 +2362,7 @@
           "item": "a12s1-reading-shopping",
           "question_item": "a12s1-expr-voinko-maksaa-kortilla-63",
           "options": [
-            "a12s1-expr-hei-78",
+            "a12s1-expr-tama-on-liian-iso-54",
             "a12s1-expr-se-maksaa-viisi-euroa-7",
             "a12s1-expr-voinko-maksaa-kortilla-63",
             "a12s1-expr-tama-on-rikki-74"
