@@ -158,13 +158,8 @@ test('recommended next vocabulary tranche is derived from the best practical cap
   assert.deepEqual(recommendation.captured_targets, captured);
 });
 
-test('the current analysis recommends a focused 301-400 source-backed expansion', () => {
-  assert.equal(report.current_vocabulary_size, 300);
-  assert.equal(report.recommendation.start_position, 301);
-  assert.equal(report.recommendation.end_position, 400);
-  assert.equal(report.recommendation.additional_source_forms, 100);
-  assert.equal(report.recommendation.captured_target_count, 9);
-  assert.deepEqual(report.recommendation.captured_targets, [
+test('the planned 301-400 tranche is now source-backed and the analyzer advances past it', () => {
+  const captured = [
     'perjantaina',
     'sunnuntaina',
     'keskiviikkona',
@@ -174,5 +169,15 @@ test('the current analysis recommends a focused 301-400 source-backed expansion'
     'tulla',
     'maksaa',
     'pieni',
-  ]);
+  ];
+
+  for (const target of captured) {
+    const item = report.targets.find((entry) => normalize(entry.target) === normalize(target));
+    assert.ok(item, `Missing A1.2 target ${target}`);
+    assert.equal(item.classification, 'current_source_backed');
+    assert.ok(item.source_position >= 301 && item.source_position <= 400);
+  }
+
+  assert.equal(report.recommendation.start_position, vocabulary.words.length + 1);
+  assert.ok(report.recommendation.start_position > 400);
 });

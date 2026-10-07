@@ -401,7 +401,7 @@ A lesson is not considered complete merely because it contains 15 activities. It
 ### Phase 3 — expand the structured course
 
 - build A1.2 and A1.3 using the same reviewed curriculum schema;
-- expand high-frequency vocabulary without replacing topic-based curriculum choices;
+- expand high-frequency vocabulary without replacing topic-based curriculum choices; the first Phase 3 tranche now covers consecutive Parole positions 301–400, and later tranches remain driven by the deterministic curriculum-gap analysis;
 - add new practical domains such as shopping, transport, home, work, weather, appointments, and health;
 - expand grammar in pedagogical order, including present tense, negation, question formation, core cases, local cases, partitive use, possession, and common stem changes;
 - introduce short dialogues, readings, and listening passages that recycle earlier material;

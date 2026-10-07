@@ -304,8 +304,8 @@
       "lemma": "mistä",
       "translation_fa": "از کجا",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 329,
       "topics": [
         "questions",
         "origin"
@@ -981,8 +981,8 @@
       "lemma": "viisi",
       "translation_fa": "۵",
       "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 318,
       "topics": [
         "numbers"
       ],

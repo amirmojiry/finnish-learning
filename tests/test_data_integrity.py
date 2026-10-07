@@ -174,6 +174,32 @@ class UdSummaryIntegrityTests(unittest.TestCase):
                         self.assertTrue(str(example.get("target_form", "")).strip())
                         self.assertTrue(str(example.get("treebank", "")).strip())
 
+    def test_lowercase_v_abbreviation_excludes_uppercase_roman_numeral_evidence(self):
+        if "v" not in self.summary_forms:
+            self.skipTest("The current vocabulary does not include v.")
+
+        vocabulary_v = self.vocabulary_forms["v"]
+        self.assertEqual(vocabulary_v["part_of_speech"].casefold(), "abbreviation")
+
+        summary_v = self.summary_forms["v"]
+        upos = summary_v.get("upos", [])
+        if upos:
+            self.assertNotEqual(upos[0]["tag"], "ADJ")
+
+        examples = list(summary_v.get("examples", []))
+        for feature in summary_v.get("features", []):
+            for value in feature.get("values", []):
+                example = value.get("example")
+                if example:
+                    examples.append(example)
+
+        for example in examples:
+            self.assertEqual(
+                example.get("target_form"),
+                "v",
+                f"Uppercase or otherwise mismatched evidence leaked into v: {example.get('text')}",
+            )
+
     def test_ovat_regression_fixture_is_auxiliary_and_indicative(self):
         if "ovat" not in self.summary_forms:
             self.skipTest("The current vocabulary does not include ovat.")

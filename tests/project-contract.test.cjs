@@ -204,7 +204,9 @@ test('About page describes the current structured learning experience', () => {
   assert.match(about, /دورهٔ ساختاریافتهٔ فنلاندی برای فارسی‌زبانان/);
   assert.match(about, /۴۰ درس/);
   assert.match(about, /۱۵ فعالیت/);
-  assert.match(about, /۳۰۰/);
+  const vocabulary = JSON.parse(read('data/common-words.json'));
+  const persianCount = String(vocabulary.words.length).replace(/\d/g, (digit) => '۰۱۲۳۴۵۶۷۸۹'[Number(digit)]);
+  assert.ok(about.includes(persianCount));
   assert.match(about, /تمرین واژه/);
   assert.match(about, /مرور هوشمند/);
   assert.match(about, /fi-FI/);
