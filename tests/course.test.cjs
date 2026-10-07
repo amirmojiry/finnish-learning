@@ -529,6 +529,7 @@ test('Section 2 family and age answers use learner-friendly reviewed forms', () 
   assert.equal(course.isTypedAnswerCorrect(age, 'Olen kaksitoistavuotias.'), true);
   assert.equal(course.isTypedAnswerCorrect(age, 'Olen kaksitoista vuotta vanha.'), true);
   assert.equal(course.isTypedAnswerCorrect(age, 'Olen kaksitoista-vuotias.'), false);
+  assert.deepEqual(age.rejected_answers, ['Olen kaksitoista-vuotias.']);
 });
 
 test('all Section 2 activity references and typed answers are explicit', () => {
