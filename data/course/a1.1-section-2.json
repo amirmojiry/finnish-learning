@@ -1243,6 +1243,9 @@
         "Olen 12-vuotias.",
         "Olen kaksitoistavuotias.",
         "Olen kaksitoista vuotta vanha."
+      ],
+      "rejected_answers": [
+        "Olen kaksitoista-vuotias."
       ]
     },
     "s2-numero": {
@@ -1450,6 +1453,9 @@
         "Olen 12-vuotias.",
         "Olen kaksitoistavuotias.",
         "Olen kaksitoista vuotta vanha."
+      ],
+      "rejected_answers": [
+        "Olen kaksitoista-vuotias."
       ]
     },
     "s2-num-nelja": {
