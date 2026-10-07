@@ -134,6 +134,7 @@ class UdSummaryIntegrityTests(unittest.TestCase):
         cls.vocabulary = load_json("data/common-words.json")
         cls.summary = load_json("data/ud/word-summary.json")
         cls.labels = load_json("data/ud/labels-fa.json")
+        cls.example_translations = load_json("data/ud/example-translations-fa.json")
         cls.vocabulary_forms = {
             normalize_word(word["word"]): word for word in cls.vocabulary["words"]
         }
@@ -145,6 +146,21 @@ class UdSummaryIntegrityTests(unittest.TestCase):
         self.assertEqual(self.summary["schema_version"], 2)
         self.assertEqual(self.summary["word_count"], len(self.vocabulary_forms))
         self.assertEqual(set(self.summary_forms), set(self.vocabulary_forms))
+
+    def test_every_displayed_corpus_example_has_a_local_persian_translation(self):
+        translations = self.example_translations.get("translations", {})
+        expected_ids = {
+            example["sentence_id"]
+            for row in self.summary["words"]
+            for example in row.get("examples", [])
+            if str(example.get("sentence_id", "")).strip()
+        }
+        self.assertGreater(len(expected_ids), 0)
+        self.assertEqual(set(translations), expected_ids)
+        for sentence_id in expected_ids:
+            with self.subTest(sentence_id=sentence_id):
+                self.assertIsInstance(translations[sentence_id], str)
+                self.assertTrue(translations[sentence_id].strip())
 
     def test_upos_rows_are_ordered_by_dominance_and_have_labels(self):
         upos_labels = self.labels.get("upos", {})
