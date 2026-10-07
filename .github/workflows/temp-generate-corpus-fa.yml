@@ -28,7 +28,7 @@ jobs:
 
           root = pathlib.Path('.')
           summary = json.loads((root / 'data/ud/word-summary.json').read_text(encoding='utf-8'))
-          output = root / 'data/ud/example-translations-fa.json'
+          output = root / 'data/corpus-example-translations-fa.json'
 
           existing = {}
           if output.exists():
