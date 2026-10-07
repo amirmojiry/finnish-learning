@@ -71,6 +71,7 @@ test('A1.2 Section 1 remains locked until all four A1.1 sections are complete', 
   let progress = course.emptyProgress();
 
   assert.equal(course.isSectionUnlocked(sections, progress, a12Index), false);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, a12Index, 0), false);
   for (const section of sections.slice(0,4)) {
     for (const lesson of section.lessons) {
       progress = course.recordLessonCompletion(progress, lesson.id, 8, 10, 1000);
@@ -90,6 +91,7 @@ test('already-started A1.2 remains accessible for backfill-safe existing progres
 
   assert.equal(course.isSectionStarted(sections[4], progress), true);
   assert.equal(course.isSectionAccessible(sections, progress, 4), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, 4, 0), true);
 });
 
 test('A1.2 Section 1 keeps curriculum target mappings exact', () => {
