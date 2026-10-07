@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.25.0] - 2026-10-07
+
+### Added
+
+- First playable A1.2 section with ten reviewed lessons and 150 deterministic activities covering shopping and everyday services.
+- Compact A1.1/A1.2 level selector in the course map; A1.3 remains hidden until playable manifests exist.
+- Cross-level course validation for globally unique lesson IDs, backward-only recycling dependencies, and preserved A1.1-to-A1.2 progression.
+
+### Changed
+
+- Refactor the course loader from one fixed A1.1 curriculum into an ordered multi-level A1 path while preserving the existing local progress schema.
+- Unlock A1.2 only after the implemented A1.1 path is complete, while keeping already-started later content accessible for backfill-safe progress.
+
+
 ## [1.24.0] - 2026-10-07
 
 ### Added
