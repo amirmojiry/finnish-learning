@@ -3116,8 +3116,8 @@
           "options": [
             "a12s2-expr-se-on-lahella-83",
             "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
-            "a12s2-expr-missa-asema-on-8",
-            "a12s2-expr-mene-suoraan-17"
+            "a12s2-expr-se-on-kaukana-84",
+            "a12s2-expr-kaanny-oikealle-19"
           ]
         },
         {
@@ -3126,9 +3126,9 @@
           "question_item": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
           "options": [
             "a12s2-expr-se-on-lahella-83",
-            "a12s2-expr-missa-asema-on-8",
+            "a12s2-expr-se-on-kaukana-84",
             "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
-            "a12s2-expr-mene-suoraan-17"
+            "a12s2-expr-kaanny-oikealle-19"
           ]
         },
         {
