@@ -1,0 +1,115 @@
+name: Temporary generate Persian corpus example translations
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-generate-corpus-fa.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Generate Persian translations for displayed corpus examples
+        run: |
+          python3 - <<'PY'
+          import json
+          import pathlib
+          import time
+          import urllib.parse
+          import urllib.request
+
+          root = pathlib.Path('.')
+          summary = json.loads((root / 'data/ud/word-summary.json').read_text(encoding='utf-8'))
+          output = root / 'data/ud/example-translations-fa.json'
+
+          existing = {}
+          if output.exists():
+              payload = json.loads(output.read_text(encoding='utf-8'))
+              existing = dict(payload.get('translations') or {})
+
+          examples = {}
+          for row in summary.get('words', []):
+              for example in row.get('examples', []):
+                  sentence_id = str(example.get('sentence_id') or '').strip()
+                  text = str(example.get('text') or '').strip()
+                  if sentence_id and text:
+                      examples[sentence_id] = text
+
+          def translate(text):
+              params = urllib.parse.urlencode({
+                  'client': 'gtx',
+                  'sl': 'fi',
+                  'tl': 'fa',
+                  'dt': 't',
+                  'q': text,
+              })
+              url = 'https://translate.googleapis.com/translate_a/single?' + params
+              request = urllib.request.Request(url, headers={
+                  'User-Agent': 'Mozilla/5.0 finnish-learning-corpus-translation/1.0',
+              })
+              last_error = None
+              for attempt in range(6):
+                  try:
+                      with urllib.request.urlopen(request, timeout=25) as response:
+                          data = json.loads(response.read().decode('utf-8'))
+                      translated = ''.join(
+                          segment[0] for segment in (data[0] or [])
+                          if isinstance(segment, list) and segment and segment[0]
+                      ).strip()
+                      if translated:
+                          return translated
+                      raise RuntimeError('empty translation')
+                  except Exception as exc:
+                      last_error = exc
+                      time.sleep(min(8, 1.5 ** attempt))
+              raise RuntimeError(f'failed to translate after retries: {last_error}')
+
+          missing = [(sid, text) for sid, text in examples.items() if not str(existing.get(sid, '')).strip()]
+          print(f'{len(examples)} corpus examples; {len(missing)} translations missing')
+
+          for index, (sentence_id, text) in enumerate(missing, start=1):
+              existing[sentence_id] = translate(text)
+              if index % 25 == 0:
+                  print(f'translated {index}/{len(missing)}')
+                  time.sleep(0.35)
+              else:
+                  time.sleep(0.05)
+
+          translations = {sid: existing[sid] for sid in sorted(examples) if str(existing.get(sid, '')).strip()}
+          if set(translations) != set(examples):
+              missing_ids = sorted(set(examples) - set(translations))
+              raise RuntimeError(f'missing translations for {len(missing_ids)} corpus examples')
+
+          payload = {
+              'schema_version': 1,
+              'language': 'fa',
+              'description': 'Persian translations for the UD corpus examples displayed in the dictionary.',
+              'translation_method': 'machine-generated, stored locally at build time',
+              'example_count': len(translations),
+              'translations': translations,
+          }
+          output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Commit translation data
+        run: |
+          if git diff --quiet -- data/ud/example-translations-fa.json; then
+            echo "No translation changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ud/example-translations-fa.json
+          git commit -m "Add Persian corpus example translations"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
