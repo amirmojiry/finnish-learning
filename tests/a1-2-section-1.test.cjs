@@ -125,6 +125,36 @@ test('A1.2 Section 1 keeps curriculum target mappings exact', () => {
   }
 });
 
+test('A1.2 number grid describes its actual 10 to 100 range', () => {
+  const lesson = a12Section1.lessons.find((entry) => entry.curriculum_id === 'a1.2-s1-l02');
+  const numberGrid = lesson.activities.find((activity) => activity.type === 'number-grid');
+  assert.ok(numberGrid);
+  assert.match(numberGrid.label_fa, /۱۰ تا ۱۰۰/);
+
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /activity\.label_fa \|\| 'اعداد این درس/);
+  assert.doesNotMatch(source, /اعداد ۰ تا ۲۰ را یک‌بار از ابتدا تا انتها مرور کن/);
+});
+
+test('A1.2 shopping reading options contain exactly one sentence from the passage', () => {
+  const lesson = a12Section1.lessons.find((entry) => entry.curriculum_id === 'a1.2-s1-l09');
+  const readings = lesson.activities.filter((activity) => activity.type === 'short-reading');
+  assert.equal(readings.length, 2);
+
+  for (const activity of readings) {
+    const passage = a12Section1.items[activity.item].surface_form;
+    let matchingOptions = 0;
+    for (const optionId of activity.options) {
+      const optionText = a12Section1.items[optionId].surface_form;
+      const appears = passage.includes(optionText);
+      if (appears) matchingOptions += 1;
+      if (optionId === activity.question_item) assert.equal(appears, true, optionText);
+      else assert.equal(appears, false, `Distractor appears in passage: ${optionText}`);
+    }
+    assert.equal(matchingOptions, 1);
+  }
+});
+
 test('A1.2 shopping morphology uses explicit reviewed forms rather than runtime suffix construction', () => {
   const prepared = course.validateSection(a12Section1);
   const quantity = prepared.lessons.find((lesson) => lesson.curriculum_id === 'a1.2-s1-l04');
