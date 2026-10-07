@@ -2099,8 +2099,10 @@
         const current = section.level === stage.level;
         const tab = createButton(stage.level, `course-level-tab${current ? ' is-current' : ''}`, () => {
           if (!target || !accessible || current) return;
+          const restoreFocus = document.activeElement === tab;
           selectSection(target);
           renderSectionMap();
+          if (restoreFocus) root.querySelector('.course-level-tab.is-current')?.focus();
         });
         tab.setAttribute('role', 'tab');
         tab.setAttribute('aria-selected', String(current));
