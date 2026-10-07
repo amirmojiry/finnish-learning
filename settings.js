@@ -137,28 +137,39 @@
 
   async function confirmCourseProgressReset() {
     const courseApi = window.FinnishCourse;
-    if (!courseApi?.resetProgress || !window.Swal?.fire) return false;
+    if (!courseApi?.resetProgress) return false;
 
-    const result = await window.Swal.fire({
-      title: 'پیشرفت دوره پاک شود؟',
-      text: 'این کار همهٔ درس‌های کامل‌شده، امتیازها، تمرین نقاط ضعف و تاریخچهٔ پاسخ‌های دوره را پاک می‌کند و قابل بازگشت نیست.',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'بله، پاک شود',
-      cancelButtonText: 'لغو',
-      reverseButtons: true,
-      focusCancel: true,
-    });
+    const warningText = 'این کار همهٔ درس‌های کامل‌شده، امتیازها، تمرین نقاط ضعف و تاریخچهٔ پاسخ‌های دوره را پاک می‌کند و قابل بازگشت نیست.';
+    const swal = window.Swal?.fire ? window.Swal : null;
 
-    if (!result.isConfirmed) return false;
+    if (swal) {
+      const result = await swal.fire({
+        title: 'پیشرفت دوره پاک شود؟',
+        text: warningText,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'بله، پاک شود',
+        cancelButtonText: 'لغو',
+        reverseButtons: true,
+        focusCancel: true,
+      });
+      if (!result.isConfirmed) return false;
+    } else if (!window.confirm(`پیشرفت دوره پاک شود؟\n\n${warningText}`)) {
+      return false;
+    }
 
     courseApi.resetProgress(localStorage);
     window.dispatchEvent(new CustomEvent('finnish-course-progress-reset'));
-    await window.Swal.fire({
-      title: 'پیشرفت دوره پاک شد',
-      icon: 'success',
-      confirmButtonText: 'باشه',
-    });
+
+    if (swal) {
+      await swal.fire({
+        title: 'پیشرفت دوره پاک شد',
+        icon: 'success',
+        confirmButtonText: 'باشه',
+      });
+    } else {
+      window.alert('پیشرفت دوره پاک شد.');
+    }
     return true;
   }
 
