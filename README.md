@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.23.0`
+- Version: `1.24.0`
 - Vocabulary entries: **400**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -24,8 +24,8 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - dictionary search and alphabetical or frequency sorting
 - part-of-speech filters generated only from categories present in the current vocabulary
 - dominant part of speech and morphological analysis derived from Universal Dependencies
-- real UD corpus examples, including examples tied to specific morphological values
-- word detail pages with meaning, lemma, examples, pronunciation, and corpus analysis
+- real UD corpus examples with local Persian translations for the displayed examples, plus sentence-level Finnish audio including examples tied to specific morphological values
+- word detail pages with meaning, lemma, bilingual examples, per-example Finnish audio, pronunciation, and corpus analysis
 - a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
 - complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-language listening and dictation with explicit fi-voice preference and browser/OS language fallback, structured sentence-building, and reviewed introductory morphology practice
 - section-scoped focused practice that tracks aggregate target accuracy and reuses reviewed activities for course targets below 80% accuracy

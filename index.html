@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="app-version" content="1.23.0">
+  <meta name="app-version" content="1.24.0">
   <meta name="theme-color" content="#f7f8fc">
   <meta name="description" content="تمرین و واژه‌نامه تعاملی زبان فنلاندی با ترجمه فارسی">
   <title>یادگیری فنلاندی</title>
@@ -18,17 +18,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1.23.0">
-  <link rel="stylesheet" href="css/option-sizing.css?v=1.23.0">
-  <link rel="stylesheet" href="css/typing-keyboard.css?v=1.23.0">
-  <link rel="stylesheet" href="css/dictionary.css?v=1.23.0">
-  <link rel="stylesheet" href="css/ud-analysis.css?v=1.23.0">
-  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=1.23.0">
-  <link rel="stylesheet" href="css/ud-analysis-collapse.css?v=1.23.0">
-  <link rel="stylesheet" href="css/settings.css?v=1.23.0">
-  <link rel="stylesheet" href="css/about.css?v=1.23.0">
-  <link rel="stylesheet" href="css/spaced-repetition.css?v=1.23.0">
-  <link rel="stylesheet" href="css/course.css?v=1.23.0">
+  <link rel="stylesheet" href="css/styles.css?v=1.24.0">
+  <link rel="stylesheet" href="css/option-sizing.css?v=1.24.0">
+  <link rel="stylesheet" href="css/typing-keyboard.css?v=1.24.0">
+  <link rel="stylesheet" href="css/dictionary.css?v=1.24.0">
+  <link rel="stylesheet" href="css/ud-analysis.css?v=1.24.0">
+  <link rel="stylesheet" href="css/ud-analysis-examples.css?v=1.24.0">
+  <link rel="stylesheet" href="css/ud-analysis-collapse.css?v=1.24.0">
+  <link rel="stylesheet" href="css/settings.css?v=1.24.0">
+  <link rel="stylesheet" href="css/about.css?v=1.24.0">
+  <link rel="stylesheet" href="css/spaced-repetition.css?v=1.24.0">
+  <link rel="stylesheet" href="css/course.css?v=1.24.0">
   <style>
     [hidden] { display: none !important; }
     body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
@@ -147,7 +147,7 @@
 
         <section class="about-section">
           <h2>نسخه</h2>
-          <p>نسخهٔ فعلی برنامه: <strong dir="ltr">1.23.0</strong></p>
+          <p>نسخهٔ فعلی برنامه: <strong dir="ltr">1.24.0</strong></p>
         </section>
 
         <section class="about-section">
@@ -169,7 +169,7 @@
 
     <div id="settings-view" class="app-view settings-view" hidden>
       <section class="settings-shell">
-        <header class="settings-header"><h1>تنظیمات</h1><p>ظاهر برنامه، وضعیت تلفظ فنلاندی دستگاه و اطلاعات بیشتر.</p></header>
+        <header class="settings-header"><h1>تنظیمات</h1><p>ظاهر برنامه، تلفظ فنلاندی دستگاه، مدیریت پیشرفت دوره و اطلاعات بیشتر.</p></header>
         <section class="settings-section settings-section-first" aria-labelledby="theme-setting-title">
           <div class="settings-section-heading"><h2 id="theme-setting-title">حالت نمایش</h2><span id="current-theme-label">روشن</span></div>
           <div class="theme-choices" role="group" aria-label="انتخاب حالت نمایش">
@@ -184,6 +184,15 @@
             <p id="finnish-speech-voice" lang="fi" dir="ltr"></p>
             <p id="finnish-speech-guide"></p>
             <button id="finnish-speech-retry" class="settings-about-button" type="button">بررسی دوباره</button>
+          </div>
+        </section>
+        <section class="settings-section settings-danger-section" aria-labelledby="course-reset-setting-title">
+          <div class="settings-about-row">
+            <div>
+              <h2 id="course-reset-setting-title">پیشرفت دوره</h2>
+              <p>همهٔ درس‌های کامل‌شده، امتیازها، تمرین نقاط ضعف و تاریخچهٔ پاسخ‌های دوره را از این دستگاه پاک می‌کند.</p>
+            </div>
+            <button id="course-progress-reset" class="settings-danger-button" type="button">پاک کردن پیشرفت دوره</button>
           </div>
         </section>
         <section class="settings-section settings-about-section" aria-labelledby="about-setting-title"><div class="settings-about-row"><div><h2 id="about-setting-title">درباره برنامه</h2><p>اطلاعات منبع واژه‌ها، سازنده و کد منبع را ببین.</p></div><a class="settings-about-button about-view-link" href="#about">مشاهده</a></div></section>
@@ -202,12 +211,13 @@
   </nav>
 
   <footer><p>ساخته‌شده برای تمرین شخصی زبان فنلاندی</p></footer>
-  <script src="app.js?v=1.23.0" defer></script>
-  <script src="dictionary-pos.js?v=1.23.0" defer></script>
-  <script src="settings.js?v=1.23.0" defer></script>
-  <script src="course.js?v=1.23.0" defer></script>
-  <script src="ud-analysis.js?v=1.23.0" defer></script>
-  <script src="ud-analysis-collapse.js?v=1.23.0" defer></script>
-  <script src="spaced-repetition.js?v=1.23.0" defer></script>
+  <script src="app.js?v=1.24.0" defer></script>
+  <script src="dictionary-pos.js?v=1.24.0" defer></script>
+  <script src="settings.js?v=1.24.0" defer></script>
+  <script src="course.js?v=1.24.0" defer></script>
+  <script src="ud-analysis.js?v=1.24.0" defer></script>
+  <script src="ud-analysis-collapse.js?v=1.24.0" defer></script>
+  <script src="spaced-repetition.js?v=1.24.0" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
 </body>
 </html>

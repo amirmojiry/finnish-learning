@@ -4,6 +4,7 @@
   const SUMMARY_URL = 'data/ud/word-summary.json?v=20260731-2';
   const LABELS_URL = 'data/ud/labels-fa.json?v=20260731-2';
   const VOCABULARY_URL = 'data/common-words.json?v=20260731-8';
+  const EXAMPLE_TRANSLATIONS_URL = 'data/corpus-example-translations-fa.json';
   const SECTION_ID = 'ud-analysis-section';
 
   const numberFormatter = new Intl.NumberFormat('fa-IR');
@@ -64,6 +65,7 @@
     promise: null,
     wordsByForm: new Map(),
     frequencyByForm: new Map(),
+    exampleTranslations: new Map(),
     labels: null,
     lastWord: '',
     frequencyEventsBound: false,
@@ -157,6 +159,13 @@
       section.className = 'ud-analysis-section';
       section.hidden = true;
       section.setAttribute('aria-live', 'polite');
+      section.addEventListener('click', (event) => {
+        const button = event.target.closest?.('.ud-speak-button');
+        if (!button) return;
+        const text = button.dataset.speechText || '';
+        if (!text) return;
+        window.FinnishCourse?.playSpeech?.(window, text);
+      });
     }
     if (section.previousElementSibling !== anchor) {
       anchor.insertAdjacentElement('afterend', section);
@@ -319,7 +328,8 @@
       fetch(SUMMARY_URL, { cache: 'no-cache' }),
       fetch(LABELS_URL, { cache: 'no-cache' }),
       fetch(VOCABULARY_URL),
-    ]).then(async ([summaryResponse, labelsResponse, vocabularyResponse]) => {
+      fetch(EXAMPLE_TRANSLATIONS_URL, { cache: 'no-cache' }).catch(() => null),
+    ]).then(async ([summaryResponse, labelsResponse, vocabularyResponse, translationsResponse]) => {
       if (!summaryResponse.ok || !labelsResponse.ok || !vocabularyResponse.ok) {
         throw new Error('UD or vocabulary data request failed');
       }
@@ -328,10 +338,14 @@
         labelsResponse.json(),
         vocabularyResponse.json(),
       ]);
+      const translations = translationsResponse?.ok
+        ? await translationsResponse.json()
+        : { translations: {} };
       if (!Array.isArray(summary.words) || !Array.isArray(vocabulary.words)) {
         throw new Error('Invalid UD or vocabulary schema');
       }
       udState.labels = labels;
+      udState.exampleTranslations = new Map(Object.entries(translations?.translations || {}));
       udState.wordsByForm = new Map(
         summary.words.map((row) => [normalizeWord(row.word), row]),
       );
@@ -402,9 +416,16 @@
   function renderUdExample(example, compact = false) {
     if (!example?.text) return '';
     const source = [example.treebank, example.split].filter(Boolean).join(' · ');
+    const translation = udState.exampleTranslations.get(example.sentence_id) || '';
     return `
       <figure class="ud-example ${compact ? 'is-compact' : ''}">
-        <blockquote lang="fi" dir="ltr">${highlightTarget(example.text, example.target_form)}</blockquote>
+        <div class="ud-example-sentence-row">
+          <blockquote lang="fi" dir="ltr">${highlightTarget(example.text, example.target_form)}</blockquote>
+          <button class="ud-speak-button" type="button" data-speech-text="${escapeHtml(example.text)}" aria-label="پخش جملهٔ فنلاندی" title="پخش جمله">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/></svg>
+          </button>
+        </div>
+        ${translation ? `<p class="ud-example-translation" lang="fa" dir="rtl">${escapeHtml(translation)}</p>` : ''}
         <figcaption>
           <span>${escapeHtml(source || 'UD')}</span>
           ${example.target_lemma ? `<span>lemma: <b class="ud-ltr">${escapeHtml(example.target_lemma)}</b></span>` : ''}

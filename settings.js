@@ -21,6 +21,7 @@
   const speechVoice = document.querySelector('#finnish-speech-voice');
   const speechGuide = document.querySelector('#finnish-speech-guide');
   const speechRetry = document.querySelector('#finnish-speech-retry');
+  const courseProgressReset = document.querySelector('#course-progress-reset');
 
   function currentTheme() {
     return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
@@ -134,6 +135,44 @@
     }
   }
 
+  async function confirmCourseProgressReset() {
+    const courseApi = window.FinnishCourse;
+    if (!courseApi?.resetProgress) return false;
+
+    const warningText = 'این کار همهٔ درس‌های کامل‌شده، امتیازها، تمرین نقاط ضعف و تاریخچهٔ پاسخ‌های دوره را پاک می‌کند و قابل بازگشت نیست.';
+    const swal = window.Swal?.fire ? window.Swal : null;
+
+    if (swal) {
+      const result = await swal.fire({
+        title: 'پیشرفت دوره پاک شود؟',
+        text: warningText,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'بله، پاک شود',
+        cancelButtonText: 'لغو',
+        reverseButtons: true,
+        focusCancel: true,
+      });
+      if (!result.isConfirmed) return false;
+    } else if (!window.confirm(`پیشرفت دوره پاک شود؟\n\n${warningText}`)) {
+      return false;
+    }
+
+    courseApi.resetProgress(localStorage);
+    window.dispatchEvent(new CustomEvent('finnish-course-progress-reset'));
+
+    if (swal) {
+      await swal.fire({
+        title: 'پیشرفت دوره پاک شد',
+        icon: 'success',
+        confirmButtonText: 'باشه',
+      });
+    } else {
+      window.alert('پیشرفت دوره پاک شد.');
+    }
+    return true;
+  }
+
   themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice)));
   settingsLinks.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -146,6 +185,7 @@
   }));
   regularViewLinks.forEach((link) => link.addEventListener('click', leaveSpecialViews));
   speechRetry?.addEventListener('click', renderFinnishSpeechStatus);
+  courseProgressReset?.addEventListener('click', confirmCourseProgressReset);
   window.addEventListener('hashchange', syncSpecialViewFromHash);
 
   applyTheme(currentTheme(), false);

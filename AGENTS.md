@@ -35,6 +35,7 @@ Do not mix the responsibilities of the data sources:
 - **Parole/Kotus/Kielipankki** owns written-corpus `frequency_rank`, `frequency_count`, `word`, and `frequency_percent`. These four values must match the corresponding line in `data/parole_frek_3.txt` exactly.
 - **Universal Dependencies** owns dominant UPOS, corpus-observed lemmas, morphological features, dependency relations, treebank distribution, and corpus examples.
 - **Curated application data** owns Persian translations, fallback part-of-speech labels, learner-oriented Finnish/Persian example pairs, and the learner-facing lemma.
+- **Corpus example translation data** in `data/corpus-example-translations-fa.json` owns only the Persian rendering of displayed UD sentences; UD remains the source of the Finnish sentence text, sentence ID, morphology, syntax, and provenance.
 
 Never replace Parole frequency percentages with UD percentages. Never present a manually assigned fallback part of speech when a dominant UD analysis is available.
 

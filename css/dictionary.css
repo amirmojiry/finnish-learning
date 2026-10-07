@@ -273,7 +273,16 @@
   margin-top: 9px;
 }
 
+.word-example-fi-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  direction: ltr;
+}
+
 .word-example-fi {
+  flex: 1;
+  min-width: 0;
   direction: ltr;
   text-align: left;
   margin: 0;
@@ -281,6 +290,37 @@
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.65;
+}
+
+.sentence-speak-button {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, var(--border));
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary) 7%, var(--surface));
+  color: var(--primary);
+  padding: 0;
+  cursor: pointer;
+}
+
+.sentence-speak-button:hover,
+.sentence-speak-button:focus-visible {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 14%, var(--surface));
+  outline: none;
+}
+
+.sentence-speak-button:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+.sentence-speak-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .word-example-fa {

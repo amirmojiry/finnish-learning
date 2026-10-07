@@ -134,6 +134,7 @@ class UdSummaryIntegrityTests(unittest.TestCase):
         cls.vocabulary = load_json("data/common-words.json")
         cls.summary = load_json("data/ud/word-summary.json")
         cls.labels = load_json("data/ud/labels-fa.json")
+        cls.example_translations = load_json("data/corpus-example-translations-fa.json")
         cls.vocabulary_forms = {
             normalize_word(word["word"]): word for word in cls.vocabulary["words"]
         }
@@ -145,6 +146,28 @@ class UdSummaryIntegrityTests(unittest.TestCase):
         self.assertEqual(self.summary["schema_version"], 2)
         self.assertEqual(self.summary["word_count"], len(self.vocabulary_forms))
         self.assertEqual(set(self.summary_forms), set(self.vocabulary_forms))
+
+    def test_every_displayed_corpus_example_has_a_local_persian_translation(self):
+        translations = self.example_translations.get("translations", {})
+        expected_ids = set()
+        for row in self.summary["words"]:
+            for example in row.get("examples", []):
+                sentence_id = str(example.get("sentence_id", "")).strip()
+                if sentence_id:
+                    expected_ids.add(sentence_id)
+            for feature in row.get("features", []):
+                for value in feature.get("values", []):
+                    example = value.get("example")
+                    sentence_id = str((example or {}).get("sentence_id", "")).strip()
+                    if sentence_id:
+                        expected_ids.add(sentence_id)
+
+        self.assertGreater(len(expected_ids), 0)
+        self.assertEqual(set(translations), expected_ids)
+        for sentence_id in expected_ids:
+            with self.subTest(sentence_id=sentence_id):
+                self.assertIsInstance(translations[sentence_id], str)
+                self.assertTrue(translations[sentence_id].strip())
 
     def test_upos_rows_are_ordered_by_dominance_and_have_labels(self):
         upos_labels = self.labels.get("upos", {})
