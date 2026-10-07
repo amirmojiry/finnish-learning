@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.24.0`
+- Version: `1.25.0`
 - Vocabulary entries: **400**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,7 +27,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples with local Persian translations for the displayed examples, plus sentence-level Finnish audio including examples tied to specific morphological values
 - word detail pages with meaning, lemma, bilingual examples, per-example Finnish audio, pronunciation, and corpus analysis
 - a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
-- complete 40-lesson A1.1 path with circular lesson maps, per-section progress, jump entry points at the first lesson of every section, quick navigation back to the current learnable lesson, Persian-to-Finnish productive recall, Finnish-language listening and dictation with explicit fi-voice preference and browser/OS language fallback, structured sentence-building, and reviewed introductory morphology practice
+- complete 40-lesson A1.1 path plus the first 10 playable A1.2 lessons for shopping and everyday services, with compact A1.1/A1.2 course switching, preserved cross-level progress, circular lesson maps, Persian-to-Finnish productive recall, Finnish listening and dictation, structured sentence-building, and reviewed morphology practice
 - section-scoped focused practice that tracks aggregate target accuracy and reuses reviewed activities for course targets below 80% accuracy
 - bounded chronological A1.1 answer history with stable sequence order, session identity, response timing, productive-vs-recognition evidence, and typed-grading quality for future mastery decisions
 - reviewed 40-lesson A1.2 and 40-lesson A1.3 curriculum matrices that define the rest of the A1 progression before later-stage playable manifests are published
@@ -165,7 +165,7 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 
 - [x] Build A1.2 and A1.3 with the same reviewed curriculum model at the curriculum-contract layer; playable later-stage manifests remain sequenced after vocabulary expansion.
 - [x] Expand high-frequency vocabulary with the reviewed Parole positions 301–400 tranche while preserving curated topic vocabulary; later source-backed tranches remain analyzer-driven.
-- [ ] Add practical domains such as shopping, transport, home, work, weather, appointments, and health.
+- [ ] Add practical domains such as shopping, transport, home, work, weather, appointments, and health. Shopping and everyday services are now playable as A1.2 Section 1.
 - [ ] Expand grammar in pedagogical order.
 - [ ] Add short dialogues, readings, and listening passages that recycle earlier material.
 - [ ] Move into A2 only after the A1 path is coherent and validated.
