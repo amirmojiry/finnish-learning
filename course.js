@@ -251,7 +251,19 @@
     if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
     const targetSection = sections[sectionIndex];
     if (!targetSection || !Array.isArray(targetSection.lessons) || lessonIndex < 0 || lessonIndex >= targetSection.lessons.length) return false;
-    if (lessonIndex === 0) return true;
+    if (lessonIndex === 0) {
+      const priorStageSections = sections.slice(0, sectionIndex).filter((entry) => (
+        entry?.level && targetSection.level && entry.level !== targetSection.level
+      ));
+      if (
+        priorStageSections.length
+        && !priorStageSections.every((entry) => isSectionComplete(entry, progress))
+        && !isSectionStarted(targetSection, progress)
+      ) {
+        return false;
+      }
+      return true;
+    }
     if (isBackfillSectionUnlocked(sections, progress, sectionIndex)) return true;
     return isSectionAccessible(sections, progress, sectionIndex)
       && isLessonUnlocked(targetSection, progress, lessonIndex);
