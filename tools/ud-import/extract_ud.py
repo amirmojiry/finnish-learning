@@ -144,6 +144,18 @@ def normalize(value: str) -> str:
     return unicodedata.normalize("NFC", value.strip()).casefold()
 
 
+def normalize_exact(value: str) -> str:
+    return unicodedata.normalize("NFC", value.strip())
+
+
+def target_matches_form(target: dict[str, Any], token_form: str) -> bool:
+    if normalize(token_form) != target["normalized"]:
+        return False
+    if target.get("case_sensitive"):
+        return normalize_exact(token_form) == target["surface_nfc"]
+    return True
+
+
 def parse_feats(raw: str) -> dict[str, list[str]]:
     if not raw or raw == "_":
         return {}
@@ -276,6 +288,8 @@ def load_targets(path: Path) -> tuple[list[dict[str, Any]], dict[str, dict[str, 
             "frequency_rank": item.get("frequency_rank", rank),
             "word": word,
             "normalized": normalize(word),
+            "surface_nfc": normalize_exact(word),
+            "case_sensitive": str(item.get("part_of_speech", "")).strip().casefold() == "abbreviation",
         }
         if target["normalized"] in by_form:
             raise ValueError(f"Duplicate normalized word form: {word}")
@@ -447,7 +461,7 @@ def process(
             all_sentence_matches: list[dict[str, Any]] = []
             for token in tokens:
                 target = targets_by_form.get(normalize(token["form"]))
-                if not target:
+                if not target or not target_matches_form(target, token["form"]):
                     continue
                 file_matches += 1
                 matches_by_word[target["word_id"]].append(token)
