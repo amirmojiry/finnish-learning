@@ -251,19 +251,7 @@
     if (!Array.isArray(sections) || sectionIndex < 0 || sectionIndex >= sections.length) return false;
     const targetSection = sections[sectionIndex];
     if (!targetSection || !Array.isArray(targetSection.lessons) || lessonIndex < 0 || lessonIndex >= targetSection.lessons.length) return false;
-    if (lessonIndex === 0) {
-      const priorStageSections = sections.slice(0, sectionIndex).filter((entry) => (
-        entry?.level && targetSection.level && entry.level !== targetSection.level
-      ));
-      if (
-        priorStageSections.length
-        && !priorStageSections.every((entry) => isSectionComplete(entry, progress))
-        && !isSectionStarted(targetSection, progress)
-      ) {
-        return false;
-      }
-      return true;
-    }
+    if (lessonIndex === 0) return true;
     if (isBackfillSectionUnlocked(sections, progress, sectionIndex)) return true;
     return isSectionAccessible(sections, progress, sectionIndex)
       && isLessonUnlocked(targetSection, progress, lessonIndex);
@@ -2094,11 +2082,10 @@
       for (const stage of COURSE_STAGES) {
         const stageSections = sections.filter((entry) => entry.level === stage.level);
         const target = preferredSectionForLevel(stage.level);
-        const targetIndex = target ? sections.indexOf(target) : -1;
-        const accessible = target && isSectionAccessible(sections, progress, targetIndex);
+        const browsable = Boolean(target && stageSections.length);
         const current = section.level === stage.level;
         const tab = createButton(stage.level, `course-level-tab${current ? ' is-current' : ''}`, () => {
-          if (!target || !accessible || current) return;
+          if (!target || !browsable || current) return;
           const restoreFocus = document.activeElement === tab;
           selectSection(target);
           renderSectionMap();
@@ -2107,8 +2094,7 @@
         tab.setAttribute('role', 'tab');
         tab.setAttribute('aria-selected', String(current));
         tab.tabIndex = current ? 0 : -1;
-        tab.disabled = !stageSections.length || (!accessible && !current);
-        if (!accessible && !current) tab.title = 'پس از تکمیل A1.1 باز می‌شود';
+        tab.disabled = !browsable;
         levelTabs.append(tab);
       }
       levelTabs.addEventListener('keydown', (event) => {
