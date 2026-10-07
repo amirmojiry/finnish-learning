@@ -12,7 +12,7 @@ on:
       - '.github/workflows/extract-ud-data.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: extract-finnish-ud-data-${{ github.event.pull_request.number || github.ref }}
@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -57,6 +58,19 @@ jobs:
 
       - name: Stabilize unchanged generation timestamps
         run: python3 tools/ud-import/stabilize_generated_at.py
+
+      - name: Commit regenerated UD data for abbreviation disambiguation
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'issue-63-vocabulary-301-400'
+        run: |
+          if git diff --quiet -- data/ud; then
+            echo "No UD data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ud
+          git commit -m "Regenerate UD data after abbreviation disambiguation"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
 
       - name: Validate generated JSON files and UI references
         run: |
