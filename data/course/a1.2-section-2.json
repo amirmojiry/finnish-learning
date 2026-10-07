@@ -1,0 +1,3399 @@
+{
+  "schema_version": 1,
+  "id": "a1.2-section-2",
+  "level": "A1.2",
+  "curriculum_section_id": "a1.2-s2",
+  "title_fa": "بخش ۲: رفت‌وآمد و پیدا کردن مکان‌ها",
+  "subtitle_fa": "مکان‌های شهر، جهت‌ها، مبدأ و مقصد، حمل‌ونقل، بلیت، زمان‌بندی و مدت مسیر",
+  "description_fa": "ده درس دوم A1.2، زبان لازم برای پیدا کردن مکان‌ها و انجام یک سفر کوتاه و قابل‌پیش‌بینی را تمرین می‌کند.",
+  "can_do_fa": [
+    "دربارهٔ مکان‌های آشنا در شهر سؤال می‌کنم و آن‌ها را روی یک نقشهٔ ساده پیدا می‌کنم.",
+    "جهت‌های بسیار کوتاه را می‌فهمم و به کار می‌برم.",
+    "مبدأ، مقصد و وسیلهٔ رفت‌وآمد را با عبارت‌های کوتاه بیان می‌کنم.",
+    "یک یا دو بلیت ساده می‌خواهم و زمان حرکت یا رسیدن را از برنامه می‌خوانم.",
+    "دربارهٔ مدت یا فاصلهٔ مسیر سؤال می‌کنم و یک سفر کوتاه را با کمک محدود پیش می‌برم."
+  ],
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a12s2-hf-missa": {
+      "id": "a12s2-hf-missa",
+      "surface_form": "missä",
+      "lemma": "mikä",
+      "translation_fa": "کجا / در کدام",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 188,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Missä asema on?",
+      "example_fa": "ایستگاه کجاست؟",
+      "accepted_answers": [
+        "missä"
+      ]
+    },
+    "a12s2-hf-taalla": {
+      "id": "a12s2-hf-taalla",
+      "surface_form": "täällä",
+      "lemma": "täällä",
+      "translation_fa": "اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 229,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Olen asunut täällä kaksi vuotta.",
+      "example_fa": "دو سال است اینجا زندگی کرده‌ام.",
+      "accepted_answers": [
+        "täällä"
+      ]
+    },
+    "a12s2-hf-siella": {
+      "id": "a12s2-hf-siella",
+      "surface_form": "siellä",
+      "lemma": "siellä",
+      "translation_fa": "آنجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 149,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Ystäväni asuu siellä.",
+      "example_fa": "دوستم آنجا زندگی می‌کند.",
+      "accepted_answers": [
+        "siellä"
+      ]
+    },
+    "a12s2-topic-asema": {
+      "id": "a12s2-topic-asema",
+      "surface_form": "asema",
+      "lemma": "asema",
+      "translation_fa": "ایستگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Asema on keskustassa.",
+      "example_fa": "ایستگاه در مرکز شهر است.",
+      "accepted_answers": [
+        "asema"
+      ],
+      "visual": "🚉"
+    },
+    "a12s2-topic-pysakki": {
+      "id": "a12s2-topic-pysakki",
+      "surface_form": "pysäkki",
+      "lemma": "pysäkki",
+      "translation_fa": "ایستگاه اتوبوس / ایستگاه وسیلهٔ نقلیه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Pysäkki on täällä.",
+      "example_fa": "ایستگاه اینجاست.",
+      "accepted_answers": [
+        "pysäkki"
+      ],
+      "visual": "🚏"
+    },
+    "a12s2-topic-apteekki": {
+      "id": "a12s2-topic-apteekki",
+      "surface_form": "apteekki",
+      "lemma": "apteekki",
+      "translation_fa": "داروخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Apteekki on lähellä.",
+      "example_fa": "داروخانه نزدیک است.",
+      "accepted_answers": [
+        "apteekki"
+      ],
+      "visual": "💊"
+    },
+    "a12s2-topic-kauppa": {
+      "id": "a12s2-topic-kauppa",
+      "surface_form": "kauppa",
+      "lemma": "kauppa",
+      "translation_fa": "فروشگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Kauppa on keskustassa.",
+      "example_fa": "فروشگاه در مرکز شهر است.",
+      "accepted_answers": [
+        "kauppa"
+      ],
+      "visual": "🏪"
+    },
+    "a12s2-topic-keskusta": {
+      "id": "a12s2-topic-keskusta",
+      "surface_form": "keskusta",
+      "lemma": "keskusta",
+      "translation_fa": "مرکز شهر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Keskusta on tuolla.",
+      "example_fa": "مرکز شهر آنجاست.",
+      "accepted_answers": [
+        "keskusta"
+      ],
+      "visual": "🏙️"
+    },
+    "a12s2-expr-missa-asema-on-8": {
+      "id": "a12s2-expr-missa-asema-on-8",
+      "surface_form": "Missä asema on?",
+      "lemma": "Missä asema on?",
+      "translation_fa": "ایستگاه کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Missä asema on?",
+      "example_fa": "ایستگاه کجاست؟",
+      "accepted_answers": [
+        "Missä asema on?"
+      ]
+    },
+    "a12s2-expr-missa-apteekki-on-9": {
+      "id": "a12s2-expr-missa-apteekki-on-9",
+      "surface_form": "Missä apteekki on?",
+      "lemma": "Missä apteekki on?",
+      "translation_fa": "داروخانه کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Missä apteekki on?",
+      "example_fa": "داروخانه کجاست؟",
+      "accepted_answers": [
+        "Missä apteekki on?"
+      ]
+    },
+    "a12s2-expr-se-on-keskustassa-10": {
+      "id": "a12s2-expr-se-on-keskustassa-10",
+      "surface_form": "Se on keskustassa.",
+      "lemma": "Se on keskustassa.",
+      "translation_fa": "در مرکز شهر است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Se on keskustassa.",
+      "example_fa": "در مرکز شهر است.",
+      "accepted_answers": [
+        "Se on keskustassa."
+      ]
+    },
+    "a12s2-hf-kohti": {
+      "id": "a12s2-hf-kohti",
+      "surface_form": "kohti",
+      "lemma": "kohti",
+      "translation_fa": "به‌سوی؛ برای هر",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 285,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Kävelimme kohti keskustaa.",
+      "example_fa": "به‌سوی مرکز شهر قدم زدیم.",
+      "accepted_answers": [
+        "kohti"
+      ]
+    },
+    "a12s2-hf-takaisin": {
+      "id": "a12s2-hf-takaisin",
+      "surface_form": "takaisin",
+      "lemma": "takaisin",
+      "translation_fa": "به عقب؛ بازگشت",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 224,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Tulen takaisin huomenna.",
+      "example_fa": "فردا برمی‌گردم.",
+      "accepted_answers": [
+        "takaisin"
+      ]
+    },
+    "a12s2-hf-pois": {
+      "id": "a12s2-hf-pois",
+      "surface_form": "pois",
+      "lemma": "pois",
+      "translation_fa": "دور / بیرون / کنار",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 157,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Laita puhelin pois.",
+      "example_fa": "تلفن را کنار بگذار.",
+      "accepted_answers": [
+        "pois"
+      ]
+    },
+    "a12s2-topic-suoraan": {
+      "id": "a12s2-topic-suoraan",
+      "surface_form": "suoraan",
+      "lemma": "suoraan",
+      "translation_fa": "مستقیم؛ مستقیماً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 360,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Mene suoraan ja käänny sitten vasemmalle.",
+      "example_fa": "مستقیم برو و بعد به چپ بپیچ.",
+      "accepted_answers": [
+        "suoraan"
+      ],
+      "visual": "⬆️"
+    },
+    "a12s2-topic-vasemmalle": {
+      "id": "a12s2-topic-vasemmalle",
+      "surface_form": "vasemmalle",
+      "lemma": "vasemmalle",
+      "translation_fa": "به چپ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Käänny vasemmalle.",
+      "example_fa": "به چپ بپیچ.",
+      "accepted_answers": [
+        "vasemmalle"
+      ],
+      "visual": "⬅️"
+    },
+    "a12s2-topic-oikealle": {
+      "id": "a12s2-topic-oikealle",
+      "surface_form": "oikealle",
+      "lemma": "oikealle",
+      "translation_fa": "به راست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Käänny oikealle.",
+      "example_fa": "به راست بپیچ.",
+      "accepted_answers": [
+        "oikealle"
+      ],
+      "visual": "➡️"
+    },
+    "a12s2-expr-mene-suoraan-17": {
+      "id": "a12s2-expr-mene-suoraan-17",
+      "surface_form": "Mene suoraan.",
+      "lemma": "Mene suoraan.",
+      "translation_fa": "مستقیم برو.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Mene suoraan.",
+      "example_fa": "مستقیم برو.",
+      "accepted_answers": [
+        "Mene suoraan."
+      ]
+    },
+    "a12s2-expr-kaanny-vasemmalle-18": {
+      "id": "a12s2-expr-kaanny-vasemmalle-18",
+      "surface_form": "Käänny vasemmalle.",
+      "lemma": "Käänny vasemmalle.",
+      "translation_fa": "به چپ بپیچ.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Käänny vasemmalle.",
+      "example_fa": "به چپ بپیچ.",
+      "accepted_answers": [
+        "Käänny vasemmalle."
+      ]
+    },
+    "a12s2-expr-kaanny-oikealle-19": {
+      "id": "a12s2-expr-kaanny-oikealle-19",
+      "surface_form": "Käänny oikealle.",
+      "lemma": "Käänny oikealle.",
+      "translation_fa": "به راست بپیچ.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Käänny oikealle.",
+      "example_fa": "به راست بپیچ.",
+      "accepted_answers": [
+        "Käänny oikealle."
+      ]
+    },
+    "a12s2-expr-mene-takaisin-20": {
+      "id": "a12s2-expr-mene-takaisin-20",
+      "surface_form": "Mene takaisin.",
+      "lemma": "Mene takaisin.",
+      "translation_fa": "برگرد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Mene takaisin.",
+      "example_fa": "برگرد.",
+      "accepted_answers": [
+        "Mene takaisin."
+      ]
+    },
+    "a12s2-hf-tahan": {
+      "id": "a12s2-hf-tahan",
+      "surface_form": "tähän",
+      "lemma": "tämä",
+      "translation_fa": "به این / داخل این / تا اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 170,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Kirjoita nimesi tähän.",
+      "example_fa": "نامت را اینجا بنویس.",
+      "accepted_answers": [
+        "tähän"
+      ]
+    },
+    "a12s2-hf-siihen": {
+      "id": "a12s2-hf-siihen",
+      "surface_form": "siihen",
+      "lemma": "se",
+      "translation_fa": "به آن / داخل آن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 78,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Laita kirja siihen.",
+      "example_fa": "کتاب را آنجا بگذار.",
+      "accepted_answers": [
+        "siihen"
+      ]
+    },
+    "a12s2-hf-tulee": {
+      "id": "a12s2-hf-tulee",
+      "surface_form": "tulee",
+      "lemma": "tulla",
+      "translation_fa": "می‌آید / می‌شود",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 59,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Bussi tulee pian.",
+      "example_fa": "اتوبوس به‌زودی می‌آید.",
+      "accepted_answers": [
+        "tulee"
+      ]
+    },
+    "a12s2-topic-mihin": {
+      "id": "a12s2-topic-mihin",
+      "surface_form": "mihin",
+      "lemma": "mihin",
+      "translation_fa": "به کجا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Mihin menet?",
+      "example_fa": "به کجا می‌روی؟",
+      "accepted_answers": [
+        "mihin"
+      ]
+    },
+    "a12s2-topic-kotiin": {
+      "id": "a12s2-topic-kotiin",
+      "surface_form": "kotiin",
+      "lemma": "kotiin",
+      "translation_fa": "به خانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen kotiin.",
+      "example_fa": "به خانه می‌روم.",
+      "accepted_answers": [
+        "kotiin"
+      ],
+      "visual": "🏠"
+    },
+    "a12s2-topic-keskustaan": {
+      "id": "a12s2-topic-keskustaan",
+      "surface_form": "keskustaan",
+      "lemma": "keskustaan",
+      "translation_fa": "به مرکز شهر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen keskustaan.",
+      "example_fa": "به مرکز شهر می‌روم.",
+      "accepted_answers": [
+        "keskustaan"
+      ],
+      "visual": "🏙️"
+    },
+    "a12s2-topic-asemalle": {
+      "id": "a12s2-topic-asemalle",
+      "surface_form": "asemalle",
+      "lemma": "asemalle",
+      "translation_fa": "به ایستگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen asemalle.",
+      "example_fa": "به ایستگاه می‌روم.",
+      "accepted_answers": [
+        "asemalle"
+      ],
+      "visual": "🚉"
+    },
+    "a12s2-expr-mihin-menet-28": {
+      "id": "a12s2-expr-mihin-menet-28",
+      "surface_form": "Mihin menet?",
+      "lemma": "Mihin menet?",
+      "translation_fa": "به کجا می‌روی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Mihin menet?",
+      "example_fa": "به کجا می‌روی؟",
+      "accepted_answers": [
+        "Mihin menet?"
+      ]
+    },
+    "a12s2-expr-menen-kotiin-29": {
+      "id": "a12s2-expr-menen-kotiin-29",
+      "surface_form": "Menen kotiin.",
+      "lemma": "Menen kotiin.",
+      "translation_fa": "به خانه می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Menen kotiin.",
+      "example_fa": "به خانه می‌روم.",
+      "accepted_answers": [
+        "Menen kotiin."
+      ]
+    },
+    "a12s2-expr-menen-keskustaan-30": {
+      "id": "a12s2-expr-menen-keskustaan-30",
+      "surface_form": "Menen keskustaan.",
+      "lemma": "Menen keskustaan.",
+      "translation_fa": "به مرکز شهر می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Menen keskustaan.",
+      "example_fa": "به مرکز شهر می‌روم.",
+      "accepted_answers": [
+        "Menen keskustaan."
+      ]
+    },
+    "a12s2-expr-menen-asemalle-31": {
+      "id": "a12s2-expr-menen-asemalle-31",
+      "surface_form": "Menen asemalle.",
+      "lemma": "Menen asemalle.",
+      "translation_fa": "به ایستگاه می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Menen asemalle.",
+      "example_fa": "به ایستگاه می‌روم.",
+      "accepted_answers": [
+        "Menen asemalle."
+      ]
+    },
+    "a12s2-hf-tasta": {
+      "id": "a12s2-hf-tasta",
+      "surface_form": "tästä",
+      "lemma": "tämä",
+      "translation_fa": "از این؛ دربارهٔ این",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 235,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Puhumme tästä huomenna.",
+      "example_fa": "فردا دربارهٔ این صحبت می‌کنیم.",
+      "accepted_answers": [
+        "tästä"
+      ]
+    },
+    "a12s2-hf-siita": {
+      "id": "a12s2-hf-siita",
+      "surface_form": "siitä",
+      "lemma": "se",
+      "translation_fa": "از آن / درباره آن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 32,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Puhumme siitä huomenna.",
+      "example_fa": "فردا درباره آن صحبت می‌کنیم.",
+      "accepted_answers": [
+        "siitä"
+      ]
+    },
+    "a12s2-topic-mista": {
+      "id": "a12s2-topic-mista",
+      "surface_form": "mistä",
+      "lemma": "mikä",
+      "translation_fa": "از کجا؛ از چه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 329,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Mistä tulet?",
+      "example_fa": "از کجا می‌آیی؟",
+      "accepted_answers": [
+        "mistä"
+      ]
+    },
+    "a12s2-topic-asemalta": {
+      "id": "a12s2-topic-asemalta",
+      "surface_form": "asemalta",
+      "lemma": "asemalta",
+      "translation_fa": "از ایستگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Tulen asemalta.",
+      "example_fa": "از ایستگاه می‌آیم.",
+      "accepted_answers": [
+        "asemalta"
+      ],
+      "visual": "🚉"
+    },
+    "a12s2-topic-kaupasta": {
+      "id": "a12s2-topic-kaupasta",
+      "surface_form": "kaupasta",
+      "lemma": "kaupasta",
+      "translation_fa": "از فروشگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Tulen kaupasta.",
+      "example_fa": "از فروشگاه می‌آیم.",
+      "accepted_answers": [
+        "kaupasta"
+      ],
+      "visual": "🏪"
+    },
+    "a12s2-topic-kotoa": {
+      "id": "a12s2-topic-kotoa",
+      "surface_form": "kotoa",
+      "lemma": "kotoa",
+      "translation_fa": "از خانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Tulen kotoa.",
+      "example_fa": "از خانه می‌آیم.",
+      "accepted_answers": [
+        "kotoa"
+      ],
+      "visual": "🏠"
+    },
+    "a12s2-expr-mista-tulet-38": {
+      "id": "a12s2-expr-mista-tulet-38",
+      "surface_form": "Mistä tulet?",
+      "lemma": "Mistä tulet?",
+      "translation_fa": "از کجا می‌آیی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Mistä tulet?",
+      "example_fa": "از کجا می‌آیی؟",
+      "accepted_answers": [
+        "Mistä tulet?"
+      ]
+    },
+    "a12s2-expr-tulen-asemalta-39": {
+      "id": "a12s2-expr-tulen-asemalta-39",
+      "surface_form": "Tulen asemalta.",
+      "lemma": "Tulen asemalta.",
+      "translation_fa": "از ایستگاه می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Tulen asemalta.",
+      "example_fa": "از ایستگاه می‌آیم.",
+      "accepted_answers": [
+        "Tulen asemalta."
+      ]
+    },
+    "a12s2-expr-tulen-kaupasta-40": {
+      "id": "a12s2-expr-tulen-kaupasta-40",
+      "surface_form": "Tulen kaupasta.",
+      "lemma": "Tulen kaupasta.",
+      "translation_fa": "از فروشگاه می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Tulen kaupasta.",
+      "example_fa": "از فروشگاه می‌آیم.",
+      "accepted_answers": [
+        "Tulen kaupasta."
+      ]
+    },
+    "a12s2-expr-tulen-kotoa-41": {
+      "id": "a12s2-expr-tulen-kotoa-41",
+      "surface_form": "Tulen kotoa.",
+      "lemma": "Tulen kotoa.",
+      "translation_fa": "از خانه می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Tulen kotoa.",
+      "example_fa": "از خانه می‌آیم.",
+      "accepted_answers": [
+        "Tulen kotoa."
+      ]
+    },
+    "a12s2-hf-kanssa": {
+      "id": "a12s2-hf-kanssa",
+      "surface_form": "kanssa",
+      "lemma": "kanssa",
+      "translation_fa": "با",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 33,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Menen kauppaan ystävän kanssa.",
+      "example_fa": "با دوستم به فروشگاه می‌روم.",
+      "accepted_answers": [
+        "kanssa"
+      ]
+    },
+    "a12s2-hf-usein": {
+      "id": "a12s2-hf-usein",
+      "surface_form": "usein",
+      "lemma": "usein",
+      "translation_fa": "اغلب / غالباً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 176,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Käyn usein kirjastossa.",
+      "example_fa": "اغلب به کتابخانه می‌روم.",
+      "accepted_answers": [
+        "usein"
+      ]
+    },
+    "a12s2-topic-bussi": {
+      "id": "a12s2-topic-bussi",
+      "surface_form": "bussi",
+      "lemma": "bussi",
+      "translation_fa": "اتوبوس",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen bussilla.",
+      "example_fa": "با اتوبوس می‌روم.",
+      "accepted_answers": [
+        "bussi"
+      ],
+      "visual": "🚌"
+    },
+    "a12s2-topic-juna": {
+      "id": "a12s2-topic-juna",
+      "surface_form": "juna",
+      "lemma": "juna",
+      "translation_fa": "قطار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen junalla.",
+      "example_fa": "با قطار می‌روم.",
+      "accepted_answers": [
+        "juna"
+      ],
+      "visual": "🚆"
+    },
+    "a12s2-topic-taksi": {
+      "id": "a12s2-topic-taksi",
+      "surface_form": "taksi",
+      "lemma": "taksi",
+      "translation_fa": "تاکسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Tulen taksilla.",
+      "example_fa": "با تاکسی می‌آیم.",
+      "accepted_answers": [
+        "taksi"
+      ],
+      "visual": "🚕"
+    },
+    "a12s2-topic-pyora": {
+      "id": "a12s2-topic-pyora",
+      "surface_form": "pyörä",
+      "lemma": "pyörä",
+      "translation_fa": "دوچرخه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen pyörällä.",
+      "example_fa": "با دوچرخه می‌روم.",
+      "accepted_answers": [
+        "pyörä"
+      ],
+      "visual": "🚲"
+    },
+    "a12s2-expr-menen-bussilla-48": {
+      "id": "a12s2-expr-menen-bussilla-48",
+      "surface_form": "Menen bussilla.",
+      "lemma": "Menen bussilla.",
+      "translation_fa": "با اتوبوس می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Menen bussilla.",
+      "example_fa": "با اتوبوس می‌روم.",
+      "accepted_answers": [
+        "Menen bussilla."
+      ]
+    },
+    "a12s2-expr-menen-junalla-49": {
+      "id": "a12s2-expr-menen-junalla-49",
+      "surface_form": "Menen junalla.",
+      "lemma": "Menen junalla.",
+      "translation_fa": "با قطار می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Menen junalla.",
+      "example_fa": "با قطار می‌روم.",
+      "accepted_answers": [
+        "Menen junalla."
+      ]
+    },
+    "a12s2-expr-tulen-taksilla-50": {
+      "id": "a12s2-expr-tulen-taksilla-50",
+      "surface_form": "Tulen taksilla.",
+      "lemma": "Tulen taksilla.",
+      "translation_fa": "با تاکسی می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Tulen taksilla.",
+      "example_fa": "با تاکسی می‌آیم.",
+      "accepted_answers": [
+        "Tulen taksilla."
+      ]
+    },
+    "a12s2-expr-menen-pyoralla-51": {
+      "id": "a12s2-expr-menen-pyoralla-51",
+      "surface_form": "Menen pyörällä.",
+      "lemma": "Menen pyörällä.",
+      "translation_fa": "با دوچرخه می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Menen pyörällä.",
+      "example_fa": "با دوچرخه می‌روم.",
+      "accepted_answers": [
+        "Menen pyörällä."
+      ]
+    },
+    "a12s2-hf-yksi": {
+      "id": "a12s2-hf-yksi",
+      "surface_form": "yksi",
+      "lemma": "yksi",
+      "translation_fa": "یک / یکی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 84,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Minulla on yksi kysymys.",
+      "example_fa": "من یک سؤال دارم.",
+      "accepted_answers": [
+        "yksi"
+      ]
+    },
+    "a12s2-hf-kaksi": {
+      "id": "a12s2-hf-kaksi",
+      "surface_form": "kaksi",
+      "lemma": "kaksi",
+      "translation_fa": "دو",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 69,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Minulla on kaksi kirjaa.",
+      "example_fa": "من دو کتاب دارم.",
+      "accepted_answers": [
+        "kaksi"
+      ]
+    },
+    "a12s2-hf-antaa": {
+      "id": "a12s2-hf-antaa",
+      "surface_form": "antaa",
+      "lemma": "antaa",
+      "translation_fa": "دادن / اجازه دادن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 164,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Voitko antaa minulle vettä?",
+      "example_fa": "می‌توانی به من آب بدهی؟",
+      "accepted_answers": [
+        "antaa"
+      ]
+    },
+    "a12s2-topic-lippu": {
+      "id": "a12s2-topic-lippu",
+      "surface_form": "lippu",
+      "lemma": "lippu",
+      "translation_fa": "بلیت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Yksi lippu, kiitos.",
+      "example_fa": "یک بلیت، لطفاً.",
+      "accepted_answers": [
+        "lippu"
+      ],
+      "visual": "🎫"
+    },
+    "a12s2-topic-menolippu": {
+      "id": "a12s2-topic-menolippu",
+      "surface_form": "menolippu",
+      "lemma": "menolippu",
+      "translation_fa": "بلیت یک‌طرفه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menolippu Helsinkiin, kiitos.",
+      "example_fa": "یک بلیت یک‌طرفه به هلسینکی، لطفاً.",
+      "accepted_answers": [
+        "menolippu"
+      ],
+      "visual": "🎟️"
+    },
+    "a12s2-topic-meno-paluu": {
+      "id": "a12s2-topic-meno-paluu",
+      "surface_form": "meno-paluu",
+      "lemma": "meno-paluu",
+      "translation_fa": "رفت‌وبرگشت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Meno-paluu, kiitos.",
+      "example_fa": "رفت‌وبرگشت، لطفاً.",
+      "accepted_answers": [
+        "meno-paluu"
+      ],
+      "visual": "🔁"
+    },
+    "a12s2-topic-automaatti": {
+      "id": "a12s2-topic-automaatti",
+      "surface_form": "automaatti",
+      "lemma": "automaatti",
+      "translation_fa": "دستگاه / دستگاه بلیت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Lippuautomaatti on tuolla.",
+      "example_fa": "دستگاه بلیت آنجاست.",
+      "accepted_answers": [
+        "automaatti"
+      ],
+      "visual": "🎫"
+    },
+    "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59": {
+      "id": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+      "surface_form": "Yksi lippu Helsinkiin, kiitos.",
+      "lemma": "Yksi lippu Helsinkiin, kiitos.",
+      "translation_fa": "یک بلیت به هلسینکی، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Yksi lippu Helsinkiin, kiitos.",
+      "example_fa": "یک بلیت به هلسینکی، لطفاً.",
+      "accepted_answers": [
+        "Yksi lippu Helsinkiin, kiitos."
+      ]
+    },
+    "a12s2-expr-kaksi-lippua-kiitos-60": {
+      "id": "a12s2-expr-kaksi-lippua-kiitos-60",
+      "surface_form": "Kaksi lippua, kiitos.",
+      "lemma": "Kaksi lippua, kiitos.",
+      "translation_fa": "دو بلیت، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Kaksi lippua, kiitos.",
+      "example_fa": "دو بلیت، لطفاً.",
+      "accepted_answers": [
+        "Kaksi lippua, kiitos."
+      ]
+    },
+    "a12s2-expr-meno-paluu-kiitos-61": {
+      "id": "a12s2-expr-meno-paluu-kiitos-61",
+      "surface_form": "Meno-paluu, kiitos.",
+      "lemma": "Meno-paluu, kiitos.",
+      "translation_fa": "رفت‌وبرگشت، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Meno-paluu, kiitos.",
+      "example_fa": "رفت‌وبرگشت، لطفاً.",
+      "accepted_answers": [
+        "Meno-paluu, kiitos."
+      ]
+    },
+    "a12s2-hf-klo": {
+      "id": "a12s2-hf-klo",
+      "surface_form": "klo",
+      "lemma": "kello",
+      "translation_fa": "ساعت؛ مخفف kello",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 148,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Kokous alkaa klo 9.",
+      "example_fa": "جلسه ساعت نه آغاز می‌شود.",
+      "accepted_answers": [
+        "klo"
+      ]
+    },
+    "a12s2-hf-ennen": {
+      "id": "a12s2-hf-ennen",
+      "surface_form": "ennen",
+      "lemma": "ennen",
+      "translation_fa": "پیش از / قبلاً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 50,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Tule ennen kello kuutta.",
+      "example_fa": "پیش از ساعت شش بیا.",
+      "accepted_answers": [
+        "ennen"
+      ]
+    },
+    "a12s2-hf-jalkeen": {
+      "id": "a12s2-hf-jalkeen",
+      "surface_form": "jälkeen",
+      "lemma": "jälkeen",
+      "translation_fa": "بعد از / پس از",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 36,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Tulen töiden jälkeen.",
+      "example_fa": "بعد از کار می‌آیم.",
+      "accepted_answers": [
+        "jälkeen"
+      ]
+    },
+    "a12s2-hf-valilla": {
+      "id": "a12s2-hf-valilla",
+      "surface_form": "välillä",
+      "lemma": "väli",
+      "translation_fa": "بین / گاهی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 200,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Junat kulkevat kaupunkien välillä.",
+      "example_fa": "قطارها بین شهرها رفت‌وآمد می‌کنند.",
+      "accepted_answers": [
+        "välillä"
+      ]
+    },
+    "a12s2-topic-lahtee": {
+      "id": "a12s2-topic-lahtee",
+      "surface_form": "lähtee",
+      "lemma": "lähtee",
+      "translation_fa": "حرکت می‌کند / راه می‌افتد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Bussi lähtee kello kahdeksan.",
+      "example_fa": "اتوبوس ساعت هشت حرکت می‌کند.",
+      "accepted_answers": [
+        "lähtee"
+      ],
+      "visual": "🚌"
+    },
+    "a12s2-topic-saapuu": {
+      "id": "a12s2-topic-saapuu",
+      "surface_form": "saapuu",
+      "lemma": "saapuu",
+      "translation_fa": "می‌رسد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Juna saapuu kello yhdeksän.",
+      "example_fa": "قطار ساعت نه می‌رسد.",
+      "accepted_answers": [
+        "saapuu"
+      ],
+      "visual": "🚆"
+    },
+    "a12s2-topic-myohassa": {
+      "id": "a12s2-topic-myohassa",
+      "surface_form": "myöhässä",
+      "lemma": "myöhässä",
+      "translation_fa": "دیر / با تأخیر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Bussi on myöhässä.",
+      "example_fa": "اتوبوس تأخیر دارد.",
+      "accepted_answers": [
+        "myöhässä"
+      ],
+      "visual": "⏰"
+    },
+    "a12s2-topic-ajoissa": {
+      "id": "a12s2-topic-ajoissa",
+      "surface_form": "ajoissa",
+      "lemma": "ajoissa",
+      "translation_fa": "سر وقت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Juna on ajoissa.",
+      "example_fa": "قطار سر وقت است.",
+      "accepted_answers": [
+        "ajoissa"
+      ],
+      "visual": "✅"
+    },
+    "a12s2-expr-bussi-lahtee-kello-kahdeksan-70": {
+      "id": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+      "surface_form": "Bussi lähtee kello kahdeksan.",
+      "lemma": "Bussi lähtee kello kahdeksan.",
+      "translation_fa": "اتوبوس ساعت هشت حرکت می‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Bussi lähtee kello kahdeksan.",
+      "example_fa": "اتوبوس ساعت هشت حرکت می‌کند.",
+      "accepted_answers": [
+        "Bussi lähtee kello kahdeksan."
+      ]
+    },
+    "a12s2-expr-juna-saapuu-kello-yhdeksan-71": {
+      "id": "a12s2-expr-juna-saapuu-kello-yhdeksan-71",
+      "surface_form": "Juna saapuu kello yhdeksän.",
+      "lemma": "Juna saapuu kello yhdeksän.",
+      "translation_fa": "قطار ساعت نه می‌رسد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Juna saapuu kello yhdeksän.",
+      "example_fa": "قطار ساعت نه می‌رسد.",
+      "accepted_answers": [
+        "Juna saapuu kello yhdeksän."
+      ]
+    },
+    "a12s2-expr-se-lahtee-ennen-kymmenta-72": {
+      "id": "a12s2-expr-se-lahtee-ennen-kymmenta-72",
+      "surface_form": "Se lähtee ennen kymmentä.",
+      "lemma": "Se lähtee ennen kymmentä.",
+      "translation_fa": "پیش از ساعت ده حرکت می‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Se lähtee ennen kymmentä.",
+      "example_fa": "پیش از ساعت ده حرکت می‌کند.",
+      "accepted_answers": [
+        "Se lähtee ennen kymmentä."
+      ]
+    },
+    "a12s2-expr-bussi-on-myohassa-73": {
+      "id": "a12s2-expr-bussi-on-myohassa-73",
+      "surface_form": "Bussi on myöhässä.",
+      "lemma": "Bussi on myöhässä.",
+      "translation_fa": "اتوبوس تأخیر دارد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Bussi on myöhässä.",
+      "example_fa": "اتوبوس تأخیر دارد.",
+      "accepted_answers": [
+        "Bussi on myöhässä."
+      ]
+    },
+    "a12s2-hf-kuinka": {
+      "id": "a12s2-hf-kuinka",
+      "surface_form": "kuinka",
+      "lemma": "kuinka",
+      "translation_fa": "چگونه / چقدر",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 173,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Kuinka paljon tämä maksaa?",
+      "example_fa": "این چقدر قیمت دارد؟",
+      "accepted_answers": [
+        "kuinka"
+      ]
+    },
+    "a12s2-hf-miten": {
+      "id": "a12s2-hf-miten",
+      "surface_form": "miten",
+      "lemma": "miten",
+      "translation_fa": "چگونه / چطور",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 85,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Miten tämä toimii?",
+      "example_fa": "این چطور کار می‌کند؟",
+      "accepted_answers": [
+        "miten"
+      ]
+    },
+    "a12s2-hf-aikaa": {
+      "id": "a12s2-hf-aikaa",
+      "surface_form": "aikaa",
+      "lemma": "aika",
+      "translation_fa": "زمان / وقت؛ حالت پارتیتیو",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 153,
+      "topics": [
+        "travel",
+        "source-backed"
+      ],
+      "example_fi": "Minulla ei ole aikaa.",
+      "example_fa": "وقت ندارم.",
+      "accepted_answers": [
+        "aikaa"
+      ]
+    },
+    "a12s2-topic-kauan": {
+      "id": "a12s2-topic-kauan",
+      "surface_form": "kauan",
+      "lemma": "kauan",
+      "translation_fa": "چه مدت / چقدر طولانی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Kuinka kauan matka kestää?",
+      "example_fa": "سفر چقدر طول می‌کشد؟",
+      "accepted_answers": [
+        "kauan"
+      ]
+    },
+    "a12s2-topic-lahella": {
+      "id": "a12s2-topic-lahella",
+      "surface_form": "lähellä",
+      "lemma": "lähellä",
+      "translation_fa": "نزدیک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Se on lähellä.",
+      "example_fa": "آن نزدیک است.",
+      "accepted_answers": [
+        "lähellä"
+      ]
+    },
+    "a12s2-topic-kaukana": {
+      "id": "a12s2-topic-kaukana",
+      "surface_form": "kaukana",
+      "lemma": "kaukana",
+      "translation_fa": "دور",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Se on kaukana.",
+      "example_fa": "آن دور است.",
+      "accepted_answers": [
+        "kaukana"
+      ]
+    },
+    "a12s2-topic-minuutti": {
+      "id": "a12s2-topic-minuutti",
+      "surface_form": "minuutti",
+      "lemma": "minuutti",
+      "translation_fa": "دقیقه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Matka kestää kymmenen minuuttia.",
+      "example_fa": "سفر ده دقیقه طول می‌کشد.",
+      "accepted_answers": [
+        "minuutti"
+      ]
+    },
+    "a12s2-expr-kuinka-kauan-matka-kestaa-81": {
+      "id": "a12s2-expr-kuinka-kauan-matka-kestaa-81",
+      "surface_form": "Kuinka kauan matka kestää?",
+      "lemma": "Kuinka kauan matka kestää?",
+      "translation_fa": "سفر چقدر طول می‌کشد؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Kuinka kauan matka kestää?",
+      "example_fa": "سفر چقدر طول می‌کشد؟",
+      "accepted_answers": [
+        "Kuinka kauan matka kestää?"
+      ]
+    },
+    "a12s2-expr-noin-kymmenen-minuuttia-82": {
+      "id": "a12s2-expr-noin-kymmenen-minuuttia-82",
+      "surface_form": "Noin kymmenen minuuttia.",
+      "lemma": "Noin kymmenen minuuttia.",
+      "translation_fa": "حدود ده دقیقه.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Noin kymmenen minuuttia.",
+      "example_fa": "حدود ده دقیقه.",
+      "accepted_answers": [
+        "Noin kymmenen minuuttia."
+      ]
+    },
+    "a12s2-expr-se-on-lahella-83": {
+      "id": "a12s2-expr-se-on-lahella-83",
+      "surface_form": "Se on lähellä.",
+      "lemma": "Se on lähellä.",
+      "translation_fa": "آن نزدیک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Se on lähellä.",
+      "example_fa": "آن نزدیک است.",
+      "accepted_answers": [
+        "Se on lähellä."
+      ]
+    },
+    "a12s2-expr-se-on-kaukana-84": {
+      "id": "a12s2-expr-se-on-kaukana-84",
+      "surface_form": "Se on kaukana.",
+      "lemma": "Se on kaukana.",
+      "translation_fa": "آن دور است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Se on kaukana.",
+      "example_fa": "آن دور است.",
+      "accepted_answers": [
+        "Se on kaukana."
+      ]
+    },
+    "a12s2-time-8": {
+      "id": "a12s2-time-8",
+      "surface_form": "kello kahdeksan",
+      "lemma": "kello kahdeksan",
+      "translation_fa": "ساعت هشت",
+      "item_type": "time",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel"
+      ],
+      "example_fi": "kello kahdeksan",
+      "example_fa": "ساعت هشت",
+      "accepted_answers": [
+        "kello kahdeksan"
+      ]
+    },
+    "a12s2-time-9": {
+      "id": "a12s2-time-9",
+      "surface_form": "kello yhdeksän",
+      "lemma": "kello yhdeksän",
+      "translation_fa": "ساعت نه",
+      "item_type": "time",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel"
+      ],
+      "example_fi": "kello yhdeksän",
+      "example_fa": "ساعت نه",
+      "accepted_answers": [
+        "kello yhdeksän"
+      ]
+    },
+    "a12s2-time-10": {
+      "id": "a12s2-time-10",
+      "surface_form": "kello kymmenen",
+      "lemma": "kello kymmenen",
+      "translation_fa": "ساعت ده",
+      "item_type": "time",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel"
+      ],
+      "example_fi": "kello kymmenen",
+      "example_fa": "ساعت ده",
+      "accepted_answers": [
+        "kello kymmenen"
+      ]
+    },
+    "a12s2-reading-short-trip": {
+      "id": "a12s2-reading-short-trip",
+      "surface_form": "Missä asema on? Mene suoraan. Menen bussilla. Yksi lippu Helsinkiin, kiitos. Bussi lähtee kello kahdeksan.",
+      "lemma": "Missä asema on? Mene suoraan. Menen bussilla. Yksi lippu Helsinkiin, kiitos. Bussi lähtee kello kahdeksan",
+      "translation_fa": "ایستگاه کجاست؟ مستقیم برو. با اتوبوس می‌روم. یک بلیت به هلسینکی، لطفاً. اتوبوس ساعت هشت حرکت می‌کند.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel"
+      ],
+      "example_fi": "Missä asema on? Mene suoraan. Menen bussilla. Yksi lippu Helsinkiin, kiitos. Bussi lähtee kello kahdeksan.",
+      "example_fa": "ایستگاه کجاست؟ مستقیم برو. با اتوبوس می‌روم. یک بلیت به هلسینکی، لطفاً. اتوبوس ساعت هشت حرکت می‌کند.",
+      "accepted_answers": [
+        "Missä asema on? Mene suoraan. Menen bussilla. Yksi lippu Helsinkiin, kiitos. Bussi lähtee kello kahdeksan."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a1.2-section-2-lesson-1",
+      "curriculum_id": "a1.2-s2-l01",
+      "order": 1,
+      "title_fa": "مکان‌های شهر",
+      "objective_fa": "بپرسد یک مکان رایج در شهر کجاست و آن را روی یک نقشهٔ ساده پیدا کند.",
+      "summary_fa": "مکان‌های رایج شهر را پیدا کن و دربارهٔ جای آن‌ها سؤال کن.",
+      "grammar_fa": "الگوی Missä … on? و چند صورت مکانی آماده مثل keskustassa را به‌صورت کامل تمرین می‌کنی.",
+      "new_targets": [
+        "a12s2-hf-missa",
+        "a12s2-hf-taalla",
+        "a12s2-hf-siella",
+        "a12s2-topic-asema",
+        "a12s2-topic-pysakki",
+        "a12s2-topic-apteekki",
+        "a12s2-topic-kauppa",
+        "a12s2-topic-keskusta"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-missa",
+          "a12s2-hf-taalla",
+          "a12s2-hf-siella"
+        ],
+        "topic": [
+          "a12s2-topic-asema",
+          "a12s2-topic-pysakki",
+          "a12s2-topic-apteekki",
+          "a12s2-topic-kauppa",
+          "a12s2-topic-keskusta"
+        ],
+        "expressions": [
+          "a12s2-expr-missa-asema-on-8",
+          "a12s2-expr-missa-apteekki-on-9",
+          "a12s2-expr-se-on-keskustassa-10"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l04",
+        "a1.1-s4-l02",
+        "a1.2-s1-l05"
+      ],
+      "production_targets": [
+        "a12s2-expr-missa-asema-on-8"
+      ],
+      "listening_targets": [
+        "a12s2-topic-asema",
+        "a12s2-hf-taalla"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s2-expr-missa-apteekki-on-9",
+          "prompt_fi": "Missä _____ on?",
+          "accepted_answers": [
+            "apteekki"
+          ],
+          "expected_fi": "Missä apteekki on?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s2-topic-keskusta",
+          "base_fi": "keskusta",
+          "feature_fa": "inessiivi برای «در مرکز شهر»",
+          "prompt_fa": "برای گفتن «در مرکز شهر» شکل درست را انتخاب کن.",
+          "frame_fi": "Se on _____.",
+          "options_fi": [
+            "keskusta",
+            "keskustaan",
+            "keskustassa",
+            "keskustasta"
+          ],
+          "expected_fi": "keskustassa",
+          "explanation_fa": "برای مکان ثابت در این عبارت از inessiivi استفاده می‌شود: keskusta → keskustassa."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-missa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-taalla"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-siella"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-asema"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-pysakki"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-apteekki"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-kauppa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-keskusta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-missa-asema-on-8"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-asema",
+          "options": [
+            "a12s2-topic-asema",
+            "a12s2-hf-taalla",
+            "a12s2-hf-siella",
+            "a12s2-topic-pysakki"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-taalla"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-missa-apteekki-on-9",
+          "options": [
+            "a12s2-expr-missa-apteekki-on-9",
+            "a12s2-hf-siella",
+            "a12s2-topic-asema",
+            "a12s2-topic-pysakki"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-keskusta",
+          "options": [
+            "a12s2-topic-keskusta",
+            "a12s2-topic-asema",
+            "a12s2-topic-pysakki",
+            "a12s2-topic-apteekki"
+          ]
+        },
+        {
+          "type": "visual-choice",
+          "item": "a12s2-topic-apteekki",
+          "options": [
+            "a12s2-topic-asema",
+            "a12s2-topic-pysakki",
+            "a12s2-topic-apteekki",
+            "a12s2-topic-kauppa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-missa",
+          "options": [
+            "a12s2-hf-missa",
+            "a12s2-hf-taalla",
+            "a12s2-hf-siella",
+            "a12s2-topic-asema"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-2",
+      "curriculum_id": "a1.2-s2-l02",
+      "order": 2,
+      "title_fa": "جهت‌های پایه",
+      "objective_fa": "چند دستور بسیار کوتاه برای مسیر را بفهمد و به کار ببرد.",
+      "summary_fa": "یک دستور کوتاه مسیر را بفهم و جهت درست را انتخاب یا بیان کن.",
+      "grammar_fa": "Mene و Käänny در این درس به‌صورت دستورهای ثابت و بازبینی‌شده می‌آیند؛ صرف تازه‌ای در زمان اجرا ساخته نمی‌شود.",
+      "new_targets": [
+        "a12s2-hf-kohti",
+        "a12s2-hf-takaisin",
+        "a12s2-hf-pois",
+        "a12s2-topic-suoraan",
+        "a12s2-topic-vasemmalle",
+        "a12s2-topic-oikealle"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-kohti",
+          "a12s2-hf-takaisin",
+          "a12s2-hf-pois"
+        ],
+        "topic": [
+          "a12s2-topic-suoraan",
+          "a12s2-topic-vasemmalle",
+          "a12s2-topic-oikealle"
+        ],
+        "expressions": [
+          "a12s2-expr-mene-suoraan-17",
+          "a12s2-expr-kaanny-vasemmalle-18",
+          "a12s2-expr-kaanny-oikealle-19",
+          "a12s2-expr-mene-takaisin-20"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l07",
+        "a1.2-s2-l01"
+      ],
+      "production_targets": [
+        "a12s2-expr-mene-suoraan-17"
+      ],
+      "listening_targets": [
+        "a12s2-topic-suoraan",
+        "a12s2-topic-oikealle"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s2-expr-kaanny-vasemmalle-18",
+          "tokens": [
+            "vasemmalle.",
+            "Käänny"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Käänny vasemmalle."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-kohti"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-takaisin"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-pois"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-suoraan"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-vasemmalle"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-oikealle"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-mene-suoraan-17"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-suoraan",
+          "options": [
+            "a12s2-topic-suoraan",
+            "a12s2-hf-takaisin",
+            "a12s2-hf-pois",
+            "a12s2-topic-vasemmalle"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-oikealle"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-kaanny-vasemmalle-18",
+          "options": [
+            "a12s2-expr-kaanny-vasemmalle-18",
+            "a12s2-hf-pois",
+            "a12s2-topic-suoraan",
+            "a12s2-topic-vasemmalle"
+          ]
+        },
+        {
+          "type": "visual-choice",
+          "item": "a12s2-topic-vasemmalle",
+          "options": [
+            "a12s2-topic-suoraan",
+            "a12s2-topic-vasemmalle",
+            "a12s2-topic-oikealle",
+            "a12s2-hf-takaisin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-kohti",
+          "options": [
+            "a12s2-hf-kohti",
+            "a12s2-hf-takaisin",
+            "a12s2-hf-pois",
+            "a12s2-topic-suoraan"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-takaisin"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-pois",
+          "options": [
+            "a12s2-hf-pois",
+            "a12s2-topic-suoraan",
+            "a12s2-topic-vasemmalle",
+            "a12s2-topic-oikealle"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-suoraan"
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-3",
+      "curriculum_id": "a1.2-s2-l03",
+      "order": 3,
+      "title_fa": "به کجا؟",
+      "objective_fa": "بپرسد کسی به کجا می‌رود و یک پاسخ کوتاه دربارهٔ مقصد بدهد.",
+      "summary_fa": "دربارهٔ مقصد سؤال کن و با یک صورت مقصد کوتاه جواب بده.",
+      "grammar_fa": "mihin و صورت‌های مقصد kotiin، keskustaan و asemalle صریحاً ذخیره و تمرین می‌شوند.",
+      "new_targets": [
+        "a12s2-hf-tahan",
+        "a12s2-hf-siihen",
+        "a12s2-hf-tulee",
+        "a12s2-topic-mihin",
+        "a12s2-topic-kotiin",
+        "a12s2-topic-keskustaan",
+        "a12s2-topic-asemalle"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-tahan",
+          "a12s2-hf-siihen",
+          "a12s2-hf-tulee"
+        ],
+        "topic": [
+          "a12s2-topic-mihin",
+          "a12s2-topic-kotiin",
+          "a12s2-topic-keskustaan",
+          "a12s2-topic-asemalle"
+        ],
+        "expressions": [
+          "a12s2-expr-mihin-menet-28",
+          "a12s2-expr-menen-kotiin-29",
+          "a12s2-expr-menen-keskustaan-30",
+          "a12s2-expr-menen-asemalle-31"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l05",
+        "a1.2-s2-l01"
+      ],
+      "production_targets": [
+        "a12s2-expr-menen-kotiin-29"
+      ],
+      "listening_targets": [
+        "a12s2-topic-mihin",
+        "a12s2-topic-kotiin"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s2-expr-menen-keskustaan-30",
+          "prompt_fa": "به مرکز شهر می‌روم.",
+          "cues_fi": [
+            "Menen",
+            "keskustaan"
+          ],
+          "expected_fi": "Menen keskustaan.",
+          "accepted_answers": [
+            "Menen keskustaan."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s2-topic-asemalle",
+          "base_fi": "asema",
+          "feature_fa": "allatiivi برای مقصد",
+          "prompt_fa": "برای گفتن «به ایستگاه» شکل درست را انتخاب کن.",
+          "frame_fi": "Menen _____.",
+          "options_fi": [
+            "asema",
+            "asemalla",
+            "asemalle",
+            "asemalta"
+          ],
+          "expected_fi": "asemalle",
+          "explanation_fa": "برای این مقصد از allatiivi استفاده می‌کنیم: asema → asemalle."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-tahan"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-siihen"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-tulee"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-mihin"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-kotiin"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-keskustaan"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-asemalle"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-menen-kotiin-29"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-mihin",
+          "options": [
+            "a12s2-topic-mihin",
+            "a12s2-hf-siihen",
+            "a12s2-hf-tulee",
+            "a12s2-topic-kotiin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-kotiin"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-menen-keskustaan-30",
+          "options": [
+            "a12s2-expr-menen-keskustaan-30",
+            "a12s2-hf-tulee",
+            "a12s2-topic-mihin",
+            "a12s2-topic-kotiin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-asemalle",
+          "options": [
+            "a12s2-topic-asemalle",
+            "a12s2-topic-mihin",
+            "a12s2-topic-kotiin",
+            "a12s2-topic-keskustaan"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-tahan",
+          "options": [
+            "a12s2-hf-tahan",
+            "a12s2-hf-siihen",
+            "a12s2-hf-tulee",
+            "a12s2-topic-mihin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-siihen"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-tulee",
+          "options": [
+            "a12s2-hf-tulee",
+            "a12s2-topic-mihin",
+            "a12s2-topic-kotiin",
+            "a12s2-topic-keskustaan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-4",
+      "curriculum_id": "a1.2-s2-l04",
+      "order": 4,
+      "title_fa": "از کجا؟",
+      "objective_fa": "بپرسد کسی از کجا می‌آید و یک پاسخ کوتاه دربارهٔ مبدأ بدهد.",
+      "summary_fa": "دربارهٔ مبدأ سؤال کن و یک پاسخ کوتاه دربارهٔ محل آمدن بده.",
+      "grammar_fa": "mistä و صورت‌های مبدأ asemalta، kaupasta و kotoa به‌صورت شکل‌های کامل و بازبینی‌شده تمرین می‌شوند.",
+      "new_targets": [
+        "a12s2-hf-tasta",
+        "a12s2-hf-siita",
+        "a12s2-hf-tulee",
+        "a12s2-topic-mista",
+        "a12s2-topic-asemalta",
+        "a12s2-topic-kaupasta",
+        "a12s2-topic-kotoa"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-tasta",
+          "a12s2-hf-siita",
+          "a12s2-hf-tulee"
+        ],
+        "topic": [
+          "a12s2-topic-mista",
+          "a12s2-topic-asemalta",
+          "a12s2-topic-kaupasta",
+          "a12s2-topic-kotoa"
+        ],
+        "expressions": [
+          "a12s2-expr-mista-tulet-38",
+          "a12s2-expr-tulen-asemalta-39",
+          "a12s2-expr-tulen-kaupasta-40",
+          "a12s2-expr-tulen-kotoa-41"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l02",
+        "a1.2-s2-l03"
+      ],
+      "production_targets": [
+        "a12s2-expr-mista-tulet-38"
+      ],
+      "listening_targets": [
+        "a12s2-topic-mista",
+        "a12s2-topic-kotoa"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s2-expr-tulen-kaupasta-40",
+          "prompt_fa": "از فروشگاه می‌آیم.",
+          "cues_fi": [
+            "Tulen",
+            "kaupasta"
+          ],
+          "expected_fi": "Tulen kaupasta.",
+          "accepted_answers": [
+            "Tulen kaupasta."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s2-topic-asemalta",
+          "base_fi": "asema",
+          "feature_fa": "ablatiivi برای مبدأ",
+          "prompt_fa": "برای گفتن «از ایستگاه» شکل درست را انتخاب کن.",
+          "frame_fi": "Tulen _____.",
+          "options_fi": [
+            "asema",
+            "asemalla",
+            "asemalle",
+            "asemalta"
+          ],
+          "expected_fi": "asemalta",
+          "explanation_fa": "برای مبدأ ایستگاه در این عبارت از ablatiivi استفاده می‌کنیم: asema → asemalta."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-tasta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-siita"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-tulee"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-mista"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-asemalta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-kaupasta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-kotoa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-mista-tulet-38"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-mista",
+          "options": [
+            "a12s2-topic-mista",
+            "a12s2-hf-siita",
+            "a12s2-hf-tulee",
+            "a12s2-topic-asemalta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-kotoa"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-tulen-kaupasta-40",
+          "options": [
+            "a12s2-expr-tulen-kaupasta-40",
+            "a12s2-hf-tulee",
+            "a12s2-topic-mista",
+            "a12s2-topic-asemalta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-asemalta",
+          "options": [
+            "a12s2-topic-asemalta",
+            "a12s2-topic-mista",
+            "a12s2-topic-kaupasta",
+            "a12s2-topic-kotoa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-tasta",
+          "options": [
+            "a12s2-hf-tasta",
+            "a12s2-hf-siita",
+            "a12s2-hf-tulee",
+            "a12s2-topic-mista"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-siita"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-tulee",
+          "options": [
+            "a12s2-hf-tulee",
+            "a12s2-topic-mista",
+            "a12s2-topic-asemalta",
+            "a12s2-topic-kaupasta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-5",
+      "curriculum_id": "a1.2-s2-l05",
+      "order": 5,
+      "title_fa": "حمل‌ونقل",
+      "objective_fa": "با چند وسیلهٔ آشنا بگوید چگونه رفت‌وآمد می‌کند.",
+      "summary_fa": "بگو با چه وسیله‌ای رفت‌وآمد می‌کنی.",
+      "grammar_fa": "صورت‌های bussilla، junalla، taksilla و pyörällä به‌صورت عبارت‌های کامل و نه با ساخت پسوند در مرورگر تمرین می‌شوند.",
+      "new_targets": [
+        "a12s2-hf-tulee",
+        "a12s2-hf-kanssa",
+        "a12s2-hf-usein",
+        "a12s2-topic-bussi",
+        "a12s2-topic-juna",
+        "a12s2-topic-taksi",
+        "a12s2-topic-pyora"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-tulee",
+          "a12s2-hf-kanssa",
+          "a12s2-hf-usein"
+        ],
+        "topic": [
+          "a12s2-topic-bussi",
+          "a12s2-topic-juna",
+          "a12s2-topic-taksi",
+          "a12s2-topic-pyora"
+        ],
+        "expressions": [
+          "a12s2-expr-menen-bussilla-48",
+          "a12s2-expr-menen-junalla-49",
+          "a12s2-expr-tulen-taksilla-50",
+          "a12s2-expr-menen-pyoralla-51"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l05",
+        "a1.2-s2-l03"
+      ],
+      "production_targets": [
+        "a12s2-expr-menen-bussilla-48"
+      ],
+      "listening_targets": [
+        "a12s2-topic-juna",
+        "a12s2-topic-taksi"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s2-expr-menen-pyoralla-51",
+          "prompt_fa": "با دوچرخه می‌روم.",
+          "cues_fi": [
+            "Menen",
+            "pyörällä"
+          ],
+          "expected_fi": "Menen pyörällä.",
+          "accepted_answers": [
+            "Menen pyörällä."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s2-topic-bussi",
+          "base_fi": "bussi",
+          "feature_fa": "adessiivi برای وسیلهٔ رفت‌وآمد",
+          "prompt_fa": "برای گفتن «با اتوبوس» شکل درست را انتخاب کن.",
+          "frame_fi": "Menen _____.",
+          "options_fi": [
+            "bussi",
+            "bussissa",
+            "bussilla",
+            "bussista"
+          ],
+          "expected_fi": "bussilla",
+          "explanation_fa": "برای وسیلهٔ رفت‌وآمد در این عبارت از adessiivi استفاده می‌کنیم: bussi → bussilla."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-tulee"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-kanssa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-usein"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-bussi"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-juna"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-taksi"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-pyora"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-menen-bussilla-48"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-juna",
+          "options": [
+            "a12s2-topic-juna",
+            "a12s2-hf-kanssa",
+            "a12s2-hf-usein",
+            "a12s2-topic-bussi"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-taksi"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-menen-pyoralla-51",
+          "options": [
+            "a12s2-expr-menen-pyoralla-51",
+            "a12s2-hf-usein",
+            "a12s2-topic-bussi",
+            "a12s2-topic-juna"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-bussi",
+          "options": [
+            "a12s2-topic-bussi",
+            "a12s2-topic-juna",
+            "a12s2-topic-taksi",
+            "a12s2-topic-pyora"
+          ]
+        },
+        {
+          "type": "visual-choice",
+          "item": "a12s2-topic-pyora",
+          "options": [
+            "a12s2-topic-bussi",
+            "a12s2-topic-juna",
+            "a12s2-topic-taksi",
+            "a12s2-topic-pyora"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-tulee",
+          "options": [
+            "a12s2-hf-tulee",
+            "a12s2-hf-kanssa",
+            "a12s2-hf-usein",
+            "a12s2-topic-bussi"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-kanssa"
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-6",
+      "curriculum_id": "a1.2-s2-l06",
+      "order": 6,
+      "title_fa": "بلیت",
+      "objective_fa": "برای یک مقصد آشنا یک یا دو بلیت ساده درخواست کند.",
+      "summary_fa": "یک یا دو بلیت ساده برای مقصد آشنا درخواست کن.",
+      "grammar_fa": "مقدار بلیت و مقصد در عبارت‌های کامل خدماتی تمرین می‌شوند؛ lippua و Helsinkiin شکل‌های صریح‌اند.",
+      "new_targets": [
+        "a12s2-hf-yksi",
+        "a12s2-hf-kaksi",
+        "a12s2-hf-antaa",
+        "a12s2-topic-lippu",
+        "a12s2-topic-menolippu",
+        "a12s2-topic-meno-paluu",
+        "a12s2-topic-automaatti"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-yksi",
+          "a12s2-hf-kaksi",
+          "a12s2-hf-antaa"
+        ],
+        "topic": [
+          "a12s2-topic-lippu",
+          "a12s2-topic-menolippu",
+          "a12s2-topic-meno-paluu",
+          "a12s2-topic-automaatti"
+        ],
+        "expressions": [
+          "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+          "a12s2-expr-kaksi-lippua-kiitos-60",
+          "a12s2-expr-meno-paluu-kiitos-61"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l06",
+        "a1.2-s1-l03",
+        "a1.2-s2-l03",
+        "a1.2-s2-l05"
+      ],
+      "production_targets": [
+        "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59"
+      ],
+      "listening_targets": [
+        "a12s2-topic-lippu",
+        "a12s2-topic-meno-paluu"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s2-expr-kaksi-lippua-kiitos-60",
+          "prompt_fi": "Kaksi _____, kiitos.",
+          "accepted_answers": [
+            "lippua"
+          ],
+          "expected_fi": "Kaksi lippua, kiitos."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a12s2-topic-lippu",
+          "base_fi": "lippu",
+          "feature_fa": "partitiivi بعد از عدد kaksi",
+          "prompt_fa": "شکل درست lippu را بعد از kaksi بنویس.",
+          "frame_fi": "Kaksi _____, kiitos.",
+          "expected_fi": "lippua",
+          "accepted_answers": [
+            "lippua"
+          ],
+          "explanation_fa": "بعد از عدد kaksi در این عبارت از partitiivi استفاده می‌شود: lippu → lippua."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-yksi"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-kaksi"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-antaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-lippu"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-menolippu"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-meno-paluu"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-automaatti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-lippu",
+          "options": [
+            "a12s2-topic-lippu",
+            "a12s2-hf-kaksi",
+            "a12s2-hf-antaa",
+            "a12s2-topic-menolippu"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-meno-paluu"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-kaksi-lippua-kiitos-60",
+          "options": [
+            "a12s2-expr-kaksi-lippua-kiitos-60",
+            "a12s2-hf-antaa",
+            "a12s2-topic-lippu",
+            "a12s2-topic-menolippu"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-lippu",
+          "options": [
+            "a12s2-topic-lippu",
+            "a12s2-topic-menolippu",
+            "a12s2-topic-meno-paluu",
+            "a12s2-topic-automaatti"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-yksi",
+          "options": [
+            "a12s2-hf-yksi",
+            "a12s2-hf-kaksi",
+            "a12s2-hf-antaa",
+            "a12s2-topic-lippu"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-kaksi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-antaa",
+          "options": [
+            "a12s2-hf-antaa",
+            "a12s2-topic-lippu",
+            "a12s2-topic-menolippu",
+            "a12s2-topic-meno-paluu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-7",
+      "curriculum_id": "a1.2-s2-l07",
+      "order": 7,
+      "title_fa": "جدول زمان‌بندی",
+      "objective_fa": "زمان حرکت را در یک جدول ساده پیدا کند و رابطهٔ قبل/بعد را بفهمد.",
+      "summary_fa": "زمان حرکت یا رسیدن را از یک برنامهٔ ساده بخوان و قبل/بعد را بفهم.",
+      "grammar_fa": "lähtee و saapuu همراه با زمان و ennen/jälkeen در عبارت‌های کامل و بازبینی‌شده تمرین می‌شوند.",
+      "new_targets": [
+        "a12s2-hf-klo",
+        "a12s2-hf-ennen",
+        "a12s2-hf-jalkeen",
+        "a12s2-hf-valilla",
+        "a12s2-topic-lahtee",
+        "a12s2-topic-saapuu",
+        "a12s2-topic-myohassa",
+        "a12s2-topic-ajoissa"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-klo",
+          "a12s2-hf-ennen",
+          "a12s2-hf-jalkeen",
+          "a12s2-hf-valilla"
+        ],
+        "topic": [
+          "a12s2-topic-lahtee",
+          "a12s2-topic-saapuu",
+          "a12s2-topic-myohassa",
+          "a12s2-topic-ajoissa"
+        ],
+        "expressions": [
+          "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+          "a12s2-expr-juna-saapuu-kello-yhdeksan-71",
+          "a12s2-expr-se-lahtee-ennen-kymmenta-72",
+          "a12s2-expr-bussi-on-myohassa-73"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l03",
+        "a1.1-s3-l08",
+        "a1.2-s2-l05",
+        "a1.2-s2-l06"
+      ],
+      "production_targets": [
+        "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+      ],
+      "listening_targets": [
+        "a12s2-topic-lahtee",
+        "a12s2-topic-myohassa"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s2-expr-juna-saapuu-kello-yhdeksan-71",
+          "tokens": [
+            "kello",
+            "yhdeksän.",
+            "saapuu",
+            "Juna"
+          ],
+          "answer_order": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Juna saapuu kello yhdeksän."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-klo"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-ennen"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-jalkeen"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-valilla"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-lahtee"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-saapuu"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-myohassa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-ajoissa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-lahtee",
+          "options": [
+            "a12s2-topic-lahtee",
+            "a12s2-hf-ennen",
+            "a12s2-hf-jalkeen",
+            "a12s2-hf-valilla"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-myohassa"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-juna-saapuu-kello-yhdeksan-71",
+          "options": [
+            "a12s2-expr-juna-saapuu-kello-yhdeksan-71",
+            "a12s2-hf-jalkeen",
+            "a12s2-hf-valilla",
+            "a12s2-topic-lahtee"
+          ]
+        },
+        {
+          "type": "clock-choice",
+          "hour": 8,
+          "item": "a12s2-time-8",
+          "options": [
+            "a12s2-time-8",
+            "a12s2-time-9",
+            "a12s2-time-10"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-klo",
+          "options": [
+            "a12s2-hf-klo",
+            "a12s2-hf-ennen",
+            "a12s2-hf-jalkeen",
+            "a12s2-hf-valilla"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-ennen"
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-8",
+      "curriculum_id": "a1.2-s2-l08",
+      "order": 8,
+      "title_fa": "چقدر دور و چقدر طول می‌کشد؟",
+      "objective_fa": "یک سؤال ساده دربارهٔ فاصله یا مدت مسیر بپرسد و پاسخ کوتاه را بفهمد.",
+      "summary_fa": "دربارهٔ مدت یا فاصلهٔ مسیر سؤال کن و پاسخ کوتاه را بفهم.",
+      "grammar_fa": "Kuinka kauan یک چارچوب ثابت است و مدت تقریبی با noin و صورت صریح minuuttia تمرین می‌شود.",
+      "new_targets": [
+        "a12s2-hf-kuinka",
+        "a12s2-hf-miten",
+        "a12s2-hf-aikaa",
+        "a12s2-topic-kauan",
+        "a12s2-topic-lahella",
+        "a12s2-topic-kaukana",
+        "a12s2-topic-minuutti"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s2-hf-kuinka",
+          "a12s2-hf-miten",
+          "a12s2-hf-aikaa"
+        ],
+        "topic": [
+          "a12s2-topic-kauan",
+          "a12s2-topic-lahella",
+          "a12s2-topic-kaukana",
+          "a12s2-topic-minuutti"
+        ],
+        "expressions": [
+          "a12s2-expr-kuinka-kauan-matka-kestaa-81",
+          "a12s2-expr-noin-kymmenen-minuuttia-82",
+          "a12s2-expr-se-on-lahella-83",
+          "a12s2-expr-se-on-kaukana-84"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l07",
+        "a1.1-s3-l08",
+        "a1.2-s2-l07"
+      ],
+      "production_targets": [
+        "a12s2-expr-kuinka-kauan-matka-kestaa-81"
+      ],
+      "listening_targets": [
+        "a12s2-topic-kauan",
+        "a12s2-topic-lahella"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s2-expr-noin-kymmenen-minuuttia-82",
+          "prompt_fi": "Noin kymmenen _____.",
+          "accepted_answers": [
+            "minuuttia"
+          ],
+          "expected_fi": "Noin kymmenen minuuttia."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a12s2-topic-minuutti",
+          "base_fi": "minuutti",
+          "feature_fa": "partitiivi بعد از عدد",
+          "prompt_fa": "شکل درست minuutti را بعد از kymmenen بنویس.",
+          "frame_fi": "Noin kymmenen _____.",
+          "expected_fi": "minuuttia",
+          "accepted_answers": [
+            "minuuttia"
+          ],
+          "explanation_fa": "بعد از عدد در این عبارت، minuutti به صورت partitiivi می‌آید: minuutti → minuuttia."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s2-hf-kuinka"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-miten"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-hf-aikaa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-kauan"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-lahella"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-kaukana"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-topic-minuutti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-kuinka-kauan-matka-kestaa-81"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-kauan",
+          "options": [
+            "a12s2-topic-kauan",
+            "a12s2-hf-miten",
+            "a12s2-hf-aikaa",
+            "a12s2-topic-lahella"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-topic-lahella"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-noin-kymmenen-minuuttia-82",
+          "options": [
+            "a12s2-expr-noin-kymmenen-minuuttia-82",
+            "a12s2-hf-aikaa",
+            "a12s2-topic-kauan",
+            "a12s2-topic-lahella"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-topic-minuutti",
+          "options": [
+            "a12s2-topic-minuutti",
+            "a12s2-topic-kauan",
+            "a12s2-topic-lahella",
+            "a12s2-topic-kaukana"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-kuinka",
+          "options": [
+            "a12s2-hf-kuinka",
+            "a12s2-hf-miten",
+            "a12s2-hf-aikaa",
+            "a12s2-topic-kauan"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-hf-miten"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-hf-aikaa",
+          "options": [
+            "a12s2-hf-aikaa",
+            "a12s2-topic-kauan",
+            "a12s2-topic-lahella",
+            "a12s2-topic-kaukana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-9",
+      "curriculum_id": "a1.2-s2-l09",
+      "order": 9,
+      "title_fa": "یک سفر کوتاه",
+      "objective_fa": "زبان مربوط به مکان، مسیر، وسیلهٔ نقلیه، بلیت و زمان‌بندی را در یک سفر کوتاه و هدایت‌شده ترکیب کند.",
+      "summary_fa": "مکان، مسیر، وسیلهٔ نقلیه، بلیت و زمان حرکت را در یک توالی کوتاه ترکیب کن.",
+      "grammar_fa": "گرامر تازه‌ای اضافه نمی‌شود؛ هدف بازیابی و ترکیب زبان همین بخش در یک سفر هدایت‌شده است.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "a12s2-expr-missa-asema-on-8",
+          "a12s2-expr-menen-bussilla-48",
+          "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+          "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s2-l01",
+        "a1.2-s2-l02",
+        "a1.2-s2-l03",
+        "a1.2-s2-l05",
+        "a1.2-s2-l06",
+        "a1.2-s2-l07",
+        "a1.2-s2-l08"
+      ],
+      "practice_targets": [
+        "a12s2-expr-missa-asema-on-8",
+        "a12s2-expr-menen-bussilla-48",
+        "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+        "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+      ],
+      "production_targets": [
+        "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59"
+      ],
+      "listening_targets": [
+        "a12s2-expr-menen-bussilla-48",
+        "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s2-expr-missa-asema-on-8",
+          "prompt_fa": "ایستگاه کجاست؟",
+          "cues_fi": [
+            "Missä",
+            "asema"
+          ],
+          "expected_fi": "Missä asema on?",
+          "accepted_answers": [
+            "Missä asema on?"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+            "a12s2-expr-missa-asema-on-8",
+            "a12s2-expr-mene-suoraan-17",
+            "a12s2-expr-menen-bussilla-48",
+            "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59"
+          ],
+          "answer_order": [
+            1,
+            2,
+            3,
+            4,
+            0
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s2-reading-short-trip",
+          "question_item": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+          "options": [
+            "a12s2-expr-se-on-lahella-83",
+            "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+            "a12s2-expr-se-on-kaukana-84",
+            "a12s2-expr-kaanny-oikealle-19"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s2-reading-short-trip",
+          "question_item": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+          "options": [
+            "a12s2-expr-se-on-lahella-83",
+            "a12s2-expr-se-on-kaukana-84",
+            "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+            "a12s2-expr-kaanny-oikealle-19"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-expr-missa-asema-on-8"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-expr-menen-bussilla-48"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59"
+        },
+        {
+          "type": "teach",
+          "item": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-expr-menen-bussilla-48",
+          "options": [
+            "a12s2-expr-menen-bussilla-48",
+            "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+            "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+            "a12s2-expr-mene-suoraan-17"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s2-expr-missa-asema-on-8",
+          "options": [
+            "a12s2-expr-missa-asema-on-8",
+            "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+            "a12s2-expr-mene-suoraan-17",
+            "a12s2-expr-se-on-lahella-83"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-expr-se-on-lahella-83",
+          "options": [
+            "a12s2-expr-se-on-lahella-83",
+            "a12s2-expr-menen-bussilla-48",
+            "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+            "a12s2-expr-bussi-lahtee-kello-kahdeksan-70"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-expr-missa-asema-on-8",
+          "options": [
+            "a12s2-expr-missa-asema-on-8",
+            "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+            "a12s2-expr-mene-suoraan-17",
+            "a12s2-expr-se-on-lahella-83"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-expr-menen-bussilla-48",
+          "options": [
+            "a12s2-expr-menen-bussilla-48",
+            "a12s2-expr-mene-suoraan-17",
+            "a12s2-expr-se-on-lahella-83",
+            "a12s2-expr-missa-asema-on-8"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+          "options": [
+            "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+            "a12s2-expr-se-on-lahella-83",
+            "a12s2-expr-missa-asema-on-8",
+            "a12s2-expr-menen-bussilla-48"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-2-lesson-10",
+      "curriculum_id": "a1.2-s2-l10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۲",
+      "objective_fa": "یک موقعیت روزمرهٔ رفت‌وآمد را با کمک محدود و زبان اصلی این بخش انجام دهد.",
+      "summary_fa": "در یک موقعیت سادهٔ رفت‌وآمد از زبان اصلی بخش استفاده کن.",
+      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ مکان، جهت، مبدأ/مقصد، حمل‌ونقل، بلیت، زمان‌بندی و مدت با هم سنجیده می‌شوند.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.2-s2-l01",
+        "a1.2-s2-l02",
+        "a1.2-s2-l03",
+        "a1.2-s2-l04",
+        "a1.2-s2-l05",
+        "a1.2-s2-l06",
+        "a1.2-s2-l07",
+        "a1.2-s2-l08",
+        "a1.2-s2-l09"
+      ],
+      "checkpoint_targets": [
+        "a12s2-expr-missa-asema-on-8",
+        "a12s2-expr-mene-suoraan-17",
+        "a12s2-expr-mihin-menet-28",
+        "a12s2-expr-menen-asemalle-31",
+        "a12s2-expr-mista-tulet-38",
+        "a12s2-expr-tulen-asemalta-39",
+        "a12s2-expr-menen-bussilla-48",
+        "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+        "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+        "a12s2-expr-bussi-on-myohassa-73",
+        "a12s2-expr-kuinka-kauan-matka-kestaa-81",
+        "a12s2-expr-noin-kymmenen-minuuttia-82",
+        "a12s2-expr-se-on-lahella-83",
+        "a12s2-expr-kaanny-oikealle-19",
+        "a12s2-expr-meno-paluu-kiitos-61"
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
+      ],
+      "production_targets": [
+        "a12s2-expr-mihin-menet-28"
+      ],
+      "listening_targets": [
+        "a12s2-expr-menen-bussilla-48",
+        "a12s2-expr-noin-kymmenen-minuuttia-82"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s2-expr-missa-asema-on-8",
+          "tokens": [
+            "asema",
+            "on?",
+            "Missä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Missä asema on?"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+          "prompt_fi": "Yksi lippu _____, kiitos.",
+          "accepted_answers": [
+            "Helsinkiin"
+          ],
+          "expected_fi": "Yksi lippu Helsinkiin, kiitos."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s2-expr-kuinka-kauan-matka-kestaa-81",
+          "prompt_fa": "سفر چقدر طول می‌کشد؟",
+          "cues_fi": [
+            "Kuinka kauan",
+            "matka"
+          ],
+          "expected_fi": "Kuinka kauan matka kestää?",
+          "accepted_answers": [
+            "Kuinka kauan matka kestää?"
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s2-expr-menen-asemalle-31",
+          "base_fi": "asema",
+          "feature_fa": "allatiivi برای مقصد",
+          "prompt_fa": "صورت مقصد ایستگاه را در جمله انتخاب کن.",
+          "frame_fi": "Menen _____.",
+          "options_fi": [
+            "asema",
+            "asemalla",
+            "asemalle",
+            "asemalta"
+          ],
+          "expected_fi": "asemalle",
+          "explanation_fa": "برای مقصد در این عبارت از asemalle استفاده می‌شود."
+        }
+      ],
+      "passing_score": 0.8
+    }
+  ]
+}

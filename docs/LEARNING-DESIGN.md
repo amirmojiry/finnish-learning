@@ -448,7 +448,7 @@ The A1 curriculum model is now defined across all three Finnish implementation s
 
 Each stage contains four sections and forty lessons under the same planning contract: communicative can-do outcomes, source-backed high-frequency targets, separate curated topic targets, explicit expressions, grammar or morphology focus, backward-only recycling, activity families, four-skill coverage, assessment criteria, and exact lexical target counts. A1.3 deliberately strengthens familiar social interaction, short messages and texts, routine study/work communication, home and neighborhood problems, and a small set of explicit recent-event forms while remaining inside CEFR A1.
 
-These matrices define reviewed curriculum targets. A1.1 has complete playable manifests, and A1.2 Section 1 (shopping and everyday services) now has a reviewed playable ten-lesson manifest using the same 15-activity contract. The remaining A1.2 sections and all A1.3 playable manifests remain sequenced behind content implementation and validation.
+These matrices define reviewed curriculum targets. A1.1 has complete playable manifests, and A1.2 Sections 1–2 now provide twenty reviewed playable lessons using the same 15-activity contract: shopping/everyday services followed by getting around/finding places. The remaining A1.2 Sections 3–4 and all A1.3 playable manifests remain sequenced behind content implementation and validation.
 
 ## 14. Key sources
 

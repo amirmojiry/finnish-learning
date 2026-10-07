@@ -23,6 +23,7 @@
       curriculumUrl: './data/course/a1.2-curriculum.json',
       sectionUrls: [
         './data/course/a1.2-section-1.json',
+        './data/course/a1.2-section-2.json',
       ],
     },
   ];

@@ -16,7 +16,10 @@ const vocabulary = readJson('data/common-words.json');
 test('course stage configuration exposes playable A1.1 and A1.2 only', () => {
   assert.deepEqual(course.COURSE_STAGES.map((stage) => stage.level), ['A1.1', 'A1.2']);
   assert.equal(course.COURSE_STAGES[0].sectionUrls.length, 4);
-  assert.deepEqual(course.COURSE_STAGES[1].sectionUrls, ['./data/course/a1.2-section-1.json']);
+  assert.deepEqual(course.COURSE_STAGES[1].sectionUrls, [
+    './data/course/a1.2-section-1.json',
+    './data/course/a1.2-section-2.json',
+  ]);
   assert.doesNotMatch(JSON.stringify(course.COURSE_STAGES), /A1\.3/);
 });
 
