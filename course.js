@@ -7,14 +7,28 @@
 
   const STORAGE_KEY = 'fiCourseProgressV1';
   const SCHEMA_VERSION = 1;
-  const SECTION_URLS = [
-    './data/course/a1.1-section-1.json',
-    './data/course/a1.1-section-2.json',
-    './data/course/a1.1-section-3.json',
-    './data/course/a1.1-section-4.json',
+  const COURSE_STAGES = [
+    {
+      level: 'A1.1',
+      curriculumUrl: './data/course/a1.1-curriculum.json',
+      sectionUrls: [
+        './data/course/a1.1-section-1.json',
+        './data/course/a1.1-section-2.json',
+        './data/course/a1.1-section-3.json',
+        './data/course/a1.1-section-4.json',
+      ],
+    },
+    {
+      level: 'A1.2',
+      curriculumUrl: './data/course/a1.2-curriculum.json',
+      sectionUrls: [
+        './data/course/a1.2-section-1.json',
+      ],
+    },
   ];
+  const SECTION_URLS = COURSE_STAGES[0].sectionUrls;
   const SECTION_URL = SECTION_URLS[0];
-  const CURRICULUM_URL = './data/course/a1.1-curriculum.json';
+  const CURRICULUM_URL = COURSE_STAGES[0].curriculumUrl;
   const WEAK_TARGET_ACCURACY = 0.8;
   const FOCUSED_PRACTICE_LIMIT = 10;
   const ANSWER_HISTORY_LIMIT = 5000;
@@ -1344,13 +1358,7 @@
     return { ...section, curriculum_contract: contract };
   }
 
-  function validateImplementedCourse(rawSections, curriculum) {
-    if (!Array.isArray(rawSections) || !rawSections.length) throw new Error('No implemented course sections.');
-    const validated = rawSections.map((rawSection) => validateSectionAgainstCurriculum(validateSection(rawSection), curriculum));
-    const sectionOrders = validated.map((implemented) => implemented.curriculum_contract.order);
-    const sortedOrders = [...sectionOrders].sort((a, b) => a - b);
-    if (JSON.stringify(sectionOrders) !== JSON.stringify(sortedOrders)) throw new Error('Implemented sections must follow curriculum order.');
-
+  function validatePreparedSections(validated) {
     const lessonIds = new Set();
     const curriculumLessonIds = new Set();
     for (const implemented of validated) {
@@ -1393,6 +1401,41 @@
       }
     }
     return validated;
+  }
+
+  function validateImplementedCourse(rawSections, curriculum) {
+    if (!Array.isArray(rawSections) || !rawSections.length) throw new Error('No implemented course sections.');
+    const validated = rawSections.map((rawSection) => validateSectionAgainstCurriculum(validateSection(rawSection), curriculum));
+    const sectionOrders = validated.map((implemented) => implemented.curriculum_contract.order);
+    const sortedOrders = [...sectionOrders].sort((a, b) => a - b);
+    if (JSON.stringify(sectionOrders) !== JSON.stringify(sortedOrders)) throw new Error('Implemented sections must follow curriculum order.');
+    return validatePreparedSections(validated);
+  }
+
+  function validateImplementedPath(stagePayloads) {
+    if (!Array.isArray(stagePayloads) || !stagePayloads.length) throw new Error('No implemented course stages.');
+    const combined = [];
+    for (const stage of stagePayloads) {
+      if (!stage?.curriculum || !Array.isArray(stage.sections) || !stage.sections.length) {
+        throw new Error('Invalid implemented course stage.');
+      }
+      if (stage.curriculum.level !== stage.level) {
+        throw new Error(`Course stage level mismatch: ${stage.level}`);
+      }
+      const validated = stage.sections.map((rawSection) => (
+        validateSectionAgainstCurriculum(validateSection(rawSection), stage.curriculum)
+      ));
+      const orders = validated.map((implemented) => implemented.curriculum_contract.order);
+      const sorted = [...orders].sort((a, b) => a - b);
+      if (JSON.stringify(orders) !== JSON.stringify(sorted)) {
+        throw new Error(`Implemented sections must follow curriculum order in ${stage.level}.`);
+      }
+      for (const implemented of validated) {
+        if (implemented.level !== stage.level) throw new Error(`Implemented section level mismatch: ${implemented.id}`);
+        combined.push(implemented);
+      }
+    }
+    return validatePreparedSections(combined);
   }
 
   function renderStructuredPracticeActivity({
@@ -1739,7 +1782,7 @@
 
     let sections = [];
     let section = null;
-    let curriculum = null;
+    let curricula = new Map();
     let progress = loadProgress(windowObject.localStorage);
     let activeLesson = null;
     let infoDisclosureId = 0;
@@ -1782,6 +1825,21 @@
         if (isSectionUnlocked(sections, progress, index)) return sections[index];
       }
       return sections[0];
+    }
+
+    function preferredSectionForLevel(level) {
+      const candidates = sections.filter((entry) => entry.level === level);
+      if (!candidates.length) return null;
+      for (const candidate of candidates) {
+        const index = sections.indexOf(candidate);
+        if (isSectionAccessible(sections, progress, index) && !isSectionComplete(candidate, progress)) return candidate;
+      }
+      for (let index = candidates.length - 1; index >= 0; index -= 1) {
+        const candidate = candidates[index];
+        const globalIndex = sections.indexOf(candidate);
+        if (isSectionAccessible(sections, progress, globalIndex)) return candidate;
+      }
+      return candidates[0];
     }
 
     function selectSection(nextSection, { updateHash = true } = {}) {
@@ -2015,10 +2073,33 @@
       catalog.className = 'course-section-catalog course-section-selector';
       const catalogTitle = document.createElement('div');
       catalogTitle.className = 'course-section-catalog-heading';
-      catalogTitle.innerHTML = '<h1>مسیر A1.1</h1>';
-      catalog.append(catalogTitle);
+      catalogTitle.innerHTML = '<h1>مسیر A1</h1>';
 
-      const currentContract = curriculum?.sections?.find((entry) => entry.id === section.curriculum_section_id) || section.curriculum_contract;
+      const levelTabs = document.createElement('div');
+      levelTabs.className = 'course-level-tabs';
+      levelTabs.setAttribute('role', 'tablist');
+      levelTabs.setAttribute('aria-label', 'انتخاب سطح دوره');
+      for (const stage of COURSE_STAGES) {
+        const stageSections = sections.filter((entry) => entry.level === stage.level);
+        const target = preferredSectionForLevel(stage.level);
+        const targetIndex = target ? sections.indexOf(target) : -1;
+        const accessible = target && isSectionAccessible(sections, progress, targetIndex);
+        const current = section.level === stage.level;
+        const tab = createButton(stage.level, `course-level-tab${current ? ' is-current' : ''}`, () => {
+          if (!target || !accessible || current) return;
+          selectSection(target);
+          renderSectionMap();
+        });
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-selected', String(current));
+        tab.disabled = current || !accessible || !stageSections.length;
+        if (!accessible && !current) tab.title = 'پس از تکمیل A1.1 باز می‌شود';
+        levelTabs.append(tab);
+      }
+      catalog.append(catalogTitle, levelTabs);
+
+      const currentCurriculum = curricula.get(section.level);
+      const currentContract = currentCurriculum?.sections?.find((entry) => entry.id === section.curriculum_section_id) || section.curriculum_contract;
       const selectorToggle = createButton('', 'course-section-selector-toggle', () => {
         const expanded = selectorToggle.getAttribute('aria-expanded') === 'true';
         selectorToggle.setAttribute('aria-expanded', String(!expanded));
@@ -2041,7 +2122,7 @@
       selectorList.className = 'course-section-selector-list';
       selectorList.hidden = true;
 
-      for (const entry of curriculum?.sections || []) {
+      for (const entry of currentCurriculum?.sections || []) {
         const implemented = sections.find((candidate) => candidate.curriculum_section_id === entry.id) || null;
         const implementedIndex = implemented ? sections.indexOf(implemented) : -1;
         const unlocked = implemented ? isSectionAccessible(sections, progress, implementedIndex) : false;
@@ -3331,25 +3412,24 @@
 
     const version = document.querySelector('meta[name="app-version"]')?.content || Date.now();
     renderLoading();
-    Promise.all([
-      ...SECTION_URLS.map((url) => windowObject.fetch(`${url}?v=${version}`, { cache: 'no-store' })),
-      windowObject.fetch(`${CURRICULUM_URL}?v=${version}`, { cache: 'no-store' }),
-    ])
-      .then(async (responses) => {
-        const curriculumResponse = responses[responses.length - 1];
-        const sectionResponses = responses.slice(0, -1);
-        for (const response of sectionResponses) {
-          if (!response.ok) throw new Error(String(response.status));
-        }
-        if (!curriculumResponse.ok) throw new Error(String(curriculumResponse.status));
-        return Promise.all([
-          Promise.all(sectionResponses.map((response) => response.json())),
-          curriculumResponse.json(),
-        ]);
-      })
-      .then(([sectionPayloads, curriculumPayload]) => {
-        curriculum = curriculumPayload;
-        sections = validateImplementedCourse(sectionPayloads, curriculum);
+    Promise.all(COURSE_STAGES.map(async (stage) => {
+      const [curriculumResponse, ...sectionResponses] = await Promise.all([
+        windowObject.fetch(`${stage.curriculumUrl}?v=${version}`, { cache: 'no-store' }),
+        ...stage.sectionUrls.map((url) => windowObject.fetch(`${url}?v=${version}`, { cache: 'no-store' })),
+      ]);
+      if (!curriculumResponse.ok) throw new Error(String(curriculumResponse.status));
+      for (const response of sectionResponses) {
+        if (!response.ok) throw new Error(String(response.status));
+      }
+      return {
+        level: stage.level,
+        curriculum: await curriculumResponse.json(),
+        sections: await Promise.all(sectionResponses.map((response) => response.json())),
+      };
+    }))
+      .then((stagePayloads) => {
+        curricula = new Map(stagePayloads.map((stage) => [stage.level, stage.curriculum]));
+        sections = validateImplementedPath(stagePayloads);
         progress = loadProgress(windowObject.localStorage);
         section = preferredSection();
         if (isCourseHash()) syncFromHash();
@@ -3377,6 +3457,7 @@
   return {
     STORAGE_KEY,
     SCHEMA_VERSION,
+    COURSE_STAGES,
     SECTION_URLS,
     SECTION_URL,
     CURRICULUM_URL,
@@ -3442,6 +3523,7 @@
     validateSection,
     validateSectionAgainstCurriculum,
     validateImplementedCourse,
+    validateImplementedPath,
     initializeBrowser,
   };
 });
