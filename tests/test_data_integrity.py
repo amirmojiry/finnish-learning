@@ -134,7 +134,7 @@ class UdSummaryIntegrityTests(unittest.TestCase):
         cls.vocabulary = load_json("data/common-words.json")
         cls.summary = load_json("data/ud/word-summary.json")
         cls.labels = load_json("data/ud/labels-fa.json")
-        cls.example_translations = load_json("data/ud/example-translations-fa.json")
+        cls.example_translations = load_json("data/corpus-example-translations-fa.json")
         cls.vocabulary_forms = {
             normalize_word(word["word"]): word for word in cls.vocabulary["words"]
         }
