@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T21:16:48+00:00",
+  "generated_at": "2026-10-07T06:00:05+00:00",
   "ud_release": "2.18",
   "sentences": [
     {
@@ -635,6 +635,1132 @@
           "upos": "PUNCT",
           "feats": {},
           "head": 9,
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sentence_id": "ftb:train:awy1b-9566",
+      "sent_id": "awy1b-9566",
+      "treebank": "FTB",
+      "split": "train",
+      "source_file": "fi_ftb-ud-train.conllu",
+      "text": "sit tota , sit mä soitin Soilille ja sanoin hyvää syntymäpäivää ja sit mä lupasin mennä käymää siel ja sit se sano et Akiro ja Matti tulee ehkä kanssa ja mm ja tota et A- et Akiro soitti kans aamulla ja muisti että on syntymäpäivä no sit ne tuli ja ne toi kans Tupikselt kukkii ja sit Akiro paljasti et .",
+      "token_count": 61,
+      "target_token_ids": [
+        31
+      ],
+      "matched_targets": [
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 8
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 12
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 19
+        },
+        {
+          "word_id": "fi-0006",
+          "rank": 6,
+          "word": "se",
+          "token_id": 21
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 25
+        },
+        {
+          "word_id": "fi-0232",
+          "rank": 232,
+          "word": "matti",
+          "token_id": 26
+        },
+        {
+          "word_id": "fi-0059",
+          "rank": 59,
+          "word": "tulee",
+          "token_id": 27
+        },
+        {
+          "word_id": "fi-0124",
+          "rank": 124,
+          "word": "ehkä",
+          "token_id": 28
+        },
+        {
+          "word_id": "fi-0033",
+          "rank": 33,
+          "word": "kanssa",
+          "token_id": 29
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 30
+        },
+        {
+          "word_id": "fi-0088",
+          "rank": 88,
+          "word": "mm",
+          "token_id": 31
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 32
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 41
+        },
+        {
+          "word_id": "fi-0004",
+          "rank": 4,
+          "word": "että",
+          "token_id": 43
+        },
+        {
+          "word_id": "fi-0002",
+          "rank": 2,
+          "word": "on",
+          "token_id": 44
+        },
+        {
+          "word_id": "fi-0042",
+          "rank": 42,
+          "word": "ne",
+          "token_id": 48
+        },
+        {
+          "word_id": "fi-0087",
+          "rank": 87,
+          "word": "tuli",
+          "token_id": 49
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 50
+        },
+        {
+          "word_id": "fi-0042",
+          "rank": 42,
+          "word": "ne",
+          "token_id": 51
+        },
+        {
+          "word_id": "fi-0001",
+          "rank": 1,
+          "word": "ja",
+          "token_id": 56
+        }
+      ],
+      "tokens": [
+        {
+          "id": 1,
+          "form": "sit",
+          "lemma": "sitten",
+          "upos": "ADV",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 6,
+          "deprel": "advmod"
+        },
+        {
+          "id": 2,
+          "form": "tota",
+          "lemma": "tuota",
+          "upos": "PART",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 6,
+          "deprel": "advmod"
+        },
+        {
+          "id": 3,
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 2,
+          "deprel": "punct"
+        },
+        {
+          "id": 4,
+          "form": "sit",
+          "lemma": "sitten",
+          "upos": "ADV",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 1,
+          "deprel": "conj"
+        },
+        {
+          "id": 5,
+          "form": "mä",
+          "lemma": "minä",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "1"
+            ],
+            "PronType": [
+              "Prs"
+            ],
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 6,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 6,
+          "form": "soitin",
+          "lemma": "soitin",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 0,
+          "deprel": "root"
+        },
+        {
+          "id": 7,
+          "form": "Soilille",
+          "lemma": "soili",
+          "upos": "PROPN",
+          "feats": {
+            "Case": [
+              "All"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 6,
+          "deprel": "nmod"
+        },
+        {
+          "id": 8,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 9,
+          "deprel": "cc"
+        },
+        {
+          "id": 9,
+          "form": "sanoin",
+          "lemma": "sanoa",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "1"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "conj"
+        },
+        {
+          "id": 10,
+          "form": "hyvää",
+          "lemma": "hyvä",
+          "upos": "ADJ",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 11,
+          "deprel": "amod"
+        },
+        {
+          "id": 11,
+          "form": "syntymäpäivää",
+          "lemma": "syntymäpäivä",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 9,
+          "deprel": "obj"
+        },
+        {
+          "id": 12,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 15,
+          "deprel": "cc"
+        },
+        {
+          "id": 13,
+          "form": "sit",
+          "lemma": "sitten",
+          "upos": "ADV",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 15,
+          "deprel": "advmod"
+        },
+        {
+          "id": 14,
+          "form": "mä",
+          "lemma": "minä",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "1"
+            ],
+            "PronType": [
+              "Prs"
+            ],
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 15,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 15,
+          "form": "lupasin",
+          "lemma": "luvata",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "1"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "conj"
+        },
+        {
+          "id": 16,
+          "form": "mennä",
+          "lemma": "mennä",
+          "upos": "VERB",
+          "feats": {
+            "Case": [
+              "Lat"
+            ],
+            "InfForm": [
+              "1"
+            ],
+            "VerbForm": [
+              "Inf"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 15,
+          "deprel": "xcomp"
+        },
+        {
+          "id": 17,
+          "form": "käymää",
+          "lemma": "käydä",
+          "upos": "VERB",
+          "feats": {
+            "Case": [
+              "Ill"
+            ],
+            "InfForm": [
+              "3"
+            ],
+            "Style": [
+              "Coll"
+            ],
+            "VerbForm": [
+              "Inf"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 16,
+          "deprel": "xcomp"
+        },
+        {
+          "id": 18,
+          "form": "siel",
+          "lemma": "siellä",
+          "upos": "ADV",
+          "feats": {
+            "PronType": [
+              "Dem"
+            ],
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 17,
+          "deprel": "advmod"
+        },
+        {
+          "id": 19,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 22,
+          "deprel": "cc"
+        },
+        {
+          "id": 20,
+          "form": "sit",
+          "lemma": "sitten",
+          "upos": "ADV",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 22,
+          "deprel": "advmod"
+        },
+        {
+          "id": 21,
+          "form": "se",
+          "lemma": "se",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "PronType": [
+              "Dem"
+            ]
+          },
+          "head": 22,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 22,
+          "form": "sano",
+          "lemma": "sanoa",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Style": [
+              "Coll"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "conj"
+        },
+        {
+          "id": 23,
+          "form": "et",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 27,
+          "deprel": "mark"
+        },
+        {
+          "id": 24,
+          "form": "Akiro",
+          "lemma": "akiro",
+          "upos": "PROPN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 27,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 25,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 26,
+          "deprel": "cc"
+        },
+        {
+          "id": 26,
+          "form": "Matti",
+          "lemma": "matti",
+          "upos": "PROPN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 24,
+          "deprel": "conj"
+        },
+        {
+          "id": 27,
+          "form": "tulee",
+          "lemma": "tulla",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 22,
+          "deprel": "ccomp"
+        },
+        {
+          "id": 28,
+          "form": "ehkä",
+          "lemma": "ehkä",
+          "upos": "ADV",
+          "feats": {},
+          "head": 27,
+          "deprel": "advmod"
+        },
+        {
+          "id": 29,
+          "form": "kanssa",
+          "lemma": "kanssa",
+          "upos": "PART",
+          "feats": {},
+          "head": 27,
+          "deprel": "advmod"
+        },
+        {
+          "id": 30,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 38,
+          "deprel": "cc"
+        },
+        {
+          "id": 31,
+          "form": "mm",
+          "lemma": "mm",
+          "upos": "PART",
+          "feats": {
+            "Abbr": [
+              "Yes"
+            ]
+          },
+          "head": 38,
+          "deprel": "advmod"
+        },
+        {
+          "id": 32,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 30,
+          "deprel": "conj"
+        },
+        {
+          "id": 33,
+          "form": "tota",
+          "lemma": "tuota",
+          "upos": "PART",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 38,
+          "deprel": "advmod"
+        },
+        {
+          "id": 34,
+          "form": "et",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 38,
+          "deprel": "mark"
+        },
+        {
+          "id": 35,
+          "form": "A-",
+          "lemma": "a-",
+          "upos": "X",
+          "feats": {},
+          "head": 37,
+          "deprel": "reparandum"
+        },
+        {
+          "id": 36,
+          "form": "et",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 34,
+          "deprel": "conj"
+        },
+        {
+          "id": 37,
+          "form": "Akiro",
+          "lemma": "akiro",
+          "upos": "PROPN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 38,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 38,
+          "form": "soitti",
+          "lemma": "soittaa",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 27,
+          "deprel": "conj"
+        },
+        {
+          "id": 39,
+          "form": "kans",
+          "lemma": "kanssa",
+          "upos": "PART",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 38,
+          "deprel": "advmod"
+        },
+        {
+          "id": 40,
+          "form": "aamulla",
+          "lemma": "aamu",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Ade"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 38,
+          "deprel": "obl"
+        },
+        {
+          "id": 41,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 42,
+          "deprel": "cc"
+        },
+        {
+          "id": 42,
+          "form": "muisti",
+          "lemma": "muistaa",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 27,
+          "deprel": "conj"
+        },
+        {
+          "id": 43,
+          "form": "että",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {},
+          "head": 45,
+          "deprel": "mark"
+        },
+        {
+          "id": 44,
+          "form": "on",
+          "lemma": "olla",
+          "upos": "AUX",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Pres"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 45,
+          "deprel": "cop"
+        },
+        {
+          "id": 45,
+          "form": "syntymäpäivä",
+          "lemma": "syntymäpäivä",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 42,
+          "deprel": "ccomp"
+        },
+        {
+          "id": 46,
+          "form": "no",
+          "lemma": "no",
+          "upos": "INTJ",
+          "feats": {},
+          "head": 49,
+          "deprel": "discourse"
+        },
+        {
+          "id": 47,
+          "form": "sit",
+          "lemma": "sitten",
+          "upos": "ADV",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 49,
+          "deprel": "advmod"
+        },
+        {
+          "id": 48,
+          "form": "ne",
+          "lemma": "ne",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Plur"
+            ],
+            "PronType": [
+              "Dem"
+            ]
+          },
+          "head": 49,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 49,
+          "form": "tuli",
+          "lemma": "tulla",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "conj"
+        },
+        {
+          "id": 50,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 52,
+          "deprel": "cc"
+        },
+        {
+          "id": 51,
+          "form": "ne",
+          "lemma": "ne",
+          "upos": "PRON",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Plur"
+            ],
+            "PronType": [
+              "Dem"
+            ]
+          },
+          "head": 52,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 52,
+          "form": "toi",
+          "lemma": "tuoda",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "conj"
+        },
+        {
+          "id": 53,
+          "form": "kans",
+          "lemma": "kanssa",
+          "upos": "PART",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 54,
+          "deprel": "advmod"
+        },
+        {
+          "id": 54,
+          "form": "Tupikselt",
+          "lemma": "tupis",
+          "upos": "PROPN",
+          "feats": {
+            "Case": [
+              "Abl"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 52,
+          "deprel": "obl"
+        },
+        {
+          "id": 55,
+          "form": "kukkii",
+          "lemma": "kukka",
+          "upos": "NOUN",
+          "feats": {
+            "Case": [
+              "Par"
+            ],
+            "Number": [
+              "Plur"
+            ],
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 52,
+          "deprel": "obj"
+        },
+        {
+          "id": 56,
+          "form": "ja",
+          "lemma": "ja",
+          "upos": "CCONJ",
+          "feats": {},
+          "head": 59,
+          "deprel": "cc"
+        },
+        {
+          "id": 57,
+          "form": "sit",
+          "lemma": "sitten",
+          "upos": "ADV",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 59,
+          "deprel": "advmod"
+        },
+        {
+          "id": 58,
+          "form": "Akiro",
+          "lemma": "akiro",
+          "upos": "PROPN",
+          "feats": {
+            "Case": [
+              "Nom"
+            ],
+            "Number": [
+              "Sing"
+            ]
+          },
+          "head": 59,
+          "deprel": "nsubj"
+        },
+        {
+          "id": 59,
+          "form": "paljasti",
+          "lemma": "paljastaa",
+          "upos": "VERB",
+          "feats": {
+            "Mood": [
+              "Ind"
+            ],
+            "Number": [
+              "Sing"
+            ],
+            "Person": [
+              "3"
+            ],
+            "Tense": [
+              "Past"
+            ],
+            "VerbForm": [
+              "Fin"
+            ],
+            "Voice": [
+              "Act"
+            ]
+          },
+          "head": 6,
+          "deprel": "conj"
+        },
+        {
+          "id": 60,
+          "form": "et",
+          "lemma": "että",
+          "upos": "SCONJ",
+          "feats": {
+            "Style": [
+              "Coll"
+            ]
+          },
+          "head": 6,
+          "deprel": "mark"
+        },
+        {
+          "id": 61,
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "feats": {},
+          "head": 60,
           "deprel": "punct"
         }
       ]
@@ -110714,120 +111840,6 @@
           "id": 5,
           "form": ".",
           "lemma": ".",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 4,
-          "deprel": "punct"
-        }
-      ]
-    },
-    {
-      "sentence_id": "tdt:train:fE04.26",
-      "sent_id": "fE04.26",
-      "treebank": "TDT",
-      "split": "train",
-      "source_file": "fi_tdt-ud-train.conllu",
-      "text": "- Mm.. The Killersiä, mitenniin?",
-      "token_count": 8,
-      "target_token_ids": [
-        2
-      ],
-      "matched_targets": [
-        {
-          "word_id": "fi-0088",
-          "rank": 88,
-          "word": "mm",
-          "token_id": 2
-        },
-        {
-          "word_id": "fi-0343",
-          "rank": 343,
-          "word": "the",
-          "token_id": 4
-        }
-      ],
-      "tokens": [
-        {
-          "id": 1,
-          "form": "-",
-          "lemma": "-",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 4,
-          "deprel": "punct"
-        },
-        {
-          "id": 2,
-          "form": "Mm",
-          "lemma": "mm",
-          "upos": "INTJ",
-          "feats": {},
-          "head": 4,
-          "deprel": "discourse"
-        },
-        {
-          "id": 3,
-          "form": "..",
-          "lemma": "..",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 2,
-          "deprel": "punct"
-        },
-        {
-          "id": 4,
-          "form": "The",
-          "lemma": "The",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 0,
-          "deprel": "root"
-        },
-        {
-          "id": 5,
-          "form": "Killersiä",
-          "lemma": "Killers",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Par"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 4,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 6,
-          "form": ",",
-          "lemma": ",",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 7,
-          "deprel": "punct"
-        },
-        {
-          "id": 7,
-          "form": "mitenniin",
-          "lemma": "miten#niin",
-          "upos": "ADV",
-          "feats": {},
-          "head": 4,
-          "deprel": "advmod"
-        },
-        {
-          "id": 8,
-          "form": "?",
-          "lemma": "?",
           "upos": "PUNCT",
           "feats": {},
           "head": 4,
@@ -223465,348 +224477,6 @@
       ]
     },
     {
-      "sentence_id": "tdt:train:w062.1",
-      "sent_id": "w062.1",
-      "treebank": "TDT",
-      "split": "train",
-      "source_file": "fi_tdt-ud-train.conllu",
-      "text": "Gliese 581 eli HO Librae on Vaa'an tähdistössä sijaitseva punainen kääpiötähti, jonka spektriluokka on M2,5 V.",
-      "token_count": 18,
-      "target_token_ids": [
-        17
-      ],
-      "matched_targets": [
-        {
-          "word_id": "fi-0077",
-          "rank": 77,
-          "word": "eli",
-          "token_id": 3
-        },
-        {
-          "word_id": "fi-0002",
-          "rank": 2,
-          "word": "on",
-          "token_id": 6
-        },
-        {
-          "word_id": "fi-0052",
-          "rank": 52,
-          "word": "jonka",
-          "token_id": 13
-        },
-        {
-          "word_id": "fi-0002",
-          "rank": 2,
-          "word": "on",
-          "token_id": 15
-        },
-        {
-          "word_id": "fi-0310",
-          "rank": 310,
-          "word": "v",
-          "token_id": 17
-        }
-      ],
-      "tokens": [
-        {
-          "id": 1,
-          "form": "Gliese",
-          "lemma": "Gliese",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 11,
-          "deprel": "nsubj:cop"
-        },
-        {
-          "id": 2,
-          "form": "581",
-          "lemma": "581",
-          "upos": "NUM",
-          "feats": {
-            "NumType": [
-              "Card"
-            ]
-          },
-          "head": 1,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 3,
-          "form": "eli",
-          "lemma": "eli",
-          "upos": "CCONJ",
-          "feats": {},
-          "head": 4,
-          "deprel": "cc"
-        },
-        {
-          "id": 4,
-          "form": "HO",
-          "lemma": "HO",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 1,
-          "deprel": "conj"
-        },
-        {
-          "id": 5,
-          "form": "Librae",
-          "lemma": "Librae",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 4,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 6,
-          "form": "on",
-          "lemma": "olla",
-          "upos": "AUX",
-          "feats": {
-            "Mood": [
-              "Ind"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "Tense": [
-              "Pres"
-            ],
-            "VerbForm": [
-              "Fin"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 11,
-          "deprel": "cop"
-        },
-        {
-          "id": 7,
-          "form": "Vaa'an",
-          "lemma": "Vaaka",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Gen"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 8,
-          "deprel": "nmod:poss"
-        },
-        {
-          "id": 8,
-          "form": "tähdistössä",
-          "lemma": "tähdistö",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Ine"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "obl"
-        },
-        {
-          "id": 9,
-          "form": "sijaitseva",
-          "lemma": "sijaita",
-          "upos": "VERB",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "PartForm": [
-              "Pres"
-            ],
-            "VerbForm": [
-              "Part"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 11,
-          "deprel": "acl"
-        },
-        {
-          "id": 10,
-          "form": "punainen",
-          "lemma": "punainen",
-          "upos": "ADJ",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Degree": [
-              "Pos"
-            ],
-            "Derivation": [
-              "Inen"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 11,
-          "deprel": "amod"
-        },
-        {
-          "id": 11,
-          "form": "kääpiötähti",
-          "lemma": "kääpiö#tähti",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 0,
-          "deprel": "root"
-        },
-        {
-          "id": 12,
-          "form": ",",
-          "lemma": ",",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 17,
-          "deprel": "punct"
-        },
-        {
-          "id": 13,
-          "form": "jonka",
-          "lemma": "joka",
-          "upos": "PRON",
-          "feats": {
-            "Case": [
-              "Gen"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "PronType": [
-              "Rel"
-            ]
-          },
-          "head": 14,
-          "deprel": "nmod:poss"
-        },
-        {
-          "id": 14,
-          "form": "spektriluokka",
-          "lemma": "spektri#luokka",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 17,
-          "deprel": "nsubj:cop"
-        },
-        {
-          "id": 15,
-          "form": "on",
-          "lemma": "olla",
-          "upos": "AUX",
-          "feats": {
-            "Mood": [
-              "Ind"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "Tense": [
-              "Pres"
-            ],
-            "VerbForm": [
-              "Fin"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 17,
-          "deprel": "cop"
-        },
-        {
-          "id": 16,
-          "form": "M2,5",
-          "lemma": "M2,5",
-          "upos": "NUM",
-          "feats": {
-            "NumType": [
-              "Card"
-            ]
-          },
-          "head": 17,
-          "deprel": "nummod"
-        },
-        {
-          "id": 17,
-          "form": "V",
-          "lemma": "V",
-          "upos": "SYM",
-          "feats": {},
-          "head": 11,
-          "deprel": "acl:relcl"
-        },
-        {
-          "id": 18,
-          "form": ".",
-          "lemma": ".",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 11,
-          "deprel": "punct"
-        }
-      ]
-    },
-    {
       "sentence_id": "tdt:train:w062.13",
       "sent_id": "w062.13",
       "treebank": "TDT",
@@ -233694,502 +234364,6 @@
       ]
     },
     {
-      "sentence_id": "tdt:train:w126.12",
-      "sent_id": "w126.12",
-      "treebank": "TDT",
-      "split": "train",
-      "source_file": "fi_tdt-ud-train.conllu",
-      "text": "Mithridates V auttoi Rooman valtakuntaa kolmannessa puunilaissodassa ja sai palkkioksi osan Fryygiasta.",
-      "token_count": 13,
-      "target_token_ids": [
-        2
-      ],
-      "matched_targets": [
-        {
-          "word_id": "fi-0310",
-          "rank": 310,
-          "word": "v",
-          "token_id": 2
-        },
-        {
-          "word_id": "fi-0001",
-          "rank": 1,
-          "word": "ja",
-          "token_id": 8
-        },
-        {
-          "word_id": "fi-0093",
-          "rank": 93,
-          "word": "sai",
-          "token_id": 9
-        }
-      ],
-      "tokens": [
-        {
-          "id": 1,
-          "form": "Mithridates",
-          "lemma": "Mithridates",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 3,
-          "deprel": "nsubj"
-        },
-        {
-          "id": 2,
-          "form": "V",
-          "lemma": "V",
-          "upos": "ADJ",
-          "feats": {
-            "NumType": [
-              "Ord"
-            ]
-          },
-          "head": 1,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 3,
-          "form": "auttoi",
-          "lemma": "auttaa",
-          "upos": "VERB",
-          "feats": {
-            "Mood": [
-              "Ind"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "Tense": [
-              "Past"
-            ],
-            "VerbForm": [
-              "Fin"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 0,
-          "deprel": "root"
-        },
-        {
-          "id": 4,
-          "form": "Rooman",
-          "lemma": "Rooma",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Gen"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 5,
-          "deprel": "nmod:poss"
-        },
-        {
-          "id": 5,
-          "form": "valtakuntaa",
-          "lemma": "valta#kunta",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Par"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 3,
-          "deprel": "obj"
-        },
-        {
-          "id": 6,
-          "form": "kolmannessa",
-          "lemma": "kolmas",
-          "upos": "ADJ",
-          "feats": {
-            "Case": [
-              "Ine"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "NumType": [
-              "Ord"
-            ]
-          },
-          "head": 7,
-          "deprel": "amod"
-        },
-        {
-          "id": 7,
-          "form": "puunilaissodassa",
-          "lemma": "puunilais#sota",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Ine"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 3,
-          "deprel": "obl"
-        },
-        {
-          "id": 8,
-          "form": "ja",
-          "lemma": "ja",
-          "upos": "CCONJ",
-          "feats": {},
-          "head": 9,
-          "deprel": "cc"
-        },
-        {
-          "id": 9,
-          "form": "sai",
-          "lemma": "saada",
-          "upos": "VERB",
-          "feats": {
-            "Mood": [
-              "Ind"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "Tense": [
-              "Past"
-            ],
-            "VerbForm": [
-              "Fin"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 3,
-          "deprel": "conj"
-        },
-        {
-          "id": 10,
-          "form": "palkkioksi",
-          "lemma": "palkkio",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Tra"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "obl"
-        },
-        {
-          "id": 11,
-          "form": "osan",
-          "lemma": "osa",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Gen"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "obj"
-        },
-        {
-          "id": 12,
-          "form": "Fryygiasta",
-          "lemma": "Fryygia",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Ela"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 11,
-          "deprel": "nmod"
-        },
-        {
-          "id": 13,
-          "form": ".",
-          "lemma": ".",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 3,
-          "deprel": "punct"
-        }
-      ]
-    },
-    {
-      "sentence_id": "tdt:train:w126.14",
-      "sent_id": "w126.14",
-      "treebank": "TDT",
-      "split": "train",
-      "source_file": "fi_tdt-ud-train.conllu",
-      "text": "Vuonna 121 eaa. tai 120 eaa.  Mithridates V joutui salamurhan kohteeksi hovissaan Sinopessa.",
-      "token_count": 14,
-      "target_token_ids": [
-        8
-      ],
-      "matched_targets": [
-        {
-          "word_id": "fi-0043",
-          "rank": 43,
-          "word": "vuonna",
-          "token_id": 1
-        },
-        {
-          "word_id": "fi-0015",
-          "rank": 15,
-          "word": "tai",
-          "token_id": 4
-        },
-        {
-          "word_id": "fi-0310",
-          "rank": 310,
-          "word": "v",
-          "token_id": 8
-        }
-      ],
-      "tokens": [
-        {
-          "id": 1,
-          "form": "Vuonna",
-          "lemma": "vuosi",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Ess"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "obl"
-        },
-        {
-          "id": 2,
-          "form": "121",
-          "lemma": "121",
-          "upos": "NUM",
-          "feats": {
-            "NumType": [
-              "Card"
-            ]
-          },
-          "head": 3,
-          "deprel": "nummod"
-        },
-        {
-          "id": 3,
-          "form": "eaa.",
-          "lemma": "eaa.",
-          "upos": "NOUN",
-          "feats": {
-            "Abbr": [
-              "Yes"
-            ]
-          },
-          "head": 1,
-          "deprel": "nmod"
-        },
-        {
-          "id": 4,
-          "form": "tai",
-          "lemma": "tai",
-          "upos": "CCONJ",
-          "feats": {},
-          "head": 6,
-          "deprel": "cc"
-        },
-        {
-          "id": 5,
-          "form": "120",
-          "lemma": "120",
-          "upos": "NUM",
-          "feats": {
-            "NumType": [
-              "Card"
-            ]
-          },
-          "head": 6,
-          "deprel": "nummod"
-        },
-        {
-          "id": 6,
-          "form": "eaa.",
-          "lemma": "eaa.",
-          "upos": "NOUN",
-          "feats": {
-            "Abbr": [
-              "Yes"
-            ]
-          },
-          "head": 3,
-          "deprel": "conj"
-        },
-        {
-          "id": 7,
-          "form": "Mithridates",
-          "lemma": "Mithridates",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "nsubj"
-        },
-        {
-          "id": 8,
-          "form": "V",
-          "lemma": "V",
-          "upos": "ADJ",
-          "feats": {
-            "NumType": [
-              "Ord"
-            ]
-          },
-          "head": 7,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 9,
-          "form": "joutui",
-          "lemma": "joutua",
-          "upos": "VERB",
-          "feats": {
-            "Mood": [
-              "Ind"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "Tense": [
-              "Past"
-            ],
-            "VerbForm": [
-              "Fin"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 0,
-          "deprel": "root"
-        },
-        {
-          "id": 10,
-          "form": "salamurhan",
-          "lemma": "sala#murha",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Gen"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 11,
-          "deprel": "nmod:poss"
-        },
-        {
-          "id": 11,
-          "form": "kohteeksi",
-          "lemma": "kohde",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Tra"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "xcomp"
-        },
-        {
-          "id": 12,
-          "form": "hovissaan",
-          "lemma": "hovi",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Ine"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person[psor]": [
-              "3"
-            ]
-          },
-          "head": 9,
-          "deprel": "obl"
-        },
-        {
-          "id": 13,
-          "form": "Sinopessa",
-          "lemma": "Sinope",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Ine"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 9,
-          "deprel": "obl"
-        },
-        {
-          "id": 14,
-          "form": ".",
-          "lemma": ".",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 9,
-          "deprel": "punct"
-        }
-      ]
-    },
-    {
       "sentence_id": "tdt:train:w126.19",
       "sent_id": "w126.19",
       "treebank": "TDT",
@@ -234279,179 +234453,6 @@
           "upos": "PUNCT",
           "feats": {},
           "head": 2,
-          "deprel": "punct"
-        }
-      ]
-    },
-    {
-      "sentence_id": "tdt:train:w126.2",
-      "sent_id": "w126.2",
-      "treebank": "TDT",
-      "split": "train",
-      "source_file": "fi_tdt-ud-train.conllu",
-      "text": "Hänen isänsä oli kuningas Mithridates V Euergetes.",
-      "token_count": 8,
-      "target_token_ids": [
-        6
-      ],
-      "matched_targets": [
-        {
-          "word_id": "fi-0026",
-          "rank": 26,
-          "word": "hänen",
-          "token_id": 1
-        },
-        {
-          "word_id": "fi-0005",
-          "rank": 5,
-          "word": "oli",
-          "token_id": 3
-        },
-        {
-          "word_id": "fi-0310",
-          "rank": 310,
-          "word": "v",
-          "token_id": 6
-        }
-      ],
-      "tokens": [
-        {
-          "id": 1,
-          "form": "Hänen",
-          "lemma": "hän",
-          "upos": "PRON",
-          "feats": {
-            "Case": [
-              "Gen"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "PronType": [
-              "Prs"
-            ]
-          },
-          "head": 2,
-          "deprel": "nmod:poss"
-        },
-        {
-          "id": 2,
-          "form": "isänsä",
-          "lemma": "isä",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person[psor]": [
-              "3"
-            ]
-          },
-          "head": 5,
-          "deprel": "nsubj:cop"
-        },
-        {
-          "id": 3,
-          "form": "oli",
-          "lemma": "olla",
-          "upos": "AUX",
-          "feats": {
-            "Mood": [
-              "Ind"
-            ],
-            "Number": [
-              "Sing"
-            ],
-            "Person": [
-              "3"
-            ],
-            "Tense": [
-              "Past"
-            ],
-            "VerbForm": [
-              "Fin"
-            ],
-            "Voice": [
-              "Act"
-            ]
-          },
-          "head": 5,
-          "deprel": "cop"
-        },
-        {
-          "id": 4,
-          "form": "kuningas",
-          "lemma": "kuningas",
-          "upos": "NOUN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 5,
-          "deprel": "compound:nn"
-        },
-        {
-          "id": 5,
-          "form": "Mithridates",
-          "lemma": "Mithridates",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 0,
-          "deprel": "root"
-        },
-        {
-          "id": 6,
-          "form": "V",
-          "lemma": "V",
-          "upos": "ADJ",
-          "feats": {
-            "NumType": [
-              "Ord"
-            ]
-          },
-          "head": 5,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 7,
-          "form": "Euergetes",
-          "lemma": "Euergetes",
-          "upos": "PROPN",
-          "feats": {
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          },
-          "head": 5,
-          "deprel": "flat:name"
-        },
-        {
-          "id": 8,
-          "form": ".",
-          "lemma": ".",
-          "upos": "PUNCT",
-          "feats": {},
-          "head": 5,
           "deprel": "punct"
         }
       ]

@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T21:16:48+00:00",
+  "generated_at": "2026-10-07T06:00:05+00:00",
   "target_word_count": 400,
   "found_word_count": 399,
   "missing_word_count": 1,
   "coverage_percent": 99.75,
-  "total_matched_occurrences": 111843,
-  "words_with_multiple_upos": 137,
-  "words_with_multiple_lemmas": 119,
+  "total_matched_occurrences": 111833,
+  "words_with_multiple_upos": 136,
+  "words_with_multiple_lemmas": 118,
   "words_with_examples": 399,
-  "selected_sentence_count": 1637,
+  "selected_sentence_count": 1633,
   "treebanks": {
     "FTB": {
       "files": 3,
@@ -33,7 +33,7 @@
       "files": 3,
       "sentences": 15136,
       "tokens": 202193,
-      "matched_tokens": 54529
+      "matched_tokens": 54519
     }
   },
   "missing_words": [
@@ -43,7 +43,14 @@
       "word": "ns"
     }
   ],
-  "low_evidence_words": [],
+  "low_evidence_words": [
+    {
+      "word_id": "fi-0310",
+      "rank": 310,
+      "word": "v",
+      "occurrences": 1
+    }
+  ],
   "words_without_selected_examples": [],
   "multiword_token_forms": [
     "ettei"

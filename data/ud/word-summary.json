@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-06T21:16:48+00:00",
+  "generated_at": "2026-10-07T06:00:05+00:00",
   "ud_release": "2.18",
   "word_count": 400,
   "words": [
@@ -44294,54 +44294,54 @@
       "word_id": "fi-0088",
       "rank": 88,
       "word": "mm",
-      "occurrences": 6,
+      "occurrences": 5,
       "treebanks": {
         "FTB": 3,
-        "TDT": 2,
-        "OOD": 1
+        "OOD": 1,
+        "TDT": 1
       },
       "surface_kinds": {
-        "token": 6,
+        "token": 5,
         "multiword_token": 0
       },
-      "upos_observed_occurrences": 6,
+      "upos_observed_occurrences": 5,
       "analysis_confidence": "low",
-      "dominant_analysis_percent": 50.0,
+      "dominant_analysis_percent": 40.0,
       "ambiguous_upos": true,
       "upos": [
         {
           "tag": "INTJ",
-          "count": 3,
-          "percent": 50.0
+          "count": 2,
+          "percent": 40.0
         },
         {
           "tag": "PART",
           "count": 2,
-          "percent": 33.3333
+          "percent": 40.0
         },
         {
           "tag": "ADV",
           "count": 1,
-          "percent": 16.6667
+          "percent": 20.0
         }
       ],
       "lemmas": [
         {
           "lemma": "mm",
-          "count": 5,
-          "percent": 83.3333
+          "count": 4,
+          "percent": 80.0
         },
         {
           "lemma": "mm.",
           "count": 1,
-          "percent": 16.6667
+          "percent": 20.0
         }
       ],
       "features": [
         {
           "name": "Abbr",
           "observed_count": 3,
-          "coverage_percent": 50.0,
+          "coverage_percent": 60.0,
           "values": [
             {
               "value": "Yes",
@@ -44364,7 +44364,7 @@
         {
           "relation": "advmod",
           "count": 3,
-          "percent": 50.0,
+          "percent": 60.0,
           "common_heads": [
             {
               "form": "soitti",
@@ -44388,8 +44388,8 @@
         },
         {
           "relation": "discourse",
-          "count": 3,
-          "percent": 50.0,
+          "count": 2,
+          "percent": 40.0,
           "common_heads": [
             {
               "form": "tekis",
@@ -44402,33 +44402,21 @@
               "lemma": "safka",
               "upos": "NOUN",
               "count": 1
-            },
-            {
-              "form": "The",
-              "lemma": "The",
-              "upos": "PROPN",
-              "count": 1
             }
           ]
         }
       ],
       "dependency_as_head": {
-        "link_count": 2,
+        "link_count": 1,
         "relations": [
           {
             "relation": "punct",
-            "count": 2,
+            "count": 1,
             "percent": 100.0,
             "common_dependents": [
               {
                 "form": ",",
                 "lemma": ",",
-                "upos": "PUNCT",
-                "count": 1
-              },
-              {
-                "form": "..",
-                "lemma": "..",
                 "upos": "PUNCT",
                 "count": 1
               }
@@ -44440,15 +44428,15 @@
         {
           "kind": "token",
           "lemma": "mm",
-          "count": 3,
-          "percent": 50.0,
+          "count": 2,
+          "percent": 40.0,
           "upos": "INTJ"
         },
         {
           "kind": "token",
           "lemma": "mm",
           "count": 2,
-          "percent": 33.3333,
+          "percent": 40.0,
           "upos": "PART",
           "feats": {
             "Abbr": [
@@ -44460,7 +44448,7 @@
           "kind": "token",
           "lemma": "mm.",
           "count": 1,
-          "percent": 16.6667,
+          "percent": 20.0,
           "upos": "ADV",
           "feats": {
             "Abbr": [
@@ -44470,15 +44458,6 @@
         }
       ],
       "examples": [
-        {
-          "sentence_id": "tdt:train:fE04.26",
-          "text": "- Mm.. The Killersiä, mitenniin?",
-          "treebank": "TDT",
-          "split": "train",
-          "target_form": "Mm",
-          "target_lemma": "mm",
-          "target_upos": "INTJ"
-        },
         {
           "sentence_id": "tdt:dev:h1053.7",
           "text": "mä en tarkota nyt vaan et et tuo jonku leivän vaan tota ni et niinku tekis jotain: mm jotai ihan kunnon safkaa.",
@@ -44496,13 +44475,22 @@
           "target_form": "mm",
           "target_lemma": "mm",
           "target_upos": "INTJ"
+        },
+        {
+          "sentence_id": "ood:test:web23.11",
+          "text": "Akti Palace Hotellissa on mm:",
+          "treebank": "OOD",
+          "split": "test",
+          "target_form": "mm",
+          "target_lemma": "mm.",
+          "target_upos": "ADV"
         }
       ],
       "dominant_analysis": {
         "kind": "token",
         "lemma": "mm",
-        "count": 3,
-        "percent": 50.0,
+        "count": 2,
+        "percent": 40.0,
         "upos": "INTJ"
       }
     },
@@ -143359,56 +143347,41 @@
       "word_id": "fi-0310",
       "rank": 310,
       "word": "v",
-      "occurrences": 10,
+      "occurrences": 1,
       "treebanks": {
-        "TDT": 10
+        "TDT": 1
       },
       "surface_kinds": {
-        "token": 10,
+        "token": 1,
         "multiword_token": 0
       },
-      "upos_observed_occurrences": 10,
-      "analysis_confidence": "medium",
-      "dominant_analysis_percent": 70.0,
-      "ambiguous_upos": true,
+      "upos_observed_occurrences": 1,
+      "analysis_confidence": "high",
+      "dominant_analysis_percent": 100.0,
+      "ambiguous_upos": false,
       "upos": [
         {
-          "tag": "ADJ",
-          "count": 7,
-          "percent": 70.0
-        },
-        {
           "tag": "NOUN",
-          "count": 2,
-          "percent": 20.0
-        },
-        {
-          "tag": "SYM",
           "count": 1,
-          "percent": 10.0
+          "percent": 100.0
         }
       ],
       "lemmas": [
         {
-          "lemma": "V",
-          "count": 9,
-          "percent": 90.0
-        },
-        {
           "lemma": "v",
           "count": 1,
-          "percent": 10.0
+          "percent": 100.0
         }
       ],
       "features": [
         {
           "name": "Abbr",
-          "observed_count": 2,
-          "coverage_percent": 20.0,
+          "observed_count": 1,
+          "coverage_percent": 100.0,
           "values": [
             {
               "value": "Yes",
-              "count": 2,
+              "count": 1,
               "percent": 100.0,
               "example": {
                 "sentence_id": "tdt:train:w057.13",
@@ -143424,12 +143397,12 @@
         },
         {
           "name": "Case",
-          "observed_count": 2,
-          "coverage_percent": 20.0,
+          "observed_count": 1,
+          "coverage_percent": 100.0,
           "values": [
             {
               "value": "Nom",
-              "count": 2,
+              "count": 1,
               "percent": 100.0,
               "example": {
                 "sentence_id": "tdt:train:w057.13",
@@ -143444,34 +143417,13 @@
           ]
         },
         {
-          "name": "NumType",
-          "observed_count": 7,
-          "coverage_percent": 70.0,
-          "values": [
-            {
-              "value": "Ord",
-              "count": 7,
-              "percent": 100.0,
-              "example": {
-                "sentence_id": "tdt:train:w126.2",
-                "text": "Hänen isänsä oli kuningas Mithridates V Euergetes.",
-                "treebank": "TDT",
-                "split": "train",
-                "target_form": "V",
-                "target_lemma": "V",
-                "target_upos": "ADJ"
-              }
-            }
-          ]
-        },
-        {
           "name": "Number",
-          "observed_count": 2,
-          "coverage_percent": 20.0,
+          "observed_count": 1,
+          "coverage_percent": 100.0,
           "values": [
             {
               "value": "Sing",
-              "count": 2,
+              "count": 1,
               "percent": 100.0,
               "example": {
                 "sentence_id": "tdt:train:w057.13",
@@ -143488,54 +143440,9 @@
       ],
       "dependency_as_dependent": [
         {
-          "relation": "flat:name",
-          "count": 4,
-          "percent": 40.0,
-          "common_heads": [
-            {
-              "form": "Mithridates",
-              "lemma": "Mithridates",
-              "upos": "PROPN",
-              "count": 4
-            }
-          ]
-        },
-        {
-          "relation": "amod",
-          "count": 3,
-          "percent": 30.0,
-          "common_heads": [
-            {
-              "form": "osastoihin",
-              "lemma": "osasto",
-              "upos": "NOUN",
-              "count": 2
-            },
-            {
-              "form": "Liitteessä",
-              "lemma": "liite",
-              "upos": "NOUN",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "relation": "acl:relcl",
-          "count": 1,
-          "percent": 10.0,
-          "common_heads": [
-            {
-              "form": "kääpiötähti",
-              "lemma": "kääpiö#tähti",
-              "upos": "NOUN",
-              "count": 1
-            }
-          ]
-        },
-        {
           "relation": "appos",
           "count": 1,
-          "percent": 10.0,
+          "percent": 100.0,
           "common_heads": [
             {
               "form": "näppäintä",
@@ -143544,134 +143451,18 @@
               "count": 1
             }
           ]
-        },
-        {
-          "relation": "conj",
-          "count": 1,
-          "percent": 10.0,
-          "common_heads": [
-            {
-              "form": "F",
-              "lemma": "F",
-              "upos": "NOUN",
-              "count": 1
-            }
-          ]
         }
       ],
       "dependency_as_head": {
-        "link_count": 7,
-        "relations": [
-          {
-            "relation": "conj",
-            "count": 2,
-            "percent": 28.5714,
-            "common_dependents": [
-              {
-                "form": "VI",
-                "lemma": "VI",
-                "upos": "ADJ",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "relation": "punct",
-            "count": 2,
-            "percent": 28.5714,
-            "common_dependents": [
-              {
-                "form": ",",
-                "lemma": ",",
-                "upos": "PUNCT",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "relation": "cop",
-            "count": 1,
-            "percent": 14.2857,
-            "common_dependents": [
-              {
-                "form": "on",
-                "lemma": "olla",
-                "upos": "AUX",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "relation": "nsubj:cop",
-            "count": 1,
-            "percent": 14.2857,
-            "common_dependents": [
-              {
-                "form": "spektriluokka",
-                "lemma": "spektri#luokka",
-                "upos": "NOUN",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "relation": "nummod",
-            "count": 1,
-            "percent": 14.2857,
-            "common_dependents": [
-              {
-                "form": "M2,5",
-                "lemma": "M2,5",
-                "upos": "NUM",
-                "count": 1
-              }
-            ]
-          }
-        ]
+        "link_count": 0,
+        "relations": []
       },
       "analyses": [
         {
           "kind": "token",
-          "lemma": "V",
-          "count": 7,
-          "percent": 70.0,
-          "upos": "ADJ",
-          "feats": {
-            "NumType": [
-              "Ord"
-            ]
-          }
-        },
-        {
-          "kind": "token",
           "lemma": "v",
           "count": 1,
-          "percent": 10.0,
-          "upos": "NOUN",
-          "feats": {
-            "Abbr": [
-              "Yes"
-            ],
-            "Case": [
-              "Nom"
-            ],
-            "Number": [
-              "Sing"
-            ]
-          }
-        },
-        {
-          "kind": "token",
-          "lemma": "V",
-          "count": 1,
-          "percent": 10.0,
-          "upos": "SYM"
-        },
-        {
-          "kind": "token",
-          "lemma": "V",
-          "count": 1,
-          "percent": 10.0,
+          "percent": 100.0,
           "upos": "NOUN",
           "feats": {
             "Abbr": [
@@ -143695,35 +143486,23 @@
           "target_form": "v",
           "target_lemma": "v",
           "target_upos": "NOUN"
-        },
-        {
-          "sentence_id": "tdt:train:w126.2",
-          "text": "Hänen isänsä oli kuningas Mithridates V Euergetes.",
-          "treebank": "TDT",
-          "split": "train",
-          "target_form": "V",
-          "target_lemma": "V",
-          "target_upos": "ADJ"
-        },
-        {
-          "sentence_id": "tdt:train:w126.12",
-          "text": "Mithridates V auttoi Rooman valtakuntaa kolmannessa puunilaissodassa ja sai palkkioksi osan Fryygiasta.",
-          "treebank": "TDT",
-          "split": "train",
-          "target_form": "V",
-          "target_lemma": "V",
-          "target_upos": "ADJ"
         }
       ],
       "dominant_analysis": {
         "kind": "token",
-        "lemma": "V",
-        "count": 7,
-        "percent": 70.0,
-        "upos": "ADJ",
+        "lemma": "v",
+        "count": 1,
+        "percent": 100.0,
+        "upos": "NOUN",
         "feats": {
-          "NumType": [
-            "Ord"
+          "Abbr": [
+            "Yes"
+          ],
+          "Case": [
+            "Nom"
+          ],
+          "Number": [
+            "Sing"
           ]
         }
       }
