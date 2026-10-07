@@ -228,7 +228,8 @@
       "example_fi": "Liput maksavat yhteensä 50 euroa.",
       "example_fa": "بلیت‌ها در مجموع ۵۰ یورو قیمت دارند.",
       "accepted_answers": [
-        "50"
+        "50",
+        "viisikymmentä"
       ]
     },
     "a12s1-topic-kolmekymmenta": {
@@ -2340,8 +2341,8 @@
           ],
           "answer_order": [
             1,
-            0,
             4,
+            0,
             3,
             2
           ]
