@@ -1723,7 +1723,7 @@
         "a12s1-expr-haluaisin-taman-kiitos-28"
       ],
       "listening_targets": [
-        "a12s1-topic-haluaisin",
+        "a12s1-hf-mita",
         "a12s1-hf-antaa"
       ],
       "structured_practice": [
@@ -1790,7 +1790,7 @@
       "structured_practice": [
         {
           "type": "expression-completion",
-          "item": "a12s1-topic-litra",
+          "item": "a12s1-topic-puoli",
           "prompt_fi": "Puoli _____ maitoa, kiitos.",
           "accepted_answers": [
             "litraa"
@@ -2080,13 +2080,13 @@
         "a12s1-expr-voinko-maksaa-kortilla-63"
       ],
       "listening_targets": [
-        "a12s1-topic-kortti",
-        "a12s1-topic-kuitti"
+        "a12s1-topic-kuitti",
+        "a12s1-hf-rahaa"
       ],
       "structured_practice": [
         {
           "type": "expression-completion",
-          "item": "a12s1-topic-kortti",
+          "item": "a12s1-topic-maksaa",
           "prompt_fi": "Voinko maksaa _____?",
           "accepted_answers": [
             "kortilla"
@@ -2260,8 +2260,8 @@
         "a12s1-expr-tarvitsen-apua-77"
       ],
       "listening_targets": [
-        "a12s1-topic-rikki",
-        "a12s1-topic-toimi"
+        "a12s1-topic-ongelma",
+        "a12s1-topic-vaara"
       ],
       "structured_practice": [
         {
@@ -2581,7 +2581,7 @@
         ]
       ],
       "production_targets": [
-        "a12s1-expr-tarvitsen-apua-77"
+        "a12s1-topic-rikki"
       ],
       "listening_targets": [
         "a12s1-topic-euro",
