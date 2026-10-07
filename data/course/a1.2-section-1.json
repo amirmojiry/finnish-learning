@@ -1,0 +1,2645 @@
+{
+  "schema_version": 1,
+  "id": "a1.2-section-1",
+  "level": "A1.2",
+  "curriculum_section_id": "a1.2-s1",
+  "title_fa": "بخش ۱: خرید و خدمات روزمره",
+  "subtitle_fa": "قیمت، مقدار، درخواست مودبانه، پیدا کردن کالا، اندازه، پرداخت و بیان یک مشکل ساده",
+  "description_fa": "ده درس نخست A1.2، خرید و خدمات روزمره را با زبان کوتاه و قابل‌پیش‌بینی تمرین می‌کند.",
+  "can_do_fa": [
+    "قیمت یک کالای آشنا را می‌پرسم و پاسخ سادهٔ قیمت را می‌فهمم.",
+    "یک درخواست مودبانه برای کالا یا خدمت بیان می‌کنم.",
+    "مقدار ساده، مکان کالا و مناسب بودن اندازه را بیان می‌کنم.",
+    "روش پرداخت را می‌گویم و رسید می‌خواهم.",
+    "یک مشکل ساده دربارهٔ کالا یا خدمت را بیان می‌کنم و کمک می‌خواهم."
+  ],
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a12s1-hf-paljon": {
+      "id": "a12s1-hf-paljon",
+      "surface_form": "paljon",
+      "lemma": "paljon",
+      "translation_fa": "زیاد / بسیار",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 60,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Minulla on paljon työtä.",
+      "example_fa": "کار زیادی دارم.",
+      "accepted_answers": [
+        "paljon"
+      ]
+    },
+    "a12s1-hf-rahaa": {
+      "id": "a12s1-hf-rahaa",
+      "surface_form": "rahaa",
+      "lemma": "raha",
+      "translation_fa": "پول؛ مقداری پول",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 297,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Minulla ei ole tarpeeksi rahaa.",
+      "example_fa": "پول کافی ندارم.",
+      "accepted_answers": [
+        "rahaa"
+      ]
+    },
+    "a12s1-hf-yksi": {
+      "id": "a12s1-hf-yksi",
+      "surface_form": "yksi",
+      "lemma": "yksi",
+      "translation_fa": "یک / یکی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 84,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Minulla on yksi kysymys.",
+      "example_fa": "من یک سؤال دارم.",
+      "accepted_answers": [
+        "yksi"
+      ]
+    },
+    "a12s1-topic-hinta": {
+      "id": "a12s1-topic-hinta",
+      "surface_form": "hinta",
+      "lemma": "hinta",
+      "translation_fa": "قیمت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Mikä on tämän hinta?",
+      "example_fa": "قیمت این چقدر است؟",
+      "accepted_answers": [
+        "hinta"
+      ]
+    },
+    "a12s1-topic-euro": {
+      "id": "a12s1-topic-euro",
+      "surface_form": "euro",
+      "lemma": "euro",
+      "translation_fa": "یورو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa viisi euroa.",
+      "example_fa": "قیمت آن پنج یورو است.",
+      "accepted_answers": [
+        "euro"
+      ]
+    },
+    "a12s1-topic-sentti": {
+      "id": "a12s1-topic-sentti",
+      "surface_form": "sentti",
+      "lemma": "sentti",
+      "translation_fa": "سِنت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa viisikymmentä senttiä.",
+      "example_fa": "قیمت آن پنجاه سنت است.",
+      "accepted_answers": [
+        "sentti"
+      ]
+    },
+    "a12s1-expr-paljonko-tama-maksaa-6": {
+      "id": "a12s1-expr-paljonko-tama-maksaa-6",
+      "surface_form": "Paljonko tämä maksaa?",
+      "lemma": "Paljonko tämä maksaa?",
+      "translation_fa": "این چقدر قیمت دارد؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Paljonko tämä maksaa?",
+      "example_fa": "این چقدر قیمت دارد؟",
+      "accepted_answers": [
+        "Paljonko tämä maksaa?"
+      ]
+    },
+    "a12s1-expr-se-maksaa-viisi-euroa-7": {
+      "id": "a12s1-expr-se-maksaa-viisi-euroa-7",
+      "surface_form": "Se maksaa viisi euroa.",
+      "lemma": "Se maksaa viisi euroa.",
+      "translation_fa": "قیمت آن پنج یورو است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Se maksaa viisi euroa.",
+      "example_fa": "قیمت آن پنج یورو است.",
+      "accepted_answers": [
+        "Se maksaa viisi euroa."
+      ]
+    },
+    "a12s1-expr-minulla-on-rahaa-8": {
+      "id": "a12s1-expr-minulla-on-rahaa-8",
+      "surface_form": "Minulla on rahaa.",
+      "lemma": "Minulla on rahaa.",
+      "translation_fa": "من پول دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Minulla on rahaa.",
+      "example_fa": "من پول دارم.",
+      "accepted_answers": [
+        "Minulla on rahaa."
+      ]
+    },
+    "a12s1-hf-10": {
+      "id": "a12s1-hf-10",
+      "surface_form": "10",
+      "lemma": "10",
+      "translation_fa": "۱۰؛ ده",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 256,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Tapaaminen alkaa kello 10.",
+      "example_fa": "دیدار ساعت ۱۰ آغاز می‌شود.",
+      "accepted_answers": [
+        "10"
+      ]
+    },
+    "a12s1-hf-20": {
+      "id": "a12s1-hf-20",
+      "surface_form": "20",
+      "lemma": "20",
+      "translation_fa": "۲۰؛ بیست",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 228,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Kurssilla on 20 opiskelijaa.",
+      "example_fa": "در دوره ۲۰ دانشجو وجود دارد.",
+      "accepted_answers": [
+        "20"
+      ]
+    },
+    "a12s1-hf-50": {
+      "id": "a12s1-hf-50",
+      "surface_form": "50",
+      "lemma": "50",
+      "translation_fa": "۵۰؛ پنجاه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 241,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Liput maksavat yhteensä 50 euroa.",
+      "example_fa": "بلیت‌ها در مجموع ۵۰ یورو قیمت دارند.",
+      "accepted_answers": [
+        "50",
+        "viisikymmentä"
+      ]
+    },
+    "a12s1-topic-kolmekymmenta": {
+      "id": "a12s1-topic-kolmekymmenta",
+      "surface_form": "kolmekymmentä",
+      "lemma": "kolmekymmentä",
+      "translation_fa": "سی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa kolmekymmentä euroa.",
+      "example_fa": "قیمت آن سی یورو است.",
+      "accepted_answers": [
+        "kolmekymmentä"
+      ]
+    },
+    "a12s1-topic-neljakymmenta": {
+      "id": "a12s1-topic-neljakymmenta",
+      "surface_form": "neljäkymmentä",
+      "lemma": "neljäkymmentä",
+      "translation_fa": "چهل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa neljäkymmentä euroa.",
+      "example_fa": "قیمت آن چهل یورو است.",
+      "accepted_answers": [
+        "neljäkymmentä"
+      ]
+    },
+    "a12s1-topic-kuusikymmenta": {
+      "id": "a12s1-topic-kuusikymmenta",
+      "surface_form": "kuusikymmentä",
+      "lemma": "kuusikymmentä",
+      "translation_fa": "شصت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa kuusikymmentä euroa.",
+      "example_fa": "قیمت آن شصت یورو است.",
+      "accepted_answers": [
+        "kuusikymmentä"
+      ]
+    },
+    "a12s1-topic-seitsemankymmenta": {
+      "id": "a12s1-topic-seitsemankymmenta",
+      "surface_form": "seitsemänkymmentä",
+      "lemma": "seitsemänkymmentä",
+      "translation_fa": "هفتاد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa seitsemänkymmentä euroa.",
+      "example_fa": "قیمت آن هفتاد یورو است.",
+      "accepted_answers": [
+        "seitsemänkymmentä"
+      ]
+    },
+    "a12s1-topic-kahdeksankymmenta": {
+      "id": "a12s1-topic-kahdeksankymmenta",
+      "surface_form": "kahdeksankymmentä",
+      "lemma": "kahdeksankymmentä",
+      "translation_fa": "هشتاد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa kahdeksankymmentä euroa.",
+      "example_fa": "قیمت آن هشتاد یورو است.",
+      "accepted_answers": [
+        "kahdeksankymmentä"
+      ]
+    },
+    "a12s1-topic-yhdeksankymmenta": {
+      "id": "a12s1-topic-yhdeksankymmenta",
+      "surface_form": "yhdeksänkymmentä",
+      "lemma": "yhdeksänkymmentä",
+      "translation_fa": "نود",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa yhdeksänkymmentä euroa.",
+      "example_fa": "قیمت آن نود یورو است.",
+      "accepted_answers": [
+        "yhdeksänkymmentä"
+      ]
+    },
+    "a12s1-topic-sata": {
+      "id": "a12s1-topic-sata",
+      "surface_form": "sata",
+      "lemma": "sata",
+      "translation_fa": "صد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Se maksaa sata euroa.",
+      "example_fa": "قیمت آن صد یورو است.",
+      "accepted_answers": [
+        "sata"
+      ]
+    },
+    "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19": {
+      "id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+      "surface_form": "Se maksaa kaksikymmentä euroa.",
+      "lemma": "Se maksaa kaksikymmentä euroa.",
+      "translation_fa": "قیمت آن بیست یورو است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Se maksaa kaksikymmentä euroa.",
+      "example_fa": "قیمت آن بیست یورو است.",
+      "accepted_answers": [
+        "Se maksaa kaksikymmentä euroa."
+      ]
+    },
+    "a12s1-expr-se-maksaa-viisikymmenta-euroa-20": {
+      "id": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+      "surface_form": "Se maksaa viisikymmentä euroa.",
+      "lemma": "Se maksaa viisikymmentä euroa.",
+      "translation_fa": "قیمت آن پنجاه یورو است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Se maksaa viisikymmentä euroa.",
+      "example_fa": "قیمت آن پنجاه یورو است.",
+      "accepted_answers": [
+        "Se maksaa viisikymmentä euroa."
+      ]
+    },
+    "a12s1-expr-se-maksaa-sata-euroa-21": {
+      "id": "a12s1-expr-se-maksaa-sata-euroa-21",
+      "surface_form": "Se maksaa sata euroa.",
+      "lemma": "Se maksaa sata euroa.",
+      "translation_fa": "قیمت آن صد یورو است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Se maksaa sata euroa.",
+      "example_fa": "قیمت آن صد یورو است.",
+      "accepted_answers": [
+        "Se maksaa sata euroa."
+      ]
+    },
+    "a12s1-hf-mita": {
+      "id": "a12s1-hf-mita",
+      "surface_form": "mitä",
+      "lemma": "mikä",
+      "translation_fa": "چه / چه چیزی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 40,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Mitä sinä teet?",
+      "example_fa": "تو چه کار می‌کنی؟",
+      "accepted_answers": [
+        "mitä"
+      ]
+    },
+    "a12s1-hf-ottaa": {
+      "id": "a12s1-hf-ottaa",
+      "surface_form": "ottaa",
+      "lemma": "ottaa",
+      "translation_fa": "گرفتن / برداشتن / انتخاب کردن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 192,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Haluan ottaa kupin kahvia.",
+      "example_fa": "می‌خواهم یک فنجان قهوه بگیرم.",
+      "accepted_answers": [
+        "ottaa"
+      ]
+    },
+    "a12s1-hf-antaa": {
+      "id": "a12s1-hf-antaa",
+      "surface_form": "antaa",
+      "lemma": "antaa",
+      "translation_fa": "دادن / اجازه دادن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 164,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Voitko antaa minulle vettä?",
+      "example_fa": "می‌توانی به من آب بدهی؟",
+      "accepted_answers": [
+        "antaa"
+      ]
+    },
+    "a12s1-topic-haluaisin": {
+      "id": "a12s1-topic-haluaisin",
+      "surface_form": "haluaisin",
+      "lemma": "haluaisin",
+      "translation_fa": "مایلم / می‌خواهم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Haluaisin tämän, kiitos.",
+      "example_fa": "این را می‌خواهم، متشکرم.",
+      "accepted_answers": [
+        "haluaisin"
+      ]
+    },
+    "a12s1-topic-saanko": {
+      "id": "a12s1-topic-saanko",
+      "surface_form": "Saanko",
+      "lemma": "saanko",
+      "translation_fa": "می‌توانم بگیرم؟ / لطفاً می‌شود؟",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Saanko kahvin, kiitos?",
+      "example_fa": "یک قهوه می‌شود، لطفاً؟",
+      "accepted_answers": [
+        "Saanko"
+      ]
+    },
+    "a12s1-topic-annos": {
+      "id": "a12s1-topic-annos",
+      "surface_form": "annos",
+      "lemma": "annos",
+      "translation_fa": "پرس / وعده",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Yksi annos keittoa, kiitos.",
+      "example_fa": "یک پرس سوپ، لطفاً.",
+      "accepted_answers": [
+        "annos"
+      ]
+    },
+    "a12s1-expr-haluaisin-taman-kiitos-28": {
+      "id": "a12s1-expr-haluaisin-taman-kiitos-28",
+      "surface_form": "Haluaisin tämän, kiitos.",
+      "lemma": "Haluaisin tämän, kiitos.",
+      "translation_fa": "این را می‌خواهم، متشکرم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Haluaisin tämän, kiitos.",
+      "example_fa": "این را می‌خواهم، متشکرم.",
+      "accepted_answers": [
+        "Haluaisin tämän, kiitos."
+      ]
+    },
+    "a12s1-expr-saanko-kahvin-kiitos-29": {
+      "id": "a12s1-expr-saanko-kahvin-kiitos-29",
+      "surface_form": "Saanko kahvin, kiitos?",
+      "lemma": "Saanko kahvin, kiitos?",
+      "translation_fa": "یک قهوه می‌شود، لطفاً؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Saanko kahvin, kiitos?",
+      "example_fa": "یک قهوه می‌شود، لطفاً؟",
+      "accepted_answers": [
+        "Saanko kahvin, kiitos?"
+      ]
+    },
+    "a12s1-expr-voitteko-antaa-taman-30": {
+      "id": "a12s1-expr-voitteko-antaa-taman-30",
+      "surface_form": "Voitteko antaa tämän?",
+      "lemma": "Voitteko antaa tämän?",
+      "translation_fa": "می‌توانید این را بدهید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Voitteko antaa tämän?",
+      "example_fa": "می‌توانید این را بدهید؟",
+      "accepted_answers": [
+        "Voitteko antaa tämän?"
+      ]
+    },
+    "a12s1-hf-vahan": {
+      "id": "a12s1-hf-vahan",
+      "surface_form": "vähän",
+      "lemma": "vähän",
+      "translation_fa": "کمی / اندکی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 139,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Puhun vähän suomea.",
+      "example_fa": "کمی فنلاندی صحبت می‌کنم.",
+      "accepted_answers": [
+        "vähän"
+      ]
+    },
+    "a12s1-hf-lisaa": {
+      "id": "a12s1-hf-lisaa",
+      "surface_form": "lisää",
+      "lemma": "lisä",
+      "translation_fa": "بیشتر / اضافه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 189,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Tarvitsen lisää aikaa.",
+      "example_fa": "به زمان بیشتری نیاز دارم.",
+      "accepted_answers": [
+        "lisää"
+      ]
+    },
+    "a12s1-topic-kilo": {
+      "id": "a12s1-topic-kilo",
+      "surface_form": "kilo",
+      "lemma": "kilo",
+      "translation_fa": "کیلو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Kilo omenoita, kiitos.",
+      "example_fa": "یک کیلو سیب، لطفاً.",
+      "accepted_answers": [
+        "kilo"
+      ]
+    },
+    "a12s1-topic-litra": {
+      "id": "a12s1-topic-litra",
+      "surface_form": "litra",
+      "lemma": "litra",
+      "translation_fa": "لیتر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Puoli litraa maitoa, kiitos.",
+      "example_fa": "نیم لیتر شیر، لطفاً.",
+      "accepted_answers": [
+        "litra"
+      ]
+    },
+    "a12s1-topic-puoli": {
+      "id": "a12s1-topic-puoli",
+      "surface_form": "puoli",
+      "lemma": "puoli",
+      "translation_fa": "نصف / نیم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Puoli litraa maitoa, kiitos.",
+      "example_fa": "نیم لیتر شیر، لطفاً.",
+      "accepted_answers": [
+        "puoli"
+      ]
+    },
+    "a12s1-expr-kilo-omenoita-kiitos-36": {
+      "id": "a12s1-expr-kilo-omenoita-kiitos-36",
+      "surface_form": "Kilo omenoita, kiitos.",
+      "lemma": "Kilo omenoita, kiitos.",
+      "translation_fa": "یک کیلو سیب، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Kilo omenoita, kiitos.",
+      "example_fa": "یک کیلو سیب، لطفاً.",
+      "accepted_answers": [
+        "Kilo omenoita, kiitos."
+      ]
+    },
+    "a12s1-expr-puoli-litraa-maitoa-kiitos-37": {
+      "id": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+      "surface_form": "Puoli litraa maitoa, kiitos.",
+      "lemma": "Puoli litraa maitoa, kiitos.",
+      "translation_fa": "نیم لیتر شیر، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Puoli litraa maitoa, kiitos.",
+      "example_fa": "نیم لیتر شیر، لطفاً.",
+      "accepted_answers": [
+        "Puoli litraa maitoa, kiitos."
+      ]
+    },
+    "a12s1-expr-vahan-lisaa-kiitos-38": {
+      "id": "a12s1-expr-vahan-lisaa-kiitos-38",
+      "surface_form": "Vähän lisää, kiitos.",
+      "lemma": "Vähän lisää, kiitos.",
+      "translation_fa": "کمی بیشتر، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Vähän lisää, kiitos.",
+      "example_fa": "کمی بیشتر، لطفاً.",
+      "accepted_answers": [
+        "Vähän lisää, kiitos."
+      ]
+    },
+    "a12s1-hf-missa": {
+      "id": "a12s1-hf-missa",
+      "surface_form": "missä",
+      "lemma": "mikä",
+      "translation_fa": "کجا / در کدام",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 188,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Missä asema on?",
+      "example_fa": "ایستگاه کجاست؟",
+      "accepted_answers": [
+        "missä"
+      ]
+    },
+    "a12s1-hf-taalla": {
+      "id": "a12s1-hf-taalla",
+      "surface_form": "täällä",
+      "lemma": "täällä",
+      "translation_fa": "اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 229,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Olen asunut täällä kaksi vuotta.",
+      "example_fa": "دو سال است اینجا زندگی کرده‌ام.",
+      "accepted_answers": [
+        "täällä"
+      ]
+    },
+    "a12s1-hf-siella": {
+      "id": "a12s1-hf-siella",
+      "surface_form": "siellä",
+      "lemma": "siellä",
+      "translation_fa": "آنجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 149,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Ystäväni asuu siellä.",
+      "example_fa": "دوستم آنجا زندگی می‌کند.",
+      "accepted_answers": [
+        "siellä"
+      ]
+    },
+    "a12s1-topic-kauppa": {
+      "id": "a12s1-topic-kauppa",
+      "surface_form": "kauppa",
+      "lemma": "kauppa",
+      "translation_fa": "فروشگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Kauppa on lähellä.",
+      "example_fa": "فروشگاه نزدیک است.",
+      "accepted_answers": [
+        "kauppa"
+      ]
+    },
+    "a12s1-topic-kassa": {
+      "id": "a12s1-topic-kassa",
+      "surface_form": "kassa",
+      "lemma": "kassa",
+      "translation_fa": "صندوق",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Kassa on tuolla.",
+      "example_fa": "صندوق آنجاست.",
+      "accepted_answers": [
+        "kassa"
+      ]
+    },
+    "a12s1-topic-osasto": {
+      "id": "a12s1-topic-osasto",
+      "surface_form": "osasto",
+      "lemma": "osasto",
+      "translation_fa": "بخش / قسمت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Maito on toisella osastolla.",
+      "example_fa": "شیر در بخش دیگری است.",
+      "accepted_answers": [
+        "osasto"
+      ]
+    },
+    "a12s1-expr-missa-maito-on-45": {
+      "id": "a12s1-expr-missa-maito-on-45",
+      "surface_form": "Missä maito on?",
+      "lemma": "Missä maito on?",
+      "translation_fa": "شیر کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Missä maito on?",
+      "example_fa": "شیر کجاست؟",
+      "accepted_answers": [
+        "Missä maito on?"
+      ]
+    },
+    "a12s1-expr-kassa-on-tuolla-46": {
+      "id": "a12s1-expr-kassa-on-tuolla-46",
+      "surface_form": "Kassa on tuolla.",
+      "lemma": "Kassa on tuolla.",
+      "translation_fa": "صندوق آنجاست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Kassa on tuolla.",
+      "example_fa": "صندوق آنجاست.",
+      "accepted_answers": [
+        "Kassa on tuolla."
+      ]
+    },
+    "a12s1-expr-se-on-taalla-47": {
+      "id": "a12s1-expr-se-on-taalla-47",
+      "surface_form": "Se on täällä.",
+      "lemma": "Se on täällä.",
+      "translation_fa": "اینجاست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Se on täällä.",
+      "example_fa": "اینجاست.",
+      "accepted_answers": [
+        "Se on täällä."
+      ]
+    },
+    "a12s1-hf-liian": {
+      "id": "a12s1-hf-liian",
+      "surface_form": "liian",
+      "lemma": "liian",
+      "translation_fa": "بیش از حد / خیلی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 166,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Tämä takki on liian kallis.",
+      "example_fa": "این کت بیش از حد گران است.",
+      "accepted_answers": [
+        "liian"
+      ]
+    },
+    "a12s1-hf-tama": {
+      "id": "a12s1-hf-tama",
+      "surface_form": "tämä",
+      "lemma": "tämä",
+      "translation_fa": "این",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 49,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Tämä kirja on helppo.",
+      "example_fa": "این کتاب آسان است.",
+      "accepted_answers": [
+        "tämä"
+      ]
+    },
+    "a12s1-hf-toinen": {
+      "id": "a12s1-hf-toinen",
+      "surface_form": "toinen",
+      "lemma": "toinen",
+      "translation_fa": "دوم / دیگری",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 119,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Toinen vaihtoehto on halvempi.",
+      "example_fa": "گزینه دوم ارزان‌تر است.",
+      "accepted_answers": [
+        "toinen"
+      ]
+    },
+    "a12s1-topic-iso": {
+      "id": "a12s1-topic-iso",
+      "surface_form": "iso",
+      "lemma": "iso",
+      "translation_fa": "بزرگ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä on liian iso.",
+      "example_fa": "این بیش از حد بزرگ است.",
+      "accepted_answers": [
+        "iso"
+      ]
+    },
+    "a12s1-topic-pieni": {
+      "id": "a12s1-topic-pieni",
+      "surface_form": "pieni",
+      "lemma": "pieni",
+      "translation_fa": "کوچک",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 389,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä on liian pieni.",
+      "example_fa": "این بیش از حد کوچک است.",
+      "accepted_answers": [
+        "pieni"
+      ]
+    },
+    "a12s1-topic-sopiva": {
+      "id": "a12s1-topic-sopiva",
+      "surface_form": "sopiva",
+      "lemma": "sopiva",
+      "translation_fa": "مناسب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä on sopiva.",
+      "example_fa": "این مناسب است.",
+      "accepted_answers": [
+        "sopiva"
+      ]
+    },
+    "a12s1-expr-tama-on-liian-iso-54": {
+      "id": "a12s1-expr-tama-on-liian-iso-54",
+      "surface_form": "Tämä on liian iso.",
+      "lemma": "Tämä on liian iso.",
+      "translation_fa": "این بیش از حد بزرگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tämä on liian iso.",
+      "example_fa": "این بیش از حد بزرگ است.",
+      "accepted_answers": [
+        "Tämä on liian iso."
+      ]
+    },
+    "a12s1-expr-tama-on-liian-pieni-55": {
+      "id": "a12s1-expr-tama-on-liian-pieni-55",
+      "surface_form": "Tämä on liian pieni.",
+      "lemma": "Tämä on liian pieni.",
+      "translation_fa": "این بیش از حد کوچک است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tämä on liian pieni.",
+      "example_fa": "این بیش از حد کوچک است.",
+      "accepted_answers": [
+        "Tämä on liian pieni."
+      ]
+    },
+    "a12s1-expr-tama-on-sopiva-56": {
+      "id": "a12s1-expr-tama-on-sopiva-56",
+      "surface_form": "Tämä on sopiva.",
+      "lemma": "Tämä on sopiva.",
+      "translation_fa": "این مناسب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tämä on sopiva.",
+      "example_fa": "این مناسب است.",
+      "accepted_answers": [
+        "Tämä on sopiva."
+      ]
+    },
+    "a12s1-expr-onko-toinen-koko-57": {
+      "id": "a12s1-expr-onko-toinen-koko-57",
+      "surface_form": "Onko toinen koko?",
+      "lemma": "Onko toinen koko?",
+      "translation_fa": "اندازهٔ دیگری هست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Onko toinen koko?",
+      "example_fa": "اندازهٔ دیگری هست؟",
+      "accepted_answers": [
+        "Onko toinen koko?"
+      ]
+    },
+    "a12s1-hf-voi": {
+      "id": "a12s1-hf-voi",
+      "surface_form": "voi",
+      "lemma": "voida",
+      "translation_fa": "می‌تواند / ممکن است",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 25,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Hän voi auttaa sinua.",
+      "example_fa": "او می‌تواند به تو کمک کند.",
+      "accepted_answers": [
+        "voi"
+      ]
+    },
+    "a12s1-topic-maksaa": {
+      "id": "a12s1-topic-maksaa",
+      "surface_form": "maksaa",
+      "lemma": "maksaa",
+      "translation_fa": "پرداخت کردن / قیمت داشتن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 383,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Voinko maksaa kortilla?",
+      "example_fa": "می‌توانم با کارت پرداخت کنم؟",
+      "accepted_answers": [
+        "maksaa"
+      ]
+    },
+    "a12s1-topic-kortti": {
+      "id": "a12s1-topic-kortti",
+      "surface_form": "kortti",
+      "lemma": "kortti",
+      "translation_fa": "کارت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Maksan kortilla.",
+      "example_fa": "با کارت پرداخت می‌کنم.",
+      "accepted_answers": [
+        "kortti"
+      ]
+    },
+    "a12s1-topic-kateinen": {
+      "id": "a12s1-topic-kateinen",
+      "surface_form": "käteinen",
+      "lemma": "käteinen",
+      "translation_fa": "پول نقد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Maksan käteisellä.",
+      "example_fa": "نقدی پرداخت می‌کنم.",
+      "accepted_answers": [
+        "käteinen"
+      ]
+    },
+    "a12s1-topic-kuitti": {
+      "id": "a12s1-topic-kuitti",
+      "surface_form": "kuitti",
+      "lemma": "kuitti",
+      "translation_fa": "رسید",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Kuitti, kiitos.",
+      "example_fa": "رسید، لطفاً.",
+      "accepted_answers": [
+        "kuitti"
+      ]
+    },
+    "a12s1-expr-voinko-maksaa-kortilla-63": {
+      "id": "a12s1-expr-voinko-maksaa-kortilla-63",
+      "surface_form": "Voinko maksaa kortilla?",
+      "lemma": "Voinko maksaa kortilla?",
+      "translation_fa": "می‌توانم با کارت پرداخت کنم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Voinko maksaa kortilla?",
+      "example_fa": "می‌توانم با کارت پرداخت کنم؟",
+      "accepted_answers": [
+        "Voinko maksaa kortilla?"
+      ]
+    },
+    "a12s1-expr-maksan-kateisella-64": {
+      "id": "a12s1-expr-maksan-kateisella-64",
+      "surface_form": "Maksan käteisellä.",
+      "lemma": "Maksan käteisellä.",
+      "translation_fa": "نقدی پرداخت می‌کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Maksan käteisellä.",
+      "example_fa": "نقدی پرداخت می‌کنم.",
+      "accepted_answers": [
+        "Maksan käteisellä."
+      ]
+    },
+    "a12s1-expr-kuitti-kiitos-65": {
+      "id": "a12s1-expr-kuitti-kiitos-65",
+      "surface_form": "Kuitti, kiitos.",
+      "lemma": "Kuitti, kiitos.",
+      "translation_fa": "رسید، لطفاً.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Kuitti, kiitos.",
+      "example_fa": "رسید، لطفاً.",
+      "accepted_answers": [
+        "Kuitti, kiitos."
+      ]
+    },
+    "a12s1-hf-ei": {
+      "id": "a12s1-hf-ei",
+      "surface_form": "ei",
+      "lemma": "ei",
+      "translation_fa": "نه / نیست / نمی‌... (برای او یا حالت عمومی)",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 3,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Hän ei tule tänään.",
+      "example_fa": "او امروز نمی‌آید.",
+      "accepted_answers": [
+        "ei"
+      ]
+    },
+    "a12s1-hf-mitaan": {
+      "id": "a12s1-hf-mitaan",
+      "surface_form": "mitään",
+      "lemma": "mikään",
+      "translation_fa": "هیچ‌چیز / چیزی؛ معمولاً در جمله منفی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 74,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "En kuullut mitään.",
+      "example_fa": "چیزی نشنیدم.",
+      "accepted_answers": [
+        "mitään"
+      ]
+    },
+    "a12s1-hf-takaisin": {
+      "id": "a12s1-hf-takaisin",
+      "surface_form": "takaisin",
+      "lemma": "takaisin",
+      "translation_fa": "به عقب؛ بازگشت",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 224,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "Tulen takaisin huomenna.",
+      "example_fa": "فردا برمی‌گردم.",
+      "accepted_answers": [
+        "takaisin"
+      ]
+    },
+    "a12s1-topic-ongelma": {
+      "id": "a12s1-topic-ongelma",
+      "surface_form": "ongelma",
+      "lemma": "ongelma",
+      "translation_fa": "مشکل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Minulla on ongelma.",
+      "example_fa": "من یک مشکل دارم.",
+      "accepted_answers": [
+        "ongelma"
+      ]
+    },
+    "a12s1-topic-rikki": {
+      "id": "a12s1-topic-rikki",
+      "surface_form": "rikki",
+      "lemma": "rikki",
+      "translation_fa": "خراب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä on rikki.",
+      "example_fa": "این خراب است.",
+      "accepted_answers": [
+        "rikki"
+      ]
+    },
+    "a12s1-topic-vaara": {
+      "id": "a12s1-topic-vaara",
+      "surface_form": "väärä",
+      "lemma": "väärä",
+      "translation_fa": "اشتباه / نادرست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä on väärä.",
+      "example_fa": "این اشتباه است.",
+      "accepted_answers": [
+        "väärä"
+      ]
+    },
+    "a12s1-topic-toimi": {
+      "id": "a12s1-topic-toimi",
+      "surface_form": "toimi",
+      "lemma": "toimi",
+      "translation_fa": "کار می‌کند؛ در اینجا صورت پس از ei",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä ei toimi.",
+      "example_fa": "این کار نمی‌کند.",
+      "accepted_answers": [
+        "toimi"
+      ]
+    },
+    "a12s1-topic-apu": {
+      "id": "a12s1-topic-apu",
+      "surface_form": "apu",
+      "lemma": "apu",
+      "translation_fa": "کمک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tarvitsen apua.",
+      "example_fa": "به کمک نیاز دارم.",
+      "accepted_answers": [
+        "apu"
+      ]
+    },
+    "a12s1-expr-tama-on-rikki-74": {
+      "id": "a12s1-expr-tama-on-rikki-74",
+      "surface_form": "Tämä on rikki.",
+      "lemma": "Tämä on rikki.",
+      "translation_fa": "این خراب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tämä on rikki.",
+      "example_fa": "این خراب است.",
+      "accepted_answers": [
+        "Tämä on rikki."
+      ]
+    },
+    "a12s1-expr-tama-ei-toimi-75": {
+      "id": "a12s1-expr-tama-ei-toimi-75",
+      "surface_form": "Tämä ei toimi.",
+      "lemma": "Tämä ei toimi.",
+      "translation_fa": "این کار نمی‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tämä ei toimi.",
+      "example_fa": "این کار نمی‌کند.",
+      "accepted_answers": [
+        "Tämä ei toimi."
+      ]
+    },
+    "a12s1-expr-tama-on-vaara-76": {
+      "id": "a12s1-expr-tama-on-vaara-76",
+      "surface_form": "Tämä on väärä.",
+      "lemma": "Tämä on väärä.",
+      "translation_fa": "این اشتباه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tämä on väärä.",
+      "example_fa": "این اشتباه است.",
+      "accepted_answers": [
+        "Tämä on väärä."
+      ]
+    },
+    "a12s1-expr-tarvitsen-apua-77": {
+      "id": "a12s1-expr-tarvitsen-apua-77",
+      "surface_form": "Tarvitsen apua.",
+      "lemma": "Tarvitsen apua.",
+      "translation_fa": "به کمک نیاز دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Tarvitsen apua.",
+      "example_fa": "به کمک نیاز دارم.",
+      "accepted_answers": [
+        "Tarvitsen apua."
+      ]
+    },
+    "a12s1-expr-hei-78": {
+      "id": "a12s1-expr-hei-78",
+      "surface_form": "Hei!",
+      "lemma": "Hei!",
+      "translation_fa": "سلام!",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "conversation"
+      ],
+      "example_fi": "Hei!",
+      "example_fa": "سلام!",
+      "accepted_answers": [
+        "Hei!"
+      ]
+    },
+    "a12s1-reading-shopping": {
+      "id": "a12s1-reading-shopping",
+      "surface_form": "Hei! Haluaisin tämän, kiitos. Paljonko tämä maksaa? Se maksaa kaksikymmentä euroa. Voinko maksaa kortilla? Kyllä. Kuitti, kiitos.",
+      "lemma": "Hei! Haluaisin tämän, kiitos. Paljonko tämä maksaa? Se maksaa kaksikymmentä euroa. Voinko maksaa kortilla? Kyllä. Kuitti, kiitos",
+      "translation_fa": "سلام! این را می‌خواهم، متشکرم. این چقدر قیمت دارد؟ بیست یورو است. می‌توانم با کارت پرداخت کنم؟ بله. رسید، لطفاً.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "reading"
+      ],
+      "example_fi": "Hei! Haluaisin tämän, kiitos. Paljonko tämä maksaa? Se maksaa kaksikymmentä euroa. Voinko maksaa kortilla? Kyllä. Kuitti, kiitos.",
+      "example_fa": "سلام! این را می‌خواهم، متشکرم. این چقدر قیمت دارد؟ بیست یورو است. می‌توانم با کارت پرداخت کنم؟ بله. رسید، لطفاً.",
+      "accepted_answers": [
+        "Hei! Haluaisin tämän, kiitos. Paljonko tämä maksaa? Se maksaa kaksikymmentä euroa. Voinko maksaa kortilla? Kyllä. Kuitti, kiitos."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a1.2-section-1-lesson-1",
+      "curriculum_id": "a1.2-s1-l01",
+      "order": 1,
+      "title_fa": "قیمت و پول",
+      "objective_fa": "قیمت یک کالای آشنا را بپرسد و یک پاسخ ساده دربارهٔ قیمت را بفهمد.",
+      "summary_fa": "قیمت یک کالای آشنا را بپرس و پاسخ سادهٔ قیمت را بفهم.",
+      "grammar_fa": "Paljonko…? را به‌عنوان پرسش ثابت قیمت تمرین می‌کنی و euro/sentti را در عبارت‌های کامل می‌بینی.",
+      "new_targets": [
+        "a12s1-hf-paljon",
+        "a12s1-hf-rahaa",
+        "a12s1-hf-yksi",
+        "a12s1-topic-hinta",
+        "a12s1-topic-euro",
+        "a12s1-topic-sentti"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-paljon",
+          "a12s1-hf-rahaa",
+          "a12s1-hf-yksi"
+        ],
+        "topic": [
+          "a12s1-topic-hinta",
+          "a12s1-topic-euro",
+          "a12s1-topic-sentti"
+        ],
+        "expressions": [
+          "a12s1-expr-paljonko-tama-maksaa-6",
+          "a12s1-expr-se-maksaa-viisi-euroa-7",
+          "a12s1-expr-minulla-on-rahaa-8"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l07",
+        "a1.1-s4-l05"
+      ],
+      "production_targets": [
+        "a12s1-expr-paljonko-tama-maksaa-6"
+      ],
+      "listening_targets": [
+        "a12s1-hf-paljon",
+        "a12s1-topic-euro"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s1-hf-paljon",
+          "tokens": [
+            "tämä",
+            "maksaa?",
+            "Paljonko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Paljonko tämä maksaa?"
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-2",
+      "curriculum_id": "a1.2-s1-l02",
+      "order": 2,
+      "title_fa": "عددها برای قیمت‌های روزمره",
+      "objective_fa": "قیمت‌های رُند و رایج بین ۲۰ تا ۱۰۰ را بفهمد و بگوید.",
+      "summary_fa": "عددهای رُند ۲۰ تا ۱۰۰ را در قیمت‌ها بفهم و بگو.",
+      "grammar_fa": "دهگان‌ها و sata به‌صورت شکل‌های کامل و بازبینی‌شده یاد گرفته می‌شوند؛ چیزی در زمان اجرا ساخته نمی‌شود.",
+      "new_targets": [
+        "a12s1-hf-10",
+        "a12s1-hf-20",
+        "a12s1-hf-50",
+        "a12s1-topic-kolmekymmenta",
+        "a12s1-topic-neljakymmenta",
+        "a12s1-topic-kuusikymmenta",
+        "a12s1-topic-seitsemankymmenta",
+        "a12s1-topic-kahdeksankymmenta",
+        "a12s1-topic-yhdeksankymmenta",
+        "a12s1-topic-sata"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-10",
+          "a12s1-hf-20",
+          "a12s1-hf-50"
+        ],
+        "topic": [
+          "a12s1-topic-kolmekymmenta",
+          "a12s1-topic-neljakymmenta",
+          "a12s1-topic-kuusikymmenta",
+          "a12s1-topic-seitsemankymmenta",
+          "a12s1-topic-kahdeksankymmenta",
+          "a12s1-topic-yhdeksankymmenta",
+          "a12s1-topic-sata"
+        ],
+        "expressions": [
+          "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+          "a12s1-expr-se-maksaa-sata-euroa-21"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l07",
+        "a1.2-s1-l01"
+      ],
+      "activities": [
+        {
+          "type": "number-grid",
+          "items": [
+            "a12s1-hf-10",
+            "a12s1-hf-20",
+            "a12s1-hf-50",
+            "a12s1-topic-kolmekymmenta",
+            "a12s1-topic-neljakymmenta",
+            "a12s1-topic-kuusikymmenta",
+            "a12s1-topic-seitsemankymmenta",
+            "a12s1-topic-kahdeksankymmenta",
+            "a12s1-topic-yhdeksankymmenta",
+            "a12s1-topic-sata"
+          ],
+          "label_fa": "عددهای دهگان ۱۰ تا ۱۰۰ را یک‌بار از ابتدا تا انتها مرور کن."
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-10"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-20"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-50"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kolmekymmenta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-neljakymmenta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kuusikymmenta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-seitsemankymmenta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kahdeksankymmenta"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-yhdeksankymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-20"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-20",
+          "options": [
+            "a12s1-hf-10",
+            "a12s1-hf-20",
+            "a12s1-hf-50",
+            "a12s1-topic-kolmekymmenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-50"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-topic-kolmekymmenta",
+          "options": [
+            "a12s1-hf-10",
+            "a12s1-hf-20",
+            "a12s1-hf-50",
+            "a12s1-topic-kolmekymmenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-sata"
+        }
+      ],
+      "production_targets": [
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19"
+      ],
+      "listening_targets": [
+        "a12s1-hf-20",
+        "a12s1-hf-50"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s1-hf-20",
+          "tokens": [
+            "euroa.",
+            "kaksikymmentä",
+            "maksaa",
+            "Se"
+          ],
+          "answer_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa."
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-3",
+      "curriculum_id": "a1.2-s1-l03",
+      "order": 3,
+      "title_fa": "درخواست مودبانه",
+      "objective_fa": "برای یک کالا یا خدمت آشنا یک درخواست کوتاه و مودبانه بیان کند.",
+      "summary_fa": "برای یک کالا یا خدمت آشنا یک درخواست کوتاه و مودبانه بساز.",
+      "grammar_fa": "Haluaisin… و Saanko… به‌صورت چارچوب‌های کامل و آماده تمرین می‌شوند.",
+      "new_targets": [
+        "a12s1-hf-mita",
+        "a12s1-hf-ottaa",
+        "a12s1-hf-antaa",
+        "a12s1-topic-haluaisin",
+        "a12s1-topic-saanko",
+        "a12s1-topic-annos"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-mita",
+          "a12s1-hf-ottaa",
+          "a12s1-hf-antaa"
+        ],
+        "topic": [
+          "a12s1-topic-haluaisin",
+          "a12s1-topic-saanko",
+          "a12s1-topic-annos"
+        ],
+        "expressions": [
+          "a12s1-expr-haluaisin-taman-kiitos-28",
+          "a12s1-expr-saanko-kahvin-kiitos-29",
+          "a12s1-expr-voitteko-antaa-taman-30"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l06",
+        "a1.1-s4-l04",
+        "a1.1-s4-l05"
+      ],
+      "production_targets": [
+        "a12s1-expr-haluaisin-taman-kiitos-28"
+      ],
+      "listening_targets": [
+        "a12s1-hf-mita",
+        "a12s1-hf-antaa"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s1-topic-haluaisin",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin",
+            "kiitos"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-4",
+      "curriculum_id": "a1.2-s1-l04",
+      "order": 4,
+      "title_fa": "مقدار و ظرف",
+      "objective_fa": "مقدار ساده‌ای از یک خوراکی یا نوشیدنی آشنا را درخواست کند.",
+      "summary_fa": "یک مقدار ساده از خوراکی یا نوشیدنی را درخواست کن.",
+      "grammar_fa": "شکل‌های partitiivi لازم بعد از مقدار در خود مثال‌ها و تمرین‌ها صریح ذخیره شده‌اند.",
+      "new_targets": [
+        "a12s1-hf-vahan",
+        "a12s1-hf-paljon",
+        "a12s1-hf-lisaa",
+        "a12s1-topic-kilo",
+        "a12s1-topic-litra",
+        "a12s1-topic-puoli"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-vahan",
+          "a12s1-hf-paljon",
+          "a12s1-hf-lisaa"
+        ],
+        "topic": [
+          "a12s1-topic-kilo",
+          "a12s1-topic-litra",
+          "a12s1-topic-puoli"
+        ],
+        "expressions": [
+          "a12s1-expr-kilo-omenoita-kiitos-36",
+          "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+          "a12s1-expr-vahan-lisaa-kiitos-38"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l03",
+        "a1.1-s4-l04",
+        "a1.2-s1-l03"
+      ],
+      "production_targets": [
+        "a12s1-expr-kilo-omenoita-kiitos-36"
+      ],
+      "listening_targets": [
+        "a12s1-topic-kilo",
+        "a12s1-hf-lisaa"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s1-topic-puoli",
+          "prompt_fi": "Puoli _____ maitoa, kiitos.",
+          "accepted_answers": [
+            "litraa"
+          ],
+          "expected_fi": "Puoli litraa maitoa, kiitos."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a12s1-topic-litra",
+          "base_fi": "litra",
+          "feature_fa": "partitiivi بعد از مقدار",
+          "prompt_fa": "شکل درست litra را بعد از Puoli بنویس.",
+          "frame_fi": "Puoli _____ maitoa, kiitos.",
+          "expected_fi": "litraa",
+          "accepted_answers": [
+            "litraa"
+          ],
+          "explanation_fa": "بعد از مقدار، litra در این عبارت به‌صورت partitiivi می‌آید: litra → litraa."
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-5",
+      "curriculum_id": "a1.2-s1-l05",
+      "order": 5,
+      "title_fa": "پیدا کردن کالا در فروشگاه",
+      "objective_fa": "بپرسد یک کالای آشنا یا بخش خدماتی کجاست و پاسخ مکانی کوتاه را بفهمد.",
+      "summary_fa": "بپرس یک کالا یا بخش خدماتی کجاست و پاسخ کوتاه مکانی را بفهم.",
+      "grammar_fa": "Missä + on و قیدهای مکانی täällä/siellä/tuolla به‌صورت الگوهای کامل تمرین می‌شوند.",
+      "new_targets": [
+        "a12s1-hf-missa",
+        "a12s1-hf-taalla",
+        "a12s1-hf-siella",
+        "a12s1-topic-kauppa",
+        "a12s1-topic-kassa",
+        "a12s1-topic-osasto"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-missa",
+          "a12s1-hf-taalla",
+          "a12s1-hf-siella"
+        ],
+        "topic": [
+          "a12s1-topic-kauppa",
+          "a12s1-topic-kassa",
+          "a12s1-topic-osasto"
+        ],
+        "expressions": [
+          "a12s1-expr-missa-maito-on-45",
+          "a12s1-expr-kassa-on-tuolla-46",
+          "a12s1-expr-se-on-taalla-47"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l02",
+        "a1.2-s1-l03"
+      ],
+      "production_targets": [
+        "a12s1-expr-missa-maito-on-45"
+      ],
+      "listening_targets": [
+        "a12s1-topic-kassa",
+        "a12s1-hf-taalla"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s1-hf-missa",
+          "tokens": [
+            "maito",
+            "on?",
+            "Missä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Missä maito on?"
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-6",
+      "curriculum_id": "a1.2-s1-l06",
+      "order": 6,
+      "title_fa": "اندازه و مناسب بودن",
+      "objective_fa": "بگوید یک کالای آشنا بیش از حد بزرگ، کوچک یا مناسب است.",
+      "summary_fa": "بگو یک کالا بیش از حد بزرگ، کوچک یا مناسب است.",
+      "grammar_fa": "ساخت liian + صفت و پرسش ثابت Onko toinen koko? را در موقعیت خرید تمرین می‌کنی.",
+      "new_targets": [
+        "a12s1-hf-liian",
+        "a12s1-hf-tama",
+        "a12s1-hf-toinen",
+        "a12s1-topic-iso",
+        "a12s1-topic-pieni",
+        "a12s1-topic-sopiva"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-liian",
+          "a12s1-hf-tama",
+          "a12s1-hf-toinen"
+        ],
+        "topic": [
+          "a12s1-topic-iso",
+          "a12s1-topic-pieni",
+          "a12s1-topic-sopiva"
+        ],
+        "expressions": [
+          "a12s1-expr-tama-on-liian-iso-54",
+          "a12s1-expr-tama-on-liian-pieni-55",
+          "a12s1-expr-tama-on-sopiva-56",
+          "a12s1-expr-onko-toinen-koko-57"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l08",
+        "a1.2-s1-l05"
+      ],
+      "production_targets": [
+        "a12s1-expr-tama-on-sopiva-56"
+      ],
+      "listening_targets": [
+        "a12s1-topic-iso",
+        "a12s1-hf-toinen"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s1-topic-sopiva",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä",
+            "sopiva"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-7",
+      "curriculum_id": "a1.2-s1-l07",
+      "order": 7,
+      "title_fa": "پرداخت",
+      "objective_fa": "درخواست پرداخت با کارت یا نقدی را بیان کند و پاسخ کوتاه مربوط به پرداخت را بفهمد.",
+      "summary_fa": "روش پرداخت را بگو و رسید بخواه.",
+      "grammar_fa": "kortilla و käteisellä صورت‌های کامل و بازبینی‌شده‌اند و در زمان اجرا با پسوند ساخته نمی‌شوند.",
+      "new_targets": [
+        "a12s1-hf-voi",
+        "a12s1-hf-antaa",
+        "a12s1-hf-rahaa",
+        "a12s1-topic-maksaa",
+        "a12s1-topic-kortti",
+        "a12s1-topic-kateinen",
+        "a12s1-topic-kuitti"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-voi",
+          "a12s1-hf-antaa",
+          "a12s1-hf-rahaa"
+        ],
+        "topic": [
+          "a12s1-topic-maksaa",
+          "a12s1-topic-kortti",
+          "a12s1-topic-kateinen",
+          "a12s1-topic-kuitti"
+        ],
+        "expressions": [
+          "a12s1-expr-voinko-maksaa-kortilla-63",
+          "a12s1-expr-maksan-kateisella-64",
+          "a12s1-expr-kuitti-kiitos-65"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s1-l01",
+        "a1.2-s1-l03"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-voi"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-antaa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-rahaa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-maksaa"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kortti"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kateinen"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kuitti"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-voi",
+          "options": [
+            "a12s1-hf-voi",
+            "a12s1-hf-antaa",
+            "a12s1-hf-rahaa",
+            "a12s1-topic-maksaa"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-antaa"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-hf-rahaa",
+          "options": [
+            "a12s1-hf-voi",
+            "a12s1-hf-antaa",
+            "a12s1-hf-rahaa",
+            "a12s1-topic-maksaa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-maksaa",
+          "options": [
+            "a12s1-hf-voi",
+            "a12s1-hf-antaa",
+            "a12s1-hf-rahaa",
+            "a12s1-topic-maksaa"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kortti"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-topic-kateinen",
+          "options": [
+            "a12s1-hf-voi",
+            "a12s1-topic-kateinen",
+            "a12s1-hf-antaa",
+            "a12s1-hf-rahaa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-kuitti",
+          "options": [
+            "a12s1-hf-voi",
+            "a12s1-hf-antaa",
+            "a12s1-topic-kuitti",
+            "a12s1-hf-rahaa"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-voi"
+        }
+      ],
+      "production_targets": [
+        "a12s1-expr-voinko-maksaa-kortilla-63"
+      ],
+      "listening_targets": [
+        "a12s1-topic-kuitti",
+        "a12s1-hf-rahaa"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s1-topic-maksaa",
+          "prompt_fi": "Voinko maksaa _____?",
+          "accepted_answers": [
+            "kortilla"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s1-topic-kortti",
+          "base_fi": "kortti",
+          "feature_fa": "adessiivi برای ابزار پرداخت",
+          "prompt_fa": "برای گفتن «با کارت» شکل درست kortti را انتخاب کن.",
+          "frame_fi": "Maksan _____.",
+          "options_fi": [
+            "kortti",
+            "korttia",
+            "kortilla",
+            "kortissa"
+          ],
+          "expected_fi": "kortilla",
+          "explanation_fa": "برای روش پرداخت از adessiivi استفاده می‌کنیم: kortti → kortilla."
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-8",
+      "curriculum_id": "a1.2-s1-l08",
+      "order": 8,
+      "title_fa": "یک مشکل ساده در خدمات",
+      "objective_fa": "یک مشکل ساده دربارهٔ کالا یا خدمت را بیان کند و کمک بخواهد.",
+      "summary_fa": "یک مشکل پایه را دربارهٔ کالا بیان کن و کمک بخواه.",
+      "grammar_fa": "در Tämä ei toimi صورت connegative یعنی toimi صریحاً ذخیره و تمرین می‌شود.",
+      "new_targets": [
+        "a12s1-hf-ei",
+        "a12s1-hf-mitaan",
+        "a12s1-hf-takaisin",
+        "a12s1-topic-ongelma",
+        "a12s1-topic-rikki",
+        "a12s1-topic-vaara",
+        "a12s1-topic-toimi",
+        "a12s1-topic-apu"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s1-hf-ei",
+          "a12s1-hf-mitaan",
+          "a12s1-hf-takaisin"
+        ],
+        "topic": [
+          "a12s1-topic-ongelma",
+          "a12s1-topic-rikki",
+          "a12s1-topic-vaara",
+          "a12s1-topic-toimi",
+          "a12s1-topic-apu"
+        ],
+        "expressions": [
+          "a12s1-expr-tama-on-rikki-74",
+          "a12s1-expr-tama-ei-toimi-75",
+          "a12s1-expr-tama-on-vaara-76",
+          "a12s1-expr-tarvitsen-apua-77"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l04",
+        "a1.1-s1-l07",
+        "a1.2-s1-l06",
+        "a1.2-s1-l07"
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-ei"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-mitaan"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-takaisin"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-ongelma"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-rikki"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-vaara"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-toimi"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-apu"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-ei",
+          "options": [
+            "a12s1-hf-ei",
+            "a12s1-hf-mitaan",
+            "a12s1-hf-takaisin",
+            "a12s1-topic-ongelma"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-mitaan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tarvitsen-apua-77"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-ongelma",
+          "options": [
+            "a12s1-hf-ei",
+            "a12s1-hf-mitaan",
+            "a12s1-hf-takaisin",
+            "a12s1-topic-ongelma"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-rikki"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-topic-vaara",
+          "options": [
+            "a12s1-hf-ei",
+            "a12s1-topic-vaara",
+            "a12s1-hf-mitaan",
+            "a12s1-hf-takaisin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-toimi",
+          "options": [
+            "a12s1-hf-ei",
+            "a12s1-hf-mitaan",
+            "a12s1-topic-toimi",
+            "a12s1-hf-takaisin"
+          ]
+        }
+      ],
+      "production_targets": [
+        "a12s1-expr-tarvitsen-apua-77"
+      ],
+      "listening_targets": [
+        "a12s1-topic-ongelma",
+        "a12s1-topic-vaara"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s1-topic-rikki",
+          "prompt_fa": "این خراب است.",
+          "cues_fi": [
+            "Tämä",
+            "rikki"
+          ],
+          "expected_fi": "Tämä on rikki.",
+          "accepted_answers": [
+            "Tämä on rikki."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s1-topic-toimi",
+          "base_fi": "toimia",
+          "feature_fa": "منفی سوم‌شخص: ei + connegative",
+          "prompt_fa": "در جملهٔ «این کار نمی‌کند» شکل درست فعل را انتخاب کن.",
+          "frame_fi": "Tämä ei _____.",
+          "options_fi": [
+            "toimii",
+            "toimi",
+            "toimia",
+            "toimin"
+          ],
+          "expected_fi": "toimi",
+          "explanation_fa": "بعد از ei، صورت connegative می‌آید: toimii → ei toimi."
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-9",
+      "curriculum_id": "a1.2-s1-l09",
+      "order": 9,
+      "title_fa": "یک گفت‌وگوی کامل خرید",
+      "objective_fa": "سلام، درخواست، مقدار، قیمت، پرداخت و تشکر را در یک گفت‌وگوی کوتاه خرید ترکیب کند.",
+      "summary_fa": "سلام، درخواست، قیمت، پرداخت و تشکر را در یک گفت‌وگوی کوتاه کنار هم بگذار.",
+      "grammar_fa": "گرامر جدیدی اضافه نمی‌شود؛ تمرکز روی بازیابی و ترکیب عبارت‌های کامل بخش است.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "a12s1-expr-hei-78",
+          "a12s1-expr-haluaisin-taman-kiitos-28",
+          "a12s1-expr-paljonko-tama-maksaa-6",
+          "a12s1-expr-voinko-maksaa-kortilla-63",
+          "a12s1-expr-kuitti-kiitos-65"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l01",
+        "a1.2-s1-l01",
+        "a1.2-s1-l03",
+        "a1.2-s1-l04",
+        "a1.2-s1-l05",
+        "a1.2-s1-l07",
+        "a1.2-s1-l08"
+      ],
+      "practice_targets": [
+        "a12s1-expr-hei-78",
+        "a12s1-expr-haluaisin-taman-kiitos-28",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-kuitti-kiitos-65"
+      ],
+      "activities": [
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "a12s1-expr-paljonko-tama-maksaa-6",
+            "a12s1-expr-hei-78",
+            "a12s1-expr-kuitti-kiitos-65",
+            "a12s1-expr-voinko-maksaa-kortilla-63",
+            "a12s1-expr-haluaisin-taman-kiitos-28"
+          ],
+          "answer_order": [
+            1,
+            4,
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s1-reading-shopping",
+          "question_item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "options": [
+            "a12s1-expr-se-maksaa-viisi-euroa-7",
+            "a12s1-expr-paljonko-tama-maksaa-6",
+            "a12s1-expr-tama-on-rikki-74",
+            "a12s1-expr-missa-maito-on-45"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s1-reading-shopping",
+          "question_item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "options": [
+            "a12s1-expr-tama-on-liian-iso-54",
+            "a12s1-expr-se-maksaa-viisi-euroa-7",
+            "a12s1-expr-voinko-maksaa-kortilla-63",
+            "a12s1-expr-tama-on-rikki-74"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-hei-78"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-kuitti-kiitos-65"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-expr-hei-78",
+          "options": [
+            "a12s1-expr-hei-78",
+            "a12s1-expr-haluaisin-taman-kiitos-28",
+            "a12s1-expr-paljonko-tama-maksaa-6",
+            "a12s1-expr-voinko-maksaa-kortilla-63"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "options": [
+            "a12s1-expr-hei-78",
+            "a12s1-expr-haluaisin-taman-kiitos-28",
+            "a12s1-expr-paljonko-tama-maksaa-6",
+            "a12s1-expr-voinko-maksaa-kortilla-63"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-expr-kuitti-kiitos-65",
+          "options": [
+            "a12s1-expr-kuitti-kiitos-65",
+            "a12s1-expr-hei-78",
+            "a12s1-expr-haluaisin-taman-kiitos-28",
+            "a12s1-expr-paljonko-tama-maksaa-6"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-hei-78"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "options": [
+            "a12s1-expr-hei-78",
+            "a12s1-expr-paljonko-tama-maksaa-6",
+            "a12s1-expr-haluaisin-taman-kiitos-28",
+            "a12s1-expr-voinko-maksaa-kortilla-63"
+          ]
+        }
+      ],
+      "production_targets": [
+        "a12s1-expr-haluaisin-taman-kiitos-28"
+      ],
+      "listening_targets": [
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-kuitti-kiitos-65"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin",
+            "kiitos"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-1-lesson-10",
+      "curriculum_id": "a1.2-s1-l10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۱",
+      "objective_fa": "یک خرید یا تعامل خدماتی روزمره را با کمک محدود و زبان اصلی این بخش انجام دهد.",
+      "summary_fa": "در یک خرید یا تعامل خدماتی روزمره از زبان اصلی بخش استفاده کن.",
+      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ قیمت، مقدار، درخواست مودبانه، مکان، پرداخت و مشکل ساده با هم سنجیده می‌شوند.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.2-s1-l01",
+        "a1.2-s1-l02",
+        "a1.2-s1-l03",
+        "a1.2-s1-l04",
+        "a1.2-s1-l05",
+        "a1.2-s1-l06",
+        "a1.2-s1-l07",
+        "a1.2-s1-l08",
+        "a1.2-s1-l09"
+      ],
+      "checkpoint_targets": [
+        "a12s1-hf-paljon",
+        "a12s1-topic-euro",
+        "a12s1-topic-kolmekymmenta",
+        "a12s1-topic-haluaisin",
+        "a12s1-topic-kilo",
+        "a12s1-hf-missa",
+        "a12s1-topic-kassa",
+        "a12s1-topic-sopiva",
+        "a12s1-topic-kortti",
+        "a12s1-topic-kuitti",
+        "a12s1-topic-rikki",
+        "a12s1-topic-toimi",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-tarvitsen-apua-77"
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "listen"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ]
+      ],
+      "production_targets": [
+        "a12s1-topic-rikki"
+      ],
+      "listening_targets": [
+        "a12s1-topic-euro",
+        "a12s1-topic-kuitti"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "tokens": [
+            "maksaa?",
+            "tämä",
+            "Paljonko"
+          ],
+          "answer_order": [
+            2,
+            1,
+            0
+          ],
+          "expected_fi": "Paljonko tämä maksaa?"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fi": "Voinko maksaa _____?",
+          "accepted_answers": [
+            "kortilla"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tarvitsen-apua-77",
+          "prompt_fa": "به کمک نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen apua.",
+          "accepted_answers": [
+            "Tarvitsen apua."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s1-topic-toimi",
+          "base_fi": "toimia",
+          "feature_fa": "منفی سوم‌شخص",
+          "prompt_fa": "شکل درست فعل را بعد از ei انتخاب کن.",
+          "frame_fi": "Tämä ei _____.",
+          "options_fi": [
+            "toimii",
+            "toimi",
+            "toimia",
+            "toimin"
+          ],
+          "expected_fi": "toimi",
+          "explanation_fa": "بعد از ei، صورت connegative می‌آید: ei toimi."
+        }
+      ],
+      "passing_score": 0.8
+    }
+  ]
+}
