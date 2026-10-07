@@ -63,7 +63,7 @@ test('multi-level validation prepares 50 globally unique A1 lessons and 150 A1.2
   }
 });
 
-test('A1.2 Section 1 remains locked until all four A1.1 sections are complete', () => {
+test('A1.2 Section 1 is previewable and jumpable before A1.1 completion', () => {
   const sections = course.validateImplementedPath([
     { level: 'A1.1', curriculum: a11Curriculum, sections: a11Sections },
     { level: 'A1.2', curriculum: a12Curriculum, sections: [a12Section1] },
@@ -72,14 +72,15 @@ test('A1.2 Section 1 remains locked until all four A1.1 sections are complete', 
   let progress = course.emptyProgress();
 
   assert.equal(course.isSectionUnlocked(sections, progress, a12Index), false);
-  assert.equal(course.isCourseLessonAccessible(sections, progress, a12Index, 0), false);
-  for (const section of sections.slice(0,4)) {
-    for (const lesson of section.lessons) {
-      progress = course.recordLessonCompletion(progress, lesson.id, 8, 10, 1000);
-    }
-  }
-  assert.equal(course.isSectionUnlocked(sections, progress, a12Index), true);
+  assert.equal(course.isSectionAccessible(sections, progress, a12Index), false);
   assert.equal(course.isCourseLessonAccessible(sections, progress, a12Index, 0), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, a12Index, 1), false);
+
+  progress = course.recordLessonCompletion(progress, a12Section1.lessons[0].id, 8, 10, 1000);
+
+  assert.equal(course.isSectionStarted(sections[a12Index], progress), true);
+  assert.equal(course.isSectionAccessible(sections, progress, a12Index), true);
+  assert.equal(course.isCourseLessonAccessible(sections, progress, a12Index, 1), true);
 });
 
 test('already-started A1.2 remains accessible for backfill-safe existing progress', () => {
@@ -243,10 +244,12 @@ test('course UI contains compact A1.1/A1.2 level tabs and no A1.3 tab', () => {
   assert.match(source, /COURSE_STAGES/);
   assert.match(source, /preferredSectionForLevel/);
   assert.match(source, /currentCurriculum = curricula\.get\(section\.level\)/);
+  assert.match(source, /const browsable = Boolean\(target && stageSections\.length\)/);
   assert.match(source, /tab\.tabIndex = current \? 0 : -1/);
   assert.match(source, /const restoreFocus = document\.activeElement === tab/);
   assert.match(source, /root\.querySelector\('\.course-level-tab\.is-current'\)\?\.focus\(\)/);
-  assert.match(source, /tab\.disabled = !stageSections\.length \|\| \(!accessible && !current\)/);
+  assert.match(source, /tab\.disabled = !browsable/);
+  assert.doesNotMatch(source, /پس از تکمیل A1\.1 باز می‌شود/);
   assert.match(source, /levelTabs\.addEventListener\('keydown'/);
   assert.match(source, /event\.key === 'ArrowRight'/);
   assert.match(source, /event\.key === 'ArrowLeft'/);
