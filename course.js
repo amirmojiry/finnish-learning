@@ -901,6 +901,38 @@
 
   const STRUCTURED_PRACTICE_TYPES = ['sentence-order', 'expression-completion', 'controlled-production'];
 
+  function structuredPracticeSentenceTranslation(section, spec) {
+    if (typeof spec.expected_fa === 'string' && spec.expected_fa.trim()) {
+      return spec.expected_fa.trim();
+    }
+    if (spec.type !== 'sentence-order' || !spec.expected_fi) return '';
+
+    const expected = normalizeAnswer(spec.expected_fi);
+    const items = Object.values(section.items || {});
+
+    for (const candidate of items) {
+      if (
+        candidate?.surface_form
+        && candidate.translation_fa
+        && normalizeAnswer(candidate.surface_form) === expected
+      ) {
+        return candidate.translation_fa;
+      }
+    }
+
+    for (const candidate of items) {
+      if (
+        candidate?.example_fi
+        && candidate.example_fa
+        && normalizeAnswer(candidate.example_fi) === expected
+      ) {
+        return candidate.example_fa;
+      }
+    }
+
+    return '';
+  }
+
   function injectStructuredPractice(section, lesson) {
     const specs = Array.isArray(lesson.structured_practice) ? lesson.structured_practice : [];
     if (!specs.length) throw new Error(`Lesson ${lesson.id || '?'} must declare structured practice.`);
@@ -934,7 +966,14 @@
         throw new Error(`Lesson ${lesson.id} has no matching slot for structured practice target ${spec.item}.`);
       }
 
-      lesson.activities[replacementIndex] = { ...spec };
+      const prepared = { ...spec };
+      if (spec.type === 'sentence-order') {
+        prepared.expected_fa = structuredPracticeSentenceTranslation(section, spec);
+        if (!prepared.expected_fa) {
+          throw new Error(`Sentence-order activity lacks a Persian translation: ${lesson.id} / ${spec.item}`);
+        }
+      }
+      lesson.activities[replacementIndex] = prepared;
       usedIndices.add(replacementIndex);
     }
   }
@@ -1481,7 +1520,12 @@
         review.lang = 'fi';
         review.dir = 'ltr';
         review.textContent = activity.expected_fi;
-        result.append(title, review, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+        const translation = document.createElement('p');
+        translation.className = 'course-sentence-translation';
+        translation.lang = 'fa';
+        translation.dir = 'rtl';
+        translation.textContent = activity.expected_fa;
+        result.append(title, review, translation, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
         card.append(result);
       });
       submit.disabled = true;
