@@ -144,6 +144,35 @@ test('A1.2 Section 1 keeps curriculum target mappings exact', () => {
   }
 });
 
+test('A1.2 numeric dictation accepts the Finnish spelling spoken by fi-FI TTS', () => {
+  const fifty = Object.values(a12Section1.items).find((item) => item.surface_form === '50');
+  assert.ok(fifty);
+  assert.equal(fifty.surface_form, '50');
+  assert.ok(fifty.accepted_answers.includes('50'));
+  assert.ok(fifty.accepted_answers.includes('viisikymmentä'));
+
+  const prepared = course.validateSection(a12Section1);
+  const lesson = prepared.lessons.find((entry) => entry.curriculum_id === 'a1.2-s1-l02');
+  const dictation = lesson.activities.find((activity) => activity.type === 'dictation');
+  assert.ok(dictation);
+  assert.equal(prepared.items[dictation.item].surface_form, '50');
+  assert.ok(prepared.items[dictation.item].accepted_answers.includes('viisikymmentä'));
+});
+
+test('A1.2 shopping dialogue order matches the reviewed passage sequence', () => {
+  const lesson = a12Section1.lessons.find((entry) => entry.curriculum_id === 'a1.2-s1-l09');
+  const dialogue = lesson.activities.find((activity) => activity.type === 'dialogue-order');
+  assert.ok(dialogue);
+  const orderedLines = dialogue.answer_order.map((index) => a12Section1.items[dialogue.turns[index]].surface_form);
+  assert.deepEqual(orderedLines, [
+    'Hei!',
+    'Haluaisin tämän, kiitos.',
+    'Paljonko tämä maksaa?',
+    'Voinko maksaa kortilla?',
+    'Kuitti, kiitos.',
+  ]);
+});
+
 test('A1.2 number grid describes its actual 10 to 100 range', () => {
   const lesson = a12Section1.lessons.find((entry) => entry.curriculum_id === 'a1.2-s1-l02');
   const numberGrid = lesson.activities.find((activity) => activity.type === 'number-grid');
