@@ -266,6 +266,17 @@ function speakFinnish(text) {
   return Boolean(window.FinnishCourse?.playSpeech?.(window, text));
 }
 
+function makeSentenceSpeakButton(text, className = 'sentence-speak-button') {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = className;
+  button.setAttribute('aria-label', 'پخش جملهٔ فنلاندی');
+  button.title = 'پخش جمله';
+  button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm11.5 3a4.5 4.5 0 0 0-2-3.74v7.48A4.5 4.5 0 0 0 16.5 12Zm-2-8.6v2.06a7 7 0 0 1 0 13.08v2.06a9 9 0 0 0 0-17.2Z"/></svg>';
+  button.addEventListener('click', () => speakFinnish(text));
+  return button;
+}
+
 function showView(view, { updateHash = true } = {}) {
   if (!['practice', 'dictionary'].includes(view)) return;
   state.view = view;
@@ -362,13 +373,16 @@ function openWordDetail(word) {
   for (const example of getExamples(word)) {
     const card = document.createElement('div');
     card.className = 'word-example-card';
+    const fiRow = document.createElement('div');
+    fiRow.className = 'word-example-fi-row';
     const fi = document.createElement('p');
     fi.className = 'word-example-fi';
     renderLinkedSentence(fi, example.fi);
+    fiRow.append(fi, makeSentenceSpeakButton(example.fi));
     const fa = document.createElement('p');
     fa.className = 'word-example-fa';
     fa.textContent = example.fa;
-    card.append(fi, fa);
+    card.append(fiRow, fa);
     els.detailExamples.append(card);
   }
 
