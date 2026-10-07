@@ -701,7 +701,7 @@
       "id": "s2-sisar",
       "surface_form": "sisar",
       "lemma": "sisar",
-      "translation_fa": "خواهر / برادر (هم‌نیای مؤنث)",
+      "translation_fa": "خواهر",
       "item_type": "word",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -921,7 +921,9 @@
       "example_fi": "Numero on nolla.",
       "example_fa": "عدد ۰ است.",
       "accepted_answers": [
-        "nolla"
+        "nolla",
+        "0",
+        "۰"
       ]
     },
     "s2-num-yksi": {
@@ -938,7 +940,9 @@
       "example_fi": "Numero on yksi.",
       "example_fa": "عدد ۱ است.",
       "accepted_answers": [
-        "yksi"
+        "yksi",
+        "1",
+        "۱"
       ]
     },
     "s2-num-kaksi": {
@@ -955,7 +959,9 @@
       "example_fi": "Numero on kaksi.",
       "example_fa": "عدد ۲ است.",
       "accepted_answers": [
-        "kaksi"
+        "kaksi",
+        "2",
+        "۲"
       ]
     },
     "s2-num-kolme": {
@@ -972,7 +978,9 @@
       "example_fi": "Numero on kolme.",
       "example_fa": "عدد ۳ است.",
       "accepted_answers": [
-        "kolme"
+        "kolme",
+        "3",
+        "۳"
       ]
     },
     "s2-num-viisi": {
@@ -989,7 +997,9 @@
       "example_fi": "Numero on viisi.",
       "example_fa": "عدد ۵ است.",
       "accepted_answers": [
-        "viisi"
+        "viisi",
+        "5",
+        "۵"
       ]
     },
     "s2-num-kuusi": {
@@ -1006,7 +1016,9 @@
       "example_fi": "Numero on kuusi.",
       "example_fa": "عدد ۶ است.",
       "accepted_answers": [
-        "kuusi"
+        "kuusi",
+        "6",
+        "۶"
       ]
     },
     "s2-num-kahdeksan": {
@@ -1023,7 +1035,9 @@
       "example_fi": "Numero on kahdeksan.",
       "example_fa": "عدد ۸ است.",
       "accepted_answers": [
-        "kahdeksan"
+        "kahdeksan",
+        "8",
+        "۸"
       ]
     },
     "s2-num-kymmenen": {
@@ -1040,7 +1054,9 @@
       "example_fi": "Numero on kymmenen.",
       "example_fa": "عدد ۱۰ است.",
       "accepted_answers": [
-        "kymmenen"
+        "kymmenen",
+        "10",
+        "۱۰"
       ]
     },
     "s2-num-yksitoista": {
@@ -1057,7 +1073,9 @@
       "example_fi": "Numero on yksitoista.",
       "example_fa": "عدد ۱۱ است.",
       "accepted_answers": [
-        "yksitoista"
+        "yksitoista",
+        "11",
+        "۱۱"
       ]
     },
     "s2-num-kaksitoista": {
@@ -1074,7 +1092,9 @@
       "example_fi": "Numero on kaksitoista.",
       "example_fa": "عدد ۱۲ است.",
       "accepted_answers": [
-        "kaksitoista"
+        "kaksitoista",
+        "12",
+        "۱۲"
       ]
     },
     "s2-num-kolmetoista": {
@@ -1091,7 +1111,9 @@
       "example_fi": "Numero on kolmetoista.",
       "example_fa": "عدد ۱۳ است.",
       "accepted_answers": [
-        "kolmetoista"
+        "kolmetoista",
+        "13",
+        "۱۳"
       ]
     },
     "s2-num-viisitoista": {
@@ -1108,7 +1130,9 @@
       "example_fi": "Numero on viisitoista.",
       "example_fa": "عدد ۱۵ است.",
       "accepted_answers": [
-        "viisitoista"
+        "viisitoista",
+        "15",
+        "۱۵"
       ]
     },
     "s2-num-kuusitoista": {
@@ -1125,7 +1149,9 @@
       "example_fi": "Numero on kuusitoista.",
       "example_fa": "عدد ۱۶ است.",
       "accepted_answers": [
-        "kuusitoista"
+        "kuusitoista",
+        "16",
+        "۱۶"
       ]
     },
     "s2-num-kahdeksantoista": {
@@ -1142,7 +1168,9 @@
       "example_fi": "Numero on kahdeksantoista.",
       "example_fa": "عدد ۱۸ است.",
       "accepted_answers": [
-        "kahdeksantoista"
+        "kahdeksantoista",
+        "18",
+        "۱۸"
       ]
     },
     "s2-ika": {
@@ -1212,7 +1240,12 @@
       "example_fi": "Olen 12-vuotias.",
       "example_fa": "من ۱۲ ساله هستم.",
       "accepted_answers": [
-        "Olen 12-vuotias."
+        "Olen 12-vuotias.",
+        "Olen kaksitoistavuotias.",
+        "Olen kaksitoista vuotta vanha."
+      ],
+      "rejected_answers": [
+        "Olen kaksitoista-vuotias."
       ]
     },
     "s2-numero": {
@@ -1417,7 +1450,12 @@
       "example_fi": "Olen 12-vuotias.",
       "example_fa": "من ۱۲ ساله هستم.",
       "accepted_answers": [
-        "Olen 12-vuotias."
+        "Olen 12-vuotias.",
+        "Olen kaksitoistavuotias.",
+        "Olen kaksitoista vuotta vanha."
+      ],
+      "rejected_answers": [
+        "Olen kaksitoista-vuotias."
       ]
     },
     "s2-num-nelja": {
@@ -1434,7 +1472,9 @@
       "example_fi": "Numero on neljä.",
       "example_fa": "عدد ۴ است.",
       "accepted_answers": [
-        "neljä"
+        "neljä",
+        "4",
+        "۴"
       ]
     },
     "s2-num-seitseman": {
@@ -1451,7 +1491,9 @@
       "example_fi": "Numero on seitsemän.",
       "example_fa": "عدد ۷ است.",
       "accepted_answers": [
-        "seitsemän"
+        "seitsemän",
+        "7",
+        "۷"
       ]
     },
     "s2-num-yhdeksan": {
@@ -1468,7 +1510,9 @@
       "example_fi": "Numero on yhdeksän.",
       "example_fa": "عدد ۹ است.",
       "accepted_answers": [
-        "yhdeksän"
+        "yhdeksän",
+        "9",
+        "۹"
       ]
     },
     "s2-num-neljatoista": {
@@ -1485,7 +1529,9 @@
       "example_fi": "Numero on neljätoista.",
       "example_fa": "عدد ۱۴ است.",
       "accepted_answers": [
-        "neljätoista"
+        "neljätoista",
+        "14",
+        "۱۴"
       ]
     },
     "s2-num-seitsemantoista": {
@@ -1502,7 +1548,9 @@
       "example_fi": "Numero on seitsemäntoista.",
       "example_fa": "عدد ۱۷ است.",
       "accepted_answers": [
-        "seitsemäntoista"
+        "seitsemäntoista",
+        "17",
+        "۱۷"
       ]
     },
     "s2-num-yhdeksantoista": {
@@ -1519,7 +1567,9 @@
       "example_fi": "Numero on yhdeksäntoista.",
       "example_fa": "عدد ۱۹ است.",
       "accepted_answers": [
-        "yhdeksäntoista"
+        "yhdeksäntoista",
+        "19",
+        "۱۹"
       ]
     },
     "s2-num-kaksikymmenta": {
@@ -1536,7 +1586,9 @@
       "example_fi": "Numero on kaksikymmentä.",
       "example_fa": "عدد ۲۰ است.",
       "accepted_answers": [
-        "kaksikymmentä"
+        "kaksikymmentä",
+        "20",
+        "۲۰"
       ]
     }
   },

@@ -83,7 +83,15 @@ test('structured-practice manifests are explicit and stay inside reviewed lesson
 
         const prepared = lesson.activities.filter((activity) => activity.type === spec.type && activity.item === spec.item);
         assert.equal(prepared.length, 1, `${lesson.id}: ${spec.type} / ${spec.item}`);
-        assert.deepEqual(prepared[0], spec);
+        if (spec.type === 'sentence-order') {
+          assert.ok(prepared[0].expected_fa, `${lesson.id}: sentence order needs Persian feedback`);
+          const { expected_fa: _preparedExpectedFa, ...preparedSpec } = prepared[0];
+          const { expected_fa: _specExpectedFa, ...rawSpec } = spec;
+          assert.deepEqual(preparedSpec, rawSpec);
+          if (spec.expected_fa) assert.equal(prepared[0].expected_fa, spec.expected_fa);
+        } else {
+          assert.deepEqual(prepared[0], spec);
+        }
       }
     });
   });
@@ -105,6 +113,8 @@ test('sentence ordering, expression completion, and controlled production keep e
           activity.expected_fi,
           lesson.id,
         );
+        assert.ok(activity.expected_fa, `${lesson.id}: missing Persian sentence translation`);
+        if (lesson.id === 'section-3-lesson-7') assert.equal(activity.expected_fa, 'نمی‌نوشم.');
       } else if (activity.type === 'expression-completion') {
         assert.ok(activity.prompt_fi.includes('_____'), lesson.id);
         assert.ok(activity.accepted_answers.length >= 1, lesson.id);
@@ -305,6 +315,7 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
       tokens: ['on', 'eläin.', 'Lammas'],
       answer_order: [2, 0, 1],
       expected_fi: 'Lammas on eläin.',
+      expected_fa: 'گوسفند حیوان است.',
     };
     const handled = course.renderStructuredPracticeActivity({
       document,
@@ -361,6 +372,7 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
 
     assert.deepEqual(results, [true]);
     assert.equal(card.children.at(-1).children[1].textContent, 'Lammas on eläin.');
+    assert.equal(card.children.at(-1).children[2].textContent, 'گوسفند حیوان است.');
   }
 
   {

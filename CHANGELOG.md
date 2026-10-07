@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.26.1] - 2026-10-07
+
+### Fixed
+
+- Simplify the A1.1 Section 2 `sisar` Persian translation to «خواهر».
+- Accept both Finnish number words and digit forms in the 0–20 lesson, including numeric and spelled-out forms of the 12-year age sentence.
+- Show the Persian sentence translation in sentence-order feedback after the learner completes the Finnish sentence.
+
+
 ## [1.26.0] - 2026-10-07
 
 ### Added
