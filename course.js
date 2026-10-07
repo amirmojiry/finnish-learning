@@ -2104,10 +2104,26 @@
         });
         tab.setAttribute('role', 'tab');
         tab.setAttribute('aria-selected', String(current));
-        tab.disabled = current || !accessible || !stageSections.length;
+        tab.tabIndex = current ? 0 : -1;
+        tab.disabled = !stageSections.length || (!accessible && !current);
         if (!accessible && !current) tab.title = 'پس از تکمیل A1.1 باز می‌شود';
         levelTabs.append(tab);
       }
+      levelTabs.addEventListener('keydown', (event) => {
+        const availableTabs = [...levelTabs.querySelectorAll('.course-level-tab:not(:disabled)')];
+        if (!availableTabs.length) return;
+        const focusedIndex = Math.max(0, availableTabs.indexOf(document.activeElement));
+        const rtl = document.documentElement?.dir === 'rtl';
+        let nextIndex = null;
+        if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = availableTabs.length - 1;
+        else if (event.key === 'ArrowRight') nextIndex = focusedIndex + (rtl ? -1 : 1);
+        else if (event.key === 'ArrowLeft') nextIndex = focusedIndex + (rtl ? 1 : -1);
+        if (nextIndex === null) return;
+        event.preventDefault();
+        const wrappedIndex = (nextIndex + availableTabs.length) % availableTabs.length;
+        availableTabs[wrappedIndex].focus();
+      });
       catalog.append(catalogTitle, levelTabs);
 
       const currentCurriculum = curricula.get(section.level);
