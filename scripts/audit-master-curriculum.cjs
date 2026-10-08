@@ -69,8 +69,41 @@ function validateMaster(master) {
     // Validate actual shipped section files against declared level contracts.
     const levelPrefix = level.level.toLowerCase().replace('.', '\\.');
     const shippedFiles = fs.readdirSync(COURSE_DIR).filter(name =>
-      new RegExp('^' + levelPrefix + '-section-[0-9]+\\.json      fail(errors, new RegExp('^'+level.level.toLowerCase().replace('.','\\.')+'-s[1-4]$').test(module.id) && module.title_fa && module.can_do_fa, `${level.level}: invalid module ID/content ${module.id}`);
-      fail(errors, !seenModules.has(module.id), `Duplicate module ID: ${module.id}`);
+      new RegExp('^' + levelPrefix + '-section-[0-9]+\\.json$').test(name));
+    const shippedSections = shippedFiles.map(name => readJson(path.join(COURSE_DIR, name)));
+    const expectedModuleIds = new Set((level.modules || []).map(module => module.id));
+    const declaredLessons = level.curriculum_file && fs.existsSync(path.join(ROOT, level.curriculum_file))
+      ? new Set(readJson(path.join(ROOT, level.curriculum_file)).sections.flatMap(section => section.lessons.map(lesson => lesson.id)))
+      : new Set();
+    const shippedIds = new Set();
+    let shippedLessonCount = 0;
+    for (const shipped of shippedSections) {
+      fail(errors, expectedModuleIds.has(shipped.curriculum_section_id),
+        level.level + ': shipped section missing from master modules: ' + shipped.curriculum_section_id);
+      fail(errors, !shippedIds.has(shipped.curriculum_section_id),
+        level.level + ': duplicate shipped section: ' + shipped.curriculum_section_id);
+      shippedIds.add(shipped.curriculum_section_id);
+      for (const lesson of shipped.lessons || []) {
+        shippedLessonCount += 1;
+        fail(errors, declaredLessons.has(lesson.curriculum_id),
+          level.level + ': shipped lesson missing from reviewed level plan: ' + lesson.curriculum_id);
+      }
+    }
+    const totalPlannedLessons = declaredLessons.size;
+    if (level.delivery_status === 'implemented') {
+      fail(errors, totalPlannedLessons > 0 && shippedLessonCount === totalPlannedLessons,
+        level.level + ': marked implemented without all planned lessons');
+    } else if (level.delivery_status === 'partially_implemented') {
+      fail(errors, shippedLessonCount > 0 && shippedLessonCount < totalPlannedLessons,
+        level.level + ': partial delivery status no longer matches shipped content');
+    } else {
+      fail(errors, shippedLessonCount === 0,
+        level.level + ': planned-only stage unexpectedly has shipped lessons');
+    }
+    for (const module of level.modules || []) {
+      fail(errors, new RegExp('^' + level.level.toLowerCase().replace('.', '\\.') + '-s[1-4]$').test(module.id)
+        && module.title_fa && module.can_do_fa, level.level + ': invalid module ID/content ' + module.id);
+      fail(errors, !seenModules.has(module.id), 'Duplicate module ID: ' + module.id);
       seenModules.add(module.id);
     }
     for (const topic of level.topic_streams || []) {
