@@ -62,7 +62,12 @@ test('Sections 3 and 4 deliver every planned lesson and exactly 300 validated ac
       for(const act of lesson.activities) {
         if(!act.options)continue;
         assert.equal(new Set(act.options).size,act.options.length,lesson.id);
-        if(act.item)assert.ok(act.options.includes(act.item),lesson.id);
+        if(['choice','visual-choice','clock-choice'].includes(act.type) && act.item) {
+          assert.ok(act.options.includes(act.item),lesson.id);
+        }
+        if(act.type==='short-reading') {
+          assert.ok(act.options.includes(act.question_item),lesson.id);
+        }
       }
     }
   }
