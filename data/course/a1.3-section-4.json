@@ -21,7 +21,7 @@
         "source-backed"
       ],
       "example_fi": "Eilen oli kylmä.",
-      "example_fa": "بود",
+      "example_fa": "دیروز هوا سرد بود.",
       "accepted_answers": [
         "oli"
       ]
@@ -39,7 +39,7 @@
         "source-backed"
       ],
       "example_fi": "Eilen olin kotona.",
-      "example_fa": "بودم",
+      "example_fa": "دیروز خانه بودم.",
       "accepted_answers": [
         "olin"
       ]
@@ -57,7 +57,7 @@
         "source-backed"
       ],
       "example_fi": "Bussi tuli myöhässä.",
-      "example_fa": "آمد / رسید",
+      "example_fa": "اتوبوس دیر رسید.",
       "accepted_answers": [
         "tuli"
       ]
@@ -75,7 +75,7 @@
         "curated"
       ],
       "example_fi": "Eilen olin kotona.",
-      "example_fa": "دیروز",
+      "example_fa": "دیروز خانه بودم.",
       "accepted_answers": [
         "eilen"
       ]
@@ -93,7 +93,7 @@
         "curated"
       ],
       "example_fi": "Eilen olin kotona.",
-      "example_fa": "در خانه",
+      "example_fa": "دیروز خانه بودم.",
       "accepted_answers": [
         "kotona"
       ]
@@ -111,7 +111,7 @@
         "curated"
       ],
       "example_fi": "Olin töissä.",
-      "example_fa": "در محل کار",
+      "example_fa": "سر کار بودم.",
       "accepted_answers": [
         "töissä"
       ]
@@ -237,7 +237,7 @@
         "source-backed"
       ],
       "example_fi": "Hän sanoi kiitos.",
-      "example_fa": "گفت",
+      "example_fa": "او تشکر کرد.",
       "accepted_answers": [
         "sanoi"
       ]
@@ -255,7 +255,7 @@
         "curated"
       ],
       "example_fi": "Söin kotona.",
-      "example_fa": "خوردم",
+      "example_fa": "در خانه غذا خوردم.",
       "accepted_answers": [
         "söin"
       ]
@@ -273,7 +273,7 @@
         "curated"
       ],
       "example_fi": "Join kahvia.",
-      "example_fa": "نوشیدم",
+      "example_fa": "قهوه نوشیدم.",
       "accepted_answers": [
         "join"
       ]
@@ -291,7 +291,7 @@
         "curated"
       ],
       "example_fi": "Ostin lipun.",
-      "example_fa": "خریدم",
+      "example_fa": "بلیط خریدم.",
       "accepted_answers": [
         "ostin"
       ]
@@ -399,7 +399,7 @@
         "source-backed"
       ],
       "example_fi": "Ensin olin töissä.",
-      "example_fa": "اول",
+      "example_fa": "اول سر کار بودم.",
       "accepted_answers": [
         "ensin"
       ]
@@ -471,7 +471,7 @@
         "curated"
       ],
       "example_fi": "Illalla söin kotona.",
-      "example_fa": "عصر",
+      "example_fa": "عصر در خانه غذا خوردم.",
       "accepted_answers": [
         "illalla"
       ]
@@ -615,7 +615,7 @@
         "curated"
       ],
       "example_fi": "Olin koulussa.",
-      "example_fa": "در مدرسه",
+      "example_fa": "در مدرسه بودم.",
       "accepted_answers": [
         "koulussa"
       ]
@@ -633,7 +633,7 @@
         "curated"
       ],
       "example_fi": "Olin kaupassa.",
-      "example_fa": "در فروشگاه",
+      "example_fa": "در فروشگاه بودم.",
       "accepted_answers": [
         "kaupassa"
       ]
@@ -651,7 +651,7 @@
         "curated"
       ],
       "example_fi": "Olin keskustassa ystävän kanssa.",
-      "example_fa": "در مرکز شهر",
+      "example_fa": "با دوستم در مرکز شهر بودم.",
       "accepted_answers": [
         "keskustassa"
       ]
@@ -813,7 +813,7 @@
         "curated"
       ],
       "example_fi": "Viikonloppuna olen kotona.",
-      "example_fa": "در آخر هفته",
+      "example_fa": "آخر هفته در خانه هستم.",
       "accepted_answers": [
         "viikonloppuna"
       ]
@@ -921,7 +921,7 @@
         "source-backed"
       ],
       "example_fi": "Pidän tästä enemmän.",
-      "example_fa": "بیشتر",
+      "example_fa": "این را بیشتر دوست دارم.",
       "accepted_answers": [
         "enemmän"
       ]
@@ -975,7 +975,7 @@
         "curated"
       ],
       "example_fi": "Tämä on parempi.",
-      "example_fa": "بهتر",
+      "example_fa": "این بهتر است.",
       "accepted_answers": [
         "parempi"
       ]
@@ -993,7 +993,7 @@
         "curated"
       ],
       "example_fi": "Tämä on halvempi.",
-      "example_fa": "ارزان‌تر",
+      "example_fa": "این ارزان‌تر است.",
       "accepted_answers": [
         "halvempi"
       ]
@@ -1119,7 +1119,7 @@
         "source-backed"
       ],
       "example_fi": "Minun mielestäni tämä on hyvä.",
-      "example_fa": "خوب",
+      "example_fa": "به نظر من این خوب است.",
       "accepted_answers": [
         "hyvä"
       ]
@@ -1137,7 +1137,7 @@
         "source-backed"
       ],
       "example_fi": "Se on vaikea, mutta hyvä.",
-      "example_fa": "اما",
+      "example_fa": "سخت است، اما خوب است.",
       "accepted_answers": [
         "mutta"
       ]
@@ -1173,7 +1173,7 @@
         "curated"
       ],
       "example_fi": "Se on mielenkiintoinen.",
-      "example_fa": "جالب",
+      "example_fa": "جالب است.",
       "accepted_answers": [
         "mielenkiintoinen"
       ]
@@ -1263,7 +1263,7 @@
         "source-backed"
       ],
       "example_fi": "Eilen olin kotona ja tein ruokaa.",
-      "example_fa": "و",
+      "example_fa": "دیروز خانه بودم و غذا درست کردم.",
       "accepted_answers": [
         "ja"
       ]
@@ -1281,7 +1281,7 @@
         "source-backed"
       ],
       "example_fi": "Huomenna menen kauppaan, koska tarvitsen ruokaa.",
-      "example_fa": "چون",
+      "example_fa": "فردا به فروشگاه می‌روم چون غذا لازم دارم.",
       "accepted_answers": [
         "koska"
       ]
@@ -1465,6 +1465,114 @@
       "accepted_answers": [
         "Mitä tämä tarkoittaa? Eilen olin kotona."
       ]
+    },
+    "a13s4-cross-1": {
+      "id": "a13s4-cross-1",
+      "surface_form": "Haluatko tulla minun kanssani?",
+      "lemma": "Haluatko tulla minun kanssani?",
+      "translation_fa": "می‌خواهی با من بیایی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cumulative-a1.3",
+        "review"
+      ],
+      "example_fi": "Haluatko tulla minun kanssani?",
+      "example_fa": "می‌خواهی با من بیایی؟",
+      "accepted_answers": [
+        "Haluatko tulla minun kanssani?"
+      ]
+    },
+    "a13s4-cross-2": {
+      "id": "a13s4-cross-2",
+      "surface_form": "Missä kirjasto on?",
+      "lemma": "Missä kirjasto on?",
+      "translation_fa": "کتابخانه کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cumulative-a1.3",
+        "review"
+      ],
+      "example_fi": "Missä kirjasto on?",
+      "example_fa": "کتابخانه کجاست؟",
+      "accepted_answers": [
+        "Missä kirjasto on?"
+      ]
+    },
+    "a13s4-cross-3": {
+      "id": "a13s4-cross-3",
+      "surface_form": "Mitä tämä tarkoittaa?",
+      "lemma": "Mitä tämä tarkoittaa?",
+      "translation_fa": "این یعنی چه؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cumulative-a1.3",
+        "review"
+      ],
+      "example_fi": "Mitä tämä tarkoittaa?",
+      "example_fa": "این یعنی چه؟",
+      "accepted_answers": [
+        "Mitä tämä tarkoittaa?"
+      ]
+    },
+    "a13s4-cross-4": {
+      "id": "a13s4-cross-4",
+      "surface_form": "Minun pitää harjoitella.",
+      "lemma": "Minun pitää harjoitella.",
+      "translation_fa": "باید تمرین کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cumulative-a1.3",
+        "review"
+      ],
+      "example_fi": "Minun pitää harjoitella.",
+      "example_fa": "باید تمرین کنم.",
+      "accepted_answers": [
+        "Minun pitää harjoitella."
+      ]
+    },
+    "a13s4-cross-5": {
+      "id": "a13s4-cross-5",
+      "surface_form": "Eilen olin kotona.",
+      "lemma": "Eilen olin kotona.",
+      "translation_fa": "دیروز در خانه بودم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cumulative-a1.3",
+        "review"
+      ],
+      "example_fi": "Eilen olin kotona.",
+      "example_fa": "دیروز در خانه بودم.",
+      "accepted_answers": [
+        "Eilen olin kotona."
+      ]
+    },
+    "a13s4-cross-6": {
+      "id": "a13s4-cross-6",
+      "surface_form": "Huomenna menen töihin.",
+      "lemma": "Huomenna menen töihin.",
+      "translation_fa": "فردا سر کار می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "cumulative-a1.3",
+        "review"
+      ],
+      "example_fi": "Huomenna menen töihin.",
+      "example_fa": "فردا سر کار می‌روم.",
+      "accepted_answers": [
+        "Huomenna menen töihin."
+      ]
     }
   },
   "lessons": [
@@ -1519,12 +1627,12 @@
           "type": "sentence-order",
           "item": "a13s4-e-008",
           "tokens": [
-            "Olin",
-            "töissä."
+            "töissä.",
+            "Olin"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Olin töissä."
         }
@@ -1722,12 +1830,12 @@
           "type": "sentence-order",
           "item": "a13s4-e-018",
           "tokens": [
-            "Söin",
-            "kotona."
+            "kotona.",
+            "Söin"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Söin kotona."
         }
@@ -1923,14 +2031,14 @@
           "type": "sentence-order",
           "item": "a13s4-e-028",
           "tokens": [
-            "Sitten",
             "menin",
-            "kauppaan."
+            "kauppaan.",
+            "Sitten"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Sitten menin kauppaan."
         }
@@ -2126,12 +2234,12 @@
           "type": "sentence-order",
           "item": "a13s4-e-038",
           "tokens": [
-            "Olin",
-            "koulussa."
+            "koulussa.",
+            "Olin"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Olin koulussa."
         }
@@ -2327,16 +2435,16 @@
           "type": "sentence-order",
           "item": "a13s4-e-048",
           "tokens": [
-            "Ensi",
             "viikolla",
             "tapaan",
-            "ystävän."
+            "ystävän.",
+            "Ensi"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Ensi viikolla tapaan ystävän."
         }
@@ -2532,14 +2640,14 @@
           "type": "sentence-order",
           "item": "a13s4-e-058",
           "tokens": [
-            "Tämä",
             "on",
-            "halvempi."
+            "halvempi.",
+            "Tämä"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Tämä on halvempi."
         }
@@ -2734,14 +2842,14 @@
           "type": "sentence-order",
           "item": "a13s4-e-068",
           "tokens": [
-            "Se",
             "on",
-            "mielenkiintoinen."
+            "mielenkiintoinen.",
+            "Se"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Se on mielenkiintoinen."
         }
@@ -2938,20 +3046,20 @@
           "type": "sentence-order",
           "item": "a13s4-e-075",
           "tokens": [
-            "Pidän",
             "tästä,",
             "mutta",
             "se",
             "on",
-            "kallis."
+            "kallis.",
+            "Pidän"
           ],
           "answer_order": [
+            5,
             0,
             1,
             2,
             3,
-            4,
-            5
+            4
           ],
           "expected_fi": "Pidän tästä, mutta se on kallis."
         }
@@ -3141,12 +3249,12 @@
           "type": "sentence-order",
           "item": "a13s4-e-078",
           "tokens": [
-            "Tarvitsen",
-            "apua."
+            "apua.",
+            "Tarvitsen"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Tarvitsen apua."
         }
@@ -3345,18 +3453,18 @@
           "type": "sentence-order",
           "item": "a13s4-e-067",
           "tokens": [
-            "Minun",
             "mielestäni",
             "tämä",
             "on",
-            "hyvä."
+            "hyvä.",
+            "Minun"
           ],
           "answer_order": [
+            4,
             0,
             1,
             2,
-            3,
-            4
+            3
           ],
           "expected_fi": "Minun mielestäni tämä on hyvä."
         },
@@ -3465,68 +3573,50 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-067",
+          "item": "a13s4-cross-1",
           "options": [
-            "a13s4-e-067",
-            "a13s4-t-004",
-            "a13s4-t-005",
-            "a13s4-t-006"
+            "a13s4-cross-1",
+            "a13s4-cross-2",
+            "a13s4-cross-3",
+            "a13s4-cross-4"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-cross-2"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-068",
+          "item": "a13s4-cross-3",
           "options": [
-            "a13s4-e-068",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-cross-3",
+            "a13s4-cross-1",
+            "a13s4-cross-2",
+            "a13s4-cross-4"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-cross-4"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-069",
+          "item": "a13s4-cross-5",
           "options": [
-            "a13s4-e-069",
-            "a13s4-h-002",
-            "a13s4-h-003",
-            "a13s4-t-004"
+            "a13s4-cross-5",
+            "a13s4-cross-1",
+            "a13s4-cross-2",
+            "a13s4-cross-3"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-074",
-          "options": [
-            "a13s4-e-074",
-            "a13s4-h-003",
-            "a13s4-t-004",
-            "a13s4-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-075",
-          "options": [
-            "a13s4-e-075",
-            "a13s4-t-004",
-            "a13s4-t-005",
-            "a13s4-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-076",
-          "options": [
-            "a13s4-e-076",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-cross-6"
         },
         {
           "type": "choice",
@@ -3560,12 +3650,12 @@
         "a13s4-e-067",
         "a13s4-e-068",
         "a13s4-e-067",
-        "a13s4-e-067",
-        "a13s4-e-068",
-        "a13s4-e-069",
-        "a13s4-e-074",
-        "a13s4-e-075",
-        "a13s4-e-076",
+        "a13s4-cross-1",
+        "a13s4-cross-2",
+        "a13s4-cross-3",
+        "a13s4-cross-4",
+        "a13s4-cross-5",
+        "a13s4-cross-6",
         "a13s4-e-077",
         "a13s4-e-078"
       ],
