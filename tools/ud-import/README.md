@@ -1,6 +1,20 @@
-# Finnish UD import
+# Finnish Universal Dependencies import: current pipeline
 
-Reusable extraction tooling for enriching the Finnish Learning vocabulary with Finnish Universal Dependencies data.
+**Status: implemented and reproducible.** This is the current technical source of truth for the Finnish UD importer, not a proposed design. The initial July 2026 proposal has been [archived](../../docs/archive/ud-integration-plan-2026-07.md). See the [documentation hub](../../docs/README.md) for the distinction between current guidance and historical plans.
+
+## Data ownership and provenance
+
+- **Parole** owns the ranking, occurrence count and written-corpus percentage of each curated surface form in `data/common-words.json`; UD frequencies must never overwrite those fields.
+- **Universal Dependencies (UD 2.18)** supplies corpus-observed lemmas, UPOS, morphological features, dependency relations, examples and treebank provenance. UD analysis can be ambiguous: do not pretend that a surface form has only one grammatical interpretation.
+- **Curated Finnish/Persian content** supplies learner-facing translations, reviewed bilingual examples and Persian renderings of actual corpus sentences.
+- Source CoNLL-U files from Finnish-TDT, Finnish-FTB, Finnish-OOD and Finnish-PUD are currently **checked in** under [`ud-import-2.18/`](../../ud-import-2.18/README.md). They are not disposable temporary uploads in the current repository.
+- [`data/ud/metadata.json`](../../data/ud/metadata.json) records the treebank sources, individual licenses, checksums and input counts; [`coverage-report.json`](../../data/ud/coverage-report.json) gives actual form coverage. Counts must be read from those generated reports, not copied from the archived 200-word proposal.
+
+## Reproducible extraction
+
+Reusable extraction tooling enriches the Finnish Learning vocabulary with Finnish UD data. [`extract-ud-data.yml`](../../.github/workflows/extract-ud-data.yml) is a current **path-scoped or manually dispatched validation workflow**: it checks deterministic regeneration and uploads a review artifact; it does **not** auto-commit generated data. Any intentional regeneration must be reviewed and committed in the same issue branch/PR.
+
+
 
 Inputs:
 - `ud-import-2.18/*.conllu`
@@ -53,4 +67,4 @@ npm test
 
 The data-integrity tests enforce exact Persian translation coverage for all rendered sentence IDs from both example locations, so a vocabulary batch with missing or stale corpus translations must fail CI.
 
-The raw CoNLL-U directory and the temporary workflow will be removed after validation. The extraction tools remain reusable for later vocabulary batches and future UD releases.
+The checked-in CoNLL-U inputs and current extraction workflow remain part of the reproducible build. If a future maintenance issue proposes shrinking these large inputs, first design a documented alternative for regeneration, attribution, data integrity and CI; do not remove them based on the archived proposal.
