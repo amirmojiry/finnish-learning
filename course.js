@@ -3170,6 +3170,13 @@
           const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
           speak.setAttribute('aria-label', `پخش تلفظ ${item.surface_form}`);
           word.append(speak);
+          // Autoplay only on explicit teaching cards; manual playback stays available.
+          windowObject.setTimeout(() => {
+            if (activeLesson?.activities[activityIndex] === activity
+              && finnishSpeechStatus(windowObject).state === 'ready') {
+              playSpeech(windowObject, item.surface_form);
+            }
+          }, 180);
         }
         const meaning = document.createElement('p');
         meaning.className = 'course-teach-meaning';
@@ -3288,7 +3295,10 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          const grading = gradeTypedAnswer(item, input.value);
+          const grading = gradeTypedAnswer(
+            activity.mode === 'cloze' ? { ...item, accepted_answers: [item.surface_form] } : item,
+            input.value,
+          );
           const correct = grading.accepted;
           recordActivityResult(activity, correct, grading);
           input.disabled = true;
@@ -3330,7 +3340,13 @@
       fi.textContent = item.example_fi;
       const fa = document.createElement('p');
       fa.textContent = item.example_fa;
-      example.append(fi, fa);
+      example.append(fi);
+      if (item.example_fi && finnishSpeechStatus(windowObject).state === 'ready') {
+        const speakExample = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.example_fi));
+        speakExample.setAttribute('aria-label', 'پخش تلفظ جملهٔ مثال');
+        example.append(speakExample);
+      }
+      example.append(fa);
       container.append(example, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
     }
 
