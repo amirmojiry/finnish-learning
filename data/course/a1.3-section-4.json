@@ -3595,6 +3595,83 @@
         {
           "type": "choice",
           "mode": "meaning",
+          "item": "a13s4-e-067",
+          "options": [
+            "a13s4-e-067",
+            "a13s4-h-002",
+            "a13s4-h-003",
+            "a13s4-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-068",
+          "options": [
+            "a13s4-e-068",
+            "a13s4-h-003",
+            "a13s4-t-004",
+            "a13s4-t-005"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-067",
+          "options": [
+            "a13s4-e-067",
+            "a13s4-t-004",
+            "a13s4-t-005",
+            "a13s4-t-006"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-067",
+          "options": [
+            "a13s4-e-067",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-068",
+          "options": [
+            "a13s4-e-068",
+            "a13s4-h-002",
+            "a13s4-h-003",
+            "a13s4-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-067",
+          "options": [
+            "a13s4-e-067",
+            "a13s4-h-003",
+            "a13s4-t-004",
+            "a13s4-t-005"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-067",
+          "options": [
+            "a13s4-e-067",
+            "a13s4-t-004",
+            "a13s4-t-005",
+            "a13s4-t-006"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
           "item": "a13s4-e-068",
           "options": [
             "a13s4-e-068",
@@ -3609,9 +3686,9 @@
           "item": "a13s4-e-069",
           "options": [
             "a13s4-e-069",
-            "a13s4-h-001",
             "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-003",
+            "a13s4-t-004"
           ]
         },
         {
@@ -3620,9 +3697,9 @@
           "item": "a13s4-e-074",
           "options": [
             "a13s4-e-074",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-003",
+            "a13s4-t-004",
+            "a13s4-t-005"
           ]
         },
         {
@@ -3631,9 +3708,9 @@
           "item": "a13s4-e-075",
           "options": [
             "a13s4-e-075",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-t-004",
+            "a13s4-t-005",
+            "a13s4-t-006"
           ]
         },
         {
@@ -3653,9 +3730,9 @@
           "item": "a13s4-e-077",
           "options": [
             "a13s4-e-077",
-            "a13s4-h-001",
             "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-003",
+            "a13s4-t-004"
           ]
         },
         {
@@ -3664,91 +3741,21 @@
           "item": "a13s4-e-078",
           "options": [
             "a13s4-e-078",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-079",
-          "options": [
-            "a13s4-e-079",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-007",
-          "options": [
-            "a13s4-e-007",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-047",
-          "options": [
-            "a13s4-e-047",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-008",
-          "options": [
-            "a13s4-e-008",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-009",
-          "options": [
-            "a13s4-e-009",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-010",
-          "options": [
-            "a13s4-e-010",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-017",
-          "options": [
-            "a13s4-e-017",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-003",
+            "a13s4-t-004",
+            "a13s4-t-005"
           ]
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
+        "a13s4-e-067",
+        "a13s4-e-067",
+        "a13s4-e-068",
+        "a13s4-e-067",
+        "a13s4-e-067",
+        "a13s4-e-068",
+        "a13s4-e-067",
         "a13s4-e-067",
         "a13s4-e-068",
         "a13s4-e-069",
@@ -3756,14 +3763,7 @@
         "a13s4-e-075",
         "a13s4-e-076",
         "a13s4-e-077",
-        "a13s4-e-078",
-        "a13s4-e-079",
-        "a13s4-e-007",
-        "a13s4-e-047",
-        "a13s4-e-008",
-        "a13s4-e-009",
-        "a13s4-e-010",
-        "a13s4-e-017"
+        "a13s4-e-078"
       ],
       "morphology_practice": [
         {
