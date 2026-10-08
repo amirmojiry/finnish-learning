@@ -93,7 +93,7 @@
         "source-backed"
       ],
       "example_fi": "Mitä teet tänään?",
-      "example_fa": "امروز",
+      "example_fa": "امروز چه کار می‌کنی؟",
       "accepted_answers": [
         "tänään"
       ]
@@ -219,7 +219,7 @@
         "source-backed"
       ],
       "example_fi": "Mennään yhdessä.",
-      "example_fa": "با هم برویم.",
+      "example_fa": "بیا با هم برویم.",
       "accepted_answers": [
         "yhdessä"
       ]
@@ -255,7 +255,7 @@
         "curated"
       ],
       "example_fi": "Kyllä, mielelläni.",
-      "example_fa": "با کمال میل",
+      "example_fa": "بله، با کمال میل.",
       "accepted_answers": [
         "mielelläni"
       ]
@@ -273,7 +273,7 @@
         "curated"
       ],
       "example_fi": "Valitettavasti en voi.",
-      "example_fa": "متأسفانه",
+      "example_fa": "متأسفانه نمی‌توانم.",
       "accepted_answers": [
         "valitettavasti"
       ]
@@ -453,7 +453,7 @@
         "curated"
       ],
       "example_fi": "Minun täytyy perua tapaaminen.",
-      "example_fa": "لغو کردن",
+      "example_fa": "باید قرار ملاقات را لغو کنم.",
       "accepted_answers": [
         "perua"
       ]
@@ -579,7 +579,7 @@
         "source-backed"
       ],
       "example_fi": "Minulle kuuluu hyvää.",
-      "example_fa": "به من",
+      "example_fa": "حالم خوب است.",
       "accepted_answers": [
         "minulle"
       ]
@@ -777,7 +777,7 @@
         "curated"
       ],
       "example_fi": "Voitko soittaa minulle myöhemmin?",
-      "example_fa": "تلفن کردن",
+      "example_fa": "می‌توانی بعداً با من تماس بگیری؟",
       "accepted_answers": [
         "soittaa"
       ]
@@ -885,7 +885,7 @@
         "source-backed"
       ],
       "example_fi": "Pidän enemmän teestä.",
-      "example_fa": "بیشتر",
+      "example_fa": "چای را بیشتر دوست دارم.",
       "accepted_answers": [
         "enemmän"
       ]
@@ -903,7 +903,7 @@
         "curated"
       ],
       "example_fi": "Juon mieluummin kahvia.",
-      "example_fa": "ترجیحاً",
+      "example_fa": "ترجیح می‌دهم قهوه بنوشم.",
       "accepted_answers": [
         "mieluummin"
       ]
@@ -1029,7 +1029,7 @@
         "source-backed"
       ],
       "example_fi": "En tule, koska olen väsynyt.",
-      "example_fa": "چون",
+      "example_fa": "نمی‌آیم چون خسته‌ام.",
       "accepted_answers": [
         "koska"
       ]
@@ -1047,7 +1047,7 @@
         "source-backed"
       ],
       "example_fi": "Haluaisin tulla, mutta olen kiireinen.",
-      "example_fa": "اما",
+      "example_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
       "accepted_answers": [
         "mutta"
       ]
@@ -1065,7 +1065,7 @@
         "source-backed"
       ],
       "example_fi": "Olen väsynyt, siksi menen kotiin.",
-      "example_fa": "به همین دلیل",
+      "example_fa": "خسته‌ام؛ برای همین به خانه می‌روم.",
       "accepted_answers": [
         "siksi"
       ]
@@ -1083,7 +1083,7 @@
         "curated"
       ],
       "example_fi": "En tule, koska olen väsynyt.",
-      "example_fa": "خسته",
+      "example_fa": "نمی‌آیم چون خسته‌ام.",
       "accepted_answers": [
         "väsynyt"
       ]
@@ -1101,7 +1101,7 @@
         "curated"
       ],
       "example_fi": "Haluaisin tulla, mutta olen kiireinen.",
-      "example_fa": "پرمشغله",
+      "example_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
       "accepted_answers": [
         "kiireinen"
       ]
@@ -1173,7 +1173,7 @@
         "source-backed"
       ],
       "example_fi": "Voidaan mennä yhdessä.",
-      "example_fa": "می‌توانیم",
+      "example_fa": "می‌توانیم با هم برویم.",
       "accepted_answers": [
         "voidaan"
       ]
@@ -1191,7 +1191,7 @@
         "curated"
       ],
       "example_fi": "Mennään yhdessä.",
-      "example_fa": "با هم برویم.",
+      "example_fa": "بیا با هم برویم.",
       "accepted_answers": [
         "mennään"
       ]
@@ -1447,14 +1447,14 @@
           "type": "sentence-order",
           "item": "a13s1-e-008",
           "tokens": [
-            "Mitä",
             "teet",
-            "tänään?"
+            "tänään?",
+            "Mitä"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Mitä teet tänään?"
         }
@@ -1650,12 +1650,12 @@
           "type": "sentence-order",
           "item": "a13s1-e-018",
           "tokens": [
-            "Kyllä,",
-            "mielelläni."
+            "mielelläni.",
+            "Kyllä,"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Kyllä, mielelläni."
         }
@@ -1851,16 +1851,16 @@
           "type": "sentence-order",
           "item": "a13s1-e-028",
           "tokens": [
-            "Minun",
             "täytyy",
             "perua",
-            "tapaaminen."
+            "tapaaminen.",
+            "Minun"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Minun täytyy perua tapaaminen."
         }
@@ -2056,14 +2056,14 @@
           "type": "sentence-order",
           "item": "a13s1-e-037",
           "tokens": [
-            "Lähetä",
             "minulle",
-            "viesti."
+            "viesti.",
+            "Lähetä"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Lähetä minulle viesti."
         }
@@ -2259,14 +2259,14 @@
           "type": "sentence-order",
           "item": "a13s1-e-045",
           "tokens": [
-            "Voinko",
             "puhua",
-            "Amirille?"
+            "Amirille?",
+            "Voinko"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Voinko puhua Amirille?"
         }
@@ -2461,14 +2461,14 @@
           "type": "sentence-order",
           "item": "a13s1-e-054",
           "tokens": [
-            "Pidän",
             "enemmän",
-            "teestä."
+            "teestä.",
+            "Pidän"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Pidän enemmän teestä."
         }
@@ -2663,18 +2663,18 @@
           "type": "sentence-order",
           "item": "a13s1-e-063",
           "tokens": [
-            "Haluaisin",
             "tulla,",
             "mutta",
             "olen",
-            "kiireinen."
+            "kiireinen.",
+            "Haluaisin"
           ],
           "answer_order": [
+            4,
             0,
             1,
             2,
-            3,
-            4
+            3
           ],
           "expected_fi": "Haluaisin tulla, mutta olen kiireinen."
         }
@@ -2870,12 +2870,12 @@
           "type": "sentence-order",
           "item": "a13s1-e-070",
           "tokens": [
-            "Mennään",
-            "yhdessä."
+            "yhdessä.",
+            "Mennään"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Mennään yhdessä."
         }
@@ -3062,16 +3062,16 @@
           "type": "sentence-order",
           "item": "a13s1-e-017",
           "tokens": [
-            "Haluatko",
             "tulla",
             "minun",
-            "kanssani?"
+            "kanssani?",
+            "Haluatko"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Haluatko tulla minun kanssani?"
         }
@@ -3273,18 +3273,18 @@
           "type": "sentence-order",
           "item": "a13s1-e-062",
           "tokens": [
-            "En",
             "tule,",
             "koska",
             "olen",
-            "väsynyt."
+            "väsynyt.",
+            "En"
           ],
           "answer_order": [
+            4,
             0,
             1,
             2,
-            3,
-            4
+            3
           ],
           "expected_fi": "En tule, koska olen väsynyt."
         },
