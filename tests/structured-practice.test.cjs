@@ -408,7 +408,7 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
         results.push(correct);
       },
     });
-    const form = card.children[1];
+    const form = card.children[2]; // semantic Persian hint precedes the form
     const input = form.children[0];
     input.value = 'nimes';
     form.submit();

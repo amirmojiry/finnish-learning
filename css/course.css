@@ -2209,3 +2209,52 @@ body.course-lesson-active .course-question-card.is-long-content {
     font-size: .74rem;
   }
 }
+
+/* Long teaching passages need readable wrapping and a stable scroll origin on mobile. */
+.course-teach-word.is-long-text {
+  flex-wrap: wrap;
+  align-content: start;
+  min-width: 0;
+}
+.course-teach-word.is-long-text strong {
+  font-size: clamp(1.15rem, 4.1vw, 1.9rem);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.course-question-card:has(.course-teach-word.is-long-text) {
+  justify-content: flex-start;
+}
+.course-next-section-link {
+  display: block;
+  width: min(100%, 720px);
+  margin: 24px auto 8px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--primary);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+}
+.course-next-section-link:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+.course-next-section-link:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .course-teach-word.is-long-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .course-teach-word.is-long-text strong {
+    font-size: clamp(1.05rem, 4vw, 1.4rem);
+    line-height: 1.5;
+  }
+}

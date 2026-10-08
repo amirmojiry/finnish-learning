@@ -729,6 +729,10 @@
     return finnishSpeechStatus(windowObject).state === 'ready';
   }
 
+  function stopSpeech(windowObject) {
+    try { windowObject.speechSynthesis?.cancel(); } catch { /* Speech API may be unavailable. */ }
+  }
+
   function playSpeech(windowObject, text) {
     if (!text) return false;
     const status = finnishSpeechStatus(windowObject);
@@ -1627,6 +1631,9 @@
       sentence.lang = 'fi';
       sentence.dir = 'ltr';
       sentence.textContent = activity.prompt_fi;
+      const translation = document.createElement('p');
+      translation.className = 'course-cloze-translation';
+      translation.textContent = activity.prompt_fa || item?.translation_fa || '';
       input.setAttribute('aria-label', 'بخش حذف‌شدهٔ عبارت فنلاندی');
       form.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -1645,7 +1652,7 @@
         input.classList.add(grading.exact ? 'correct' : grading.fuzzy ? 'near-correct' : 'wrong');
         showFeedback(feedback, grading.accepted, expected, grading);
       });
-      card.append(sentence, form, feedback);
+      card.append(sentence, translation, form, feedback);
       windowObject.setTimeout(() => input.focus(), 0);
       return true;
     }
@@ -1863,6 +1870,7 @@
     let sessionStartedAt = 0;
     let activityStartedAt = 0;
     let activityTimingIndex = -1;
+    let audioSlideToken = 0;
     let answered = false;
 
     function isCourseHash() {
@@ -1951,6 +1959,8 @@
     }
 
     function hideCourseView() {
+      audioSlideToken += 1;
+      stopSpeech(windowObject);
       courseView.hidden = true;
       setLessonFocusMode(false);
       activateCourseNavigation(false);
@@ -2126,6 +2136,8 @@
     }
 
     function renderSectionMap() {
+      audioSlideToken += 1;
+      stopSpeech(windowObject);
       if (mapNavigationCleanup) {
         mapNavigationCleanup();
         mapNavigationCleanup = null;
@@ -2455,6 +2467,19 @@
       root.append(catalog, header);
       if (focusedCard) root.append(focusedCard);
       root.append(path);
+      const nextSection = sections[sections.indexOf(section) + 1];
+      if (nextSection) {
+        const nextIndex = sections.indexOf(nextSection);
+        const unlocked = isSectionAccessible(sections, progress, nextIndex);
+        const nextLink = createButton(
+          `بخش بعدی: ${nextSection.title_fa || nextSection.id} ←`,
+          'course-next-section-link',
+          () => { if (selectSection(nextSection)) renderSectionMap(); },
+        );
+        nextLink.disabled = !unlocked;
+        if (!unlocked) nextLink.title = 'برای رفتن به بخش بعدی ابتدا درس‌های لازم را کامل کن.';
+        root.append(nextLink);
+      }
 
       const onPageClick = (event) => {
         if (!selectedNode) return;
@@ -2594,6 +2619,8 @@
     }
 
     function renderActivity() {
+      const currentAudioToken = ++audioSlideToken;
+      stopSpeech(windowObject);
       if (!activeLesson) return renderSectionMap();
       const activity = activeLesson.activities[activityIndex];
       if (!activity) return completeLesson();
@@ -2865,7 +2892,7 @@
         focus.textContent = affirmative.surface_form;
         const hint = document.createElement('p');
         hint.className = 'course-transform-hint';
-        hint.textContent = 'با en و شکل منفیِ درست بنویس.';
+        hint.textContent = `به فنلاندی بنویس: ${negative.translation_fa}. با en و شکل منفیِ درست بنویس.`;
         const form = document.createElement('form');
         form.className = 'course-typing-form';
         const input = document.createElement('input');
@@ -3164,6 +3191,7 @@
         surface.lang = 'fi';
         surface.dir = 'ltr';
         surface.textContent = item.surface_form;
+        if (item.surface_form.length > 65) word.classList.add('is-long-text');
         const speechStatus = finnishSpeechStatus(windowObject);
         word.append(surface);
         if (speechStatus.state === 'ready') {
@@ -3172,7 +3200,8 @@
           word.append(speak);
           // Autoplay only on explicit teaching cards; manual playback stays available.
           windowObject.setTimeout(() => {
-            if (activeLesson?.activities[activityIndex] === activity
+            if (currentAudioToken === audioSlideToken
+              && activeLesson?.activities[activityIndex] === activity
               && finnishSpeechStatus(windowObject).state === 'ready') {
               playSpeech(windowObject, item.surface_form);
             }
@@ -3350,6 +3379,8 @@
     }
 
     function nextActivity() {
+      audioSlideToken += 1;
+      stopSpeech(windowObject);
       activityIndex += 1;
       if (activityIndex >= activeLesson.activities.length) {
         if (!activeLesson.focused_practice && !lessonRetryPhase && retryActivities.length) {
@@ -3361,6 +3392,8 @@
     }
 
     function completeLesson() {
+      audioSlideToken += 1;
+      stopSpeech(windowObject);
       if (!activeLesson) return renderSectionMap();
       if (activeLesson.focused_practice) {
         const remainingActivities = buildFocusedPracticeActivities(section, progress);

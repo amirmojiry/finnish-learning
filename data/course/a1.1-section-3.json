@@ -895,7 +895,7 @@
       "id": "s3-negative-syon",
       "surface_form": "En syö.",
       "lemma": "En syö",
-      "translation_fa": "می‌خورم → نمی‌خورم",
+      "translation_fa": "نمی‌خورم",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -904,7 +904,7 @@
         "routine"
       ],
       "example_fi": "En syö.",
-      "example_fa": "می‌خورم → نمی‌خورم",
+      "example_fa": "نمی‌خورم",
       "accepted_answers": [
         "En syö."
       ]
@@ -949,7 +949,7 @@
       "id": "s3-negative-juon",
       "surface_form": "En juo.",
       "lemma": "En juo",
-      "translation_fa": "می‌نوشم → نمی‌نوشم",
+      "translation_fa": "نمی‌نوشم",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -958,7 +958,7 @@
         "routine"
       ],
       "example_fi": "En juo.",
-      "example_fa": "می‌نوشم → نمی‌نوشم",
+      "example_fa": "نمی‌نوشم",
       "accepted_answers": [
         "En juo."
       ]
@@ -1003,7 +1003,7 @@
       "id": "s3-negative-nukun",
       "surface_form": "En nuku.",
       "lemma": "En nuku",
-      "translation_fa": "می‌خوابم → نمی‌خوابم",
+      "translation_fa": "نمی‌خوابم",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -1012,7 +1012,7 @@
         "routine"
       ],
       "example_fi": "En nuku.",
-      "example_fa": "می‌خوابم → نمی‌خوابم",
+      "example_fa": "نمی‌خوابم",
       "accepted_answers": [
         "En nuku."
       ]
@@ -1057,7 +1057,7 @@
       "id": "s3-negative-opiskelen",
       "surface_form": "En opiskele.",
       "lemma": "En opiskele",
-      "translation_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "translation_fa": "درس نمی‌خوانم",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -1066,7 +1066,7 @@
         "routine"
       ],
       "example_fi": "En opiskele.",
-      "example_fa": "درس می‌خوانم → درس نمی‌خوانم",
+      "example_fa": "درس نمی‌خوانم",
       "accepted_answers": [
         "En opiskele."
       ]
@@ -1111,7 +1111,7 @@
       "id": "s3-negative-tyoskentelen",
       "surface_form": "En työskentele.",
       "lemma": "En työskentele",
-      "translation_fa": "کار می‌کنم → کار نمی‌کنم",
+      "translation_fa": "کار نمی‌کنم",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -1120,7 +1120,7 @@
         "routine"
       ],
       "example_fi": "En työskentele.",
-      "example_fa": "کار می‌کنم → کار نمی‌کنم",
+      "example_fa": "کار نمی‌کنم",
       "accepted_answers": [
         "En työskentele."
       ]
