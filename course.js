@@ -28,6 +28,16 @@
         './data/course/a1.2-section-4.json',
       ],
     },
+    {
+      level: 'A1.3',
+      curriculumUrl: './data/course/a1.3-curriculum.json',
+      sectionUrls: [
+        './data/course/a1.3-section-1.json',
+        './data/course/a1.3-section-2.json',
+        './data/course/a1.3-section-3.json',
+        './data/course/a1.3-section-4.json',
+      ],
+    },
   ];
   const SECTION_URLS = COURSE_STAGES[0].sectionUrls;
   const SECTION_URL = SECTION_URLS[0];
