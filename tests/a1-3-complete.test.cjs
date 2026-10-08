@@ -40,7 +40,7 @@ test('A1.3 delivers 40 contract-mapped lessons and 600 graded/teaching activitie
       assert.equal(l.activities.filter(a=>a.type==='dictation').length,1,l.id);
       assert.ok(l.activities.some(a=>a.type==='sentence-order'),l.id);
       assert.ok(l.objective_fa&&l.grammar_fa,l.id);
-      for(const a of l.activities) if(a.options)assert.ok(a.options.includes(a.item),l.id);
+      for(const a of l.activities) if(a.options)assert.ok(a.options.includes(a.type==='short-reading'?a.question_item:a.item),l.id);
     }
     assert.equal(s.lessons.at(-1).passing_score,0.8);
     for(const type of ['sentence-order','expression-completion','controlled-production','morphology-choice']){
