@@ -21,7 +21,7 @@
         "source-backed"
       ],
       "example_fi": "Keittiö on tässä.",
-      "example_fa": "اینجا",
+      "example_fa": "آشپزخانه اینجاست.",
       "accepted_answers": [
         "tässä"
       ]
@@ -57,7 +57,7 @@
         "source-backed"
       ],
       "example_fi": "Kaikki on valmista.",
-      "example_fa": "همه",
+      "example_fa": "همه‌چیز آماده است.",
       "accepted_answers": [
         "kaikki"
       ]
@@ -75,7 +75,7 @@
         "curated"
       ],
       "example_fi": "Keittiö on tässä.",
-      "example_fa": "آشپزخانه",
+      "example_fa": "آشپزخانه اینجاست.",
       "accepted_answers": [
         "keittiö"
       ]
@@ -93,7 +93,7 @@
         "curated"
       ],
       "example_fi": "Olohuone on siellä.",
-      "example_fa": "اتاق نشیمن",
+      "example_fa": "اتاق نشیمن آنجاست.",
       "accepted_answers": [
         "olohuone"
       ]
@@ -201,7 +201,7 @@
         "curated"
       ],
       "example_fi": "Avain on pöydällä.",
-      "example_fa": "روی میز",
+      "example_fa": "کلید روی میز است.",
       "accepted_answers": [
         "pöydällä"
       ]
@@ -219,7 +219,7 @@
         "curated"
       ],
       "example_fi": "Lasi on kaapissa.",
-      "example_fa": "در کمد",
+      "example_fa": "لیوان داخل کمد است.",
       "accepted_answers": [
         "kaapissa"
       ]
@@ -237,7 +237,7 @@
         "curated"
       ],
       "example_fi": "Kengät ovat lattialla.",
-      "example_fa": "روی زمین",
+      "example_fa": "کفش‌ها روی زمین‌اند.",
       "accepted_answers": [
         "lattialla"
       ]
@@ -345,7 +345,7 @@
         "source-backed"
       ],
       "example_fi": "Tarvitsen lisää aikaa.",
-      "example_fa": "به زمان بیشتری نیاز دارم.",
+      "example_fa": "وقت بیشتری لازم دارم.",
       "accepted_answers": [
         "lisää"
       ]
@@ -363,7 +363,7 @@
         "curated"
       ],
       "example_fi": "Pitää siivota.",
-      "example_fa": "نظافت کردن",
+      "example_fa": "باید نظافت کرد.",
       "accepted_answers": [
         "siivota"
       ]
@@ -381,7 +381,7 @@
         "curated"
       ],
       "example_fi": "Pitää pestä astiat.",
-      "example_fa": "شستن",
+      "example_fa": "باید ظرف‌ها را شست.",
       "accepted_answers": [
         "pestä"
       ]
@@ -399,7 +399,7 @@
         "curated"
       ],
       "example_fi": "Vien roskat.",
-      "example_fa": "زباله‌ها",
+      "example_fa": "زباله‌ها را بیرون می‌برم.",
       "accepted_answers": [
         "roskat"
       ]
@@ -507,7 +507,7 @@
         "source-backed"
       ],
       "example_fi": "Ongelma ei ole vielä korjattu.",
-      "example_fa": "هنوز",
+      "example_fa": "مشکل هنوز برطرف نشده است.",
       "accepted_answers": [
         "vielä"
       ]
@@ -525,7 +525,7 @@
         "source-backed"
       ],
       "example_fi": "Lämmitys ei toimi oikein.",
-      "example_fa": "درست",
+      "example_fa": "سیستم گرمایش درست کار نمی‌کند.",
       "accepted_answers": [
         "oikein"
       ]
@@ -543,7 +543,7 @@
         "curated"
       ],
       "example_fi": "Hana ei toimi.",
-      "example_fa": "شیر آب",
+      "example_fa": "شیر آب کار نمی‌کند.",
       "accepted_answers": [
         "hana"
       ]
@@ -561,7 +561,7 @@
         "curated"
       ],
       "example_fi": "Valo ei pala.",
-      "example_fa": "چراغ",
+      "example_fa": "چراغ روشن نمی‌شود.",
       "accepted_answers": [
         "valo"
       ]
@@ -579,7 +579,7 @@
         "curated"
       ],
       "example_fi": "Lämmitys ei toimi oikein.",
-      "example_fa": "گرمایش",
+      "example_fa": "سیستم گرمایش درست کار نمی‌کند.",
       "accepted_answers": [
         "lämmitys"
       ]
@@ -705,7 +705,7 @@
         "source-backed"
       ],
       "example_fi": "Voitteko soittaa minulle?",
-      "example_fa": "به من",
+      "example_fa": "می‌توانید با من تماس بگیرید؟",
       "accepted_answers": [
         "minulle"
       ]
@@ -759,7 +759,7 @@
         "curated"
       ],
       "example_fi": "Osoite on …",
-      "example_fa": "نشانی",
+      "example_fa": "نشانی این است: …",
       "accepted_answers": [
         "osoite"
       ]
@@ -885,7 +885,7 @@
         "source-backed"
       ],
       "example_fi": "Täällä on myös kirjasto.",
-      "example_fa": "همچنین",
+      "example_fa": "اینجا کتابخانه هم هست.",
       "accepted_answers": [
         "myös"
       ]
@@ -903,7 +903,7 @@
         "curated"
       ],
       "example_fi": "Missä kirjasto on?",
-      "example_fa": "کتابخانه",
+      "example_fa": "کتابخانه کجاست؟",
       "accepted_answers": [
         "kirjasto"
       ]
@@ -921,7 +921,7 @@
         "curated"
       ],
       "example_fi": "Onko täällä posti?",
-      "example_fa": "ادارهٔ پست",
+      "example_fa": "اینجا ادارهٔ پست هست؟",
       "accepted_answers": [
         "posti"
       ]
@@ -939,7 +939,7 @@
         "curated"
       ],
       "example_fi": "Pankki on keskustassa.",
-      "example_fa": "بانک",
+      "example_fa": "بانک در مرکز شهر است.",
       "accepted_answers": [
         "pankki"
       ]
@@ -1029,7 +1029,7 @@
         "source-backed"
       ],
       "example_fi": "Se menee kiinni kello kuusi.",
-      "example_fa": "بسته",
+      "example_fa": "ساعت شش بسته می‌شود.",
       "accepted_answers": [
         "kiinni"
       ]
@@ -1083,7 +1083,7 @@
         "curated"
       ],
       "example_fi": "Milloin kirjasto on auki?",
-      "example_fa": "باز",
+      "example_fa": "کتابخانه چه زمانی باز است؟",
       "accepted_answers": [
         "auki"
       ]
@@ -1101,7 +1101,7 @@
         "curated"
       ],
       "example_fi": "Se avautuu kello yhdeksän.",
-      "example_fa": "باز می‌شود",
+      "example_fa": "ساعت نه باز می‌شود.",
       "accepted_answers": [
         "avautuu"
       ]
@@ -1245,7 +1245,7 @@
         "curated"
       ],
       "example_fi": "Tämä on kielletty.",
-      "example_fa": "ممنوع",
+      "example_fa": "این ممنوع است.",
       "accepted_answers": [
         "kielletty"
       ]
@@ -1263,7 +1263,7 @@
         "curated"
       ],
       "example_fi": "Sisäänkäynti on tästä.",
-      "example_fa": "ورودی",
+      "example_fa": "ورودی از اینجاست.",
       "accepted_answers": [
         "sisäänkäynti"
       ]
@@ -1464,14 +1464,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-008",
           "tokens": [
-            "Olohuone",
             "on",
-            "siellä."
+            "siellä.",
+            "Olohuone"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Olohuone on siellä."
         }
@@ -1666,14 +1666,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-015",
           "tokens": [
-            "Lasi",
             "on",
-            "kaapissa."
+            "kaapissa.",
+            "Lasi"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Lasi on kaapissa."
         }
@@ -1868,14 +1868,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-024",
           "tokens": [
-            "Pitää",
             "pestä",
-            "astiat."
+            "astiat.",
+            "Pitää"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Pitää pestä astiat."
         }
@@ -2071,14 +2071,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-034",
           "tokens": [
-            "Valo",
             "ei",
-            "pala."
+            "pala.",
+            "Valo"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Valo ei pala."
         }
@@ -2274,14 +2274,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-044",
           "tokens": [
-            "Voitteko",
             "lähettää",
-            "korjaajan?"
+            "korjaajan?",
+            "Voitteko"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Voitteko lähettää korjaajan?"
         }
@@ -2477,14 +2477,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-054",
           "tokens": [
-            "Onko",
             "täällä",
-            "posti?"
+            "posti?",
+            "Onko"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Onko täällä posti?"
         }
@@ -2680,16 +2680,16 @@
           "type": "sentence-order",
           "item": "a13s2-e-064",
           "tokens": [
-            "Se",
             "avautuu",
             "kello",
-            "yhdeksän."
+            "yhdeksän.",
+            "Se"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Se avautuu kello yhdeksän."
         }
@@ -2885,14 +2885,14 @@
           "type": "sentence-order",
           "item": "a13s2-e-072",
           "tokens": [
-            "Sisäänkäynti",
             "on",
-            "tästä."
+            "tästä.",
+            "Sisäänkäynti"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Sisäänkäynti on tästä."
         }
@@ -3078,16 +3078,16 @@
           "type": "sentence-order",
           "item": "a13s2-e-075",
           "tokens": [
-            "Milloin",
             "se",
             "on",
-            "auki?"
+            "auki?",
+            "Milloin"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Milloin se on auki?"
         }
@@ -3284,16 +3284,16 @@
           "type": "sentence-order",
           "item": "a13s2-e-063",
           "tokens": [
-            "Milloin",
             "kirjasto",
             "on",
-            "auki?"
+            "auki?",
+            "Milloin"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Milloin kirjasto on auki?"
         },
