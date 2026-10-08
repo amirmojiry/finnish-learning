@@ -3479,12 +3479,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-074",
+          "item": "a13s2-e-007",
           "options": [
-            "a13s2-e-074",
-            "a13s2-h-003",
-            "a13s2-t-004",
-            "a13s2-t-005"
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
           ]
         }
       ],
@@ -3504,12 +3504,12 @@
         "a13s2-e-071",
         "a13s2-e-072",
         "a13s2-e-073",
-        "a13s2-e-074"
+        "a13s2-e-007"
       ],
       "morphology_practice": [
         {
           "type": "morphology-choice",
-          "item": "a13s2-e-063",
+          "item": "a13s2-e-007",
           "base_fi": "olla",
           "feature_fa": "حال سوم‌شخص مفرد",
           "prompt_fa": "در جملهٔ «آشپزخانه اینجاست» شکل صحیح olla را انتخاب کن.",
