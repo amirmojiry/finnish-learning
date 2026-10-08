@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.27.0`
+- Version: `1.28.0`
 - Vocabulary entries: **400**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -27,10 +27,10 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 - real UD corpus examples with local Persian translations for the displayed examples, plus sentence-level Finnish audio including examples tied to specific morphological values
 - word detail pages with meaning, lemma, bilingual examples, per-example Finnish audio, pronunciation, and corpus analysis
 - a dedicated Word Practice surface whose Smart Review rotates between translation, multiple-choice cloze, and typed cloze
-- complete 40-lesson A1.1 path plus all 40 playable A1.2 lessons covering shopping, transport, daily routines, study, work, appointments, weather and routine health/help, with always-browsable A1.1/A1.2 course switching, section-style jump entry into implemented later sections, preserved cross-level progress, circular lesson maps, Persian-to-Finnish productive recall, Finnish listening and dictation, structured sentence-building, and reviewed morphology practice
+- complete 40-lesson A1.1 path plus all 40 playable A1.2 lessons and 40 playable A1.3 lessons covering shopping, transport, daily routines, study, work, appointments, weather and routine health/help, with always-browsable A1.1/A1.2/A1.3 course switching, section-style jump entry into implemented later sections, preserved cross-level progress, circular lesson maps, Persian-to-Finnish productive recall, Finnish listening and dictation, structured sentence-building, and reviewed morphology practice
 - section-scoped focused practice that uses recent consecutive correct answers and immediate lesson-end recovery to resolve weak targets while retaining aggregate accuracy history
 - bounded chronological course answer history with stable sequence order, session identity, response timing, productive-vs-recognition evidence, and typed-grading quality for future mastery decisions
-- a fully implemented reviewed 40-lesson A1.2 curriculum and a reviewed, not-yet-playable 40-lesson A1.3 planning matrix
+- a fully implemented reviewed 40-lesson A1.2 curriculum and a reviewed and playable 40-lesson A1.3 curriculum
 - distraction-free active lessons with hidden global navigation, compact integrated progress, and in-viewport answer feedback
 - Word Practice spaced-repetition review queue with due-word priority and a ten-new-word daily limit
 - clickable reviewed-word history with accuracy and learning state
