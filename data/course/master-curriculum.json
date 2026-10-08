@@ -1,0 +1,2202 @@
+{
+  "schema_version": 1,
+  "id": "finnish-learning-master-curriculum",
+  "status": "design_baseline_not_runtime_course",
+  "updated_on": "2026-10-08",
+  "sources": [
+    {
+      "id": "coe-cefr",
+      "name": "Council of Europe CEFR illustrative descriptors and 2020 Companion Volume",
+      "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors",
+      "role": "Communicative outcomes and mediation"
+    },
+    {
+      "id": "oph-scale",
+      "name": "Finnish National Agency for Education evolving proficiency scale",
+      "url": "https://www.oph.fi/fi/koulutus-ja-tutkinnot/kehittyvan-kielitaidon-tasojen-kuvausasteikko",
+      "role": "Finer-grained A1–B2 educational progression"
+    },
+    {
+      "id": "oph-yki",
+      "name": "Finnish National Agency for Education YKI correspondence",
+      "url": "https://www.oph.fi/en/education-and-qualifications/selecting-right-yki-test-test-days",
+      "role": "Six-level YKI to A1–C2 correspondence"
+    },
+    {
+      "id": "helsinki",
+      "name": "University of Helsinki Finnish course contents",
+      "url": "https://www.helsinki.fi/en/language-centre/teaching-and-research/finnish-foreigners/course-materials-objectives-and-contents",
+      "role": "Practical Finnish grammatical sequencing; not an official prescription"
+    },
+    {
+      "id": "kotus",
+      "name": "Institute for the Languages of Finland grammar overview",
+      "url": "https://kotus.fi/kotus/kielet-ja-kielipolitiikka/kansalliskielet/suomen-kieli/",
+      "role": "Reference morphology and descriptive grammatical categories"
+    }
+  ],
+  "framework": {
+    "canonical_cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "project_level_order": [
+      "A1.1",
+      "A1.2",
+      "A1.3",
+      "A2.1",
+      "A2.2",
+      "B1.1",
+      "B1.2",
+      "B2.1",
+      "B2.2",
+      "C1",
+      "C2"
+    ],
+    "subdivision_note": "A1.1–A1.3, A2.1–A2.2, B1.1–B1.2 and B2.1–B2.2 are Finnish educational sublevels, not independent CEFR global reference levels; C1 and C2 remain unsplit here. Specific grammar placement is the project's provisional teaching design.",
+    "official_grammar_warning": "CEFR and YKI specify what learners can do, not mandatory grammar lists or word quotas.",
+    "evidence_warning": "Finishing automated app exercises is not proof of a CEFR or YKI score. Spoken interaction, extended production and mediation require valid performance evidence.",
+    "scope_warning": "Levels marked planned are a roadmap only; curriculum files and playable lessons must be created and reviewed separately."
+  },
+  "skill_keys": [
+    "listening",
+    "reading",
+    "spoken_interaction",
+    "spoken_production",
+    "writing",
+    "mediation"
+  ],
+  "lexical_policy": {
+    "corpus_source": "Parole written Finnish surface-form frequency; source-owned rank/count/percent remain unchanged.",
+    "source_position_window_is": "An advisory selection ceiling in the original written corpus sequence, not a CEFR vocabulary requirement, an exclusive allocation, an application-dictionary total, or learner coverage.",
+    "ranked_vs_curated": "Separate ranked source word forms from curated topic vocabulary, lexemes, inflections and multiword expressions. Never fabricate ranks for unranked material.",
+    "counts": "Do not claim a fixed number of words implies CEFR ability. Count lemma, lexeme, surface form, formula and learned productive usage separately.",
+    "recycle": "Spaced recycling across stages is expected: encounter, understand, retrieve, produce and generalize to new morphological contexts.",
+    "measurement": "Report assessed listening/reading/production separately; Parole written-corpus token coverage is an approximate frequency statistic, not percentage of Finnish understood."
+  },
+  "planning_conventions": {
+    "modules_per_stage": 4,
+    "lesson_count_per_module": "A1 existing curricula use 10; higher-stage figures are proposals and require review",
+    "suggested_a1_new_targets_per_lesson": [
+      3,
+      6
+    ],
+    "advanced_lexical_quota": "adaptive, evidence-based, not hard-coded"
+  },
+  "levels": [
+    {
+      "level": "A1.1",
+      "cefr": "A1",
+      "title_fa": "فنلاندیِ ضروری و ارتباط نخست",
+      "outcome_en": "Handle rehearsed greetings and familiar personal exchanges with support.",
+      "outcome_fa": "سلام و معرفی، اطلاعات شخصی، زمان و جمله‌های بسیار ساده را با کمک بیان کند.",
+      "curriculum_file": "data/course/a1.1-curriculum.json",
+      "delivery_status": "implemented",
+      "grammar": [
+        {
+          "id": "a11-sounds",
+          "title_fa": "واج‌ها، واکه‌های کوتاه/بلند و آهنگ پایه",
+          "title_en": "Basic phonology and vowel length",
+          "prerequisites": [],
+          "depth": "introduce"
+        },
+        {
+          "id": "a11-olla",
+          "title_fa": "فعل olla و معرفی ساده",
+          "title_en": "Olla in basic identification",
+          "prerequisites": [],
+          "depth": "introduce"
+        },
+        {
+          "id": "a11-questions",
+          "title_fa": "واژه‌های پرسشی kuka/mikä/missä و پرسش‌های کوتاه",
+          "title_en": "Core question words",
+          "prerequisites": [
+            "a11-olla"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a11-present-chunks",
+          "title_fa": "شکل‌های پرتکرار حال به‌صورت عبارت‌های آماده",
+          "title_en": "Present-tense formulae",
+          "prerequisites": [
+            "a11-olla"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a11-negation",
+          "title_fa": "منفی‌سازی ساده با en/ei و عبارت‌های ثابت",
+          "title_en": "Simple negation and memorized frames",
+          "prerequisites": [
+            "a11-present-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a11-case-chunks",
+          "title_fa": "حالت‌های مکانی و Partitive در عبارت‌های آماده، نه صرف آزاد",
+          "title_en": "Locative and partitive chunks",
+          "prerequisites": [
+            "a11-present-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a11-pronouns",
+          "title_fa": "ضمایر شخصی و اشاری پایه، مالکیت در عبارت‌های ثابت",
+          "title_en": "Basic pronouns and demonstratives",
+          "prerequisites": [
+            "a11-olla"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [],
+      "topic_streams": [
+        {
+          "id": "greetings",
+          "title_fa": "سلام و مکالمهٔ ابتدایی",
+          "samples": [
+            "hei",
+            "moi",
+            "kiitos",
+            "anteeksi"
+          ]
+        },
+        {
+          "id": "people",
+          "title_fa": "خود، خانواده و زبان",
+          "samples": [
+            "minä",
+            "sinä",
+            "perhe",
+            "äiti",
+            "puhun"
+          ]
+        },
+        {
+          "id": "time",
+          "title_fa": "عدد، روز و کار روزانه",
+          "samples": [
+            "yksi",
+            "maanantai",
+            "tänään",
+            "aamulla"
+          ]
+        },
+        {
+          "id": "home-food",
+          "title_fa": "خانه و خوراک",
+          "samples": [
+            "koti",
+            "keittiö",
+            "leipä",
+            "vesi"
+          ]
+        }
+      ],
+      "expressions": [
+        "Hei!",
+        "Mikä sinun nimesi on?",
+        "En ymmärrä. Uudestaan, kiitos.",
+        "Asun Vaasassa.",
+        "Minulla on lapsi.",
+        "Kello on kolme."
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Minun nimeni on …",
+          "fa": "نام من ... است."
+        },
+        {
+          "fi": "Mistä olet?",
+          "fa": "اهل کجا هستی؟"
+        },
+        {
+          "fi": "Minä syön.",
+          "fa": "من غذا می‌خورم."
+        },
+        {
+          "fi": "En ymmärrä.",
+          "fa": "متوجه نمی‌شوم."
+        }
+      ],
+      "modules": [
+        {
+          "id": "a1.1-s1",
+          "title_fa": "اولین ارتباط و فنلاندیِ ضروری",
+          "can_do_fa": "سلام، پرسیدن نام و درخواست تکرار"
+        },
+        {
+          "id": "a1.1-s2",
+          "title_fa": "من و آدم‌های اطرافم",
+          "can_do_fa": "خانواده، کشور، زبان، محل زندگی و عدد"
+        },
+        {
+          "id": "a1.1-s3",
+          "title_fa": "زمان و یک روز ساده",
+          "can_do_fa": "روز، ساعت و فعل‌های روزمره در زمان حال"
+        },
+        {
+          "id": "a1.1-s4",
+          "title_fa": "خانه، خوراک و دنیای آشنا",
+          "can_do_fa": "اشیای آشنا، خوراکی‌ها و درخواست بسیار ساده"
+        }
+      ],
+      "skills": {
+        "listening": "واژه‌ها و جمله‌های آهسته و آشنا را با کمک موقعیت تشخیص دهد.",
+        "reading": "برچسب‌ها و پیام‌های بسیار کوتاه را بفهمد.",
+        "spoken_interaction": "در سلام و معرفی کوتاه سؤال و جواب کند.",
+        "spoken_production": "چند جمله تمرین‌شده درباره خود بگوید.",
+        "writing": "نام، نشانی و چند جمله بسیار کوتاه بنویسد.",
+        "mediation": "اطلاعات ضروری یک پیام کوتاه را به زبان ساده بازگو کند."
+      },
+      "assessment": {
+        "task_fa": "گفت‌وگوی دو تا چهار نوبتی با کمک، تشخیص اطلاعات شخصی از یک فایل صوتی کوتاه و نوشتن معرفی دو جمله‌ای.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 400,
+        "selection_policy_fa": "از صورت‌های پرتکرار موجود آغاز کن؛ تنها واژه‌های قابل‌آموزشِ متناسب با سطح را معرفی کن. ۳ تا ۶ هدف جدید در هر درس صرفاً راهنمای طراحی است."
+      }
+    },
+    {
+      "level": "A1.2",
+      "cefr": "A1",
+      "title_fa": "خرید، رفت‌وآمد و خدمات روزمره",
+      "outcome_en": "Complete predictable transactions and ask for places, quantities, and help.",
+      "outcome_fa": "خرید، مسیر، زمان‌بندی و درخواست‌های آشنای روزمره را با عبارت‌های تمرین‌شده انجام دهد.",
+      "curriculum_file": "data/course/a1.2-curriculum.json",
+      "delivery_status": "partially_implemented",
+      "grammar": [
+        {
+          "id": "a12-quantities",
+          "title_fa": "مقدار، عدد و کاربردهای محدود Partitive",
+          "title_en": "Quantities and restricted partitive",
+          "prerequisites": [
+            "a11-case-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a12-local-cases",
+          "title_fa": "حالت‌های در/از/به مکان، با صورت‌های صحیح و بازبینی‌شده",
+          "title_en": "Internal and external local cases in reviewed forms",
+          "prerequisites": [
+            "a11-case-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a12-requests",
+          "title_fa": "درخواست مودبانهٔ ثابت (haluaisin، saanko)",
+          "title_en": "Polite service requests as formulae",
+          "prerequisites": [
+            "a11-present-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a12-commands",
+          "title_fa": "امر مفرد و دستورهای جهت‌یابی",
+          "title_en": "Singular imperatives and route instructions",
+          "prerequisites": [
+            "a11-present-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a12-negation-expand",
+          "title_fa": "منفی‌سازی درخواست‌ها و جمله‌های روزمره",
+          "title_en": "Expanded everyday negation",
+          "prerequisites": [
+            "a11-negation"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a12-frequency-adverbs",
+          "title_fa": "قیدهای بسامد و زمان‌بندی ساده",
+          "title_en": "Simple frequency/time adverbs",
+          "prerequisites": [
+            "a11-present-chunks"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "a11-questions",
+        "a11-case-chunks",
+        "a11-pronouns"
+      ],
+      "topic_streams": [
+        {
+          "id": "shopping",
+          "title_fa": "خرید و پرداخت",
+          "samples": [
+            "hinta",
+            "euro",
+            "kassa",
+            "kortti",
+            "kuitti"
+          ]
+        },
+        {
+          "id": "movement",
+          "title_fa": "مسیر و حمل‌ونقل",
+          "samples": [
+            "asema",
+            "pysäkki",
+            "bussi",
+            "vasen",
+            "oikea"
+          ]
+        },
+        {
+          "id": "routine",
+          "title_fa": "کار، تحصیل، قرار",
+          "samples": [
+            "työ",
+            "koulu",
+            "tapaaminen",
+            "viikko"
+          ]
+        },
+        {
+          "id": "services-health",
+          "title_fa": "هوا، سلامت و خدمات",
+          "samples": [
+            "apteekki",
+            "lääkäri",
+            "sää",
+            "kuume"
+          ]
+        }
+      ],
+      "expressions": [
+        "Paljonko tämä maksaa?",
+        "Haluaisin kahvia, kiitos.",
+        "Missä pysäkki on?",
+        "Voinko maksaa kortilla?",
+        "Minulla on kuumetta.",
+        "Voitko auttaa?"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Se maksaa viisi euroa.",
+          "fa": "این پنج یورو قیمت دارد."
+        },
+        {
+          "fi": "Menen bussilla keskustaan.",
+          "fa": "با اتوبوس به مرکز شهر می‌روم."
+        },
+        {
+          "fi": "Tarvitsen apua.",
+          "fa": "کمک لازم دارم."
+        },
+        {
+          "fi": "Kello on kolme.",
+          "fa": "ساعت سه است."
+        }
+      ],
+      "modules": [
+        {
+          "id": "a1.2-s1",
+          "title_fa": "خرید و خدمات روزمره",
+          "can_do_fa": "پرسیدن قیمت، درخواست و پرداخت"
+        },
+        {
+          "id": "a1.2-s2",
+          "title_fa": "رفت‌وآمد و پیدا کردن مکان‌ها",
+          "can_do_fa": "پیداکردن مسیر، بلیت و حمل‌ونقل"
+        },
+        {
+          "id": "a1.2-s3",
+          "title_fa": "زندگی روزمره، تحصیل، کار و قرارهای ساده",
+          "can_do_fa": "برنامهٔ کار و قرار در جمله کوتاه"
+        },
+        {
+          "id": "a1.2-s4",
+          "title_fa": "آب‌وهوا، سلامت و کمک‌های روزمره",
+          "can_do_fa": "بیان مشکل ساده و درخواست کمک"
+        }
+      ],
+      "skills": {
+        "listening": "اطلاعات کوتاه درباره قیمت، زمان و مسیر را از گفتار شمرده تشخیص دهد.",
+        "reading": "تابلو و پیام خدماتی کوتاه را بخواند.",
+        "spoken_interaction": "یک تبادل خرید یا درخواست مسیر ساده انجام دهد.",
+        "spoken_production": "نیاز و برنامهٔ روزانهٔ خود را کوتاه توضیح دهد.",
+        "writing": "پیام کوتاه درباره زمان و قرار بنویسد.",
+        "mediation": "قیمت، مقصد یا زمان یک پیام خدماتی را برای شخص دیگر بازگو کند."
+      },
+      "assessment": {
+        "task_fa": "خرید شبیه‌سازی‌شده همراه با مقدار و پرداخت، پرسیدن مسیر و نوشتن پیام کوتاه.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 900,
+        "selection_policy_fa": "صورت‌های پرتکرار منطبق با خرید و مسیر را با واژگان موضوعی کم‌بسامد ولی ضروری ترکیب کن؛ پنجرهٔ عددی سهمیه یا سطح رسمی نیست."
+      }
+    },
+    {
+      "level": "A1.3",
+      "cefr": "A1",
+      "title_fa": "کارکرد مستقل‌تر در موقعیت‌های آشنا",
+      "outcome_en": "Maintain simple social exchanges and manage familiar practical messages with some support.",
+      "outcome_fa": "دعوت، تغییر قرار، مشکل خانه و کار روزمره و رویدادهای کوتاه را با زبان آشنا بیان کند.",
+      "curriculum_file": "data/course/a1.3-curriculum.json",
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "a13-present-paradigm",
+          "title_fa": "توسعهٔ شکل‌های شخصی حال در فعل‌های پرتکرار",
+          "title_en": "High-frequency present paradigms",
+          "prerequisites": [
+            "a11-present-chunks"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a13-verb-classes",
+          "title_fa": "آشنایی تدریجی با انواع فعل و ریشه‌های متداول",
+          "title_en": "Selected verb types and stems",
+          "prerequisites": [
+            "a13-present-paradigm"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a13-kpt-preview",
+          "title_fa": "درجه‌بندی همخوان (KPT) در واژه‌های منتخب",
+          "title_en": "Selected consonant gradation",
+          "prerequisites": [
+            "a13-verb-classes"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a13-local-expansion",
+          "title_fa": "تقویت کاربرد حالت‌های مکانی و فعل + حالت",
+          "title_en": "Expanded local-case patterns",
+          "prerequisites": [
+            "a12-local-cases"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a13-partitive-patterns",
+          "title_fa": "مفعول Partitive در جمله‌های آشنا",
+          "title_en": "Partitive in familiar object frames",
+          "prerequisites": [
+            "a12-quantities"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a13-necessity",
+          "title_fa": "الگوهای اجبار/توانایی (pitää، täytyy، voin)",
+          "title_en": "Necessity and ability frames",
+          "prerequisites": [
+            "a12-requests"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a13-past-recognition",
+          "title_fa": "تشخیص چند شکل پرتکرار گذشته، بدون الزام صرف آزاد",
+          "title_en": "Recognition of common past forms",
+          "prerequisites": [
+            "a13-present-paradigm"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "a12-requests",
+        "a12-local-cases",
+        "a11-negation"
+      ],
+      "topic_streams": [
+        {
+          "id": "social-messages",
+          "title_fa": "دوستی و پیام",
+          "samples": [
+            "viesti",
+            "myöhässä",
+            "sopia",
+            "kanssa"
+          ]
+        },
+        {
+          "id": "neighbourhood",
+          "title_fa": "خانه و محله",
+          "samples": [
+            "naapuri",
+            "huolto",
+            "avaimet",
+            "rikki"
+          ]
+        },
+        {
+          "id": "responsibilities",
+          "title_fa": "مسئولیت و آموزش",
+          "samples": [
+            "tehtävä",
+            "aikataulu",
+            "opiskella",
+            "selittää"
+          ]
+        },
+        {
+          "id": "plans",
+          "title_fa": "رویداد و آیندهٔ نزدیک",
+          "samples": [
+            "eilen",
+            "huomenna",
+            "ensi viikolla",
+            "suunnitelma"
+          ]
+        }
+      ],
+      "expressions": [
+        "Haluatko tulla mukaan?",
+        "Valitettavasti en voi.",
+        "Voimmeko tavata myöhemmin?",
+        "Minun täytyy perua tapaaminen.",
+        "Voitko toistaa?",
+        "Olin kotona eilen."
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Olen vähän myöhässä.",
+          "fa": "کمی دیر کرده‌ام."
+        },
+        {
+          "fi": "Meidän pitää lähteä.",
+          "fa": "باید برویم."
+        },
+        {
+          "fi": "Voimmeko tavata huomenna?",
+          "fa": "می‌توانیم فردا همدیگر را ببینیم؟"
+        },
+        {
+          "fi": "Eilen olin kotona.",
+          "fa": "دیروز خانه بودم."
+        }
+      ],
+      "modules": [
+        {
+          "id": "a1.3-s1",
+          "title_fa": "پیام‌ها، دعوت‌ها و ارتباط اجتماعی",
+          "can_do_fa": "دعوت، پاسخ و تغییر قرار"
+        },
+        {
+          "id": "a1.3-s2",
+          "title_fa": "خانه، محله و مشکلات روزمره",
+          "can_do_fa": "درخواست کمک برای مشکلات آشنا"
+        },
+        {
+          "id": "a1.3-s3",
+          "title_fa": "تحصیل، کار و مسئولیت‌های روزمره",
+          "can_do_fa": "برنامه و تکلیف، درخواست روشن‌سازی"
+        },
+        {
+          "id": "a1.3-s4",
+          "title_fa": "رویدادهای اخیر، برنامه‌ها و زبان روزمرهٔ یکپارچه",
+          "can_do_fa": "چند جمله مرتبط درباره اتفاق/برنامه"
+        }
+      ],
+      "skills": {
+        "listening": "معنای اصلی مکالمه‌ای کوتاه در موضوع آشنا را بگیرد.",
+        "reading": "پیام یا اعلان ساده را با جزئیات کلیدی بخواند.",
+        "spoken_interaction": "یک گفت‌وگوی کوتاه را با پرسش پیگیری ادامه دهد.",
+        "spoken_production": "روال، تجربه بسیار کوتاه و برنامه را توصیف کند.",
+        "writing": "یک پیام عملی چندجمله‌ای بنویسد.",
+        "mediation": "قرار تغییرکرده یا دستور کوتاه را برای دیگری بازگو کند."
+      },
+      "assessment": {
+        "task_fa": "تعامل چهار تا شش نوبتی برای دعوت و جابه‌جایی قرار، گزارش کوتاه مشکل و نوشتن پیام کاربردی.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 1400,
+        "selection_policy_fa": "از لغات پرکاربردِ پشتیبان پیام و زندگی روزانه استفاده کن؛ واژگان معرفی‌شده در A1.1/A1.2 باید در بافت متفاوت بازیابی شوند."
+      }
+    },
+    {
+      "level": "A2.1",
+      "cefr": "A2",
+      "title_fa": "تجربه‌های گذشته و خدمات پیچیده‌تر",
+      "outcome_en": "Describe past experiences and handle routine appointments and familiar institutional tasks.",
+      "outcome_fa": "از گذشته و تجربه‌های ساده بگوید و در خدمات روزمره با جزئیات بیشتری تعامل کند.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "a21-imperfect",
+          "title_fa": "گذشتهٔ ساده (imperfekti) در افعال متداول",
+          "title_en": "Productive simple past",
+          "prerequisites": [
+            "a13-past-recognition",
+            "a13-verb-classes"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a21-object-core",
+          "title_fa": "مفعول کل/جزئی در نمونه‌های مشخص",
+          "title_en": "Partitive vs total-object basics",
+          "prerequisites": [
+            "a13-partitive-patterns"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a21-plural-partitive",
+          "title_fa": "Partitive جمع و گروه‌های اسمی پرکاربرد",
+          "title_en": "Plural partitive in common phrases",
+          "prerequisites": [
+            "a12-quantities"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a21-illative-patterns",
+          "title_fa": "حالت‌های ورود/خروج و مقصدهای متنوع‌تر",
+          "title_en": "Expanded destination forms",
+          "prerequisites": [
+            "a13-local-expansion"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a21-rections",
+          "title_fa": "حاکمیت حالت در فعل‌های پرکاربرد (pitää + sta و ...)",
+          "title_en": "Common verb-case government",
+          "prerequisites": [
+            "a13-local-expansion"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a21-maan",
+          "title_fa": "الگوهای فعل + -maan/-massa/-masta در بافت‌های محدود",
+          "title_en": "Common -maan/-massa frames",
+          "prerequisites": [
+            "a13-verb-classes"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a21-sequencing",
+          "title_fa": "پیوند ترتیب اتفاق‌ها با sitten، kun و ...",
+          "title_en": "Sequencing simple events",
+          "prerequisites": [
+            "a21-imperfect"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "a13-present-paradigm",
+        "a13-kpt-preview",
+        "a13-partitive-patterns"
+      ],
+      "topic_streams": [
+        {
+          "id": "travel-history",
+          "title_fa": "سفر و خاطرات",
+          "samples": [
+            "matka",
+            "hotelli",
+            "lippu",
+            "kävin"
+          ]
+        },
+        {
+          "id": "public-services",
+          "title_fa": "خدمات و قرار",
+          "samples": [
+            "ajanvaraus",
+            "hakemus",
+            "todistus",
+            "toimisto"
+          ]
+        },
+        {
+          "id": "hobbies",
+          "title_fa": "تفریح و فعالیت",
+          "samples": [
+            "harrastus",
+            "uiminen",
+            "metsä",
+            "retki"
+          ]
+        },
+        {
+          "id": "events",
+          "title_fa": "رویداد و تجربه",
+          "samples": [
+            "eilen",
+            "viime viikolla",
+            "tapasin",
+            "vierailu"
+          ]
+        }
+      ],
+      "expressions": [
+        "Eilen kävin kirjastossa.",
+        "Viime viikolla matkustin Tampereelle.",
+        "Odotan bussia.",
+        "Pidän suomalaisesta ruoasta.",
+        "Lähden opiskelemaan.",
+        "Voisinko varata ajan?"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Kävin eilen lääkärissä.",
+          "fa": "دیروز به پزشک مراجعه کردم."
+        },
+        {
+          "fi": "Odotamme bussia.",
+          "fa": "منتظر اتوبوس هستیم."
+        },
+        {
+          "fi": "Lähden opiskelemaan.",
+          "fa": "می‌روم درس بخوانم."
+        },
+        {
+          "fi": "Pidän tästä kaupungista.",
+          "fa": "این شهر را دوست دارم."
+        }
+      ],
+      "modules": [
+        {
+          "id": "a2.1-s1",
+          "title_fa": "سفر و رویدادهای گذشته",
+          "can_do_fa": "توصیف یک سفر و ترتیب رویدادها"
+        },
+        {
+          "id": "a2.1-s2",
+          "title_fa": "پزشک و خدمات اداری",
+          "can_do_fa": "قرار، فرم، پیگیری ساده"
+        },
+        {
+          "id": "a2.1-s3",
+          "title_fa": "تفریح و علایق",
+          "can_do_fa": "بیان سلیقه و تجربه"
+        },
+        {
+          "id": "a2.1-s4",
+          "title_fa": "خانواده و داستان کوتاه",
+          "can_do_fa": "روایت پیوستهٔ چند اتفاق"
+        }
+      ],
+      "skills": {
+        "listening": "خط اصلی روایت آهستهٔ یک تجربه روزمره را بفهمد.",
+        "reading": "نامه، دستور و روایت کوتاه را بخواند.",
+        "spoken_interaction": "قرار و خدمات ساده را پیگیری کند.",
+        "spoken_production": "چند واقعهٔ گذشته را به ترتیب روایت کند.",
+        "writing": "گزارش کوتاه یک تجربه یا درخواست بنویسد.",
+        "mediation": "مراحل یک دستور خدماتی را خلاصه کند."
+      },
+      "assessment": {
+        "task_fa": "بازگویی یک سفر کوتاه، تنظیم قرار و نوشتن پیام درباره تجربه گذشته.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 2300,
+        "selection_policy_fa": "واژه‌های پرتکرار فعل/حالت را در کنار حوزه‌های سفر و خدمات بازگسترش بده؛ شناسايی ریشه و صورت صرف‌شده را جدا ثبت کن."
+      }
+    },
+    {
+      "level": "A2.2",
+      "cefr": "A2",
+      "title_fa": "روایت، مقایسه و تعامل اجتماعی",
+      "outcome_en": "Explain experiences, compare options, and make moderately extended requests.",
+      "outcome_fa": "روایت نسبتاً پیوسته، مقایسه و درخواست‌های مودبانه در موقعیت‌های آشنا را انجام دهد.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "a22-perfect",
+          "title_fa": "گذشتهٔ نقلی (perfekti) و کاربرد در تجربه‌ها",
+          "title_en": "Present perfect",
+          "prerequisites": [
+            "a21-imperfect"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a22-pluperfect-preview",
+          "title_fa": "آشنایی و تشخیص گذشتهٔ دور",
+          "title_en": "Past perfect recognition",
+          "prerequisites": [
+            "a22-perfect"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a22-conditional",
+          "title_fa": "شرطی مودبانه و درخواست احتمالی",
+          "title_en": "Conditional for polite requests",
+          "prerequisites": [
+            "a12-requests"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a22-passive-present",
+          "title_fa": "مجهول حال و کاربرد خدماتی",
+          "title_en": "Present passive",
+          "prerequisites": [
+            "a13-present-paradigm"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a22-comparison",
+          "title_fa": "صفت تفضیلی و عالی",
+          "title_en": "Comparatives and superlatives",
+          "prerequisites": [
+            "a13-kpt-preview"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a22-essive-translative",
+          "title_fa": "Essive و Translative در نقش، وضعیت و تغییر",
+          "title_en": "Essive and translative cases",
+          "prerequisites": [
+            "a21-illative-patterns"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "a22-postpositions",
+          "title_fa": "حروف اضافه/پس‌اضافهٔ پرتکرار",
+          "title_en": "Common Finnish postpositions",
+          "prerequisites": [
+            "a13-local-expansion"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "a21-imperfect",
+        "a21-object-core",
+        "a21-rections"
+      ],
+      "topic_streams": [
+        {
+          "id": "housing",
+          "title_fa": "مسکن و قرارداد",
+          "samples": [
+            "vuokra",
+            "asunto",
+            "sopimus",
+            "muutto"
+          ]
+        },
+        {
+          "id": "comparison",
+          "title_fa": "خرید و انتخاب",
+          "samples": [
+            "halvempi",
+            "parempi",
+            "sopivampi",
+            "laatu"
+          ]
+        },
+        {
+          "id": "culture",
+          "title_fa": "فرهنگ و جشن",
+          "samples": [
+            "juhla",
+            "perinne",
+            "konsertti",
+            "näyttely"
+          ]
+        },
+        {
+          "id": "work-communication",
+          "title_fa": "ایمیل و محیط کار",
+          "samples": [
+            "sähköposti",
+            "työpaikka",
+            "kokous",
+            "liite"
+          ]
+        }
+      ],
+      "expressions": [
+        "Olen asunut Suomessa kaksi vuotta.",
+        "Voisitko auttaa minua?",
+        "Tämä on halvempi kuin tuo.",
+        "Asunto on suurempi.",
+        "Täällä puhutaan suomea.",
+        "Haluaisin vaihtaa ajan."
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Olen jo käynyt siellä.",
+          "fa": "قبلاً آنجا رفته‌ام."
+        },
+        {
+          "fi": "Tämä asunto on rauhallisempi.",
+          "fa": "این آپارتمان آرام‌تر است."
+        },
+        {
+          "fi": "Kokous pidetään huomenna.",
+          "fa": "جلسه فردا برگزار می‌شود."
+        },
+        {
+          "fi": "Voisitko lähettää viestin?",
+          "fa": "می‌توانی لطفاً پیام بفرستی؟"
+        }
+      ],
+      "modules": [
+        {
+          "id": "a2.2-s1",
+          "title_fa": "تجربه و گذشتهٔ نقلی",
+          "can_do_fa": "تجربه و رویدادهای پیشین"
+        },
+        {
+          "id": "a2.2-s2",
+          "title_fa": "مقایسه و انتخاب",
+          "can_do_fa": "توصیف تفاوت و ترجیح"
+        },
+        {
+          "id": "a2.2-s3",
+          "title_fa": "کار و مکاتبه",
+          "can_do_fa": "نامه و تعامل مودبانه"
+        },
+        {
+          "id": "a2.2-s4",
+          "title_fa": "زندگی در فنلاند",
+          "can_do_fa": "خدمات و فرهنگ با گفت‌وگوی طولانی‌تر"
+        }
+      ],
+      "skills": {
+        "listening": "معنای کلی گفتار استاندارد درباره موضوعات آشنا را بگیرد.",
+        "reading": "متن‌های کاربردی چندپاراگرافی ساده را بخواند.",
+        "spoken_interaction": "در خدمات یا گفت‌وگوی دوستانه مشکل و انتخاب را توضیح دهد.",
+        "spoken_production": "به‌صورت پیوسته تجربه و ترجیح را بیان کند.",
+        "writing": "ایمیل کوتاه و منسجم بنویسد.",
+        "mediation": "دو گزینه یا یک راهنما را برای دیگری مقایسه کند."
+      },
+      "assessment": {
+        "task_fa": "مقایسه دو آپارتمان، نوشتن ایمیل رسمی ساده و روایت یک تجربه با Perfekti.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 3600,
+        "selection_policy_fa": "معناهای چندگانهٔ واژه‌های رایج و هم‌آیندها مهم‌تر از بالا بردن صرف شمار واژه‌اند؛ فهرست پربسامد راهنماست."
+      }
+    },
+    {
+      "level": "B1.1",
+      "cefr": "B1",
+      "title_fa": "کاربرد مستقل در خدمات و کار",
+      "outcome_en": "Manage most familiar everyday situations and justify straightforward opinions.",
+      "outcome_fa": "در موقعیت‌های معمول اجتماعی و اداری مستقل‌تر عمل کند و نظر ساده را توضیح دهد.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "b11-tense-contrast",
+          "title_fa": "تمایز imperfekti/perfekti/pluskvamperfekti",
+          "title_en": "Past-tense contrasts",
+          "prerequisites": [
+            "a22-perfect",
+            "a22-pluperfect-preview"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-passive-past",
+          "title_fa": "مجهول در زمان گذشته و نقلی",
+          "title_en": "Passive in past contexts",
+          "prerequisites": [
+            "a22-passive-present"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-conditionals",
+          "title_fa": "جمله‌های شرطی اگر/پس و درخواست پیچیده‌تر",
+          "title_en": "Conditional constructions",
+          "prerequisites": [
+            "a22-conditional"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-plural-case",
+          "title_fa": "جمع در حالت‌های اسمی و الگوهای رایج",
+          "title_en": "Plural case inflection",
+          "prerequisites": [
+            "a21-plural-partitive",
+            "a22-essive-translative"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-participles-intro",
+          "title_fa": "وجه وصفی حال و گذشته در متن‌های آشنا",
+          "title_en": "Introductory participles",
+          "prerequisites": [
+            "a22-perfect"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-possessive-suffixes",
+          "title_fa": "شناسه‌های ملکی در کاربردهای رایج",
+          "title_en": "Possessive suffixes",
+          "prerequisites": [
+            "a11-pronouns"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-subordination",
+          "title_fa": "جمله‌واره‌های että، koska، kun و اگر",
+          "title_en": "Subordinate clauses",
+          "prerequisites": [
+            "a21-sequencing"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b11-register",
+          "title_fa": "تفاوت فنلاندی نوشتاری و گفتاری در موقعیت آشنا",
+          "title_en": "Early written/spoken register awareness",
+          "prerequisites": [
+            "a13-present-paradigm"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "a21-object-core",
+        "a22-comparison",
+        "a22-postpositions"
+      ],
+      "topic_streams": [
+        {
+          "id": "employment",
+          "title_fa": "کار و درخواست شغل",
+          "samples": [
+            "työsopimus",
+            "haastattelu",
+            "palkka",
+            "työvuoro"
+          ]
+        },
+        {
+          "id": "bureaucracy",
+          "title_fa": "اداره و مقررات",
+          "samples": [
+            "päätös",
+            "lomake",
+            "todistus",
+            "oikeus"
+          ]
+        },
+        {
+          "id": "technology",
+          "title_fa": "فناوری روزمره",
+          "samples": [
+            "sovellus",
+            "kirjautua",
+            "salasana",
+            "laite"
+          ]
+        },
+        {
+          "id": "society",
+          "title_fa": "زندگی اجتماعی",
+          "samples": [
+            "palvelu",
+            "asukas",
+            "liikenne",
+            "koulutus"
+          ]
+        }
+      ],
+      "expressions": [
+        "Olen sitä mieltä, että …",
+        "Voisitko tarkentaa asiaa?",
+        "Haluaisin hakea tätä paikkaa.",
+        "Jos minulla olisi aikaa, …",
+        "Tämä asia pitää selvittää.",
+        "Miten voin valittaa päätöksestä?"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Haen työpaikkaa, koska haluan kehittyä.",
+          "fa": "برای کار درخواست می‌دهم چون می‌خواهم پیشرفت کنم."
+        },
+        {
+          "fi": "Jos ehtisin, tulisin mukaan.",
+          "fa": "اگر وقت داشتم، همراه می‌آمدم."
+        },
+        {
+          "fi": "Päätös on lähetetty.",
+          "fa": "تصمیم ارسال شده است."
+        },
+        {
+          "fi": "Olen eri mieltä tästä asiasta.",
+          "fa": "در این مورد مخالفم."
+        }
+      ],
+      "modules": [
+        {
+          "id": "b1.1-s1",
+          "title_fa": "کار و مصاحبه",
+          "can_do_fa": "توضیح تجربه و انگیزه"
+        },
+        {
+          "id": "b1.1-s2",
+          "title_fa": "اداره و خدمات عمومی",
+          "can_do_fa": "درخواست، شکایت و پیگیری"
+        },
+        {
+          "id": "b1.1-s3",
+          "title_fa": "فناوری و حل مشکل",
+          "can_do_fa": "توضیح مسئله و راه‌حل"
+        },
+        {
+          "id": "b1.1-s4",
+          "title_fa": "نظر و تجربهٔ اجتماعی",
+          "can_do_fa": "بیان و توضیح دیدگاه"
+        }
+      ],
+      "skills": {
+        "listening": "نکات اصلی گفتار واضحِ استاندارد درباره مسائل روزمره را بفهمد.",
+        "reading": "متن‌های کاربردی و گزارش‌های ساده را دنبال کند.",
+        "spoken_interaction": "در خدمات و مکالمات معمول بدون کمک مداوم تعامل کند.",
+        "spoken_production": "تجربه، هدف و نظر خود را دلیل‌دار بیان کند.",
+        "writing": "گزارش یا نامهٔ کاری نسبتاً منسجم بنویسد.",
+        "mediation": "نکات یک نامهٔ رسمی آشنا را برای دیگری توضیح دهد."
+      },
+      "assessment": {
+        "task_fa": "درخواست شغل و تماس با خدمات عمومی، توضیح مشکل و نوشتن نامهٔ چندپاراگرافی.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 6000,
+        "selection_policy_fa": "واژگان اداری و کاربردی، هم‌آیندهای فعل+حالت و ترکیب‌های معنایی را از پیکره و منابع بازبینی‌شده انتخاب کن."
+      }
+    },
+    {
+      "level": "B1.2",
+      "cefr": "B1",
+      "title_fa": "روایت پیچیده‌تر و تعامل در جامعه",
+      "outcome_en": "Maintain connected discussions, summarize information, and adjust register for familiar contexts.",
+      "outcome_fa": "موضوع‌های روز، تجربه‌ها و دستورالعمل‌ها را منسجم و با سبک مناسب‌تر توضیح دهد.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "b12-clause-equivalents",
+          "title_fa": "ساختارهای جانشین جمله‌واره (lauseenvastike) در موارد رایج",
+          "title_en": "Common non-finite clause equivalents",
+          "prerequisites": [
+            "b11-subordination",
+            "b11-participles-intro"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b12-infinitive",
+          "title_fa": "اسم‌مصدرها و ترکیب‌های -maan/-massa/-minen پیشرفته‌تر",
+          "title_en": "Extended infinitival constructions",
+          "prerequisites": [
+            "a21-maan"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b12-participles",
+          "title_fa": "وجه وصفی و عبارت‌های وصفی چندواژه‌ای",
+          "title_en": "Productive participial modifiers",
+          "prerequisites": [
+            "b11-participles-intro"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b12-verb-case",
+          "title_fa": "ترکیب‌های فعل + حالت و معنای متفاوت حالت‌ها",
+          "title_en": "Systematic verb-case government",
+          "prerequisites": [
+            "a21-rections"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b12-derivation",
+          "title_fa": "ساخت واژه و مشتقات پرکاربرد",
+          "title_en": "Common Finnish derivation",
+          "prerequisites": [
+            "a13-verb-classes"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b12-reporting",
+          "title_fa": "نقل گفتار و گزارش غیرمستقیم",
+          "title_en": "Reported speech",
+          "prerequisites": [
+            "b11-subordination"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b12-particles",
+          "title_fa": "ذرات گفتاری -han/-hän و -kin/-kaan در بافت",
+          "title_en": "Discourse particles",
+          "prerequisites": [
+            "b11-register"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "b11-tense-contrast",
+        "b11-passive-past",
+        "b11-possessive-suffixes"
+      ],
+      "topic_streams": [
+        {
+          "id": "current-events",
+          "title_fa": "اخبار و رسانه",
+          "samples": [
+            "uutinen",
+            "haastattelu",
+            "tapahtuma",
+            "lähde"
+          ]
+        },
+        {
+          "id": "community",
+          "title_fa": "جامعه و مشارکت",
+          "samples": [
+            "yhdistys",
+            "osallistua",
+            "vapaaehtoinen",
+            "järjestää"
+          ]
+        },
+        {
+          "id": "education",
+          "title_fa": "مطالعه و مسیر شغلی",
+          "samples": [
+            "tutkinto",
+            "opinnot",
+            "koulutus",
+            "hakemus"
+          ]
+        },
+        {
+          "id": "wellbeing",
+          "title_fa": "سلامت و سبک زندگی",
+          "samples": [
+            "hyvinvointi",
+            "neuvonta",
+            "liikunta",
+            "vaikutus"
+          ]
+        }
+      ],
+      "expressions": [
+        "Luin uutisen, jossa kerrottiin …",
+        "Olen huomannut, että …",
+        "Toisin sanoen …",
+        "Kyse on siitä, että …",
+        "Haluaisin perustella näkökulmani.",
+        "Mistä tämä johtuu?"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Luettuani viestin vastasin heti.",
+          "fa": "پس از خواندن پیام فوراً جواب دادم."
+        },
+        {
+          "fi": "Minun mielestäni asia on tärkeä.",
+          "fa": "به نظر من موضوع مهم است."
+        },
+        {
+          "fi": "Hän sanoi tulevansa myöhemmin.",
+          "fa": "او گفت که بعداً می‌آید."
+        },
+        {
+          "fi": "Voisitko selittää tämän tarkemmin?",
+          "fa": "می‌توانی این را دقیق‌تر توضیح بدهی؟"
+        }
+      ],
+      "modules": [
+        {
+          "id": "b1.2-s1",
+          "title_fa": "اخبار و روایت",
+          "can_do_fa": "خلاصه کردن اتفاق‌ها"
+        },
+        {
+          "id": "b1.2-s2",
+          "title_fa": "مشارکت و سازمان‌دهی",
+          "can_do_fa": "درخواست و هماهنگی رویداد"
+        },
+        {
+          "id": "b1.2-s3",
+          "title_fa": "تحصیل و محیط کار",
+          "can_do_fa": "توضیح دستور و فرایند"
+        },
+        {
+          "id": "b1.2-s4",
+          "title_fa": "گفت‌وگوی استدلالی",
+          "can_do_fa": "پشتیبانی از یک نظر با مثال"
+        }
+      ],
+      "skills": {
+        "listening": "جزئیات اصلی گفت‌وگوی روشن درباره موضوع اجتماعی آشنا را استخراج کند.",
+        "reading": "مقاله و گزارش غیرتخصصی را خلاصه کند.",
+        "spoken_interaction": "در گفت‌وگوی طولانی‌تر نوبت بگیرد و توضیح بخواهد.",
+        "spoken_production": "روایت پیوسته با دلیل و نتیجه ارائه کند.",
+        "writing": "گزارش یا نقد کوتاه با پیوند منطقی بنویسد.",
+        "mediation": "نکات مهم مقاله یا اعلان را برای دیگری خلاصه کند."
+      },
+      "assessment": {
+        "task_fa": "خلاصه خبر، ارائه کوتاه درباره جامعه و نوشتن گزارش منسجم با نقل غیرمستقیم.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 9500,
+        "selection_policy_fa": "عبارت‌های طبیعی رسانه‌ای و فعل‌+حالت با یادداشت تفاوت رسمی/محاوره‌ای در اولویت‌اند."
+      }
+    },
+    {
+      "level": "B2.1",
+      "cefr": "B2",
+      "title_fa": "بحث، تحلیل و ارتباط تخصصی ابتدایی",
+      "outcome_en": "Argue for positions, follow extended discourse, and engage in broad familiar professional contexts.",
+      "outcome_fa": "از موضع خود دفاع کند، سخن طولانی را دنبال کند و در بحث‌های کاری شرکت کند.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "b21-potential",
+          "title_fa": "وجه احتمالی (potentiaali) بیشتر برای تشخیص و کاربرد محدود",
+          "title_en": "Potential mood, mainly receptive",
+          "prerequisites": [
+            "b11-tense-contrast"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b21-passive-advanced",
+          "title_fa": "الگوهای مجهول و تفاوت کاربرد رسمی/محاوره‌ای",
+          "title_en": "Advanced passive structures",
+          "prerequisites": [
+            "b11-passive-past",
+            "b11-register"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b21-object-semantics",
+          "title_fa": "جزئی/کلی بودن مفعول و دلالت معنایی در بافت پیچیده",
+          "title_en": "Aspectual object choice and semantics",
+          "prerequisites": [
+            "a21-object-core"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b21-nonfinite",
+          "title_fa": "ساختارهای مصدر/وجه وصفی پیچیده‌تر",
+          "title_en": "Advanced non-finite forms",
+          "prerequisites": [
+            "b12-clause-equivalents"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b21-cohesion",
+          "title_fa": "ارجاع، پیوستگی و ارتباط بین بندها",
+          "title_en": "Textual cohesion and reference",
+          "prerequisites": [
+            "b12-reporting"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b21-discourse",
+          "title_fa": "رابطه‌های علت، نتیجه، امتیاز و تضاد",
+          "title_en": "Causal and concessive discourse patterns",
+          "prerequisites": [
+            "b11-subordination"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b21-register",
+          "title_fa": "تغییر سبک زبان در ارائه، نامه و گفت‌وگو",
+          "title_en": "Register control",
+          "prerequisites": [
+            "b12-particles"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "b12-infinitive",
+        "b12-verb-case",
+        "b12-participles"
+      ],
+      "topic_streams": [
+        {
+          "id": "working-life",
+          "title_fa": "قرارداد و جلسات",
+          "samples": [
+            "neuvottelu",
+            "vastuu",
+            "hanke",
+            "arvio"
+          ]
+        },
+        {
+          "id": "economy",
+          "title_fa": "اقتصاد و مصرف",
+          "samples": [
+            "talous",
+            "kustannus",
+            "kestävä",
+            "kuluttaja"
+          ]
+        },
+        {
+          "id": "public-debate",
+          "title_fa": "آموزش و سیاست‌گذاری اجتماعی",
+          "samples": [
+            "keskustelu",
+            "vaikutus",
+            "näkökulma",
+            "tutkimus"
+          ]
+        },
+        {
+          "id": "culture-critique",
+          "title_fa": "هنر و نقد",
+          "samples": [
+            "teos",
+            "arvostelu",
+            "tulkinta",
+            "yleisö"
+          ]
+        }
+      ],
+      "expressions": [
+        "Ensinnäkin … toisaalta …",
+        "Tämä johtuu osittain siitä, että …",
+        "On syytä huomata, että …",
+        "Ymmärrän näkökulmasi, mutta …",
+        "Tutkimuksen mukaan …",
+        "Voisimmeko tarkastella vaihtoehtoja?"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Vaikka ratkaisu maksaa enemmän, se voi olla kestävämpi.",
+          "fa": "اگرچه این راه‌حل گران‌تر است، ممکن است پایدارتر باشد."
+        },
+        {
+          "fi": "On syytä harkita muitakin vaihtoehtoja.",
+          "fa": "باید گزینه‌های دیگری را هم سنجید."
+        },
+        {
+          "fi": "Raportin mukaan tulokset paranivat.",
+          "fa": "طبق گزارش نتایج بهتر شدند."
+        },
+        {
+          "fi": "Ehdotan, että keskustelemme asiasta.",
+          "fa": "پیشنهاد می‌کنم درباره این موضوع گفت‌وگو کنیم."
+        }
+      ],
+      "modules": [
+        {
+          "id": "b2.1-s1",
+          "title_fa": "اقتصاد و جامعه",
+          "can_do_fa": "توضیح روند و اثر"
+        },
+        {
+          "id": "b2.1-s2",
+          "title_fa": "کار و مذاکره",
+          "can_do_fa": "مطرح کردن گزینه‌ها"
+        },
+        {
+          "id": "b2.1-s3",
+          "title_fa": "رسانه و ارزیابی منبع",
+          "can_do_fa": "تمایز واقعیت و نظر"
+        },
+        {
+          "id": "b2.1-s4",
+          "title_fa": "مناظره و ارائه",
+          "can_do_fa": "استدلال و پاسخ به نقد"
+        }
+      ],
+      "skills": {
+        "listening": "گفتار طولانی استاندارد و توضیح‌های نسبتاً انتزاعی را دنبال کند.",
+        "reading": "دیدگاه نویسنده و استدلال متن را تشخیص دهد.",
+        "spoken_interaction": "در بحث‌های گستردهٔ آشنا مشارکت و پاسخ‌گویی فعال کند.",
+        "spoken_production": "دلیل، مثال و نتیجه را ساختارمند ارائه کند.",
+        "writing": "مقالهٔ استدلالی روشن بنویسد.",
+        "mediation": "دو منبع درباره یک موضوع را مقایسه و خلاصه کند."
+      },
+      "assessment": {
+        "task_fa": "ارائه پنج‌دقیقه‌ای درباره یک مسئله، مناظرهٔ هدایت‌شده و نگارش مقالهٔ تحلیلی.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 15000,
+        "selection_policy_fa": "واژگان انتزاعی پربسامد، هم‌آیندهای کاری و تمایز سبک؛ صرف رتبهٔ خام واژه معیار کفایت نیست."
+      }
+    },
+    {
+      "level": "B2.2",
+      "cefr": "B2",
+      "title_fa": "نوشتار استدلالی و انعطاف سبکی",
+      "outcome_en": "Discuss nuanced questions, synthesize sources, and produce clear detailed arguments.",
+      "outcome_fa": "دیدگاه‌های متفاوت را ترکیب و نقد کند و در نوشتار و گفتار متناسب با مخاطب سبک انتخاب کند.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "b22-nominalisation",
+          "title_fa": "اسمی‌سازی و عبارت‌های وجه وصفی فشرده",
+          "title_en": "Nominalisation and dense participial phrases",
+          "prerequisites": [
+            "b21-nonfinite"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b22-mood-modality",
+          "title_fa": "درجهٔ قطعیت، الزام، احتمال و بیان دیدگاه",
+          "title_en": "Modality and epistemic stance",
+          "prerequisites": [
+            "b21-potential",
+            "a22-conditional"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b22-information-structure",
+          "title_fa": "ترتیب واژه، تأکید و ساختار اطلاعات",
+          "title_en": "Word order and information structure",
+          "prerequisites": [
+            "b21-cohesion"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b22-idioms",
+          "title_fa": "عبارت‌های اصطلاحی، مجازی و هم‌آیندهای دشوارتر",
+          "title_en": "Idioms and lexicalized collocations",
+          "prerequisites": [
+            "b12-derivation"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b22-precision",
+          "title_fa": "کنترل ارجاع، تضاد و رابطه‌های منطقی",
+          "title_en": "Fine-grained cohesion",
+          "prerequisites": [
+            "b21-discourse"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "b22-style-shift",
+          "title_fa": "تفاوت سبک در درخواست، انتقاد و متن رسمی",
+          "title_en": "Style shifting and politeness",
+          "prerequisites": [
+            "b21-register"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "b21-object-semantics",
+        "b21-passive-advanced",
+        "b21-cohesion"
+      ],
+      "topic_streams": [
+        {
+          "id": "media-literacy",
+          "title_fa": "رسانه و اطلاعات نادرست",
+          "samples": [
+            "väite",
+            "todiste",
+            "luotettava",
+            "näkökulma"
+          ]
+        },
+        {
+          "id": "environment",
+          "title_fa": "محیط زیست و سیاست عمومی",
+          "samples": [
+            "ilmasto",
+            "energiatehokkuus",
+            "päästö",
+            "päätöksenteko"
+          ]
+        },
+        {
+          "id": "work-advanced",
+          "title_fa": "فرایند و مدیریت",
+          "samples": [
+            "hankinta",
+            "tavoite",
+            "johtaminen",
+            "resurssi"
+          ]
+        },
+        {
+          "id": "culture-identity",
+          "title_fa": "هویت و فرهنگ",
+          "samples": [
+            "identiteetti",
+            "perinne",
+            "muutos",
+            "moninaisuus"
+          ]
+        }
+      ],
+      "expressions": [
+        "Näkemykseni mukaan …",
+        "Tätä voidaan tulkita myös niin, että …",
+        "Yhtäältä … toisaalta …",
+        "Edellä esitetyn perusteella …",
+        "On mahdollista, että …",
+        "Tässä yhteydessä on erotettava …"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Näiden tietojen perusteella ehdotus vaikuttaa perustellulta.",
+          "fa": "بر اساس این اطلاعات، پیشنهاد موجه به نظر می‌رسد."
+        },
+        {
+          "fi": "Kysymystä on tarkasteltava useasta näkökulmasta.",
+          "fa": "باید موضوع را از چند دیدگاه بررسی کرد."
+        },
+        {
+          "fi": "Tulos ei välttämättä tarkoita samaa kaikille.",
+          "fa": "این نتیجه لزوماً برای همه یکسان نیست."
+        },
+        {
+          "fi": "Tämä ei kuitenkaan poista ongelmaa.",
+          "fa": "با این حال، این مشکل را از بین نمی‌برد."
+        }
+      ],
+      "modules": [
+        {
+          "id": "b2.2-s1",
+          "title_fa": "تحلیل منابع و ادعاها",
+          "can_do_fa": "مقایسه دیدگاه‌ها"
+        },
+        {
+          "id": "b2.2-s2",
+          "title_fa": "مسئله‌های اجتماعی",
+          "can_do_fa": "توضیح پیامدها و پیشنهاد"
+        },
+        {
+          "id": "b2.2-s3",
+          "title_fa": "مکاتبه و گزارش رسمی",
+          "can_do_fa": "تنظیم سبک و ساختار"
+        },
+        {
+          "id": "b2.2-s4",
+          "title_fa": "بحث پیچیده و جمع‌بندی",
+          "can_do_fa": "ترکیب منابع و نتیجه‌گیری"
+        }
+      ],
+      "skills": {
+        "listening": "نکته‌ها و ظرافت استدلال گفتار طولانی را دنبال کند.",
+        "reading": "متن تحلیلی نسبتاً پیچیده و زاویه دید آن را ارزیابی کند.",
+        "spoken_interaction": "اختلاف‌نظر را با دقت و احترام مدیریت کند.",
+        "spoken_production": "دلیل‌های چندگانه را بدون از دست دادن انسجام ارائه کند.",
+        "writing": "متن تحلیلی چندبخشی و منظم بنویسد.",
+        "mediation": "دیدگاه‌های متعارض را منصفانه جمع‌بندی کند."
+      },
+      "assessment": {
+        "task_fa": "ارائه و پاسخ به پرسش‌های انتقادی و نوشتن گزارش ترکیبی با استناد به دو منبع.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": 24000,
+        "selection_policy_fa": "عبارت‌های ژانری، ساختارهای تأکیدی و واژه‌های معنایی دقیق را از متن‌های معتبر استخراج کن."
+      }
+    },
+    {
+      "level": "C1",
+      "cefr": "C1",
+      "title_fa": "کاربرد پیشرفتهٔ مستقل در بافت‌های گوناگون",
+      "outcome_en": "Communicate fluently and precisely in social, professional, and academic contexts.",
+      "outcome_fa": "زبان را روان، دقیق و متناسب با ژانر و مخاطب برای اهداف اجتماعی، حرفه‌ای و دانشگاهی به‌کار ببرد.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "c1-style",
+          "title_fa": "سبک رسمی، محاوره‌ای و ادبی و انتخاب هدفمند",
+          "title_en": "Flexible register and style",
+          "prerequisites": [
+            "b22-style-shift"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c1-discourse",
+          "title_fa": "ساختار متن پیچیده، انسجام و استدلال چندلایه",
+          "title_en": "Complex discourse organization",
+          "prerequisites": [
+            "b22-precision"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c1-implicature",
+          "title_fa": "اشارهٔ ضمنی، کنایه، لحن و ادب ارتباطی",
+          "title_en": "Pragmatic implication and nuance",
+          "prerequisites": [
+            "b22-mood-modality"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c1-morphology",
+          "title_fa": "کاربرد دقیق ساختارهای صرفی کم‌کاربرد با شواهد متنی",
+          "title_en": "Low-frequency morphology in context",
+          "prerequisites": [
+            "b22-nominalisation"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c1-collocations",
+          "title_fa": "هم‌آیندهای تخصصی، اصطلاحات و ترکیب‌های تثبیت‌شده",
+          "title_en": "Specialized collocations",
+          "prerequisites": [
+            "b22-idioms"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c1-varieties",
+          "title_fa": "شناخت گونه‌های محلی، گفتاری و موقعیتی",
+          "title_en": "Dialectal and situational variation",
+          "prerequisites": [
+            "b21-register"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "b22-information-structure",
+        "b22-mood-modality",
+        "b22-idioms"
+      ],
+      "topic_streams": [
+        {
+          "id": "academic",
+          "title_fa": "گفتار دانشگاهی و پژوهش",
+          "samples": [
+            "menetelmä",
+            "johtopäätös",
+            "viite",
+            "tulkinta"
+          ]
+        },
+        {
+          "id": "law-society",
+          "title_fa": "قانون، خدمات و اجتماع",
+          "samples": [
+            "lainsäädäntö",
+            "vastuullisuus",
+            "oikeudenmukaisuus",
+            "käytäntö"
+          ]
+        },
+        {
+          "id": "literature",
+          "title_fa": "ادبیات و نقد هنری",
+          "samples": [
+            "kerronta",
+            "symboli",
+            "metafora",
+            "tyyli"
+          ]
+        },
+        {
+          "id": "professional",
+          "title_fa": "تصمیم‌گیری حرفه‌ای",
+          "samples": [
+            "strategia",
+            "päätös",
+            "peruste",
+            "vaihtoehto"
+          ]
+        }
+      ],
+      "expressions": [
+        "Olennaista on tarkastella sitä, miten …",
+        "Edellä mainitusta huolimatta …",
+        "Tämä herättää kysymyksen siitä, …",
+        "Ilmiö voidaan ymmärtää usealla tavalla.",
+        "Mikäli oletetaan, että …",
+        "Tässä väitteessä jää huomiotta …"
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Tätä ilmiötä on syytä tarkastella laajemmassa yhteydessä.",
+          "fa": "باید این پدیده را در زمینه‌ای گسترده‌تر بررسی کرد."
+        },
+        {
+          "fi": "Vaikka perustelut ovat vakuuttavia, johtopäätös jää avoimeksi.",
+          "fa": "اگرچه دلایل قانع‌کننده‌اند، نتیجه‌گیری همچنان باز می‌ماند."
+        },
+        {
+          "fi": "Keskustelussa on erotettava tosiasiat tulkinnoista.",
+          "fa": "در بحث باید واقعیت‌ها را از تفسیرها جدا کرد."
+        },
+        {
+          "fi": "Hänen näkemyksensä poikkeaa aiemmin esitetystä.",
+          "fa": "دیدگاه او با آنچه پیش‌تر مطرح شده متفاوت است."
+        }
+      ],
+      "modules": [
+        {
+          "id": "c1-s1",
+          "title_fa": "متون دانشگاهی و حرفه‌ای",
+          "can_do_fa": "خلاصه و تحلیل متن پیچیده"
+        },
+        {
+          "id": "c1-s2",
+          "title_fa": "مذاکره و ارتباط بین‌فرهنگی",
+          "can_do_fa": "کنترل لحن و هدف"
+        },
+        {
+          "id": "c1-s3",
+          "title_fa": "ادبیات، رسانه و اشاره",
+          "can_do_fa": "برداشت معناهای ضمنی"
+        },
+        {
+          "id": "c1-s4",
+          "title_fa": "گزارش و استدلال پیشرفته",
+          "can_do_fa": "نوشتار دقیق و ارائه رسمی"
+        }
+      ],
+      "skills": {
+        "listening": "معنای اصلی و کنایه در گفتار طبیعی و طولانی را در بیشتر زمینه‌ها دریافت کند.",
+        "reading": "متن تخصصی پیچیده را از نظر ساختار، موضع و سبک تحلیل کند.",
+        "spoken_interaction": "به‌صورت روان با تغییر سبک و راهبرد مذاکره کند.",
+        "spoken_production": "موضوع‌های پیچیده را منظم و با تأکید مناسب بیان کند.",
+        "writing": "متن دانشگاهی/حرفه‌ای مفصل و منسجم بنویسد.",
+        "mediation": "دیدگاه چند منبع را متناسب با مخاطب تلفیق و بازبیان کند."
+      },
+      "assessment": {
+        "task_fa": "ارائهٔ مستقل با پرسش و پاسخ، تحلیل مقالهٔ دانشگاهی و نگارش گزارش چندمنبعی.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": null,
+        "selection_policy_fa": "از سقف عددی واژگان صرف‌نظر کن: تسلط بر کاربرد حرفه‌ای، ژانر، تنوع سبکی و دقت معنایی مهم‌تر از رتبهٔ Parole است."
+      }
+    },
+    {
+      "level": "C2",
+      "cefr": "C2",
+      "title_fa": "دقت، ظرافت و کنترل کامل ارتباط پیچیده",
+      "outcome_en": "Interpret almost all demanding discourse and express subtle distinctions precisely and spontaneously.",
+      "outcome_fa": "محتوای دشوار را دقیق تفسیر کند و با کنترل کامل لحن، کنایه، ژانر و تفاوت‌های معنایی ارتباط برقرار کند.",
+      "curriculum_file": null,
+      "delivery_status": "planned",
+      "grammar": [
+        {
+          "id": "c2-rhetoric",
+          "title_fa": "بلاغت و تغییر ظریف لحن برای مخاطب",
+          "title_en": "Rhetorical flexibility",
+          "prerequisites": [
+            "c1-style",
+            "c1-discourse"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c2-implicit",
+          "title_fa": "دریافت نیت، پیش‌فرض و معنی ضمنی",
+          "title_en": "Deep pragmatic inference",
+          "prerequisites": [
+            "c1-implicature"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c2-genre-editing",
+          "title_fa": "ویرایش پیشرفته و بازنویسی چندژانری",
+          "title_en": "Advanced editing across genres",
+          "prerequisites": [
+            "c1-style"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c2-idiomatic",
+          "title_fa": "اصطلاحات کم‌بسامد، طنز و ارجاعات فرهنگی",
+          "title_en": "Idiomatic and cultural allusions",
+          "prerequisites": [
+            "c1-collocations",
+            "c1-varieties"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c2-precision",
+          "title_fa": "تفاوت‌های بسیار ریز معنایی و انتخاب واژه",
+          "title_en": "Lexical-semantic precision",
+          "prerequisites": [
+            "c1-collocations"
+          ],
+          "depth": "introduce"
+        },
+        {
+          "id": "c2-synthesis",
+          "title_fa": "تلفیق انتقادی منابع ناهمگون و اختلاف‌های ضمنی",
+          "title_en": "Cross-source synthesis",
+          "prerequisites": [
+            "c1-discourse"
+          ],
+          "depth": "introduce"
+        }
+      ],
+      "review_grammar": [
+        "c1-implicature",
+        "c1-varieties",
+        "c1-morphology"
+      ],
+      "topic_streams": [
+        {
+          "id": "specialist-innovation",
+          "title_fa": "متون تخصصی و فناورانه",
+          "samples": [
+            "tutkimustieto",
+            "monitulkintainen",
+            "perustelu",
+            "tarkkuus"
+          ]
+        },
+        {
+          "id": "literary-cultural",
+          "title_fa": "سبک و فرهنگ",
+          "samples": [
+            "ironia",
+            "viittaus",
+            "kerronnallinen",
+            "sävy"
+          ]
+        },
+        {
+          "id": "advanced-mediation",
+          "title_fa": "میانجی‌گری پیچیده",
+          "samples": [
+            "ristiriita",
+            "tulkintakehys",
+            "sovittelu",
+            "taustaoletus"
+          ]
+        },
+        {
+          "id": "precision",
+          "title_fa": "بازنویسی حرفه‌ای",
+          "samples": [
+            "vivahde",
+            "johdonmukaisuus",
+            "täsmällisyys",
+            "painotus"
+          ]
+        }
+      ],
+      "expressions": [
+        "Se, mitä lausumatta jää, on tässä yhtä olennaista kuin …",
+        "Tarkastelutavasta riippuen …",
+        "Väitteen taustalla näyttää olevan oletus, että …",
+        "Tämä tulkinta ei yksin riitä selittämään …",
+        "Sanavalinta muuttaa merkitysvivahdetta.",
+        "Teksti voidaan muotoilla myös lukijalähtöisemmin."
+      ],
+      "sentence_patterns": [
+        {
+          "fi": "Tulkinnan uskottavuus riippuu siitä, mitä oletuksia pidetään perusteltuina.",
+          "fa": "توجیه‌پذیری تفسیر به این بستگی دارد که کدام پیش‌فرض‌ها موجه دانسته شوند."
+        },
+        {
+          "fi": "Ilmauksen sävy muuttuu asiayhteyden mukaan.",
+          "fa": "لحن عبارت بسته به بافت تغییر می‌کند."
+        },
+        {
+          "fi": "Näennäinen ristiriita ratkeaa, kun käsitteet erotetaan toisistaan.",
+          "fa": "تعارض ظاهری وقتی حل می‌شود که مفاهیم از هم تفکیک شوند."
+        },
+        {
+          "fi": "Kirjoittaja jättää johtopäätöksen tarkoituksella avoimeksi.",
+          "fa": "نویسنده عمداً نتیجه‌گیری را باز می‌گذارد."
+        }
+      ],
+      "modules": [
+        {
+          "id": "c2-s1",
+          "title_fa": "تفسیر چندلایه و سبک",
+          "can_do_fa": "درک کنایه و هدف نویسنده"
+        },
+        {
+          "id": "c2-s2",
+          "title_fa": "بازنویسی و ویرایش تخصصی",
+          "can_do_fa": "تغییر سبک بدون تغییر معنی"
+        },
+        {
+          "id": "c2-s3",
+          "title_fa": "مذاکره و گفت‌وگوی دشوار",
+          "can_do_fa": "واکنش سریع، دقیق و ظریف"
+        },
+        {
+          "id": "c2-s4",
+          "title_fa": "ترکیب منابع و تولید خلاق",
+          "can_do_fa": "بازسازی و نقد اطلاعات پیچیده"
+        }
+      ],
+      "skills": {
+        "listening": "گفتار سریع، ضمنی و متنوع را با دقت بالا تفسیر کند.",
+        "reading": "متون پیچیدهٔ تخصصی و ادبی را با ظرافت معنایی تحلیل کند.",
+        "spoken_interaction": "در موضوع‌های پیچیده روان و دقیق با ظرافت گفت‌وگو کند.",
+        "spoken_production": "بیان پیچیده و خودانگیخته با لحن هدفمند داشته باشد.",
+        "writing": "متون دشوار را با دقت بالا تولید و بازنویسی کند.",
+        "mediation": "تعارض‌های ظریف بین منابع را تلفیق و برای مخاطب روشن کند."
+      },
+      "assessment": {
+        "task_fa": "تحلیل متن پرارجاع، مذاکرهٔ پیچیده، ارائهٔ آزاد و بازنویسی حرفه‌ای برای دو مخاطب متفاوت.",
+        "coverage": [
+          "listening",
+          "reading",
+          "spoken_interaction",
+          "spoken_production",
+          "writing",
+          "mediation"
+        ],
+        "rating": "performance_rubric",
+        "human_assessment_required": true
+      },
+      "frequency_stream": {
+        "advisory_parole_source_position_ceiling": null,
+        "selection_policy_fa": "در C2 فهرست واژهٔ پایان‌یافتنی وجود ندارد؛ ارزیابی بر شواهد عملکردی و دامنهٔ ژانری استوار باشد."
+      }
+    }
+  ]
+}
