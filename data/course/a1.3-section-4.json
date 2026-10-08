@@ -3632,12 +3632,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-078",
+          "item": "a13s4-e-007",
           "options": [
-            "a13s4-e-078",
-            "a13s4-h-003",
-            "a13s4-t-004",
-            "a13s4-t-005"
+            "a13s4-e-007",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
           ]
         }
       ],
@@ -3657,12 +3657,12 @@
         "a13s4-cross-5",
         "a13s4-cross-6",
         "a13s4-e-077",
-        "a13s4-e-078"
+        "a13s4-e-007"
       ],
       "morphology_practice": [
         {
           "type": "morphology-choice",
-          "item": "a13s4-e-067",
+          "item": "a13s4-e-007",
           "base_fi": "olla",
           "feature_fa": "گذشتهٔ اول‌شخص مفرد",
           "prompt_fa": "برای «دیروز خانه بودم» صورت گذشتهٔ صحیح را انتخاب کن.",
