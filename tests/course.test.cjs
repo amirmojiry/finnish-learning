@@ -959,3 +959,19 @@ test('long mobile lesson content starts at the top of its scrollable card', () =
     /body\.course-lesson-active \.course-question-card\.is-long-content\s*\{[\s\S]*?justify-content:\s*flex-start/,
   );
 });
+
+
+test('teaching cards autoplay Finnish audio and feedback offers example playback', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /Autoplay only on explicit teaching cards/);
+  assert.match(source, /پخش تلفظ جملهٔ مثال/);
+  assert.match(source, /gradeTypedAnswer\(\{ \.\.\.item, accepted_answers: \[item\.surface_form\] \}, input\.value\)/);
+});
+
+test('morning in Persian accepts both aamu and aamulla', () => {
+  const section = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/course/a1.1-section-3.json'), 'utf8'));
+  const item = section.items['s3-aamulla'];
+  assert.ok(item.accepted_answers.includes('aamu'));
+  assert.ok(item.accepted_answers.includes('aamulla'));
+  assert.equal(course.gradeTypedAnswer(item, 'aamu').accepted, true);
+});
