@@ -6,6 +6,21 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.27.0] - 2026-10-08
+
+### Added
+
+- Complete A1.2 Sections 3 and 4 with twenty additional reviewed lessons and 300 deterministic activities covering routines, study, work, frequency, hobbies, invitations, short arrangements, weather, clothing, body parts, symptoms, pharmacy, appointments and asking for help.
+- Integrated short readings, ordered dialogues, visual and clock tasks, Finnish listening/dictation, production and explicit reviewed morphology.
+- A1.2 Section 3 checkpoint and Section 4 cumulative 80% checkpoint reviewing shopping, transport, arrangements and health across all four A1.2 sections.
+- Regression tests for the complete 80-lesson A1.1/A1.2 path, honest corpus provenance, contextual Persian prompts and cumulative checkpoint coverage.
+
+### Changed
+
+- Load all four A1.2 sections and update curriculum and roadmap delivery states while keeping A1.3 and A2–C2 planning-only.
+- Preserve the 400-entry Parole dictionary and existing user progress; curated lesson-topic expressions do not receive fabricated corpus ranks.
+
+
 ## [1.26.2] - 2026-10-08
 
 ### Documentation

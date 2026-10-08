@@ -21,6 +21,8 @@ test('A1.2 stage loads both implemented sections in curriculum order', () => {
   assert.deepEqual(stage.sectionUrls, [
     './data/course/a1.2-section-1.json',
     './data/course/a1.2-section-2.json',
+    './data/course/a1.2-section-3.json',
+    './data/course/a1.2-section-4.json',
   ]);
 });
 

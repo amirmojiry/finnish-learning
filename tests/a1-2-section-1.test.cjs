@@ -19,6 +19,8 @@ test('course stage configuration exposes playable A1.1 and A1.2 only', () => {
   assert.deepEqual(course.COURSE_STAGES[1].sectionUrls, [
     './data/course/a1.2-section-1.json',
     './data/course/a1.2-section-2.json',
+    './data/course/a1.2-section-3.json',
+    './data/course/a1.2-section-4.json',
   ]);
   assert.doesNotMatch(JSON.stringify(course.COURSE_STAGES), /A1\.3/);
 });

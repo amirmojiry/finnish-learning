@@ -64,7 +64,7 @@ test('inventory distinguishes planned, shipped and source dictionary terms', () 
   const a12 = audit.stages.find(s => s.level === 'A1.2');
   const a13 = audit.stages.find(s => s.level === 'A1.3');
   assert.equal(a11.shipped_lesson_count, a11.authored_curriculum_lessons);
-  assert.ok(a12.shipped_lesson_count > 0 && a12.shipped_lesson_count < a12.authored_curriculum_lessons);
+  assert.equal(a12.shipped_lesson_count, a12.authored_curriculum_lessons);
   assert.equal(a13.shipped_lesson_count, 0);
   assert.equal(a13.authored_curriculum_lessons, 40);
   assert.ok(a11.target_strings_also_in_current_dictionary <= a11.unique_curriculum_lexical_surface_targets);

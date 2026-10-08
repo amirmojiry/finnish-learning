@@ -282,7 +282,7 @@
       "outcome_en": "Complete predictable transactions and ask for places, quantities, and help.",
       "outcome_fa": "خرید، مسیر، زمان‌بندی و درخواست‌های آشنای روزمره را با عبارت‌های تمرین‌شده انجام دهد.",
       "curriculum_file": "data/course/a1.2-curriculum.json",
-      "delivery_status": "partially_implemented",
+      "delivery_status": "implemented",
       "grammar": [
         {
           "id": "a12-quantities",

@@ -11,8 +11,8 @@ This status snapshot was checked on **2026-10-08**. For fresh implementation cou
 | Stage | Curriculum planning | Implemented lesson records | Next decision |
 | --- | --- | --- | --- |
 | A1.1 | 4 sections, 40 lessons in [A1.1 curriculum](../data/course/a1.1-curriculum.json) | 4 sections / 40 lessons | Maintain correctness, review exercise quality and skills evidence |
-| A1.2 | 4 sections, 40 lessons in [A1.2 curriculum](../data/course/a1.2-curriculum.json) | Sections 1–2 / 20 lessons | **Build and validate Sections 3–4** |
-| A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 0 | Build the reviewed lesson manifests after A1.2 |
+| A1.2 | 4 sections, 40 lessons in [A1.2 curriculum](../data/course/a1.2-curriculum.json) | **4 sections / 40 lessons** | Continue correctness, device/audio and proficiency-evidence auditing |
+| A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 0 | **Next content milestone: build reviewed A1.3 sections** |
 | A2.1–C2 | Four proposed modules per level in the [master plan](../data/course/master-curriculum.json) | 0 | Author and review full level curricula before writing lessons |
 
 The shipped dictionary has an independently generated count and Parole frequency fields. Do not interpret stage lexical targets as existing dictionary entries or attained proficiency. Consult the [vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) and [vocabulary roadmap](VOCABULARY-ROADMAP.md) when sourcing new items.
@@ -21,21 +21,20 @@ The shipped dictionary has an independently generated count and Parole frequency
 
 - **A1.1 foundation:** Four playable sections, lesson summaries, reviewed example frames, basic morphology, prerequisite and recycling relationships, and automated data contracts.
 - **Course practice foundations:** Persian-to-Finnish production, reading/listening and dictation where device audio permits, sentence ordering, expression completion, exercise feedback and course weakness review with answer history.
-- **Authoring contracts:** A1.2 and A1.3 lesson-level plans are reviewed but not fully implemented; separate plans exist for frequency vs curated vocabulary.
+- **Authoring contracts:** A1.2's reviewed contract is now fully playable; A1.3 has a reviewed lesson plan but no playable manifests yet. Frequency and curated topical sources remain separate.
 - **Source-backed vocabulary:** The reviewed Parole position tranche through 400 was added to the dictionary. Future tranches must be selected from evidence, not simply assumed to cover the next curriculum topics.
 - **Whole-course planning:** A1.1–C2 master JSON with grammar dependencies, topic vocabulary, sentence/phrase examples and proposed authentic assessment. These are design targets, not automatic certification claims.
 
 ## Near-term content priorities
 
-### 1. Finish A1.2 (next)
+### 1. Review completed A1.2 and close quality gaps
 
-- Build A1.2 Section 3: daily life, study, work and simple arrangements.
-- Build A1.2 Section 4: weather, health and routine help.
-- Verify lesson IDs, prior-level prerequisites, natural Finnish examples, all acceptable answers and Persian translations. Introduce topic vocabulary explicitly when a source-ranked form is absent from the current dictionary.
-- Add listening, recognition and production as appropriate. Keep score claims limited to assessed skills.
-- Re-run `npm run curriculum:check`, `npm run curriculum:audit` and `npm test`; reconcile the [implementation audit](CURRICULUM-AUDIT.fa.md).
+- A1.2 Sections 3 (routines, work/study, appointments) and 4 (weather, symptoms, pharmacy and help) are now playable: 20 new lessons, each with 15 activities.
+- Re-evaluate expression naturalness, accepted variants, device speech support, visual clarity and the final cumulative checkpoint using user feedback.
+- All four sections must keep reviewed target IDs, explicit word morphology and authentic Persian prompts; do not confuse this milestone with independent CEFR/YKI proficiency assessment.
+- Use `npm run curriculum:check`, `npm run curriculum:audit` and `npm test` before any content release.
 
-### 2. Implement A1.3 after A1.2
+### 2. Implement A1.3 (next content priority)
 
 - Convert the [reviewed A1.3 curriculum](../data/course/a1.3-curriculum.json) into playable sections, not a second competing planning matrix.
 - Extend familiar conversations, messages, home/neighborhood, study/work and recent-event phrases.
