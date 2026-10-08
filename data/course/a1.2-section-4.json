@@ -1,0 +1,3658 @@
+{
+  "schema_version": 1,
+  "id": "a1.2-section-4",
+  "level": "A1.2",
+  "curriculum_section_id": "a1.2-s4",
+  "title_fa": "بخش ۴: آب‌وهوا، سلامت و کمک‌های روزمره",
+  "subtitle_fa": "آب‌وهوا، فصل و لباس، اعضای بدن، سلامت، داروخانه، وقت و کمک",
+  "description_fa": "ده درس پایانی A1.2 به آب‌وهوا، بیان نیازهای سادهٔ سلامت و درخواست کمک می‌پردازد و در پایان همهٔ موقعیت‌های A1.2 را مرور می‌کند.",
+  "can_do_fa": [
+    "اطلاعات بسیار ساده دربارهٔ آب‌وهوا و حال جسمی را بفهمد و بیان کند، یک تعامل پایه در داروخانه یا برای وقت‌گرفتن انجام دهد و کمک روزمره بخواهد.",
+    "می‌توانم عبارت‌های آشنا از بخش‌های خرید، سفر و هماهنگی قرار را نیز مرور کنم."
+  ],
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a12s4-hf-01": {
+      "id": "a12s4-hf-01",
+      "surface_form": "nyt",
+      "lemma": "nyt",
+      "translation_fa": "اکنون",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 23,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Nyt on hyvä aika.",
+      "example_fa": "حالا زمان خوبی است.",
+      "accepted_answers": [
+        "nyt"
+      ]
+    },
+    "a12s4-hf-02": {
+      "id": "a12s4-hf-02",
+      "surface_form": "hyvin",
+      "lemma": "hyvin",
+      "translation_fa": "خوب",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 58,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "En voi hyvin.",
+      "example_fa": "حالم خوب نیست.",
+      "accepted_answers": [
+        "hyvin"
+      ]
+    },
+    "a12s4-hf-03": {
+      "id": "a12s4-hf-03",
+      "surface_form": "paljon",
+      "lemma": "paljon",
+      "translation_fa": "زیاد",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 60,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Tänään sataa paljon.",
+      "example_fa": "امروز باران زیادی می‌بارد.",
+      "accepted_answers": [
+        "paljon"
+      ]
+    },
+    "a12s4-hf-04": {
+      "id": "a12s4-hf-04",
+      "surface_form": "aikana",
+      "lemma": "aika",
+      "translation_fa": "در مدت / هنگام",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 82,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Päivän aikana sataa.",
+      "example_fa": "در طول روز باران می‌بارد.",
+      "accepted_answers": [
+        "aikana"
+      ]
+    },
+    "a12s4-hf-05": {
+      "id": "a12s4-hf-05",
+      "surface_form": "liian",
+      "lemma": "liian",
+      "translation_fa": "بیش از اندازه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 166,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "On liian kylmä.",
+      "example_fa": "هوا بیش از اندازه سرد است.",
+      "accepted_answers": [
+        "liian"
+      ]
+    },
+    "a12s4-hf-06": {
+      "id": "a12s4-hf-06",
+      "surface_form": "tämä",
+      "lemma": "tämä",
+      "translation_fa": "این",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 49,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Tämä on käsi.",
+      "example_fa": "این دست است.",
+      "accepted_answers": [
+        "tämä"
+      ]
+    },
+    "a12s4-hf-07": {
+      "id": "a12s4-hf-07",
+      "surface_form": "minun",
+      "lemma": "minä",
+      "translation_fa": "منِ / مال من",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 163,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Minun päätäni särkee.",
+      "example_fa": "سرم درد می‌کند.",
+      "accepted_answers": [
+        "minun"
+      ]
+    },
+    "a12s4-hf-08": {
+      "id": "a12s4-hf-08",
+      "surface_form": "missä",
+      "lemma": "mikä",
+      "translation_fa": "کجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 188,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Missä apteekki on?",
+      "example_fa": "داروخانه کجاست؟",
+      "accepted_answers": [
+        "missä"
+      ]
+    },
+    "a12s4-hf-09": {
+      "id": "a12s4-hf-09",
+      "surface_form": "vähän",
+      "lemma": "vähän",
+      "translation_fa": "کمی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 139,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Minulla on vähän kuumetta.",
+      "example_fa": "کمی تب دارم.",
+      "accepted_answers": [
+        "vähän"
+      ]
+    },
+    "a12s4-hf-10": {
+      "id": "a12s4-hf-10",
+      "surface_form": "olen",
+      "lemma": "olla",
+      "translation_fa": "هستم",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 96,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Olen sairas.",
+      "example_fa": "بیمارم.",
+      "accepted_answers": [
+        "olen"
+      ]
+    },
+    "a12s4-hf-11": {
+      "id": "a12s4-hf-11",
+      "surface_form": "mitä",
+      "lemma": "mikä",
+      "translation_fa": "چه / چه چیزی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 40,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Mitä tähän voi ottaa?",
+      "example_fa": "برای این مشکل چه می‌توان مصرف کرد؟",
+      "accepted_answers": [
+        "mitä"
+      ]
+    },
+    "a12s4-hf-12": {
+      "id": "a12s4-hf-12",
+      "surface_form": "saa",
+      "lemma": "saada",
+      "translation_fa": "می‌توان گرفت",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 61,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Täältä saa apua.",
+      "example_fa": "از اینجا می‌توان کمک گرفت.",
+      "accepted_answers": [
+        "saa"
+      ]
+    },
+    "a12s4-hf-13": {
+      "id": "a12s4-hf-13",
+      "surface_form": "ottaa",
+      "lemma": "ottaa",
+      "translation_fa": "گرفتن / مصرف‌کردن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 192,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Mitä tähän voi ottaa?",
+      "example_fa": "برای این مشکل چه می‌توان مصرف کرد؟",
+      "accepted_answers": [
+        "ottaa"
+      ]
+    },
+    "a12s4-hf-14": {
+      "id": "a12s4-hf-14",
+      "surface_form": "aika",
+      "lemma": "aika",
+      "translation_fa": "زمان / وقت",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 151,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Minulla on aika lääkärille.",
+      "example_fa": "وقت دکتر دارم.",
+      "accepted_answers": [
+        "aika"
+      ]
+    },
+    "a12s4-hf-15": {
+      "id": "a12s4-hf-15",
+      "surface_form": "heti",
+      "lemma": "heti",
+      "translation_fa": "فوراً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 141,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Tarvitsen apua heti.",
+      "example_fa": "فوراً کمک لازم دارم.",
+      "accepted_answers": [
+        "heti"
+      ]
+    },
+    "a12s4-hf-16": {
+      "id": "a12s4-hf-16",
+      "surface_form": "täällä",
+      "lemma": "täällä",
+      "translation_fa": "اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 229,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Olen täällä.",
+      "example_fa": "اینجا هستم.",
+      "accepted_answers": [
+        "täällä"
+      ]
+    },
+    "a12s4-hf-17": {
+      "id": "a12s4-hf-17",
+      "surface_form": "voi",
+      "lemma": "voida",
+      "translation_fa": "می‌تواند",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 25,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "En voi hyvin.",
+      "example_fa": "حالم خوب نیست.",
+      "accepted_answers": [
+        "voi"
+      ]
+    },
+    "a12s4-hf-18": {
+      "id": "a12s4-hf-18",
+      "surface_form": "jos",
+      "lemma": "jos",
+      "translation_fa": "اگر",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 22,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Jos on kylmä, ota takki.",
+      "example_fa": "اگر هوا سرد است، کاپشن بردار.",
+      "accepted_answers": [
+        "jos"
+      ]
+    },
+    "a12s4-hf-19": {
+      "id": "a12s4-hf-19",
+      "surface_form": "ehkä",
+      "lemma": "ehkä",
+      "translation_fa": "شاید",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 124,
+      "topics": [
+        "weather-health",
+        "source-backed"
+      ],
+      "example_fi": "Ehkä huomenna.",
+      "example_fa": "شاید فردا.",
+      "accepted_answers": [
+        "ehkä"
+      ]
+    },
+    "a12s4-topic-01": {
+      "id": "a12s4-topic-01",
+      "surface_form": "sää",
+      "lemma": "sää",
+      "translation_fa": "آب‌وهوا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Millainen sää tänään on?",
+      "example_fa": "هوای امروز چطور است؟",
+      "accepted_answers": [
+        "sää"
+      ],
+      "visual": "🌤️"
+    },
+    "a12s4-topic-02": {
+      "id": "a12s4-topic-02",
+      "surface_form": "aurinko",
+      "lemma": "aurinko",
+      "translation_fa": "خورشید",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Aurinko paistaa.",
+      "example_fa": "خورشید می‌تابد.",
+      "accepted_answers": [
+        "aurinko"
+      ],
+      "visual": "☀️"
+    },
+    "a12s4-topic-03": {
+      "id": "a12s4-topic-03",
+      "surface_form": "sade",
+      "lemma": "sade",
+      "translation_fa": "باران",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Sade alkaa aamulla.",
+      "example_fa": "باران صبح شروع می‌شود.",
+      "accepted_answers": [
+        "sade"
+      ],
+      "visual": "🌧️"
+    },
+    "a12s4-topic-04": {
+      "id": "a12s4-topic-04",
+      "surface_form": "tuuli",
+      "lemma": "tuuli",
+      "translation_fa": "باد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tuuli on kova.",
+      "example_fa": "باد شدید است.",
+      "accepted_answers": [
+        "tuuli"
+      ],
+      "visual": "💨"
+    },
+    "a12s4-topic-05": {
+      "id": "a12s4-topic-05",
+      "surface_form": "kylmä",
+      "lemma": "kylmä",
+      "translation_fa": "سرد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tänään on kylmä.",
+      "example_fa": "امروز هوا سرد است.",
+      "accepted_answers": [
+        "kylmä"
+      ]
+    },
+    "a12s4-topic-06": {
+      "id": "a12s4-topic-06",
+      "surface_form": "lämmin",
+      "lemma": "lämmin",
+      "translation_fa": "گرم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tänään on lämmin.",
+      "example_fa": "امروز هوا گرم است.",
+      "accepted_answers": [
+        "lämmin"
+      ]
+    },
+    "a12s4-topic-07": {
+      "id": "a12s4-topic-07",
+      "surface_form": "talvi",
+      "lemma": "talvi",
+      "translation_fa": "زمستان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Talvi on pitkä.",
+      "example_fa": "زمستان طولانی است.",
+      "accepted_answers": [
+        "talvi"
+      ],
+      "visual": "❄️"
+    },
+    "a12s4-topic-08": {
+      "id": "a12s4-topic-08",
+      "surface_form": "kesä",
+      "lemma": "kesä",
+      "translation_fa": "تابستان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Kesä on lämmin.",
+      "example_fa": "تابستان گرم است.",
+      "accepted_answers": [
+        "kesä"
+      ],
+      "visual": "🏖️"
+    },
+    "a12s4-topic-09": {
+      "id": "a12s4-topic-09",
+      "surface_form": "syksy",
+      "lemma": "syksy",
+      "translation_fa": "پاییز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Syksy on viileä.",
+      "example_fa": "پاییز خنک است.",
+      "accepted_answers": [
+        "syksy"
+      ]
+    },
+    "a12s4-topic-10": {
+      "id": "a12s4-topic-10",
+      "surface_form": "kevät",
+      "lemma": "kevät",
+      "translation_fa": "بهار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Kevät on täällä.",
+      "example_fa": "بهار رسیده است.",
+      "accepted_answers": [
+        "kevät"
+      ]
+    },
+    "a12s4-topic-11": {
+      "id": "a12s4-topic-11",
+      "surface_form": "takki",
+      "lemma": "takki",
+      "translation_fa": "کاپشن / کت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Ota takki.",
+      "example_fa": "کاپشن را بردار.",
+      "accepted_answers": [
+        "takki"
+      ],
+      "visual": "🧥"
+    },
+    "a12s4-topic-12": {
+      "id": "a12s4-topic-12",
+      "surface_form": "kengät",
+      "lemma": "kenkä",
+      "translation_fa": "کفش‌ها",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Nämä kengät ovat hyvät.",
+      "example_fa": "این کفش‌ها خوب هستند.",
+      "accepted_answers": [
+        "kengät"
+      ],
+      "visual": "👟"
+    },
+    "a12s4-topic-13": {
+      "id": "a12s4-topic-13",
+      "surface_form": "pää",
+      "lemma": "pää",
+      "translation_fa": "سر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Pää on kipeä.",
+      "example_fa": "سر درد می‌کند.",
+      "accepted_answers": [
+        "pää"
+      ],
+      "visual": "🙂"
+    },
+    "a12s4-topic-14": {
+      "id": "a12s4-topic-14",
+      "surface_form": "käsi",
+      "lemma": "käsi",
+      "translation_fa": "دست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tämä on käsi.",
+      "example_fa": "این دست است.",
+      "accepted_answers": [
+        "käsi"
+      ],
+      "visual": "✋"
+    },
+    "a12s4-topic-15": {
+      "id": "a12s4-topic-15",
+      "surface_form": "jalka",
+      "lemma": "jalka",
+      "translation_fa": "پا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Jalka on kipeä.",
+      "example_fa": "پا درد می‌کند.",
+      "accepted_answers": [
+        "jalka"
+      ],
+      "visual": "🦶"
+    },
+    "a12s4-topic-16": {
+      "id": "a12s4-topic-16",
+      "surface_form": "vatsa",
+      "lemma": "vatsa",
+      "translation_fa": "شکم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Minun vatsani on kipeä.",
+      "example_fa": "شکمم درد می‌کند.",
+      "accepted_answers": [
+        "vatsa"
+      ],
+      "visual": "🫃"
+    },
+    "a12s4-topic-17": {
+      "id": "a12s4-topic-17",
+      "surface_form": "kurkku",
+      "lemma": "kurkku",
+      "translation_fa": "گلو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Kurkku on kipeä.",
+      "example_fa": "گلو درد می‌کند.",
+      "accepted_answers": [
+        "kurkku"
+      ],
+      "visual": "🗣️"
+    },
+    "a12s4-topic-18": {
+      "id": "a12s4-topic-18",
+      "surface_form": "sairas",
+      "lemma": "sairas",
+      "translation_fa": "بیمار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Olen sairas.",
+      "example_fa": "بیمارم.",
+      "accepted_answers": [
+        "sairas"
+      ]
+    },
+    "a12s4-topic-19": {
+      "id": "a12s4-topic-19",
+      "surface_form": "kipeä",
+      "lemma": "kipeä",
+      "translation_fa": "دردناک / بیمار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Jalka on kipeä.",
+      "example_fa": "پا درد می‌کند.",
+      "accepted_answers": [
+        "kipeä"
+      ]
+    },
+    "a12s4-topic-20": {
+      "id": "a12s4-topic-20",
+      "surface_form": "kuume",
+      "lemma": "kuume",
+      "translation_fa": "تب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Kuume on kova.",
+      "example_fa": "تب شدید است.",
+      "accepted_answers": [
+        "kuume"
+      ]
+    },
+    "a12s4-topic-21": {
+      "id": "a12s4-topic-21",
+      "surface_form": "yskä",
+      "lemma": "yskä",
+      "translation_fa": "سرفه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Minulla on yskä.",
+      "example_fa": "سرفه دارم.",
+      "accepted_answers": [
+        "yskä"
+      ]
+    },
+    "a12s4-topic-22": {
+      "id": "a12s4-topic-22",
+      "surface_form": "apteekki",
+      "lemma": "apteekki",
+      "translation_fa": "داروخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Apteekki on lähellä.",
+      "example_fa": "داروخانه نزدیک است.",
+      "accepted_answers": [
+        "apteekki"
+      ]
+    },
+    "a12s4-topic-23": {
+      "id": "a12s4-topic-23",
+      "surface_form": "lääke",
+      "lemma": "lääke",
+      "translation_fa": "دارو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Lääke auttaa.",
+      "example_fa": "دارو کمک می‌کند.",
+      "accepted_answers": [
+        "lääke"
+      ]
+    },
+    "a12s4-topic-24": {
+      "id": "a12s4-topic-24",
+      "surface_form": "kipu",
+      "lemma": "kipu",
+      "translation_fa": "درد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Kipu on kova.",
+      "example_fa": "درد شدید است.",
+      "accepted_answers": [
+        "kipu"
+      ]
+    },
+    "a12s4-topic-25": {
+      "id": "a12s4-topic-25",
+      "surface_form": "tarvitsen",
+      "lemma": "tarvita",
+      "translation_fa": "نیاز دارم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen takin.",
+      "example_fa": "کاپشن لازم دارم.",
+      "accepted_answers": [
+        "tarvitsen"
+      ]
+    },
+    "a12s4-topic-26": {
+      "id": "a12s4-topic-26",
+      "surface_form": "milloin",
+      "lemma": "milloin",
+      "translation_fa": "کی / چه زمانی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Milloin lääkäri tulee?",
+      "example_fa": "دکتر کی می‌آید؟",
+      "accepted_answers": [
+        "milloin"
+      ]
+    },
+    "a12s4-topic-27": {
+      "id": "a12s4-topic-27",
+      "surface_form": "huomenna",
+      "lemma": "huomenna",
+      "translation_fa": "فردا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Onko aikaa huomenna?",
+      "example_fa": "فردا وقت خالی هست؟",
+      "accepted_answers": [
+        "huomenna"
+      ]
+    },
+    "a12s4-topic-28": {
+      "id": "a12s4-topic-28",
+      "surface_form": "lääkäri",
+      "lemma": "lääkäri",
+      "translation_fa": "پزشک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Lääkäri on täällä.",
+      "example_fa": "پزشک اینجاست.",
+      "accepted_answers": [
+        "lääkäri"
+      ]
+    },
+    "a12s4-topic-29": {
+      "id": "a12s4-topic-29",
+      "surface_form": "terveysasema",
+      "lemma": "terveysasema",
+      "translation_fa": "مرکز درمانی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Terveysasema on lähellä.",
+      "example_fa": "مرکز درمانی نزدیک است.",
+      "accepted_answers": [
+        "terveysasema"
+      ]
+    },
+    "a12s4-topic-30": {
+      "id": "a12s4-topic-30",
+      "surface_form": "ajanvaraus",
+      "lemma": "ajanvaraus",
+      "translation_fa": "وقت‌گرفتن / رزرو نوبت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Ajanvaraus alkaa kahdeksalta.",
+      "example_fa": "وقت‌دهی از ساعت هشت آغاز می‌شود.",
+      "accepted_answers": [
+        "ajanvaraus"
+      ]
+    },
+    "a12s4-topic-31": {
+      "id": "a12s4-topic-31",
+      "surface_form": "varata",
+      "lemma": "varata",
+      "translation_fa": "رزروکردن / وقت‌گرفتن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Haluaisin varata ajan.",
+      "example_fa": "می‌خواهم وقت بگیرم.",
+      "accepted_answers": [
+        "varata"
+      ]
+    },
+    "a12s4-topic-32": {
+      "id": "a12s4-topic-32",
+      "surface_form": "apu",
+      "lemma": "apu",
+      "translation_fa": "کمک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Apu tulee pian.",
+      "example_fa": "کمک به‌زودی می‌رسد.",
+      "accepted_answers": [
+        "apu"
+      ]
+    },
+    "a12s4-topic-33": {
+      "id": "a12s4-topic-33",
+      "surface_form": "auttaa",
+      "lemma": "auttaa",
+      "translation_fa": "کمک‌کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Voitko auttaa?",
+      "example_fa": "می‌توانی کمکم کنی؟",
+      "accepted_answers": [
+        "auttaa"
+      ]
+    },
+    "a12s4-topic-34": {
+      "id": "a12s4-topic-34",
+      "surface_form": "hätä",
+      "lemma": "hätä",
+      "translation_fa": "وضعیت اضطراری",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Onko sinulla hätä?",
+      "example_fa": "آیا وضعیت اضطراری داری؟",
+      "accepted_answers": [
+        "hätä"
+      ]
+    },
+    "a12s4-topic-35": {
+      "id": "a12s4-topic-35",
+      "surface_form": "ota",
+      "lemma": "ottaa",
+      "translation_fa": "بردار (امر)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Ota takki.",
+      "example_fa": "کاپشن را بردار.",
+      "accepted_answers": [
+        "ota"
+      ]
+    },
+    "a12s4-topic-36": {
+      "id": "a12s4-topic-36",
+      "surface_form": "juo",
+      "lemma": "juoda",
+      "translation_fa": "بنوش (امر)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Juo vettä.",
+      "example_fa": "آب بنوش.",
+      "accepted_answers": [
+        "juo"
+      ]
+    },
+    "a12s4-topic-37": {
+      "id": "a12s4-topic-37",
+      "surface_form": "lepää",
+      "lemma": "levätä",
+      "translation_fa": "استراحت کن (امر)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Lepää kotona.",
+      "example_fa": "در خانه استراحت کن.",
+      "accepted_answers": [
+        "lepää"
+      ]
+    },
+    "a12s4-topic-38": {
+      "id": "a12s4-topic-38",
+      "surface_form": "sisällä",
+      "lemma": "sisällä",
+      "translation_fa": "داخل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Pysy sisällä.",
+      "example_fa": "داخل بمان.",
+      "accepted_answers": [
+        "sisällä"
+      ]
+    },
+    "a12s4-topic-39": {
+      "id": "a12s4-topic-39",
+      "surface_form": "ulkona",
+      "lemma": "ulkona",
+      "translation_fa": "بیرون",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Ulkona on kylmä.",
+      "example_fa": "بیرون هوا سرد است.",
+      "accepted_answers": [
+        "ulkona"
+      ]
+    },
+    "a12s4-expr-01": {
+      "id": "a12s4-expr-01",
+      "surface_form": "Tänään on kylmä.",
+      "lemma": "Tänään on kylmä.",
+      "translation_fa": "امروز هوا سرد است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tänään on kylmä.",
+      "example_fa": "امروز هوا سرد است.",
+      "accepted_answers": [
+        "Tänään on kylmä."
+      ]
+    },
+    "a12s4-expr-02": {
+      "id": "a12s4-expr-02",
+      "surface_form": "Tänään on lämmin.",
+      "lemma": "Tänään on lämmin.",
+      "translation_fa": "امروز هوا گرم است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tänään on lämmin.",
+      "example_fa": "امروز هوا گرم است.",
+      "accepted_answers": [
+        "Tänään on lämmin."
+      ]
+    },
+    "a12s4-expr-03": {
+      "id": "a12s4-expr-03",
+      "surface_form": "Sataa.",
+      "lemma": "Sataa.",
+      "translation_fa": "باران می‌بارد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Sataa.",
+      "example_fa": "باران می‌بارد.",
+      "accepted_answers": [
+        "Sataa."
+      ]
+    },
+    "a12s4-expr-04": {
+      "id": "a12s4-expr-04",
+      "surface_form": "Tuulee.",
+      "lemma": "Tuulee.",
+      "translation_fa": "باد می‌وزد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tuulee.",
+      "example_fa": "باد می‌وزد.",
+      "accepted_answers": [
+        "Tuulee."
+      ]
+    },
+    "a12s4-expr-05": {
+      "id": "a12s4-expr-05",
+      "surface_form": "Aurinko paistaa.",
+      "lemma": "Aurinko paistaa.",
+      "translation_fa": "خورشید می‌تابد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Aurinko paistaa.",
+      "example_fa": "خورشید می‌تابد.",
+      "accepted_answers": [
+        "Aurinko paistaa."
+      ]
+    },
+    "a12s4-expr-06": {
+      "id": "a12s4-expr-06",
+      "surface_form": "Talvella on kylmä.",
+      "lemma": "Talvella on kylmä.",
+      "translation_fa": "زمستان هوا سرد است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Talvella on kylmä.",
+      "example_fa": "زمستان هوا سرد است.",
+      "accepted_answers": [
+        "Talvella on kylmä."
+      ]
+    },
+    "a12s4-expr-07": {
+      "id": "a12s4-expr-07",
+      "surface_form": "Kesällä on lämmin.",
+      "lemma": "Kesällä on lämmin.",
+      "translation_fa": "تابستان هوا گرم است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Kesällä on lämmin.",
+      "example_fa": "تابستان هوا گرم است.",
+      "accepted_answers": [
+        "Kesällä on lämmin."
+      ]
+    },
+    "a12s4-expr-08": {
+      "id": "a12s4-expr-08",
+      "surface_form": "Tarvitsen takin.",
+      "lemma": "Tarvitsen takin.",
+      "translation_fa": "کاپشن لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen takin.",
+      "example_fa": "کاپشن لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen takin."
+      ]
+    },
+    "a12s4-expr-09": {
+      "id": "a12s4-expr-09",
+      "surface_form": "Nämä kengät ovat hyvät.",
+      "lemma": "Nämä kengät ovat hyvät.",
+      "translation_fa": "این کفش‌ها خوب هستند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Nämä kengät ovat hyvät.",
+      "example_fa": "این کفش‌ها خوب هستند.",
+      "accepted_answers": [
+        "Nämä kengät ovat hyvät."
+      ]
+    },
+    "a12s4-expr-10": {
+      "id": "a12s4-expr-10",
+      "surface_form": "Tämä on käsi.",
+      "lemma": "Tämä on käsi.",
+      "translation_fa": "این دست است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tämä on käsi.",
+      "example_fa": "این دست است.",
+      "accepted_answers": [
+        "Tämä on käsi."
+      ]
+    },
+    "a12s4-expr-11": {
+      "id": "a12s4-expr-11",
+      "surface_form": "Minun päätäni särkee.",
+      "lemma": "Minun päätäni särkee.",
+      "translation_fa": "سرم درد می‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Minun päätäni särkee.",
+      "example_fa": "سرم درد می‌کند.",
+      "accepted_answers": [
+        "Minun päätäni särkee."
+      ]
+    },
+    "a12s4-expr-12": {
+      "id": "a12s4-expr-12",
+      "surface_form": "Vatsaan sattuu.",
+      "lemma": "Vatsaan sattuu.",
+      "translation_fa": "شکمم درد می‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Vatsaan sattuu.",
+      "example_fa": "شکمم درد می‌کند.",
+      "accepted_answers": [
+        "Vatsaan sattuu."
+      ]
+    },
+    "a12s4-expr-13": {
+      "id": "a12s4-expr-13",
+      "surface_form": "Olen sairas.",
+      "lemma": "Olen sairas.",
+      "translation_fa": "بیمارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Olen sairas.",
+      "example_fa": "بیمارم.",
+      "accepted_answers": [
+        "Olen sairas."
+      ]
+    },
+    "a12s4-expr-14": {
+      "id": "a12s4-expr-14",
+      "surface_form": "Minulla on kuumetta.",
+      "lemma": "Minulla on kuumetta.",
+      "translation_fa": "تب دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Minulla on kuumetta.",
+      "example_fa": "تب دارم.",
+      "accepted_answers": [
+        "Minulla on kuumetta."
+      ]
+    },
+    "a12s4-expr-15": {
+      "id": "a12s4-expr-15",
+      "surface_form": "Minulla on yskä.",
+      "lemma": "Minulla on yskä.",
+      "translation_fa": "سرفه دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Minulla on yskä.",
+      "example_fa": "سرفه دارم.",
+      "accepted_answers": [
+        "Minulla on yskä."
+      ]
+    },
+    "a12s4-expr-16": {
+      "id": "a12s4-expr-16",
+      "surface_form": "En voi hyvin.",
+      "lemma": "En voi hyvin.",
+      "translation_fa": "حالم خوب نیست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "En voi hyvin.",
+      "example_fa": "حالم خوب نیست.",
+      "accepted_answers": [
+        "En voi hyvin."
+      ]
+    },
+    "a12s4-expr-17": {
+      "id": "a12s4-expr-17",
+      "surface_form": "Tarvitsen lääkettä kipuun.",
+      "lemma": "Tarvitsen lääkettä kipuun.",
+      "translation_fa": "برای درد دارو لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen lääkettä kipuun.",
+      "example_fa": "برای درد دارو لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen lääkettä kipuun."
+      ]
+    },
+    "a12s4-expr-18": {
+      "id": "a12s4-expr-18",
+      "surface_form": "Onko teillä lääkettä?",
+      "lemma": "Onko teillä lääkettä?",
+      "translation_fa": "دارو دارید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Onko teillä lääkettä?",
+      "example_fa": "دارو دارید؟",
+      "accepted_answers": [
+        "Onko teillä lääkettä?"
+      ]
+    },
+    "a12s4-expr-19": {
+      "id": "a12s4-expr-19",
+      "surface_form": "Mitä tähän voi ottaa?",
+      "lemma": "Mitä tähän voi ottaa?",
+      "translation_fa": "برای این مشکل چه می‌توان مصرف کرد؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Mitä tähän voi ottaa?",
+      "example_fa": "برای این مشکل چه می‌توان مصرف کرد؟",
+      "accepted_answers": [
+        "Mitä tähän voi ottaa?"
+      ]
+    },
+    "a12s4-expr-20": {
+      "id": "a12s4-expr-20",
+      "surface_form": "Haluaisin varata ajan.",
+      "lemma": "Haluaisin varata ajan.",
+      "translation_fa": "می‌خواهم وقت بگیرم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Haluaisin varata ajan.",
+      "example_fa": "می‌خواهم وقت بگیرم.",
+      "accepted_answers": [
+        "Haluaisin varata ajan."
+      ]
+    },
+    "a12s4-expr-21": {
+      "id": "a12s4-expr-21",
+      "surface_form": "Onko aikaa huomenna?",
+      "lemma": "Onko aikaa huomenna?",
+      "translation_fa": "فردا وقت خالی هست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Onko aikaa huomenna?",
+      "example_fa": "فردا وقت خالی هست؟",
+      "accepted_answers": [
+        "Onko aikaa huomenna?"
+      ]
+    },
+    "a12s4-expr-22": {
+      "id": "a12s4-expr-22",
+      "surface_form": "Sopiiko kello kymmenen?",
+      "lemma": "Sopiiko kello kymmenen?",
+      "translation_fa": "ساعت ده مناسب است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Sopiiko kello kymmenen?",
+      "example_fa": "ساعت ده مناسب است؟",
+      "accepted_answers": [
+        "Sopiiko kello kymmenen?"
+      ]
+    },
+    "a12s4-expr-23": {
+      "id": "a12s4-expr-23",
+      "surface_form": "Tarvitsen apua.",
+      "lemma": "Tarvitsen apua.",
+      "translation_fa": "کمک لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen apua.",
+      "example_fa": "کمک لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen apua."
+      ]
+    },
+    "a12s4-expr-24": {
+      "id": "a12s4-expr-24",
+      "surface_form": "Voitko auttaa?",
+      "lemma": "Voitko auttaa?",
+      "translation_fa": "می‌توانی کمکم کنی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Voitko auttaa?",
+      "example_fa": "می‌توانی کمکم کنی؟",
+      "accepted_answers": [
+        "Voitko auttaa?"
+      ]
+    },
+    "a12s4-expr-25": {
+      "id": "a12s4-expr-25",
+      "surface_form": "Minulla on ongelma.",
+      "lemma": "Minulla on ongelma.",
+      "translation_fa": "مشکلی دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Minulla on ongelma.",
+      "example_fa": "مشکلی دارم.",
+      "accepted_answers": [
+        "Minulla on ongelma."
+      ]
+    },
+    "a12s4-expr-26": {
+      "id": "a12s4-expr-26",
+      "surface_form": "Tarvitsen apua heti.",
+      "lemma": "Tarvitsen apua heti.",
+      "translation_fa": "فوراً کمک لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen apua heti.",
+      "example_fa": "فوراً کمک لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen apua heti."
+      ]
+    },
+    "a12s4-expr-27": {
+      "id": "a12s4-expr-27",
+      "surface_form": "Ota takki.",
+      "lemma": "Ota takki.",
+      "translation_fa": "کاپشن را بردار.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Ota takki.",
+      "example_fa": "کاپشن را بردار.",
+      "accepted_answers": [
+        "Ota takki."
+      ]
+    },
+    "a12s4-expr-28": {
+      "id": "a12s4-expr-28",
+      "surface_form": "Juo vettä.",
+      "lemma": "Juo vettä.",
+      "translation_fa": "آب بنوش.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Juo vettä.",
+      "example_fa": "آب بنوش.",
+      "accepted_answers": [
+        "Juo vettä."
+      ]
+    },
+    "a12s4-expr-29": {
+      "id": "a12s4-expr-29",
+      "surface_form": "Lepää kotona.",
+      "lemma": "Lepää kotona.",
+      "translation_fa": "در خانه استراحت کن.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Lepää kotona.",
+      "example_fa": "در خانه استراحت کن.",
+      "accepted_answers": [
+        "Lepää kotona."
+      ]
+    },
+    "a12s4-expr-30": {
+      "id": "a12s4-expr-30",
+      "surface_form": "Pysy sisällä.",
+      "lemma": "Pysy sisällä.",
+      "translation_fa": "داخل بمان.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Pysy sisällä.",
+      "example_fa": "داخل بمان.",
+      "accepted_answers": [
+        "Pysy sisällä."
+      ]
+    },
+    "a12s4-expr-31": {
+      "id": "a12s4-expr-31",
+      "surface_form": "Tarvitsen lääkettä.",
+      "lemma": "Tarvitsen lääkettä.",
+      "translation_fa": "دارو لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen lääkettä.",
+      "example_fa": "دارو لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen lääkettä."
+      ]
+    },
+    "a12s4-extra-01": {
+      "id": "a12s4-extra-01",
+      "surface_form": "Paljonko tämä maksaa?",
+      "lemma": "Paljonko tämä maksaa?",
+      "translation_fa": "این چقدر قیمت دارد؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Paljonko tämä maksaa?",
+      "example_fa": "این چقدر قیمت دارد؟",
+      "accepted_answers": [
+        "Paljonko tämä maksaa?"
+      ]
+    },
+    "a12s4-extra-02": {
+      "id": "a12s4-extra-02",
+      "surface_form": "Haluaisin kahvia.",
+      "lemma": "Haluaisin kahvia.",
+      "translation_fa": "قهوه می‌خواهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Haluaisin kahvia.",
+      "example_fa": "قهوه می‌خواهم.",
+      "accepted_answers": [
+        "Haluaisin kahvia."
+      ]
+    },
+    "a12s4-extra-03": {
+      "id": "a12s4-extra-03",
+      "surface_form": "Menen bussilla.",
+      "lemma": "Menen bussilla.",
+      "translation_fa": "با اتوبوس می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Menen bussilla.",
+      "example_fa": "با اتوبوس می‌روم.",
+      "accepted_answers": [
+        "Menen bussilla."
+      ]
+    },
+    "a12s4-extra-04": {
+      "id": "a12s4-extra-04",
+      "surface_form": "Missä asema on?",
+      "lemma": "Missä asema on?",
+      "translation_fa": "ایستگاه کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Missä asema on?",
+      "example_fa": "ایستگاه کجاست؟",
+      "accepted_answers": [
+        "Missä asema on?"
+      ]
+    },
+    "a12s4-extra-05": {
+      "id": "a12s4-extra-05",
+      "surface_form": "Opiskelen joka päivä.",
+      "lemma": "Opiskelen joka päivä.",
+      "translation_fa": "هر روز درس می‌خوانم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Opiskelen joka päivä.",
+      "example_fa": "هر روز درس می‌خوانم.",
+      "accepted_answers": [
+        "Opiskelen joka päivä."
+      ]
+    },
+    "a12s4-extra-06": {
+      "id": "a12s4-extra-06",
+      "surface_form": "Sopiiko kello kuusi?",
+      "lemma": "Sopiiko kello kuusi?",
+      "translation_fa": "ساعت شش مناسب است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Sopiiko kello kuusi?",
+      "example_fa": "ساعت شش مناسب است؟",
+      "accepted_answers": [
+        "Sopiiko kello kuusi?"
+      ]
+    },
+    "a12s4-extra-07": {
+      "id": "a12s4-extra-07",
+      "surface_form": "Nähdään perjantaina.",
+      "lemma": "Nähdään perjantaina.",
+      "translation_fa": "جمعه همدیگر را می‌بینیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Nähdään perjantaina.",
+      "example_fa": "جمعه همدیگر را می‌بینیم.",
+      "accepted_answers": [
+        "Nähdään perjantaina."
+      ]
+    },
+    "a12s4-extra-08": {
+      "id": "a12s4-extra-08",
+      "surface_form": "Voinko auttaa?",
+      "lemma": "Voinko auttaa?",
+      "translation_fa": "می‌توانم کمکتان کنم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Voinko auttaa?",
+      "example_fa": "می‌توانم کمکتان کنم؟",
+      "accepted_answers": [
+        "Voinko auttaa?"
+      ]
+    },
+    "a12s4-extra-09": {
+      "id": "a12s4-extra-09",
+      "surface_form": "Kyllä, sopii.",
+      "lemma": "Kyllä, sopii.",
+      "translation_fa": "بله، مناسب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Kyllä, sopii.",
+      "example_fa": "بله، مناسب است.",
+      "accepted_answers": [
+        "Kyllä, sopii."
+      ]
+    },
+    "a12s4-extra-10": {
+      "id": "a12s4-extra-10",
+      "surface_form": "kello kahdeksan",
+      "lemma": "kello kahdeksan",
+      "translation_fa": "ساعت هشت",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "kello kahdeksan",
+      "example_fa": "ساعت هشت",
+      "accepted_answers": [
+        "kello kahdeksan"
+      ]
+    },
+    "a12s4-extra-11": {
+      "id": "a12s4-extra-11",
+      "surface_form": "kello yhdeksän",
+      "lemma": "kello yhdeksän",
+      "translation_fa": "ساعت نه",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "kello yhdeksän",
+      "example_fa": "ساعت نه",
+      "accepted_answers": [
+        "kello yhdeksän"
+      ]
+    },
+    "a12s4-extra-12": {
+      "id": "a12s4-extra-12",
+      "surface_form": "kello kymmenen",
+      "lemma": "kello kymmenen",
+      "translation_fa": "ساعت ده",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "kello kymmenen",
+      "example_fa": "ساعت ده",
+      "accepted_answers": [
+        "kello kymmenen"
+      ]
+    },
+    "a12s4-extra-13": {
+      "id": "a12s4-extra-13",
+      "surface_form": "kello yksitoista",
+      "lemma": "kello yksitoista",
+      "translation_fa": "ساعت یازده",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "kello yksitoista",
+      "example_fa": "ساعت یازده",
+      "accepted_answers": [
+        "kello yksitoista"
+      ]
+    },
+    "a12s4-extra-14": {
+      "id": "a12s4-extra-14",
+      "surface_form": "Olen sairas. Minulla on kuumetta. Haluaisin varata ajan. Sopiiko kello kymmenen?",
+      "lemma": "Olen sairas. Minulla on kuumetta. Haluaisin varata ajan. Sopiiko kello kymmenen?",
+      "translation_fa": "بیمارم. تب دارم. می‌خواهم وقت بگیرم. ساعت ده مناسب است؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Olen sairas. Minulla on kuumetta. Haluaisin varata ajan. Sopiiko kello kymmenen?",
+      "example_fa": "بیمارم. تب دارم. می‌خواهم وقت بگیرم. ساعت ده مناسب است؟",
+      "accepted_answers": [
+        "Olen sairas. Minulla on kuumetta. Haluaisin varata ajan. Sopiiko kello kymmenen?"
+      ]
+    },
+    "a12s4-extra-15": {
+      "id": "a12s4-extra-15",
+      "surface_form": "Apteekki on lähellä. Tarvitsen lääkettä. Voitko auttaa? Lepää kotona.",
+      "lemma": "Apteekki on lähellä. Tarvitsen lääkettä. Voitko auttaa? Lepää kotona.",
+      "translation_fa": "داروخانه نزدیک است. دارو لازم دارم. می‌توانی کمک کنی؟ در خانه استراحت کن.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weather-health",
+        "review"
+      ],
+      "example_fi": "Apteekki on lähellä. Tarvitsen lääkettä. Voitko auttaa? Lepää kotona.",
+      "example_fa": "داروخانه نزدیک است. دارو لازم دارم. می‌توانی کمک کنی؟ در خانه استراحت کن.",
+      "accepted_answers": [
+        "Apteekki on lähellä. Tarvitsen lääkettä. Voitko auttaa? Lepää kotona."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a1.2-section-4-lesson-1",
+      "curriculum_id": "a1.2-s4-l01",
+      "order": 1,
+      "title_fa": "آب‌وهوای پایه",
+      "objective_fa": "یک یا دو جملهٔ بسیار ساده دربارهٔ آب‌وهوای امروز را بفهمد و بیان کند.",
+      "summary_fa": "آب‌وهوای امروز را با عبارت‌های کوتاه توصیف کن.",
+      "grammar_fa": "جمله‌های آمادهٔ آب‌وهوا: Tänään on kylmä، Sataa و Tuulee؛ فعل‌های غیرشخصی را به‌صورت کامل یاد بگیر.",
+      "new_targets": [
+        "a12s4-hf-01",
+        "a12s4-hf-02",
+        "a12s4-hf-03",
+        "a12s4-topic-01",
+        "a12s4-topic-02",
+        "a12s4-topic-03",
+        "a12s4-topic-04",
+        "a12s4-topic-05",
+        "a12s4-topic-06"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-01",
+          "a12s4-hf-02",
+          "a12s4-hf-03"
+        ],
+        "topic": [
+          "a12s4-topic-01",
+          "a12s4-topic-02",
+          "a12s4-topic-03",
+          "a12s4-topic-04",
+          "a12s4-topic-05",
+          "a12s4-topic-06"
+        ],
+        "expressions": [
+          "a12s4-expr-01",
+          "a12s4-expr-02",
+          "a12s4-expr-03",
+          "a12s4-expr-04",
+          "a12s4-expr-05"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l01",
+        "a1.1-s4-l08"
+      ],
+      "production_targets": [
+        "a12s4-expr-01"
+      ],
+      "listening_targets": [
+        "a12s4-hf-01",
+        "a12s4-hf-02"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s4-expr-02",
+          "tokens": [
+            "on",
+            "lämmin.",
+            "Tänään"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tänään on lämmin.",
+          "expected_fa": "امروز هوا گرم است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-01"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-02"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-03"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-01"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-02"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-03"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-04"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-05"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-06"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-01"
+        },
+        {
+          "type": "visual-choice",
+          "item": "a12s4-topic-02",
+          "options": [
+            "a12s4-topic-02",
+            "a12s4-topic-03",
+            "a12s4-topic-04",
+            "a12s4-topic-05"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-01"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-01",
+          "options": [
+            "a12s4-hf-02",
+            "a12s4-hf-01",
+            "a12s4-hf-03",
+            "a12s4-topic-01"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-02"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-02"
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-2",
+      "curriculum_id": "a1.2-s4-l02",
+      "order": 2,
+      "title_fa": "فصل‌ها و لباس",
+      "objective_fa": "بگوید در یک فصل آشنا هوا چگونه است و یک لباس پایهٔ مناسب را نام ببرد.",
+      "summary_fa": "فصل و لباس مناسب را با عبارت‌های کوتاه بیان کن.",
+      "grammar_fa": "صورت‌های زمانی talvella/kesällä و درخواست لباس در یک عبارت کامل.",
+      "new_targets": [
+        "a12s4-hf-04",
+        "a12s4-hf-05",
+        "a12s4-hf-02",
+        "a12s4-topic-07",
+        "a12s4-topic-08",
+        "a12s4-topic-09",
+        "a12s4-topic-10",
+        "a12s4-topic-11",
+        "a12s4-topic-12"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-04",
+          "a12s4-hf-05",
+          "a12s4-hf-02"
+        ],
+        "topic": [
+          "a12s4-topic-07",
+          "a12s4-topic-08",
+          "a12s4-topic-09",
+          "a12s4-topic-10",
+          "a12s4-topic-11",
+          "a12s4-topic-12"
+        ],
+        "expressions": [
+          "a12s4-expr-06",
+          "a12s4-expr-07",
+          "a12s4-expr-08",
+          "a12s4-expr-09"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l08",
+        "a1.2-s1-l06",
+        "a1.2-s4-l01"
+      ],
+      "production_targets": [
+        "a12s4-expr-06"
+      ],
+      "listening_targets": [
+        "a12s4-hf-04",
+        "a12s4-hf-05"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s4-expr-07",
+          "prompt_fi": "Kesällä on _____.",
+          "prompt_fa": "تابستان هوا گرم است.",
+          "accepted_answers": [
+            "lämmin"
+          ],
+          "expected_fi": "Kesällä on lämmin."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s4-expr-08",
+          "base_fi": "takki",
+          "feature_fa": "مفعول مفرد مشخص در عبارت درخواست لباس",
+          "prompt_fa": "در عبارت «یک کاپشن لازم دارم» شکل بازبینی‌شدهٔ مفعول را انتخاب کن.",
+          "frame_fi": "Tarvitsen _____.",
+          "options_fi": [
+            "takki",
+            "takin",
+            "takissa",
+            "takista"
+          ],
+          "expected_fi": "takin",
+          "explanation_fa": "در این جمله شکل مفعولیِ تکمیل‌شده takin است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-04"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-05"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-02"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-07"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-08"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-09"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-10"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-11"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-06"
+        },
+        {
+          "type": "visual-choice",
+          "item": "a12s4-topic-11",
+          "options": [
+            "a12s4-topic-11",
+            "a12s4-topic-12",
+            "a12s4-topic-07",
+            "a12s4-topic-08"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-06"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-04",
+          "options": [
+            "a12s4-hf-05",
+            "a12s4-hf-04",
+            "a12s4-hf-02",
+            "a12s4-topic-07"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-05"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-07"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-08",
+          "options": [
+            "a12s4-hf-04",
+            "a12s4-expr-08",
+            "a12s4-hf-05",
+            "a12s4-hf-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-3",
+      "curriculum_id": "a1.2-s4-l03",
+      "order": 3,
+      "title_fa": "اعضای بدن",
+      "objective_fa": "چند عضو رایج بدن را نام ببرد و محل یک مشکل ساده را مشخص کند.",
+      "summary_fa": "عضوهای پایهٔ بدن و محل درد را بشناس.",
+      "grammar_fa": "نام عضو بدن و شکل‌های کاملِ بیان درد را بدون ساختن شکل صرفی از حدس تمرین کن.",
+      "new_targets": [
+        "a12s4-hf-06",
+        "a12s4-hf-07",
+        "a12s4-hf-08",
+        "a12s4-topic-13",
+        "a12s4-topic-14",
+        "a12s4-topic-15",
+        "a12s4-topic-16",
+        "a12s4-topic-17"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-06",
+          "a12s4-hf-07",
+          "a12s4-hf-08"
+        ],
+        "topic": [
+          "a12s4-topic-13",
+          "a12s4-topic-14",
+          "a12s4-topic-15",
+          "a12s4-topic-16",
+          "a12s4-topic-17"
+        ],
+        "expressions": [
+          "a12s4-expr-10",
+          "a12s4-expr-11",
+          "a12s4-expr-12"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l05",
+        "a1.1-s2-l06"
+      ],
+      "production_targets": [
+        "a12s4-expr-10"
+      ],
+      "listening_targets": [
+        "a12s4-hf-06",
+        "a12s4-hf-07"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s4-expr-11",
+          "prompt_fa": "سرم درد می‌کند.",
+          "cues_fi": [
+            "Minun",
+            "päätäni"
+          ],
+          "expected_fi": "Minun päätäni särkee.",
+          "accepted_answers": [
+            "Minun päätäni särkee."
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-06"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-07"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-08"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-13"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-14"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-15"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-16"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-17"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-10"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-11"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-10"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-06",
+          "options": [
+            "a12s4-hf-07",
+            "a12s4-hf-06",
+            "a12s4-hf-08",
+            "a12s4-topic-13"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-07"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-11"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-12",
+          "options": [
+            "a12s4-hf-06",
+            "a12s4-expr-12",
+            "a12s4-hf-07",
+            "a12s4-hf-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-4",
+      "curriculum_id": "a1.2-s4-l04",
+      "order": 4,
+      "title_fa": "حالم چطور است",
+      "objective_fa": "یک یا دو علامت ساده را بیان کند یا بگوید حالش خوب یا بد است.",
+      "summary_fa": "حالت و علامت سادهٔ بیماری را بیان کن.",
+      "grammar_fa": "جمله‌های Olen sairas، Minulla on kuumetta و En voi hyvin؛ صورت kuumetta در یک عبارت ثابت.",
+      "new_targets": [
+        "a12s4-hf-02",
+        "a12s4-hf-09",
+        "a12s4-hf-10",
+        "a12s4-topic-18",
+        "a12s4-topic-19",
+        "a12s4-topic-20",
+        "a12s4-topic-21"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-02",
+          "a12s4-hf-09",
+          "a12s4-hf-10"
+        ],
+        "topic": [
+          "a12s4-topic-18",
+          "a12s4-topic-19",
+          "a12s4-topic-20",
+          "a12s4-topic-21"
+        ],
+        "expressions": [
+          "a12s4-expr-13",
+          "a12s4-expr-14",
+          "a12s4-expr-15",
+          "a12s4-expr-16"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l03",
+        "a1.1-s2-l05",
+        "a1.1-s3-l07",
+        "a1.2-s4-l03"
+      ],
+      "production_targets": [
+        "a12s4-expr-13"
+      ],
+      "listening_targets": [
+        "a12s4-hf-02",
+        "a12s4-hf-09"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s4-expr-14",
+          "tokens": [
+            "on",
+            "kuumetta.",
+            "Minulla"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Minulla on kuumetta.",
+          "expected_fa": "تب دارم."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-02"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-09"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-10"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-18"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-19"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-20"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-21"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-13"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-14"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-13"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-02",
+          "options": [
+            "a12s4-hf-09",
+            "a12s4-hf-02",
+            "a12s4-hf-10",
+            "a12s4-topic-18"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-09"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-14"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-15",
+          "options": [
+            "a12s4-hf-02",
+            "a12s4-expr-15",
+            "a12s4-hf-09",
+            "a12s4-hf-10"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-16",
+          "options": [
+            "a12s4-hf-02",
+            "a12s4-expr-16",
+            "a12s4-hf-09",
+            "a12s4-hf-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-5",
+      "curriculum_id": "a1.2-s4-l05",
+      "order": 5,
+      "title_fa": "در داروخانه",
+      "objective_fa": "در داروخانه کمک ساده بخواهد و یک پاسخ کوتاه و آشنا را بفهمد.",
+      "summary_fa": "در داروخانه نیاز ساده‌ای را مودبانه بگو.",
+      "grammar_fa": "درخواست کوتاه دارو با lääkettä و جمله‌های آمادهٔ داروخانه؛ تشخیص نیاز به مشاورهٔ حرفه‌ای مهم است.",
+      "new_targets": [
+        "a12s4-hf-11",
+        "a12s4-hf-12",
+        "a12s4-hf-13",
+        "a12s4-topic-22",
+        "a12s4-topic-23",
+        "a12s4-topic-24",
+        "a12s4-topic-25"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-11",
+          "a12s4-hf-12",
+          "a12s4-hf-13"
+        ],
+        "topic": [
+          "a12s4-topic-22",
+          "a12s4-topic-23",
+          "a12s4-topic-24",
+          "a12s4-topic-25"
+        ],
+        "expressions": [
+          "a12s4-expr-17",
+          "a12s4-expr-18",
+          "a12s4-expr-19"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l06",
+        "a1.1-s1-l07",
+        "a1.2-s1-l03",
+        "a1.2-s4-l04"
+      ],
+      "production_targets": [
+        "a12s4-expr-17"
+      ],
+      "listening_targets": [
+        "a12s4-hf-11",
+        "a12s4-hf-12"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s4-expr-18",
+          "prompt_fi": "Onko teillä _____?",
+          "prompt_fa": "دارو دارید؟",
+          "accepted_answers": [
+            "lääkettä"
+          ],
+          "expected_fi": "Onko teillä lääkettä?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s4-expr-17",
+          "base_fi": "lääke",
+          "feature_fa": "partitiivi نامعین در درخواست دارو",
+          "prompt_fa": "برای گفتن «برای درد مقداری دارو لازم دارم» کدام شکل درست است؟",
+          "frame_fi": "Tarvitsen _____ kipuun.",
+          "options_fi": [
+            "lääke",
+            "lääkettä",
+            "lääkkeellä",
+            "lääkkeeseen"
+          ],
+          "expected_fi": "lääkettä",
+          "explanation_fa": "در این درخواستِ مقدار نامشخص، lääkettä به کار می‌رود."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-11"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-12"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-13"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-22"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-23"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-24"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-25"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-17"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-18"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-17"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-11",
+          "options": [
+            "a12s4-hf-12",
+            "a12s4-hf-11",
+            "a12s4-hf-13",
+            "a12s4-topic-22"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-12"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-18"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-17",
+          "options": [
+            "a12s4-hf-11",
+            "a12s4-expr-17",
+            "a12s4-hf-12",
+            "a12s4-hf-13"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-19",
+          "options": [
+            "a12s4-hf-11",
+            "a12s4-expr-19",
+            "a12s4-hf-12",
+            "a12s4-hf-13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-6",
+      "curriculum_id": "a1.2-s4-l06",
+      "order": 6,
+      "title_fa": "وقت گرفتن",
+      "objective_fa": "یک وقت ساده درخواست کند و زمان پیشنهادی کوتاه را بفهمد.",
+      "summary_fa": "یک وقت و ساعت پیشنهادی را بفهم و درخواست کن.",
+      "grammar_fa": "وقت‌گرفتن با varata ajan و پرسیدن امکان وقت در زمانی مشخص.",
+      "new_targets": [
+        "a12s4-hf-14",
+        "a12s4-topic-26",
+        "a12s4-topic-27",
+        "a12s4-topic-28",
+        "a12s4-topic-29",
+        "a12s4-topic-30",
+        "a12s4-topic-31"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-14"
+        ],
+        "topic": [
+          "a12s4-topic-26",
+          "a12s4-topic-27",
+          "a12s4-topic-28",
+          "a12s4-topic-29",
+          "a12s4-topic-30",
+          "a12s4-topic-31"
+        ],
+        "expressions": [
+          "a12s4-expr-20",
+          "a12s4-expr-21",
+          "a12s4-expr-22"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s3-l08",
+        "a1.2-s3-l05",
+        "a1.2-s4-l04"
+      ],
+      "production_targets": [
+        "a12s4-expr-20"
+      ],
+      "listening_targets": [
+        "a12s4-hf-14",
+        "a12s4-topic-26"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s4-expr-21",
+          "prompt_fa": "فردا وقت خالی هست؟",
+          "cues_fi": [
+            "Onko",
+            "aikaa"
+          ],
+          "expected_fi": "Onko aikaa huomenna?",
+          "accepted_answers": [
+            "Onko aikaa huomenna?"
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s4-expr-21",
+          "base_fi": "aika",
+          "feature_fa": "partitiivi برای «وقت خالی»",
+          "prompt_fa": "برای پرسیدن «فردا وقت خالی هست؟» جای خالی را پر کن.",
+          "frame_fi": "Onko _____ huomenna?",
+          "options_fi": [
+            "aika",
+            "aikaa",
+            "ajalla",
+            "ajassa"
+          ],
+          "expected_fi": "aikaa",
+          "explanation_fa": "در این سؤال آماده از Onko aikaa huomenna? استفاده می‌کنیم."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-14"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-26"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-27"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-28"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-29"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-30"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-31"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-20"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-21"
+        },
+        {
+          "type": "clock-choice",
+          "hour": 10,
+          "item": "a12s4-extra-12",
+          "options": [
+            "a12s4-extra-10",
+            "a12s4-extra-11",
+            "a12s4-extra-12",
+            "a12s4-extra-13"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-20"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-14",
+          "options": [
+            "a12s4-topic-26",
+            "a12s4-hf-14",
+            "a12s4-topic-27",
+            "a12s4-topic-28"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-topic-26"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-21"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-21",
+          "options": [
+            "a12s4-hf-14",
+            "a12s4-expr-21",
+            "a12s4-topic-26",
+            "a12s4-topic-27"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-7",
+      "curriculum_id": "a1.2-s4-l07",
+      "order": 7,
+      "title_fa": "کمک خواستن",
+      "objective_fa": "از فرد دیگری کمک روزمره بخواهد و خیلی کوتاه بگوید چه مشکلی دارد.",
+      "summary_fa": "کمک روزمره بخواه و مشکل را کوتاه توضیح بده.",
+      "grammar_fa": "درخواست کمک روزمره با Tarvitsen apua و Voitko auttaa؛ این درس جایگزین خدمات اضطراری نیست.",
+      "new_targets": [
+        "a12s4-hf-15",
+        "a12s4-hf-16",
+        "a12s4-hf-17",
+        "a12s4-topic-32",
+        "a12s4-topic-33",
+        "a12s4-topic-34",
+        "a12s4-topic-25"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-15",
+          "a12s4-hf-16",
+          "a12s4-hf-17"
+        ],
+        "topic": [
+          "a12s4-topic-32",
+          "a12s4-topic-33",
+          "a12s4-topic-34",
+          "a12s4-topic-25"
+        ],
+        "expressions": [
+          "a12s4-expr-23",
+          "a12s4-expr-24",
+          "a12s4-expr-25",
+          "a12s4-expr-26"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l07",
+        "a1.2-s1-l08",
+        "a1.2-s4-l04"
+      ],
+      "production_targets": [
+        "a12s4-expr-23"
+      ],
+      "listening_targets": [
+        "a12s4-hf-15",
+        "a12s4-hf-16"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s4-expr-24",
+          "tokens": [
+            "auttaa?",
+            "Voitko"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Voitko auttaa?",
+          "expected_fa": "می‌توانی کمکم کنی؟"
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-15"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-16"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-17"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-32"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-33"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-34"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-25"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-23"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-24"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-23"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-15",
+          "options": [
+            "a12s4-hf-16",
+            "a12s4-hf-15",
+            "a12s4-hf-17",
+            "a12s4-topic-32"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-16"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-24"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-25",
+          "options": [
+            "a12s4-hf-15",
+            "a12s4-expr-25",
+            "a12s4-hf-16",
+            "a12s4-hf-17"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-26",
+          "options": [
+            "a12s4-hf-15",
+            "a12s4-expr-26",
+            "a12s4-hf-16",
+            "a12s4-hf-17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-8",
+      "curriculum_id": "a1.2-s4-l08",
+      "order": 8,
+      "title_fa": "توصیهٔ ساده",
+      "objective_fa": "چند توصیهٔ بسیار کوتاه و آشنا دربارهٔ آب‌وهوا یا حال جسمی را بفهمد.",
+      "summary_fa": "چهار توصیهٔ کوتاه در بافت آب‌وهوا و سلامت را بفهم.",
+      "grammar_fa": "امرهای کوتاه و بازبینی‌شده Ota، Juo، Lepää و Pysy.",
+      "new_targets": [
+        "a12s4-hf-18",
+        "a12s4-hf-19",
+        "a12s4-hf-15",
+        "a12s4-topic-35",
+        "a12s4-topic-36",
+        "a12s4-topic-37",
+        "a12s4-topic-38",
+        "a12s4-topic-39"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a12s4-hf-18",
+          "a12s4-hf-19",
+          "a12s4-hf-15"
+        ],
+        "topic": [
+          "a12s4-topic-35",
+          "a12s4-topic-36",
+          "a12s4-topic-37",
+          "a12s4-topic-38",
+          "a12s4-topic-39"
+        ],
+        "expressions": [
+          "a12s4-expr-27",
+          "a12s4-expr-28",
+          "a12s4-expr-29",
+          "a12s4-expr-30"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l04",
+        "a1.2-s4-l01",
+        "a1.2-s4-l02",
+        "a1.2-s4-l04"
+      ],
+      "production_targets": [
+        "a12s4-expr-27"
+      ],
+      "listening_targets": [
+        "a12s4-hf-18",
+        "a12s4-hf-19"
+      ],
+      "structured_practice": [
+        {
+          "type": "expression-completion",
+          "item": "a12s4-expr-28",
+          "prompt_fi": "Juo _____.",
+          "prompt_fa": "آب بنوش.",
+          "accepted_answers": [
+            "vettä"
+          ],
+          "expected_fi": "Juo vettä."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s4-expr-28",
+          "base_fi": "juoda",
+          "feature_fa": "امری مفرد (بِنوش)",
+          "prompt_fa": "برای دستور مودبانه و سادهٔ «آب بنوش»، شکل امرِ فعل juoda را انتخاب کن.",
+          "frame_fi": "_____ vettä.",
+          "options_fi": [
+            "juo",
+            "juon",
+            "juot",
+            "juoda"
+          ],
+          "expected_fi": "juo",
+          "explanation_fa": "برای خطاب به یک نفر: Juo vettä."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s4-hf-18"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-19"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-hf-15"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-35"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-36"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-37"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-38"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-topic-39"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-27"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-28"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-27"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-hf-18",
+          "options": [
+            "a12s4-hf-19",
+            "a12s4-hf-18",
+            "a12s4-hf-15",
+            "a12s4-topic-35"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-hf-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-28"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-28",
+          "options": [
+            "a12s4-hf-18",
+            "a12s4-expr-28",
+            "a12s4-hf-19",
+            "a12s4-hf-15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-9",
+      "curriculum_id": "a1.2-s4-l09",
+      "order": 9,
+      "title_fa": "یک گفت‌وگوی کوتاه دربارهٔ سلامت و کمک",
+      "objective_fa": "زبان مربوط به علامت بیماری، داروخانه یا وقت‌گرفتن و درخواست کمک را در یک گفت‌وگوی کوتاه و هدایت‌شده ترکیب کند.",
+      "summary_fa": "چند جمله از یک گفت‌وگوی ساده دربارهٔ سلامت را ترکیب کن.",
+      "grammar_fa": "تلفیق عبارت‌های سلامت، داروخانه، وقت و کمک بدون دستور تازه.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "a12s4-expr-14",
+          "a12s4-expr-31",
+          "a12s4-expr-20",
+          "a12s4-expr-24"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s4-l03",
+        "a1.2-s4-l04",
+        "a1.2-s4-l05",
+        "a1.2-s4-l06",
+        "a1.2-s4-l07",
+        "a1.2-s4-l08"
+      ],
+      "production_targets": [
+        "a12s4-expr-20"
+      ],
+      "listening_targets": [
+        "a12s4-expr-14",
+        "a12s4-expr-24"
+      ],
+      "structured_practice": [
+        {
+          "type": "controlled-production",
+          "item": "a12s4-expr-31",
+          "prompt_fa": "دارو لازم دارم.",
+          "cues_fi": [
+            "Tarvitsen",
+            "lääkettä."
+          ],
+          "expected_fi": "Tarvitsen lääkettä.",
+          "accepted_answers": [
+            "Tarvitsen lääkettä."
+          ]
+        }
+      ],
+      "practice_targets": [
+        "a12s4-expr-14",
+        "a12s4-expr-31",
+        "a12s4-expr-20",
+        "a12s4-expr-24",
+        "a12s4-expr-22",
+        "a12s4-expr-31",
+        "a12s4-extra-08",
+        "a12s4-extra-09"
+      ],
+      "activities": [
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "a12s4-extra-09",
+            "a12s4-expr-22",
+            "a12s4-expr-20",
+            "a12s4-extra-08",
+            "a12s4-expr-14"
+          ],
+          "answer_order": [
+            3,
+            4,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s4-extra-14",
+          "question_item": "a12s4-expr-14",
+          "options": [
+            "a12s4-expr-23",
+            "a12s4-expr-14",
+            "a12s4-expr-28",
+            "a12s4-expr-08"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s4-extra-15",
+          "question_item": "a12s4-expr-31",
+          "options": [
+            "a12s4-expr-13",
+            "a12s4-expr-31",
+            "a12s4-expr-21",
+            "a12s4-expr-02"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-14"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-31"
+        },
+        {
+          "type": "teach",
+          "item": "a12s4-expr-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-20"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s4-expr-14",
+          "options": [
+            "a12s4-expr-31",
+            "a12s4-expr-14",
+            "a12s4-expr-20",
+            "a12s4-expr-24"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-24"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-31"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-24",
+          "options": [
+            "a12s4-expr-14",
+            "a12s4-expr-24",
+            "a12s4-expr-31",
+            "a12s4-expr-20"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-22",
+          "options": [
+            "a12s4-expr-14",
+            "a12s4-expr-22",
+            "a12s4-expr-31",
+            "a12s4-expr-20"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-extra-08"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-extra-09",
+          "options": [
+            "a12s4-expr-14",
+            "a12s4-extra-09",
+            "a12s4-expr-31",
+            "a12s4-expr-20"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-14",
+          "options": [
+            "a12s4-expr-31",
+            "a12s4-expr-14",
+            "a12s4-expr-20",
+            "a12s4-expr-24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.2-section-4-lesson-10",
+      "curriculum_id": "a1.2-s4-l10",
+      "order": 10,
+      "title_fa": "ایستگاه پایانی A1.2",
+      "objective_fa": "موقعیت‌های روزمرهٔ A1.2 را با کمک محدود در حوزه‌های خرید، رفت‌وآمد، قرارهای روزمره، آب‌وهوا، سلامت و کمک انجام دهد.",
+      "summary_fa": "تمام موضوعات A1.2 را در ایستگاه نهایی مرور کن.",
+      "grammar_fa": "مرور یکپارچهٔ موضوعات خرید، سفر، برنامه، آب‌وهوا، سلامت و کمک در سطح A1.2.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.2-s1-l10",
+        "a1.2-s2-l10",
+        "a1.2-s3-l10",
+        "a1.2-s4-l01",
+        "a1.2-s4-l04",
+        "a1.2-s4-l05",
+        "a1.2-s4-l06",
+        "a1.2-s4-l07",
+        "a1.2-s4-l09"
+      ],
+      "checkpoint_targets": [
+        "a12s4-extra-01",
+        "a12s4-extra-02",
+        "a12s4-extra-04",
+        "a12s4-extra-03",
+        "a12s4-extra-05",
+        "a12s4-extra-06",
+        "a12s4-extra-07",
+        "a12s4-expr-01",
+        "a12s4-expr-14",
+        "a12s4-expr-17",
+        "a12s4-expr-20",
+        "a12s4-expr-23",
+        "a12s4-expr-24",
+        "a12s4-expr-28",
+        "a12s4-expr-27"
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ]
+      ],
+      "production_targets": [
+        "a12s4-expr-20"
+      ],
+      "listening_targets": [
+        "a12s4-extra-03",
+        "a12s4-expr-01"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a12s4-extra-05",
+          "tokens": [
+            "joka",
+            "päivä.",
+            "Opiskelen"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Opiskelen joka päivä.",
+          "expected_fa": "هر روز درس می‌خوانم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a12s4-expr-14",
+          "prompt_fi": "Minulla on _____.",
+          "prompt_fa": "تب دارم.",
+          "accepted_answers": [
+            "kuumetta"
+          ],
+          "expected_fi": "Minulla on kuumetta."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s4-expr-23",
+          "prompt_fa": "کمک لازم دارم.",
+          "cues_fi": [
+            "Tarvitsen",
+            "apua."
+          ],
+          "expected_fi": "Tarvitsen apua.",
+          "accepted_answers": [
+            "Tarvitsen apua."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a12s4-expr-17",
+          "base_fi": "lääke",
+          "feature_fa": "partitiivi در درخواست دارو",
+          "prompt_fa": "برای بیان «برای درد مقداری دارو لازم دارم» شکل درست را انتخاب کن.",
+          "frame_fi": "Tarvitsen _____ kipuun.",
+          "options_fi": [
+            "lääke",
+            "lääkettä",
+            "lääkkeellä",
+            "lääkkeeseen"
+          ],
+          "expected_fi": "lääkettä",
+          "explanation_fa": "در عبارت آموزش‌داده‌شده از lääkettä استفاده می‌شود."
+        }
+      ],
+      "passing_score": 0.8,
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-extra-01",
+          "options": [
+            "a12s4-extra-02",
+            "a12s4-extra-01",
+            "a12s4-extra-04",
+            "a12s4-extra-03"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-extra-02"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-extra-04",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-extra-04",
+            "a12s4-extra-02",
+            "a12s4-extra-03"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-extra-03",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-extra-03",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-extra-05"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-extra-06",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-extra-06",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-extra-07",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-extra-07",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-01"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-14",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-expr-14",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-17",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-expr-17",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-20"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-23",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-expr-23",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-24",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-expr-24",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s4-expr-28"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s4-expr-27",
+          "options": [
+            "a12s4-extra-01",
+            "a12s4-expr-27",
+            "a12s4-extra-02",
+            "a12s4-extra-04"
+          ]
+        }
+      ]
+    }
+  ]
+}
