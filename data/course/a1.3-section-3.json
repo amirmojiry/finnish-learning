@@ -1442,6 +1442,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-001"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-002"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-003"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-004"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-007",
@@ -1465,7 +1481,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-002",
           "options": [
             "a13s3-h-002",
@@ -1483,6 +1499,28 @@
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-001",
+          "options": [
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003",
+            "a13s3-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-002",
+          "options": [
+            "a13s3-h-002",
+            "a13s3-h-001",
+            "a13s3-h-003",
+            "a13s3-t-004"
           ]
         },
         {
@@ -1509,7 +1547,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-005",
           "options": [
             "a13s3-t-005",
@@ -1532,63 +1570,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-009",
+          "item": "a13s3-e-007",
           "options": [
-            "a13s3-e-009",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a13s3-h-001"
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-h-002",
-          "options": [
-            "a13s3-h-002",
-            "a13s3-h-001",
-            "a13s3-h-003",
-            "a13s3-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-h-003",
-          "options": [
-            "a13s3-h-003",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-t-004"
-          ]
-        },
-        {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a13s3-t-004"
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-t-005",
-          "options": [
-            "a13s3-t-005",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-t-006",
-          "options": [
-            "a13s3-t-006",
+            "a13s3-e-007",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -1659,6 +1643,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-010"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-011"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-012"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-013"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-016",
@@ -1682,7 +1682,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-011",
           "options": [
             "a13s3-h-011",
@@ -1697,6 +1697,28 @@
           "item": "a13s3-e-017",
           "options": [
             "a13s3-e-017",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-010",
+          "options": [
+            "a13s3-h-010",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-011",
+          "options": [
+            "a13s3-h-011",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -1726,7 +1748,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-014",
           "options": [
             "a13s3-t-014",
@@ -1749,75 +1771,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-018",
+          "item": "a13s3-e-016",
           "options": [
-            "a13s3-e-018",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-019",
-          "options": [
-            "a13s3-e-019",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-007",
-          "options": [
-            "a13s3-e-007",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-008",
-          "options": [
-            "a13s3-e-008",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-009",
-          "options": [
-            "a13s3-e-009",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-h-010",
-          "options": [
-            "a13s3-h-010",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-h-011",
-          "options": [
-            "a13s3-h-011",
+            "a13s3-e-016",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -1887,6 +1843,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-020"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-021"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-022"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-023"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-026",
@@ -1910,7 +1882,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-021",
           "options": [
             "a13s3-h-021",
@@ -1925,6 +1897,28 @@
           "item": "a13s3-e-027",
           "options": [
             "a13s3-e-027",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-020",
+          "options": [
+            "a13s3-h-020",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-021",
+          "options": [
+            "a13s3-h-021",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -1954,7 +1948,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-024",
           "options": [
             "a13s3-t-024",
@@ -1977,75 +1971,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-028",
+          "item": "a13s3-e-026",
           "options": [
-            "a13s3-e-028",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-007",
-          "options": [
-            "a13s3-e-007",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-008",
-          "options": [
-            "a13s3-e-008",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-009",
-          "options": [
-            "a13s3-e-009",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-016",
-          "options": [
-            "a13s3-e-016",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-017",
-          "options": [
-            "a13s3-e-017",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-018",
-          "options": [
-            "a13s3-e-018",
+            "a13s3-e-026",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2116,6 +2044,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-029"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-002"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-030"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-031"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-034",
@@ -2139,7 +2083,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-002",
           "options": [
             "a13s3-h-002",
@@ -2157,6 +2101,28 @@
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-029",
+          "options": [
+            "a13s3-h-029",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-002",
+          "options": [
+            "a13s3-h-002",
+            "a13s3-h-001",
+            "a13s3-h-003",
+            "a13s3-t-004"
           ]
         },
         {
@@ -2183,7 +2149,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-032",
           "options": [
             "a13s3-t-032",
@@ -2206,75 +2172,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-036",
+          "item": "a13s3-e-034",
           "options": [
-            "a13s3-e-036",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-037",
-          "options": [
-            "a13s3-e-037",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-007",
-          "options": [
-            "a13s3-e-007",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-008",
-          "options": [
-            "a13s3-e-008",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-009",
-          "options": [
-            "a13s3-e-009",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-016",
-          "options": [
-            "a13s3-e-016",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-017",
-          "options": [
-            "a13s3-e-017",
+            "a13s3-e-034",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2347,6 +2247,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-038"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-039"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-040"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-041"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-044",
@@ -2370,7 +2286,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-039",
           "options": [
             "a13s3-h-039",
@@ -2385,6 +2301,28 @@
           "item": "a13s3-e-045",
           "options": [
             "a13s3-e-045",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-038",
+          "options": [
+            "a13s3-h-038",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-039",
+          "options": [
+            "a13s3-h-039",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2414,7 +2352,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-042",
           "options": [
             "a13s3-t-042",
@@ -2437,75 +2375,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-046",
+          "item": "a13s3-e-044",
           "options": [
-            "a13s3-e-046",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-047",
-          "options": [
-            "a13s3-e-047",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-016",
-          "options": [
-            "a13s3-e-016",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-017",
-          "options": [
-            "a13s3-e-017",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-018",
-          "options": [
-            "a13s3-e-018",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-019",
-          "options": [
-            "a13s3-e-019",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-026",
-          "options": [
-            "a13s3-e-026",
+            "a13s3-e-044",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2578,6 +2450,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-048"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-049"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-050"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-051"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-054",
@@ -2601,7 +2489,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-049",
           "options": [
             "a13s3-h-049",
@@ -2616,6 +2504,28 @@
           "item": "a13s3-e-055",
           "options": [
             "a13s3-e-055",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-048",
+          "options": [
+            "a13s3-h-048",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-049",
+          "options": [
+            "a13s3-h-049",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2645,7 +2555,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-052",
           "options": [
             "a13s3-t-052",
@@ -2668,75 +2578,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-056",
+          "item": "a13s3-e-054",
           "options": [
-            "a13s3-e-056",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-057",
-          "options": [
-            "a13s3-e-057",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-026",
-          "options": [
-            "a13s3-e-026",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-027",
-          "options": [
-            "a13s3-e-027",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-028",
-          "options": [
-            "a13s3-e-028",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-034",
-          "options": [
-            "a13s3-e-034",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-035",
-          "options": [
-            "a13s3-e-035",
+            "a13s3-e-054",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2811,6 +2655,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-003"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-058"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-059"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-060"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-063",
@@ -2834,7 +2694,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-058",
           "options": [
             "a13s3-h-058",
@@ -2849,6 +2709,28 @@
           "item": "a13s3-e-064",
           "options": [
             "a13s3-e-064",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-003",
+          "options": [
+            "a13s3-h-003",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-058",
+          "options": [
+            "a13s3-h-058",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -2878,7 +2760,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-061",
           "options": [
             "a13s3-t-061",
@@ -2901,75 +2783,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-065",
+          "item": "a13s3-e-063",
           "options": [
-            "a13s3-e-065",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-066",
-          "options": [
-            "a13s3-e-066",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-034",
-          "options": [
-            "a13s3-e-034",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-035",
-          "options": [
-            "a13s3-e-035",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-036",
-          "options": [
-            "a13s3-e-036",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-037",
-          "options": [
-            "a13s3-e-037",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-044",
-          "options": [
-            "a13s3-e-044",
+            "a13s3-e-063",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -3049,6 +2865,22 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-h-067"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-068"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-h-069"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-t-070"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-073",
@@ -3072,7 +2904,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-h-068",
           "options": [
             "a13s3-h-068",
@@ -3087,6 +2919,28 @@
           "item": "a13s3-e-074",
           "options": [
             "a13s3-e-074",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-h-067",
+          "options": [
+            "a13s3-h-067",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-h-068",
+          "options": [
+            "a13s3-h-068",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -3116,7 +2970,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-t-071",
           "options": [
             "a13s3-t-071",
@@ -3139,75 +2993,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-075",
+          "item": "a13s3-e-073",
           "options": [
-            "a13s3-e-075",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-076",
-          "options": [
-            "a13s3-e-076",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-044",
-          "options": [
-            "a13s3-e-044",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-045",
-          "options": [
-            "a13s3-e-045",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-046",
-          "options": [
-            "a13s3-e-046",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-047",
-          "options": [
-            "a13s3-e-047",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-054",
-          "options": [
-            "a13s3-e-054",
+            "a13s3-e-073",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -3271,6 +3059,113 @@
       ],
       "activities": [
         {
+          "type": "teach",
+          "item": "a13s3-e-016"
+        },
+        {
+          "type": "teach",
+          "item": "a13s3-e-026"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-016",
+          "options": [
+            "a13s3-e-016",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-016",
+          "options": [
+            "a13s3-e-016",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-e-056",
+          "options": [
+            "a13s3-e-056",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-026",
+          "options": [
+            "a13s3-e-026",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-016",
+          "options": [
+            "a13s3-e-016",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-e-026",
+          "options": [
+            "a13s3-e-026",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-056",
+          "options": [
+            "a13s3-e-056",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-063",
+          "options": [
+            "a13s3-e-063",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-e-073",
+          "options": [
+            "a13s3-e-073",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s3-e-016",
@@ -3294,7 +3189,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-e-026",
           "options": [
             "a13s3-e-026",
@@ -3309,127 +3204,6 @@
           "item": "a13s3-e-063",
           "options": [
             "a13s3-e-063",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-073",
-          "options": [
-            "a13s3-e-073",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-054",
-          "options": [
-            "a13s3-e-054",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-055",
-          "options": [
-            "a13s3-e-055",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-057",
-          "options": [
-            "a13s3-e-057",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-064",
-          "options": [
-            "a13s3-e-064",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-065",
-          "options": [
-            "a13s3-e-065",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-066",
-          "options": [
-            "a13s3-e-066",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-074",
-          "options": [
-            "a13s3-e-074",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-075",
-          "options": [
-            "a13s3-e-075",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-076",
-          "options": [
-            "a13s3-e-076",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-007",
-          "options": [
-            "a13s3-e-007",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
