@@ -965,7 +965,7 @@ test('teaching cards autoplay Finnish audio and feedback offers example playback
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.match(source, /Autoplay only on explicit teaching cards/);
   assert.match(source, /پخش تلفظ جملهٔ مثال/);
-  assert.match(source, /activity\.mode === 'cloze' \? \{ \.\.\.item, accepted_answers: \[item\.surface_form\] \} : item/);
+  assert.match(source, /gradeTypedAnswer\(\{ \.\.\.item, accepted_answers: \[item\.surface_form\] \}, input\.value\)/);
 });
 
 test('morning in Persian accepts both aamu and aamulla', () => {
