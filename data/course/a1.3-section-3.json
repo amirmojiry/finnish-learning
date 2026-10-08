@@ -1375,6 +1375,42 @@
       "accepted_answers": [
         "Tulen huomenna takaisin."
       ]
+    },
+    "a13s3-reading-1": {
+      "id": "a13s3-reading-1",
+      "surface_form": "Mitä tämä tarkoittaa? Avaa tiedosto ensin.",
+      "lemma": "Mitä tämä tarkoittaa? Avaa tiedosto ensin.",
+      "translation_fa": "این یعنی چه؟ اول فایل را باز کن.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s3",
+        "integrated-reading"
+      ],
+      "example_fi": "Mitä tämä tarkoittaa? Avaa tiedosto ensin.",
+      "example_fa": "این یعنی چه؟ اول فایل را باز کن.",
+      "accepted_answers": [
+        "Mitä tämä tarkoittaa? Avaa tiedosto ensin."
+      ]
+    },
+    "a13s3-reading-2": {
+      "id": "a13s3-reading-2",
+      "surface_form": "Voitko lähettää sen minulle? Määräaika on perjantaina.",
+      "lemma": "Voitko lähettää sen minulle? Määräaika on perjantaina.",
+      "translation_fa": "می‌توانی آن را برایم بفرستی؟ مهلت روز جمعه است.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s3",
+        "integrated-reading"
+      ],
+      "example_fi": "Voitko lähettää sen minulle? Määräaika on perjantaina.",
+      "example_fa": "می‌توانی آن را برایم بفرستی؟ مهلت روز جمعه است.",
+      "accepted_answers": [
+        "Voitko lähettää sen minulle? Määräaika on perjantaina."
+      ]
     }
   },
   "lessons": [
@@ -3188,25 +3224,25 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s3-e-026",
+          "type": "short-reading",
+          "item": "a13s3-reading-2",
+          "question_item": "a13s3-e-056",
           "options": [
-            "a13s3-e-026",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-007",
+            "a13s3-e-056",
+            "a13s3-e-008",
+            "a13s3-e-009"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-063",
+          "type": "short-reading",
+          "item": "a13s3-reading-1",
+          "question_item": "a13s3-e-016",
           "options": [
-            "a13s3-e-063",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-007",
+            "a13s3-e-016",
+            "a13s3-e-008",
+            "a13s3-e-009"
           ]
         }
       ]
@@ -3473,17 +3509,18 @@
         {
           "type": "morphology-choice",
           "item": "a13s3-e-063",
-          "base_fi": "Määräaika on perjantaina.",
-          "feature_fa": "تشخیص صورت آموزش‌داده‌شده",
-          "prompt_fa": "صورت درست «مهلت روز جمعه است.» را انتخاب کن.",
-          "frame_fi": "_____",
+          "base_fi": "tehdä",
+          "feature_fa": "ساخت فعل در پرسش راهنمایی",
+          "prompt_fa": "در پرسش «این کار چطور انجام می‌شود؟» صورت آموزش‌داده‌شده را انتخاب کن.",
+          "frame_fi": "Miten tämä _____?",
           "options_fi": [
-            "Määräaika on perjantaina.",
-            "ei Määräaika on perjantaina.",
-            "minun Määräaika on perjantaina."
+            "tehdään",
+            "tehdä",
+            "tekee",
+            "teen"
           ],
-          "expected_fi": "Määräaika on perjantaina.",
-          "explanation_fa": "این صورت دقیقاً در واژگان درس آموزش داده شده است."
+          "expected_fi": "tehdään",
+          "explanation_fa": "در سؤال Miten tämä tehdään? صورت tehdään استفاده می‌شود؛ ساخت مجهول کامل در این درس آموزش داده نمی‌شود."
         }
       ]
     }
