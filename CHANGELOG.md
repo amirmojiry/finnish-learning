@@ -6,6 +6,11 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- Correct A1.1's Persian curriculum audit figures to match Unicode-normalized inventory counts, with a synchronization regression test.
+- Reject duplicated, missing or cross-section mismatched curriculum lesson IDs even when an implemented stage's raw lesson count is unchanged.
+
 ### Documentation and development tooling
 
 - Establish a source-backed, machine-readable A1.1–C2 master curriculum with 11 stage contracts, communicative competencies, Finnish grammar prerequisite graph, topic vocabulary, expressions, sentence patterns, and authentic assessment plans.
