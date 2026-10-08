@@ -13,8 +13,8 @@ const a11Sections = [1,2,3,4].map((number) => readJson(`data/course/a1.1-section
 const a12Section1 = readJson('data/course/a1.2-section-1.json');
 const vocabulary = readJson('data/common-words.json');
 
-test('course stage configuration exposes playable A1.1 and A1.2 only', () => {
-  assert.deepEqual(course.COURSE_STAGES.map((stage) => stage.level), ['A1.1', 'A1.2']);
+test('course stage configuration exposes playable A1.1 through A1.3', () => {
+  assert.deepEqual(course.COURSE_STAGES.map((stage) => stage.level), ['A1.1', 'A1.2', 'A1.3']);
   assert.equal(course.COURSE_STAGES[0].sectionUrls.length, 4);
   assert.deepEqual(course.COURSE_STAGES[1].sectionUrls, [
     './data/course/a1.2-section-1.json',
@@ -22,7 +22,7 @@ test('course stage configuration exposes playable A1.1 and A1.2 only', () => {
     './data/course/a1.2-section-3.json',
     './data/course/a1.2-section-4.json',
   ]);
-  assert.doesNotMatch(JSON.stringify(course.COURSE_STAGES), /A1\.3/);
+  assert.equal(course.COURSE_STAGES[2].sectionUrls.length, 4);
 });
 
 test('A1.2 Section 1 maps all ten reviewed curriculum lessons', () => {
