@@ -78,6 +78,11 @@ test('every new item has explicit Finnish, Persian, pronunciation example, accep
     for (const item of Object.values(raw.items)) {
       assert.ok(item.surface_form && item.translation_fa && item.example_fi && item.example_fa, item.id);
       assert.ok(item.accepted_answers.includes(item.surface_form), item.id);
+      if (item.item_type === 'word') {
+        const sourceForm = item.surface_form.normalize('NFC').toLocaleLowerCase('fi-FI');
+        const sentence = item.example_fi.normalize('NFC').toLocaleLowerCase('fi-FI');
+        assert.ok(sentence.includes(sourceForm), item.id + ': the reviewed example must contain the taught form');
+      }
       const fromDictionary=sourceMap.get(item.surface_form.normalize('NFC').toLocaleLowerCase('fi-FI'));
       if (fromDictionary) {
         assert.equal(item.frequency_status,'ranked',item.id);
