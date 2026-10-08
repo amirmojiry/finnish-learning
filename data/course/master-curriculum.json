@@ -469,7 +469,7 @@
       "outcome_en": "Maintain simple social exchanges and manage familiar practical messages with some support.",
       "outcome_fa": "دعوت، تغییر قرار، مشکل خانه و کار روزمره و رویدادهای کوتاه را با زبان آشنا بیان کند.",
       "curriculum_file": "data/course/a1.3-curriculum.json",
-      "delivery_status": "planned",
+      "delivery_status": "implemented",
       "grammar": [
         {
           "id": "a13-present-paradigm",
