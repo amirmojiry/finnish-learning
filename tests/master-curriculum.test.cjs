@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
-const { validateMaster, inventory } = require('../scripts/audit-master-curriculum.cjs');
+const { validateMaster, validateLessonCoverage, inventory, normalizeForm } = require('../scripts/audit-master-curriculum.cjs');
 
 const ROOT = path.resolve(__dirname, '..');
 const read = (name) => fs.readFileSync(path.join(ROOT, name), 'utf8');
@@ -118,4 +118,62 @@ test('new curriculum data does not redefine current Parole frequency source fiel
   assert.ok(!curriculum.levels.some(stage => Object.hasOwn(stage, 'frequency_rank') || Object.hasOwn(stage, 'frequency_percent')));
   assert.ok(curriculum.lexical_policy.corpus_source.includes('Parole'));
   assert.ok(curriculum.lexical_policy.counts.includes('not claim'));
+});
+
+test('Persian lexical counts match the normalized generated inventory', () => {
+  const auditDoc = read('docs/CURRICULUM-AUDIT.fa.md');
+  const audit = inventory(curriculum);
+  const persianDigits = (number) => String(number).replace(/[0-9]/g, digit => '۰۱۲۳۴۵۶۷۸۹'[Number(digit)]);
+  assert.equal(normalizeForm('Suomi'), normalizeForm('suomi'));
+  for (const stage of audit.stages.filter(stage => stage.authored_curriculum_lessons > 0)) {
+    const expectedRow = `| ${stage.level} | ${persianDigits(stage.unique_curriculum_lexical_surface_targets)} | ${persianDigits(stage.target_strings_also_in_current_dictionary)} |`;
+    assert.ok(auditDoc.includes(expectedRow), `${stage.level}: the Persian audit table diverges from the normalized source inventory: ${expectedRow}`);
+  }
+});
+
+test('lesson coverage validator rejects duplicate mapped lesson IDs even when the counts match', () => {
+  const planned = [{
+    id: 'a1.1-s1',
+    lessons: [{ id: 'a1.1-s1-l09' }, { id: 'a1.1-s1-l10' }],
+  }];
+  const valid = [{
+    curriculum_section_id: 'a1.1-s1',
+    lessons: [{ curriculum_id: 'a1.1-s1-l09' }, { curriculum_id: 'a1.1-s1-l10' }],
+  }];
+  assert.deepEqual(validateLessonCoverage('A1.1', 'implemented', planned, valid), []);
+
+  const duplicated = [{
+    curriculum_section_id: 'a1.1-s1',
+    lessons: [{ curriculum_id: 'a1.1-s1-l09' }, { curriculum_id: 'a1.1-s1-l09' }],
+  }];
+  const errors = validateLessonCoverage('A1.1', 'implemented', planned, duplicated);
+  assert.ok(errors.some(error => /duplicate.*a1\.1-s1-l09/i.test(error)), errors.join('\n'));
+  assert.ok(errors.some(error => /missing.*a1\.1-s1-l10/i.test(error)), errors.join('\n'));
+});
+
+test('partial stages cannot silently contain duplicated IDs or the wrong section mapping', () => {
+  const planned = [
+    { id: 'a1.2-s1', lessons: [{ id: 'a1.2-s1-l01' }, { id: 'a1.2-s1-l02' }] },
+    { id: 'a1.2-s2', lessons: [{ id: 'a1.2-s2-l01' }] },
+  ];
+  const legitimatePartial = [{
+    curriculum_section_id: 'a1.2-s1',
+    lessons: [{ curriculum_id: 'a1.2-s1-l01' }],
+  }];
+  assert.deepEqual(validateLessonCoverage('A1.2', 'partially_implemented', planned, legitimatePartial), []);
+
+  const duplicatedPartial = [{
+    curriculum_section_id: 'a1.2-s1',
+    lessons: [{ curriculum_id: 'a1.2-s1-l01' }, { curriculum_id: 'a1.2-s1-l01' }],
+  }];
+  assert.ok(validateLessonCoverage('A1.2', 'partially_implemented', planned, duplicatedPartial)
+    .some(error => /duplicate/i.test(error)));
+
+  const wrongSection = [{
+    curriculum_section_id: 'a1.2-s1',
+    lessons: [{ curriculum_id: 'a1.2-s2-l01' }],
+  }];
+  assert.ok(validateLessonCoverage('A1.2', 'partially_implemented', planned, wrongSection)
+    .some(error => /not planned for section/i.test(error)));
+  assert.deepEqual(validateLessonCoverage('A2.1', 'planned', [], []), []);
 });

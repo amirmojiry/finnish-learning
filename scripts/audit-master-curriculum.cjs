@@ -22,6 +22,58 @@ function fail(errors, condition, message) {
   if (!condition) errors.push(message);
 }
 
+function validateLessonCoverage(levelName, deliveryStatus, plannedSections, shippedSections) {
+  const errors = [];
+  const expectedBySection = new Map();
+  const expectedIds = new Set();
+
+  for (const section of plannedSections) {
+    const sectionIds = new Set();
+    fail(errors, !expectedBySection.has(section.id),
+      `${levelName}: duplicate planned section ID: ${section.id}`);
+    for (const lesson of section.lessons || []) {
+      fail(errors, !expectedIds.has(lesson.id),
+        `${levelName}: duplicate planned curriculum lesson ID: ${lesson.id}`);
+      expectedIds.add(lesson.id);
+      sectionIds.add(lesson.id);
+    }
+    expectedBySection.set(section.id, sectionIds);
+  }
+
+  const actualIds = new Set();
+  let shippedLessonCount = 0;
+  for (const section of shippedSections) {
+    const expectedInSection = expectedBySection.get(section.curriculum_section_id);
+    for (const lesson of section.lessons || []) {
+      const lessonId = lesson.curriculum_id;
+      shippedLessonCount += 1;
+      fail(errors, expectedIds.has(lessonId),
+        `${levelName}: unknown shipped curriculum lesson ID: ${lessonId}`);
+      fail(errors, Boolean(expectedInSection?.has(lessonId)),
+        `${levelName}: lesson ${lessonId} is not planned for section ${section.curriculum_section_id}`);
+      fail(errors, !actualIds.has(lessonId),
+        `${levelName}: duplicate shipped curriculum lesson ID: ${lessonId}`);
+      actualIds.add(lessonId);
+    }
+  }
+
+  const missing = [...expectedIds].filter(id => !actualIds.has(id));
+  if (deliveryStatus === 'implemented') {
+    fail(errors, missing.length === 0,
+      `${levelName}: missing required curriculum lesson IDs: ${missing.join(', ')}`);
+    fail(errors, expectedIds.size > 0 && shippedLessonCount === expectedIds.size
+      && actualIds.size === expectedIds.size,
+      `${levelName}: marked implemented without all unique planned lessons`);
+  } else if (deliveryStatus === 'partially_implemented') {
+    fail(errors, shippedLessonCount > 0 && shippedLessonCount < expectedIds.size,
+      `${levelName}: partial delivery status no longer matches shipped content`);
+  } else {
+    fail(errors, shippedLessonCount === 0,
+      `${levelName}: planned-only stage unexpectedly has shipped lessons`);
+  }
+  return errors;
+}
+
 function validateMaster(master) {
   const errors = [];
   fail(errors, master.schema_version === 1, 'Master schema_version must be 1');
@@ -72,34 +124,20 @@ function validateMaster(master) {
       new RegExp('^' + levelPrefix + '-section-[0-9]+\\.json$').test(name));
     const shippedSections = shippedFiles.map(name => readJson(path.join(COURSE_DIR, name)));
     const expectedModuleIds = new Set((level.modules || []).map(module => module.id));
-    const declaredLessons = level.curriculum_file && fs.existsSync(path.join(ROOT, level.curriculum_file))
-      ? new Set(readJson(path.join(ROOT, level.curriculum_file)).sections.flatMap(section => section.lessons.map(lesson => lesson.id)))
-      : new Set();
+    const declaredSections = level.curriculum_file && fs.existsSync(path.join(ROOT, level.curriculum_file))
+      ? readJson(path.join(ROOT, level.curriculum_file)).sections
+      : [];
     const shippedIds = new Set();
-    let shippedLessonCount = 0;
     for (const shipped of shippedSections) {
       fail(errors, expectedModuleIds.has(shipped.curriculum_section_id),
         level.level + ': shipped section missing from master modules: ' + shipped.curriculum_section_id);
       fail(errors, !shippedIds.has(shipped.curriculum_section_id),
         level.level + ': duplicate shipped section: ' + shipped.curriculum_section_id);
       shippedIds.add(shipped.curriculum_section_id);
-      for (const lesson of shipped.lessons || []) {
-        shippedLessonCount += 1;
-        fail(errors, declaredLessons.has(lesson.curriculum_id),
-          level.level + ': shipped lesson missing from reviewed level plan: ' + lesson.curriculum_id);
-      }
     }
-    const totalPlannedLessons = declaredLessons.size;
-    if (level.delivery_status === 'implemented') {
-      fail(errors, totalPlannedLessons > 0 && shippedLessonCount === totalPlannedLessons,
-        level.level + ': marked implemented without all planned lessons');
-    } else if (level.delivery_status === 'partially_implemented') {
-      fail(errors, shippedLessonCount > 0 && shippedLessonCount < totalPlannedLessons,
-        level.level + ': partial delivery status no longer matches shipped content');
-    } else {
-      fail(errors, shippedLessonCount === 0,
-        level.level + ': planned-only stage unexpectedly has shipped lessons');
-    }
+    errors.push(...validateLessonCoverage(
+      level.level, level.delivery_status, declaredSections, shippedSections,
+    ));
     for (const module of level.modules || []) {
       fail(errors, new RegExp('^' + level.level.toLowerCase().replace('.', '\\.') + '-s[1-4]$').test(module.id)
         && module.title_fa && module.can_do_fa, level.level + ': invalid module ID/content ' + module.id);
@@ -199,4 +237,4 @@ function main(args=process.argv.slice(2)) {
 }
 
 if(require.main===module)main();
-module.exports={validateMaster,inventory,toMarkdown,normalizeForm};
+module.exports={validateMaster,validateLessonCoverage,inventory,toMarkdown,normalizeForm};
