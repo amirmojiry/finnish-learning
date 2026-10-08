@@ -12,7 +12,7 @@ This status snapshot was checked on **2026-10-08**. For fresh implementation cou
 | --- | --- | --- | --- |
 | A1.1 | 4 sections, 40 lessons in [A1.1 curriculum](../data/course/a1.1-curriculum.json) | 4 sections / 40 lessons | Maintain correctness, review exercise quality and skills evidence |
 | A1.2 | 4 sections, 40 lessons in [A1.2 curriculum](../data/course/a1.2-curriculum.json) | **4 sections / 40 lessons** | Continue correctness, device/audio and proficiency-evidence auditing |
-| A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 4 sections / 40 lessons | **Next content milestone: build reviewed A1.3 sections** |
+| A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 4 sections / 40 lessons | Language review, device testing and independent proficiency-evidence audit |
 | A2.1–C2 | Four proposed modules per level in the [master plan](../data/course/master-curriculum.json) | 0 | Author and review full level curricula before writing lessons |
 
 The shipped dictionary has an independently generated count and Parole frequency fields. Do not interpret stage lexical targets as existing dictionary entries or attained proficiency. Consult the [vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) and [vocabulary roadmap](VOCABULARY-ROADMAP.md) when sourcing new items.
@@ -36,7 +36,7 @@ The shipped dictionary has an independently generated count and Parole frequency
 
 ### 2. Quality review of completed A1.3
 
-- Convert the [reviewed A1.3 curriculum](../data/course/a1.3-curriculum.json) into playable sections, not a second competing planning matrix.
+- All four sections of the [reviewed A1.3 curriculum](../data/course/a1.3-curriculum.json) are now playable; preserve one canonical curriculum and verify every implemented contract.
 - Extend familiar conversations, messages, home/neighborhood, study/work and recent-event phrases.
 - Teach selected past forms as reviewed chunks first; do not silently equate them with full independent past-tense morphology.
 
