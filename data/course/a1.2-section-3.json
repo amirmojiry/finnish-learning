@@ -240,8 +240,8 @@
         "daily-life",
         "source-backed"
       ],
-      "example_fi": "Pidän tästä musiikista.",
-      "example_fa": "این موسیقی را دوست دارم.",
+      "example_fi": "Minun pitää lähteä.",
+      "example_fa": "من باید بروم.",
       "accepted_answers": [
         "pitää"
       ]
@@ -672,8 +672,8 @@
         "daily-life",
         "curated"
       ],
-      "example_fi": "Musiikki on harrastukseni.",
-      "example_fa": "موسیقی سرگرمی من است.",
+      "example_fi": "Tämä harrastus on mukava.",
+      "example_fa": "این سرگرمی دلپذیر است.",
       "accepted_answers": [
         "harrastus"
       ]
