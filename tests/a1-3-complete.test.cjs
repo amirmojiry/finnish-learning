@@ -67,3 +67,38 @@ test('A1.3 entry is browseable without destroying prior saved progress',()=>{
  assert.equal(course.isCourseLessonAccessible(prepared,roundTrip,8,0),true);
  assert.equal(course.isCourseLessonAccessible(prepared,roundTrip,8,1),false);
 });
+
+
+test('integrated lessons have source-matched bilingual reading comprehension',()=>{
+  for(const section of prepared.slice(8)){
+    const lesson=section.lessons[8];
+    const readings=lesson.activities.filter(a=>a.type==='short-reading');
+    assert.equal(readings.length,2,section.id);
+    for(const a of readings){
+      const passage=section.items[a.item].surface_form;
+      const expected=section.items[a.question_item].surface_form;
+      assert.ok(passage.includes(expected),a.item);
+      assert.equal(a.options.filter(id=>passage.includes(section.items[id].surface_form)).length,1,a.item);
+      assert.ok(section.items[a.item].translation_fa&&section.items[a.item].example_fa);
+    }
+  }
+  assert.equal(prepared[8].lessons[8].activities.filter(a=>a.type==='dialogue-order').length,1);
+});
+
+test('A1.3 ordering activities are meaningfully scrambled and reconstruct only their canonical Finnish sentence',()=>{
+  for(const section of prepared.slice(8))for(const lesson of section.lessons){
+    for(const a of lesson.activities.filter(x=>x.type==='sentence-order')){
+      assert.notDeepEqual(a.answer_order,a.tokens.map((_,i)=>i),lesson.id);
+      assert.equal(a.answer_order.map(i=>a.tokens[i]).join(' '),a.expected_fi);
+      assert.ok(a.expected_fa&&a.expected_fa.trim(),lesson.id);
+    }
+  }
+});
+
+test('A1.3 final checkpoint samples earlier sections as well as recent events',()=>{
+ const last=prepared.at(-1).lessons.at(-1);
+ const forms=last.checkpoint_targets.map(id=>prepared.at(-1).items[id].surface_form);
+ for(const sample of ['Haluatko tulla minun kanssani?','Missä kirjasto on?','Mitä tämä tarkoittaa?','Eilen olin kotona.','Huomenna menen töihin.']){
+  assert.ok(forms.includes(sample),sample);
+ }
+});
