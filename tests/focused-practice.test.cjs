@@ -63,11 +63,15 @@ test('course target attempts aggregate by section and target', () => {
     attempts: 2,
     correct: 1,
     lastAttemptAt: 2000,
+    consecutiveCorrect: 1,
+    retryRecovered: false,
   });
   assert.deepEqual(progress.targetPerformance['section-test::beta'], {
     attempts: 1,
     correct: 1,
     lastAttemptAt: 3000,
+    consecutiveCorrect: 1,
+    retryRecovered: false,
   });
 });
 
