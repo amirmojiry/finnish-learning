@@ -1429,6 +1429,42 @@
       "accepted_answers": [
         "Mitä tämä tarkoittaa?"
       ]
+    },
+    "a13s4-reading-1": {
+      "id": "a13s4-reading-1",
+      "surface_form": "Mitä sinulle kuuluu? Tarvitsen apua.",
+      "lemma": "Mitä sinulle kuuluu? Tarvitsen apua.",
+      "translation_fa": "حالت چطور است؟ به کمک نیاز دارم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s4",
+        "integrated-reading"
+      ],
+      "example_fi": "Mitä sinulle kuuluu? Tarvitsen apua.",
+      "example_fa": "حالت چطور است؟ به کمک نیاز دارم.",
+      "accepted_answers": [
+        "Mitä sinulle kuuluu? Tarvitsen apua."
+      ]
+    },
+    "a13s4-reading-2": {
+      "id": "a13s4-reading-2",
+      "surface_form": "Mitä tämä tarkoittaa? Eilen olin kotona.",
+      "lemma": "Mitä tämä tarkoittaa? Eilen olin kotona.",
+      "translation_fa": "این یعنی چه؟ دیروز خانه بودم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s4",
+        "integrated-reading"
+      ],
+      "example_fi": "Mitä tämä tarkoittaa? Eilen olin kotona.",
+      "example_fa": "این یعنی چه؟ دیروز خانه بودم.",
+      "accepted_answers": [
+        "Mitä tämä tarkoittaa? Eilen olin kotona."
+      ]
     }
   },
   "lessons": [
@@ -3246,25 +3282,25 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s4-e-078",
+          "type": "short-reading",
+          "item": "a13s4-reading-2",
+          "question_item": "a13s4-e-079",
           "options": [
-            "a13s4-e-078",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-e-008",
+            "a13s4-e-079",
+            "a13s4-e-009",
+            "a13s4-e-010"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-007",
+          "type": "short-reading",
+          "item": "a13s4-reading-1",
+          "question_item": "a13s4-e-077",
           "options": [
             "a13s4-e-007",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-e-077",
+            "a13s4-e-008",
+            "a13s4-e-009"
           ]
         }
       ]
@@ -3537,17 +3573,18 @@
         {
           "type": "morphology-choice",
           "item": "a13s4-e-067",
-          "base_fi": "Minun mielestäni tämä on hyvä.",
-          "feature_fa": "تشخیص صورت آموزش‌داده‌شده",
-          "prompt_fa": "صورت درست «به نظر من این خوب است.» را انتخاب کن.",
-          "frame_fi": "_____",
+          "base_fi": "olla",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "برای «دیروز خانه بودم» صورت گذشتهٔ صحیح را انتخاب کن.",
+          "frame_fi": "Eilen _____ kotona.",
           "options_fi": [
-            "Minun mielestäni tämä on hyvä.",
-            "ei Minun mielestäni tämä on hyvä.",
-            "minun Minun mielestäni tämä on hyvä."
+            "olin",
+            "oli",
+            "olit",
+            "olen"
           ],
-          "expected_fi": "Minun mielestäni tämä on hyvä.",
-          "explanation_fa": "این صورت دقیقاً در واژگان درس آموزش داده شده است."
+          "expected_fi": "olin",
+          "explanation_fa": "olin صورت گذشتهٔ اول‌شخص مفرد از olla است."
         }
       ]
     }
