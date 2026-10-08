@@ -534,7 +534,7 @@
       "id": "a13s1-e-030",
       "surface_form": "Ehkä sitten huomenna.",
       "lemma": "Ehkä sitten huomenna.",
-      "translation_fa": "شاید پس فردا؛ نه، فردا.",
+      "translation_fa": "شاید فردا.",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -543,7 +543,7 @@
         "curated"
       ],
       "example_fi": "Ehkä sitten huomenna.",
-      "example_fa": "شاید پس فردا؛ نه، فردا.",
+      "example_fa": "شاید فردا.",
       "accepted_answers": [
         "Ehkä sitten huomenna."
       ]
@@ -1356,6 +1356,42 @@
       "example_fa": "می‌توانیم بعداً همدیگر را ببینیم.",
       "accepted_answers": [
         "Voidaan tavata myöhemmin."
+      ]
+    },
+    "a13s1-reading-1": {
+      "id": "a13s1-reading-1",
+      "surface_form": "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?",
+      "lemma": "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?",
+      "translation_fa": "سلام! حالت چطور است؟ می‌خواهی با من بیایی؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "integrated-reading"
+      ],
+      "example_fi": "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?",
+      "example_fa": "سلام! حالت چطور است؟ می‌خواهی با من بیایی؟",
+      "accepted_answers": [
+        "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?"
+      ]
+    },
+    "a13s1-reading-2": {
+      "id": "a13s1-reading-2",
+      "surface_form": "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin.",
+      "lemma": "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin.",
+      "translation_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است. می‌توانیم بعداً همدیگر را ببینیم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "integrated-reading"
+      ],
+      "example_fi": "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin.",
+      "example_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است. می‌توانیم بعداً همدیگر را ببینیم.",
+      "accepted_answers": [
+        "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin."
       ]
     }
   },
@@ -3160,36 +3196,42 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-074",
-          "options": [
+          "type": "dialogue-order",
+          "turns": [
+            "a13s1-e-072",
             "a13s1-e-074",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s1-e-017",
-          "options": [
+            "a13s1-e-073",
             "a13s1-e-017",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-075"
+          ],
+          "answer_order": [
+            2,
+            3,
+            1,
+            4,
+            0
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-075",
+          "type": "short-reading",
+          "item": "a13s1-reading-2",
+          "question_item": "a13s1-e-074",
           "options": [
-            "a13s1-e-075",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-007",
+            "a13s1-e-074",
+            "a13s1-e-008",
+            "a13s1-e-009"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s1-reading-1",
+          "question_item": "a13s1-e-073",
+          "options": [
+            "a13s1-e-007",
+            "a13s1-e-073",
+            "a13s1-e-008",
+            "a13s1-e-009"
           ]
         }
       ]
@@ -3459,17 +3501,18 @@
         {
           "type": "morphology-choice",
           "item": "a13s1-e-062",
-          "base_fi": "En tule, koska olen väsynyt.",
-          "feature_fa": "تشخیص صورت آموزش‌داده‌شده",
-          "prompt_fa": "صورت درست «نمی‌آیم چون خسته‌ام.» را انتخاب کن.",
-          "frame_fi": "_____",
+          "base_fi": "tulla",
+          "feature_fa": "حال اول‌شخص مفرد فعل آمدن",
+          "prompt_fa": "در جملهٔ «به‌زودی می‌آیم» صورت اول‌شخص درست را انتخاب کن.",
+          "frame_fi": "_____ pian.",
           "options_fi": [
-            "En tule, koska olen väsynyt.",
-            "ei En tule, koska olen väsynyt.",
-            "minun En tule, koska olen väsynyt."
+            "Tulen",
+            "Tulet",
+            "Tulee",
+            "Tulla"
           ],
-          "expected_fi": "En tule, koska olen väsynyt.",
-          "explanation_fa": "این صورت دقیقاً در واژگان درس آموزش داده شده است."
+          "expected_fi": "Tulen",
+          "explanation_fa": "Tulen صورت اول‌شخص مفرد فعل tulla در زمان حال است."
         }
       ]
     }
