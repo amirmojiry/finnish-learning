@@ -14,7 +14,7 @@
 | Stage | First focus | Recycled prerequisites | Pedagogical emphasis |
 | --- | --- | --- | --- |
 | A1.1 | Basic phonology and vowel length; Olla in basic identification; Core question words | Entry stage | Available in existing content; audit individual lesson treatment |
-| A1.2 | Quantities and restricted partitive; Internal and external local cases in reviewed forms; Polite service requests as formulae | a11-questions, a11-case-chunks, a11-pronouns | Partially implemented; remaining topics are a design proposal |
+| A1.2 | Quantities and restricted partitive; Internal and external local cases in reviewed forms; Polite service requests as formulae | a11-questions, a11-case-chunks, a11-pronouns | Four playable sections; grammatical competence still requires separate learner assessment |
 | A1.3 | High-frequency present paradigms; Selected verb types and stems; Selected consonant gradation | a12-requests, a12-local-cases, a11-negation | Planning only, not shipped |
 | A2.1 | Productive simple past; Partitive vs total-object basics; Plural partitive in common phrases | a13-present-paradigm, a13-kpt-preview, a13-partitive-patterns | Planning only, not shipped |
 | A2.2 | Present perfect; Past perfect recognition; Conditional for polite requests | a21-imperfect, a21-object-core, a21-rections | Planning only, not shipped |
