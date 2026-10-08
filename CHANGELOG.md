@@ -6,6 +6,8 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.26.2] - 2026-10-08
+
 ### Documentation
 
 - Introduce a bilingual documentation hub with explicit canonical source-of-truth ownership and status for planning versus implemented lessons.
