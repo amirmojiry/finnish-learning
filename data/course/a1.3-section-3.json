@@ -75,7 +75,7 @@
         "curated"
       ],
       "example_fi": "Tämä tehtävä pitää tehdä tänään.",
-      "example_fa": "تکلیف / کار",
+      "example_fa": "این کار باید امروز انجام شود.",
       "accepted_answers": [
         "tehtävä"
       ]
@@ -93,7 +93,7 @@
         "curated"
       ],
       "example_fi": "Kurssi alkaa aamulla.",
-      "example_fa": "دوره",
+      "example_fa": "کلاس صبح شروع می‌شود.",
       "accepted_answers": [
         "kurssi"
       ]
@@ -237,7 +237,7 @@
         "curated"
       ],
       "example_fi": "Mitä tämä tarkoittaa?",
-      "example_fa": "معنی دادن",
+      "example_fa": "این یعنی چه؟",
       "accepted_answers": [
         "tarkoittaa"
       ]
@@ -255,7 +255,7 @@
         "curated"
       ],
       "example_fi": "Voitko selittää?",
-      "example_fa": "توضیح دادن",
+      "example_fa": "می‌توانی توضیح بدهی؟",
       "accepted_answers": [
         "selittää"
       ]
@@ -273,7 +273,7 @@
         "curated"
       ],
       "example_fi": "Voitko sanoa uudestaan?",
-      "example_fa": "دوباره",
+      "example_fa": "می‌توانی دوباره بگویی؟",
       "accepted_answers": [
         "uudestaan"
       ]
@@ -363,7 +363,7 @@
         "source-backed"
       ],
       "example_fi": "Avaa tiedosto ensin.",
-      "example_fa": "اول",
+      "example_fa": "اول فایل را باز کن.",
       "accepted_answers": [
         "ensin"
       ]
@@ -417,7 +417,7 @@
         "curated"
       ],
       "example_fi": "Avaa tiedosto ensin.",
-      "example_fa": "باز کن",
+      "example_fa": "اول فایل را باز کن.",
       "accepted_answers": [
         "avaa"
       ]
@@ -435,7 +435,7 @@
         "curated"
       ],
       "example_fi": "Kirjoita nimi.",
-      "example_fa": "بنویس",
+      "example_fa": "نام را بنویس.",
       "accepted_answers": [
         "kirjoita"
       ]
@@ -453,7 +453,7 @@
         "curated"
       ],
       "example_fi": "Lähetä viesti sen jälkeen.",
-      "example_fa": "بفرست",
+      "example_fa": "بعد از آن پیام را بفرست.",
       "accepted_answers": [
         "lähetä"
       ]
@@ -561,7 +561,7 @@
         "curated"
       ],
       "example_fi": "Osaan vähän suomea.",
-      "example_fa": "بلدم",
+      "example_fa": "کمی فنلاندی بلدم.",
       "accepted_answers": [
         "osaan"
       ]
@@ -579,7 +579,7 @@
         "curated"
       ],
       "example_fi": "Minun pitää harjoitella.",
-      "example_fa": "تمرین کردن",
+      "example_fa": "باید تمرین کنم.",
       "accepted_answers": [
         "harjoitella"
       ]
@@ -723,7 +723,7 @@
         "source-backed"
       ],
       "example_fi": "Meidän opettajamme on täällä.",
-      "example_fa": "ما / مال ما",
+      "example_fa": "معلم ما اینجاست.",
       "accepted_answers": [
         "meidän"
       ]
@@ -867,7 +867,7 @@
         "source-backed"
       ],
       "example_fi": "Voitko lähettää sen minulle?",
-      "example_fa": "به من",
+      "example_fa": "می‌توانی آن را برایم بفرستی؟",
       "accepted_answers": [
         "minulle"
       ]
@@ -939,7 +939,7 @@
         "curated"
       ],
       "example_fi": "Liite on mukana.",
-      "example_fa": "پیوست",
+      "example_fa": "فایل پیوست همراه پیام است.",
       "accepted_answers": [
         "liite"
       ]
@@ -957,7 +957,7 @@
         "curated"
       ],
       "example_fi": "Voitko lähettää sen minulle?",
-      "example_fa": "فرستادن",
+      "example_fa": "می‌توانی آن را برایم بفرستی؟",
       "accepted_answers": [
         "lähettää"
       ]
@@ -1083,7 +1083,7 @@
         "curated"
       ],
       "example_fi": "Määräaika on perjantaina.",
-      "example_fa": "مهلت",
+      "example_fa": "مهلت روز جمعه است.",
       "accepted_answers": [
         "määräaika"
       ]
@@ -1119,7 +1119,7 @@
         "curated"
       ],
       "example_fi": "Teen sen tällä viikolla.",
-      "example_fa": "در هفته",
+      "example_fa": "این هفته انجامش می‌دهم.",
       "accepted_answers": [
         "viikolla"
       ]
@@ -1209,7 +1209,7 @@
         "source-backed"
       ],
       "example_fi": "Olen myöhässä, koska bussi on myöhässä.",
-      "example_fa": "چون",
+      "example_fa": "دیر کرده‌ام چون اتوبوس تأخیر دارد.",
       "accepted_answers": [
         "koska"
       ]
@@ -1245,7 +1245,7 @@
         "source-backed"
       ],
       "example_fi": "Olen poissa sairauden vuoksi.",
-      "example_fa": "به دلیل",
+      "example_fa": "به‌دلیل بیماری غایبم.",
       "accepted_answers": [
         "vuoksi"
       ]
@@ -1263,7 +1263,7 @@
         "curated"
       ],
       "example_fi": "Viime viikolla olin poissa.",
-      "example_fa": "غایب",
+      "example_fa": "هفتهٔ گذشته غایب بودم.",
       "accepted_answers": [
         "poissa"
       ]
@@ -1464,14 +1464,14 @@
           "type": "sentence-order",
           "item": "a13s3-e-008",
           "tokens": [
-            "Kurssi",
             "alkaa",
-            "aamulla."
+            "aamulla.",
+            "Kurssi"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Kurssi alkaa aamulla."
         }
@@ -1667,12 +1667,12 @@
           "type": "sentence-order",
           "item": "a13s3-e-017",
           "tokens": [
-            "Voitko",
-            "selittää?"
+            "selittää?",
+            "Voitko"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Voitko selittää?"
         }
@@ -1867,12 +1867,12 @@
           "type": "sentence-order",
           "item": "a13s3-e-027",
           "tokens": [
-            "Kirjoita",
-            "nimi."
+            "nimi.",
+            "Kirjoita"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Kirjoita nimi."
         }
@@ -2068,12 +2068,12 @@
           "type": "sentence-order",
           "item": "a13s3-e-035",
           "tokens": [
-            "Tarvitsen",
-            "apua."
+            "apua.",
+            "Tarvitsen"
           ],
           "answer_order": [
-            0,
-            1
+            1,
+            0
           ],
           "expected_fi": "Tarvitsen apua."
         }
@@ -2269,14 +2269,14 @@
           "type": "sentence-order",
           "item": "a13s3-e-045",
           "tokens": [
-            "Opiskelen",
             "tässä",
-            "ryhmässä."
+            "ryhmässä.",
+            "Opiskelen"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Opiskelen tässä ryhmässä."
         }
@@ -2472,14 +2472,14 @@
           "type": "sentence-order",
           "item": "a13s3-e-055",
           "tokens": [
-            "Liite",
             "on",
-            "mukana."
+            "mukana.",
+            "Liite"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Liite on mukana."
         }
@@ -2675,16 +2675,16 @@
           "type": "sentence-order",
           "item": "a13s3-e-064",
           "tokens": [
-            "Teen",
             "sen",
             "tällä",
-            "viikolla."
+            "viikolla.",
+            "Teen"
           ],
           "answer_order": [
+            3,
             0,
             1,
-            2,
-            3
+            2
           ],
           "expected_fi": "Teen sen tällä viikolla."
         }
@@ -2881,20 +2881,20 @@
           "type": "sentence-order",
           "item": "a13s3-e-074",
           "tokens": [
-            "Olen",
             "myöhässä,",
             "koska",
             "bussi",
             "on",
-            "myöhässä."
+            "myöhässä.",
+            "Olen"
           ],
           "answer_order": [
+            5,
             0,
             1,
             2,
             3,
-            4,
-            5
+            4
           ],
           "expected_fi": "Olen myöhässä, koska bussi on myöhässä."
         }
@@ -3081,14 +3081,14 @@
           "type": "sentence-order",
           "item": "a13s3-e-026",
           "tokens": [
-            "Avaa",
             "tiedosto",
-            "ensin."
+            "ensin.",
+            "Avaa"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Avaa tiedosto ensin."
         }
@@ -3285,14 +3285,14 @@
           "type": "sentence-order",
           "item": "a13s3-e-063",
           "tokens": [
-            "Määräaika",
             "on",
-            "perjantaina."
+            "perjantaina.",
+            "Määräaika"
           ],
           "answer_order": [
+            2,
             0,
-            1,
-            2
+            1
           ],
           "expected_fi": "Määräaika on perjantaina."
         },
