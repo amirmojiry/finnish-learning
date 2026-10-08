@@ -6,6 +6,18 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.28.0] - 2026-10-08
+
+### Added
+
+- Forty A1.3 playable lessons across four sections (social messages, home/neighborhood, work/study, and recent events/plans) with fifteen activities per lesson and four 80% checkpoints.
+- Persian/Finnish curated phrase mappings, targeted listening and dictation, structured sentence work, explicit past-tense examples, and A1.3-to-A1.2 progress continuity.
+
+### Changed
+
+- A1.3 joins the playable course stage loader. Higher levels remain planning only; completing in-app exercises is not a CEFR/YKI certificate.
+
+
 ## [1.27.0] - 2026-10-08
 
 ### Added
