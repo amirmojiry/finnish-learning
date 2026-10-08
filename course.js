@@ -3295,10 +3295,9 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          const grading = gradeTypedAnswer(
-            activity.mode === 'cloze' ? { ...item, accepted_answers: [item.surface_form] } : item,
-            input.value,
-          );
+          const grading = activity.mode === 'cloze'
+            ? gradeTypedAnswer({ ...item, accepted_answers: [item.surface_form] }, input.value)
+            : gradeTypedAnswer(item, input.value);
           const correct = grading.accepted;
           recordActivityResult(activity, correct, grading);
           input.disabled = true;
