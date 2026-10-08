@@ -3204,19 +3204,19 @@
       "morphology_practice": [
         {
           "type": "morphology-choice",
-          "item": "a12s3-expr-09",
-          "base_fi": "yliopisto",
-          "feature_fa": "inessiivi محل تحصیل",
-          "prompt_fa": "برای «در دانشگاه درس می‌خوانم»، شکل «در دانشگاه» را انتخاب کن.",
-          "frame_fi": "Opiskelen _____.",
+          "item": "a12s3-expr-02",
+          "base_fi": "koti",
+          "feature_fa": "elatiivi / صورت مبدأ در عبارت ثابت",
+          "prompt_fa": "برای گفتن «از خانه راه می‌افتم»، کدام شکل خانه را انتخاب می‌کنی؟",
+          "frame_fi": "Lähden _____.",
           "options_fi": [
-            "yliopisto",
-            "yliopistoon",
-            "yliopistossa",
-            "yliopistosta"
+            "koti",
+            "kotoa",
+            "kotona",
+            "kotiin"
           ],
-          "expected_fi": "yliopistossa",
-          "explanation_fa": "یادگیری در یک مکان ثابت: Opiskelen yliopistossa."
+          "expected_fi": "kotoa",
+          "explanation_fa": "در عبارت Lähden kotoa شکلِ مبدأ «از خانه» به‌صورت kotoa است."
         }
       ],
       "passing_score": 0.8,
