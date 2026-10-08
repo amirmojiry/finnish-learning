@@ -1870,6 +1870,7 @@
     let sessionStartedAt = 0;
     let activityStartedAt = 0;
     let activityTimingIndex = -1;
+    let audioSlideToken = 0;
     let answered = false;
 
     function isCourseHash() {
@@ -1958,6 +1959,7 @@
     }
 
     function hideCourseView() {
+      audioSlideToken += 1;
       stopSpeech(windowObject);
       courseView.hidden = true;
       setLessonFocusMode(false);
@@ -2134,6 +2136,7 @@
     }
 
     function renderSectionMap() {
+      audioSlideToken += 1;
       stopSpeech(windowObject);
       if (mapNavigationCleanup) {
         mapNavigationCleanup();
@@ -2616,6 +2619,7 @@
     }
 
     function renderActivity() {
+      const currentAudioToken = ++audioSlideToken;
       stopSpeech(windowObject);
       if (!activeLesson) return renderSectionMap();
       const activity = activeLesson.activities[activityIndex];
@@ -3196,7 +3200,8 @@
           word.append(speak);
           // Autoplay only on explicit teaching cards; manual playback stays available.
           windowObject.setTimeout(() => {
-            if (activeLesson?.activities[activityIndex] === activity
+            if (currentAudioToken === audioSlideToken
+              && activeLesson?.activities[activityIndex] === activity
               && finnishSpeechStatus(windowObject).state === 'ready') {
               playSpeech(windowObject, item.surface_form);
             }
@@ -3374,6 +3379,7 @@
     }
 
     function nextActivity() {
+      audioSlideToken += 1;
       stopSpeech(windowObject);
       activityIndex += 1;
       if (activityIndex >= activeLesson.activities.length) {
@@ -3386,6 +3392,7 @@
     }
 
     function completeLesson() {
+      audioSlideToken += 1;
       stopSpeech(windowObject);
       if (!activeLesson) return renderSectionMap();
       if (activeLesson.focused_practice) {
