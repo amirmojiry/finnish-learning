@@ -1375,6 +1375,42 @@
       "accepted_answers": [
         "Voitteko auttaa minua?"
       ]
+    },
+    "a13s2-reading-1": {
+      "id": "a13s2-reading-1",
+      "surface_form": "Missä kirjasto on? Milloin se on auki?",
+      "lemma": "Missä kirjasto on? Milloin se on auki?",
+      "translation_fa": "کتابخانه کجاست؟ چه زمانی باز است؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "integrated-reading"
+      ],
+      "example_fi": "Missä kirjasto on? Milloin se on auki?",
+      "example_fa": "کتابخانه کجاست؟ چه زمانی باز است؟",
+      "accepted_answers": [
+        "Missä kirjasto on? Milloin se on auki?"
+      ]
+    },
+    "a13s2-reading-2": {
+      "id": "a13s2-reading-2",
+      "surface_form": "Sisäänkäynti on tästä. Voitteko auttaa minua?",
+      "lemma": "Sisäänkäynti on tästä. Voitteko auttaa minua?",
+      "translation_fa": "ورودی از اینجاست. می‌توانید به من کمک کنید؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "integrated-reading"
+      ],
+      "example_fi": "Sisäänkäynti on tästä. Voitteko auttaa minua?",
+      "example_fa": "ورودی از اینجاست. می‌توانید به من کمک کنید؟",
+      "accepted_answers": [
+        "Sisäänkäynti on tästä. Voitteko auttaa minua?"
+      ]
     }
   },
   "lessons": [
@@ -3187,25 +3223,25 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s2-e-076",
+          "type": "short-reading",
+          "item": "a13s2-reading-2",
+          "question_item": "a13s2-e-072",
           "options": [
-            "a13s2-e-076",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-007",
+            "a13s2-e-072",
+            "a13s2-e-008",
+            "a13s2-e-009"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-054",
+          "type": "short-reading",
+          "item": "a13s2-reading-1",
+          "question_item": "a13s2-e-053",
           "options": [
-            "a13s2-e-054",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-007",
+            "a13s2-e-053",
+            "a13s2-e-008",
+            "a13s2-e-009"
           ]
         }
       ]
@@ -3474,17 +3510,18 @@
         {
           "type": "morphology-choice",
           "item": "a13s2-e-063",
-          "base_fi": "Milloin kirjasto on auki?",
-          "feature_fa": "تشخیص صورت آموزش‌داده‌شده",
-          "prompt_fa": "صورت درست «کتابخانه چه زمانی باز است؟» را انتخاب کن.",
-          "frame_fi": "_____",
+          "base_fi": "olla",
+          "feature_fa": "حال سوم‌شخص مفرد",
+          "prompt_fa": "در جملهٔ «آشپزخانه اینجاست» شکل صحیح olla را انتخاب کن.",
+          "frame_fi": "Keittiö _____ tässä.",
           "options_fi": [
-            "Milloin kirjasto on auki?",
-            "ei Milloin kirjasto on auki?",
-            "minun Milloin kirjasto on auki?"
+            "on",
+            "olen",
+            "olet",
+            "ovat"
           ],
-          "expected_fi": "Milloin kirjasto on auki?",
-          "explanation_fa": "این صورت دقیقاً در واژگان درس آموزش داده شده است."
+          "expected_fi": "on",
+          "explanation_fa": "برای فاعل مفرد Keittiö، صورت on به کار می‌رود."
         }
       ]
     }
