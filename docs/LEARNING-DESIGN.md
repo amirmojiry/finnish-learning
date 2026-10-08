@@ -2,6 +2,8 @@
 
 [نسخه فارسی](LEARNING-DESIGN.fa.md)
 
+> **Canonical A1.1–C2 roadmap:** [Master curriculum](MASTER-CURRICULUM.md) · [Persian version](MASTER-CURRICULUM.fa.md) · [Grammar](GRAMMAR-ROADMAP.md) · [Vocabulary](VOCABULARY-ROADMAP.md) · [Implementation audit](CURRICULUM-AUDIT.fa.md). These files specify the project content plan and distinguish planned stages from shipped lessons.
+
 This document records the research-backed learning model and the proposed curriculum architecture for Finnish Learning. It is a product and data-design specification, not a claim that the current application already implements every item below.
 
 ## 1. Product direction

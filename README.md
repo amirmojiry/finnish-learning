@@ -188,3 +188,11 @@ The roadmap is course-first: complete a coherent Finnish learning path before pr
 - [ ] Accessibility and screen-reader improvements.
 
 See [Learning design and curriculum plan](docs/LEARNING-DESIGN.md) for the detailed rationale and architecture.
+
+### Master curriculum (A1.1–C2)
+
+- [English master syllabus](docs/MASTER-CURRICULUM.md) / [complete Persian syllabus](docs/MASTER-CURRICULUM.fa.md)
+- [Grammar prerequisites](docs/GRAMMAR-ROADMAP.md), [vocabulary planning](docs/VOCABULARY-ROADMAP.md), and [current implementation audit](docs/CURRICULUM-AUDIT.fa.md)
+- Machine-readable source: [`data/course/master-curriculum.json`](data/course/master-curriculum.json); validation: `node scripts/audit-master-curriculum.cjs --check`
+
+The master syllabus is a **planning guide**, not a claim that A2–C2 lessons are available or that an app score certifies CEFR/YKI.

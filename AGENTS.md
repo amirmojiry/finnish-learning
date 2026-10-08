@@ -150,3 +150,11 @@ A change is complete only when:
 - English and Persian documentation are factually synchronized
 - no empty POS filter category is possible
 - no existing practice mode or dictionary behavior is unintentionally changed
+
+## 11. Master curriculum and content authoring
+
+- Use `data/course/master-curriculum.json` as the canonical long-range A1.1–C2 content plan; keep `docs/MASTER-CURRICULUM.fa.md`, `docs/MASTER-CURRICULUM.md`, `docs/GRAMMAR-ROADMAP.md`, and `docs/VOCABULARY-ROADMAP.md` synchronized in the same PR.
+- Before authoring a new course level, run `node scripts/audit-master-curriculum.cjs --check` and inspect `--markdown` to distinguish currently implemented sections from drafts. Every new grammar concept needs an ID and prerequisites that appear no later than its introduction.
+- Never treat a planned module, reviewed curriculum document, or exercise score as evidence that speaking, writing, mediation, or a CEFR/YKI level has been assessed. Preserve the official six-level CEFR distinction and the Finnish educational sublevel convention.
+- Place advanced level curriculum contracts before playable section files. The new content must reference existing module IDs and maintain reviewed vocabulary/grammar dependencies.
+- Keep Parole written-corpus source positions separate from the app's curated dictionary rank, lemma, inflected form, and expression inventory. Frequency candidate windows are advisory, not official word quotas.

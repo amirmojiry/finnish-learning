@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+### Documentation and development tooling
+
+- Establish a source-backed, machine-readable A1.1–C2 master curriculum with 11 stage contracts, communicative competencies, Finnish grammar prerequisite graph, topic vocabulary, expressions, sentence patterns, and authentic assessment plans.
+- Publish Persian/English syllabus, grammar and vocabulary maps, and an implementation audit separating planned courses from playable lessons.
+- Add deterministic curriculum audit and regression checks for future stage additions. This is a documentation-only planning baseline; it does not add new playable lessons.
+
 ## [1.26.1] - 2026-10-07
 
 ### Fixed
