@@ -63,11 +63,15 @@ test('course target attempts aggregate by section and target', () => {
     attempts: 2,
     correct: 1,
     lastAttemptAt: 2000,
+    consecutiveCorrect: 1,
+    retryRecovered: false,
   });
   assert.deepEqual(progress.targetPerformance['section-test::beta'], {
     attempts: 1,
     correct: 1,
     lastAttemptAt: 3000,
+    consecutiveCorrect: 1,
+    retryRecovered: false,
   });
 });
 
@@ -160,4 +164,34 @@ test('weak-target totals are independent from the focused-session activity cap',
     source,
     /const remainingTargets = weakTargetsForSection\(section, progress, Number\.POSITIVE_INFINITY\)/,
   );
+});
+
+test('three consecutive correct answers resolve historical weak targets', () => {
+  const section = makeSection();
+  let progress = course.emptyProgress();
+  progress = course.recordTargetAttempt(progress, section.id, 'alpha', false, 1000);
+  for (let i = 0; i < 2; i++) progress = course.recordTargetAttempt(progress, section.id, 'alpha', true, 2000 + i);
+  assert.equal(course.weakTargetsForSection(section, progress).some((entry) => entry.itemId === 'alpha'), true);
+  progress = course.recordTargetAttempt(progress, section.id, 'alpha', true, 3000);
+  assert.equal(course.weakTargetsForSection(section, progress).some((entry) => entry.itemId === 'alpha'), false);
+  progress = course.recordTargetAttempt(progress, section.id, 'alpha', false, 4000);
+  assert.equal(course.weakTargetsForSection(section, progress).some((entry) => entry.itemId === 'alpha'), true);
+});
+
+test('successful end-of-lesson retry resolves a fresh weak target', () => {
+  const section = makeSection();
+  let progress = course.emptyProgress();
+  progress = course.recordTargetAttempt(progress, section.id, 'alpha', false, 1000);
+  progress = course.recordTargetAttempt(progress, section.id, 'alpha', true, 2000, true);
+  assert.equal(course.weakTargetsForSection(section, progress).some((entry) => entry.itemId === 'alpha'), false);
+  progress = course.recordTargetAttempt(progress, section.id, 'alpha', false, 3000);
+  assert.equal(course.weakTargetsForSection(section, progress).some((entry) => entry.itemId === 'alpha'), true);
+});
+
+test('lesson retries preserve first-attempt scoring and history', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
+  assert.match(source, /retryActivities\.push\(activity\)/);
+  assert.match(source, /firstAttempt: !lessonRetryPhase/);
+  assert.match(source, /recordTargetAttempt\(progress, section\.id, targetId, correct, answeredAt, lessonRetryPhase\)/);
+  assert.match(source, /const initialGraded = sessionGraded - \(lessonRetryPhase \? retryActivities\.length : 0\)/);
 });

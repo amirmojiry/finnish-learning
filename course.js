@@ -149,6 +149,9 @@
         attempts,
         correct,
         lastAttemptAt: Number.isFinite(stats.lastAttemptAt) ? stats.lastAttemptAt : 0,
+        consecutiveCorrect: Number.isFinite(stats.consecutiveCorrect)
+          ? Math.max(0, Math.floor(stats.consecutiveCorrect)) : 0,
+        retryRecovered: stats.retryRecovered === true,
       };
     }
     const answerHistory = Array.isArray(progress.answerHistory) ? progress.answerHistory : [];
@@ -287,7 +290,7 @@
     return sectionKey && targetKey ? `${sectionKey}::${targetKey}` : '';
   }
 
-  function recordTargetAttempt(progress, sectionId, targetId, correct, now = Date.now()) {
+  function recordTargetAttempt(progress, sectionId, targetId, correct, now = Date.now(), isRetry = false) {
     const clean = sanitizeProgress(progress);
     const key = targetPerformanceKey(sectionId, targetId);
     if (!key) return clean;
@@ -296,6 +299,8 @@
       attempts: previous.attempts + 1,
       correct: previous.correct + (correct ? 1 : 0),
       lastAttemptAt: Number.isFinite(now) ? now : Date.now(),
+      consecutiveCorrect: correct ? Math.max(0, previous.consecutiveCorrect || 0) + 1 : 0,
+      retryRecovered: correct ? (isRetry || previous.retryRecovered === true) : false,
     };
     return clean;
   }
@@ -381,7 +386,7 @@
       if (!stats || stats.attempts < 1) continue;
       const missed = stats.attempts - stats.correct;
       const accuracy = stats.correct / stats.attempts;
-      if (missed < 1 || accuracy >= WEAK_TARGET_ACCURACY) continue;
+      if (missed < 1 || (stats.consecutiveCorrect || 0) >= 3 || stats.retryRecovered === true) continue;
       targets.push({
         itemId,
         attempts: stats.attempts,
@@ -1851,6 +1856,8 @@
     let activityIndex = 0;
     let sessionCorrect = 0;
     let sessionGraded = 0;
+    let retryActivities = [];
+    let lessonRetryPhase = false;
     let sessionSequence = 0;
     let activeSessionId = null;
     let sessionStartedAt = 0;
@@ -1974,13 +1981,14 @@
     function recordActivityResult(activity, correct, grading = null) {
       answered = true;
       sessionGraded += 1;
-      if (correct) sessionCorrect += 1;
+      if (correct && !lessonRetryPhase) sessionCorrect += 1;
+      if (!correct && !lessonRetryPhase && !activeLesson?.focused_practice) retryActivities.push(activity);
       if (!section) return;
 
       const answeredAt = Date.now();
       const targetId = activityPrimaryTargetId(activity);
       if (targetId) {
-        progress = recordTargetAttempt(progress, section.id, targetId, correct, answeredAt);
+        progress = recordTargetAttempt(progress, section.id, targetId, correct, answeredAt, lessonRetryPhase);
       }
       progress = recordAnswerHistoryEvent(progress, {
         answeredAt,
@@ -1997,7 +2005,7 @@
         productive: isProductiveCourseActivity(activity),
         guided: isGuidedCourseActivity(activity),
         direction: courseActivityDirection(activity),
-        firstAttempt: true,
+        firstAttempt: !lessonRetryPhase,
         responseMs: activityStartedAt ? Math.max(0, answeredAt - activityStartedAt) : 0,
         exact: typeof grading?.exact === 'boolean' ? grading.exact : null,
         fuzzy: Boolean(grading?.fuzzy),
@@ -2520,6 +2528,8 @@
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
       activeLesson = lesson;
+      retryActivities = [];
+      lessonRetryPhase = false;
       setLessonFocusMode(true);
       activityIndex = 0;
       sessionCorrect = 0;
@@ -2548,6 +2558,8 @@
       activityIndex = 0;
       sessionCorrect = 0;
       sessionGraded = 0;
+      retryActivities = [];
+      lessonRetryPhase = false;
       answered = false;
       beginCourseSession('focused', activeLesson.id);
       setHash(`#course-${section.id}`);
@@ -3324,8 +3336,13 @@
 
     function nextActivity() {
       activityIndex += 1;
-      if (activityIndex >= activeLesson.activities.length) completeLesson();
-      else renderActivity();
+      if (activityIndex >= activeLesson.activities.length) {
+        if (!activeLesson.focused_practice && !lessonRetryPhase && retryActivities.length) {
+          lessonRetryPhase = true;
+          activeLesson = { ...activeLesson, activities: [...activeLesson.activities, ...retryActivities] };
+          renderActivity();
+        } else completeLesson();
+      } else renderActivity();
     }
 
     function completeLesson() {
@@ -3360,9 +3377,10 @@
       }
 
       const passingScore = Number(activeLesson.passing_score || 0);
-      const passed = passesLessonRequirement(activeLesson, sessionCorrect, sessionGraded);
+      const initialGraded = sessionGraded - (lessonRetryPhase ? retryActivities.length : 0);
+      const passed = passesLessonRequirement(activeLesson, sessionCorrect, initialGraded);
       if (passed) {
-        progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, sessionGraded);
+        progress = recordLessonCompletion(progress, activeLesson.id, sessionCorrect, initialGraded);
         progress = saveProgress(windowObject.localStorage, progress);
       }
 
@@ -3378,7 +3396,7 @@
       const title = document.createElement('h1');
       title.textContent = passed ? 'درس کامل شد' : 'برای قبولی دوباره تلاش کن';
       const message = document.createElement('p');
-      message.textContent = `${toPersianNumber(sessionCorrect)} پاسخ درست از ${toPersianNumber(sessionGraded)} فعالیت نمره‌دار`;
+      message.textContent = `${toPersianNumber(sessionCorrect)} پاسخ درست از ${toPersianNumber(initialGraded)} فعالیت نمره‌دار در دور اول`;
       const note = document.createElement('p');
       note.className = 'course-completion-note';
       note.textContent = passed
