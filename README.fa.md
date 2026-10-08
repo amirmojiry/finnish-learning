@@ -190,3 +190,11 @@ python3 -m http.server 8000
 - [ ] بهبود دسترس‌پذیری و screen reader.
 
 برای جزئیات بیشتر، [سند طراحی آموزشی و برنامهٔ دوره](docs/LEARNING-DESIGN.fa.md) را ببینید.
+
+### سیلابس جامع A1.1 تا C2
+
+- [سیلابس کامل فارسی](docs/MASTER-CURRICULUM.fa.md) و [نسخهٔ انگلیسی](docs/MASTER-CURRICULUM.md)
+- [پیش‌نیازهای دستور زبان](docs/GRAMMAR-ROADMAP.md)، [نقشهٔ واژگان](docs/VOCABULARY-ROADMAP.md) و [ممیزی وضعیت اجرا](docs/CURRICULUM-AUDIT.fa.md)
+- منبع ساختاریافته: [`data/course/master-curriculum.json`](data/course/master-curriculum.json)؛ بررسی: `node scripts/audit-master-curriculum.cjs --check`
+
+این سند **نقشهٔ طراحی محتوا** است؛ وجود نام A2 تا C2 به معنای فعال بودن درس‌ها یا معادل بودن پیشرفت برنامه با مدرک YKI/CEFR نیست.
