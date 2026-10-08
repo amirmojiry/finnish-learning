@@ -11,7 +11,9 @@
     "version:patch": "node scripts/bump-version.cjs patch",
     "version:minor": "node scripts/bump-version.cjs minor",
     "version:major": "node scripts/bump-version.cjs major",
-    "sync": "python3 scripts/sync_project.py"
+    "sync": "python3 scripts/sync_project.py",
+    "curriculum:check": "node scripts/audit-master-curriculum.cjs --check",
+    "curriculum:audit": "node scripts/audit-master-curriculum.cjs --markdown"
   },
   "engines": {
     "node": ">=20",
