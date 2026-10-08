@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.26.1`
+- Version: `1.26.2`
 - Vocabulary entries: **400**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -139,60 +139,13 @@ Pull requests and non-main branches run continuous integration. The suite checks
 
 GitHub Pages deployment depends on the complete validation job and cannot publish a revision with failing tests or stale generated files.
 
-## Roadmap
+## Roadmap and documentation
 
-The roadmap is course-first: complete a coherent Finnish learning path before prioritizing convenience or gamification features.
+[Browse the documentation hub](docs/README.md) to find the canonical curriculum, engineering and contribution guides.
 
-### Phase 1 — complete A1.1
+- **Delivery priorities:** [roadmap in English](docs/ROADMAP.md) / [نسخهٔ فارسی](docs/ROADMAP.fa.md).
+- **Content targets through C2:** [master syllabus](docs/MASTER-CURRICULUM.md) / [Persian syllabus](docs/MASTER-CURRICULUM.fa.md); authoritative data: [master curriculum JSON](data/course/master-curriculum.json).
+- **Actual current coverage:** [curriculum implementation audit](docs/CURRICULUM-AUDIT.fa.md); regenerate live counts with `npm run curriculum:audit`.
+- **Teaching design and research:** [Learning Design](docs/LEARNING-DESIGN.md) / [Persian version](docs/LEARNING-DESIGN.fa.md).
 
-- [x] Define the complete A1.1 curriculum matrix from reviewed CEFR can-do outcomes.
-- [x] Turn the current 10-lesson prototype into a coherent A1.1 path.
-- [x] Ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions/sentence frames, and a grammar or morphology objective.
-- [x] Add lesson summaries and short explicit grammar explanations where useful.
-- [x] Define prerequisite and recycling relationships between lessons.
-- [x] Add deterministic completeness checks for lesson manifests and accepted answers.
-
-### Phase 2 — richer A1.1 practice
-
-- [x] Add Persian-to-Finnish production.
-- [x] Add listening and dictation that prefer an explicitly exposed Finnish browser voice and otherwise request `fi-FI` directly from the browser/OS speech engine, with a no-penalty fallback only when speech synthesis itself is unavailable and a course contract ready for future static or build-time-generated audio.
-- [x] Add sentence ordering, expression completion, and controlled sentence production.
-- [x] Add morphology-aware distractors and introductory inflection exercises from explicit reviewed forms.
-- [x] Add focused practice for weak or frequently missed course targets.
-- [x] Record chronological answer history needed for stronger mastery decisions.
-
-### Phase 3 — expand the structured course
-
-- [x] Build A1.2 and A1.3 with the same reviewed curriculum model at the curriculum-contract layer; playable later-stage manifests remain sequenced after vocabulary expansion.
-- [x] Expand high-frequency vocabulary with the reviewed Parole positions 301–400 tranche while preserving curated topic vocabulary; later source-backed tranches remain analyzer-driven.
-- [ ] Add practical domains such as shopping, transport, home, work, weather, appointments, and health. Shopping/everyday services and transport/finding places are now playable as A1.2 Sections 1–2.
-- [ ] Expand grammar in pedagogical order.
-- [ ] Add short dialogues, readings, and listening passages that recycle earlier material.
-- [ ] Move into A2 only after the A1 path is coherent and validated.
-
-### Phase 4 — scale content safely
-
-- [ ] Formalize topic taxonomy, expression metadata, and lexeme/surface-form links.
-- [ ] Add course-level validation for missing vocabulary, grammar, expressions, and recycling targets.
-- [ ] Use GitHub Actions only for validation or intentional build-time generation.
-- [ ] Keep AI-generated learning content unpublished until reviewed or deterministically validated.
-- [ ] Generate compact static lesson bundles and optional audio artifacts.
-
-### Phase 5 — secondary learner features
-
-- [ ] Session length and difficulty settings.
-- [ ] Daily goals, streaks, and richer progress dashboards.
-- [ ] Bookmarks and custom word lists.
-- [ ] Import/export of local progress.
-- [ ] Installable PWA and offline study.
-- [ ] Accessibility and screen-reader improvements.
-
-See [Learning design and curriculum plan](docs/LEARNING-DESIGN.md) for the detailed rationale and architecture.
-
-### Master curriculum (A1.1–C2)
-
-- [English master syllabus](docs/MASTER-CURRICULUM.md) / [complete Persian syllabus](docs/MASTER-CURRICULUM.fa.md)
-- [Grammar prerequisites](docs/GRAMMAR-ROADMAP.md), [vocabulary planning](docs/VOCABULARY-ROADMAP.md), and [current implementation audit](docs/CURRICULUM-AUDIT.fa.md)
-- Machine-readable source: [`data/course/master-curriculum.json`](data/course/master-curriculum.json); validation: `node scripts/audit-master-curriculum.cjs --check`
-
-The master syllabus is a **planning guide**, not a claim that A2–C2 lessons are available or that an app score certifies CEFR/YKI.
+Completed A1.1 work, incomplete A1.2 content, planned A1.3 sections and future A2–C2 stages have **different delivery statuses**. Read the live audit before making a completion claim. The syllabus is a planning framework, not a CEFR/YKI certificate.

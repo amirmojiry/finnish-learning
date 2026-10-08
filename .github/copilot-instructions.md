@@ -8,6 +8,7 @@ The non-negotiable requirements are:
 - Preserve the source-of-truth split between Parole frequency data, Universal Dependencies analysis, and curated Persian learning content.
 - Never hardcode the vocabulary total in code, workflows, generators, or tests.
 - Keep `README.md` and `README.fa.md` factually synchronized.
+- Use `docs/README.md` for documentation navigation and `docs/ROADMAP.md` / `docs/ROADMAP.fa.md` as the only development roadmaps; archive obsolete plans rather than presenting them as current guidance.
 - Run `npm run sync` after version, vocabulary, asset, or documented-count changes.
 - Run `npm test`; do not merge or deploy when any test fails.
 - Add regression coverage for bug fixes and user-visible behavior.

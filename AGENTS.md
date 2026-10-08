@@ -127,6 +127,14 @@ Do not weaken an assertion merely to make CI pass. Change a test contract only a
 - Update `CHANGELOG.md` for every released user-visible change.
 - Run `npm run sync` rather than manually changing generated project-status blocks, visible counts, or cache keys.
 
+### Documentation information architecture
+
+- `docs/README.md` is the documentation hub. Keep it up to date when adding, archiving, moving or retiring documentation.
+- `docs/ROADMAP.md` and `docs/ROADMAP.fa.md` are the **sole maintained delivery/backlog roadmaps**. Root README files describe the project and link there. Learning Design explains pedagogy and architecture; do not duplicate independent completion checklists in those four files.
+- `data/course/master-curriculum.json` is authoritative for the A1.1–C2 syllabus structure. Its readable master documents and topical grammar/vocabulary roadmaps are complementary explanations, not rival specifications.
+- `tools/ud-import/README.md` is the authoritative implemented UD pipeline guide. Date-bound initial proposals belong in `docs/archive/` and must explicitly be marked historical, with a link to current guidance.
+- Any Markdown documentation edit must preserve local relative links. Run `npm test`, including `tests/documentation-navigation.test.cjs`. When status figures are included, identify a dated snapshot or prefer a command that computes actual values.
+
 ## 9. Git and deployment
 
 - Use clear English commit messages.

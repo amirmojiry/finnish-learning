@@ -1,3 +1,11 @@
+> **بایگانی / Archived — طراحی اولیه در ۳۱ ژوئیهٔ ۲۰۲۶.**
+>
+> این نوشته برای حفظ تاریخچهٔ تصمیم‌های فنی نگهداری شده است؛ **راهنمای اجرای فعلی نیست**. هنگام نگارش، استخراج UD هنوز پیاده‌سازی نشده بود و شمار واژه‌ها و فازهای پیشنهادی با وضعیت امروز سازگار نیست.
+>
+> For the **current, implemented** UD pipeline and data licensing, use [the importer README](../../tools/ud-import/README.md), [source treebanks](../../ud-import-2.18/README.md) and [generated metadata](../../data/ud/metadata.json). [Documentation hub](../README.md).
+>
+> ---
+
 # برنامه ادغام Universal Dependencies با Finnish Learning
 
 وضعیت: طراحی و برنامه‌ریزی؛ در این مرحله هیچ کد اجرایی یا تغییری در رابط کاربری انجام نمی‌شود.

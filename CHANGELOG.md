@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.26.2] - 2026-10-08
+
+### Documentation
+
+- Introduce a bilingual documentation hub with explicit canonical source-of-truth ownership and status for planning versus implemented lessons.
+- Merge duplicate development-phase lists from both READMEs and both Learning Design specifications into a paired execution roadmap; retain the distinct syllabus, grammar/vocabulary maps and A1.1 lesson matrices.
+- Archive the obsolete pre-implementation UD proposal and refresh current UD source/import documentation to match the checked-in treebanks and active extraction workflow.
+- Add regression coverage for local Markdown links, documentation entry points and the retirement of outdated guidance.
+
 ### Fixed
 
 - Correct A1.1's Persian curriculum audit figures to match Unicode-normalized inventory counts, with a synchronization regression test.

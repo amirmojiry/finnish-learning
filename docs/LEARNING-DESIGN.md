@@ -374,70 +374,13 @@ GitHub Pages alone is not suitable for:
 
 Those features require a separate backend or serverless API. The static frontend can remain on Pages and call that service later.
 
-## 12. Recommended implementation phases
+## 12. Delivery and implementation roadmap
 
-The roadmap is course-first. Personalization and convenience features should not displace completion of the instructional sequence.
+This document describes the **instructional rationale and technical design**, not a second delivery backlog. The checklists formerly duplicated here and in the root READMEs are consolidated into the [canonical delivery roadmap](ROADMAP.md) ([Persian](ROADMAP.fa.md)).
 
-### Phase 1 — complete the A1.1 course foundation
+The delivery order stays course-first: complete and validate A1.2, implement the reviewed A1.3 plan, then design individual A2+ levels from the [master curriculum](MASTER-CURRICULUM.md). Cross-cutting work on content validation, lexeme/surface-form links, graded production and accessibility supports that sequence. Backend accounts, offline features and live tutoring remain optional until a concrete product requirement justifies them.
 
-- define the full A1.1 curriculum matrix from reviewed CEFR can-do outcomes;
-- turn the existing 10-lesson prototype into a complete, coherent A1.1 learning path;
-- ensure every lesson deliberately combines high-frequency vocabulary, topic vocabulary, useful expressions or sentence frames, and an explicit grammar or morphology objective;
-- define prerequisite and recycling relationships between lessons;
-- add short lesson summaries and grammar explanations where explicit instruction improves understanding;
-- keep all course data static and deployable on GitHub Pages;
-- validate every lesson manifest and accepted answer deterministically.
-
-A lesson is not considered complete merely because it contains 15 activities. It must have a communicative purpose and reviewed content coverage.
-
-### Phase 2 — richer A1.1 practice and retention
-
-- connect curriculum targets to lexeme- and surface-form-aware spaced repetition;
-- add Persian-to-Finnish production;
-- add listening and dictation with static or build-time-generated audio where practical;
-- add sentence ordering, expression completion, and controlled sentence production;
-- add morphology-aware distractors and introductory inflection exercises;
-- add focused review of weak or frequently missed course targets;
-- record chronological answer evidence needed for better mastery decisions.
-
-### Phase 3 — expand the structured course
-
-- build A1.2 and A1.3 using the same reviewed curriculum schema;
-- expand high-frequency vocabulary without replacing topic-based curriculum choices; the first Phase 3 tranche now covers consecutive Parole positions 301–400, and later tranches remain driven by the deterministic curriculum-gap analysis;
-- add new practical domains such as shopping, transport, home, work, weather, appointments, and health;
-- expand grammar in pedagogical order, including present tense, negation, question formation, core cases, local cases, partitive use, possession, and common stem changes;
-- introduce short dialogues, readings, and listening passages that recycle earlier material;
-- move into A2 only after the A1 progression is coherent and validated.
-
-### Phase 4 — content pipeline and quality at scale
-
-- formalize topic taxonomy, expressions, lexeme/surface-form links, and curriculum metadata;
-- use GitHub Actions only for validation or intentional build-time generation;
-- keep AI-generated drafts unpublished until reviewed or deterministically validated;
-- generate compact static lesson bundles and optional audio artifacts;
-- add course-level completeness checks so missing grammar, vocabulary, expression, or recycling targets are visible before merge.
-
-### Phase 5 — secondary learner features
-
-After the structured course is useful end to end:
-
-- configurable session length and difficulty;
-- daily goals, streaks, and richer progress dashboards;
-- bookmarks and custom word lists;
-- import/export of local learning progress;
-- PWA installation and offline study;
-- accessibility improvements and screen-reader regression coverage.
-
-### Phase 6 — optional backend
-
-Only when GitHub Pages is no longer sufficient:
-
-- accounts and synchronized progress;
-- live AI tutoring;
-- free-text semantic feedback;
-- speech uploads and richer pronunciation analysis;
-- teacher dashboards or shared courses.
-
+For actual implemented lesson counts and available dictionary targets, consult the [dated content audit](CURRICULUM-AUDIT.fa.md) and run `npm run curriculum:audit` rather than inferring progress from a planned curriculum.
 
 ## 13. A1 curriculum specifications
 
@@ -450,7 +393,7 @@ The A1 curriculum model is now defined across all three Finnish implementation s
 
 Each stage contains four sections and forty lessons under the same planning contract: communicative can-do outcomes, source-backed high-frequency targets, separate curated topic targets, explicit expressions, grammar or morphology focus, backward-only recycling, activity families, four-skill coverage, assessment criteria, and exact lexical target counts. A1.3 deliberately strengthens familiar social interaction, short messages and texts, routine study/work communication, home and neighborhood problems, and a small set of explicit recent-event forms while remaining inside CEFR A1.
 
-These matrices define reviewed curriculum targets. A1.1 has complete playable manifests, and A1.2 Sections 1–2 now provide twenty reviewed playable lessons using the same 15-activity contract: shopping/everyday services followed by getting around/finding places. The remaining A1.2 Sections 3–4 and all A1.3 playable manifests remain sequenced behind content implementation and validation.
+These matrices define reviewed curriculum targets, **not proof of delivery**. Consult the [implementation audit](CURRICULUM-AUDIT.fa.md) or `npm run curriculum:audit` for current playable lesson counts. The [delivery roadmap](ROADMAP.md) owns the next implementation steps.
 
 ## 14. Key sources
 
@@ -482,7 +425,7 @@ The current product direction is therefore:
 
 - the primary product is a structured Finnish course, not a standalone vocabulary trainer;
 - GitHub Pages remains the target platform for the current development stage;
-- A1.1 is the immediate curriculum priority, followed by A1.2, A1.3, and later A2+;
+- A1.1 is already authored; current delivery priorities are maintained in the roadmap (complete A1.2, then A1.3, and only then author later levels);
 - each lesson combines communicative goals with high-frequency vocabulary, curated topic vocabulary, useful sentences or expressions, and grammar;
 - sections normally contain about 10 lessons and lessons normally contain about 15 activities, but pedagogical completeness matters more than fixed counts;
 - frequency vocabulary is distributed through the curriculum without overriding source frequency data;
