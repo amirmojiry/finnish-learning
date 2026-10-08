@@ -1,0 +1,3712 @@
+{
+  "schema_version": 1,
+  "id": "a1.3-section-2",
+  "level": "A1.3",
+  "curriculum_section_id": "a1.3-s2",
+  "title_fa": "بخش 2: خانه، محله و مشکلات روزمره",
+  "subtitle_fa": "خانه، محله و مشکلات روزمره",
+  "description_fa": "۱۰ درس دربارهٔ خانه، محله و مشکلات روزمره با نمونه‌های فنلاندی، ترجمهٔ فارسی و تمرین شنیداری و نوشتاری.",
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a13s2-h-001": {
+      "id": "a13s2-h-001",
+      "surface_form": "tässä",
+      "lemma": "tässä",
+      "translation_fa": "اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 97,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Keittiö on tässä.",
+      "example_fa": "اینجا",
+      "accepted_answers": [
+        "tässä"
+      ]
+    },
+    "a13s2-h-002": {
+      "id": "a13s2-h-002",
+      "surface_form": "siellä",
+      "lemma": "siellä",
+      "translation_fa": "آنجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 149,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Ystäväni asuu siellä.",
+      "example_fa": "دوستم آنجا زندگی می‌کند.",
+      "accepted_answers": [
+        "siellä"
+      ]
+    },
+    "a13s2-h-003": {
+      "id": "a13s2-h-003",
+      "surface_form": "kaikki",
+      "lemma": "kaikki",
+      "translation_fa": "همه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 44,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Kaikki on valmista.",
+      "example_fa": "همه",
+      "accepted_answers": [
+        "kaikki"
+      ]
+    },
+    "a13s2-t-004": {
+      "id": "a13s2-t-004",
+      "surface_form": "keittiö",
+      "lemma": "keittiö",
+      "translation_fa": "آشپزخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Keittiö on tässä.",
+      "example_fa": "آشپزخانه",
+      "accepted_answers": [
+        "keittiö"
+      ]
+    },
+    "a13s2-t-005": {
+      "id": "a13s2-t-005",
+      "surface_form": "olohuone",
+      "lemma": "olohuone",
+      "translation_fa": "اتاق نشیمن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Olohuone on siellä.",
+      "example_fa": "اتاق نشیمن",
+      "accepted_answers": [
+        "olohuone"
+      ]
+    },
+    "a13s2-t-006": {
+      "id": "a13s2-t-006",
+      "surface_form": "makuuhuone",
+      "lemma": "makuuhuone",
+      "translation_fa": "اتاق خواب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "makuuhuone",
+      "example_fa": "اتاق خواب",
+      "accepted_answers": [
+        "makuuhuone"
+      ]
+    },
+    "a13s2-e-007": {
+      "id": "a13s2-e-007",
+      "surface_form": "Keittiö on tässä.",
+      "lemma": "Keittiö on tässä.",
+      "translation_fa": "آشپزخانه اینجاست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Keittiö on tässä.",
+      "example_fa": "آشپزخانه اینجاست.",
+      "accepted_answers": [
+        "Keittiö on tässä."
+      ]
+    },
+    "a13s2-e-008": {
+      "id": "a13s2-e-008",
+      "surface_form": "Olohuone on siellä.",
+      "lemma": "Olohuone on siellä.",
+      "translation_fa": "اتاق نشیمن آنجاست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Olohuone on siellä.",
+      "example_fa": "اتاق نشیمن آنجاست.",
+      "accepted_answers": [
+        "Olohuone on siellä."
+      ]
+    },
+    "a13s2-e-009": {
+      "id": "a13s2-e-009",
+      "surface_form": "Kaikki on valmista.",
+      "lemma": "Kaikki on valmista.",
+      "translation_fa": "همه‌چیز آماده است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Kaikki on valmista.",
+      "example_fa": "همه‌چیز آماده است.",
+      "accepted_answers": [
+        "Kaikki on valmista."
+      ]
+    },
+    "a13s2-h-010": {
+      "id": "a13s2-h-010",
+      "surface_form": "siinä",
+      "lemma": "siinä",
+      "translation_fa": "در آنجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 80,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "siinä",
+      "example_fa": "در آنجا",
+      "accepted_answers": [
+        "siinä"
+      ]
+    },
+    "a13s2-t-011": {
+      "id": "a13s2-t-011",
+      "surface_form": "pöydällä",
+      "lemma": "pöydällä",
+      "translation_fa": "روی میز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Avain on pöydällä.",
+      "example_fa": "روی میز",
+      "accepted_answers": [
+        "pöydällä"
+      ]
+    },
+    "a13s2-t-012": {
+      "id": "a13s2-t-012",
+      "surface_form": "kaapissa",
+      "lemma": "kaapissa",
+      "translation_fa": "در کمد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Lasi on kaapissa.",
+      "example_fa": "در کمد",
+      "accepted_answers": [
+        "kaapissa"
+      ]
+    },
+    "a13s2-t-013": {
+      "id": "a13s2-t-013",
+      "surface_form": "lattialla",
+      "lemma": "lattialla",
+      "translation_fa": "روی زمین",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Kengät ovat lattialla.",
+      "example_fa": "روی زمین",
+      "accepted_answers": [
+        "lattialla"
+      ]
+    },
+    "a13s2-e-014": {
+      "id": "a13s2-e-014",
+      "surface_form": "Avain on pöydällä.",
+      "lemma": "Avain on pöydällä.",
+      "translation_fa": "کلید روی میز است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Avain on pöydällä.",
+      "example_fa": "کلید روی میز است.",
+      "accepted_answers": [
+        "Avain on pöydällä."
+      ]
+    },
+    "a13s2-e-015": {
+      "id": "a13s2-e-015",
+      "surface_form": "Lasi on kaapissa.",
+      "lemma": "Lasi on kaapissa.",
+      "translation_fa": "لیوان داخل کمد است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Lasi on kaapissa.",
+      "example_fa": "لیوان داخل کمد است.",
+      "accepted_answers": [
+        "Lasi on kaapissa."
+      ]
+    },
+    "a13s2-e-016": {
+      "id": "a13s2-e-016",
+      "surface_form": "Kengät ovat lattialla.",
+      "lemma": "Kengät ovat lattialla.",
+      "translation_fa": "کفش‌ها روی زمین‌اند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Kengät ovat lattialla.",
+      "example_fa": "کفش‌ها روی زمین‌اند.",
+      "accepted_answers": [
+        "Kengät ovat lattialla."
+      ]
+    },
+    "a13s2-h-017": {
+      "id": "a13s2-h-017",
+      "surface_form": "pitää",
+      "lemma": "pitää",
+      "translation_fa": "دوست داشتن یا باید، بسته به ساختار",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 70,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Minun pitää lähteä.",
+      "example_fa": "من باید بروم.",
+      "accepted_answers": [
+        "pitää"
+      ]
+    },
+    "a13s2-h-018": {
+      "id": "a13s2-h-018",
+      "surface_form": "tehdä",
+      "lemma": "tehdä",
+      "translation_fa": "انجام دادن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 138,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Haluan tehdä ruokaa.",
+      "example_fa": "می‌خواهم غذا درست کنم.",
+      "accepted_answers": [
+        "tehdä"
+      ]
+    },
+    "a13s2-h-019": {
+      "id": "a13s2-h-019",
+      "surface_form": "lisää",
+      "lemma": "lisä",
+      "translation_fa": "بیشتر / اضافه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 189,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Tarvitsen lisää aikaa.",
+      "example_fa": "به زمان بیشتری نیاز دارم.",
+      "accepted_answers": [
+        "lisää"
+      ]
+    },
+    "a13s2-t-020": {
+      "id": "a13s2-t-020",
+      "surface_form": "siivota",
+      "lemma": "siivota",
+      "translation_fa": "نظافت کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Pitää siivota.",
+      "example_fa": "نظافت کردن",
+      "accepted_answers": [
+        "siivota"
+      ]
+    },
+    "a13s2-t-021": {
+      "id": "a13s2-t-021",
+      "surface_form": "pestä",
+      "lemma": "pestä",
+      "translation_fa": "شستن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Pitää pestä astiat.",
+      "example_fa": "شستن",
+      "accepted_answers": [
+        "pestä"
+      ]
+    },
+    "a13s2-t-022": {
+      "id": "a13s2-t-022",
+      "surface_form": "roskat",
+      "lemma": "roskat",
+      "translation_fa": "زباله‌ها",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Vien roskat.",
+      "example_fa": "زباله‌ها",
+      "accepted_answers": [
+        "roskat"
+      ]
+    },
+    "a13s2-e-023": {
+      "id": "a13s2-e-023",
+      "surface_form": "Pitää siivota.",
+      "lemma": "Pitää siivota.",
+      "translation_fa": "باید نظافت کرد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Pitää siivota.",
+      "example_fa": "باید نظافت کرد.",
+      "accepted_answers": [
+        "Pitää siivota."
+      ]
+    },
+    "a13s2-e-024": {
+      "id": "a13s2-e-024",
+      "surface_form": "Pitää pestä astiat.",
+      "lemma": "Pitää pestä astiat.",
+      "translation_fa": "باید ظرف‌ها را شست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Pitää pestä astiat.",
+      "example_fa": "باید ظرف‌ها را شست.",
+      "accepted_answers": [
+        "Pitää pestä astiat."
+      ]
+    },
+    "a13s2-e-025": {
+      "id": "a13s2-e-025",
+      "surface_form": "Vien roskat.",
+      "lemma": "Vien roskat.",
+      "translation_fa": "زباله‌ها را بیرون می‌برم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Vien roskat.",
+      "example_fa": "زباله‌ها را بیرون می‌برم.",
+      "accepted_answers": [
+        "Vien roskat."
+      ]
+    },
+    "a13s2-e-026": {
+      "id": "a13s2-e-026",
+      "surface_form": "Tarvitsen lisää aikaa.",
+      "lemma": "Tarvitsen lisää aikaa.",
+      "translation_fa": "وقت بیشتری لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen lisää aikaa.",
+      "example_fa": "وقت بیشتری لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen lisää aikaa."
+      ]
+    },
+    "a13s2-h-027": {
+      "id": "a13s2-h-027",
+      "surface_form": "ei",
+      "lemma": "ei",
+      "translation_fa": "نه / نیست / نمی‌... (برای او یا حالت عمومی)",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 3,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Hän ei tule tänään.",
+      "example_fa": "او امروز نمی‌آید.",
+      "accepted_answers": [
+        "ei"
+      ]
+    },
+    "a13s2-h-028": {
+      "id": "a13s2-h-028",
+      "surface_form": "vielä",
+      "lemma": "vielä",
+      "translation_fa": "هنوز",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 29,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Ongelma ei ole vielä korjattu.",
+      "example_fa": "هنوز",
+      "accepted_answers": [
+        "vielä"
+      ]
+    },
+    "a13s2-h-029": {
+      "id": "a13s2-h-029",
+      "surface_form": "oikein",
+      "lemma": "oikein",
+      "translation_fa": "درست",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 253,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Lämmitys ei toimi oikein.",
+      "example_fa": "درست",
+      "accepted_answers": [
+        "oikein"
+      ]
+    },
+    "a13s2-t-030": {
+      "id": "a13s2-t-030",
+      "surface_form": "hana",
+      "lemma": "hana",
+      "translation_fa": "شیر آب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Hana ei toimi.",
+      "example_fa": "شیر آب",
+      "accepted_answers": [
+        "hana"
+      ]
+    },
+    "a13s2-t-031": {
+      "id": "a13s2-t-031",
+      "surface_form": "valo",
+      "lemma": "valo",
+      "translation_fa": "چراغ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Valo ei pala.",
+      "example_fa": "چراغ",
+      "accepted_answers": [
+        "valo"
+      ]
+    },
+    "a13s2-t-032": {
+      "id": "a13s2-t-032",
+      "surface_form": "lämmitys",
+      "lemma": "lämmitys",
+      "translation_fa": "گرمایش",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Lämmitys ei toimi oikein.",
+      "example_fa": "گرمایش",
+      "accepted_answers": [
+        "lämmitys"
+      ]
+    },
+    "a13s2-e-033": {
+      "id": "a13s2-e-033",
+      "surface_form": "Hana ei toimi.",
+      "lemma": "Hana ei toimi.",
+      "translation_fa": "شیر آب کار نمی‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Hana ei toimi.",
+      "example_fa": "شیر آب کار نمی‌کند.",
+      "accepted_answers": [
+        "Hana ei toimi."
+      ]
+    },
+    "a13s2-e-034": {
+      "id": "a13s2-e-034",
+      "surface_form": "Valo ei pala.",
+      "lemma": "Valo ei pala.",
+      "translation_fa": "چراغ روشن نمی‌شود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Valo ei pala.",
+      "example_fa": "چراغ روشن نمی‌شود.",
+      "accepted_answers": [
+        "Valo ei pala."
+      ]
+    },
+    "a13s2-e-035": {
+      "id": "a13s2-e-035",
+      "surface_form": "Lämmitys ei toimi oikein.",
+      "lemma": "Lämmitys ei toimi oikein.",
+      "translation_fa": "سیستم گرمایش درست کار نمی‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Lämmitys ei toimi oikein.",
+      "example_fa": "سیستم گرمایش درست کار نمی‌کند.",
+      "accepted_answers": [
+        "Lämmitys ei toimi oikein."
+      ]
+    },
+    "a13s2-e-036": {
+      "id": "a13s2-e-036",
+      "surface_form": "Ongelma ei ole vielä korjattu.",
+      "lemma": "Ongelma ei ole vielä korjattu.",
+      "translation_fa": "مشکل هنوز برطرف نشده است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Ongelma ei ole vielä korjattu.",
+      "example_fa": "مشکل هنوز برطرف نشده است.",
+      "accepted_answers": [
+        "Ongelma ei ole vielä korjattu."
+      ]
+    },
+    "a13s2-h-037": {
+      "id": "a13s2-h-037",
+      "surface_form": "voi",
+      "lemma": "voida",
+      "translation_fa": "می‌تواند",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 25,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "En voi hyvin.",
+      "example_fa": "حالم خوب نیست.",
+      "accepted_answers": [
+        "voi"
+      ]
+    },
+    "a13s2-h-038": {
+      "id": "a13s2-h-038",
+      "surface_form": "heti",
+      "lemma": "heti",
+      "translation_fa": "فوراً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 141,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Tarvitsen apua heti.",
+      "example_fa": "فوراً کمک لازم دارم.",
+      "accepted_answers": [
+        "heti"
+      ]
+    },
+    "a13s2-h-039": {
+      "id": "a13s2-h-039",
+      "surface_form": "minulle",
+      "lemma": "minulle",
+      "translation_fa": "به من",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 296,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Voitteko soittaa minulle?",
+      "example_fa": "به من",
+      "accepted_answers": [
+        "minulle"
+      ]
+    },
+    "a13s2-t-040": {
+      "id": "a13s2-t-040",
+      "surface_form": "huolto",
+      "lemma": "huolto",
+      "translation_fa": "تعمیر و نگهداری",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "huolto",
+      "example_fa": "تعمیر و نگهداری",
+      "accepted_answers": [
+        "huolto"
+      ]
+    },
+    "a13s2-t-041": {
+      "id": "a13s2-t-041",
+      "surface_form": "korjaaja",
+      "lemma": "korjaaja",
+      "translation_fa": "تعمیرکار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "korjaaja",
+      "example_fa": "تعمیرکار",
+      "accepted_answers": [
+        "korjaaja"
+      ]
+    },
+    "a13s2-t-042": {
+      "id": "a13s2-t-042",
+      "surface_form": "osoite",
+      "lemma": "osoite",
+      "translation_fa": "نشانی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Osoite on …",
+      "example_fa": "نشانی",
+      "accepted_answers": [
+        "osoite"
+      ]
+    },
+    "a13s2-e-043": {
+      "id": "a13s2-e-043",
+      "surface_form": "Tarvitsen huoltoa.",
+      "lemma": "Tarvitsen huoltoa.",
+      "translation_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Tarvitsen huoltoa.",
+      "example_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+      "accepted_answers": [
+        "Tarvitsen huoltoa."
+      ]
+    },
+    "a13s2-e-044": {
+      "id": "a13s2-e-044",
+      "surface_form": "Voitteko lähettää korjaajan?",
+      "lemma": "Voitteko lähettää korjaajan?",
+      "translation_fa": "می‌توانید تعمیرکار بفرستید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Voitteko lähettää korjaajan?",
+      "example_fa": "می‌توانید تعمیرکار بفرستید؟",
+      "accepted_answers": [
+        "Voitteko lähettää korjaajan?"
+      ]
+    },
+    "a13s2-e-045": {
+      "id": "a13s2-e-045",
+      "surface_form": "Osoite on …",
+      "lemma": "Osoite on …",
+      "translation_fa": "نشانی این است: …",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Osoite on …",
+      "example_fa": "نشانی این است: …",
+      "accepted_answers": [
+        "Osoite on …"
+      ]
+    },
+    "a13s2-e-046": {
+      "id": "a13s2-e-046",
+      "surface_form": "Voitteko soittaa minulle?",
+      "lemma": "Voitteko soittaa minulle?",
+      "translation_fa": "می‌توانید با من تماس بگیرید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Voitteko soittaa minulle?",
+      "example_fa": "می‌توانید با من تماس بگیرید؟",
+      "accepted_answers": [
+        "Voitteko soittaa minulle?"
+      ]
+    },
+    "a13s2-h-047": {
+      "id": "a13s2-h-047",
+      "surface_form": "täällä",
+      "lemma": "täällä",
+      "translation_fa": "اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 229,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Olen täällä.",
+      "example_fa": "اینجا هستم.",
+      "accepted_answers": [
+        "täällä"
+      ]
+    },
+    "a13s2-h-048": {
+      "id": "a13s2-h-048",
+      "surface_form": "missä",
+      "lemma": "mikä",
+      "translation_fa": "کجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 188,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Missä apteekki on?",
+      "example_fa": "داروخانه کجاست؟",
+      "accepted_answers": [
+        "missä"
+      ]
+    },
+    "a13s2-h-049": {
+      "id": "a13s2-h-049",
+      "surface_form": "myös",
+      "lemma": "myös",
+      "translation_fa": "همچنین",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 11,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Täällä on myös kirjasto.",
+      "example_fa": "همچنین",
+      "accepted_answers": [
+        "myös"
+      ]
+    },
+    "a13s2-t-050": {
+      "id": "a13s2-t-050",
+      "surface_form": "kirjasto",
+      "lemma": "kirjasto",
+      "translation_fa": "کتابخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Missä kirjasto on?",
+      "example_fa": "کتابخانه",
+      "accepted_answers": [
+        "kirjasto"
+      ]
+    },
+    "a13s2-t-051": {
+      "id": "a13s2-t-051",
+      "surface_form": "posti",
+      "lemma": "posti",
+      "translation_fa": "ادارهٔ پست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Onko täällä posti?",
+      "example_fa": "ادارهٔ پست",
+      "accepted_answers": [
+        "posti"
+      ]
+    },
+    "a13s2-t-052": {
+      "id": "a13s2-t-052",
+      "surface_form": "pankki",
+      "lemma": "pankki",
+      "translation_fa": "بانک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Pankki on keskustassa.",
+      "example_fa": "بانک",
+      "accepted_answers": [
+        "pankki"
+      ]
+    },
+    "a13s2-e-053": {
+      "id": "a13s2-e-053",
+      "surface_form": "Missä kirjasto on?",
+      "lemma": "Missä kirjasto on?",
+      "translation_fa": "کتابخانه کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Missä kirjasto on?",
+      "example_fa": "کتابخانه کجاست؟",
+      "accepted_answers": [
+        "Missä kirjasto on?"
+      ]
+    },
+    "a13s2-e-054": {
+      "id": "a13s2-e-054",
+      "surface_form": "Onko täällä posti?",
+      "lemma": "Onko täällä posti?",
+      "translation_fa": "اینجا ادارهٔ پست هست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Onko täällä posti?",
+      "example_fa": "اینجا ادارهٔ پست هست؟",
+      "accepted_answers": [
+        "Onko täällä posti?"
+      ]
+    },
+    "a13s2-e-055": {
+      "id": "a13s2-e-055",
+      "surface_form": "Pankki on keskustassa.",
+      "lemma": "Pankki on keskustassa.",
+      "translation_fa": "بانک در مرکز شهر است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Pankki on keskustassa.",
+      "example_fa": "بانک در مرکز شهر است.",
+      "accepted_answers": [
+        "Pankki on keskustassa."
+      ]
+    },
+    "a13s2-e-056": {
+      "id": "a13s2-e-056",
+      "surface_form": "Täällä on myös kirjasto.",
+      "lemma": "Täällä on myös kirjasto.",
+      "translation_fa": "اینجا کتابخانه هم هست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Täällä on myös kirjasto.",
+      "example_fa": "اینجا کتابخانه هم هست.",
+      "accepted_answers": [
+        "Täällä on myös kirjasto."
+      ]
+    },
+    "a13s2-h-057": {
+      "id": "a13s2-h-057",
+      "surface_form": "kiinni",
+      "lemma": "kiinni",
+      "translation_fa": "بسته",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 230,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Se menee kiinni kello kuusi.",
+      "example_fa": "بسته",
+      "accepted_answers": [
+        "kiinni"
+      ]
+    },
+    "a13s2-h-058": {
+      "id": "a13s2-h-058",
+      "surface_form": "klo",
+      "lemma": "kello",
+      "translation_fa": "ساعت؛ مخفف kello",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 148,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Kokous alkaa klo 9.",
+      "example_fa": "جلسه ساعت نه آغاز می‌شود.",
+      "accepted_answers": [
+        "klo"
+      ]
+    },
+    "a13s2-h-059": {
+      "id": "a13s2-h-059",
+      "surface_form": "jälkeen",
+      "lemma": "jälkeen",
+      "translation_fa": "بعد از / پس از",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 36,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Tulen töiden jälkeen.",
+      "example_fa": "بعد از کار می‌آیم.",
+      "accepted_answers": [
+        "jälkeen"
+      ]
+    },
+    "a13s2-t-060": {
+      "id": "a13s2-t-060",
+      "surface_form": "auki",
+      "lemma": "auki",
+      "translation_fa": "باز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Milloin kirjasto on auki?",
+      "example_fa": "باز",
+      "accepted_answers": [
+        "auki"
+      ]
+    },
+    "a13s2-t-061": {
+      "id": "a13s2-t-061",
+      "surface_form": "avautuu",
+      "lemma": "avautuu",
+      "translation_fa": "باز می‌شود",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Se avautuu kello yhdeksän.",
+      "example_fa": "باز می‌شود",
+      "accepted_answers": [
+        "avautuu"
+      ]
+    },
+    "a13s2-t-062": {
+      "id": "a13s2-t-062",
+      "surface_form": "sulkeutuu",
+      "lemma": "sulkeutuu",
+      "translation_fa": "بسته می‌شود",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "sulkeutuu",
+      "example_fa": "بسته می‌شود",
+      "accepted_answers": [
+        "sulkeutuu"
+      ]
+    },
+    "a13s2-e-063": {
+      "id": "a13s2-e-063",
+      "surface_form": "Milloin kirjasto on auki?",
+      "lemma": "Milloin kirjasto on auki?",
+      "translation_fa": "کتابخانه چه زمانی باز است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Milloin kirjasto on auki?",
+      "example_fa": "کتابخانه چه زمانی باز است؟",
+      "accepted_answers": [
+        "Milloin kirjasto on auki?"
+      ]
+    },
+    "a13s2-e-064": {
+      "id": "a13s2-e-064",
+      "surface_form": "Se avautuu kello yhdeksän.",
+      "lemma": "Se avautuu kello yhdeksän.",
+      "translation_fa": "ساعت نه باز می‌شود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Se avautuu kello yhdeksän.",
+      "example_fa": "ساعت نه باز می‌شود.",
+      "accepted_answers": [
+        "Se avautuu kello yhdeksän."
+      ]
+    },
+    "a13s2-e-065": {
+      "id": "a13s2-e-065",
+      "surface_form": "Se menee kiinni kello kuusi.",
+      "lemma": "Se menee kiinni kello kuusi.",
+      "translation_fa": "ساعت شش بسته می‌شود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Se menee kiinni kello kuusi.",
+      "example_fa": "ساعت شش بسته می‌شود.",
+      "accepted_answers": [
+        "Se menee kiinni kello kuusi."
+      ]
+    },
+    "a13s2-e-066": {
+      "id": "a13s2-e-066",
+      "surface_form": "Se on auki viiden jälkeen.",
+      "lemma": "Se on auki viiden jälkeen.",
+      "translation_fa": "بعد از ساعت پنج باز است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Se on auki viiden jälkeen.",
+      "example_fa": "بعد از ساعت پنج باز است.",
+      "accepted_answers": [
+        "Se on auki viiden jälkeen."
+      ]
+    },
+    "a13s2-h-067": {
+      "id": "a13s2-h-067",
+      "surface_form": "saa",
+      "lemma": "saada",
+      "translation_fa": "می‌توان گرفت",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 61,
+      "topics": [
+        "a1.3-s2",
+        "source-backed"
+      ],
+      "example_fi": "Täältä saa apua.",
+      "example_fa": "از اینجا می‌توان کمک گرفت.",
+      "accepted_answers": [
+        "saa"
+      ]
+    },
+    "a13s2-t-068": {
+      "id": "a13s2-t-068",
+      "surface_form": "sallittu",
+      "lemma": "sallittu",
+      "translation_fa": "مجاز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "sallittu",
+      "example_fa": "مجاز",
+      "accepted_answers": [
+        "sallittu"
+      ]
+    },
+    "a13s2-t-069": {
+      "id": "a13s2-t-069",
+      "surface_form": "kielletty",
+      "lemma": "kielletty",
+      "translation_fa": "ممنوع",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Tämä on kielletty.",
+      "example_fa": "ممنوع",
+      "accepted_answers": [
+        "kielletty"
+      ]
+    },
+    "a13s2-t-070": {
+      "id": "a13s2-t-070",
+      "surface_form": "sisäänkäynti",
+      "lemma": "sisäänkäynti",
+      "translation_fa": "ورودی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Sisäänkäynti on tästä.",
+      "example_fa": "ورودی",
+      "accepted_answers": [
+        "sisäänkäynti"
+      ]
+    },
+    "a13s2-e-071": {
+      "id": "a13s2-e-071",
+      "surface_form": "Täällä ei saa tupakoida.",
+      "lemma": "Täällä ei saa tupakoida.",
+      "translation_fa": "اینجا سیگار کشیدن ممنوع است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Täällä ei saa tupakoida.",
+      "example_fa": "اینجا سیگار کشیدن ممنوع است.",
+      "accepted_answers": [
+        "Täällä ei saa tupakoida."
+      ]
+    },
+    "a13s2-e-072": {
+      "id": "a13s2-e-072",
+      "surface_form": "Sisäänkäynti on tästä.",
+      "lemma": "Sisäänkäynti on tästä.",
+      "translation_fa": "ورودی از اینجاست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Sisäänkäynti on tästä.",
+      "example_fa": "ورودی از اینجاست.",
+      "accepted_answers": [
+        "Sisäänkäynti on tästä."
+      ]
+    },
+    "a13s2-e-073": {
+      "id": "a13s2-e-073",
+      "surface_form": "Tämä on kielletty.",
+      "lemma": "Tämä on kielletty.",
+      "translation_fa": "این ممنوع است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Tämä on kielletty.",
+      "example_fa": "این ممنوع است.",
+      "accepted_answers": [
+        "Tämä on kielletty."
+      ]
+    },
+    "a13s2-e-074": {
+      "id": "a13s2-e-074",
+      "surface_form": "Täällä saa odottaa.",
+      "lemma": "Täällä saa odottaa.",
+      "translation_fa": "اینجا می‌توان منتظر ماند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Täällä saa odottaa.",
+      "example_fa": "اینجا می‌توان منتظر ماند.",
+      "accepted_answers": [
+        "Täällä saa odottaa."
+      ]
+    },
+    "a13s2-e-075": {
+      "id": "a13s2-e-075",
+      "surface_form": "Milloin se on auki?",
+      "lemma": "Milloin se on auki?",
+      "translation_fa": "چه زمانی باز است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Milloin se on auki?",
+      "example_fa": "چه زمانی باز است؟",
+      "accepted_answers": [
+        "Milloin se on auki?"
+      ]
+    },
+    "a13s2-e-076": {
+      "id": "a13s2-e-076",
+      "surface_form": "Voitteko auttaa minua?",
+      "lemma": "Voitteko auttaa minua?",
+      "translation_fa": "می‌توانید به من کمک کنید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Voitteko auttaa minua?",
+      "example_fa": "می‌توانید به من کمک کنید؟",
+      "accepted_answers": [
+        "Voitteko auttaa minua?"
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a1.3-section-2-lesson-1",
+      "curriculum_id": "a1.3-s2-l01",
+      "order": 1,
+      "title_fa": "اتاق‌ها و فضاهای خانه",
+      "objective_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
+      "summary_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
+      "grammar_fa": "missä/on location statements with room vocabulary as explicit reviewed forms",
+      "new_targets": [
+        "a13s2-h-001",
+        "a13s2-h-002",
+        "a13s2-h-003",
+        "a13s2-t-004",
+        "a13s2-t-005",
+        "a13s2-t-006"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-001",
+          "a13s2-h-002",
+          "a13s2-h-003"
+        ],
+        "topic": [
+          "a13s2-t-004",
+          "a13s2-t-005",
+          "a13s2-t-006"
+        ],
+        "expressions": [
+          "a13s2-e-007",
+          "a13s2-e-008",
+          "a13s2-e-009"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s2-l04",
+        "a1.2-s2-l01",
+        "a1.2-s4-l02"
+      ],
+      "production_targets": [
+        "a13s2-e-007"
+      ],
+      "listening_targets": [
+        "a13s2-h-001",
+        "a13s2-h-002"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-008",
+          "tokens": [
+            "Olohuone",
+            "on",
+            "siellä."
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Olohuone on siellä."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-007",
+          "options": [
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-001",
+          "options": [
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-002",
+          "options": [
+            "a13s2-h-002",
+            "a13s2-h-001",
+            "a13s2-h-003",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-008",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-003",
+          "options": [
+            "a13s2-h-003",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-004",
+          "options": [
+            "a13s2-t-004",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-005",
+          "options": [
+            "a13s2-t-005",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-006",
+          "options": [
+            "a13s2-t-006",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-009",
+          "options": [
+            "a13s2-e-009",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-001"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-h-002",
+          "options": [
+            "a13s2-h-002",
+            "a13s2-h-001",
+            "a13s2-h-003",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-h-003",
+          "options": [
+            "a13s2-h-003",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-004"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-t-005",
+          "options": [
+            "a13s2-t-005",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-t-006",
+          "options": [
+            "a13s2-t-006",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-2",
+      "curriculum_id": "a1.3-s2-l02",
+      "order": 2,
+      "title_fa": "جای وسایل",
+      "objective_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
+      "summary_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
+      "grammar_fa": "selected adessive/inessive household location forms stored explicitly; no case suffix generation",
+      "new_targets": [
+        "a13s2-h-001",
+        "a13s2-h-010",
+        "a13s2-h-002",
+        "a13s2-t-011",
+        "a13s2-t-012",
+        "a13s2-t-013"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-001",
+          "a13s2-h-010",
+          "a13s2-h-002"
+        ],
+        "topic": [
+          "a13s2-t-011",
+          "a13s2-t-012",
+          "a13s2-t-013"
+        ],
+        "expressions": [
+          "a13s2-e-014",
+          "a13s2-e-015",
+          "a13s2-e-016"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s4-l02",
+        "a1.2-s2-l01",
+        "a1.3-s2-l01"
+      ],
+      "production_targets": [
+        "a13s2-e-014"
+      ],
+      "listening_targets": [
+        "a13s2-h-001",
+        "a13s2-h-010"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-015",
+          "tokens": [
+            "Lasi",
+            "on",
+            "kaapissa."
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Lasi on kaapissa."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-014",
+          "options": [
+            "a13s2-e-014",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-001",
+          "options": [
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-010",
+          "options": [
+            "a13s2-h-010",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-015",
+          "options": [
+            "a13s2-e-015",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-002",
+          "options": [
+            "a13s2-h-002",
+            "a13s2-h-001",
+            "a13s2-h-003",
+            "a13s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-011",
+          "options": [
+            "a13s2-t-011",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-012",
+          "options": [
+            "a13s2-t-012",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-013",
+          "options": [
+            "a13s2-t-013",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-016",
+          "options": [
+            "a13s2-e-016",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-007",
+          "options": [
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-008",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-009",
+          "options": [
+            "a13s2-e-009",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-001"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-h-010",
+          "options": [
+            "a13s2-h-010",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-h-002",
+          "options": [
+            "a13s2-h-002",
+            "a13s2-h-001",
+            "a13s2-h-003",
+            "a13s2-t-004"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-3",
+      "curriculum_id": "a1.3-s2-l03",
+      "order": 3,
+      "title_fa": "کارهای خانه",
+      "objective_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
+      "summary_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
+      "grammar_fa": "pitää + infinitive as a reviewed obligation frame; household verbs remain explicit",
+      "new_targets": [
+        "a13s2-h-017",
+        "a13s2-h-018",
+        "a13s2-h-019",
+        "a13s2-t-020",
+        "a13s2-t-021",
+        "a13s2-t-022"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-017",
+          "a13s2-h-018",
+          "a13s2-h-019"
+        ],
+        "topic": [
+          "a13s2-t-020",
+          "a13s2-t-021",
+          "a13s2-t-022"
+        ],
+        "expressions": [
+          "a13s2-e-023",
+          "a13s2-e-024",
+          "a13s2-e-025",
+          "a13s2-e-026"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s3-l01",
+        "a1.3-s2-l01"
+      ],
+      "production_targets": [
+        "a13s2-e-023"
+      ],
+      "listening_targets": [
+        "a13s2-h-017",
+        "a13s2-h-018"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-024",
+          "tokens": [
+            "Pitää",
+            "pestä",
+            "astiat."
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Pitää pestä astiat."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-023",
+          "options": [
+            "a13s2-e-023",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-017",
+          "options": [
+            "a13s2-h-017",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-018",
+          "options": [
+            "a13s2-h-018",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-024",
+          "options": [
+            "a13s2-e-024",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-019",
+          "options": [
+            "a13s2-h-019",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-020",
+          "options": [
+            "a13s2-t-020",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-021",
+          "options": [
+            "a13s2-t-021",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-022",
+          "options": [
+            "a13s2-t-022",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-025",
+          "options": [
+            "a13s2-e-025",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-026",
+          "options": [
+            "a13s2-e-026",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-007",
+          "options": [
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-008",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-009",
+          "options": [
+            "a13s2-e-009",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-014",
+          "options": [
+            "a13s2-e-014",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-015",
+          "options": [
+            "a13s2-e-015",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-4",
+      "curriculum_id": "a1.3-s2-l04",
+      "order": 4,
+      "title_fa": "یک مشکل در خانه",
+      "objective_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
+      "summary_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
+      "grammar_fa": "simple negation with explicit problem verbs/forms; no runtime connegative generation",
+      "new_targets": [
+        "a13s2-h-027",
+        "a13s2-h-028",
+        "a13s2-h-029",
+        "a13s2-t-030",
+        "a13s2-t-031",
+        "a13s2-t-032"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-027",
+          "a13s2-h-028",
+          "a13s2-h-029"
+        ],
+        "topic": [
+          "a13s2-t-030",
+          "a13s2-t-031",
+          "a13s2-t-032"
+        ],
+        "expressions": [
+          "a13s2-e-033",
+          "a13s2-e-034",
+          "a13s2-e-035",
+          "a13s2-e-036"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s1-l08",
+        "a1.2-s4-l07",
+        "a1.3-s2-l03"
+      ],
+      "production_targets": [
+        "a13s2-e-033"
+      ],
+      "listening_targets": [
+        "a13s2-h-027",
+        "a13s2-h-028"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-034",
+          "tokens": [
+            "Valo",
+            "ei",
+            "pala."
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Valo ei pala."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-033",
+          "options": [
+            "a13s2-e-033",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-027",
+          "options": [
+            "a13s2-h-027",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-028",
+          "options": [
+            "a13s2-h-028",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-034",
+          "options": [
+            "a13s2-e-034",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-029",
+          "options": [
+            "a13s2-h-029",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-030",
+          "options": [
+            "a13s2-t-030",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-031",
+          "options": [
+            "a13s2-t-031",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-032",
+          "options": [
+            "a13s2-t-032",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-035",
+          "options": [
+            "a13s2-e-035",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-036",
+          "options": [
+            "a13s2-e-036",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-007",
+          "options": [
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-008",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-009",
+          "options": [
+            "a13s2-e-009",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-014",
+          "options": [
+            "a13s2-e-014",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-015",
+          "options": [
+            "a13s2-e-015",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-5",
+      "curriculum_id": "a1.3-s2-l05",
+      "order": 5,
+      "title_fa": "تماس با خدمات تعمیر و نگهداری",
+      "objective_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
+      "summary_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
+      "grammar_fa": "maintenance request and contact-detail frames stored as complete reviewed expressions",
+      "new_targets": [
+        "a13s2-h-037",
+        "a13s2-h-038",
+        "a13s2-h-039",
+        "a13s2-t-040",
+        "a13s2-t-041",
+        "a13s2-t-042"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-037",
+          "a13s2-h-038",
+          "a13s2-h-039"
+        ],
+        "topic": [
+          "a13s2-t-040",
+          "a13s2-t-041",
+          "a13s2-t-042"
+        ],
+        "expressions": [
+          "a13s2-e-043",
+          "a13s2-e-044",
+          "a13s2-e-045",
+          "a13s2-e-046"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s4-l07",
+        "a1.3-s1-l05",
+        "a1.3-s2-l04"
+      ],
+      "production_targets": [
+        "a13s2-e-043"
+      ],
+      "listening_targets": [
+        "a13s2-h-037",
+        "a13s2-h-038"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-044",
+          "tokens": [
+            "Voitteko",
+            "lähettää",
+            "korjaajan?"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Voitteko lähettää korjaajan?"
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-043",
+          "options": [
+            "a13s2-e-043",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-037",
+          "options": [
+            "a13s2-h-037",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-038",
+          "options": [
+            "a13s2-h-038",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-044",
+          "options": [
+            "a13s2-e-044",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-039",
+          "options": [
+            "a13s2-h-039",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-040",
+          "options": [
+            "a13s2-t-040",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-041",
+          "options": [
+            "a13s2-t-041",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-042",
+          "options": [
+            "a13s2-t-042",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-045",
+          "options": [
+            "a13s2-e-045",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-046",
+          "options": [
+            "a13s2-e-046",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-014",
+          "options": [
+            "a13s2-e-014",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-015",
+          "options": [
+            "a13s2-e-015",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-016",
+          "options": [
+            "a13s2-e-016",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-023",
+          "options": [
+            "a13s2-e-023",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-024",
+          "options": [
+            "a13s2-e-024",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-6",
+      "curriculum_id": "a1.3-s2-l06",
+      "order": 6,
+      "title_fa": "خدمات محله",
+      "objective_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
+      "summary_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
+      "grammar_fa": "service-location questions and selected inessive forms as reviewed phrases",
+      "new_targets": [
+        "a13s2-h-047",
+        "a13s2-h-048",
+        "a13s2-h-049",
+        "a13s2-t-050",
+        "a13s2-t-051",
+        "a13s2-t-052"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-047",
+          "a13s2-h-048",
+          "a13s2-h-049"
+        ],
+        "topic": [
+          "a13s2-t-050",
+          "a13s2-t-051",
+          "a13s2-t-052"
+        ],
+        "expressions": [
+          "a13s2-e-053",
+          "a13s2-e-054",
+          "a13s2-e-055",
+          "a13s2-e-056"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s2-l01",
+        "a1.2-s2-l02",
+        "a1.3-s2-l01"
+      ],
+      "production_targets": [
+        "a13s2-e-053"
+      ],
+      "listening_targets": [
+        "a13s2-h-047",
+        "a13s2-h-048"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-054",
+          "tokens": [
+            "Onko",
+            "täällä",
+            "posti?"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Onko täällä posti?"
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-053",
+          "options": [
+            "a13s2-e-053",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-047",
+          "options": [
+            "a13s2-h-047",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-048",
+          "options": [
+            "a13s2-h-048",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-054",
+          "options": [
+            "a13s2-e-054",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-049",
+          "options": [
+            "a13s2-h-049",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-050",
+          "options": [
+            "a13s2-t-050",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-051",
+          "options": [
+            "a13s2-t-051",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-052",
+          "options": [
+            "a13s2-t-052",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-055",
+          "options": [
+            "a13s2-e-055",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-056",
+          "options": [
+            "a13s2-e-056",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-023",
+          "options": [
+            "a13s2-e-023",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-024",
+          "options": [
+            "a13s2-e-024",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-025",
+          "options": [
+            "a13s2-e-025",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-026",
+          "options": [
+            "a13s2-e-026",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-033",
+          "options": [
+            "a13s2-e-033",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-7",
+      "curriculum_id": "a1.3-s2-l07",
+      "order": 7,
+      "title_fa": "ساعت‌های باز بودن",
+      "objective_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
+      "summary_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
+      "grammar_fa": "opening-time formulas and before/after time phrases taught as complete reviewed forms",
+      "new_targets": [
+        "a13s2-h-057",
+        "a13s2-h-058",
+        "a13s2-h-059",
+        "a13s2-t-060",
+        "a13s2-t-061",
+        "a13s2-t-062"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-057",
+          "a13s2-h-058",
+          "a13s2-h-059"
+        ],
+        "topic": [
+          "a13s2-t-060",
+          "a13s2-t-061",
+          "a13s2-t-062"
+        ],
+        "expressions": [
+          "a13s2-e-063",
+          "a13s2-e-064",
+          "a13s2-e-065",
+          "a13s2-e-066"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s2-l07",
+        "a1.2-s3-l05",
+        "a1.3-s2-l06"
+      ],
+      "production_targets": [
+        "a13s2-e-063"
+      ],
+      "listening_targets": [
+        "a13s2-h-057",
+        "a13s2-h-058"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-064",
+          "tokens": [
+            "Se",
+            "avautuu",
+            "kello",
+            "yhdeksän."
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-063",
+          "options": [
+            "a13s2-e-063",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-057",
+          "options": [
+            "a13s2-h-057",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-058",
+          "options": [
+            "a13s2-h-058",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-064",
+          "options": [
+            "a13s2-e-064",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-059",
+          "options": [
+            "a13s2-h-059",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-060",
+          "options": [
+            "a13s2-t-060",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-061",
+          "options": [
+            "a13s2-t-061",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-062",
+          "options": [
+            "a13s2-t-062",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-065",
+          "options": [
+            "a13s2-e-065",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-066",
+          "options": [
+            "a13s2-e-066",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-033",
+          "options": [
+            "a13s2-e-033",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-034",
+          "options": [
+            "a13s2-e-034",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-035",
+          "options": [
+            "a13s2-e-035",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-036",
+          "options": [
+            "a13s2-e-036",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-043",
+          "options": [
+            "a13s2-e-043",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-8",
+      "curriculum_id": "a1.3-s2-l08",
+      "order": 8,
+      "title_fa": "اعلان‌ها و قوانین ساده",
+      "objective_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
+      "summary_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
+      "grammar_fa": "ei saa / saa + infinitive as explicit permission/prohibition frames",
+      "new_targets": [
+        "a13s2-h-017",
+        "a13s2-h-027",
+        "a13s2-h-067",
+        "a13s2-t-068",
+        "a13s2-t-069",
+        "a13s2-t-070"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s2-h-017",
+          "a13s2-h-027",
+          "a13s2-h-067"
+        ],
+        "topic": [
+          "a13s2-t-068",
+          "a13s2-t-069",
+          "a13s2-t-070"
+        ],
+        "expressions": [
+          "a13s2-e-071",
+          "a13s2-e-072",
+          "a13s2-e-073",
+          "a13s2-e-074"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l04",
+        "a1.2-s4-l08",
+        "a1.3-s2-l06"
+      ],
+      "production_targets": [
+        "a13s2-e-071"
+      ],
+      "listening_targets": [
+        "a13s2-h-017",
+        "a13s2-h-027"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-072",
+          "tokens": [
+            "Sisäänkäynti",
+            "on",
+            "tästä."
+          ],
+          "answer_order": [
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Sisäänkäynti on tästä."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-071",
+          "options": [
+            "a13s2-e-071",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-017",
+          "options": [
+            "a13s2-h-017",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-027",
+          "options": [
+            "a13s2-h-027",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-072",
+          "options": [
+            "a13s2-e-072",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-h-067",
+          "options": [
+            "a13s2-h-067",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-068",
+          "options": [
+            "a13s2-t-068",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-069",
+          "options": [
+            "a13s2-t-069",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-t-070",
+          "options": [
+            "a13s2-t-070",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-073",
+          "options": [
+            "a13s2-e-073",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-074",
+          "options": [
+            "a13s2-e-074",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-043",
+          "options": [
+            "a13s2-e-043",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-044",
+          "options": [
+            "a13s2-e-044",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-045",
+          "options": [
+            "a13s2-e-045",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-046",
+          "options": [
+            "a13s2-e-046",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-053",
+          "options": [
+            "a13s2-e-053",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-9",
+      "curriculum_id": "a1.3-s2-l09",
+      "order": 9,
+      "title_fa": "یک کار محلی و مشکل روزمره",
+      "objective_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
+      "summary_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
+      "grammar_fa": "recycling only; preserve reviewed location, time, rule, and help frames",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "a13s2-e-053",
+          "a13s2-e-075",
+          "a13s2-e-072",
+          "a13s2-e-076"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s2-l01",
+        "a1.3-s2-l02",
+        "a1.3-s2-l03",
+        "a1.3-s2-l04",
+        "a1.3-s2-l05",
+        "a1.3-s2-l06",
+        "a1.3-s2-l07",
+        "a1.3-s2-l08"
+      ],
+      "production_targets": [
+        "a13s2-e-053"
+      ],
+      "listening_targets": [
+        "a13s2-e-053",
+        "a13s2-e-072"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-075",
+          "tokens": [
+            "Milloin",
+            "se",
+            "on",
+            "auki?"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Milloin se on auki?"
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-053",
+          "options": [
+            "a13s2-e-053",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-072",
+          "options": [
+            "a13s2-e-072",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-075",
+          "options": [
+            "a13s2-e-075",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-076",
+          "options": [
+            "a13s2-e-076",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-054",
+          "options": [
+            "a13s2-e-054",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-055",
+          "options": [
+            "a13s2-e-055",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-056",
+          "options": [
+            "a13s2-e-056",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-063",
+          "options": [
+            "a13s2-e-063",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-064",
+          "options": [
+            "a13s2-e-064",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-065",
+          "options": [
+            "a13s2-e-065",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-066",
+          "options": [
+            "a13s2-e-066",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-071",
+          "options": [
+            "a13s2-e-071",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-073",
+          "options": [
+            "a13s2-e-073",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-074",
+          "options": [
+            "a13s2-e-074",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-007",
+          "options": [
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-2-lesson-10",
+      "curriculum_id": "a1.3-s2-l10",
+      "order": 10,
+      "title_fa": "ارزیابی بخش ۲",
+      "objective_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
+      "summary_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
+      "grammar_fa": "checkpoint: rooms and locations, household tasks, home problems, maintenance, neighborhood services, opening times, notices",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.3-s1-l10",
+        "a1.3-s2-l01",
+        "a1.3-s2-l02",
+        "a1.3-s2-l03",
+        "a1.3-s2-l04",
+        "a1.3-s2-l05",
+        "a1.3-s2-l06",
+        "a1.3-s2-l07",
+        "a1.3-s2-l08",
+        "a1.3-s2-l09"
+      ],
+      "production_targets": [
+        "a13s2-e-063"
+      ],
+      "listening_targets": [
+        "a13s2-e-063",
+        "a13s2-e-064"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-063",
+          "tokens": [
+            "Milloin",
+            "kirjasto",
+            "on",
+            "auki?"
+          ],
+          "answer_order": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Milloin kirjasto on auki?"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a13s2-e-063",
+          "prompt_fi": "Milloin _____ on auki?",
+          "prompt_fa": "کتابخانه چه زمانی باز است؟",
+          "accepted_answers": [
+            "kirjasto"
+          ],
+          "expected_fi": "Milloin kirjasto on auki?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-064",
+          "prompt_fa": "ساعت نه باز می‌شود.",
+          "cues_fi": [
+            "Se",
+            "avautuu"
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "accepted_answers": [
+            "Se avautuu kello yhdeksän."
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-063",
+          "options": [
+            "a13s2-e-063",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-064",
+          "options": [
+            "a13s2-e-064",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-065",
+          "options": [
+            "a13s2-e-065",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-066",
+          "options": [
+            "a13s2-e-066",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-071",
+          "options": [
+            "a13s2-e-071",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-072",
+          "options": [
+            "a13s2-e-072",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-073",
+          "options": [
+            "a13s2-e-073",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-074",
+          "options": [
+            "a13s2-e-074",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-053",
+          "options": [
+            "a13s2-e-053",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-075",
+          "options": [
+            "a13s2-e-075",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-076",
+          "options": [
+            "a13s2-e-076",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-007",
+          "options": [
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-008",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-009",
+          "options": [
+            "a13s2-e-009",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-014",
+          "options": [
+            "a13s2-e-014",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        }
+      ],
+      "passing_score": 0.8,
+      "checkpoint_targets": [
+        "a13s2-e-063",
+        "a13s2-e-064",
+        "a13s2-e-065",
+        "a13s2-e-066",
+        "a13s2-e-071",
+        "a13s2-e-072",
+        "a13s2-e-073",
+        "a13s2-e-074",
+        "a13s2-e-053",
+        "a13s2-e-075",
+        "a13s2-e-076",
+        "a13s2-e-007",
+        "a13s2-e-008",
+        "a13s2-e-009",
+        "a13s2-e-014"
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s2-e-063",
+          "base_fi": "Milloin kirjasto on auki?",
+          "feature_fa": "تشخیص صورت آموزش‌داده‌شده",
+          "prompt_fa": "صورت درست «کتابخانه چه زمانی باز است؟» را انتخاب کن.",
+          "frame_fi": "_____",
+          "options_fi": [
+            "Milloin kirjasto on auki?",
+            "ei Milloin kirjasto on auki?",
+            "minun Milloin kirjasto on auki?"
+          ],
+          "expected_fi": "Milloin kirjasto on auki?",
+          "explanation_fa": "این صورت دقیقاً در واژگان درس آموزش داده شده است."
+        }
+      ]
+    }
+  ]
+}
