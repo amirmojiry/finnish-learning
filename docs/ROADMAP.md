@@ -46,6 +46,8 @@ The shipped dictionary has an independently generated count and Parole frequency
 - Audit grammar transfer from memorized phrases to productive use, including present tense, negation, local cases, partitive and consonant gradation.
 - Check progression through listening, reading, writing and spoken interaction with appropriately valid assessment evidence. Current app exercise completion **does not** certify CEFR/YKI speaking or mediation.
 
+**Gate before A2.1 Section 3:** [Tracking issue #101](https://github.com/amirmojiry/finnish-learning/issues/101) sequences lexical, grammar and review infrastructure. P0 adds the [shipped content coverage audit](COURSE-COVERAGE-AUDIT.md) and its [machine-readable evidence](../data/course/coverage-audit.json). A grammar explanation in prose is not counted as a validated grammar-concept mapping.
+
 ### 4. Complete A2.1 deliberately, then expand A2.2–C2
 
 - A2.1 Sections 1–2 are playable: 20 lessons covering travel/past and routine healthcare/public-service language, each with varied listening, controlled production, integrated reading and an 80% checkpoint. Healthcare texts teach communication, never medication dosage or clinical advice.
