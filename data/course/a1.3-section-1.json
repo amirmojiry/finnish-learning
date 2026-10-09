@@ -1403,7 +1403,7 @@
       "title_fa": "ادامه دادن یک گفت‌وگوی کوتاه",
       "objective_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
       "summary_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
-      "grammar_fa": "simple follow-up questions and reciprocal Entä sinä? as complete reviewed conversation frames",
+      "grammar_fa": "برای ادامهٔ گفت‌وگو از پرسش‌های کوتاه «Mitä teet tänään?» (امروز چه کار می‌کنی؟) و «Entä sinä?» (تو چطور؟) استفاده کن. این پرسش‌ها را به‌صورت عبارت‌های کامل یاد بگیر.",
       "new_targets": [
         "a13s1-h-001",
         "a13s1-h-002",
@@ -1606,7 +1606,7 @@
       "title_fa": "دعوت کردن و پاسخ دادن",
       "objective_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
       "summary_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
-      "grammar_fa": "invitation and response formulas stored as complete reviewed social chunks",
+      "grammar_fa": "برای دعوت از «Haluatko tulla minun kanssani?» استفاده کن. «Kyllä, mielelläni.» پذیرش مؤدبانه و «Valitettavasti en voi.» رد کردن مؤدبانه است.",
       "new_targets": [
         "a13s1-h-011",
         "a13s1-h-012",
@@ -1807,7 +1807,7 @@
       "title_fa": "تغییر دادن برنامه",
       "objective_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
       "summary_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
-      "grammar_fa": "change-of-plan phrases and täytyy + infinitive introduced only through explicit reviewed examples",
+      "grammar_fa": "برای تغییر قرار از «Voimmeko tavata myöhemmin?» کمک بگیر. در «Minun täytyy perua tapaaminen.»، ساختار «täytyy + شکل پایهٔ فعل» الزام را بیان می‌کند.",
       "new_targets": [
         "a13s1-h-021",
         "a13s1-h-022",
@@ -2012,7 +2012,7 @@
       "title_fa": "پیام‌های عملی کوتاه",
       "objective_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
       "summary_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
-      "grammar_fa": "short-message word order and explicit present-tense message formulas",
+      "grammar_fa": "در پیام کوتاه، فعل و زمان را روشن بنویس؛ مانند «Tulen pian.» یا «Vastaan myöhemmin.». «Lähetä» صورت امریِ فعل فرستادن است.",
       "new_targets": [
         "a13s1-h-002",
         "a13s1-h-031",
@@ -2215,7 +2215,7 @@
       "title_fa": "یک گفت‌وگوی تلفنی ساده",
       "objective_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
       "summary_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
-      "grammar_fa": "telephone identification and callback requests as complete reviewed frames",
+      "grammar_fa": "هنگام تماس، «Hei, täällä on Sara.» برای معرفی پشت تلفن و «Voinko puhua Amirille?» برای درخواست صحبت با شخصی دیگر به کار می‌رود.",
       "new_targets": [
         "a13s1-h-040",
         "a13s1-h-013",
@@ -2418,7 +2418,7 @@
       "title_fa": "ترجیحات در گفت‌وگو",
       "objective_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
       "summary_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
-      "grammar_fa": "preference frames with pidän and mieluummin stored explicitly; no runtime case generation",
+      "grammar_fa": "«Pidän tästä.» یعنی «این را دوست دارم»؛ در «Pidän enemmän teestä.» ترجیح قوی‌تری بیان می‌شود. صورت‌های «tästä» و «teestä» را در همین عبارت‌ها تمرین کن.",
       "new_targets": [
         "a13s1-h-048",
         "a13s1-h-049",
@@ -2620,7 +2620,7 @@
       "title_fa": "گفتن یک دلیل ساده",
       "objective_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
       "summary_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
-      "grammar_fa": "because/but/therefore links limited to short reviewed clauses",
+      "grammar_fa": "با «koska» دلیل بیاور، با «mutta» تضاد نشان بده و با «siksi» نتیجه را بگو: «En tule, koska olen väsynyt.»؛ جمله‌ها را کوتاه و آشنا نگه دار.",
       "new_targets": [
         "a13s1-h-057",
         "a13s1-h-058",
@@ -2826,7 +2826,7 @@
       "title_fa": "پیشنهاد ساده",
       "objective_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
       "summary_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
-      "grammar_fa": "voidaan and mennään as reviewed suggestion chunks rather than productive passive generation",
+      "grammar_fa": "«Voidaan tavata huomenna.» و «Mennään yhdessä.» دو شیوهٔ پیشنهاد دادن هستند. این صورت‌ها را فعلاً به‌شکل عبارت‌های آماده بیاموز، نه قاعدهٔ کامل ساخت مجهول.",
       "new_targets": [
         "a13s1-h-065",
         "a13s1-h-012",
@@ -3027,7 +3027,7 @@
       "title_fa": "یک هماهنگی اجتماعی کامل",
       "objective_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
       "summary_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
-      "grammar_fa": "recycling only; preserve complete reviewed social and arrangement frames",
+      "grammar_fa": "در یک گفت‌وگوی کوتاه، احوالپرسی، دعوت، بیان دلیل، پیشنهاد زمان تازه و تأیید را به‌ترتیب ترکیب کن؛ مانند «Voidaan tavata myöhemmin.» و «Sovitaan niin.».",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3243,7 +3243,7 @@
       "title_fa": "ارزیابی بخش ۱",
       "objective_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
       "summary_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
-      "grammar_fa": "checkpoint: social follow-up, invitations, practical messages, phone language, preferences, reasons, and suggestions",
+      "grammar_fa": "در ارزیابی این بخش، احوالپرسی، دعوت، پیام، تلفن، ترجیح، بیان دلیل و تغییر قرار مرور می‌شود. پاسخ‌ها باید با عبارت‌های تمرین‌شده هماهنگ باشند.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
