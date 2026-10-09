@@ -1421,7 +1421,7 @@
       "title_fa": "اتاق‌ها و فضاهای خانه",
       "objective_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
       "summary_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
-      "grammar_fa": "برای گفتن محل اتاق‌ها از ساختار «اسم + on + مکان» استفاده کن: «Keittiö on tässä.» و «Olohuone on siellä.».",
+      "grammar_fa": "مکان اتاق را با «اسم + on + مکان» بگو؛ مانند «Keittiö on tässä.».",
       "new_targets": [
         "a13s2-h-001",
         "a13s2-h-002",
@@ -1623,7 +1623,7 @@
       "title_fa": "جای وسایل",
       "objective_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
       "summary_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
-      "grammar_fa": "مکان اشیا را با صورت‌های یادگرفته‌شده بیان کن: «pöydällä» (روی میز)، «kaapissa» (داخل کمد) و «lattialla» (روی زمین). هنوز قرار نیست همهٔ حالت‌های مکانی را آزادانه بسازی.",
+      "grammar_fa": "«pöydällä» روی میز، «kaapissa» در کمد و «lattialla» روی زمین است؛ صورت‌ها را یک‌به‌یک تمرین کن.",
       "new_targets": [
         "a13s2-h-001",
         "a13s2-h-010",
@@ -1825,7 +1825,7 @@
       "title_fa": "کارهای خانه",
       "objective_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
       "summary_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
-      "grammar_fa": "«Pitää + شکل پایهٔ فعل» در عبارت‌هایی مانند «Pitää siivota.» برای بیان کاری که باید انجام شود به کار می‌رود. «Vien roskat.» نمونهٔ یک کار روزمره است.",
+      "grammar_fa": "«pitää + مصدر» مانند «Pitää siivota.» بیانگر ضرورت انجام کار است.",
       "new_targets": [
         "a13s2-h-017",
         "a13s2-h-018",
@@ -2027,7 +2027,7 @@
       "title_fa": "یک مشکل در خانه",
       "objective_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
       "summary_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
-      "grammar_fa": "برای گزارش مشکل، جملهٔ منفی کوتاه به‌کار ببر: «Hana ei toimi.» یا «Valo ei pala.». در «Lämmitys ei toimi oikein.» واژهٔ «oikein» یعنی «درست».",
+      "grammar_fa": "با «ei» خرابی را گزارش کن؛ مانند «Hana ei toimi.» و «Valo ei pala.».",
       "new_targets": [
         "a13s2-h-027",
         "a13s2-h-028",
@@ -2230,7 +2230,7 @@
       "title_fa": "تماس با خدمات تعمیر و نگهداری",
       "objective_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
       "summary_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
-      "grammar_fa": "برای درخواست تعمیر از «Tarvitsen huoltoa.» و پرسش مؤدبانهٔ «Voitteko lähettää korjaajan?» استفاده کن؛ نشانی و شمارهٔ تماس را کوتاه و روشن بیان کن.",
+      "grammar_fa": "«Tarvitsen huoltoa.» نیاز و «Voitteko lähettää korjaajan?» درخواست مؤدبانه است.",
       "new_targets": [
         "a13s2-h-037",
         "a13s2-h-038",
@@ -2433,7 +2433,7 @@
       "title_fa": "خدمات محله",
       "objective_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
       "summary_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
-      "grammar_fa": "مکان خدمات محله را با «Missä ... on?» بپرس. «Onko täällä posti?» پرسش بله/خیر است و «keskustassa» یعنی «در مرکز شهر».",
+      "grammar_fa": "«Missä kirjasto on?» پرسش مکان و «Onko täällä posti?» پرسش بله/خیر است.",
       "new_targets": [
         "a13s2-h-047",
         "a13s2-h-048",
@@ -2523,9 +2523,9 @@
           "item": "a13s2-h-047",
           "options": [
             "a13s2-h-047",
-            "a13s2-h-001",
             "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-h-003",
+            "a13s2-t-004"
           ]
         },
         {
@@ -2556,9 +2556,9 @@
           "item": "a13s2-h-047",
           "options": [
             "a13s2-h-047",
-            "a13s2-h-001",
             "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-h-003",
+            "a13s2-t-004"
           ]
         },
         {
@@ -2636,7 +2636,7 @@
       "title_fa": "ساعت‌های باز بودن",
       "objective_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
       "summary_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
-      "grammar_fa": "برای ساعت کار، «Milloin ... on auki?» یعنی «چه زمانی باز است؟». «avautuu» باز شدن و «menee kiinni» بسته شدن را بیان می‌کند.",
+      "grammar_fa": "«Milloin ... on auki?» دربارهٔ ساعت باز بودن می‌پرسد؛ «avautuu» باز و «menee kiinni» بسته می‌شود.",
       "new_targets": [
         "a13s2-h-057",
         "a13s2-h-058",
@@ -2841,7 +2841,7 @@
       "title_fa": "اعلان‌ها و قوانین ساده",
       "objective_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
       "summary_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
-      "grammar_fa": "ساختار «saa + شکل پایهٔ فعل» اجازه و «ei saa + شکل پایهٔ فعل» ممنوعیت را بیان می‌کند: «Täällä saa odottaa.» در برابر «Täällä ei saa tupakoida.».",
+      "grammar_fa": "«saa + مصدر» اجازه و «ei saa + مصدر» ممنوعیت را بیان می‌کند.",
       "new_targets": [
         "a13s2-h-017",
         "a13s2-h-027",
@@ -3044,7 +3044,7 @@
       "title_fa": "یک کار محلی و مشکل روزمره",
       "objective_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
       "summary_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
-      "grammar_fa": "در یک موقعیت محلی، پرسیدن مسیر، ساعت کار، خواندن اعلان و درخواست کمک را به هم پیوند بده؛ مانند «Missä kirjasto on?» و «Voitteko auttaa minua?».",
+      "grammar_fa": "مکان، ساعت کار، اعلان و درخواست کمک را در یک سناریوی محله ترکیب کن.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3253,7 +3253,7 @@
       "title_fa": "ارزیابی بخش ۲",
       "objective_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
       "summary_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
-      "grammar_fa": "این ارزیابی محل اشیا، کارهای خانه، گزارش خرابی، درخواست تعمیر، خدمات محله، ساعت کار و تابلوهای ساده را مرور می‌کند.",
+      "grammar_fa": "این آزمون، اتاق، وسایل، کارهای خانه، خرابی، خدمات، ساعت کار و اعلان‌ها را مرور می‌کند.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3273,51 +3273,49 @@
         "a1.3-s2-l09"
       ],
       "production_targets": [
-        "a13s2-e-063"
+        "a13s2-e-007"
       ],
       "listening_targets": [
-        "a13s2-e-063",
-        "a13s2-e-064"
+        "a13s2-e-014",
+        "a13s2-e-023"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s2-e-063",
+          "item": "a13s2-e-033",
           "tokens": [
-            "kirjasto",
-            "on",
-            "auki?",
-            "Milloin"
+            "ei",
+            "toimi.",
+            "Hana"
           ],
           "answer_order": [
-            3,
+            2,
             0,
-            1,
-            2
+            1
           ],
-          "expected_fi": "Milloin kirjasto on auki?"
+          "expected_fi": "Hana ei toimi."
         },
         {
           "type": "expression-completion",
-          "item": "a13s2-e-063",
-          "prompt_fi": "Milloin _____ on auki?",
-          "prompt_fa": "کتابخانه چه زمانی باز است؟",
+          "item": "a13s2-e-044",
+          "prompt_fi": "Voitteko _____ korjaajan?",
+          "prompt_fa": "می‌توانید تعمیرکار بفرستید؟",
           "accepted_answers": [
-            "kirjasto"
+            "lähettää"
           ],
-          "expected_fi": "Milloin kirjasto on auki?"
+          "expected_fi": "Voitteko lähettää korjaajan?"
         },
         {
           "type": "controlled-production",
-          "item": "a13s2-e-064",
-          "prompt_fa": "ساعت نه باز می‌شود.",
+          "item": "a13s2-e-053",
+          "prompt_fa": "کتابخانه کجاست؟",
           "cues_fi": [
-            "Se",
-            "avautuu"
+            "Missä",
+            "kirjasto"
           ],
-          "expected_fi": "Se avautuu kello yhdeksän.",
+          "expected_fi": "Missä kirjasto on?",
           "accepted_answers": [
-            "Se avautuu kello yhdeksän."
+            "Missä kirjasto on?"
           ]
         }
       ],
@@ -3325,9 +3323,64 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-063",
+          "item": "a13s2-e-007",
           "options": [
-            "a13s2-e-063",
+            "a13s2-e-007",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-014",
+          "options": [
+            "a13s2-e-014",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-023",
+          "options": [
+            "a13s2-e-023",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-033",
+          "options": [
+            "a13s2-e-033",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-044",
+          "options": [
+            "a13s2-e-044",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-053",
+          "options": [
+            "a13s2-e-053",
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
@@ -3339,108 +3392,9 @@
           "item": "a13s2-e-063",
           "options": [
             "a13s2-e-063",
-            "a13s2-h-002",
-            "a13s2-h-003",
-            "a13s2-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-064",
-          "options": [
-            "a13s2-e-064",
-            "a13s2-h-003",
-            "a13s2-t-004",
-            "a13s2-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-063",
-          "options": [
-            "a13s2-e-063",
-            "a13s2-t-004",
-            "a13s2-t-005",
-            "a13s2-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-063",
-          "options": [
-            "a13s2-e-063",
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-064",
-          "options": [
-            "a13s2-e-064",
-            "a13s2-h-002",
-            "a13s2-h-003",
-            "a13s2-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-063",
-          "options": [
-            "a13s2-e-063",
-            "a13s2-h-003",
-            "a13s2-t-004",
-            "a13s2-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-063",
-          "options": [
-            "a13s2-e-063",
-            "a13s2-t-004",
-            "a13s2-t-005",
-            "a13s2-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-064",
-          "options": [
-            "a13s2-e-064",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-065",
-          "options": [
-            "a13s2-e-065",
-            "a13s2-h-002",
-            "a13s2-h-003",
-            "a13s2-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-066",
-          "options": [
-            "a13s2-e-066",
-            "a13s2-h-003",
-            "a13s2-t-004",
-            "a13s2-t-005"
           ]
         },
         {
@@ -3449,17 +3403,6 @@
           "item": "a13s2-e-071",
           "options": [
             "a13s2-e-071",
-            "a13s2-t-004",
-            "a13s2-t-005",
-            "a13s2-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-072",
-          "options": [
-            "a13s2-e-072",
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
@@ -3468,12 +3411,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-073",
+          "item": "a13s2-e-076",
           "options": [
-            "a13s2-e-073",
+            "a13s2-e-076",
+            "a13s2-h-001",
             "a13s2-h-002",
-            "a13s2-h-003",
-            "a13s2-t-004"
+            "a13s2-h-003"
           ]
         },
         {
@@ -3486,25 +3429,80 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-008",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-009",
+          "options": [
+            "a13s2-e-009",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-015",
+          "options": [
+            "a13s2-e-015",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-016",
+          "options": [
+            "a13s2-e-016",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-024",
+          "options": [
+            "a13s2-e-024",
+            "a13s2-h-001",
+            "a13s2-h-002",
+            "a13s2-h-003"
+          ]
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
+        "a13s2-e-007",
+        "a13s2-e-014",
+        "a13s2-e-023",
+        "a13s2-e-033",
+        "a13s2-e-044",
+        "a13s2-e-053",
         "a13s2-e-063",
-        "a13s2-e-063",
-        "a13s2-e-064",
-        "a13s2-e-063",
-        "a13s2-e-063",
-        "a13s2-e-064",
-        "a13s2-e-063",
-        "a13s2-e-063",
-        "a13s2-e-064",
-        "a13s2-e-065",
-        "a13s2-e-066",
         "a13s2-e-071",
-        "a13s2-e-072",
-        "a13s2-e-073",
-        "a13s2-e-007"
+        "a13s2-e-076",
+        "a13s2-e-007",
+        "a13s2-e-008",
+        "a13s2-e-009",
+        "a13s2-e-015",
+        "a13s2-e-016",
+        "a13s2-e-024"
       ],
       "morphology_practice": [
         {
