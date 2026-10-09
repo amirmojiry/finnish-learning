@@ -34,7 +34,10 @@ function loadStages(master) {
   }).filter(stage=>stage.sections.length);
 }
 function positives(a) {
-  if(a.type==='teach')return [];
+  if(a.type==='teach'||a.type==='number-grid')return [];
+  if(a.type==='event-time-match')return a.time_item?[a.time_item]:[];
+  if(a.type==='prompt-choice')return a.answer_item?[a.answer_item]:[];
+  if(a.type==='sequence-order')return a.items||[];
   if(a.type==='short-reading')return a.question_item?[a.question_item]:[];
   if(a.type==='dialogue-order')return a.turns||[];
   if(a.type==='negative-transform')return [a.negative_item||a.item].filter(Boolean);
@@ -130,7 +133,7 @@ function build(master,stages,dictionary,parole) {
     for(const id of ids)if(section.items[id])words.push(section.items[id]);
     sections.push({
       level:section.level,id:section.id,lessons:current.length,
-      graded_slots:section.lessons.reduce((n,l)=>n+l.activities.filter(a=>a.type!=='teach').length,0),
+      graded_slots:section.lessons.reduce((n,l)=>n+l.activities.filter(a=>a.type!=='teach'&&a.type!=='number-grid').length,0),
       unassessed_target_forms:current.reduce((n,l)=>n+l.lexical.declared_unassessed.length,0),
       lessons_missing_grammar_ids:current.filter(l=>!l.grammar.concept_ids.length).length,
     });
@@ -257,6 +260,7 @@ function main(args=process.argv.slice(2)) {
     const existingJson=fs.existsSync(JSON_FILE)?fs.readFileSync(JSON_FILE,'utf8'):null;
     const existingMd=fs.existsSync(MD_FILE)?fs.readFileSync(MD_FILE,'utf8'):null;
     if(existingJson!==json||existingMd!==md){
+      if (process.env.GITHUB_ACTIONS) process.stdout.write('COVERAGE_AUDIT_SNAPSHOT='+JSON.stringify({json,markdown:md})+'\n');
       process.stderr.write('Missing or stale course audit snapshots; run npm run curriculum:coverage:write.\n');
       process.exitCode=1;
     }else process.stdout.write('Course coverage audit current for '+data.summary.shipped_lessons+' lessons.\n');
