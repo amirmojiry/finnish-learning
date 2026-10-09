@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "finnish-learning-master-curriculum",
   "status": "design_baseline_not_runtime_course",
-  "updated_on": "2026-10-08",
+  "updated_on": "2026-10-09",
   "sources": [
     {
       "id": "coe-cefr",
@@ -662,8 +662,8 @@
       "title_fa": "تجربه‌های گذشته و خدمات پیچیده‌تر",
       "outcome_en": "Describe past experiences and handle routine appointments and familiar institutional tasks.",
       "outcome_fa": "از گذشته و تجربه‌های ساده بگوید و در خدمات روزمره با جزئیات بیشتری تعامل کند.",
-      "curriculum_file": null,
-      "delivery_status": "planned",
+      "curriculum_file": "data/course/a2.1-curriculum.json",
+      "delivery_status": "partially_implemented",
       "grammar": [
         {
           "id": "a21-imperfect",
