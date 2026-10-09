@@ -1,0 +1,1670 @@
+{
+  "schema_version": 1,
+  "id": "a2.1-curriculum",
+  "level": "A2.1",
+  "status": "partially_authored_implementation_candidate",
+  "platform": "github-pages-static",
+  "source_basis": [
+    {
+      "name": "Finnish National Agency for Education — Evolving Language Proficiency Scale",
+      "url": "https://www.oph.fi/fi/koulutus-ja-tutkinnot/kehittyvan-kielitaidon-tasojen-kuvausasteikko",
+      "note": "A2.1 is a Finnish educational sublevel within CEFR A2, not a separate global proficiency level."
+    },
+    {
+      "name": "Council of Europe — CEFR Companion Volume (2020)",
+      "url": "https://rm.coe.int/cefr-companion-volume-with-new-descriptors-2020/16809ea0d4",
+      "note": "Familiar travel, recent personal events, short messages and routines; automatic quizzes do not certify a CEFR/YKI level."
+    }
+  ],
+  "design_principles": [
+    "Section 1 is playable; sections 2-4 are explicitly outline-only and must not be presented as reviewed lesson content.",
+    "Separate source-backed Parole surface ranks from unranked curated travel phrases and inflected forms.",
+    "No invented Finnish suffix derivation: explicit past-tense forms and meaningful contexts are stored in lesson content.",
+    "A2.1 is a Finnish educational subdivision of CEFR A2; spontaneous speaking and writing still need independent assessment."
+  ],
+  "stage_outcomes": [
+    "Describe a short journey with familiar first-person past forms.",
+    "Read, hear and write short accounts of timetable, ticket, hotel and travel problems.",
+    "Sequence recent experiences using ensin, sitten, sen jälkeen and lopuksi."
+  ],
+  "lesson_defaults": {
+    "target_activity_count": 15,
+    "required_fields": [
+      "can_do_fa",
+      "high_frequency_targets",
+      "topic_targets",
+      "expressions",
+      "grammar_focus",
+      "recycle_from",
+      "skills",
+      "assessment",
+      "lexical_target_count"
+    ],
+    "recommended_new_lexical_target_range": [
+      3,
+      6
+    ],
+    "lexical_target_count_policy": "Only the reviewed candidate section 1 includes targets; outline-only modules have zero."
+  },
+  "sections": [
+    {
+      "id": "a2.1-s1",
+      "order": 1,
+      "title_en": "Travel and recent events",
+      "title_fa": "سفر و رویدادهای گذشته",
+      "goal_en": "Describe a recent trip with time, tickets, lodging, travel problems and chronological markers.",
+      "goal_fa": "سفری کوتاه را با فعل‌های گذشته و ترتیب رویدادها تعریف کند.",
+      "authoring_status": "implementation_candidate",
+      "lessons": [
+        {
+          "id": "a2.1-s1-l01",
+          "order": 1,
+          "title_en": "Weekend travel",
+          "title_fa": "سفر آخر هفته",
+          "can_do_en": "Weekend travel.",
+          "can_do_fa": "بپرسم آخر هفته کسی کجا رفته و بگویم خودم کجا و چه مدتی بوده‌ام.",
+          "high_frequency_targets": [
+            "olin",
+            "oli"
+          ],
+          "topic_targets": [
+            "viikonloppuna",
+            "matka",
+            "kävin"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "viikonloppuna",
+              "fa": "آخر هفته"
+            },
+            {
+              "fi": "matka",
+              "fa": "سفر"
+            },
+            {
+              "fi": "kävin",
+              "fa": "رفتم / بازدید کردم"
+            }
+          ],
+          "expressions": [
+            "Missä kävit viime viikonloppuna?",
+            "Kävin eilen Turussa.",
+            "Olin siellä kaksi päivää.",
+            "Matka oli mukava."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Missä kävit viime viikonloppuna?",
+              "fa": "آخر هفتهٔ گذشته کجا رفتی؟"
+            },
+            {
+              "fi": "Kävin eilen Turussa.",
+              "fa": "دیروز به تورکو رفتم."
+            },
+            {
+              "fi": "Olin siellä kaksi päivää.",
+              "fa": "دو روز آنجا بودم."
+            },
+            {
+              "fi": "Matka oli mukava.",
+              "fa": "سفر دلپذیر بود."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: weekend travel."
+          ],
+          "grammar_note_fa": "«Kävin» (رفتم/بازدید کردم)، «kävit» (رفتی)، «olin» (بودم) و «oli» (بود) شکل‌های گذشته‌اند. «Missä kävit?» را با «Kävin ...» پاسخ بده.",
+          "recycle_from": [
+            "a1.3-s4-l01",
+            "a1.3-s4-l04",
+            "a1.3-s4-l09"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l02",
+          "order": 2,
+          "title_en": "Past travel movements",
+          "title_fa": "رفتن، حرکت کردن و برگشتن در گذشته",
+          "can_do_en": "Past travel movements.",
+          "can_do_fa": "با فعل‌های گذشتهٔ تمرین‌شده بگویم از کجا حرکت کردم و به کجا رسیدم.",
+          "high_frequency_targets": [
+            "tuli",
+            "ennen"
+          ],
+          "topic_targets": [
+            "asemalle",
+            "Vaasasta",
+            "junalla"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "asemalle",
+              "fa": "به ایستگاه"
+            },
+            {
+              "fi": "Vaasasta",
+              "fa": "از واسا"
+            },
+            {
+              "fi": "junalla",
+              "fa": "با قطار"
+            }
+          ],
+          "expressions": [
+            "Menin asemalle aamulla.",
+            "Lähdin Vaasasta aikaisin.",
+            "Tulin kotiin illalla.",
+            "Matkustin junalla.",
+            "Lähdin ennen kahdeksaa."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Menin asemalle aamulla.",
+              "fa": "صبح به ایستگاه رفتم."
+            },
+            {
+              "fi": "Lähdin Vaasasta aikaisin.",
+              "fa": "زود از واسا حرکت کردم."
+            },
+            {
+              "fi": "Tulin kotiin illalla.",
+              "fa": "عصر به خانه آمدم."
+            },
+            {
+              "fi": "Matkustin junalla.",
+              "fa": "با قطار سفر کردم."
+            },
+            {
+              "fi": "Lähdin ennen kahdeksaa.",
+              "fa": "پیش از ساعت هشت حرکت کردم."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: past travel movements."
+          ],
+          "grammar_note_fa": "«Menin» (رفتم)، «lähdin» (حرکت کردم)، «tulin» (آمدم) و «matkustin» (سفر کردم) نمونه‌های گذشتهٔ اول‌شخص‌اند. «Vaasasta» مبدأ و «asemalle» مقصد را نشان می‌دهند.",
+          "recycle_from": [
+            "a1.3-s4-l01",
+            "a1.3-s4-l03",
+            "a2.1-s1-l01"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l03",
+          "order": 3,
+          "title_en": "Ticket purchase and payment",
+          "title_fa": "خرید بلیت و پرداخت در سفر گذشته",
+          "can_do_en": "Ticket purchase and payment.",
+          "can_do_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم.",
+          "high_frequency_targets": [
+            "myös",
+            "paljon"
+          ],
+          "topic_targets": [
+            "lippu",
+            "kortilla",
+            "paluulippu"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "lippu",
+              "fa": "بلیت"
+            },
+            {
+              "fi": "kortilla",
+              "fa": "با کارت"
+            },
+            {
+              "fi": "paluulippu",
+              "fa": "بلیت برگشت"
+            }
+          ],
+          "expressions": [
+            "Ostin lipun etukäteen.",
+            "Maksoin lipun kortilla.",
+            "Lippu maksoi kaksikymmentä euroa.",
+            "Ostin myös paluulipun.",
+            "Maksoiko lippu paljon?"
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Ostin lipun etukäteen.",
+              "fa": "بلیت را از قبل خریدم."
+            },
+            {
+              "fi": "Maksoin lipun kortilla.",
+              "fa": "بلیت را با کارت پرداخت کردم."
+            },
+            {
+              "fi": "Lippu maksoi kaksikymmentä euroa.",
+              "fa": "بلیت بیست یورو قیمت داشت."
+            },
+            {
+              "fi": "Ostin myös paluulipun.",
+              "fa": "بلیت برگشت هم خریدم."
+            },
+            {
+              "fi": "Maksoiko lippu paljon?",
+              "fa": "آیا بلیت گران تمام شد؟"
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: ticket purchase and payment."
+          ],
+          "grammar_note_fa": "«Ostin» (خریدم)، «maksoin» (پرداخت کردم) و «maksoi» (قیمت داشت) گذشته‌اند. «Lipun» و «paluulipun» در جملهٔ خرید بلیت مفعول کامل‌اند؛ صورت‌ها را در عبارت یاد بگیر.",
+          "recycle_from": [
+            "a1.2-s1-l02",
+            "a1.2-s2-l06",
+            "a2.1-s1-l02"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l04",
+          "order": 4,
+          "title_en": "Past timetables and duration",
+          "title_fa": "حرکت، رسیدن و مدت سفر",
+          "can_do_en": "Past timetables and duration.",
+          "can_do_fa": "بگویم قطار چه زمانی حرکت کرد، آیا تأخیر داشت و سفر چقدر طول کشید.",
+          "high_frequency_targets": [
+            "oli",
+            "sitten"
+          ],
+          "topic_targets": [
+            "ajoissa",
+            "myöhässä",
+            "tuntia"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "ajoissa",
+              "fa": "به‌موقع"
+            },
+            {
+              "fi": "myöhässä",
+              "fa": "با تأخیر / دیر"
+            },
+            {
+              "fi": "tuntia",
+              "fa": "ساعت (مدت)"
+            }
+          ],
+          "expressions": [
+            "Juna lähti ajoissa.",
+            "Juna saapui myöhässä.",
+            "Odotin asemalla.",
+            "Matka kesti kaksi tuntia.",
+            "Bussi tuli sitten."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Juna lähti ajoissa.",
+              "fa": "قطار به‌موقع حرکت کرد."
+            },
+            {
+              "fi": "Juna saapui myöhässä.",
+              "fa": "قطار با تأخیر رسید."
+            },
+            {
+              "fi": "Odotin asemalla.",
+              "fa": "در ایستگاه منتظر ماندم."
+            },
+            {
+              "fi": "Matka kesti kaksi tuntia.",
+              "fa": "سفر دو ساعت طول کشید."
+            },
+            {
+              "fi": "Bussi tuli sitten.",
+              "fa": "اتوبوس بعداً آمد."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: past timetables and duration."
+          ],
+          "grammar_note_fa": "«Lähti» (حرکت کرد)، «saapui» (رسید) و «kesti» (طول کشید) گذشتهٔ سوم‌شخص‌اند. «Odotin asemalla» یعنی در ایستگاه منتظر ماندم؛ «kaksi tuntia» یعنی دو ساعت.",
+          "recycle_from": [
+            "a1.2-s2-l07",
+            "a1.2-s2-l08",
+            "a2.1-s1-l03"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l05",
+          "order": 5,
+          "title_en": "Hotel and a night away",
+          "title_fa": "هتل و اقامت کوتاه",
+          "can_do_en": "Hotel and a night away.",
+          "can_do_fa": "رزرو اتاق، یک شب اقامت و کیفیت هتل را با جمله‌های کوتاه گذشته توصیف کنم.",
+          "high_frequency_targets": [
+            "oli",
+            "hyvä"
+          ],
+          "topic_targets": [
+            "huoneen",
+            "hotellissa",
+            "aamiainen"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "huoneen",
+              "fa": "اتاق (مفعول کامل)"
+            },
+            {
+              "fi": "hotellissa",
+              "fa": "در هتل"
+            },
+            {
+              "fi": "aamiainen",
+              "fa": "صبحانه"
+            }
+          ],
+          "expressions": [
+            "Varasin huoneen hotellista.",
+            "Yövyin hotellissa yhden yön.",
+            "Huone oli siisti.",
+            "Aamiainen kuului hintaan.",
+            "Aamiainen oli hyvä."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Varasin huoneen hotellista.",
+              "fa": "اتاقی در هتل رزرو کردم."
+            },
+            {
+              "fi": "Yövyin hotellissa yhden yön.",
+              "fa": "یک شب در هتل اقامت کردم."
+            },
+            {
+              "fi": "Huone oli siisti.",
+              "fa": "اتاق تمیز بود."
+            },
+            {
+              "fi": "Aamiainen kuului hintaan.",
+              "fa": "صبحانه در قیمت اقامت گنجانده شده بود."
+            },
+            {
+              "fi": "Aamiainen oli hyvä.",
+              "fa": "صبحانه خوب بود."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: hotel and a night away."
+          ],
+          "grammar_note_fa": "«Varasin» یعنی رزرو کردم و «yövyin» یعنی شب را گذراندم. «Varasin huoneen» مفعول کامل و «hotellissa» مکان را نشان می‌دهد. «Kuului hintaan» یعنی جزو قیمت بود.",
+          "recycle_from": [
+            "a1.2-s1-l05",
+            "a1.3-s2-l01",
+            "a2.1-s1-l04"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l06",
+          "order": 6,
+          "title_en": "Problems during a journey",
+          "title_fa": "مشکلات سفر و درخواست راهنمایی",
+          "can_do_en": "Problems during a journey.",
+          "can_do_fa": "مشکلی مانند تأخیر یا گم‌شدن بلیت را توضیح بدهم و بگویم چگونه راهنمایی خواستم.",
+          "high_frequency_targets": [
+            "oli",
+            "koska"
+          ],
+          "topic_targets": [
+            "myöhästyin",
+            "lippua",
+            "neuvoa"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "myöhästyin",
+              "fa": "جا ماندم / دیر رسیدم"
+            },
+            {
+              "fi": "lippua",
+              "fa": "بلیت (مفعول جزئی)"
+            },
+            {
+              "fi": "neuvoa",
+              "fa": "راهنمایی (مفعول جزئی)"
+            }
+          ],
+          "expressions": [
+            "Juna oli myöhässä.",
+            "Myöhästyin bussista.",
+            "En löytänyt lippua.",
+            "Kysyin neuvoa asemalla.",
+            "Myöhästyin, koska juna oli myöhässä."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Juna oli myöhässä.",
+              "fa": "قطار تأخیر داشت."
+            },
+            {
+              "fi": "Myöhästyin bussista.",
+              "fa": "از اتوبوس جا ماندم."
+            },
+            {
+              "fi": "En löytänyt lippua.",
+              "fa": "بلیت را پیدا نکردم."
+            },
+            {
+              "fi": "Kysyin neuvoa asemalla.",
+              "fa": "در ایستگاه راهنمایی خواستم."
+            },
+            {
+              "fi": "Myöhästyin, koska juna oli myöhässä.",
+              "fa": "دیر رسیدم، چون قطار تأخیر داشت."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: problems during a journey."
+          ],
+          "grammar_note_fa": "«En löytänyt lippua» یعنی بلیت را پیدا نکردم؛ در منفی گذشته «löytänyt» با «en» می‌آید. «Myöhästyin bussista» یعنی از اتوبوس جا ماندم. «Koska» دلیل را وصل می‌کند.",
+          "recycle_from": [
+            "a1.3-s2-l04",
+            "a1.3-s3-l08",
+            "a2.1-s1-l04"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l07",
+          "order": 7,
+          "title_en": "Travel experiences",
+          "title_fa": "دیدنی‌ها و تجربه‌های سفر",
+          "can_do_en": "Travel experiences.",
+          "can_do_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
+          "high_frequency_targets": [
+            "hyvä",
+            "paljon"
+          ],
+          "topic_targets": [
+            "museossa",
+            "valokuvia",
+            "kirkon"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "museossa",
+              "fa": "در موزه"
+            },
+            {
+              "fi": "valokuvia",
+              "fa": "عکس‌ها (مفعول جمع جزئی)"
+            },
+            {
+              "fi": "kirkon",
+              "fa": "کلیسا (مفعول کامل)"
+            }
+          ],
+          "expressions": [
+            "Kävin museossa.",
+            "Näin vanhan kirkon.",
+            "Otin valokuvia.",
+            "Pidin kaupungista.",
+            "Museo oli hyvä."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Kävin museossa.",
+              "fa": "به موزه رفتم."
+            },
+            {
+              "fi": "Näin vanhan kirkon.",
+              "fa": "یک کلیسای قدیمی را دیدم."
+            },
+            {
+              "fi": "Otin valokuvia.",
+              "fa": "عکس گرفتم."
+            },
+            {
+              "fi": "Pidin kaupungista.",
+              "fa": "از شهر خوشم آمد."
+            },
+            {
+              "fi": "Museo oli hyvä.",
+              "fa": "موزه خوب بود."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: travel experiences."
+          ],
+          "grammar_note_fa": "«Näin» (دیدم)، «otin» (گرفتم) و «pidin» (دوست داشتم) شکل‌های گذشته‌اند. «Näin vanhan kirkon» مفعول کامل و «Otin valokuvia» مفعول جمعِ partitiivi دارد. «Pidin kaupungista» را یک‌جا تمرین کن.",
+          "recycle_from": [
+            "a1.3-s1-l06",
+            "a1.3-s4-l06",
+            "a2.1-s1-l05"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l08",
+          "order": 8,
+          "title_en": "Sequencing a short trip",
+          "title_fa": "ترتیب رویدادهای یک سفر",
+          "can_do_en": "Sequencing a short trip.",
+          "can_do_fa": "چهار اتفاق گذشته را با «اول»، «بعد»، «پس از آن» و «در پایان» به‌ترتیب تعریف کنم.",
+          "high_frequency_targets": [
+            "sitten",
+            "jälkeen"
+          ],
+          "topic_targets": [
+            "ensin",
+            "junaan",
+            "lopuksi"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "ensin",
+              "fa": "اول"
+            },
+            {
+              "fi": "junaan",
+              "fa": "به داخل قطار"
+            },
+            {
+              "fi": "lopuksi",
+              "fa": "در پایان"
+            }
+          ],
+          "expressions": [
+            "Ensin ostin lipun.",
+            "Sitten nousin junaan.",
+            "Sen jälkeen kävelin hotelliin.",
+            "Lopuksi palasin kotiin."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Ensin ostin lipun.",
+              "fa": "اول بلیت خریدم."
+            },
+            {
+              "fi": "Sitten nousin junaan.",
+              "fa": "بعد سوار قطار شدم."
+            },
+            {
+              "fi": "Sen jälkeen kävelin hotelliin.",
+              "fa": "پس از آن پیاده به هتل رفتم."
+            },
+            {
+              "fi": "Lopuksi palasin kotiin.",
+              "fa": "در پایان به خانه برگشتم."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: sequencing a short trip."
+          ],
+          "grammar_note_fa": "«Ensin» یعنی اول، «sitten» یعنی بعد، «sen jälkeen» یعنی پس از آن و «lopuksi» یعنی در پایان. با این پیوندها فعل‌های گذشته را مرتب کن؛ «junaan» و «hotelliin» مقصد هستند.",
+          "recycle_from": [
+            "a1.3-s4-l03",
+            "a2.1-s1-l02",
+            "a2.1-s1-l04",
+            "a2.1-s1-l06"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l09",
+          "order": 9,
+          "title_en": "A short recent travel story",
+          "title_fa": "روایت کوتاه یک سفر",
+          "can_do_en": "A short recent travel story.",
+          "can_do_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
+          "high_frequency_targets": [
+            "viime",
+            "sitten"
+          ],
+          "topic_targets": [
+            "lauantaina",
+            "Tampereella",
+            "sunnuntaina"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "lauantaina",
+              "fa": "روز شنبه"
+            },
+            {
+              "fi": "Tampereella",
+              "fa": "در تامپره"
+            },
+            {
+              "fi": "sunnuntaina",
+              "fa": "روز یکشنبه"
+            }
+          ],
+          "expressions": [
+            "Viime lauantaina kävin Tampereella.",
+            "Matkustin sinne junalla.",
+            "Tapasin ystävän.",
+            "Palasin kotiin sunnuntaina."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Viime lauantaina kävin Tampereella.",
+              "fa": "شنبهٔ گذشته به تامپره رفتم."
+            },
+            {
+              "fi": "Matkustin sinne junalla.",
+              "fa": "با قطار به آنجا سفر کردم."
+            },
+            {
+              "fi": "Tapasin ystävän.",
+              "fa": "دوستم را دیدم."
+            },
+            {
+              "fi": "Palasin kotiin sunnuntaina.",
+              "fa": "یکشنبه به خانه برگشتم."
+            }
+          ],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: a short recent travel story."
+          ],
+          "grammar_note_fa": "در روایت کوتاه، زمان را با «Viime lauantaina» مشخص کن و سپس مقصد، وسیلهٔ رفت‌وآمد، یک دیدار و بازگشت را با فعل‌های گذشته بیان کن. از جمله‌های کوتاه استفاده کن.",
+          "recycle_from": [
+            "a1.3-s4-l08",
+            "a1.3-s4-l09",
+            "a2.1-s1-l01",
+            "a2.1-s1-l03",
+            "a2.1-s1-l05",
+            "a2.1-s1-l07",
+            "a2.1-s1-l08"
+          ],
+          "activity_families": [
+            "listening",
+            "dictation",
+            "sentence-order",
+            "morphology",
+            "controlled-production",
+            "reading"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Respond to short travel and past questions correctly in at least 4 of 5 supported prompts."
+          },
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate"
+        },
+        {
+          "id": "a2.1-s1-l10",
+          "order": 10,
+          "title_en": "Travel and recent past checkpoint",
+          "title_fa": "ارزیابی بخش ۱: سفر و گذشته",
+          "can_do_en": "Travel and recent past checkpoint.",
+          "can_do_fa": "در تمرین‌های ترکیبی سفر، زمان گذشته، بلیت، اقامت، مشکل و ترتیب رویدادها پاسخ بدهم.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "topic_pairs": [],
+          "expressions": [],
+          "expression_pairs": [],
+          "grammar_focus": [
+            "Explicit reviewed imperfect and travel phrases: travel and recent past checkpoint."
+          ],
+          "grammar_note_fa": "در این آزمون، افعال گذشته و عبارت‌های مربوط به بلیت، حرکت، رسیدن، اقامت، مشکل و ترتیب رویدادها را مرور می‌کنی. قبولی در تمرین، گواهی رسمی A2 نیست.",
+          "recycle_from": [
+            "a2.1-s1-l01",
+            "a2.1-s1-l02",
+            "a2.1-s1-l03",
+            "a2.1-s1-l04",
+            "a2.1-s1-l05",
+            "a2.1-s1-l06",
+            "a2.1-s1-l07",
+            "a2.1-s1-l08",
+            "a2.1-s1-l09"
+          ],
+          "activity_families": [
+            "mixed-checkpoint",
+            "inflection-production"
+          ],
+          "skills": {
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
+          },
+          "assessment": {
+            "criterion_en": "Mixed checkpoint threshold 80%; human assessment needed for spontaneous performance."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "implementation_candidate"
+        }
+      ]
+    },
+    {
+      "id": "a2.1-s2",
+      "order": 2,
+      "title_en": "Doctor appointments and public services",
+      "title_fa": "پزشک و خدمات اداری",
+      "goal_en": "Further lessons to be authored and reviewed.",
+      "goal_fa": "درس‌های این بخش هنوز تألیف و بازبینی نشده‌اند.",
+      "authoring_status": "outline_only",
+      "lessons": [
+        {
+          "id": "a2.1-s2-l01",
+          "order": 1,
+          "title_en": "Lesson 1 (outline)",
+          "title_fa": "گرفتن وقت",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l02",
+          "order": 2,
+          "title_en": "Lesson 2 (outline)",
+          "title_fa": "تغییر یا لغو وقت",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l03",
+          "order": 3,
+          "title_en": "Lesson 3 (outline)",
+          "title_fa": "توضیح نشانه‌ها و مدت آن‌ها",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l04",
+          "order": 4,
+          "title_en": "Lesson 4 (outline)",
+          "title_fa": "فهمیدن توصیه‌های پزشکی ساده",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l05",
+          "order": 5,
+          "title_en": "Lesson 5 (outline)",
+          "title_fa": "توضیحات داروخانه",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l06",
+          "order": 6,
+          "title_en": "Lesson 6 (outline)",
+          "title_fa": "پیدا کردن بخش خدماتی مناسب",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l07",
+          "order": 7,
+          "title_en": "Lesson 7 (outline)",
+          "title_fa": "پر کردن فرم ساده",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l08",
+          "order": 8,
+          "title_en": "Lesson 8 (outline)",
+          "title_fa": "درخواست گواهی یا مدرک",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l09",
+          "order": 9,
+          "title_en": "Lesson 9 (outline)",
+          "title_fa": "یک مراجعهٔ کامل خدماتی",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s2-l10",
+          "order": 10,
+          "title_en": "Lesson 10 (outline)",
+          "title_fa": "ارزیابی بخش ۲",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        }
+      ]
+    },
+    {
+      "id": "a2.1-s3",
+      "order": 3,
+      "title_en": "Hobbies and interests",
+      "title_fa": "تفریح و علایق",
+      "goal_en": "Further lessons to be authored and reviewed.",
+      "goal_fa": "درس‌های این بخش هنوز تألیف و بازبینی نشده‌اند.",
+      "authoring_status": "outline_only",
+      "lessons": [
+        {
+          "id": "a2.1-s3-l01",
+          "order": 1,
+          "title_en": "Lesson 1 (outline)",
+          "title_fa": "نام بردن از سرگرمی‌ها",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l02",
+          "order": 2,
+          "title_en": "Lesson 2 (outline)",
+          "title_fa": "فعالیت‌های تفریحی گذشته",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l03",
+          "order": 3,
+          "title_en": "Lesson 3 (outline)",
+          "title_fa": "گفتن علت علاقه",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l04",
+          "order": 4,
+          "title_en": "Lesson 4 (outline)",
+          "title_fa": "مقایسهٔ دو فعالیت",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l05",
+          "order": 5,
+          "title_en": "Lesson 5 (outline)",
+          "title_fa": "دعوت به گردش",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l06",
+          "order": 6,
+          "title_en": "Lesson 6 (outline)",
+          "title_fa": "تفریح در طبیعت فنلاند",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l07",
+          "order": 7,
+          "title_en": "Lesson 7 (outline)",
+          "title_fa": "برنامه‌ریزی فعالیت مشترک",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l08",
+          "order": 8,
+          "title_en": "Lesson 8 (outline)",
+          "title_fa": "نوشتن دربارهٔ تجربهٔ خوب",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l09",
+          "order": 9,
+          "title_en": "Lesson 9 (outline)",
+          "title_fa": "گفت‌وگوی کامل دربارهٔ تفریح",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s3-l10",
+          "order": 10,
+          "title_en": "Lesson 10 (outline)",
+          "title_fa": "ارزیابی بخش ۳",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        }
+      ]
+    },
+    {
+      "id": "a2.1-s4",
+      "order": 4,
+      "title_en": "Family and a short story",
+      "title_fa": "خانواده و داستان کوتاه",
+      "goal_en": "Further lessons to be authored and reviewed.",
+      "goal_fa": "درس‌های این بخش هنوز تألیف و بازبینی نشده‌اند.",
+      "authoring_status": "outline_only",
+      "lessons": [
+        {
+          "id": "a2.1-s4-l01",
+          "order": 1,
+          "title_en": "Lesson 1 (outline)",
+          "title_fa": "صحبت دربارهٔ بستگان",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l02",
+          "order": 2,
+          "title_en": "Lesson 2 (outline)",
+          "title_fa": "گذشتهٔ کارهای خانوادگی",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l03",
+          "order": 3,
+          "title_en": "Lesson 3 (outline)",
+          "title_fa": "دیدار خانوادگی",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l04",
+          "order": 4,
+          "title_en": "Lesson 4 (outline)",
+          "title_fa": "جشن و تولد",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l05",
+          "order": 5,
+          "title_en": "Lesson 5 (outline)",
+          "title_fa": "ترتیب اتفاق‌ها",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l06",
+          "order": 6,
+          "title_en": "Lesson 6 (outline)",
+          "title_fa": "پرسش دربارهٔ جزئیات روایت",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l07",
+          "order": 7,
+          "title_en": "Lesson 7 (outline)",
+          "title_fa": "نوشتن داستان کوتاه",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l08",
+          "order": 8,
+          "title_en": "Lesson 8 (outline)",
+          "title_fa": "خواندن پیام خانوادگی",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l09",
+          "order": 9,
+          "title_en": "Lesson 9 (outline)",
+          "title_fa": "روایت کامل خانوادگی",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        },
+        {
+          "id": "a2.1-s4-l10",
+          "order": 10,
+          "title_en": "Lesson 10 (outline)",
+          "title_fa": "ارزیابی بخش ۴",
+          "can_do_en": "To be specified after review.",
+          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "high_frequency_targets": [],
+          "topic_targets": [],
+          "expressions": [],
+          "grammar_focus": [],
+          "recycle_from": [],
+          "activity_families": [],
+          "skills": {
+            "listening": false,
+            "reading": false,
+            "speaking": false,
+            "writing": false
+          },
+          "assessment": {
+            "criterion_en": "Outline only; no playable tasks."
+          },
+          "lexical_target_count": 0,
+          "authoring_status": "outline_only"
+        }
+      ]
+    }
+  ]
+}
