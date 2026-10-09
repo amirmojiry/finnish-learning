@@ -87,6 +87,11 @@ test('static report emits a complete per-lesson machine contract and linked huma
   for(const row of report.lessons){
     assert.ok(row.can_do_fa&&row.curriculum_id&&row.section_id);
     assert.ok(Array.isArray(row.lexical.correct_answer));
+    assert.equal(row.lexical.high_frequency_target_forms.length,row.target_counts.high_frequency);
+    assert.equal(row.lexical.topic_target_forms.length,row.target_counts.topic);
+    assert.equal(row.lexical.expression_target_forms.length,row.target_counts.expressions);
+    assert.ok(Array.isArray(row.lexical.authored_new_forms));
+    assert.ok(Array.isArray(row.grammar.prerequisite_concept_ids));
     assert.ok(row.grammar.structured_or_morphology_slots>=0);
   }
   const text=audit.toMarkdown(report);
