@@ -67,7 +67,7 @@ test('unusual graded activity schemas use the real correct-answer references',()
   ]};
   const ev=audit.evidence(s,lesson);
   assert.deepEqual(ev.declared_unassessed,[]);
-  assert.deepEqual(ev.correct,['kyllä','keskiviikko','maanantai','tiistai']);
+  assert.deepEqual(ev.correct,['keskiviikko','kyllä','maanantai','tiistai']);
   assert.ok(!ev.correct.includes('ei'));
 });
 
