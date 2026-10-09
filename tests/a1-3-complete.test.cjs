@@ -193,3 +193,28 @@ test('the authoritative documentation hub describes A1.3 as implemented', () => 
   assert.match(hub, /A1\.2 and A1\.3 each have four playable sections/);
   assert.doesNotMatch(hub, /A1\.3 is a reviewed \*\*plan only\*\*/);
 });
+
+test('all playable A1 sections show non-empty learner-facing Persian goals', () => {
+  for (const section of prepared) {
+    assert.ok(Array.isArray(section.can_do_fa) && section.can_do_fa.length > 0, section.id);
+    for (const goal of section.can_do_fa) {
+      assert.ok(typeof goal === 'string' && goal.trim().length > 12, section.id);
+      assert.match(goal, /[\u0600-\u06FF]/u, section.id);
+    }
+  }
+  for (const section of prepared.slice(8)) assert.equal(section.can_do_fa.length, 5, section.id);
+});
+
+test('section validation rejects absent, empty, and whitespace learning goals', () => {
+  const source = payloads[2].sections[2];
+  for (const invalid of [undefined, null, [], [''], ['  '], ['هدف معتبر', '']]) {
+    const copy = structuredClone(source);
+    if (invalid === undefined) delete copy.can_do_fa;
+    else copy.can_do_fa = invalid;
+    assert.throws(
+      () => course.validateSection(copy),
+      /requires non-empty Persian learning goals/,
+      'invalid goals: ' + JSON.stringify(invalid),
+    );
+  }
+});

@@ -1183,6 +1183,9 @@
 
   function validateSection(rawSection) {
     const section = prepareSection(rawSection);
+    if (!Array.isArray(section.can_do_fa) || section.can_do_fa.length === 0 || section.can_do_fa.some((goal) => typeof goal !== 'string' || !goal.trim())) {
+      throw new Error(`Section ${section.id || '?'} requires non-empty Persian learning goals.`);
+    }
     if (section.lessons.length !== 10) throw new Error('The sample section must contain exactly ten lessons.');
     for (const lesson of section.lessons) {
       if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
