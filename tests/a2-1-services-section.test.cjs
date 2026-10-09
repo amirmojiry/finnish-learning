@@ -139,3 +139,14 @@ test('adding the service section does not reset A1 or A2.1 travel progress',()=>
  assert.equal(course.isCourseLessonAccessible(stages,restored,13,1),false);
  assert.equal(course.isCourseLessonAccessible(stages,restored,12,0),true);
 });
+
+
+test('appointment time and rescheduling examples use explicit, natural service language',()=>{
+ const form=Object.values(section.items).find(i=>i.surface_form==='Mihin aikaan vastaanotto alkaa?');
+ assert.ok(form);
+ assert.equal(form.translation_fa,'ویزیت چه ساعتی شروع می‌شود؟');
+ const rescheduling=Object.values(section.items).find(i=>i.surface_form==='Minun pitää siirtää vastaanottoaikaani.');
+ assert.ok(rescheduling);
+ assert.equal(rescheduling.translation_fa,'باید وقت ویزیتم را جابه‌جا کنم.');
+ assert.ok(!Object.values(section.items).some(i=>i.surface_form==='Mihin aikaan aika on?'||i.surface_form==='Minun pitää siirtää aikaani.'));
+});
