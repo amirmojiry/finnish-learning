@@ -124,3 +124,10 @@ test('A1 progress survives stage addition; A2.1 is browseable but unlocks sequen
  assert.equal(course.isCourseLessonAccessible(prepared,after,12,1),false);
  assert.equal(course.isCourseLessonAccessible(prepared,after,11,0),true);
 });
+
+
+test('four playable A1/A2 level tabs fit narrow mobile widths',()=>{
+ const css=fs.readFileSync(path.join(ROOT,'css/course.css'),'utf8');
+ assert.match(css, /@media \(max-width: 720px\)\s*\{[\s\S]*?\.course-level-tabs\s*\{[^}]*grid-auto-columns:\s*minmax\(0, 1fr\)/);
+ assert.match(css, /\.course-level-tab\s*\{[^}]*min-width:\s*0;[^}]*padding-inline:\s*6px;/);
+});
