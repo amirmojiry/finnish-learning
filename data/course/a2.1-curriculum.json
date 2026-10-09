@@ -784,7 +784,7 @@
           "expressions": [
             "Viime lauantaina kävin Tampereella.",
             "Matkustin sinne junalla.",
-            "Tapasin ystävän.",
+            "Tapasin ystäväni.",
             "Palasin kotiin sunnuntaina."
           ],
           "expression_pairs": [
@@ -797,8 +797,8 @@
               "fa": "با قطار به آنجا سفر کردم."
             },
             {
-              "fi": "Tapasin ystävän.",
-              "fa": "دوستم را دیدم."
+              "fi": "Tapasin ystäväni.",
+              "fa": "دوستم را ملاقات کردم."
             },
             {
               "fi": "Palasin kotiin sunnuntaina.",
