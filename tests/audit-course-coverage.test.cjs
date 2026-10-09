@@ -25,7 +25,7 @@ test('audit discovers shipped stages rather than planned-only future lessons',()
 
 test('audit counts runtime-injected graded activities rather than authored placeholders',()=>{
   const actual=prepared.flatMap(section=>section.lessons.flatMap(lesson=>lesson.activities));
-  assert.equal(report.summary.graded_activity_slots,actual.filter(a=>a.type!=='teach').length);
+  assert.equal(report.summary.graded_activity_slots,actual.filter(a=>a.type!=='teach'&&a.type!=='number-grid').length);
   assert.ok(actual.some(a=>a.type==='production'));
   assert.ok(actual.some(a=>a.type==='dictation'));
   assert.ok(report.summary.graded_grammar_related_slots>0);
@@ -46,6 +46,29 @@ test('graded correct answers exclude distractors, reading passages and teaching-
   assert.deepEqual(ev.reading_only,['lause']);
   assert.deepEqual(ev.distractor_only,[]);
   assert.equal(ev.grammar_slots,0);
+});
+
+test('unusual graded activity schemas use the real correct-answer references',()=>{
+  assert.deepEqual(audit.positives({type:'event-time-match',event_item:'event',time_item:'time',
+    options:['wrong','time']}),['time']);
+  assert.deepEqual(audit.positives({type:'prompt-choice',prompt_item:'prompt',answer_item:'reply',
+    options:['wrong','reply']}),['reply']);
+  assert.deepEqual(audit.positives({type:'sequence-order',items:['ma','ti','ke'],
+    answer_order:[0,1,2]}),['ma','ti','ke']);
+  assert.deepEqual(audit.positives({type:'number-grid',items:['one','two']}),[]);
+  const s={items:{event:{surface_form:'tapahtuma'},time:{surface_form:'maanantai'},
+    reply:{surface_form:'kyllä'},prompt:{surface_form:'kysymys'},wrong:{surface_form:'ei'},
+    ma:{surface_form:'maanantai'},ti:{surface_form:'tiistai'},ke:{surface_form:'keskiviikko'}}};
+  const lesson={curriculum_target_refs:{high_frequency:['time','ti','ke'],topic:[],expressions:[]},activities:[
+    {type:'event-time-match',event_item:'event',time_item:'time',options:['time','wrong']},
+    {type:'prompt-choice',prompt_item:'prompt',answer_item:'reply',options:['reply','wrong']},
+    {type:'sequence-order',items:['ma','ti','ke'],answer_order:[0,1,2]},
+    {type:'number-grid',items:['ma','ti','ke']},
+  ]};
+  const ev=audit.evidence(s,lesson);
+  assert.deepEqual(ev.declared_unassessed,[]);
+  assert.deepEqual(ev.correct,['kyllä','keskiviikko','maanantai','tiistai']);
+  assert.ok(!ev.correct.includes('ei'));
 });
 
 test('audit follows source-backed Parole positions and never synthesizes a rank',()=>{
