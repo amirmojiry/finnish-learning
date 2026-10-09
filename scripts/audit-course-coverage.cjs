@@ -102,6 +102,10 @@ function build(master,stages,dictionary,parole) {
           later_correct_retrieval:review,declared_unassessed:ev.declared_unassessed,
           teach_only:ev.teach_only,distractor_only_count:ev.distractor_only.length,
           reading_only:ev.reading_only,
+          high_frequency_target_forms:unique((refs.high_frequency||[]).filter(id=>section.items[id]).map(id=>norm(section.items[id].surface_form))),
+          topic_target_forms:unique((refs.topic||[]).filter(id=>section.items[id]).map(id=>norm(section.items[id].surface_form))),
+          expression_target_forms:unique((refs.expressions||[]).filter(id=>section.items[id]).map(id=>norm(section.items[id].surface_form))),
+          authored_new_forms:unique((lesson.new_targets||[]).filter(id=>section.items[id]).map(id=>norm(section.items[id].surface_form))),
         },
         grammar:{
           note_present:Boolean(String(lesson.grammar_fa||'').trim()),
@@ -109,6 +113,7 @@ function build(master,stages,dictionary,parole) {
           structured_or_morphology_slots:ev.grammar_slots,
           morphology_slots:ev.morphology_slots,
           evidence_status:known.length?'explicit_ids_need_activity_mapping_review':'unmapped',
+          prerequisite_concept_ids:unique(known.flatMap(id=>grammar.find(g=>g.id===id)?.prerequisites||[])),
         }
       };
       current.push(row);rows.push(row);
