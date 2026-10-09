@@ -149,6 +149,12 @@ A future lexeme/form coverage table should record these separate fields. Until a
 | `recognition_evidence`, `production_evidence` | Different evidence for receptive and productive knowledge |
 | `source_id`, `review_status` | Provenance and editorial verification |
 
+## Shipped-course baseline audit
+
+The separate [shipped lexical and grammar coverage audit](COURSE-COVERAGE-AUDIT.md) compares real, runtime-injected activities with authored targets, actual corpus/dictionary matches, cross-lesson repetitions and the master grammar prerequisite list. Run `npm run curriculum:coverage:report` for the current report or `npm run curriculum:coverage:check` to detect stale snapshots. The JSON ledger is stored in `data/course/coverage-audit.json`.
+
+The audit deliberately does not infer distinct senses from Persian translations or claim learner mastery from planned targets. Missing grammar-concept IDs are recorded as a traceability gap for P1; natural grammar explanations are not deleted. Track implementation steps in [issue #101](https://github.com/amirmojiry/finnish-learning/issues/101).
+
 ## Recycling and quality assurance
 
 - **First exposure:** introduce a useful form in a context with audio and a trustworthy Persian meaning.
