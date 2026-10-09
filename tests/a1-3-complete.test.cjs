@@ -102,3 +102,39 @@ test('A1.3 final checkpoint samples earlier sections as well as recent events',(
   assert.ok(forms.includes(sample),sample);
  }
 });
+
+
+test('A1.3 grammar notes are Persian and contain no English-only learner explanations',()=>{
+ for(const section of prepared.slice(8))for(const lesson of section.lessons){
+  assert.match(lesson.grammar_fa,/[\u0600-\u06ff]/u,lesson.id);
+  assert.ok(lesson.grammar_fa.length>35,lesson.id);
+ }
+});
+
+test('A1.3 meaning and listening questions never present identical Persian labels for different IDs',()=>{
+ for(const section of prepared.slice(8))for(const lesson of section.lessons)for(const activity of lesson.activities){
+  if(activity.type!=='choice'||!['meaning','listen'].includes(activity.mode))continue;
+  const labels=activity.options.map(id=>section.items[id].translation_fa.normalize('NFC').trim());
+  assert.equal(new Set(labels).size,labels.length,lesson.id+' / '+activity.item);
+ }
+});
+
+test('A1.3 checkpoints assess all nine previous lessons instead of repeating one lesson',()=>{
+ for(const section of prepared.slice(8)){
+  const source=new Map();
+  section.lessons.slice(0,9).forEach(lesson=>{
+   for(const id of lesson.curriculum_target_refs.expressions){
+    if(!source.has(id))source.set(id,lesson.order);
+   }
+  });
+  const checkpoint=section.lessons[9];
+  const ids=[
+   ...checkpoint.activities.map(a=>a.item).filter(Boolean),
+   checkpoint.production_targets[0],
+   ...checkpoint.listening_targets,
+   ...checkpoint.structured_practice.map(a=>a.item)
+  ];
+  const represented=new Set(ids.map(id=>source.get(id)).filter(Boolean));
+  assert.ok(represented.size>=8,section.id+': covered only '+[...represented].join(', '));
+ }
+});
