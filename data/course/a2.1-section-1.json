@@ -189,8 +189,8 @@
         "a2.1-s1",
         "source-backed"
       ],
-      "example_fi": "Bussi tuli sitten.",
-      "example_fa": "اتوبوس بعداً آمد.",
+      "example_fi": "Sitten bussi tuli asemalle.",
+      "example_fa": "سپس اتوبوس به ایستگاه رسید.",
       "accepted_answers": [
         "tuli"
       ]
@@ -549,8 +549,8 @@
         "a2.1-s1",
         "source-backed"
       ],
-      "example_fi": "Bussi tuli sitten.",
-      "example_fa": "اتوبوس بعداً آمد.",
+      "example_fi": "Sitten bussi tuli asemalle.",
+      "example_fa": "سپس اتوبوس به ایستگاه رسید.",
       "accepted_answers": [
         "sitten"
       ]
@@ -683,9 +683,9 @@
     },
     "a21s1-e-038": {
       "id": "a21s1-e-038",
-      "surface_form": "Bussi tuli sitten.",
-      "lemma": "Bussi tuli sitten.",
-      "translation_fa": "اتوبوس بعداً آمد.",
+      "surface_form": "Sitten bussi tuli asemalle.",
+      "lemma": "Sitten bussi tuli asemalle.",
+      "translation_fa": "سپس اتوبوس به ایستگاه رسید.",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -693,10 +693,10 @@
         "a2.1-s1",
         "curated-travel"
       ],
-      "example_fi": "Bussi tuli sitten.",
-      "example_fa": "اتوبوس بعداً آمد.",
+      "example_fi": "Sitten bussi tuli asemalle.",
+      "example_fa": "سپس اتوبوس به ایستگاه رسید.",
       "accepted_answers": [
-        "Bussi tuli sitten."
+        "Sitten bussi tuli asemalle."
       ]
     },
     "a21s1-h-039": {
