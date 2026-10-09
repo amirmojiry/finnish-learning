@@ -1951,6 +1951,12 @@
 @media (max-width: 720px) {
   .course-level-tabs {
     width: 100%;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+
+  .course-level-tab {
+    min-width: 0;
+    padding-inline: 6px;
   }
 
   .course-lesson-popover {
