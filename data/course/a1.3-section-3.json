@@ -3274,73 +3274,66 @@
         "a1.3-s3-l09"
       ],
       "production_targets": [
-        "a13s3-e-007"
+        "a13s3-e-036"
       ],
       "listening_targets": [
-        "a13s3-e-016",
-        "a13s3-e-026"
+        "a13s3-e-026",
+        "a13s3-e-054"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s3-e-034",
+          "item": "a13s3-e-007",
           "tokens": [
-            "vähän",
-            "suomea.",
-            "Osaan"
+            "tehtävä",
+            "pitää",
+            "tehdä",
+            "tänään.",
+            "Tämä"
           ],
           "answer_order": [
-            2,
+            4,
             0,
-            1
+            1,
+            2,
+            3
           ],
-          "expected_fi": "Osaan vähän suomea."
+          "expected_fi": "Tämä tehtävä pitää tehdä tänään."
         },
         {
           "type": "expression-completion",
-          "item": "a13s3-e-044",
-          "prompt_fi": "Työskentelen _____ kanssaan.",
-          "prompt_fa": "با او کار می‌کنم.",
+          "item": "a13s3-e-045",
+          "prompt_fi": "Opiskelen tässä _____.",
+          "prompt_fa": "در این گروه درس می‌خوانم.",
           "accepted_answers": [
-            "hänen"
+            "ryhmässä"
           ],
-          "expected_fi": "Työskentelen hänen kanssaan."
+          "expected_fi": "Opiskelen tässä ryhmässä."
         },
         {
           "type": "controlled-production",
-          "item": "a13s3-e-056",
-          "prompt_fa": "می‌توانی آن را برایم بفرستی؟",
+          "item": "a13s3-e-063",
+          "prompt_fa": "مهلت روز جمعه است.",
           "cues_fi": [
-            "Voitko",
-            "lähettää"
+            "Määräaika",
+            "on"
           ],
-          "expected_fi": "Voitko lähettää sen minulle?",
+          "expected_fi": "Määräaika on perjantaina.",
           "accepted_answers": [
-            "Voitko lähettää sen minulle?"
+            "Määräaika on perjantaina."
           ]
         }
       ],
       "activities": [
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-007",
+          "mode": "finnish",
+          "item": "a13s3-e-036",
           "options": [
-            "a13s3-e-007",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-016",
-          "options": [
-            "a13s3-e-016",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-036",
+            "a13s3-e-045",
+            "a13s3-e-009",
+            "a13s3-e-034"
           ]
         },
         {
@@ -3348,43 +3341,43 @@
           "mode": "meaning",
           "item": "a13s3-e-026",
           "options": [
+            "a13s3-e-063",
             "a13s3-e-026",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-019",
+            "a13s3-e-044"
           ]
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-034",
+          "item": "a13s3-e-054",
           "options": [
+            "a13s3-e-018",
+            "a13s3-e-028",
+            "a13s3-e-054",
+            "a13s3-e-056"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-e-007",
+          "options": [
+            "a13s3-e-009",
             "a13s3-e-034",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-075",
+            "a13s3-e-007"
           ]
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-044",
+          "item": "a13s3-e-045",
           "options": [
+            "a13s3-e-045",
+            "a13s3-e-019",
             "a13s3-e-044",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-056",
-          "options": [
-            "a13s3-e-056",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-073"
           ]
         },
         {
@@ -3392,54 +3385,21 @@
           "mode": "meaning",
           "item": "a13s3-e-063",
           "options": [
+            "a13s3-e-028",
             "a13s3-e-063",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-056",
+            "a13s3-e-036"
           ]
         },
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-073",
-          "options": [
-            "a13s3-e-073",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-057",
-          "options": [
-            "a13s3-e-057",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s3-e-018",
           "options": [
+            "a13s3-e-034",
+            "a13s3-e-075",
             "a13s3-e-018",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-008",
-          "options": [
-            "a13s3-e-008",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-026"
           ]
         },
         {
@@ -3447,63 +3407,83 @@
           "mode": "meaning",
           "item": "a13s3-e-009",
           "options": [
-            "a13s3-e-009",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-044",
+            "a13s3-e-073",
+            "a13s3-e-054",
+            "a13s3-e-009"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s3-e-019"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s3-e-028",
+          "options": [
+            "a13s3-e-075",
+            "a13s3-e-028",
+            "a13s3-e-026",
+            "a13s3-e-045"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s3-e-034"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-017",
+          "item": "a13s3-e-044",
           "options": [
-            "a13s3-e-017",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-018",
-          "options": [
+            "a13s3-e-036",
+            "a13s3-e-007",
             "a13s3-e-018",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-044"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s3-e-056"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-019",
+          "item": "a13s3-e-075",
           "options": [
-            "a13s3-e-019",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
+            "a13s3-e-054",
+            "a13s3-e-075",
+            "a13s3-e-063",
+            "a13s3-e-019"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s3-e-073"
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
-        "a13s3-e-007",
-        "a13s3-e-016",
+        "a13s3-e-036",
         "a13s3-e-026",
+        "a13s3-e-054",
+        "a13s3-e-007",
+        "a13s3-e-045",
+        "a13s3-e-063",
+        "a13s3-e-018",
+        "a13s3-e-009",
+        "a13s3-e-019",
+        "a13s3-e-028",
         "a13s3-e-034",
         "a13s3-e-044",
         "a13s3-e-056",
-        "a13s3-e-063",
-        "a13s3-e-073",
-        "a13s3-e-057",
-        "a13s3-e-018",
-        "a13s3-e-008",
-        "a13s3-e-009",
-        "a13s3-e-017",
-        "a13s3-e-018",
-        "a13s3-e-019"
+        "a13s3-e-075",
+        "a13s3-e-073"
       ],
       "morphology_practice": [
         {
@@ -3522,6 +3502,68 @@
           "expected_fi": "tehdään",
           "explanation_fa": "در سؤال Miten tämä tehdään? صورت tehdään استفاده می‌شود؛ ساخت مجهول کامل در این درس آموزش داده نمی‌شود."
         }
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
       ]
     }
   ]
