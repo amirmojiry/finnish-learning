@@ -1403,7 +1403,7 @@
       "title_fa": "ادامه دادن یک گفت‌وگوی کوتاه",
       "objective_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
       "summary_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
-      "grammar_fa": "برای ادامهٔ گفت‌وگو از پرسش‌های کوتاه «Mitä teet tänään?» (امروز چه کار می‌کنی؟) و «Entä sinä?» (تو چطور؟) استفاده کن. این پرسش‌ها را به‌صورت عبارت‌های کامل یاد بگیر.",
+      "grammar_fa": "برای گفت‌وگو از پرسش پیگیری «Mitä teet tänään?» و پاسخ «Entä sinä?» استفاده کن.",
       "new_targets": [
         "a13s1-h-001",
         "a13s1-h-002",
@@ -1606,7 +1606,7 @@
       "title_fa": "دعوت کردن و پاسخ دادن",
       "objective_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
       "summary_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
-      "grammar_fa": "برای دعوت از «Haluatko tulla minun kanssani?» استفاده کن. «Kyllä, mielelläni.» پذیرش مؤدبانه و «Valitettavasti en voi.» رد کردن مؤدبانه است.",
+      "grammar_fa": "دعوت را با «Haluatko tulla minun kanssani?» بیان کن؛ «Kyllä, mielelläni.» پذیرش و «Valitettavasti en voi.» رد مؤدبانه است.",
       "new_targets": [
         "a13s1-h-011",
         "a13s1-h-012",
@@ -1807,7 +1807,7 @@
       "title_fa": "تغییر دادن برنامه",
       "objective_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
       "summary_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
-      "grammar_fa": "برای تغییر قرار از «Voimmeko tavata myöhemmin?» کمک بگیر. در «Minun täytyy perua tapaaminen.»، ساختار «täytyy + شکل پایهٔ فعل» الزام را بیان می‌کند.",
+      "grammar_fa": "«Voimmeko tavata myöhemmin?» تغییر قرار است؛ «täytyy + مصدر» مانند «Minun täytyy perua tapaaminen.» الزام را بیان می‌کند.",
       "new_targets": [
         "a13s1-h-021",
         "a13s1-h-022",
@@ -2012,7 +2012,7 @@
       "title_fa": "پیام‌های عملی کوتاه",
       "objective_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
       "summary_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
-      "grammar_fa": "در پیام کوتاه، فعل و زمان را روشن بنویس؛ مانند «Tulen pian.» یا «Vastaan myöhemmin.». «Lähetä» صورت امریِ فعل فرستادن است.",
+      "grammar_fa": "در پیام کوتاه «Tulen pian.» یعنی به‌زودی می‌آیم و «Vastaan myöhemmin.» یعنی بعداً پاسخ می‌دهم.",
       "new_targets": [
         "a13s1-h-002",
         "a13s1-h-031",
@@ -2215,7 +2215,7 @@
       "title_fa": "یک گفت‌وگوی تلفنی ساده",
       "objective_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
       "summary_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
-      "grammar_fa": "هنگام تماس، «Hei, täällä on Sara.» برای معرفی پشت تلفن و «Voinko puhua Amirille?» برای درخواست صحبت با شخصی دیگر به کار می‌رود.",
+      "grammar_fa": "«täällä on Sara» برای معرفی تلفنی و «Voinko puhua Amirille?» برای درخواست صحبت است.",
       "new_targets": [
         "a13s1-h-040",
         "a13s1-h-013",
@@ -2418,7 +2418,7 @@
       "title_fa": "ترجیحات در گفت‌وگو",
       "objective_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
       "summary_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
-      "grammar_fa": "«Pidän tästä.» یعنی «این را دوست دارم»؛ در «Pidän enemmän teestä.» ترجیح قوی‌تری بیان می‌شود. صورت‌های «tästä» و «teestä» را در همین عبارت‌ها تمرین کن.",
+      "grammar_fa": "«Pidän tästä.» علاقه و «Pidän enemmän teestä.» ترجیح را بیان می‌کند؛ شکل‌های دستوری را در عبارت بیاموز.",
       "new_targets": [
         "a13s1-h-048",
         "a13s1-h-049",
@@ -2620,7 +2620,7 @@
       "title_fa": "گفتن یک دلیل ساده",
       "objective_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
       "summary_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
-      "grammar_fa": "با «koska» دلیل بیاور، با «mutta» تضاد نشان بده و با «siksi» نتیجه را بگو: «En tule, koska olen väsynyt.»؛ جمله‌ها را کوتاه و آشنا نگه دار.",
+      "grammar_fa": "«koska» دلیل، «mutta» تضاد و «siksi» نتیجه را نشان می‌دهند.",
       "new_targets": [
         "a13s1-h-057",
         "a13s1-h-058",
@@ -2826,7 +2826,7 @@
       "title_fa": "پیشنهاد ساده",
       "objective_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
       "summary_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
-      "grammar_fa": "«Voidaan tavata huomenna.» و «Mennään yhdessä.» دو شیوهٔ پیشنهاد دادن هستند. این صورت‌ها را فعلاً به‌شکل عبارت‌های آماده بیاموز، نه قاعدهٔ کامل ساخت مجهول.",
+      "grammar_fa": "«Voidaan» و «Mennään» را در پیشنهادها فعلاً به‌شکل عبارت کامل تمرین کن.",
       "new_targets": [
         "a13s1-h-065",
         "a13s1-h-012",
@@ -3027,7 +3027,7 @@
       "title_fa": "یک هماهنگی اجتماعی کامل",
       "objective_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
       "summary_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
-      "grammar_fa": "در یک گفت‌وگوی کوتاه، احوالپرسی، دعوت، بیان دلیل، پیشنهاد زمان تازه و تأیید را به‌ترتیب ترکیب کن؛ مانند «Voidaan tavata myöhemmin.» و «Sovitaan niin.».",
+      "grammar_fa": "احوالپرسی، دعوت، دلیل، تغییر زمان و تأیید را در یک گفت‌وگوی مرتبط ترکیب کن.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3243,7 +3243,7 @@
       "title_fa": "ارزیابی بخش ۱",
       "objective_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
       "summary_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
-      "grammar_fa": "در ارزیابی این بخش، احوالپرسی، دعوت، پیام، تلفن، ترجیح، بیان دلیل و تغییر قرار مرور می‌شود. پاسخ‌ها باید با عبارت‌های تمرین‌شده هماهنگ باشند.",
+      "grammar_fa": "این آزمون، احوالپرسی، دعوت، پیام، تماس، ترجیح، دلیل و پیشنهاد را مرور می‌کند.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3262,53 +3262,47 @@
         "a1.3-s1-l09"
       ],
       "production_targets": [
-        "a13s1-e-062"
+        "a13s1-e-007"
       ],
       "listening_targets": [
-        "a13s1-e-062",
-        "a13s1-e-063"
+        "a13s1-e-017",
+        "a13s1-e-027"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s1-e-062",
+          "item": "a13s1-e-036",
           "tokens": [
-            "tule,",
-            "koska",
-            "olen",
-            "väsynyt.",
-            "En"
+            "pian.",
+            "Tulen"
           ],
           "answer_order": [
-            4,
-            0,
             1,
-            2,
-            3
+            0
           ],
-          "expected_fi": "En tule, koska olen väsynyt."
+          "expected_fi": "Tulen pian."
         },
         {
           "type": "expression-completion",
-          "item": "a13s1-e-062",
-          "prompt_fi": "En _____ koska olen väsynyt.",
-          "prompt_fa": "نمی‌آیم چون خسته‌ام.",
+          "item": "a13s1-e-045",
+          "prompt_fi": "Voinko _____ Amirille?",
+          "prompt_fa": "می‌توانم با امیر صحبت کنم؟",
           "accepted_answers": [
-            "tule,"
+            "puhua"
           ],
-          "expected_fi": "En tule, koska olen väsynyt."
+          "expected_fi": "Voinko puhua Amirille?"
         },
         {
           "type": "controlled-production",
-          "item": "a13s1-e-063",
-          "prompt_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
           "cues_fi": [
-            "Haluaisin",
-            "tulla,"
+            "Pidän",
+            "enemmän"
           ],
-          "expected_fi": "Haluaisin tulla, mutta olen kiireinen.",
+          "expected_fi": "Pidän enemmän teestä.",
           "accepted_answers": [
-            "Haluaisin tulla, mutta olen kiireinen."
+            "Pidän enemmän teestä."
           ]
         }
       ],
@@ -3316,9 +3310,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s1-e-062",
+          "item": "a13s1-e-007",
           "options": [
-            "a13s1-e-062",
+            "a13s1-e-007",
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
@@ -3327,42 +3321,9 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s1-e-062",
+          "item": "a13s1-e-017",
           "options": [
-            "a13s1-e-062",
-            "a13s1-h-002",
-            "a13s1-h-003",
-            "a13s1-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-063",
-          "options": [
-            "a13s1-e-063",
-            "a13s1-h-003",
-            "a13s1-t-004",
-            "a13s1-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-062",
-          "options": [
-            "a13s1-e-062",
-            "a13s1-t-004",
-            "a13s1-t-005",
-            "a13s1-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-062",
-          "options": [
-            "a13s1-e-062",
+            "a13s1-e-017",
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
@@ -3371,100 +3332,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s1-e-063",
+          "item": "a13s1-e-027",
           "options": [
-            "a13s1-e-063",
-            "a13s1-h-002",
-            "a13s1-h-003",
-            "a13s1-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-062",
-          "options": [
-            "a13s1-e-062",
-            "a13s1-h-003",
-            "a13s1-t-004",
-            "a13s1-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-062",
-          "options": [
-            "a13s1-e-062",
-            "a13s1-t-004",
-            "a13s1-t-005",
-            "a13s1-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-063",
-          "options": [
-            "a13s1-e-063",
+            "a13s1-e-027",
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-064",
-          "options": [
-            "a13s1-e-064",
-            "a13s1-h-002",
-            "a13s1-h-003",
-            "a13s1-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-069",
-          "options": [
-            "a13s1-e-069",
-            "a13s1-h-003",
-            "a13s1-t-004",
-            "a13s1-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-070",
-          "options": [
-            "a13s1-e-070",
-            "a13s1-t-004",
-            "a13s1-t-005",
-            "a13s1-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-071",
-          "options": [
-            "a13s1-e-071",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-072",
-          "options": [
-            "a13s1-e-072",
-            "a13s1-h-002",
-            "a13s1-h-003",
-            "a13s1-t-004"
           ]
         },
         {
@@ -3477,25 +3350,146 @@
             "a13s1-h-002",
             "a13s1-h-003"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-045",
+          "options": [
+            "a13s1-e-045",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-054",
+          "options": [
+            "a13s1-e-054",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-062",
+          "options": [
+            "a13s1-e-062",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-069",
+          "options": [
+            "a13s1-e-069",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-072",
+          "options": [
+            "a13s1-e-072",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-036",
+          "options": [
+            "a13s1-e-036",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-008",
+          "options": [
+            "a13s1-e-008",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-009",
+          "options": [
+            "a13s1-e-009",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-010",
+          "options": [
+            "a13s1-e-010",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-018",
+          "options": [
+            "a13s1-e-018",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-019",
+          "options": [
+            "a13s1-e-019",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
+        "a13s1-e-007",
+        "a13s1-e-017",
+        "a13s1-e-027",
+        "a13s1-e-036",
+        "a13s1-e-045",
+        "a13s1-e-054",
         "a13s1-e-062",
-        "a13s1-e-062",
-        "a13s1-e-063",
-        "a13s1-e-062",
-        "a13s1-e-062",
-        "a13s1-e-063",
-        "a13s1-e-062",
-        "a13s1-e-062",
-        "a13s1-e-063",
-        "a13s1-e-064",
         "a13s1-e-069",
-        "a13s1-e-070",
-        "a13s1-e-071",
         "a13s1-e-072",
-        "a13s1-e-036"
+        "a13s1-e-036",
+        "a13s1-e-008",
+        "a13s1-e-009",
+        "a13s1-e-010",
+        "a13s1-e-018",
+        "a13s1-e-019"
       ],
       "morphology_practice": [
         {
