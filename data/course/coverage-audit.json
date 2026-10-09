@@ -204,7 +204,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ja",
+          "on"
+        ],
+        "topic_target_forms": [
+          "hei",
+          "huomenta",
+          "moi"
+        ],
+        "expression_target_forms": [
+          "hei",
+          "hyvää huomenta",
+          "moi",
+          "näkemiin"
+        ],
+        "authored_new_forms": [
+          "hei",
+          "hyvää huomenta",
+          "ja",
+          "moi",
+          "näkemiin",
+          "on"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -212,7 +235,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -274,7 +298,27 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minä",
+          "olen",
+          "sinä"
+        ],
+        "topic_target_forms": [
+          "nimi"
+        ],
+        "expression_target_forms": [
+          "mikä sinun nimesi on?",
+          "minun nimeni on"
+        ],
+        "authored_new_forms": [
+          "mikä sinun nimesi on?",
+          "minun nimeni on",
+          "minä",
+          "olen",
+          "olet",
+          "sinä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -282,7 +326,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -344,7 +389,25 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hyvä",
+          "mitä"
+        ],
+        "topic_target_forms": [
+          "hyvää"
+        ],
+        "expression_target_forms": [
+          "hyvää, kiitos",
+          "ihan hyvää",
+          "mitä kuuluu?"
+        ],
+        "authored_new_forms": [
+          "hyvää",
+          "ihan hyvää",
+          "kiitos",
+          "mitä kuuluu?"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -352,7 +415,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -408,7 +472,26 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ei",
+          "kyllä",
+          "ole"
+        ],
+        "topic_target_forms": [
+          "vastaus"
+        ],
+        "expression_target_forms": [
+          "ei",
+          "ei ole",
+          "kyllä"
+        ],
+        "authored_new_forms": [
+          "ei",
+          "ei ole",
+          "kyllä",
+          "ole"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -416,7 +499,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -481,7 +565,27 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hän",
+          "mikä",
+          "tämä"
+        ],
+        "topic_target_forms": [
+          "esine",
+          "ihminen",
+          "kuka"
+        ],
+        "expression_target_forms": [
+          "kuka hän on?",
+          "mikä tämä on?"
+        ],
+        "authored_new_forms": [
+          "hän",
+          "kuka hän on?",
+          "mikä tämä on?",
+          "tämä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -489,7 +593,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -539,7 +644,22 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 1,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "anteeksi",
+          "kiitos"
+        ],
+        "expression_target_forms": [
+          "anteeksi",
+          "kiitos",
+          "ole hyvä"
+        ],
+        "authored_new_forms": [
+          "anteeksi",
+          "kiitos",
+          "ole hyvä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -547,7 +667,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -603,7 +724,25 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "en"
+        ],
+        "topic_target_forms": [
+          "hitaasti",
+          "uudestaan, kiitos"
+        ],
+        "expression_target_forms": [
+          "en ymmärrä",
+          "hitaammin, kiitos",
+          "uudestaan, kiitos"
+        ],
+        "authored_new_forms": [
+          "en",
+          "en ymmärrä",
+          "hitaammin, kiitos",
+          "uudestaan, kiitos"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -611,7 +750,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -676,7 +816,29 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "on",
+          "se",
+          "tämä"
+        ],
+        "topic_target_forms": [
+          "kirja",
+          "ovi",
+          "puhelin"
+        ],
+        "expression_target_forms": [
+          "se on",
+          "tämä on"
+        ],
+        "authored_new_forms": [
+          "kirja",
+          "on",
+          "ovi",
+          "puhelin",
+          "se",
+          "tämä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -684,7 +846,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -748,7 +911,15 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 4,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "en ymmärrä. uudestaan, kiitos.",
+          "hei! minun nimeni on",
+          "mitä kuuluu?"
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -756,7 +927,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -831,7 +1003,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 1,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -839,7 +1015,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -905,7 +1082,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "he",
+          "hän",
+          "me"
+        ],
+        "topic_target_forms": [
+          "te",
+          "ystävä"
+        ],
+        "expression_target_forms": [
+          "he ovat",
+          "hän on",
+          "me olemme",
+          "te olette"
+        ],
+        "authored_new_forms": [
+          "he",
+          "hän",
+          "me",
+          "me olemme",
+          "te",
+          "ystävä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -913,7 +1113,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -977,7 +1178,29 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "olen"
+        ],
+        "topic_target_forms": [
+          "iran",
+          "maa",
+          "mistä",
+          "suomi"
+        ],
+        "expression_target_forms": [
+          "mistä olet?",
+          "olen iranista.",
+          "olen suomesta."
+        ],
+        "authored_new_forms": [
+          "iran",
+          "maa",
+          "mistä",
+          "olen iranista.",
+          "olen suomesta.",
+          "suomi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -985,7 +1208,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1054,7 +1278,28 @@
           "puhun"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "englanti",
+          "persia",
+          "puhun",
+          "suomi"
+        ],
+        "expression_target_forms": [
+          "puhun englantia.",
+          "puhun persiaa.",
+          "puhun suomea.",
+          "puhun vähän suomea."
+        ],
+        "authored_new_forms": [
+          "englanti",
+          "persia",
+          "puhun",
+          "puhun persiaa.",
+          "puhun suomea.",
+          "suomi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1062,7 +1307,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1124,7 +1370,28 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "missä"
+        ],
+        "topic_target_forms": [
+          "asun",
+          "helsinki",
+          "kaupunki",
+          "vaasa"
+        ],
+        "expression_target_forms": [
+          "asun vaasassa.",
+          "missä asut?"
+        ],
+        "authored_new_forms": [
+          "asun vaasassa.",
+          "helsinki",
+          "kaupunki",
+          "missä",
+          "missä asut?",
+          "vaasa"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1132,7 +1399,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1194,7 +1462,28 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "isä",
+          "lapsi",
+          "perhe",
+          "sisar",
+          "veli",
+          "äiti"
+        ],
+        "expression_target_forms": [
+          "minulla on lapsi.",
+          "tämä on minun äitini."
+        ],
+        "authored_new_forms": [
+          "isä",
+          "lapsi",
+          "perhe",
+          "sisar",
+          "veli",
+          "äiti"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1202,7 +1491,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1264,7 +1554,28 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minun"
+        ],
+        "topic_target_forms": [
+          "koti",
+          "nimi",
+          "sinun"
+        ],
+        "expression_target_forms": [
+          "minun kotini",
+          "minun nimeni",
+          "sinun nimesi"
+        ],
+        "authored_new_forms": [
+          "koti",
+          "minun",
+          "minun nimeni",
+          "nimi",
+          "sinun",
+          "sinun nimesi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1272,7 +1583,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1404,7 +1716,61 @@
           "olen …-vuotias."
         ],
         "distractor_only_count": 11,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kaksi",
+          "kolme",
+          "yksi"
+        ],
+        "topic_target_forms": [
+          "ikä",
+          "kahdeksan",
+          "kahdeksantoista",
+          "kaksikymmentä",
+          "kaksitoista",
+          "kolmetoista",
+          "kuusi",
+          "kuusitoista",
+          "kymmenen",
+          "neljä",
+          "neljätoista",
+          "nolla",
+          "seitsemän",
+          "seitsemäntoista",
+          "viisi",
+          "viisitoista",
+          "yhdeksän",
+          "yhdeksäntoista",
+          "yksitoista"
+        ],
+        "expression_target_forms": [
+          "kuinka vanha olet?",
+          "olen …-vuotias."
+        ],
+        "authored_new_forms": [
+          "ikä",
+          "kahdeksan",
+          "kahdeksantoista",
+          "kaksi",
+          "kaksikymmentä",
+          "kaksitoista",
+          "kolme",
+          "kolmetoista",
+          "kuusi",
+          "kuusitoista",
+          "kymmenen",
+          "neljä",
+          "neljätoista",
+          "nolla",
+          "seitsemän",
+          "seitsemäntoista",
+          "viisi",
+          "viisitoista",
+          "yhdeksän",
+          "yhdeksäntoista",
+          "yksi",
+          "yksitoista"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1412,7 +1778,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1474,7 +1841,26 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "katu",
+          "numero",
+          "osoite",
+          "puhelinnumero"
+        ],
+        "expression_target_forms": [
+          "mikä sinun puhelinnumerosi on?",
+          "minun numeroni on"
+        ],
+        "authored_new_forms": [
+          "katu",
+          "mikä sinun puhelinnumerosi on?",
+          "minun numeroni on 040 123 4567.",
+          "numero",
+          "osoite",
+          "puhelinnumero"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1482,7 +1868,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1549,7 +1936,20 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "asun helsingissä.",
+          "asun vaasassa.",
+          "minun nimeni on",
+          "olen iranista.",
+          "olen suomesta.",
+          "puhun englantia.",
+          "puhun persiaa.",
+          "puhun suomea."
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -1557,7 +1957,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1633,7 +2034,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -1641,7 +2046,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1692,7 +2098,24 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "eilen",
+          "huomenna",
+          "tänään"
+        ],
+        "expression_target_forms": [
+          "huomenna on …",
+          "tänään on …"
+        ],
+        "authored_new_forms": [
+          "eilen",
+          "huomenna",
+          "huomenna on …",
+          "tänään",
+          "tänään on …"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1700,7 +2123,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1773,7 +2197,30 @@
           "torstai"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "keskiviikko",
+          "lauantai",
+          "maanantai",
+          "perjantai",
+          "sunnuntai",
+          "tiistai",
+          "torstai"
+        ],
+        "expression_target_forms": [
+          "huomenna on tiistai.",
+          "tänään on maanantai."
+        ],
+        "authored_new_forms": [
+          "keskiviikko",
+          "lauantai",
+          "maanantai",
+          "perjantai",
+          "sunnuntai",
+          "tiistai",
+          "torstai"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1781,7 +2228,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1838,7 +2286,24 @@
           "kello"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "aamu",
+          "ilta",
+          "kello"
+        ],
+        "expression_target_forms": [
+          "kello on kaksi.",
+          "kello on yksi."
+        ],
+        "authored_new_forms": [
+          "aamu",
+          "ilta",
+          "kello",
+          "kello on kaksi.",
+          "kello on yksi."
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1846,7 +2311,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -1919,7 +2385,29 @@
           "yöllä."
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "nyt"
+        ],
+        "topic_target_forms": [
+          "aamulla",
+          "illalla",
+          "päivällä",
+          "yöllä"
+        ],
+        "expression_target_forms": [
+          "aamulla.",
+          "illalla.",
+          "päivällä.",
+          "yöllä."
+        ],
+        "authored_new_forms": [
+          "aamulla",
+          "illalla",
+          "nyt",
+          "päivällä",
+          "yöllä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -1927,7 +2415,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2005,7 +2494,31 @@
           "tulen"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "juon",
+          "menen",
+          "nukun",
+          "opiskelen",
+          "syön",
+          "tulen",
+          "työskentelen"
+        ],
+        "expression_target_forms": [
+          "menen kotiin.",
+          "minä juon kahvia.",
+          "minä syön."
+        ],
+        "authored_new_forms": [
+          "juon",
+          "menen",
+          "nukun",
+          "opiskelen",
+          "syön",
+          "tulen",
+          "työskentelen"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2013,7 +2526,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2074,7 +2588,28 @@
           "mitä"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "mitä"
+        ],
+        "topic_target_forms": [
+          "koulu",
+          "teet",
+          "työ"
+        ],
+        "expression_target_forms": [
+          "mitä teet?",
+          "opiskeletko?",
+          "työskenteletkö?"
+        ],
+        "authored_new_forms": [
+          "koulu",
+          "mitä",
+          "mitä teet?",
+          "opiskeletko?",
+          "teet",
+          "työ"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2082,7 +2617,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2149,7 +2685,21 @@
           "minä työskentelen. → en työskentele."
         ],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "en"
+        ],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele."
+        ],
+        "authored_new_forms": [
+          "en"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2157,7 +2707,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 6,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2216,7 +2767,26 @@
           "milloin"
         ],
         "distractor_only_count": 4,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "aika",
+          "milloin"
+        ],
+        "expression_target_forms": [
+          "huomenna.",
+          "kello kolme.",
+          "milloin?",
+          "tänään."
+        ],
+        "authored_new_forms": [
+          "aika",
+          "huomenna.",
+          "kello kolme.",
+          "milloin",
+          "milloin?",
+          "tänään."
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2224,7 +2794,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2278,7 +2849,15 @@
           "päivällä …"
         ],
         "distractor_only_count": 1,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "aamulla …",
+          "illalla …",
+          "päivällä …"
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -2286,7 +2865,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2362,7 +2942,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -2370,7 +2954,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2437,7 +3022,28 @@
           "huone"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "huone",
+          "keittiö",
+          "koti",
+          "makuuhuone",
+          "olohuone",
+          "wc"
+        ],
+        "expression_target_forms": [
+          "olen kotona.",
+          "tämä on keittiö."
+        ],
+        "authored_new_forms": [
+          "huone",
+          "keittiö",
+          "koti",
+          "makuuhuone",
+          "olohuone",
+          "wc"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2445,7 +3051,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2508,7 +3115,28 @@
           "on"
         ],
         "distractor_only_count": 5,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "missä",
+          "on"
+        ],
+        "topic_target_forms": [
+          "pöytä",
+          "sänky",
+          "tuoli"
+        ],
+        "expression_target_forms": [
+          "missä puhelin on?",
+          "se on huoneessa.",
+          "se on pöydällä."
+        ],
+        "authored_new_forms": [
+          "missä",
+          "on",
+          "pöytä",
+          "sänky",
+          "tuoli"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2516,7 +3144,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2582,7 +3211,28 @@
           "ruoka"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "kahvi",
+          "leipä",
+          "maito",
+          "ruoka",
+          "tee",
+          "vesi"
+        ],
+        "expression_target_forms": [
+          "tämä on kahvia.",
+          "tämä on leipä."
+        ],
+        "authored_new_forms": [
+          "kahvi",
+          "leipä",
+          "maito",
+          "ruoka",
+          "tee",
+          "vesi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2590,7 +3240,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2650,7 +3301,23 @@
           "haluan"
         ],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "haluan",
+          "jano",
+          "nälkä"
+        ],
+        "expression_target_forms": [
+          "haluan kahvia.",
+          "haluan vettä.",
+          "minulla on nälkä."
+        ],
+        "authored_new_forms": [
+          "haluan",
+          "jano",
+          "nälkä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2658,7 +3325,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2712,7 +3380,22 @@
           "yksi"
         ],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "yksi"
+        ],
+        "topic_target_forms": [
+          "kahvila"
+        ],
+        "expression_target_forms": [
+          "ole hyvä.",
+          "vettä, kiitos.",
+          "yksi kahvi, kiitos."
+        ],
+        "authored_new_forms": [
+          "kahvila",
+          "yksi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2720,7 +3403,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2779,7 +3463,26 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "hevonen",
+          "kala",
+          "kissa",
+          "koira",
+          "lintu"
+        ],
+        "expression_target_forms": [
+          "se on kissa.",
+          "tämä on koira."
+        ],
+        "authored_new_forms": [
+          "hevonen",
+          "kala",
+          "kissa",
+          "koira",
+          "lintu"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2787,7 +3490,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2849,7 +3553,26 @@
           "susi"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "hirvi",
+          "karhu",
+          "lammas",
+          "lehmä",
+          "susi"
+        ],
+        "expression_target_forms": [
+          "karhu on eläin.",
+          "lehmä on eläin."
+        ],
+        "authored_new_forms": [
+          "hirvi",
+          "karhu",
+          "lammas",
+          "lehmä",
+          "susi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2857,7 +3580,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2918,7 +3642,26 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [
+          "iso",
+          "musta",
+          "pieni",
+          "punainen",
+          "valkoinen"
+        ],
+        "expression_target_forms": [
+          "kissa on pieni.",
+          "koira on iso."
+        ],
+        "authored_new_forms": [
+          "iso",
+          "musta",
+          "pieni",
+          "punainen",
+          "valkoinen"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -2926,7 +3669,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -2985,7 +3729,16 @@
         "distractor_only_count": 3,
         "reading_only": [
           "tämä on minun kotini. keittiössä on pöytä. minulla on kissa. haluan kahvia. kissa on pieni."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "haluan …",
+          "keittiössä on …",
+          "minulla on …",
+          "tämä on minun kotini."
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -2993,7 +3746,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3058,7 +3812,11 @@
         "distractor_only_count": 15,
         "reading_only": [
           "tämä on minun kotini. keittiössä on pöytä. minulla on kissa. haluan kahvia. kissa on pieni."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -3066,7 +3824,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3132,7 +3891,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "paljon",
+          "rahaa",
+          "yksi"
+        ],
+        "topic_target_forms": [
+          "euro",
+          "hinta",
+          "sentti"
+        ],
+        "expression_target_forms": [
+          "minulla on rahaa.",
+          "paljonko tämä maksaa?",
+          "se maksaa viisi euroa."
+        ],
+        "authored_new_forms": [
+          "euro",
+          "hinta",
+          "paljon",
+          "rahaa",
+          "sentti",
+          "yksi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3140,7 +3922,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3228,7 +4011,38 @@
           "yhdeksänkymmentä"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "10",
+          "20",
+          "50"
+        ],
+        "topic_target_forms": [
+          "kahdeksankymmentä",
+          "kolmekymmentä",
+          "kuusikymmentä",
+          "neljäkymmentä",
+          "sata",
+          "seitsemänkymmentä",
+          "yhdeksänkymmentä"
+        ],
+        "expression_target_forms": [
+          "se maksaa kaksikymmentä euroa.",
+          "se maksaa sata euroa.",
+          "se maksaa viisikymmentä euroa."
+        ],
+        "authored_new_forms": [
+          "10",
+          "20",
+          "50",
+          "kahdeksankymmentä",
+          "kolmekymmentä",
+          "kuusikymmentä",
+          "neljäkymmentä",
+          "sata",
+          "seitsemänkymmentä",
+          "yhdeksänkymmentä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3236,7 +4050,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3302,7 +4117,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "antaa",
+          "mitä",
+          "ottaa"
+        ],
+        "topic_target_forms": [
+          "annos",
+          "haluaisin",
+          "saanko"
+        ],
+        "expression_target_forms": [
+          "haluaisin tämän, kiitos.",
+          "saanko kahvin, kiitos?",
+          "voitteko antaa tämän?"
+        ],
+        "authored_new_forms": [
+          "annos",
+          "antaa",
+          "haluaisin",
+          "mitä",
+          "ottaa",
+          "saanko"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3310,7 +4148,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3376,7 +4215,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "lisää",
+          "paljon",
+          "vähän"
+        ],
+        "topic_target_forms": [
+          "kilo",
+          "litra",
+          "puoli"
+        ],
+        "expression_target_forms": [
+          "kilo omenoita, kiitos.",
+          "puoli litraa maitoa, kiitos.",
+          "vähän lisää, kiitos."
+        ],
+        "authored_new_forms": [
+          "kilo",
+          "lisää",
+          "litra",
+          "paljon",
+          "puoli",
+          "vähän"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3384,7 +4246,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3450,7 +4313,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "missä",
+          "siellä",
+          "täällä"
+        ],
+        "topic_target_forms": [
+          "kassa",
+          "kauppa",
+          "osasto"
+        ],
+        "expression_target_forms": [
+          "kassa on tuolla.",
+          "missä maito on?",
+          "se on täällä."
+        ],
+        "authored_new_forms": [
+          "kassa",
+          "kauppa",
+          "missä",
+          "osasto",
+          "siellä",
+          "täällä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3458,7 +4344,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3527,7 +4414,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "liian",
+          "toinen",
+          "tämä"
+        ],
+        "topic_target_forms": [
+          "iso",
+          "pieni",
+          "sopiva"
+        ],
+        "expression_target_forms": [
+          "onko toinen koko?",
+          "tämä on liian iso.",
+          "tämä on liian pieni.",
+          "tämä on sopiva."
+        ],
+        "authored_new_forms": [
+          "iso",
+          "liian",
+          "pieni",
+          "sopiva",
+          "toinen",
+          "tämä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3535,7 +4446,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3605,7 +4517,32 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "antaa",
+          "rahaa",
+          "voi"
+        ],
+        "topic_target_forms": [
+          "kortti",
+          "kuitti",
+          "käteinen",
+          "maksaa"
+        ],
+        "expression_target_forms": [
+          "kuitti, kiitos.",
+          "maksan käteisellä.",
+          "voinko maksaa kortilla?"
+        ],
+        "authored_new_forms": [
+          "antaa",
+          "kortti",
+          "kuitti",
+          "käteinen",
+          "maksaa",
+          "rahaa",
+          "voi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3613,7 +4550,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3693,7 +4631,35 @@
           "takaisin"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ei",
+          "mitään",
+          "takaisin"
+        ],
+        "topic_target_forms": [
+          "apu",
+          "ongelma",
+          "rikki",
+          "toimi",
+          "väärä"
+        ],
+        "expression_target_forms": [
+          "tarvitsen apua.",
+          "tämä ei toimi.",
+          "tämä on rikki.",
+          "tämä on väärä."
+        ],
+        "authored_new_forms": [
+          "apu",
+          "ei",
+          "mitään",
+          "ongelma",
+          "rikki",
+          "takaisin",
+          "toimi",
+          "väärä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3701,7 +4667,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3754,7 +4721,17 @@
         "distractor_only_count": 4,
         "reading_only": [
           "hei! haluaisin tämän, kiitos. paljonko tämä maksaa? se maksaa kaksikymmentä euroa. voinko maksaa kortilla? kyllä. kuitti, kiitos."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "haluaisin tämän, kiitos.",
+          "hei!",
+          "kuitti, kiitos.",
+          "paljonko tämä maksaa?",
+          "voinko maksaa kortilla?"
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -3762,7 +4739,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3837,7 +4815,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -3845,7 +4827,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3921,7 +4904,34 @@
           "siellä"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "missä",
+          "siellä",
+          "täällä"
+        ],
+        "topic_target_forms": [
+          "apteekki",
+          "asema",
+          "kauppa",
+          "keskusta",
+          "pysäkki"
+        ],
+        "expression_target_forms": [
+          "missä apteekki on?",
+          "missä asema on?",
+          "se on keskustassa."
+        ],
+        "authored_new_forms": [
+          "apteekki",
+          "asema",
+          "kauppa",
+          "keskusta",
+          "missä",
+          "pysäkki",
+          "siellä",
+          "täällä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -3929,7 +4939,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -3998,7 +5009,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kohti",
+          "pois",
+          "takaisin"
+        ],
+        "topic_target_forms": [
+          "oikealle",
+          "suoraan",
+          "vasemmalle"
+        ],
+        "expression_target_forms": [
+          "käänny oikealle.",
+          "käänny vasemmalle.",
+          "mene suoraan.",
+          "mene takaisin."
+        ],
+        "authored_new_forms": [
+          "kohti",
+          "oikealle",
+          "pois",
+          "suoraan",
+          "takaisin",
+          "vasemmalle"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4006,7 +5041,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4081,7 +5117,33 @@
           "keskustaan"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "siihen",
+          "tulee",
+          "tähän"
+        ],
+        "topic_target_forms": [
+          "asemalle",
+          "keskustaan",
+          "kotiin",
+          "mihin"
+        ],
+        "expression_target_forms": [
+          "menen asemalle.",
+          "menen keskustaan.",
+          "menen kotiin.",
+          "mihin menet?"
+        ],
+        "authored_new_forms": [
+          "asemalle",
+          "keskustaan",
+          "kotiin",
+          "mihin",
+          "siihen",
+          "tulee",
+          "tähän"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4089,7 +5151,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4164,7 +5227,33 @@
           "kaupasta"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "siitä",
+          "tulee",
+          "tästä"
+        ],
+        "topic_target_forms": [
+          "asemalta",
+          "kaupasta",
+          "kotoa",
+          "mistä"
+        ],
+        "expression_target_forms": [
+          "mistä tulet?",
+          "tulen asemalta.",
+          "tulen kaupasta.",
+          "tulen kotoa."
+        ],
+        "authored_new_forms": [
+          "asemalta",
+          "kaupasta",
+          "kotoa",
+          "mistä",
+          "siitä",
+          "tulee",
+          "tästä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4172,7 +5261,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4247,7 +5337,33 @@
           "usein"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kanssa",
+          "tulee",
+          "usein"
+        ],
+        "topic_target_forms": [
+          "bussi",
+          "juna",
+          "pyörä",
+          "taksi"
+        ],
+        "expression_target_forms": [
+          "menen bussilla.",
+          "menen junalla.",
+          "menen pyörällä.",
+          "tulen taksilla."
+        ],
+        "authored_new_forms": [
+          "bussi",
+          "juna",
+          "kanssa",
+          "pyörä",
+          "taksi",
+          "tulee",
+          "usein"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4255,7 +5371,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4328,7 +5445,32 @@
           "menolippu"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "antaa",
+          "kaksi",
+          "yksi"
+        ],
+        "topic_target_forms": [
+          "automaatti",
+          "lippu",
+          "meno-paluu",
+          "menolippu"
+        ],
+        "expression_target_forms": [
+          "kaksi lippua, kiitos.",
+          "meno-paluu, kiitos.",
+          "yksi lippu helsinkiin, kiitos."
+        ],
+        "authored_new_forms": [
+          "antaa",
+          "automaatti",
+          "kaksi",
+          "lippu",
+          "meno-paluu",
+          "menolippu",
+          "yksi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4336,7 +5478,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4418,7 +5561,35 @@
           "välillä"
         ],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ennen",
+          "jälkeen",
+          "klo",
+          "välillä"
+        ],
+        "topic_target_forms": [
+          "ajoissa",
+          "lähtee",
+          "myöhässä",
+          "saapuu"
+        ],
+        "expression_target_forms": [
+          "bussi lähtee kello kahdeksan.",
+          "bussi on myöhässä.",
+          "juna saapuu kello yhdeksän.",
+          "se lähtee ennen kymmentä."
+        ],
+        "authored_new_forms": [
+          "ajoissa",
+          "ennen",
+          "jälkeen",
+          "klo",
+          "lähtee",
+          "myöhässä",
+          "saapuu",
+          "välillä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4426,7 +5597,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4500,7 +5672,33 @@
           "kaukana"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "aikaa",
+          "kuinka",
+          "miten"
+        ],
+        "topic_target_forms": [
+          "kauan",
+          "kaukana",
+          "lähellä",
+          "minuutti"
+        ],
+        "expression_target_forms": [
+          "kuinka kauan matka kestää?",
+          "noin kymmenen minuuttia.",
+          "se on kaukana.",
+          "se on lähellä."
+        ],
+        "authored_new_forms": [
+          "aikaa",
+          "kauan",
+          "kaukana",
+          "kuinka",
+          "lähellä",
+          "minuutti",
+          "miten"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4508,7 +5706,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4561,7 +5760,16 @@
         "distractor_only_count": 2,
         "reading_only": [
           "missä asema on? mene suoraan. menen bussilla. yksi lippu helsinkiin, kiitos. bussi lähtee kello kahdeksan."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "bussi lähtee kello kahdeksan.",
+          "menen bussilla.",
+          "missä asema on?",
+          "yksi lippu helsinkiin, kiitos."
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -4569,7 +5777,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4644,7 +5853,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -4652,7 +5865,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4728,7 +5942,31 @@
           "palaan"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "käyttää",
+          "tekee",
+          "tulee"
+        ],
+        "topic_target_forms": [
+          "herään",
+          "lähden",
+          "palaan"
+        ],
+        "expression_target_forms": [
+          "herään aamulla.",
+          "illalla käytän puhelinta.",
+          "lähden kotoa.",
+          "palaan kotiin."
+        ],
+        "authored_new_forms": [
+          "herään",
+          "käyttää",
+          "lähden",
+          "palaan",
+          "tekee",
+          "tulee"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4736,7 +5974,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4812,7 +6051,31 @@
           "yleensä"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "aina",
+          "joskus",
+          "usein",
+          "yleensä"
+        ],
+        "topic_target_forms": [
+          "harvoin",
+          "joka päivä"
+        ],
+        "expression_target_forms": [
+          "en käy siellä koskaan.",
+          "käyn siellä usein.",
+          "opiskelen joka päivä.",
+          "teen sen joskus."
+        ],
+        "authored_new_forms": [
+          "aina",
+          "harvoin",
+          "joka päivä",
+          "joskus",
+          "usein",
+          "yleensä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4820,7 +6083,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4900,7 +6164,34 @@
           "yliopisto"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kaupungin",
+          "maan",
+          "tehdä"
+        ],
+        "topic_target_forms": [
+          "koulu",
+          "opiskelija",
+          "toimisto",
+          "työpaikka",
+          "yliopisto"
+        ],
+        "expression_target_forms": [
+          "missä työskentelet?",
+          "opiskelen yliopistossa.",
+          "työskentelen toimistossa."
+        ],
+        "authored_new_forms": [
+          "kaupungin",
+          "koulu",
+          "maan",
+          "opiskelija",
+          "tehdä",
+          "toimisto",
+          "työpaikka",
+          "yliopisto"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -4908,7 +6199,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -4993,7 +6285,35 @@
           "pitää"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "paljon",
+          "pitää",
+          "yhdessä"
+        ],
+        "topic_target_forms": [
+          "harrastus",
+          "katsoa",
+          "liikunta",
+          "lukea",
+          "musiikki"
+        ],
+        "expression_target_forms": [
+          "katson elokuvia.",
+          "luen vapaa-ajalla.",
+          "pidän liikunnasta.",
+          "pidän musiikista."
+        ],
+        "authored_new_forms": [
+          "harrastus",
+          "katsoa",
+          "liikunta",
+          "lukea",
+          "musiikki",
+          "paljon",
+          "pitää",
+          "yhdessä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5001,7 +6321,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5077,7 +6398,31 @@
           "tavata"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ehkä",
+          "sitten",
+          "voi"
+        ],
+        "topic_target_forms": [
+          "sopia",
+          "sopiiko",
+          "tavata"
+        ],
+        "expression_target_forms": [
+          "ei, ehkä myöhemmin.",
+          "kyllä, sopii.",
+          "sopiiko kello kuusi?",
+          "voimmeko tavata huomenna?"
+        ],
+        "authored_new_forms": [
+          "ehkä",
+          "sitten",
+          "sopia",
+          "sopiiko",
+          "tavata",
+          "voi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5085,7 +6430,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5174,7 +6520,37 @@
           "viime"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ensi",
+          "maanantaina",
+          "tiistaina",
+          "torstaina",
+          "viime"
+        ],
+        "topic_target_forms": [
+          "keskiviikkona",
+          "lauantaina",
+          "perjantaina",
+          "sunnuntaina"
+        ],
+        "expression_target_forms": [
+          "ensi viikolla.",
+          "nähdään perjantaina.",
+          "tavataan maanantaina.",
+          "viime viikolla."
+        ],
+        "authored_new_forms": [
+          "ensi",
+          "keskiviikkona",
+          "lauantaina",
+          "maanantaina",
+          "perjantaina",
+          "sunnuntaina",
+          "tiistaina",
+          "torstaina",
+          "viime"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5182,7 +6558,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5262,7 +6639,33 @@
           "tulla"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kanssa",
+          "kyllä",
+          "yhdessä"
+        ],
+        "topic_target_forms": [
+          "elokuviin",
+          "kahville",
+          "mennään",
+          "tulla"
+        ],
+        "expression_target_forms": [
+          "anteeksi, en voi.",
+          "haluatko tulla kahville?",
+          "kyllä, mielelläni.",
+          "mennäänkö elokuviin?"
+        ],
+        "authored_new_forms": [
+          "elokuviin",
+          "kahville",
+          "kanssa",
+          "kyllä",
+          "mennään",
+          "tulla",
+          "yhdessä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5270,7 +6673,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5350,7 +6754,33 @@
           "viesti"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "heti",
+          "myöhemmin",
+          "nyt"
+        ],
+        "topic_target_forms": [
+          "myöhässä",
+          "perun",
+          "sopii",
+          "viesti"
+        ],
+        "expression_target_forms": [
+          "nähdään myöhemmin.",
+          "olen vähän myöhässä.",
+          "perun tämän päivän tapaamisen.",
+          "sopiiko kello seitsemän?"
+        ],
+        "authored_new_forms": [
+          "heti",
+          "myöhemmin",
+          "myöhässä",
+          "nyt",
+          "perun",
+          "sopii",
+          "viesti"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5358,7 +6788,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5418,7 +6849,16 @@
         "reading_only": [
           "opiskelen joka päivä. pidän musiikista. tavataan perjantaina. nähdään myöhemmin.",
           "voimmeko tavata huomenna? sopiiko kello kuusi? kyllä, sopii. olen vähän myöhässä."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "nähdään myöhemmin.",
+          "opiskelen joka päivä.",
+          "pidän musiikista.",
+          "tavataan perjantaina."
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -5426,7 +6866,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5501,7 +6942,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -5509,7 +6954,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5600,7 +7046,38 @@
           "tuuli"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hyvin",
+          "nyt",
+          "paljon"
+        ],
+        "topic_target_forms": [
+          "aurinko",
+          "kylmä",
+          "lämmin",
+          "sade",
+          "sää",
+          "tuuli"
+        ],
+        "expression_target_forms": [
+          "aurinko paistaa.",
+          "sataa.",
+          "tuulee.",
+          "tänään on kylmä.",
+          "tänään on lämmin."
+        ],
+        "authored_new_forms": [
+          "aurinko",
+          "hyvin",
+          "kylmä",
+          "lämmin",
+          "nyt",
+          "paljon",
+          "sade",
+          "sää",
+          "tuuli"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5608,7 +7085,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5695,7 +7173,37 @@
           "talvi"
         ],
         "distractor_only_count": 1,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "aikana",
+          "hyvin",
+          "liian"
+        ],
+        "topic_target_forms": [
+          "kengät",
+          "kesä",
+          "kevät",
+          "syksy",
+          "takki",
+          "talvi"
+        ],
+        "expression_target_forms": [
+          "kesällä on lämmin.",
+          "nämä kengät ovat hyvät.",
+          "talvella on kylmä.",
+          "tarvitsen takin."
+        ],
+        "authored_new_forms": [
+          "aikana",
+          "hyvin",
+          "kengät",
+          "kesä",
+          "kevät",
+          "liian",
+          "syksy",
+          "takki",
+          "talvi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5703,7 +7211,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5785,7 +7294,34 @@
           "vatsa"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minun",
+          "missä",
+          "tämä"
+        ],
+        "topic_target_forms": [
+          "jalka",
+          "kurkku",
+          "käsi",
+          "pää",
+          "vatsa"
+        ],
+        "expression_target_forms": [
+          "minun päätäni särkee.",
+          "tämä on käsi.",
+          "vatsaan sattuu."
+        ],
+        "authored_new_forms": [
+          "jalka",
+          "kurkku",
+          "käsi",
+          "minun",
+          "missä",
+          "pää",
+          "tämä",
+          "vatsa"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5793,7 +7329,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5873,7 +7410,33 @@
           "yskä"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hyvin",
+          "olen",
+          "vähän"
+        ],
+        "topic_target_forms": [
+          "kipeä",
+          "kuume",
+          "sairas",
+          "yskä"
+        ],
+        "expression_target_forms": [
+          "en voi hyvin.",
+          "minulla on kuumetta.",
+          "minulla on yskä.",
+          "olen sairas."
+        ],
+        "authored_new_forms": [
+          "hyvin",
+          "kipeä",
+          "kuume",
+          "olen",
+          "sairas",
+          "vähän",
+          "yskä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5881,7 +7444,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -5957,7 +7521,32 @@
           "tarvitsen"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "mitä",
+          "ottaa",
+          "saa"
+        ],
+        "topic_target_forms": [
+          "apteekki",
+          "kipu",
+          "lääke",
+          "tarvitsen"
+        ],
+        "expression_target_forms": [
+          "mitä tähän voi ottaa?",
+          "onko teillä lääkettä?",
+          "tarvitsen lääkettä kipuun."
+        ],
+        "authored_new_forms": [
+          "apteekki",
+          "kipu",
+          "lääke",
+          "mitä",
+          "ottaa",
+          "saa",
+          "tarvitsen"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -5965,7 +7554,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6043,7 +7633,32 @@
           "varata"
         ],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "aika"
+        ],
+        "topic_target_forms": [
+          "ajanvaraus",
+          "huomenna",
+          "lääkäri",
+          "milloin",
+          "terveysasema",
+          "varata"
+        ],
+        "expression_target_forms": [
+          "haluaisin varata ajan.",
+          "onko aikaa huomenna?",
+          "sopiiko kello kymmenen?"
+        ],
+        "authored_new_forms": [
+          "aika",
+          "ajanvaraus",
+          "huomenna",
+          "lääkäri",
+          "milloin",
+          "terveysasema",
+          "varata"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6051,7 +7666,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6129,7 +7745,33 @@
           "voi"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "heti",
+          "täällä",
+          "voi"
+        ],
+        "topic_target_forms": [
+          "apu",
+          "auttaa",
+          "hätä",
+          "tarvitsen"
+        ],
+        "expression_target_forms": [
+          "minulla on ongelma.",
+          "tarvitsen apua heti.",
+          "tarvitsen apua.",
+          "voitko auttaa?"
+        ],
+        "authored_new_forms": [
+          "apu",
+          "auttaa",
+          "heti",
+          "hätä",
+          "tarvitsen",
+          "täällä",
+          "voi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6137,7 +7779,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6222,7 +7865,35 @@
           "ulkona"
         ],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ehkä",
+          "heti",
+          "jos"
+        ],
+        "topic_target_forms": [
+          "juo",
+          "lepää",
+          "ota",
+          "sisällä",
+          "ulkona"
+        ],
+        "expression_target_forms": [
+          "juo vettä.",
+          "lepää kotona.",
+          "ota takki.",
+          "pysy sisällä."
+        ],
+        "authored_new_forms": [
+          "ehkä",
+          "heti",
+          "jos",
+          "juo",
+          "lepää",
+          "ota",
+          "sisällä",
+          "ulkona"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6230,7 +7901,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6289,7 +7961,16 @@
         "reading_only": [
           "apteekki on lähellä. tarvitsen lääkettä. voitko auttaa? lepää kotona.",
           "olen sairas. minulla on kuumetta. haluaisin varata ajan. sopiiko kello kymmenen?"
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "haluaisin varata ajan.",
+          "minulla on kuumetta.",
+          "tarvitsen lääkettä.",
+          "voitko auttaa?"
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -6297,7 +7978,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6373,7 +8055,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -6381,7 +8067,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6450,7 +8137,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "mitä",
+          "myös",
+          "nyt"
+        ],
+        "topic_target_forms": [
+          "kuulumiset",
+          "tänään",
+          "vapaa-aika"
+        ],
+        "expression_target_forms": [
+          "entä sinä?",
+          "minulle kuuluu hyvää.",
+          "mitä sinulle kuuluu?",
+          "mitä teet tänään?"
+        ],
+        "authored_new_forms": [
+          "kuulumiset",
+          "mitä",
+          "myös",
+          "nyt",
+          "tänään",
+          "vapaa-aika"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6458,7 +8169,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6527,7 +8239,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kanssa",
+          "voi",
+          "yhdessä"
+        ],
+        "topic_target_forms": [
+          "mielelläni",
+          "valitettavasti",
+          "vapaa"
+        ],
+        "expression_target_forms": [
+          "haluatko tulla minun kanssani?",
+          "kyllä, mielelläni.",
+          "valitettavasti en voi.",
+          "voidaan mennä yhdessä."
+        ],
+        "authored_new_forms": [
+          "kanssa",
+          "mielelläni",
+          "valitettavasti",
+          "vapaa",
+          "voi",
+          "yhdessä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6535,7 +8271,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6604,7 +8341,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ehkä",
+          "myöhemmin",
+          "sitten"
+        ],
+        "topic_target_forms": [
+          "myöhässä",
+          "perua",
+          "siirtää"
+        ],
+        "expression_target_forms": [
+          "ehkä sitten huomenna.",
+          "minun täytyy perua tapaaminen.",
+          "olen myöhässä.",
+          "voimmeko tavata myöhemmin?"
+        ],
+        "authored_new_forms": [
+          "ehkä",
+          "myöhemmin",
+          "myöhässä",
+          "perua",
+          "siirtää",
+          "sitten"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6612,7 +8373,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6681,7 +8443,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "heti",
+          "minulle",
+          "nyt"
+        ],
+        "topic_target_forms": [
+          "saapua",
+          "vastata",
+          "viesti"
+        ],
+        "expression_target_forms": [
+          "lähetä minulle viesti.",
+          "olen siellä kello kuusi.",
+          "tulen pian.",
+          "vastaan myöhemmin."
+        ],
+        "authored_new_forms": [
+          "heti",
+          "minulle",
+          "nyt",
+          "saapua",
+          "vastata",
+          "viesti"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6689,7 +8475,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6758,7 +8545,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minulle",
+          "sanoo",
+          "voi"
+        ],
+        "topic_target_forms": [
+          "numero",
+          "puhelin",
+          "soittaa"
+        ],
+        "expression_target_forms": [
+          "hei, täällä on sara.",
+          "hän ei ole nyt täällä.",
+          "voinko puhua amirille?",
+          "voitko soittaa minulle myöhemmin?"
+        ],
+        "authored_new_forms": [
+          "minulle",
+          "numero",
+          "puhelin",
+          "sanoo",
+          "soittaa",
+          "voi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6766,7 +8577,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6835,7 +8647,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "enemmän",
+          "hyvä",
+          "myös"
+        ],
+        "topic_target_forms": [
+          "lempiruoka",
+          "mieluummin",
+          "suosikki"
+        ],
+        "expression_target_forms": [
+          "juon mieluummin kahvia.",
+          "mikä on sinun suosikkisi?",
+          "pidän enemmän teestä.",
+          "pidän tästä."
+        ],
+        "authored_new_forms": [
+          "enemmän",
+          "hyvä",
+          "lempiruoka",
+          "mieluummin",
+          "myös",
+          "suosikki"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6843,7 +8679,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6909,7 +8746,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "koska",
+          "mutta",
+          "siksi"
+        ],
+        "topic_target_forms": [
+          "kiireinen",
+          "vapaa",
+          "väsynyt"
+        ],
+        "expression_target_forms": [
+          "en tule, koska olen väsynyt.",
+          "haluaisin tulla, mutta olen kiireinen.",
+          "olen väsynyt, siksi menen kotiin."
+        ],
+        "authored_new_forms": [
+          "kiireinen",
+          "koska",
+          "mutta",
+          "siksi",
+          "vapaa",
+          "väsynyt"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6917,7 +8777,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -6986,7 +8847,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "sitten",
+          "voidaan",
+          "yhdessä"
+        ],
+        "topic_target_forms": [
+          "mennään",
+          "sopimus",
+          "tavataan"
+        ],
+        "expression_target_forms": [
+          "mennään yhdessä.",
+          "sitten mennään kahville.",
+          "sovitaan niin.",
+          "voidaan tavata huomenna."
+        ],
+        "authored_new_forms": [
+          "mennään",
+          "sitten",
+          "sopimus",
+          "tavataan",
+          "voidaan",
+          "yhdessä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -6994,7 +8879,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7046,7 +8932,17 @@
         "reading_only": [
           "hei! mitä kuuluu? haluatko tulla minun kanssani?",
           "valitettavasti en voi, koska olen kiireinen. voidaan tavata myöhemmin."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "haluatko tulla minun kanssani?",
+          "hei! mitä kuuluu?",
+          "sovitaan niin.",
+          "valitettavasti en voi, koska olen kiireinen.",
+          "voidaan tavata myöhemmin."
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -7054,7 +8950,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7129,7 +9026,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -7137,7 +9038,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7203,7 +9105,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kaikki",
+          "siellä",
+          "tässä"
+        ],
+        "topic_target_forms": [
+          "keittiö",
+          "makuuhuone",
+          "olohuone"
+        ],
+        "expression_target_forms": [
+          "kaikki on valmista.",
+          "keittiö on tässä.",
+          "olohuone on siellä."
+        ],
+        "authored_new_forms": [
+          "kaikki",
+          "keittiö",
+          "makuuhuone",
+          "olohuone",
+          "siellä",
+          "tässä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7211,7 +9136,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7277,7 +9203,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 2,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "siellä",
+          "siinä",
+          "tässä"
+        ],
+        "topic_target_forms": [
+          "kaapissa",
+          "lattialla",
+          "pöydällä"
+        ],
+        "expression_target_forms": [
+          "avain on pöydällä.",
+          "kengät ovat lattialla.",
+          "lasi on kaapissa."
+        ],
+        "authored_new_forms": [
+          "kaapissa",
+          "lattialla",
+          "pöydällä",
+          "siellä",
+          "siinä",
+          "tässä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7285,7 +9234,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7354,7 +9304,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "lisää",
+          "pitää",
+          "tehdä"
+        ],
+        "topic_target_forms": [
+          "pestä",
+          "roskat",
+          "siivota"
+        ],
+        "expression_target_forms": [
+          "pitää pestä astiat.",
+          "pitää siivota.",
+          "tarvitsen lisää aikaa.",
+          "vien roskat."
+        ],
+        "authored_new_forms": [
+          "lisää",
+          "pestä",
+          "pitää",
+          "roskat",
+          "siivota",
+          "tehdä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7362,7 +9336,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7431,7 +9406,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ei",
+          "oikein",
+          "vielä"
+        ],
+        "topic_target_forms": [
+          "hana",
+          "lämmitys",
+          "valo"
+        ],
+        "expression_target_forms": [
+          "hana ei toimi.",
+          "lämmitys ei toimi oikein.",
+          "ongelma ei ole vielä korjattu.",
+          "valo ei pala."
+        ],
+        "authored_new_forms": [
+          "ei",
+          "hana",
+          "lämmitys",
+          "oikein",
+          "valo",
+          "vielä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7439,7 +9438,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7508,7 +9508,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "heti",
+          "minulle",
+          "voi"
+        ],
+        "topic_target_forms": [
+          "huolto",
+          "korjaaja",
+          "osoite"
+        ],
+        "expression_target_forms": [
+          "osoite on …",
+          "tarvitsen huoltoa.",
+          "voitteko lähettää korjaajan?",
+          "voitteko soittaa minulle?"
+        ],
+        "authored_new_forms": [
+          "heti",
+          "huolto",
+          "korjaaja",
+          "minulle",
+          "osoite",
+          "voi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7516,7 +9540,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7585,7 +9610,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 4,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "missä",
+          "myös",
+          "täällä"
+        ],
+        "topic_target_forms": [
+          "kirjasto",
+          "pankki",
+          "posti"
+        ],
+        "expression_target_forms": [
+          "missä kirjasto on?",
+          "onko täällä posti?",
+          "pankki on keskustassa.",
+          "täällä on myös kirjasto."
+        ],
+        "authored_new_forms": [
+          "kirjasto",
+          "missä",
+          "myös",
+          "pankki",
+          "posti",
+          "täällä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7593,7 +9642,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7662,7 +9712,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "jälkeen",
+          "kiinni",
+          "klo"
+        ],
+        "topic_target_forms": [
+          "auki",
+          "avautuu",
+          "sulkeutuu"
+        ],
+        "expression_target_forms": [
+          "milloin kirjasto on auki?",
+          "se avautuu kello yhdeksän.",
+          "se menee kiinni kello kuusi.",
+          "se on auki viiden jälkeen."
+        ],
+        "authored_new_forms": [
+          "auki",
+          "avautuu",
+          "jälkeen",
+          "kiinni",
+          "klo",
+          "sulkeutuu"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7670,7 +9744,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7739,7 +9814,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ei",
+          "pitää",
+          "saa"
+        ],
+        "topic_target_forms": [
+          "kielletty",
+          "sallittu",
+          "sisäänkäynti"
+        ],
+        "expression_target_forms": [
+          "sisäänkäynti on tästä.",
+          "tämä on kielletty.",
+          "täällä ei saa tupakoida.",
+          "täällä saa odottaa."
+        ],
+        "authored_new_forms": [
+          "ei",
+          "kielletty",
+          "pitää",
+          "saa",
+          "sallittu",
+          "sisäänkäynti"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7747,7 +9846,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7796,7 +9896,16 @@
         "reading_only": [
           "missä kirjasto on? milloin se on auki?",
           "sisäänkäynti on tästä. voitteko auttaa minua?"
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "milloin se on auki?",
+          "missä kirjasto on?",
+          "sisäänkäynti on tästä.",
+          "voitteko auttaa minua?"
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -7804,7 +9913,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7879,7 +9989,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -7887,7 +10001,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -7953,7 +10068,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "pitää",
+          "tehdä",
+          "tänä"
+        ],
+        "topic_target_forms": [
+          "kurssi",
+          "tehtävä",
+          "vuoro"
+        ],
+        "expression_target_forms": [
+          "kurssi alkaa aamulla.",
+          "minulla on iltavuoro.",
+          "tämä tehtävä pitää tehdä tänään."
+        ],
+        "authored_new_forms": [
+          "kurssi",
+          "pitää",
+          "tehdä",
+          "tehtävä",
+          "tänä",
+          "vuoro"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -7961,7 +10099,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8030,7 +10169,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "miten",
+          "mitä",
+          "vielä"
+        ],
+        "topic_target_forms": [
+          "selittää",
+          "tarkoittaa",
+          "uudestaan"
+        ],
+        "expression_target_forms": [
+          "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
+          "voitko sanoa uudestaan?",
+          "voitko selittää?"
+        ],
+        "authored_new_forms": [
+          "miten",
+          "mitä",
+          "selittää",
+          "tarkoittaa",
+          "uudestaan",
+          "vielä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8038,7 +10201,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8104,7 +10268,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ensin",
+          "jälkeen",
+          "sitten"
+        ],
+        "topic_target_forms": [
+          "avaa",
+          "kirjoita",
+          "lähetä"
+        ],
+        "expression_target_forms": [
+          "avaa tiedosto ensin.",
+          "kirjoita nimi.",
+          "lähetä viesti sen jälkeen."
+        ],
+        "authored_new_forms": [
+          "avaa",
+          "ensin",
+          "jälkeen",
+          "kirjoita",
+          "lähetä",
+          "sitten"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8112,7 +10299,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8181,7 +10369,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "pitää",
+          "voi",
+          "vähän"
+        ],
+        "topic_target_forms": [
+          "harjoitella",
+          "osaan",
+          "tarvitsen"
+        ],
+        "expression_target_forms": [
+          "minun pitää harjoitella.",
+          "osaan vähän suomea.",
+          "tarvitsen apua.",
+          "voin tehdä tämän."
+        ],
+        "authored_new_forms": [
+          "harjoitella",
+          "osaan",
+          "pitää",
+          "tarvitsen",
+          "voi",
+          "vähän"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8189,7 +10401,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8258,7 +10471,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kanssa",
+          "meidän",
+          "yhdessä"
+        ],
+        "topic_target_forms": [
+          "opettaja",
+          "ryhmä",
+          "työkaveri"
+        ],
+        "expression_target_forms": [
+          "meidän opettajamme on täällä.",
+          "opiskelen tässä ryhmässä.",
+          "teemme tämän yhdessä.",
+          "työskentelen hänen kanssaan."
+        ],
+        "authored_new_forms": [
+          "kanssa",
+          "meidän",
+          "opettaja",
+          "ryhmä",
+          "työkaveri",
+          "yhdessä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8266,7 +10503,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8335,7 +10573,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "että",
+          "minulle",
+          "sinä"
+        ],
+        "topic_target_forms": [
+          "liite",
+          "lähettää",
+          "sähköposti"
+        ],
+        "expression_target_forms": [
+          "hei! lähetän sinulle viestin.",
+          "kiitos avusta.",
+          "liite on mukana.",
+          "voitko lähettää sen minulle?"
+        ],
+        "authored_new_forms": [
+          "että",
+          "liite",
+          "lähettää",
+          "minulle",
+          "sinä",
+          "sähköposti"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8343,7 +10605,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8412,7 +10675,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ensi",
+          "tänä",
+          "viime"
+        ],
+        "topic_target_forms": [
+          "määräaika",
+          "perjantaina",
+          "viikolla"
+        ],
+        "expression_target_forms": [
+          "ensi viikolla on uusi tehtävä.",
+          "määräaika on perjantaina.",
+          "teen sen tällä viikolla.",
+          "viime viikolla olin poissa."
+        ],
+        "authored_new_forms": [
+          "ensi",
+          "määräaika",
+          "perjantaina",
+          "tänä",
+          "viikolla",
+          "viime"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8420,7 +10707,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8489,7 +10777,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "koska",
+          "pois",
+          "vuoksi"
+        ],
+        "topic_target_forms": [
+          "myöhässä",
+          "poissa",
+          "sairas"
+        ],
+        "expression_target_forms": [
+          "olen myöhässä, koska bussi on myöhässä.",
+          "olen poissa sairauden vuoksi.",
+          "olen tänään poissa.",
+          "tulen huomenna takaisin."
+        ],
+        "authored_new_forms": [
+          "koska",
+          "myöhässä",
+          "pois",
+          "poissa",
+          "sairas",
+          "vuoksi"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8497,7 +10809,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8548,7 +10861,17 @@
         "reading_only": [
           "mitä tämä tarkoittaa? avaa tiedosto ensin.",
           "voitko lähettää sen minulle? määräaika on perjantaina."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "avaa tiedosto ensin.",
+          "mitä tämä tarkoittaa?",
+          "määräaika on perjantaina.",
+          "olen tänään poissa.",
+          "voitko lähettää sen minulle?"
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -8556,7 +10879,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8631,7 +10955,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -8639,7 +10967,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8708,7 +11037,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "oli",
+          "olin",
+          "tuli"
+        ],
+        "topic_target_forms": [
+          "eilen",
+          "kotona",
+          "töissä"
+        ],
+        "expression_target_forms": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
+          "eilen olin kotona.",
+          "olin töissä."
+        ],
+        "authored_new_forms": [
+          "eilen",
+          "kotona",
+          "oli",
+          "olin",
+          "tuli",
+          "töissä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8716,7 +11069,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8787,7 +11141,32 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "sai",
+          "sanoi",
+          "teki"
+        ],
+        "topic_target_forms": [
+          "join",
+          "ostin",
+          "söin"
+        ],
+        "expression_target_forms": [
+          "hän sanoi kiitos.",
+          "join kahvia.",
+          "ostin lipun.",
+          "söin kotona.",
+          "tein ruokaa."
+        ],
+        "authored_new_forms": [
+          "join",
+          "ostin",
+          "sai",
+          "sanoi",
+          "söin",
+          "teki"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8795,7 +11174,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8864,7 +11244,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ensin",
+          "jälkeen",
+          "sitten"
+        ],
+        "topic_target_forms": [
+          "aamulla",
+          "eilen",
+          "illalla"
+        ],
+        "expression_target_forms": [
+          "ensin olin töissä.",
+          "illalla söin kotona.",
+          "sen jälkeen menin kotiin.",
+          "sitten menin kauppaan."
+        ],
+        "authored_new_forms": [
+          "aamulla",
+          "eilen",
+          "ensin",
+          "illalla",
+          "jälkeen",
+          "sitten"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8872,7 +11276,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -8941,7 +11346,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "kanssa",
+          "missä",
+          "siellä"
+        ],
+        "topic_target_forms": [
+          "kaupassa",
+          "keskustassa",
+          "koulussa"
+        ],
+        "expression_target_forms": [
+          "missä olit eilen?",
+          "olin kaupassa.",
+          "olin keskustassa ystävän kanssa.",
+          "olin koulussa."
+        ],
+        "authored_new_forms": [
+          "kanssa",
+          "kaupassa",
+          "keskustassa",
+          "koulussa",
+          "missä",
+          "siellä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -8949,7 +11378,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9018,7 +11448,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ehkä",
+          "ensi",
+          "tulee"
+        ],
+        "topic_target_forms": [
+          "huomenna",
+          "suunnitelma",
+          "viikonloppuna"
+        ],
+        "expression_target_forms": [
+          "ehkä menen elokuviin.",
+          "ensi viikolla tapaan ystävän.",
+          "huomenna menen töihin.",
+          "viikonloppuna olen kotona."
+        ],
+        "authored_new_forms": [
+          "ehkä",
+          "ensi",
+          "huomenna",
+          "suunnitelma",
+          "tulee",
+          "viikonloppuna"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9026,7 +11480,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9095,7 +11550,31 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "enemmän",
+          "liian",
+          "toinen"
+        ],
+        "topic_target_forms": [
+          "halvempi",
+          "kalliimpi",
+          "parempi"
+        ],
+        "expression_target_forms": [
+          "pidän tästä enemmän.",
+          "toinen on liian kallis.",
+          "tämä on halvempi.",
+          "tämä on parempi."
+        ],
+        "authored_new_forms": [
+          "enemmän",
+          "halvempi",
+          "kalliimpi",
+          "liian",
+          "parempi",
+          "toinen"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9103,7 +11582,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9169,7 +11649,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hyvä",
+          "mielestä",
+          "mutta"
+        ],
+        "topic_target_forms": [
+          "huono",
+          "mielenkiintoinen",
+          "vaikea"
+        ],
+        "expression_target_forms": [
+          "minun mielestäni tämä on hyvä.",
+          "se on mielenkiintoinen.",
+          "se on vaikea, mutta hyvä."
+        ],
+        "authored_new_forms": [
+          "huono",
+          "hyvä",
+          "mielenkiintoinen",
+          "mielestä",
+          "mutta",
+          "vaikea"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9177,7 +11680,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9243,7 +11747,30 @@
         ],
         "teach_only": [],
         "distractor_only_count": 3,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ja",
+          "koska",
+          "mutta"
+        ],
+        "topic_target_forms": [
+          "suunnitelma",
+          "tarina",
+          "viesti"
+        ],
+        "expression_target_forms": [
+          "eilen olin kotona ja tein ruokaa.",
+          "huomenna menen kauppaan, koska tarvitsen ruokaa.",
+          "pidän tästä, mutta se on kallis."
+        ],
+        "authored_new_forms": [
+          "ja",
+          "koska",
+          "mutta",
+          "suunnitelma",
+          "tarina",
+          "viesti"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9251,7 +11778,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9302,7 +11830,17 @@
         "reading_only": [
           "mitä sinulle kuuluu? tarvitsen apua.",
           "mitä tämä tarkoittaa? eilen olin kotona."
-        ]
+        ],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [
+          "eilen olin kotona.",
+          "huomenna menen töihin.",
+          "mitä sinulle kuuluu?",
+          "mitä tämä tarkoittaa?",
+          "tarvitsen apua."
+        ],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -9310,7 +11848,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9385,7 +11924,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -9393,7 +11936,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9460,7 +12004,29 @@
           "matka"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "oli",
+          "olin"
+        ],
+        "topic_target_forms": [
+          "kävin",
+          "matka",
+          "viikonloppuna"
+        ],
+        "expression_target_forms": [
+          "kävin eilen turussa.",
+          "matka oli mukava.",
+          "missä kävit viime viikonloppuna?",
+          "olin siellä kaksi päivää."
+        ],
+        "authored_new_forms": [
+          "kävin",
+          "kävin eilen turussa.",
+          "matka",
+          "missä kävit viime viikonloppuna?",
+          "viikonloppuna"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9468,7 +12034,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9538,7 +12105,30 @@
           "vaasasta"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ennen",
+          "tuli"
+        ],
+        "topic_target_forms": [
+          "asemalle",
+          "junalla",
+          "vaasasta"
+        ],
+        "expression_target_forms": [
+          "lähdin ennen kahdeksaa.",
+          "lähdin vaasasta aikaisin.",
+          "matkustin junalla.",
+          "menin asemalle aamulla.",
+          "tulin kotiin illalla."
+        ],
+        "authored_new_forms": [
+          "asemalle",
+          "junalla",
+          "lähdin vaasasta aikaisin.",
+          "menin asemalle aamulla.",
+          "vaasasta"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9546,7 +12136,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9616,7 +12207,30 @@
           "paluulippu"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "myös",
+          "paljon"
+        ],
+        "topic_target_forms": [
+          "kortilla",
+          "lippu",
+          "paluulippu"
+        ],
+        "expression_target_forms": [
+          "lippu maksoi kaksikymmentä euroa.",
+          "maksoiko lippu paljon?",
+          "maksoin lipun kortilla.",
+          "ostin lipun etukäteen.",
+          "ostin myös paluulipun."
+        ],
+        "authored_new_forms": [
+          "kortilla",
+          "lippu",
+          "maksoin lipun kortilla.",
+          "ostin lipun etukäteen.",
+          "paluulippu"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9624,7 +12238,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9693,7 +12308,30 @@
           "tuntia"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "oli",
+          "sitten"
+        ],
+        "topic_target_forms": [
+          "ajoissa",
+          "myöhässä",
+          "tuntia"
+        ],
+        "expression_target_forms": [
+          "juna lähti ajoissa.",
+          "juna saapui myöhässä.",
+          "matka kesti kaksi tuntia.",
+          "odotin asemalla.",
+          "sitten bussi tuli asemalle."
+        ],
+        "authored_new_forms": [
+          "ajoissa",
+          "juna lähti ajoissa.",
+          "juna saapui myöhässä.",
+          "myöhässä",
+          "tuntia"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9701,7 +12339,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9771,7 +12410,30 @@
           "hotellissa"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hyvä",
+          "oli"
+        ],
+        "topic_target_forms": [
+          "aamiainen",
+          "hotellissa",
+          "huoneen"
+        ],
+        "expression_target_forms": [
+          "aamiainen kuului hintaan.",
+          "aamiainen oli hyvä.",
+          "huone oli siisti.",
+          "varasin huoneen hotellista.",
+          "yövyin hotellissa yhden yön."
+        ],
+        "authored_new_forms": [
+          "aamiainen",
+          "hotellissa",
+          "huoneen",
+          "varasin huoneen hotellista.",
+          "yövyin hotellissa yhden yön."
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9779,7 +12441,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9849,7 +12512,30 @@
           "neuvoa"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "koska",
+          "oli"
+        ],
+        "topic_target_forms": [
+          "lippua",
+          "myöhästyin",
+          "neuvoa"
+        ],
+        "expression_target_forms": [
+          "en löytänyt lippua.",
+          "juna oli myöhässä.",
+          "kysyin neuvoa asemalla.",
+          "myöhästyin bussista.",
+          "myöhästyin, koska juna oli myöhässä."
+        ],
+        "authored_new_forms": [
+          "juna oli myöhässä.",
+          "lippua",
+          "myöhästyin",
+          "myöhästyin bussista.",
+          "neuvoa"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9857,7 +12543,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -9927,7 +12614,30 @@
           "valokuvia"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "hyvä",
+          "paljon"
+        ],
+        "topic_target_forms": [
+          "kirkon",
+          "museossa",
+          "valokuvia"
+        ],
+        "expression_target_forms": [
+          "kävin museossa.",
+          "museo oli hyvä.",
+          "näin vanhan kirkon.",
+          "otin valokuvia.",
+          "pidin kaupungista."
+        ],
+        "authored_new_forms": [
+          "kirkon",
+          "kävin museossa.",
+          "museossa",
+          "näin vanhan kirkon.",
+          "valokuvia"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -9935,7 +12645,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10002,7 +12713,29 @@
           "lopuksi"
         ],
         "distractor_only_count": 8,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "jälkeen",
+          "sitten"
+        ],
+        "topic_target_forms": [
+          "ensin",
+          "junaan",
+          "lopuksi"
+        ],
+        "expression_target_forms": [
+          "ensin ostin lipun.",
+          "lopuksi palasin kotiin.",
+          "sen jälkeen kävelin hotelliin.",
+          "sitten nousin junaan."
+        ],
+        "authored_new_forms": [
+          "ensin",
+          "ensin ostin lipun.",
+          "junaan",
+          "lopuksi",
+          "sitten nousin junaan."
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10010,7 +12743,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10077,6 +12811,28 @@
         "reading_only": [
           "tapasin ystäväni. palasin kotiin sunnuntaina.",
           "viime lauantaina kävin tampereella. matkustin sinne junalla."
+        ],
+        "high_frequency_target_forms": [
+          "sitten",
+          "viime"
+        ],
+        "topic_target_forms": [
+          "lauantaina",
+          "sunnuntaina",
+          "tampereella"
+        ],
+        "expression_target_forms": [
+          "matkustin sinne junalla.",
+          "palasin kotiin sunnuntaina.",
+          "tapasin ystäväni.",
+          "viime lauantaina kävin tampereella."
+        ],
+        "authored_new_forms": [
+          "lauantaina",
+          "matkustin sinne junalla.",
+          "sunnuntaina",
+          "tampereella",
+          "viime lauantaina kävin tampereella."
         ]
       },
       "grammar": {
@@ -10085,7 +12841,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10160,7 +12917,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 7,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -10168,7 +12929,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10239,7 +13001,30 @@
           "vastaanotto"
         ],
         "distractor_only_count": 12,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minulle",
+          "on"
+        ],
+        "topic_target_forms": [
+          "ajan",
+          "lääkärille",
+          "vastaanotto"
+        ],
+        "expression_target_forms": [
+          "hei, haluaisin varata ajan lääkärille.",
+          "mihin aikaan vastaanotto alkaa?",
+          "onko teillä vapaita aikoja tiistaina?",
+          "tarvitsen ajan ensi viikolle.",
+          "tiistai kello kymmenen sopii minulle."
+        ],
+        "authored_new_forms": [
+          "ajan",
+          "hei, haluaisin varata ajan lääkärille.",
+          "lääkärille",
+          "onko teillä vapaita aikoja tiistaina?",
+          "vastaanotto"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10247,7 +13032,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10316,7 +13102,30 @@
           "vastaanotolle"
         ],
         "distractor_only_count": 12,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minun",
+          "pitää"
+        ],
+        "topic_target_forms": [
+          "perua",
+          "siirtää",
+          "vastaanotolle"
+        ],
+        "expression_target_forms": [
+          "en pääse vastaanotolle huomenna.",
+          "kiitos, uusi aika sopii.",
+          "minun pitää siirtää vastaanottoaikaani.",
+          "onko perjantaina vapaita aikoja?",
+          "voinko perua ajan?"
+        ],
+        "authored_new_forms": [
+          "en pääse vastaanotolle huomenna.",
+          "minun pitää siirtää vastaanottoaikaani.",
+          "perua",
+          "siirtää",
+          "vastaanotolle"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10324,7 +13133,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10395,7 +13205,30 @@
           "päänsärkyä"
         ],
         "distractor_only_count": 14,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "oli",
+          "on"
+        ],
+        "topic_target_forms": [
+          "kuumetta",
+          "oireet",
+          "päänsärkyä"
+        ],
+        "expression_target_forms": [
+          "kurkkuni on kipeä.",
+          "minulla oli kuumetta eilen.",
+          "minulla on kuumetta.",
+          "minulla on päänsärkyä.",
+          "oireet alkoivat maanantaina."
+        ],
+        "authored_new_forms": [
+          "kuumetta",
+          "minulla on kuumetta.",
+          "minulla on päänsärkyä.",
+          "oireet",
+          "päänsärkyä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10403,7 +13236,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10474,7 +13308,30 @@
           "seuraavaksi"
         ],
         "distractor_only_count": 9,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minun",
+          "pitää"
+        ],
+        "topic_target_forms": [
+          "hitaammin",
+          "ohjeen",
+          "seuraavaksi"
+        ],
+        "expression_target_forms": [
+          "en ymmärtänyt viimeistä sanaa.",
+          "mitä minun pitää tehdä seuraavaksi?",
+          "odota tässä, ole hyvä.",
+          "voitteko puhua hitaammin?",
+          "voitteko toistaa ohjeen?"
+        ],
+        "authored_new_forms": [
+          "hitaammin",
+          "ohjeen",
+          "seuraavaksi",
+          "voitteko puhua hitaammin?",
+          "voitteko toistaa ohjeen?"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10482,7 +13339,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10552,7 +13410,30 @@
           "lääkkeestä"
         ],
         "distractor_only_count": 12,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "ennen",
+          "jos"
+        ],
+        "topic_target_forms": [
+          "apteekki",
+          "käyttöohjeen",
+          "lääkkeestä"
+        ],
+        "expression_target_forms": [
+          "anteeksi, missä apteekki on?",
+          "haluaisin kysyä tästä lääkkeestä.",
+          "kysyn apteekista, jos en ymmärrä.",
+          "luen ohjeen ennen käyttöä.",
+          "voitteko selittää käyttöohjeen?"
+        ],
+        "authored_new_forms": [
+          "anteeksi, missä apteekki on?",
+          "apteekki",
+          "haluaisin kysyä tästä lääkkeestä.",
+          "käyttöohjeen",
+          "lääkkeestä"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10560,7 +13441,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10631,7 +13513,30 @@
           "vuoroani"
         ],
         "distractor_only_count": 14,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minun",
+          "tämä"
+        ],
+        "topic_target_forms": [
+          "luukulle",
+          "palvelupiste",
+          "vuoroani"
+        ],
+        "expression_target_forms": [
+          "mille luukulle minun pitää mennä?",
+          "missä palvelupiste sijaitsee?",
+          "odotan vuoroani tässä.",
+          "onko tämä oikea paikka?",
+          "tarvitsen apua ajanvarauksessa."
+        ],
+        "authored_new_forms": [
+          "luukulle",
+          "missä palvelupiste sijaitsee?",
+          "onko tämä oikea paikka?",
+          "palvelupiste",
+          "vuoroani"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10639,7 +13544,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10710,7 +13616,30 @@
           "osoitetta"
         ],
         "distractor_only_count": 14,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "minun",
+          "tähän"
+        ],
+        "topic_target_forms": [
+          "allekirjoittaa",
+          "lomakkeessa",
+          "osoitetta"
+        ],
+        "expression_target_forms": [
+          "en ymmärrä tätä kohtaa.",
+          "kirjoitan nimeni tähän.",
+          "lomakkeessa kysytään osoitetta.",
+          "minun pitää allekirjoittaa lomake.",
+          "pitääkö tähän kirjoittaa päivämäärä?"
+        ],
+        "authored_new_forms": [
+          "allekirjoittaa",
+          "kirjoitan nimeni tähän.",
+          "lomakkeessa",
+          "lomakkeessa kysytään osoitetta.",
+          "osoitetta"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10718,7 +13647,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10788,7 +13718,30 @@
           "todistuksen"
         ],
         "distractor_only_count": 12,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [
+          "on",
+          "saada"
+        ],
+        "topic_target_forms": [
+          "kopion",
+          "sähköpostilla",
+          "todistuksen"
+        ],
+        "expression_target_forms": [
+          "milloin todistus valmistuu?",
+          "minulla on henkilöllisyystodistus mukana.",
+          "tarvitsen todistuksen työnantajalle.",
+          "voinko saada kopion tästä?",
+          "voitteko lähettää sen sähköpostilla?"
+        ],
+        "authored_new_forms": [
+          "kopion",
+          "sähköpostilla",
+          "tarvitsen todistuksen työnantajalle.",
+          "todistuksen",
+          "voinko saada kopion tästä?"
+        ]
       },
       "grammar": {
         "note_present": true,
@@ -10796,7 +13749,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10866,6 +13820,29 @@
         "reading_only": [
           "hei, haluaisin varata ajan. onko torstaina vapaita aikoja?",
           "tarvitsen myös todistuksen. voitteko lähettää vahvistuksen sähköpostilla?"
+        ],
+        "high_frequency_target_forms": [
+          "minulle",
+          "myös"
+        ],
+        "topic_target_forms": [
+          "sähköpostilla",
+          "torstaina",
+          "vahvistuksen"
+        ],
+        "expression_target_forms": [
+          "hei, haluaisin varata ajan.",
+          "onko torstaina vapaita aikoja?",
+          "tarvitsen myös todistuksen.",
+          "torstai sopii minulle.",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
+        ],
+        "authored_new_forms": [
+          "hei, haluaisin varata ajan.",
+          "onko torstaina vapaita aikoja?",
+          "sähköpostilla",
+          "torstaina",
+          "vahvistuksen"
         ]
       },
       "grammar": {
@@ -10874,7 +13851,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     },
     {
@@ -10949,7 +13927,11 @@
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 7,
-        "reading_only": []
+        "reading_only": [],
+        "high_frequency_target_forms": [],
+        "topic_target_forms": [],
+        "expression_target_forms": [],
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
@@ -10957,7 +13939,8 @@
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped"
+        "evidence_status": "unmapped",
+        "prerequisite_concept_ids": []
       }
     }
   ],
