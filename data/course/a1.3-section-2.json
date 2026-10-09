@@ -12,7 +12,7 @@
       "id": "a13s2-h-001",
       "surface_form": "tässä",
       "lemma": "tässä",
-      "translation_fa": "اینجا",
+      "translation_fa": "در همین نقطه",
       "item_type": "word",
       "frequency_status": "ranked",
       "frequency_rank": 97,
@@ -3273,62 +3273,62 @@
         "a1.3-s2-l09"
       ],
       "production_targets": [
-        "a13s2-e-007"
+        "a13s2-e-043"
       ],
       "listening_targets": [
         "a13s2-e-014",
-        "a13s2-e-023"
+        "a13s2-e-033"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s2-e-033",
+          "item": "a13s2-e-024",
           "tokens": [
-            "ei",
-            "toimi.",
-            "Hana"
+            "pestä",
+            "astiat.",
+            "Pitää"
           ],
           "answer_order": [
             2,
             0,
             1
           ],
-          "expected_fi": "Hana ei toimi."
+          "expected_fi": "Pitää pestä astiat."
         },
         {
           "type": "expression-completion",
-          "item": "a13s2-e-044",
-          "prompt_fi": "Voitteko _____ korjaajan?",
-          "prompt_fa": "می‌توانید تعمیرکار بفرستید؟",
+          "item": "a13s2-e-055",
+          "prompt_fi": "Pankki on _____.",
+          "prompt_fa": "بانک در مرکز شهر است.",
           "accepted_answers": [
-            "lähettää"
+            "keskustassa"
           ],
-          "expected_fi": "Voitteko lähettää korjaajan?"
+          "expected_fi": "Pankki on keskustassa."
         },
         {
           "type": "controlled-production",
-          "item": "a13s2-e-053",
-          "prompt_fa": "کتابخانه کجاست؟",
+          "item": "a13s2-e-063",
+          "prompt_fa": "کتابخانه چه زمانی باز است؟",
           "cues_fi": [
-            "Missä",
+            "Milloin",
             "kirjasto"
           ],
-          "expected_fi": "Missä kirjasto on?",
+          "expected_fi": "Milloin kirjasto on auki?",
           "accepted_answers": [
-            "Missä kirjasto on?"
+            "Milloin kirjasto on auki?"
           ]
         }
       ],
       "activities": [
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-007",
+          "mode": "finnish",
+          "item": "a13s2-e-043",
           "options": [
-            "a13s2-e-007",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-043",
+            "a13s2-e-055",
+            "a13s2-e-008",
+            "a13s2-e-035"
           ]
         },
         {
@@ -3336,21 +3336,10 @@
           "mode": "meaning",
           "item": "a13s2-e-014",
           "options": [
+            "a13s2-e-063",
             "a13s2-e-014",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-023",
-          "options": [
-            "a13s2-e-023",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-015",
+            "a13s2-e-044"
           ]
         },
         {
@@ -3358,32 +3347,32 @@
           "mode": "meaning",
           "item": "a13s2-e-033",
           "options": [
+            "a13s2-e-007",
+            "a13s2-e-025",
             "a13s2-e-033",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-054"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-e-024",
+          "options": [
+            "a13s2-e-008",
+            "a13s2-e-035",
+            "a13s2-e-071",
+            "a13s2-e-024"
           ]
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-044",
+          "item": "a13s2-e-055",
           "options": [
+            "a13s2-e-055",
+            "a13s2-e-015",
             "a13s2-e-044",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-053",
-          "options": [
-            "a13s2-e-053",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-076"
           ]
         },
         {
@@ -3391,43 +3380,21 @@
           "mode": "meaning",
           "item": "a13s2-e-063",
           "options": [
+            "a13s2-e-025",
             "a13s2-e-063",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-054",
+            "a13s2-e-043"
           ]
         },
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-071",
-          "options": [
-            "a13s2-e-071",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-076",
-          "options": [
-            "a13s2-e-076",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s2-e-007",
           "options": [
+            "a13s2-e-035",
+            "a13s2-e-071",
             "a13s2-e-007",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-014"
           ]
         },
         {
@@ -3435,74 +3402,83 @@
           "mode": "meaning",
           "item": "a13s2-e-008",
           "options": [
-            "a13s2-e-008",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-044",
+            "a13s2-e-076",
+            "a13s2-e-033",
+            "a13s2-e-008"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-015"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s2-e-025",
+          "options": [
+            "a13s2-e-071",
+            "a13s2-e-025",
+            "a13s2-e-014",
+            "a13s2-e-055"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-035"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-009",
+          "item": "a13s2-e-044",
           "options": [
-            "a13s2-e-009",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-015",
-          "options": [
-            "a13s2-e-015",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-016",
-          "options": [
-            "a13s2-e-016",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-024",
-          "options": [
+            "a13s2-e-043",
             "a13s2-e-024",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-007",
+            "a13s2-e-044"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-054"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s2-e-071",
+          "options": [
+            "a13s2-e-033",
+            "a13s2-e-071",
+            "a13s2-e-063",
+            "a13s2-e-015"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-076"
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
-        "a13s2-e-007",
+        "a13s2-e-043",
         "a13s2-e-014",
-        "a13s2-e-023",
         "a13s2-e-033",
-        "a13s2-e-044",
-        "a13s2-e-053",
+        "a13s2-e-024",
+        "a13s2-e-055",
         "a13s2-e-063",
-        "a13s2-e-071",
-        "a13s2-e-076",
         "a13s2-e-007",
         "a13s2-e-008",
-        "a13s2-e-009",
         "a13s2-e-015",
-        "a13s2-e-016",
-        "a13s2-e-024"
+        "a13s2-e-025",
+        "a13s2-e-035",
+        "a13s2-e-044",
+        "a13s2-e-054",
+        "a13s2-e-071",
+        "a13s2-e-076"
       ],
       "morphology_practice": [
         {
@@ -3521,6 +3497,68 @@
           "expected_fi": "on",
           "explanation_fa": "برای فاعل مفرد Keittiö، صورت on به کار می‌رود."
         }
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
       ]
     }
   ]
