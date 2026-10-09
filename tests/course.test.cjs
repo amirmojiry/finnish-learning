@@ -364,7 +364,7 @@ test('course map hides explanatory copy behind accessible info disclosures', () 
   assert.match(source, /توضیحات و اهداف بخش/);
   assert.match(source, /جزئیات درس/);
   assert.match(source, /course-lesson-popover-details/);
-  assert.match(source, /در پایان این بخش می‌توانی/);
+  assert.match(source, /در پایان این بخش می‌توانم/);
   assert.doesNotMatch(source, /بخش اول آمادهٔ یادگیری است؛ بخش‌های بعدی به‌ترتیب رودمپ اضافه می‌شوند/);
   assert.doesNotMatch(source, /section\.description_fa/);
   assert.doesNotMatch(source, /بخش ۱ نخستین بخش پیاده‌شدهٔ A1\.1 است/);

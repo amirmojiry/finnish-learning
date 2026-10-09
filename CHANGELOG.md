@@ -6,6 +6,13 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.28.2] - 2026-10-09
+
+### Fixed
+
+- Present all A1.1–A1.3 section goals as natural first-person subjunctive continuations of `در پایان این بخش می‌توانم`, rather than mixing second-person headings, first-person indicative sentences, third-person goals, and repeated `می‌توانم` prefixes.
+- Expand A1.2 Sections 3 and 4 goals into concise, independently assessable abilities and add regression coverage for the new copy contract.
+
 ## [1.28.1] - 2026-10-09
 
 ### Fixed
