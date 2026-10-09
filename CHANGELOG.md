@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.30.0] - 2026-10-09
+
+### Added
+
+- Ten A2.1 Section 2 lessons (routine doctor appointments and public services), with 150 varied activities, Persian objectives, Finnish listening/dictation, guided verb forms, service-text comprehension and an 80% nine-unit checkpoint.
+- Fully authored A2.1 Section 2 curriculum goals, bilingual service expressions, sample forms, appointment changes, requests for clarification, pharmacy-information questions and certificates; without clinical or dosage recommendations.
+- Regression coverage for 140 playable lessons in 14 sections, 300 A2.1 activities, exact contract targets, official corpus ranks, grammar blanks, reading, checkpoint coverage and preserved progress.
+
+### Changed
+
+- Add the second A2.1 section to the existing course stage; Sections 3–4 remain outline-only and the master stage remains partially implemented.
+- Keep 400 Parole dictionary entries unchanged and use unranked curated service vocabulary only where required.
+
+
 ## [1.29.0] - 2026-10-09
 
 ### Added

@@ -158,7 +158,7 @@ A future lexeme/form coverage table should record these separate fields. Until a
 - **Scheduled repetition:** revisit by actual learner performance rather than treating a lesson as the last exposure.
 - **Proficiency check:** reading, listening and production are distinct skills; available automatic tasks do not certify all of them.
 
-The curriculum's existing `high_frequency_targets` and `topic_targets` for A1.1–A1.3, plus the new A2.1 Section 1, are authored **plans**, while implemented section JSON files are the source of learner-facing content. A2.1 Sections 2–4 currently have outline titles only. The audit command counts authored targets separately from shipped lessons. The existing [A1.2 gap inventory](../data/course/a1.2-vocabulary-gap.json) remains a useful trace for Parole-backed versus currently available items.
+The curriculum's existing `high_frequency_targets` and `topic_targets` for A1.1–A1.3, plus the new A2.1 Sections 1–2, are authored **plans**, while implemented section JSON files are the source of learner-facing content. A2.1 Sections 3–4 currently have outline titles only. The audit command counts authored targets separately from shipped lessons. The existing [A1.2 gap inventory](../data/course/a1.2-vocabulary-gap.json) remains a useful trace for Parole-backed versus currently available items.
 
 ## Frequency and measurement rules
 

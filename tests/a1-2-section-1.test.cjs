@@ -23,7 +23,7 @@ test('course stage configuration exposes playable A1.1 through A2.1', () => {
     './data/course/a1.2-section-4.json',
   ]);
   assert.equal(course.COURSE_STAGES[2].sectionUrls.length, 4);
-  assert.deepEqual(course.COURSE_STAGES[3].sectionUrls, ['./data/course/a2.1-section-1.json']);
+  assert.deepEqual(course.COURSE_STAGES[3].sectionUrls, ['./data/course/a2.1-section-1.json','./data/course/a2.1-section-2.json']);
 });
 
 test('A1.2 Section 1 maps all ten reviewed curriculum lessons', () => {

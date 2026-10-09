@@ -71,8 +71,8 @@ test('inventory distinguishes planned, shipped and source dictionary terms', () 
   assert.ok(a12.target_strings_also_in_current_dictionary <= a12.unique_curriculum_lexical_surface_targets);
   const a21 = audit.stages.find(s=>s.level==='A2.1');
   assert.equal(a21.authored_curriculum_lessons, 40);
-  assert.equal(a21.shipped_lesson_count, 10);
-  assert.equal(a21.shipped_section_count, 1);
+  assert.equal(a21.shipped_lesson_count, 20);
+  assert.equal(a21.shipped_section_count, 2);
   assert.ok(audit.stages.filter(s=>!['A1.1','A1.2','A1.3','A2.1'].includes(s.level)).every(s=>s.shipped_lesson_count===0));
 });
 

@@ -17,7 +17,7 @@
     }
   ],
   "design_principles": [
-    "Section 1 is playable; sections 2-4 are explicitly outline-only and must not be presented as reviewed lesson content.",
+    "A2.1 Sections 1–2 are playable; Sections 3–4 are outline-only and must not appear as delivered lessons.",
     "Separate source-backed Parole surface ranks from unranked curated travel phrases and inflected forms.",
     "No invented Finnish suffix derivation: explicit past-tense forms and meaningful contexts are stored in lesson content.",
     "A2.1 is a Finnish educational subdivision of CEFR A2; spontaneous speaking and writing still need independent assessment."
@@ -25,7 +25,8 @@
   "stage_outcomes": [
     "Describe a short journey with familiar first-person past forms.",
     "Read, hear and write short accounts of timetable, ticket, hotel and travel problems.",
-    "Sequence recent experiences using ensin, sitten, sen jälkeen and lopuksi."
+    "Sequence recent experiences using ensin, sitten, sen jälkeen and lopuksi.",
+    "Ask for, change and confirm service appointments and request help with forms or certificates using familiar expressions."
   ],
   "lesson_defaults": {
     "target_activity_count": 15,
@@ -44,7 +45,7 @@
       3,
       6
     ],
-    "lexical_target_count_policy": "Only the reviewed candidate section 1 includes targets; outline-only modules have zero."
+    "lexical_target_count_policy": "Sections 1–2 supply detailed lexical targets; outline-only Sections 3–4 have zero."
   },
   "sections": [
     {
@@ -888,259 +889,902 @@
       "order": 2,
       "title_en": "Doctor appointments and public services",
       "title_fa": "پزشک و خدمات اداری",
-      "goal_en": "Further lessons to be authored and reviewed.",
-      "goal_fa": "درس‌های این بخش هنوز تألیف و بازبینی نشده‌اند.",
-      "authoring_status": "outline_only",
+      "goal_en": "Manage routine appointment and administrative service exchanges, simple forms and document requests.",
+      "goal_fa": "در موقعیت‌های معمول درمانگاه و خدمات اداری درخواست مؤدبانه بگوید، راهنما را بفهمد، فرم کوتاه پر کند و مدرک بخواهد.",
+      "authoring_status": "implementation_candidate",
       "lessons": [
         {
           "id": "a2.1-s2-l01",
           "order": 1,
-          "title_en": "Lesson 1 (outline)",
-          "title_fa": "گرفتن وقت",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "Booking a doctor's appointment",
+          "title_fa": "گرفتن وقت پزشک",
+          "can_do_en": "Book a routine doctor's appointment and confirm the date and time.",
+          "can_do_fa": "برای پزشک وقت بخواهم، دربارهٔ وقت‌های خالی بپرسم و زمانی مناسب را تأیید کنم.",
+          "high_frequency_targets": [
+            "on",
+            "minulle"
+          ],
+          "topic_targets": [
+            "ajan",
+            "lääkärille",
+            "vastaanotto"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "ajan",
+              "fa": "وقت ملاقات (مفعول)"
+            },
+            {
+              "fi": "lääkärille",
+              "fa": "برای پزشک / نزد پزشک"
+            },
+            {
+              "fi": "vastaanotto",
+              "fa": "ویزیت / پذیرش پزشکی"
+            }
+          ],
+          "expressions": [
+            "Hei, haluaisin varata ajan lääkärille.",
+            "Onko teillä vapaita aikoja tiistaina?",
+            "Tarvitsen ajan ensi viikolle.",
+            "Tiistai kello kymmenen sopii minulle.",
+            "Mihin aikaan vastaanotto alkaa?"
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Hei, haluaisin varata ajan lääkärille.",
+              "fa": "سلام، می‌خواهم برای پزشک وقت بگیرم."
+            },
+            {
+              "fi": "Onko teillä vapaita aikoja tiistaina?",
+              "fa": "آیا سه‌شنبه وقت خالی دارید؟"
+            },
+            {
+              "fi": "Tarvitsen ajan ensi viikolle.",
+              "fa": "برای هفتهٔ آینده وقت لازم دارم."
+            },
+            {
+              "fi": "Tiistai kello kymmenen sopii minulle.",
+              "fa": "سه‌شنبه ساعت ده برایم مناسب است."
+            },
+            {
+              "fi": "Mihin aikaan vastaanotto alkaa?",
+              "fa": "ویزیت چه ساعتی شروع می‌شود؟"
+            }
+          ],
+          "grammar_focus": [
+            "Polite appointment request with fixed Haluaisin phrase; adessive time and allative recipient."
+          ],
+          "grammar_note_fa": "«Haluaisin» یک درخواست مؤدبانه است؛ صرف کامل شرطی در این بخش تدریس نمی‌شود. «lääkärille» جهت و «tiistaina» زمان را مشخص می‌کند.",
+          "recycle_from": [
+            "a1.2-s4-l08",
+            "a1.3-s1-l03",
+            "a2.1-s1-l05"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "varata",
+            "feature_fa": "مصدر پس از درخواست مؤدبانه",
+            "frame_fi": "Hei, haluaisin _____ ajan lääkärille.",
+            "expected_fi": "varata",
+            "explanation_fa": "«Haluaisin varata» یعنی «می‌خواهم رزرو کنم»؛ پس از haluaisin شکل پایهٔ «varata» می‌آید."
+          }
         },
         {
           "id": "a2.1-s2-l02",
           "order": 2,
-          "title_en": "Lesson 2 (outline)",
+          "title_en": "Changing or cancelling an appointment",
           "title_fa": "تغییر یا لغو وقت",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "can_do_en": "Ask to reschedule or cancel a booked appointment and explain not being able to attend.",
+          "can_do_fa": "بگویم در وقت تعیین‌شده نمی‌توانم حاضر شوم و درخواست تغییر یا لغو آن را مطرح کنم.",
+          "high_frequency_targets": [
+            "minun",
+            "pitää"
+          ],
+          "topic_targets": [
+            "siirtää",
+            "perua",
+            "vastaanotolle"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "siirtää",
+              "fa": "جابه‌جا کردن"
+            },
+            {
+              "fi": "perua",
+              "fa": "لغو کردن"
+            },
+            {
+              "fi": "vastaanotolle",
+              "fa": "به محل ویزیت / نزد پزشک"
+            }
+          ],
+          "expressions": [
+            "Minun pitää siirtää vastaanottoaikaani.",
+            "En pääse vastaanotolle huomenna.",
+            "Voinko perua ajan?",
+            "Onko perjantaina vapaita aikoja?",
+            "Kiitos, uusi aika sopii."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Minun pitää siirtää vastaanottoaikaani.",
+              "fa": "باید وقت ویزیتم را جابه‌جا کنم."
+            },
+            {
+              "fi": "En pääse vastaanotolle huomenna.",
+              "fa": "فردا نمی‌توانم برای ویزیت بیایم."
+            },
+            {
+              "fi": "Voinko perua ajan?",
+              "fa": "می‌توانم وقت را لغو کنم؟"
+            },
+            {
+              "fi": "Onko perjantaina vapaita aikoja?",
+              "fa": "آیا روز جمعه وقت خالی دارید؟"
+            },
+            {
+              "fi": "Kiitos, uusi aika sopii.",
+              "fa": "ممنون، وقت جدید مناسب است."
+            }
+          ],
+          "grammar_focus": [
+            "Minun pitää + infinitive; negative present En pääse; perua ajan."
+          ],
+          "grammar_note_fa": "«Minun pitää + مصدر» ضرورت را نشان می‌دهد. در «En pääse» فعل pääse پس از منفی اول‌شخص آمده است. «perua ajan» یعنی لغو کردن وقت.",
+          "recycle_from": [
+            "a1.3-s1-l03",
+            "a1.3-s1-l04",
+            "a2.1-s2-l01"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "päästä",
+            "feature_fa": "منفی اول‌شخص",
+            "frame_fi": "En _____ vastaanotolle huomenna.",
+            "expected_fi": "pääse",
+            "explanation_fa": "در «En pääse» صورت «pääse» بعد از «en» می‌آید؛ این عبارت را در بافت کامل تمرین کن."
+          }
         },
         {
           "id": "a2.1-s2-l03",
           "order": 3,
-          "title_en": "Lesson 3 (outline)",
-          "title_fa": "توضیح نشانه‌ها و مدت آن‌ها",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "Describing symptoms and their onset",
+          "title_fa": "نشانه‌ها و زمان شروع آن‌ها",
+          "can_do_en": "Name familiar symptoms and say when they started, without diagnosing illness.",
+          "can_do_fa": "چند نشانهٔ معمول را به زبان ساده نام ببرم و بگویم چه زمانی شروع شده‌اند.",
+          "high_frequency_targets": [
+            "on",
+            "oli"
+          ],
+          "topic_targets": [
+            "päänsärkyä",
+            "kuumetta",
+            "oireet"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "päänsärkyä",
+              "fa": "سردرد"
+            },
+            {
+              "fi": "kuumetta",
+              "fa": "تب"
+            },
+            {
+              "fi": "oireet",
+              "fa": "نشانه‌ها"
+            }
+          ],
+          "expressions": [
+            "Minulla on päänsärkyä.",
+            "Minulla on kuumetta.",
+            "Kurkkuni on kipeä.",
+            "Oireet alkoivat maanantaina.",
+            "Minulla oli kuumetta eilen."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Minulla on päänsärkyä.",
+              "fa": "سردرد دارم."
+            },
+            {
+              "fi": "Minulla on kuumetta.",
+              "fa": "تب دارم."
+            },
+            {
+              "fi": "Kurkkuni on kipeä.",
+              "fa": "گلویم درد می‌کند."
+            },
+            {
+              "fi": "Oireet alkoivat maanantaina.",
+              "fa": "نشانه‌ها روز دوشنبه شروع شدند."
+            },
+            {
+              "fi": "Minulla oli kuumetta eilen.",
+              "fa": "دیروز تب داشتم."
+            }
+          ],
+          "grammar_focus": [
+            "Minulla on/oli symptom; partitive symptom terms; imperfect plural alkoivat."
+          ],
+          "grammar_note_fa": "«Minulla on» برای توصیف داشتن نشانه به کار می‌رود. «päänsärkyä» و «kuumetta» صورت Partitiivi دارند. «Oireet alkoivat» گذشتهٔ جمع است. این‌ها عبارت‌های زبانی‌اند و تشخیص پزشکی نیستند.",
+          "recycle_from": [
+            "a1.2-s4-l02",
+            "a1.2-s4-l03",
+            "a2.1-s2-l01"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "alkaa",
+            "feature_fa": "گذشتهٔ سوم‌شخص جمع",
+            "frame_fi": "Oireet _____ maanantaina.",
+            "expected_fi": "alkoivat",
+            "explanation_fa": "«Oireet» جمع است و «alkoivat» گذشتهٔ سوم‌شخص جمعِ «alkaa» است."
+          }
         },
         {
           "id": "a2.1-s2-l04",
           "order": 4,
-          "title_en": "Lesson 4 (outline)",
-          "title_fa": "فهمیدن توصیه‌های پزشکی ساده",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "Clarifying spoken instructions",
+          "title_fa": "فهمیدن و روشن‌کردن دستورهای کارکنان",
+          "can_do_en": "Ask staff to repeat, speak more slowly and explain the next step.",
+          "can_do_fa": "از کارکنان بخواهم آهسته‌تر صحبت کنند، توضیح را تکرار کنند و مرحلهٔ بعد را روشن کنند.",
+          "high_frequency_targets": [
+            "minun",
+            "pitää"
+          ],
+          "topic_targets": [
+            "ohjeen",
+            "hitaammin",
+            "seuraavaksi"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "ohjeen",
+              "fa": "دستور / راهنمای مشخص"
+            },
+            {
+              "fi": "hitaammin",
+              "fa": "آهسته‌تر"
+            },
+            {
+              "fi": "seuraavaksi",
+              "fa": "در مرحلهٔ بعد"
+            }
+          ],
+          "expressions": [
+            "Voitteko puhua hitaammin?",
+            "Voitteko toistaa ohjeen?",
+            "En ymmärtänyt viimeistä sanaa.",
+            "Mitä minun pitää tehdä seuraavaksi?",
+            "Odota tässä, ole hyvä."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Voitteko puhua hitaammin?",
+              "fa": "ممکن است آهسته‌تر صحبت کنید؟"
+            },
+            {
+              "fi": "Voitteko toistaa ohjeen?",
+              "fa": "ممکن است دستور را تکرار کنید؟"
+            },
+            {
+              "fi": "En ymmärtänyt viimeistä sanaa.",
+              "fa": "آخرین کلمه را متوجه نشدم."
+            },
+            {
+              "fi": "Mitä minun pitää tehdä seuraavaksi?",
+              "fa": "بعد باید چه کار کنم؟"
+            },
+            {
+              "fi": "Odota tässä, ole hyvä.",
+              "fa": "لطفاً اینجا منتظر بمان."
+            }
+          ],
+          "grammar_focus": [
+            "Voitteko + infinitive; negative imperfect En ymmärtänyt; mitä minun pitää tehdä."
+          ],
+          "grammar_note_fa": "«Voitteko + مصدر» برای درخواست مؤدبانه از کارکنان است. «En ymmärtänyt» یعنی «متوجه نشدم». «Minun pitää tehdä» برای پرسیدن دربارهٔ الزام یا قدم بعدی است.",
+          "recycle_from": [
+            "a1.3-s3-l02",
+            "a1.3-s3-l03",
+            "a2.1-s2-l03"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "puhua",
+            "feature_fa": "مصدر پس از پرسش مؤدبانه",
+            "frame_fi": "Voitteko _____ hitaammin?",
+            "expected_fi": "puhua",
+            "explanation_fa": "در «Voitteko puhua hitaammin?» بعد از Voitteko صورت پایهٔ «puhua» آمده است."
+          }
         },
         {
           "id": "a2.1-s2-l05",
           "order": 5,
-          "title_en": "Lesson 5 (outline)",
-          "title_fa": "توضیحات داروخانه",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "Asking about pharmacy instructions",
+          "title_fa": "پرسش و فهم راهنمای داروخانه",
+          "can_do_en": "Ask a pharmacist to explain written usage instructions without giving dosage advice.",
+          "can_do_fa": "جای داروخانه را بپرسم و برای فهمیدن راهنمای نوشته‌شدهٔ دارو سؤال کنم.",
+          "high_frequency_targets": [
+            "ennen",
+            "jos"
+          ],
+          "topic_targets": [
+            "apteekki",
+            "lääkkeestä",
+            "käyttöohjeen"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "apteekki",
+              "fa": "داروخانه"
+            },
+            {
+              "fi": "lääkkeestä",
+              "fa": "دربارهٔ دارو"
+            },
+            {
+              "fi": "käyttöohjeen",
+              "fa": "راهنمای استفاده (مفعول)"
+            }
+          ],
+          "expressions": [
+            "Anteeksi, missä apteekki on?",
+            "Haluaisin kysyä tästä lääkkeestä.",
+            "Voitteko selittää käyttöohjeen?",
+            "Luen ohjeen ennen käyttöä.",
+            "Kysyn apteekista, jos en ymmärrä."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Anteeksi, missä apteekki on?",
+              "fa": "ببخشید، داروخانه کجاست؟"
+            },
+            {
+              "fi": "Haluaisin kysyä tästä lääkkeestä.",
+              "fa": "می‌خواهم دربارهٔ این دارو سؤال کنم."
+            },
+            {
+              "fi": "Voitteko selittää käyttöohjeen?",
+              "fa": "می‌توانید راهنمای استفاده را توضیح دهید؟"
+            },
+            {
+              "fi": "Luen ohjeen ennen käyttöä.",
+              "fa": "پیش از استفاده، راهنما را می‌خوانم."
+            },
+            {
+              "fi": "Kysyn apteekista, jos en ymmärrä.",
+              "fa": "اگر متوجه نشوم، از داروخانه می‌پرسم."
+            }
+          ],
+          "grammar_focus": [
+            "Kysyä + elative; ennen käyttöä; conditional jos in service questions."
+          ],
+          "grammar_note_fa": "«kysyä tästä lääkkeestä» برای پرسش دربارهٔ چیزی است. «ennen käyttöä» یعنی پیش از استفاده و «jos» یک شرط کوتاه می‌سازد. این تمرین‌ها تجویز دارویی نیستند.",
+          "recycle_from": [
+            "a1.2-s4-l03",
+            "a1.3-s3-l02",
+            "a2.1-s2-l04"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "lukea",
+            "feature_fa": "حال اول‌شخص مفرد",
+            "frame_fi": "_____ ohjeen ennen käyttöä.",
+            "expected_fi": "Luen",
+            "explanation_fa": "«Luen» صورت حالِ اول‌شخصِ «lukea» است؛ در این نمونه راهنمای نوشته‌شده را می‌خوانم."
+          }
         },
         {
           "id": "a2.1-s2-l06",
           "order": 6,
-          "title_en": "Lesson 6 (outline)",
-          "title_fa": "پیدا کردن بخش خدماتی مناسب",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "Finding the service counter",
+          "title_fa": "پیدا کردن باجهٔ خدماتی مناسب",
+          "can_do_en": "Locate a public-service desk and ask where to go and wait.",
+          "can_do_fa": "باجهٔ درست را پیدا کنم، نیاز اداری ساده‌ای را بیان کنم و دربارهٔ نوبت بپرسم.",
+          "high_frequency_targets": [
+            "tämä",
+            "minun"
+          ],
+          "topic_targets": [
+            "palvelupiste",
+            "luukulle",
+            "vuoroani"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "palvelupiste",
+              "fa": "باجهٔ خدمات"
+            },
+            {
+              "fi": "luukulle",
+              "fa": "به باجه"
+            },
+            {
+              "fi": "vuoroani",
+              "fa": "نوبتم (مفعول)"
+            }
+          ],
+          "expressions": [
+            "Missä palvelupiste sijaitsee?",
+            "Onko tämä oikea paikka?",
+            "Tarvitsen apua ajanvarauksessa.",
+            "Mille luukulle minun pitää mennä?",
+            "Odotan vuoroani tässä."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Missä palvelupiste sijaitsee?",
+              "fa": "باجهٔ خدمات کجاست؟"
+            },
+            {
+              "fi": "Onko tämä oikea paikka?",
+              "fa": "آیا اینجا جای درست است؟"
+            },
+            {
+              "fi": "Tarvitsen apua ajanvarauksessa.",
+              "fa": "برای گرفتن وقت به کمک نیاز دارم."
+            },
+            {
+              "fi": "Mille luukulle minun pitää mennä?",
+              "fa": "باید به کدام باجه بروم؟"
+            },
+            {
+              "fi": "Odotan vuoroani tässä.",
+              "fa": "اینجا منتظر نوبتم می‌مانم."
+            }
+          ],
+          "grammar_focus": [
+            "Missä sijaitsee; Mille luukulle; Minun pitää mennä; vuoroani."
+          ],
+          "grammar_note_fa": "«Missä ... sijaitsee?» برای پرسیدن مکان است. «Mille luukulle» جهت رفتن به یک باجه را می‌گوید و «vuoroani» یعنی «نوبتم» به‌صورت مفعول.",
+          "recycle_from": [
+            "a1.3-s2-l06",
+            "a1.3-s3-l04",
+            "a2.1-s2-l01"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "mennä",
+            "feature_fa": "مصدر پس از pitää",
+            "frame_fi": "Mille luukulle minun pitää _____?",
+            "expected_fi": "mennä",
+            "explanation_fa": "«Minun pitää mennä» یعنی «باید بروم»؛ پس از «pitää» مصدر «mennä» می‌آید."
+          }
         },
         {
           "id": "a2.1-s2-l07",
           "order": 7,
-          "title_en": "Lesson 7 (outline)",
-          "title_fa": "پر کردن فرم ساده",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "Completing a service form",
+          "title_fa": "پرکردن یک فرم ساده",
+          "can_do_en": "Fill in a simple form and ask about unfamiliar fields before signing.",
+          "can_do_fa": "قسمت‌های اصلی یک فرم ساده را بفهمم و پیش از امضا دربارهٔ بخش نامفهوم سؤال کنم.",
+          "high_frequency_targets": [
+            "tähän",
+            "minun"
+          ],
+          "topic_targets": [
+            "lomakkeessa",
+            "osoitetta",
+            "allekirjoittaa"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "lomakkeessa",
+              "fa": "در فرم"
+            },
+            {
+              "fi": "osoitetta",
+              "fa": "نشانی (مفعول جزئی)"
+            },
+            {
+              "fi": "allekirjoittaa",
+              "fa": "امضا کردن"
+            }
+          ],
+          "expressions": [
+            "Kirjoitan nimeni tähän.",
+            "Lomakkeessa kysytään osoitetta.",
+            "En ymmärrä tätä kohtaa.",
+            "Pitääkö tähän kirjoittaa päivämäärä?",
+            "Minun pitää allekirjoittaa lomake."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Kirjoitan nimeni tähän.",
+              "fa": "نامم را اینجا می‌نویسم."
+            },
+            {
+              "fi": "Lomakkeessa kysytään osoitetta.",
+              "fa": "در فرم نشانی خواسته شده است."
+            },
+            {
+              "fi": "En ymmärrä tätä kohtaa.",
+              "fa": "این قسمت را نمی‌فهمم."
+            },
+            {
+              "fi": "Pitääkö tähän kirjoittaa päivämäärä?",
+              "fa": "آیا باید اینجا تاریخ بنویسم؟"
+            },
+            {
+              "fi": "Minun pitää allekirjoittaa lomake.",
+              "fa": "باید فرم را امضا کنم."
+            }
+          ],
+          "grammar_focus": [
+            "Locative lomakkeessa; passive recognition kysytään; tähän and writing."
+          ],
+          "grammar_note_fa": "«Kirjoitan» یعنی «می‌نویسم» و «lomakkeessa» یعنی «در فرم». صورت «kysytään» در اینجا تنها برای درک نوشتهٔ فرم مطرح می‌شود. «tähän» یعنی «به این قسمت».",
+          "recycle_from": [
+            "a1.3-s3-l03",
+            "a1.3-s3-l06",
+            "a2.1-s2-l06"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "kirjoittaa",
+            "feature_fa": "حال اول‌شخص مفرد",
+            "frame_fi": "_____ nimeni tähän.",
+            "expected_fi": "Kirjoitan",
+            "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است؛ «Kirjoitan nimeni» یعنی «نامم را می‌نویسم»."
+          }
         },
         {
           "id": "a2.1-s2-l08",
           "order": 8,
-          "title_en": "Lesson 8 (outline)",
+          "title_en": "Requesting a certificate",
           "title_fa": "درخواست گواهی یا مدرک",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "can_do_en": "Ask for a certificate or document copy and clarify the delivery time.",
+          "can_do_fa": "گواهی یا کپی مدرکی را درخواست کنم و دربارهٔ زمان آماده‌شدن و روش دریافت آن بپرسم.",
+          "high_frequency_targets": [
+            "saada",
+            "on"
+          ],
+          "topic_targets": [
+            "todistuksen",
+            "kopion",
+            "sähköpostilla"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "todistuksen",
+              "fa": "گواهی (مفعول کامل)"
+            },
+            {
+              "fi": "kopion",
+              "fa": "کپی (مفعول کامل)"
+            },
+            {
+              "fi": "sähköpostilla",
+              "fa": "با ایمیل"
+            }
+          ],
+          "expressions": [
+            "Tarvitsen todistuksen työnantajalle.",
+            "Voinko saada kopion tästä?",
+            "Milloin todistus valmistuu?",
+            "Voitteko lähettää sen sähköpostilla?",
+            "Minulla on henkilöllisyystodistus mukana."
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Tarvitsen todistuksen työnantajalle.",
+              "fa": "برای کارفرما به گواهی نیاز دارم."
+            },
+            {
+              "fi": "Voinko saada kopion tästä?",
+              "fa": "می‌توانم یک کپی از این بگیرم؟"
+            },
+            {
+              "fi": "Milloin todistus valmistuu?",
+              "fa": "گواهی چه زمانی آماده می‌شود؟"
+            },
+            {
+              "fi": "Voitteko lähettää sen sähköpostilla?",
+              "fa": "می‌توانید آن را با ایمیل بفرستید؟"
+            },
+            {
+              "fi": "Minulla on henkilöllisyystodistus mukana.",
+              "fa": "کارت شناسایی‌ام همراهم است."
+            }
+          ],
+          "grammar_focus": [
+            "Definite object phrase todistuksen/kopion; Milloin valmistuu; sähköpostilla."
+          ],
+          "grammar_note_fa": "«Tarvitsen todistuksen» و «saada kopion» نمونه‌های مفعول کامل هستند. «Milloin ... valmistuu?» یعنی «چه زمانی آماده می‌شود؟»؛ عبارت‌های کامل را در موقعیت خدماتی تمرین کن.",
+          "recycle_from": [
+            "a1.3-s3-l06",
+            "a1.3-s3-l07",
+            "a2.1-s2-l07"
+          ],
+          "activity_families": [
+            "meaning-choice",
+            "listening",
+            "dictation",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "saada",
+            "feature_fa": "مصدر پس از Voinko",
+            "frame_fi": "Voinko _____ kopion tästä?",
+            "expected_fi": "saada",
+            "explanation_fa": "پس از «Voinko» مصدر «saada» می‌آید."
+          }
         },
         {
           "id": "a2.1-s2-l09",
           "order": 9,
-          "title_en": "Lesson 9 (outline)",
-          "title_fa": "یک مراجعهٔ کامل خدماتی",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
-          "high_frequency_targets": [],
-          "topic_targets": [],
-          "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "title_en": "A complete appointment conversation",
+          "title_fa": "یک مراجعهٔ کامل به خدمات",
+          "can_do_en": "Read and write a short connected appointment exchange with a confirmation.",
+          "can_do_fa": "گفت‌وگوی کوتاه خدماتی را بخوانم و درخواست وقت و تأیید آن را در چند جمله بنویسم.",
+          "high_frequency_targets": [
+            "myös",
+            "minulle"
+          ],
+          "topic_targets": [
+            "torstaina",
+            "vahvistuksen",
+            "sähköpostilla"
+          ],
+          "topic_pairs": [
+            {
+              "fi": "torstaina",
+              "fa": "روز پنجشنبه"
+            },
+            {
+              "fi": "vahvistuksen",
+              "fa": "تأییدیه (مفعول کامل)"
+            },
+            {
+              "fi": "sähköpostilla",
+              "fa": "با ایمیل"
+            }
+          ],
+          "expressions": [
+            "Hei, haluaisin varata ajan.",
+            "Onko torstaina vapaita aikoja?",
+            "Torstai sopii minulle.",
+            "Tarvitsen myös todistuksen.",
+            "Voitteko lähettää vahvistuksen sähköpostilla?"
+          ],
+          "expression_pairs": [
+            {
+              "fi": "Hei, haluaisin varata ajan.",
+              "fa": "سلام، می‌خواهم وقت بگیرم."
+            },
+            {
+              "fi": "Onko torstaina vapaita aikoja?",
+              "fa": "پنجشنبه وقت خالی دارید؟"
+            },
+            {
+              "fi": "Torstai sopii minulle.",
+              "fa": "پنجشنبه برایم مناسب است."
+            },
+            {
+              "fi": "Tarvitsen myös todistuksen.",
+              "fa": "به گواهی هم نیاز دارم."
+            },
+            {
+              "fi": "Voitteko lähettää vahvistuksen sähköpostilla?",
+              "fa": "می‌توانید تأییدیه را با ایمیل بفرستید؟"
+            }
+          ],
+          "grammar_focus": [
+            "Fixed Haluaisin request, Onko time availability, and Sopii minulle acceptance."
+          ],
+          "grammar_note_fa": "«Haluaisin ...» درخواست محترمانه است، «Onko ...?» زمان خالی را می‌پرسد و «sopii minulle» تأیید می‌کند. تمرین مستقل گفتار برای استفادهٔ واقعی ضروری است.",
+          "recycle_from": [
+            "a2.1-s2-l01",
+            "a2.1-s2-l02",
+            "a2.1-s2-l03",
+            "a2.1-s2-l05",
+            "a2.1-s2-l06",
+            "a2.1-s2-l07",
+            "a2.1-s2-l08"
+          ],
+          "activity_families": [
+            "short-reading",
+            "listening",
+            "sentence-order",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Complete short guided service reading, listening and writing prompts."
           },
-          "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "lexical_target_count": 5,
+          "authoring_status": "implementation_candidate",
+          "morphology_target": {
+            "base_fi": "sopia",
+            "feature_fa": "حال سوم‌شخص مفرد",
+            "frame_fi": "Torstai _____ minulle.",
+            "expected_fi": "sopii",
+            "explanation_fa": "«sopii» صورت حال سوم‌شخص «sopia» است؛ «Torstai sopii minulle» یعنی پنجشنبه برایم مناسب است."
+          }
         },
         {
           "id": "a2.1-s2-l10",
           "order": 10,
-          "title_en": "Lesson 10 (outline)",
+          "title_en": "Section 2 checkpoint",
           "title_fa": "ارزیابی بخش ۲",
-          "can_do_en": "To be specified after review.",
-          "can_do_fa": "هدف پس از بازبینی مشخص می‌شود.",
+          "can_do_en": "Demonstrate nine preceding service situations in a supported 80%-threshold checkpoint.",
+          "can_do_fa": "در تمرین‌های ترکیبی گرفتن وقت، نشانه‌ها، فرم‌ها و دریافت مدارک پاسخ بدهم.",
           "high_frequency_targets": [],
           "topic_targets": [],
+          "topic_pairs": [],
           "expressions": [],
-          "grammar_focus": [],
-          "recycle_from": [],
-          "activity_families": [],
+          "expression_pairs": [],
+          "grammar_focus": [
+            "Mixed review of appointment, symptoms, forms and service language, not a medical or CEFR certificate."
+          ],
+          "grammar_note_fa": "در آزمون پایانی، درخواست وقت، تغییر قرار، توضیح نشانه‌ها، دستورها، داروخانه، باجهٔ خدماتی، فرم و گواهی مرور می‌شوند. نمرهٔ تمرین گواهی سطح A2 یا راهنمای درمان نیست.",
+          "recycle_from": [
+            "a2.1-s2-l01",
+            "a2.1-s2-l02",
+            "a2.1-s2-l03",
+            "a2.1-s2-l04",
+            "a2.1-s2-l05",
+            "a2.1-s2-l06",
+            "a2.1-s2-l07",
+            "a2.1-s2-l08",
+            "a2.1-s2-l09"
+          ],
+          "activity_families": [
+            "mixed-checkpoint",
+            "listening",
+            "inflection-production"
+          ],
           "skills": {
-            "listening": false,
-            "reading": false,
-            "speaking": false,
-            "writing": false
+            "listening": true,
+            "reading": true,
+            "speaking": true,
+            "writing": true
           },
           "assessment": {
-            "criterion_en": "Outline only; no playable tasks."
+            "criterion_en": "Reach >=80% of graded familiar service tasks; spontaneous interaction must be assessed by a person."
           },
           "lexical_target_count": 0,
-          "authoring_status": "outline_only"
+          "authoring_status": "implementation_candidate"
         }
       ]
     },
