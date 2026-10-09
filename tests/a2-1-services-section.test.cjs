@@ -150,3 +150,20 @@ test('appointment time and rescheduling examples use explicit, natural service l
  assert.equal(rescheduling.translation_fa,'باید وقت ویزیتم را جابه‌جا کنم.');
  assert.ok(!Object.values(section.items).some(i=>i.surface_form==='Mihin aikaan aika on?'||i.surface_form==='Minun pitää siirtää aikaani.'));
 });
+
+
+test('every authored service expression appears as a positive, graded learning task',()=>{
+ const graded=new Set(['choice','type','production','dictation','sentence-order','expression-completion','controlled-production','inflection-production','short-reading']);
+ for(const lesson of section.lessons.slice(0,9)){
+  const expressions=lesson.curriculum_target_refs.expressions;
+  assert.ok(expressions.length>=4,lesson.id);
+  for(const id of expressions){
+   const active=lesson.activities.filter(a=>graded.has(a.type)&&(
+    (a.type==='short-reading'&&a.question_item===id)
+    || (a.type!=='short-reading'&&a.item===id)
+   ));
+   assert.ok(active.length>0,lesson.id+' does not positively assess '+section.items[id].surface_form);
+   assert.ok(!active.some(a=>a.type==='choice'&&!a.options.includes(id)),lesson.id);
+  }
+ }
+});
