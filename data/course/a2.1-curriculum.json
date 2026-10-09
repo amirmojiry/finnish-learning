@@ -898,7 +898,7 @@
           "order": 1,
           "title_en": "Booking a doctor's appointment",
           "title_fa": "گرفتن وقت پزشک",
-          "can_do_en": "Booking a doctor's appointment.",
+          "can_do_en": "Book a routine doctor's appointment and confirm the date and time.",
           "can_do_fa": "برای پزشک وقت بخواهم، دربارهٔ وقت‌های خالی بپرسم و زمانی مناسب را تأیید کنم.",
           "high_frequency_targets": [
             "on",
@@ -953,7 +953,7 @@
             }
           ],
           "grammar_focus": [
-            "«Haluaisin» یک درخواست مؤدبانه است؛ صرف کامل شرطی در این بخش تدریس نمی‌شود. «lääkärille» جهت و «tiistaina» زمان را مشخص می‌کند."
+            "Polite appointment request with fixed Haluaisin phrase; adessive time and allative recipient."
           ],
           "grammar_note_fa": "«Haluaisin» یک درخواست مؤدبانه است؛ صرف کامل شرطی در این بخش تدریس نمی‌شود. «lääkärille» جهت و «tiistaina» زمان را مشخص می‌کند.",
           "recycle_from": [
@@ -992,7 +992,7 @@
           "order": 2,
           "title_en": "Changing or cancelling an appointment",
           "title_fa": "تغییر یا لغو وقت",
-          "can_do_en": "Changing or cancelling an appointment.",
+          "can_do_en": "Ask to reschedule or cancel a booked appointment and explain not being able to attend.",
           "can_do_fa": "بگویم در وقت تعیین‌شده نمی‌توانم حاضر شوم و درخواست تغییر یا لغو آن را مطرح کنم.",
           "high_frequency_targets": [
             "minun",
@@ -1047,7 +1047,7 @@
             }
           ],
           "grammar_focus": [
-            "«Minun pitää + مصدر» ضرورت را نشان می‌دهد. در «En pääse» فعل pääse پس از منفی اول‌شخص آمده است. «perua ajan» یعنی لغو کردن وقت."
+            "Minun pitää + infinitive; negative present En pääse; perua ajan."
           ],
           "grammar_note_fa": "«Minun pitää + مصدر» ضرورت را نشان می‌دهد. در «En pääse» فعل pääse پس از منفی اول‌شخص آمده است. «perua ajan» یعنی لغو کردن وقت.",
           "recycle_from": [
@@ -1086,7 +1086,7 @@
           "order": 3,
           "title_en": "Describing symptoms and their onset",
           "title_fa": "نشانه‌ها و زمان شروع آن‌ها",
-          "can_do_en": "Describing symptoms and their onset.",
+          "can_do_en": "Name familiar symptoms and say when they started, without diagnosing illness.",
           "can_do_fa": "چند نشانهٔ معمول را به زبان ساده نام ببرم و بگویم چه زمانی شروع شده‌اند.",
           "high_frequency_targets": [
             "on",
@@ -1141,7 +1141,7 @@
             }
           ],
           "grammar_focus": [
-            "«Minulla on» برای توصیف داشتن نشانه به کار می‌رود. «päänsärkyä» و «kuumetta» صورت Partitiivi دارند. «Oireet alkoivat» گذشتهٔ جمع است. این‌ها عبارت‌های زبانی‌اند و تشخیص پزشکی نیستند."
+            "Minulla on/oli symptom; partitive symptom terms; imperfect plural alkoivat."
           ],
           "grammar_note_fa": "«Minulla on» برای توصیف داشتن نشانه به کار می‌رود. «päänsärkyä» و «kuumetta» صورت Partitiivi دارند. «Oireet alkoivat» گذشتهٔ جمع است. این‌ها عبارت‌های زبانی‌اند و تشخیص پزشکی نیستند.",
           "recycle_from": [
@@ -1180,7 +1180,7 @@
           "order": 4,
           "title_en": "Clarifying spoken instructions",
           "title_fa": "فهمیدن و روشن‌کردن دستورهای کارکنان",
-          "can_do_en": "Clarifying spoken instructions.",
+          "can_do_en": "Ask staff to repeat, speak more slowly and explain the next step.",
           "can_do_fa": "از کارکنان بخواهم آهسته‌تر صحبت کنند، توضیح را تکرار کنند و مرحلهٔ بعد را روشن کنند.",
           "high_frequency_targets": [
             "minun",
@@ -1235,7 +1235,7 @@
             }
           ],
           "grammar_focus": [
-            "«Voitteko + مصدر» برای درخواست مؤدبانه از کارکنان است. «En ymmärtänyt» یعنی «متوجه نشدم». «Minun pitää tehdä» برای پرسیدن دربارهٔ الزام یا قدم بعدی است."
+            "Voitteko + infinitive; negative imperfect En ymmärtänyt; mitä minun pitää tehdä."
           ],
           "grammar_note_fa": "«Voitteko + مصدر» برای درخواست مؤدبانه از کارکنان است. «En ymmärtänyt» یعنی «متوجه نشدم». «Minun pitää tehdä» برای پرسیدن دربارهٔ الزام یا قدم بعدی است.",
           "recycle_from": [
@@ -1274,7 +1274,7 @@
           "order": 5,
           "title_en": "Asking about pharmacy instructions",
           "title_fa": "پرسش و فهم راهنمای داروخانه",
-          "can_do_en": "Asking about pharmacy instructions.",
+          "can_do_en": "Ask a pharmacist to explain written usage instructions without giving dosage advice.",
           "can_do_fa": "جای داروخانه را بپرسم و برای فهمیدن راهنمای نوشته‌شدهٔ دارو سؤال کنم.",
           "high_frequency_targets": [
             "ennen",
@@ -1329,7 +1329,7 @@
             }
           ],
           "grammar_focus": [
-            "«kysyä tästä lääkkeestä» برای پرسش دربارهٔ چیزی است. «ennen käyttöä» یعنی پیش از استفاده و «jos» یک شرط کوتاه می‌سازد. این تمرین‌ها تجویز دارویی نیستند."
+            "Kysyä + elative; ennen käyttöä; conditional jos in service questions."
           ],
           "grammar_note_fa": "«kysyä tästä lääkkeestä» برای پرسش دربارهٔ چیزی است. «ennen käyttöä» یعنی پیش از استفاده و «jos» یک شرط کوتاه می‌سازد. این تمرین‌ها تجویز دارویی نیستند.",
           "recycle_from": [
@@ -1368,7 +1368,7 @@
           "order": 6,
           "title_en": "Finding the service counter",
           "title_fa": "پیدا کردن باجهٔ خدماتی مناسب",
-          "can_do_en": "Finding the service counter.",
+          "can_do_en": "Locate a public-service desk and ask where to go and wait.",
           "can_do_fa": "باجهٔ درست را پیدا کنم، نیاز اداری ساده‌ای را بیان کنم و دربارهٔ نوبت بپرسم.",
           "high_frequency_targets": [
             "tämä",
@@ -1423,7 +1423,7 @@
             }
           ],
           "grammar_focus": [
-            "«Missä ... sijaitsee?» برای پرسیدن مکان است. «Mille luukulle» جهت رفتن به یک باجه را می‌گوید و «vuoroani» یعنی «نوبتم» به‌صورت مفعول."
+            "Missä sijaitsee; Mille luukulle; Minun pitää mennä; vuoroani."
           ],
           "grammar_note_fa": "«Missä ... sijaitsee?» برای پرسیدن مکان است. «Mille luukulle» جهت رفتن به یک باجه را می‌گوید و «vuoroani» یعنی «نوبتم» به‌صورت مفعول.",
           "recycle_from": [
@@ -1462,7 +1462,7 @@
           "order": 7,
           "title_en": "Completing a service form",
           "title_fa": "پرکردن یک فرم ساده",
-          "can_do_en": "Completing a service form.",
+          "can_do_en": "Fill in a simple form and ask about unfamiliar fields before signing.",
           "can_do_fa": "قسمت‌های اصلی یک فرم ساده را بفهمم و پیش از امضا دربارهٔ بخش نامفهوم سؤال کنم.",
           "high_frequency_targets": [
             "tähän",
@@ -1517,7 +1517,7 @@
             }
           ],
           "grammar_focus": [
-            "«Kirjoitan» یعنی «می‌نویسم» و «lomakkeessa» یعنی «در فرم». صورت «kysytään» در اینجا تنها برای درک نوشتهٔ فرم مطرح می‌شود. «tähän» یعنی «به این قسمت»."
+            "Locative lomakkeessa; passive recognition kysytään; tähän and writing."
           ],
           "grammar_note_fa": "«Kirjoitan» یعنی «می‌نویسم» و «lomakkeessa» یعنی «در فرم». صورت «kysytään» در اینجا تنها برای درک نوشتهٔ فرم مطرح می‌شود. «tähän» یعنی «به این قسمت».",
           "recycle_from": [
@@ -1556,7 +1556,7 @@
           "order": 8,
           "title_en": "Requesting a certificate",
           "title_fa": "درخواست گواهی یا مدرک",
-          "can_do_en": "Requesting a certificate.",
+          "can_do_en": "Ask for a certificate or document copy and clarify the delivery time.",
           "can_do_fa": "گواهی یا کپی مدرکی را درخواست کنم و دربارهٔ زمان آماده‌شدن و روش دریافت آن بپرسم.",
           "high_frequency_targets": [
             "saada",
@@ -1611,7 +1611,7 @@
             }
           ],
           "grammar_focus": [
-            "«Tarvitsen todistuksen» و «saada kopion» نمونه‌های مفعول کامل هستند. «Milloin ... valmistuu?» یعنی «چه زمانی آماده می‌شود؟»؛ عبارت‌های کامل را در موقعیت خدماتی تمرین کن."
+            "Definite object phrase todistuksen/kopion; Milloin valmistuu; sähköpostilla."
           ],
           "grammar_note_fa": "«Tarvitsen todistuksen» و «saada kopion» نمونه‌های مفعول کامل هستند. «Milloin ... valmistuu?» یعنی «چه زمانی آماده می‌شود؟»؛ عبارت‌های کامل را در موقعیت خدماتی تمرین کن.",
           "recycle_from": [
@@ -1650,7 +1650,7 @@
           "order": 9,
           "title_en": "A complete appointment conversation",
           "title_fa": "یک مراجعهٔ کامل به خدمات",
-          "can_do_en": "A complete appointment conversation.",
+          "can_do_en": "Read and write a short connected appointment exchange with a confirmation.",
           "can_do_fa": "گفت‌وگوی کوتاه خدماتی را بخوانم و درخواست وقت و تأیید آن را در چند جمله بنویسم.",
           "high_frequency_targets": [
             "myös",
@@ -1705,7 +1705,7 @@
             }
           ],
           "grammar_focus": [
-            "«Haluaisin ...» درخواست محترمانه است، «Onko ...?» زمان خالی را می‌پرسد و «sopii minulle» تأیید می‌کند. تمرین مستقل گفتار برای استفادهٔ واقعی ضروری است."
+            "Fixed Haluaisin request, Onko time availability, and Sopii minulle acceptance."
           ],
           "grammar_note_fa": "«Haluaisin ...» درخواست محترمانه است، «Onko ...?» زمان خالی را می‌پرسد و «sopii minulle» تأیید می‌کند. تمرین مستقل گفتار برای استفادهٔ واقعی ضروری است.",
           "recycle_from": [
@@ -1747,7 +1747,7 @@
           "order": 10,
           "title_en": "Section 2 checkpoint",
           "title_fa": "ارزیابی بخش ۲",
-          "can_do_en": "Section 2 checkpoint.",
+          "can_do_en": "Demonstrate nine preceding service situations in a supported 80%-threshold checkpoint.",
           "can_do_fa": "در تمرین‌های ترکیبی گرفتن وقت، نشانه‌ها، فرم‌ها و دریافت مدارک پاسخ بدهم.",
           "high_frequency_targets": [],
           "topic_targets": [],
@@ -1755,7 +1755,7 @@
           "expressions": [],
           "expression_pairs": [],
           "grammar_focus": [
-            "در آزمون پایانی، درخواست وقت، تغییر قرار، توضیح نشانه‌ها، دستورها، داروخانه، باجهٔ خدماتی، فرم و گواهی مرور می‌شوند. نمرهٔ تمرین گواهی سطح A2 یا راهنمای درمان نیست."
+            "Mixed review of appointment, symptoms, forms and service language, not a medical or CEFR certificate."
           ],
           "grammar_note_fa": "در آزمون پایانی، درخواست وقت، تغییر قرار، توضیح نشانه‌ها، دستورها، داروخانه، باجهٔ خدماتی، فرم و گواهی مرور می‌شوند. نمرهٔ تمرین گواهی سطح A2 یا راهنمای درمان نیست.",
           "recycle_from": [
