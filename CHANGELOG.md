@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.28.1] - 2026-10-09
+
+### Fixed
+
+- Restore five visible Persian learning outcomes in each of the four A1.3 section information panels; these were omitted from the first playable A1.3 delivery.
+- Validate that every playable A1 section has non-empty learning goals, with regression coverage for absent, empty, or whitespace-only goals.
+
+
 ## [1.28.0] - 2026-10-08
 
 ### Added
