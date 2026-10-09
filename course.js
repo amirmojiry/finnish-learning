@@ -1236,8 +1236,9 @@
         if (!['recognition', 'supported_production', 'independent_production'].includes(item.mode)) {
           fail('invalid evidence mode');
         }
-        const activity = activities[item.activity_index];
-        if (!Number.isInteger(item.activity_index) || !activity || ['teach', 'number-grid'].includes(activity.type)) {
+        const activity = Number.isInteger(item.activity_index) ? activities[item.activity_index]
+          : activities.find((candidate) => candidate.type === item.activity_type && candidate.item === item.item_id);
+        if (!activity || ['teach', 'number-grid'].includes(activity.type)) {
           fail('invalid graded evidence index');
         }
         if (!(activity.grammar_concept_ids || []).includes(goal.concept_id)) fail('missing explicit evidence concept link');
@@ -1589,7 +1590,7 @@
         validateSectionAgainstCurriculum(validateSection(rawSection), stage.curriculum)
       ));
       for (const section of validated) {
-        for (const lesson of section.lessons) validateLessonObjectives(lesson, section, stage.grammar_concepts || []);
+        for (const lesson of section.lessons) validateLessonObjectives(lesson, section, stage.curriculum.grammar_concepts || []);
       }
       const orders = validated.map((implemented) => implemented.curriculum_contract.order);
       const sorted = [...orders].sort((a, b) => a - b);
