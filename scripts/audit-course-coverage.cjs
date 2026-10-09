@@ -260,7 +260,6 @@ function main(args=process.argv.slice(2)) {
     const existingJson=fs.existsSync(JSON_FILE)?fs.readFileSync(JSON_FILE,'utf8'):null;
     const existingMd=fs.existsSync(MD_FILE)?fs.readFileSync(MD_FILE,'utf8'):null;
     if(existingJson!==json||existingMd!==md){
-      if (process.env.GITHUB_ACTIONS) process.stdout.write('COVERAGE_AUDIT_SNAPSHOT='+JSON.stringify({json,markdown:md})+'\n');
       process.stderr.write('Missing or stale course audit snapshots; run npm run curriculum:coverage:write.\n');
       process.exitCode=1;
     }else process.stdout.write('Course coverage audit current for '+data.summary.shipped_lessons+' lessons.\n');
