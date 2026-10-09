@@ -190,6 +190,6 @@ test('every A1.3 checkpoint samples all nine preceding lessons with varied grade
 
 test('the authoritative documentation hub describes A1.3 as implemented', () => {
   const hub = fs.readFileSync(path.join(ROOT, 'docs/README.md'), 'utf8');
-  assert.match(hub, /A1\\.2 and A1\\.3 each have four playable sections/);
-  assert.doesNotMatch(hub, /A1\\.3 is a reviewed \*\*plan only\*\*/);
+  assert.match(hub, /A1\.2 and A1\.3 each have four playable sections/);
+  assert.doesNotMatch(hub, /A1\.3 is a reviewed \*\*plan only\*\*/);
 });
