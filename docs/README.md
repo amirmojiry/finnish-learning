@@ -24,6 +24,7 @@ This is the documentation entry point for **Finnish Learning**. Each subject has
 | Later A1 curriculum contracts | [A1.2 JSON](../data/course/a1.2-curriculum.json) · [A1.3 JSON](../data/course/a1.3-curriculum.json) | A1.2 and A1.3 each have four playable sections and 40 lessons; both follow their reviewed curriculum contracts |
 | A2.1 partially authored contract | [A2.1 curriculum](../data/course/a2.1-curriculum.json) | Sections 1–2 have twenty playable lessons (travel/past and health/public services); Sections 3–4 remain outline-only |
 | Existing content coverage / پوشش اجرایی | [ممیزی محتوایی فارسی](CURRICULUM-AUDIT.fa.md) | A dated snapshot; regenerate live inventory with `npm run curriculum:audit` |
+| Shipped lexical and grammar evidence / ممیزی واقعی | [Coverage audit](COURSE-COVERAGE-AUDIT.md) · [JSON ledger](../data/course/coverage-audit.json) | Read-only analysis of graded activity answers, Parole gaps and grammar prerequisites; regenerate with `npm run curriculum:coverage:write` |
 | A1.2 corpus-vocabulary gap | [Vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) | Source-backed selection analysis, not a learner score |
 
 **Canonical rule / قانون مرجع:** The JSON under `data/course/` owns curriculum structure; readable Markdown explains it. Neither a proposed module nor a reviewed planning matrix creates a playable lesson. The content inventory command reads existing section files. **فهرست بسامد Parole و واژگان موضوعیِ تألیفی را با هم یکی نگیرید.**
