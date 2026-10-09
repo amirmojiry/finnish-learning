@@ -313,8 +313,8 @@ test('English and Persian project status agree on the current release', () => {
   const version = fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim();
   assert.ok(en.includes(`Version: \`${version}\``));
   assert.ok(fa.includes(`نسخه: \`${version}\``));
-  assert.match(en, /130 playable lessons/);
-  assert.match(fa, /۱۳۰ درسی/);
+  assert.match(en, /140 playable lessons/);
+  assert.match(fa, /۱۴۰ درسی/);
 });
 
 
