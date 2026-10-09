@@ -1583,7 +1583,7 @@
       "title_fa": "دیروز و زمان اخیر",
       "objective_fa": "بگوید در یک موقعیت ساده و آشنای اخیر کجا بوده یا چه اتفاقی افتاده است.",
       "summary_fa": "بگوید در یک موقعیت ساده و آشنای اخیر کجا بوده یا چه اتفاقی افتاده است.",
-      "grammar_fa": "برای رویدادهای دیروز، صورت‌های گذشتهٔ آموخته‌شده مانند «olin» (بودم)، «oli» (بود) و «tuli» (آمد/رسید) را با مثال کامل تمرین کن؛ هنوز قاعدهٔ صرف همهٔ فعل‌ها آموزش داده نمی‌شود.",
+      "grammar_fa": "«olin» بودم، «oli» بود و «tuli» آمد است؛ این صورت‌های گذشته را در مثال مشخص تمرین کن.",
       "new_targets": [
         "a13s4-h-001",
         "a13s4-h-002",
@@ -1784,7 +1784,7 @@
       "title_fa": "کارهای رایج در گذشته",
       "objective_fa": "چند صورت گذشتهٔ بازبینی‌شده برای کارهای روزمرهٔ آشنا را بفهمد و استفاده کند.",
       "summary_fa": "چند صورت گذشتهٔ بازبینی‌شده برای کارهای روزمرهٔ آشنا را بفهمد و استفاده کند.",
-      "grammar_fa": "صورت‌های گذشتهٔ «tein»، «söin»، «join» و «ostin» را در عبارت‌های واقعی مانند «Tein ruokaa.» و «Ostin lipun.» بیاموز؛ از روی آن‌ها برای فعل‌های دیگر صورت تازه نساز.",
+      "grammar_fa": "«tein»، «söin»، «join» و «ostin» صورت‌های گذشتهٔ پرکاربردند؛ آن‌ها را بدون تعمیم خودکار تمرین کن.",
       "new_targets": [
         "a13s4-h-011",
         "a13s4-h-012",
@@ -1987,7 +1987,7 @@
       "title_fa": "مرتب کردن رویدادهای اخیر",
       "objective_fa": "یک توالی دو یا سه‌مرحله‌ای از رویداد اخیر را با پیوندهای زمانی ساده بیان کند.",
       "summary_fa": "یک توالی دو یا سه‌مرحله‌ای از رویداد اخیر را با پیوندهای زمانی ساده بیان کند.",
-      "grammar_fa": "با «ensin» (اول)، «sitten» (سپس) و «sen jälkeen» (بعد از آن) رویدادهای کوتاه گذشته را به ترتیب بیان کن.",
+      "grammar_fa": "«ensin» اول، «sitten» سپس و «sen jälkeen» بعد از آن است؛ ترتیب رویدادهای گذشته را با آن‌ها بیان کن.",
       "new_targets": [
         "a13s4-h-022",
         "a13s4-h-023",
@@ -2190,7 +2190,7 @@
       "title_fa": "کجا بودی؟",
       "objective_fa": "در یک موقعیت اخیر و آشنا بپرسد کسی کجا بوده و پاسخ دهد.",
       "summary_fa": "در یک موقعیت اخیر و آشنا بپرسد کسی کجا بوده و پاسخ دهد.",
-      "grammar_fa": "«Missä olit eilen?» یعنی «دیروز کجا بودی؟». پاسخ را با «Olin ...» و صورت‌های مکانیِ آموخته‌شده مانند «koulussa» و «kaupassa» بده.",
+      "grammar_fa": "«Missä olit eilen?» یعنی دیروز کجا بودی؟ با «Olin ...» و مکان پاسخ بده.",
       "new_targets": [
         "a13s4-h-031",
         "a13s4-h-032",
@@ -2391,7 +2391,7 @@
       "title_fa": "برنامه‌های سادهٔ آینده",
       "objective_fa": "یک برنامهٔ سادهٔ آینده را با یک ساخت حال آشنا همراه با عبارت زمان بیان کند.",
       "summary_fa": "یک برنامهٔ سادهٔ آینده را با یک ساخت حال آشنا همراه با عبارت زمان بیان کند.",
-      "grammar_fa": "در فنلاندی، برای برنامهٔ آینده معمولاً زمان حال همراه با قید آینده می‌آید: «Huomenna menen töihin.» یا «Ensi viikolla tapaan ystävän.».",
+      "grammar_fa": "زمان حال همراه با قید آینده می‌تواند برنامه را نشان دهد: «Huomenna menen töihin.».",
       "new_targets": [
         "a13s4-h-041",
         "a13s4-h-042",
@@ -2596,7 +2596,7 @@
       "title_fa": "انتخاب میان گزینه‌های ساده",
       "objective_fa": "دو گزینهٔ آشنا را با مجموعه‌ای کوچک از عبارت‌های مقایسه‌ای تمرین‌شده مقایسه کند.",
       "summary_fa": "دو گزینهٔ آشنا را با مجموعه‌ای کوچک از عبارت‌های مقایسه‌ای تمرین‌شده مقایسه کند.",
-      "grammar_fa": "در مقایسه‌های ساده، شکل‌های آمادهٔ «parempi» (بهتر)، «halvempi» (ارزان‌تر) و «kalliimpi» (گران‌تر) را تمرین کن؛ قاعدهٔ ساخت همهٔ صفت‌های تفضیلی هنوز مطرح نیست.",
+      "grammar_fa": "«parempi» بهتر، «halvempi» ارزان‌تر و «kalliimpi» گران‌تر است؛ صورت‌های صریح را بیاموز.",
       "new_targets": [
         "a13s4-h-051",
         "a13s4-h-052",
@@ -2799,7 +2799,7 @@
       "title_fa": "یک نظر ساده",
       "objective_fa": "دربارهٔ یک موضوع آشنا نظر کوتاهی بدهد و یک تضاد یا دلیل ساده اضافه کند.",
       "summary_fa": "دربارهٔ یک موضوع آشنا نظر کوتاهی بدهد و یک تضاد یا دلیل ساده اضافه کند.",
-      "grammar_fa": "برای نظر شخصی از «Minun mielestäni ...» استفاده کن. با «mutta» می‌توانی تضاد کوتاهی بسازی؛ مانند «Se on vaikea, mutta hyvä.».",
+      "grammar_fa": "«Minun mielestäni ...» نظر شخصی و «mutta» تضاد کوتاه را بیان می‌کند.",
       "new_targets": [
         "a13s4-h-061",
         "a13s4-h-062",
@@ -3001,7 +3001,7 @@
       "title_fa": "یک متن شخصی کوتاه",
       "objective_fa": "سه یا چهار جملهٔ ساده و پیوسته دربارهٔ برنامه روزانه، رویداد اخیر، ترجیح یا برنامهٔ آینده بنویسد.",
       "summary_fa": "سه یا چهار جملهٔ ساده و پیوسته دربارهٔ برنامه روزانه، رویداد اخیر، ترجیح یا برنامهٔ آینده بنویسد.",
-      "grammar_fa": "برای نوشتن چند جملهٔ مرتبط از «ja» (و)، «mutta» (اما) و «koska» (چون) استفاده کن؛ هر جمله را کوتاه و در چارچوب عبارت‌های آشنا نگه دار.",
+      "grammar_fa": "برای نوشتن متن مرتبط از «ja» (و)، «mutta» (اما) و «koska» (چون) استفاده کن.",
       "new_targets": [
         "a13s4-h-070",
         "a13s4-h-063",
@@ -3211,7 +3211,7 @@
       "title_fa": "یک سناریوی یکپارچهٔ روزمره در سطح A1",
       "objective_fa": "ارتباط اجتماعی، مشکل عملی، اطلاعات روزمره، رویداد اخیر و برنامهٔ آینده را در یک سناریوی آشنا و هدایت‌شده ترکیب کند.",
       "summary_fa": "ارتباط اجتماعی، مشکل عملی، اطلاعات روزمره، رویداد اخیر و برنامهٔ آینده را در یک سناریوی آشنا و هدایت‌شده ترکیب کند.",
-      "grammar_fa": "در سناریوی یکپارچه، احوالپرسی، درخواست کمک، پرسیدن معنی، صحبت از دیروز و برنامهٔ فردا را با صورت‌های قبلاً آموخته‌شده ترکیب کن.",
+      "grammar_fa": "گفت‌وگو، درخواست کمک، پرسیدن معنی، رویداد دیروز و برنامهٔ فردا را ترکیب کن.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3420,7 +3420,7 @@
       "title_fa": "ارزیابی نهایی A1.3",
       "objective_fa": "در مجموعه‌ای از کارهای آشنای اجتماعی و عملی و تمرین‌های خواندن، شنیدن، گفتن و نوشتن در سطح A1 عملکرد کاربردی نشان دهد.",
       "summary_fa": "در مجموعه‌ای از کارهای آشنای اجتماعی و عملی و تمرین‌های خواندن، شنیدن، گفتن و نوشتن در سطح A1 عملکرد کاربردی نشان دهد.",
-      "grammar_fa": "ارزیابی نهایی A1.3 از رویدادهای اخیر و برنامه‌های آینده همراه با ارتباط اجتماعی، خانه و محله و تحصیل/کار نمونه می‌گیرد. موفقیت در تمرین، جای آزمون رسمی مهارت را نمی‌گیرد.",
+      "grammar_fa": "آزمون نهایی، ارتباط اجتماعی، مسائل خانه و محله، کار، گذشته و آینده را مرور می‌کند؛ گواهی رسمی نیست.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3442,53 +3442,49 @@
         "a1.3-s4-l09"
       ],
       "production_targets": [
-        "a13s4-e-067"
+        "a13s4-e-007"
       ],
       "listening_targets": [
-        "a13s4-e-067",
-        "a13s4-e-068"
+        "a13s4-e-018",
+        "a13s4-e-027"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s4-e-067",
+          "item": "a13s4-e-037",
           "tokens": [
-            "mielestäni",
-            "tämä",
-            "on",
-            "hyvä.",
-            "Minun"
+            "olit",
+            "eilen?",
+            "Missä"
           ],
           "answer_order": [
-            4,
-            0,
-            1,
             2,
-            3
+            0,
+            1
           ],
-          "expected_fi": "Minun mielestäni tämä on hyvä."
+          "expected_fi": "Missä olit eilen?"
         },
         {
           "type": "expression-completion",
-          "item": "a13s4-e-067",
-          "prompt_fi": "Minun _____ tämä on hyvä.",
-          "prompt_fa": "به نظر من این خوب است.",
+          "item": "a13s4-e-047",
+          "prompt_fi": "Huomenna _____ töihin.",
+          "prompt_fa": "فردا سر کار می‌روم.",
           "accepted_answers": [
-            "mielestäni"
+            "menen"
           ],
-          "expected_fi": "Minun mielestäni tämä on hyvä."
+          "expected_fi": "Huomenna menen töihin."
         },
         {
           "type": "controlled-production",
-          "item": "a13s4-e-068",
-          "prompt_fa": "جالب است.",
+          "item": "a13s4-e-058",
+          "prompt_fa": "این ارزان‌تر است.",
           "cues_fi": [
-            "Se",
+            "Tämä",
             "on"
           ],
-          "expected_fi": "Se on mielenkiintoinen.",
+          "expected_fi": "Tämä on halvempi.",
           "accepted_answers": [
-            "Se on mielenkiintoinen."
+            "Tämä on halvempi."
           ]
         }
       ],
@@ -3496,9 +3492,64 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-067",
+          "item": "a13s4-e-007",
           "options": [
-            "a13s4-e-067",
+            "a13s4-e-007",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-018",
+          "options": [
+            "a13s4-e-018",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-027",
+          "options": [
+            "a13s4-e-027",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-037",
+          "options": [
+            "a13s4-e-037",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-047",
+          "options": [
+            "a13s4-e-047",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-e-058",
+          "options": [
+            "a13s4-e-058",
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
@@ -3510,39 +3561,6 @@
           "item": "a13s4-e-067",
           "options": [
             "a13s4-e-067",
-            "a13s4-h-002",
-            "a13s4-h-003",
-            "a13s4-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-068",
-          "options": [
-            "a13s4-e-068",
-            "a13s4-h-003",
-            "a13s4-t-004",
-            "a13s4-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-067",
-          "options": [
-            "a13s4-e-067",
-            "a13s4-t-004",
-            "a13s4-t-005",
-            "a13s4-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-067",
-          "options": [
-            "a13s4-e-067",
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
@@ -3551,82 +3569,23 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-068",
+          "item": "a13s4-e-074",
           "options": [
-            "a13s4-e-068",
+            "a13s4-e-074",
+            "a13s4-h-001",
             "a13s4-h-002",
-            "a13s4-h-003",
-            "a13s4-t-004"
+            "a13s4-h-003"
           ]
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s4-e-067",
+          "item": "a13s4-e-078",
           "options": [
-            "a13s4-e-067",
-            "a13s4-h-003",
-            "a13s4-t-004",
-            "a13s4-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-cross-1",
-          "options": [
-            "a13s4-cross-1",
-            "a13s4-cross-2",
-            "a13s4-cross-3",
-            "a13s4-cross-4"
-          ]
-        },
-        {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a13s4-cross-2"
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-cross-3",
-          "options": [
-            "a13s4-cross-3",
-            "a13s4-cross-1",
-            "a13s4-cross-2",
-            "a13s4-cross-4"
-          ]
-        },
-        {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a13s4-cross-4"
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-cross-5",
-          "options": [
-            "a13s4-cross-5",
-            "a13s4-cross-1",
-            "a13s4-cross-2",
-            "a13s4-cross-3"
-          ]
-        },
-        {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a13s4-cross-6"
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-077",
-          "options": [
-            "a13s4-e-077",
+            "a13s4-e-078",
+            "a13s4-h-001",
             "a13s4-h-002",
-            "a13s4-h-003",
-            "a13s4-t-004"
+            "a13s4-h-003"
           ]
         },
         {
@@ -3639,25 +3598,80 @@
             "a13s4-h-002",
             "a13s4-h-003"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-cross-1",
+          "options": [
+            "a13s4-cross-1",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-cross-2",
+          "options": [
+            "a13s4-cross-2",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-cross-3",
+          "options": [
+            "a13s4-cross-3",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-cross-4",
+          "options": [
+            "a13s4-cross-4",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s4-cross-5",
+          "options": [
+            "a13s4-cross-5",
+            "a13s4-h-001",
+            "a13s4-h-002",
+            "a13s4-h-003"
+          ]
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
+        "a13s4-e-007",
+        "a13s4-e-018",
+        "a13s4-e-027",
+        "a13s4-e-037",
+        "a13s4-e-047",
+        "a13s4-e-058",
         "a13s4-e-067",
-        "a13s4-e-067",
-        "a13s4-e-068",
-        "a13s4-e-067",
-        "a13s4-e-067",
-        "a13s4-e-068",
-        "a13s4-e-067",
+        "a13s4-e-074",
+        "a13s4-e-078",
+        "a13s4-e-007",
         "a13s4-cross-1",
         "a13s4-cross-2",
         "a13s4-cross-3",
         "a13s4-cross-4",
-        "a13s4-cross-5",
-        "a13s4-cross-6",
-        "a13s4-e-077",
-        "a13s4-e-007"
+        "a13s4-cross-5"
       ],
       "morphology_practice": [
         {
