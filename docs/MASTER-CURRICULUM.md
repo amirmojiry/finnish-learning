@@ -16,7 +16,7 @@ The curriculum explicitly distinguishes (1) introduced grammatical patterns, (2)
 | --- | --- | --- | --- |
 | A1.1 | A1 | Handle rehearsed greetings and familiar personal exchanges with support. | implemented |
 | A1.2 | A1 | Complete predictable transactions and ask for places, quantities, and help. | implemented (40 playable lessons; not proficiency certification) |
-| A1.3 | A1 | Maintain simple social exchanges and manage familiar practical messages with some support. | planned |
+| A1.3 | A1 | Maintain simple social exchanges and manage familiar practical messages with some support. | implemented (40 playable lessons; not proficiency certification) |
 | A2.1 | A2 | Describe past experiences and handle routine appointments and familiar institutional tasks. | planned |
 | A2.2 | A2 | Explain experiences, compare options, and make moderately extended requests. | planned |
 | B1.1 | B1 | Manage most familiar everyday situations and justify straightforward opinions. | planned |

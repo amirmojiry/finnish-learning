@@ -1,0 +1,3554 @@
+{
+  "schema_version": 1,
+  "id": "a1.3-section-1",
+  "level": "A1.3",
+  "curriculum_section_id": "a1.3-s1",
+  "title_fa": "بخش 1: پیام‌ها، دعوت‌ها و ارتباط اجتماعی",
+  "subtitle_fa": "پیام‌ها، دعوت‌ها و ارتباط اجتماعی",
+  "description_fa": "۱۰ درس دربارهٔ پیام‌ها، دعوت‌ها و ارتباط اجتماعی با نمونه‌های فنلاندی، ترجمهٔ فارسی و تمرین شنیداری و نوشتاری.",
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a13s1-h-001": {
+      "id": "a13s1-h-001",
+      "surface_form": "mitä",
+      "lemma": "mikä",
+      "translation_fa": "چه / چه چیزی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 40,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Mitä tähän voi ottaa?",
+      "example_fa": "برای این مشکل چه می‌توان مصرف کرد؟",
+      "accepted_answers": [
+        "mitä"
+      ]
+    },
+    "a13s1-h-002": {
+      "id": "a13s1-h-002",
+      "surface_form": "nyt",
+      "lemma": "nyt",
+      "translation_fa": "اکنون",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 23,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Nyt on hyvä aika.",
+      "example_fa": "حالا زمان خوبی است.",
+      "accepted_answers": [
+        "nyt"
+      ]
+    },
+    "a13s1-h-003": {
+      "id": "a13s1-h-003",
+      "surface_form": "myös",
+      "lemma": "myös",
+      "translation_fa": "همچنین",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 11,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "myös",
+      "example_fa": "همچنین",
+      "accepted_answers": [
+        "myös"
+      ]
+    },
+    "a13s1-t-004": {
+      "id": "a13s1-t-004",
+      "surface_form": "kuulumiset",
+      "lemma": "kuulumiset",
+      "translation_fa": "احوال",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "kuulumiset",
+      "example_fa": "احوال",
+      "accepted_answers": [
+        "kuulumiset"
+      ]
+    },
+    "a13s1-t-005": {
+      "id": "a13s1-t-005",
+      "surface_form": "tänään",
+      "lemma": "tänään",
+      "translation_fa": "امروز",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 329,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Mitä teet tänään?",
+      "example_fa": "امروز چه کار می‌کنی؟",
+      "accepted_answers": [
+        "tänään"
+      ]
+    },
+    "a13s1-t-006": {
+      "id": "a13s1-t-006",
+      "surface_form": "vapaa-aika",
+      "lemma": "vapaa-aika",
+      "translation_fa": "اوقات فراغت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "vapaa-aika",
+      "example_fa": "اوقات فراغت",
+      "accepted_answers": [
+        "vapaa-aika"
+      ]
+    },
+    "a13s1-e-007": {
+      "id": "a13s1-e-007",
+      "surface_form": "Mitä sinulle kuuluu?",
+      "lemma": "Mitä sinulle kuuluu?",
+      "translation_fa": "چه خبر؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Mitä sinulle kuuluu?",
+      "example_fa": "چه خبر؟",
+      "accepted_answers": [
+        "Mitä sinulle kuuluu?"
+      ]
+    },
+    "a13s1-e-008": {
+      "id": "a13s1-e-008",
+      "surface_form": "Mitä teet tänään?",
+      "lemma": "Mitä teet tänään?",
+      "translation_fa": "امروز چه کار می‌کنی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Mitä teet tänään?",
+      "example_fa": "امروز چه کار می‌کنی؟",
+      "accepted_answers": [
+        "Mitä teet tänään?"
+      ]
+    },
+    "a13s1-e-009": {
+      "id": "a13s1-e-009",
+      "surface_form": "Entä sinä?",
+      "lemma": "Entä sinä?",
+      "translation_fa": "تو چطور؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Entä sinä?",
+      "example_fa": "تو چطور؟",
+      "accepted_answers": [
+        "Entä sinä?"
+      ]
+    },
+    "a13s1-e-010": {
+      "id": "a13s1-e-010",
+      "surface_form": "Minulle kuuluu hyvää.",
+      "lemma": "Minulle kuuluu hyvää.",
+      "translation_fa": "حالم خوب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Minulle kuuluu hyvää.",
+      "example_fa": "حالم خوب است.",
+      "accepted_answers": [
+        "Minulle kuuluu hyvää."
+      ]
+    },
+    "a13s1-h-011": {
+      "id": "a13s1-h-011",
+      "surface_form": "kanssa",
+      "lemma": "kanssa",
+      "translation_fa": "با / همراه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 33,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Tulen ystävän kanssa.",
+      "example_fa": "با دوستم می‌آیم.",
+      "accepted_answers": [
+        "kanssa"
+      ]
+    },
+    "a13s1-h-012": {
+      "id": "a13s1-h-012",
+      "surface_form": "yhdessä",
+      "lemma": "yhdessä",
+      "translation_fa": "با هم",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 269,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Mennään yhdessä.",
+      "example_fa": "بیا با هم برویم.",
+      "accepted_answers": [
+        "yhdessä"
+      ]
+    },
+    "a13s1-h-013": {
+      "id": "a13s1-h-013",
+      "surface_form": "voi",
+      "lemma": "voida",
+      "translation_fa": "می‌تواند",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 25,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "En voi hyvin.",
+      "example_fa": "حالم خوب نیست.",
+      "accepted_answers": [
+        "voi"
+      ]
+    },
+    "a13s1-t-014": {
+      "id": "a13s1-t-014",
+      "surface_form": "mielelläni",
+      "lemma": "mielelläni",
+      "translation_fa": "با کمال میل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Kyllä, mielelläni.",
+      "example_fa": "بله، با کمال میل.",
+      "accepted_answers": [
+        "mielelläni"
+      ]
+    },
+    "a13s1-t-015": {
+      "id": "a13s1-t-015",
+      "surface_form": "valitettavasti",
+      "lemma": "valitettavasti",
+      "translation_fa": "متأسفانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Valitettavasti en voi.",
+      "example_fa": "متأسفانه نمی‌توانم.",
+      "accepted_answers": [
+        "valitettavasti"
+      ]
+    },
+    "a13s1-t-016": {
+      "id": "a13s1-t-016",
+      "surface_form": "vapaa",
+      "lemma": "vapaa",
+      "translation_fa": "آزاد / وقت‌دار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "vapaa",
+      "example_fa": "آزاد / وقت‌دار",
+      "accepted_answers": [
+        "vapaa"
+      ]
+    },
+    "a13s1-e-017": {
+      "id": "a13s1-e-017",
+      "surface_form": "Haluatko tulla minun kanssani?",
+      "lemma": "Haluatko tulla minun kanssani?",
+      "translation_fa": "می‌خواهی با من بیایی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Haluatko tulla minun kanssani?",
+      "example_fa": "می‌خواهی با من بیایی؟",
+      "accepted_answers": [
+        "Haluatko tulla minun kanssani?"
+      ]
+    },
+    "a13s1-e-018": {
+      "id": "a13s1-e-018",
+      "surface_form": "Kyllä, mielelläni.",
+      "lemma": "Kyllä, mielelläni.",
+      "translation_fa": "بله، با کمال میل.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Kyllä, mielelläni.",
+      "example_fa": "بله، با کمال میل.",
+      "accepted_answers": [
+        "Kyllä, mielelläni."
+      ]
+    },
+    "a13s1-e-019": {
+      "id": "a13s1-e-019",
+      "surface_form": "Valitettavasti en voi.",
+      "lemma": "Valitettavasti en voi.",
+      "translation_fa": "متأسفانه نمی‌توانم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Valitettavasti en voi.",
+      "example_fa": "متأسفانه نمی‌توانم.",
+      "accepted_answers": [
+        "Valitettavasti en voi."
+      ]
+    },
+    "a13s1-e-020": {
+      "id": "a13s1-e-020",
+      "surface_form": "Voidaan mennä yhdessä.",
+      "lemma": "Voidaan mennä yhdessä.",
+      "translation_fa": "می‌توانیم با هم برویم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voidaan mennä yhdessä.",
+      "example_fa": "می‌توانیم با هم برویم.",
+      "accepted_answers": [
+        "Voidaan mennä yhdessä."
+      ]
+    },
+    "a13s1-h-021": {
+      "id": "a13s1-h-021",
+      "surface_form": "myöhemmin",
+      "lemma": "myöhemmin",
+      "translation_fa": "بعداً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 227,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Ei, ehkä myöhemmin.",
+      "example_fa": "نه، شاید بعداً.",
+      "accepted_answers": [
+        "myöhemmin"
+      ]
+    },
+    "a13s1-h-022": {
+      "id": "a13s1-h-022",
+      "surface_form": "sitten",
+      "lemma": "sitten",
+      "translation_fa": "سپس",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 31,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Ensin syön, sitten lähden.",
+      "example_fa": "اول غذا می‌خورم، بعد می‌روم.",
+      "accepted_answers": [
+        "sitten"
+      ]
+    },
+    "a13s1-h-023": {
+      "id": "a13s1-h-023",
+      "surface_form": "ehkä",
+      "lemma": "ehkä",
+      "translation_fa": "شاید",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 124,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Ehkä huomenna.",
+      "example_fa": "شاید فردا.",
+      "accepted_answers": [
+        "ehkä"
+      ]
+    },
+    "a13s1-t-024": {
+      "id": "a13s1-t-024",
+      "surface_form": "siirtää",
+      "lemma": "siirtää",
+      "translation_fa": "جابه‌جا کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "siirtää",
+      "example_fa": "جابه‌جا کردن",
+      "accepted_answers": [
+        "siirtää"
+      ]
+    },
+    "a13s1-t-025": {
+      "id": "a13s1-t-025",
+      "surface_form": "perua",
+      "lemma": "perua",
+      "translation_fa": "لغو کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Minun täytyy perua tapaaminen.",
+      "example_fa": "باید قرار ملاقات را لغو کنم.",
+      "accepted_answers": [
+        "perua"
+      ]
+    },
+    "a13s1-t-026": {
+      "id": "a13s1-t-026",
+      "surface_form": "myöhässä",
+      "lemma": "myöhässä",
+      "translation_fa": "دیر / با تأخیر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Olen vähän myöhässä.",
+      "example_fa": "کمی دیر کرده‌ام.",
+      "accepted_answers": [
+        "myöhässä"
+      ]
+    },
+    "a13s1-e-027": {
+      "id": "a13s1-e-027",
+      "surface_form": "Voimmeko tavata myöhemmin?",
+      "lemma": "Voimmeko tavata myöhemmin?",
+      "translation_fa": "می‌توانیم بعداً همدیگر را ببینیم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voimmeko tavata myöhemmin?",
+      "example_fa": "می‌توانیم بعداً همدیگر را ببینیم؟",
+      "accepted_answers": [
+        "Voimmeko tavata myöhemmin?"
+      ]
+    },
+    "a13s1-e-028": {
+      "id": "a13s1-e-028",
+      "surface_form": "Minun täytyy perua tapaaminen.",
+      "lemma": "Minun täytyy perua tapaaminen.",
+      "translation_fa": "باید قرار ملاقات را لغو کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Minun täytyy perua tapaaminen.",
+      "example_fa": "باید قرار ملاقات را لغو کنم.",
+      "accepted_answers": [
+        "Minun täytyy perua tapaaminen."
+      ]
+    },
+    "a13s1-e-029": {
+      "id": "a13s1-e-029",
+      "surface_form": "Olen myöhässä.",
+      "lemma": "Olen myöhässä.",
+      "translation_fa": "دیر کرده‌ام.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Olen myöhässä.",
+      "example_fa": "دیر کرده‌ام.",
+      "accepted_answers": [
+        "Olen myöhässä."
+      ]
+    },
+    "a13s1-e-030": {
+      "id": "a13s1-e-030",
+      "surface_form": "Ehkä sitten huomenna.",
+      "lemma": "Ehkä sitten huomenna.",
+      "translation_fa": "شاید فردا.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Ehkä sitten huomenna.",
+      "example_fa": "شاید فردا.",
+      "accepted_answers": [
+        "Ehkä sitten huomenna."
+      ]
+    },
+    "a13s1-h-031": {
+      "id": "a13s1-h-031",
+      "surface_form": "heti",
+      "lemma": "heti",
+      "translation_fa": "فوراً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 141,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Tarvitsen apua heti.",
+      "example_fa": "فوراً کمک لازم دارم.",
+      "accepted_answers": [
+        "heti"
+      ]
+    },
+    "a13s1-h-032": {
+      "id": "a13s1-h-032",
+      "surface_form": "minulle",
+      "lemma": "minulle",
+      "translation_fa": "به من",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 296,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Minulle kuuluu hyvää.",
+      "example_fa": "حالم خوب است.",
+      "accepted_answers": [
+        "minulle"
+      ]
+    },
+    "a13s1-t-033": {
+      "id": "a13s1-t-033",
+      "surface_form": "viesti",
+      "lemma": "viesti",
+      "translation_fa": "پیام",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Lähetän viestin.",
+      "example_fa": "پیام می‌فرستم.",
+      "accepted_answers": [
+        "viesti"
+      ]
+    },
+    "a13s1-t-034": {
+      "id": "a13s1-t-034",
+      "surface_form": "saapua",
+      "lemma": "saapua",
+      "translation_fa": "رسیدن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "saapua",
+      "example_fa": "رسیدن",
+      "accepted_answers": [
+        "saapua"
+      ]
+    },
+    "a13s1-t-035": {
+      "id": "a13s1-t-035",
+      "surface_form": "vastata",
+      "lemma": "vastata",
+      "translation_fa": "پاسخ دادن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "vastata",
+      "example_fa": "پاسخ دادن",
+      "accepted_answers": [
+        "vastata"
+      ]
+    },
+    "a13s1-e-036": {
+      "id": "a13s1-e-036",
+      "surface_form": "Tulen pian.",
+      "lemma": "Tulen pian.",
+      "translation_fa": "به‌زودی می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Tulen pian.",
+      "example_fa": "به‌زودی می‌آیم.",
+      "accepted_answers": [
+        "Tulen pian."
+      ]
+    },
+    "a13s1-e-037": {
+      "id": "a13s1-e-037",
+      "surface_form": "Lähetä minulle viesti.",
+      "lemma": "Lähetä minulle viesti.",
+      "translation_fa": "برایم پیام بفرست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Lähetä minulle viesti.",
+      "example_fa": "برایم پیام بفرست.",
+      "accepted_answers": [
+        "Lähetä minulle viesti."
+      ]
+    },
+    "a13s1-e-038": {
+      "id": "a13s1-e-038",
+      "surface_form": "Vastaan myöhemmin.",
+      "lemma": "Vastaan myöhemmin.",
+      "translation_fa": "بعداً جواب می‌دهم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Vastaan myöhemmin.",
+      "example_fa": "بعداً جواب می‌دهم.",
+      "accepted_answers": [
+        "Vastaan myöhemmin."
+      ]
+    },
+    "a13s1-e-039": {
+      "id": "a13s1-e-039",
+      "surface_form": "Olen siellä kello kuusi.",
+      "lemma": "Olen siellä kello kuusi.",
+      "translation_fa": "ساعت شش آنجا هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Olen siellä kello kuusi.",
+      "example_fa": "ساعت شش آنجا هستم.",
+      "accepted_answers": [
+        "Olen siellä kello kuusi."
+      ]
+    },
+    "a13s1-h-040": {
+      "id": "a13s1-h-040",
+      "surface_form": "sanoo",
+      "lemma": "sanoo",
+      "translation_fa": "می‌گوید",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 56,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "sanoo",
+      "example_fa": "می‌گوید",
+      "accepted_answers": [
+        "sanoo"
+      ]
+    },
+    "a13s1-t-041": {
+      "id": "a13s1-t-041",
+      "surface_form": "puhelin",
+      "lemma": "puhelin",
+      "translation_fa": "تلفن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "puhelin",
+      "example_fa": "تلفن",
+      "accepted_answers": [
+        "puhelin"
+      ]
+    },
+    "a13s1-t-042": {
+      "id": "a13s1-t-042",
+      "surface_form": "numero",
+      "lemma": "numero",
+      "translation_fa": "شماره",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "numero",
+      "example_fa": "شماره",
+      "accepted_answers": [
+        "numero"
+      ]
+    },
+    "a13s1-t-043": {
+      "id": "a13s1-t-043",
+      "surface_form": "soittaa",
+      "lemma": "soittaa",
+      "translation_fa": "تلفن کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voitko soittaa minulle myöhemmin?",
+      "example_fa": "می‌توانی بعداً با من تماس بگیری؟",
+      "accepted_answers": [
+        "soittaa"
+      ]
+    },
+    "a13s1-e-044": {
+      "id": "a13s1-e-044",
+      "surface_form": "Hei, täällä on Sara.",
+      "lemma": "Hei, täällä on Sara.",
+      "translation_fa": "سلام، سارا هستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Hei, täällä on Sara.",
+      "example_fa": "سلام، سارا هستم.",
+      "accepted_answers": [
+        "Hei, täällä on Sara."
+      ]
+    },
+    "a13s1-e-045": {
+      "id": "a13s1-e-045",
+      "surface_form": "Voinko puhua Amirille?",
+      "lemma": "Voinko puhua Amirille?",
+      "translation_fa": "می‌توانم با امیر صحبت کنم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voinko puhua Amirille?",
+      "example_fa": "می‌توانم با امیر صحبت کنم؟",
+      "accepted_answers": [
+        "Voinko puhua Amirille?"
+      ]
+    },
+    "a13s1-e-046": {
+      "id": "a13s1-e-046",
+      "surface_form": "Hän ei ole nyt täällä.",
+      "lemma": "Hän ei ole nyt täällä.",
+      "translation_fa": "او الان اینجا نیست.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Hän ei ole nyt täällä.",
+      "example_fa": "او الان اینجا نیست.",
+      "accepted_answers": [
+        "Hän ei ole nyt täällä."
+      ]
+    },
+    "a13s1-e-047": {
+      "id": "a13s1-e-047",
+      "surface_form": "Voitko soittaa minulle myöhemmin?",
+      "lemma": "Voitko soittaa minulle myöhemmin?",
+      "translation_fa": "می‌توانی بعداً با من تماس بگیری؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voitko soittaa minulle myöhemmin?",
+      "example_fa": "می‌توانی بعداً با من تماس بگیری؟",
+      "accepted_answers": [
+        "Voitko soittaa minulle myöhemmin?"
+      ]
+    },
+    "a13s1-h-048": {
+      "id": "a13s1-h-048",
+      "surface_form": "hyvä",
+      "lemma": "hyvä",
+      "translation_fa": "خوب",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 121,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "hyvä",
+      "example_fa": "خوب",
+      "accepted_answers": [
+        "hyvä"
+      ]
+    },
+    "a13s1-h-049": {
+      "id": "a13s1-h-049",
+      "surface_form": "enemmän",
+      "lemma": "enemmän",
+      "translation_fa": "بیشتر",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 89,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Pidän enemmän teestä.",
+      "example_fa": "چای را بیشتر دوست دارم.",
+      "accepted_answers": [
+        "enemmän"
+      ]
+    },
+    "a13s1-t-050": {
+      "id": "a13s1-t-050",
+      "surface_form": "mieluummin",
+      "lemma": "mieluummin",
+      "translation_fa": "ترجیحاً",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Juon mieluummin kahvia.",
+      "example_fa": "ترجیح می‌دهم قهوه بنوشم.",
+      "accepted_answers": [
+        "mieluummin"
+      ]
+    },
+    "a13s1-t-051": {
+      "id": "a13s1-t-051",
+      "surface_form": "suosikki",
+      "lemma": "suosikki",
+      "translation_fa": "موردعلاقه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "suosikki",
+      "example_fa": "موردعلاقه",
+      "accepted_answers": [
+        "suosikki"
+      ]
+    },
+    "a13s1-t-052": {
+      "id": "a13s1-t-052",
+      "surface_form": "lempiruoka",
+      "lemma": "lempiruoka",
+      "translation_fa": "غذای موردعلاقه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "lempiruoka",
+      "example_fa": "غذای موردعلاقه",
+      "accepted_answers": [
+        "lempiruoka"
+      ]
+    },
+    "a13s1-e-053": {
+      "id": "a13s1-e-053",
+      "surface_form": "Pidän tästä.",
+      "lemma": "Pidän tästä.",
+      "translation_fa": "این را دوست دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Pidän tästä.",
+      "example_fa": "این را دوست دارم.",
+      "accepted_answers": [
+        "Pidän tästä."
+      ]
+    },
+    "a13s1-e-054": {
+      "id": "a13s1-e-054",
+      "surface_form": "Pidän enemmän teestä.",
+      "lemma": "Pidän enemmän teestä.",
+      "translation_fa": "چای را بیشتر دوست دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Pidän enemmän teestä.",
+      "example_fa": "چای را بیشتر دوست دارم.",
+      "accepted_answers": [
+        "Pidän enemmän teestä."
+      ]
+    },
+    "a13s1-e-055": {
+      "id": "a13s1-e-055",
+      "surface_form": "Juon mieluummin kahvia.",
+      "lemma": "Juon mieluummin kahvia.",
+      "translation_fa": "ترجیح می‌دهم قهوه بنوشم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Juon mieluummin kahvia.",
+      "example_fa": "ترجیح می‌دهم قهوه بنوشم.",
+      "accepted_answers": [
+        "Juon mieluummin kahvia."
+      ]
+    },
+    "a13s1-e-056": {
+      "id": "a13s1-e-056",
+      "surface_form": "Mikä on sinun suosikkisi?",
+      "lemma": "Mikä on sinun suosikkisi?",
+      "translation_fa": "موردعلاقهٔ تو چیست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Mikä on sinun suosikkisi?",
+      "example_fa": "موردعلاقهٔ تو چیست؟",
+      "accepted_answers": [
+        "Mikä on sinun suosikkisi?"
+      ]
+    },
+    "a13s1-h-057": {
+      "id": "a13s1-h-057",
+      "surface_form": "koska",
+      "lemma": "koska",
+      "translation_fa": "چون",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 64,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "En tule, koska olen väsynyt.",
+      "example_fa": "نمی‌آیم چون خسته‌ام.",
+      "accepted_answers": [
+        "koska"
+      ]
+    },
+    "a13s1-h-058": {
+      "id": "a13s1-h-058",
+      "surface_form": "mutta",
+      "lemma": "mutta",
+      "translation_fa": "اما",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 8,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Haluaisin tulla, mutta olen kiireinen.",
+      "example_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
+      "accepted_answers": [
+        "mutta"
+      ]
+    },
+    "a13s1-h-059": {
+      "id": "a13s1-h-059",
+      "surface_form": "siksi",
+      "lemma": "siksi",
+      "translation_fa": "به همین دلیل",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 217,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Olen väsynyt, siksi menen kotiin.",
+      "example_fa": "خسته‌ام؛ برای همین به خانه می‌روم.",
+      "accepted_answers": [
+        "siksi"
+      ]
+    },
+    "a13s1-t-060": {
+      "id": "a13s1-t-060",
+      "surface_form": "väsynyt",
+      "lemma": "väsynyt",
+      "translation_fa": "خسته",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "En tule, koska olen väsynyt.",
+      "example_fa": "نمی‌آیم چون خسته‌ام.",
+      "accepted_answers": [
+        "väsynyt"
+      ]
+    },
+    "a13s1-t-061": {
+      "id": "a13s1-t-061",
+      "surface_form": "kiireinen",
+      "lemma": "kiireinen",
+      "translation_fa": "پرمشغله",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Haluaisin tulla, mutta olen kiireinen.",
+      "example_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
+      "accepted_answers": [
+        "kiireinen"
+      ]
+    },
+    "a13s1-e-062": {
+      "id": "a13s1-e-062",
+      "surface_form": "En tule, koska olen väsynyt.",
+      "lemma": "En tule, koska olen väsynyt.",
+      "translation_fa": "نمی‌آیم چون خسته‌ام.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "En tule, koska olen väsynyt.",
+      "example_fa": "نمی‌آیم چون خسته‌ام.",
+      "accepted_answers": [
+        "En tule, koska olen väsynyt."
+      ]
+    },
+    "a13s1-e-063": {
+      "id": "a13s1-e-063",
+      "surface_form": "Haluaisin tulla, mutta olen kiireinen.",
+      "lemma": "Haluaisin tulla, mutta olen kiireinen.",
+      "translation_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Haluaisin tulla, mutta olen kiireinen.",
+      "example_fa": "دوست دارم بیایم، اما سرم شلوغ است.",
+      "accepted_answers": [
+        "Haluaisin tulla, mutta olen kiireinen."
+      ]
+    },
+    "a13s1-e-064": {
+      "id": "a13s1-e-064",
+      "surface_form": "Olen väsynyt, siksi menen kotiin.",
+      "lemma": "Olen väsynyt, siksi menen kotiin.",
+      "translation_fa": "خسته‌ام؛ برای همین به خانه می‌روم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Olen väsynyt, siksi menen kotiin.",
+      "example_fa": "خسته‌ام؛ برای همین به خانه می‌روم.",
+      "accepted_answers": [
+        "Olen väsynyt, siksi menen kotiin."
+      ]
+    },
+    "a13s1-h-065": {
+      "id": "a13s1-h-065",
+      "surface_form": "voidaan",
+      "lemma": "voidaan",
+      "translation_fa": "می‌توانیم",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 112,
+      "topics": [
+        "a1.3-s1",
+        "source-backed"
+      ],
+      "example_fi": "Voidaan mennä yhdessä.",
+      "example_fa": "می‌توانیم با هم برویم.",
+      "accepted_answers": [
+        "voidaan"
+      ]
+    },
+    "a13s1-t-066": {
+      "id": "a13s1-t-066",
+      "surface_form": "mennään",
+      "lemma": "mennään",
+      "translation_fa": "برویم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Mennään yhdessä.",
+      "example_fa": "بیا با هم برویم.",
+      "accepted_answers": [
+        "mennään"
+      ]
+    },
+    "a13s1-t-067": {
+      "id": "a13s1-t-067",
+      "surface_form": "tavataan",
+      "lemma": "tavataan",
+      "translation_fa": "همدیگر را ببینیم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "tavataan",
+      "example_fa": "همدیگر را ببینیم",
+      "accepted_answers": [
+        "tavataan"
+      ]
+    },
+    "a13s1-t-068": {
+      "id": "a13s1-t-068",
+      "surface_form": "sopimus",
+      "lemma": "sopimus",
+      "translation_fa": "توافق",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "sopimus",
+      "example_fa": "توافق",
+      "accepted_answers": [
+        "sopimus"
+      ]
+    },
+    "a13s1-e-069": {
+      "id": "a13s1-e-069",
+      "surface_form": "Voidaan tavata huomenna.",
+      "lemma": "Voidaan tavata huomenna.",
+      "translation_fa": "می‌توانیم فردا همدیگر را ببینیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voidaan tavata huomenna.",
+      "example_fa": "می‌توانیم فردا همدیگر را ببینیم.",
+      "accepted_answers": [
+        "Voidaan tavata huomenna."
+      ]
+    },
+    "a13s1-e-070": {
+      "id": "a13s1-e-070",
+      "surface_form": "Mennään yhdessä.",
+      "lemma": "Mennään yhdessä.",
+      "translation_fa": "بیا با هم برویم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Mennään yhdessä.",
+      "example_fa": "بیا با هم برویم.",
+      "accepted_answers": [
+        "Mennään yhdessä."
+      ]
+    },
+    "a13s1-e-071": {
+      "id": "a13s1-e-071",
+      "surface_form": "Sitten mennään kahville.",
+      "lemma": "Sitten mennään kahville.",
+      "translation_fa": "بعد برای قهوه می‌رویم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Sitten mennään kahville.",
+      "example_fa": "بعد برای قهوه می‌رویم.",
+      "accepted_answers": [
+        "Sitten mennään kahville."
+      ]
+    },
+    "a13s1-e-072": {
+      "id": "a13s1-e-072",
+      "surface_form": "Sovitaan niin.",
+      "lemma": "Sovitaan niin.",
+      "translation_fa": "پس قرارمان همین شد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Sovitaan niin.",
+      "example_fa": "پس قرارمان همین شد.",
+      "accepted_answers": [
+        "Sovitaan niin."
+      ]
+    },
+    "a13s1-e-073": {
+      "id": "a13s1-e-073",
+      "surface_form": "Hei! Mitä kuuluu?",
+      "lemma": "Hei! Mitä kuuluu?",
+      "translation_fa": "سلام! حالت چطور است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Hei! Mitä kuuluu?",
+      "example_fa": "سلام! حالت چطور است؟",
+      "accepted_answers": [
+        "Hei! Mitä kuuluu?"
+      ]
+    },
+    "a13s1-e-074": {
+      "id": "a13s1-e-074",
+      "surface_form": "Valitettavasti en voi, koska olen kiireinen.",
+      "lemma": "Valitettavasti en voi, koska olen kiireinen.",
+      "translation_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Valitettavasti en voi, koska olen kiireinen.",
+      "example_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است.",
+      "accepted_answers": [
+        "Valitettavasti en voi, koska olen kiireinen."
+      ]
+    },
+    "a13s1-e-075": {
+      "id": "a13s1-e-075",
+      "surface_form": "Voidaan tavata myöhemmin.",
+      "lemma": "Voidaan tavata myöhemmin.",
+      "translation_fa": "می‌توانیم بعداً همدیگر را ببینیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "curated"
+      ],
+      "example_fi": "Voidaan tavata myöhemmin.",
+      "example_fa": "می‌توانیم بعداً همدیگر را ببینیم.",
+      "accepted_answers": [
+        "Voidaan tavata myöhemmin."
+      ]
+    },
+    "a13s1-reading-1": {
+      "id": "a13s1-reading-1",
+      "surface_form": "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?",
+      "lemma": "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?",
+      "translation_fa": "سلام! حالت چطور است؟ می‌خواهی با من بیایی؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "integrated-reading"
+      ],
+      "example_fi": "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?",
+      "example_fa": "سلام! حالت چطور است؟ می‌خواهی با من بیایی؟",
+      "accepted_answers": [
+        "Hei! Mitä kuuluu? Haluatko tulla minun kanssani?"
+      ]
+    },
+    "a13s1-reading-2": {
+      "id": "a13s1-reading-2",
+      "surface_form": "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin.",
+      "lemma": "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin.",
+      "translation_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است. می‌توانیم بعداً همدیگر را ببینیم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s1",
+        "integrated-reading"
+      ],
+      "example_fi": "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin.",
+      "example_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است. می‌توانیم بعداً همدیگر را ببینیم.",
+      "accepted_answers": [
+        "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a1.3-section-1-lesson-1",
+      "curriculum_id": "a1.3-s1-l01",
+      "order": 1,
+      "title_fa": "ادامه دادن یک گفت‌وگوی کوتاه",
+      "objective_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
+      "summary_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
+      "grammar_fa": "برای گفت‌وگو از پرسش پیگیری «Mitä teet tänään?» و پاسخ «Entä sinä?» استفاده کن.",
+      "new_targets": [
+        "a13s1-h-001",
+        "a13s1-h-002",
+        "a13s1-h-003",
+        "a13s1-t-004",
+        "a13s1-t-005",
+        "a13s1-t-006"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-001",
+          "a13s1-h-002",
+          "a13s1-h-003"
+        ],
+        "topic": [
+          "a13s1-t-004",
+          "a13s1-t-005",
+          "a13s1-t-006"
+        ],
+        "expressions": [
+          "a13s1-e-007",
+          "a13s1-e-008",
+          "a13s1-e-009",
+          "a13s1-e-010"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l03",
+        "a1.2-s3-l04",
+        "a1.2-s3-l08"
+      ],
+      "production_targets": [
+        "a13s1-e-007"
+      ],
+      "listening_targets": [
+        "a13s1-h-001",
+        "a13s1-h-002"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-008",
+          "tokens": [
+            "teet",
+            "tänään?",
+            "Mitä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Mitä teet tänään?"
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-001"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-002"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-003"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-004"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-007",
+          "options": [
+            "a13s1-e-007",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-001",
+          "options": [
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-002",
+          "options": [
+            "a13s1-h-002",
+            "a13s1-h-001",
+            "a13s1-h-003",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-008",
+          "options": [
+            "a13s1-e-008",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-001",
+          "options": [
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-002",
+          "options": [
+            "a13s1-h-002",
+            "a13s1-h-001",
+            "a13s1-h-003",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-003",
+          "options": [
+            "a13s1-h-003",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-004",
+          "options": [
+            "a13s1-t-004",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-005",
+          "options": [
+            "a13s1-t-005",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-006",
+          "options": [
+            "a13s1-t-006",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-007",
+          "options": [
+            "a13s1-e-007",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-2",
+      "curriculum_id": "a1.3-s1-l02",
+      "order": 2,
+      "title_fa": "دعوت کردن و پاسخ دادن",
+      "objective_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
+      "summary_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
+      "grammar_fa": "دعوت را با «Haluatko tulla minun kanssani?» بیان کن؛ «Kyllä, mielelläni.» پذیرش و «Valitettavasti en voi.» رد مؤدبانه است.",
+      "new_targets": [
+        "a13s1-h-011",
+        "a13s1-h-012",
+        "a13s1-h-013",
+        "a13s1-t-014",
+        "a13s1-t-015",
+        "a13s1-t-016"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-011",
+          "a13s1-h-012",
+          "a13s1-h-013"
+        ],
+        "topic": [
+          "a13s1-t-014",
+          "a13s1-t-015",
+          "a13s1-t-016"
+        ],
+        "expressions": [
+          "a13s1-e-017",
+          "a13s1-e-018",
+          "a13s1-e-019",
+          "a13s1-e-020"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s3-l05",
+        "a1.2-s3-l07",
+        "a1.3-s1-l01"
+      ],
+      "production_targets": [
+        "a13s1-e-017"
+      ],
+      "listening_targets": [
+        "a13s1-h-011",
+        "a13s1-h-012"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-018",
+          "tokens": [
+            "mielelläni.",
+            "Kyllä,"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Kyllä, mielelläni."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-011"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-012"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-013"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-014"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-017",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-011",
+          "options": [
+            "a13s1-h-011",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-012",
+          "options": [
+            "a13s1-h-012",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-018",
+          "options": [
+            "a13s1-e-018",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-011",
+          "options": [
+            "a13s1-h-011",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-012",
+          "options": [
+            "a13s1-h-012",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-013",
+          "options": [
+            "a13s1-h-013",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-014",
+          "options": [
+            "a13s1-t-014",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-015",
+          "options": [
+            "a13s1-t-015",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-016",
+          "options": [
+            "a13s1-t-016",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-017",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-3",
+      "curriculum_id": "a1.3-s1-l03",
+      "order": 3,
+      "title_fa": "تغییر دادن برنامه",
+      "objective_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
+      "summary_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
+      "grammar_fa": "«Voimmeko tavata myöhemmin?» تغییر قرار است؛ «täytyy + مصدر» مانند «Minun täytyy perua tapaaminen.» الزام را بیان می‌کند.",
+      "new_targets": [
+        "a13s1-h-021",
+        "a13s1-h-022",
+        "a13s1-h-023",
+        "a13s1-t-024",
+        "a13s1-t-025",
+        "a13s1-t-026"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-021",
+          "a13s1-h-022",
+          "a13s1-h-023"
+        ],
+        "topic": [
+          "a13s1-t-024",
+          "a13s1-t-025",
+          "a13s1-t-026"
+        ],
+        "expressions": [
+          "a13s1-e-027",
+          "a13s1-e-028",
+          "a13s1-e-029",
+          "a13s1-e-030"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s3-l05",
+        "a1.2-s3-l08",
+        "a1.3-s1-l02"
+      ],
+      "production_targets": [
+        "a13s1-e-027"
+      ],
+      "listening_targets": [
+        "a13s1-h-021",
+        "a13s1-h-022"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-028",
+          "tokens": [
+            "täytyy",
+            "perua",
+            "tapaaminen.",
+            "Minun"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Minun täytyy perua tapaaminen."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-021"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-022"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-023"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-024"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-027",
+          "options": [
+            "a13s1-e-027",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-021",
+          "options": [
+            "a13s1-h-021",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-022",
+          "options": [
+            "a13s1-h-022",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-028",
+          "options": [
+            "a13s1-e-028",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-021",
+          "options": [
+            "a13s1-h-021",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-022",
+          "options": [
+            "a13s1-h-022",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-023",
+          "options": [
+            "a13s1-h-023",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-024",
+          "options": [
+            "a13s1-t-024",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-025",
+          "options": [
+            "a13s1-t-025",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-026",
+          "options": [
+            "a13s1-t-026",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-027",
+          "options": [
+            "a13s1-e-027",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-4",
+      "curriculum_id": "a1.3-s1-l04",
+      "order": 4,
+      "title_fa": "پیام‌های عملی کوتاه",
+      "objective_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
+      "summary_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
+      "grammar_fa": "در پیام کوتاه «Tulen pian.» یعنی به‌زودی می‌آیم و «Vastaan myöhemmin.» یعنی بعداً پاسخ می‌دهم.",
+      "new_targets": [
+        "a13s1-h-002",
+        "a13s1-h-031",
+        "a13s1-h-032",
+        "a13s1-t-033",
+        "a13s1-t-034",
+        "a13s1-t-035"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-002",
+          "a13s1-h-031",
+          "a13s1-h-032"
+        ],
+        "topic": [
+          "a13s1-t-033",
+          "a13s1-t-034",
+          "a13s1-t-035"
+        ],
+        "expressions": [
+          "a13s1-e-036",
+          "a13s1-e-037",
+          "a13s1-e-038",
+          "a13s1-e-039"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s2-l07",
+        "a1.2-s3-l08",
+        "a1.3-s1-l03"
+      ],
+      "production_targets": [
+        "a13s1-e-036"
+      ],
+      "listening_targets": [
+        "a13s1-h-002",
+        "a13s1-h-031"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-037",
+          "tokens": [
+            "minulle",
+            "viesti.",
+            "Lähetä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Lähetä minulle viesti."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-002"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-031"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-032"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-033"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-036",
+          "options": [
+            "a13s1-e-036",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-002",
+          "options": [
+            "a13s1-h-002",
+            "a13s1-h-001",
+            "a13s1-h-003",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-031",
+          "options": [
+            "a13s1-h-031",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-037",
+          "options": [
+            "a13s1-e-037",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-002",
+          "options": [
+            "a13s1-h-002",
+            "a13s1-h-001",
+            "a13s1-h-003",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-031",
+          "options": [
+            "a13s1-h-031",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-032",
+          "options": [
+            "a13s1-h-032",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-033",
+          "options": [
+            "a13s1-t-033",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-034",
+          "options": [
+            "a13s1-t-034",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-035",
+          "options": [
+            "a13s1-t-035",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-036",
+          "options": [
+            "a13s1-e-036",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-5",
+      "curriculum_id": "a1.3-s1-l05",
+      "order": 5,
+      "title_fa": "یک گفت‌وگوی تلفنی ساده",
+      "objective_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
+      "summary_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
+      "grammar_fa": "«täällä on Sara» برای معرفی تلفنی و «Voinko puhua Amirille?» برای درخواست صحبت است.",
+      "new_targets": [
+        "a13s1-h-040",
+        "a13s1-h-013",
+        "a13s1-h-032",
+        "a13s1-t-041",
+        "a13s1-t-042",
+        "a13s1-t-043"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-040",
+          "a13s1-h-013",
+          "a13s1-h-032"
+        ],
+        "topic": [
+          "a13s1-t-041",
+          "a13s1-t-042",
+          "a13s1-t-043"
+        ],
+        "expressions": [
+          "a13s1-e-044",
+          "a13s1-e-045",
+          "a13s1-e-046",
+          "a13s1-e-047"
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l02",
+        "a1.2-s3-l08",
+        "a1.3-s1-l04"
+      ],
+      "production_targets": [
+        "a13s1-e-044"
+      ],
+      "listening_targets": [
+        "a13s1-h-040",
+        "a13s1-h-013"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-045",
+          "tokens": [
+            "puhua",
+            "Amirille?",
+            "Voinko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Voinko puhua Amirille?"
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-040"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-013"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-032"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-041"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-044",
+          "options": [
+            "a13s1-e-044",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-040",
+          "options": [
+            "a13s1-h-040",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-013",
+          "options": [
+            "a13s1-h-013",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-045",
+          "options": [
+            "a13s1-e-045",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-040",
+          "options": [
+            "a13s1-h-040",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-013",
+          "options": [
+            "a13s1-h-013",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-032",
+          "options": [
+            "a13s1-h-032",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-041",
+          "options": [
+            "a13s1-t-041",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-042",
+          "options": [
+            "a13s1-t-042",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-043",
+          "options": [
+            "a13s1-t-043",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-044",
+          "options": [
+            "a13s1-e-044",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-6",
+      "curriculum_id": "a1.3-s1-l06",
+      "order": 6,
+      "title_fa": "ترجیحات در گفت‌وگو",
+      "objective_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
+      "summary_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
+      "grammar_fa": "«Pidän tästä.» علاقه و «Pidän enemmän teestä.» ترجیح را بیان می‌کند؛ شکل‌های دستوری را در عبارت بیاموز.",
+      "new_targets": [
+        "a13s1-h-048",
+        "a13s1-h-049",
+        "a13s1-h-003",
+        "a13s1-t-050",
+        "a13s1-t-051",
+        "a13s1-t-052"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-048",
+          "a13s1-h-049",
+          "a13s1-h-003"
+        ],
+        "topic": [
+          "a13s1-t-050",
+          "a13s1-t-051",
+          "a13s1-t-052"
+        ],
+        "expressions": [
+          "a13s1-e-053",
+          "a13s1-e-054",
+          "a13s1-e-055",
+          "a13s1-e-056"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s3-l04",
+        "a1.3-s1-l01"
+      ],
+      "production_targets": [
+        "a13s1-e-053"
+      ],
+      "listening_targets": [
+        "a13s1-h-048",
+        "a13s1-h-049"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-054",
+          "tokens": [
+            "enemmän",
+            "teestä.",
+            "Pidän"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Pidän enemmän teestä."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-048"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-049"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-003"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-050"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-053",
+          "options": [
+            "a13s1-e-053",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-048",
+          "options": [
+            "a13s1-h-048",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-049",
+          "options": [
+            "a13s1-h-049",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-054",
+          "options": [
+            "a13s1-e-054",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-048",
+          "options": [
+            "a13s1-h-048",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-049",
+          "options": [
+            "a13s1-h-049",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-003",
+          "options": [
+            "a13s1-h-003",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-050",
+          "options": [
+            "a13s1-t-050",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-051",
+          "options": [
+            "a13s1-t-051",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-052",
+          "options": [
+            "a13s1-t-052",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-053",
+          "options": [
+            "a13s1-e-053",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-7",
+      "curriculum_id": "a1.3-s1-l07",
+      "order": 7,
+      "title_fa": "گفتن یک دلیل ساده",
+      "objective_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
+      "summary_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
+      "grammar_fa": "«koska» دلیل، «mutta» تضاد و «siksi» نتیجه را نشان می‌دهند.",
+      "new_targets": [
+        "a13s1-h-057",
+        "a13s1-h-058",
+        "a13s1-h-059",
+        "a13s1-t-060",
+        "a13s1-t-061",
+        "a13s1-t-016"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-057",
+          "a13s1-h-058",
+          "a13s1-h-059"
+        ],
+        "topic": [
+          "a13s1-t-060",
+          "a13s1-t-061",
+          "a13s1-t-016"
+        ],
+        "expressions": [
+          "a13s1-e-062",
+          "a13s1-e-063",
+          "a13s1-e-064"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s3-l07",
+        "a1.2-s4-l04",
+        "a1.3-s1-l02"
+      ],
+      "production_targets": [
+        "a13s1-e-062"
+      ],
+      "listening_targets": [
+        "a13s1-h-057",
+        "a13s1-h-058"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-063",
+          "tokens": [
+            "tulla,",
+            "mutta",
+            "olen",
+            "kiireinen.",
+            "Haluaisin"
+          ],
+          "answer_order": [
+            4,
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Haluaisin tulla, mutta olen kiireinen."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-057"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-058"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-059"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-060"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-062",
+          "options": [
+            "a13s1-e-062",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-057",
+          "options": [
+            "a13s1-h-057",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-058",
+          "options": [
+            "a13s1-h-058",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-063",
+          "options": [
+            "a13s1-e-063",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-057",
+          "options": [
+            "a13s1-h-057",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-058",
+          "options": [
+            "a13s1-h-058",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-059",
+          "options": [
+            "a13s1-h-059",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-060",
+          "options": [
+            "a13s1-t-060",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-061",
+          "options": [
+            "a13s1-t-061",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-016",
+          "options": [
+            "a13s1-t-016",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-062",
+          "options": [
+            "a13s1-e-062",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-8",
+      "curriculum_id": "a1.3-s1-l08",
+      "order": 8,
+      "title_fa": "پیشنهاد ساده",
+      "objective_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
+      "summary_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
+      "grammar_fa": "«Voidaan» و «Mennään» را در پیشنهادها فعلاً به‌شکل عبارت کامل تمرین کن.",
+      "new_targets": [
+        "a13s1-h-065",
+        "a13s1-h-012",
+        "a13s1-h-022",
+        "a13s1-t-066",
+        "a13s1-t-067",
+        "a13s1-t-068"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a13s1-h-065",
+          "a13s1-h-012",
+          "a13s1-h-022"
+        ],
+        "topic": [
+          "a13s1-t-066",
+          "a13s1-t-067",
+          "a13s1-t-068"
+        ],
+        "expressions": [
+          "a13s1-e-069",
+          "a13s1-e-070",
+          "a13s1-e-071",
+          "a13s1-e-072"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s3-l05",
+        "a1.2-s3-l07",
+        "a1.3-s1-l03"
+      ],
+      "production_targets": [
+        "a13s1-e-069"
+      ],
+      "listening_targets": [
+        "a13s1-h-065",
+        "a13s1-h-012"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-070",
+          "tokens": [
+            "yhdessä.",
+            "Mennään"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Mennään yhdessä."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-h-065"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-012"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-h-022"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-066"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-069",
+          "options": [
+            "a13s1-e-069",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-065",
+          "options": [
+            "a13s1-h-065",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-012",
+          "options": [
+            "a13s1-h-012",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-070",
+          "options": [
+            "a13s1-e-070",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-065",
+          "options": [
+            "a13s1-h-065",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-h-012",
+          "options": [
+            "a13s1-h-012",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-h-022",
+          "options": [
+            "a13s1-h-022",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-066",
+          "options": [
+            "a13s1-t-066",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-t-067",
+          "options": [
+            "a13s1-t-067",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-t-068",
+          "options": [
+            "a13s1-t-068",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-069",
+          "options": [
+            "a13s1-e-069",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-9",
+      "curriculum_id": "a1.3-s1-l09",
+      "order": 9,
+      "title_fa": "یک هماهنگی اجتماعی کامل",
+      "objective_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
+      "summary_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
+      "grammar_fa": "احوالپرسی، دعوت، دلیل، تغییر زمان و تأیید را در یک گفت‌وگوی مرتبط ترکیب کن.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": [
+          "a13s1-e-073",
+          "a13s1-e-017",
+          "a13s1-e-074",
+          "a13s1-e-075",
+          "a13s1-e-072"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s1-l01",
+        "a1.3-s1-l02",
+        "a1.3-s1-l03",
+        "a1.3-s1-l04",
+        "a1.3-s1-l05",
+        "a1.3-s1-l06",
+        "a1.3-s1-l07",
+        "a1.3-s1-l08"
+      ],
+      "production_targets": [
+        "a13s1-e-073"
+      ],
+      "listening_targets": [
+        "a13s1-e-073",
+        "a13s1-e-074"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-017",
+          "tokens": [
+            "tulla",
+            "minun",
+            "kanssani?",
+            "Haluatko"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Haluatko tulla minun kanssani?"
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a13s1-e-073"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-017"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-073",
+          "options": [
+            "a13s1-e-073",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-073",
+          "options": [
+            "a13s1-e-073",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-074",
+          "options": [
+            "a13s1-e-074",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-017",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-073",
+          "options": [
+            "a13s1-e-073",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-017",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-074",
+          "options": [
+            "a13s1-e-074",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-075",
+          "options": [
+            "a13s1-e-075",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-072",
+          "options": [
+            "a13s1-e-072",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-073",
+          "options": [
+            "a13s1-e-073",
+            "a13s1-h-001",
+            "a13s1-h-002",
+            "a13s1-h-003"
+          ]
+        },
+        {
+          "type": "dialogue-order",
+          "turns": [
+            "a13s1-e-072",
+            "a13s1-e-074",
+            "a13s1-e-073",
+            "a13s1-e-017",
+            "a13s1-e-075"
+          ],
+          "answer_order": [
+            2,
+            3,
+            1,
+            4,
+            0
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s1-reading-2",
+          "question_item": "a13s1-e-074",
+          "options": [
+            "a13s1-e-007",
+            "a13s1-e-074",
+            "a13s1-e-008",
+            "a13s1-e-009"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s1-reading-1",
+          "question_item": "a13s1-e-073",
+          "options": [
+            "a13s1-e-007",
+            "a13s1-e-073",
+            "a13s1-e-008",
+            "a13s1-e-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1.3-section-1-lesson-10",
+      "curriculum_id": "a1.3-s1-l10",
+      "order": 10,
+      "title_fa": "ارزیابی بخش ۱",
+      "objective_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
+      "summary_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
+      "grammar_fa": "این آزمون، احوالپرسی، دعوت، پیام، تماس، ترجیح، دلیل و پیشنهاد را مرور می‌کند.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a1.3-s1-l01",
+        "a1.3-s1-l02",
+        "a1.3-s1-l03",
+        "a1.3-s1-l04",
+        "a1.3-s1-l05",
+        "a1.3-s1-l06",
+        "a1.3-s1-l07",
+        "a1.3-s1-l08",
+        "a1.3-s1-l09"
+      ],
+      "production_targets": [
+        "a13s1-e-017"
+      ],
+      "listening_targets": [
+        "a13s1-e-027",
+        "a13s1-e-044"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-007",
+          "tokens": [
+            "sinulle",
+            "kuuluu?",
+            "Mitä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Mitä sinulle kuuluu?"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a13s1-e-054",
+          "prompt_fi": "Pidän _____ teestä.",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "accepted_answers": [
+            "enemmän"
+          ],
+          "expected_fi": "Pidän enemmän teestä."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-062",
+          "prompt_fa": "نمی‌آیم چون خسته‌ام.",
+          "cues_fi": [
+            "En",
+            "tule,"
+          ],
+          "expected_fi": "En tule, koska olen väsynyt.",
+          "accepted_answers": [
+            "En tule, koska olen väsynyt."
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-017",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-e-054",
+            "a13s1-e-009",
+            "a13s1-e-037"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-027",
+          "options": [
+            "a13s1-e-062",
+            "a13s1-e-027",
+            "a13s1-e-019",
+            "a13s1-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-044",
+          "options": [
+            "a13s1-e-036",
+            "a13s1-e-028",
+            "a13s1-e-044",
+            "a13s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-007",
+          "options": [
+            "a13s1-e-009",
+            "a13s1-e-037",
+            "a13s1-e-069",
+            "a13s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-054",
+          "options": [
+            "a13s1-e-054",
+            "a13s1-e-019",
+            "a13s1-e-047",
+            "a13s1-e-074"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-062",
+          "options": [
+            "a13s1-e-028",
+            "a13s1-e-062",
+            "a13s1-e-055",
+            "a13s1-e-017"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-036",
+          "options": [
+            "a13s1-e-037",
+            "a13s1-e-069",
+            "a13s1-e-036",
+            "a13s1-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-009",
+          "options": [
+            "a13s1-e-047",
+            "a13s1-e-074",
+            "a13s1-e-044",
+            "a13s1-e-009"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-019"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-028",
+          "options": [
+            "a13s1-e-069",
+            "a13s1-e-028",
+            "a13s1-e-027",
+            "a13s1-e-054"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-037"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-047",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-e-007",
+            "a13s1-e-036",
+            "a13s1-e-047"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-055"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s1-e-069",
+          "options": [
+            "a13s1-e-044",
+            "a13s1-e-069",
+            "a13s1-e-062",
+            "a13s1-e-019"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-074"
+        }
+      ],
+      "passing_score": 0.8,
+      "checkpoint_targets": [
+        "a13s1-e-017",
+        "a13s1-e-027",
+        "a13s1-e-044",
+        "a13s1-e-007",
+        "a13s1-e-054",
+        "a13s1-e-062",
+        "a13s1-e-036",
+        "a13s1-e-009",
+        "a13s1-e-019",
+        "a13s1-e-028",
+        "a13s1-e-037",
+        "a13s1-e-047",
+        "a13s1-e-055",
+        "a13s1-e-069",
+        "a13s1-e-074"
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s1-e-036",
+          "base_fi": "tulla",
+          "feature_fa": "حال اول‌شخص مفرد فعل آمدن",
+          "prompt_fa": "در جملهٔ «به‌زودی می‌آیم» صورت اول‌شخص درست را انتخاب کن.",
+          "frame_fi": "_____ pian.",
+          "options_fi": [
+            "Tulen",
+            "Tulet",
+            "Tulee",
+            "Tulla"
+          ],
+          "expected_fi": "Tulen",
+          "explanation_fa": "Tulen صورت اول‌شخص مفرد فعل tulla در زمان حال است."
+        }
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
+      ]
+    }
+  ]
+}

@@ -30,7 +30,7 @@ test('A1.1 through A1.2 now contains eight playable sections and 80 uniquely map
   assert.equal(new Set(ids).size, 80);
   const stage = course.COURSE_STAGES.find(entry => entry.level === 'A1.2');
   assert.deepEqual(stage.sectionUrls, [1,2,3,4].map(n => './data/course/a1.2-section-' + n + '.json'));
-  assert.doesNotMatch(JSON.stringify(course.COURSE_STAGES), /A1\\.3/);
+  assert.equal(course.COURSE_STAGES[2].sectionUrls.length, 4);
 });
 
 test('Sections 3 and 4 deliver every planned lesson and exactly 300 validated activities', () => {

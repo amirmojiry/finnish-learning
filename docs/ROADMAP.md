@@ -12,7 +12,7 @@ This status snapshot was checked on **2026-10-08**. For fresh implementation cou
 | --- | --- | --- | --- |
 | A1.1 | 4 sections, 40 lessons in [A1.1 curriculum](../data/course/a1.1-curriculum.json) | 4 sections / 40 lessons | Maintain correctness, review exercise quality and skills evidence |
 | A1.2 | 4 sections, 40 lessons in [A1.2 curriculum](../data/course/a1.2-curriculum.json) | **4 sections / 40 lessons** | Continue correctness, device/audio and proficiency-evidence auditing |
-| A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 0 | **Next content milestone: build reviewed A1.3 sections** |
+| A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 4 sections / 40 lessons | Language review, device testing and independent proficiency-evidence audit |
 | A2.1–C2 | Four proposed modules per level in the [master plan](../data/course/master-curriculum.json) | 0 | Author and review full level curricula before writing lessons |
 
 The shipped dictionary has an independently generated count and Parole frequency fields. Do not interpret stage lexical targets as existing dictionary entries or attained proficiency. Consult the [vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) and [vocabulary roadmap](VOCABULARY-ROADMAP.md) when sourcing new items.
@@ -21,7 +21,7 @@ The shipped dictionary has an independently generated count and Parole frequency
 
 - **A1.1 foundation:** Four playable sections, lesson summaries, reviewed example frames, basic morphology, prerequisite and recycling relationships, and automated data contracts.
 - **Course practice foundations:** Persian-to-Finnish production, reading/listening and dictation where device audio permits, sentence ordering, expression completion, exercise feedback and course weakness review with answer history.
-- **Authoring contracts:** A1.2's reviewed contract is now fully playable; A1.3 has a reviewed lesson plan but no playable manifests yet. Frequency and curated topical sources remain separate.
+- **Authoring contracts:** A1.2's reviewed contract is now fully playable; A1.3 has four implemented playable sections and a reviewed lesson plan. Frequency and curated topical sources remain separate.
 - **Source-backed vocabulary:** The reviewed Parole position tranche through 400 was added to the dictionary. Future tranches must be selected from evidence, not simply assumed to cover the next curriculum topics.
 - **Whole-course planning:** A1.1–C2 master JSON with grammar dependencies, topic vocabulary, sentence/phrase examples and proposed authentic assessment. These are design targets, not automatic certification claims.
 
@@ -34,9 +34,9 @@ The shipped dictionary has an independently generated count and Parole frequency
 - All four sections must keep reviewed target IDs, explicit word morphology and authentic Persian prompts; do not confuse this milestone with independent CEFR/YKI proficiency assessment.
 - Use `npm run curriculum:check`, `npm run curriculum:audit` and `npm test` before any content release.
 
-### 2. Implement A1.3 (next content priority)
+### 2. Quality review of completed A1.3
 
-- Convert the [reviewed A1.3 curriculum](../data/course/a1.3-curriculum.json) into playable sections, not a second competing planning matrix.
+- All four sections of the [reviewed A1.3 curriculum](../data/course/a1.3-curriculum.json) are now playable; preserve one canonical curriculum and verify every implemented contract.
 - Extend familiar conversations, messages, home/neighborhood, study/work and recent-event phrases.
 - Teach selected past forms as reviewed chunks first; do not silently equate them with full independent past-tense morphology.
 

@@ -378,7 +378,7 @@ Those features require a separate backend or serverless API. The static frontend
 
 This document describes the **instructional rationale and technical design**, not a second delivery backlog. The checklists formerly duplicated here and in the root READMEs are consolidated into the [canonical delivery roadmap](ROADMAP.md) ([Persian](ROADMAP.fa.md)).
 
-The delivery order stays course-first: review the now-complete playable A1.2 and implement the reviewed A1.3 plan, then design individual A2+ levels from the [master curriculum](MASTER-CURRICULUM.md). Cross-cutting work on content validation, lexeme/surface-form links, graded production and accessibility supports that sequence. Backend accounts, offline features and live tutoring remain optional until a concrete product requirement justifies them.
+The delivery order stays course-first: review the now-complete playable A1.2 and A1.3 paths, then design individual A2+ levels from the [master curriculum](MASTER-CURRICULUM.md). Cross-cutting work on content validation, lexeme/surface-form links, graded production and accessibility supports that sequence. Backend accounts, offline features and live tutoring remain optional until a concrete product requirement justifies them.
 
 For actual implemented lesson counts and available dictionary targets, consult the [dated content audit](CURRICULUM-AUDIT.fa.md) and run `npm run curriculum:audit` rather than inferring progress from a planned curriculum.
 
@@ -425,7 +425,7 @@ The current product direction is therefore:
 
 - the primary product is a structured Finnish course, not a standalone vocabulary trainer;
 - GitHub Pages remains the target platform for the current development stage;
-- A1.1 is already authored; current delivery priorities are maintained in the roadmap (maintain the playable A1.2, implement A1.3, and only then author later levels);
+- A1.1 is already authored; current delivery priorities are maintained in the roadmap (maintain and audit the playable A1.2/A1.3 content, and only then author later levels);
 - each lesson combines communicative goals with high-frequency vocabulary, curated topic vocabulary, useful sentences or expressions, and grammar;
 - sections normally contain about 10 lessons and lessons normally contain about 15 activities, but pedagogical completeness matters more than fixed counts;
 - frequency vocabulary is distributed through the curriculum without overriding source frequency data;
