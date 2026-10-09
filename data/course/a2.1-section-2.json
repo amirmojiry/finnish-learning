@@ -1,0 +1,3696 @@
+{
+  "schema_version": 1,
+  "id": "a2.1-section-2",
+  "level": "A2.1",
+  "curriculum_section_id": "a2.1-s2",
+  "title_fa": "بخش ۲: پزشک و خدمات اداری",
+  "subtitle_fa": "گرفتن وقت، توضیح نشانه‌ها، راهنمایی، فرم‌ها و درخواست مدارک",
+  "description_fa": "ده درس کاربردی با گفت‌وگوهای کوتاه و مؤدبانه، خواندن و شنیدن پیام‌های خدماتی، تمرین نوشتاری و آزمون پایان بخش؛ نمونه‌های پزشکی صرفاً آموزش زبان هستند.",
+  "can_do_fa": [
+    "برای وقت‌گرفتن یا تغییر قرار، درخواست مؤدبانه بنویسم و پاسخ ساده را بفهمم.",
+    "نشانه‌های معمول و زمان شروع آن‌ها را با چند عبارت آشنا توضیح بدهم.",
+    "از کارکنان بخواهم توضیح را تکرار کنند و راهنمای داروخانه را بفهمم.",
+    "در خدمات عمومی باجهٔ درست را پیدا کنم و فرم ساده‌ای را با کمک پر کنم.",
+    "مدرکی را درخواست کنم و دربارهٔ زمان آماده‌شدن و روش دریافت آن بپرسم."
+  ],
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a21s2-h-001": {
+      "id": "a21s2-h-001",
+      "surface_form": "on",
+      "lemma": "olla",
+      "translation_fa": "است / هست / هستند",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 2,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Mihin aikaan aika on?",
+      "example_fa": "وقت ملاقات چه ساعتی است؟",
+      "accepted_answers": [
+        "on"
+      ]
+    },
+    "a21s2-h-002": {
+      "id": "a21s2-h-002",
+      "surface_form": "minulle",
+      "lemma": "minä",
+      "translation_fa": "برای من؛ به من",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 296,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Tiistai kello kymmenen sopii minulle.",
+      "example_fa": "سه‌شنبه ساعت ده برایم مناسب است.",
+      "accepted_answers": [
+        "minulle"
+      ]
+    },
+    "a21s2-t-003": {
+      "id": "a21s2-t-003",
+      "surface_form": "ajan",
+      "lemma": "aika",
+      "translation_fa": "وقت ملاقات (مفعول)",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 117,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Hei, haluaisin varata ajan lääkärille.",
+      "example_fa": "سلام، می‌خواهم برای پزشک وقت بگیرم.",
+      "accepted_answers": [
+        "ajan"
+      ]
+    },
+    "a21s2-t-004": {
+      "id": "a21s2-t-004",
+      "surface_form": "lääkärille",
+      "lemma": "lääkäri",
+      "translation_fa": "برای پزشک / نزد پزشک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Hei, haluaisin varata ajan lääkärille.",
+      "example_fa": "سلام، می‌خواهم برای پزشک وقت بگیرم.",
+      "accepted_answers": [
+        "lääkärille"
+      ]
+    },
+    "a21s2-t-005": {
+      "id": "a21s2-t-005",
+      "surface_form": "vastaanotto",
+      "lemma": "vastaanotto",
+      "translation_fa": "ویزیت / پذیرش پزشکی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "vastaanotto",
+      "example_fa": "ویزیت / پذیرش پزشکی",
+      "accepted_answers": [
+        "vastaanotto"
+      ]
+    },
+    "a21s2-e-006": {
+      "id": "a21s2-e-006",
+      "surface_form": "Hei, haluaisin varata ajan lääkärille.",
+      "lemma": "Hei, haluaisin varata ajan lääkärille.",
+      "translation_fa": "سلام، می‌خواهم برای پزشک وقت بگیرم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Hei, haluaisin varata ajan lääkärille.",
+      "example_fa": "سلام، می‌خواهم برای پزشک وقت بگیرم.",
+      "accepted_answers": [
+        "Hei, haluaisin varata ajan lääkärille."
+      ]
+    },
+    "a21s2-e-007": {
+      "id": "a21s2-e-007",
+      "surface_form": "Onko teillä vapaita aikoja tiistaina?",
+      "lemma": "Onko teillä vapaita aikoja tiistaina?",
+      "translation_fa": "آیا سه‌شنبه وقت خالی دارید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Onko teillä vapaita aikoja tiistaina?",
+      "example_fa": "آیا سه‌شنبه وقت خالی دارید؟",
+      "accepted_answers": [
+        "Onko teillä vapaita aikoja tiistaina?"
+      ]
+    },
+    "a21s2-e-008": {
+      "id": "a21s2-e-008",
+      "surface_form": "Tarvitsen ajan ensi viikolle.",
+      "lemma": "Tarvitsen ajan ensi viikolle.",
+      "translation_fa": "برای هفتهٔ آینده وقت لازم دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Tarvitsen ajan ensi viikolle.",
+      "example_fa": "برای هفتهٔ آینده وقت لازم دارم.",
+      "accepted_answers": [
+        "Tarvitsen ajan ensi viikolle."
+      ]
+    },
+    "a21s2-e-009": {
+      "id": "a21s2-e-009",
+      "surface_form": "Tiistai kello kymmenen sopii minulle.",
+      "lemma": "Tiistai kello kymmenen sopii minulle.",
+      "translation_fa": "سه‌شنبه ساعت ده برایم مناسب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Tiistai kello kymmenen sopii minulle.",
+      "example_fa": "سه‌شنبه ساعت ده برایم مناسب است.",
+      "accepted_answers": [
+        "Tiistai kello kymmenen sopii minulle."
+      ]
+    },
+    "a21s2-e-010": {
+      "id": "a21s2-e-010",
+      "surface_form": "Mihin aikaan aika on?",
+      "lemma": "Mihin aikaan aika on?",
+      "translation_fa": "وقت ملاقات چه ساعتی است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Mihin aikaan aika on?",
+      "example_fa": "وقت ملاقات چه ساعتی است؟",
+      "accepted_answers": [
+        "Mihin aikaan aika on?"
+      ]
+    },
+    "a21s2-h-011": {
+      "id": "a21s2-h-011",
+      "surface_form": "minun",
+      "lemma": "minä",
+      "translation_fa": "مال من / ـم",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 163,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Minun pitää siirtää aikaani.",
+      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "accepted_answers": [
+        "minun"
+      ]
+    },
+    "a21s2-h-012": {
+      "id": "a21s2-h-012",
+      "surface_form": "pitää",
+      "lemma": "pitää",
+      "translation_fa": "باید / دوست داشتن / نگه داشتن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 70,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Minun pitää siirtää aikaani.",
+      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "accepted_answers": [
+        "pitää"
+      ]
+    },
+    "a21s2-t-013": {
+      "id": "a21s2-t-013",
+      "surface_form": "siirtää",
+      "lemma": "siirtää",
+      "translation_fa": "جابه‌جا کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minun pitää siirtää aikaani.",
+      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "accepted_answers": [
+        "siirtää"
+      ]
+    },
+    "a21s2-t-014": {
+      "id": "a21s2-t-014",
+      "surface_form": "perua",
+      "lemma": "perua",
+      "translation_fa": "لغو کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voinko perua ajan?",
+      "example_fa": "می‌توانم وقت را لغو کنم؟",
+      "accepted_answers": [
+        "perua"
+      ]
+    },
+    "a21s2-t-015": {
+      "id": "a21s2-t-015",
+      "surface_form": "vastaanotolle",
+      "lemma": "vastaanotto",
+      "translation_fa": "به محل ویزیت / نزد پزشک",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "En pääse vastaanotolle huomenna.",
+      "example_fa": "فردا نمی‌توانم برای ویزیت بیایم.",
+      "accepted_answers": [
+        "vastaanotolle"
+      ]
+    },
+    "a21s2-e-016": {
+      "id": "a21s2-e-016",
+      "surface_form": "Minun pitää siirtää aikaani.",
+      "lemma": "Minun pitää siirtää aikaani.",
+      "translation_fa": "باید وقتم را جابه‌جا کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minun pitää siirtää aikaani.",
+      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "accepted_answers": [
+        "Minun pitää siirtää aikaani."
+      ]
+    },
+    "a21s2-e-017": {
+      "id": "a21s2-e-017",
+      "surface_form": "En pääse vastaanotolle huomenna.",
+      "lemma": "En pääse vastaanotolle huomenna.",
+      "translation_fa": "فردا نمی‌توانم برای ویزیت بیایم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "En pääse vastaanotolle huomenna.",
+      "example_fa": "فردا نمی‌توانم برای ویزیت بیایم.",
+      "accepted_answers": [
+        "En pääse vastaanotolle huomenna."
+      ]
+    },
+    "a21s2-e-018": {
+      "id": "a21s2-e-018",
+      "surface_form": "Voinko perua ajan?",
+      "lemma": "Voinko perua ajan?",
+      "translation_fa": "می‌توانم وقت را لغو کنم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voinko perua ajan?",
+      "example_fa": "می‌توانم وقت را لغو کنم؟",
+      "accepted_answers": [
+        "Voinko perua ajan?"
+      ]
+    },
+    "a21s2-e-019": {
+      "id": "a21s2-e-019",
+      "surface_form": "Onko perjantaina vapaita aikoja?",
+      "lemma": "Onko perjantaina vapaita aikoja?",
+      "translation_fa": "آیا روز جمعه وقت خالی دارید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Onko perjantaina vapaita aikoja?",
+      "example_fa": "آیا روز جمعه وقت خالی دارید؟",
+      "accepted_answers": [
+        "Onko perjantaina vapaita aikoja?"
+      ]
+    },
+    "a21s2-e-020": {
+      "id": "a21s2-e-020",
+      "surface_form": "Kiitos, uusi aika sopii.",
+      "lemma": "Kiitos, uusi aika sopii.",
+      "translation_fa": "ممنون، وقت جدید مناسب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Kiitos, uusi aika sopii.",
+      "example_fa": "ممنون، وقت جدید مناسب است.",
+      "accepted_answers": [
+        "Kiitos, uusi aika sopii."
+      ]
+    },
+    "a21s2-h-021": {
+      "id": "a21s2-h-021",
+      "surface_form": "oli",
+      "lemma": "olla",
+      "translation_fa": "بود",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 5,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Minulla oli kuumetta eilen.",
+      "example_fa": "دیروز تب داشتم.",
+      "accepted_answers": [
+        "oli"
+      ]
+    },
+    "a21s2-t-022": {
+      "id": "a21s2-t-022",
+      "surface_form": "päänsärkyä",
+      "lemma": "päänsärky",
+      "translation_fa": "سردرد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minulla on päänsärkyä.",
+      "example_fa": "سردرد دارم.",
+      "accepted_answers": [
+        "päänsärkyä"
+      ]
+    },
+    "a21s2-t-023": {
+      "id": "a21s2-t-023",
+      "surface_form": "kuumetta",
+      "lemma": "kuume",
+      "translation_fa": "تب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minulla on kuumetta.",
+      "example_fa": "تب دارم.",
+      "accepted_answers": [
+        "kuumetta"
+      ]
+    },
+    "a21s2-t-024": {
+      "id": "a21s2-t-024",
+      "surface_form": "oireet",
+      "lemma": "oire",
+      "translation_fa": "نشانه‌ها",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Oireet alkoivat maanantaina.",
+      "example_fa": "نشانه‌ها روز دوشنبه شروع شدند.",
+      "accepted_answers": [
+        "oireet"
+      ]
+    },
+    "a21s2-e-025": {
+      "id": "a21s2-e-025",
+      "surface_form": "Minulla on päänsärkyä.",
+      "lemma": "Minulla on päänsärkyä.",
+      "translation_fa": "سردرد دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minulla on päänsärkyä.",
+      "example_fa": "سردرد دارم.",
+      "accepted_answers": [
+        "Minulla on päänsärkyä."
+      ]
+    },
+    "a21s2-e-026": {
+      "id": "a21s2-e-026",
+      "surface_form": "Minulla on kuumetta.",
+      "lemma": "Minulla on kuumetta.",
+      "translation_fa": "تب دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minulla on kuumetta.",
+      "example_fa": "تب دارم.",
+      "accepted_answers": [
+        "Minulla on kuumetta."
+      ]
+    },
+    "a21s2-e-027": {
+      "id": "a21s2-e-027",
+      "surface_form": "Kurkkuni on kipeä.",
+      "lemma": "Kurkkuni on kipeä.",
+      "translation_fa": "گلویم درد می‌کند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Kurkkuni on kipeä.",
+      "example_fa": "گلویم درد می‌کند.",
+      "accepted_answers": [
+        "Kurkkuni on kipeä."
+      ]
+    },
+    "a21s2-e-028": {
+      "id": "a21s2-e-028",
+      "surface_form": "Oireet alkoivat maanantaina.",
+      "lemma": "Oireet alkoivat maanantaina.",
+      "translation_fa": "نشانه‌ها روز دوشنبه شروع شدند.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Oireet alkoivat maanantaina.",
+      "example_fa": "نشانه‌ها روز دوشنبه شروع شدند.",
+      "accepted_answers": [
+        "Oireet alkoivat maanantaina."
+      ]
+    },
+    "a21s2-e-029": {
+      "id": "a21s2-e-029",
+      "surface_form": "Minulla oli kuumetta eilen.",
+      "lemma": "Minulla oli kuumetta eilen.",
+      "translation_fa": "دیروز تب داشتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minulla oli kuumetta eilen.",
+      "example_fa": "دیروز تب داشتم.",
+      "accepted_answers": [
+        "Minulla oli kuumetta eilen."
+      ]
+    },
+    "a21s2-t-030": {
+      "id": "a21s2-t-030",
+      "surface_form": "ohjeen",
+      "lemma": "ohje",
+      "translation_fa": "دستور / راهنمای مشخص",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko toistaa ohjeen?",
+      "example_fa": "ممکن است دستور را تکرار کنید؟",
+      "accepted_answers": [
+        "ohjeen"
+      ]
+    },
+    "a21s2-t-031": {
+      "id": "a21s2-t-031",
+      "surface_form": "hitaammin",
+      "lemma": "hitaasti",
+      "translation_fa": "آهسته‌تر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko puhua hitaammin?",
+      "example_fa": "ممکن است آهسته‌تر صحبت کنید؟",
+      "accepted_answers": [
+        "hitaammin"
+      ]
+    },
+    "a21s2-t-032": {
+      "id": "a21s2-t-032",
+      "surface_form": "seuraavaksi",
+      "lemma": "seuraava",
+      "translation_fa": "در مرحلهٔ بعد",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Mitä minun pitää tehdä seuraavaksi?",
+      "example_fa": "بعد باید چه کار کنم؟",
+      "accepted_answers": [
+        "seuraavaksi"
+      ]
+    },
+    "a21s2-e-033": {
+      "id": "a21s2-e-033",
+      "surface_form": "Voitteko puhua hitaammin?",
+      "lemma": "Voitteko puhua hitaammin?",
+      "translation_fa": "ممکن است آهسته‌تر صحبت کنید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko puhua hitaammin?",
+      "example_fa": "ممکن است آهسته‌تر صحبت کنید؟",
+      "accepted_answers": [
+        "Voitteko puhua hitaammin?"
+      ]
+    },
+    "a21s2-e-034": {
+      "id": "a21s2-e-034",
+      "surface_form": "Voitteko toistaa ohjeen?",
+      "lemma": "Voitteko toistaa ohjeen?",
+      "translation_fa": "ممکن است دستور را تکرار کنید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko toistaa ohjeen?",
+      "example_fa": "ممکن است دستور را تکرار کنید؟",
+      "accepted_answers": [
+        "Voitteko toistaa ohjeen?"
+      ]
+    },
+    "a21s2-e-035": {
+      "id": "a21s2-e-035",
+      "surface_form": "En ymmärtänyt viimeistä sanaa.",
+      "lemma": "En ymmärtänyt viimeistä sanaa.",
+      "translation_fa": "آخرین کلمه را متوجه نشدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "En ymmärtänyt viimeistä sanaa.",
+      "example_fa": "آخرین کلمه را متوجه نشدم.",
+      "accepted_answers": [
+        "En ymmärtänyt viimeistä sanaa."
+      ]
+    },
+    "a21s2-e-036": {
+      "id": "a21s2-e-036",
+      "surface_form": "Mitä minun pitää tehdä seuraavaksi?",
+      "lemma": "Mitä minun pitää tehdä seuraavaksi?",
+      "translation_fa": "بعد باید چه کار کنم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Mitä minun pitää tehdä seuraavaksi?",
+      "example_fa": "بعد باید چه کار کنم؟",
+      "accepted_answers": [
+        "Mitä minun pitää tehdä seuraavaksi?"
+      ]
+    },
+    "a21s2-e-037": {
+      "id": "a21s2-e-037",
+      "surface_form": "Odota tässä, ole hyvä.",
+      "lemma": "Odota tässä, ole hyvä.",
+      "translation_fa": "لطفاً اینجا منتظر بمان.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Odota tässä, ole hyvä.",
+      "example_fa": "لطفاً اینجا منتظر بمان.",
+      "accepted_answers": [
+        "Odota tässä, ole hyvä."
+      ]
+    },
+    "a21s2-h-038": {
+      "id": "a21s2-h-038",
+      "surface_form": "ennen",
+      "lemma": "ennen",
+      "translation_fa": "پیش از / قبلاً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 50,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Luen ohjeen ennen käyttöä.",
+      "example_fa": "پیش از استفاده، راهنما را می‌خوانم.",
+      "accepted_answers": [
+        "ennen"
+      ]
+    },
+    "a21s2-h-039": {
+      "id": "a21s2-h-039",
+      "surface_form": "jos",
+      "lemma": "jos",
+      "translation_fa": "اگر",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 22,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Kysyn apteekista, jos en ymmärrä.",
+      "example_fa": "اگر متوجه نشوم، از داروخانه می‌پرسم.",
+      "accepted_answers": [
+        "jos"
+      ]
+    },
+    "a21s2-t-040": {
+      "id": "a21s2-t-040",
+      "surface_form": "apteekki",
+      "lemma": "apteekki",
+      "translation_fa": "داروخانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Anteeksi, missä apteekki on?",
+      "example_fa": "ببخشید، داروخانه کجاست؟",
+      "accepted_answers": [
+        "apteekki"
+      ]
+    },
+    "a21s2-t-041": {
+      "id": "a21s2-t-041",
+      "surface_form": "lääkkeestä",
+      "lemma": "lääke",
+      "translation_fa": "دربارهٔ دارو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Haluaisin kysyä tästä lääkkeestä.",
+      "example_fa": "می‌خواهم دربارهٔ این دارو سؤال کنم.",
+      "accepted_answers": [
+        "lääkkeestä"
+      ]
+    },
+    "a21s2-t-042": {
+      "id": "a21s2-t-042",
+      "surface_form": "käyttöohjeen",
+      "lemma": "käyttöohje",
+      "translation_fa": "راهنمای استفاده (مفعول)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko selittää käyttöohjeen?",
+      "example_fa": "می‌توانید راهنمای استفاده را توضیح دهید؟",
+      "accepted_answers": [
+        "käyttöohjeen"
+      ]
+    },
+    "a21s2-e-043": {
+      "id": "a21s2-e-043",
+      "surface_form": "Anteeksi, missä apteekki on?",
+      "lemma": "Anteeksi, missä apteekki on?",
+      "translation_fa": "ببخشید، داروخانه کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Anteeksi, missä apteekki on?",
+      "example_fa": "ببخشید، داروخانه کجاست؟",
+      "accepted_answers": [
+        "Anteeksi, missä apteekki on?"
+      ]
+    },
+    "a21s2-e-044": {
+      "id": "a21s2-e-044",
+      "surface_form": "Haluaisin kysyä tästä lääkkeestä.",
+      "lemma": "Haluaisin kysyä tästä lääkkeestä.",
+      "translation_fa": "می‌خواهم دربارهٔ این دارو سؤال کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Haluaisin kysyä tästä lääkkeestä.",
+      "example_fa": "می‌خواهم دربارهٔ این دارو سؤال کنم.",
+      "accepted_answers": [
+        "Haluaisin kysyä tästä lääkkeestä."
+      ]
+    },
+    "a21s2-e-045": {
+      "id": "a21s2-e-045",
+      "surface_form": "Voitteko selittää käyttöohjeen?",
+      "lemma": "Voitteko selittää käyttöohjeen?",
+      "translation_fa": "می‌توانید راهنمای استفاده را توضیح دهید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko selittää käyttöohjeen?",
+      "example_fa": "می‌توانید راهنمای استفاده را توضیح دهید؟",
+      "accepted_answers": [
+        "Voitteko selittää käyttöohjeen?"
+      ]
+    },
+    "a21s2-e-046": {
+      "id": "a21s2-e-046",
+      "surface_form": "Luen ohjeen ennen käyttöä.",
+      "lemma": "Luen ohjeen ennen käyttöä.",
+      "translation_fa": "پیش از استفاده، راهنما را می‌خوانم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Luen ohjeen ennen käyttöä.",
+      "example_fa": "پیش از استفاده، راهنما را می‌خوانم.",
+      "accepted_answers": [
+        "Luen ohjeen ennen käyttöä."
+      ]
+    },
+    "a21s2-e-047": {
+      "id": "a21s2-e-047",
+      "surface_form": "Kysyn apteekista, jos en ymmärrä.",
+      "lemma": "Kysyn apteekista, jos en ymmärrä.",
+      "translation_fa": "اگر متوجه نشوم، از داروخانه می‌پرسم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Kysyn apteekista, jos en ymmärrä.",
+      "example_fa": "اگر متوجه نشوم، از داروخانه می‌پرسم.",
+      "accepted_answers": [
+        "Kysyn apteekista, jos en ymmärrä."
+      ]
+    },
+    "a21s2-h-048": {
+      "id": "a21s2-h-048",
+      "surface_form": "tämä",
+      "lemma": "tämä",
+      "translation_fa": "این",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 49,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Onko tämä oikea paikka?",
+      "example_fa": "آیا اینجا جای درست است؟",
+      "accepted_answers": [
+        "tämä"
+      ]
+    },
+    "a21s2-t-049": {
+      "id": "a21s2-t-049",
+      "surface_form": "palvelupiste",
+      "lemma": "palvelupiste",
+      "translation_fa": "باجهٔ خدمات",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Missä palvelupiste sijaitsee?",
+      "example_fa": "باجهٔ خدمات کجاست؟",
+      "accepted_answers": [
+        "palvelupiste"
+      ]
+    },
+    "a21s2-t-050": {
+      "id": "a21s2-t-050",
+      "surface_form": "luukulle",
+      "lemma": "luukku",
+      "translation_fa": "به باجه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Mille luukulle minun pitää mennä?",
+      "example_fa": "باید به کدام باجه بروم؟",
+      "accepted_answers": [
+        "luukulle"
+      ]
+    },
+    "a21s2-t-051": {
+      "id": "a21s2-t-051",
+      "surface_form": "vuoroani",
+      "lemma": "vuoro",
+      "translation_fa": "نوبتم (مفعول)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Odotan vuoroani tässä.",
+      "example_fa": "اینجا منتظر نوبتم می‌مانم.",
+      "accepted_answers": [
+        "vuoroani"
+      ]
+    },
+    "a21s2-e-052": {
+      "id": "a21s2-e-052",
+      "surface_form": "Missä palvelupiste sijaitsee?",
+      "lemma": "Missä palvelupiste sijaitsee?",
+      "translation_fa": "باجهٔ خدمات کجاست؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Missä palvelupiste sijaitsee?",
+      "example_fa": "باجهٔ خدمات کجاست؟",
+      "accepted_answers": [
+        "Missä palvelupiste sijaitsee?"
+      ]
+    },
+    "a21s2-e-053": {
+      "id": "a21s2-e-053",
+      "surface_form": "Onko tämä oikea paikka?",
+      "lemma": "Onko tämä oikea paikka?",
+      "translation_fa": "آیا اینجا جای درست است؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Onko tämä oikea paikka?",
+      "example_fa": "آیا اینجا جای درست است؟",
+      "accepted_answers": [
+        "Onko tämä oikea paikka?"
+      ]
+    },
+    "a21s2-e-054": {
+      "id": "a21s2-e-054",
+      "surface_form": "Tarvitsen apua ajanvarauksessa.",
+      "lemma": "Tarvitsen apua ajanvarauksessa.",
+      "translation_fa": "برای گرفتن وقت به کمک نیاز دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Tarvitsen apua ajanvarauksessa.",
+      "example_fa": "برای گرفتن وقت به کمک نیاز دارم.",
+      "accepted_answers": [
+        "Tarvitsen apua ajanvarauksessa."
+      ]
+    },
+    "a21s2-e-055": {
+      "id": "a21s2-e-055",
+      "surface_form": "Mille luukulle minun pitää mennä?",
+      "lemma": "Mille luukulle minun pitää mennä?",
+      "translation_fa": "باید به کدام باجه بروم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Mille luukulle minun pitää mennä?",
+      "example_fa": "باید به کدام باجه بروم؟",
+      "accepted_answers": [
+        "Mille luukulle minun pitää mennä?"
+      ]
+    },
+    "a21s2-e-056": {
+      "id": "a21s2-e-056",
+      "surface_form": "Odotan vuoroani tässä.",
+      "lemma": "Odotan vuoroani tässä.",
+      "translation_fa": "اینجا منتظر نوبتم می‌مانم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Odotan vuoroani tässä.",
+      "example_fa": "اینجا منتظر نوبتم می‌مانم.",
+      "accepted_answers": [
+        "Odotan vuoroani tässä."
+      ]
+    },
+    "a21s2-h-057": {
+      "id": "a21s2-h-057",
+      "surface_form": "tähän",
+      "lemma": "tämä",
+      "translation_fa": "به این / داخل این / تا اینجا",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 170,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Kirjoitan nimeni tähän.",
+      "example_fa": "نامم را اینجا می‌نویسم.",
+      "accepted_answers": [
+        "tähän"
+      ]
+    },
+    "a21s2-t-058": {
+      "id": "a21s2-t-058",
+      "surface_form": "lomakkeessa",
+      "lemma": "lomake",
+      "translation_fa": "در فرم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Lomakkeessa kysytään osoitetta.",
+      "example_fa": "در فرم نشانی خواسته شده است.",
+      "accepted_answers": [
+        "lomakkeessa"
+      ]
+    },
+    "a21s2-t-059": {
+      "id": "a21s2-t-059",
+      "surface_form": "osoitetta",
+      "lemma": "osoite",
+      "translation_fa": "نشانی (مفعول جزئی)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Lomakkeessa kysytään osoitetta.",
+      "example_fa": "در فرم نشانی خواسته شده است.",
+      "accepted_answers": [
+        "osoitetta"
+      ]
+    },
+    "a21s2-t-060": {
+      "id": "a21s2-t-060",
+      "surface_form": "allekirjoittaa",
+      "lemma": "allekirjoittaa",
+      "translation_fa": "امضا کردن",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minun pitää allekirjoittaa lomake.",
+      "example_fa": "باید فرم را امضا کنم.",
+      "accepted_answers": [
+        "allekirjoittaa"
+      ]
+    },
+    "a21s2-e-061": {
+      "id": "a21s2-e-061",
+      "surface_form": "Kirjoitan nimeni tähän.",
+      "lemma": "Kirjoitan nimeni tähän.",
+      "translation_fa": "نامم را اینجا می‌نویسم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Kirjoitan nimeni tähän.",
+      "example_fa": "نامم را اینجا می‌نویسم.",
+      "accepted_answers": [
+        "Kirjoitan nimeni tähän."
+      ]
+    },
+    "a21s2-e-062": {
+      "id": "a21s2-e-062",
+      "surface_form": "Lomakkeessa kysytään osoitetta.",
+      "lemma": "Lomakkeessa kysytään osoitetta.",
+      "translation_fa": "در فرم نشانی خواسته شده است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Lomakkeessa kysytään osoitetta.",
+      "example_fa": "در فرم نشانی خواسته شده است.",
+      "accepted_answers": [
+        "Lomakkeessa kysytään osoitetta."
+      ]
+    },
+    "a21s2-e-063": {
+      "id": "a21s2-e-063",
+      "surface_form": "En ymmärrä tätä kohtaa.",
+      "lemma": "En ymmärrä tätä kohtaa.",
+      "translation_fa": "این قسمت را نمی‌فهمم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "En ymmärrä tätä kohtaa.",
+      "example_fa": "این قسمت را نمی‌فهمم.",
+      "accepted_answers": [
+        "En ymmärrä tätä kohtaa."
+      ]
+    },
+    "a21s2-e-064": {
+      "id": "a21s2-e-064",
+      "surface_form": "Pitääkö tähän kirjoittaa päivämäärä?",
+      "lemma": "Pitääkö tähän kirjoittaa päivämäärä?",
+      "translation_fa": "آیا باید اینجا تاریخ بنویسم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Pitääkö tähän kirjoittaa päivämäärä?",
+      "example_fa": "آیا باید اینجا تاریخ بنویسم؟",
+      "accepted_answers": [
+        "Pitääkö tähän kirjoittaa päivämäärä?"
+      ]
+    },
+    "a21s2-e-065": {
+      "id": "a21s2-e-065",
+      "surface_form": "Minun pitää allekirjoittaa lomake.",
+      "lemma": "Minun pitää allekirjoittaa lomake.",
+      "translation_fa": "باید فرم را امضا کنم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minun pitää allekirjoittaa lomake.",
+      "example_fa": "باید فرم را امضا کنم.",
+      "accepted_answers": [
+        "Minun pitää allekirjoittaa lomake."
+      ]
+    },
+    "a21s2-h-066": {
+      "id": "a21s2-h-066",
+      "surface_form": "saada",
+      "lemma": "saada",
+      "translation_fa": "گرفتن / دریافت کردن / اجازه داشتن",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 159,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Voinko saada kopion tästä?",
+      "example_fa": "می‌توانم یک کپی از این بگیرم؟",
+      "accepted_answers": [
+        "saada"
+      ]
+    },
+    "a21s2-t-067": {
+      "id": "a21s2-t-067",
+      "surface_form": "todistuksen",
+      "lemma": "todistus",
+      "translation_fa": "گواهی (مفعول کامل)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Tarvitsen todistuksen työnantajalle.",
+      "example_fa": "برای کارفرما به گواهی نیاز دارم.",
+      "accepted_answers": [
+        "todistuksen"
+      ]
+    },
+    "a21s2-t-068": {
+      "id": "a21s2-t-068",
+      "surface_form": "kopion",
+      "lemma": "kopio",
+      "translation_fa": "کپی (مفعول کامل)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voinko saada kopion tästä?",
+      "example_fa": "می‌توانم یک کپی از این بگیرم؟",
+      "accepted_answers": [
+        "kopion"
+      ]
+    },
+    "a21s2-t-069": {
+      "id": "a21s2-t-069",
+      "surface_form": "sähköpostilla",
+      "lemma": "sähköposti",
+      "translation_fa": "با ایمیل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko lähettää sen sähköpostilla?",
+      "example_fa": "می‌توانید آن را با ایمیل بفرستید؟",
+      "accepted_answers": [
+        "sähköpostilla"
+      ]
+    },
+    "a21s2-e-070": {
+      "id": "a21s2-e-070",
+      "surface_form": "Tarvitsen todistuksen työnantajalle.",
+      "lemma": "Tarvitsen todistuksen työnantajalle.",
+      "translation_fa": "برای کارفرما به گواهی نیاز دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Tarvitsen todistuksen työnantajalle.",
+      "example_fa": "برای کارفرما به گواهی نیاز دارم.",
+      "accepted_answers": [
+        "Tarvitsen todistuksen työnantajalle."
+      ]
+    },
+    "a21s2-e-071": {
+      "id": "a21s2-e-071",
+      "surface_form": "Voinko saada kopion tästä?",
+      "lemma": "Voinko saada kopion tästä?",
+      "translation_fa": "می‌توانم یک کپی از این بگیرم؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voinko saada kopion tästä?",
+      "example_fa": "می‌توانم یک کپی از این بگیرم؟",
+      "accepted_answers": [
+        "Voinko saada kopion tästä?"
+      ]
+    },
+    "a21s2-e-072": {
+      "id": "a21s2-e-072",
+      "surface_form": "Milloin todistus valmistuu?",
+      "lemma": "Milloin todistus valmistuu?",
+      "translation_fa": "گواهی چه زمانی آماده می‌شود؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Milloin todistus valmistuu?",
+      "example_fa": "گواهی چه زمانی آماده می‌شود؟",
+      "accepted_answers": [
+        "Milloin todistus valmistuu?"
+      ]
+    },
+    "a21s2-e-073": {
+      "id": "a21s2-e-073",
+      "surface_form": "Voitteko lähettää sen sähköpostilla?",
+      "lemma": "Voitteko lähettää sen sähköpostilla?",
+      "translation_fa": "می‌توانید آن را با ایمیل بفرستید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko lähettää sen sähköpostilla?",
+      "example_fa": "می‌توانید آن را با ایمیل بفرستید؟",
+      "accepted_answers": [
+        "Voitteko lähettää sen sähköpostilla?"
+      ]
+    },
+    "a21s2-e-074": {
+      "id": "a21s2-e-074",
+      "surface_form": "Minulla on henkilöllisyystodistus mukana.",
+      "lemma": "Minulla on henkilöllisyystodistus mukana.",
+      "translation_fa": "کارت شناسایی‌ام همراهم است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Minulla on henkilöllisyystodistus mukana.",
+      "example_fa": "کارت شناسایی‌ام همراهم است.",
+      "accepted_answers": [
+        "Minulla on henkilöllisyystodistus mukana."
+      ]
+    },
+    "a21s2-h-075": {
+      "id": "a21s2-h-075",
+      "surface_form": "myös",
+      "lemma": "myös",
+      "translation_fa": "همچنین / نیز",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 11,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Tarvitsen myös todistuksen.",
+      "example_fa": "به گواهی هم نیاز دارم.",
+      "accepted_answers": [
+        "myös"
+      ]
+    },
+    "a21s2-t-076": {
+      "id": "a21s2-t-076",
+      "surface_form": "torstaina",
+      "lemma": "torstai",
+      "translation_fa": "روز پنجشنبه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 298,
+      "topics": [
+        "a2.1-s2",
+        "source-backed"
+      ],
+      "example_fi": "Onko torstaina vapaita aikoja?",
+      "example_fa": "پنجشنبه وقت خالی دارید؟",
+      "accepted_answers": [
+        "torstaina"
+      ]
+    },
+    "a21s2-t-077": {
+      "id": "a21s2-t-077",
+      "surface_form": "vahvistuksen",
+      "lemma": "vahvistus",
+      "translation_fa": "تأییدیه (مفعول کامل)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko lähettää vahvistuksen sähköpostilla?",
+      "example_fa": "می‌توانید تأییدیه را با ایمیل بفرستید؟",
+      "accepted_answers": [
+        "vahvistuksen"
+      ]
+    },
+    "a21s2-e-078": {
+      "id": "a21s2-e-078",
+      "surface_form": "Hei, haluaisin varata ajan.",
+      "lemma": "Hei, haluaisin varata ajan.",
+      "translation_fa": "سلام، می‌خواهم وقت بگیرم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Hei, haluaisin varata ajan.",
+      "example_fa": "سلام، می‌خواهم وقت بگیرم.",
+      "accepted_answers": [
+        "Hei, haluaisin varata ajan."
+      ]
+    },
+    "a21s2-e-079": {
+      "id": "a21s2-e-079",
+      "surface_form": "Onko torstaina vapaita aikoja?",
+      "lemma": "Onko torstaina vapaita aikoja?",
+      "translation_fa": "پنجشنبه وقت خالی دارید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Onko torstaina vapaita aikoja?",
+      "example_fa": "پنجشنبه وقت خالی دارید؟",
+      "accepted_answers": [
+        "Onko torstaina vapaita aikoja?"
+      ]
+    },
+    "a21s2-e-080": {
+      "id": "a21s2-e-080",
+      "surface_form": "Torstai sopii minulle.",
+      "lemma": "Torstai sopii minulle.",
+      "translation_fa": "پنجشنبه برایم مناسب است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Torstai sopii minulle.",
+      "example_fa": "پنجشنبه برایم مناسب است.",
+      "accepted_answers": [
+        "Torstai sopii minulle."
+      ]
+    },
+    "a21s2-e-081": {
+      "id": "a21s2-e-081",
+      "surface_form": "Tarvitsen myös todistuksen.",
+      "lemma": "Tarvitsen myös todistuksen.",
+      "translation_fa": "به گواهی هم نیاز دارم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Tarvitsen myös todistuksen.",
+      "example_fa": "به گواهی هم نیاز دارم.",
+      "accepted_answers": [
+        "Tarvitsen myös todistuksen."
+      ]
+    },
+    "a21s2-e-082": {
+      "id": "a21s2-e-082",
+      "surface_form": "Voitteko lähettää vahvistuksen sähköpostilla?",
+      "lemma": "Voitteko lähettää vahvistuksen sähköpostilla?",
+      "translation_fa": "می‌توانید تأییدیه را با ایمیل بفرستید؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Voitteko lähettää vahvistuksen sähköpostilla?",
+      "example_fa": "می‌توانید تأییدیه را با ایمیل بفرستید؟",
+      "accepted_answers": [
+        "Voitteko lähettää vahvistuksen sähköpostilla?"
+      ]
+    },
+    "a21s2-reading-1": {
+      "id": "a21s2-reading-1",
+      "surface_form": "Hei, haluaisin varata ajan. Onko torstaina vapaita aikoja?",
+      "lemma": "Hei, haluaisin varata ajan. Onko torstaina vapaita aikoja?",
+      "translation_fa": "سلام، می‌خواهم وقت بگیرم. پنجشنبه وقت خالی دارید؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "integrated-reading"
+      ],
+      "example_fi": "Hei, haluaisin varata ajan. Onko torstaina vapaita aikoja?",
+      "example_fa": "سلام، می‌خواهم وقت بگیرم. پنجشنبه وقت خالی دارید؟",
+      "accepted_answers": [
+        "Hei, haluaisin varata ajan. Onko torstaina vapaita aikoja?"
+      ]
+    },
+    "a21s2-reading-2": {
+      "id": "a21s2-reading-2",
+      "surface_form": "Tarvitsen myös todistuksen. Voitteko lähettää vahvistuksen sähköpostilla?",
+      "lemma": "Tarvitsen myös todistuksen. Voitteko lähettää vahvistuksen sähköpostilla?",
+      "translation_fa": "به گواهی هم نیاز دارم. می‌توانید تأییدیه را با ایمیل بفرستید؟",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "integrated-reading"
+      ],
+      "example_fi": "Tarvitsen myös todistuksen. Voitteko lähettää vahvistuksen sähköpostilla?",
+      "example_fa": "به گواهی هم نیاز دارم. می‌توانید تأییدیه را با ایمیل بفرستید؟",
+      "accepted_answers": [
+        "Tarvitsen myös todistuksen. Voitteko lähettää vahvistuksen sähköpostilla?"
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a2.1-section-2-lesson-1",
+      "curriculum_id": "a2.1-s2-l01",
+      "order": 1,
+      "title_fa": "گرفتن وقت پزشک",
+      "objective_fa": "برای پزشک وقت بخواهم، دربارهٔ وقت‌های خالی بپرسم و زمانی مناسب را تأیید کنم.",
+      "summary_fa": "برای پزشک وقت بخواهم، دربارهٔ وقت‌های خالی بپرسم و زمانی مناسب را تأیید کنم.",
+      "grammar_fa": "«Haluaisin» یک درخواست مؤدبانه است؛ صرف کامل شرطی در این بخش تدریس نمی‌شود. «lääkärille» جهت و «tiistaina» زمان را مشخص می‌کند.",
+      "new_targets": [
+        "a21s2-t-003",
+        "a21s2-t-004",
+        "a21s2-t-005",
+        "a21s2-e-006",
+        "a21s2-e-007"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-001",
+          "a21s2-h-002"
+        ],
+        "topic": [
+          "a21s2-t-003",
+          "a21s2-t-004",
+          "a21s2-t-005"
+        ],
+        "expressions": [
+          "a21s2-e-006",
+          "a21s2-e-007",
+          "a21s2-e-008",
+          "a21s2-e-009",
+          "a21s2-e-010"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s4-l08",
+        "a1.3-s1-l03",
+        "a2.1-s1-l05"
+      ],
+      "production_targets": [
+        "a21s2-e-006"
+      ],
+      "listening_targets": [
+        "a21s2-e-007",
+        "a21s2-e-008"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-009",
+          "tokens": [
+            "kello",
+            "kymmenen",
+            "sopii",
+            "minulle.",
+            "Tiistai"
+          ],
+          "answer_order": [
+            4,
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Tiistai kello kymmenen sopii minulle."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-006",
+          "base_fi": "varata",
+          "feature_fa": "مصدر پس از درخواست مؤدبانه",
+          "prompt_fa": "در جملهٔ «سلام، می‌خواهم برای پزشک وقت بگیرم.» صورت درست فعل را بنویس.",
+          "frame_fi": "Hei, haluaisin _____ ajan lääkärille.",
+          "expected_fi": "varata",
+          "accepted_answers": [
+            "varata"
+          ],
+          "explanation_fa": "«Haluaisin varata» یعنی «می‌خواهم رزرو کنم»؛ پس از haluaisin شکل پایهٔ «varata» می‌آید."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-003"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-004"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-005"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-006"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-007"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-006",
+          "options": [
+            "a21s2-e-006",
+            "a21s2-e-007",
+            "a21s2-e-008",
+            "a21s2-e-009"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-006",
+          "options": [
+            "a21s2-e-018",
+            "a21s2-e-006",
+            "a21s2-e-019",
+            "a21s2-e-020"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-007",
+          "options": [
+            "a21s2-e-029",
+            "a21s2-e-033",
+            "a21s2-e-007",
+            "a21s2-e-034"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-007",
+          "options": [
+            "a21s2-e-044",
+            "a21s2-e-045",
+            "a21s2-e-046",
+            "a21s2-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-008",
+          "options": [
+            "a21s2-e-008",
+            "a21s2-e-055",
+            "a21s2-e-056",
+            "a21s2-e-061"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-008",
+          "options": [
+            "a21s2-e-070",
+            "a21s2-e-008",
+            "a21s2-e-071",
+            "a21s2-e-072"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-009",
+          "options": [
+            "a21s2-e-080",
+            "a21s2-e-081",
+            "a21s2-e-009",
+            "a21s2-e-082"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-009",
+          "options": [
+            "a21s2-e-010",
+            "a21s2-e-016",
+            "a21s2-e-017",
+            "a21s2-e-009"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-001",
+          "options": [
+            "a21s2-t-058",
+            "a21s2-t-059",
+            "a21s2-h-001",
+            "a21s2-t-060"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-003",
+          "options": [
+            "a21s2-h-057",
+            "a21s2-t-058",
+            "a21s2-t-059",
+            "a21s2-t-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-2",
+      "curriculum_id": "a2.1-s2-l02",
+      "order": 2,
+      "title_fa": "تغییر یا لغو وقت",
+      "objective_fa": "بگویم در وقت تعیین‌شده نمی‌توانم حاضر شوم و درخواست تغییر یا لغو آن را مطرح کنم.",
+      "summary_fa": "بگویم در وقت تعیین‌شده نمی‌توانم حاضر شوم و درخواست تغییر یا لغو آن را مطرح کنم.",
+      "grammar_fa": "«Minun pitää + مصدر» ضرورت را نشان می‌دهد. در «En pääse» فعل pääse پس از منفی اول‌شخص آمده است. «perua ajan» یعنی لغو کردن وقت.",
+      "new_targets": [
+        "a21s2-t-013",
+        "a21s2-t-014",
+        "a21s2-t-015",
+        "a21s2-e-016",
+        "a21s2-e-017"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-011",
+          "a21s2-h-012"
+        ],
+        "topic": [
+          "a21s2-t-013",
+          "a21s2-t-014",
+          "a21s2-t-015"
+        ],
+        "expressions": [
+          "a21s2-e-016",
+          "a21s2-e-017",
+          "a21s2-e-018",
+          "a21s2-e-019",
+          "a21s2-e-020"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s1-l03",
+        "a1.3-s1-l04",
+        "a2.1-s2-l01"
+      ],
+      "production_targets": [
+        "a21s2-e-016"
+      ],
+      "listening_targets": [
+        "a21s2-e-017",
+        "a21s2-e-018"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-019",
+          "tokens": [
+            "perjantaina",
+            "vapaita",
+            "aikoja?",
+            "Onko"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Onko perjantaina vapaita aikoja?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-017",
+          "base_fi": "päästä",
+          "feature_fa": "منفی اول‌شخص",
+          "prompt_fa": "در جملهٔ «فردا نمی‌توانم برای ویزیت بیایم.» صورت درست فعل را بنویس.",
+          "frame_fi": "En _____ vastaanotolle huomenna.",
+          "expected_fi": "pääse",
+          "accepted_answers": [
+            "pääse"
+          ],
+          "explanation_fa": "در «En pääse» صورت «pääse» بعد از «en» می‌آید؛ این عبارت را در بافت کامل تمرین کن."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-013"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-014"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-015"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-016"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-017"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-016",
+          "options": [
+            "a21s2-e-007",
+            "a21s2-e-016",
+            "a21s2-e-008",
+            "a21s2-e-009"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-016",
+          "options": [
+            "a21s2-e-019",
+            "a21s2-e-020",
+            "a21s2-e-016",
+            "a21s2-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-017",
+          "options": [
+            "a21s2-e-033",
+            "a21s2-e-034",
+            "a21s2-e-035",
+            "a21s2-e-017"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-017",
+          "options": [
+            "a21s2-e-017",
+            "a21s2-e-045",
+            "a21s2-e-046",
+            "a21s2-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-018",
+          "options": [
+            "a21s2-e-056",
+            "a21s2-e-018",
+            "a21s2-e-061",
+            "a21s2-e-062"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-018",
+          "options": [
+            "a21s2-e-071",
+            "a21s2-e-072",
+            "a21s2-e-018",
+            "a21s2-e-073"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-019",
+          "options": [
+            "a21s2-e-081",
+            "a21s2-e-082",
+            "a21s2-e-006",
+            "a21s2-e-019"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-019",
+          "options": [
+            "a21s2-e-019",
+            "a21s2-e-016",
+            "a21s2-e-017",
+            "a21s2-e-018"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-011",
+          "options": [
+            "a21s2-h-075",
+            "a21s2-t-076",
+            "a21s2-t-077",
+            "a21s2-h-011"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-013",
+          "options": [
+            "a21s2-t-013",
+            "a21s2-t-069",
+            "a21s2-h-075",
+            "a21s2-t-076"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-3",
+      "curriculum_id": "a2.1-s2-l03",
+      "order": 3,
+      "title_fa": "نشانه‌ها و زمان شروع آن‌ها",
+      "objective_fa": "چند نشانهٔ معمول را به زبان ساده نام ببرم و بگویم چه زمانی شروع شده‌اند.",
+      "summary_fa": "چند نشانهٔ معمول را به زبان ساده نام ببرم و بگویم چه زمانی شروع شده‌اند.",
+      "grammar_fa": "«Minulla on» برای توصیف داشتن نشانه به کار می‌رود. «päänsärkyä» و «kuumetta» صورت Partitiivi دارند. «Oireet alkoivat» گذشتهٔ جمع است. این‌ها عبارت‌های زبانی‌اند و تشخیص پزشکی نیستند.",
+      "new_targets": [
+        "a21s2-t-022",
+        "a21s2-t-023",
+        "a21s2-t-024",
+        "a21s2-e-025",
+        "a21s2-e-026"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-001",
+          "a21s2-h-021"
+        ],
+        "topic": [
+          "a21s2-t-022",
+          "a21s2-t-023",
+          "a21s2-t-024"
+        ],
+        "expressions": [
+          "a21s2-e-025",
+          "a21s2-e-026",
+          "a21s2-e-027",
+          "a21s2-e-028",
+          "a21s2-e-029"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s4-l02",
+        "a1.2-s4-l03",
+        "a2.1-s2-l01"
+      ],
+      "production_targets": [
+        "a21s2-e-025"
+      ],
+      "listening_targets": [
+        "a21s2-e-026",
+        "a21s2-e-027"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-028",
+          "tokens": [
+            "alkoivat",
+            "maanantaina.",
+            "Oireet"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Oireet alkoivat maanantaina."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-028",
+          "base_fi": "alkaa",
+          "feature_fa": "گذشتهٔ سوم‌شخص جمع",
+          "prompt_fa": "در جملهٔ «نشانه‌ها روز دوشنبه شروع شدند.» صورت درست فعل را بنویس.",
+          "frame_fi": "Oireet _____ maanantaina.",
+          "expected_fi": "alkoivat",
+          "accepted_answers": [
+            "alkoivat"
+          ],
+          "explanation_fa": "«Oireet» جمع است و «alkoivat» گذشتهٔ سوم‌شخص جمعِ «alkaa» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-022"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-023"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-024"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-025"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-026"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-025",
+          "options": [
+            "a21s2-e-008",
+            "a21s2-e-009",
+            "a21s2-e-025",
+            "a21s2-e-010"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-025",
+          "options": [
+            "a21s2-e-020",
+            "a21s2-e-026",
+            "a21s2-e-027",
+            "a21s2-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-026",
+          "options": [
+            "a21s2-e-026",
+            "a21s2-e-034",
+            "a21s2-e-035",
+            "a21s2-e-036"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-026",
+          "options": [
+            "a21s2-e-046",
+            "a21s2-e-026",
+            "a21s2-e-047",
+            "a21s2-e-052"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-027",
+          "options": [
+            "a21s2-e-061",
+            "a21s2-e-062",
+            "a21s2-e-027",
+            "a21s2-e-063"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-027",
+          "options": [
+            "a21s2-e-072",
+            "a21s2-e-073",
+            "a21s2-e-074",
+            "a21s2-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-028",
+          "options": [
+            "a21s2-e-028",
+            "a21s2-e-082",
+            "a21s2-e-006",
+            "a21s2-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-028",
+          "options": [
+            "a21s2-e-017",
+            "a21s2-e-028",
+            "a21s2-e-018",
+            "a21s2-e-019"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-001",
+          "options": [
+            "a21s2-h-001",
+            "a21s2-t-005",
+            "a21s2-h-011",
+            "a21s2-h-012"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-022",
+          "options": [
+            "a21s2-t-004",
+            "a21s2-t-022",
+            "a21s2-t-005",
+            "a21s2-h-011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-4",
+      "curriculum_id": "a2.1-s2-l04",
+      "order": 4,
+      "title_fa": "فهمیدن و روشن‌کردن دستورهای کارکنان",
+      "objective_fa": "از کارکنان بخواهم آهسته‌تر صحبت کنند، توضیح را تکرار کنند و مرحلهٔ بعد را روشن کنند.",
+      "summary_fa": "از کارکنان بخواهم آهسته‌تر صحبت کنند، توضیح را تکرار کنند و مرحلهٔ بعد را روشن کنند.",
+      "grammar_fa": "«Voitteko + مصدر» برای درخواست مؤدبانه از کارکنان است. «En ymmärtänyt» یعنی «متوجه نشدم». «Minun pitää tehdä» برای پرسیدن دربارهٔ الزام یا قدم بعدی است.",
+      "new_targets": [
+        "a21s2-t-030",
+        "a21s2-t-031",
+        "a21s2-t-032",
+        "a21s2-e-033",
+        "a21s2-e-034"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-011",
+          "a21s2-h-012"
+        ],
+        "topic": [
+          "a21s2-t-030",
+          "a21s2-t-031",
+          "a21s2-t-032"
+        ],
+        "expressions": [
+          "a21s2-e-033",
+          "a21s2-e-034",
+          "a21s2-e-035",
+          "a21s2-e-036",
+          "a21s2-e-037"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s3-l02",
+        "a1.3-s3-l03",
+        "a2.1-s2-l03"
+      ],
+      "production_targets": [
+        "a21s2-e-033"
+      ],
+      "listening_targets": [
+        "a21s2-e-034",
+        "a21s2-e-035"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-036",
+          "tokens": [
+            "minun",
+            "pitää",
+            "tehdä",
+            "seuraavaksi?",
+            "Mitä"
+          ],
+          "answer_order": [
+            4,
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Mitä minun pitää tehdä seuraavaksi?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-033",
+          "base_fi": "puhua",
+          "feature_fa": "مصدر پس از پرسش مؤدبانه",
+          "prompt_fa": "در جملهٔ «ممکن است آهسته‌تر صحبت کنید؟» صورت درست فعل را بنویس.",
+          "frame_fi": "Voitteko _____ hitaammin?",
+          "expected_fi": "puhua",
+          "accepted_answers": [
+            "puhua"
+          ],
+          "explanation_fa": "در «Voitteko puhua hitaammin?» بعد از Voitteko صورت پایهٔ «puhua» آمده است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-030"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-031"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-032"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-033"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-034"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-033",
+          "options": [
+            "a21s2-e-009",
+            "a21s2-e-010",
+            "a21s2-e-016",
+            "a21s2-e-033"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-033",
+          "options": [
+            "a21s2-e-033",
+            "a21s2-e-025",
+            "a21s2-e-026",
+            "a21s2-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-034",
+          "options": [
+            "a21s2-e-035",
+            "a21s2-e-034",
+            "a21s2-e-036",
+            "a21s2-e-037"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-034",
+          "options": [
+            "a21s2-e-047",
+            "a21s2-e-052",
+            "a21s2-e-034",
+            "a21s2-e-053"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-035",
+          "options": [
+            "a21s2-e-062",
+            "a21s2-e-063",
+            "a21s2-e-064",
+            "a21s2-e-035"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-035",
+          "options": [
+            "a21s2-e-035",
+            "a21s2-e-073",
+            "a21s2-e-074",
+            "a21s2-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-036",
+          "options": [
+            "a21s2-e-006",
+            "a21s2-e-036",
+            "a21s2-e-007",
+            "a21s2-e-008"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-036",
+          "options": [
+            "a21s2-e-018",
+            "a21s2-e-019",
+            "a21s2-e-036",
+            "a21s2-e-020"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-011",
+          "options": [
+            "a21s2-t-022",
+            "a21s2-h-011",
+            "a21s2-t-023",
+            "a21s2-t-024"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-030",
+          "options": [
+            "a21s2-h-021",
+            "a21s2-t-022",
+            "a21s2-t-030",
+            "a21s2-t-023"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-5",
+      "curriculum_id": "a2.1-s2-l05",
+      "order": 5,
+      "title_fa": "پرسش و فهم راهنمای داروخانه",
+      "objective_fa": "جای داروخانه را بپرسم و برای فهمیدن راهنمای نوشته‌شدهٔ دارو سؤال کنم.",
+      "summary_fa": "جای داروخانه را بپرسم و برای فهمیدن راهنمای نوشته‌شدهٔ دارو سؤال کنم.",
+      "grammar_fa": "«kysyä tästä lääkkeestä» برای پرسش دربارهٔ چیزی است. «ennen käyttöä» یعنی پیش از استفاده و «jos» یک شرط کوتاه می‌سازد. این تمرین‌ها تجویز دارویی نیستند.",
+      "new_targets": [
+        "a21s2-t-040",
+        "a21s2-t-041",
+        "a21s2-t-042",
+        "a21s2-e-043",
+        "a21s2-e-044"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-038",
+          "a21s2-h-039"
+        ],
+        "topic": [
+          "a21s2-t-040",
+          "a21s2-t-041",
+          "a21s2-t-042"
+        ],
+        "expressions": [
+          "a21s2-e-043",
+          "a21s2-e-044",
+          "a21s2-e-045",
+          "a21s2-e-046",
+          "a21s2-e-047"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s4-l03",
+        "a1.3-s3-l02",
+        "a2.1-s2-l04"
+      ],
+      "production_targets": [
+        "a21s2-e-043"
+      ],
+      "listening_targets": [
+        "a21s2-e-044",
+        "a21s2-e-045"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-046",
+          "tokens": [
+            "ohjeen",
+            "ennen",
+            "käyttöä.",
+            "Luen"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Luen ohjeen ennen käyttöä."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-046",
+          "base_fi": "lukea",
+          "feature_fa": "حال اول‌شخص مفرد",
+          "prompt_fa": "در جملهٔ «پیش از استفاده، راهنما را می‌خوانم.» صورت درست فعل را بنویس.",
+          "frame_fi": "_____ ohjeen ennen käyttöä.",
+          "expected_fi": "Luen",
+          "accepted_answers": [
+            "Luen"
+          ],
+          "explanation_fa": "«Luen» صورت حالِ اول‌شخصِ «lukea» است؛ در این نمونه راهنمای نوشته‌شده را می‌خوانم."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-040"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-041"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-042"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-043"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-044"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-043",
+          "options": [
+            "a21s2-e-043",
+            "a21s2-e-010",
+            "a21s2-e-016",
+            "a21s2-e-017"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-043",
+          "options": [
+            "a21s2-e-026",
+            "a21s2-e-043",
+            "a21s2-e-027",
+            "a21s2-e-028"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-044",
+          "options": [
+            "a21s2-e-036",
+            "a21s2-e-037",
+            "a21s2-e-044",
+            "a21s2-e-043"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-044",
+          "options": [
+            "a21s2-e-052",
+            "a21s2-e-053",
+            "a21s2-e-054",
+            "a21s2-e-044"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-045",
+          "options": [
+            "a21s2-e-045",
+            "a21s2-e-063",
+            "a21s2-e-064",
+            "a21s2-e-065"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-045",
+          "options": [
+            "a21s2-e-074",
+            "a21s2-e-045",
+            "a21s2-e-078",
+            "a21s2-e-079"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-046",
+          "options": [
+            "a21s2-e-007",
+            "a21s2-e-008",
+            "a21s2-e-046",
+            "a21s2-e-009"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-046",
+          "options": [
+            "a21s2-e-019",
+            "a21s2-e-020",
+            "a21s2-e-025",
+            "a21s2-e-046"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-038",
+          "options": [
+            "a21s2-h-039",
+            "a21s2-t-040",
+            "a21s2-h-038",
+            "a21s2-t-041"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-040",
+          "options": [
+            "a21s2-h-038",
+            "a21s2-h-039",
+            "a21s2-t-041",
+            "a21s2-t-040"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-6",
+      "curriculum_id": "a2.1-s2-l06",
+      "order": 6,
+      "title_fa": "پیدا کردن باجهٔ خدماتی مناسب",
+      "objective_fa": "باجهٔ درست را پیدا کنم، نیاز اداری ساده‌ای را بیان کنم و دربارهٔ نوبت بپرسم.",
+      "summary_fa": "باجهٔ درست را پیدا کنم، نیاز اداری ساده‌ای را بیان کنم و دربارهٔ نوبت بپرسم.",
+      "grammar_fa": "«Missä ... sijaitsee?» برای پرسیدن مکان است. «Mille luukulle» جهت رفتن به یک باجه را می‌گوید و «vuoroani» یعنی «نوبتم» به‌صورت مفعول.",
+      "new_targets": [
+        "a21s2-t-049",
+        "a21s2-t-050",
+        "a21s2-t-051",
+        "a21s2-e-052",
+        "a21s2-e-053"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-048",
+          "a21s2-h-011"
+        ],
+        "topic": [
+          "a21s2-t-049",
+          "a21s2-t-050",
+          "a21s2-t-051"
+        ],
+        "expressions": [
+          "a21s2-e-052",
+          "a21s2-e-053",
+          "a21s2-e-054",
+          "a21s2-e-055",
+          "a21s2-e-056"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s2-l06",
+        "a1.3-s3-l04",
+        "a2.1-s2-l01"
+      ],
+      "production_targets": [
+        "a21s2-e-052"
+      ],
+      "listening_targets": [
+        "a21s2-e-053",
+        "a21s2-e-054"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-055",
+          "tokens": [
+            "luukulle",
+            "minun",
+            "pitää",
+            "mennä?",
+            "Mille"
+          ],
+          "answer_order": [
+            4,
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Mille luukulle minun pitää mennä?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-055",
+          "base_fi": "mennä",
+          "feature_fa": "مصدر پس از pitää",
+          "prompt_fa": "در جملهٔ «باید به کدام باجه بروم؟» صورت درست فعل را بنویس.",
+          "frame_fi": "Mille luukulle minun pitää _____?",
+          "expected_fi": "mennä",
+          "accepted_answers": [
+            "mennä"
+          ],
+          "explanation_fa": "«Minun pitää mennä» یعنی «باید بروم»؛ پس از «pitää» مصدر «mennä» می‌آید."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-049"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-050"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-051"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-052"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-053"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-052",
+          "options": [
+            "a21s2-e-016",
+            "a21s2-e-052",
+            "a21s2-e-017",
+            "a21s2-e-018"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-052",
+          "options": [
+            "a21s2-e-027",
+            "a21s2-e-028",
+            "a21s2-e-052",
+            "a21s2-e-029"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-053",
+          "options": [
+            "a21s2-e-037",
+            "a21s2-e-043",
+            "a21s2-e-044",
+            "a21s2-e-053"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-053",
+          "options": [
+            "a21s2-e-053",
+            "a21s2-e-054",
+            "a21s2-e-055",
+            "a21s2-e-056"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-054",
+          "options": [
+            "a21s2-e-064",
+            "a21s2-e-054",
+            "a21s2-e-065",
+            "a21s2-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-054",
+          "options": [
+            "a21s2-e-078",
+            "a21s2-e-079",
+            "a21s2-e-054",
+            "a21s2-e-080"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-055",
+          "options": [
+            "a21s2-e-008",
+            "a21s2-e-009",
+            "a21s2-e-010",
+            "a21s2-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-055",
+          "options": [
+            "a21s2-e-055",
+            "a21s2-e-020",
+            "a21s2-e-025",
+            "a21s2-e-026"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-048",
+          "options": [
+            "a21s2-t-051",
+            "a21s2-h-057",
+            "a21s2-t-058",
+            "a21s2-h-048"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-049",
+          "options": [
+            "a21s2-t-049",
+            "a21s2-t-050",
+            "a21s2-t-051",
+            "a21s2-h-057"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-7",
+      "curriculum_id": "a2.1-s2-l07",
+      "order": 7,
+      "title_fa": "پرکردن یک فرم ساده",
+      "objective_fa": "قسمت‌های اصلی یک فرم ساده را بفهمم و پیش از امضا دربارهٔ بخش نامفهوم سؤال کنم.",
+      "summary_fa": "قسمت‌های اصلی یک فرم ساده را بفهمم و پیش از امضا دربارهٔ بخش نامفهوم سؤال کنم.",
+      "grammar_fa": "«Kirjoitan» یعنی «می‌نویسم» و «lomakkeessa» یعنی «در فرم». صورت «kysytään» در اینجا تنها برای درک نوشتهٔ فرم مطرح می‌شود. «tähän» یعنی «به این قسمت».",
+      "new_targets": [
+        "a21s2-t-058",
+        "a21s2-t-059",
+        "a21s2-t-060",
+        "a21s2-e-061",
+        "a21s2-e-062"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-057",
+          "a21s2-h-011"
+        ],
+        "topic": [
+          "a21s2-t-058",
+          "a21s2-t-059",
+          "a21s2-t-060"
+        ],
+        "expressions": [
+          "a21s2-e-061",
+          "a21s2-e-062",
+          "a21s2-e-063",
+          "a21s2-e-064",
+          "a21s2-e-065"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s3-l03",
+        "a1.3-s3-l06",
+        "a2.1-s2-l06"
+      ],
+      "production_targets": [
+        "a21s2-e-061"
+      ],
+      "listening_targets": [
+        "a21s2-e-062",
+        "a21s2-e-063"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-064",
+          "tokens": [
+            "tähän",
+            "kirjoittaa",
+            "päivämäärä?",
+            "Pitääkö"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Pitääkö tähän kirjoittaa päivämäärä?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-061",
+          "base_fi": "kirjoittaa",
+          "feature_fa": "حال اول‌شخص مفرد",
+          "prompt_fa": "در جملهٔ «نامم را اینجا می‌نویسم.» صورت درست فعل را بنویس.",
+          "frame_fi": "_____ nimeni tähän.",
+          "expected_fi": "Kirjoitan",
+          "accepted_answers": [
+            "Kirjoitan"
+          ],
+          "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است؛ «Kirjoitan nimeni» یعنی «نامم را می‌نویسم»."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-058"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-059"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-060"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-061"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-062"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-061",
+          "options": [
+            "a21s2-e-017",
+            "a21s2-e-018",
+            "a21s2-e-061",
+            "a21s2-e-019"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-061",
+          "options": [
+            "a21s2-e-028",
+            "a21s2-e-029",
+            "a21s2-e-033",
+            "a21s2-e-061"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-062",
+          "options": [
+            "a21s2-e-062",
+            "a21s2-e-043",
+            "a21s2-e-044",
+            "a21s2-e-045"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-062",
+          "options": [
+            "a21s2-e-054",
+            "a21s2-e-062",
+            "a21s2-e-055",
+            "a21s2-e-056"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-063",
+          "options": [
+            "a21s2-e-065",
+            "a21s2-e-070",
+            "a21s2-e-063",
+            "a21s2-e-071"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-063",
+          "options": [
+            "a21s2-e-079",
+            "a21s2-e-080",
+            "a21s2-e-081",
+            "a21s2-e-063"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-064",
+          "options": [
+            "a21s2-e-064",
+            "a21s2-e-009",
+            "a21s2-e-010",
+            "a21s2-e-016"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-064",
+          "options": [
+            "a21s2-e-025",
+            "a21s2-e-064",
+            "a21s2-e-026",
+            "a21s2-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-057",
+          "options": [
+            "a21s2-h-057",
+            "a21s2-t-068",
+            "a21s2-t-069",
+            "a21s2-h-075"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-058",
+          "options": [
+            "a21s2-t-067",
+            "a21s2-t-058",
+            "a21s2-t-068",
+            "a21s2-t-069"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-8",
+      "curriculum_id": "a2.1-s2-l08",
+      "order": 8,
+      "title_fa": "درخواست گواهی یا مدرک",
+      "objective_fa": "گواهی یا کپی مدرکی را درخواست کنم و دربارهٔ زمان آماده‌شدن و روش دریافت آن بپرسم.",
+      "summary_fa": "گواهی یا کپی مدرکی را درخواست کنم و دربارهٔ زمان آماده‌شدن و روش دریافت آن بپرسم.",
+      "grammar_fa": "«Tarvitsen todistuksen» و «saada kopion» نمونه‌های مفعول کامل هستند. «Milloin ... valmistuu?» یعنی «چه زمانی آماده می‌شود؟»؛ عبارت‌های کامل را در موقعیت خدماتی تمرین کن.",
+      "new_targets": [
+        "a21s2-t-067",
+        "a21s2-t-068",
+        "a21s2-t-069",
+        "a21s2-e-070",
+        "a21s2-e-071"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-066",
+          "a21s2-h-001"
+        ],
+        "topic": [
+          "a21s2-t-067",
+          "a21s2-t-068",
+          "a21s2-t-069"
+        ],
+        "expressions": [
+          "a21s2-e-070",
+          "a21s2-e-071",
+          "a21s2-e-072",
+          "a21s2-e-073",
+          "a21s2-e-074"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s3-l06",
+        "a1.3-s3-l07",
+        "a2.1-s2-l07"
+      ],
+      "production_targets": [
+        "a21s2-e-070"
+      ],
+      "listening_targets": [
+        "a21s2-e-071",
+        "a21s2-e-072"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-073",
+          "tokens": [
+            "lähettää",
+            "sen",
+            "sähköpostilla?",
+            "Voitteko"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Voitteko lähettää sen sähköpostilla?"
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-071",
+          "base_fi": "saada",
+          "feature_fa": "مصدر پس از Voinko",
+          "prompt_fa": "در جملهٔ «می‌توانم یک کپی از این بگیرم؟» صورت درست فعل را بنویس.",
+          "frame_fi": "Voinko _____ kopion tästä?",
+          "expected_fi": "saada",
+          "accepted_answers": [
+            "saada"
+          ],
+          "explanation_fa": "پس از «Voinko» مصدر «saada» می‌آید."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-067"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-068"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-069"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-070"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-071"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-070",
+          "options": [
+            "a21s2-e-018",
+            "a21s2-e-019",
+            "a21s2-e-020",
+            "a21s2-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-070",
+          "options": [
+            "a21s2-e-070",
+            "a21s2-e-029",
+            "a21s2-e-033",
+            "a21s2-e-034"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-071",
+          "options": [
+            "a21s2-e-044",
+            "a21s2-e-071",
+            "a21s2-e-045",
+            "a21s2-e-046"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-071",
+          "options": [
+            "a21s2-e-055",
+            "a21s2-e-056",
+            "a21s2-e-071",
+            "a21s2-e-061"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-072",
+          "options": [
+            "a21s2-e-070",
+            "a21s2-e-071",
+            "a21s2-e-073",
+            "a21s2-e-072"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-072",
+          "options": [
+            "a21s2-e-072",
+            "a21s2-e-080",
+            "a21s2-e-081",
+            "a21s2-e-082"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-073",
+          "options": [
+            "a21s2-e-010",
+            "a21s2-e-073",
+            "a21s2-e-016",
+            "a21s2-e-017"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-073",
+          "options": [
+            "a21s2-e-026",
+            "a21s2-e-027",
+            "a21s2-e-073",
+            "a21s2-e-028"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-h-066",
+          "options": [
+            "a21s2-t-003",
+            "a21s2-h-066",
+            "a21s2-t-004",
+            "a21s2-t-005"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-067",
+          "options": [
+            "a21s2-h-002",
+            "a21s2-t-003",
+            "a21s2-t-067",
+            "a21s2-t-004"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-9",
+      "curriculum_id": "a2.1-s2-l09",
+      "order": 9,
+      "title_fa": "یک مراجعهٔ کامل به خدمات",
+      "objective_fa": "گفت‌وگوی کوتاه خدماتی را بخوانم و درخواست وقت و تأیید آن را در چند جمله بنویسم.",
+      "summary_fa": "گفت‌وگوی کوتاه خدماتی را بخوانم و درخواست وقت و تأیید آن را در چند جمله بنویسم.",
+      "grammar_fa": "«Haluaisin ...» درخواست محترمانه است، «Onko ...?» زمان خالی را می‌پرسد و «sopii minulle» تأیید می‌کند. تمرین مستقل گفتار برای استفادهٔ واقعی ضروری است.",
+      "new_targets": [
+        "a21s2-t-076",
+        "a21s2-t-077",
+        "a21s2-t-069",
+        "a21s2-e-078",
+        "a21s2-e-079"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s2-h-075",
+          "a21s2-h-002"
+        ],
+        "topic": [
+          "a21s2-t-076",
+          "a21s2-t-077",
+          "a21s2-t-069"
+        ],
+        "expressions": [
+          "a21s2-e-078",
+          "a21s2-e-079",
+          "a21s2-e-080",
+          "a21s2-e-081",
+          "a21s2-e-082"
+        ]
+      },
+      "recycle_from": [
+        "a2.1-s2-l01",
+        "a2.1-s2-l02",
+        "a2.1-s2-l03",
+        "a2.1-s2-l05",
+        "a2.1-s2-l06",
+        "a2.1-s2-l07",
+        "a2.1-s2-l08"
+      ],
+      "production_targets": [
+        "a21s2-e-078"
+      ],
+      "listening_targets": [
+        "a21s2-e-079",
+        "a21s2-e-080"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-081",
+          "tokens": [
+            "myös",
+            "todistuksen.",
+            "Tarvitsen"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tarvitsen myös todistuksen."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-080",
+          "base_fi": "sopia",
+          "feature_fa": "حال سوم‌شخص مفرد",
+          "prompt_fa": "در جملهٔ «پنجشنبه برایم مناسب است.» صورت درست فعل را بنویس.",
+          "frame_fi": "Torstai _____ minulle.",
+          "expected_fi": "sopii",
+          "accepted_answers": [
+            "sopii"
+          ],
+          "explanation_fa": "«sopii» صورت حال سوم‌شخص «sopia» است؛ «Torstai sopii minulle» یعنی پنجشنبه برایم مناسب است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s2-t-076"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-077"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-t-069"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-078"
+        },
+        {
+          "type": "teach",
+          "item": "a21s2-e-079"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-078",
+          "options": [
+            "a21s2-e-078",
+            "a21s2-e-019",
+            "a21s2-e-020",
+            "a21s2-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-078",
+          "options": [
+            "a21s2-e-033",
+            "a21s2-e-078",
+            "a21s2-e-034",
+            "a21s2-e-035"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-079",
+          "options": [
+            "a21s2-e-045",
+            "a21s2-e-046",
+            "a21s2-e-079",
+            "a21s2-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-079",
+          "options": [
+            "a21s2-e-056",
+            "a21s2-e-061",
+            "a21s2-e-062",
+            "a21s2-e-079"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-080",
+          "options": [
+            "a21s2-e-080",
+            "a21s2-e-071",
+            "a21s2-e-072",
+            "a21s2-e-073"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-080",
+          "options": [
+            "a21s2-e-081",
+            "a21s2-e-080",
+            "a21s2-e-082",
+            "a21s2-e-006"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-081",
+          "options": [
+            "a21s2-e-016",
+            "a21s2-e-017",
+            "a21s2-e-081",
+            "a21s2-e-018"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-081",
+          "options": [
+            "a21s2-e-027",
+            "a21s2-e-028",
+            "a21s2-e-029",
+            "a21s2-e-081"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a21s2-reading-1",
+          "question_item": "a21s2-e-078",
+          "options": [
+            "a21s2-e-008",
+            "a21s2-e-078",
+            "a21s2-e-009",
+            "a21s2-e-010"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a21s2-reading-2",
+          "question_item": "a21s2-e-081",
+          "options": [
+            "a21s2-e-037",
+            "a21s2-e-081",
+            "a21s2-e-043",
+            "a21s2-e-044"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-2-lesson-10",
+      "curriculum_id": "a2.1-s2-l10",
+      "order": 10,
+      "title_fa": "ارزیابی بخش ۲",
+      "objective_fa": "در تمرین‌های ترکیبی گرفتن وقت، نشانه‌ها، فرم‌ها و دریافت مدارک پاسخ بدهم.",
+      "summary_fa": "در تمرین‌های ترکیبی گرفتن وقت، نشانه‌ها، فرم‌ها و دریافت مدارک پاسخ بدهم.",
+      "grammar_fa": "در آزمون پایانی، درخواست وقت، تغییر قرار، توضیح نشانه‌ها، دستورها، داروخانه، باجهٔ خدماتی، فرم و گواهی مرور می‌شوند. نمرهٔ تمرین گواهی سطح A2 یا راهنمای درمان نیست.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a2.1-s2-l01",
+        "a2.1-s2-l02",
+        "a2.1-s2-l03",
+        "a2.1-s2-l04",
+        "a2.1-s2-l05",
+        "a2.1-s2-l06",
+        "a2.1-s2-l07",
+        "a2.1-s2-l08",
+        "a2.1-s2-l09"
+      ],
+      "passing_score": 0.8,
+      "checkpoint_targets": [
+        "a21s2-e-006",
+        "a21s2-e-017",
+        "a21s2-e-028",
+        "a21s2-e-034",
+        "a21s2-e-045",
+        "a21s2-e-055",
+        "a21s2-e-061",
+        "a21s2-e-070",
+        "a21s2-e-080",
+        "a21s2-e-009",
+        "a21s2-e-018",
+        "a21s2-e-025",
+        "a21s2-e-052",
+        "a21s2-e-073",
+        "a21s2-e-081"
+      ],
+      "production_targets": [
+        "a21s2-e-006"
+      ],
+      "listening_targets": [
+        "a21s2-e-017",
+        "a21s2-e-028"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s2-e-034",
+          "tokens": [
+            "toistaa",
+            "ohjeen?",
+            "Voitteko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Voitteko toistaa ohjeen?"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-e-045",
+          "prompt_fi": "Voitteko selittää _____?",
+          "prompt_fa": "می‌توانید راهنمای استفاده را توضیح دهید؟",
+          "expected_fi": "Voitteko selittää käyttöohjeen?",
+          "accepted_answers": [
+            "käyttöohjeen"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-055",
+          "prompt_fa": "باید به کدام باجه بروم؟",
+          "cues_fi": [
+            "Mille",
+            "luukulle"
+          ],
+          "expected_fi": "Mille luukulle minun pitää mennä?",
+          "accepted_answers": [
+            "Mille luukulle minun pitää mennä?"
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-061",
+          "base_fi": "kirjoittaa",
+          "feature_fa": "حال اول‌شخص مفرد",
+          "prompt_fa": "برای «نامم را اینجا می‌نویسم» فعل درست را وارد کن.",
+          "frame_fi": "_____ nimeni tähän.",
+          "expected_fi": "Kirjoitan",
+          "accepted_answers": [
+            "Kirjoitan"
+          ],
+          "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-006",
+          "options": [
+            "a21s2-e-072",
+            "a21s2-e-006",
+            "a21s2-e-073",
+            "a21s2-e-074"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-017",
+          "options": [
+            "a21s2-e-082",
+            "a21s2-e-006",
+            "a21s2-e-017",
+            "a21s2-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-028",
+          "options": [
+            "a21s2-e-017",
+            "a21s2-e-018",
+            "a21s2-e-019",
+            "a21s2-e-028"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-034",
+          "options": [
+            "a21s2-e-034",
+            "a21s2-e-028",
+            "a21s2-e-029",
+            "a21s2-e-033"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-045",
+          "options": [
+            "a21s2-e-043",
+            "a21s2-e-045",
+            "a21s2-e-044",
+            "a21s2-e-046"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-055",
+          "options": [
+            "a21s2-e-054",
+            "a21s2-e-056",
+            "a21s2-e-055",
+            "a21s2-e-061"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-061",
+          "options": [
+            "a21s2-e-065",
+            "a21s2-e-070",
+            "a21s2-e-071",
+            "a21s2-e-061"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-070",
+          "options": [
+            "a21s2-e-070",
+            "a21s2-e-079",
+            "a21s2-e-080",
+            "a21s2-e-081"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-080"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-009",
+          "options": [
+            "a21s2-e-025",
+            "a21s2-e-026",
+            "a21s2-e-009",
+            "a21s2-e-027"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-018"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-025",
+          "options": [
+            "a21s2-e-025",
+            "a21s2-e-047",
+            "a21s2-e-052",
+            "a21s2-e-053"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-052"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-e-073",
+          "options": [
+            "a21s2-e-074",
+            "a21s2-e-078",
+            "a21s2-e-073",
+            "a21s2-e-079"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-081"
+        }
+      ]
+    }
+  ]
+}
