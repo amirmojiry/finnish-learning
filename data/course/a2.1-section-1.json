@@ -1421,9 +1421,9 @@
     },
     "a21s1-e-079": {
       "id": "a21s1-e-079",
-      "surface_form": "Tapasin ystävän.",
-      "lemma": "Tapasin ystävän.",
-      "translation_fa": "دوستم را دیدم.",
+      "surface_form": "Tapasin ystäväni.",
+      "lemma": "Tapasin ystäväni.",
+      "translation_fa": "دوستم را ملاقات کردم.",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -1431,10 +1431,10 @@
         "a2.1-s1",
         "curated-travel"
       ],
-      "example_fi": "Tapasin ystävän.",
-      "example_fa": "دوستم را دیدم.",
+      "example_fi": "Tapasin ystäväni.",
+      "example_fa": "دوستم را ملاقات کردم.",
       "accepted_answers": [
-        "Tapasin ystävän."
+        "Tapasin ystäväni."
       ]
     },
     "a21s1-e-080": {
@@ -1475,9 +1475,9 @@
     },
     "a21s1-reading-2": {
       "id": "a21s1-reading-2",
-      "surface_form": "Tapasin ystävän. Palasin kotiin sunnuntaina.",
-      "lemma": "Tapasin ystävän. Palasin kotiin sunnuntaina.",
-      "translation_fa": "دوستم را دیدم. یکشنبه به خانه برگشتم.",
+      "surface_form": "Tapasin ystäväni. Palasin kotiin sunnuntaina.",
+      "lemma": "Tapasin ystäväni. Palasin kotiin sunnuntaina.",
+      "translation_fa": "دوستم را ملاقات کردم. یکشنبه به خانه برگشتم.",
       "item_type": "reading",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -1485,10 +1485,10 @@
         "a2.1-s1",
         "integrated-reading"
       ],
-      "example_fi": "Tapasin ystävän. Palasin kotiin sunnuntaina.",
-      "example_fa": "دوستم را دیدم. یکشنبه به خانه برگشتم.",
+      "example_fi": "Tapasin ystäväni. Palasin kotiin sunnuntaina.",
+      "example_fa": "دوستم را ملاقات کردم. یکشنبه به خانه برگشتم.",
       "accepted_answers": [
-        "Tapasin ystävän. Palasin kotiin sunnuntaina."
+        "Tapasin ystäväni. Palasin kotiin sunnuntaina."
       ]
     }
   },
