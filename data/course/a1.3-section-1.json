@@ -3262,71 +3262,62 @@
         "a1.3-s1-l09"
       ],
       "production_targets": [
-        "a13s1-e-007"
+        "a13s1-e-017"
       ],
       "listening_targets": [
-        "a13s1-e-017",
-        "a13s1-e-027"
+        "a13s1-e-027",
+        "a13s1-e-044"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s1-e-036",
+          "item": "a13s1-e-007",
           "tokens": [
-            "pian.",
-            "Tulen"
+            "sinulle",
+            "kuuluu?",
+            "Mitä"
           ],
           "answer_order": [
-            1,
-            0
+            2,
+            0,
+            1
           ],
-          "expected_fi": "Tulen pian."
+          "expected_fi": "Mitä sinulle kuuluu?"
         },
         {
           "type": "expression-completion",
-          "item": "a13s1-e-045",
-          "prompt_fi": "Voinko _____ Amirille?",
-          "prompt_fa": "می‌توانم با امیر صحبت کنم؟",
+          "item": "a13s1-e-054",
+          "prompt_fi": "Pidän _____ teestä.",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
           "accepted_answers": [
-            "puhua"
+            "enemmän"
           ],
-          "expected_fi": "Voinko puhua Amirille?"
+          "expected_fi": "Pidän enemmän teestä."
         },
         {
           "type": "controlled-production",
-          "item": "a13s1-e-054",
-          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "item": "a13s1-e-062",
+          "prompt_fa": "نمی‌آیم چون خسته‌ام.",
           "cues_fi": [
-            "Pidän",
-            "enemmän"
+            "En",
+            "tule,"
           ],
-          "expected_fi": "Pidän enemmän teestä.",
+          "expected_fi": "En tule, koska olen väsynyt.",
           "accepted_answers": [
-            "Pidän enemmän teestä."
+            "En tule, koska olen väsynyt."
           ]
         }
       ],
       "activities": [
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-007",
-          "options": [
-            "a13s1-e-007",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s1-e-017",
           "options": [
             "a13s1-e-017",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-054",
+            "a13s1-e-009",
+            "a13s1-e-037"
           ]
         },
         {
@@ -3334,32 +3325,32 @@
           "mode": "meaning",
           "item": "a13s1-e-027",
           "options": [
+            "a13s1-e-062",
             "a13s1-e-027",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-019",
+            "a13s1-e-047"
           ]
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s1-e-036",
+          "item": "a13s1-e-044",
           "options": [
             "a13s1-e-036",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-028",
+            "a13s1-e-044",
+            "a13s1-e-055"
           ]
         },
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-045",
+          "mode": "finnish",
+          "item": "a13s1-e-007",
           "options": [
-            "a13s1-e-045",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-009",
+            "a13s1-e-037",
+            "a13s1-e-069",
+            "a13s1-e-007"
           ]
         },
         {
@@ -3368,9 +3359,9 @@
           "item": "a13s1-e-054",
           "options": [
             "a13s1-e-054",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-019",
+            "a13s1-e-047",
+            "a13s1-e-074"
           ]
         },
         {
@@ -3378,54 +3369,21 @@
           "mode": "meaning",
           "item": "a13s1-e-062",
           "options": [
+            "a13s1-e-028",
             "a13s1-e-062",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-055",
+            "a13s1-e-017"
           ]
         },
         {
           "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-069",
-          "options": [
-            "a13s1-e-069",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-072",
-          "options": [
-            "a13s1-e-072",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
+          "mode": "finnish",
           "item": "a13s1-e-036",
           "options": [
+            "a13s1-e-037",
+            "a13s1-e-069",
             "a13s1-e-036",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-008",
-          "options": [
-            "a13s1-e-008",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-027"
           ]
         },
         {
@@ -3433,63 +3391,83 @@
           "mode": "meaning",
           "item": "a13s1-e-009",
           "options": [
-            "a13s1-e-009",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-047",
+            "a13s1-e-074",
+            "a13s1-e-044",
+            "a13s1-e-009"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-019"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a13s1-e-028",
+          "options": [
+            "a13s1-e-069",
+            "a13s1-e-028",
+            "a13s1-e-027",
+            "a13s1-e-054"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-037"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s1-e-010",
+          "item": "a13s1-e-047",
           "options": [
-            "a13s1-e-010",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-017",
+            "a13s1-e-007",
+            "a13s1-e-036",
+            "a13s1-e-047"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-055"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s1-e-018",
+          "item": "a13s1-e-069",
           "options": [
-            "a13s1-e-018",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-e-044",
+            "a13s1-e-069",
+            "a13s1-e-062",
+            "a13s1-e-019"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-019",
-          "options": [
-            "a13s1-e-019",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-074"
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
-        "a13s1-e-007",
         "a13s1-e-017",
         "a13s1-e-027",
-        "a13s1-e-036",
-        "a13s1-e-045",
+        "a13s1-e-044",
+        "a13s1-e-007",
         "a13s1-e-054",
         "a13s1-e-062",
-        "a13s1-e-069",
-        "a13s1-e-072",
         "a13s1-e-036",
-        "a13s1-e-008",
         "a13s1-e-009",
-        "a13s1-e-010",
-        "a13s1-e-018",
-        "a13s1-e-019"
+        "a13s1-e-019",
+        "a13s1-e-028",
+        "a13s1-e-037",
+        "a13s1-e-047",
+        "a13s1-e-055",
+        "a13s1-e-069",
+        "a13s1-e-074"
       ],
       "morphology_practice": [
         {
@@ -3508,6 +3486,68 @@
           "expected_fi": "Tulen",
           "explanation_fa": "Tulen صورت اول‌شخص مفرد فعل tulla در زمان حال است."
         }
+      ],
+      "checkpoint_modes": [
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "finnish"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ],
+        [
+          "choice",
+          "meaning"
+        ],
+        [
+          "type",
+          "finnish"
+        ]
       ]
     }
   ]
