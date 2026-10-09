@@ -131,3 +131,15 @@ test('four playable A1/A2 level tabs fit narrow mobile widths',()=>{
  assert.match(css, /@media \(max-width: 720px\)\s*\{[\s\S]*?\.course-level-tabs\s*\{[^}]*grid-auto-columns:\s*minmax\(0, 1fr\)/);
  assert.match(css, /\.course-level-tab\s*\{[^}]*min-width:\s*0;[^}]*padding-inline:\s*6px;/);
 });
+
+
+test('friend-meeting translation keeps possessive Finnish and Persian meaning aligned',()=>{
+ const phrase=Object.values(section.items).find(item=>item.surface_form==='Tapasin ystäväni.');
+ assert.ok(phrase);
+ assert.equal(phrase.translation_fa,'دوستم را ملاقات کردم.');
+ assert.deepEqual(phrase.accepted_answers,['Tapasin ystäväni.']);
+ const narrative=Object.values(section.items).find(item=>item.item_type==='reading' && item.surface_form.includes('Tapasin ystäväni.'));
+ assert.ok(narrative);
+ assert.match(narrative.translation_fa,/دوستم را ملاقات کردم\./u);
+ assert.ok(!Object.values(section.items).some(item=>item.surface_form.includes('Tapasin ystävän.')));
+});
