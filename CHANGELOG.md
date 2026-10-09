@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.29.0] - 2026-10-09
+
+### Added
+
+- A2.1 Section 1 (travel and recent past): ten playable lessons, 150 deterministic activities, short travel readings, Finnish listening/dictation, explicit past-tense production, and an 80% checkpoint spanning nine teaching lessons.
+- A2.1 curriculum with ten detailed first-section lesson contracts and thirty clearly marked outline-only lesson titles in Sections 2-4.
+- Regression coverage for 130-lesson/13-section progression, actual source-backed ranks, mixed checkpoint coverage, A1 progress compatibility and Persian goals.
+
+### Changed
+
+- A2.1 joins the course stage selector. The 120 previous A1 lesson IDs and saved progress format are unchanged.
+- A2.1 is partially implemented in the master plan; A2.2-C2 are still planning only. Automated practice does not certify CEFR/YKI A2.
+
+
 ## [1.28.2] - 2026-10-09
 
 ### Fixed
