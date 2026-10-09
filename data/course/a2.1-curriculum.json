@@ -928,7 +928,7 @@
             "Onko teillä vapaita aikoja tiistaina?",
             "Tarvitsen ajan ensi viikolle.",
             "Tiistai kello kymmenen sopii minulle.",
-            "Mihin aikaan aika on?"
+            "Mihin aikaan vastaanotto alkaa?"
           ],
           "expression_pairs": [
             {
@@ -948,8 +948,8 @@
               "fa": "سه‌شنبه ساعت ده برایم مناسب است."
             },
             {
-              "fi": "Mihin aikaan aika on?",
-              "fa": "وقت ملاقات چه ساعتی است؟"
+              "fi": "Mihin aikaan vastaanotto alkaa?",
+              "fa": "ویزیت چه ساعتی شروع می‌شود؟"
             }
           ],
           "grammar_focus": [
@@ -1018,7 +1018,7 @@
             }
           ],
           "expressions": [
-            "Minun pitää siirtää aikaani.",
+            "Minun pitää siirtää vastaanottoaikaani.",
             "En pääse vastaanotolle huomenna.",
             "Voinko perua ajan?",
             "Onko perjantaina vapaita aikoja?",
@@ -1026,8 +1026,8 @@
           ],
           "expression_pairs": [
             {
-              "fi": "Minun pitää siirtää aikaani.",
-              "fa": "باید وقتم را جابه‌جا کنم."
+              "fi": "Minun pitää siirtää vastaanottoaikaani.",
+              "fa": "باید وقت ویزیتم را جابه‌جا کنم."
             },
             {
               "fi": "En pääse vastaanotolle huomenna.",
