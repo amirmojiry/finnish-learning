@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1390,
+    "graded_activity_slots": 1388,
     "dictionary_ranked_surface_entries": 400,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 340,
     "outside_dictionary_but_in_original_parole": 334,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 290,
+    "assessed_again_after_earlier_reference": 295,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 0,
     "lessons_without_explicit_grammar_concept_ids": 140,
     "graded_grammar_related_slots": 243,
     "graded_morphology_slots": 54,
-    "lessons_with_declared_unassessed_forms": 113,
+    "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -46,7 +46,7 @@
       "level": "A1.1",
       "id": "a1.1-section-2",
       "lessons": 10,
-      "graded_slots": 98,
+      "graded_slots": 97,
       "unassessed_target_forms": 30,
       "lessons_missing_grammar_ids": 10
     },
@@ -55,7 +55,7 @@
       "id": "a1.1-section-3",
       "lessons": 10,
       "graded_slots": 89,
-      "unassessed_target_forms": 26,
+      "unassessed_target_forms": 22,
       "lessons_missing_grammar_ids": 10
     },
     {
@@ -63,14 +63,14 @@
       "id": "a1.1-section-4",
       "lessons": 10,
       "graded_slots": 91,
-      "unassessed_target_forms": 9,
+      "unassessed_target_forms": 8,
       "lessons_missing_grammar_ids": 10
     },
     {
       "level": "A1.2",
       "id": "a1.2-section-1",
       "lessons": 10,
-      "graded_slots": 91,
+      "graded_slots": 90,
       "unassessed_target_forms": 27,
       "lessons_missing_grammar_ids": 10
     },
@@ -2177,25 +2177,19 @@
         "correct_answer": [
           "huomenna on tiistai.",
           "keskiviikko",
+          "lauantai",
+          "maanantai",
           "perjantai",
           "sunnuntai",
+          "tiistai",
+          "torstai",
           "tänään on maanantai."
         ],
-        "receptive_count": 1,
+        "receptive_count": 7,
         "productive_count": 4,
         "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "lauantai",
-          "maanantai",
-          "tiistai",
-          "torstai"
-        ],
-        "teach_only": [
-          "lauantai",
-          "maanantai",
-          "tiistai",
-          "torstai"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -2750,14 +2744,23 @@
           "tänään."
         ],
         "correct_answer": [
+          "aamulla.",
           "huomenna.",
+          "illalla.",
           "kello kolme.",
           "milloin?",
-          "tänään."
+          "päivällä.",
+          "tänään.",
+          "yöllä."
         ],
-        "receptive_count": 1,
+        "receptive_count": 6,
         "productive_count": 3,
-        "later_correct_retrieval": [],
+        "later_correct_retrieval": [
+          "aamulla.",
+          "illalla.",
+          "päivällä.",
+          "yöllä."
+        ],
         "declared_unassessed": [
           "aika",
           "milloin"
@@ -2766,7 +2769,7 @@
           "aika",
           "milloin"
         ],
-        "distractor_only_count": 4,
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [
@@ -2829,13 +2832,14 @@
           "päivällä …"
         ],
         "correct_answer": [
+          "aamulla menen kouluun.",
           "aamulla syön.",
           "aamulla syön. aamulla menen kouluun. päivällä opiskelen. illalla tulen kotiin. yöllä nukun.",
           "illalla tulen kotiin.",
           "päivällä opiskelen.",
           "yöllä nukun."
         ],
-        "receptive_count": 3,
+        "receptive_count": 6,
         "productive_count": 4,
         "later_correct_retrieval": [],
         "declared_unassessed": [
@@ -2848,7 +2852,7 @@
           "illalla …",
           "päivällä …"
         ],
-        "distractor_only_count": 1,
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [],
@@ -3097,24 +3101,29 @@
         ],
         "correct_answer": [
           "missä puhelin on?",
+          "olen kotona.",
           "pöytä",
           "se on huoneessa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
           "sänky",
           "tuoli"
         ],
-        "receptive_count": 2,
+        "receptive_count": 6,
         "productive_count": 3,
-        "later_correct_retrieval": [],
+        "later_correct_retrieval": [
+          "olen kotona."
+        ],
         "declared_unassessed": [
           "missä",
-          "on",
-          "se on pöydällä."
+          "on"
         ],
         "teach_only": [
           "missä",
           "on"
         ],
-        "distractor_only_count": 5,
+        "distractor_only_count": 1,
         "reading_only": [],
         "high_frequency_target_forms": [
           "missä",
@@ -16574,15 +16583,6 @@
         ]
       },
       {
-        "lesson_id": "section-3-lesson-2",
-        "forms": [
-          "lauantai",
-          "maanantai",
-          "tiistai",
-          "torstai"
-        ]
-      },
-      {
         "lesson_id": "section-3-lesson-3",
         "forms": [
           "kello"
@@ -16649,8 +16649,7 @@
         "lesson_id": "section-4-lesson-2",
         "forms": [
           "missä",
-          "on",
-          "se on pöydällä."
+          "on"
         ]
       },
       {
