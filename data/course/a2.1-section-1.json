@@ -1,0 +1,3636 @@
+{
+  "schema_version": 1,
+  "id": "a2.1-section-1",
+  "level": "A2.1",
+  "curriculum_section_id": "a2.1-s1",
+  "title_fa": "بخش ۱: سفر و رویدادهای گذشته",
+  "subtitle_fa": "سفر، رفت‌وآمد، زمان گذشته، اقامت و ترتیب اتفاق‌ها",
+  "description_fa": "ده درس برای تعریف سفر کوتاه با شکل‌های گذشتهٔ بررسی‌شده، شنیدن و خواندن پیام سفر، پاسخ نوشتاری هدایت‌شده و ارزیابی پایان بخش.",
+  "can_do_fa": [
+    "یک سفر کوتاه گذشته را با چند جملهٔ ساده تعریف کنم.",
+    "زمان حرکت، رسیدن و مدت سفر را از متن یا گفت‌وگوی کوتاه بفهمم.",
+    "خرید بلیت، اقامت در هتل و مشکل سفر را با فعل‌های گذشته توضیح بدهم.",
+    "برای تأخیر یا گم‌شدن بلیت، مشکل را بیان کنم و راهنمایی بخواهم.",
+    "اتفاق‌های سفر را با عبارت‌های زمانی به‌ترتیب بیان کنم."
+  ],
+  "activity_count_per_lesson": 15,
+  "items": {
+    "a21s1-h-001": {
+      "id": "a21s1-h-001",
+      "surface_form": "olin",
+      "lemma": "olla",
+      "translation_fa": "بودم",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 177,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Olin siellä kaksi päivää.",
+      "example_fa": "دو روز آنجا بودم.",
+      "accepted_answers": [
+        "olin"
+      ]
+    },
+    "a21s1-h-002": {
+      "id": "a21s1-h-002",
+      "surface_form": "oli",
+      "lemma": "olla",
+      "translation_fa": "بود",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 5,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Matka oli mukava.",
+      "example_fa": "سفر دلپذیر بود.",
+      "accepted_answers": [
+        "oli"
+      ]
+    },
+    "a21s1-t-003": {
+      "id": "a21s1-t-003",
+      "surface_form": "viikonloppuna",
+      "lemma": "viikonloppu",
+      "translation_fa": "آخر هفته",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Missä kävit viime viikonloppuna?",
+      "example_fa": "آخر هفتهٔ گذشته کجا رفتی؟",
+      "accepted_answers": [
+        "viikonloppuna"
+      ]
+    },
+    "a21s1-t-004": {
+      "id": "a21s1-t-004",
+      "surface_form": "matka",
+      "lemma": "matka",
+      "translation_fa": "سفر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matka oli mukava.",
+      "example_fa": "سفر دلپذیر بود.",
+      "accepted_answers": [
+        "matka"
+      ]
+    },
+    "a21s1-t-005": {
+      "id": "a21s1-t-005",
+      "surface_form": "kävin",
+      "lemma": "käydä",
+      "translation_fa": "رفتم / بازدید کردم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Kävin eilen Turussa.",
+      "example_fa": "دیروز به تورکو رفتم.",
+      "accepted_answers": [
+        "kävin"
+      ]
+    },
+    "a21s1-e-006": {
+      "id": "a21s1-e-006",
+      "surface_form": "Missä kävit viime viikonloppuna?",
+      "lemma": "Missä kävit viime viikonloppuna?",
+      "translation_fa": "آخر هفتهٔ گذشته کجا رفتی؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Missä kävit viime viikonloppuna?",
+      "example_fa": "آخر هفتهٔ گذشته کجا رفتی؟",
+      "accepted_answers": [
+        "Missä kävit viime viikonloppuna?"
+      ]
+    },
+    "a21s1-e-007": {
+      "id": "a21s1-e-007",
+      "surface_form": "Kävin eilen Turussa.",
+      "lemma": "Kävin eilen Turussa.",
+      "translation_fa": "دیروز به تورکو رفتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Kävin eilen Turussa.",
+      "example_fa": "دیروز به تورکو رفتم.",
+      "accepted_answers": [
+        "Kävin eilen Turussa."
+      ]
+    },
+    "a21s1-e-008": {
+      "id": "a21s1-e-008",
+      "surface_form": "Olin siellä kaksi päivää.",
+      "lemma": "Olin siellä kaksi päivää.",
+      "translation_fa": "دو روز آنجا بودم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Olin siellä kaksi päivää.",
+      "example_fa": "دو روز آنجا بودم.",
+      "accepted_answers": [
+        "Olin siellä kaksi päivää."
+      ]
+    },
+    "a21s1-e-009": {
+      "id": "a21s1-e-009",
+      "surface_form": "Matka oli mukava.",
+      "lemma": "Matka oli mukava.",
+      "translation_fa": "سفر دلپذیر بود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matka oli mukava.",
+      "example_fa": "سفر دلپذیر بود.",
+      "accepted_answers": [
+        "Matka oli mukava."
+      ]
+    },
+    "a21s1-h-010": {
+      "id": "a21s1-h-010",
+      "surface_form": "tuli",
+      "lemma": "tulla",
+      "translation_fa": "آمد / آتش",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 87,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Bussi tuli sitten.",
+      "example_fa": "اتوبوس بعداً آمد.",
+      "accepted_answers": [
+        "tuli"
+      ]
+    },
+    "a21s1-h-011": {
+      "id": "a21s1-h-011",
+      "surface_form": "ennen",
+      "lemma": "ennen",
+      "translation_fa": "پیش از / قبلاً",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 50,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Lähdin ennen kahdeksaa.",
+      "example_fa": "پیش از ساعت هشت حرکت کردم.",
+      "accepted_answers": [
+        "ennen"
+      ]
+    },
+    "a21s1-t-012": {
+      "id": "a21s1-t-012",
+      "surface_form": "asemalle",
+      "lemma": "asema",
+      "translation_fa": "به ایستگاه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Menin asemalle aamulla.",
+      "example_fa": "صبح به ایستگاه رفتم.",
+      "accepted_answers": [
+        "asemalle"
+      ]
+    },
+    "a21s1-t-013": {
+      "id": "a21s1-t-013",
+      "surface_form": "Vaasasta",
+      "lemma": "Vaasa",
+      "translation_fa": "از واسا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lähdin Vaasasta aikaisin.",
+      "example_fa": "زود از واسا حرکت کردم.",
+      "accepted_answers": [
+        "Vaasasta"
+      ]
+    },
+    "a21s1-t-014": {
+      "id": "a21s1-t-014",
+      "surface_form": "junalla",
+      "lemma": "juna",
+      "translation_fa": "با قطار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matkustin junalla.",
+      "example_fa": "با قطار سفر کردم.",
+      "accepted_answers": [
+        "junalla"
+      ]
+    },
+    "a21s1-e-015": {
+      "id": "a21s1-e-015",
+      "surface_form": "Menin asemalle aamulla.",
+      "lemma": "Menin asemalle aamulla.",
+      "translation_fa": "صبح به ایستگاه رفتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Menin asemalle aamulla.",
+      "example_fa": "صبح به ایستگاه رفتم.",
+      "accepted_answers": [
+        "Menin asemalle aamulla."
+      ]
+    },
+    "a21s1-e-016": {
+      "id": "a21s1-e-016",
+      "surface_form": "Lähdin Vaasasta aikaisin.",
+      "lemma": "Lähdin Vaasasta aikaisin.",
+      "translation_fa": "زود از واسا حرکت کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lähdin Vaasasta aikaisin.",
+      "example_fa": "زود از واسا حرکت کردم.",
+      "accepted_answers": [
+        "Lähdin Vaasasta aikaisin."
+      ]
+    },
+    "a21s1-e-017": {
+      "id": "a21s1-e-017",
+      "surface_form": "Tulin kotiin illalla.",
+      "lemma": "Tulin kotiin illalla.",
+      "translation_fa": "عصر به خانه آمدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Tulin kotiin illalla.",
+      "example_fa": "عصر به خانه آمدم.",
+      "accepted_answers": [
+        "Tulin kotiin illalla."
+      ]
+    },
+    "a21s1-e-018": {
+      "id": "a21s1-e-018",
+      "surface_form": "Matkustin junalla.",
+      "lemma": "Matkustin junalla.",
+      "translation_fa": "با قطار سفر کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matkustin junalla.",
+      "example_fa": "با قطار سفر کردم.",
+      "accepted_answers": [
+        "Matkustin junalla."
+      ]
+    },
+    "a21s1-e-019": {
+      "id": "a21s1-e-019",
+      "surface_form": "Lähdin ennen kahdeksaa.",
+      "lemma": "Lähdin ennen kahdeksaa.",
+      "translation_fa": "پیش از ساعت هشت حرکت کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lähdin ennen kahdeksaa.",
+      "example_fa": "پیش از ساعت هشت حرکت کردم.",
+      "accepted_answers": [
+        "Lähdin ennen kahdeksaa."
+      ]
+    },
+    "a21s1-h-020": {
+      "id": "a21s1-h-020",
+      "surface_form": "myös",
+      "lemma": "myös",
+      "translation_fa": "همچنین / نیز",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 11,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Ostin myös paluulipun.",
+      "example_fa": "بلیت برگشت هم خریدم.",
+      "accepted_answers": [
+        "myös"
+      ]
+    },
+    "a21s1-h-021": {
+      "id": "a21s1-h-021",
+      "surface_form": "paljon",
+      "lemma": "paljon",
+      "translation_fa": "زیاد / بسیار",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 60,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Maksoiko lippu paljon?",
+      "example_fa": "آیا بلیت گران تمام شد؟",
+      "accepted_answers": [
+        "paljon"
+      ]
+    },
+    "a21s1-t-022": {
+      "id": "a21s1-t-022",
+      "surface_form": "lippu",
+      "lemma": "lippu",
+      "translation_fa": "بلیت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lippu maksoi kaksikymmentä euroa.",
+      "example_fa": "بلیت بیست یورو قیمت داشت.",
+      "accepted_answers": [
+        "lippu"
+      ]
+    },
+    "a21s1-t-023": {
+      "id": "a21s1-t-023",
+      "surface_form": "kortilla",
+      "lemma": "kortti",
+      "translation_fa": "با کارت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Maksoin lipun kortilla.",
+      "example_fa": "بلیت را با کارت پرداخت کردم.",
+      "accepted_answers": [
+        "kortilla"
+      ]
+    },
+    "a21s1-t-024": {
+      "id": "a21s1-t-024",
+      "surface_form": "paluulippu",
+      "lemma": "paluulippu",
+      "translation_fa": "بلیت برگشت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "paluulippu",
+      "example_fa": "بلیت برگشت",
+      "accepted_answers": [
+        "paluulippu"
+      ]
+    },
+    "a21s1-e-025": {
+      "id": "a21s1-e-025",
+      "surface_form": "Ostin lipun etukäteen.",
+      "lemma": "Ostin lipun etukäteen.",
+      "translation_fa": "بلیت را از قبل خریدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Ostin lipun etukäteen.",
+      "example_fa": "بلیت را از قبل خریدم.",
+      "accepted_answers": [
+        "Ostin lipun etukäteen."
+      ]
+    },
+    "a21s1-e-026": {
+      "id": "a21s1-e-026",
+      "surface_form": "Maksoin lipun kortilla.",
+      "lemma": "Maksoin lipun kortilla.",
+      "translation_fa": "بلیت را با کارت پرداخت کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Maksoin lipun kortilla.",
+      "example_fa": "بلیت را با کارت پرداخت کردم.",
+      "accepted_answers": [
+        "Maksoin lipun kortilla."
+      ]
+    },
+    "a21s1-e-027": {
+      "id": "a21s1-e-027",
+      "surface_form": "Lippu maksoi kaksikymmentä euroa.",
+      "lemma": "Lippu maksoi kaksikymmentä euroa.",
+      "translation_fa": "بلیت بیست یورو قیمت داشت.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lippu maksoi kaksikymmentä euroa.",
+      "example_fa": "بلیت بیست یورو قیمت داشت.",
+      "accepted_answers": [
+        "Lippu maksoi kaksikymmentä euroa."
+      ]
+    },
+    "a21s1-e-028": {
+      "id": "a21s1-e-028",
+      "surface_form": "Ostin myös paluulipun.",
+      "lemma": "Ostin myös paluulipun.",
+      "translation_fa": "بلیت برگشت هم خریدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Ostin myös paluulipun.",
+      "example_fa": "بلیت برگشت هم خریدم.",
+      "accepted_answers": [
+        "Ostin myös paluulipun."
+      ]
+    },
+    "a21s1-e-029": {
+      "id": "a21s1-e-029",
+      "surface_form": "Maksoiko lippu paljon?",
+      "lemma": "Maksoiko lippu paljon?",
+      "translation_fa": "آیا بلیت گران تمام شد؟",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Maksoiko lippu paljon?",
+      "example_fa": "آیا بلیت گران تمام شد؟",
+      "accepted_answers": [
+        "Maksoiko lippu paljon?"
+      ]
+    },
+    "a21s1-h-030": {
+      "id": "a21s1-h-030",
+      "surface_form": "sitten",
+      "lemma": "sitten",
+      "translation_fa": "سپس / بعد",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 31,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Bussi tuli sitten.",
+      "example_fa": "اتوبوس بعداً آمد.",
+      "accepted_answers": [
+        "sitten"
+      ]
+    },
+    "a21s1-t-031": {
+      "id": "a21s1-t-031",
+      "surface_form": "ajoissa",
+      "lemma": "ajoissa",
+      "translation_fa": "به‌موقع",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Juna lähti ajoissa.",
+      "example_fa": "قطار به‌موقع حرکت کرد.",
+      "accepted_answers": [
+        "ajoissa"
+      ]
+    },
+    "a21s1-t-032": {
+      "id": "a21s1-t-032",
+      "surface_form": "myöhässä",
+      "lemma": "myöhässä",
+      "translation_fa": "با تأخیر / دیر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Juna saapui myöhässä.",
+      "example_fa": "قطار با تأخیر رسید.",
+      "accepted_answers": [
+        "myöhässä"
+      ]
+    },
+    "a21s1-t-033": {
+      "id": "a21s1-t-033",
+      "surface_form": "tuntia",
+      "lemma": "tunti",
+      "translation_fa": "ساعت (مدت)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matka kesti kaksi tuntia.",
+      "example_fa": "سفر دو ساعت طول کشید.",
+      "accepted_answers": [
+        "tuntia"
+      ]
+    },
+    "a21s1-e-034": {
+      "id": "a21s1-e-034",
+      "surface_form": "Juna lähti ajoissa.",
+      "lemma": "Juna lähti ajoissa.",
+      "translation_fa": "قطار به‌موقع حرکت کرد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Juna lähti ajoissa.",
+      "example_fa": "قطار به‌موقع حرکت کرد.",
+      "accepted_answers": [
+        "Juna lähti ajoissa."
+      ]
+    },
+    "a21s1-e-035": {
+      "id": "a21s1-e-035",
+      "surface_form": "Juna saapui myöhässä.",
+      "lemma": "Juna saapui myöhässä.",
+      "translation_fa": "قطار با تأخیر رسید.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Juna saapui myöhässä.",
+      "example_fa": "قطار با تأخیر رسید.",
+      "accepted_answers": [
+        "Juna saapui myöhässä."
+      ]
+    },
+    "a21s1-e-036": {
+      "id": "a21s1-e-036",
+      "surface_form": "Odotin asemalla.",
+      "lemma": "Odotin asemalla.",
+      "translation_fa": "در ایستگاه منتظر ماندم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Odotin asemalla.",
+      "example_fa": "در ایستگاه منتظر ماندم.",
+      "accepted_answers": [
+        "Odotin asemalla."
+      ]
+    },
+    "a21s1-e-037": {
+      "id": "a21s1-e-037",
+      "surface_form": "Matka kesti kaksi tuntia.",
+      "lemma": "Matka kesti kaksi tuntia.",
+      "translation_fa": "سفر دو ساعت طول کشید.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matka kesti kaksi tuntia.",
+      "example_fa": "سفر دو ساعت طول کشید.",
+      "accepted_answers": [
+        "Matka kesti kaksi tuntia."
+      ]
+    },
+    "a21s1-e-038": {
+      "id": "a21s1-e-038",
+      "surface_form": "Bussi tuli sitten.",
+      "lemma": "Bussi tuli sitten.",
+      "translation_fa": "اتوبوس بعداً آمد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Bussi tuli sitten.",
+      "example_fa": "اتوبوس بعداً آمد.",
+      "accepted_answers": [
+        "Bussi tuli sitten."
+      ]
+    },
+    "a21s1-h-039": {
+      "id": "a21s1-h-039",
+      "surface_form": "hyvä",
+      "lemma": "hyvä",
+      "translation_fa": "خوب / مناسب",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 121,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Aamiainen oli hyvä.",
+      "example_fa": "صبحانه خوب بود.",
+      "accepted_answers": [
+        "hyvä"
+      ]
+    },
+    "a21s1-t-040": {
+      "id": "a21s1-t-040",
+      "surface_form": "huoneen",
+      "lemma": "huone",
+      "translation_fa": "اتاق (مفعول کامل)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Varasin huoneen hotellista.",
+      "example_fa": "اتاقی در هتل رزرو کردم.",
+      "accepted_answers": [
+        "huoneen"
+      ]
+    },
+    "a21s1-t-041": {
+      "id": "a21s1-t-041",
+      "surface_form": "hotellissa",
+      "lemma": "hotelli",
+      "translation_fa": "در هتل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Yövyin hotellissa yhden yön.",
+      "example_fa": "یک شب در هتل اقامت کردم.",
+      "accepted_answers": [
+        "hotellissa"
+      ]
+    },
+    "a21s1-t-042": {
+      "id": "a21s1-t-042",
+      "surface_form": "aamiainen",
+      "lemma": "aamiainen",
+      "translation_fa": "صبحانه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Aamiainen kuului hintaan.",
+      "example_fa": "صبحانه در قیمت اقامت گنجانده شده بود.",
+      "accepted_answers": [
+        "aamiainen"
+      ]
+    },
+    "a21s1-e-043": {
+      "id": "a21s1-e-043",
+      "surface_form": "Varasin huoneen hotellista.",
+      "lemma": "Varasin huoneen hotellista.",
+      "translation_fa": "اتاقی در هتل رزرو کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Varasin huoneen hotellista.",
+      "example_fa": "اتاقی در هتل رزرو کردم.",
+      "accepted_answers": [
+        "Varasin huoneen hotellista."
+      ]
+    },
+    "a21s1-e-044": {
+      "id": "a21s1-e-044",
+      "surface_form": "Yövyin hotellissa yhden yön.",
+      "lemma": "Yövyin hotellissa yhden yön.",
+      "translation_fa": "یک شب در هتل اقامت کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Yövyin hotellissa yhden yön.",
+      "example_fa": "یک شب در هتل اقامت کردم.",
+      "accepted_answers": [
+        "Yövyin hotellissa yhden yön."
+      ]
+    },
+    "a21s1-e-045": {
+      "id": "a21s1-e-045",
+      "surface_form": "Huone oli siisti.",
+      "lemma": "Huone oli siisti.",
+      "translation_fa": "اتاق تمیز بود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Huone oli siisti.",
+      "example_fa": "اتاق تمیز بود.",
+      "accepted_answers": [
+        "Huone oli siisti."
+      ]
+    },
+    "a21s1-e-046": {
+      "id": "a21s1-e-046",
+      "surface_form": "Aamiainen kuului hintaan.",
+      "lemma": "Aamiainen kuului hintaan.",
+      "translation_fa": "صبحانه در قیمت اقامت گنجانده شده بود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Aamiainen kuului hintaan.",
+      "example_fa": "صبحانه در قیمت اقامت گنجانده شده بود.",
+      "accepted_answers": [
+        "Aamiainen kuului hintaan."
+      ]
+    },
+    "a21s1-e-047": {
+      "id": "a21s1-e-047",
+      "surface_form": "Aamiainen oli hyvä.",
+      "lemma": "Aamiainen oli hyvä.",
+      "translation_fa": "صبحانه خوب بود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Aamiainen oli hyvä.",
+      "example_fa": "صبحانه خوب بود.",
+      "accepted_answers": [
+        "Aamiainen oli hyvä."
+      ]
+    },
+    "a21s1-h-048": {
+      "id": "a21s1-h-048",
+      "surface_form": "koska",
+      "lemma": "koska",
+      "translation_fa": "زیرا / چون",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 64,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Myöhästyin, koska juna oli myöhässä.",
+      "example_fa": "دیر رسیدم، چون قطار تأخیر داشت.",
+      "accepted_answers": [
+        "koska"
+      ]
+    },
+    "a21s1-t-049": {
+      "id": "a21s1-t-049",
+      "surface_form": "myöhästyin",
+      "lemma": "myöhästyä",
+      "translation_fa": "جا ماندم / دیر رسیدم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Myöhästyin bussista.",
+      "example_fa": "از اتوبوس جا ماندم.",
+      "accepted_answers": [
+        "myöhästyin"
+      ]
+    },
+    "a21s1-t-050": {
+      "id": "a21s1-t-050",
+      "surface_form": "lippua",
+      "lemma": "lippu",
+      "translation_fa": "بلیت (مفعول جزئی)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "En löytänyt lippua.",
+      "example_fa": "بلیت را پیدا نکردم.",
+      "accepted_answers": [
+        "lippua"
+      ]
+    },
+    "a21s1-t-051": {
+      "id": "a21s1-t-051",
+      "surface_form": "neuvoa",
+      "lemma": "neuvo",
+      "translation_fa": "راهنمایی (مفعول جزئی)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Kysyin neuvoa asemalla.",
+      "example_fa": "در ایستگاه راهنمایی خواستم.",
+      "accepted_answers": [
+        "neuvoa"
+      ]
+    },
+    "a21s1-e-052": {
+      "id": "a21s1-e-052",
+      "surface_form": "Juna oli myöhässä.",
+      "lemma": "Juna oli myöhässä.",
+      "translation_fa": "قطار تأخیر داشت.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Juna oli myöhässä.",
+      "example_fa": "قطار تأخیر داشت.",
+      "accepted_answers": [
+        "Juna oli myöhässä."
+      ]
+    },
+    "a21s1-e-053": {
+      "id": "a21s1-e-053",
+      "surface_form": "Myöhästyin bussista.",
+      "lemma": "Myöhästyin bussista.",
+      "translation_fa": "از اتوبوس جا ماندم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Myöhästyin bussista.",
+      "example_fa": "از اتوبوس جا ماندم.",
+      "accepted_answers": [
+        "Myöhästyin bussista."
+      ]
+    },
+    "a21s1-e-054": {
+      "id": "a21s1-e-054",
+      "surface_form": "En löytänyt lippua.",
+      "lemma": "En löytänyt lippua.",
+      "translation_fa": "بلیت را پیدا نکردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "En löytänyt lippua.",
+      "example_fa": "بلیت را پیدا نکردم.",
+      "accepted_answers": [
+        "En löytänyt lippua."
+      ]
+    },
+    "a21s1-e-055": {
+      "id": "a21s1-e-055",
+      "surface_form": "Kysyin neuvoa asemalla.",
+      "lemma": "Kysyin neuvoa asemalla.",
+      "translation_fa": "در ایستگاه راهنمایی خواستم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Kysyin neuvoa asemalla.",
+      "example_fa": "در ایستگاه راهنمایی خواستم.",
+      "accepted_answers": [
+        "Kysyin neuvoa asemalla."
+      ]
+    },
+    "a21s1-e-056": {
+      "id": "a21s1-e-056",
+      "surface_form": "Myöhästyin, koska juna oli myöhässä.",
+      "lemma": "Myöhästyin, koska juna oli myöhässä.",
+      "translation_fa": "دیر رسیدم، چون قطار تأخیر داشت.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Myöhästyin, koska juna oli myöhässä.",
+      "example_fa": "دیر رسیدم، چون قطار تأخیر داشت.",
+      "accepted_answers": [
+        "Myöhästyin, koska juna oli myöhässä."
+      ]
+    },
+    "a21s1-t-057": {
+      "id": "a21s1-t-057",
+      "surface_form": "museossa",
+      "lemma": "museo",
+      "translation_fa": "در موزه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Kävin museossa.",
+      "example_fa": "به موزه رفتم.",
+      "accepted_answers": [
+        "museossa"
+      ]
+    },
+    "a21s1-t-058": {
+      "id": "a21s1-t-058",
+      "surface_form": "valokuvia",
+      "lemma": "valokuva",
+      "translation_fa": "عکس‌ها (مفعول جمع جزئی)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Otin valokuvia.",
+      "example_fa": "عکس گرفتم.",
+      "accepted_answers": [
+        "valokuvia"
+      ]
+    },
+    "a21s1-t-059": {
+      "id": "a21s1-t-059",
+      "surface_form": "kirkon",
+      "lemma": "kirkko",
+      "translation_fa": "کلیسا (مفعول کامل)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Näin vanhan kirkon.",
+      "example_fa": "یک کلیسای قدیمی را دیدم.",
+      "accepted_answers": [
+        "kirkon"
+      ]
+    },
+    "a21s1-e-060": {
+      "id": "a21s1-e-060",
+      "surface_form": "Kävin museossa.",
+      "lemma": "Kävin museossa.",
+      "translation_fa": "به موزه رفتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Kävin museossa.",
+      "example_fa": "به موزه رفتم.",
+      "accepted_answers": [
+        "Kävin museossa."
+      ]
+    },
+    "a21s1-e-061": {
+      "id": "a21s1-e-061",
+      "surface_form": "Näin vanhan kirkon.",
+      "lemma": "Näin vanhan kirkon.",
+      "translation_fa": "یک کلیسای قدیمی را دیدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Näin vanhan kirkon.",
+      "example_fa": "یک کلیسای قدیمی را دیدم.",
+      "accepted_answers": [
+        "Näin vanhan kirkon."
+      ]
+    },
+    "a21s1-e-062": {
+      "id": "a21s1-e-062",
+      "surface_form": "Otin valokuvia.",
+      "lemma": "Otin valokuvia.",
+      "translation_fa": "عکس گرفتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Otin valokuvia.",
+      "example_fa": "عکس گرفتم.",
+      "accepted_answers": [
+        "Otin valokuvia."
+      ]
+    },
+    "a21s1-e-063": {
+      "id": "a21s1-e-063",
+      "surface_form": "Pidin kaupungista.",
+      "lemma": "Pidin kaupungista.",
+      "translation_fa": "از شهر خوشم آمد.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Pidin kaupungista.",
+      "example_fa": "از شهر خوشم آمد.",
+      "accepted_answers": [
+        "Pidin kaupungista."
+      ]
+    },
+    "a21s1-e-064": {
+      "id": "a21s1-e-064",
+      "surface_form": "Museo oli hyvä.",
+      "lemma": "Museo oli hyvä.",
+      "translation_fa": "موزه خوب بود.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Museo oli hyvä.",
+      "example_fa": "موزه خوب بود.",
+      "accepted_answers": [
+        "Museo oli hyvä."
+      ]
+    },
+    "a21s1-h-065": {
+      "id": "a21s1-h-065",
+      "surface_form": "jälkeen",
+      "lemma": "jälkeen",
+      "translation_fa": "بعد از / پس از",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 36,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Sen jälkeen kävelin hotelliin.",
+      "example_fa": "پس از آن پیاده به هتل رفتم.",
+      "accepted_answers": [
+        "jälkeen"
+      ]
+    },
+    "a21s1-t-066": {
+      "id": "a21s1-t-066",
+      "surface_form": "ensin",
+      "lemma": "ensin",
+      "translation_fa": "اول",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 299,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Ensin ostin lipun.",
+      "example_fa": "اول بلیت خریدم.",
+      "accepted_answers": [
+        "ensin"
+      ]
+    },
+    "a21s1-t-067": {
+      "id": "a21s1-t-067",
+      "surface_form": "junaan",
+      "lemma": "juna",
+      "translation_fa": "به داخل قطار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Sitten nousin junaan.",
+      "example_fa": "بعد سوار قطار شدم.",
+      "accepted_answers": [
+        "junaan"
+      ]
+    },
+    "a21s1-t-068": {
+      "id": "a21s1-t-068",
+      "surface_form": "lopuksi",
+      "lemma": "lopuksi",
+      "translation_fa": "در پایان",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lopuksi palasin kotiin.",
+      "example_fa": "در پایان به خانه برگشتم.",
+      "accepted_answers": [
+        "lopuksi"
+      ]
+    },
+    "a21s1-e-069": {
+      "id": "a21s1-e-069",
+      "surface_form": "Ensin ostin lipun.",
+      "lemma": "Ensin ostin lipun.",
+      "translation_fa": "اول بلیت خریدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Ensin ostin lipun.",
+      "example_fa": "اول بلیت خریدم.",
+      "accepted_answers": [
+        "Ensin ostin lipun."
+      ]
+    },
+    "a21s1-e-070": {
+      "id": "a21s1-e-070",
+      "surface_form": "Sitten nousin junaan.",
+      "lemma": "Sitten nousin junaan.",
+      "translation_fa": "بعد سوار قطار شدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Sitten nousin junaan.",
+      "example_fa": "بعد سوار قطار شدم.",
+      "accepted_answers": [
+        "Sitten nousin junaan."
+      ]
+    },
+    "a21s1-e-071": {
+      "id": "a21s1-e-071",
+      "surface_form": "Sen jälkeen kävelin hotelliin.",
+      "lemma": "Sen jälkeen kävelin hotelliin.",
+      "translation_fa": "پس از آن پیاده به هتل رفتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Sen jälkeen kävelin hotelliin.",
+      "example_fa": "پس از آن پیاده به هتل رفتم.",
+      "accepted_answers": [
+        "Sen jälkeen kävelin hotelliin."
+      ]
+    },
+    "a21s1-e-072": {
+      "id": "a21s1-e-072",
+      "surface_form": "Lopuksi palasin kotiin.",
+      "lemma": "Lopuksi palasin kotiin.",
+      "translation_fa": "در پایان به خانه برگشتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Lopuksi palasin kotiin.",
+      "example_fa": "در پایان به خانه برگشتم.",
+      "accepted_answers": [
+        "Lopuksi palasin kotiin."
+      ]
+    },
+    "a21s1-h-073": {
+      "id": "a21s1-h-073",
+      "surface_form": "viime",
+      "lemma": "viime",
+      "translation_fa": "گذشته / آخرین",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 39,
+      "topics": [
+        "a2.1-s1",
+        "source-backed"
+      ],
+      "example_fi": "Missä kävit viime viikonloppuna?",
+      "example_fa": "آخر هفتهٔ گذشته کجا رفتی؟",
+      "accepted_answers": [
+        "viime"
+      ]
+    },
+    "a21s1-t-074": {
+      "id": "a21s1-t-074",
+      "surface_form": "lauantaina",
+      "lemma": "lauantai",
+      "translation_fa": "روز شنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Viime lauantaina kävin Tampereella.",
+      "example_fa": "شنبهٔ گذشته به تامپره رفتم.",
+      "accepted_answers": [
+        "lauantaina"
+      ]
+    },
+    "a21s1-t-075": {
+      "id": "a21s1-t-075",
+      "surface_form": "Tampereella",
+      "lemma": "Tampere",
+      "translation_fa": "در تامپره",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Viime lauantaina kävin Tampereella.",
+      "example_fa": "شنبهٔ گذشته به تامپره رفتم.",
+      "accepted_answers": [
+        "Tampereella"
+      ]
+    },
+    "a21s1-t-076": {
+      "id": "a21s1-t-076",
+      "surface_form": "sunnuntaina",
+      "lemma": "sunnuntai",
+      "translation_fa": "روز یکشنبه",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 303,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Palasin kotiin sunnuntaina.",
+      "example_fa": "یکشنبه به خانه برگشتم.",
+      "accepted_answers": [
+        "sunnuntaina"
+      ]
+    },
+    "a21s1-e-077": {
+      "id": "a21s1-e-077",
+      "surface_form": "Viime lauantaina kävin Tampereella.",
+      "lemma": "Viime lauantaina kävin Tampereella.",
+      "translation_fa": "شنبهٔ گذشته به تامپره رفتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Viime lauantaina kävin Tampereella.",
+      "example_fa": "شنبهٔ گذشته به تامپره رفتم.",
+      "accepted_answers": [
+        "Viime lauantaina kävin Tampereella."
+      ]
+    },
+    "a21s1-e-078": {
+      "id": "a21s1-e-078",
+      "surface_form": "Matkustin sinne junalla.",
+      "lemma": "Matkustin sinne junalla.",
+      "translation_fa": "با قطار به آنجا سفر کردم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Matkustin sinne junalla.",
+      "example_fa": "با قطار به آنجا سفر کردم.",
+      "accepted_answers": [
+        "Matkustin sinne junalla."
+      ]
+    },
+    "a21s1-e-079": {
+      "id": "a21s1-e-079",
+      "surface_form": "Tapasin ystävän.",
+      "lemma": "Tapasin ystävän.",
+      "translation_fa": "دوستم را دیدم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Tapasin ystävän.",
+      "example_fa": "دوستم را دیدم.",
+      "accepted_answers": [
+        "Tapasin ystävän."
+      ]
+    },
+    "a21s1-e-080": {
+      "id": "a21s1-e-080",
+      "surface_form": "Palasin kotiin sunnuntaina.",
+      "lemma": "Palasin kotiin sunnuntaina.",
+      "translation_fa": "یکشنبه به خانه برگشتم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel"
+      ],
+      "example_fi": "Palasin kotiin sunnuntaina.",
+      "example_fa": "یکشنبه به خانه برگشتم.",
+      "accepted_answers": [
+        "Palasin kotiin sunnuntaina."
+      ]
+    },
+    "a21s1-reading-1": {
+      "id": "a21s1-reading-1",
+      "surface_form": "Viime lauantaina kävin Tampereella. Matkustin sinne junalla.",
+      "lemma": "Viime lauantaina kävin Tampereella. Matkustin sinne junalla.",
+      "translation_fa": "شنبهٔ گذشته به تامپره رفتم. با قطار به آنجا سفر کردم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "integrated-reading"
+      ],
+      "example_fi": "Viime lauantaina kävin Tampereella. Matkustin sinne junalla.",
+      "example_fa": "شنبهٔ گذشته به تامپره رفتم. با قطار به آنجا سفر کردم.",
+      "accepted_answers": [
+        "Viime lauantaina kävin Tampereella. Matkustin sinne junalla."
+      ]
+    },
+    "a21s1-reading-2": {
+      "id": "a21s1-reading-2",
+      "surface_form": "Tapasin ystävän. Palasin kotiin sunnuntaina.",
+      "lemma": "Tapasin ystävän. Palasin kotiin sunnuntaina.",
+      "translation_fa": "دوستم را دیدم. یکشنبه به خانه برگشتم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "integrated-reading"
+      ],
+      "example_fi": "Tapasin ystävän. Palasin kotiin sunnuntaina.",
+      "example_fa": "دوستم را دیدم. یکشنبه به خانه برگشتم.",
+      "accepted_answers": [
+        "Tapasin ystävän. Palasin kotiin sunnuntaina."
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "a2.1-section-1-lesson-1",
+      "curriculum_id": "a2.1-s1-l01",
+      "order": 1,
+      "title_fa": "سفر آخر هفته",
+      "objective_fa": "بپرسم آخر هفته کسی کجا رفته و بگویم خودم کجا و چه مدتی بوده‌ام.",
+      "summary_fa": "بپرسم آخر هفته کسی کجا رفته و بگویم خودم کجا و چه مدتی بوده‌ام.",
+      "grammar_fa": "«Kävin» (رفتم/بازدید کردم)، «kävit» (رفتی)، «olin» (بودم) و «oli» (بود) شکل‌های گذشته‌اند. «Missä kävit?» را با «Kävin ...» پاسخ بده.",
+      "new_targets": [
+        "a21s1-t-003",
+        "a21s1-t-004",
+        "a21s1-t-005",
+        "a21s1-e-006",
+        "a21s1-e-007"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-001",
+          "a21s1-h-002"
+        ],
+        "topic": [
+          "a21s1-t-003",
+          "a21s1-t-004",
+          "a21s1-t-005"
+        ],
+        "expressions": [
+          "a21s1-e-006",
+          "a21s1-e-007",
+          "a21s1-e-008",
+          "a21s1-e-009"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s4-l01",
+        "a1.3-s4-l04",
+        "a1.3-s4-l09"
+      ],
+      "production_targets": [
+        "a21s1-e-006"
+      ],
+      "listening_targets": [
+        "a21s1-e-007",
+        "a21s1-e-008"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-009",
+          "tokens": [
+            "oli",
+            "mukava.",
+            "Matka"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Matka oli mukava."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-006",
+          "base_fi": "käydä",
+          "feature_fa": "گذشتهٔ دوم‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «آخر هفتهٔ گذشته کجا رفتی؟» بنویس.",
+          "frame_fi": "Missä _____ viime viikonloppuna?",
+          "expected_fi": "kävit",
+          "accepted_answers": [
+            "kävit"
+          ],
+          "explanation_fa": "در سؤال از مخاطب، «kävit» صورت گذشتهٔ دوم‌شخص از «käydä» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-003"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-004"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-005"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-006"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-007"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-006",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-007",
+            "a21s1-e-008",
+            "a21s1-e-009"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-006",
+          "options": [
+            "a21s1-e-016",
+            "a21s1-e-006",
+            "a21s1-e-017",
+            "a21s1-e-018"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-007",
+          "options": [
+            "a21s1-e-025",
+            "a21s1-e-026",
+            "a21s1-e-007",
+            "a21s1-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-007",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-034",
+            "a21s1-e-035",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-008",
+          "options": [
+            "a21s1-e-008",
+            "a21s1-e-037",
+            "a21s1-e-038",
+            "a21s1-e-043"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-008",
+          "options": [
+            "a21s1-e-045",
+            "a21s1-e-008",
+            "a21s1-e-046",
+            "a21s1-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-009",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-054",
+            "a21s1-e-009",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-009",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-009"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-001",
+          "options": [
+            "a21s1-h-001",
+            "a21s1-t-003",
+            "a21s1-t-004",
+            "a21s1-t-005"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-003",
+          "options": [
+            "a21s1-t-003",
+            "a21s1-t-004",
+            "a21s1-t-005",
+            "a21s1-h-001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-2",
+      "curriculum_id": "a2.1-s1-l02",
+      "order": 2,
+      "title_fa": "رفتن، حرکت کردن و برگشتن در گذشته",
+      "objective_fa": "با فعل‌های گذشتهٔ تمرین‌شده بگویم از کجا حرکت کردم و به کجا رسیدم.",
+      "summary_fa": "با فعل‌های گذشتهٔ تمرین‌شده بگویم از کجا حرکت کردم و به کجا رسیدم.",
+      "grammar_fa": "«Menin» (رفتم)، «lähdin» (حرکت کردم)، «tulin» (آمدم) و «matkustin» (سفر کردم) نمونه‌های گذشتهٔ اول‌شخص‌اند. «Vaasasta» مبدأ و «asemalle» مقصد را نشان می‌دهند.",
+      "new_targets": [
+        "a21s1-t-012",
+        "a21s1-t-013",
+        "a21s1-t-014",
+        "a21s1-e-015",
+        "a21s1-e-016"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-010",
+          "a21s1-h-011"
+        ],
+        "topic": [
+          "a21s1-t-012",
+          "a21s1-t-013",
+          "a21s1-t-014"
+        ],
+        "expressions": [
+          "a21s1-e-015",
+          "a21s1-e-016",
+          "a21s1-e-017",
+          "a21s1-e-018",
+          "a21s1-e-019"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s4-l01",
+        "a1.3-s4-l03",
+        "a2.1-s1-l01"
+      ],
+      "production_targets": [
+        "a21s1-e-015"
+      ],
+      "listening_targets": [
+        "a21s1-e-016",
+        "a21s1-e-017"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-018",
+          "tokens": [
+            "junalla.",
+            "Matkustin"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Matkustin junalla."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-015",
+          "base_fi": "mennä",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «صبح به ایستگاه رفتم.» بنویس.",
+          "frame_fi": "_____ asemalle aamulla.",
+          "expected_fi": "Menin",
+          "accepted_answers": [
+            "Menin"
+          ],
+          "explanation_fa": "«Menin» صورت گذشتهٔ اول‌شخص فعل «mennä» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-012"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-013"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-014"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-015"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-016"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-015",
+          "options": [
+            "a21s1-e-016",
+            "a21s1-e-015",
+            "a21s1-e-017",
+            "a21s1-e-018"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-015",
+          "options": [
+            "a21s1-e-025",
+            "a21s1-e-026",
+            "a21s1-e-015",
+            "a21s1-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-016",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-034",
+            "a21s1-e-035",
+            "a21s1-e-016"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-016",
+          "options": [
+            "a21s1-e-016",
+            "a21s1-e-037",
+            "a21s1-e-038",
+            "a21s1-e-043"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-017",
+          "options": [
+            "a21s1-e-045",
+            "a21s1-e-017",
+            "a21s1-e-046",
+            "a21s1-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-017",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-054",
+            "a21s1-e-017",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-018",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-018"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-018",
+          "options": [
+            "a21s1-e-018",
+            "a21s1-e-064",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-010",
+          "options": [
+            "a21s1-h-010",
+            "a21s1-t-012",
+            "a21s1-t-013",
+            "a21s1-t-014"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-012",
+          "options": [
+            "a21s1-t-012",
+            "a21s1-t-013",
+            "a21s1-t-014",
+            "a21s1-h-010"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-3",
+      "curriculum_id": "a2.1-s1-l03",
+      "order": 3,
+      "title_fa": "خرید بلیت و پرداخت در سفر گذشته",
+      "objective_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم.",
+      "summary_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم.",
+      "grammar_fa": "«Ostin» (خریدم)، «maksoin» (پرداخت کردم) و «maksoi» (قیمت داشت) گذشته‌اند. «Lipun» و «paluulipun» در جملهٔ خرید بلیت مفعول کامل‌اند؛ صورت‌ها را در عبارت یاد بگیر.",
+      "new_targets": [
+        "a21s1-t-022",
+        "a21s1-t-023",
+        "a21s1-t-024",
+        "a21s1-e-025",
+        "a21s1-e-026"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-020",
+          "a21s1-h-021"
+        ],
+        "topic": [
+          "a21s1-t-022",
+          "a21s1-t-023",
+          "a21s1-t-024"
+        ],
+        "expressions": [
+          "a21s1-e-025",
+          "a21s1-e-026",
+          "a21s1-e-027",
+          "a21s1-e-028",
+          "a21s1-e-029"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s1-l02",
+        "a1.2-s2-l06",
+        "a2.1-s1-l02"
+      ],
+      "production_targets": [
+        "a21s1-e-025"
+      ],
+      "listening_targets": [
+        "a21s1-e-026",
+        "a21s1-e-027"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-028",
+          "tokens": [
+            "myös",
+            "paluulipun.",
+            "Ostin"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Ostin myös paluulipun."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-025",
+          "base_fi": "ostaa",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «بلیت را از قبل خریدم.» بنویس.",
+          "frame_fi": "_____ lipun etukäteen.",
+          "expected_fi": "Ostin",
+          "accepted_answers": [
+            "Ostin"
+          ],
+          "explanation_fa": "«Ostin» گذشتهٔ اول‌شخص از «ostaa» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-022"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-023"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-024"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-025"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-026"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-025",
+          "options": [
+            "a21s1-e-019",
+            "a21s1-e-026",
+            "a21s1-e-025",
+            "a21s1-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-025",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-034",
+            "a21s1-e-035",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-026",
+          "options": [
+            "a21s1-e-026",
+            "a21s1-e-037",
+            "a21s1-e-038",
+            "a21s1-e-043"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-026",
+          "options": [
+            "a21s1-e-045",
+            "a21s1-e-026",
+            "a21s1-e-046",
+            "a21s1-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-027",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-054",
+            "a21s1-e-027",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-027",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-027"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-028",
+          "options": [
+            "a21s1-e-028",
+            "a21s1-e-064",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-028",
+          "options": [
+            "a21s1-e-072",
+            "a21s1-e-028",
+            "a21s1-e-077",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-020",
+          "options": [
+            "a21s1-h-020",
+            "a21s1-t-022",
+            "a21s1-t-023",
+            "a21s1-t-024"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-022",
+          "options": [
+            "a21s1-t-022",
+            "a21s1-t-023",
+            "a21s1-t-024",
+            "a21s1-h-020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-4",
+      "curriculum_id": "a2.1-s1-l04",
+      "order": 4,
+      "title_fa": "حرکت، رسیدن و مدت سفر",
+      "objective_fa": "بگویم قطار چه زمانی حرکت کرد، آیا تأخیر داشت و سفر چقدر طول کشید.",
+      "summary_fa": "بگویم قطار چه زمانی حرکت کرد، آیا تأخیر داشت و سفر چقدر طول کشید.",
+      "grammar_fa": "«Lähti» (حرکت کرد)، «saapui» (رسید) و «kesti» (طول کشید) گذشتهٔ سوم‌شخص‌اند. «Odotin asemalla» یعنی در ایستگاه منتظر ماندم؛ «kaksi tuntia» یعنی دو ساعت.",
+      "new_targets": [
+        "a21s1-t-031",
+        "a21s1-t-032",
+        "a21s1-t-033",
+        "a21s1-e-034",
+        "a21s1-e-035"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-002",
+          "a21s1-h-030"
+        ],
+        "topic": [
+          "a21s1-t-031",
+          "a21s1-t-032",
+          "a21s1-t-033"
+        ],
+        "expressions": [
+          "a21s1-e-034",
+          "a21s1-e-035",
+          "a21s1-e-036",
+          "a21s1-e-037",
+          "a21s1-e-038"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s2-l07",
+        "a1.2-s2-l08",
+        "a2.1-s1-l03"
+      ],
+      "production_targets": [
+        "a21s1-e-034"
+      ],
+      "listening_targets": [
+        "a21s1-e-035",
+        "a21s1-e-036"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-037",
+          "tokens": [
+            "kesti",
+            "kaksi",
+            "tuntia.",
+            "Matka"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Matka kesti kaksi tuntia."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-034",
+          "base_fi": "lähteä",
+          "feature_fa": "گذشتهٔ سوم‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «قطار به‌موقع حرکت کرد.» بنویس.",
+          "frame_fi": "Juna _____ ajoissa.",
+          "expected_fi": "lähti",
+          "accepted_answers": [
+            "lähti"
+          ],
+          "explanation_fa": "«Lähti» صورت گذشتهٔ سوم‌شخص از «lähteä» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-031"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-032"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-033"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-034"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-035"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-034",
+          "options": [
+            "a21s1-e-028",
+            "a21s1-e-029",
+            "a21s1-e-035",
+            "a21s1-e-034"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-034",
+          "options": [
+            "a21s1-e-034",
+            "a21s1-e-037",
+            "a21s1-e-038",
+            "a21s1-e-043"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-035",
+          "options": [
+            "a21s1-e-045",
+            "a21s1-e-035",
+            "a21s1-e-046",
+            "a21s1-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-035",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-054",
+            "a21s1-e-035",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-036",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-036"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-036",
+          "options": [
+            "a21s1-e-036",
+            "a21s1-e-064",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-037",
+          "options": [
+            "a21s1-e-072",
+            "a21s1-e-037",
+            "a21s1-e-077",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-037",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-006",
+            "a21s1-e-037",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-002",
+          "options": [
+            "a21s1-h-002",
+            "a21s1-t-031",
+            "a21s1-t-032",
+            "a21s1-t-033"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-031",
+          "options": [
+            "a21s1-t-031",
+            "a21s1-t-032",
+            "a21s1-t-033",
+            "a21s1-h-002"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-5",
+      "curriculum_id": "a2.1-s1-l05",
+      "order": 5,
+      "title_fa": "هتل و اقامت کوتاه",
+      "objective_fa": "رزرو اتاق، یک شب اقامت و کیفیت هتل را با جمله‌های کوتاه گذشته توصیف کنم.",
+      "summary_fa": "رزرو اتاق، یک شب اقامت و کیفیت هتل را با جمله‌های کوتاه گذشته توصیف کنم.",
+      "grammar_fa": "«Varasin» یعنی رزرو کردم و «yövyin» یعنی شب را گذراندم. «Varasin huoneen» مفعول کامل و «hotellissa» مکان را نشان می‌دهد. «Kuului hintaan» یعنی جزو قیمت بود.",
+      "new_targets": [
+        "a21s1-t-040",
+        "a21s1-t-041",
+        "a21s1-t-042",
+        "a21s1-e-043",
+        "a21s1-e-044"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-002",
+          "a21s1-h-039"
+        ],
+        "topic": [
+          "a21s1-t-040",
+          "a21s1-t-041",
+          "a21s1-t-042"
+        ],
+        "expressions": [
+          "a21s1-e-043",
+          "a21s1-e-044",
+          "a21s1-e-045",
+          "a21s1-e-046",
+          "a21s1-e-047"
+        ]
+      },
+      "recycle_from": [
+        "a1.2-s1-l05",
+        "a1.3-s2-l01",
+        "a2.1-s1-l04"
+      ],
+      "production_targets": [
+        "a21s1-e-043"
+      ],
+      "listening_targets": [
+        "a21s1-e-044",
+        "a21s1-e-045"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-046",
+          "tokens": [
+            "kuului",
+            "hintaan.",
+            "Aamiainen"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Aamiainen kuului hintaan."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-043",
+          "base_fi": "varata",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «اتاقی در هتل رزرو کردم.» بنویس.",
+          "frame_fi": "_____ huoneen hotellista.",
+          "expected_fi": "Varasin",
+          "accepted_answers": [
+            "Varasin"
+          ],
+          "explanation_fa": "«Varasin» صورت گذشتهٔ اول‌شخص از «varata» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-040"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-041"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-042"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-043"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-044"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-043",
+          "options": [
+            "a21s1-e-043",
+            "a21s1-e-036",
+            "a21s1-e-037",
+            "a21s1-e-038"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-043",
+          "options": [
+            "a21s1-e-045",
+            "a21s1-e-043",
+            "a21s1-e-046",
+            "a21s1-e-047"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-044",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-054",
+            "a21s1-e-044",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-044",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-044"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-045",
+          "options": [
+            "a21s1-e-045",
+            "a21s1-e-064",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-045",
+          "options": [
+            "a21s1-e-072",
+            "a21s1-e-045",
+            "a21s1-e-077",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-046",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-006",
+            "a21s1-e-046",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-046",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-015",
+            "a21s1-e-016",
+            "a21s1-e-046"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-002",
+          "options": [
+            "a21s1-h-002",
+            "a21s1-t-040",
+            "a21s1-t-041",
+            "a21s1-t-042"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-040",
+          "options": [
+            "a21s1-t-040",
+            "a21s1-t-041",
+            "a21s1-t-042",
+            "a21s1-h-002"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-6",
+      "curriculum_id": "a2.1-s1-l06",
+      "order": 6,
+      "title_fa": "مشکلات سفر و درخواست راهنمایی",
+      "objective_fa": "مشکلی مانند تأخیر یا گم‌شدن بلیت را توضیح بدهم و بگویم چگونه راهنمایی خواستم.",
+      "summary_fa": "مشکلی مانند تأخیر یا گم‌شدن بلیت را توضیح بدهم و بگویم چگونه راهنمایی خواستم.",
+      "grammar_fa": "«En löytänyt lippua» یعنی بلیت را پیدا نکردم؛ در منفی گذشته «löytänyt» با «en» می‌آید. «Myöhästyin bussista» یعنی از اتوبوس جا ماندم. «Koska» دلیل را وصل می‌کند.",
+      "new_targets": [
+        "a21s1-t-049",
+        "a21s1-t-050",
+        "a21s1-t-051",
+        "a21s1-e-052",
+        "a21s1-e-053"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-002",
+          "a21s1-h-048"
+        ],
+        "topic": [
+          "a21s1-t-049",
+          "a21s1-t-050",
+          "a21s1-t-051"
+        ],
+        "expressions": [
+          "a21s1-e-052",
+          "a21s1-e-053",
+          "a21s1-e-054",
+          "a21s1-e-055",
+          "a21s1-e-056"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s2-l04",
+        "a1.3-s3-l08",
+        "a2.1-s1-l04"
+      ],
+      "production_targets": [
+        "a21s1-e-052"
+      ],
+      "listening_targets": [
+        "a21s1-e-053",
+        "a21s1-e-054"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-055",
+          "tokens": [
+            "neuvoa",
+            "asemalla.",
+            "Kysyin"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Kysyin neuvoa asemalla."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-052",
+          "base_fi": "olla",
+          "feature_fa": "گذشتهٔ سوم‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «قطار تأخیر داشت.» بنویس.",
+          "frame_fi": "Juna _____ myöhässä.",
+          "expected_fi": "oli",
+          "accepted_answers": [
+            "oli"
+          ],
+          "explanation_fa": "«oli» صورت گذشتهٔ سوم‌شخص از «olla» است؛ منفی گذشته در جملهٔ جداگانه آموزش داده می‌شود."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-049"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-050"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-051"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-052"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-053"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-052",
+          "options": [
+            "a21s1-e-044",
+            "a21s1-e-052",
+            "a21s1-e-045",
+            "a21s1-e-046"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-052",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-054",
+            "a21s1-e-052",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-053",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-053"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-053",
+          "options": [
+            "a21s1-e-053",
+            "a21s1-e-064",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-054",
+          "options": [
+            "a21s1-e-072",
+            "a21s1-e-054",
+            "a21s1-e-077",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-054",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-006",
+            "a21s1-e-054",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-055",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-015",
+            "a21s1-e-016",
+            "a21s1-e-055"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-055",
+          "options": [
+            "a21s1-e-055",
+            "a21s1-e-018",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-002",
+          "options": [
+            "a21s1-h-002",
+            "a21s1-t-049",
+            "a21s1-t-050",
+            "a21s1-t-051"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-049",
+          "options": [
+            "a21s1-t-049",
+            "a21s1-t-050",
+            "a21s1-t-051",
+            "a21s1-h-002"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-7",
+      "curriculum_id": "a2.1-s1-l07",
+      "order": 7,
+      "title_fa": "دیدنی‌ها و تجربه‌های سفر",
+      "objective_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
+      "summary_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
+      "grammar_fa": "«Näin» (دیدم)، «otin» (گرفتم) و «pidin» (دوست داشتم) شکل‌های گذشته‌اند. «Näin vanhan kirkon» مفعول کامل و «Otin valokuvia» مفعول جمعِ partitiivi دارد. «Pidin kaupungista» را یک‌جا تمرین کن.",
+      "new_targets": [
+        "a21s1-t-057",
+        "a21s1-t-058",
+        "a21s1-t-059",
+        "a21s1-e-060",
+        "a21s1-e-061"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-039",
+          "a21s1-h-021"
+        ],
+        "topic": [
+          "a21s1-t-057",
+          "a21s1-t-058",
+          "a21s1-t-059"
+        ],
+        "expressions": [
+          "a21s1-e-060",
+          "a21s1-e-061",
+          "a21s1-e-062",
+          "a21s1-e-063",
+          "a21s1-e-064"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s1-l06",
+        "a1.3-s4-l06",
+        "a2.1-s1-l05"
+      ],
+      "production_targets": [
+        "a21s1-e-060"
+      ],
+      "listening_targets": [
+        "a21s1-e-061",
+        "a21s1-e-062"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-063",
+          "tokens": [
+            "kaupungista.",
+            "Pidin"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Pidin kaupungista."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-060",
+          "base_fi": "käydä",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «به موزه رفتم.» بنویس.",
+          "frame_fi": "_____ museossa.",
+          "expected_fi": "Kävin",
+          "accepted_answers": [
+            "Kävin"
+          ],
+          "explanation_fa": "«Kävin» صورت گذشتهٔ اول‌شخص از «käydä» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-057"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-058"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-059"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-060"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-061"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-060",
+          "options": [
+            "a21s1-e-052",
+            "a21s1-e-053",
+            "a21s1-e-060",
+            "a21s1-e-054"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-060",
+          "options": [
+            "a21s1-e-056",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-060"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-061",
+          "options": [
+            "a21s1-e-061",
+            "a21s1-e-064",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-061",
+          "options": [
+            "a21s1-e-072",
+            "a21s1-e-061",
+            "a21s1-e-077",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-062",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-006",
+            "a21s1-e-062",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-062",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-015",
+            "a21s1-e-016",
+            "a21s1-e-062"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-063",
+          "options": [
+            "a21s1-e-063",
+            "a21s1-e-018",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-063",
+          "options": [
+            "a21s1-e-027",
+            "a21s1-e-063",
+            "a21s1-e-028",
+            "a21s1-e-029"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-039",
+          "options": [
+            "a21s1-h-039",
+            "a21s1-t-057",
+            "a21s1-t-058",
+            "a21s1-t-059"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-057",
+          "options": [
+            "a21s1-t-057",
+            "a21s1-t-058",
+            "a21s1-t-059",
+            "a21s1-h-039"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-8",
+      "curriculum_id": "a2.1-s1-l08",
+      "order": 8,
+      "title_fa": "ترتیب رویدادهای یک سفر",
+      "objective_fa": "چهار اتفاق گذشته را با «اول»، «بعد»، «پس از آن» و «در پایان» به‌ترتیب تعریف کنم.",
+      "summary_fa": "چهار اتفاق گذشته را با «اول»، «بعد»، «پس از آن» و «در پایان» به‌ترتیب تعریف کنم.",
+      "grammar_fa": "«Ensin» یعنی اول، «sitten» یعنی بعد، «sen jälkeen» یعنی پس از آن و «lopuksi» یعنی در پایان. با این پیوندها فعل‌های گذشته را مرتب کن؛ «junaan» و «hotelliin» مقصد هستند.",
+      "new_targets": [
+        "a21s1-t-066",
+        "a21s1-t-067",
+        "a21s1-t-068",
+        "a21s1-e-069",
+        "a21s1-e-070"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-030",
+          "a21s1-h-065"
+        ],
+        "topic": [
+          "a21s1-t-066",
+          "a21s1-t-067",
+          "a21s1-t-068"
+        ],
+        "expressions": [
+          "a21s1-e-069",
+          "a21s1-e-070",
+          "a21s1-e-071",
+          "a21s1-e-072"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s4-l03",
+        "a2.1-s1-l02",
+        "a2.1-s1-l04",
+        "a2.1-s1-l06"
+      ],
+      "production_targets": [
+        "a21s1-e-069"
+      ],
+      "listening_targets": [
+        "a21s1-e-070",
+        "a21s1-e-071"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-072",
+          "tokens": [
+            "palasin",
+            "kotiin.",
+            "Lopuksi"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Lopuksi palasin kotiin."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-069",
+          "base_fi": "ostaa",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «اول بلیت خریدم.» بنویس.",
+          "frame_fi": "Ensin _____ lipun.",
+          "expected_fi": "ostin",
+          "accepted_answers": [
+            "ostin"
+          ],
+          "explanation_fa": "«ostin» گذشتهٔ اول‌شخص «ostaa» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-066"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-067"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-068"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-069"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-070"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-069",
+          "options": [
+            "a21s1-e-056",
+            "a21s1-e-060",
+            "a21s1-e-061",
+            "a21s1-e-069"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-069",
+          "options": [
+            "a21s1-e-069",
+            "a21s1-e-063",
+            "a21s1-e-064",
+            "a21s1-e-070"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-070",
+          "options": [
+            "a21s1-e-072",
+            "a21s1-e-070",
+            "a21s1-e-077",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-070",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-006",
+            "a21s1-e-070",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-071",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-015",
+            "a21s1-e-016",
+            "a21s1-e-071"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-071",
+          "options": [
+            "a21s1-e-071",
+            "a21s1-e-018",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-072",
+          "options": [
+            "a21s1-e-027",
+            "a21s1-e-072",
+            "a21s1-e-028",
+            "a21s1-e-029"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-072",
+          "options": [
+            "a21s1-e-035",
+            "a21s1-e-036",
+            "a21s1-e-072",
+            "a21s1-e-037"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-030",
+          "options": [
+            "a21s1-h-030",
+            "a21s1-t-066",
+            "a21s1-t-067",
+            "a21s1-t-068"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-066",
+          "options": [
+            "a21s1-t-066",
+            "a21s1-t-067",
+            "a21s1-t-068",
+            "a21s1-h-030"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-9",
+      "curriculum_id": "a2.1-s1-l09",
+      "order": 9,
+      "title_fa": "روایت کوتاه یک سفر",
+      "objective_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
+      "summary_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
+      "grammar_fa": "در روایت کوتاه، زمان را با «Viime lauantaina» مشخص کن و سپس مقصد، وسیلهٔ رفت‌وآمد، یک دیدار و بازگشت را با فعل‌های گذشته بیان کن. از جمله‌های کوتاه استفاده کن.",
+      "new_targets": [
+        "a21s1-t-074",
+        "a21s1-t-075",
+        "a21s1-t-076",
+        "a21s1-e-077",
+        "a21s1-e-078"
+      ],
+      "curriculum_target_refs": {
+        "high_frequency": [
+          "a21s1-h-073",
+          "a21s1-h-030"
+        ],
+        "topic": [
+          "a21s1-t-074",
+          "a21s1-t-075",
+          "a21s1-t-076"
+        ],
+        "expressions": [
+          "a21s1-e-077",
+          "a21s1-e-078",
+          "a21s1-e-079",
+          "a21s1-e-080"
+        ]
+      },
+      "recycle_from": [
+        "a1.3-s4-l08",
+        "a1.3-s4-l09",
+        "a2.1-s1-l01",
+        "a2.1-s1-l03",
+        "a2.1-s1-l05",
+        "a2.1-s1-l07",
+        "a2.1-s1-l08"
+      ],
+      "production_targets": [
+        "a21s1-e-077"
+      ],
+      "listening_targets": [
+        "a21s1-e-078",
+        "a21s1-e-079"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-080",
+          "tokens": [
+            "kotiin",
+            "sunnuntaina.",
+            "Palasin"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Palasin kotiin sunnuntaina."
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-077",
+          "base_fi": "käydä",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "صورت گذشتهٔ مناسب را در جملهٔ «شنبهٔ گذشته به تامپره رفتم.» بنویس.",
+          "frame_fi": "Viime lauantaina _____ Tampereella.",
+          "expected_fi": "kävin",
+          "accepted_answers": [
+            "kävin"
+          ],
+          "explanation_fa": "«kävin» صورت گذشتهٔ اول‌شخص «käydä» است."
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a21s1-t-074"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-075"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-076"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-077"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-078"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-077",
+          "options": [
+            "a21s1-e-077",
+            "a21s1-e-063",
+            "a21s1-e-064",
+            "a21s1-e-069"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-077",
+          "options": [
+            "a21s1-e-071",
+            "a21s1-e-077",
+            "a21s1-e-072",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-078",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-006",
+            "a21s1-e-078",
+            "a21s1-e-007"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-078",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-015",
+            "a21s1-e-016",
+            "a21s1-e-078"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-079",
+          "options": [
+            "a21s1-e-079",
+            "a21s1-e-018",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-079",
+          "options": [
+            "a21s1-e-027",
+            "a21s1-e-079",
+            "a21s1-e-028",
+            "a21s1-e-029"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-080",
+          "options": [
+            "a21s1-e-035",
+            "a21s1-e-036",
+            "a21s1-e-080",
+            "a21s1-e-037"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-080",
+          "options": [
+            "a21s1-e-043",
+            "a21s1-e-044",
+            "a21s1-e-045",
+            "a21s1-e-080"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a21s1-reading-1",
+          "question_item": "a21s1-e-077",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-077",
+            "a21s1-e-007",
+            "a21s1-e-008"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a21s1-reading-2",
+          "question_item": "a21s1-e-079",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-079",
+            "a21s1-e-015",
+            "a21s1-e-016"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.1-section-1-lesson-10",
+      "curriculum_id": "a2.1-s1-l10",
+      "order": 10,
+      "title_fa": "ارزیابی بخش ۱: سفر و گذشته",
+      "objective_fa": "در تمرین‌های ترکیبی سفر، زمان گذشته، بلیت، اقامت، مشکل و ترتیب رویدادها پاسخ بدهم.",
+      "summary_fa": "در تمرین‌های ترکیبی سفر، زمان گذشته، بلیت، اقامت، مشکل و ترتیب رویدادها پاسخ بدهم.",
+      "grammar_fa": "در این آزمون، افعال گذشته و عبارت‌های مربوط به بلیت، حرکت، رسیدن، اقامت، مشکل و ترتیب رویدادها را مرور می‌کنی. قبولی در تمرین، گواهی رسمی A2 نیست.",
+      "new_targets": [],
+      "curriculum_target_refs": {
+        "high_frequency": [],
+        "topic": [],
+        "expressions": []
+      },
+      "recycle_from": [
+        "a2.1-s1-l01",
+        "a2.1-s1-l02",
+        "a2.1-s1-l03",
+        "a2.1-s1-l04",
+        "a2.1-s1-l05",
+        "a2.1-s1-l06",
+        "a2.1-s1-l07",
+        "a2.1-s1-l08",
+        "a2.1-s1-l09"
+      ],
+      "passing_score": 0.8,
+      "production_targets": [
+        "a21s1-e-006"
+      ],
+      "listening_targets": [
+        "a21s1-e-016",
+        "a21s1-e-025"
+      ],
+      "structured_practice": [
+        {
+          "type": "sentence-order",
+          "item": "a21s1-e-034",
+          "tokens": [
+            "lähti",
+            "ajoissa.",
+            "Juna"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Juna lähti ajoissa."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-e-043",
+          "prompt_fi": "Varasin _____ hotellista.",
+          "prompt_fa": "اتاقی در هتل رزرو کردم.",
+          "expected_fi": "Varasin huoneen hotellista.",
+          "accepted_answers": [
+            "huoneen"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s1-e-054",
+          "prompt_fa": "بلیت را پیدا نکردم.",
+          "cues_fi": [
+            "En",
+            "löytänyt"
+          ],
+          "expected_fi": "En löytänyt lippua.",
+          "accepted_answers": [
+            "En löytänyt lippua."
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "a21s1-e-061",
+          "base_fi": "nähdä",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "برای «یک کلیسای قدیمی را دیدم» صورت گذشتهٔ «nähdä» را بنویس.",
+          "frame_fi": "_____ vanhan kirkon.",
+          "expected_fi": "Näin",
+          "accepted_answers": [
+            "Näin"
+          ],
+          "explanation_fa": "«Näin» صورت گذشتهٔ اول‌شخص فعل «nähdä» است."
+        }
+      ],
+      "checkpoint_targets": [
+        "a21s1-e-006",
+        "a21s1-e-016",
+        "a21s1-e-025",
+        "a21s1-e-034",
+        "a21s1-e-043",
+        "a21s1-e-054",
+        "a21s1-e-061",
+        "a21s1-e-070",
+        "a21s1-e-077",
+        "a21s1-e-027",
+        "a21s1-e-037",
+        "a21s1-e-044",
+        "a21s1-e-053",
+        "a21s1-e-062",
+        "a21s1-e-080"
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-006",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-006",
+            "a21s1-e-015",
+            "a21s1-e-016"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-016",
+          "options": [
+            "a21s1-e-018",
+            "a21s1-e-019",
+            "a21s1-e-016",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-025",
+          "options": [
+            "a21s1-e-027",
+            "a21s1-e-028",
+            "a21s1-e-029",
+            "a21s1-e-025"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-034",
+          "options": [
+            "a21s1-e-034",
+            "a21s1-e-035",
+            "a21s1-e-036",
+            "a21s1-e-037"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-043",
+          "options": [
+            "a21s1-e-038",
+            "a21s1-e-043",
+            "a21s1-e-044",
+            "a21s1-e-045"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-054",
+          "options": [
+            "a21s1-e-046",
+            "a21s1-e-047",
+            "a21s1-e-054",
+            "a21s1-e-052"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-061",
+          "options": [
+            "a21s1-e-054",
+            "a21s1-e-055",
+            "a21s1-e-056",
+            "a21s1-e-061"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-070",
+          "options": [
+            "a21s1-e-070",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-063"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-077"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-027",
+          "options": [
+            "a21s1-e-078",
+            "a21s1-e-079",
+            "a21s1-e-027",
+            "a21s1-e-080"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-037"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-044",
+          "options": [
+            "a21s1-e-044",
+            "a21s1-e-016",
+            "a21s1-e-017",
+            "a21s1-e-018"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-053"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-062",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-034",
+            "a21s1-e-062",
+            "a21s1-e-035"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-080"
+        }
+      ]
+    }
+  ]
+}
