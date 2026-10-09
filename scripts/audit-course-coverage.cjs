@@ -236,7 +236,7 @@ function toMarkdown(report) {
 }
 function main(args=process.argv.slice(2)) {
   const mode=args[0]||'--markdown';
-  if(!['--markdown','--json','--check','--write','--emit-snapshot'].includes(mode)) {
+  if(!['--markdown','--json','--check','--write'].includes(mode)) {
     process.stderr.write('Usage: audit-course-coverage.cjs [--markdown|--json|--check|--write]\n');
     process.exitCode=2;return;
   }
@@ -245,7 +245,6 @@ function main(args=process.argv.slice(2)) {
   const json=JSON.stringify(data,null,2)+'\n',md=toMarkdown(data)+'\n';
   if(mode==='--json')process.stdout.write(json);
   else if(mode==='--markdown')process.stdout.write(md);
-  else if(mode==='--emit-snapshot')process.stdout.write('COVERAGE_AUDIT_SNAPSHOT='+JSON.stringify({json,markdown:md})+'\n');
   else if(mode==='--write'){
     fs.writeFileSync(JSON_FILE,json);fs.writeFileSync(MD_FILE,md);
     process.stdout.write('Wrote course coverage snapshots.\n');
@@ -253,7 +252,6 @@ function main(args=process.argv.slice(2)) {
     const existingJson=fs.existsSync(JSON_FILE)?fs.readFileSync(JSON_FILE,'utf8'):null;
     const existingMd=fs.existsSync(MD_FILE)?fs.readFileSync(MD_FILE,'utf8'):null;
     if(existingJson!==json||existingMd!==md){
-      if (process.env.GITHUB_ACTIONS && (!existingJson || !existingMd)) process.stdout.write('COVERAGE_AUDIT_SNAPSHOT='+JSON.stringify({json,markdown:md})+'\n');
       process.stderr.write('Missing or stale course audit snapshots; run npm run curriculum:coverage:write.\n');
       process.exitCode=1;
     }else process.stdout.write('Course coverage audit current for '+data.summary.shipped_lessons+' lessons.\n');
