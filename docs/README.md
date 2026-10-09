@@ -22,6 +22,7 @@ This is the documentation entry point for **Finnish Learning**. Each subject has
 | Topic and frequency vocabulary / تقسیم واژگان | [Vocabulary roadmap](VOCABULARY-ROADMAP.md) | Selection policy; does not replace actual Parole data |
 | A1.1 lesson-by-lesson matrix / ماتریس درس‌ها | [فارسی](A1.1-CURRICULUM.fa.md) · [English](A1.1-CURRICULUM.md) | Detailed readable plan of [A1.1 curriculum JSON](../data/course/a1.1-curriculum.json) |
 | Later A1 curriculum contracts | [A1.2 JSON](../data/course/a1.2-curriculum.json) · [A1.3 JSON](../data/course/a1.3-curriculum.json) | A1.2 and A1.3 each have four playable sections and 40 lessons; both follow their reviewed curriculum contracts |
+| A2.1 partially authored contract | [A2.1 curriculum](../data/course/a2.1-curriculum.json) | Section 1 has ten playable travel/past lessons; Sections 2–4 are outlines only, not published content |
 | Existing content coverage / پوشش اجرایی | [ممیزی محتوایی فارسی](CURRICULUM-AUDIT.fa.md) | A dated snapshot; regenerate live inventory with `npm run curriculum:audit` |
 | A1.2 corpus-vocabulary gap | [Vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) | Source-backed selection analysis, not a learner score |
 

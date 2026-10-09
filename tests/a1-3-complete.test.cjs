@@ -15,7 +15,7 @@ const prepared=course.validateImplementedPath(payloads);
 const wordMap=new Map(read('data/common-words.json').words.map(w=>[w.word.normalize('NFC').toLocaleLowerCase('fi-FI'),w]));
 
 test('A1.1 to A1.3 offers 12 sections and 120 independent lessons',()=>{
-  assert.deepEqual(course.COURSE_STAGES.map(s=>s.level),['A1.1','A1.2','A1.3']);
+  assert.deepEqual(course.COURSE_STAGES.map(s=>s.level),['A1.1','A1.2','A1.3','A2.1']);
   assert.equal(prepared.length,12);
   const ids=prepared.flatMap(s=>s.lessons.map(l=>l.id));
   assert.equal(ids.length,120);

@@ -69,7 +69,11 @@ test('inventory distinguishes planned, shipped and source dictionary terms', () 
   assert.equal(a13.authored_curriculum_lessons, 40);
   assert.ok(a11.target_strings_also_in_current_dictionary <= a11.unique_curriculum_lexical_surface_targets);
   assert.ok(a12.target_strings_also_in_current_dictionary <= a12.unique_curriculum_lexical_surface_targets);
-  assert.ok(audit.stages.filter(s => s.level.startsWith('A2') || s.level.startsWith('B') || s.level.startsWith('C')).every(s=>s.shipped_lesson_count===0));
+  const a21 = audit.stages.find(s=>s.level==='A2.1');
+  assert.equal(a21.authored_curriculum_lessons, 40);
+  assert.equal(a21.shipped_lesson_count, 10);
+  assert.equal(a21.shipped_section_count, 1);
+  assert.ok(audit.stages.filter(s=>!['A1.1','A1.2','A1.3','A2.1'].includes(s.level)).every(s=>s.shipped_lesson_count===0));
 });
 
 test('declared status tracks actual published coverage, not curriculum review status', () => {

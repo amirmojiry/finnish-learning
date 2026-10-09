@@ -6,14 +6,15 @@ This document is the **single maintained delivery roadmap**. [Learning Design](L
 
 ## Baseline and source of truth
 
-This status snapshot was checked on **2026-10-08**. For fresh implementation counts use `npm run curriculum:audit`, which reads the actual course JSON files. A planned level is not a playable level.
+This status snapshot was checked on **2026-10-09**. For fresh implementation counts use `npm run curriculum:audit`, which reads the actual course JSON files. A planned level is not a playable level.
 
 | Stage | Curriculum planning | Implemented lesson records | Next decision |
 | --- | --- | --- | --- |
 | A1.1 | 4 sections, 40 lessons in [A1.1 curriculum](../data/course/a1.1-curriculum.json) | 4 sections / 40 lessons | Maintain correctness, review exercise quality and skills evidence |
 | A1.2 | 4 sections, 40 lessons in [A1.2 curriculum](../data/course/a1.2-curriculum.json) | **4 sections / 40 lessons** | Continue correctness, device/audio and proficiency-evidence auditing |
 | A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 4 sections / 40 lessons | Language review, device testing and independent proficiency-evidence audit |
-| A2.1–C2 | Four proposed modules per level in the [master plan](../data/course/master-curriculum.json) | 0 | Author and review full level curricula before writing lessons |
+| A2.1 | [40-lesson curriculum outline](../data/course/a2.1-curriculum.json), first 10 lesson contracts detailed | **1 section / 10 playable lessons** | Review Finnish morphology and ship Sections 2–4 only after their outline contracts are fully authored |
+| A2.2–C2 | Four proposed modules per level in the [master plan](../data/course/master-curriculum.json) | 0 | Author and review full level curricula before writing lessons |
 
 The shipped dictionary has an independently generated count and Parole frequency fields. Do not interpret stage lexical targets as existing dictionary entries or attained proficiency. Consult the [vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) and [vocabulary roadmap](VOCABULARY-ROADMAP.md) when sourcing new items.
 
@@ -45,10 +46,10 @@ The shipped dictionary has an independently generated count and Parole frequency
 - Audit grammar transfer from memorized phrases to productive use, including present tense, negation, local cases, partitive and consonant gradation.
 - Check progression through listening, reading, writing and spoken interaction with appropriately valid assessment evidence. Current app exercise completion **does not** certify CEFR/YKI speaking or mediation.
 
-### 4. Expand A2.1–C2 deliberately
+### 4. Complete A2.1 deliberately, then expand A2.2–C2
 
-- Start with a reviewed level curriculum with communicative can-do criteria, grammar prerequisites, four thematic modules, curated expressions, source-backed vocabulary selection and assessments.
-- Only then add actual section manifests and the regression tests that distinguish planning from implementation.
+- A2.1 Section 1 (travel and recent past) is playable: 10 lessons with explicit past-tense forms, varied practice, short reading and an 80% checkpoint. The other three section contracts remain outline-only, not approved learner content.
+- Author and independently review the remaining A2.1 section contracts, then add playable files and regression tests; A2.2–C2 are still planning-only.
 - The current A1 convention of ten lessons and fifteen activities is a starting heuristic, **not** an obligatory prescription for B2/C1/C2.
 
 ## Cross-cutting quality work

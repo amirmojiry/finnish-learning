@@ -38,6 +38,13 @@
         './data/course/a1.3-section-4.json',
       ],
     },
+    {
+      level: 'A2.1',
+      curriculumUrl: './data/course/a2.1-curriculum.json',
+      sectionUrls: [
+        './data/course/a2.1-section-1.json',
+      ],
+    },
   ];
   const SECTION_URLS = COURSE_STAGES[0].sectionUrls;
   const SECTION_URL = SECTION_URLS[0];
@@ -2172,7 +2179,7 @@
       catalog.className = 'course-section-catalog course-section-selector';
       const catalogTitle = document.createElement('div');
       catalogTitle.className = 'course-section-catalog-heading';
-      catalogTitle.innerHTML = '<h1>مسیر A1</h1>';
+      catalogTitle.innerHTML = '<h1>مسیر A1–A2</h1>';
 
       const levelTabs = document.createElement('div');
       levelTabs.className = 'course-level-tabs';
