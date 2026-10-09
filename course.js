@@ -1186,6 +1186,9 @@
     if (!Array.isArray(section.can_do_fa) || section.can_do_fa.length === 0 || section.can_do_fa.some((goal) => typeof goal !== 'string' || !goal.trim())) {
       throw new Error(`Section ${section.id || '?'} requires non-empty Persian learning goals.`);
     }
+    if (section.can_do_fa.some((goal) => /^می‌توانم(?:\s|$)/u.test(goal.trim()))) {
+      throw new Error(`Section ${section.id || '?'} goals must not repeat the first-person ability heading.`);
+    }
     if (section.lessons.length !== 10) throw new Error('The sample section must contain exactly ten lessons.');
     for (const lesson of section.lessons) {
       if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
@@ -2305,7 +2308,7 @@
         subtitle.className = 'course-subtitle';
         subtitle.textContent = section.subtitle_fa;
         const outcomesTitle = document.createElement('h2');
-        outcomesTitle.textContent = 'در پایان این بخش می‌توانی';
+        outcomesTitle.textContent = 'در پایان این بخش می‌توانم';
         const outcomesList = document.createElement('ul');
         for (const outcome of section.can_do_fa || []) {
           const item = document.createElement('li');
