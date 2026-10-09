@@ -2310,5 +2310,529 @@
         }
       ]
     }
+  ],
+  "grammar_concepts": [
+    {
+      "id": "a11-sounds",
+      "prerequisites": [],
+      "title_fa": "واج‌ها، واکه‌های کوتاه/بلند و آهنگ پایه"
+    },
+    {
+      "id": "a11-olla",
+      "prerequisites": [],
+      "title_fa": "فعل olla و معرفی ساده"
+    },
+    {
+      "id": "a11-questions",
+      "prerequisites": [
+        "a11-olla"
+      ],
+      "title_fa": "واژه‌های پرسشی kuka/mikä/missä و پرسش‌های کوتاه"
+    },
+    {
+      "id": "a11-present-chunks",
+      "prerequisites": [
+        "a11-olla"
+      ],
+      "title_fa": "شکل‌های پرتکرار حال به‌صورت عبارت‌های آماده"
+    },
+    {
+      "id": "a11-negation",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "منفی‌سازی ساده با en/ei و عبارت‌های ثابت"
+    },
+    {
+      "id": "a11-case-chunks",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "حالت‌های مکانی و Partitive در عبارت‌های آماده، نه صرف آزاد"
+    },
+    {
+      "id": "a11-pronouns",
+      "prerequisites": [
+        "a11-olla"
+      ],
+      "title_fa": "ضمایر شخصی و اشاری پایه، مالکیت در عبارت‌های ثابت"
+    },
+    {
+      "id": "a12-quantities",
+      "prerequisites": [
+        "a11-case-chunks"
+      ],
+      "title_fa": "مقدار، عدد و کاربردهای محدود Partitive"
+    },
+    {
+      "id": "a12-local-cases",
+      "prerequisites": [
+        "a11-case-chunks"
+      ],
+      "title_fa": "حالت‌های در/از/به مکان، با صورت‌های صحیح و بازبینی‌شده"
+    },
+    {
+      "id": "a12-requests",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "درخواست مودبانهٔ ثابت (haluaisin، saanko)"
+    },
+    {
+      "id": "a12-commands",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "امر مفرد و دستورهای جهت‌یابی"
+    },
+    {
+      "id": "a12-negation-expand",
+      "prerequisites": [
+        "a11-negation"
+      ],
+      "title_fa": "منفی‌سازی درخواست‌ها و جمله‌های روزمره"
+    },
+    {
+      "id": "a12-frequency-adverbs",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "قیدهای بسامد و زمان‌بندی ساده"
+    },
+    {
+      "id": "a13-present-paradigm",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "توسعهٔ شکل‌های شخصی حال در فعل‌های پرتکرار"
+    },
+    {
+      "id": "a13-verb-classes",
+      "prerequisites": [
+        "a13-present-paradigm"
+      ],
+      "title_fa": "آشنایی تدریجی با انواع فعل و ریشه‌های متداول"
+    },
+    {
+      "id": "a13-kpt-preview",
+      "prerequisites": [
+        "a13-verb-classes"
+      ],
+      "title_fa": "درجه‌بندی همخوان (KPT) در واژه‌های منتخب"
+    },
+    {
+      "id": "a13-local-expansion",
+      "prerequisites": [
+        "a12-local-cases"
+      ],
+      "title_fa": "تقویت کاربرد حالت‌های مکانی و فعل + حالت"
+    },
+    {
+      "id": "a13-partitive-patterns",
+      "prerequisites": [
+        "a12-quantities"
+      ],
+      "title_fa": "مفعول Partitive در جمله‌های آشنا"
+    },
+    {
+      "id": "a13-necessity",
+      "prerequisites": [
+        "a12-requests"
+      ],
+      "title_fa": "الگوهای اجبار/توانایی (pitää، täytyy، voin)"
+    },
+    {
+      "id": "a13-past-recognition",
+      "prerequisites": [
+        "a13-present-paradigm"
+      ],
+      "title_fa": "تشخیص چند شکل پرتکرار گذشته، بدون الزام صرف آزاد"
+    },
+    {
+      "id": "a21-imperfect",
+      "prerequisites": [
+        "a13-past-recognition",
+        "a13-verb-classes"
+      ],
+      "title_fa": "گذشتهٔ ساده (imperfekti) در افعال متداول"
+    },
+    {
+      "id": "a21-object-core",
+      "prerequisites": [
+        "a13-partitive-patterns"
+      ],
+      "title_fa": "مفعول کل/جزئی در نمونه‌های مشخص"
+    },
+    {
+      "id": "a21-plural-partitive",
+      "prerequisites": [
+        "a12-quantities"
+      ],
+      "title_fa": "Partitive جمع و گروه‌های اسمی پرکاربرد"
+    },
+    {
+      "id": "a21-illative-patterns",
+      "prerequisites": [
+        "a13-local-expansion"
+      ],
+      "title_fa": "حالت‌های ورود/خروج و مقصدهای متنوع‌تر"
+    },
+    {
+      "id": "a21-rections",
+      "prerequisites": [
+        "a13-local-expansion"
+      ],
+      "title_fa": "حاکمیت حالت در فعل‌های پرکاربرد (pitää + sta و ...)"
+    },
+    {
+      "id": "a21-maan",
+      "prerequisites": [
+        "a13-verb-classes"
+      ],
+      "title_fa": "الگوهای فعل + -maan/-massa/-masta در بافت‌های محدود"
+    },
+    {
+      "id": "a21-sequencing",
+      "prerequisites": [
+        "a21-imperfect"
+      ],
+      "title_fa": "پیوند ترتیب اتفاق‌ها با sitten، kun و ..."
+    },
+    {
+      "id": "a22-perfect",
+      "prerequisites": [
+        "a21-imperfect"
+      ],
+      "title_fa": "گذشتهٔ نقلی (perfekti) و کاربرد در تجربه‌ها"
+    },
+    {
+      "id": "a22-pluperfect-preview",
+      "prerequisites": [
+        "a22-perfect"
+      ],
+      "title_fa": "آشنایی و تشخیص گذشتهٔ دور"
+    },
+    {
+      "id": "a22-conditional",
+      "prerequisites": [
+        "a12-requests"
+      ],
+      "title_fa": "شرطی مودبانه و درخواست احتمالی"
+    },
+    {
+      "id": "a22-passive-present",
+      "prerequisites": [
+        "a13-present-paradigm"
+      ],
+      "title_fa": "مجهول حال و کاربرد خدماتی"
+    },
+    {
+      "id": "a22-comparison",
+      "prerequisites": [
+        "a13-kpt-preview"
+      ],
+      "title_fa": "صفت تفضیلی و عالی"
+    },
+    {
+      "id": "a22-essive-translative",
+      "prerequisites": [
+        "a21-illative-patterns"
+      ],
+      "title_fa": "Essive و Translative در نقش، وضعیت و تغییر"
+    },
+    {
+      "id": "a22-postpositions",
+      "prerequisites": [
+        "a13-local-expansion"
+      ],
+      "title_fa": "حروف اضافه/پس‌اضافهٔ پرتکرار"
+    },
+    {
+      "id": "b11-tense-contrast",
+      "prerequisites": [
+        "a22-perfect",
+        "a22-pluperfect-preview"
+      ],
+      "title_fa": "تمایز imperfekti/perfekti/pluskvamperfekti"
+    },
+    {
+      "id": "b11-passive-past",
+      "prerequisites": [
+        "a22-passive-present"
+      ],
+      "title_fa": "مجهول در زمان گذشته و نقلی"
+    },
+    {
+      "id": "b11-conditionals",
+      "prerequisites": [
+        "a22-conditional"
+      ],
+      "title_fa": "جمله‌های شرطی اگر/پس و درخواست پیچیده‌تر"
+    },
+    {
+      "id": "b11-plural-case",
+      "prerequisites": [
+        "a21-plural-partitive",
+        "a22-essive-translative"
+      ],
+      "title_fa": "جمع در حالت‌های اسمی و الگوهای رایج"
+    },
+    {
+      "id": "b11-participles-intro",
+      "prerequisites": [
+        "a22-perfect"
+      ],
+      "title_fa": "وجه وصفی حال و گذشته در متن‌های آشنا"
+    },
+    {
+      "id": "b11-possessive-suffixes",
+      "prerequisites": [
+        "a11-pronouns"
+      ],
+      "title_fa": "شناسه‌های ملکی در کاربردهای رایج"
+    },
+    {
+      "id": "b11-subordination",
+      "prerequisites": [
+        "a21-sequencing"
+      ],
+      "title_fa": "جمله‌واره‌های että، koska، kun و اگر"
+    },
+    {
+      "id": "b11-register",
+      "prerequisites": [
+        "a13-present-paradigm"
+      ],
+      "title_fa": "تفاوت فنلاندی نوشتاری و گفتاری در موقعیت آشنا"
+    },
+    {
+      "id": "b12-clause-equivalents",
+      "prerequisites": [
+        "b11-subordination",
+        "b11-participles-intro"
+      ],
+      "title_fa": "ساختارهای جانشین جمله‌واره (lauseenvastike) در موارد رایج"
+    },
+    {
+      "id": "b12-infinitive",
+      "prerequisites": [
+        "a21-maan"
+      ],
+      "title_fa": "اسم‌مصدرها و ترکیب‌های -maan/-massa/-minen پیشرفته‌تر"
+    },
+    {
+      "id": "b12-participles",
+      "prerequisites": [
+        "b11-participles-intro"
+      ],
+      "title_fa": "وجه وصفی و عبارت‌های وصفی چندواژه‌ای"
+    },
+    {
+      "id": "b12-verb-case",
+      "prerequisites": [
+        "a21-rections"
+      ],
+      "title_fa": "ترکیب‌های فعل + حالت و معنای متفاوت حالت‌ها"
+    },
+    {
+      "id": "b12-derivation",
+      "prerequisites": [
+        "a13-verb-classes"
+      ],
+      "title_fa": "ساخت واژه و مشتقات پرکاربرد"
+    },
+    {
+      "id": "b12-reporting",
+      "prerequisites": [
+        "b11-subordination"
+      ],
+      "title_fa": "نقل گفتار و گزارش غیرمستقیم"
+    },
+    {
+      "id": "b12-particles",
+      "prerequisites": [
+        "b11-register"
+      ],
+      "title_fa": "ذرات گفتاری -han/-hän و -kin/-kaan در بافت"
+    },
+    {
+      "id": "b21-potential",
+      "prerequisites": [
+        "b11-tense-contrast"
+      ],
+      "title_fa": "وجه احتمالی (potentiaali) بیشتر برای تشخیص و کاربرد محدود"
+    },
+    {
+      "id": "b21-passive-advanced",
+      "prerequisites": [
+        "b11-passive-past",
+        "b11-register"
+      ],
+      "title_fa": "الگوهای مجهول و تفاوت کاربرد رسمی/محاوره‌ای"
+    },
+    {
+      "id": "b21-object-semantics",
+      "prerequisites": [
+        "a21-object-core"
+      ],
+      "title_fa": "جزئی/کلی بودن مفعول و دلالت معنایی در بافت پیچیده"
+    },
+    {
+      "id": "b21-nonfinite",
+      "prerequisites": [
+        "b12-clause-equivalents"
+      ],
+      "title_fa": "ساختارهای مصدر/وجه وصفی پیچیده‌تر"
+    },
+    {
+      "id": "b21-cohesion",
+      "prerequisites": [
+        "b12-reporting"
+      ],
+      "title_fa": "ارجاع، پیوستگی و ارتباط بین بندها"
+    },
+    {
+      "id": "b21-discourse",
+      "prerequisites": [
+        "b11-subordination"
+      ],
+      "title_fa": "رابطه‌های علت، نتیجه، امتیاز و تضاد"
+    },
+    {
+      "id": "b21-register",
+      "prerequisites": [
+        "b12-particles"
+      ],
+      "title_fa": "تغییر سبک زبان در ارائه، نامه و گفت‌وگو"
+    },
+    {
+      "id": "b22-nominalisation",
+      "prerequisites": [
+        "b21-nonfinite"
+      ],
+      "title_fa": "اسمی‌سازی و عبارت‌های وجه وصفی فشرده"
+    },
+    {
+      "id": "b22-mood-modality",
+      "prerequisites": [
+        "b21-potential",
+        "a22-conditional"
+      ],
+      "title_fa": "درجهٔ قطعیت، الزام، احتمال و بیان دیدگاه"
+    },
+    {
+      "id": "b22-information-structure",
+      "prerequisites": [
+        "b21-cohesion"
+      ],
+      "title_fa": "ترتیب واژه، تأکید و ساختار اطلاعات"
+    },
+    {
+      "id": "b22-idioms",
+      "prerequisites": [
+        "b12-derivation"
+      ],
+      "title_fa": "عبارت‌های اصطلاحی، مجازی و هم‌آیندهای دشوارتر"
+    },
+    {
+      "id": "b22-precision",
+      "prerequisites": [
+        "b21-discourse"
+      ],
+      "title_fa": "کنترل ارجاع، تضاد و رابطه‌های منطقی"
+    },
+    {
+      "id": "b22-style-shift",
+      "prerequisites": [
+        "b21-register"
+      ],
+      "title_fa": "تفاوت سبک در درخواست، انتقاد و متن رسمی"
+    },
+    {
+      "id": "c1-style",
+      "prerequisites": [
+        "b22-style-shift"
+      ],
+      "title_fa": "سبک رسمی، محاوره‌ای و ادبی و انتخاب هدفمند"
+    },
+    {
+      "id": "c1-discourse",
+      "prerequisites": [
+        "b22-precision"
+      ],
+      "title_fa": "ساختار متن پیچیده، انسجام و استدلال چندلایه"
+    },
+    {
+      "id": "c1-implicature",
+      "prerequisites": [
+        "b22-mood-modality"
+      ],
+      "title_fa": "اشارهٔ ضمنی، کنایه، لحن و ادب ارتباطی"
+    },
+    {
+      "id": "c1-morphology",
+      "prerequisites": [
+        "b22-nominalisation"
+      ],
+      "title_fa": "کاربرد دقیق ساختارهای صرفی کم‌کاربرد با شواهد متنی"
+    },
+    {
+      "id": "c1-collocations",
+      "prerequisites": [
+        "b22-idioms"
+      ],
+      "title_fa": "هم‌آیندهای تخصصی، اصطلاحات و ترکیب‌های تثبیت‌شده"
+    },
+    {
+      "id": "c1-varieties",
+      "prerequisites": [
+        "b21-register"
+      ],
+      "title_fa": "شناخت گونه‌های محلی، گفتاری و موقعیتی"
+    },
+    {
+      "id": "c2-rhetoric",
+      "prerequisites": [
+        "c1-style",
+        "c1-discourse"
+      ],
+      "title_fa": "بلاغت و تغییر ظریف لحن برای مخاطب"
+    },
+    {
+      "id": "c2-implicit",
+      "prerequisites": [
+        "c1-implicature"
+      ],
+      "title_fa": "دریافت نیت، پیش‌فرض و معنی ضمنی"
+    },
+    {
+      "id": "c2-genre-editing",
+      "prerequisites": [
+        "c1-style"
+      ],
+      "title_fa": "ویرایش پیشرفته و بازنویسی چندژانری"
+    },
+    {
+      "id": "c2-idiomatic",
+      "prerequisites": [
+        "c1-collocations",
+        "c1-varieties"
+      ],
+      "title_fa": "اصطلاحات کم‌بسامد، طنز و ارجاعات فرهنگی"
+    },
+    {
+      "id": "c2-precision",
+      "prerequisites": [
+        "c1-collocations"
+      ],
+      "title_fa": "تفاوت‌های بسیار ریز معنایی و انتخاب واژه"
+    },
+    {
+      "id": "c2-synthesis",
+      "prerequisites": [
+        "c1-discourse"
+      ],
+      "title_fa": "تلفیق انتقادی منابع ناهمگون و اختلاف‌های ضمنی"
+    }
   ]
 }
