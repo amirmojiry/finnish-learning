@@ -1421,7 +1421,7 @@
       "title_fa": "اتاق‌ها و فضاهای خانه",
       "objective_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
       "summary_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
-      "grammar_fa": "missä/on location statements with room vocabulary as explicit reviewed forms",
+      "grammar_fa": "برای گفتن محل اتاق‌ها از ساختار «اسم + on + مکان» استفاده کن: «Keittiö on tässä.» و «Olohuone on siellä.».",
       "new_targets": [
         "a13s2-h-001",
         "a13s2-h-002",
@@ -1623,7 +1623,7 @@
       "title_fa": "جای وسایل",
       "objective_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
       "summary_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
-      "grammar_fa": "selected adessive/inessive household location forms stored explicitly; no case suffix generation",
+      "grammar_fa": "مکان اشیا را با صورت‌های یادگرفته‌شده بیان کن: «pöydällä» (روی میز)، «kaapissa» (داخل کمد) و «lattialla» (روی زمین). هنوز قرار نیست همهٔ حالت‌های مکانی را آزادانه بسازی.",
       "new_targets": [
         "a13s2-h-001",
         "a13s2-h-010",
@@ -1825,7 +1825,7 @@
       "title_fa": "کارهای خانه",
       "objective_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
       "summary_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
-      "grammar_fa": "pitää + infinitive as a reviewed obligation frame; household verbs remain explicit",
+      "grammar_fa": "«Pitää + شکل پایهٔ فعل» در عبارت‌هایی مانند «Pitää siivota.» برای بیان کاری که باید انجام شود به کار می‌رود. «Vien roskat.» نمونهٔ یک کار روزمره است.",
       "new_targets": [
         "a13s2-h-017",
         "a13s2-h-018",
@@ -2027,7 +2027,7 @@
       "title_fa": "یک مشکل در خانه",
       "objective_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
       "summary_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
-      "grammar_fa": "simple negation with explicit problem verbs/forms; no runtime connegative generation",
+      "grammar_fa": "برای گزارش مشکل، جملهٔ منفی کوتاه به‌کار ببر: «Hana ei toimi.» یا «Valo ei pala.». در «Lämmitys ei toimi oikein.» واژهٔ «oikein» یعنی «درست».",
       "new_targets": [
         "a13s2-h-027",
         "a13s2-h-028",
@@ -2230,7 +2230,7 @@
       "title_fa": "تماس با خدمات تعمیر و نگهداری",
       "objective_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
       "summary_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
-      "grammar_fa": "maintenance request and contact-detail frames stored as complete reviewed expressions",
+      "grammar_fa": "برای درخواست تعمیر از «Tarvitsen huoltoa.» و پرسش مؤدبانهٔ «Voitteko lähettää korjaajan?» استفاده کن؛ نشانی و شمارهٔ تماس را کوتاه و روشن بیان کن.",
       "new_targets": [
         "a13s2-h-037",
         "a13s2-h-038",
@@ -2433,7 +2433,7 @@
       "title_fa": "خدمات محله",
       "objective_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
       "summary_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
-      "grammar_fa": "service-location questions and selected inessive forms as reviewed phrases",
+      "grammar_fa": "مکان خدمات محله را با «Missä ... on?» بپرس. «Onko täällä posti?» پرسش بله/خیر است و «keskustassa» یعنی «در مرکز شهر».",
       "new_targets": [
         "a13s2-h-047",
         "a13s2-h-048",
@@ -2636,7 +2636,7 @@
       "title_fa": "ساعت‌های باز بودن",
       "objective_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
       "summary_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
-      "grammar_fa": "opening-time formulas and before/after time phrases taught as complete reviewed forms",
+      "grammar_fa": "برای ساعت کار، «Milloin ... on auki?» یعنی «چه زمانی باز است؟». «avautuu» باز شدن و «menee kiinni» بسته شدن را بیان می‌کند.",
       "new_targets": [
         "a13s2-h-057",
         "a13s2-h-058",
@@ -2841,7 +2841,7 @@
       "title_fa": "اعلان‌ها و قوانین ساده",
       "objective_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
       "summary_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
-      "grammar_fa": "ei saa / saa + infinitive as explicit permission/prohibition frames",
+      "grammar_fa": "ساختار «saa + شکل پایهٔ فعل» اجازه و «ei saa + شکل پایهٔ فعل» ممنوعیت را بیان می‌کند: «Täällä saa odottaa.» در برابر «Täällä ei saa tupakoida.».",
       "new_targets": [
         "a13s2-h-017",
         "a13s2-h-027",
@@ -3044,7 +3044,7 @@
       "title_fa": "یک کار محلی و مشکل روزمره",
       "objective_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
       "summary_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
-      "grammar_fa": "recycling only; preserve reviewed location, time, rule, and help frames",
+      "grammar_fa": "در یک موقعیت محلی، پرسیدن مسیر، ساعت کار، خواندن اعلان و درخواست کمک را به هم پیوند بده؛ مانند «Missä kirjasto on?» و «Voitteko auttaa minua?».",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3253,7 +3253,7 @@
       "title_fa": "ارزیابی بخش ۲",
       "objective_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
       "summary_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
-      "grammar_fa": "checkpoint: rooms and locations, household tasks, home problems, maintenance, neighborhood services, opening times, notices",
+      "grammar_fa": "این ارزیابی محل اشیا، کارهای خانه، گزارش خرابی، درخواست تعمیر، خدمات محله، ساعت کار و تابلوهای ساده را مرور می‌کند.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
