@@ -1421,7 +1421,7 @@
       "title_fa": "کارها و برنامه‌ها",
       "objective_fa": "بگوید چه کار ساده‌ای باید انجام شود و زمان انجام آن را مشخص کند.",
       "summary_fa": "بگوید چه کار ساده‌ای باید انجام شود و زمان انجام آن را مشخص کند.",
-      "grammar_fa": "pitää + infinitive and time expressions used only in explicit reviewed task frames",
+      "grammar_fa": "برای وظیفه‌ها از «pitää + شکل پایهٔ فعل» استفاده کن: «Tämä tehtävä pitää tehdä tänään.». قیدهایی مانند «tänään» زمان انجام کار را روشن می‌کنند.",
       "new_targets": [
         "a13s3-h-001",
         "a13s3-h-002",
@@ -1623,7 +1623,7 @@
       "title_fa": "درخواست توضیح",
       "objective_fa": "بپرسد یک دستور آشنا چه معنی می‌دهد یا یک توضیح ساده درخواست کند.",
       "summary_fa": "بپرسد یک دستور آشنا چه معنی می‌دهد یا یک توضیح ساده درخواست کند.",
-      "grammar_fa": "clarification and repetition requests stored as complete reviewed repair strategies",
+      "grammar_fa": "وقتی دستور روشن نیست، از «Mitä tämä tarkoittaa?» (این یعنی چه؟) یا «Voitko sanoa uudestaan?» (می‌توانی دوباره بگویی؟) کمک بگیر.",
       "new_targets": [
         "a13s3-h-010",
         "a13s3-h-011",
@@ -1824,7 +1824,7 @@
       "title_fa": "پیروی از دستورهای ساده",
       "objective_fa": "یک توالی کوتاه دو یا سه‌مرحله‌ای از دستورهای آشنا را بفهمد.",
       "summary_fa": "یک توالی کوتاه دو یا سه‌مرحله‌ای از دستورهای آشنا را بفهمد.",
-      "grammar_fa": "imperatives and sequence markers stored as complete reviewed instruction forms",
+      "grammar_fa": "دستورها را با صورت‌های امریِ آموخته‌شده دنبال کن: «Avaa»، «Kirjoita» و «Lähetä». «ensin»، «sitten» و «sen jälkeen» ترتیب مراحل را نشان می‌دهند.",
       "new_targets": [
         "a13s3-h-020",
         "a13s3-h-021",
@@ -2024,7 +2024,7 @@
       "title_fa": "توانایی و نیاز",
       "objective_fa": "کوتاه بگوید چه کاری را می‌تواند انجام دهد و در چه چیزی هنوز به کمک یا تمرین نیاز دارد.",
       "summary_fa": "کوتاه بگوید چه کاری را می‌تواند انجام دهد و در چه چیزی هنوز به کمک یا تمرین نیاز دارد.",
-      "grammar_fa": "osaan, tarvitsen, pitää, and voin taught as explicit first-person ability/need frames",
+      "grammar_fa": "برای گفتن توانایی از «Osaan ...» یا «Voin ...» و برای نیاز از «Tarvitsen ...» استفاده کن؛ مانند «Osaan vähän suomea.» و «Minun pitää harjoitella.».",
       "new_targets": [
         "a13s3-h-029",
         "a13s3-h-002",
@@ -2225,7 +2225,7 @@
       "title_fa": "افراد در محیط تحصیل و کار",
       "objective_fa": "یک نقش آشنا در تحصیل یا کار را مشخص کند و بگوید با چه کسی کار یا تحصیل می‌کند.",
       "summary_fa": "یک نقش آشنا در تحصیل یا کار را مشخص کند و بگوید با چه کسی کار یا تحصیل می‌کند.",
-      "grammar_fa": "kanssa and group/possessive frames kept as explicit reviewed expressions",
+      "grammar_fa": "«kanssa» همراهی را نشان می‌دهد: «Työskentelen hänen kanssaan.». «Meidän opettajamme» یعنی «معلم ما»؛ این عبارت ملکی را فعلاً یکجا یاد بگیر.",
       "new_targets": [
         "a13s3-h-038",
         "a13s3-h-039",
@@ -2428,7 +2428,7 @@
       "title_fa": "یک ایمیل یا پیام کوتاه",
       "objective_fa": "یک ایمیل یا پیام کوتاه و آشنا بنویسد که یک درخواست یا یک نکتهٔ اطلاعاتی را بیان کند.",
       "summary_fa": "یک ایمیل یا پیام کوتاه و آشنا بنویسد که یک درخواست یا یک نکتهٔ اطلاعاتی را بیان کند.",
-      "grammar_fa": "short written-message formulas and että recognition; productive output stays within reviewed sentence frames",
+      "grammar_fa": "در پیام کوتاه می‌توانی از «Lähetän sinulle viestin.»، «Liite on mukana.» و «Kiitos avusta.» استفاده کنی. واژهٔ «että» را در این مرحله بیشتر برای تشخیص در متن بشناس.",
       "new_targets": [
         "a13s3-h-048",
         "a13s3-h-049",
@@ -2631,7 +2631,7 @@
       "title_fa": "تاریخ‌ها و مهلت‌ها",
       "objective_fa": "یک مهلت ساده و آشنا را با عبارت‌های تمرین‌شدهٔ روز و هفته بفهمد یا بیان کند.",
       "summary_fa": "یک مهلت ساده و آشنا را با عبارت‌های تمرین‌شدهٔ روز و هفته بفهمد یا بیان کند.",
-      "grammar_fa": "weekday/week time forms reused as explicit reviewed scheduling phrases",
+      "grammar_fa": "برای مهلت‌ها از صورت‌های زمانیِ آماده استفاده کن: «perjantaina» (روز جمعه)، «tällä viikolla» (این هفته)، «ensi viikolla» (هفتهٔ بعد) و «viime viikolla» (هفتهٔ پیش).",
       "new_targets": [
         "a13s3-h-003",
         "a13s3-h-058",
@@ -2836,7 +2836,7 @@
       "title_fa": "غیبت و تأخیر",
       "objective_fa": "برای غیبت یا تأخیر یک دلیل کوتاه و آشنا بدهد و بگوید چه زمانی برمی‌گردد.",
       "summary_fa": "برای غیبت یا تأخیر یک دلیل کوتاه و آشنا بدهد و بگوید چه زمانی برمی‌گردد.",
-      "grammar_fa": "absence/reason formulas with koska and vuoksi as complete reviewed chunks",
+      "grammar_fa": "«koska» و «vuoksi» دلیل را به دو شیوه بیان می‌کنند: «Olen myöhässä, koska ...» و «Olen poissa sairauden vuoksi.». این ساختارها را با مثال‌های کامل تمرین کن.",
       "new_targets": [
         "a13s3-h-067",
         "a13s3-h-068",
@@ -3046,7 +3046,7 @@
       "title_fa": "یک روز کامل تحصیل یا کار",
       "objective_fa": "کار، درخواست توضیح، دستور ساده، پیام و جزئیات برنامه را در یک سناریوی آشنای تحصیل یا کار ترکیب کند.",
       "summary_fa": "کار، درخواست توضیح، دستور ساده، پیام و جزئیات برنامه را در یک سناریوی آشنای تحصیل یا کار ترکیب کند.",
-      "grammar_fa": "recycling only; preserve reviewed task, clarification, instruction, message, and scheduling frames",
+      "grammar_fa": "در یک روز کاری یا آموزشی، وظیفه، درخواست توضیح، دستور، پیام، مهلت و غیبت را با جمله‌های کوتاه و روشن به هم متصل کن.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3254,7 +3254,7 @@
       "title_fa": "ارزیابی بخش ۳",
       "objective_fa": "ارتباط معمول تحصیل یا کار شامل کارها، دستورها، درخواست توضیح، پیام‌ها، زمان و غیبت را انجام دهد.",
       "summary_fa": "ارتباط معمول تحصیل یا کار شامل کارها، دستورها، درخواست توضیح، پیام‌ها، زمان و غیبت را انجام دهد.",
-      "grammar_fa": "checkpoint: tasks, clarification, instructions, ability/need, people, written messages, deadlines, absence",
+      "grammar_fa": "این ارزیابی وظایف، پرسش برای رفع ابهام، دستورها، توانایی و نیاز، همکاران، پیام‌های کوتاه، مهلت و غیبت را مرور می‌کند.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
