@@ -1421,7 +1421,7 @@
       "title_fa": "کارها و برنامه‌ها",
       "objective_fa": "بگوید چه کار ساده‌ای باید انجام شود و زمان انجام آن را مشخص کند.",
       "summary_fa": "بگوید چه کار ساده‌ای باید انجام شود و زمان انجام آن را مشخص کند.",
-      "grammar_fa": "برای وظیفه‌ها از «pitää + شکل پایهٔ فعل» استفاده کن: «Tämä tehtävä pitää tehdä tänään.». قیدهایی مانند «tänään» زمان انجام کار را روشن می‌کنند.",
+      "grammar_fa": "«pitää + مصدر» مانند «Tämä tehtävä pitää tehdä tänään.» ضرورت را بیان می‌کند.",
       "new_targets": [
         "a13s3-h-001",
         "a13s3-h-002",
@@ -1623,7 +1623,7 @@
       "title_fa": "درخواست توضیح",
       "objective_fa": "بپرسد یک دستور آشنا چه معنی می‌دهد یا یک توضیح ساده درخواست کند.",
       "summary_fa": "بپرسد یک دستور آشنا چه معنی می‌دهد یا یک توضیح ساده درخواست کند.",
-      "grammar_fa": "وقتی دستور روشن نیست، از «Mitä tämä tarkoittaa?» (این یعنی چه؟) یا «Voitko sanoa uudestaan?» (می‌توانی دوباره بگویی؟) کمک بگیر.",
+      "grammar_fa": "«Mitä tämä tarkoittaa?» درخواست معنی و «Voitko sanoa uudestaan?» درخواست تکرار است.",
       "new_targets": [
         "a13s3-h-010",
         "a13s3-h-011",
@@ -1824,7 +1824,7 @@
       "title_fa": "پیروی از دستورهای ساده",
       "objective_fa": "یک توالی کوتاه دو یا سه‌مرحله‌ای از دستورهای آشنا را بفهمد.",
       "summary_fa": "یک توالی کوتاه دو یا سه‌مرحله‌ای از دستورهای آشنا را بفهمد.",
-      "grammar_fa": "دستورها را با صورت‌های امریِ آموخته‌شده دنبال کن: «Avaa»، «Kirjoita» و «Lähetä». «ensin»، «sitten» و «sen jälkeen» ترتیب مراحل را نشان می‌دهند.",
+      "grammar_fa": "«Avaa»، «Kirjoita» و «Lähetä» دستورند؛ «ensin» و «sen jälkeen» ترتیب را نشان می‌دهند.",
       "new_targets": [
         "a13s3-h-020",
         "a13s3-h-021",
@@ -2024,7 +2024,7 @@
       "title_fa": "توانایی و نیاز",
       "objective_fa": "کوتاه بگوید چه کاری را می‌تواند انجام دهد و در چه چیزی هنوز به کمک یا تمرین نیاز دارد.",
       "summary_fa": "کوتاه بگوید چه کاری را می‌تواند انجام دهد و در چه چیزی هنوز به کمک یا تمرین نیاز دارد.",
-      "grammar_fa": "برای گفتن توانایی از «Osaan ...» یا «Voin ...» و برای نیاز از «Tarvitsen ...» استفاده کن؛ مانند «Osaan vähän suomea.» و «Minun pitää harjoitella.».",
+      "grammar_fa": "«Osaan» توانایی، «Tarvitsen» نیاز و «Minun pitää» ضرورت را بیان می‌کند.",
       "new_targets": [
         "a13s3-h-029",
         "a13s3-h-002",
@@ -2225,7 +2225,7 @@
       "title_fa": "افراد در محیط تحصیل و کار",
       "objective_fa": "یک نقش آشنا در تحصیل یا کار را مشخص کند و بگوید با چه کسی کار یا تحصیل می‌کند.",
       "summary_fa": "یک نقش آشنا در تحصیل یا کار را مشخص کند و بگوید با چه کسی کار یا تحصیل می‌کند.",
-      "grammar_fa": "«kanssa» همراهی را نشان می‌دهد: «Työskentelen hänen kanssaan.». «Meidän opettajamme» یعنی «معلم ما»؛ این عبارت ملکی را فعلاً یکجا یاد بگیر.",
+      "grammar_fa": "«kanssa» همراهی و «Meidän opettajamme» عبارت ملکی «معلم ما» را نشان می‌دهد.",
       "new_targets": [
         "a13s3-h-038",
         "a13s3-h-039",
@@ -2428,7 +2428,7 @@
       "title_fa": "یک ایمیل یا پیام کوتاه",
       "objective_fa": "یک ایمیل یا پیام کوتاه و آشنا بنویسد که یک درخواست یا یک نکتهٔ اطلاعاتی را بیان کند.",
       "summary_fa": "یک ایمیل یا پیام کوتاه و آشنا بنویسد که یک درخواست یا یک نکتهٔ اطلاعاتی را بیان کند.",
-      "grammar_fa": "در پیام کوتاه می‌توانی از «Lähetän sinulle viestin.»، «Liite on mukana.» و «Kiitos avusta.» استفاده کنی. واژهٔ «että» را در این مرحله بیشتر برای تشخیص در متن بشناس.",
+      "grammar_fa": "در پیام کوتاه از «Lähetän sinulle viestin.» و «Kiitos avusta.» استفاده کن؛ «että» را فعلاً بیشتر تشخیص بده.",
       "new_targets": [
         "a13s3-h-048",
         "a13s3-h-049",
@@ -2631,7 +2631,7 @@
       "title_fa": "تاریخ‌ها و مهلت‌ها",
       "objective_fa": "یک مهلت ساده و آشنا را با عبارت‌های تمرین‌شدهٔ روز و هفته بفهمد یا بیان کند.",
       "summary_fa": "یک مهلت ساده و آشنا را با عبارت‌های تمرین‌شدهٔ روز و هفته بفهمد یا بیان کند.",
-      "grammar_fa": "برای مهلت‌ها از صورت‌های زمانیِ آماده استفاده کن: «perjantaina» (روز جمعه)، «tällä viikolla» (این هفته)، «ensi viikolla» (هفتهٔ بعد) و «viime viikolla» (هفتهٔ پیش).",
+      "grammar_fa": "«perjantaina» جمعه، «tällä viikolla» این هفته، «ensi viikolla» هفتهٔ بعد و «viime viikolla» هفتهٔ پیش است.",
       "new_targets": [
         "a13s3-h-003",
         "a13s3-h-058",
@@ -2836,7 +2836,7 @@
       "title_fa": "غیبت و تأخیر",
       "objective_fa": "برای غیبت یا تأخیر یک دلیل کوتاه و آشنا بدهد و بگوید چه زمانی برمی‌گردد.",
       "summary_fa": "برای غیبت یا تأخیر یک دلیل کوتاه و آشنا بدهد و بگوید چه زمانی برمی‌گردد.",
-      "grammar_fa": "«koska» و «vuoksi» دلیل را به دو شیوه بیان می‌کنند: «Olen myöhässä, koska ...» و «Olen poissa sairauden vuoksi.». این ساختارها را با مثال‌های کامل تمرین کن.",
+      "grammar_fa": "«koska» و «vuoksi» در «Olen myöhässä, koska ...» و «Olen poissa sairauden vuoksi.» دلیل را بیان می‌کنند.",
       "new_targets": [
         "a13s3-h-067",
         "a13s3-h-068",
@@ -3046,7 +3046,7 @@
       "title_fa": "یک روز کامل تحصیل یا کار",
       "objective_fa": "کار، درخواست توضیح، دستور ساده، پیام و جزئیات برنامه را در یک سناریوی آشنای تحصیل یا کار ترکیب کند.",
       "summary_fa": "کار، درخواست توضیح، دستور ساده، پیام و جزئیات برنامه را در یک سناریوی آشنای تحصیل یا کار ترکیب کند.",
-      "grammar_fa": "در یک روز کاری یا آموزشی، وظیفه، درخواست توضیح، دستور، پیام، مهلت و غیبت را با جمله‌های کوتاه و روشن به هم متصل کن.",
+      "grammar_fa": "وظیفه، توضیح، دستور، پیام، مهلت و غیبت را با عبارت‌های کوتاه به هم پیوند بده.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3254,7 +3254,7 @@
       "title_fa": "ارزیابی بخش ۳",
       "objective_fa": "ارتباط معمول تحصیل یا کار شامل کارها، دستورها، درخواست توضیح، پیام‌ها، زمان و غیبت را انجام دهد.",
       "summary_fa": "ارتباط معمول تحصیل یا کار شامل کارها، دستورها، درخواست توضیح، پیام‌ها، زمان و غیبت را انجام دهد.",
-      "grammar_fa": "این ارزیابی وظایف، پرسش برای رفع ابهام، دستورها، توانایی و نیاز، همکاران، پیام‌های کوتاه، مهلت و غیبت را مرور می‌کند.",
+      "grammar_fa": "این آزمون، وظایف، توضیح، دستور، توانایی، پیام، مهلت و غیبت را مرور می‌کند.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3274,49 +3274,49 @@
         "a1.3-s3-l09"
       ],
       "production_targets": [
-        "a13s3-e-063"
+        "a13s3-e-007"
       ],
       "listening_targets": [
-        "a13s3-e-063",
-        "a13s3-e-064"
+        "a13s3-e-016",
+        "a13s3-e-026"
       ],
       "structured_practice": [
         {
           "type": "sentence-order",
-          "item": "a13s3-e-063",
+          "item": "a13s3-e-034",
           "tokens": [
-            "on",
-            "perjantaina.",
-            "Määräaika"
+            "vähän",
+            "suomea.",
+            "Osaan"
           ],
           "answer_order": [
             2,
             0,
             1
           ],
-          "expected_fi": "Määräaika on perjantaina."
+          "expected_fi": "Osaan vähän suomea."
         },
         {
           "type": "expression-completion",
-          "item": "a13s3-e-063",
-          "prompt_fi": "Määräaika _____ perjantaina.",
-          "prompt_fa": "مهلت روز جمعه است.",
+          "item": "a13s3-e-044",
+          "prompt_fi": "Työskentelen _____ kanssaan.",
+          "prompt_fa": "با او کار می‌کنم.",
           "accepted_answers": [
-            "on"
+            "hänen"
           ],
-          "expected_fi": "Määräaika on perjantaina."
+          "expected_fi": "Työskentelen hänen kanssaan."
         },
         {
           "type": "controlled-production",
-          "item": "a13s3-e-064",
-          "prompt_fa": "این هفته انجامش می‌دهم.",
+          "item": "a13s3-e-056",
+          "prompt_fa": "می‌توانی آن را برایم بفرستی؟",
           "cues_fi": [
-            "Teen",
-            "sen"
+            "Voitko",
+            "lähettää"
           ],
-          "expected_fi": "Teen sen tällä viikolla.",
+          "expected_fi": "Voitko lähettää sen minulle?",
           "accepted_answers": [
-            "Teen sen tällä viikolla."
+            "Voitko lähettää sen minulle?"
           ]
         }
       ],
@@ -3324,9 +3324,64 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-063",
+          "item": "a13s3-e-007",
           "options": [
-            "a13s3-e-063",
+            "a13s3-e-007",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-016",
+          "options": [
+            "a13s3-e-016",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-026",
+          "options": [
+            "a13s3-e-026",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-034",
+          "options": [
+            "a13s3-e-034",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-044",
+          "options": [
+            "a13s3-e-044",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-056",
+          "options": [
+            "a13s3-e-056",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -3338,108 +3393,9 @@
           "item": "a13s3-e-063",
           "options": [
             "a13s3-e-063",
-            "a13s3-h-002",
-            "a13s3-h-003",
-            "a13s3-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-064",
-          "options": [
-            "a13s3-e-064",
-            "a13s3-h-003",
-            "a13s3-t-004",
-            "a13s3-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-063",
-          "options": [
-            "a13s3-e-063",
-            "a13s3-t-004",
-            "a13s3-t-005",
-            "a13s3-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-063",
-          "options": [
-            "a13s3-e-063",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-064",
-          "options": [
-            "a13s3-e-064",
-            "a13s3-h-002",
-            "a13s3-h-003",
-            "a13s3-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-063",
-          "options": [
-            "a13s3-e-063",
-            "a13s3-h-003",
-            "a13s3-t-004",
-            "a13s3-t-005"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-063",
-          "options": [
-            "a13s3-e-063",
-            "a13s3-t-004",
-            "a13s3-t-005",
-            "a13s3-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-064",
-          "options": [
-            "a13s3-e-064",
-            "a13s3-h-001",
-            "a13s3-h-002",
-            "a13s3-h-003"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-065",
-          "options": [
-            "a13s3-e-065",
-            "a13s3-h-002",
-            "a13s3-h-003",
-            "a13s3-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-066",
-          "options": [
-            "a13s3-e-066",
-            "a13s3-h-003",
-            "a13s3-t-004",
-            "a13s3-t-005"
           ]
         },
         {
@@ -3448,17 +3404,6 @@
           "item": "a13s3-e-073",
           "options": [
             "a13s3-e-073",
-            "a13s3-t-004",
-            "a13s3-t-005",
-            "a13s3-t-006"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s3-e-074",
-          "options": [
-            "a13s3-e-074",
             "a13s3-h-001",
             "a13s3-h-002",
             "a13s3-h-003"
@@ -3467,12 +3412,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s3-e-075",
+          "item": "a13s3-e-057",
           "options": [
-            "a13s3-e-075",
+            "a13s3-e-057",
+            "a13s3-h-001",
             "a13s3-h-002",
-            "a13s3-h-003",
-            "a13s3-t-004"
+            "a13s3-h-003"
           ]
         },
         {
@@ -3485,25 +3430,80 @@
             "a13s3-h-002",
             "a13s3-h-003"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-008",
+          "options": [
+            "a13s3-e-008",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-009",
+          "options": [
+            "a13s3-e-009",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-017",
+          "options": [
+            "a13s3-e-017",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-018",
+          "options": [
+            "a13s3-e-018",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a13s3-e-019",
+          "options": [
+            "a13s3-e-019",
+            "a13s3-h-001",
+            "a13s3-h-002",
+            "a13s3-h-003"
+          ]
         }
       ],
       "passing_score": 0.8,
       "checkpoint_targets": [
+        "a13s3-e-007",
+        "a13s3-e-016",
+        "a13s3-e-026",
+        "a13s3-e-034",
+        "a13s3-e-044",
+        "a13s3-e-056",
         "a13s3-e-063",
-        "a13s3-e-063",
-        "a13s3-e-064",
-        "a13s3-e-063",
-        "a13s3-e-063",
-        "a13s3-e-064",
-        "a13s3-e-063",
-        "a13s3-e-063",
-        "a13s3-e-064",
-        "a13s3-e-065",
-        "a13s3-e-066",
         "a13s3-e-073",
-        "a13s3-e-074",
-        "a13s3-e-075",
-        "a13s3-e-018"
+        "a13s3-e-057",
+        "a13s3-e-018",
+        "a13s3-e-008",
+        "a13s3-e-009",
+        "a13s3-e-017",
+        "a13s3-e-018",
+        "a13s3-e-019"
       ],
       "morphology_practice": [
         {
