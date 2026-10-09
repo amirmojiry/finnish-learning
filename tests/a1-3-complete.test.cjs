@@ -138,3 +138,58 @@ test('A1.3 checkpoints assess all nine previous lessons instead of repeating one
   assert.ok(represented.size>=8,section.id+': covered only '+[...represented].join(', '));
  }
 });
+
+test('all forty A1.3 learner-facing grammar notes explain the lesson in Persian', () => {
+  for (const section of prepared.slice(8)) {
+    for (const lesson of section.lessons) {
+      assert.ok(lesson.grammar_fa.length >= 35, lesson.id);
+      assert.match(lesson.grammar_fa, /[\u0600-\u06FF]/u, lesson.id);
+      assert.doesNotMatch(lesson.grammar_fa, /^(?:checkpoint:|recycling only|selected|simple |short |common |reviewed |past-tense|invitation|telephone|future meaning)/iu, lesson.id);
+    }
+  }
+});
+
+test('A1.3 multiple-choice answers remain distinguishable after runtime activity injection', () => {
+  for (const section of prepared.slice(8)) {
+    for (const lesson of section.lessons) {
+      for (const activity of lesson.activities.filter(a => a.type === 'choice')) {
+        const options = activity.options || [];
+        assert.ok(options.length >= 2, lesson.id);
+        const label = id => activity.mode === 'meaning' || activity.mode === 'listen'
+          ? section.items[id]?.translation_fa
+          : section.items[id]?.surface_form;
+        const labels = options.map(id => String(label(id) || '').normalize('NFC').trim());
+        assert.ok(labels.every(Boolean), lesson.id);
+        assert.equal(new Set(labels).size, labels.length, lesson.id + ' / ' + activity.mode + ' / ' + labels.join(' | '));
+      }
+    }
+  }
+});
+
+test('every A1.3 checkpoint samples all nine preceding lessons with varied graded activities', () => {
+  for (const [sectionIndex, section] of prepared.slice(8).entries()) {
+    const checkpoint = section.lessons.at(-1);
+    const forms = checkpoint.activities.map(a => section.items[a.item]?.surface_form).filter(Boolean);
+    const checked = new Set(forms);
+    assert.equal(checkpoint.activities.length, 15);
+    assert.equal(checkpoint.checkpoint_targets.length, 15);
+    assert.equal(new Set(checkpoint.checkpoint_targets).size, 15, section.id);
+    assert.equal(new Set(checkpoint.activities.map(a => a.item)).size, 15, section.id);
+    for (const lesson of payloads[2].curriculum.sections[sectionIndex].lessons.slice(0, 9)) {
+      assert.ok(lesson.expressions.some(form => checked.has(form)), section.id + ': no assessed item for ' + lesson.id);
+    }
+    const types = checkpoint.activities.map(a => a.type);
+    for (const type of ['production', 'dictation', 'sentence-order', 'expression-completion', 'controlled-production', 'morphology-choice']) {
+      assert.ok(types.includes(type), section.id + ': missing ' + type);
+    }
+    assert.ok(types.includes('choice'), section.id);
+    assert.ok(types.includes('type'), section.id);
+    assert.equal(checkpoint.passing_score, 0.8, section.id);
+  }
+});
+
+test('the authoritative documentation hub describes A1.3 as implemented', () => {
+  const hub = fs.readFileSync(path.join(ROOT, 'docs/README.md'), 'utf8');
+  assert.match(hub, /A1\\.2 and A1\\.3 each have four playable sections/);
+  assert.doesNotMatch(hub, /A1\\.3 is a reviewed \*\*plan only\*\*/);
+});
