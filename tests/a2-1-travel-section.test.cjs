@@ -10,25 +10,26 @@ const read=name=>JSON.parse(fs.readFileSync(path.join(ROOT,name),'utf8'));
 const levels=['A1.1','A1.2','A1.3','A2.1'];
 const stages=levels.map(level=>{
  const prefix=level.toLowerCase();
- const count=level==='A2.1'?1:4;
+ const count=level==='A2.1'?2:4;
  return {level,curriculum:read('data/course/'+prefix+'-curriculum.json'),sections:Array.from({length:count},(_,i)=>read('data/course/'+prefix+'-section-'+(i+1)+'.json'))};
 });
-const prepared=course.validateImplementedPath(stages),section=prepared.at(-1),contract=stages.at(-1).curriculum;
+const prepared=course.validateImplementedPath(stages),section=prepared[12],contract=stages.at(-1).curriculum;
 const dictionary=new Map(read('data/common-words.json').words.map(w=>[w.word.normalize('NFC').toLocaleLowerCase('fi-FI'),w]));
 
 test('A2.1 travel is an additional real stage without exposing planned A2 modules',()=>{
  assert.deepEqual(course.COURSE_STAGES.map(s=>s.level),levels);
- assert.deepEqual(course.COURSE_STAGES.at(-1).sectionUrls,['./data/course/a2.1-section-1.json']);
- assert.equal(prepared.length,13);
+ assert.deepEqual(course.COURSE_STAGES.at(-1).sectionUrls,['./data/course/a2.1-section-1.json','./data/course/a2.1-section-2.json']);
+ assert.equal(prepared.length,14);
  const all=prepared.flatMap(s=>s.lessons.map(l=>l.id));
- assert.equal(all.length,130);
- assert.equal(new Set(all).size,130);
+ assert.equal(all.length,140);
+ assert.equal(new Set(all).size,140);
  assert.equal(section.id,'a2.1-section-1');
  assert.equal(section.curriculum_section_id,'a2.1-s1');
  assert.equal(contract.sections.length,4);
  assert.equal(contract.sections[0].authoring_status,'implementation_candidate');
- assert.ok(contract.sections.slice(1).every(s=>s.authoring_status==='outline_only'));
- assert.equal(stages.at(-1).sections.length,1);
+ assert.equal(contract.sections[1].authoring_status,'implementation_candidate');
+ assert.ok(contract.sections.slice(2).every(s=>s.authoring_status==='outline_only'));
+ assert.equal(stages.at(-1).sections.length,2);
 });
 
 test('ten A2.1 travel lessons map exact curriculum target forms and cover 150 activities',()=>{
