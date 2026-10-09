@@ -27,8 +27,8 @@
         "a2.1-s2",
         "source-backed"
       ],
-      "example_fi": "Mihin aikaan aika on?",
-      "example_fa": "وقت ملاقات چه ساعتی است؟",
+      "example_fi": "Mihin aikaan vastaanotto alkaa?",
+      "example_fa": "ویزیت چه ساعتی شروع می‌شود؟",
       "accepted_answers": [
         "on"
       ]
@@ -99,8 +99,8 @@
         "a2.1-s2",
         "curated-service"
       ],
-      "example_fi": "vastaanotto",
-      "example_fa": "ویزیت / پذیرش پزشکی",
+      "example_fi": "Mihin aikaan vastaanotto alkaa?",
+      "example_fa": "ویزیت چه ساعتی شروع می‌شود؟",
       "accepted_answers": [
         "vastaanotto"
       ]
@@ -179,9 +179,9 @@
     },
     "a21s2-e-010": {
       "id": "a21s2-e-010",
-      "surface_form": "Mihin aikaan aika on?",
-      "lemma": "Mihin aikaan aika on?",
-      "translation_fa": "وقت ملاقات چه ساعتی است؟",
+      "surface_form": "Mihin aikaan vastaanotto alkaa?",
+      "lemma": "Mihin aikaan vastaanotto alkaa?",
+      "translation_fa": "ویزیت چه ساعتی شروع می‌شود؟",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -189,10 +189,10 @@
         "a2.1-s2",
         "curated-service"
       ],
-      "example_fi": "Mihin aikaan aika on?",
-      "example_fa": "وقت ملاقات چه ساعتی است؟",
+      "example_fi": "Mihin aikaan vastaanotto alkaa?",
+      "example_fa": "ویزیت چه ساعتی شروع می‌شود؟",
       "accepted_answers": [
-        "Mihin aikaan aika on?"
+        "Mihin aikaan vastaanotto alkaa?"
       ]
     },
     "a21s2-h-011": {
@@ -207,8 +207,8 @@
         "a2.1-s2",
         "source-backed"
       ],
-      "example_fi": "Minun pitää siirtää aikaani.",
-      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "example_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "example_fa": "باید وقت ویزیتم را جابه‌جا کنم.",
       "accepted_answers": [
         "minun"
       ]
@@ -225,8 +225,8 @@
         "a2.1-s2",
         "source-backed"
       ],
-      "example_fi": "Minun pitää siirtää aikaani.",
-      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "example_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "example_fa": "باید وقت ویزیتم را جابه‌جا کنم.",
       "accepted_answers": [
         "pitää"
       ]
@@ -243,8 +243,8 @@
         "a2.1-s2",
         "curated-service"
       ],
-      "example_fi": "Minun pitää siirtää aikaani.",
-      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "example_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "example_fa": "باید وقت ویزیتم را جابه‌جا کنم.",
       "accepted_answers": [
         "siirtää"
       ]
@@ -287,9 +287,9 @@
     },
     "a21s2-e-016": {
       "id": "a21s2-e-016",
-      "surface_form": "Minun pitää siirtää aikaani.",
-      "lemma": "Minun pitää siirtää aikaani.",
-      "translation_fa": "باید وقتم را جابه‌جا کنم.",
+      "surface_form": "Minun pitää siirtää vastaanottoaikaani.",
+      "lemma": "Minun pitää siirtää vastaanottoaikaani.",
+      "translation_fa": "باید وقت ویزیتم را جابه‌جا کنم.",
       "item_type": "expression",
       "frequency_status": "unranked",
       "frequency_rank": null,
@@ -297,10 +297,10 @@
         "a2.1-s2",
         "curated-service"
       ],
-      "example_fi": "Minun pitää siirtää aikaani.",
-      "example_fa": "باید وقتم را جابه‌جا کنم.",
+      "example_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "example_fa": "باید وقت ویزیتم را جابه‌جا کنم.",
       "accepted_answers": [
-        "Minun pitää siirtää aikaani."
+        "Minun pitää siirtää vastaanottoaikaani."
       ]
     },
     "a21s2-e-017": {
