@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.0] - 2026-10-10
+
+### Added
+
+- Structured communicative, lexical, and assessed simple-past grammar objectives for A2.1 travel lessons 1–3, including reviewed bilingual examples and explicit graded exercise links.
+
 ## [1.31.1] - 2026-10-10
 
 ### Added
