@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.30.1] - 2026-10-10
+
+### Fixed
+
+- Suppress repeated lesson objective/summary paragraphs in the course path detail popover while keeping distinct details and grammar notes.
+
 ## [1.30.0] - 2026-10-09
 
 ### Added

@@ -1190,6 +1190,17 @@
   }
 
 
+  function lessonDetailParagraphs(lesson) {
+    const objective = String(lesson.objective_fa || '').trim();
+    const summary = String(lesson.summary_fa || '').trim();
+    const normalized = (value) => value.normalize('NFKC').replace(/[\u200c\u200d\u200e\u200f\u0640]/g, '').replace(/[\s\u00a0]+/g, ' ').replace(/[.،؛!?؟]+$/g, '').trim();
+    return {
+      objective,
+      summary: normalized(objective) === normalized(summary) ? '' : summary,
+      grammar: String(lesson.grammar_fa || '').trim(),
+    };
+  }
+
   function validateLessonObjectives(lesson, section, concepts) {
     const data = lesson.learning_objectives;
     if (data === undefined) return;
@@ -2472,13 +2483,15 @@
         details.hidden = true;
         const objective = document.createElement('p');
         objective.className = 'course-lesson-objective';
-        objective.textContent = lesson.objective_fa;
+        const detailCopy = lessonDetailParagraphs(lesson);
+        objective.textContent = detailCopy.objective;
         const summary = document.createElement('p');
         summary.className = 'course-lesson-summary';
-        summary.textContent = lesson.summary_fa;
+        summary.textContent = detailCopy.summary;
+        summary.hidden = !detailCopy.summary;
         const grammar = document.createElement('p');
         grammar.className = 'course-lesson-grammar';
-        grammar.textContent = `نکتهٔ زبان: ${lesson.grammar_fa}`;
+        grammar.textContent = `نکتهٔ زبان: ${detailCopy.grammar}`;
         details.append(objective, summary, grammar);
 
         actionPanel.append(eyebrow, heading, actions, details);
@@ -3770,6 +3783,7 @@
     validateImplementedCourse,
     validateImplementedPath,
     validateLessonObjectives,
+    lessonDetailParagraphs,
     initializeBrowser,
   };
 });
