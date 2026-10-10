@@ -42,6 +42,8 @@ jobs:
       - name: Refresh coverage snapshots for the PR branch
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
+          git fetch origin '${{ github.event.pull_request.head.ref }}'
+          git checkout -B '${{ github.event.pull_request.head.ref }}' 'origin/${{ github.event.pull_request.head.ref }}'
           npm run curriculum:coverage:write
           if ! git diff --quiet -- data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md; then
             git config user.name 'github-actions[bot]'
