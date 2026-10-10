@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.31.1] - 2026-10-10
+
+### Added
+
+- Show reviewed Finnish and Persian grammar examples in structured lesson details with explicit language direction and safe text rendering.
+
 ## [1.31.0] - 2026-10-10
 
 ### Added
