@@ -2029,7 +2029,10 @@
           "accepted_answers": [
             "alkoivat"
           ],
-          "explanation_fa": "«Oireet» جمع است و «alkoivat» گذشتهٔ سوم‌شخص جمعِ «alkaa» است."
+          "explanation_fa": "«Oireet» جمع است و «alkoivat» گذشتهٔ سوم‌شخص جمعِ «alkaa» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -2163,7 +2166,61 @@
             "a21s2-e-029"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a21s2-l03-can-do",
+            "can_do_fa": "چند نشانهٔ معمول را به زبان ساده نام ببرم و بگویم چه زمانی شروع شده‌اند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-022",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-023",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-024",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-025",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-026",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "در «Oireet alkoivat» فعل alkoivat گذشتهٔ سادهٔ سوم‌شخص جمع از alkaa است؛ برای توصیف آغاز نشانه‌ها استفاده می‌شود.",
+            "examples": [
+              {
+                "fi": "Oireet alkoivat eilen.",
+                "fa": "نشانه‌ها دیروز شروع شدند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-028",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-4",

@@ -4,7 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
-## 1. Start here | شروع
+- [Lesson objectives contract](LESSON-OBJECTIVES-CONTRACT.md) — implemented metadata and validation rules.\n- [P1 grammar contract draft](P1-GRAMMAR-CONTRACT-DRAFT.md) — historical design rationale; prefer the implemented contract above.\n\n## 1. Start here | شروع
 
 | Need / موضوع | Recommended document / سند | Role / نقش |
 | --- | --- | --- |

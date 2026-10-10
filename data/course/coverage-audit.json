@@ -26,8 +26,8 @@
     "outside_dictionary_and_not_in_original_parole": 6,
     "assessed_again_after_earlier_reference": 295,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 0,
-    "lessons_without_explicit_grammar_concept_ids": 140,
+    "grammar_concepts_with_explicit_lesson_ids": 1,
+    "lessons_without_explicit_grammar_concept_ids": 139,
     "graded_grammar_related_slots": 243,
     "graded_morphology_slots": 54,
     "lessons_with_declared_unassessed_forms": 112,
@@ -144,7 +144,7 @@
       "lessons": 10,
       "graded_slots": 105,
       "unassessed_target_forms": 37,
-      "lessons_missing_grammar_ids": 10
+      "lessons_missing_grammar_ids": 9
     }
   ],
   "lessons": [
@@ -13241,12 +13241,17 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a21-imperfect"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a13-past-recognition",
+          "a13-verb-classes"
+        ]
       }
     },
     {
@@ -17527,15 +17532,6 @@
         "title_en": "Recognition of common past forms",
         "prerequisites": [
           "a13-present-paradigm"
-        ]
-      },
-      {
-        "id": "a21-imperfect",
-        "level": "A2.1",
-        "title_en": "Productive simple past",
-        "prerequisites": [
-          "a13-past-recognition",
-          "a13-verb-classes"
         ]
       },
       {

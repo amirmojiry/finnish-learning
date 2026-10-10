@@ -89,7 +89,7 @@ function build(master,stages,dictionary,parole) {
     const current=[];
     for(const lesson of section.lessons){
       const refs=lesson.curriculum_target_refs||{},ev=evidence(section,lesson);
-      const intended=unique([...(lesson.grammar_concept_ids||[]),...(lesson.grammar_targets||[])].filter(id=>typeof id==='string'));
+      const intended=unique([...(lesson.grammar_concept_ids||[]),...(lesson.grammar_targets||[]),...(lesson.learning_objectives?.grammar||[]).map(g=>g.concept_id)].filter(id=>typeof id==='string'));
       const known=intended.filter(id=>knownGrammar.has(id)); known.forEach(id=>mapped.add(id));
       const review=ev.correct.filter(form=>first.has(form)&&first.get(form)!==lesson.id);
       review.forEach(form=>later.add(form));

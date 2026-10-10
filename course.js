@@ -1189,6 +1189,79 @@
     return section;
   }
 
+
+  function validateLessonObjectives(lesson, section, concepts) {
+    const data = lesson.learning_objectives;
+    if (data === undefined) return;
+    const fail = (reason) => { throw new Error('Lesson ' + lesson.id + ': ' + reason); };
+    if (!data || typeof data !== 'object' || Array.isArray(data)) fail('invalid learning objectives');
+    const known = new Map((concepts || []).map((concept) => [concept.id, concept]));
+    const activities = lesson.activities || [];
+    const nonempty = (value) => typeof value === 'string' && Boolean(value.trim());
+    const requireArray = (value, label) => {
+      if (!Array.isArray(value)) fail(label + ' must be an array');
+      return value;
+    };
+    for (const goal of requireArray(data.communicative, 'communicative objectives')) {
+      if (!nonempty(goal.id) || !nonempty(goal.can_do_fa)) fail('invalid communicative goal');
+    }
+    const lexicalIds = new Set();
+    for (const goal of requireArray(data.lexical, 'lexical objectives')) {
+      if (!nonempty(goal.target_id) || !section.items[goal.target_id]) fail('unknown lexical target');
+      if (!['introduced', 'reviewed'].includes(goal.status)) fail('invalid lexical status');
+      if (lexicalIds.has(goal.target_id)) fail('duplicate lexical objective');
+      lexicalIds.add(goal.target_id);
+    }
+    const grammarIds = new Set();
+    for (const goal of requireArray(data.grammar, 'grammar objectives')) {
+      if (!known.has(goal.concept_id)) fail('unknown grammar concept');
+      if (grammarIds.has(goal.concept_id)) fail('duplicate grammar objective');
+      grammarIds.add(goal.concept_id);
+      if (!['introduced', 'reviewed'].includes(goal.status)) fail('invalid grammar status');
+      if (!nonempty(goal.explanation_fa)) fail('missing Persian grammar explanation');
+      if (!Array.isArray(goal.examples) || !goal.examples.length
+        || goal.examples.some((example) => !nonempty(example.fi) || !nonempty(example.fa))) {
+        fail('missing bilingual grammar examples');
+      }
+      const prerequisites = known.get(goal.concept_id).prerequisites || [];
+      const declaredPrerequisites = requireArray(goal.prerequisite_concept_ids, 'prerequisites');
+      if (new Set(declaredPrerequisites).size !== declaredPrerequisites.length
+        || prerequisites.some((id) => !declaredPrerequisites.includes(id))
+        || declaredPrerequisites.some((id) => !prerequisites.includes(id))) {
+        fail('grammar prerequisites differ from the master curriculum');
+      }
+      const evidence = requireArray(goal.evidence, 'grammar evidence');
+      if (!evidence.length) fail('grammar objective requires positive assessment');
+      for (const item of evidence) {
+        if (!['recognition', 'supported_production', 'independent_production'].includes(item.mode)) {
+          fail('invalid evidence mode');
+        }
+        const activity = Number.isInteger(item.activity_index) ? activities[item.activity_index]
+          : activities.find((candidate) => candidate.type === item.activity_type && candidate.item === item.item_id);
+        if (!activity || ['teach', 'number-grid'].includes(activity.type)) {
+          fail('invalid graded evidence index');
+        }
+        if (!(activity.grammar_concept_ids || []).includes(goal.concept_id)) fail('missing explicit evidence concept link');
+        const correctItems = activity.type === 'event-time-match' ? [activity.time_item]
+          : activity.type === 'prompt-choice' ? [activity.answer_item]
+          : activity.type === 'sequence-order' ? activity.items
+          : activity.type === 'short-reading' ? [activity.question_item]
+          : activity.type === 'dialogue-order' ? activity.turns
+          : activity.type === 'negative-transform' ? [activity.negative_item || activity.item]
+          : activity.item ? [activity.item] : activity.expected_items;
+        if (!Array.isArray(correctItems) || !correctItems.some((id) => section.items[id])) {
+          fail('grammar assessment must have a positive answer, not a distractor');
+        }
+        const productive = ['type', 'production', 'dictation', 'inflection-production', 'expression-completion',
+          'controlled-production', 'negative-transform', 'guided-writing'].includes(activity.type);
+        if (item.mode !== 'recognition' && !productive) fail('production claim requires productive assessment');
+        if (item.mode === 'independent_production' && (
+          !productive || activity.type === 'dictation' || Boolean(activity.frame_fi) || Boolean(activity.tokens) || Boolean(activity.hint_fi)
+        )) fail('independent production cannot use a scaffold');
+      }
+    }
+  }
+
   function validateSection(rawSection) {
     const section = prepareSection(rawSection);
     if (!Array.isArray(section.can_do_fa) || section.can_do_fa.length === 0 || section.can_do_fa.some((goal) => typeof goal !== 'string' || !goal.trim())) {
@@ -1516,6 +1589,9 @@
       const validated = stage.sections.map((rawSection) => (
         validateSectionAgainstCurriculum(validateSection(rawSection), stage.curriculum)
       ));
+      for (const section of validated) {
+        for (const lesson of section.lessons) validateLessonObjectives(lesson, section, stage.curriculum.grammar_concepts || []);
+      }
       const orders = validated.map((implemented) => implemented.curriculum_contract.order);
       const sorted = [...orders].sort((a, b) => a - b);
       if (JSON.stringify(orders) !== JSON.stringify(sorted)) {
@@ -3693,6 +3769,7 @@
     validateSectionAgainstCurriculum,
     validateImplementedCourse,
     validateImplementedPath,
+    validateLessonObjectives,
     initializeBrowser,
   };
 });
