@@ -1196,7 +1196,7 @@
     if (!objectives) return { ...detail, structured: false, communicative: [], lexical: [], grammarGoals: [] };
     const communicative = (objectives.communicative || []).map(goal => goal.can_do_fa).filter(Boolean);
     const lexical = (objectives.lexical || []).map(goal => ({
-      label: items[goal.target_id]?.fi || items[goal.target_id]?.text_fi || goal.target_id,
+      label: items[goal.target_id]?.surface_form || goal.target_id,
       status: goal.status,
     }));
     const grammarGoals = (objectives.grammar || []).map(goal => ({
