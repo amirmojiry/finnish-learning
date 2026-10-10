@@ -1190,6 +1190,39 @@
   }
 
 
+  function appendGrammarGoalDetails(details, detailCopy) {
+    if (detailCopy.grammarGoals.length) {
+            const group = document.createElement('section');
+            group.className = 'course-lesson-objective-group';
+            const title = document.createElement('h3');
+            title.textContent = 'گرامر';
+            const list = document.createElement('ul');
+            for (const goal of detailCopy.grammarGoals) {
+              const row = document.createElement('li');
+              const description = document.createElement('p');
+              description.textContent = `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`;
+              row.append(description);
+              for (const example of goal.examples) {
+                const pair = document.createElement('p');
+                pair.className = 'course-lesson-grammar-example';
+                const finnish = document.createElement('span');
+                finnish.lang = 'fi';
+                finnish.dir = 'ltr';
+                finnish.textContent = example.fi;
+                const persian = document.createElement('span');
+                persian.lang = 'fa';
+                persian.dir = 'rtl';
+                persian.textContent = example.fa;
+                pair.append(finnish, document.createTextNode(' — '), persian);
+                row.append(pair);
+              }
+              list.append(row);
+            }
+            group.append(title, list);
+      details.append(group);
+          }
+  }
+
   function lessonObjectiveDisplay(lesson, items = {}) {
     const detail = lessonDetailParagraphs(lesson);
     const objectives = lesson.learning_objectives;
@@ -2525,36 +2558,7 @@
           appendGroup('هدف‌های ارتباطی', detailCopy.communicative);
           appendGroup('واژگان', detailCopy.lexical.map(goal =>
             `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`));
-          if (detailCopy.grammarGoals.length) {
-            const group = document.createElement('section');
-            group.className = 'course-lesson-objective-group';
-            const title = document.createElement('h3');
-            title.textContent = 'گرامر';
-            const list = document.createElement('ul');
-            for (const goal of detailCopy.grammarGoals) {
-              const row = document.createElement('li');
-              const description = document.createElement('p');
-              description.textContent = `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`;
-              row.append(description);
-              for (const example of goal.examples) {
-                const pair = document.createElement('p');
-                pair.className = 'course-lesson-grammar-example';
-                const finnish = document.createElement('span');
-                finnish.lang = 'fi';
-                finnish.dir = 'ltr';
-                finnish.textContent = example.fi;
-                const persian = document.createElement('span');
-                persian.lang = 'fa';
-                persian.dir = 'rtl';
-                persian.textContent = example.fa;
-                pair.append(finnish, document.createTextNode(' — '), persian);
-                row.append(pair);
-              }
-              list.append(row);
-            }
-            group.append(title, list);
-            details.append(group);
-          }
+          appendGrammarGoalDetails(details, detailCopy);
           if (!detailCopy.communicative.length) appendParagraph(detailCopy.objective, 'course-lesson-objective');
           if (!detailCopy.grammarGoals.length) appendParagraph(`نکتهٔ زبان: ${detailCopy.grammar}`, 'course-lesson-grammar');
         } else {
@@ -3854,6 +3858,7 @@
     validateLessonObjectives,
     lessonDetailParagraphs,
     lessonObjectiveDisplay,
+    appendGrammarGoalDetails,
     initializeBrowser,
   };
 });
