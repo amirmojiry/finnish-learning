@@ -11,7 +11,7 @@ test('authored lesson objectives are presented by category', () => {
   assert.equal(view.communicative.length, 1);
   assert.equal(view.lexical.length, lesson.learning_objectives.lexical.length);
   assert.ok(view.lexical.every(goal => goal.label && !goal.label.startsWith('a21s2-')));
-  assert.equal(view.grammarGoals[0].status, 'introduced');
+  assert.equal(view.grammarGoals[0].status, 'reviewed');
   assert.match(view.grammarGoals[0].label, /alkoivat/);
 });
 test('legacy lesson details retain objective summary and grammar', () => {
