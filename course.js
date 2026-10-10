@@ -1190,6 +1190,23 @@
   }
 
 
+  function lessonObjectiveDisplay(lesson, items = {}) {
+    const detail = lessonDetailParagraphs(lesson);
+    const objectives = lesson.learning_objectives;
+    if (!objectives) return { ...detail, structured: false, communicative: [], lexical: [], grammarGoals: [] };
+    const communicative = (objectives.communicative || []).map(goal => goal.can_do_fa).filter(Boolean);
+    const lexical = (objectives.lexical || []).map(goal => ({
+      label: items[goal.target_id]?.fi || items[goal.target_id]?.text_fi || goal.target_id,
+      status: goal.status,
+    }));
+    const grammarGoals = (objectives.grammar || []).map(goal => ({
+      label: goal.explanation_fa,
+      status: goal.status,
+      examples: goal.examples || [],
+    }));
+    return { ...detail, structured: true, communicative, lexical, grammarGoals };
+  }
+
   function lessonDetailParagraphs(lesson) {
     const objective = String(lesson.objective_fa || '').trim();
     const summary = String(lesson.summary_fa || '').trim();
@@ -2481,18 +2498,42 @@
         const details = document.createElement('div');
         details.className = 'course-lesson-popover-details';
         details.hidden = true;
-        const objective = document.createElement('p');
-        objective.className = 'course-lesson-objective';
-        const detailCopy = lessonDetailParagraphs(lesson);
-        objective.textContent = detailCopy.objective;
-        const summary = document.createElement('p');
-        summary.className = 'course-lesson-summary';
-        summary.textContent = detailCopy.summary;
-        summary.hidden = !detailCopy.summary;
-        const grammar = document.createElement('p');
-        grammar.className = 'course-lesson-grammar';
-        grammar.textContent = `نکتهٔ زبان: ${detailCopy.grammar}`;
-        details.append(objective, summary, grammar);
+        const detailCopy = lessonObjectiveDisplay(lesson, section.items);
+        const appendParagraph = (value, className) => {
+          if (!value) return;
+          const paragraph = document.createElement('p');
+          paragraph.className = className;
+          paragraph.textContent = value;
+          details.append(paragraph);
+        };
+        const appendGroup = (heading, entries) => {
+          if (!entries.length) return;
+          const group = document.createElement('section');
+          group.className = 'course-lesson-objective-group';
+          const title = document.createElement('h3');
+          title.textContent = heading;
+          const list = document.createElement('ul');
+          for (const entry of entries) {
+            const row = document.createElement('li');
+            row.textContent = entry;
+            list.append(row);
+          }
+          group.append(title, list);
+          details.append(group);
+        };
+        if (detailCopy.structured) {
+          appendGroup('هدف‌های ارتباطی', detailCopy.communicative);
+          appendGroup('واژگان', detailCopy.lexical.map(goal =>
+            `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`));
+          appendGroup('گرامر', detailCopy.grammarGoals.map(goal =>
+            `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`));
+          if (!detailCopy.communicative.length) appendParagraph(detailCopy.objective, 'course-lesson-objective');
+          if (!detailCopy.grammarGoals.length) appendParagraph(`نکتهٔ زبان: ${detailCopy.grammar}`, 'course-lesson-grammar');
+        } else {
+          appendParagraph(detailCopy.objective, 'course-lesson-objective');
+          appendParagraph(detailCopy.summary, 'course-lesson-summary');
+          appendParagraph(`نکتهٔ زبان: ${detailCopy.grammar}`, 'course-lesson-grammar');
+        }
 
         actionPanel.append(eyebrow, heading, actions, details);
 
@@ -3784,6 +3825,7 @@
     validateImplementedPath,
     validateLessonObjectives,
     lessonDetailParagraphs,
+    lessonObjectiveDisplay,
     initializeBrowser,
   };
 });
