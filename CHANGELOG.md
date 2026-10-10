@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.31.0] - 2026-10-10
+
+### Added
+
+- Learner-facing communicative, lexical and grammar objective groups in course lesson details when authored metadata exists; existing lessons retain their previous details.
+
 ## [1.30.1] - 2026-10-10
 
 ### Fixed
