@@ -18,6 +18,6 @@ test('legacy lesson details retain objective summary and grammar', () => {
   const view = lessonObjectiveDisplay(section.lessons[0], section.items);
   assert.equal(view.structured, false);
   assert.ok(view.objective);
-  assert.ok(view.summary);
+  assert.equal(view.summary, ''); // Duplicate authored summary is suppressed.
   assert.ok(view.grammar);
 });
