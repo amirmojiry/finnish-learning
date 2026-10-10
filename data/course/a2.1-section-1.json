@@ -1566,7 +1566,10 @@
           "accepted_answers": [
             "kävit"
           ],
-          "explanation_fa": "در سؤال از مخاطب، «kävit» صورت گذشتهٔ دوم‌شخص از «käydä» است."
+          "explanation_fa": "در سؤال از مخاطب، «kävit» صورت گذشتهٔ دوم‌شخص از «käydä» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -1700,7 +1703,61 @@
             "a21s1-h-001"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-1-can-do",
+            "can_do_fa": "بپرسم آخر هفته کسی کجا رفته و بگویم خودم کجا و چه مدتی بوده‌ام."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-003",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-004",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-005",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-006",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-007",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "در سؤال از مخاطب، «kävit» صورت گذشتهٔ دوم‌شخص از «käydä» است.",
+            "examples": [
+              {
+                "fi": "Missä kävit viime viikonloppuna?",
+                "fa": "آخر هفتهٔ گذشته کجا رفتی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-006",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-2",
@@ -1774,7 +1831,10 @@
           "accepted_answers": [
             "Menin"
           ],
-          "explanation_fa": "«Menin» صورت گذشتهٔ اول‌شخص فعل «mennä» است."
+          "explanation_fa": "«Menin» صورت گذشتهٔ اول‌شخص فعل «mennä» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -1908,7 +1968,61 @@
             "a21s1-h-010"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-2-can-do",
+            "can_do_fa": "با فعل‌های گذشتهٔ تمرین‌شده بگویم از کجا حرکت کردم و به کجا رسیدم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-012",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-013",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-014",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-015",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-016",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«Menin» صورت گذشتهٔ اول‌شخص فعل «mennä» است.",
+            "examples": [
+              {
+                "fi": "Menin asemalle aamulla.",
+                "fa": "صبح به ایستگاه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-015",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-3",
@@ -1984,7 +2098,10 @@
           "accepted_answers": [
             "Ostin"
           ],
-          "explanation_fa": "«Ostin» گذشتهٔ اول‌شخص از «ostaa» است."
+          "explanation_fa": "«Ostin» گذشتهٔ اول‌شخص از «ostaa» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -2118,7 +2235,61 @@
             "a21s1-h-020"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-3-can-do",
+            "can_do_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-022",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-023",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-024",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-025",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-026",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«Ostin» گذشتهٔ اول‌شخص از «ostaa» است.",
+            "examples": [
+              {
+                "fi": "Ostin lipun etukäteen.",
+                "fa": "بلیت را از قبل خریدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-025",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-4",
