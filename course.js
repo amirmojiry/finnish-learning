@@ -2560,7 +2560,7 @@
             `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`));
           appendGrammarGoalDetails(details, detailCopy);
           if (!detailCopy.communicative.length) appendParagraph(detailCopy.objective, 'course-lesson-objective');
-          if (!detailCopy.grammarGoals.length) appendParagraph(`نکتهٔ زبان: ${detailCopy.grammar}`, 'course-lesson-grammar');
+          appendParagraph(`نکتهٔ زبان: ${detailCopy.grammar}`, 'course-lesson-grammar');
         } else {
           appendParagraph(detailCopy.objective, 'course-lesson-objective');
           appendParagraph(detailCopy.summary, 'course-lesson-summary');
