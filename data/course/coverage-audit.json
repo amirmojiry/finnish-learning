@@ -13537,14 +13537,16 @@
         "note_present": true,
         "concept_ids": [
           "a12-requests",
-          "a13-present-paradigm"
+          "a13-present-paradigm",
+          "a21-rections"
         ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
-          "a11-present-chunks"
+          "a11-present-chunks",
+          "a13-local-expansion"
         ]
       }
     },
