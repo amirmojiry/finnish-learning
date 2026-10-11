@@ -2367,7 +2367,10 @@
           "accepted_answers": [
             "lähti"
           ],
-          "explanation_fa": "«Lähti» صورت گذشتهٔ سوم‌شخص از «lähteä» است."
+          "explanation_fa": "«Lähti» صورت گذشتهٔ سوم‌شخص از «lähteä» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -2501,7 +2504,61 @@
             "a21s1-h-002"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-4-can-do",
+            "can_do_fa": "بگویم قطار چه زمانی حرکت کرد، آیا تأخیر داشت و سفر چقدر طول کشید."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-031",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-032",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-033",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-034",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-035",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«Lähti» صورت گذشتهٔ سوم‌شخص از «lähteä» است.",
+            "examples": [
+              {
+                "fi": "Juna lähti ajoissa.",
+                "fa": "قطار به‌موقع حرکت کرد."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-034",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-5",
@@ -2577,7 +2634,10 @@
           "accepted_answers": [
             "Varasin"
           ],
-          "explanation_fa": "«Varasin» صورت گذشتهٔ اول‌شخص از «varata» است."
+          "explanation_fa": "«Varasin» صورت گذشتهٔ اول‌شخص از «varata» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -2711,7 +2771,61 @@
             "a21s1-h-002"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-5-can-do",
+            "can_do_fa": "رزرو اتاق، یک شب اقامت و کیفیت هتل را با جمله‌های کوتاه گذشته توصیف کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-040",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-041",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-042",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-043",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-044",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«Varasin» صورت گذشتهٔ اول‌شخص از «varata» است.",
+            "examples": [
+              {
+                "fi": "Varasin huoneen hotellista.",
+                "fa": "اتاقی در هتل رزرو کردم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-043",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-6",
@@ -2787,7 +2901,10 @@
           "accepted_answers": [
             "oli"
           ],
-          "explanation_fa": "«oli» صورت گذشتهٔ سوم‌شخص از «olla» است؛ منفی گذشته در جملهٔ جداگانه آموزش داده می‌شود."
+          "explanation_fa": "«oli» صورت گذشتهٔ سوم‌شخص از «olla» است؛ منفی گذشته در جملهٔ جداگانه آموزش داده می‌شود.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -2921,7 +3038,61 @@
             "a21s1-h-002"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-6-can-do",
+            "can_do_fa": "مشکلی مانند تأخیر یا گم‌شدن بلیت را توضیح بدهم و بگویم چگونه راهنمایی خواستم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-049",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-050",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-051",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-052",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-053",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«oli» صورت گذشتهٔ سوم‌شخص از «olla» است؛ منفی گذشته در جملهٔ جداگانه آموزش داده می‌شود.",
+            "examples": [
+              {
+                "fi": "Juna oli myöhässä.",
+                "fa": "قطار تأخیر داشت."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-052",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-7",
