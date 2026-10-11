@@ -38,6 +38,7 @@ test('new object, quantity, rection and destination forms are explicitly and cor
   assert.throws(()=>course.validateLessonObjectives(broken,section,grammar),/explicit evidence concept link/);
  }
 });
+test('pharmacy rection has real scored guided-production evidence',()=>{const sec=sections[1],lesson=sec.lessons[4],goal=lesson.learning_objectives.grammar.find(g=>g.concept_id==='a21-rections');assert.deepEqual(goal.prerequisite_concept_ids,['a13-local-expansion']);const a=lesson.activities.find(a=>a.type==='controlled-production'&&a.item==='a21s2-e-044');assert.equal(a.expected_fi,'Haluaisin kysyä tästä lääkkeestä.');assert.ok(a.grammar_concept_ids.includes('a21-rections'));const broken=structuredClone(lesson);broken.activities.find(a=>a.item==='a21s2-e-044'&&a.type==='controlled-production').grammar_concept_ids=['a12-requests'];assert.throws(()=>course.validateLessonObjectives(broken,sec,grammar),/explicit evidence concept link/);});
 test('sequencing and checkpoint object review have real positive scored evidence',()=>{
  const sec=sections[0],sequence=sec.lessons[7],cp=sec.lessons[9];
  const act=sequence.activities.find(a=>a.type==='controlled-production'&&a.item==='a21s1-e-072');

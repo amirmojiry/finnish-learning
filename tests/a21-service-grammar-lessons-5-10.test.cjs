@@ -6,7 +6,7 @@ const section=course.validateSection(require('../data/course/a2.1-section-2.json
 const curriculum=require('../data/course/a2.1-curriculum.json');
 const lessons=section.lessons.slice(4);
 const expected=[
- ['a12-requests','a13-present-paradigm'],
+ ['a12-requests','a13-present-paradigm','a21-rections'],
  ['a13-necessity','a11-questions'],
  ['a13-present-paradigm','a13-necessity'],
  ['a12-requests'],

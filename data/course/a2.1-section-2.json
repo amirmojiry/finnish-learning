@@ -2863,7 +2863,8 @@
             "Haluaisin kysyä tästä lääkkeestä."
           ],
           "grammar_concept_ids": [
-            "a12-requests"
+            "a12-requests",
+            "a21-rections"
           ]
         }
       ],
@@ -3085,6 +3086,27 @@
               {
                 "activity_type": "inflection-production",
                 "item_id": "a21s2-e-046",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a21-rections",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-local-expansion"
+            ],
+            "explanation_fa": "در «Haluaisin kysyä tästä lääkkeestä» پرسیدن دربارهٔ دارو با ساختار «kysyä + elatiivi» بیان می‌شود؛ این تمرین فقط تولید هدایت‌شدهٔ همین عبارت را می‌سنجد.",
+            "examples": [
+              {
+                "fi": "Haluaisin kysyä tästä lääkkeestä.",
+                "fa": "می‌خواهم دربارهٔ این دارو سؤال کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-044",
                 "mode": "supported_production"
               }
             ]
