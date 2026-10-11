@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.4] - 2026-10-11
+
+### Changed
+
+- Strengthen symptom and staff-clarification lessons with a scored quantity-partitive decision, supported past symptom reporting, real staff request production and necessity infinitive production.
+- Mark previously assessed fever phrase as review and link reviewed grammar concepts with accurate prerequisite and scored answer evidence.
+- Add positive/negative regression tests without changing existing lesson IDs, fifteen-card course lengths, saved progress or dictionary source ranks.
+
 ## [1.32.3] - 2026-10-11
 
 ### Changed

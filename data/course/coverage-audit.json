@@ -26,10 +26,10 @@
     "outside_dictionary_and_not_in_original_parole": 6,
     "assessed_again_after_earlier_reference": 295,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 4,
-    "lessons_without_explicit_grammar_concept_ids": 127,
-    "graded_grammar_related_slots": 246,
-    "graded_morphology_slots": 54,
+    "grammar_concepts_with_explicit_lesson_ids": 5,
+    "lessons_without_explicit_grammar_concept_ids": 126,
+    "graded_grammar_related_slots": 250,
+    "graded_morphology_slots": 56,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
   },
@@ -144,7 +144,7 @@
       "lessons": 10,
       "graded_slots": 105,
       "unassessed_target_forms": 37,
-      "lessons_missing_grammar_ids": 7
+      "lessons_missing_grammar_ids": 6
     }
   ],
   "lessons": [
@@ -13256,8 +13256,8 @@
           "oireet alkoivat maanantaina.",
           "on"
         ],
-        "receptive_count": 6,
-        "productive_count": 3,
+        "receptive_count": 5,
+        "productive_count": 4,
         "later_correct_retrieval": [
           "minulla on kuumetta.",
           "on"
@@ -13273,7 +13273,7 @@
           "oireet",
           "päänsärkyä"
         ],
-        "distractor_only_count": 14,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "oli",
@@ -13302,13 +13302,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a12-quantities",
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a11-case-chunks",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -13366,7 +13368,7 @@
           "voitteko toistaa ohjeen?"
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 4,
         "later_correct_retrieval": [
           "minun"
         ],
@@ -13409,12 +13411,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests",
+          "a13-necessity"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 4,
+        "morphology_slots": 2,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -17488,14 +17496,6 @@
         "title_en": "Basic pronouns and demonstratives",
         "prerequisites": [
           "a11-olla"
-        ]
-      },
-      {
-        "id": "a12-quantities",
-        "level": "A1.2",
-        "title_en": "Quantities and restricted partitive",
-        "prerequisites": [
-          "a11-case-chunks"
         ]
       },
       {

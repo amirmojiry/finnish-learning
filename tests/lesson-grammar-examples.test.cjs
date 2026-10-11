@@ -16,7 +16,7 @@ test('structured grammar objectives retain reviewed bilingual examples for rende
   }
 });
 test('legacy lesson without structured goals remains unchanged', () => {
-  const result = lessonObjectiveDisplay(section.lessons[3], section.items);
+  const result = lessonObjectiveDisplay(section.lessons[4], section.items);
   assert.equal(result.structured, false);
   assert.deepEqual(result.grammarGoals, []);
 });

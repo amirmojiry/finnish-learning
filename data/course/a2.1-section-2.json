@@ -2196,6 +2196,22 @@
             1
           ],
           "expected_fi": "Oireet alkoivat maanantaina."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-029",
+          "prompt_fa": "به پذیرش بگو دیروز تب داشتی.",
+          "cues_fi": [
+            "Minulla",
+            "oli"
+          ],
+          "expected_fi": "Minulla oli kuumetta eilen.",
+          "accepted_answers": [
+            "Minulla oli kuumetta eilen."
+          ],
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2213,6 +2229,25 @@
           "explanation_fa": "«Oireet» جمع است و «alkoivat» گذشتهٔ سوم‌شخص جمعِ «alkaa» است.",
           "grammar_concept_ids": [
             "a21-imperfect"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s2-e-026",
+          "base_fi": "kuume",
+          "feature_fa": "Partitiivi در عبارت بیان مقدار",
+          "prompt_fa": "در جملهٔ «کمی تب دارم» بعد از vähän کدام صورت صحیح است؟",
+          "frame_fi": "Minulla on vähän _____.",
+          "options_fi": [
+            "kuume",
+            "kuumetta",
+            "kuumeen",
+            "kuumeeseen"
+          ],
+          "expected_fi": "kuumetta",
+          "explanation_fa": "پس از «vähän» در بیان مقدار تب، صورت partitiivi «kuumetta» درست است.",
+          "grammar_concept_ids": [
+            "a12-quantities"
           ]
         }
       ],
@@ -2374,7 +2409,7 @@
           },
           {
             "target_id": "a21s2-e-026",
-            "status": "introduced"
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -2397,6 +2432,32 @@
                 "activity_type": "inflection-production",
                 "item_id": "a21s2-e-028",
                 "mode": "supported_production"
+              },
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-029",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در «vähän kuumetta» عبارتِ مقدار با صورت partitiivi بیان می‌شود؛ این تمرین فقط تشخیص یک نمونهٔ آشنا را می‌سنجد.",
+            "examples": [
+              {
+                "fi": "Minulla on vähän kuumetta.",
+                "fa": "کمی تب دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s2-e-026",
+                "mode": "recognition"
               }
             ]
           }
@@ -2467,6 +2528,22 @@
             3
           ],
           "expected_fi": "Mitä minun pitää tehdä seuraavaksi?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-034",
+          "prompt_fa": "از کارمند مؤدبانه بخواه دستور را تکرار کند.",
+          "cues_fi": [
+            "Voitteko",
+            "toistaa"
+          ],
+          "expected_fi": "Voitteko toistaa ohjeen?",
+          "accepted_answers": [
+            "Voitteko toistaa ohjeen?"
+          ],
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2481,7 +2558,26 @@
           "accepted_answers": [
             "puhua"
           ],
-          "explanation_fa": "در «Voitteko puhua hitaammin?» بعد از Voitteko صورت پایهٔ «puhua» آمده است."
+          "explanation_fa": "در «Voitteko puhua hitaammin?» بعد از Voitteko صورت پایهٔ «puhua» آمده است.",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "a21s2-e-036",
+          "base_fi": "tehdä",
+          "feature_fa": "مصدر پس از pitää",
+          "prompt_fa": "در جملهٔ «بعد باید چه کار کنم؟» مصدر درست را بنویس.",
+          "frame_fi": "Mitä minun pitää _____ seuraavaksi?",
+          "expected_fi": "tehdä",
+          "accepted_answers": [
+            "tehdä"
+          ],
+          "explanation_fa": "پس از «minun pitää» مصدر «tehdä» به کار می‌رود.",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "activities": [
@@ -2615,7 +2711,81 @@
             "a21s2-e-008"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-4-can-do",
+            "can_do_fa": "از کارکنان بخواهم آهسته‌تر صحبت کنند، توضیح را تکرار کنند و مرحلهٔ بعد را روشن کنند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-030",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-031",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-032",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-033",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-034",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست مؤدبانهٔ «Voitteko + مصدر» را برای آهسته صحبت‌کردن یا تکرار توضیح در موقعیت خدماتی تمرین کن.",
+            "examples": [
+              {
+                "fi": "Voitteko toistaa ohjeen?",
+                "fa": "ممکن است دستور را تکرار کنید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-034",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "در جملهٔ «Mitä minun pitää tehdä seuraavaksi?» پس از pitää مصدر tehdä می‌آید.",
+            "examples": [
+              {
+                "fi": "Mitä minun pitää tehdä seuraavaksi?",
+                "fa": "بعد باید چه کار کنم؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-036",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-5",
