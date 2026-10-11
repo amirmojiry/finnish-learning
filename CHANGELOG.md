@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.7] - 2026-10-12
+
+### Changed
+
+- Remove the hard-coded fifteen-activity validation for explicitly authored lessons, permitting pedagogically justified activity counts from 1 to 60 while retaining mandatory graded practice, production, listening, dictation and checkpoint contracts.
+- Preserve deterministic fifteen-item legacy generation and checkpoint target definitions; progress and scoring use actual prepared lesson activity counts without changing saved learner data.
+- Add variable-length lesson regression fixtures and retain all existing 140 lessons unchanged.
+
 ## [1.32.6] - 2026-10-11
 
 ### Changed
