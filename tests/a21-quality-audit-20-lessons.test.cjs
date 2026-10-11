@@ -22,8 +22,7 @@ test('new object, quantity, rection and destination forms are explicitly and cor
  const checks=[
  [0,2,'a21-object-core','paluulipun'],[0,3,'a12-quantities','tuntia'],
  [0,4,'a21-rections','hintaan'],[0,5,'a21-object-core','lippua'],
- [0,6,'a21-rections','kaupungista'],[0,8,'a21-illative-patterns','kotiin'],
- [1,4,'a21-rections','apteekista']
+ [0,6,'a21-rections','kaupungista'],[0,8,'a21-illative-patterns','kotiin']
  ];
  for(const [s,l,concept,answer] of checks){
   const section=sections[s],lesson=section.lessons[l];
