@@ -1998,13 +1998,13 @@
         },
         {
           "type": "choice",
-          "mode": "finnish",
-          "item": "a21s2-e-019",
+          "mode": "meaning",
+          "item": "a21s2-e-017",
           "options": [
-            "a21s2-e-081",
-            "a21s2-e-082",
-            "a21s2-e-006",
-            "a21s2-e-019"
+            "a21s2-e-017",
+            "a21s2-e-045",
+            "a21s2-e-046",
+            "a21s2-e-047"
           ]
         },
         {
