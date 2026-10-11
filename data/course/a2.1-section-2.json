@@ -2883,6 +2883,25 @@
           "grammar_concept_ids": [
             "a13-present-paradigm"
           ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s2-e-044",
+          "base_fi": "lääke",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "Haluaisin kysyä tästä _____.",
+          "options_fi": [
+            "lääkkeeseen",
+            "lääkkeessä",
+            "lääkkeestä",
+            "lääkkeellä"
+          ],
+          "expected_fi": "lääkkeestä",
+          "explanation_fa": "برای پرسیدن دربارهٔ دارو، ترکیب «kysyä tästä lääkkeestä» با elatiivi استفاده می‌شود.",
+          "grammar_concept_ids": [
+            "a21-rections"
+          ]
         }
       ],
       "activities": [
@@ -3086,6 +3105,27 @@
                 "activity_type": "inflection-production",
                 "item_id": "a21s2-e-046",
                 "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a21-rections",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-local-expansion"
+            ],
+            "explanation_fa": "برای پرسیدن دربارهٔ دارو، ترکیب «kysyä tästä lääkkeestä» با elatiivi استفاده می‌شود.",
+            "examples": [
+              {
+                "fi": "Haluaisin kysyä tästä lääkkeestä.",
+                "fa": "می‌خواهم دربارهٔ این دارو سؤال کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s2-e-044",
+                "mode": "recognition"
               }
             ]
           }

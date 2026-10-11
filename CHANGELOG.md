@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.6] - 2026-10-11
+
+### Changed
+
+- Audit all 20 existing A2.1 lessons and strengthen eight travel grammar lessons and one service lesson with evidence-based choices/controlled responses for objects, quantities, rections, destinations, and event sequencing.
+- Preserve existing past-tense typed tasks and progress; highlight still-unassessed lexical forms, independent narrative production, plural partitive, and -maan in the follow-up plan.
+- Add whole-level regression tests and deterministic coverage refresh.
+
 ## [1.32.5] - 2026-10-11
 
 ### Changed

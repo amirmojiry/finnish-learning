@@ -2102,6 +2102,25 @@
           "grammar_concept_ids": [
             "a21-imperfect"
           ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-028",
+          "base_fi": "paluulippu",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "Ostin myös _____.",
+          "options_fi": [
+            "paluulippu",
+            "paluulipun",
+            "paluulippua",
+            "paluulipussa"
+          ],
+          "expected_fi": "paluulipun",
+          "explanation_fa": "خرید بلیت برگشت به‌عنوان نتیجهٔ کامل در این جمله با «paluulipun» بیان شده است.",
+          "grammar_concept_ids": [
+            "a21-object-core"
+          ]
         }
       ],
       "activities": [
@@ -2287,6 +2306,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-object-core",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a13-partitive-patterns"
+            ],
+            "explanation_fa": "خرید بلیت برگشت به‌عنوان نتیجهٔ کامل در این جمله با «paluulipun» بیان شده است.",
+            "examples": [
+              {
+                "fi": "Ostin myös paluulipun.",
+                "fa": "بلیت برگشت هم خریدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-028",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
       }
@@ -2370,6 +2410,25 @@
           "explanation_fa": "«Lähti» صورت گذشتهٔ سوم‌شخص از «lähteä» است.",
           "grammar_concept_ids": [
             "a21-imperfect"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-037",
+          "base_fi": "tunti",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "Matka kesti kaksi _____.",
+          "options_fi": [
+            "tunti",
+            "tunnit",
+            "tuntia",
+            "tunnin"
+          ],
+          "expected_fi": "tuntia",
+          "explanation_fa": "پس از عدد kaksi، اسم شمارش‌شده در این عبارت به صورت partitiivi مفرد «tuntia» می‌آید.",
+          "grammar_concept_ids": [
+            "a12-quantities"
           ]
         }
       ],
@@ -2556,6 +2615,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "پس از عدد kaksi، اسم شمارش‌شده در این عبارت به صورت partitiivi مفرد «tuntia» می‌آید.",
+            "examples": [
+              {
+                "fi": "Matka kesti kaksi tuntia.",
+                "fa": "سفر دو ساعت طول کشید."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-037",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
       }
@@ -2637,6 +2717,25 @@
           "explanation_fa": "«Varasin» صورت گذشتهٔ اول‌شخص از «varata» است.",
           "grammar_concept_ids": [
             "a21-imperfect"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-046",
+          "base_fi": "hinta",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "Aamiainen kuului _____.",
+          "options_fi": [
+            "hinnasta",
+            "hintaan",
+            "hinnalla",
+            "hinnassa"
+          ],
+          "expected_fi": "hintaan",
+          "explanation_fa": "«kuulua hintaan» ترکیب ثابت «جزو قیمت بودن» است؛ این تمرین همین ترکیب و حالت illatiivi را می‌سنجد.",
+          "grammar_concept_ids": [
+            "a21-rections"
           ]
         }
       ],
@@ -2823,6 +2922,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-rections",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a13-local-expansion"
+            ],
+            "explanation_fa": "«kuulua hintaan» ترکیب ثابت «جزو قیمت بودن» است؛ این تمرین همین ترکیب و حالت illatiivi را می‌سنجد.",
+            "examples": [
+              {
+                "fi": "Aamiainen kuului hintaan.",
+                "fa": "صبحانه در قیمت اقامت گنجانده شده بود."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-046",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
       }
@@ -2904,6 +3024,25 @@
           "explanation_fa": "«oli» صورت گذشتهٔ سوم‌شخص از «olla» است؛ منفی گذشته در جملهٔ جداگانه آموزش داده می‌شود.",
           "grammar_concept_ids": [
             "a21-imperfect"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-054",
+          "base_fi": "lippu",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "En löytänyt _____.",
+          "options_fi": [
+            "lippu",
+            "lipun",
+            "lippua",
+            "lipussa"
+          ],
+          "expected_fi": "lippua",
+          "explanation_fa": "در «En löytänyt lippua» مفعولِ جملهٔ منفی به صورت partitiivi «lippua» می‌آید.",
+          "grammar_concept_ids": [
+            "a21-object-core"
           ]
         }
       ],
@@ -3090,6 +3229,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-object-core",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-partitive-patterns"
+            ],
+            "explanation_fa": "در «En löytänyt lippua» مفعولِ جملهٔ منفی به صورت partitiivi «lippua» می‌آید.",
+            "examples": [
+              {
+                "fi": "En löytänyt lippua.",
+                "fa": "بلیت را پیدا نکردم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-054",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
       }
@@ -3169,6 +3329,25 @@
           "explanation_fa": "«Kävin» صورت گذشتهٔ اول‌شخص از «käydä» است.",
           "grammar_concept_ids": [
             "a21-imperfect"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-063",
+          "base_fi": "kaupunki",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "Pidin _____.",
+          "options_fi": [
+            "kaupunki",
+            "kaupungin",
+            "kaupungista",
+            "kaupunkiin"
+          ],
+          "expected_fi": "kaupungista",
+          "explanation_fa": "فعل «pitää» به معنی دوست داشتن در این ساختار با elatiivi می‌آید: «pitää kaupungista».",
+          "grammar_concept_ids": [
+            "a21-rections"
           ]
         }
       ],
@@ -3355,6 +3534,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-rections",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-local-expansion"
+            ],
+            "explanation_fa": "فعل «pitää» به معنی دوست داشتن در این ساختار با elatiivi می‌آید: «pitää kaupungista».",
+            "examples": [
+              {
+                "fi": "Pidin kaupungista.",
+                "fa": "از شهر خوشم آمد."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-063",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
       }
@@ -3419,6 +3619,22 @@
             1
           ],
           "expected_fi": "Lopuksi palasin kotiin."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s1-e-072",
+          "prompt_fa": "برای پایان روایت سفر، بگو در پایان به خانه برگشتی.",
+          "cues_fi": [
+            "Lopuksi",
+            "palasin"
+          ],
+          "expected_fi": "Lopuksi palasin kotiin.",
+          "accepted_answers": [
+            "Lopuksi palasin kotiin."
+          ],
+          "grammar_concept_ids": [
+            "a21-sequencing"
+          ]
         }
       ],
       "morphology_practice": [
@@ -3622,6 +3838,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-sequencing",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a21-imperfect"
+            ],
+            "explanation_fa": "«Lopuksi» در آغاز جمله پایان یک توالی رویداد را نشان می‌دهد؛ تولید هدایت‌شدهٔ این جمله به معنی تسلط مستقل بر روایت چندرویدادی نیست.",
+            "examples": [
+              {
+                "fi": "Lopuksi palasin kotiin.",
+                "fa": "در پایان به خانه برگشتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s1-e-072",
+                "mode": "supported_production"
+              }
+            ]
           }
         ]
       }
@@ -3706,6 +3943,25 @@
           "explanation_fa": "«kävin» صورت گذشتهٔ اول‌شخص «käydä» است.",
           "grammar_concept_ids": [
             "a21-imperfect"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-080",
+          "base_fi": "koti",
+          "feature_fa": "انتخاب حالت درست در جمله",
+          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
+          "frame_fi": "Palasin _____ sunnuntaina.",
+          "options_fi": [
+            "koti",
+            "kotona",
+            "kotiin",
+            "kotoa"
+          ],
+          "expected_fi": "kotiin",
+          "explanation_fa": "برای بازگشت به خانه، مقصد با «kotiin» بیان می‌شود؛ «kotona» مکان ثابت و «kotoa» مبدأ است.",
+          "grammar_concept_ids": [
+            "a21-illative-patterns"
           ]
         }
       ],
@@ -3892,6 +4148,27 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-illative-patterns",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a13-local-expansion"
+            ],
+            "explanation_fa": "برای بازگشت به خانه، مقصد با «kotiin» بیان می‌شود؛ «kotona» مکان ثابت و «kotoa» مبدأ است.",
+            "examples": [
+              {
+                "fi": "Palasin kotiin sunnuntaina.",
+                "fa": "یکشنبه به خانه برگشتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-080",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
       }
@@ -3953,6 +4230,9 @@
           "expected_fi": "Varasin huoneen hotellista.",
           "accepted_answers": [
             "huoneen"
+          ],
+          "grammar_concept_ids": [
+            "a21-object-core"
           ]
         },
         {
@@ -4235,6 +4515,27 @@
               {
                 "activity_type": "inflection-production",
                 "item_id": "a21s1-e-061",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a21-object-core",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-partitive-patterns"
+            ],
+            "explanation_fa": "در «Varasin huoneen hotellista» رزرو اتاقِ کامل با مفعول «huoneen» بیان می‌شود؛ این تمرین فقط همین نمونه را بررسی می‌کند.",
+            "examples": [
+              {
+                "fi": "Varasin huoneen hotellista.",
+                "fa": "اتاقی در هتل رزرو کردم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "a21s1-e-043",
                 "mode": "supported_production"
               }
             ]
