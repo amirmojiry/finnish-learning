@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.1] - 2026-10-11
+
+### Added
+
+- Review-linked simple-past grammar and communicative/lexical objectives for A2.1 travel lessons 4-6, with positively assessed Finnish inflection exercises and bilingual learner examples.
+- Distinguish existing A1.2 vocabulary forms from new A2.1 introductions and preserve fuller grammar notes for object cases and negative past without claiming those patterns have been separately assessed.
+- Add regression checks and refresh deterministic course coverage snapshots; no existing lesson IDs, exercise counts, SRS or learner progress formats change.
+
 ## [1.32.0] - 2026-10-10
 
 ### Added
