@@ -9,7 +9,7 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 - 670 lexical target placements and 464 distinct surface forms; 432 lemma-field values (unverified) and 0 explicit sense IDs.
 - 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 295 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 400 dictionary entries; 124 authored lexical target forms found in the curated dictionary; 340 missing, of which 334 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 5 with explicit lesson concept IDs. 126 lessons lack these links even though 250 structural/grammar slots exist (56 morphology slots).
+- 27 planned grammar concepts in shipped stages; 7 with explicit lesson concept IDs. 120 lessons lack these links even though 255 structural/grammar slots exist (56 morphology slots).
 - 112 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage
@@ -29,7 +29,7 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 | A1.3 | a1.3-section-3 | 10 | 116 | 14 | 10 |
 | A1.3 | a1.3-section-4 | 10 | 116 | 15 | 10 |
 | A2.1 | a2.1-section-1 | 10 | 105 | 35 | 0 |
-| A2.1 | a2.1-section-2 | 10 | 105 | 37 | 6 |
+| A2.1 | a2.1-section-2 | 10 | 105 | 37 | 0 |
 
 ## Lexical candidates outside the installed dictionary
 
@@ -96,7 +96,6 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | --- | --- | --- |
 | `a11-sounds` | A1.1 | — |
 | `a11-olla` | A1.1 | — |
-| `a11-questions` | A1.1 | `a11-olla` |
 | `a11-present-chunks` | A1.1 | `a11-olla` |
 | `a11-negation` | A1.1 | `a11-present-chunks` |
 | `a11-case-chunks` | A1.1 | `a11-present-chunks` |
@@ -104,7 +103,6 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | `a12-local-cases` | A1.2 | `a11-case-chunks` |
 | `a12-commands` | A1.2 | `a11-present-chunks` |
 | `a12-frequency-adverbs` | A1.2 | `a11-present-chunks` |
-| `a13-present-paradigm` | A1.3 | `a11-present-chunks` |
 | `a13-verb-classes` | A1.3 | `a13-present-paradigm` |
 | `a13-kpt-preview` | A1.3 | `a13-verb-classes` |
 | `a13-local-expansion` | A1.3 | `a12-local-cases` |

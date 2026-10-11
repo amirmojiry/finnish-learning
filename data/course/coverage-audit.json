@@ -26,9 +26,9 @@
     "outside_dictionary_and_not_in_original_parole": 6,
     "assessed_again_after_earlier_reference": 295,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 5,
-    "lessons_without_explicit_grammar_concept_ids": 126,
-    "graded_grammar_related_slots": 250,
+    "grammar_concepts_with_explicit_lesson_ids": 7,
+    "lessons_without_explicit_grammar_concept_ids": 120,
+    "graded_grammar_related_slots": 255,
     "graded_morphology_slots": 56,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
@@ -144,7 +144,7 @@
       "lessons": 10,
       "graded_slots": 105,
       "unassessed_target_forms": 37,
-      "lessons_missing_grammar_ids": 6
+      "lessons_missing_grammar_ids": 0
     }
   ],
   "lessons": [
@@ -13476,7 +13476,7 @@
           "voitteko selittää käyttöohjeen?"
         ],
         "receptive_count": 6,
-        "productive_count": 3,
+        "productive_count": 4,
         "later_correct_retrieval": [
           "ennen"
         ],
@@ -13491,7 +13491,7 @@
           "käyttöohjeen",
           "lääkkeestä"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 10,
         "reading_only": [],
         "high_frequency_target_forms": [
           "ennen",
@@ -13519,12 +13519,17 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -13578,7 +13583,7 @@
           "tarvitsen apua ajanvarauksessa.",
           "tämä"
         ],
-        "receptive_count": 6,
+        "receptive_count": 5,
         "productive_count": 3,
         "later_correct_retrieval": [
           "tämä"
@@ -13594,7 +13599,7 @@
           "palvelupiste",
           "vuoroani"
         ],
-        "distractor_only_count": 14,
+        "distractor_only_count": 11,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -13622,12 +13627,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a13-necessity"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -13681,8 +13692,8 @@
           "pitääkö tähän kirjoittaa päivämäärä?",
           "tähän"
         ],
-        "receptive_count": 5,
-        "productive_count": 2,
+        "receptive_count": 4,
+        "productive_count": 3,
         "later_correct_retrieval": [
           "tähän"
         ],
@@ -13697,7 +13708,7 @@
           "lomakkeessa",
           "osoitetta"
         ],
-        "distractor_only_count": 14,
+        "distractor_only_count": 11,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -13725,12 +13736,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-necessity",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -13786,7 +13803,7 @@
           "voitteko lähettää sen sähköpostilla?"
         ],
         "receptive_count": 6,
-        "productive_count": 3,
+        "productive_count": 4,
         "later_correct_retrieval": [],
         "declared_unassessed": [
           "kopion",
@@ -13799,7 +13816,7 @@
           "sähköpostilla",
           "todistuksen"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "on",
@@ -13827,12 +13844,16 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -13884,7 +13905,7 @@
           "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
         "receptive_count": 4,
-        "productive_count": 2,
+        "productive_count": 3,
         "later_correct_retrieval": [],
         "declared_unassessed": [
           "minulle",
@@ -13898,7 +13919,7 @@
           "torstaina",
           "vahvistuksen"
         ],
-        "distractor_only_count": 15,
+        "distractor_only_count": 12,
         "reading_only": [
           "hei, haluaisin varata ajan. onko torstaina vapaita aikoja?",
           "tarvitsen myös todistuksen. voitteko lähettää vahvistuksen sähköpostilla?"
@@ -13929,12 +13950,17 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -14017,12 +14043,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-necessity",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-requests"
+        ]
       }
     }
   ],
@@ -17459,14 +17491,6 @@
         "prerequisites": []
       },
       {
-        "id": "a11-questions",
-        "level": "A1.1",
-        "title_en": "Core question words",
-        "prerequisites": [
-          "a11-olla"
-        ]
-      },
-      {
         "id": "a11-present-chunks",
         "level": "A1.1",
         "title_en": "Present-tense formulae",
@@ -17518,14 +17542,6 @@
         "id": "a12-frequency-adverbs",
         "level": "A1.2",
         "title_en": "Simple frequency/time adverbs",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
-      },
-      {
-        "id": "a13-present-paradigm",
-        "level": "A1.3",
-        "title_en": "High-frequency present paradigms",
         "prerequisites": [
           "a11-present-chunks"
         ]
