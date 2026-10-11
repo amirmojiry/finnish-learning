@@ -13044,7 +13044,7 @@
           "tiistai kello kymmenen sopii minulle."
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 3,
         "later_correct_retrieval": [
           "on"
         ],
@@ -13059,7 +13059,7 @@
           "lääkärille",
           "vastaanotto"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minulle",
@@ -13148,7 +13148,7 @@
           "onko perjantaina vapaita aikoja?",
           "voinko perua ajan?"
         ],
-        "receptive_count": 6,
+        "receptive_count": 5,
         "productive_count": 3,
         "later_correct_retrieval": [
           "minun"
@@ -13164,7 +13164,7 @@
           "siirtää",
           "vastaanotolle"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -17507,27 +17507,11 @@
         ]
       },
       {
-        "id": "a12-requests",
-        "level": "A1.2",
-        "title_en": "Polite service requests as formulae",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
-      },
-      {
         "id": "a12-commands",
         "level": "A1.2",
         "title_en": "Singular imperatives and route instructions",
         "prerequisites": [
           "a11-present-chunks"
-        ]
-      },
-      {
-        "id": "a12-negation-expand",
-        "level": "A1.2",
-        "title_en": "Expanded everyday negation",
-        "prerequisites": [
-          "a11-negation"
         ]
       },
       {
@@ -17576,14 +17560,6 @@
         "title_en": "Partitive in familiar object frames",
         "prerequisites": [
           "a12-quantities"
-        ]
-      },
-      {
-        "id": "a13-necessity",
-        "level": "A1.3",
-        "title_en": "Necessity and ability frames",
-        "prerequisites": [
-          "a12-requests"
         ]
       },
       {

@@ -103,16 +103,13 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | `a11-pronouns` | A1.1 | `a11-olla` |
 | `a12-quantities` | A1.2 | `a11-case-chunks` |
 | `a12-local-cases` | A1.2 | `a11-case-chunks` |
-| `a12-requests` | A1.2 | `a11-present-chunks` |
 | `a12-commands` | A1.2 | `a11-present-chunks` |
-| `a12-negation-expand` | A1.2 | `a11-negation` |
 | `a12-frequency-adverbs` | A1.2 | `a11-present-chunks` |
 | `a13-present-paradigm` | A1.3 | `a11-present-chunks` |
 | `a13-verb-classes` | A1.3 | `a13-present-paradigm` |
 | `a13-kpt-preview` | A1.3 | `a13-verb-classes` |
 | `a13-local-expansion` | A1.3 | `a12-local-cases` |
 | `a13-partitive-patterns` | A1.3 | `a12-quantities` |
-| `a13-necessity` | A1.3 | `a12-requests` |
 | `a13-past-recognition` | A1.3 | `a13-present-paradigm` |
 | `a21-object-core` | A2.1 | `a13-partitive-patterns` |
 | `a21-plural-partitive` | A2.1 | `a12-quantities` |
