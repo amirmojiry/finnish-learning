@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.5] - 2026-10-11
+
+### Changed
+
+- Audit and strengthen all six remaining A2.1 Section 2 lessons (5–10), linking authentic guided service requests, present/necessity exercises and checkpoint review to canonical assessed grammar goals.
+- Correct review status for pharmacy and repeated Thursday/email vocabulary without changing frequency ranks or inventing mastery; preserve all 15 checkpoint targets and existing progress.
+- Add six-lesson regression checks and refresh deterministic course-coverage reports.
+
 ## [1.32.4] - 2026-10-11
 
 ### Changed

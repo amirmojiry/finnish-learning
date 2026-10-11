@@ -12,3 +12,5 @@ Current mapped simple-past examples: A2.1 Section 1 Lesson 1 **introduces** `a21
 This change does not alter lesson progression or user storage. Lesson-overview UI, activity-count flexibility and additional lesson mappings are separate follow-up work.
 
 A2.1 Section 2 lessons 3–4 now include context-specific positively graded recognition of `vähän kuumetta`, supported symptom-past reporting, controlled polite clarification requests, and supported `pitää + tehdä` necessity. These are linked to reviewed `a12-quantities`, `a21-imperfect`, `a12-requests`, and `a13-necessity` targets. They do not assess unconstrained partitive paradigms, conditional morphology or medical competency.
+
+A2.1 Section 2 lessons 5–10 now distinguish reviewed, positively assessed supported service requests, location questions, present morphology and necessity frames. Vocabulary already authored in earlier lessons is marked reviewed; checkpoint lessons contain no new vocabulary. These guided activities do not certify free production or general tense/case mastery.
