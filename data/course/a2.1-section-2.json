@@ -1997,12 +1997,14 @@
           ]
         },
         {
-          "type": "negative-transform",
-          "item": "a21s2-e-017",
-          "affirmative_item": "a21s2-e-017-affirmative",
-          "negative_item": "a21s2-e-017",
-          "grammar_concept_ids": [
-            "a12-negation-expand"
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s2-e-019",
+          "options": [
+            "a21s2-e-081",
+            "a21s2-e-082",
+            "a21s2-e-006",
+            "a21s2-e-019"
           ]
         },
         {
@@ -2017,14 +2019,12 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a21s2-e-019",
-          "options": [
-            "a21s2-e-081",
-            "a21s2-e-082",
-            "a21s2-e-006",
-            "a21s2-e-019"
+          "type": "negative-transform",
+          "item": "a21s2-e-017",
+          "affirmative_item": "a21s2-e-017-affirmative",
+          "negative_item": "a21s2-e-017",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
         },
         {
