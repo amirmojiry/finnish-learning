@@ -15,7 +15,7 @@ test('authored lesson objectives are presented by category', () => {
   assert.match(view.grammarGoals[0].label, /alkoivat/);
 });
 test('legacy lesson details retain objective summary and grammar', () => {
-  const view = lessonObjectiveDisplay(section.lessons[3], section.items);
+  const view = lessonObjectiveDisplay(section.lessons[4], section.items);
   assert.equal(view.structured, false);
   assert.ok(view.objective);
   assert.equal(view.summary, ''); // Duplicate authored summary is suppressed.
