@@ -4379,6 +4379,9 @@
           "expected_fi": "Mille luukulle minun pitää mennä?",
           "accepted_answers": [
             "Mille luukulle minun pitää mennä?"
+          ],
+          "grammar_concept_ids": [
+            "a13-necessity"
           ]
         }
       ],
