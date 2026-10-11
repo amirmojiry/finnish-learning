@@ -44,7 +44,17 @@ test('already introduced forms have reviewed, not new, lexical status', () => {
   assert.equal(mapped.get('a21s1-t-032'), 'reviewed'); // myöhässä, previously in A1.2
   assert.equal(mapped.get('a21s1-t-033'), 'introduced'); // tuntia form
   assert.ok(hotel.learning_objectives.lexical.every(goal => goal.status === 'introduced'));
-  assert.ok(problems.learning_objectives.lexical.every(goal => goal.status === 'introduced'));
+  const problemsMap = new Map(problems.learning_objectives.lexical.map(goal => [goal.target_id, goal.status]));
+  assert.equal(section.items['a21s1-t-050'].surface_form, 'lippua');
+  assert.equal(problemsMap.get('a21s1-t-050'), 'reviewed');
+  assert.ok(problems.learning_objectives.lexical.every(goal => (
+    goal.target_id === 'a21s1-t-050' || goal.status === 'introduced'
+  )));
+  const priorTravel = require('../data/course/a1.2-section-2.json');
+  const previouslyAssessed = priorTravel.lessons.flatMap(lesson => lesson.morphology_practice || [])
+    .find(activity => activity.type === 'inflection-production' && activity.expected_fi === 'lippua');
+  assert.ok(previouslyAssessed, 'A1.2 must positively assess lippua before it can be reviewed');
+  assert.ok(previouslyAssessed.accepted_answers.includes('lippua'));
 });
 
 test('preserve contextual grammar notes without falsely asserting their independent assessment', () => {
