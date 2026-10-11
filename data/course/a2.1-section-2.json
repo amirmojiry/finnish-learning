@@ -2886,19 +2886,19 @@
         },
         {
           "type": "morphology-choice",
-          "item": "a21s2-e-044",
-          "base_fi": "lääke",
+          "item": "a21s2-e-047",
+          "base_fi": "apteekki",
           "feature_fa": "انتخاب حالت درست در جمله",
           "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
-          "frame_fi": "Haluaisin kysyä tästä _____.",
+          "frame_fi": "Kysyn _____, jos en ymmärrä.",
           "options_fi": [
-            "lääkkeeseen",
-            "lääkkeessä",
-            "lääkkeestä",
-            "lääkkeellä"
+            "apteekkiin",
+            "apteekissa",
+            "apteekista",
+            "apteekilla"
           ],
-          "expected_fi": "lääkkeestä",
-          "explanation_fa": "برای پرسیدن دربارهٔ دارو، ترکیب «kysyä tästä lääkkeestä» با elatiivi استفاده می‌شود.",
+          "expected_fi": "apteekista",
+          "explanation_fa": "«kysyä apteekista» در این جمله پرسیدن از داروخانه را نشان می‌دهد؛ صورت «apteekista» حالت elatiivi است.",
           "grammar_concept_ids": [
             "a21-rections"
           ]
@@ -3114,17 +3114,17 @@
             "prerequisite_concept_ids": [
               "a13-local-expansion"
             ],
-            "explanation_fa": "برای پرسیدن دربارهٔ دارو، ترکیب «kysyä tästä lääkkeestä» با elatiivi استفاده می‌شود.",
+            "explanation_fa": "«kysyä apteekista» در این جمله پرسیدن از داروخانه را نشان می‌دهد؛ صورت «apteekista» حالت elatiivi است.",
             "examples": [
               {
-                "fi": "Haluaisin kysyä tästä lääkkeestä.",
-                "fa": "می‌خواهم دربارهٔ این دارو سؤال کنم."
+                "fi": "Kysyn apteekista, jos en ymmärrä.",
+                "fa": "اگر متوجه نشوم، از داروخانه می‌پرسم."
               }
             ],
             "evidence": [
               {
                 "activity_type": "morphology-choice",
-                "item_id": "a21s2-e-044",
+                "item_id": "a21s2-e-047",
                 "mode": "recognition"
               }
             ]
