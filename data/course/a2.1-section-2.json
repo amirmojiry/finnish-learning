@@ -1526,6 +1526,24 @@
       "accepted_answers": [
         "Tarvitsen myös todistuksen. Voitteko lähettää vahvistuksen sähköpostilla?"
       ]
+    },
+    "a21s2-e-017-affirmative": {
+      "id": "a21s2-e-017-affirmative",
+      "surface_form": "Pääsen vastaanotolle huomenna.",
+      "lemma": "Pääsen vastaanotolle huomenna.",
+      "translation_fa": "فردا می‌توانم برای ویزیت بیایم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s2",
+        "curated-service"
+      ],
+      "example_fi": "Pääsen vastaanotolle huomenna.",
+      "example_fa": "فردا می‌توانم برای ویزیت بیایم.",
+      "accepted_answers": [
+        "Pääsen vastaanotolle huomenna."
+      ]
     }
   },
   "lessons": [
@@ -1593,6 +1611,22 @@
             3
           ],
           "expected_fi": "Tiistai kello kymmenen sopii minulle."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-007",
+          "prompt_fa": "از پذیرش دربارهٔ وقت‌های خالی روز سه‌شنبه مؤدبانه سؤال کن.",
+          "cues_fi": [
+            "Onko",
+            "teillä"
+          ],
+          "expected_fi": "Onko teillä vapaita aikoja tiistaina?",
+          "accepted_answers": [
+            "Onko teillä vapaita aikoja tiistaina?"
+          ],
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         }
       ],
       "morphology_practice": [
@@ -1607,7 +1641,10 @@
           "accepted_answers": [
             "varata"
           ],
-          "explanation_fa": "«Haluaisin varata» یعنی «می‌خواهم رزرو کنم»؛ پس از haluaisin شکل پایهٔ «varata» می‌آید."
+          "explanation_fa": "«Haluaisin varata» یعنی «می‌خواهم رزرو کنم»؛ پس از haluaisin شکل پایهٔ «varata» می‌آید.",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         }
       ],
       "activities": [
@@ -1741,7 +1778,60 @@
             "a21s2-e-008"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-1-can-do",
+            "can_do_fa": "برای پزشک وقت بخواهم، دربارهٔ وقت‌های خالی بپرسم و زمانی مناسب را تأیید کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-003",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-004",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-005",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-006",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-007",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "برای درخواست محترمانهٔ وقت از «haluaisin varata» و برای پرسیدن وقت‌های خالی از «Onko teillä ...?» استفاده کن.",
+            "examples": [
+              {
+                "fi": "Onko teillä vapaita aikoja tiistaina?",
+                "fa": "آیا سه‌شنبه وقت خالی دارید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-007",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-2",
@@ -1805,6 +1895,22 @@
             2
           ],
           "expected_fi": "Onko perjantaina vapaita aikoja?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-016",
+          "prompt_fa": "به پذیرش بگو باید وقت ویزیتت را جابه‌جا کنی.",
+          "cues_fi": [
+            "Minun",
+            "pitää"
+          ],
+          "expected_fi": "Minun pitää siirtää vastaanottoaikaani.",
+          "accepted_answers": [
+            "Minun pitää siirtää vastaanottoaikaani."
+          ],
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "morphology_practice": [
@@ -1819,7 +1925,10 @@
           "accepted_answers": [
             "pääse"
           ],
-          "explanation_fa": "در «En pääse» صورت «pääse» بعد از «en» می‌آید؛ این عبارت را در بافت کامل تمرین کن."
+          "explanation_fa": "در «En pääse» صورت «pääse» بعد از «en» می‌آید؛ این عبارت را در بافت کامل تمرین کن.",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -1868,12 +1977,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a21s2-e-017",
+          "item": "a21s2-e-018",
           "options": [
-            "a21s2-e-033",
-            "a21s2-e-034",
-            "a21s2-e-035",
-            "a21s2-e-017"
+            "a21s2-e-056",
+            "a21s2-e-018",
+            "a21s2-e-061",
+            "a21s2-e-062"
           ]
         },
         {
@@ -1890,12 +1999,12 @@
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "a21s2-e-018",
+          "item": "a21s2-e-017",
           "options": [
-            "a21s2-e-056",
-            "a21s2-e-018",
-            "a21s2-e-061",
-            "a21s2-e-062"
+            "a21s2-e-017",
+            "a21s2-e-045",
+            "a21s2-e-046",
+            "a21s2-e-047"
           ]
         },
         {
@@ -1910,14 +2019,12 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a21s2-e-019",
-          "options": [
-            "a21s2-e-081",
-            "a21s2-e-082",
-            "a21s2-e-006",
-            "a21s2-e-019"
+          "type": "negative-transform",
+          "item": "a21s2-e-017",
+          "affirmative_item": "a21s2-e-017-affirmative",
+          "negative_item": "a21s2-e-017",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
         },
         {
@@ -1953,7 +2060,81 @@
             "a21s2-e-008"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-2-can-do",
+            "can_do_fa": "بگویم در وقت تعیین‌شده نمی‌توانم حاضر شوم و درخواست تغییر یا لغو آن را مطرح کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-013",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-t-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-t-015",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-016",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-017",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "«Minun pitää + مصدر» ضرورت انجام کاری را نشان می‌دهد.",
+            "examples": [
+              {
+                "fi": "Minun pitää siirtää vastaanottoaikaani.",
+                "fa": "باید وقت ویزیتم را جابه‌جا کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-016",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "«En pääse» صورت منفی اول‌شخص «päästä» است؛ یک جملهٔ مثبت را به جملهٔ منفی تبدیل کن.",
+            "examples": [
+              {
+                "fi": "En pääse vastaanotolle huomenna.",
+                "fa": "فردا نمی‌توانم برای ویزیت بیایم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "negative-transform",
+                "item_id": "a21s2-e-017",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-3",

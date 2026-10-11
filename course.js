@@ -1053,7 +1053,6 @@
           && (
             (activity.type === 'choice' && activity.mode !== 'listen')
             || activity.type === 'visual-choice'
-            || activity.type === 'negative-transform'
           )
         ));
       } else {
@@ -1072,7 +1071,6 @@
             (activity.type === 'choice' && activity.mode !== 'listen')
             || activity.type === 'visual-choice'
             || activity.type === 'type'
-            || activity.type === 'negative-transform'
           )
         ));
       }

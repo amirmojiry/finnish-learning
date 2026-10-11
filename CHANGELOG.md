@@ -6,6 +6,13 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.3] - 2026-10-11
+
+### Changed
+
+- Assess real polite appointment questions, obligation and sentence-level negation in A2.1 Section 2 lessons 1-2 through authored positive controlled-production and transformation tasks.
+- Mark previously taught rescheduling verbs as reviewed, preserve existing fifteen-slide lesson contracts and user progress, and add regression tests for correct grammar evidence and prerequisite links.
+
 ## [1.32.2] - 2026-10-11
 
 ### Added

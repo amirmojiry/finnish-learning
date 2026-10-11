@@ -26,9 +26,9 @@
     "outside_dictionary_and_not_in_original_parole": 6,
     "assessed_again_after_earlier_reference": 295,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 1,
-    "lessons_without_explicit_grammar_concept_ids": 129,
-    "graded_grammar_related_slots": 243,
+    "grammar_concepts_with_explicit_lesson_ids": 4,
+    "lessons_without_explicit_grammar_concept_ids": 127,
+    "graded_grammar_related_slots": 246,
     "graded_morphology_slots": 54,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
@@ -144,7 +144,7 @@
       "lessons": 10,
       "graded_slots": 105,
       "unassessed_target_forms": 37,
-      "lessons_missing_grammar_ids": 9
+      "lessons_missing_grammar_ids": 7
     }
   ],
   "lessons": [
@@ -13044,7 +13044,7 @@
           "tiistai kello kymmenen sopii minulle."
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 3,
         "later_correct_retrieval": [
           "on"
         ],
@@ -13059,7 +13059,7 @@
           "lääkärille",
           "vastaanotto"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minulle",
@@ -13087,12 +13087,16 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -13144,7 +13148,7 @@
           "onko perjantaina vapaita aikoja?",
           "voinko perua ajan?"
         ],
-        "receptive_count": 6,
+        "receptive_count": 5,
         "productive_count": 3,
         "later_correct_retrieval": [
           "minun"
@@ -13160,7 +13164,7 @@
           "siirtää",
           "vastaanotolle"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -13188,12 +13192,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand",
+          "a13-necessity"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -17497,27 +17507,11 @@
         ]
       },
       {
-        "id": "a12-requests",
-        "level": "A1.2",
-        "title_en": "Polite service requests as formulae",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
-      },
-      {
         "id": "a12-commands",
         "level": "A1.2",
         "title_en": "Singular imperatives and route instructions",
         "prerequisites": [
           "a11-present-chunks"
-        ]
-      },
-      {
-        "id": "a12-negation-expand",
-        "level": "A1.2",
-        "title_en": "Expanded everyday negation",
-        "prerequisites": [
-          "a11-negation"
         ]
       },
       {
@@ -17566,14 +17560,6 @@
         "title_en": "Partitive in familiar object frames",
         "prerequisites": [
           "a12-quantities"
-        ]
-      },
-      {
-        "id": "a13-necessity",
-        "level": "A1.3",
-        "title_en": "Necessity and ability frames",
-        "prerequisites": [
-          "a12-requests"
         ]
       },
       {
