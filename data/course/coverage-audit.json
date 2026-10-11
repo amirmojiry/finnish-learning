@@ -26,10 +26,10 @@
     "outside_dictionary_and_not_in_original_parole": 6,
     "assessed_again_after_earlier_reference": 295,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 7,
+    "grammar_concepts_with_explicit_lesson_ids": 11,
     "lessons_without_explicit_grammar_concept_ids": 120,
-    "graded_grammar_related_slots": 255,
-    "graded_morphology_slots": 56,
+    "graded_grammar_related_slots": 262,
+    "graded_morphology_slots": 62,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
   },
@@ -12225,7 +12225,7 @@
           "kortilla",
           "paluulippu"
         ],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "myös",
@@ -12254,13 +12254,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-object-core"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-partitive-patterns",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -12331,7 +12333,7 @@
           "myöhässä",
           "tuntia"
         ],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "oli",
@@ -12360,13 +12362,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a12-quantities",
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a11-case-chunks",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -12438,7 +12442,7 @@
           "aamiainen",
           "hotellissa"
         ],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "hyvä",
@@ -12467,13 +12471,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-rections"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-local-expansion",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -12545,7 +12551,7 @@
           "lippua",
           "neuvoa"
         ],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "koska",
@@ -12574,13 +12580,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-object-core"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-partitive-patterns",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -12652,7 +12660,7 @@
           "kirkon",
           "valokuvia"
         ],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "hyvä",
@@ -12681,13 +12689,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-rections"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-local-expansion",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -12742,7 +12752,7 @@
           "sitten nousin junaan."
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 3,
         "later_correct_retrieval": [
           "ensin",
           "sitten"
@@ -12756,7 +12766,7 @@
           "junaan",
           "lopuksi"
         ],
-        "distractor_only_count": 8,
+        "distractor_only_count": 5,
         "reading_only": [],
         "high_frequency_target_forms": [
           "jälkeen",
@@ -12784,15 +12794,17 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-sequencing"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
           "a13-past-recognition",
-          "a13-verb-classes"
+          "a13-verb-classes",
+          "a21-imperfect"
         ]
       }
     },
@@ -12856,7 +12868,7 @@
           "sunnuntaina",
           "tampereella"
         ],
-        "distractor_only_count": 12,
+        "distractor_only_count": 9,
         "reading_only": [
           "tapasin ystäväni. palasin kotiin sunnuntaina.",
           "viime lauantaina kävin tampereella. matkustin sinne junalla."
@@ -12887,13 +12899,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a21-illative-patterns",
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-local-expansion",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -12980,13 +12994,15 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-object-core"
         ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-partitive-patterns",
           "a13-past-recognition",
           "a13-verb-classes"
         ]
@@ -13521,14 +13537,16 @@
         "note_present": true,
         "concept_ids": [
           "a12-requests",
-          "a13-present-paradigm"
+          "a13-present-paradigm",
+          "a21-rections"
         ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
-          "a11-present-chunks"
+          "a11-present-chunks",
+          "a13-local-expansion"
         ]
       }
     },
@@ -17587,14 +17605,6 @@
         ]
       },
       {
-        "id": "a21-object-core",
-        "level": "A2.1",
-        "title_en": "Partitive vs total-object basics",
-        "prerequisites": [
-          "a13-partitive-patterns"
-        ]
-      },
-      {
         "id": "a21-plural-partitive",
         "level": "A2.1",
         "title_en": "Plural partitive in common phrases",
@@ -17603,35 +17613,11 @@
         ]
       },
       {
-        "id": "a21-illative-patterns",
-        "level": "A2.1",
-        "title_en": "Expanded destination forms",
-        "prerequisites": [
-          "a13-local-expansion"
-        ]
-      },
-      {
-        "id": "a21-rections",
-        "level": "A2.1",
-        "title_en": "Common verb-case government",
-        "prerequisites": [
-          "a13-local-expansion"
-        ]
-      },
-      {
         "id": "a21-maan",
         "level": "A2.1",
         "title_en": "Common -maan/-massa frames",
         "prerequisites": [
           "a13-verb-classes"
-        ]
-      },
-      {
-        "id": "a21-sequencing",
-        "level": "A2.1",
-        "title_en": "Sequencing simple events",
-        "prerequisites": [
-          "a21-imperfect"
         ]
       }
     ],
