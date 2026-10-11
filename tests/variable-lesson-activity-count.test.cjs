@@ -6,7 +6,7 @@ const original=require('../data/course/a2.1-section-1.json');
 const clone=()=>structuredClone(original);
 const altered=count=>{
  const section=clone(),lesson=section.lessons[0];
- if(count===14)lesson.activities.splice(6,1);
+ if(count===14)lesson.activities.splice(14,1);
  else if(count>15){
    const extra=structuredClone(lesson.activities.find(a=>a.type==='choice'&&a.mode==='meaning'&&a.item==='a21s1-e-006'));
    for(let i=0;i<count-15;i++)lesson.activities.push(structuredClone(extra));

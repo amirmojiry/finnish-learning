@@ -1177,6 +1177,9 @@
       } else {
         lesson.activities = lesson.activities.map((activity) => ({ ...activity }));
       }
+      if (!Array.isArray(lesson.activities) || lesson.activities.length < 1 || lesson.activities.length > 60) {
+        throw new Error(`Lesson ${lesson.id || '?'} requires between 1 and 60 activities.`);
+      }
       lesson.review_targets = Array.isArray(lesson.review_targets) ? lesson.review_targets : seen.slice(-3);
       injectProductionActivity(section, lesson);
       injectListeningActivities(section, lesson);
