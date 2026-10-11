@@ -51,6 +51,8 @@ test('A2.1 service lessons map all authored Finnish/Persian contract targets',()
   assert.equal(l.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1,l.id);
   assert.equal(l.activities.filter(a=>a.type==='dictation').length,1,l.id);
   assert.equal(l.activities.filter(a=>a.type==='sentence-order').length,1,l.id);
+  assert.ok(l.morphology_practice.some(a=>a.type==='inflection-production'),l.id+' must declare typed inflection practice');
+  assert.ok(l.activities.some(a=>a.type==='inflection-production'),l.id+' must retain graded typed inflection practice');
   assert.equal(l.activities.filter(a=>['inflection-production','morphology-choice'].includes(a.type)).length,l.morphology_practice.length,l.id);
  }
 });
