@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.32.2] - 2026-10-11
+
+### Added
+
+- Evidence-linked, reviewed simple-past objectives for A2.1 travel lessons 7–10, including the cumulative checkpoint, with reviewed bilingual examples.
+- Accurate review labels for recurring forms `ensin`, `lauantaina` and `sunnuntaina`; all 15 checkpoint lexical targets are review-only.
+- Regression tests and refreshed coverage snapshots; no new content, activity counts, progress format, dictionary ranks or independent sequencing/mastery claims.
+
 ## [1.32.1] - 2026-10-11
 
 ### Added

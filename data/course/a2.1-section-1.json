@@ -3166,7 +3166,10 @@
           "accepted_answers": [
             "Kävin"
           ],
-          "explanation_fa": "«Kävin» صورت گذشتهٔ اول‌شخص از «käydä» است."
+          "explanation_fa": "«Kävin» صورت گذشتهٔ اول‌شخص از «käydä» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -3300,7 +3303,61 @@
             "a21s1-h-039"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-7-can-do",
+            "can_do_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-057",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-058",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-059",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-060",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-061",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«Kävin» صورت گذشتهٔ اول‌شخص از «käydä» است.",
+            "examples": [
+              {
+                "fi": "Kävin museossa.",
+                "fa": "به موزه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-060",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-8",
@@ -3376,7 +3433,10 @@
           "accepted_answers": [
             "ostin"
           ],
-          "explanation_fa": "«ostin» گذشتهٔ اول‌شخص «ostaa» است."
+          "explanation_fa": "«ostin» گذشتهٔ اول‌شخص «ostaa» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -3510,7 +3570,61 @@
             "a21s1-h-030"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-8-can-do",
+            "can_do_fa": "چهار اتفاق گذشته را با «اول»، «بعد»، «پس از آن» و «در پایان» به‌ترتیب تعریف کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-066",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-067",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-068",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-069",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-070",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«ostin» گذشتهٔ اول‌شخص «ostaa» است.",
+            "examples": [
+              {
+                "fi": "Ensin ostin lipun.",
+                "fa": "اول بلیت خریدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-069",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-9",
@@ -3589,7 +3703,10 @@
           "accepted_answers": [
             "kävin"
           ],
-          "explanation_fa": "«kävin» صورت گذشتهٔ اول‌شخص «käydä» است."
+          "explanation_fa": "«kävin» صورت گذشتهٔ اول‌شخص «käydä» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "activities": [
@@ -3723,7 +3840,61 @@
             "a21s1-e-016"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-9-can-do",
+            "can_do_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-t-074",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-075",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-076",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-077",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-078",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«kävin» صورت گذشتهٔ اول‌شخص «käydä» است.",
+            "examples": [
+              {
+                "fi": "Viime lauantaina kävin Tampereella.",
+                "fa": "شنبهٔ گذشته به تامپره رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-077",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-1-lesson-10",
@@ -3810,7 +3981,10 @@
           "accepted_answers": [
             "Näin"
           ],
-          "explanation_fa": "«Näin» صورت گذشتهٔ اول‌شخص فعل «nähdä» است."
+          "explanation_fa": "«Näin» صورت گذشتهٔ اول‌شخص فعل «nähdä» است.",
+          "grammar_concept_ids": [
+            "a21-imperfect"
+          ]
         }
       ],
       "checkpoint_targets": [
@@ -3972,7 +4146,101 @@
           "mode": "finnish",
           "item": "a21s1-e-080"
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-1-lesson-10-can-do",
+            "can_do_fa": "در تمرین‌های ترکیبی سفر، زمان گذشته، بلیت، اقامت، مشکل و ترتیب رویدادها پاسخ بدهم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s1-e-006",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-025",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-034",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-043",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-054",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-061",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-070",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-077",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-044",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-053",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-062",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-080",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a21-imperfect",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-past-recognition",
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "«Näin» صورت گذشتهٔ اول‌شخص فعل «nähdä» است.",
+            "examples": [
+              {
+                "fi": "Näin vanhan kirkon.",
+                "fa": "یک کلیسای قدیمی را دیدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-e-061",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
