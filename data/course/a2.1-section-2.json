@@ -2849,6 +2849,22 @@
             2
           ],
           "expected_fi": "Luen ohjeen ennen käyttöä."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-044",
+          "prompt_fa": "از داروساز مؤدبانه دربارهٔ این دارو سؤال کن.",
+          "cues_fi": [
+            "Haluaisin",
+            "kysyä"
+          ],
+          "expected_fi": "Haluaisin kysyä tästä lääkkeestä.",
+          "accepted_answers": [
+            "Haluaisin kysyä tästä lääkkeestä."
+          ],
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2863,7 +2879,10 @@
           "accepted_answers": [
             "Luen"
           ],
-          "explanation_fa": "«Luen» صورت حالِ اول‌شخصِ «lukea» است؛ در این نمونه راهنمای نوشته‌شده را می‌خوانم."
+          "explanation_fa": "«Luen» صورت حالِ اول‌شخصِ «lukea» است؛ در این نمونه راهنمای نوشته‌شده را می‌خوانم.",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
         }
       ],
       "activities": [
@@ -2997,7 +3016,81 @@
             "a21s2-e-008"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-5-can-do",
+            "can_do_fa": "جای داروخانه را بپرسم و برای فهمیدن راهنمای نوشته‌شدهٔ دارو سؤال کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-040",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-t-041",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-042",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-043",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-044",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "این ساختار را برای درخواست یا پرسش مشخص در موقعیت خدماتی با راهنمای نوشتاری تمرین کن.",
+            "examples": [
+              {
+                "fi": "Haluaisin kysyä tästä lääkkeestä.",
+                "fa": "می‌خواهم دربارهٔ این دارو سؤال کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-044",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Luen» صورت حالِ اول‌شخصِ «lukea» است؛ در این نمونه راهنمای نوشته‌شده را می‌خوانم.",
+            "examples": [
+              {
+                "fi": "Luen ohjeen ennen käyttöä.",
+                "fa": "پیش از استفاده، راهنما را می‌خوانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-046",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-6",
@@ -3063,6 +3156,22 @@
             3
           ],
           "expected_fi": "Mille luukulle minun pitää mennä?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-052",
+          "prompt_fa": "از کارمند بپرس باجهٔ خدمات کجاست.",
+          "cues_fi": [
+            "Missä",
+            "palvelupiste"
+          ],
+          "expected_fi": "Missä palvelupiste sijaitsee?",
+          "accepted_answers": [
+            "Missä palvelupiste sijaitsee?"
+          ],
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
       ],
       "morphology_practice": [
@@ -3077,7 +3186,10 @@
           "accepted_answers": [
             "mennä"
           ],
-          "explanation_fa": "«Minun pitää mennä» یعنی «باید بروم»؛ پس از «pitää» مصدر «mennä» می‌آید."
+          "explanation_fa": "«Minun pitää mennä» یعنی «باید بروم»؛ پس از «pitää» مصدر «mennä» می‌آید.",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "activities": [
@@ -3211,7 +3323,81 @@
             "a21s2-e-008"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-6-can-do",
+            "can_do_fa": "باجهٔ درست را پیدا کنم، نیاز اداری ساده‌ای را بیان کنم و دربارهٔ نوبت بپرسم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-049",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-050",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-051",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-052",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-053",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "«Minun pitää mennä» یعنی «باید بروم»؛ پس از «pitää» مصدر «mennä» می‌آید.",
+            "examples": [
+              {
+                "fi": "Mille luukulle minun pitää mennä?",
+                "fa": "باید به کدام باجه بروم؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-055",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "این ساختار را برای درخواست یا پرسش مشخص در موقعیت خدماتی با راهنمای نوشتاری تمرین کن.",
+            "examples": [
+              {
+                "fi": "Missä palvelupiste sijaitsee?",
+                "fa": "باجهٔ خدمات کجاست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-052",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-7",
@@ -3275,6 +3461,22 @@
             2
           ],
           "expected_fi": "Pitääkö tähän kirjoittaa päivämäärä?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-065",
+          "prompt_fa": "به کارمند بگو باید فرم را امضا کنی.",
+          "cues_fi": [
+            "Minun",
+            "pitää"
+          ],
+          "expected_fi": "Minun pitää allekirjoittaa lomake.",
+          "accepted_answers": [
+            "Minun pitää allekirjoittaa lomake."
+          ],
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "morphology_practice": [
@@ -3289,7 +3491,10 @@
           "accepted_answers": [
             "Kirjoitan"
           ],
-          "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است؛ «Kirjoitan nimeni» یعنی «نامم را می‌نویسم»."
+          "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است؛ «Kirjoitan nimeni» یعنی «نامم را می‌نویسم».",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
         }
       ],
       "activities": [
@@ -3423,7 +3628,81 @@
             "a21s2-e-065"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-7-can-do",
+            "can_do_fa": "قسمت‌های اصلی یک فرم ساده را بفهمم و پیش از امضا دربارهٔ بخش نامفهوم سؤال کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-058",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-059",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-060",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-061",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-062",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است؛ «Kirjoitan nimeni» یعنی «نامم را می‌نویسم».",
+            "examples": [
+              {
+                "fi": "Kirjoitan nimeni tähän.",
+                "fa": "نامم را اینجا می‌نویسم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-061",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "این ساختار را برای درخواست یا پرسش مشخص در موقعیت خدماتی با راهنمای نوشتاری تمرین کن.",
+            "examples": [
+              {
+                "fi": "Minun pitää allekirjoittaa lomake.",
+                "fa": "باید فرم را امضا کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-065",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-8",
@@ -3487,6 +3766,22 @@
             2
           ],
           "expected_fi": "Voitteko lähettää sen sähköpostilla?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-073",
+          "prompt_fa": "مؤدبانه بخواه سند را با ایمیل بفرستند.",
+          "cues_fi": [
+            "Voitteko",
+            "lähettää"
+          ],
+          "expected_fi": "Voitteko lähettää sen sähköpostilla?",
+          "accepted_answers": [
+            "Voitteko lähettää sen sähköpostilla?"
+          ],
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         }
       ],
       "morphology_practice": [
@@ -3635,7 +3930,60 @@
             "a21s2-e-008"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-8-can-do",
+            "can_do_fa": "گواهی یا کپی مدرکی را درخواست کنم و دربارهٔ زمان آماده‌شدن و روش دریافت آن بپرسم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-067",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-068",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-069",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-070",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-071",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "این ساختار را برای درخواست یا پرسش مشخص در موقعیت خدماتی با راهنمای نوشتاری تمرین کن.",
+            "examples": [
+              {
+                "fi": "Voitteko lähettää sen sähköpostilla?",
+                "fa": "می‌توانید آن را با ایمیل بفرستید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-073",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-9",
@@ -3701,6 +4049,22 @@
             1
           ],
           "expected_fi": "Tarvitsen myös todistuksen."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s2-e-079",
+          "prompt_fa": "دربارهٔ وقت‌های خالی پنجشنبه سؤال کن.",
+          "cues_fi": [
+            "Onko",
+            "torstaina"
+          ],
+          "expected_fi": "Onko torstaina vapaita aikoja?",
+          "accepted_answers": [
+            "Onko torstaina vapaita aikoja?"
+          ],
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         }
       ],
       "morphology_practice": [
@@ -3715,7 +4079,10 @@
           "accepted_answers": [
             "sopii"
           ],
-          "explanation_fa": "«sopii» صورت حال سوم‌شخص «sopia» است؛ «Torstai sopii minulle» یعنی پنجشنبه برایم مناسب است."
+          "explanation_fa": "«sopii» صورت حال سوم‌شخص «sopia» است؛ «Torstai sopii minulle» یعنی پنجشنبه برایم مناسب است.",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
         }
       ],
       "activities": [
@@ -3849,7 +4216,81 @@
             "a21s2-e-044"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-9-can-do",
+            "can_do_fa": "گفت‌وگوی کوتاه خدماتی را بخوانم و درخواست وقت و تأیید آن را در چند جمله بنویسم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-t-076",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-t-077",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-t-069",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-078",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s2-e-079",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "این ساختار را برای درخواست یا پرسش مشخص در موقعیت خدماتی با راهنمای نوشتاری تمرین کن.",
+            "examples": [
+              {
+                "fi": "Onko torstaina vapaita aikoja?",
+                "fa": "پنجشنبه وقت خالی دارید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-079",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«sopii» صورت حال سوم‌شخص «sopia» است؛ «Torstai sopii minulle» یعنی پنجشنبه برایم مناسب است.",
+            "examples": [
+              {
+                "fi": "Torstai sopii minulle.",
+                "fa": "پنجشنبه برایم مناسب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-080",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a2.1-section-2-lesson-10",
@@ -3938,6 +4379,9 @@
           "expected_fi": "Mille luukulle minun pitää mennä?",
           "accepted_answers": [
             "Mille luukulle minun pitää mennä?"
+          ],
+          "grammar_concept_ids": [
+            "a13-necessity"
           ]
         }
       ],
@@ -3953,7 +4397,10 @@
           "accepted_answers": [
             "Kirjoitan"
           ],
-          "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است."
+          "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است.",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
         }
       ],
       "activities": [
@@ -4098,7 +4545,121 @@
           "mode": "finnish",
           "item": "a21s2-e-081"
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a2.1-section-2-lesson-10-can-do",
+            "can_do_fa": "در تمرین‌های ترکیبی گرفتن وقت، نشانه‌ها، فرم‌ها و دریافت مدارک پاسخ بدهم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a21s2-e-006",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-034",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-045",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-061",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-070",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-080",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-009",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-018",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-025",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-052",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-073",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s2-e-081",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "این ساختار را برای درخواست یا پرسش مشخص در موقعیت خدماتی با راهنمای نوشتاری تمرین کن.",
+            "examples": [
+              {
+                "fi": "Mille luukulle minun pitää mennä?",
+                "fa": "باید به کدام باجه بروم؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s2-e-055",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Kirjoitan» صورت حال اول‌شخص «kirjoittaa» است.",
+            "examples": [
+              {
+                "fi": "Kirjoitan nimeni tähän.",
+                "fa": "نامم را اینجا می‌نویسم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s2-e-061",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
