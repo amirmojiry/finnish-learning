@@ -775,7 +775,8 @@
     return [...new Set(values.filter(Boolean))];
   }
 
-  function buildStandardActivities(targets, previousTargets = []) {
+  function buildStandardActivities(targets, previousTargets = [], activityCount = 15) {
+    if (!Number.isSafeInteger(activityCount) || activityCount < 1 || activityCount > 200) throw new Error('Invalid standard lesson activity count.');
     if (!Array.isArray(targets) || targets.length < 1 || targets.length > 6) {
       throw new Error('A standard lesson must define between one and six practice targets.');
     }
@@ -797,12 +798,13 @@
       activities.push({ type: 'choice', mode: 'meaning', item: target, options: optionsFor(target) });
     }
 
-    const remaining = 15 - activities.length;
+    if (activityCount < activities.length) throw new Error('Activity count cannot omit required teaching and recognition cards.');
+    const remaining = activityCount - activities.length;
     const gradedModes = remaining <= 3
       ? [['choice', 'listen'], ['type', 'finnish'], ['type', 'cloze']]
       : [['choice', 'finnish'], ['choice', 'listen'], ['choice', 'cloze'], ['type', 'finnish'], ['type', 'cloze']];
     let cursor = 0;
-    while (activities.length < 15) {
+    while (activities.length < activityCount) {
       const useReview = reviewTargets.length && cursor % 3 === 2;
       const item = useReview
         ? reviewTargets[cursor % reviewTargets.length]
@@ -815,14 +817,14 @@
       );
       cursor += 1;
     }
-    return activities.slice(0, 15);
+    return activities;
   }
 
   function buildCheckpointActivities(section, lesson) {
     const targets = Array.isArray(lesson.checkpoint_targets) ? lesson.checkpoint_targets : [];
     const modes = Array.isArray(lesson.checkpoint_modes) ? lesson.checkpoint_modes : [];
-    if (targets.length !== 15 || modes.length !== 15) {
-      throw new Error('The checkpoint lesson must define fifteen targets and modes.');
+    if (!targets.length || targets.length !== modes.length) {
+      throw new Error('The checkpoint lesson requires matching nonempty targets and modes.');
     }
     const allIds = Object.keys(section.items);
     return targets.map((itemId, index) => {
@@ -1172,7 +1174,7 @@
           const practiceTargets = Array.isArray(lesson.new_targets) && lesson.new_targets.length
             ? lesson.new_targets
             : lesson.practice_targets;
-          lesson.activities = buildStandardActivities(practiceTargets, seen);
+          lesson.activities = buildStandardActivities(practiceTargets, seen, lesson.activity_count ?? section.activity_count_per_lesson ?? 15);
         }
       } else {
         lesson.activities = lesson.activities.map((activity) => ({ ...activity }));
@@ -1331,8 +1333,12 @@
     }
     if (section.lessons.length !== 10) throw new Error('The sample section must contain exactly ten lessons.');
     for (const lesson of section.lessons) {
-      if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || lesson.activities.length !== 15) {
-        throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or fifteen deterministic activities.`);
+      if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || !lesson.activities.length) {
+        throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or nonempty deterministic activities.`);
+      }
+      const declaredCount = lesson.activity_count ?? (Array.isArray(rawSection.lessons.find((entry) => entry.id === lesson.id)?.activities) ? lesson.activities.length : section.activity_count_per_lesson ?? 15);
+      if (!Number.isSafeInteger(declaredCount) || declaredCount < 1 || declaredCount > 200 || lesson.activities.length !== declaredCount) {
+        throw new Error(`Lesson ${lesson.id} activity count differs from its declared positive count.`);
       }
       const productionActivities = lesson.activities.filter((activity) => activity.type === 'production');
       if (productionActivities.length !== 1 || productionActivities[0].item !== lesson.production_targets[0]) {
