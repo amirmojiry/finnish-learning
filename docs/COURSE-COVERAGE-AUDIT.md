@@ -9,7 +9,7 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 - 670 lexical target placements and 464 distinct surface forms; 432 lemma-field values (unverified) and 0 explicit sense IDs.
 - 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 295 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 400 dictionary entries; 124 authored lexical target forms found in the curated dictionary; 340 missing, of which 334 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 11 with explicit lesson concept IDs. 120 lessons lack these links even though 263 structural/grammar slots exist (63 morphology slots).
+- 27 planned grammar concepts in shipped stages; 11 with explicit lesson concept IDs. 120 lessons lack these links even though 262 structural/grammar slots exist (62 morphology slots).
 - 112 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage

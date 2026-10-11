@@ -28,8 +28,8 @@
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 11,
     "lessons_without_explicit_grammar_concept_ids": 120,
-    "graded_grammar_related_slots": 263,
-    "graded_morphology_slots": 63,
+    "graded_grammar_related_slots": 262,
+    "graded_morphology_slots": 62,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
   },
@@ -13507,7 +13507,7 @@
           "käyttöohjeen",
           "lääkkeestä"
         ],
-        "distractor_only_count": 7,
+        "distractor_only_count": 10,
         "reading_only": [],
         "high_frequency_target_forms": [
           "ennen",
@@ -13537,16 +13537,14 @@
         "note_present": true,
         "concept_ids": [
           "a12-requests",
-          "a13-present-paradigm",
-          "a21-rections"
+          "a13-present-paradigm"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
-        "morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
-          "a11-present-chunks",
-          "a13-local-expansion"
+          "a11-present-chunks"
         ]
       }
     },
