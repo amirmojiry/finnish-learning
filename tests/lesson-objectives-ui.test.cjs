@@ -3,6 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { lessonObjectiveDisplay } = require('../course.js');
 const section = require('../data/course/a2.1-section-2.json');
+const legacySection = require('../data/course/a1.2-section-1.json');
 
 test('authored lesson objectives are presented by category', () => {
   const lesson = section.lessons[2];
@@ -15,7 +16,7 @@ test('authored lesson objectives are presented by category', () => {
   assert.match(view.grammarGoals[0].label, /alkoivat/);
 });
 test('legacy lesson details retain objective summary and grammar', () => {
-  const view = lessonObjectiveDisplay(section.lessons[4], section.items);
+  const view = lessonObjectiveDisplay(legacySection.lessons[0], legacySection.items);
   assert.equal(view.structured, false);
   assert.ok(view.objective);
   assert.equal(view.summary, ''); // Duplicate authored summary is suppressed.

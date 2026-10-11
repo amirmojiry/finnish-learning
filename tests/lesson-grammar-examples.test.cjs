@@ -3,6 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { lessonObjectiveDisplay } = require('../course.js');
 const section = require('../data/course/a2.1-section-2.json');
+const legacySection = require('../data/course/a1.2-section-1.json');
 test('structured grammar objectives retain reviewed bilingual examples for rendering', () => {
   const result = lessonObjectiveDisplay(section.lessons[2], section.items);
   assert.ok(result.structured);
@@ -16,7 +17,7 @@ test('structured grammar objectives retain reviewed bilingual examples for rende
   }
 });
 test('legacy lesson without structured goals remains unchanged', () => {
-  const result = lessonObjectiveDisplay(section.lessons[4], section.items);
+  const result = lessonObjectiveDisplay(legacySection.lessons[0], legacySection.items);
   assert.equal(result.structured, false);
   assert.deepEqual(result.grammarGoals, []);
 });
