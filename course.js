@@ -1165,6 +1165,9 @@
     };
     const seen = [];
     section.lessons.forEach((lesson, index) => {
+      if (lesson.activities !== undefined && !Array.isArray(lesson.activities)) {
+        throw new Error(`Lesson ${lesson.id || '?'} requires between 1 and 60 activities.`);
+      }
       if (!Array.isArray(lesson.activities)) {
         if (index === section.lessons.length - 1 && Array.isArray(lesson.checkpoint_targets)) {
           lesson.activities = buildCheckpointActivities(section, lesson);
