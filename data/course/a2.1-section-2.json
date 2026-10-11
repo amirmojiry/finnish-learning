@@ -2883,25 +2883,6 @@
           "grammar_concept_ids": [
             "a13-present-paradigm"
           ]
-        },
-        {
-          "type": "morphology-choice",
-          "item": "a21s2-e-047",
-          "base_fi": "apteekki",
-          "feature_fa": "انتخاب حالت درست در جمله",
-          "prompt_fa": "برای تکمیل جملهٔ فنلاندی، صورت درست را انتخاب کن.",
-          "frame_fi": "Kysyn _____, jos en ymmärrä.",
-          "options_fi": [
-            "apteekkiin",
-            "apteekissa",
-            "apteekista",
-            "apteekilla"
-          ],
-          "expected_fi": "apteekista",
-          "explanation_fa": "«kysyä apteekista» در این جمله پرسیدن از داروخانه را نشان می‌دهد؛ صورت «apteekista» حالت elatiivi است.",
-          "grammar_concept_ids": [
-            "a21-rections"
-          ]
         }
       ],
       "activities": [
@@ -3105,27 +3086,6 @@
                 "activity_type": "inflection-production",
                 "item_id": "a21s2-e-046",
                 "mode": "supported_production"
-              }
-            ]
-          },
-          {
-            "concept_id": "a21-rections",
-            "status": "reviewed",
-            "prerequisite_concept_ids": [
-              "a13-local-expansion"
-            ],
-            "explanation_fa": "«kysyä apteekista» در این جمله پرسیدن از داروخانه را نشان می‌دهد؛ صورت «apteekista» حالت elatiivi است.",
-            "examples": [
-              {
-                "fi": "Kysyn apteekista, jos en ymmärrä.",
-                "fa": "اگر متوجه نشوم، از داروخانه می‌پرسم."
-              }
-            ],
-            "evidence": [
-              {
-                "activity_type": "morphology-choice",
-                "item_id": "a21s2-e-047",
-                "mode": "recognition"
               }
             ]
           }

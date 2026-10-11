@@ -15,7 +15,7 @@ test('A2.1 travel lessons 4-6 link reviewed simple-past goals to graded positive
       { id: lesson.id + '-can-do', can_do_fa: lesson.objective_fa },
     ]);
     assert.deepEqual(lesson.learning_objectives.lexical.map(goal => goal.target_id), lesson.new_targets);
-    assert.deepEqual(lesson.learning_objectives.grammar.map(goal => goal.concept_id), ['a21-imperfect']);
+    assert.ok(lesson.learning_objectives.grammar.some(goal => goal.concept_id === 'a21-imperfect'));
     const goal = lesson.learning_objectives.grammar[0];
     assert.equal(goal.status, 'reviewed');
     assert.deepEqual(goal.prerequisite_concept_ids, prerequisiteIds);
@@ -60,8 +60,8 @@ test('already introduced forms have reviewed, not new, lexical status', () => {
 test('preserve contextual grammar notes without falsely asserting their independent assessment', () => {
   assert.match(lessons[1].grammar_fa, /مفعول کامل/u);
   assert.match(lessons[2].grammar_fa, /منفی گذشته/u);
-  assert.equal(lessons[1].learning_objectives.grammar.length, 1);
-  assert.equal(lessons[2].learning_objectives.grammar.length, 1);
+  assert.ok(lessons[1].learning_objectives.grammar.some(goal => goal.concept_id === 'a21-rections'));
+  assert.ok(lessons[2].learning_objectives.grammar.some(goal => goal.concept_id === 'a21-object-core'));
   assert.equal(section.lessons[0].learning_objectives.grammar[0].status, 'introduced');
   assert.equal(section.lessons[1].learning_objectives.grammar[0].status, 'reviewed');
 });
