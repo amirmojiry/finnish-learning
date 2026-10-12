@@ -7,22 +7,40 @@ const ROOT=path.resolve(__dirname,'..');
 const OUT=path.join(ROOT,'data/course/lexical-identity-sidecar.json');
 const normalize=value=>String(value||'').normalize('NFC').toLocaleLowerCase('fi-FI').trim();
 const stableId=(kind,form)=>kind+':'+[...form].map(c=>c.codePointAt(0).toString(16)).join('-');
-function build(dictionary,sections,audit){
+function readParoleSource(bytes){
+ const forms=new Map();
+ let position=0;
+ for(const line of bytes.toString('latin1').split(/\r?\n/)){
+  if(!line.trim())continue;
+  position++;
+  const match=line.match(/^(\d+)\s+(\d+)\s+(.+?)\s+\((\S+)\s+%\)$/);
+  if(!match)throw Error('Invalid original Parole row at '+position);
+  const form=normalize(match[3]);
+  if(!forms.has(form))forms.set(form,{position,frequency_rank:Number(match[1])});
+ }
+ return {forms,positions:position};
+}
+function build(dictionary,sections,parole){
  const dictionaryByForm=new Map();
  for(const w of dictionary.words||[]){
   const form=normalize(w.word);
   if(!form||dictionaryByForm.has(form))throw Error('Duplicate or invalid dictionary form: '+form);
   dictionaryByForm.set(form,w);
  }
- const outside=new Map((audit.gaps?.lexical_forms_outside_dictionary||[]).map(x=>[normalize(x.surface_form),x]));
+ const sourceRows=parole?.forms||new Map();
  const entries=new Map();
  for(const section of sections){
   for(const lesson of section.lessons||[]){
    const refs=lesson.curriculum_target_refs||{};
-   const active=new Set([...(refs.high_frequency||[]),...(refs.topic||[]),...(refs.expressions||[]),...(lesson.new_targets||[]),...(lesson.practice_targets||[]),...(lesson.checkpoint_targets||[])]);
+   const active=new Set([...(refs.high_frequency||[]),...(refs.topic||[]),...(refs.expressions||[]),...(lesson.new_targets||[]),...(lesson.practice_targets||[]),...(lesson.checkpoint_targets||[]),...(lesson.review_targets||[])]);
    for(const activity of lesson.activities||[]){
-    for(const field of ['item','answer_item','question_item','negative_item','affirmative_item','event_item','time_item']){
+    for(const field of ['item','answer_item','question_item','negative_item','affirmative_item','event_item','time_item','prompt_item']){
      if(activity[field]&&section.items[activity[field]])active.add(activity[field]);
+    }
+    for(const field of ['items','turns','expected_items']){
+     if(Array.isArray(activity[field]))for(const itemId of activity[field]){
+      if(section.items[itemId])active.add(itemId);
+     }
     }
    }
    for(const itemId of [...active].sort()){
@@ -32,13 +50,13 @@ function build(dictionary,sections,audit){
     const id=stableId(kind,form);
     let record=entries.get(id);
     const word=dictionaryByForm.get(form);
-    const source=outside.get(form);
-    const provenance=kind==='expression'?'curated_unranked':word?'ranked':source?.source_position!=null?'source_backed_outside_dictionary':'curated_unranked';
+    const source=sourceRows.get(form);
+    const provenance=kind==='expression'?'curated_unranked':word?'ranked':source?.position!=null?'source_backed_outside_dictionary':'curated_unranked';
     if(!record){
       record={id,kind,surface_form:form,form_id:kind==='form'?id:null,expression_id:kind==='expression'?id:null,
        lexeme_id:null,sense_id:null,morphology:null,identity_review_status:'unresolved',
-       provenance,source_rank:kind==='form'&&word?word.frequency_rank:kind==='form'&&source?.source_position!=null?source.source_frequency_rank:null,
-       source_position:kind==='form'&&source?.source_position!=null?source.source_position:null,
+       provenance,source_rank:kind==='form'&&word?word.frequency_rank:kind==='form'&&source?.position!=null?source.frequency_rank:null,
+       source_position:kind==='form'&&source?.position!=null?source.position:null,
        first_shipped_lesson:null,review_lessons:[],occurrences:[]};
       entries.set(id,record);
     }
@@ -69,7 +87,7 @@ function main(args=process.argv.slice(2)){
  const names=['a1.1','a1.2','a1.3','a2.1'];
  const sections=names.flatMap(level=>[1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
   .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
- const data=build(read('data/common-words.json'),sections,read('data/course/coverage-audit.json'));
+ const data=build(read('data/common-words.json'),sections,readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))));
  const serialized=JSON.stringify(data,null,2)+'\n';
  if(command==='--write'){fs.writeFileSync(OUT,serialized);process.stdout.write('Wrote lexical identity sidecar.\n');}
  else if(!fs.existsSync(OUT)||fs.readFileSync(OUT,'utf8')!==serialized){
@@ -78,4 +96,4 @@ function main(args=process.argv.slice(2)){
  } else process.stdout.write('Lexical identity sidecar current.\n');
 }
 if(require.main===module)main();
-module.exports={build,normalize,stableId,main};
+module.exports={build,normalize,stableId,readParoleSource,main};
