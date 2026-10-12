@@ -2216,6 +2216,30 @@ body.course-lesson-active .course-question-card.is-long-content {
   }
 }
 
+/* Multi-sentence prompts use reading-sized type and a scrollable question surface. */
+.course-focus-word.is-long-text,
+.course-focus-word.is-contextual-prompt {
+  font-size: clamp(1.15rem, 4.1vw, 1.75rem);
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+body.course-lesson-active .course-question-card.is-long-content {
+  scroll-padding-block: 16px;
+}
+
+.course-question-card.is-long-content .course-options {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 620px) {
+  .course-focus-word.is-long-text,
+  .course-focus-word.is-contextual-prompt {
+    font-size: clamp(1.12rem, 4.5vw, 1.4rem);
+  }
+}
+
 /* Long teaching passages need readable wrapping and a stable scroll origin on mobile. */
 .course-teach-word.is-long-text {
   flex-wrap: wrap;

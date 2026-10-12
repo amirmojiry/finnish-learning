@@ -17969,6 +17969,30 @@
       ]
     },
     {
+      "id": "form:6b-69-72-6a-61-20-6f-6e-20-74-75-6f-6c-69-6c-6c-61-2e-20-6d-69-73-73-e4-20-6b-69-72-6a-61-20-6f-6e-3f",
+      "kind": "form",
+      "surface_form": "kirja on tuolilla. missä kirja on?",
+      "form_id": "form:6b-69-72-6a-61-20-6f-6e-20-74-75-6f-6c-69-6c-6c-61-2e-20-6d-69-73-73-e4-20-6b-69-72-6a-61-20-6f-6e-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-book",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
       "id": "form:6b-69-72-6a-61-73-74-6f",
       "kind": "form",
       "surface_form": "kirjasto",
@@ -18061,6 +18085,30 @@
           "lesson_id": "section-4-lesson-6",
           "item_id": "s4-kissa",
           "role": "introduced"
+        }
+      ]
+    },
+    {
+      "id": "form:6b-69-73-73-61-20-6e-75-6b-6b-75-75-20-73-e4-6e-67-79-6c-6c-e4-2e-20-6d-69-73-73-e4-20-6b-69-73-73-61-20-6f-6e-3f",
+      "kind": "form",
+      "surface_form": "kissa nukkuu sängyllä. missä kissa on?",
+      "form_id": "form:6b-69-73-73-61-20-6e-75-6b-6b-75-75-20-73-e4-6e-67-79-6c-6c-e4-2e-20-6d-69-73-73-e4-20-6b-69-73-73-61-20-6f-6e-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-cat",
+          "role": "referenced"
         }
       ]
     },
@@ -21505,30 +21553,6 @@
       ]
     },
     {
-      "id": "form:6d-69-73-73-e4-20-6b-69-72-6a-61-20-6f-6e-3f",
-      "kind": "form",
-      "surface_form": "missä kirja on?",
-      "form_id": "form:6d-69-73-73-e4-20-6b-69-72-6a-61-20-6f-6e-3f",
-      "expression_id": null,
-      "lexeme_id": null,
-      "sense_id": null,
-      "morphology": null,
-      "identity_review_status": "unresolved",
-      "provenance": "curated_unranked",
-      "source_rank": null,
-      "source_position": null,
-      "first_shipped_lesson": "section-4-lesson-2",
-      "review_lessons": [],
-      "occurrences": [
-        {
-          "section_id": "a1.1-section-4",
-          "lesson_id": "section-4-lesson-2",
-          "item_id": "s4-location-q-book",
-          "role": "referenced"
-        }
-      ]
-    },
-    {
       "id": "form:6d-69-73-73-e4-20-6b-69-72-6a-61-73-74-6f-20-6f-6e-3f-20-6d-69-6c-6c-6f-69-6e-20-73-65-20-6f-6e-20-61-75-6b-69-3f",
       "kind": "form",
       "surface_form": "missä kirjasto on? milloin se on auki?",
@@ -21548,78 +21572,6 @@
           "section_id": "a1.3-section-2",
           "lesson_id": "a1.3-section-2-lesson-9",
           "item_id": "a13s2-reading-1",
-          "role": "referenced"
-        }
-      ]
-    },
-    {
-      "id": "form:6d-69-73-73-e4-20-6b-69-73-73-61-20-6f-6e-3f",
-      "kind": "form",
-      "surface_form": "missä kissa on?",
-      "form_id": "form:6d-69-73-73-e4-20-6b-69-73-73-61-20-6f-6e-3f",
-      "expression_id": null,
-      "lexeme_id": null,
-      "sense_id": null,
-      "morphology": null,
-      "identity_review_status": "unresolved",
-      "provenance": "curated_unranked",
-      "source_rank": null,
-      "source_position": null,
-      "first_shipped_lesson": "section-4-lesson-2",
-      "review_lessons": [],
-      "occurrences": [
-        {
-          "section_id": "a1.1-section-4",
-          "lesson_id": "section-4-lesson-2",
-          "item_id": "s4-location-q-cat",
-          "role": "referenced"
-        }
-      ]
-    },
-    {
-      "id": "form:6d-69-73-73-e4-20-6f-6c-65-74-3f",
-      "kind": "form",
-      "surface_form": "missä olet?",
-      "form_id": "form:6d-69-73-73-e4-20-6f-6c-65-74-3f",
-      "expression_id": null,
-      "lexeme_id": null,
-      "sense_id": null,
-      "morphology": null,
-      "identity_review_status": "unresolved",
-      "provenance": "curated_unranked",
-      "source_rank": null,
-      "source_position": null,
-      "first_shipped_lesson": "section-4-lesson-2",
-      "review_lessons": [],
-      "occurrences": [
-        {
-          "section_id": "a1.1-section-4",
-          "lesson_id": "section-4-lesson-2",
-          "item_id": "s4-location-q-home",
-          "role": "referenced"
-        }
-      ]
-    },
-    {
-      "id": "form:6d-69-73-73-e4-20-70-75-68-65-6c-69-6e-20-6f-6e-3f",
-      "kind": "form",
-      "surface_form": "missä puhelin on?",
-      "form_id": "form:6d-69-73-73-e4-20-70-75-68-65-6c-69-6e-20-6f-6e-3f",
-      "expression_id": null,
-      "lexeme_id": null,
-      "sense_id": null,
-      "morphology": null,
-      "identity_review_status": "unresolved",
-      "provenance": "curated_unranked",
-      "source_rank": null,
-      "source_position": null,
-      "first_shipped_lesson": "section-4-lesson-2",
-      "review_lessons": [],
-      "occurrences": [
-        {
-          "section_id": "a1.1-section-4",
-          "lesson_id": "section-4-lesson-2",
-          "item_id": "s4-location-q-phone",
           "role": "referenced"
         }
       ]
@@ -24640,6 +24592,30 @@
       ]
     },
     {
+      "id": "form:70-75-68-65-6c-69-6e-20-6f-6e-20-70-f6-79-64-e4-6c-6c-e4-2e-20-6d-69-73-73-e4-20-70-75-68-65-6c-69-6e-20-6f-6e-3f",
+      "kind": "form",
+      "surface_form": "puhelin on pöydällä. missä puhelin on?",
+      "form_id": "form:70-75-68-65-6c-69-6e-20-6f-6e-20-70-f6-79-64-e4-6c-6c-e4-2e-20-6d-69-73-73-e4-20-70-75-68-65-6c-69-6e-20-6f-6e-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-phone",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
       "id": "form:70-75-68-65-6c-69-6e-6e-75-6d-65-72-6f",
       "kind": "form",
       "surface_form": "puhelinnumero",
@@ -26250,6 +26226,30 @@
           "lesson_id": "a1.3-section-3-lesson-6",
           "item_id": "a13s3-h-049",
           "role": "introduced"
+        }
+      ]
+    },
+    {
+      "id": "form:73-69-6e-e4-20-6f-6c-65-74-20-6b-6f-74-6f-6e-61-2e-20-6d-69-73-73-e4-20-6f-6c-65-74-3f",
+      "kind": "form",
+      "surface_form": "sinä olet kotona. missä olet?",
+      "form_id": "form:73-69-6e-e4-20-6f-6c-65-74-20-6b-6f-74-6f-6e-61-2e-20-6d-69-73-73-e4-20-6f-6c-65-74-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-home",
+          "role": "referenced"
         }
       ]
     },
