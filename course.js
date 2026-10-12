@@ -297,7 +297,16 @@
       graded: Math.max(0, Math.floor(Number(graded) || 0)),
       completedAt: now,
     };
-    if (!previous || nextScore.correct > previous.correct || (nextScore.correct === previous.correct && nextScore.graded < previous.graded)) {
+    // Compare completion rates first: lesson lengths may change across releases.
+    // A zero-denominator attempt does not outrank a valid graded attempt.
+    const previousRate = previous && previous.graded > 0 ? previous.correct / previous.graded : -1;
+    const nextRate = nextScore.graded > 0 ? nextScore.correct / nextScore.graded : -1;
+    if (!previous || nextRate > previousRate || (
+      nextRate === previousRate
+      && (nextScore.correct > previous.correct || (
+        nextScore.correct === previous.correct && nextScore.graded < previous.graded
+      ))
+    )) {
       clean.lessonScores[lessonId] = nextScore;
     }
     clean.lastLessonId = lessonId;

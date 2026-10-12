@@ -39,3 +39,24 @@ test('saved progress and scores remain valid independent of future activity coun
  const current=course.validateSection(raw);
  assert.equal(current.lessons.reduce((sum,l)=>sum+l.activities.length,0),150);
 });
+test('best score compares percentage before raw count when lesson size changes',()=>{
+ const base=course.recordLessonCompletion(course.emptyProgress(),'resized',8,10,100);
+ const worse=course.recordLessonCompletion(base,'resized',9,15,200);
+ assert.deepEqual(worse.lessonScores.resized,{correct:8,graded:10,completedAt:100});
+ const better=course.recordLessonCompletion(base,'resized',10,10,300);
+ assert.deepEqual(better.lessonScores.resized,{correct:10,graded:10,completedAt:300});
+ const old=course.recordLessonCompletion(course.emptyProgress(),'shrunk',12,15,100);
+ const improved=course.recordLessonCompletion(old,'shrunk',10,10,200);
+ assert.deepEqual(improved.lessonScores.shrunk,{correct:10,graded:10,completedAt:200});
+});
+test('equal rates keep raw-correct tie breakers and zero-graded attempts rank last',()=>{
+ let p=course.recordLessonCompletion(course.emptyProgress(),'tie',8,10,100);
+ p=course.recordLessonCompletion(p,'tie',12,15,200);
+ assert.deepEqual(p.lessonScores.tie,{correct:12,graded:15,completedAt:200});
+ p=course.recordLessonCompletion(p,'tie',8,10,300);
+ assert.equal(p.lessonScores.tie.completedAt,200);
+ const ungraded=course.recordLessonCompletion(course.emptyProgress(),'zero',0,0,100);
+ const valid=course.recordLessonCompletion(ungraded,'zero',0,10,200);
+ assert.deepEqual(valid.lessonScores.zero,{correct:0,graded:10,completedAt:200});
+ assert.deepEqual(course.sanitizeProgress(p).completedLessons,['tie']);
+});

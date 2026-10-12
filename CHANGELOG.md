@@ -6,12 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
-## [1.32.7] - 2026-10-12
+## [1.33.0] - 2026-10-12
 
 ### Changed
 
 - Support lesson-specific activity counts and variable checkpoint target/mode counts while keeping existing fifteen-activity lessons unchanged.
-- Validate nonempty lesson plans and stable counts after injection; preserve existing score denominators, saved learner progress and deterministic practice.
+- Validate nonempty lesson plans and stable counts after injection; compare saved best scores by success rate across changing lesson lengths, preserving previous attempts and deterministic practice.
 - Add regression tests for variable generated and authored activity lengths.
 
 ## [1.32.6] - 2026-10-11
