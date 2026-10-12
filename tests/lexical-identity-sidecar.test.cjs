@@ -52,7 +52,49 @@ test('source-ranked fields follow curated Parole entries, not guessed morphology
 test('real output reproducibility and no dictionary/course schema modifications',()=>{
  const stages=['a1.1','a1.2','a1.3','a2.1'].flatMap(level=>[1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
    .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
- const actual=generator.build(read('data/common-words.json'),stages,read('data/course/coverage-audit.json'));
+ const actual=generator.build(read('data/common-words.json'),stages,generator.readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))));
  assert.deepEqual(actual,sidecar);
  assert.equal(actual.counts.shipped_lessons,140);
+});
+
+
+test('array-valued authored activity references and prompt items receive lesson occurrences',()=>{
+ const fixture={id:'fixture',items:{
+   a:{surface_form:'a',item_type:'word'},
+   b:{surface_form:'b',item_type:'expression'},
+   c:{surface_form:'c',item_type:'expression'},
+   d:{surface_form:'d',item_type:'prompt'}
+ },lessons:[{id:'fixture-lesson',new_targets:[],activities:[
+   {type:'sequence-order',items:['a']},
+   {type:'dialogue-order',turns:['b']},
+   {type:'guided-writing',expected_items:['c']},
+   {type:'prompt-choice',prompt_item:'d',answer_item:'a'}
+ ]}]};
+ const built=generator.build({words:[]},[fixture],{forms:new Map()});
+ for(const id of ['a','b','c','d']){
+  const kind=id==='b'||id==='c'?'expression':'form';
+  const record=built.records.find(r=>r.id===generator.stableId(kind,id));
+  assert.ok(record,'missing authored reference '+id);
+  assert.ok(record.occurrences.some(o=>o.item_id===id&&o.lesson_id==='fixture-lesson'));
+ }
+});
+
+test('previously missed guided-writing expressions from A1.1 section four are indexed',()=>{
+ for(const form of ['Hevonen on iso.','Lintu on pieni.']){
+  const r=sidecar.records.find(row=>row.id===generator.stableId('expression',generator.normalize(form)));
+  assert.ok(r,'missing authored expression '+form);
+  assert.ok(r.occurrences.some(o=>o.section_id==='a1.1-section-4'));
+ }
+});
+
+test('Parole provenance of uncurated taught forms is read from the full original source',()=>{
+ const source=generator.readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt')));
+ const listed=source.forms.get('olet');
+ assert.ok(listed);
+ assert.equal(listed.frequency_rank,745);
+ const olet=sidecar.records.find(r=>r.id===generator.stableId('form','olet'));
+ assert.ok(olet);
+ assert.equal(olet.provenance,'source_backed_outside_dictionary');
+ assert.equal(olet.source_rank,listed.frequency_rank);
+ assert.equal(olet.source_position,listed.position);
 });
