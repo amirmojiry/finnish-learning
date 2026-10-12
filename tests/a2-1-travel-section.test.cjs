@@ -32,9 +32,9 @@ test('A2.1 travel is an additional real stage without exposing planned A2 module
  assert.equal(stages.at(-1).sections.length,2);
 });
 
-test('ten A2.1 travel lessons map exact curriculum target forms and cover 150 activities',()=>{
+test('ten A2.1 travel lessons map exact curriculum target forms and cover 180 activities',()=>{
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),150);
+ assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),180);
  for(const lesson of section.lessons){
   const planned=contract.sections[0].lessons[lesson.order-1];
   assert.equal(lesson.curriculum_id,planned.id);
@@ -42,7 +42,7 @@ test('ten A2.1 travel lessons map exact curriculum target forms and cover 150 ac
    assert.deepEqual(lesson.curriculum_target_refs[key].map(id=>section.items[id].surface_form),planned[source],lesson.id+'/'+key);
   }
   assert.ok(lesson.grammar_fa&&/[\u0600-\u06ff]/u.test(lesson.grammar_fa),lesson.id);
-  assert.equal(lesson.activities.length,15);
+  assert.equal(lesson.activities.length,lesson.activity_count ?? 15);
   assert.equal(lesson.activities.filter(a=>a.type==='production').length,1,lesson.id);
   assert.equal(lesson.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1,lesson.id);
   assert.equal(lesson.activities.filter(a=>a.type==='dictation').length,1,lesson.id);

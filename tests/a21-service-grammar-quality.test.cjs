@@ -9,7 +9,7 @@ const [appointment,reschedule]=section.lessons;
 
 test('service lessons assess polite questions, necessity and sentence-level negation',()=>{
   for(const lesson of [appointment,reschedule]) {
-    assert.equal(lesson.activities.length,15);
+    assert.equal(lesson.activities.length,lesson.activity_count);
     assert.doesNotThrow(()=>course.validateLessonObjectives(lesson,section,curriculum.grammar_concepts));
   }
   const request=appointment.activities.find(a=>a.type==='controlled-production'&&a.item==='a21s2-e-007');
@@ -52,5 +52,5 @@ test('grammar evidence requires real linked graded decisions and canonical prere
   assert.throws(()=>course.validateLessonObjectives(badPrereq,section,curriculum.grammar_concepts),/prerequisites differ/);
  }
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),150);
+ assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),184);
 });

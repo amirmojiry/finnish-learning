@@ -50,7 +50,7 @@ The shipped dictionary has an independently generated count and Parole frequency
 
 ### 4. Complete A2.1 deliberately, then expand A2.2–C2
 
-- A2.1 Sections 1–2 are playable: 20 lessons covering travel/past and routine healthcare/public-service language, each with varied listening, controlled production, integrated reading and an 80% checkpoint. Healthcare texts teach communication, never medication dosage or clinical advice.
+- A2.1 Sections 1–2 are playable: 20 lessons covering travel/past and routine healthcare/public-service language, with varied listening, controlled production, contextual Finnish form completion, integrated reading and an 80% checkpoint. After the 2026-10-12 practice expansion, Section 1 has 180 activities and Section 2 has 184 (364 total); the two checkpoints retain 15 targets each. These remain learning opportunities, not evidence of independently mastered grammar or CEFR certification. Healthcare texts teach communication, never medication dosage or clinical advice.
 - Author and independently review A2.1 Sections 3–4 (leisure and family narratives), then add playable files and regression tests; A2.2–C2 remain planning-only.
 - The current A1 convention of ten lessons and fifteen activities is a starting heuristic, **not** an obligatory prescription for B2/C1/C2.
 

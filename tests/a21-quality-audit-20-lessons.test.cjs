@@ -10,7 +10,7 @@ test('audit all twenty A2.1 lessons and preserve listening and productive practi
  assert.equal(all.length,20);
  for(const {section,lesson} of all){
    assert.doesNotThrow(()=>course.validateLessonObjectives(lesson,section,grammar));
-   assert.equal(lesson.activities.length,15);
+   assert.equal(lesson.activities.length,lesson.activity_count ?? 15);
    assert.ok(lesson.activities.some(a=>a.type==='inflection-production'),lesson.id);
    assert.equal(lesson.activities.filter(a=>a.type==='production').length,1,lesson.id);
    assert.equal(lesson.activities.filter(a=>a.type==='dictation').length,1,lesson.id);
