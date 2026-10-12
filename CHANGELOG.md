@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.34.1] - 2026-10-13
+
+### Fixed
+
+- Make multi-sentence Finnish meaning questions render at readable passage size with a top-aligned, independently scrollable lesson card, keeping all four mobile answer options reachable.
+- Replace context-free A1.1 location multiple-choice questions with coherent Finnish scene clues and synchronized Persian translations, examples, and accepted prompts, while retaining graded choices, lesson length, and learner progress.
+- Add targeted regression tests for mobile long-text layout, four-option availability, and evidence-based location answers.
+
 ## [1.34.0] - 2026-10-13
 
 ### Added
