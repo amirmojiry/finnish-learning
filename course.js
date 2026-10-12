@@ -3252,10 +3252,11 @@
         const promptItem = section.items[activity.prompt_item];
         const answerItem = section.items[activity.answer_item];
         const focus = document.createElement('strong');
-        focus.className = 'course-focus-word';
+        focus.className = 'course-focus-word is-contextual-prompt';
         focus.lang = 'fi';
         focus.dir = 'ltr';
         focus.textContent = promptItem.surface_form;
+        card.classList.add('is-long-content');
         const translation = document.createElement('p');
         translation.className = 'course-cloze-translation';
         translation.textContent = promptItem.translation_fa;
@@ -3423,6 +3424,10 @@
           focus.lang = 'fi';
           focus.dir = 'ltr';
           focus.textContent = item.surface_form;
+          if (item.item_type === 'reading' || item.surface_form.length > 85) {
+            focus.classList.add('is-long-text');
+            card.classList.add('is-long-content');
+          }
           card.append(focus);
         } else if (activity.mode === 'finnish') {
           const focus = document.createElement('strong');
