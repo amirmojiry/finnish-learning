@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.34.0] - 2026-10-13
+
+### Added
+
+- Introduce stable, deterministic normalized surface-form and expression identity sidecar for all 140 shipped lessons and 400 curated dictionary forms, keeping lexeme, sense and morphology unresolved until editorial verification.
+- Record first and later lesson exposure, immutable source metadata and Parole-backed versus curated-unranked provenance without modifying existing dictionary, course progress or Word Practice history.
+- Add reproducible identity build/check commands and regression coverage for duplicate normalized forms, identities, provenance and 14-section mapping.
+
 ## [1.33.1] - 2026-10-12
 
 ### Changed
