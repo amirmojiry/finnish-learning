@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1388,
+    "graded_activity_slots": 1452,
     "dictionary_ranked_surface_entries": 400,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,12 +24,12 @@
     "lexical_forms_missing_dictionary": 340,
     "outside_dictionary_but_in_original_parole": 334,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 295,
+    "assessed_again_after_earlier_reference": 303,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 11,
+    "grammar_concepts_with_explicit_lesson_ids": 13,
     "lessons_without_explicit_grammar_concept_ids": 120,
-    "graded_grammar_related_slots": 262,
-    "graded_morphology_slots": 62,
+    "graded_grammar_related_slots": 311,
+    "graded_morphology_slots": 64,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
   },
@@ -134,16 +134,16 @@
       "level": "A2.1",
       "id": "a2.1-section-1",
       "lessons": 10,
-      "graded_slots": 105,
-      "unassessed_target_forms": 35,
+      "graded_slots": 135,
+      "unassessed_target_forms": 10,
       "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A2.1",
       "id": "a2.1-section-2",
       "lessons": 10,
-      "graded_slots": 105,
-      "unassessed_target_forms": 37,
+      "graded_slots": 139,
+      "unassessed_target_forms": 10,
       "lessons_missing_grammar_ids": 0
     }
   ],
@@ -11990,7 +11990,9 @@
           "viikonloppuna"
         ],
         "correct_answer": [
+          "kävin",
           "kävin eilen turussa.",
+          "matka",
           "matka oli mukava.",
           "missä kävit viime viikonloppuna?",
           "olin",
@@ -11998,20 +12000,15 @@
           "viikonloppuna"
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 4,
         "later_correct_retrieval": [
           "olin",
           "viikonloppuna"
         ],
         "declared_unassessed": [
-          "kävin",
-          "matka",
           "oli"
         ],
-        "teach_only": [
-          "kävin",
-          "matka"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12043,7 +12040,7 @@
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -12096,28 +12093,25 @@
         ],
         "correct_answer": [
           "asemalle",
+          "junalla",
+          "lähdin ennen kahdeksaa.",
           "lähdin vaasasta aikaisin.",
           "matkustin junalla.",
           "menin asemalle aamulla.",
           "tuli",
-          "tulin kotiin illalla."
+          "tulin kotiin illalla.",
+          "vaasasta"
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 5,
         "later_correct_retrieval": [
           "asemalle",
           "tuli"
         ],
         "declared_unassessed": [
-          "ennen",
-          "junalla",
-          "lähdin ennen kahdeksaa.",
-          "vaasasta"
+          "ennen"
         ],
-        "teach_only": [
-          "junalla",
-          "vaasasta"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12150,7 +12144,7 @@
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -12177,6 +12171,7 @@
           "kortilla",
           "lippu",
           "lippu maksoi kaksikymmentä euroa.",
+          "lähdin ostamaan lippua.",
           "maksoiko lippu paljon?",
           "maksoin lipun kortilla.",
           "myös",
@@ -12188,6 +12183,7 @@
         "first_referenced": [
           "kortilla",
           "lippu maksoi kaksikymmentä euroa.",
+          "lähdin ostamaan lippua.",
           "maksoiko lippu paljon?",
           "maksoin lipun kortilla.",
           "ostin lipun etukäteen.",
@@ -12202,29 +12198,27 @@
           "paluulippu"
         ],
         "correct_answer": [
+          "kortilla",
           "lippu",
           "lippu maksoi kaksikymmentä euroa.",
+          "lähdin ostamaan lippua.",
+          "maksoiko lippu paljon?",
           "maksoin lipun kortilla.",
           "myös",
           "ostin lipun etukäteen.",
-          "ostin myös paluulipun."
+          "ostin myös paluulipun.",
+          "paluulippu"
         ],
-        "receptive_count": 5,
-        "productive_count": 2,
+        "receptive_count": 6,
+        "productive_count": 6,
         "later_correct_retrieval": [
           "lippu",
           "myös"
         ],
         "declared_unassessed": [
-          "kortilla",
-          "maksoiko lippu paljon?",
-          "paljon",
-          "paluulippu"
+          "paljon"
         ],
-        "teach_only": [
-          "kortilla",
-          "paluulippu"
-        ],
+        "teach_only": [],
         "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12255,11 +12249,12 @@
         "note_present": true,
         "concept_ids": [
           "a21-imperfect",
+          "a21-maan",
           "a21-object-core"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
-        "morphology_slots": 2,
+        "structured_or_morphology_slots": 6,
+        "morphology_slots": 3,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
           "a13-partitive-patterns",
@@ -12314,25 +12309,23 @@
           "juna lähti ajoissa.",
           "juna saapui myöhässä.",
           "matka kesti kaksi tuntia.",
-          "odotin asemalla.",
-          "oli"
-        ],
-        "receptive_count": 5,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "ajoissa",
-          "oli"
-        ],
-        "declared_unassessed": [
           "myöhässä",
-          "sitten",
+          "odotin asemalla.",
+          "oli",
           "sitten bussi tuli asemalle.",
           "tuntia"
         ],
-        "teach_only": [
+        "receptive_count": 5,
+        "productive_count": 5,
+        "later_correct_retrieval": [
+          "ajoissa",
           "myöhässä",
-          "tuntia"
+          "oli"
         ],
+        "declared_unassessed": [
+          "sitten"
+        ],
+        "teach_only": [],
         "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12366,7 +12359,7 @@
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -12420,7 +12413,10 @@
           "yövyin hotellissa yhden yön."
         ],
         "correct_answer": [
+          "aamiainen",
           "aamiainen kuului hintaan.",
+          "aamiainen oli hyvä.",
+          "hotellissa",
           "huone oli siisti.",
           "huoneen",
           "oli",
@@ -12428,20 +12424,14 @@
           "yövyin hotellissa yhden yön."
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 5,
         "later_correct_retrieval": [
           "oli"
         ],
         "declared_unassessed": [
-          "aamiainen",
-          "aamiainen oli hyvä.",
-          "hotellissa",
           "hyvä"
         ],
-        "teach_only": [
-          "aamiainen",
-          "hotellissa"
-        ],
+        "teach_only": [],
         "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12475,7 +12465,7 @@
           "a21-rections"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -12532,25 +12522,22 @@
           "en löytänyt lippua.",
           "juna oli myöhässä.",
           "kysyin neuvoa asemalla.",
+          "lippua",
           "myöhästyin",
           "myöhästyin bussista.",
+          "myöhästyin, koska juna oli myöhässä.",
+          "neuvoa",
           "oli"
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 5,
         "later_correct_retrieval": [
           "oli"
         ],
         "declared_unassessed": [
-          "koska",
-          "lippua",
-          "myöhästyin, koska juna oli myöhässä.",
-          "neuvoa"
+          "koska"
         ],
-        "teach_only": [
-          "lippua",
-          "neuvoa"
-        ],
+        "teach_only": [],
         "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12584,7 +12571,7 @@
           "a21-object-core"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -12639,28 +12626,25 @@
         ],
         "correct_answer": [
           "hyvä",
+          "kirkon",
           "kävin museossa.",
+          "museo oli hyvä.",
           "museossa",
           "näin vanhan kirkon.",
           "otin valokuvia.",
-          "pidin kaupungista."
+          "pidin kaupungista.",
+          "valokuvia"
         ],
-        "receptive_count": 5,
-        "productive_count": 2,
+        "receptive_count": 6,
+        "productive_count": 5,
         "later_correct_retrieval": [
           "hyvä"
         ],
         "declared_unassessed": [
-          "kirkon",
-          "museo oli hyvä.",
-          "paljon",
-          "valokuvia"
+          "paljon"
         ],
-        "teach_only": [
-          "kirkon",
-          "valokuvia"
-        ],
-        "distractor_only_count": 6,
+        "teach_only": [],
+        "distractor_only_count": 5,
         "reading_only": [],
         "high_frequency_target_forms": [
           "hyvä",
@@ -12690,13 +12674,15 @@
         "note_present": true,
         "concept_ids": [
           "a21-imperfect",
+          "a21-plural-partitive",
           "a21-rections"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
-        "morphology_slots": 2,
+        "structured_or_morphology_slots": 6,
+        "morphology_slots": 3,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a12-quantities",
           "a13-local-expansion",
           "a13-past-recognition",
           "a13-verb-classes"
@@ -12724,6 +12710,7 @@
           "jälkeen",
           "lopuksi",
           "lopuksi palasin kotiin.",
+          "lähdin ostamaan lippua.",
           "sen jälkeen kävelin hotelliin.",
           "sitten",
           "sitten nousin junaan."
@@ -12746,26 +12733,25 @@
         "correct_answer": [
           "ensin",
           "ensin ostin lipun.",
+          "junaan",
+          "lopuksi",
           "lopuksi palasin kotiin.",
+          "lähdin ostamaan lippua.",
           "sen jälkeen kävelin hotelliin.",
           "sitten",
           "sitten nousin junaan."
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 6,
         "later_correct_retrieval": [
           "ensin",
+          "lähdin ostamaan lippua.",
           "sitten"
         ],
         "declared_unassessed": [
-          "junaan",
-          "jälkeen",
-          "lopuksi"
+          "jälkeen"
         ],
-        "teach_only": [
-          "junaan",
-          "lopuksi"
-        ],
+        "teach_only": [],
         "distractor_only_count": 5,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -12795,10 +12781,11 @@
         "note_present": true,
         "concept_ids": [
           "a21-imperfect",
+          "a21-maan",
           "a21-sequencing"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -12848,26 +12835,25 @@
           "viime lauantaina kävin tampereella."
         ],
         "correct_answer": [
+          "lauantaina",
           "matkustin sinne junalla.",
           "palasin kotiin sunnuntaina.",
+          "sunnuntaina",
+          "tampereella",
           "tapasin ystäväni.",
           "viime lauantaina kävin tampereella."
         ],
         "receptive_count": 4,
-        "productive_count": 2,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
+        "productive_count": 5,
+        "later_correct_retrieval": [
           "lauantaina",
+          "sunnuntaina"
+        ],
+        "declared_unassessed": [
           "sitten",
-          "sunnuntaina",
-          "tampereella",
           "viime"
         ],
-        "teach_only": [
-          "lauantaina",
-          "sunnuntaina",
-          "tampereella"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [
           "tapasin ystäväni. palasin kotiin sunnuntaina.",
@@ -12900,16 +12886,18 @@
         "note_present": true,
         "concept_ids": [
           "a21-illative-patterns",
-          "a21-imperfect"
+          "a21-imperfect",
+          "a21-sequencing"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
           "a13-local-expansion",
           "a13-past-recognition",
-          "a13-verb-classes"
+          "a13-verb-classes",
+          "a21-imperfect"
         ]
       }
     },
@@ -13052,29 +13040,25 @@
           "vastaanotto"
         ],
         "correct_answer": [
+          "ajan",
           "hei, haluaisin varata ajan lääkärille.",
+          "lääkärille",
           "mihin aikaan vastaanotto alkaa?",
           "on",
           "onko teillä vapaita aikoja tiistaina?",
           "tarvitsen ajan ensi viikolle.",
-          "tiistai kello kymmenen sopii minulle."
+          "tiistai kello kymmenen sopii minulle.",
+          "vastaanotto"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 7,
         "later_correct_retrieval": [
           "on"
         ],
         "declared_unassessed": [
-          "ajan",
-          "lääkärille",
-          "minulle",
-          "vastaanotto"
+          "minulle"
         ],
-        "teach_only": [
-          "ajan",
-          "lääkärille",
-          "vastaanotto"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13107,7 +13091,7 @@
           "a12-requests"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13162,24 +13146,22 @@
           "minun",
           "minun pitää siirtää vastaanottoaikaani.",
           "onko perjantaina vapaita aikoja?",
+          "perua",
+          "siirtää",
+          "vastaanotolle",
           "voinko perua ajan?"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 7,
         "later_correct_retrieval": [
-          "minun"
+          "minun",
+          "perua",
+          "siirtää"
         ],
         "declared_unassessed": [
-          "perua",
-          "pitää",
-          "siirtää",
-          "vastaanotolle"
+          "pitää"
         ],
-        "teach_only": [
-          "perua",
-          "siirtää",
-          "vastaanotolle"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13213,7 +13195,7 @@
           "a13-necessity"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13266,29 +13248,25 @@
         ],
         "correct_answer": [
           "kurkkuni on kipeä.",
+          "kuumetta",
           "minulla oli kuumetta eilen.",
           "minulla on kuumetta.",
           "minulla on päänsärkyä.",
+          "oireet",
           "oireet alkoivat maanantaina.",
-          "on"
+          "on",
+          "päänsärkyä"
         ],
         "receptive_count": 5,
-        "productive_count": 4,
+        "productive_count": 7,
         "later_correct_retrieval": [
           "minulla on kuumetta.",
           "on"
         ],
         "declared_unassessed": [
-          "kuumetta",
-          "oireet",
-          "oli",
-          "päänsärkyä"
+          "oli"
         ],
-        "teach_only": [
-          "kuumetta",
-          "oireet",
-          "päänsärkyä"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13322,7 +13300,7 @@
           "a21-imperfect"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13377,28 +13355,24 @@
         ],
         "correct_answer": [
           "en ymmärtänyt viimeistä sanaa.",
+          "hitaammin",
           "minun",
           "mitä minun pitää tehdä seuraavaksi?",
           "odota tässä, ole hyvä.",
+          "ohjeen",
+          "seuraavaksi",
           "voitteko puhua hitaammin?",
           "voitteko toistaa ohjeen?"
         ],
         "receptive_count": 5,
-        "productive_count": 4,
+        "productive_count": 8,
         "later_correct_retrieval": [
           "minun"
         ],
         "declared_unassessed": [
-          "hitaammin",
-          "ohjeen",
-          "pitää",
-          "seuraavaksi"
+          "pitää"
         ],
-        "teach_only": [
-          "hitaammin",
-          "ohjeen",
-          "seuraavaksi"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13432,7 +13406,7 @@
           "a13-necessity"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13485,28 +13459,25 @@
         ],
         "correct_answer": [
           "anteeksi, missä apteekki on?",
+          "apteekki",
           "ennen",
           "haluaisin kysyä tästä lääkkeestä.",
           "kysyn apteekista, jos en ymmärrä.",
+          "käyttöohjeen",
           "luen ohjeen ennen käyttöä.",
+          "lääkkeestä",
           "voitteko selittää käyttöohjeen?"
         ],
         "receptive_count": 6,
-        "productive_count": 4,
+        "productive_count": 8,
         "later_correct_retrieval": [
+          "apteekki",
           "ennen"
         ],
         "declared_unassessed": [
-          "apteekki",
-          "jos",
-          "käyttöohjeen",
-          "lääkkeestä"
+          "jos"
         ],
-        "teach_only": [
-          "apteekki",
-          "käyttöohjeen",
-          "lääkkeestä"
-        ],
+        "teach_only": [],
         "distractor_only_count": 10,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13541,7 +13512,7 @@
           "a21-rections"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13594,29 +13565,25 @@
           "vuoroani"
         ],
         "correct_answer": [
+          "luukulle",
           "mille luukulle minun pitää mennä?",
           "missä palvelupiste sijaitsee?",
           "odotan vuoroani tässä.",
           "onko tämä oikea paikka?",
+          "palvelupiste",
           "tarvitsen apua ajanvarauksessa.",
-          "tämä"
+          "tämä",
+          "vuoroani"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 7,
         "later_correct_retrieval": [
           "tämä"
         ],
         "declared_unassessed": [
-          "luukulle",
-          "minun",
-          "palvelupiste",
-          "vuoroani"
+          "minun"
         ],
-        "teach_only": [
-          "luukulle",
-          "palvelupiste",
-          "vuoroani"
-        ],
+        "teach_only": [],
         "distractor_only_count": 11,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13650,7 +13617,7 @@
           "a13-necessity"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13703,29 +13670,25 @@
           "osoitetta"
         ],
         "correct_answer": [
+          "allekirjoittaa",
           "en ymmärrä tätä kohtaa.",
           "kirjoitan nimeni tähän.",
+          "lomakkeessa",
           "lomakkeessa kysytään osoitetta.",
           "minun pitää allekirjoittaa lomake.",
+          "osoitetta",
           "pitääkö tähän kirjoittaa päivämäärä?",
           "tähän"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
+        "productive_count": 6,
         "later_correct_retrieval": [
           "tähän"
         ],
         "declared_unassessed": [
-          "allekirjoittaa",
-          "lomakkeessa",
-          "minun",
-          "osoitetta"
+          "minun"
         ],
-        "teach_only": [
-          "allekirjoittaa",
-          "lomakkeessa",
-          "osoitetta"
-        ],
+        "teach_only": [],
         "distractor_only_count": 11,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13759,7 +13722,7 @@
           "a13-present-paradigm"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13813,27 +13776,23 @@
           "voinko saada kopion tästä?"
         ],
         "correct_answer": [
+          "kopion",
           "milloin todistus valmistuu?",
           "minulla on henkilöllisyystodistus mukana.",
           "saada",
+          "sähköpostilla",
           "tarvitsen todistuksen työnantajalle.",
+          "todistuksen",
           "voinko saada kopion tästä?",
           "voitteko lähettää sen sähköpostilla?"
         ],
         "receptive_count": 6,
-        "productive_count": 4,
+        "productive_count": 8,
         "later_correct_retrieval": [],
         "declared_unassessed": [
-          "kopion",
-          "on",
-          "sähköpostilla",
-          "todistuksen"
+          "on"
         ],
-        "teach_only": [
-          "kopion",
-          "sähköpostilla",
-          "todistuksen"
-        ],
+        "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -13866,7 +13825,7 @@
           "a12-requests"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -13918,25 +13877,24 @@
         "correct_answer": [
           "hei, haluaisin varata ajan.",
           "onko torstaina vapaita aikoja?",
+          "sähköpostilla",
           "tarvitsen myös todistuksen.",
           "torstai sopii minulle.",
+          "torstaina",
+          "vahvistuksen",
           "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "sähköpostilla",
+          "torstaina"
+        ],
         "declared_unassessed": [
           "minulle",
-          "myös",
-          "sähköpostilla",
-          "torstaina",
-          "vahvistuksen"
+          "myös"
         ],
-        "teach_only": [
-          "sähköpostilla",
-          "torstaina",
-          "vahvistuksen"
-        ],
+        "teach_only": [],
         "distractor_only_count": 12,
         "reading_only": [
           "hei, haluaisin varata ajan. onko torstaina vapaita aikoja?",
@@ -13973,7 +13931,7 @@
           "a13-present-paradigm"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 3,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -17335,163 +17293,111 @@
       {
         "lesson_id": "a2.1-section-1-lesson-1",
         "forms": [
-          "kävin",
-          "matka",
           "oli"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-2",
         "forms": [
-          "ennen",
-          "junalla",
-          "lähdin ennen kahdeksaa.",
-          "vaasasta"
+          "ennen"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-3",
         "forms": [
-          "kortilla",
-          "maksoiko lippu paljon?",
-          "paljon",
-          "paluulippu"
+          "paljon"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-4",
         "forms": [
-          "myöhässä",
-          "sitten",
-          "sitten bussi tuli asemalle.",
-          "tuntia"
+          "sitten"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-5",
         "forms": [
-          "aamiainen",
-          "aamiainen oli hyvä.",
-          "hotellissa",
           "hyvä"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-6",
         "forms": [
-          "koska",
-          "lippua",
-          "myöhästyin, koska juna oli myöhässä.",
-          "neuvoa"
+          "koska"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-7",
         "forms": [
-          "kirkon",
-          "museo oli hyvä.",
-          "paljon",
-          "valokuvia"
+          "paljon"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-8",
         "forms": [
-          "junaan",
-          "jälkeen",
-          "lopuksi"
+          "jälkeen"
         ]
       },
       {
         "lesson_id": "a2.1-section-1-lesson-9",
         "forms": [
-          "lauantaina",
           "sitten",
-          "sunnuntaina",
-          "tampereella",
           "viime"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-1",
         "forms": [
-          "ajan",
-          "lääkärille",
-          "minulle",
-          "vastaanotto"
+          "minulle"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-2",
         "forms": [
-          "perua",
-          "pitää",
-          "siirtää",
-          "vastaanotolle"
+          "pitää"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-3",
         "forms": [
-          "kuumetta",
-          "oireet",
-          "oli",
-          "päänsärkyä"
+          "oli"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-4",
         "forms": [
-          "hitaammin",
-          "ohjeen",
-          "pitää",
-          "seuraavaksi"
+          "pitää"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-5",
         "forms": [
-          "apteekki",
-          "jos",
-          "käyttöohjeen",
-          "lääkkeestä"
+          "jos"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-6",
         "forms": [
-          "luukulle",
-          "minun",
-          "palvelupiste",
-          "vuoroani"
+          "minun"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-7",
         "forms": [
-          "allekirjoittaa",
-          "lomakkeessa",
-          "minun",
-          "osoitetta"
+          "minun"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-8",
         "forms": [
-          "kopion",
-          "on",
-          "sähköpostilla",
-          "todistuksen"
+          "on"
         ]
       },
       {
         "lesson_id": "a2.1-section-2-lesson-9",
         "forms": [
           "minulle",
-          "myös",
-          "sähköpostilla",
-          "torstaina",
-          "vahvistuksen"
+          "myös"
         ]
       }
     ],
@@ -17602,22 +17508,6 @@
         "title_en": "Recognition of common past forms",
         "prerequisites": [
           "a13-present-paradigm"
-        ]
-      },
-      {
-        "id": "a21-plural-partitive",
-        "level": "A2.1",
-        "title_en": "Plural partitive in common phrases",
-        "prerequisites": [
-          "a12-quantities"
-        ]
-      },
-      {
-        "id": "a21-maan",
-        "level": "A2.1",
-        "title_en": "Common -maan/-massa frames",
-        "prerequisites": [
-          "a13-verb-classes"
         ]
       }
     ],
