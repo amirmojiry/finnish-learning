@@ -21,7 +21,9 @@ test('all 20 shipped A2.1 lessons have exactly their authored length and retain 
    assert.equal(lesson.activities.filter(a=>a.type==='production').length,1);
    assert.equal(lesson.activities.filter(a=>a.type==='dictation').length,1);
    assert.equal(lesson.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1);
-   assert.equal(lesson.activities.filter(a=>a.type==='inflection-production').length,1);
+   const typedInflectionCount=lesson.activities.filter(a=>a.type==='inflection-production').length;
+   assert.equal(typedInflectionCount,lesson.morphology_practice.filter(a=>a.type==='inflection-production').length);
+   assert.ok(typedInflectionCount>=1,'Retain explicit typed inflection: '+lesson.id);
    assert.doesNotThrow(()=>course.validateLessonObjectives(lesson,section,curriculum.grammar_concepts));
    if(i===9){
     assert.equal(lesson.activities.length,15);
