@@ -52,7 +52,7 @@ test('all forty A1.1 lessons contain reviewed structured sentence-building pract
 
   const counts = new Map();
   for (const lesson of lessons) {
-    assert.equal(lesson.activities.length, 15, lesson.id);
+    assert.equal(lesson.activities.length, lesson.activity_count ?? 15, lesson.id);
     const structured = lesson.activities.filter((activity) => STRUCTURED_TYPES.has(activity.type));
     assert.ok(structured.length >= 1, lesson.id);
     assert.equal(structured.length, lesson.structured_practice.length, lesson.id);

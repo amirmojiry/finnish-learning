@@ -1627,6 +1627,36 @@
           "grammar_concept_ids": [
             "a12-requests"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-003",
+          "prompt_fi": "Hei, haluaisin varata _____ lääkärille.",
+          "accepted_answers": [
+            "ajan"
+          ],
+          "expected_fi": "Hei, haluaisin varata ajan lääkärille.",
+          "expected_fa": "سلام، می‌خواهم برای پزشک وقت بگیرم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-004",
+          "prompt_fi": "Hei, haluaisin varata ajan _____.",
+          "accepted_answers": [
+            "lääkärille"
+          ],
+          "expected_fi": "Hei, haluaisin varata ajan lääkärille.",
+          "expected_fa": "سلام، می‌خواهم برای پزشک وقت بگیرم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-005",
+          "prompt_fi": "Mihin aikaan _____ alkaa?",
+          "accepted_answers": [
+            "vastaanotto"
+          ],
+          "expected_fi": "Mihin aikaan vastaanotto alkaa?",
+          "expected_fa": "ویزیت چه ساعتی شروع می‌شود؟"
         }
       ],
       "morphology_practice": [
@@ -1777,6 +1807,44 @@
             "a21s2-e-007",
             "a21s2-e-008"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-003",
+          "options": [
+            "a21s2-t-003",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-004"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-004",
+          "options": [
+            "a21s2-t-004",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-005",
+          "options": [
+            "a21s2-t-005",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-010"
         }
       ],
       "learning_objectives": {
@@ -1831,7 +1899,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-2",
@@ -1911,6 +1980,36 @@
           "grammar_concept_ids": [
             "a13-necessity"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-013",
+          "prompt_fi": "Minun pitää _____ vastaanottoaikaani.",
+          "accepted_answers": [
+            "siirtää"
+          ],
+          "expected_fi": "Minun pitää siirtää vastaanottoaikaani.",
+          "expected_fa": "باید وقت ویزیتم را جابه‌جا کنم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-014",
+          "prompt_fi": "Voinko _____ ajan?",
+          "accepted_answers": [
+            "perua"
+          ],
+          "expected_fi": "Voinko perua ajan?",
+          "expected_fa": "می‌توانم وقت را لغو کنم؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-015",
+          "prompt_fi": "En pääse _____ huomenna.",
+          "accepted_answers": [
+            "vastaanotolle"
+          ],
+          "expected_fi": "En pääse vastaanotolle huomenna.",
+          "expected_fa": "فردا نمی‌توانم برای ویزیت بیایم."
         }
       ],
       "morphology_practice": [
@@ -2059,6 +2158,44 @@
             "a21s2-e-020",
             "a21s2-e-008"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-013",
+          "options": [
+            "a21s2-t-013",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-014",
+          "options": [
+            "a21s2-t-014",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-015",
+          "options": [
+            "a21s2-t-015",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-020"
         }
       ],
       "learning_objectives": {
@@ -2134,7 +2271,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-3",
@@ -2212,6 +2350,36 @@
           "grammar_concept_ids": [
             "a21-imperfect"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-022",
+          "prompt_fi": "Minulla on _____.",
+          "accepted_answers": [
+            "päänsärkyä"
+          ],
+          "expected_fi": "Minulla on päänsärkyä.",
+          "expected_fa": "سردرد دارم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-023",
+          "prompt_fi": "Minulla on _____.",
+          "accepted_answers": [
+            "kuumetta"
+          ],
+          "expected_fi": "Minulla on kuumetta.",
+          "expected_fa": "تب دارم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-024",
+          "prompt_fi": "_____ alkoivat maanantaina.",
+          "accepted_answers": [
+            "Oireet"
+          ],
+          "expected_fi": "Oireet alkoivat maanantaina.",
+          "expected_fa": "نشانه‌ها روز دوشنبه شروع شدند."
         }
       ],
       "morphology_practice": [
@@ -2381,6 +2549,39 @@
             "a21s2-e-008",
             "a21s2-e-029"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-022",
+          "options": [
+            "a21s2-t-022",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-023",
+          "options": [
+            "a21s2-t-023",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-024",
+          "options": [
+            "a21s2-t-024",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
         }
       ],
       "learning_objectives": {
@@ -2462,7 +2663,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-2-lesson-4",
@@ -2544,6 +2746,36 @@
           "grammar_concept_ids": [
             "a12-requests"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-030",
+          "prompt_fi": "Voitteko toistaa _____?",
+          "accepted_answers": [
+            "ohjeen"
+          ],
+          "expected_fi": "Voitteko toistaa ohjeen?",
+          "expected_fa": "ممکن است دستور را تکرار کنید؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-031",
+          "prompt_fi": "Voitteko puhua _____?",
+          "accepted_answers": [
+            "hitaammin"
+          ],
+          "expected_fi": "Voitteko puhua hitaammin?",
+          "expected_fa": "ممکن است آهسته‌تر صحبت کنید؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-032",
+          "prompt_fi": "Mitä minun pitää tehdä _____?",
+          "accepted_answers": [
+            "seuraavaksi"
+          ],
+          "expected_fi": "Mitä minun pitää tehdä seuraavaksi?",
+          "expected_fa": "بعد باید چه کار کنم؟"
         }
       ],
       "morphology_practice": [
@@ -2710,6 +2942,44 @@
             "a21s2-e-007",
             "a21s2-e-008"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-030",
+          "options": [
+            "a21s2-t-030",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-031",
+          "options": [
+            "a21s2-t-031",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-032",
+          "options": [
+            "a21s2-t-032",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-037"
         }
       ],
       "learning_objectives": {
@@ -2785,7 +3055,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-5",
@@ -2866,6 +3137,36 @@
             "a12-requests",
             "a21-rections"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-040",
+          "prompt_fi": "Anteeksi, missä _____ on?",
+          "accepted_answers": [
+            "apteekki"
+          ],
+          "expected_fi": "Anteeksi, missä apteekki on?",
+          "expected_fa": "ببخشید، داروخانه کجاست؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-041",
+          "prompt_fi": "Haluaisin kysyä tästä _____.",
+          "accepted_answers": [
+            "lääkkeestä"
+          ],
+          "expected_fi": "Haluaisin kysyä tästä lääkkeestä.",
+          "expected_fa": "می‌خواهم دربارهٔ این دارو سؤال کنم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-042",
+          "prompt_fi": "Voitteko selittää _____?",
+          "accepted_answers": [
+            "käyttöohjeen"
+          ],
+          "expected_fi": "Voitteko selittää käyttöohjeen?",
+          "expected_fa": "می‌توانید راهنمای استفاده را توضیح دهید؟"
         }
       ],
       "morphology_practice": [
@@ -3016,6 +3317,44 @@
             "a21s2-e-007",
             "a21s2-e-008"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-040",
+          "options": [
+            "a21s2-t-040",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-041",
+          "options": [
+            "a21s2-t-041",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-042",
+          "options": [
+            "a21s2-t-042",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-047"
         }
       ],
       "learning_objectives": {
@@ -3112,7 +3451,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-6",
@@ -3194,6 +3534,36 @@
           "grammar_concept_ids": [
             "a11-questions"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-049",
+          "prompt_fi": "Missä _____ sijaitsee?",
+          "accepted_answers": [
+            "palvelupiste"
+          ],
+          "expected_fi": "Missä palvelupiste sijaitsee?",
+          "expected_fa": "باجهٔ خدمات کجاست؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-050",
+          "prompt_fi": "Mille _____ minun pitää mennä?",
+          "accepted_answers": [
+            "luukulle"
+          ],
+          "expected_fi": "Mille luukulle minun pitää mennä?",
+          "expected_fa": "باید به کدام باجه بروم؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-051",
+          "prompt_fi": "Odotan _____ tässä.",
+          "accepted_answers": [
+            "vuoroani"
+          ],
+          "expected_fi": "Odotan vuoroani tässä.",
+          "expected_fa": "اینجا منتظر نوبتم می‌مانم."
         }
       ],
       "morphology_practice": [
@@ -3344,6 +3714,44 @@
             "a21s2-e-056",
             "a21s2-e-008"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-049",
+          "options": [
+            "a21s2-t-049",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-050",
+          "options": [
+            "a21s2-t-050",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-051",
+          "options": [
+            "a21s2-t-051",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-056"
         }
       ],
       "learning_objectives": {
@@ -3419,7 +3827,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-7",
@@ -3499,6 +3908,36 @@
           "grammar_concept_ids": [
             "a13-necessity"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-058",
+          "prompt_fi": "_____ kysytään osoitetta.",
+          "accepted_answers": [
+            "Lomakkeessa"
+          ],
+          "expected_fi": "Lomakkeessa kysytään osoitetta.",
+          "expected_fa": "در فرم نشانی خواسته شده است."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-059",
+          "prompt_fi": "Lomakkeessa kysytään _____.",
+          "accepted_answers": [
+            "osoitetta"
+          ],
+          "expected_fi": "Lomakkeessa kysytään osoitetta.",
+          "expected_fa": "در فرم نشانی خواسته شده است."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-060",
+          "prompt_fi": "Minun pitää _____ lomake.",
+          "accepted_answers": [
+            "allekirjoittaa"
+          ],
+          "expected_fi": "Minun pitää allekirjoittaa lomake.",
+          "expected_fa": "باید فرم را امضا کنم."
         }
       ],
       "morphology_practice": [
@@ -3649,6 +4088,39 @@
             "a21s2-e-008",
             "a21s2-e-065"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-058",
+          "options": [
+            "a21s2-t-058",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-059",
+          "options": [
+            "a21s2-t-059",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-060",
+          "options": [
+            "a21s2-t-060",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
         }
       ],
       "learning_objectives": {
@@ -3724,7 +4196,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-2-lesson-8",
@@ -3804,6 +4277,36 @@
           "grammar_concept_ids": [
             "a12-requests"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-067",
+          "prompt_fi": "Tarvitsen _____ työnantajalle.",
+          "accepted_answers": [
+            "todistuksen"
+          ],
+          "expected_fi": "Tarvitsen todistuksen työnantajalle.",
+          "expected_fa": "برای کارفرما به گواهی نیاز دارم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-068",
+          "prompt_fi": "Voinko saada _____ tästä?",
+          "accepted_answers": [
+            "kopion"
+          ],
+          "expected_fi": "Voinko saada kopion tästä?",
+          "expected_fa": "می‌توانم یک کپی از این بگیرم؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-069",
+          "prompt_fi": "Voitteko lähettää sen _____?",
+          "accepted_answers": [
+            "sähköpostilla"
+          ],
+          "expected_fi": "Voitteko lähettää sen sähköpostilla?",
+          "expected_fa": "می‌توانید آن را با ایمیل بفرستید؟"
         }
       ],
       "morphology_practice": [
@@ -3951,6 +4454,44 @@
             "a21s2-e-007",
             "a21s2-e-008"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-067",
+          "options": [
+            "a21s2-t-067",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-068",
+          "options": [
+            "a21s2-t-068",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-069",
+          "options": [
+            "a21s2-t-069",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-074"
         }
       ],
       "learning_objectives": {
@@ -4005,7 +4546,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-9",
@@ -4087,6 +4629,36 @@
           "grammar_concept_ids": [
             "a12-requests"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-076",
+          "prompt_fi": "Onko _____ vapaita aikoja?",
+          "accepted_answers": [
+            "torstaina"
+          ],
+          "expected_fi": "Onko torstaina vapaita aikoja?",
+          "expected_fa": "پنجشنبه وقت خالی دارید؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-077",
+          "prompt_fi": "Voitteko lähettää _____ sähköpostilla?",
+          "accepted_answers": [
+            "vahvistuksen"
+          ],
+          "expected_fi": "Voitteko lähettää vahvistuksen sähköpostilla?",
+          "expected_fa": "می‌توانید تأییدیه را با ایمیل بفرستید؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s2-t-069",
+          "prompt_fi": "Voitteko lähettää sen _____?",
+          "accepted_answers": [
+            "sähköpostilla"
+          ],
+          "expected_fi": "Voitteko lähettää sen sähköpostilla?",
+          "expected_fa": "می‌توانید آن را با ایمیل بفرستید؟"
         }
       ],
       "morphology_practice": [
@@ -4237,6 +4809,44 @@
             "a21s2-e-043",
             "a21s2-e-044"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-076",
+          "options": [
+            "a21s2-t-076",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-077",
+          "options": [
+            "a21s2-t-077",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s2-t-069",
+          "options": [
+            "a21s2-t-069",
+            "a21s2-h-001",
+            "a21s2-h-002",
+            "a21s2-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s2-e-082"
         }
       ],
       "learning_objectives": {
@@ -4312,7 +4922,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-2-lesson-10",

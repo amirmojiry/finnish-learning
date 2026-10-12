@@ -27,7 +27,7 @@ test('A2.1 travel lessons 7-10 assess reviewed imperfect using positive supporte
     assert.ok(graded.accepted_answers.includes(expected[index]));
     assert.ok(graded.frame_fi.includes('_____'));
     assert.deepEqual(goal.examples, [{ fi: section.items[graded.item].surface_form, fa: section.items[graded.item].translation_fa }]);
-    assert.equal(lesson.activities.length, 15);
+    assert.equal(lesson.activities.length, lesson.activity_count ?? 15);
     assert.ok(lesson.grammar_fa);
   });
 });

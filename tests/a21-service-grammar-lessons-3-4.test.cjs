@@ -43,7 +43,7 @@ test('clarification assesses staff request and necessity rather than translation
 
 test('both lessons keep activity and progress contracts without padding',()=>{
  for(const lesson of [symptoms,clarification]){
-  assert.equal(lesson.activities.length,15);
+  assert.equal(lesson.activities.length,lesson.activity_count);
   assert.equal(lesson.activities.filter(a=>a.type==='production').length,1);
   assert.equal(lesson.activities.filter(a=>a.type==='dictation').length,1);
   assert.equal(lesson.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1);
@@ -51,7 +51,7 @@ test('both lessons keep activity and progress contracts without padding',()=>{
   assert.equal(lesson.activities.filter(a=>['sentence-order','controlled-production','expression-completion'].includes(a.type)).length,lesson.structured_practice.length);
   assert.deepEqual(lesson.learning_objectives.lexical.map(x=>x.target_id),lesson.new_targets);
  }
- assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),150);
+ assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),184);
 });
 
 test('missing evidence, unlinked correct answers and fabricated prereqs are rejected',()=>{

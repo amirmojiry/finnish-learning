@@ -20,7 +20,7 @@ test('all six service lessons declare separately assessed communicative, lexical
   assert.deepEqual(lesson.learning_objectives.communicative,[{id:lesson.id+'-can-do',can_do_fa:lesson.objective_fa}]);
   assert.deepEqual(lesson.learning_objectives.grammar.map(g=>g.concept_id),expected[i]);
   assert.deepEqual(lesson.learning_objectives.lexical.map(g=>g.target_id),i===5?lesson.checkpoint_targets:lesson.new_targets);
-  assert.equal(lesson.activities.length,15);
+  assert.equal(lesson.activities.length,lesson.activity_count ?? 15);
   for(const goal of lesson.learning_objectives.grammar){
    const canonical=curriculum.grammar_concepts.find(g=>g.id===goal.concept_id);
    assert.deepEqual(goal.prerequisite_concept_ids,canonical.prerequisites);

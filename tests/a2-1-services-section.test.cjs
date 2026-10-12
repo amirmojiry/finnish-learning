@@ -35,7 +35,7 @@ test('A2.1 Section 2 is the 14th playable section, with 140 existing and new les
 
 test('A2.1 service lessons map all authored Finnish/Persian contract targets',()=>{
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),150);
+ assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),184);
  for(let i=0;i<10;i++){
   const l=section.lessons[i],spec=contract.sections[1].lessons[i];
   assert.equal(l.curriculum_id,spec.id);
@@ -46,7 +46,7 @@ test('A2.1 service lessons map all authored Finnish/Persian contract targets',()
   for(const [key,target] of [['high_frequency','high_frequency_targets'],['topic','topic_targets'],['expressions','expressions']]){
    assert.deepEqual(l.curriculum_target_refs[key].map(id=>section.items[id].surface_form),spec[target],l.id+'/'+key);
   }
-  assert.equal(l.activities.length,15,l.id);
+  assert.equal(l.activities.length,l.activity_count ?? 15,l.id);
   assert.equal(l.activities.filter(a=>a.type==='production').length,1,l.id);
   assert.equal(l.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1,l.id);
   assert.equal(l.activities.filter(a=>a.type==='dictation').length,1,l.id);

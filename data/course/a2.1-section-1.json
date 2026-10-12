@@ -1490,6 +1490,25 @@
       "accepted_answers": [
         "Tapasin ystäväni. Palasin kotiin sunnuntaina."
       ]
+    },
+    "a21s1-e-maan-001": {
+      "id": "a21s1-e-maan-001",
+      "surface_form": "Lähdin ostamaan lippua.",
+      "lemma": "Lähdin ostamaan lippua.",
+      "translation_fa": "برای خرید بلیت راه افتادم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a2.1-s1",
+        "curated-travel",
+        "grammar-ma-infinitive"
+      ],
+      "example_fi": "Lähdin ostamaan lippua.",
+      "example_fa": "برای خرید بلیت راه افتادم.",
+      "accepted_answers": [
+        "Lähdin ostamaan lippua."
+      ]
     }
   },
   "lessons": [
@@ -1552,6 +1571,26 @@
             1
           ],
           "expected_fi": "Matka oli mukava."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-004",
+          "prompt_fi": "_____ oli mukava.",
+          "accepted_answers": [
+            "Matka"
+          ],
+          "expected_fi": "Matka oli mukava.",
+          "expected_fa": "سفر دلپذیر بود."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-005",
+          "prompt_fi": "_____ eilen Turussa.",
+          "accepted_answers": [
+            "Kävin"
+          ],
+          "expected_fi": "Kävin eilen Turussa.",
+          "expected_fa": "دیروز به تورکو رفتم."
         }
       ],
       "morphology_practice": [
@@ -1702,6 +1741,28 @@
             "a21s1-t-005",
             "a21s1-h-001"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-004",
+          "options": [
+            "a21s1-t-004",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-005",
+          "options": [
+            "a21s1-t-005",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
         }
       ],
       "learning_objectives": {
@@ -1757,7 +1818,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 17
     },
     {
       "id": "a2.1-section-1-lesson-2",
@@ -1817,6 +1879,26 @@
             0
           ],
           "expected_fi": "Matkustin junalla."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-013",
+          "prompt_fi": "Lähdin _____ aikaisin.",
+          "accepted_answers": [
+            "Vaasasta"
+          ],
+          "expected_fi": "Lähdin Vaasasta aikaisin.",
+          "expected_fa": "زود از واسا حرکت کردم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-014",
+          "prompt_fi": "Matkustin _____.",
+          "accepted_answers": [
+            "junalla"
+          ],
+          "expected_fi": "Matkustin junalla.",
+          "expected_fa": "با قطار سفر کردم."
         }
       ],
       "morphology_practice": [
@@ -1967,6 +2049,33 @@
             "a21s1-t-014",
             "a21s1-h-010"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-013",
+          "options": [
+            "a21s1-t-013",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-014",
+          "options": [
+            "a21s1-t-014",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-019"
         }
       ],
       "learning_objectives": {
@@ -2022,7 +2131,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-1-lesson-3",
@@ -2031,7 +2141,7 @@
       "title_fa": "خرید بلیت و پرداخت در سفر گذشته",
       "objective_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم.",
       "summary_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم.",
-      "grammar_fa": "«Ostin» (خریدم)، «maksoin» (پرداخت کردم) و «maksoi» (قیمت داشت) گذشته‌اند. «Lipun» و «paluulipun» در جملهٔ خرید بلیت مفعول کامل‌اند؛ صورت‌ها را در عبارت یاد بگیر.",
+      "grammar_fa": "«Ostin» (خریدم)، «maksoin» (پرداخت کردم) و «maksoi» (قیمت داشت) گذشته‌اند. «Lipun» و «paluulipun» در جملهٔ خرید بلیت مفعول کامل‌اند؛ صورت‌ها را در عبارت یاد بگیر. «Lähdin ostamaan lippua» یک نمونهٔ مشخص از فعل حرکت + مصدر -maan برای بیان هدف حرکت است؛ صرف همهٔ افعال در این الگو هنوز آموزش داده نمی‌شود.",
       "new_targets": [
         "a21s1-t-022",
         "a21s1-t-023",
@@ -2084,6 +2194,32 @@
             1
           ],
           "expected_fi": "Ostin myös paluulipun."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-023",
+          "prompt_fi": "Maksoin lipun _____.",
+          "accepted_answers": [
+            "kortilla"
+          ],
+          "expected_fi": "Maksoin lipun kortilla.",
+          "expected_fa": "بلیت را با کارت پرداخت کردم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a21s1-e-maan-001",
+          "prompt_fa": "در موقعیت خرید بلیت بگو: «برای خرید بلیت راه افتادم.»",
+          "cues_fi": [
+            "Lähdin",
+            "ostamaan"
+          ],
+          "expected_fi": "Lähdin ostamaan lippua.",
+          "accepted_answers": [
+            "Lähdin ostamaan lippua."
+          ],
+          "grammar_concept_ids": [
+            "a21-maan"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2120,6 +2256,25 @@
           "explanation_fa": "خرید بلیت برگشت به‌عنوان نتیجهٔ کامل در این جمله با «paluulipun» بیان شده است.",
           "grammar_concept_ids": [
             "a21-object-core"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-maan-001",
+          "base_fi": "ostaa",
+          "feature_fa": "مصدر سوم در حالت جهت (-maan)",
+          "prompt_fa": "پس از «Lähdin» برای بیان هدف «رفتم بلیت بخرم»، کدام صورت فعل درست است؟",
+          "frame_fi": "Lähdin _____ lippua.",
+          "options_fi": [
+            "ostaa",
+            "ostan",
+            "ostamassa",
+            "ostamaan"
+          ],
+          "expected_fi": "ostamaan",
+          "explanation_fa": "پس از «lähteä» برای بیان رفتن به قصد انجام کاری، شکل «ostamaan» به‌کار می‌رود؛ این تمرین فقط همین ترکیب را می‌سنجد.",
+          "grammar_concept_ids": [
+            "a21-maan"
           ]
         }
       ],
@@ -2253,6 +2408,49 @@
             "a21s1-t-024",
             "a21s1-h-020"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-023",
+          "options": [
+            "a21s1-t-023",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-t-024"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-029"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-maan-001",
+          "options": [
+            "a21s1-e-maan-001",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-e-maan-001",
+          "options": [
+            "a21s1-e-maan-001",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
         }
       ],
       "learning_objectives": {
@@ -2327,9 +2525,39 @@
                 "mode": "recognition"
               }
             ]
+          },
+          {
+            "concept_id": "a21-maan",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "در «Lähdin ostamaan lippua» فعل حرکت با شکل -maan هدف حرکت را بیان می‌کند؛ این شواهد محدود به کاربرد مشخص است.",
+            "examples": [
+              {
+                "fi": "Lähdin ostamaan lippua.",
+                "fa": "برای خرید بلیت راه افتادم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-maan-001",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "controlled-production",
+                "item_id": "a21s1-e-maan-001",
+                "mode": "supported_production"
+              }
+            ]
           }
         ]
-      }
+      },
+      "practice_targets": [
+        "a21s1-e-maan-001"
+      ],
+      "activity_count": 20
     },
     {
       "id": "a2.1-section-1-lesson-4",
@@ -2393,6 +2621,26 @@
             2
           ],
           "expected_fi": "Matka kesti kaksi tuntia."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-032",
+          "prompt_fi": "Juna saapui _____.",
+          "accepted_answers": [
+            "myöhässä"
+          ],
+          "expected_fi": "Juna saapui myöhässä.",
+          "expected_fa": "قطار با تأخیر رسید."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-033",
+          "prompt_fi": "Matka kesti kaksi _____.",
+          "accepted_answers": [
+            "tuntia"
+          ],
+          "expected_fi": "Matka kesti kaksi tuntia.",
+          "expected_fa": "سفر دو ساعت طول کشید."
         }
       ],
       "morphology_practice": [
@@ -2562,6 +2810,33 @@
             "a21s1-t-033",
             "a21s1-h-002"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-032",
+          "options": [
+            "a21s1-t-032",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-033",
+          "options": [
+            "a21s1-t-033",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-038"
         }
       ],
       "learning_objectives": {
@@ -2638,7 +2913,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-1-lesson-5",
@@ -2700,6 +2976,26 @@
             1
           ],
           "expected_fi": "Aamiainen kuului hintaan."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-041",
+          "prompt_fi": "Yövyin _____ yhden yön.",
+          "accepted_answers": [
+            "hotellissa"
+          ],
+          "expected_fi": "Yövyin hotellissa yhden yön.",
+          "expected_fa": "یک شب در هتل اقامت کردم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-042",
+          "prompt_fi": "_____ kuului hintaan.",
+          "accepted_answers": [
+            "Aamiainen"
+          ],
+          "expected_fi": "Aamiainen kuului hintaan.",
+          "expected_fa": "صبحانه در قیمت اقامت گنجانده شده بود."
         }
       ],
       "morphology_practice": [
@@ -2869,6 +3165,33 @@
             "a21s1-t-042",
             "a21s1-h-002"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-041",
+          "options": [
+            "a21s1-t-041",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-042",
+          "options": [
+            "a21s1-t-042",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-047"
         }
       ],
       "learning_objectives": {
@@ -2945,7 +3268,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-1-lesson-6",
@@ -3007,6 +3331,26 @@
             1
           ],
           "expected_fi": "Kysyin neuvoa asemalla."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-050",
+          "prompt_fi": "En löytänyt _____.",
+          "accepted_answers": [
+            "lippua"
+          ],
+          "expected_fi": "En löytänyt lippua.",
+          "expected_fa": "بلیت را پیدا نکردم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-051",
+          "prompt_fi": "Kysyin _____ asemalla.",
+          "accepted_answers": [
+            "neuvoa"
+          ],
+          "expected_fi": "Kysyin neuvoa asemalla.",
+          "expected_fa": "در ایستگاه راهنمایی خواستم."
         }
       ],
       "morphology_practice": [
@@ -3176,6 +3520,33 @@
             "a21s1-t-051",
             "a21s1-h-002"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-050",
+          "options": [
+            "a21s1-t-050",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-051",
+          "options": [
+            "a21s1-t-051",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-056"
         }
       ],
       "learning_objectives": {
@@ -3252,7 +3623,8 @@
             ]
           }
         ]
-      }
+      },
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-1-lesson-7",
@@ -3261,7 +3633,7 @@
       "title_fa": "دیدنی‌ها و تجربه‌های سفر",
       "objective_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
       "summary_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
-      "grammar_fa": "«Näin» (دیدم)، «otin» (گرفتم) و «pidin» (دوست داشتم) شکل‌های گذشته‌اند. «Näin vanhan kirkon» مفعول کامل و «Otin valokuvia» مفعول جمعِ partitiivi دارد. «Pidin kaupungista» را یک‌جا تمرین کن.",
+      "grammar_fa": "«Näin» (دیدم)، «otin» (گرفتم) و «pidin» (دوست داشتم) شکل‌های گذشته‌اند. «Näin vanhan kirkon» مفعول کامل و «Otin valokuvia» مفعول جمعِ partitiivi دارد. «Pidin kaupungista» را یک‌جا تمرین کن. در «Otin valokuvia» کلمهٔ «valokuvia» نمونه‌ای از Partitiivi جمع است؛ صرف همهٔ گروه‌های اسمی از این مثال نتیجه گرفته نمی‌شود.",
       "new_targets": [
         "a21s1-t-057",
         "a21s1-t-058",
@@ -3312,6 +3684,26 @@
             0
           ],
           "expected_fi": "Pidin kaupungista."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-058",
+          "prompt_fi": "Otin _____.",
+          "accepted_answers": [
+            "valokuvia"
+          ],
+          "expected_fi": "Otin valokuvia.",
+          "expected_fa": "عکس گرفتم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-059",
+          "prompt_fi": "Näin vanhan _____.",
+          "accepted_answers": [
+            "kirkon"
+          ],
+          "expected_fi": "Näin vanhan kirkon.",
+          "expected_fa": "یک کلیسای قدیمی را دیدم."
         }
       ],
       "morphology_practice": [
@@ -3348,6 +3740,25 @@
           "explanation_fa": "فعل «pitää» به معنی دوست داشتن در این ساختار با elatiivi می‌آید: «pitää kaupungista».",
           "grammar_concept_ids": [
             "a21-rections"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-t-058",
+          "base_fi": "valokuva",
+          "feature_fa": "Partitiivi جمع در جملهٔ آشنا",
+          "prompt_fa": "در عبارت «عکس گرفتم» بعد از «Otin»، کدام صورت جمع درست است؟",
+          "frame_fi": "Otin _____.",
+          "options_fi": [
+            "valokuva",
+            "valokuvan",
+            "valokuvia",
+            "valokuvassa"
+          ],
+          "expected_fi": "valokuvia",
+          "explanation_fa": "«valokuvia» شکل Partitiivi جمع از «valokuva» در عبارت «Otin valokuvia» است؛ این یک الگوی نمونه است.",
+          "grammar_concept_ids": [
+            "a21-plural-partitive"
           ]
         }
       ],
@@ -3481,6 +3892,44 @@
             "a21s1-t-059",
             "a21s1-h-039"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-058",
+          "options": [
+            "a21s1-t-058",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-059",
+          "options": [
+            "a21s1-t-059",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-064"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-058",
+          "options": [
+            "a21s1-t-058",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
         }
       ],
       "learning_objectives": {
@@ -3555,9 +4004,31 @@
                 "mode": "recognition"
               }
             ]
+          },
+          {
+            "concept_id": "a21-plural-partitive",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "Partitiivi جمع در «Otin valokuvia» با صورت «valokuvia» دیده و در یک تصمیم گرامری سنجیده می‌شود؛ تعمیم به همهٔ اسم‌ها آموزش داده نشده است.",
+            "examples": [
+              {
+                "fi": "Otin valokuvia.",
+                "fa": "عکس گرفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-t-058",
+                "mode": "recognition"
+              }
+            ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-1-lesson-8",
@@ -3635,6 +4106,26 @@
           "grammar_concept_ids": [
             "a21-sequencing"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-067",
+          "prompt_fi": "Sitten nousin _____.",
+          "accepted_answers": [
+            "junaan"
+          ],
+          "expected_fi": "Sitten nousin junaan.",
+          "expected_fa": "بعد سوار قطار شدم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-068",
+          "prompt_fi": "_____ palasin kotiin.",
+          "accepted_answers": [
+            "Lopuksi"
+          ],
+          "expected_fi": "Lopuksi palasin kotiin.",
+          "expected_fa": "در پایان به خانه برگشتم."
         }
       ],
       "morphology_practice": [
@@ -3785,6 +4276,36 @@
             "a21s1-t-068",
             "a21s1-h-030"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-067",
+          "options": [
+            "a21s1-t-067",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-068",
+          "options": [
+            "a21s1-t-068",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-e-maan-001",
+          "grammar_concept_ids": [
+            "a21-maan"
+          ]
         }
       ],
       "learning_objectives": {
@@ -3859,9 +4380,34 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-maan",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-verb-classes"
+            ],
+            "explanation_fa": "عبارت «Lähdin ostamaan lippua» به‌صورت محدود، ساختار حرکت برای انجام کاری را در مرور بعدی دوباره تمرین می‌کند.",
+            "examples": [
+              {
+                "fi": "Lähdin ostamaan lippua.",
+                "fa": "برای خرید بلیت راه افتادم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "type",
+                "item_id": "a21s1-e-maan-001",
+                "mode": "supported_production"
+              }
+            ]
           }
         ]
-      }
+      },
+      "practice_targets": [
+        "a21s1-e-maan-001"
+      ],
+      "activity_count": 18
     },
     {
       "id": "a2.1-section-1-lesson-9",
@@ -3926,6 +4472,36 @@
             1
           ],
           "expected_fi": "Palasin kotiin sunnuntaina."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-074",
+          "prompt_fi": "Viime _____ kävin Tampereella.",
+          "accepted_answers": [
+            "lauantaina"
+          ],
+          "expected_fi": "Viime lauantaina kävin Tampereella.",
+          "expected_fa": "شنبهٔ گذشته به تامپره رفتم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-075",
+          "prompt_fi": "Viime lauantaina kävin _____.",
+          "accepted_answers": [
+            "Tampereella"
+          ],
+          "expected_fi": "Viime lauantaina kävin Tampereella.",
+          "expected_fa": "شنبهٔ گذشته به تامپره رفتم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a21s1-t-076",
+          "prompt_fi": "Palasin kotiin _____.",
+          "accepted_answers": [
+            "sunnuntaina"
+          ],
+          "expected_fi": "Palasin kotiin sunnuntaina.",
+          "expected_fa": "یکشنبه به خانه برگشتم."
         }
       ],
       "morphology_practice": [
@@ -4095,6 +4671,53 @@
             "a21s1-e-015",
             "a21s1-e-016"
           ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-074",
+          "options": [
+            "a21s1-t-074",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-075",
+          "options": [
+            "a21s1-t-075",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a21s1-t-076",
+          "options": [
+            "a21s1-t-076",
+            "a21s1-h-001",
+            "a21s1-h-002",
+            "a21s1-t-003"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "item": "a21s1-e-077",
+          "expected_items": [
+            "a21s1-e-077",
+            "a21s1-e-078",
+            "a21s1-e-079",
+            "a21s1-e-080"
+          ],
+          "prompt_fa": "داستان سفر را در چهار جملهٔ متصل بازنویسی کن: زمان و مکان، وسیلهٔ سفر، دیدار و بازگشت.",
+          "grammar_concept_ids": [
+            "a21-sequencing"
+          ]
         }
       ],
       "learning_objectives": {
@@ -4169,9 +4792,31 @@
                 "mode": "recognition"
               }
             ]
+          },
+          {
+            "concept_id": "a21-sequencing",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a21-imperfect"
+            ],
+            "explanation_fa": "چهار جملهٔ آشنای گذشته را به‌ترتیب رویدادها در یک روایت راهنمایی‌شده می‌نویسیم؛ این هنوز روایت مستقل در موقعیت جدید نیست.",
+            "examples": [
+              {
+                "fi": "Viime lauantaina kävin Tampereella. Matkustin sinne junalla. Tapasin ystäväni. Palasin kotiin sunnuntaina.",
+                "fa": "شنبهٔ گذشته به تامپره رفتم. با قطار به آنجا سفر کردم. دوستم را دیدم. یکشنبه به خانه برگشتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "guided-writing",
+                "item_id": "a21s1-e-077",
+                "mode": "supported_production"
+              }
+            ]
           }
         ]
-      }
+      },
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-1-lesson-10",

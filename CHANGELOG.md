@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.33.1] - 2026-10-12
+
+### Changed
+
+- Expand all 18 shipped A2.1 teaching lessons without deleting earlier assessed practice: 45 contextual Finnish form-completion tasks, one direct typed lexical-form task and thirteen full-expression typed recalls; add direct introduction/review work for the `-maan` infinitive, plural partitive, and a supported four-event travel narrative.
+- Retain the two 15-target checkpoints, all 140 shipped lesson IDs, existing SRS/local progress storage and separate listening/dictation/production activities. A2.1 Sections 1–2 now include 180 and 184 activities respectively (364 total).
+- Strengthen multi-lesson variable-card and positive-answer regression tests, improve explicit per-lesson counts, and refresh deterministic lexical/grammar coverage snapshots. This expands assessed learning opportunities; quiz answers are not evidence of independent CEFR proficiency.
+
 ## [1.33.0] - 2026-10-12
 
 ### Changed

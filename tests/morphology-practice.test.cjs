@@ -53,7 +53,7 @@ test('reviewed morphology practice is present in the intended A1.1 lessons', () 
 
   assert.equal(affected.length, expectedCurriculumIds.size);
   assert.deepEqual(new Set(affected.map((lesson) => lesson.curriculum_id)), expectedCurriculumIds);
-  for (const lesson of affected) assert.equal(lesson.activities.length, 15, lesson.id);
+  for (const lesson of affected) assert.equal(lesson.activities.length, lesson.activity_count ?? 15, lesson.id);
 
   const counts = affected.flatMap((lesson) => lesson.activities)
     .filter((activity) => MORPHOLOGY_TYPES.has(activity.type))

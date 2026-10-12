@@ -16,13 +16,14 @@ test('generated activity counts may differ without changing the default legacy f
 test('explicitly authored lesson activity counts may grow independently',()=>{
  const modified=structuredClone(raw);
  const lesson=modified.lessons[0];
+ const originalCount=lesson.activities.length;
  lesson.activities.push({...lesson.activities.find(a=>a.type==='choice'&&a.mode==='meaning')});
- assert.equal(lesson.activities.length,16);
- lesson.activity_count=16;
- assert.equal(course.validateSection(modified).lessons[0].activities.length,16);
- assert.equal(course.validateSection(modified).lessons[1].activities.length,15);
+ assert.equal(lesson.activities.length,originalCount+1);
+ lesson.activity_count=originalCount+1;
+ assert.equal(course.validateSection(modified).lessons[0].activities.length,originalCount+1);
+ assert.equal(course.validateSection(modified).lessons[1].activities.length,raw.lessons[1].activity_count);
  const invalid=structuredClone(modified);
- invalid.lessons[0].activity_count=17;
+ invalid.lessons[0].activity_count=originalCount+2;
  assert.throws(()=>course.validateSection(invalid),/activity count differs/);
 });
 test('checkpoint builder supports matching variable targets and modes',()=>{
@@ -37,7 +38,7 @@ test('saved progress and scores remain valid independent of future activity coun
  assert.deepEqual(restored.lessonScores['legacy-lesson'],{correct:8,graded:10,completedAt:123});
  assert.equal(restored.completedLessons.includes('legacy-lesson'),true);
  const current=course.validateSection(raw);
- assert.equal(current.lessons.reduce((sum,l)=>sum+l.activities.length,0),150);
+ assert.equal(current.lessons.reduce((sum,l)=>sum+l.activities.length,0),184);
 });
 test('best score compares percentage before raw count when lesson size changes',()=>{
  const base=course.recordLessonCompletion(course.emptyProgress(),'resized',8,10,100);

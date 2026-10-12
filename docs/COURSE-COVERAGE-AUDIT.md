@@ -5,11 +5,11 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 
 ## Key findings
 
-- 140 shipped lessons / 14 sections; 1388 graded slots after real runtime injection.
+- 140 shipped lessons / 14 sections; 1452 graded slots after real runtime injection.
 - 670 lexical target placements and 464 distinct surface forms; 432 lemma-field values (unverified) and 0 explicit sense IDs.
-- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 295 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
+- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 303 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 400 dictionary entries; 124 authored lexical target forms found in the curated dictionary; 340 missing, of which 334 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 11 with explicit lesson concept IDs. 120 lessons lack these links even though 262 structural/grammar slots exist (62 morphology slots).
+- 27 planned grammar concepts in shipped stages; 13 with explicit lesson concept IDs. 120 lessons lack these links even though 311 structural/grammar slots exist (64 morphology slots).
 - 112 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage
@@ -28,8 +28,8 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 | A1.3 | a1.3-section-2 | 10 | 116 | 14 | 10 |
 | A1.3 | a1.3-section-3 | 10 | 116 | 14 | 10 |
 | A1.3 | a1.3-section-4 | 10 | 116 | 15 | 10 |
-| A2.1 | a2.1-section-1 | 10 | 105 | 35 | 0 |
-| A2.1 | a2.1-section-2 | 10 | 105 | 37 | 0 |
+| A2.1 | a2.1-section-1 | 10 | 135 | 10 | 0 |
+| A2.1 | a2.1-section-2 | 10 | 139 | 10 | 0 |
 
 ## Lexical candidates outside the installed dictionary
 
@@ -108,8 +108,6 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | `a13-local-expansion` | A1.3 | `a12-local-cases` |
 | `a13-partitive-patterns` | A1.3 | `a12-quantities` |
 | `a13-past-recognition` | A1.3 | `a13-present-paradigm` |
-| `a21-plural-partitive` | A2.1 | `a12-quantities` |
-| `a21-maan` | A2.1 | `a13-verb-classes` |
 
 ## Next work according to issue #101
 
