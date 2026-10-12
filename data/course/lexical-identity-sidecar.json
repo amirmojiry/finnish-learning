@@ -6,7 +6,7 @@
     "shipped_sections": 14,
     "shipped_lessons": 140,
     "dictionary_forms": 400,
-    "records": 1209
+    "records": 1216
   },
   "records": [
     {
@@ -53,6 +53,30 @@
           "section_id": "a2.1-section-1",
           "lesson_id": "a2.1-section-1-lesson-5",
           "item_id": "a21s1-e-047",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
+      "id": "expression:61-61-6d-75-6c-6c-61-20-6d-65-6e-65-6e-20-6b-6f-75-6c-75-75-6e-2e",
+      "kind": "expression",
+      "surface_form": "aamulla menen kouluun.",
+      "form_id": null,
+      "expression_id": "expression:61-61-6d-75-6c-6c-61-20-6d-65-6e-65-6e-20-6b-6f-75-6c-75-75-6e-2e",
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-3-lesson-9",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-3",
+          "lesson_id": "section-3-lesson-9",
+          "item_id": "s3-routine-2",
           "role": "referenced"
         }
       ]
@@ -216,7 +240,8 @@
       "first_shipped_lesson": "section-2-lesson-4",
       "review_lessons": [
         "section-2-lesson-9",
-        "section-2-lesson-10"
+        "section-2-lesson-10",
+        "section-4-lesson-10"
       ],
       "occurrences": [
         {
@@ -242,6 +267,12 @@
           "lesson_id": "section-2-lesson-10",
           "item_id": "s2-asun-vaasassa",
           "role": "checkpoint"
+        },
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-10",
+          "item_id": "s4-final-live",
+          "role": "referenced"
         }
       ]
     },
@@ -1733,6 +1764,30 @@
       ]
     },
     {
+      "id": "expression:68-65-76-6f-6e-65-6e-20-6f-6e-20-69-73-6f-2e",
+      "kind": "expression",
+      "surface_form": "hevonen on iso.",
+      "form_id": null,
+      "expression_id": "expression:68-65-76-6f-6e-65-6e-20-6f-6e-20-69-73-6f-2e",
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-8",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-8",
+          "item_id": "s4-hevonen-on-iso",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
       "id": "expression:68-69-74-61-61-6d-6d-69-6e-2c-20-6b-69-69-74-6f-73",
       "kind": "expression",
       "surface_form": "hitaammin, kiitos",
@@ -2824,12 +2879,20 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "section-4-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "section-4-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-4",
           "lesson_id": "section-4-lesson-5",
           "item_id": "s4-kiitos",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-10",
+          "item_id": "s4-final-cafe-thanks",
           "role": "referenced"
         }
       ]
@@ -3513,6 +3576,30 @@
       ]
     },
     {
+      "id": "expression:6c-69-6e-74-75-20-6f-6e-20-70-69-65-6e-69-2e",
+      "kind": "expression",
+      "surface_form": "lintu on pieni.",
+      "form_id": null,
+      "expression_id": "expression:6c-69-6e-74-75-20-6f-6e-20-70-69-65-6e-69-2e",
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-8",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-8",
+          "item_id": "s4-lintu-on-pieni",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
       "id": "expression:6c-69-70-70-75-20-6d-61-6b-73-6f-69-20-6b-61-6b-73-69-6b-79-6d-6d-65-6e-74-e4-20-65-75-72-6f-61-2e",
       "kind": "expression",
       "surface_form": "lippu maksoi kaksikymmentä euroa.",
@@ -4071,12 +4158,19 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-2-lesson-2",
       "review_lessons": [
+        "a1.2-section-2-lesson-9",
         "a1.2-section-2-lesson-10"
       ],
       "occurrences": [
         {
           "section_id": "a1.2-section-2",
           "lesson_id": "a1.2-section-2-lesson-2",
+          "item_id": "a12s2-expr-mene-suoraan-17",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-2",
+          "lesson_id": "a1.2-section-2-lesson-9",
           "item_id": "a12s2-expr-mene-suoraan-17",
           "role": "referenced"
         },
@@ -4501,6 +4595,7 @@
       "source_position": null,
       "first_shipped_lesson": "lesson-2",
       "review_lessons": [
+        "lesson-9",
         "lesson-10"
       ],
       "occurrences": [
@@ -4509,6 +4604,12 @@
           "lesson_id": "lesson-2",
           "item_id": "mika-sinun-nimesi-on",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-9",
+          "item_id": "mika-sinun-nimesi-on",
+          "role": "referenced"
         },
         {
           "section_id": "a1.1-section-1",
@@ -6494,12 +6595,20 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "section-4-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "section-4-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-4",
           "lesson_id": "section-4-lesson-5",
           "item_id": "s4-ole-hyva",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-10",
+          "item_id": "s4-final-cafe-give",
           "role": "referenced"
         }
       ]
@@ -9062,6 +9171,7 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-3-lesson-5",
       "review_lessons": [
+        "a1.2-section-3-lesson-9",
         "a1.2-section-3-lesson-10",
         "a1.2-section-4-lesson-10"
       ],
@@ -9069,6 +9179,12 @@
         {
           "section_id": "a1.2-section-3",
           "lesson_id": "a1.2-section-3-lesson-5",
+          "item_id": "a12s3-expr-17",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-3",
+          "lesson_id": "a1.2-section-3-lesson-9",
           "item_id": "a12s3-expr-17",
           "role": "referenced"
         },
@@ -10407,7 +10523,9 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "section-4-lesson-9",
-      "review_lessons": [],
+      "review_lessons": [
+        "section-4-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-4",
@@ -10419,6 +10537,12 @@
           "section_id": "a1.1-section-4",
           "lesson_id": "section-4-lesson-9",
           "item_id": "s4-world-1",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-10",
+          "item_id": "s4-tama-on-minun-kotini",
           "role": "referenced"
         }
       ]
@@ -11920,12 +12044,20 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "section-4-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "section-4-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-4",
           "lesson_id": "section-4-lesson-5",
           "item_id": "s4-yksi-kahvi-kiitos",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-10",
+          "item_id": "s4-final-cafe-order",
           "role": "referenced"
         }
       ]
@@ -12094,7 +12226,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 256,
-      "source_position": null,
+      "source_position": 256,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -12186,7 +12318,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 228,
-      "source_position": null,
+      "source_position": 228,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -12278,7 +12410,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 241,
-      "source_position": null,
+      "source_position": 241,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -12454,7 +12586,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 151,
-      "source_position": null,
+      "source_position": 151,
       "first_shipped_lesson": "section-3-lesson-8",
       "review_lessons": [
         "a1.2-section-4-lesson-6"
@@ -12486,7 +12618,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 153,
-      "source_position": null,
+      "source_position": 153,
       "first_shipped_lesson": "a1.2-section-2-lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -12527,7 +12659,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 82,
-      "source_position": null,
+      "source_position": 82,
       "first_shipped_lesson": "a1.2-section-4-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -12551,7 +12683,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 76,
-      "source_position": null,
+      "source_position": 76,
       "first_shipped_lesson": "a1.2-section-3-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -12626,7 +12758,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 117,
-      "source_position": null,
+      "source_position": 117,
       "first_shipped_lesson": "a2.1-section-2-lesson-1",
       "review_lessons": [],
       "occurrences": [
@@ -12822,7 +12954,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 164,
-      "source_position": null,
+      "source_position": 164,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
       "review_lessons": [
         "a1.2-section-1-lesson-7",
@@ -12864,6 +12996,7 @@
       "source_position": 1731,
       "first_shipped_lesson": "lesson-6",
       "review_lessons": [
+        "lesson-9",
         "lesson-10"
       ],
       "occurrences": [
@@ -12872,6 +13005,12 @@
           "lesson_id": "lesson-6",
           "item_id": "anteeksi",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-9",
+          "item_id": "anteeksi",
+          "role": "referenced"
         },
         {
           "section_id": "a1.1-section-1",
@@ -13362,7 +13501,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 124,
-      "source_position": null,
+      "source_position": 124,
       "first_shipped_lesson": "a1.2-section-3-lesson-5",
       "review_lessons": [
         "a1.2-section-4-lesson-8",
@@ -13408,7 +13547,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 3,
-      "source_position": null,
+      "source_position": 3,
       "first_shipped_lesson": "lesson-4",
       "review_lessons": [
         "a1.2-section-1-lesson-8",
@@ -13585,7 +13724,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 55,
-      "source_position": null,
+      "source_position": 55,
       "first_shipped_lesson": "lesson-7",
       "review_lessons": [
         "section-3-lesson-7"
@@ -13617,7 +13756,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 89,
-      "source_position": null,
+      "source_position": 89,
       "first_shipped_lesson": "a1.3-section-1-lesson-6",
       "review_lessons": [
         "a1.3-section-4-lesson-6"
@@ -13673,7 +13812,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 50,
-      "source_position": null,
+      "source_position": 50,
       "first_shipped_lesson": "a1.2-section-2-lesson-7",
       "review_lessons": [
         "a2.1-section-1-lesson-2",
@@ -13712,7 +13851,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 86,
-      "source_position": null,
+      "source_position": 86,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [
         "a1.3-section-3-lesson-7",
@@ -13785,7 +13924,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 299,
-      "source_position": null,
+      "source_position": 299,
       "first_shipped_lesson": "a1.3-section-3-lesson-3",
       "review_lessons": [
         "a1.3-section-4-lesson-3",
@@ -13950,7 +14089,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 4,
-      "source_position": null,
+      "source_position": 4,
       "first_shipped_lesson": "a1.3-section-3-lesson-6",
       "review_lessons": [],
       "occurrences": [
@@ -14291,7 +14430,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 67,
-      "source_position": null,
+      "source_position": 67,
       "first_shipped_lesson": "section-2-lesson-1",
       "review_lessons": [],
       "occurrences": [
@@ -14573,7 +14712,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 141,
-      "source_position": null,
+      "source_position": 141,
       "first_shipped_lesson": "a1.2-section-3-lesson-8",
       "review_lessons": [
         "a1.2-section-4-lesson-7",
@@ -15004,7 +15143,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 58,
-      "source_position": null,
+      "source_position": 58,
       "first_shipped_lesson": "a1.2-section-4-lesson-1",
       "review_lessons": [
         "a1.2-section-4-lesson-2",
@@ -15043,7 +15182,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 121,
-      "source_position": null,
+      "source_position": 121,
       "first_shipped_lesson": "lesson-3",
       "review_lessons": [
         "a1.3-section-1-lesson-6",
@@ -15128,7 +15267,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 7,
-      "source_position": null,
+      "source_position": 7,
       "first_shipped_lesson": "lesson-5",
       "review_lessons": [
         "section-2-lesson-1",
@@ -15317,7 +15456,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 280,
-      "source_position": null,
+      "source_position": 280,
       "first_shipped_lesson": "lesson-5",
       "review_lessons": [],
       "occurrences": [
@@ -15661,7 +15800,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 1,
-      "source_position": null,
+      "source_position": 1,
       "first_shipped_lesson": "lesson-1",
       "review_lessons": [
         "a1.3-section-4-lesson-8"
@@ -16027,7 +16166,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 22,
-      "source_position": null,
+      "source_position": 22,
       "first_shipped_lesson": "a1.2-section-4-lesson-8",
       "review_lessons": [
         "a2.1-section-2-lesson-5"
@@ -16059,7 +16198,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 243,
-      "source_position": null,
+      "source_position": 243,
       "first_shipped_lesson": "a1.2-section-3-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -16381,7 +16520,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 36,
-      "source_position": null,
+      "source_position": 36,
       "first_shipped_lesson": "a1.2-section-2-lesson-7",
       "review_lessons": [
         "a1.3-section-2-lesson-7",
@@ -16687,7 +16826,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 44,
-      "source_position": null,
+      "source_position": 44,
       "first_shipped_lesson": "a1.3-section-2-lesson-1",
       "review_lessons": [],
       "occurrences": [
@@ -16728,7 +16867,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 69,
-      "source_position": null,
+      "source_position": 69,
       "first_shipped_lesson": "section-2-lesson-7",
       "review_lessons": [
         "a1.2-section-2-lesson-6"
@@ -16881,7 +17020,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 33,
-      "source_position": null,
+      "source_position": 33,
       "first_shipped_lesson": "a1.2-section-2-lesson-5",
       "review_lessons": [
         "a1.2-section-3-lesson-7",
@@ -17183,7 +17322,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 184,
-      "source_position": null,
+      "source_position": 184,
       "first_shipped_lesson": "a1.2-section-3-lesson-3",
       "review_lessons": [],
       "occurrences": [
@@ -17475,7 +17614,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 323,
-      "source_position": null,
+      "source_position": 323,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [],
       "occurrences": [
@@ -17643,7 +17782,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 230,
-      "source_position": null,
+      "source_position": 230,
       "first_shipped_lesson": "a1.3-section-2-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -17937,7 +18076,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 148,
-      "source_position": null,
+      "source_position": 148,
       "first_shipped_lesson": "a1.2-section-2-lesson-7",
       "review_lessons": [
         "a1.3-section-2-lesson-7"
@@ -17969,7 +18108,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 285,
-      "source_position": null,
+      "source_position": 285,
       "first_shipped_lesson": "a1.2-section-2-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -18059,7 +18198,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 125,
-      "source_position": null,
+      "source_position": 125,
       "first_shipped_lesson": "section-2-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -18260,7 +18399,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 64,
-      "source_position": null,
+      "source_position": 64,
       "first_shipped_lesson": "a1.3-section-1-lesson-7",
       "review_lessons": [
         "a1.3-section-3-lesson-8",
@@ -18517,7 +18656,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 173,
-      "source_position": null,
+      "source_position": 173,
       "first_shipped_lesson": "a1.2-section-2-lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -18607,7 +18746,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 356,
-      "source_position": null,
+      "source_position": 356,
       "first_shipped_lesson": "lesson-5",
       "review_lessons": [],
       "occurrences": [
@@ -18908,7 +19047,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 116,
-      "source_position": null,
+      "source_position": 116,
       "first_shipped_lesson": "lesson-4",
       "review_lessons": [
         "lesson-10",
@@ -18971,7 +19110,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 244,
-      "source_position": null,
+      "source_position": 244,
       "first_shipped_lesson": "section-2-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -19118,7 +19257,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 281,
-      "source_position": null,
+      "source_position": 281,
       "first_shipped_lesson": "a1.2-section-3-lesson-1",
       "review_lessons": [],
       "occurrences": [
@@ -19390,7 +19529,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 166,
-      "source_position": null,
+      "source_position": 166,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
       "review_lessons": [
         "a1.2-section-4-lesson-2",
@@ -19574,7 +19713,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 189,
-      "source_position": null,
+      "source_position": 189,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
       "review_lessons": [
         "a1.3-section-2-lesson-3"
@@ -20099,7 +20238,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 155,
-      "source_position": null,
+      "source_position": 155,
       "first_shipped_lesson": "a1.2-section-3-lesson-3",
       "review_lessons": [],
       "occurrences": [
@@ -20155,7 +20294,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 260,
-      "source_position": null,
+      "source_position": 260,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [],
       "occurrences": [
@@ -20220,7 +20359,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 383,
-      "source_position": null,
+      "source_position": 383,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -20351,7 +20490,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 133,
-      "source_position": null,
+      "source_position": 133,
       "first_shipped_lesson": "section-2-lesson-1",
       "review_lessons": [],
       "occurrences": [
@@ -20399,7 +20538,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 236,
-      "source_position": null,
+      "source_position": 236,
       "first_shipped_lesson": "a1.3-section-3-lesson-5",
       "review_lessons": [],
       "occurrences": [
@@ -20643,7 +20782,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 105,
-      "source_position": null,
+      "source_position": 105,
       "first_shipped_lesson": "a1.3-section-4-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -20749,7 +20888,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 98,
-      "source_position": null,
+      "source_position": 98,
       "first_shipped_lesson": "lesson-5",
       "review_lessons": [],
       "occurrences": [
@@ -20914,7 +21053,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 296,
-      "source_position": null,
+      "source_position": 296,
       "first_shipped_lesson": "a1.3-section-1-lesson-4",
       "review_lessons": [
         "a1.3-section-1-lesson-5",
@@ -20974,7 +21113,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 163,
-      "source_position": null,
+      "source_position": 163,
       "first_shipped_lesson": "section-2-lesson-6",
       "review_lessons": [
         "section-2-lesson-10",
@@ -21135,7 +21274,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 54,
-      "source_position": null,
+      "source_position": 54,
       "first_shipped_lesson": "lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -21279,7 +21418,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 188,
-      "source_position": null,
+      "source_position": 188,
       "first_shipped_lesson": "section-2-lesson-4",
       "review_lessons": [
         "section-4-lesson-2",
@@ -21366,6 +21505,30 @@
       ]
     },
     {
+      "id": "form:6d-69-73-73-e4-20-6b-69-72-6a-61-20-6f-6e-3f",
+      "kind": "form",
+      "surface_form": "missä kirja on?",
+      "form_id": "form:6d-69-73-73-e4-20-6b-69-72-6a-61-20-6f-6e-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-book",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
       "id": "form:6d-69-73-73-e4-20-6b-69-72-6a-61-73-74-6f-20-6f-6e-3f-20-6d-69-6c-6c-6f-69-6e-20-73-65-20-6f-6e-20-61-75-6b-69-3f",
       "kind": "form",
       "surface_form": "missä kirjasto on? milloin se on auki?",
@@ -21390,6 +21553,78 @@
       ]
     },
     {
+      "id": "form:6d-69-73-73-e4-20-6b-69-73-73-61-20-6f-6e-3f",
+      "kind": "form",
+      "surface_form": "missä kissa on?",
+      "form_id": "form:6d-69-73-73-e4-20-6b-69-73-73-61-20-6f-6e-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-cat",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
+      "id": "form:6d-69-73-73-e4-20-6f-6c-65-74-3f",
+      "kind": "form",
+      "surface_form": "missä olet?",
+      "form_id": "form:6d-69-73-73-e4-20-6f-6c-65-74-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-home",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
+      "id": "form:6d-69-73-73-e4-20-70-75-68-65-6c-69-6e-20-6f-6e-3f",
+      "kind": "form",
+      "surface_form": "missä puhelin on?",
+      "form_id": "form:6d-69-73-73-e4-20-70-75-68-65-6c-69-6e-20-6f-6e-3f",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "curated_unranked",
+      "source_rank": null,
+      "source_position": null,
+      "first_shipped_lesson": "section-4-lesson-2",
+      "review_lessons": [],
+      "occurrences": [
+        {
+          "section_id": "a1.1-section-4",
+          "lesson_id": "section-4-lesson-2",
+          "item_id": "s4-location-q-phone",
+          "role": "referenced"
+        }
+      ]
+    },
+    {
       "id": "form:6d-69-73-74-e4",
       "kind": "form",
       "surface_form": "mistä",
@@ -21401,7 +21636,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 329,
-      "source_position": null,
+      "source_position": 330,
       "first_shipped_lesson": "section-2-lesson-2",
       "review_lessons": [
         "a1.2-section-2-lesson-4"
@@ -21433,7 +21668,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 85,
-      "source_position": null,
+      "source_position": 85,
       "first_shipped_lesson": "a1.2-section-2-lesson-8",
       "review_lessons": [
         "a1.3-section-3-lesson-2"
@@ -21465,7 +21700,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 40,
-      "source_position": null,
+      "source_position": 40,
       "first_shipped_lesson": "lesson-3",
       "review_lessons": [
         "section-3-lesson-6",
@@ -21597,7 +21832,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 74,
-      "source_position": null,
+      "source_position": 74,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -21836,7 +22071,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 8,
-      "source_position": null,
+      "source_position": 8,
       "first_shipped_lesson": "a1.3-section-1-lesson-7",
       "review_lessons": [
         "a1.3-section-4-lesson-7",
@@ -21943,7 +22178,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 227,
-      "source_position": null,
+      "source_position": 227,
       "first_shipped_lesson": "a1.2-section-3-lesson-8",
       "review_lessons": [
         "a1.3-section-1-lesson-3"
@@ -22052,7 +22287,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 11,
-      "source_position": null,
+      "source_position": 11,
       "first_shipped_lesson": "a1.3-section-1-lesson-1",
       "review_lessons": [
         "a1.3-section-1-lesson-6",
@@ -22197,7 +22432,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 254,
-      "source_position": null,
+      "source_position": 254,
       "first_shipped_lesson": "section-2-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -22532,7 +22767,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 23,
-      "source_position": null,
+      "source_position": 23,
       "first_shipped_lesson": "section-3-lesson-4",
       "review_lessons": [
         "a1.2-section-3-lesson-8",
@@ -22708,7 +22943,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 253,
-      "source_position": null,
+      "source_position": 253,
       "first_shipped_lesson": "a1.3-section-2-lesson-4",
       "review_lessons": [],
       "occurrences": [
@@ -22756,7 +22991,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 13,
-      "source_position": null,
+      "source_position": 13,
       "first_shipped_lesson": "lesson-4",
       "review_lessons": [],
       "occurrences": [
@@ -22797,7 +23032,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 96,
-      "source_position": null,
+      "source_position": 96,
       "first_shipped_lesson": "lesson-2",
       "review_lessons": [
         "section-2-lesson-2",
@@ -22882,9 +23117,9 @@
       "sense_id": null,
       "morphology": null,
       "identity_review_status": "unresolved",
-      "provenance": "curated_unranked",
-      "source_rank": null,
-      "source_position": null,
+      "provenance": "source_backed_outside_dictionary",
+      "source_rank": 745,
+      "source_position": 745,
       "first_shipped_lesson": "lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -22925,7 +23160,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 5,
-      "source_position": null,
+      "source_position": 5,
       "first_shipped_lesson": "a1.3-section-4-lesson-1",
       "review_lessons": [
         "a2.1-section-1-lesson-1",
@@ -22985,7 +23220,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 177,
-      "source_position": null,
+      "source_position": 177,
       "first_shipped_lesson": "a1.3-section-4-lesson-1",
       "review_lessons": [
         "a2.1-section-1-lesson-1"
@@ -23168,7 +23403,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 2,
-      "source_position": null,
+      "source_position": 2,
       "first_shipped_lesson": "lesson-1",
       "review_lessons": [
         "lesson-8",
@@ -23566,7 +23801,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 192,
-      "source_position": null,
+      "source_position": 192,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
       "review_lessons": [
         "a1.2-section-4-lesson-5"
@@ -23680,7 +23915,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 60,
-      "source_position": null,
+      "source_position": 60,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
       "review_lessons": [
         "a1.2-section-1-lesson-4",
@@ -23933,7 +24168,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 301,
-      "source_position": null,
+      "source_position": 301,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [
         "a1.3-section-3-lesson-7"
@@ -24086,7 +24321,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 389,
-      "source_position": null,
+      "source_position": 389,
       "first_shipped_lesson": "section-4-lesson-8",
       "review_lessons": [
         "a1.2-section-1-lesson-6"
@@ -24169,7 +24404,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 70,
-      "source_position": null,
+      "source_position": 70,
       "first_shipped_lesson": "a1.2-section-3-lesson-4",
       "review_lessons": [
         "a1.3-section-2-lesson-3",
@@ -24236,7 +24471,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 157,
-      "source_position": null,
+      "source_position": 157,
       "first_shipped_lesson": "a1.2-section-2-lesson-2",
       "review_lessons": [
         "a1.3-section-3-lesson-8"
@@ -24831,7 +25066,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 297,
-      "source_position": null,
+      "source_position": 297,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
       "review_lessons": [
         "a1.2-section-1-lesson-7"
@@ -24984,7 +25219,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 61,
-      "source_position": null,
+      "source_position": 61,
       "first_shipped_lesson": "a1.2-section-4-lesson-5",
       "review_lessons": [
         "a1.3-section-2-lesson-8"
@@ -25016,7 +25251,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 159,
-      "source_position": null,
+      "source_position": 159,
       "first_shipped_lesson": "a2.1-section-2-lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -25204,7 +25439,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 93,
-      "source_position": null,
+      "source_position": 93,
       "first_shipped_lesson": "a1.3-section-4-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -25369,7 +25604,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 57,
-      "source_position": null,
+      "source_position": 57,
       "first_shipped_lesson": "a1.3-section-4-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -25393,7 +25628,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 56,
-      "source_position": null,
+      "source_position": 56,
       "first_shipped_lesson": "a1.3-section-1-lesson-5",
       "review_lessons": [],
       "occurrences": [
@@ -25441,7 +25676,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 6,
-      "source_position": null,
+      "source_position": 6,
       "first_shipped_lesson": "lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -25684,7 +25919,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 149,
-      "source_position": null,
+      "source_position": 149,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
       "review_lessons": [
         "a1.2-section-2-lesson-1",
@@ -25737,7 +25972,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 78,
-      "source_position": null,
+      "source_position": 78,
       "first_shipped_lesson": "a1.2-section-2-lesson-3",
       "review_lessons": [],
       "occurrences": [
@@ -25761,7 +25996,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 80,
-      "source_position": null,
+      "source_position": 80,
       "first_shipped_lesson": "a1.3-section-2-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -25834,7 +26069,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 32,
-      "source_position": null,
+      "source_position": 32,
       "first_shipped_lesson": "a1.2-section-2-lesson-4",
       "review_lessons": [],
       "occurrences": [
@@ -25899,7 +26134,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 217,
-      "source_position": null,
+      "source_position": 217,
       "first_shipped_lesson": "a1.3-section-1-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -25998,7 +26233,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 202,
-      "source_position": null,
+      "source_position": 202,
       "first_shipped_lesson": "lesson-2",
       "review_lessons": [
         "a1.3-section-3-lesson-6"
@@ -26143,7 +26378,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 31,
-      "source_position": null,
+      "source_position": 31,
       "first_shipped_lesson": "a1.2-section-3-lesson-5",
       "review_lessons": [
         "a1.3-section-1-lesson-3",
@@ -26434,7 +26669,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 303,
-      "source_position": null,
+      "source_position": 303,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [
         "a2.1-section-1-lesson-9"
@@ -26517,7 +26752,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 144,
-      "source_position": null,
+      "source_position": 144,
       "first_shipped_lesson": "section-2-lesson-2",
       "review_lessons": [
         "section-2-lesson-3"
@@ -26549,7 +26784,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 360,
-      "source_position": null,
+      "source_position": 360,
       "first_shipped_lesson": "a1.2-section-2-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -26912,7 +27147,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 224,
-      "source_position": null,
+      "source_position": 224,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [
         "a1.2-section-2-lesson-2"
@@ -27404,7 +27639,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 138,
-      "source_position": null,
+      "source_position": 138,
       "first_shipped_lesson": "a1.2-section-3-lesson-3",
       "review_lessons": [
         "a1.3-section-2-lesson-3",
@@ -27518,7 +27753,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 272,
-      "source_position": null,
+      "source_position": 272,
       "first_shipped_lesson": "a1.2-section-3-lesson-1",
       "review_lessons": [],
       "occurrences": [
@@ -27542,7 +27777,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 273,
-      "source_position": null,
+      "source_position": 273,
       "first_shipped_lesson": "a1.3-section-4-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -27665,7 +27900,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 291,
-      "source_position": null,
+      "source_position": 291,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [],
       "occurrences": [
@@ -27803,7 +28038,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 119,
-      "source_position": null,
+      "source_position": 119,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
       "review_lessons": [
         "a1.3-section-4-lesson-6"
@@ -27893,7 +28128,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 298,
-      "source_position": null,
+      "source_position": 298,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [
         "a2.1-section-2-lesson-9"
@@ -27942,7 +28177,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 59,
-      "source_position": null,
+      "source_position": 59,
       "first_shipped_lesson": "a1.2-section-2-lesson-3",
       "review_lessons": [
         "a1.2-section-2-lesson-4",
@@ -28019,7 +28254,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 87,
-      "source_position": null,
+      "source_position": 87,
       "first_shipped_lesson": "a1.3-section-4-lesson-1",
       "review_lessons": [
         "a2.1-section-1-lesson-2"
@@ -28068,7 +28303,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 376,
-      "source_position": null,
+      "source_position": 376,
       "first_shipped_lesson": "a1.2-section-3-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -28336,7 +28571,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 170,
-      "source_position": null,
+      "source_position": 170,
       "first_shipped_lesson": "a1.2-section-2-lesson-3",
       "review_lessons": [
         "a2.1-section-2-lesson-7"
@@ -28385,7 +28620,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 49,
-      "source_position": null,
+      "source_position": 49,
       "first_shipped_lesson": "lesson-5",
       "review_lessons": [
         "lesson-8",
@@ -28518,7 +28753,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 171,
-      "source_position": null,
+      "source_position": 171,
       "first_shipped_lesson": "a1.3-section-3-lesson-1",
       "review_lessons": [
         "a1.3-section-3-lesson-7"
@@ -28550,7 +28785,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 329,
-      "source_position": null,
+      "source_position": 329,
       "first_shipped_lesson": "section-3-lesson-1",
       "review_lessons": [
         "section-3-lesson-10",
@@ -28613,7 +28848,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 97,
-      "source_position": null,
+      "source_position": 97,
       "first_shipped_lesson": "a1.3-section-2-lesson-1",
       "review_lessons": [
         "a1.3-section-2-lesson-2"
@@ -28645,7 +28880,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 235,
-      "source_position": null,
+      "source_position": 235,
       "first_shipped_lesson": "a1.2-section-2-lesson-4",
       "review_lessons": [],
       "occurrences": [
@@ -28703,7 +28938,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 229,
-      "source_position": null,
+      "source_position": 229,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
       "review_lessons": [
         "a1.2-section-2-lesson-1",
@@ -28797,7 +29032,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 176,
-      "source_position": null,
+      "source_position": 176,
       "first_shipped_lesson": "a1.2-section-2-lesson-5",
       "review_lessons": [
         "a1.2-section-3-lesson-2"
@@ -29061,7 +29296,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 362,
-      "source_position": null,
+      "source_position": 362,
       "first_shipped_lesson": "a1.3-section-4-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -29630,7 +29865,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 29,
-      "source_position": null,
+      "source_position": 29,
       "first_shipped_lesson": "a1.3-section-2-lesson-4",
       "review_lessons": [
         "a1.3-section-3-lesson-2"
@@ -29774,7 +30009,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 39,
-      "source_position": null,
+      "source_position": 39,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
       "review_lessons": [
         "a1.3-section-3-lesson-7",
@@ -29837,7 +30072,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 318,
-      "source_position": null,
+      "source_position": 318,
       "first_shipped_lesson": "section-2-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -29885,7 +30120,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 25,
-      "source_position": null,
+      "source_position": 25,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [
         "a1.2-section-3-lesson-5",
@@ -29952,7 +30187,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 112,
-      "source_position": null,
+      "source_position": 112,
       "first_shipped_lesson": "a1.3-section-1-lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -30109,7 +30344,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 174,
-      "source_position": null,
+      "source_position": 174,
       "first_shipped_lesson": "a1.3-section-3-lesson-8",
       "review_lessons": [],
       "occurrences": [
@@ -30249,7 +30484,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 139,
-      "source_position": null,
+      "source_position": 139,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
       "review_lessons": [
         "a1.2-section-4-lesson-4",
@@ -30288,7 +30523,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 200,
-      "source_position": null,
+      "source_position": 200,
       "first_shipped_lesson": "a1.2-section-2-lesson-7",
       "review_lessons": [],
       "occurrences": [
@@ -30473,7 +30708,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 269,
-      "source_position": null,
+      "source_position": 269,
       "first_shipped_lesson": "a1.2-section-3-lesson-4",
       "review_lessons": [
         "a1.2-section-3-lesson-7",
@@ -30577,7 +30812,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 84,
-      "source_position": null,
+      "source_position": 84,
       "first_shipped_lesson": "section-2-lesson-7",
       "review_lessons": [
         "section-4-lesson-5",
@@ -30647,7 +30882,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 274,
-      "source_position": null,
+      "source_position": 274,
       "first_shipped_lesson": "a1.2-section-3-lesson-2",
       "review_lessons": [],
       "occurrences": [
@@ -30688,7 +30923,7 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 364,
-      "source_position": null,
+      "source_position": 365,
       "first_shipped_lesson": "a1.2-section-3-lesson-3",
       "review_lessons": [],
       "occurrences": [
