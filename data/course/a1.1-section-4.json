@@ -392,70 +392,70 @@
     },
     "s4-location-q-phone": {
       "id": "s4-location-q-phone",
-      "surface_form": "Missä puhelin on?",
-      "lemma": "Missä puhelin on",
-      "translation_fa": "تلفن کجاست؟",
+      "surface_form": "Puhelin on pöydällä. Missä puhelin on?",
+      "lemma": "Puhelin on pöydällä. Missä puhelin on",
+      "translation_fa": "تلفن روی میز است. تلفن کجاست؟",
       "item_type": "prompt",
       "frequency_status": "unranked",
       "frequency_rank": null,
       "topics": [
         "location"
       ],
-      "example_fi": "Missä puhelin on?",
-      "example_fa": "تلفن کجاست؟",
+      "example_fi": "Puhelin on pöydällä. Missä puhelin on?",
+      "example_fa": "تلفن روی میز است. تلفن کجاست؟",
       "accepted_answers": [
-        "Missä puhelin on?"
+        "Puhelin on pöydällä. Missä puhelin on?"
       ]
     },
     "s4-location-q-book": {
       "id": "s4-location-q-book",
-      "surface_form": "Missä kirja on?",
-      "lemma": "Missä kirja on",
-      "translation_fa": "کتاب کجاست؟",
+      "surface_form": "Kirja on tuolilla. Missä kirja on?",
+      "lemma": "Kirja on tuolilla. Missä kirja on",
+      "translation_fa": "کتاب روی صندلی است. کتاب کجاست؟",
       "item_type": "prompt",
       "frequency_status": "unranked",
       "frequency_rank": null,
       "topics": [
         "location"
       ],
-      "example_fi": "Missä kirja on?",
-      "example_fa": "کتاب کجاست؟",
+      "example_fi": "Kirja on tuolilla. Missä kirja on?",
+      "example_fa": "کتاب روی صندلی است. کتاب کجاست؟",
       "accepted_answers": [
-        "Missä kirja on?"
+        "Kirja on tuolilla. Missä kirja on?"
       ]
     },
     "s4-location-q-cat": {
       "id": "s4-location-q-cat",
-      "surface_form": "Missä kissa on?",
-      "lemma": "Missä kissa on",
-      "translation_fa": "گربه کجاست؟",
+      "surface_form": "Kissa nukkuu sängyllä. Missä kissa on?",
+      "lemma": "Kissa nukkuu sängyllä. Missä kissa on",
+      "translation_fa": "گربه روی تخت می‌خوابد. گربه کجاست؟",
       "item_type": "prompt",
       "frequency_status": "unranked",
       "frequency_rank": null,
       "topics": [
         "location"
       ],
-      "example_fi": "Missä kissa on?",
-      "example_fa": "گربه کجاست؟",
+      "example_fi": "Kissa nukkuu sängyllä. Missä kissa on?",
+      "example_fa": "گربه روی تخت می‌خوابد. گربه کجاست؟",
       "accepted_answers": [
-        "Missä kissa on?"
+        "Kissa nukkuu sängyllä. Missä kissa on?"
       ]
     },
     "s4-location-q-home": {
       "id": "s4-location-q-home",
-      "surface_form": "Missä olet?",
-      "lemma": "Missä olet",
-      "translation_fa": "کجایی؟",
+      "surface_form": "Sinä olet kotona. Missä olet?",
+      "lemma": "Sinä olet kotona. Missä olet",
+      "translation_fa": "تو در خانه هستی. کجایی؟",
       "item_type": "prompt",
       "frequency_status": "unranked",
       "frequency_rank": null,
       "topics": [
         "location"
       ],
-      "example_fi": "Missä olet?",
-      "example_fa": "کجایی؟",
+      "example_fi": "Sinä olet kotona. Missä olet?",
+      "example_fa": "تو در خانه هستی. کجایی؟",
       "accepted_answers": [
-        "Missä olet?"
+        "Sinä olet kotona. Missä olet?"
       ]
     },
     "s4-location-a-home": {
