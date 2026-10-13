@@ -36,5 +36,18 @@
     }
     return Object.fromEntries([...counts.entries()].sort(([a],[b])=>a.localeCompare(b,'fi')));
   }
-  return {LOOKBACK_DAYS,reviewPriorities};
+  function reviewPrioritiesFromStorage(storage,mapData,storageKey,expectedVersion,now=Date.now()){
+    if(!storage||typeof storage.getItem!=='function'||typeof storageKey!=='string'||!storageKey
+      ||!Number.isInteger(expectedVersion))return {};
+    try{
+      const raw=storage.getItem(storageKey);
+      if(typeof raw!=='string'||!raw)return {};
+      // Read the original event flags, never Course's lossy sanitization defaults.
+      const progress=JSON.parse(raw);
+      if(!progress||typeof progress!=='object'||Array.isArray(progress)
+        ||progress.version!==expectedVersion)return {};
+      return reviewPriorities(progress,mapData,now);
+    }catch{return {};}
+  }
+  return {LOOKBACK_DAYS,reviewPriorities,reviewPrioritiesFromStorage};
 });
