@@ -214,7 +214,7 @@ function toMarkdown(report) {
     '| --- | ---: | ---: | ---: | ---: |',
     ...rows,
     '',
-    'An exact match with the 400-word dictionary only means a matching written surface form is available; it does not mean it is taught, learned or mastered.',
+    'An exact match with the current source-form dictionary only means a matching written surface form is available; it does not mean it is taught, learned or mastered.',
     'No stage beyond the existing authored curricula has actual lessons; the 4-module roadmap alone does not imply 40 playable lessons.'
   ].join('\n') + '\n';
 }
