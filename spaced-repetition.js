@@ -129,7 +129,13 @@
       else if (record.dueAt <= now) due.push({ word, dueAt: record.dueAt });
     }
     due.sort((left, right) => left.dueAt - right.dueAt || Number(left.word.rank) - Number(right.word.rank));
-    unseen.sort((left, right) => Number(left.rank) - Number(right.rank));
+    const priorities = options.coursePriorities && typeof options.coursePriorities === 'object'
+      ? options.coursePriorities : {};
+    const priorityOf = word => {
+      const value = Number(priorities[normalizeWord(word.word)]);
+      return Number.isFinite(value) && value > 0 ? Math.min(1000, value) : 0;
+    };
+    unseen.sort((left, right) => priorityOf(right) - priorityOf(left) || Number(left.rank) - Number(right.rank));
     const queue = due.map((item) => item.word).slice(0, sessionLimit);
     queue.push(...unseen.slice(0, Math.min(Math.max(0, sessionLimit - queue.length), remainingNew)));
     return queue;
@@ -223,6 +229,14 @@
     let words = [];
     let wordMap = new Map();
     let progress = loadProgress(windowObject.localStorage);
+    let courseReviewMap = null;
+    function courseReviewPriorities() {
+      const course = windowObject.FinnishCourse;
+      const bridge = windowObject.FinnishCourseSrsBridge;
+      if (!courseReviewMap || !course?.loadProgress || !bridge?.reviewPriorities) return {};
+      try { return bridge.reviewPriorities(course.loadProgress(windowObject.localStorage), courseReviewMap); }
+      catch { return {}; }
+    }
     let active = false;
     let queue = [];
     let currentWord = null;
@@ -331,7 +345,7 @@
         return;
       }
       progress = loadProgress(windowObject.localStorage);
-      queue = buildReviewQueue(words, progress);
+      queue = buildReviewQueue(words, progress, Date.now(), { coursePriorities: courseReviewPriorities() });
       if (queue.length === 0) {
         completionMessage = 'در حال حاضر واژه موعددار یا سهمیه واژه جدیدی باقی نمانده است.';
         updatePanel();
@@ -364,6 +378,10 @@
     windowObject.addEventListener('finnish-word-review-ready', updatePanel);
     windowObject.addEventListener('storage', (event) => { if (event.key === STORAGE_KEY) { progress = loadProgress(windowObject.localStorage); updatePanel(); } });
     const detailWord = document.getElementById('detail-word'); if (detailWord && typeof windowObject.MutationObserver === 'function') new windowObject.MutationObserver(renderDetailReviewStatus).observe(detailWord, { childList: true, characterData: true, subtree: true });
+    windowObject.fetch(`./data/course/course-review-form-map.json?v=${Date.now()}`, { cache: 'no-store' })
+      .then(response => { if (!response.ok) throw Error(String(response.status)); return response.json(); })
+      .then(data => { if (data?.schema_version === 1 && Array.isArray(data.mappings)) courseReviewMap = data; })
+      .catch(() => { courseReviewMap = null; }); // Word Practice remains usable offline or without Course evidence.
     windowObject.fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' }).then((response) => { if (!response.ok) throw new Error(String(response.status)); return response.json(); }).then((payload) => { words = Array.isArray(payload.words) ? payload.words : []; wordMap = new Map(words.map((word) => [normalizeWord(word.word), word])); progress = loadProgress(windowObject.localStorage); updatePanel(); }).catch(() => { elements.message.textContent = 'بارگذاری صف مرور انجام نشد.'; elements.start.disabled = true; });
   }
 
