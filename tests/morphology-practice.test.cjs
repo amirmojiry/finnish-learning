@@ -159,7 +159,6 @@ test('section checkpoints review morphology and retain original targets with dec
   for (const checkpoint of [section2Checkpoint, section3Checkpoint, finalCheckpoint]) {
     assert.equal(checkpoint.order, 10);
     assert.equal(checkpoint.activities.length, checkpoint.activity_count ?? 15);
-
   }
 });
 

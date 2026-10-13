@@ -84,7 +84,8 @@ function evaluate(raw, curriculum, sidecar, preceding = []) {
   const grammarReview = [...currentGrammar.entries()].map(([concept_id, first]) => {
     const later = section.lessons.filter((lesson, index) => index > first.index && lesson.learning_objectives.grammar.some(goal => goal.concept_id === concept_id && goal.status === 'reviewed')).map(lesson => lesson.id);
     if (!later.length) errors.push(first.lesson_id + ': no later grammar review: ' + concept_id);
-    return { concept_id, introduced_in: first.lesson_id, later_review_lessons: later };
+    return { concept_id, introduced_in: grammarIntroductions.get(concept_id)?.lesson_id || null,
+      ...(section.id === 'a1.1-section-2' ? { first_assessed_in_section: first.lesson_id } : {}), later_review_lessons: later };
   });
   if (composed.summary.declared_missing_positive || composed.summary.duplicate_new_labels) errors.push('Composition gaps remain');
   return { schema_version: 1, section_id: section.id,
@@ -118,7 +119,7 @@ function markdown(report) {
     `- ${report.summary.missing_positive_targets} missing positive targets; ${report.summary.repeated_new_labels} repeated-new labels; ${report.summary.errors} acceptance errors.`, '',
     '| Lesson | Activities | Declared targets | New surfaces | Grammar scope |', '| --- | ---: | ---: | ---: | --- |',
     ...report.lessons.map(row => `| ${row.order}: ${row.title_fa} | ${row.activities} | ${row.declared_targets} | ${row.introduced_surfaces} | ${row.grammar_concepts.join(', ') || 'Formulaic only'} |`), '',
-    '## Grammar review', '', ...report.grammar_review.map(row => `- ${row.concept_id}: ${row.introduced_in} → ${row.later_review_lessons.join(', ')}`), '',
+    '## Grammar review', '', ...report.grammar_review.map(row => `- ${row.concept_id}: ${row.first_assessed_in_section || row.introduced_in} → ${row.later_review_lessons.join(', ')}`), '',
     '## Boundaries', '', ...report.boundaries.map(text => '- ' + text), '',
     `Full per-target review evidence: [machine-readable report](../data/course/a1.1-section-${number}-acceptance.json).`, ''].join('\n');
 }
@@ -135,7 +136,7 @@ function main(args = process.argv.slice(2)) {
   const json = JSON.stringify(report, null, 2) + '\n', md = markdown(report);
   if (action === '--write') { fs.writeFileSync(jsonPath, json); fs.writeFileSync(mdPath, md); }
   else if (action === '--markdown') process.stdout.write(md);
-  else if (fs.readFileSync(jsonPath, 'utf8') !== json || fs.readFileSync(mdPath, 'utf8') !== md) throw Error('Section acceptance snapshots stale; run npm run section:a11:write');
+  else if (fs.readFileSync(jsonPath, 'utf8') !== json || fs.readFileSync(mdPath, 'utf8') !== md) throw Error(`Section acceptance snapshots stale; run npm run section:a11${number === 2 ? ':s2' : ''}:write`);
 }
 if (require.main === module) main();
 module.exports = { evaluate, markdown, main };

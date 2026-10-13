@@ -877,7 +877,8 @@
   "grammar_review": [
     {
       "concept_id": "a11-olla",
-      "introduced_in": "section-2-lesson-1",
+      "introduced_in": "lesson-2",
+      "first_assessed_in_section": "section-2-lesson-1",
       "later_review_lessons": [
         "section-2-lesson-7",
         "section-2-lesson-10"
@@ -885,7 +886,8 @@
     },
     {
       "concept_id": "a11-pronouns",
-      "introduced_in": "section-2-lesson-1",
+      "introduced_in": "lesson-5",
+      "first_assessed_in_section": "section-2-lesson-1",
       "later_review_lessons": [
         "section-2-lesson-5",
         "section-2-lesson-6",
@@ -895,6 +897,7 @@
     {
       "concept_id": "a11-case-chunks",
       "introduced_in": "section-2-lesson-2",
+      "first_assessed_in_section": "section-2-lesson-2",
       "later_review_lessons": [
         "section-2-lesson-3",
         "section-2-lesson-4",
@@ -904,7 +907,8 @@
     },
     {
       "concept_id": "a11-questions",
-      "introduced_in": "section-2-lesson-2",
+      "introduced_in": "lesson-5",
+      "first_assessed_in_section": "section-2-lesson-2",
       "later_review_lessons": [
         "section-2-lesson-4",
         "section-2-lesson-7",
@@ -914,7 +918,8 @@
     },
     {
       "concept_id": "a11-present-chunks",
-      "introduced_in": "section-2-lesson-3",
+      "introduced_in": "lesson-3",
+      "first_assessed_in_section": "section-2-lesson-3",
       "later_review_lessons": [
         "section-2-lesson-9",
         "section-2-lesson-10"

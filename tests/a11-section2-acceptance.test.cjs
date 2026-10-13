@@ -55,6 +55,9 @@ test('every 0–20 number has an actual positive answer and later retrieval, not
 });
 
 test('prior prerequisites and punctuation-equivalent greeting are verified without merging identities', () => {
+  const grammar = verify(raw).grammar_review;
+  assert.equal(grammar.find(g => g.concept_id === 'a11-olla').introduced_in, 'lesson-2');
+  assert.equal(grammar.find(g => g.concept_id === 'a11-case-chunks').introduced_in, 'section-2-lesson-2');
   assert.equal(raw.lessons[0].learning_objectives.lexical.find(g => g.target_id === 's2-han').status, 'reviewed');
   assert.equal(raw.lessons[9].learning_objectives.lexical.find(g => g.target_id === 's2-hei').status, 'reviewed');
   assert.notEqual(composition.identity(prior, 'hei', new Map()).id, composition.identity(raw, 's2-hei', new Map()).id);
