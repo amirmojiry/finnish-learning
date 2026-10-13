@@ -186,5 +186,3 @@ When authoring a new stage: (1) identify the planned topic/grammar prerequisite,
 - [Finnish National Agency for Education evolving proficiency scale](https://www.oph.fi/fi/koulutus-ja-tutkinnot/kehittyvan-kielitaidon-tasojen-kuvausasteikko)
 - [University of Helsinki Finnish course contents](https://www.helsinki.fi/en/language-centre/teaching-and-research/finnish-foreigners/course-materials-objectives-and-contents)
 - [Institute for the Languages of Finland grammar overview](https://kotus.fi/kotus/kielet-ja-kielipolitiikka/kansalliskielet/suomen-kieli/)
-
-First actual P4 source-contiguous batch (issue #142): review and add Parole source positions 401–425 as 25 learner-curated forms, rebuild original-source ranks and UD examples with Persian translations. These are written-corpus forms, not 25 newly mastered lexemes. Follow-up batches require editorial review and cannot be inferred from rank alone.
