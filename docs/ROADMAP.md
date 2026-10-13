@@ -80,3 +80,5 @@ Session length/difficulty, daily goals, streaks, bookmarks, word lists, progress
 4. Preserve GitHub Pages compatibility and current course/data contracts; do not fabricate source frequency ranks.
 5. Use `npm run curriculum:check`, `npm run curriculum:audit`, and `npm test`. Review CI comments before merge.
 6. Change milestones **only here and in the paired Persian roadmap**; root READMEs and Learning Design link here rather than maintaining separate phase checklists.
+
+P4 delivery, initial reviewed batch: issue #142, 25 original-source forms 401–425 (minor release 1.35.0). Future batches remain editorial review work; P5 Course/Word Practice review bridge follows after the first real batch meets source, UD and Persian-translation coverage gates.

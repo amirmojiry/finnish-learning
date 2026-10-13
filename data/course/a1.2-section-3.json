@@ -846,11 +846,11 @@
     "a12s3-topic-21": {
       "id": "a12s3-topic-21",
       "surface_form": "lauantaina",
-      "lemma": "lauantaina",
+      "lemma": "lauantai",
       "translation_fa": "شنبه، در روز شنبه",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 416,
       "topics": [
         "daily-life",
         "curated"

@@ -1335,8 +1335,8 @@
       "lemma": "lauantai",
       "translation_fa": "روز شنبه",
       "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
+      "frequency_status": "ranked",
+      "frequency_rank": 416,
       "topics": [
         "a2.1-s1",
         "curated-travel"

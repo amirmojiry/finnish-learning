@@ -12,7 +12,7 @@ test('all shipped lessons and dictionary forms have stable provenance-aware surf
  assert.equal(sidecar.schema_version,1);
  assert.equal(sidecar.counts.shipped_sections,14);
  assert.equal(sidecar.counts.shipped_lessons,140);
- assert.equal(sidecar.counts.dictionary_forms,400);
+ assert.equal(sidecar.counts.dictionary_forms,read('data/common-words.json').words.length);
  assert.equal(sidecar.records.length,sidecar.counts.records);
  assert.equal(new Set(sidecar.records.map(r=>r.id)).size,sidecar.records.length);
  assert.deepEqual(sidecar.records.map(r=>r.id),sidecar.records.map(r=>r.id).sort());

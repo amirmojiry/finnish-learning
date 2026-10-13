@@ -6,9 +6,9 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 ## Key findings
 
 - 140 shipped lessons / 14 sections; 1452 graded slots after real runtime injection.
-- 670 lexical target placements and 464 distinct surface forms; 432 lemma-field values (unverified) and 0 explicit sense IDs.
+- 670 lexical target placements and 464 distinct surface forms; 431 lemma-field values (unverified) and 0 explicit sense IDs.
 - 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 303 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
-- 400 dictionary entries; 124 authored lexical target forms found in the curated dictionary; 340 missing, of which 334 exist in original Parole and 6 were not found.
+- 425 dictionary entries; 126 authored lexical target forms found in the curated dictionary; 338 missing, of which 332 exist in original Parole and 6 were not found.
 - 27 planned grammar concepts in shipped stages; 13 with explicit lesson concept IDs. 120 lessons lack these links even though 311 structural/grammar slots exist (64 morphology slots).
 - 112 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
@@ -37,8 +37,6 @@ First 50 shipped single-word targets by original Parole position (full list in J
 
 | Form | Parole position | Status | Placements |
 | --- | ---: | --- | ---: |
-| lauantaina | 416 | parole_source_outside_curated_dictionary | 2 |
-| maa | 417 | parole_source_outside_curated_dictionary | 1 |
 | äiti | 433 | parole_source_outside_curated_dictionary | 1 |
 | viikolla | 435 | parole_source_outside_curated_dictionary | 1 |
 | helsinki | 436 | parole_source_outside_curated_dictionary | 1 |
@@ -87,6 +85,8 @@ First 50 shipped single-word targets by original Parole position (full list in J
 | selittää | 1126 | parole_source_outside_curated_dictionary | 1 |
 | pankki | 1131 | parole_source_outside_curated_dictionary | 1 |
 | aamulla | 1207 | parole_source_outside_curated_dictionary | 2 |
+| vesi | 1227 | parole_source_outside_curated_dictionary | 1 |
+| illalla | 1262 | parole_source_outside_curated_dictionary | 2 |
 
 ## Planned grammar concepts without lesson-ID mapping
 
