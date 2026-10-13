@@ -11,7 +11,7 @@ test('P4 queue is original-Parole-backed and excludes existing dictionary forms'
  const installed=new Set(dictionary.words.map(w=>w.word.normalize('NFC').toLocaleLowerCase('fi-FI').trim()));
  const original=sourceRows().forms;
  assert.equal(output.installed_dictionary_forms,dictionary.words.length);
- assert.equal(output.source_backed_gap_count,334);
+ assert.equal(output.source_backed_gap_count,read('data/course/coverage-audit.json').gaps.lexical_forms_outside_dictionary.filter(row=>row.category==='parole_source_outside_curated_dictionary').length);
  assert.ok(output.shortlisted_source_backed.every(x=>!installed.has(x.form)));
  for(const e of output.shortlisted_source_backed){
   assert.equal(e.source_position,original.get(e.form).position);
