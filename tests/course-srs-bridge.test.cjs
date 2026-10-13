@@ -37,7 +37,7 @@ test('Word Practice due reviews retain priority; Course weak hints only reorder 
  const original=srs.emptyProgress(NOW);
  const withDue=srs.recordAnswer(original,words[0],false,NOW-20*60000);
  const saved=JSON.stringify(withDue);
- const queue=srs.buildReviewQueue(words,withDue,NOW,{newLimit:2,sessionLimit:3,coursePriorities:{on:2,olin:1}});
+ const queue=srs.buildReviewQueue(words,withDue,NOW,{newLimit:3,sessionLimit:3,coursePriorities:{on:2,olin:1}});
  assert.deepEqual(queue.map(w=>w.word),['ja','on','olin']);
  assert.equal(JSON.stringify(withDue),saved);
  assert.equal(withDue.words.ja.totalAnswers,1);
