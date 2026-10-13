@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "review_policy": "Only explicit editorial form, sense and morphology decisions; never transfer learner mastery between forms.",
+  "entries": [
+    {
+      "surface_form": "kissa",
+      "lexeme_id": "lexeme:kissa",
+      "sense_id": "sense:kissa-animal",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "koira",
+      "lexeme_id": "lexeme:koira",
+      "sense_id": "sense:koira-animal",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kirja",
+      "lexeme_id": "lexeme:kirja",
+      "sense_id": "sense:kirja-book",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "minä",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "minun",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "sinä",
+      "lexeme_id": "lexeme:sina",
+      "sense_id": "sense:sina-second-person",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "sinun",
+      "lexeme_id": "lexeme:sina",
+      "sense_id": "sense:sina-second-person",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    }
+  ]
+}
