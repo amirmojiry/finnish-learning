@@ -1915,14 +1915,17 @@
       "title_fa": "خانه و اتاق‌ها",
       "objective_fa": "چند مکان رایج در خانه را نام ببر و از روی تصویر تشخیص بده.",
       "summary_fa": "شش واژهٔ پایهٔ خانه را با نشانهٔ تصویری و دو جملهٔ کامل تمرین می‌کنی.",
-      "grammar_fa": "kotona یک شکل مکانی ثابت است و در این سطح به‌صورت chunk کامل در Olen kotona. یاد گرفته می‌شود.",
+      "grammar_fa": "در جمله‌های «Tämä on keittiö.» و «Tämä on olohuone.» یک اتاق را با «on» معرفی می‌کنیم. ترتیب همین جملهٔ ساده تمرین می‌شود؛ الگوی جدیدی برای صرف فعل ادعا نمی‌شود. «Olen kotona.» یعنی «در خانه هستم». صورت «kotona» را کامل یاد می‌گیریم و در همین جمله بازیابی می‌کنیم؛ از این نمونه، قاعدهٔ عمومیِ ساخت همهٔ حالت‌های مکانی نتیجه گرفته نمی‌شود. «Tämä on minun kotini.» خانهٔ خودِ گوینده را معرفی می‌کند. «minun» در این عبارت «مال من» است و «kotini» را به صورت کامل تمرین می‌کنیم؛ صرف آزاد پسوندهای ملکی سنجیده نمی‌شود.",
       "new_targets": [
         "s4-huone",
         "s4-keittio",
         "s4-olohuone",
         "s4-makuuhuone",
         "s4-wc",
-        "s4-koti"
+        "s4-tama-on-keittio",
+        "s4-olen-kotona",
+        "s4-tama-on-minun-kotini",
+        "s4-kotona"
       ],
       "display_targets": [
         "s4-huone",
@@ -1961,13 +1964,14 @@
           "item": "s4-keittio"
         },
         {
-          "type": "visual-choice",
+          "type": "choice",
+          "mode": "listen",
           "item": "s4-keittio",
           "options": [
-            "s4-olohuone",
             "s4-keittio",
-            "s4-makuuhuone",
-            "s4-wc"
+            "s4-huone",
+            "s4-olohuone",
+            "s4-makuuhuone"
           ]
         },
         {
@@ -1975,13 +1979,22 @@
           "item": "s4-olohuone"
         },
         {
-          "type": "visual-choice",
+          "type": "sentence-order",
           "item": "s4-olohuone",
-          "options": [
-            "s4-huone",
-            "s4-wc",
-            "s4-olohuone",
-            "s4-koti"
+          "tokens": [
+            "on",
+            "olohuone.",
+            "Tämä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tämä on olohuone.",
+          "expected_fa": "این اتاق نشیمن است.",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         },
         {
@@ -2043,6 +2056,57 @@
           "type": "type",
           "mode": "finnish",
           "item": "s4-olen-kotona"
+        },
+        {
+          "type": "teach",
+          "item": "s4-tama-on-minun-kotini"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-minun-kotini"
+        },
+        {
+          "type": "teach",
+          "item": "s4-kotona"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kotona"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-olen-kotona",
+          "prompt_fi": "Olen _____.",
+          "prompt_fa": "در خانه هستم.",
+          "accepted_answers": [
+            "kotona"
+          ],
+          "expected_fi": "Olen kotona.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-tama-on-minun-kotini",
+          "prompt_fi": "Tämä on _____ kotini.",
+          "prompt_fa": "این خانهٔ من است.",
+          "accepted_answers": [
+            "minun"
+          ],
+          "expected_fi": "Tämä on minun kotini.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-huone"
         }
       ],
       "production_targets": [
@@ -2066,9 +2130,162 @@
             0,
             1
           ],
-          "expected_fi": "Tämä on olohuone."
+          "expected_fi": "Tämä on olohuone.",
+          "expected_fa": "این اتاق نشیمن است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-olen-kotona",
+          "prompt_fi": "Olen _____.",
+          "prompt_fa": "در خانه هستم.",
+          "accepted_answers": [
+            "kotona"
+          ],
+          "expected_fi": "Olen kotona.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-tama-on-minun-kotini",
+          "prompt_fi": "Tämä on _____ kotini.",
+          "prompt_fa": "این خانهٔ من است.",
+          "accepted_answers": [
+            "minun"
+          ],
+          "expected_fi": "Tämä on minun kotini.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [],
+      "activity_count": 22,
+      "practice_targets": [
+        "s4-tama-on-minun-kotini",
+        "s4-kotona"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l01-can-do",
+            "can_do_fa": "چند مکان رایج در خانه را نام ببر و از روی تصویر تشخیص بده."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-huone",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-keittio",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-olohuone",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-makuuhuone",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-wc",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-koti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tama-on-keittio",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-olen-kotona",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-tama-on-minun-kotini",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-kotona",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در جمله‌های «Tämä on keittiö.» و «Tämä on olohuone.» یک اتاق را با «on» معرفی می‌کنیم. ترتیب همین جملهٔ ساده تمرین می‌شود؛ الگوی جدیدی برای صرف فعل ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on keittiö.",
+                "fa": "این آشپزخانه است."
+              },
+              {
+                "fi": "Tämä on olohuone.",
+                "fa": "این اتاق نشیمن است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 4,
+                "mode": "recognition"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Olen kotona.» یعنی «در خانه هستم». صورت «kotona» را کامل یاد می‌گیریم و در همین جمله بازیابی می‌کنیم؛ از این نمونه، قاعدهٔ عمومیِ ساخت همهٔ حالت‌های مکانی نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olen kotona.",
+                "fa": "من در خانه هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Tämä on minun kotini.» خانهٔ خودِ گوینده را معرفی می‌کند. «minun» در این عبارت «مال من» است و «kotini» را به صورت کامل تمرین می‌کنیم؛ صرف آزاد پسوندهای ملکی سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on minun kotini.",
+                "fa": "این خانهٔ من است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-2",
@@ -2077,13 +2294,19 @@
       "title_fa": "کجاست؟",
       "objective_fa": "با چند الگوی مکانی ثابت بگو یک شیء آشنا کجاست.",
       "summary_fa": "Missä? را با pöytä، tuoli و sänky و شکل‌های کامل pöydällä، huoneessa، tuolilla و sängyllä تمرین می‌کنی.",
-      "grammar_fa": "شکل‌های -ssa/-ssä و -lla/-llä فقط به‌صورت عبارت‌های کامل و بازبینی‌شده ذخیره شده‌اند؛ runtime آن‌ها را نمی‌سازد.",
+      "grammar_fa": "«pöydällä»، «tuolilla» و «sängyllä» در این نمونه‌ها جای شیء را روی میز، صندلی و تخت نشان می‌دهند؛ «huoneessa» یعنی در اتاق. این صورت‌های کامل در پاسخ به موقعیت‌های مشخص تمرین می‌شوند، نه صرف آزاد اسم‌های تازه. «Missä puhelin on?» جای تلفن را می‌پرسد. «Missä» در همین سؤالِ آشنا بازیابی می‌شود؛ پاسخ‌های مکانی هم با موقعیتِ داده‌شده هماهنگ‌اند.",
       "new_targets": [
-        "s4-missa",
-        "s4-on",
         "s4-poyta",
         "s4-tuoli",
-        "s4-sanky"
+        "s4-sanky",
+        "s4-missa-puhelin",
+        "s4-se-on-poydalla",
+        "s4-se-on-huoneessa",
+        "s4-keittiossa-on-frame",
+        "s4-world-2",
+        "s4-keittiossa",
+        "s4-se-on-tuolilla",
+        "s4-se-on-sangylla"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2119,13 +2342,14 @@
           "item": "s4-on"
         },
         {
-          "type": "visual-choice",
+          "type": "choice",
+          "mode": "listen",
           "item": "s4-poyta",
           "options": [
-            "s4-tuoli",
+            "s4-missa",
             "s4-poyta",
-            "s4-sanky",
-            "s4-puhelin"
+            "s4-on",
+            "s4-tuoli"
           ]
         },
         {
@@ -2133,14 +2357,13 @@
           "item": "s4-tuoli"
         },
         {
-          "type": "visual-choice",
+          "type": "expression-completion",
           "item": "s4-tuoli",
-          "options": [
-            "s4-sanky",
-            "s4-tuoli",
-            "s4-poyta",
-            "s4-kirja"
-          ]
+          "prompt_fi": "Kirja on _____lla.",
+          "accepted_answers": [
+            "tuoli"
+          ],
+          "expected_fi": "Kirja on tuolilla."
         },
         {
           "type": "teach",
@@ -2169,6 +2392,9 @@
             "s4-se-on-poydalla",
             "s4-se-on-tuolilla",
             "s4-se-on-sangylla"
+          ],
+          "grammar_concept_ids": [
+            "a11-case-chunks"
           ]
         },
         {
@@ -2180,6 +2406,9 @@
             "s4-se-on-sangylla",
             "s4-se-on-tuolilla",
             "s4-se-on-huoneessa"
+          ],
+          "grammar_concept_ids": [
+            "a11-case-chunks"
           ]
         },
         {
@@ -2191,6 +2420,9 @@
             "s4-se-on-huoneessa",
             "s4-se-on-sangylla",
             "s4-se-on-tuolilla"
+          ],
+          "grammar_concept_ids": [
+            "a11-case-chunks"
           ]
         },
         {
@@ -2202,17 +2434,103 @@
             "s4-location-a-home",
             "s4-se-on-poydalla",
             "s4-se-on-tuolilla"
+          ],
+          "grammar_concept_ids": [
+            "a11-case-chunks"
           ]
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "s4-se-on-poydalla"
+          "item": "s4-missa-puhelin"
         },
         {
           "type": "type",
           "mode": "finnish",
           "item": "s4-se-on-huoneessa"
+        },
+        {
+          "type": "teach",
+          "item": "s4-keittiossa-on-frame"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-keittiossa-on-frame",
+          "options": [
+            "s4-keittiossa-on-frame"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-world-2"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-world-2"
+        },
+        {
+          "type": "teach",
+          "item": "s4-keittiossa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-keittiossa"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-se-on-poydalla",
+          "prompt_fi": "Se on _____.",
+          "prompt_fa": "آن روی میز است.",
+          "accepted_answers": [
+            "pöydällä"
+          ],
+          "expected_fi": "Se on pöydällä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-missa-puhelin",
+          "prompt_fi": "_____ puhelin on?",
+          "prompt_fa": "تلفن کجاست؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä puhelin on?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-missa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-makuuhuone"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-wc"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-koti"
         }
       ],
       "production_targets": [
@@ -2231,8 +2549,199 @@
             "tuoli"
           ],
           "expected_fi": "Kirja on tuolilla."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-se-on-poydalla",
+          "prompt_fi": "Se on _____.",
+          "prompt_fa": "آن روی میز است.",
+          "accepted_answers": [
+            "pöydällä"
+          ],
+          "expected_fi": "Se on pöydällä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-missa-puhelin",
+          "prompt_fi": "_____ puhelin on?",
+          "prompt_fa": "تلفن کجاست؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä puhelin on?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ],
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-makuuhuone",
+        "s4-wc",
+        "s4-koti"
+      ],
+      "activity_count": 28,
+      "practice_targets": [
+        "s4-keittiossa-on-frame",
+        "s4-world-2",
+        "s4-keittiossa",
+        "s4-se-on-tuolilla",
+        "s4-se-on-sangylla",
+        "s4-location-a-home"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l02-can-do",
+            "can_do_fa": "با چند الگوی مکانی ثابت بگو یک شیء آشنا کجاست."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-missa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-poyta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-tuoli",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-sanky",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-missa-puhelin",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-se-on-poydalla",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-se-on-huoneessa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-keittiossa-on-frame",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-world-2",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-keittiossa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-se-on-tuolilla",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-se-on-sangylla",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-location-a-home",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-makuuhuone",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-wc",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-koti",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«pöydällä»، «tuolilla» و «sängyllä» در این نمونه‌ها جای شیء را روی میز، صندلی و تخت نشان می‌دهند؛ «huoneessa» یعنی در اتاق. این صورت‌های کامل در پاسخ به موقعیت‌های مشخص تمرین می‌شوند، نه صرف آزاد اسم‌های تازه.",
+            "examples": [
+              {
+                "fi": "Se on pöydällä.",
+                "fa": "روی میز است."
+              },
+              {
+                "fi": "Se on tuolilla.",
+                "fa": "روی صندلی است."
+              },
+              {
+                "fi": "Se on sängyllä.",
+                "fa": "روی تخت است."
+              },
+              {
+                "fi": "Se on huoneessa.",
+                "fa": "در اتاق است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 9,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 10,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 11,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 12,
+                "mode": "recognition"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Missä puhelin on?» جای تلفن را می‌پرسد. «Missä» در همین سؤالِ آشنا بازیابی می‌شود؛ پاسخ‌های مکانی هم با موقعیتِ داده‌شده هماهنگ‌اند.",
+            "examples": [
+              {
+                "fi": "Missä puhelin on?",
+                "fa": "تلفن کجاست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-3",
@@ -2241,14 +2750,16 @@
       "title_fa": "خوراک و نوشیدنی",
       "objective_fa": "چند خوراک و نوشیدنی بسیار رایج را از روی تصویر و صدا تشخیص بده و نام ببر.",
       "summary_fa": "قهوه، چای، شیر، نان، غذا و آب را با تصویر، شنیدن و یادآوری تایپی تمرین می‌کنی.",
-      "grammar_fa": "تفاوت mass/count فقط از راه نمونه‌های حفظ‌شدهٔ Tämä on kahvia. و Tämä on leipä. معرفی می‌شود.",
+      "grammar_fa": "در نمونهٔ نوشیدنی می‌گوییم «Tämä on kahvia.»؛ برای یک نانِ شمارش‌پذیر در نمونهٔ این درس «Tämä on leipä.» آمده است. صورت «kahvia» فقط در این جملهٔ آشنا سنجیده می‌شود؛ قاعدهٔ کامل اسم‌های ماده و شمارشی ادعا نمی‌شود.",
       "new_targets": [
         "s4-kahvi",
         "s4-tee",
         "s4-maito",
         "s4-leipa",
         "s4-ruoka",
-        "s4-vesi"
+        "s4-vesi",
+        "s4-tama-on-kahvia",
+        "s4-tama-on-leipa"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2274,14 +2785,20 @@
           "item": "s4-kahvi"
         },
         {
-          "type": "visual-choice",
+          "type": "controlled-production",
           "item": "s4-kahvi",
-          "options": [
-            "s4-tee",
-            "s4-kahvi",
-            "s4-maito",
-            "s4-vesi"
-          ]
+          "prompt_fa": "این قهوه است.",
+          "cues_fi": [
+            "kahvi"
+          ],
+          "expected_fi": "Tämä on kahvia.",
+          "accepted_answers": [
+            "Tämä on kahvia."
+          ],
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "teach",
@@ -2306,10 +2823,10 @@
           "mode": "listen",
           "item": "s4-maito",
           "options": [
-            "s4-vesi",
-            "s4-maito",
             "s4-kahvi",
-            "s4-tee"
+            "s4-tee",
+            "s4-maito",
+            "s4-leipa"
           ]
         },
         {
@@ -2349,15 +2866,9 @@
           "item": "s4-tama-on-kahvia"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "s4-tama-on-kahvia",
-          "options": [
-            "s4-tama-on-leipa",
-            "s4-tama-on-kahvia",
-            "s4-kahvi",
-            "s4-vesi"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-kahvia"
         },
         {
           "type": "teach",
@@ -2367,6 +2878,40 @@
           "type": "type",
           "mode": "finnish",
           "item": "s4-tama-on-leipa"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-kahvia",
+          "prompt_fi": "Tämä on _____.",
+          "prompt_fa": "این قهوه است.",
+          "accepted_answers": [
+            "kahvia"
+          ],
+          "expected_fi": "Tämä on kahvia.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-ruoka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-poyta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tuoli"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-sanky"
         }
       ],
       "production_targets": [
@@ -2387,8 +2932,124 @@
           "expected_fi": "Tämä on kahvia.",
           "accepted_answers": [
             "Tämä on kahvia."
-          ]
+          ],
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-kahvia",
+          "prompt_fi": "Tämä on _____.",
+          "prompt_fa": "این قهوه است.",
+          "accepted_answers": [
+            "kahvia"
+          ],
+          "expected_fi": "Tämä on kahvia.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
         }
+      ],
+      "review_targets": [
+        "s4-poyta",
+        "s4-tuoli",
+        "s4-sanky"
+      ],
+      "activity_count": 20,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l03-can-do",
+            "can_do_fa": "چند خوراک و نوشیدنی بسیار رایج را از روی تصویر و صدا تشخیص بده و نام ببر."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-kahvi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-tee",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-maito",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-leipa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-ruoka",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-vesi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-tama-on-kahvia",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-tama-on-leipa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-kahvia",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-poyta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tuoli",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-sanky",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در نمونهٔ نوشیدنی می‌گوییم «Tämä on kahvia.»؛ برای یک نانِ شمارش‌پذیر در نمونهٔ این درس «Tämä on leipä.» آمده است. صورت «kahvia» فقط در این جملهٔ آشنا سنجیده می‌شود؛ قاعدهٔ کامل اسم‌های ماده و شمارشی ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on kahvia.",
+                "fa": "این قهوه است."
+              },
+              {
+                "fi": "Tämä on leipä.",
+                "fa": "این نان است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 1,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "practice_targets": [
+        "s4-kahvia"
       ]
     },
     {
@@ -2398,11 +3059,18 @@
       "title_fa": "من ... می‌خواهم",
       "objective_fa": "یک خواسته یا نیاز پایه دربارهٔ خوراک و نوشیدنی را بیان کن.",
       "summary_fa": "haluan، nälkä و jano را با سه عبارت کامل و قابل‌استفاده تمرین می‌کنی.",
-      "grammar_fa": "kahvia و vettä بعد از haluan و Minulla on nälkä به‌صورت chunk کامل ذخیره شده‌اند.",
+      "grammar_fa": "در دو خواستهٔ آشنا می‌گوییم «Haluan kahvia.» و «Haluan vettä.». این شکل‌های partitiivi را با جملهٔ کامل تمرین می‌کنیم؛ پاسخ «vesi» در عبارتِ «Haluan vettä.» درست نیست. صرف آزاد تمام مفعول‌ها سنجیده نمی‌شود. «Haluan» برای گفتن «من می‌خواهم» است. آن را در خواستهٔ آمادهٔ «Haluan kahvia.» بازیابی می‌کنیم، نه در صرفِ تمام اشخاص فعل haluta.",
       "new_targets": [
         "s4-nalka",
         "s4-jano",
-        "s4-haluan"
+        "s4-haluan",
+        "s4-haluan-kahvia",
+        "s4-haluan-vetta",
+        "s4-minulla-on-nalka",
+        "s4-haluan-frame",
+        "s4-minulla-on-frame",
+        "s4-minulla-on-jano",
+        "s4-vetta"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2466,15 +3134,20 @@
           "item": "s4-minulla-on-jano"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "sentence-order",
           "item": "s4-minulla-on-jano",
-          "options": [
-            "s4-minulla-on-nalka",
-            "s4-haluan-vetta",
-            "s4-minulla-on-jano",
-            "s4-haluan-kahvia"
-          ]
+          "tokens": [
+            "on",
+            "jano.",
+            "Minulla"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Minulla on jano.",
+          "expected_fa": "تشنه‌ام."
         },
         {
           "type": "visual-choice",
@@ -2501,22 +3174,83 @@
           "mode": "listen",
           "item": "s4-haluan-vetta",
           "options": [
-            "s4-haluan-kahvia",
-            "s4-minulla-on-nalka",
-            "s4-haluan-vetta",
-            "s4-minulla-on-jano"
+            "s4-nalka",
+            "s4-jano",
+            "s4-haluan",
+            "s4-haluan-vetta"
           ]
         },
         {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-haluan-kahvia"
+        },
+        {
+          "type": "teach",
+          "item": "s4-haluan-frame"
+        },
+        {
           "type": "choice",
-          "mode": "cloze",
-          "item": "s4-haluan-kahvia",
+          "mode": "meaning",
+          "item": "s4-haluan-frame",
           "options": [
-            "s4-haluan-kahvia",
-            "s4-haluan-vetta",
-            "s4-minulla-on-nalka",
-            "s4-minulla-on-jano"
+            "s4-haluan-frame"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-minulla-on-frame"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-minulla-on-frame",
+          "options": [
+            "s4-minulla-on-frame"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-vetta",
+          "prompt_fi": "Haluan _____.",
+          "prompt_fa": "آب می‌خواهم.",
+          "accepted_answers": [
+            "vettä"
+          ],
+          "expected_fi": "Haluan vettä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-haluan",
+          "prompt_fi": "_____ kahvia.",
+          "prompt_fa": "من قهوه می‌خواهم.",
+          "accepted_answers": [
+            "Haluan"
+          ],
+          "expected_fi": "Haluan kahvia.",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-leipa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-ruoka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-vesi"
         }
       ],
       "production_targets": [
@@ -2540,9 +3274,159 @@
             0,
             1
           ],
-          "expected_fi": "Minulla on jano."
+          "expected_fi": "Minulla on jano.",
+          "expected_fa": "تشنه‌ام."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-vetta",
+          "prompt_fi": "Haluan _____.",
+          "prompt_fa": "آب می‌خواهم.",
+          "accepted_answers": [
+            "vettä"
+          ],
+          "expected_fi": "Haluan vettä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-haluan",
+          "prompt_fi": "_____ kahvia.",
+          "prompt_fa": "من قهوه می‌خواهم.",
+          "accepted_answers": [
+            "Haluan"
+          ],
+          "expected_fi": "Haluan kahvia.",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ],
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-leipa",
+        "s4-ruoka",
+        "s4-vesi"
+      ],
+      "activity_count": 24,
+      "practice_targets": [
+        "s4-haluan-frame",
+        "s4-minulla-on-frame",
+        "s4-minulla-on-jano",
+        "s4-vetta"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l04-can-do",
+            "can_do_fa": "یک خواسته یا نیاز پایه دربارهٔ خوراک و نوشیدنی را بیان کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-nalka",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-jano",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-haluan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-haluan-kahvia",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-haluan-vetta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-minulla-on-nalka",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-haluan-frame",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-minulla-on-frame",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-minulla-on-jano",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-vetta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-leipa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-ruoka",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-vesi",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در دو خواستهٔ آشنا می‌گوییم «Haluan kahvia.» و «Haluan vettä.». این شکل‌های partitiivi را با جملهٔ کامل تمرین می‌کنیم؛ پاسخ «vesi» در عبارتِ «Haluan vettä.» درست نیست. صرف آزاد تمام مفعول‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Haluan kahvia.",
+                "fa": "قهوه می‌خواهم."
+              },
+              {
+                "fi": "Haluan vettä.",
+                "fa": "آب می‌خواهم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Haluan» برای گفتن «من می‌خواهم» است. آن را در خواستهٔ آمادهٔ «Haluan kahvia.» بازیابی می‌کنیم، نه در صرفِ تمام اشخاص فعل haluta.",
+            "examples": [
+              {
+                "fi": "Haluan kahvia.",
+                "fa": "قهوه می‌خواهم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-5",
@@ -2551,10 +3435,11 @@
       "title_fa": "سفارش خیلی ساده در کافه",
       "objective_fa": "برای یک خوراک یا نوشیدنی آشنا سفارش بسیار ساده و مودبانه بده.",
       "summary_fa": "دو سفارش کوتاه و پاسخ مودبانه را در گفت‌وگوی سه‌نوبتی تمرین می‌کنی.",
-      "grammar_fa": "عبارت‌های سفارشی بی‌فعل هستند و به‌صورت chunk کامل همراه با kiitos و Ole hyvä یاد گرفته می‌شوند.",
+      "grammar_fa": "سفارش‌های «Yksi kahvi, kiitos.» و «Vettä, kiitos.» عبارت‌های آماده و کوتاه‌اند. «Ole hyvä.» و «Kiitos.» پاسخ‌های مؤدبانهٔ آشنا هستند. این درس هدفِ صرفیِ مستقل ندارد؛ کاربردِ عبارت‌ها در گفت‌وگو سنجیده می‌شود.",
       "new_targets": [
-        "s4-yksi",
-        "s4-kahvila"
+        "s4-kahvila",
+        "s4-yksi-kahvi-kiitos",
+        "s4-vetta-kiitos"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2585,13 +3470,14 @@
           "item": "s4-kahvila"
         },
         {
-          "type": "visual-choice",
+          "type": "choice",
+          "mode": "listen",
           "item": "s4-kahvila",
           "options": [
             "s4-kahvila",
-            "s4-keittio",
-            "s4-olohuone",
-            "s4-koti"
+            "s4-yksi",
+            "s4-nalka",
+            "s4-jano"
           ]
         },
         {
@@ -2646,7 +3532,7 @@
         },
         {
           "type": "choice",
-          "mode": "listen",
+          "mode": "finnish",
           "item": "s4-yksi-kahvi-kiitos",
           "options": [
             "s4-vetta-kiitos",
@@ -2667,15 +3553,13 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "expression-completion",
           "item": "s4-vetta-kiitos",
-          "options": [
-            "s4-yksi-kahvi-kiitos",
-            "s4-vetta-kiitos",
-            "s4-ole-hyva",
-            "s4-kiitos"
-          ]
+          "prompt_fi": "Vettä, _____.",
+          "accepted_answers": [
+            "kiitos"
+          ],
+          "expected_fi": "Vettä, kiitos."
         },
         {
           "type": "type",
@@ -2683,15 +3567,29 @@
           "item": "s4-kiitos"
         },
         {
-          "type": "choice",
-          "mode": "cloze",
-          "item": "s4-yksi-kahvi-kiitos",
-          "options": [
-            "s4-yksi-kahvi-kiitos",
-            "s4-vetta-kiitos",
-            "s4-ole-hyva",
-            "s4-kiitos"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-yksi-kahvi-kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-yksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-nalka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-jano"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-haluan"
         }
       ],
       "production_targets": [
@@ -2711,7 +3609,64 @@
           ],
           "expected_fi": "Vettä, kiitos."
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-nalka",
+        "s4-jano",
+        "s4-haluan"
+      ],
+      "activity_count": 19,
+      "practice_targets": [
+        "s4-kiitos"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l05-can-do",
+            "can_do_fa": "برای یک خوراک یا نوشیدنی آشنا سفارش بسیار ساده و مودبانه بده."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-yksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kahvila",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-yksi-kahvi-kiitos",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-vetta-kiitos",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-ole-hyva",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kiitos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-nalka",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-jano",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-haluan",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "formulaic",
+        "grammar": []
+      }
     },
     {
       "id": "section-4-lesson-6",
@@ -2720,13 +3675,16 @@
       "title_fa": "حیوانات آشنا ۱",
       "objective_fa": "پنج حیوان رایج را از روی تصویر و صدا تشخیص بده و نام ببر.",
       "summary_fa": "سگ، گربه، پرنده، ماهی و اسب را با تصویر، شنیدن و جمله‌های معرفی تمرین می‌کنی.",
-      "grammar_fa": "Tämä on و Se on از Section 1 بازیابی می‌شوند و واژهٔ حیوان بدون تغییر بعد از olla می‌آید.",
+      "grammar_fa": "برای معرفی حیوان نزدیک از «Tämä on koira.» استفاده می‌کنیم؛ «Se on kissa.» عبارتِ آشنای اشاره به آن است. در «Minulla on kissa.» داشتن را با عبارت آمادهٔ «Minulla on» بیان می‌کنیم. فقط همین کاربردهای محدود سنجیده می‌شوند.",
       "new_targets": [
         "s4-koira",
         "s4-kissa",
         "s4-lintu",
         "s4-kala",
-        "s4-hevonen"
+        "s4-hevonen",
+        "s4-tama-on-koira",
+        "s4-se-on-kissa",
+        "s4-world-3"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2751,13 +3709,15 @@
           "item": "s4-koira"
         },
         {
-          "type": "visual-choice",
+          "type": "controlled-production",
           "item": "s4-koira",
-          "options": [
-            "s4-kissa",
-            "s4-koira",
-            "s4-lintu",
-            "s4-hevonen"
+          "prompt_fa": "این سگ است.",
+          "cues_fi": [
+            "koira"
+          ],
+          "expected_fi": "Tämä on koira.",
+          "accepted_answers": [
+            "Tämä on koira."
           ]
         },
         {
@@ -2785,8 +3745,8 @@
           "options": [
             "s4-koira",
             "s4-lintu",
-            "s4-kala",
-            "s4-hevonen"
+            "s4-kissa",
+            "s4-kala"
           ]
         },
         {
@@ -2837,7 +3797,7 @@
         },
         {
           "type": "choice",
-          "mode": "listen",
+          "mode": "finnish",
           "item": "s4-hevonen",
           "options": [
             "s4-lintu",
@@ -2845,6 +3805,58 @@
             "s4-hevonen",
             "s4-koira"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "s4-world-3"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-world-3"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-tama-on-koira",
+          "prompt_fi": "_____ on koira.",
+          "prompt_fa": "این سگ است.",
+          "accepted_answers": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on koira.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-world-3",
+          "prompt_fi": "_____ on kissa.",
+          "prompt_fa": "من گربه دارم.",
+          "accepted_answers": [
+            "Minulla"
+          ],
+          "expected_fi": "Minulla on kissa.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-haluan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-yksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kahvila"
         }
       ],
       "production_targets": [
@@ -2866,8 +3878,134 @@
           "accepted_answers": [
             "Tämä on koira."
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-tama-on-koira",
+          "prompt_fi": "_____ on koira.",
+          "prompt_fa": "این سگ است.",
+          "accepted_answers": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on koira.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-world-3",
+          "prompt_fi": "_____ on kissa.",
+          "prompt_fa": "من گربه دارم.",
+          "accepted_answers": [
+            "Minulla"
+          ],
+          "expected_fi": "Minulla on kissa.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-haluan",
+        "s4-yksi",
+        "s4-kahvila"
+      ],
+      "activity_count": 22,
+      "practice_targets": [
+        "s4-world-3"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l06-can-do",
+            "can_do_fa": "پنج حیوان رایج را از روی تصویر و صدا تشخیص بده و نام ببر."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-koira",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-kissa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-lintu",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-kala",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-hevonen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-tama-on-koira",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-se-on-kissa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-world-3",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-haluan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-yksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kahvila",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "برای معرفی حیوان نزدیک از «Tämä on koira.» استفاده می‌کنیم؛ «Se on kissa.» عبارتِ آشنای اشاره به آن است. در «Minulla on kissa.» داشتن را با عبارت آمادهٔ «Minulla on» بیان می‌کنیم. فقط همین کاربردهای محدود سنجیده می‌شوند.",
+            "examples": [
+              {
+                "fi": "Tämä on koira.",
+                "fa": "این سگ است."
+              },
+              {
+                "fi": "Se on kissa.",
+                "fa": "آن گربه است."
+              },
+              {
+                "fi": "Minulla on kissa.",
+                "fa": "من گربه دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-7",
@@ -2876,13 +4014,15 @@
       "title_fa": "حیوانات آشنا ۲",
       "objective_fa": "پنج حیوان آشنای دیگر را تشخیص بده و نمونه‌های آشنا را به‌عنوان حیوان دسته‌بندی کن.",
       "summary_fa": "گاو، گوسفند، خرس، گرگ و گوزن بزرگ / موس را با تصویر و دسته‌بندی ساده تمرین می‌کنی.",
-      "grammar_fa": "الگوی noun + on + eläin یک جملهٔ اسمی بسیار ساده با olla است.",
+      "grammar_fa": "در «Karhu on eläin.» و «Lehmä on eläin.» حیوان بودن را با «on» بیان می‌کنیم. جملهٔ «Lammas on eläin.» را به‌ترتیب می‌چینیم؛ این همان الگوی سادهٔ جملهٔ اسمی است.",
       "new_targets": [
         "s4-lehma",
         "s4-lammas",
         "s4-karhu",
         "s4-susi",
-        "s4-hirvi"
+        "s4-hirvi",
+        "s4-karhu-on-elain",
+        "s4-lehma-on-elain"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2907,13 +4047,14 @@
           "item": "s4-lehma"
         },
         {
-          "type": "visual-choice",
+          "type": "choice",
+          "mode": "listen",
           "item": "s4-lehma",
           "options": [
             "s4-lammas",
-            "s4-lehma",
             "s4-karhu",
-            "s4-hirvi"
+            "s4-lehma",
+            "s4-susi"
           ]
         },
         {
@@ -2921,13 +4062,22 @@
           "item": "s4-lammas"
         },
         {
-          "type": "visual-choice",
+          "type": "sentence-order",
           "item": "s4-lammas",
-          "options": [
-            "s4-susi",
-            "s4-lammas",
-            "s4-lehma",
-            "s4-karhu"
+          "tokens": [
+            "on",
+            "eläin.",
+            "Lammas"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Lammas on eläin.",
+          "expected_fa": "گوسفند حیوان است.",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         },
         {
@@ -2999,6 +4149,26 @@
           "type": "type",
           "mode": "finnish",
           "item": "s4-lehma-on-elain"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-susi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-lintu"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kala"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-hevonen"
         }
       ],
       "production_targets": [
@@ -3022,9 +4192,98 @@
             0,
             1
           ],
-          "expected_fi": "Lammas on eläin."
+          "expected_fi": "Lammas on eläin.",
+          "expected_fa": "گوسفند حیوان است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-lintu",
+        "s4-kala",
+        "s4-hevonen"
+      ],
+      "activity_count": 19,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l07-can-do",
+            "can_do_fa": "پنج حیوان آشنای دیگر را تشخیص بده و نمونه‌های آشنا را به‌عنوان حیوان دسته‌بندی کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-lehma",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-lammas",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-karhu",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-susi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-hirvi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-karhu-on-elain",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-lehma-on-elain",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-lintu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kala",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-hevonen",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در «Karhu on eläin.» و «Lehmä on eläin.» حیوان بودن را با «on» بیان می‌کنیم. جملهٔ «Lammas on eläin.» را به‌ترتیب می‌چینیم؛ این همان الگوی سادهٔ جملهٔ اسمی است.",
+            "examples": [
+              {
+                "fi": "Karhu on eläin.",
+                "fa": "خرس حیوان است."
+              },
+              {
+                "fi": "Lehmä on eläin.",
+                "fa": "گاو حیوان است."
+              },
+              {
+                "fi": "lammas on eläin.",
+                "fa": "گوسفند حیوان است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 3,
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-8",
@@ -3033,13 +4292,17 @@
       "title_fa": "توصیف ساده",
       "objective_fa": "یک شخص، شیء یا حیوان آشنا را با یک صفت پایه توصیف کن.",
       "summary_fa": "سه رنگ و دو اندازه را می‌آموزی و چهار جملهٔ noun + on + adjective را به‌صورت هدایت‌شده تولید می‌کنی.",
-      "grammar_fa": "صفت خبری بعد از on در جمله‌های بسیار ساده مثل Koira on iso. بدون تغییر اضافی تمرین می‌شود.",
+      "grammar_fa": "در جمله‌های سادهٔ «Koira on iso.» و «Kissa on pieni.» بعد از «on» یک توصیف پایه می‌آید. چهار جملهٔ آشنای راهنمایی‌شده نوشته می‌شود؛ حالت‌های همهٔ صفت‌ها یا توصیف مستقلِ متن تازه سنجیده نمی‌شوند.",
       "new_targets": [
         "s4-punainen",
         "s4-valkoinen",
         "s4-musta",
         "s4-iso",
-        "s4-pieni"
+        "s4-pieni",
+        "s4-koira-on-iso",
+        "s4-kissa-on-pieni",
+        "s4-hevonen-on-iso",
+        "s4-lintu-on-pieni"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3065,13 +4328,14 @@
           "item": "s4-punainen"
         },
         {
-          "type": "visual-choice",
+          "type": "choice",
+          "mode": "listen",
           "item": "s4-punainen",
           "options": [
-            "s4-musta",
-            "s4-punainen",
             "s4-valkoinen",
-            "s4-iso"
+            "s4-musta",
+            "s4-iso",
+            "s4-punainen"
           ]
         },
         {
@@ -3079,14 +4343,17 @@
           "item": "s4-valkoinen"
         },
         {
-          "type": "visual-choice",
+          "type": "expression-completion",
           "item": "s4-valkoinen",
-          "options": [
-            "s4-pieni",
-            "s4-musta",
-            "s4-valkoinen",
-            "s4-punainen"
-          ]
+          "prompt_fi": "Kissa on _____.",
+          "accepted_answers": [
+            "valkoinen"
+          ],
+          "expected_fi": "Kissa on valkoinen.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "teach",
@@ -3135,7 +4402,11 @@
             "s4-kissa-on-pieni",
             "s4-hevonen-on-iso",
             "s4-lintu-on-pieni"
-          ]
+          ],
+          "grammar_concept_ids": [
+            "a11-olla"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3158,6 +4429,21 @@
             "s4-iso",
             "s4-punainen"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-karhu"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-susi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-hirvi"
         }
       ],
       "production_targets": [
@@ -3175,9 +4461,118 @@
           "accepted_answers": [
             "valkoinen"
           ],
-          "expected_fi": "Kissa on valkoinen."
+          "expected_fi": "Kissa on valkoinen.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ],
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-karhu",
+        "s4-susi",
+        "s4-hirvi"
+      ],
+      "activity_count": 18,
+      "practice_targets": [
+        "s4-hevonen-on-iso",
+        "s4-lintu-on-pieni"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l08-can-do",
+            "can_do_fa": "یک شخص، شیء یا حیوان آشنا را با یک صفت پایه توصیف کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-punainen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-valkoinen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-musta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-iso",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-pieni",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-koira-on-iso",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-kissa-on-pieni",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-hevonen-on-iso",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-lintu-on-pieni",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s4-karhu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-susi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-hirvi",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در جمله‌های سادهٔ «Koira on iso.» و «Kissa on pieni.» بعد از «on» یک توصیف پایه می‌آید. چهار جملهٔ آشنای راهنمایی‌شده نوشته می‌شود؛ حالت‌های همهٔ صفت‌ها یا توصیف مستقلِ متن تازه سنجیده نمی‌شوند.",
+            "examples": [
+              {
+                "fi": "Koira on iso.",
+                "fa": "سگ بزرگ است."
+              },
+              {
+                "fi": "Kissa on pieni.",
+                "fa": "گربه کوچک است."
+              },
+              {
+                "fi": "Hevonen on iso.",
+                "fa": "اسب بزرگ است."
+              },
+              {
+                "fi": "Lintu on pieni.",
+                "fa": "پرنده کوچک است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 3,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 12,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-9",
@@ -3186,13 +4581,43 @@
       "title_fa": "دنیای آشنای من",
       "objective_fa": "یک متن پنج‌جمله‌ای دربارهٔ خانه و دنیای آشنا را بفهم و چهار جملهٔ هدایت‌شده تولید کن.",
       "summary_fa": "خانه، آشپزخانه، مالکیت، خواسته و توصیف حیوان در یک متن کوتاه کنار هم قرار می‌گیرند.",
-      "grammar_fa": "گرامر جدیدی نیست؛ فقط الگوهای قبلی بازیابی و در یک متن بسیار کوتاه ترکیب می‌شوند.",
+      "grammar_fa": "«Tämä on minun kotini.» و «Minulla on kissa.» را از درس‌های قبل در متن آشنا بازیابی می‌کنیم. این نوشتن چهار جملهٔ راهنمایی‌شده است، نه بیان مستقلِ اطلاعات تازه. «Haluan kahvia.» را در کنار خانه و مالکیت در همان متن کوتاه می‌نویسیم. این مرورِ خواستهٔ آمادهٔ خودِ گوینده است. «Keittiössä on pöytä.» یعنی در آشپزخانه میز هست. صورت «Keittiössä» را از درس مکان در همین جمله بازیابی می‌کنیم؛ ساخت صورت مکانی اسم‌های تازه ادعا نمی‌شود. «En nuku.» را از برنامهٔ روزانهٔ بخش سوم مرور می‌کنیم. بعد از «En»، صورت «nuku» لازم است؛ «En nukun» درست نیست. این تمرین فقط مرور همان فعلِ آشناست.",
       "new_targets": [],
       "practice_targets": [
         "s4-tama-on-minun-kotini",
         "s4-keittiossa-on-frame",
         "s4-haluan-frame",
-        "s4-minulla-on-frame"
+        "s4-minulla-on-frame",
+        "s4-world-3",
+        "s4-world-4",
+        "s4-world-2",
+        "s4-world-5",
+        "s4-keittiossa",
+        "s4-final-negative",
+        "s4-huone",
+        "s4-olohuone",
+        "s4-tama-on-keittio",
+        "s4-kotona",
+        "s4-se-on-poydalla",
+        "s4-se-on-huoneessa",
+        "s4-se-on-tuolilla",
+        "s4-se-on-sangylla",
+        "s4-kahvi",
+        "s4-tee",
+        "s4-maito",
+        "s4-tama-on-kahvia",
+        "s4-tama-on-leipa",
+        "s4-minulla-on-nalka",
+        "s4-minulla-on-jano",
+        "s4-vetta",
+        "s4-vetta-kiitos",
+        "s4-kissa",
+        "s4-tama-on-koira",
+        "s4-se-on-kissa",
+        "s4-lehma",
+        "s4-lammas",
+        "s4-karhu-on-elain",
+        "s4-lehma-on-elain"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3253,30 +4678,35 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "s4-world-2",
           "options": [
-            "s4-world-5",
             "s4-world-2",
-            "s4-world-4",
-            "s4-world-3"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "listen",
-          "item": "s4-world-5",
-          "options": [
-            "s4-world-3",
-            "s4-world-5",
-            "s4-world-2",
-            "s4-world-1"
+            "s4-tama-on-minun-kotini",
+            "s4-keittiossa-on-frame",
+            "s4-haluan-frame"
           ]
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "s4-world-1"
+          "item": "s4-world-5"
+        },
+        {
+          "type": "controlled-production",
+          "item": "s4-world-1",
+          "prompt_fa": "این خانهٔ من است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on minun kotini.",
+          "accepted_answers": [
+            "Tämä on minun kotini."
+          ],
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -3290,7 +4720,12 @@
             "s4-world-2",
             "s4-world-3",
             "s4-world-4"
-          ]
+          ],
+          "grammar_concept_ids": [
+            "a11-pronouns",
+            "a11-present-chunks"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -3298,15 +4733,9 @@
           "item": "s4-world-5"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "s4-tama-on-minun-kotini",
-          "options": [
-            "s4-world-2",
-            "s4-tama-on-minun-kotini",
-            "s4-world-4",
-            "s4-world-5"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-minun-kotini"
         },
         {
           "type": "choice",
@@ -3329,6 +4758,210 @@
             "s4-minulla-on-frame",
             "s4-keittiossa-on-frame"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-keittiossa",
+          "prompt_fi": "_____ on pöytä.",
+          "prompt_fa": "در آشپزخانه میز هست.",
+          "accepted_answers": [
+            "Keittiössä"
+          ],
+          "expected_fi": "Keittiössä on pöytä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-final-negative",
+          "prompt_fi": "En _____.",
+          "prompt_fa": "من نمی‌خوابم.",
+          "accepted_answers": [
+            "nuku"
+          ],
+          "expected_fi": "En nuku.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "short-reading",
+          "item": "s4-world-reading",
+          "question_item": "s4-world-1",
+          "options": [
+            "s4-world-1",
+            "s4-world-d1",
+            "s4-world-d2",
+            "s4-world-d3"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s4-world-reading",
+          "question_item": "s4-world-2",
+          "options": [
+            "s4-world-2",
+            "s4-world-d1",
+            "s4-world-d2",
+            "s4-world-d3"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s4-world-reading",
+          "question_item": "s4-world-5",
+          "options": [
+            "s4-world-5",
+            "s4-world-d1",
+            "s4-world-d2",
+            "s4-world-d3"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s4-keittiossa-on-frame",
+          "options": [
+            "s4-keittiossa-on-frame"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-musta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-iso"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-pieni"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-huone"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-olohuone"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-keittio"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kotona"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-poydalla"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-huoneessa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-tuolilla"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-sangylla"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kahvi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tee"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-maito"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-kahvia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-leipa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-minulla-on-nalka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-minulla-on-jano"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-vetta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-vetta-kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-kissa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-tama-on-koira"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-se-on-kissa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-lehma"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-lammas"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-karhu-on-elain"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-lehma-on-elain"
         }
       ],
       "production_targets": [
@@ -3349,9 +4982,296 @@
           "expected_fi": "Tämä on minun kotini.",
           "accepted_answers": [
             "Tämä on minun kotini."
-          ]
+          ],
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-keittiossa",
+          "prompt_fi": "_____ on pöytä.",
+          "prompt_fa": "در آشپزخانه میز هست.",
+          "accepted_answers": [
+            "Keittiössä"
+          ],
+          "expected_fi": "Keittiössä on pöytä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-final-negative",
+          "prompt_fi": "En _____.",
+          "prompt_fa": "من نمی‌خوابم.",
+          "accepted_answers": [
+            "nuku"
+          ],
+          "expected_fi": "En nuku.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ],
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-musta",
+        "s4-iso",
+        "s4-pieni"
+      ],
+      "activity_count": 48,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l09-can-do",
+            "can_do_fa": "یک متن پنج‌جمله‌ای دربارهٔ خانه و دنیای آشنا را بفهم و چهار جملهٔ هدایت‌شده تولید کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-tama-on-minun-kotini",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-keittiossa-on-frame",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-haluan-frame",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-minulla-on-frame",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-world-3",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-world-4",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-world-2",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-world-5",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-keittiossa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-negative",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-huone",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-olohuone",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tama-on-keittio",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kotona",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-se-on-poydalla",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-se-on-huoneessa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-se-on-tuolilla",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-se-on-sangylla",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kahvi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tee",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-maito",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tama-on-kahvia",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tama-on-leipa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-minulla-on-nalka",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-minulla-on-jano",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-vetta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-vetta-kiitos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-kissa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tama-on-koira",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-se-on-kissa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-lehma",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-lammas",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-karhu-on-elain",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-lehma-on-elain",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-musta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-iso",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-pieni",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Tämä on minun kotini.» و «Minulla on kissa.» را از درس‌های قبل در متن آشنا بازیابی می‌کنیم. این نوشتن چهار جملهٔ راهنمایی‌شده است، نه بیان مستقلِ اطلاعات تازه.",
+            "examples": [
+              {
+                "fi": "Tämä on minun kotini.",
+                "fa": "این خانهٔ من است."
+              },
+              {
+                "fi": "Minulla on kissa.",
+                "fa": "من گربه دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 10,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 8,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Haluan kahvia.» را در کنار خانه و مالکیت در همان متن کوتاه می‌نویسیم. این مرورِ خواستهٔ آمادهٔ خودِ گوینده است.",
+            "examples": [
+              {
+                "fi": "Haluan kahvia.",
+                "fa": "قهوه می‌خواهم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 10,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Keittiössä on pöytä.» یعنی در آشپزخانه میز هست. صورت «Keittiössä» را از درس مکان در همین جمله بازیابی می‌کنیم؛ ساخت صورت مکانی اسم‌های تازه ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Keittiössä on pöytä.",
+                "fa": "در آشپزخانه میز هست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-negation",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«En nuku.» را از برنامهٔ روزانهٔ بخش سوم مرور می‌کنیم. بعد از «En»، صورت «nuku» لازم است؛ «En nukun» درست نیست. این تمرین فقط مرور همان فعلِ آشناست.",
+            "examples": [
+              {
+                "fi": "En nuku.",
+                "fa": "نمی‌خوابم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-4-lesson-10",
@@ -3360,7 +5280,7 @@
       "title_fa": "آزمون پایانی A1.1",
       "objective_fa": "در موقعیت‌های اصلی A1.1 از زبان بسیار تمرین‌شده استفاده کن و حداقل ۸۰٪ پاسخ درست بگیر.",
       "summary_fa": "این آزمون از ارتباط اولیه، اطلاعات شخصی، زمان و روتین، خانه و نیازهای پایه نمونه می‌گیرد و یک گفت‌وگو و خروجی چندجمله‌ای دارد.",
-      "grammar_fa": "مطلب جدیدی معرفی نمی‌شود؛ این آزمون سنجش نهایی کل مسیر A1.1 است.",
+      "grammar_fa": "«Minun nimeni on Sara.» را به‌ترتیب می‌چینیم و جمله‌های آشنای پروفایل و خانه را با راهنما می‌نویسیم. ضمیر ملکی و عبارت‌های کامل قبلی مرور می‌شوند؛ این تمرین ادعای نوشتن مستقل ندارد. در پاسخِ آشنای «Olen Iranista.»، صورتِ مبدأ «Iranista» را بازیابی می‌کنیم. این همان نمونهٔ اهل ایران بودن در بخش دوم است؛ حالتِ نام کشور تازه سنجیده نمی‌شود. «Puhun persiaa.» و «Aamulla syön.» را از دو بخش قبلی با راهنما بازیابی می‌کنیم. فعلِ حال در جمله‌های کاملِ آشنا تمرین می‌شود، نه صرفِ فعل‌های تازه. «En nuku.» را هم با انتخاب و هم با نوشتن «nuku» مرور می‌کنیم. فعلِ مثبت «nukun» بعد از «En» پذیرفته نمی‌شود؛ این مرورِ همان جفتِ صریحِ بخش سوم است. «Missä puhelin on?» را برای پرسیدن مکانِ تلفن دوباره کامل می‌کنیم. واژهٔ پرسشیِ این موقعیت همان «Missä» است. در توصیفِ آشنای «Koira on iso.» از «on» برای یک سگ استفاده می‌کنیم. این مرورِ همان جملهٔ ساده است، نه گرامر تازه.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3384,46 +5304,69 @@
       "passing_score": 0.8,
       "activities": [
         {
-          "type": "choice",
-          "mode": "listen",
-          "item": "s4-final-hei",
-          "options": [
-            "s4-final-name",
-            "s4-final-hei",
-            "s4-final-origin",
-            "s4-final-day"
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-final-hei"
+        },
+        {
+          "type": "sentence-order",
+          "item": "s4-final-name",
+          "tokens": [
+            "nimeni",
+            "on",
+            "Sara.",
+            "Minun"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Minun nimeni on Sara.",
+          "expected_fa": "نام من سارا است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
           ]
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "s4-final-name"
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "expression-completion",
           "item": "s4-final-origin",
-          "options": [
-            "s4-final-language",
-            "s4-final-origin",
-            "s4-final-live",
-            "s4-final-home"
-          ]
+          "prompt_fi": "Olen _____.",
+          "accepted_answers": [
+            "Iranista"
+          ],
+          "expected_fi": "Olen Iranista.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "s4-final-language"
+          "type": "controlled-production",
+          "item": "s4-final-language",
+          "prompt_fa": "فارسی صحبت می‌کنم.",
+          "cues_fi": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "accepted_answers": [
+            "Puhun persiaa."
+          ],
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
           "mode": "listen",
           "item": "s4-final-day",
           "options": [
-            "s4-final-clock",
+            "s4-musta",
             "s4-final-day",
-            "s4-final-routine",
-            "s4-final-negative"
+            "s4-iso",
+            "s4-pieni"
           ]
         },
         {
@@ -3443,9 +5386,23 @@
           "item": "s4-final-routine"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "s4-final-negative"
+          "type": "morphology-choice",
+          "item": "s4-final-negative",
+          "base_fi": "nukkua",
+          "feature_fa": "منفی اول‌شخص: en + connegative",
+          "prompt_fa": "در جملهٔ منفی «من نمی‌خوابم»، شکل درست nukkua را انتخاب کن.",
+          "frame_fi": "En _____.",
+          "options_fi": [
+            "nukun",
+            "nukkuu",
+            "nuku",
+            "nukut"
+          ],
+          "expected_fi": "nuku",
+          "explanation_fa": "بعد از en، صورت connegative فعل می‌آید: nukun → En nuku.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
         },
         {
           "type": "visual-choice",
@@ -3498,7 +5455,12 @@
             "s4-final-live",
             "s4-final-routine",
             "s4-tama-on-minun-kotini"
-          ]
+          ],
+          "grammar_concept_ids": [
+            "a11-pronouns",
+            "a11-present-chunks"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "short-reading",
@@ -3510,6 +5472,85 @@
             "s4-world-d2",
             "s4-world-d3"
           ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "s4-final-negative",
+          "base_fi": "nukkua",
+          "feature_fa": "منفی اول‌شخص در عبارت آشنا",
+          "prompt_fa": "صورت درست nukkua را بعد از En بنویس.",
+          "frame_fi": "En _____.",
+          "expected_fi": "nuku",
+          "accepted_answers": [
+            "nuku"
+          ],
+          "explanation_fa": "صورت آشنای nukun در جملهٔ منفیِ اول‌شخص به En nuku تبدیل می‌شود؛ En nukun نادرست است.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-missa-puhelin",
+          "prompt_fi": "_____ puhelin on?",
+          "prompt_fa": "تلفن کجاست؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä puhelin on?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-final-description",
+          "prompt_fi": "Koira _____ iso.",
+          "prompt_fa": "سگ بزرگ است.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Koira on iso.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-musta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-iso"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-pieni"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-punainen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-valkoinen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-hevonen-on-iso"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s4-lintu-on-pieni"
         }
       ],
       "production_targets": [
@@ -3535,7 +5576,11 @@
             1,
             2
           ],
-          "expected_fi": "Minun nimeni on Sara."
+          "expected_fi": "Minun nimeni on Sara.",
+          "expected_fa": "نام من سارا است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
         },
         {
           "type": "expression-completion",
@@ -3544,7 +5589,11 @@
           "accepted_answers": [
             "Iranista"
           ],
-          "expected_fi": "Olen Iranista."
+          "expected_fi": "Olen Iranista.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -3556,7 +5605,39 @@
           "expected_fi": "Puhun persiaa.",
           "accepted_answers": [
             "Puhun persiaa."
-          ]
+          ],
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-missa-puhelin",
+          "prompt_fi": "_____ puhelin on?",
+          "prompt_fa": "تلفن کجاست؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä puhelin on?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s4-final-description",
+          "prompt_fi": "Koira _____ iso.",
+          "prompt_fa": "سگ بزرگ است.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Koira on iso.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -3574,9 +5655,324 @@
             "nukut"
           ],
           "expected_fi": "nuku",
-          "explanation_fa": "بعد از en، صورت connegative فعل می‌آید: nukun → En nuku."
+          "explanation_fa": "بعد از en، صورت connegative فعل می‌آید: nukun → En nuku.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "s4-final-negative",
+          "base_fi": "nukkua",
+          "feature_fa": "منفی اول‌شخص در عبارت آشنا",
+          "prompt_fa": "صورت درست nukkua را بعد از En بنویس.",
+          "frame_fi": "En _____.",
+          "expected_fi": "nuku",
+          "accepted_answers": [
+            "nuku"
+          ],
+          "explanation_fa": "صورت آشنای nukun در جملهٔ منفیِ اول‌شخص به En nuku تبدیل می‌شود؛ En nukun نادرست است.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
         }
-      ]
+      ],
+      "review_targets": [
+        "s4-musta",
+        "s4-iso",
+        "s4-pieni"
+      ],
+      "activity_count": 25,
+      "practice_targets": [
+        "s4-final-hei",
+        "s4-final-name",
+        "s4-final-origin",
+        "s4-final-language",
+        "s4-final-day",
+        "s4-final-clock",
+        "s4-final-routine",
+        "s4-final-negative",
+        "s4-keittio",
+        "s4-final-want",
+        "s4-koira",
+        "s4-final-description",
+        "s4-final-cafe-thanks",
+        "s4-final-cafe-order",
+        "s4-final-cafe-give",
+        "s4-final-live",
+        "s4-tama-on-minun-kotini",
+        "s4-world-5",
+        "s4-missa-puhelin",
+        "s4-punainen",
+        "s4-valkoinen",
+        "s4-hevonen-on-iso",
+        "s4-lintu-on-pieni"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s4-l10-can-do",
+            "can_do_fa": "در موقعیت‌های اصلی A1.1 از زبان بسیار تمرین‌شده استفاده کن و حداقل ۸۰٪ پاسخ درست بگیر."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s4-final-hei",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-name",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-origin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-language",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-day",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-clock",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-routine",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-negative",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-keittio",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-want",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-koira",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-description",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-cafe-thanks",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-cafe-order",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-cafe-give",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-final-live",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-tama-on-minun-kotini",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-world-5",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-missa-puhelin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-punainen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-valkoinen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-hevonen-on-iso",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-lintu-on-pieni",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-musta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-iso",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s4-pieni",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Minun nimeni on Sara.» را به‌ترتیب می‌چینیم و جمله‌های آشنای پروفایل و خانه را با راهنما می‌نویسیم. ضمیر ملکی و عبارت‌های کامل قبلی مرور می‌شوند؛ این تمرین ادعای نوشتن مستقل ندارد.",
+            "examples": [
+              {
+                "fi": "Minun nimeni on Sara.",
+                "fa": "نام من سارا است."
+              },
+              {
+                "fi": "Tämä on minun kotini.",
+                "fa": "این خانهٔ من است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 1,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 13,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در پاسخِ آشنای «Olen Iranista.»، صورتِ مبدأ «Iranista» را بازیابی می‌کنیم. این همان نمونهٔ اهل ایران بودن در بخش دوم است؛ حالتِ نام کشور تازه سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olen Iranista.",
+                "fa": "من اهل ایران هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 2,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Puhun persiaa.» و «Aamulla syön.» را از دو بخش قبلی با راهنما بازیابی می‌کنیم. فعلِ حال در جمله‌های کاملِ آشنا تمرین می‌شود، نه صرفِ فعل‌های تازه.",
+            "examples": [
+              {
+                "fi": "Puhun persiaa.",
+                "fa": "فارسی صحبت می‌کنم."
+              },
+              {
+                "fi": "Aamulla syön.",
+                "fa": "صبح غذا می‌خورم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 3,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 13,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-negation",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«En nuku.» را هم با انتخاب و هم با نوشتن «nuku» مرور می‌کنیم. فعلِ مثبت «nukun» بعد از «En» پذیرفته نمی‌شود؛ این مرورِ همان جفتِ صریحِ بخش سوم است.",
+            "examples": [
+              {
+                "fi": "En nuku.",
+                "fa": "نمی‌خوابم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 7,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Missä puhelin on?» را برای پرسیدن مکانِ تلفن دوباره کامل می‌کنیم. واژهٔ پرسشیِ این موقعیت همان «Missä» است.",
+            "examples": [
+              {
+                "fi": "Missä puhelin on?",
+                "fa": "تلفن کجاست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در توصیفِ آشنای «Koira on iso.» از «on» برای یک سگ استفاده می‌کنیم. این مرورِ همان جملهٔ ساده است، نه گرامر تازه.",
+            "examples": [
+              {
+                "fi": "Koira on iso.",
+                "fa": "سگ بزرگ است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "prior_target_refs": {
+    "s4-ole-hyva": {
+      "section_id": "a1.1-section-1",
+      "item_id": "ole-hyva"
+    },
+    "s4-kiitos": {
+      "section_id": "a1.1-section-1",
+      "item_id": "kiitos"
+    }
+  }
 }

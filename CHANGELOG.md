@@ -6,6 +6,17 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.40.0] - 2026-10-14
+
+### Added
+
+- Complete all ten A1.1 Section 4 overviews with bounded positive grammar evidence and review/prerequisite context inherited from Sections 1–3. Cafe ordering remains honestly formulaic with no invented independent grammar goal.
+- Repair all 35 legacy declared positive-answer gaps; all 65 introduced exact surfaces/expressions have later retrieval. Every one of the ten animal names is assessed and reviewed.
+- Teach complete familiar-world sentences before review-only lessons 9–10 and assess all five facts in the existing passage; retain supported four-sentence writing and the original cafe dialogue.
+- Preserve the final checkpoint’s original prepared positive-answer scope (18 target IDs across 15 original activities), cumulative tasks and 80% threshold while expanding to 25 activities. Original item records, lesson IDs, core targets and historical scores remain intact; Section 4 has 245 activities. Corrected scope can change listening distractors.
+- Reuse exact-form/diacritic-only grammatical answer policies for limited location, partitive, possession, description and negative decisions; reference ellipsis frames are recognized rather than typed literally.
+- Add deterministic Section 4 acceptance snapshots, Persian explanation and regressions. All forty A1.1 lessons now have canonical overviews and scoped section gates (1,030 activities), while broader identity/review/integration work under #101 remains open.
+
 ## [1.39.0] - 2026-10-13
 
 ### Added

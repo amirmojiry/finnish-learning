@@ -23,7 +23,7 @@ test('the complete A1.1 path has four sections and forty unique lessons', () => 
 test('A1.1 Section 4 contains ten deterministic fifteen-activity lessons', () => {
   assert.equal(section4.lessons.length, 10);
   assert.equal(section4.activity_count_per_lesson, 15);
-  assert.equal(section4.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.equal(section4.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 245);
   assert.deepEqual(
     section4.lessons.map((lesson) => lesson.curriculum_id),
     curriculum.sections[3].lessons.map((lesson) => lesson.id),
@@ -139,7 +139,7 @@ test('familiar-world lesson uses a five-sentence reading and four-sentence outpu
 test('final A1.1 checkpoint requires 80 percent and samples the whole path', () => {
   const lesson = section4.lessons.find((entry) => entry.curriculum_id === 'a1.1-s4-l10');
   assert.equal(lesson.passing_score, 0.8);
-  assert.equal(lesson.activities.length, 15);
+  assert.equal(lesson.activities.length, lesson.activity_count);
   assert.equal(course.passesLessonRequirement(lesson, 12, 15), true);
   assert.equal(course.passesLessonRequirement(lesson, 11, 15), false);
   assert.equal(course.passesLessonRequirement(lesson, 0, 0), false);

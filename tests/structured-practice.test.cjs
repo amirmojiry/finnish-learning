@@ -63,7 +63,7 @@ test('all forty A1.1 lessons contain reviewed structured sentence-building pract
 
   assert.deepEqual(Object.fromEntries(counts), {
     'sentence-order': 16,
-    'expression-completion': 54,
+    'expression-completion': 67,
     'controlled-production': 17,
   });
 });
