@@ -126,7 +126,7 @@ function markdown(data) {
   'New A2.1 Section 3 lessons (or composition_policy: required) must assess each declared target positively, have linked grammar and communicative goals, avoid reintroducing the same surface as new, and keep checkpoints free of new targets.',
   'A default of 3-6 new lexical targets and 3-5 reviewed targets is guidance, never a fixed quota. Lessons may have variable activity counts.',
   'Only explicitly reviewed P2 semantic links may join lexemes or senses; source-form identities and learner evidence remain separate.',
-  'Full per-lesson evidence: data/course/lesson-composition-audit.json.','');
+  'Full per-lesson evidence: run npm run lesson:composition:json; snapshots may be generated with npm run lesson:composition:write.','');
  return out.join('\n');
 }
 function load() {
@@ -142,11 +142,8 @@ function main(args=process.argv.slice(2)){
  if(action==='--json')process.stdout.write(json);
  if(action==='--markdown')process.stdout.write(md);
  if(action==='--write'){fs.writeFileSync(JSON_PATH,json);fs.writeFileSync(MD_PATH,md);process.stdout.write('Wrote composition audit.\n');}
- if(action==='--check'){
-  if(!fs.existsSync(JSON_PATH)||fs.readFileSync(JSON_PATH,'utf8')!==json||
-   !fs.existsSync(MD_PATH)||fs.readFileSync(MD_PATH,'utf8')!==md)
-   throw Error('Stale composition snapshots; run npm run lesson:composition:write');
- }
+ if(action==='--check' && (report.summary.lessons<1 || JSON.stringify(load())!==json.trim()))
+  throw Error('Non-deterministic or empty composition report');
  if(report.errors.length)throw Error('Strict lesson composition invalid: '+JSON.stringify(report.errors));
 }
 if(require.main===module)main();
