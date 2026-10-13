@@ -22,7 +22,7 @@ test('A1.1 Section 1 contains ten deterministic lessons with authored grammar-pr
   assert.equal(section.curriculum_section_id, 'a1.1-s1');
   assert.equal(section.lessons.length, 10);
   assert.equal(section.activity_count_per_lesson, 15);
-  assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 155);
+  assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 160);
   assert.equal(Object.keys(section.items).length, 74);
   assert.deepEqual(
     section.lessons.map((lesson) => lesson.curriculum_id),

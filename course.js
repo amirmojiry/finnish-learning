@@ -1003,7 +1003,10 @@
         throw new Error(`Structured practice target must belong to the explicit lesson scope: ${lesson.id} / ${spec.item}`);
       }
 
-      let replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+      let replacementIndex = lesson.activities.findIndex((activity, index) => (
+        !usedIndices.has(index) && activity.type === spec.type && activity.item === spec.item
+      ));
+      if (replacementIndex < 0) replacementIndex = lesson.activities.findLastIndex((activity, index) => (
         !usedIndices.has(index)
         && activity.item === spec.item
         && (
@@ -1396,6 +1399,9 @@
 
       for (const activity of lesson.activities) {
         if (activity.type === 'morphology-choice') {
+          if (activity.selection_kind !== undefined && activity.selection_kind !== 'question-word') {
+            throw new Error(`Unknown choice selection kind in ${lesson.id}`);
+          }
           if (!section.items[activity.item]) throw new Error(`Unknown morphology-choice target in ${lesson.id}`);
           if (!activity.base_fi || !activity.feature_fa || !activity.prompt_fa || !activity.frame_fi || !activity.frame_fi.includes('_____') || !activity.explanation_fa) {
             throw new Error(`Morphology choice requires explicit base, feature, prompt, frame and explanation in ${lesson.id}`);
@@ -1867,6 +1873,21 @@
     return true;
   }
 
+  function morphologyPracticeCopy(activity) {
+    if (activity.selection_kind === 'question-word') return {
+      heading: 'واژهٔ پرسشی مناسب را انتخاب کن.',
+      showBase: false,
+      correct: 'آفرین، واژهٔ پرسشی درست است.',
+      wrong: 'واژهٔ پرسشی درست:',
+    };
+    return {
+      heading: 'شکل صرفی درست را انتخاب کن.',
+      showBase: true,
+      correct: 'آفرین، فرم درست است.',
+      wrong: 'شکل درست:',
+    };
+  }
+
   function renderMorphologyPracticeActivity({
     document,
     windowObject,
@@ -1880,6 +1901,7 @@
   }) {
     if (!MORPHOLOGY_PRACTICE_TYPES.includes(activity.type)) return false;
     let answered = false;
+    const copy = morphologyPracticeCopy(activity);
 
     const context = document.createElement('div');
     context.className = 'course-morphology-context';
@@ -1907,7 +1929,8 @@
     frame.lang = 'fi';
     frame.dir = 'ltr';
     frame.textContent = activity.frame_fi;
-    context.append(base, feature, instruction, frame);
+    if (copy.showBase) context.append(base);
+    context.append(feature, instruction, frame);
     card.append(context);
 
     const finish = (correct, grading = null) => {
@@ -1917,8 +1940,8 @@
 
       const title = document.createElement('strong');
       title.textContent = correct
-        ? (grading?.fuzzy ? 'قبول شد؛ شکل درست را هم مرور کن.' : 'آفرین، فرم درست است.')
-        : `شکل درست: ${activity.expected_fi}`;
+        ? (grading?.fuzzy ? 'قبول شد؛ شکل درست را هم مرور کن.' : copy.correct)
+        : `${copy.wrong} ${activity.expected_fi}`;
       feedback.append(title);
 
       if (grading && !grading.exact) feedback.append(createTypedDifference(grading));
@@ -2810,7 +2833,7 @@
       if (activity.type === 'sentence-order') return 'کلمات را برای ساختن جملهٔ درست مرتب کن.';
       if (activity.type === 'expression-completion') return 'بخش حذف‌شدهٔ عبارت را کامل کن.';
       if (activity.type === 'controlled-production') return 'با راهنماها جملهٔ فنلاندی را بنویس.';
-      if (activity.type === 'morphology-choice') return 'شکل صرفی درست را انتخاب کن.';
+      if (activity.type === 'morphology-choice') return morphologyPracticeCopy(activity).heading;
       if (activity.type === 'inflection-production') return 'شکل صرف‌شدهٔ درست را بنویس.';
       if (activity.type === 'production') return 'فارسی را به فنلاندی بنویس.';
       if (activity.type === 'dictation') return 'گوش کن و چیزی را که می‌شنوی به فنلاندی بنویس.';
@@ -3866,6 +3889,7 @@
     MORPHOLOGY_PRACTICE_TYPES,
     injectMorphologyPractice,
     renderMorphologyPracticeActivity,
+    morphologyPracticeCopy,
     optionLabel,
     uniqueOptions,
     buildStandardActivities,

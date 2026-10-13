@@ -53,7 +53,7 @@ function evidence(section,lesson) {
     if(a.type==='teach'&&a.item)teach.add(a.item);
     if(a.type==='short-reading'&&a.item)reading.add(a.item);
     if(GRAMMAR_TYPES.has(a.type))grammatical++;
-    if(['morphology-choice','inflection-production'].includes(a.type))morphological++;
+    if(['morphology-choice','inflection-production'].includes(a.type) && a.selection_kind!=='question-word')morphological++;
     const answers=positives(a);
     for(const id of answers)if(section.items[id]){
       correct.add(id);

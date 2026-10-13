@@ -36,6 +36,8 @@ function rawLessonScope(lesson) {
 test('reviewed morphology practice is present in the intended A1.1 lessons', () => {
   const expectedCurriculumIds = new Set([
     'a1.1-s1-l02',
+    'a1.1-s1-l05',
+    'a1.1-s1-l10',
     'a1.1-s1-l09',
     'a1.1-s2-l02',
     'a1.1-s2-l03',
@@ -64,7 +66,7 @@ test('reviewed morphology practice is present in the intended A1.1 lessons', () 
       return result;
     }, {});
   assert.deepEqual(counts, {
-    'morphology-choice': 7,
+    'morphology-choice': 11,
     'inflection-production': 8,
   });
 });
@@ -374,4 +376,37 @@ test('inflection-production tolerates keyboard diacritics while keeping canonica
   assert.match(feedback.children[0].textContent, /قبول شد/);
   assert.equal(feedback.children[2].textContent, 'Minä työskentelen.');
   assert.match(feedback.children[3].textContent, /työskennellä/);
+});
+
+test('question-word cards show semantic selection labels and omit the base-form block', () => {
+  const cards = sections[0].lessons.flatMap(l => l.activities).filter(a => a.selection_kind === 'question-word');
+  assert.equal(cards.length, 4);
+  for (const activity of cards) {
+    assert.equal(course.morphologyPracticeCopy(activity).heading, 'واژهٔ پرسشی مناسب را انتخاب کن.');
+    for (const correct of [true, false]) {
+      const { document, windowObject, createButton, createTypedDifference } = fakeDomHarness();
+      const card = document.createElement('div'), feedback = document.createElement('div'), results = [];
+      course.renderMorphologyPracticeActivity({ document, windowObject, activity, card, feedback, createButton,
+        nextActivity() {}, createTypedDifference, recordResult(value) { results.push(value); } });
+      assert.ok(card.children[0].children.every(node => node.className !== 'course-morphology-base'));
+      const options = card.children[1];
+      const selected = options.children.find(button => (button.textContent === activity.expected_fi) === correct);
+      selected.click();
+      assert.deepEqual(results, [correct]);
+      assert.equal(feedback.children[0].textContent, correct ? 'آفرین، واژهٔ پرسشی درست است.' : 'واژهٔ پرسشی درست: ' + activity.expected_fi);
+      assert.equal(feedback.children[1].textContent, activity.frame_fi.replace('_____', activity.expected_fi));
+      const audit = require('../scripts/audit-course-coverage.cjs').evidence(sections[0], { activities: [activity] });
+      assert.equal(audit.grammar_slots, 1);
+      assert.equal(audit.morphology_slots, 0);
+    }
+  }
+  const actualMorphology = course.morphologyPracticeCopy({ type: 'morphology-choice' });
+  assert.equal(actualMorphology.showBase, true);
+  assert.equal(actualMorphology.heading, 'شکل صرفی درست را انتخاب کن.');
+});
+
+test('unknown selection kinds fail lesson validation', () => {
+  const broken = structuredClone(rawSections[0]);
+  broken.lessons[4].morphology_practice[0].selection_kind = 'unknown';
+  assert.throws(() => course.validateSection(broken), /Unknown choice selection kind/);
 });
