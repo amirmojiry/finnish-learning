@@ -52,46 +52,6 @@ jobs:
             git commit -m 'chore: regenerate course coverage snapshots'
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
-      - name: TEMP P4 regenerate and stage source-matched UD artifacts on issue branch
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'feat/142-parole-vocab-401-425'
-        run: |
-          python3 tools/ud-import/extract_ud.py
-          python3 tools/ud-import/enrich_multiword_tokens.py
-          python3 tools/ud-import/enrich_ui_examples.py
-          python3 tools/ud-import/build_ui_summary.py
-          python3 tools/ud-import/connect_ui.py
-          python3 tools/ud-import/stabilize_generated_at.py
-          node scripts/build-lexical-identity.cjs --write
-          npm run curriculum:coverage:write
-          python3 scripts/sync_project.py
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          summary = json.loads(Path('data/ud/word-summary.json').read_text())
-          existing = json.loads(Path('data/corpus-example-translations-fa.json').read_text())
-          rendered = {}
-          for word in summary['words']:
-              for example in word.get('examples', []):
-                  if example.get('sentence_id') and example.get('text'):
-                      rendered[example['sentence_id']] = example['text']
-              for feature in word.get('features', []):
-                  for value in feature.get('values', []):
-                      example = value.get('example') or {}
-                      if example.get('sentence_id') and example.get('text'):
-                          rendered[example['sentence_id']] = example['text']
-          missing = [(key, value) for key, value in rendered.items() if key not in existing['translations']]
-          print('P4_MISSING_TRANSLATION_COUNT', len(missing))
-          for key, value in sorted(missing):
-              print('P4_MISSING_TRANSLATION', json.dumps({'id': key, 'fi': value}, ensure_ascii=False))
-          print('P4_STALE_TRANSLATION_COUNT', len(set(existing['translations']) - set(rendered)))
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ud data/course/lexical-identity-sidecar.json data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md README.md README.fa.md index.html deploy-version.txt
-          if ! git diff --cached --quiet; then
-            git commit -m 'chore: regenerate UD, lexical identity and coverage for vocabulary 425'
-            git push origin HEAD:feat/142-parole-vocab-401-425
-          fi
       - name: Compile Python sources
         run: python3 -m compileall -q scripts tools tests
       - name: Run complete regression suite
