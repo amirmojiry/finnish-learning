@@ -71,3 +71,12 @@ test('teaching-card headings reuse canonical introduced/reviewed metadata', () =
   assert.equal(course.teachingActivityHeading(raw.lessons[5], { item: 'anteeksi' }), 'عبارت جدید را ببین و با صدای بلند تکرار کن.');
   assert.equal(course.teachingActivityHeading({}, { item: 'legacy' }), 'عبارت جدید را ببین و با صدای بلند تکرار کن.');
 });
+
+
+test('learner grammar notes contain no duplicated explanatory sentences', () => {
+  for (const lesson of raw.lessons) {
+    const sentences = lesson.grammar_fa.split(/(?<=[.!؟])\s+/);
+    assert.equal(new Set(sentences).size, sentences.length, lesson.id);
+    assert.ok(lesson.grammar_fa.length > 0);
+  }
+});
