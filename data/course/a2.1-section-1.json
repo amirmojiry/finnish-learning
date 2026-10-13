@@ -3693,7 +3693,10 @@
             "valokuvia"
           ],
           "expected_fi": "Otin valokuvia.",
-          "expected_fa": "عکس گرفتم."
+          "expected_fa": "عکس گرفتم.",
+          "grammar_concept_ids": [
+            "a21-plural-partitive"
+          ]
         },
         {
           "type": "expression-completion",
@@ -3757,22 +3760,6 @@
           ],
           "expected_fi": "valokuvia",
           "explanation_fa": "«valokuvia» شکل Partitiivi جمع از «valokuva» در عبارت «Otin valokuvia» است؛ این یک الگوی نمونه است.",
-          "grammar_concept_ids": [
-            "a21-plural-partitive"
-          ]
-        },
-        {
-          "type": "inflection-production",
-          "item": "a21s1-t-058",
-          "base_fi": "valokuva",
-          "feature_fa": "پارتیتیو جمع برای تعداد نامشخص عکس‌ها",
-          "prompt_fa": "برای گفتن «عکس‌هایی گرفتم»، صورت پارتیتیو جمعِ «valokuva» را بنویس.",
-          "frame_fi": "Otin _____.",
-          "expected_fi": "valokuvia",
-          "accepted_answers": [
-            "valokuvia"
-          ],
-          "explanation_fa": "در «Otin valokuvia» تعداد عکس‌ها مشخص نیست و مفعول با پارتیتیو جمع می‌آید. «valokuvan» به یک عکس اشاره می‌کند؛ «valokuvia» صورت جمعِ مورد نیاز این جمله است.",
           "grammar_concept_ids": [
             "a21-plural-partitive"
           ]
@@ -3946,11 +3933,6 @@
             "a21s1-h-002",
             "a21s1-t-003"
           ]
-        },
-        {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a21s1-t-058"
         }
       ],
       "learning_objectives": {
@@ -4046,7 +4028,7 @@
                 "mode": "recognition"
               },
               {
-                "activity_type": "inflection-production",
+                "activity_type": "expression-completion",
                 "item_id": "a21s1-t-058",
                 "mode": "supported_production"
               }
@@ -4054,7 +4036,7 @@
           }
         ]
       },
-      "activity_count": 20
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-1-lesson-8",

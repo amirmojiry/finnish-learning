@@ -11,7 +11,7 @@ const concept = 'a21-plural-partitive';
 const introduction = section.lessons[6];
 const review = section.lessons[8];
 const goal = (lesson) => lesson.learning_objectives.grammar.find(g => g.concept_id === concept);
-const production = (lesson) => lesson.activities.find(a => a.type === 'inflection-production' && a.item === target);
+const production = (lesson) => lesson.activities.find(a => ['expression-completion', 'inflection-production'].includes(a.type) && a.item === target);
 
 test('plural partitive has recognition, supported production and later contextual review', () => {
   assert.deepEqual(goal(introduction).evidence.map(e => e.mode), ['recognition', 'supported_production']);
@@ -23,7 +23,7 @@ test('plural partitive has recognition, supported production and later contextua
   assert.ok(review.practice_targets.includes(target));
   assert.ok(review.learning_objectives.lexical.some(g => g.target_id === target && g.status === 'reviewed'));
   assert.ok(!review.new_targets.includes(target));
-  assert.equal(production(introduction).frame_fi, 'Otin _____.');
+  assert.equal(production(introduction).prompt_fi, 'Otin _____.');
   assert.equal(production(review).frame_fi, 'Näin _____ museossa.');
   assert.equal(production(review).frame_fi.replace('_____', 'valokuvia'), goal(review).examples[0].fi);
   assert.equal(goal(review).examples[0].fa, 'در موزه عکس‌هایی دیدم.');
@@ -33,7 +33,7 @@ test('typed grammar application accepts the plural form and rejects singular or 
   for (const lesson of [introduction, review]) {
     const activity = production(lesson);
     assert.ok(activity);
-    const answer = { surface_form: activity.expected_fi, accepted_answers: activity.accepted_answers };
+    const answer = { surface_form: activity.accepted_answers[0], accepted_answers: activity.accepted_answers };
     assert.equal(course.gradeMorphologyAnswer(answer, 'valokuvia').accepted, true);
     for (const wrong of ['valokuva', 'valokuvan', 'valokuvat', 'valokuvassa', '']) {
       assert.equal(course.gradeMorphologyAnswer(answer, wrong).accepted, false, wrong);
@@ -55,9 +55,11 @@ test('appending practice preserves all previous prepared activity positions and 
     [introduction, '4bd26fa8df660be8724a99f56385a771926a4045c9f72495a7c5b0ed9045b923'],
     [review, '0e9e881f47badb7a527bec01c3695cf9ab622470498a5d0e3468f16068e08d97'],
   ]) {
-    assert.equal(lesson.activities.length, 20);
-    assert.equal(createHash('sha256').update(JSON.stringify(lesson.activities.slice(0, 19))).digest('hex'), hash);
-    assert.equal(lesson.activities.at(-1).type, 'inflection-production');
+    assert.equal(lesson.activities.length, lesson === introduction ? 19 : 20);
+    const previous = structuredClone(lesson.activities.slice(0, 19));
+    if (lesson === introduction) delete previous.find(a => a.type === 'expression-completion' && a.item === target).grammar_concept_ids;
+    assert.equal(createHash('sha256').update(JSON.stringify(previous)).digest('hex'), hash);
+    assert.equal(lesson.activities.at(-1).type, lesson === introduction ? 'expression-completion' : 'inflection-production');
     const old = course.recordLessonCompletion(course.emptyProgress(), lesson.id, 12, 14, 123);
     assert.deepEqual(course.sanitizeProgress(old).lessonScores[lesson.id], { correct: 12, graded: 14, completedAt: 123 });
     const completed = course.recordLessonCompletion(old, lesson.id, 13, 15, 456);
@@ -66,4 +68,12 @@ test('appending practice preserves all previous prepared activity positions and 
   assert.equal(section.lessons[9].activities.length, 15);
   assert.equal(section.lessons[9].checkpoint_targets.length, 15);
   assert.deepEqual(section.lessons[9].new_targets, []);
+});
+
+test('lesson 7 has exactly one typed Otin frame and evidence reuses its completion', () => {
+  const duplicates = introduction.activities.filter(a => ['expression-completion', 'inflection-production'].includes(a.type) && (a.prompt_fi || a.frame_fi) === 'Otin _____.');
+  assert.equal(duplicates.length, 1);
+  assert.equal(duplicates[0].type, 'expression-completion');
+  assert.equal(goal(introduction).evidence[1].activity_type, 'expression-completion');
+  assert.ok(duplicates[0].grammar_concept_ids.includes(concept));
 });

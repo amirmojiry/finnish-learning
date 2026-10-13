@@ -32,9 +32,9 @@ test('A2.1 travel is an additional real stage without exposing planned A2 module
  assert.equal(stages.at(-1).sections.length,2);
 });
 
-test('ten A2.1 travel lessons map exact curriculum target forms and cover 182 activities',()=>{
+test('ten A2.1 travel lessons map exact curriculum target forms and cover 181 activities',()=>{
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),182);
+ assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),181);
  for(const lesson of section.lessons){
   const planned=contract.sections[0].lessons[lesson.order-1];
   assert.equal(lesson.curriculum_id,planned.id);
