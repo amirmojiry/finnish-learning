@@ -2066,7 +2066,8 @@
           "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
           "grammar_concept_ids": [
             "a11-questions"
-          ]
+          ],
+          "selection_kind": "question-word"
         },
         {
           "type": "morphology-choice",
@@ -2084,7 +2085,8 @@
           "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
           "grammar_concept_ids": [
             "a11-questions"
-          ]
+          ],
+          "selection_kind": "question-word"
         },
         {
           "type": "expression-completion",
@@ -2132,7 +2134,8 @@
           "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
           "grammar_concept_ids": [
             "a11-questions"
-          ]
+          ],
+          "selection_kind": "question-word"
         },
         {
           "type": "morphology-choice",
@@ -2150,7 +2153,8 @@
           "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
           "grammar_concept_ids": [
             "a11-questions"
-          ]
+          ],
+          "selection_kind": "question-word"
         }
       ],
       "activity_count": 19,
@@ -3097,7 +3101,8 @@
           "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
           "grammar_concept_ids": [
             "a11-questions"
-          ]
+          ],
+          "selection_kind": "question-word"
         },
         {
           "type": "morphology-choice",
@@ -3115,7 +3120,8 @@
           "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
           "grammar_concept_ids": [
             "a11-questions"
-          ]
+          ],
+          "selection_kind": "question-word"
         }
       ],
       "learning_objectives": {

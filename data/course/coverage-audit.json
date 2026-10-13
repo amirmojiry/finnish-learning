@@ -29,7 +29,7 @@
     "grammar_concepts_with_explicit_lesson_ids": 14,
     "lessons_without_explicit_grammar_concept_ids": 115,
     "graded_grammar_related_slots": 324,
-    "graded_morphology_slots": 74,
+    "graded_morphology_slots": 70,
     "lessons_with_declared_unassessed_forms": 112,
     "ranked_metadata_conflicts": 0
   },
@@ -596,7 +596,7 @@
         ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 5,
-        "morphology_slots": 2,
+        "morphology_slots": 0,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
           "a11-olla"
@@ -1037,7 +1037,7 @@
         ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 5,
-        "morphology_slots": 2,
+        "morphology_slots": 0,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
           "a11-olla"
