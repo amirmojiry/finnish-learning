@@ -14,9 +14,9 @@ test('P4 first contiguous batch retains original Parole frequencies and bilingua
  const batch=load('data/vocabulary-details/401-425.json');
  const words=load('data/common-words.json').words;
  const sourceRows=fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt')).toString('latin1').split(/\r?\n/).filter(Boolean);
- const start=words.length-batch.length;
+ const start=400; // First published P4 bundle occupies original source positions 401–425.
  assert.equal(batch.length,25);
- assert.equal(start,400);
+ assert.ok(words.length>=start+batch.length);
  assert.equal(new Set(words.map(x=>normalize(x.word))).size,words.length);
  for(let i=0;i<batch.length;i++){
   const form=batch[i],entry=words[start+i];
