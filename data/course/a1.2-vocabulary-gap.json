@@ -2,7 +2,7 @@
   "schema_version": 1,
   "curriculum_id": "a1.2-curriculum",
   "curriculum_level": "A1.2",
-  "current_vocabulary_size": 400,
+  "current_vocabulary_size": 425,
   "source_file": "data/parole_frek_3.txt",
   "classification_policy": {
     "current_source_backed": "The exact surface form already exists in data/common-words.json.",
@@ -11,218 +11,222 @@
   },
   "summary": {
     "unique_lexical_target_count": 194,
-    "current_source_backed_count": 75,
-    "source_ranked_gap_count": 117,
+    "current_source_backed_count": 76,
+    "source_ranked_gap_count": 116,
     "curated_unranked_count": 2,
-    "current_coverage_percent": 38.7,
+    "current_coverage_percent": 39.2,
     "exact_parole_match_percent": 99
   },
   "recommendation": {
     "strategy": "next_consecutive_parole_tranche",
-    "start_position": 401,
-    "end_position": 550,
-    "additional_source_forms": 150,
-    "captured_target_count": 5,
+    "start_position": 426,
+    "end_position": 700,
+    "additional_source_forms": 275,
+    "captured_target_count": 9,
     "captured_targets": [
-      "lauantaina",
       "mihin",
       "kauan",
       "lähellä",
-      "puoli"
+      "puoli",
+      "sisällä",
+      "toimi",
+      "kotiin",
+      "hinta",
+      "lähtee"
     ],
-    "remaining_source_ranked_gap_count": 112,
+    "remaining_source_ranked_gap_count": 107,
     "candidate_endpoints": [
       {
         "end_position": 450,
-        "additional_source_forms": 50,
-        "captured_target_count": 1,
-        "capture_density": 0.02
+        "additional_source_forms": 25,
+        "captured_target_count": 0,
+        "capture_density": 0
       },
       {
         "end_position": 500,
-        "additional_source_forms": 100,
-        "captured_target_count": 2,
-        "capture_density": 0.02
+        "additional_source_forms": 75,
+        "captured_target_count": 1,
+        "capture_density": 0.0133
       },
       {
         "end_position": 550,
-        "additional_source_forms": 150,
-        "captured_target_count": 5,
-        "capture_density": 0.0333
+        "additional_source_forms": 125,
+        "captured_target_count": 4,
+        "capture_density": 0.032
       },
       {
         "end_position": 600,
-        "additional_source_forms": 200,
-        "captured_target_count": 5,
-        "capture_density": 0.025
-      },
-      {
-        "end_position": 650,
-        "additional_source_forms": 250,
-        "captured_target_count": 7,
-        "capture_density": 0.028
-      },
-      {
-        "end_position": 700,
-        "additional_source_forms": 300,
-        "captured_target_count": 10,
-        "capture_density": 0.0333
-      },
-      {
-        "end_position": 750,
-        "additional_source_forms": 350,
-        "captured_target_count": 11,
-        "capture_density": 0.0314
-      },
-      {
-        "end_position": 800,
-        "additional_source_forms": 400,
-        "captured_target_count": 13,
-        "capture_density": 0.0325
-      },
-      {
-        "end_position": 850,
-        "additional_source_forms": 450,
-        "captured_target_count": 14,
-        "capture_density": 0.0311
-      },
-      {
-        "end_position": 900,
-        "additional_source_forms": 500,
-        "captured_target_count": 14,
-        "capture_density": 0.028
-      },
-      {
-        "end_position": 950,
-        "additional_source_forms": 550,
-        "captured_target_count": 14,
-        "capture_density": 0.0255
-      },
-      {
-        "end_position": 1000,
-        "additional_source_forms": 600,
-        "captured_target_count": 14,
-        "capture_density": 0.0233
-      },
-      {
-        "end_position": 1050,
-        "additional_source_forms": 650,
-        "captured_target_count": 15,
-        "capture_density": 0.0231
-      },
-      {
-        "end_position": 1100,
-        "additional_source_forms": 700,
-        "captured_target_count": 16,
+        "additional_source_forms": 175,
+        "captured_target_count": 4,
         "capture_density": 0.0229
       },
       {
+        "end_position": 650,
+        "additional_source_forms": 225,
+        "captured_target_count": 6,
+        "capture_density": 0.0267
+      },
+      {
+        "end_position": 700,
+        "additional_source_forms": 275,
+        "captured_target_count": 9,
+        "capture_density": 0.0327
+      },
+      {
+        "end_position": 750,
+        "additional_source_forms": 325,
+        "captured_target_count": 10,
+        "capture_density": 0.0308
+      },
+      {
+        "end_position": 800,
+        "additional_source_forms": 375,
+        "captured_target_count": 12,
+        "capture_density": 0.032
+      },
+      {
+        "end_position": 850,
+        "additional_source_forms": 425,
+        "captured_target_count": 13,
+        "capture_density": 0.0306
+      },
+      {
+        "end_position": 900,
+        "additional_source_forms": 475,
+        "captured_target_count": 13,
+        "capture_density": 0.0274
+      },
+      {
+        "end_position": 950,
+        "additional_source_forms": 525,
+        "captured_target_count": 13,
+        "capture_density": 0.0248
+      },
+      {
+        "end_position": 1000,
+        "additional_source_forms": 575,
+        "captured_target_count": 13,
+        "capture_density": 0.0226
+      },
+      {
+        "end_position": 1050,
+        "additional_source_forms": 625,
+        "captured_target_count": 14,
+        "capture_density": 0.0224
+      },
+      {
+        "end_position": 1100,
+        "additional_source_forms": 675,
+        "captured_target_count": 15,
+        "capture_density": 0.0222
+      },
+      {
         "end_position": 1150,
-        "additional_source_forms": 750,
-        "captured_target_count": 18,
-        "capture_density": 0.024
+        "additional_source_forms": 725,
+        "captured_target_count": 17,
+        "capture_density": 0.0234
       },
       {
         "end_position": 1200,
-        "additional_source_forms": 800,
-        "captured_target_count": 18,
-        "capture_density": 0.0225
+        "additional_source_forms": 775,
+        "captured_target_count": 17,
+        "capture_density": 0.0219
       },
       {
         "end_position": 1250,
-        "additional_source_forms": 850,
-        "captured_target_count": 18,
-        "capture_density": 0.0212
+        "additional_source_forms": 825,
+        "captured_target_count": 17,
+        "capture_density": 0.0206
       },
       {
         "end_position": 1300,
-        "additional_source_forms": 900,
-        "captured_target_count": 18,
-        "capture_density": 0.02
+        "additional_source_forms": 875,
+        "captured_target_count": 17,
+        "capture_density": 0.0194
       },
       {
         "end_position": 1350,
-        "additional_source_forms": 950,
-        "captured_target_count": 18,
-        "capture_density": 0.0189
+        "additional_source_forms": 925,
+        "captured_target_count": 17,
+        "capture_density": 0.0184
       },
       {
         "end_position": 1400,
-        "additional_source_forms": 1000,
-        "captured_target_count": 19,
-        "capture_density": 0.019
-      },
-      {
-        "end_position": 1450,
-        "additional_source_forms": 1050,
-        "captured_target_count": 19,
-        "capture_density": 0.0181
-      },
-      {
-        "end_position": 1500,
-        "additional_source_forms": 1100,
-        "captured_target_count": 21,
-        "capture_density": 0.0191
-      },
-      {
-        "end_position": 1550,
-        "additional_source_forms": 1150,
-        "captured_target_count": 21,
-        "capture_density": 0.0183
-      },
-      {
-        "end_position": 1600,
-        "additional_source_forms": 1200,
-        "captured_target_count": 21,
-        "capture_density": 0.0175
-      },
-      {
-        "end_position": 1650,
-        "additional_source_forms": 1250,
-        "captured_target_count": 22,
-        "capture_density": 0.0176
-      },
-      {
-        "end_position": 1700,
-        "additional_source_forms": 1300,
-        "captured_target_count": 23,
-        "capture_density": 0.0177
-      },
-      {
-        "end_position": 1750,
-        "additional_source_forms": 1350,
-        "captured_target_count": 25,
+        "additional_source_forms": 975,
+        "captured_target_count": 18,
         "capture_density": 0.0185
       },
       {
-        "end_position": 1800,
-        "additional_source_forms": 1400,
-        "captured_target_count": 25,
-        "capture_density": 0.0179
+        "end_position": 1450,
+        "additional_source_forms": 1025,
+        "captured_target_count": 18,
+        "capture_density": 0.0176
       },
       {
-        "end_position": 1850,
-        "additional_source_forms": 1450,
-        "captured_target_count": 26,
-        "capture_density": 0.0179
+        "end_position": 1500,
+        "additional_source_forms": 1075,
+        "captured_target_count": 20,
+        "capture_density": 0.0186
       },
       {
-        "end_position": 1900,
-        "additional_source_forms": 1500,
-        "captured_target_count": 26,
+        "end_position": 1550,
+        "additional_source_forms": 1125,
+        "captured_target_count": 20,
+        "capture_density": 0.0178
+      },
+      {
+        "end_position": 1600,
+        "additional_source_forms": 1175,
+        "captured_target_count": 20,
+        "capture_density": 0.017
+      },
+      {
+        "end_position": 1650,
+        "additional_source_forms": 1225,
+        "captured_target_count": 21,
+        "capture_density": 0.0171
+      },
+      {
+        "end_position": 1700,
+        "additional_source_forms": 1275,
+        "captured_target_count": 22,
         "capture_density": 0.0173
       },
       {
+        "end_position": 1750,
+        "additional_source_forms": 1325,
+        "captured_target_count": 24,
+        "capture_density": 0.0181
+      },
+      {
+        "end_position": 1800,
+        "additional_source_forms": 1375,
+        "captured_target_count": 24,
+        "capture_density": 0.0175
+      },
+      {
+        "end_position": 1850,
+        "additional_source_forms": 1425,
+        "captured_target_count": 25,
+        "capture_density": 0.0175
+      },
+      {
+        "end_position": 1900,
+        "additional_source_forms": 1475,
+        "captured_target_count": 25,
+        "capture_density": 0.0169
+      },
+      {
         "end_position": 1950,
-        "additional_source_forms": 1550,
-        "captured_target_count": 29,
-        "capture_density": 0.0187
+        "additional_source_forms": 1525,
+        "captured_target_count": 28,
+        "capture_density": 0.0184
       },
       {
         "end_position": 2000,
-        "additional_source_forms": 1600,
-        "captured_target_count": 29,
-        "capture_density": 0.0181
+        "additional_source_forms": 1575,
+        "captured_target_count": 28,
+        "capture_density": 0.0178
       }
     ],
     "rationale": "Choose the standard 50-entry endpoint up to source position 2000 with the highest cumulative exact A1.2 target yield per added Parole form. This keeps the next source-backed expansion small and avoids inflating the common vocabulary merely to absorb low-frequency topic forms."
@@ -1648,7 +1652,7 @@
       "section_ids": [
         "a1.2-s3"
       ],
-      "classification": "source_ranked_gap",
+      "classification": "current_source_backed",
       "source_position": 416,
       "source_word": "lauantaina",
       "frequency_rank": 416,
@@ -4757,8 +4761,8 @@
         {
           "lesson_id": "a1.2-s3-l06",
           "lexical_target_count": 9,
-          "current_source_backed_count": 8,
-          "source_ranked_gap_count": 1,
+          "current_source_backed_count": 9,
+          "source_ranked_gap_count": 0,
           "curated_unranked_count": 0,
           "targets": [
             {
@@ -4798,7 +4802,7 @@
             },
             {
               "target": "lauantaina",
-              "classification": "source_ranked_gap",
+              "classification": "current_source_backed",
               "source_position": 416
             },
             {
