@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.34.4] - 2026-10-13
+
+### Added
+
+- Start P4 with a reproducible, original-Parole-verified review queue for lexical forms already targeted by shipped course lessons but absent from the curated dictionary.
+- Prioritize repeated course targets over single-placement candidates while retaining original Parole source position and tied source rank, and documenting the existing consecutive-bundle constraint.
+- Add source consistency and duplicate-form tests plus a cautious human-curation gate for the next actual vocabulary expansion tranche. No dictionary, source metadata, course content or learner progress is modified.
+
 ## [1.34.3] - 2026-10-13
 
 ### Added
