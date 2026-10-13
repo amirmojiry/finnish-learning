@@ -72,3 +72,23 @@ test('verified sense shared by two forms keeps separate correct-answer evidence'
  assert.equal(r.lessons[0].reviewed_identities[0].lexeme_id,'lexeme:mina');
  assert.equal(new Set(r.lessons[0].reviewed_identities.map(x=>x.form_id)).size,2);
 });
+
+test('later review summary counts distinct normalized forms once across repeated introductions',()=>{
+ const s=sample();
+ const second={...s.lessons[0],id:'fixture-second',order:2,new_targets:['one'],activities:[{type:'type',item:'one'}]};
+ const third={...s.lessons[0],id:'fixture-third',order:3,new_targets:[],activities:[{type:'type',item:'one'}]};
+ s.lessons.push(second,third);
+ const result=comp.evaluate([s],sidecar);
+ const all=result.lessons.flatMap(row=>row.later_positive_lessons.map(entry=>entry.form_id));
+ assert.ok(all.length>new Set(all).size);
+ assert.equal(result.summary.forms_with_planned_later_positive_reviews,new Set(all).size);
+});
+test('snapshot generator never overwrites authored curriculum audit guide',()=>{
+ const script=fs.readFileSync(path.join(ROOT,'scripts/audit-lesson-composition.cjs'),'utf8');
+ assert.match(script,/data\\/course\\/lesson-composition-audit\\.generated\\.md/);
+ assert.doesNotMatch(script,/MD_PATH=path\\.join\\(ROOT,'docs\\/LESSON-COMPOSITION-AUDIT\\.md'\\)/);
+});
+test('documentation hub links the canonical composition audit methodology',()=>{
+ const hub=fs.readFileSync(path.join(ROOT,'docs/README.md'),'utf8');
+ assert.match(hub,/\\[Lesson composition and recycling audit\\]\\(LESSON-COMPOSITION-AUDIT\\.md\\)/);
+});
