@@ -6419,13 +6419,21 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "lesson-1",
-      "review_lessons": [],
+      "review_lessons": [
+        "lesson-2"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-1",
           "lesson_id": "lesson-1",
           "item_id": "nakemiin",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-2",
+          "item_id": "nakemiin",
+          "role": "referenced"
         }
       ]
     },
@@ -23211,6 +23219,7 @@
       "source_position": 96,
       "first_shipped_lesson": "lesson-2",
       "review_lessons": [
+        "lesson-9",
         "section-2-lesson-2",
         "a1.2-section-4-lesson-4"
       ],
@@ -23220,6 +23229,12 @@
           "lesson_id": "lesson-2",
           "item_id": "olen",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-9",
+          "item_id": "olen",
+          "role": "referenced"
         },
         {
           "section_id": "a1.1-section-2",
@@ -23297,13 +23312,21 @@
       "source_rank": 745,
       "source_position": 745,
       "first_shipped_lesson": "lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-1",
           "lesson_id": "lesson-2",
           "item_id": "olet",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-9",
+          "item_id": "olet",
+          "role": "referenced"
         }
       ]
     },

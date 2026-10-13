@@ -216,3 +216,5 @@ Conjunctions and simple explanatory clauses begin at B1.1. B1.2 onward adds comm
 - [Finnish National Agency for Education evolving proficiency scale](https://www.oph.fi/fi/koulutus-ja-tutkinnot/kehittyvan-kielitaidon-tasojen-kuvausasteikko)
 - [University of Helsinki Finnish course contents](https://www.helsinki.fi/en/language-centre/teaching-and-research/finnish-foreigners/course-materials-objectives-and-contents)
 - [Institute for the Languages of Finland grammar overview](https://kotus.fi/kotus/kielet-ja-kielipolitiikka/kansalliskielet/suomen-kieli/)
+
+A1.1 evidence pilot (issue #148): `a11-olla` is explicitly introduced in Section 1 lesson 2 and reviewed in lesson 9 through the limited first/second-person present contrast (`minä olen`, `sinä olet`). Recognition and supported typed form production are assessed separately; case endings inside these reviewed sentences, formulaic greetings and politeness phrases are not claimed as complete paradigms. Canonical concept IDs/dependencies above are unchanged.

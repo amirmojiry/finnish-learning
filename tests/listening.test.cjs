@@ -37,7 +37,7 @@ test('all forty A1.1 lessons contain one listening-recognition activity and one 
   assert.equal(lessons.length, 40);
 
   for (const lesson of lessons) {
-    assert.equal(lesson.activities.length, 15, lesson.id);
+    assert.equal(lesson.activities.length, lesson.activity_count ?? 15, lesson.id);
     assert.equal(lesson.listening_targets.length, 2, lesson.id);
 
     const listening = lesson.activities.filter((activity) => activity.type === 'choice' && activity.mode === 'listen');

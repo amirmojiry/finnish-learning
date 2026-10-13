@@ -1392,7 +1392,7 @@
       "title_fa": "نام من",
       "objective_fa": "نام خود را بگو و نام طرف مقابل را بپرس.",
       "summary_fa": "با minä و sinä و شکل‌های olen/olet خودت را معرفی می‌کنی و سؤال نام را می‌پرسی.",
-      "grammar_fa": "فعل olla در اول‌شخص و دوم‌شخص مفرد: minä olen، sinä olet.",
+      "grammar_fa": "برای «من هستم» از «minä olen» و برای «تو هستی» از «sinä olet» استفاده می‌کنیم. انتخاب فعل به شخصِ ضمیر وابسته است. این تمرین‌ها فقط همین دو صورتِ حال را می‌سنجند، نه صرف کامل فعل olla.",
       "new_targets": [
         "mina",
         "sina",
@@ -1430,8 +1430,320 @@
           "accepted_answers": [
             "olen"
           ],
-          "expected_fi": "Minä olen Suomessa."
+          "expected_fi": "Minä olen Suomessa.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
         }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "mina"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "mina",
+          "options": [
+            "mina",
+            "sina",
+            "olen",
+            "olet"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "sina"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "sina",
+          "options": [
+            "mina",
+            "sina",
+            "olen",
+            "olet"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "olen"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "olen",
+          "options": [
+            "mina",
+            "sina",
+            "olen",
+            "olet"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "olet"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "olet",
+          "options": [
+            "mina",
+            "sina",
+            "olen",
+            "olet"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "minun-nimeni-on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "minun-nimeni-on",
+          "options": [
+            "minun-nimeni-on",
+            "mina",
+            "sina",
+            "olen"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "mika-sinun-nimesi-on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "mika-sinun-nimesi-on",
+          "options": [
+            "mina",
+            "mika-sinun-nimesi-on",
+            "sina",
+            "olen"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "mina",
+          "options": [
+            "sina",
+            "olen",
+            "mina",
+            "olet"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "sina"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "nakemiin"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "olen",
+          "base_fi": "olla",
+          "feature_fa": "صورت حال برای «من»",
+          "prompt_fa": "برای معرفی خودت، شکل درست فعل را انتخاب کن.",
+          "frame_fi": "Minä _____ Amir.",
+          "options_fi": [
+            "olen",
+            "olet",
+            "on",
+            "olla"
+          ],
+          "expected_fi": "olen",
+          "explanation_fa": "ضمیر «minä» با صورت اول‌شخص «olen» می‌آید: من امیر هستم.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "olet",
+          "base_fi": "olla",
+          "feature_fa": "صورت حال برای «تو»",
+          "prompt_fa": "وقتی به یک نفر می‌گویی «تو دانشجو هستی»، شکل درست فعل را انتخاب کن.",
+          "frame_fi": "Sinä _____ opiskelija.",
+          "options_fi": [
+            "olen",
+            "olet",
+            "on",
+            "olla"
+          ],
+          "expected_fi": "olet",
+          "explanation_fa": "ضمیر «sinä» با صورت دوم‌شخص «olet» می‌آید: تو دانشجو هستی.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "olet",
+          "base_fi": "olla",
+          "feature_fa": "صورت حال برای «تو»",
+          "prompt_fa": "برای گفتن «تو دوست من هستی»، صورت مناسب olla را بنویس.",
+          "frame_fi": "Sinä _____ ystäväni.",
+          "expected_fi": "olet",
+          "accepted_answers": [
+            "olet"
+          ],
+          "explanation_fa": "برای «sinä» صورت «olet» را می‌نویسیم؛ «olen» برای «minä» است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        }
+      ],
+      "activity_count": 18,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l02-can-do",
+            "can_do_fa": "نام خود را بگویم، نام طرف مقابل را بپرسم و جمله‌های ساده با «من هستم» و «تو هستی» بسازم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "mina",
+            "status": "introduced"
+          },
+          {
+            "target_id": "sina",
+            "status": "introduced"
+          },
+          {
+            "target_id": "olen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "olet",
+            "status": "introduced"
+          },
+          {
+            "target_id": "minun-nimeni-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "mika-sinun-nimesi-on",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "introduced",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "برای «من هستم» از «minä olen» و برای «تو هستی» از «sinä olet» استفاده می‌کنیم. انتخاب فعل به شخصِ ضمیر وابسته است. این تمرین‌ها فقط همین دو صورتِ حال را می‌سنجند، نه صرف کامل فعل olla.",
+            "examples": [
+              {
+                "fi": "Minä olen Suomessa.",
+                "fa": "من در فنلاند هستم."
+              },
+              {
+                "fi": "Minä olen Amir.",
+                "fa": "من امیر هستم."
+              },
+              {
+                "fi": "Sinä olet opiskelija.",
+                "fa": "تو دانشجو هستی."
+              },
+              {
+                "fi": "Sinä olet ystäväni.",
+                "fa": "تو دوست من هستی."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "olen",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "olet",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "olen",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "inflection-production",
+                "item_id": "olet",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "olen",
+          "base_fi": "olla",
+          "feature_fa": "صورت حال برای «من»",
+          "prompt_fa": "برای معرفی خودت، شکل درست فعل را انتخاب کن.",
+          "frame_fi": "Minä _____ Amir.",
+          "options_fi": [
+            "olen",
+            "olet",
+            "on",
+            "olla"
+          ],
+          "expected_fi": "olen",
+          "explanation_fa": "ضمیر «minä» با صورت اول‌شخص «olen» می‌آید: من امیر هستم.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "olet",
+          "base_fi": "olla",
+          "feature_fa": "صورت حال برای «تو»",
+          "prompt_fa": "وقتی به یک نفر می‌گویی «تو دانشجو هستی»، شکل درست فعل را انتخاب کن.",
+          "frame_fi": "Sinä _____ opiskelija.",
+          "options_fi": [
+            "olen",
+            "olet",
+            "on",
+            "olla"
+          ],
+          "expected_fi": "olet",
+          "explanation_fa": "ضمیر «sinä» با صورت دوم‌شخص «olet» می‌آید: تو دانشجو هستی.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "olet",
+          "base_fi": "olla",
+          "feature_fa": "صورت حال برای «تو»",
+          "prompt_fa": "برای گفتن «تو دوست من هستی»، صورت مناسب olla را بنویس.",
+          "frame_fi": "Sinä _____ ystäväni.",
+          "expected_fi": "olet",
+          "accepted_answers": [
+            "olet"
+          ],
+          "explanation_fa": "برای «sinä» صورت «olet» را می‌نویسیم؛ «olen» برای «minä» است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        }
+      ],
+      "recycle_from": [
+        "a1.1-s1-l01"
       ]
     },
     {
@@ -1741,21 +2053,25 @@
       "title_fa": "اولین گفت‌وگوهای کوتاه",
       "objective_fa": "سلام، معرفی، حال‌واحوال و درخواست کمک را در گفت‌وگوهای کوتاه ترکیب کن.",
       "summary_fa": "به‌جای واژهٔ جدید، عبارت‌های درس‌های قبل را کنار هم می‌گذاری تا چند گفت‌وگوی کوتاه واقعی بسازی.",
-      "grammar_fa": "این درس گرامر جدید ندارد؛ هدف، بازیابی و ترکیب الگوهای قبلی است.",
+      "grammar_fa": "این درس گرامر جدید ندارد؛ هدف، بازیابی و ترکیب الگوهای قبلی است. برای «من هستم» از «minä olen» و برای «تو هستی» از «sinä olet» استفاده می‌کنیم. انتخاب فعل به شخصِ ضمیر وابسته است. این تمرین‌ها فقط همین دو صورتِ حال را می‌سنجند، نه صرف کامل فعل olla.",
       "new_targets": [],
       "practice_targets": [
         "hei",
         "minun-nimeni-on",
         "mita-kuuluu",
         "kiitos",
-        "en-ymmarra"
+        "en-ymmarra",
+        "olen",
+        "olet"
       ],
       "review_targets": [
         "hei",
         "minun-nimeni-on",
         "mita-kuuluu",
         "kiitos",
-        "en-ymmarra"
+        "en-ymmarra",
+        "olen",
+        "olet"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -1908,6 +2224,38 @@
             0,
             2
           ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "olen",
+          "base_fi": "olla",
+          "feature_fa": "مرور صورت حال برای «من» و «تو»",
+          "prompt_fa": "در گفت‌وگوی معرفی، برای «من دانشجو هستم.» صورت مناسب olla را بنویس.",
+          "frame_fi": "Minä _____ opiskelija.",
+          "expected_fi": "olen",
+          "accepted_answers": [
+            "olen"
+          ],
+          "explanation_fa": "با «minä» از «olen» و با «sinä» از «olet» استفاده می‌کنیم؛ معنی جمله تازه است و شخصِ فعل باید با ضمیر هماهنگ بماند.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "olet",
+          "base_fi": "olla",
+          "feature_fa": "مرور صورت حال برای «من» و «تو»",
+          "prompt_fa": "در گفت‌وگوی معرفی، برای «تو در فنلاند هستی.» صورت مناسب olla را بنویس.",
+          "frame_fi": "Sinä _____ Suomessa.",
+          "expected_fi": "olet",
+          "accepted_answers": [
+            "olet"
+          ],
+          "explanation_fa": "با «minä» از «olen» و با «sinä» از «olet» استفاده می‌کنیم؛ معنی جمله تازه است و شخصِ فعل باید با ضمیر هماهنگ بماند.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
         }
       ],
       "production_targets": [
@@ -1930,6 +2278,116 @@
             "Anteeksi, en ymmärrä."
           ]
         }
+      ],
+      "activity_count": 17,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l09-can-do",
+            "can_do_fa": "سلام، معرفی، حال‌واحوال و درخواست کمک را در گفت‌وگوهای کوتاه ترکیب کنم و صورت «من هستم» و «تو هستی» را در جمله‌های تازه به کار ببرم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "hei",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "minun-nimeni-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mita-kuuluu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kiitos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "en-ymmarra",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "olen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "olet",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "برای «من هستم» از «minä olen» و برای «تو هستی» از «sinä olet» استفاده می‌کنیم. انتخاب فعل به شخصِ ضمیر وابسته است. این تمرین‌ها فقط همین دو صورتِ حال را می‌سنجند، نه صرف کامل فعل olla.",
+            "examples": [
+              {
+                "fi": "Minä olen opiskelija.",
+                "fa": "من دانشجو هستم."
+              },
+              {
+                "fi": "Sinä olet Suomessa.",
+                "fa": "تو در فنلاند هستی."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "olen",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "inflection-production",
+                "item_id": "olet",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "olen",
+          "base_fi": "olla",
+          "feature_fa": "مرور صورت حال برای «من» و «تو»",
+          "prompt_fa": "در گفت‌وگوی معرفی، برای «من دانشجو هستم.» صورت مناسب olla را بنویس.",
+          "frame_fi": "Minä _____ opiskelija.",
+          "expected_fi": "olen",
+          "accepted_answers": [
+            "olen"
+          ],
+          "explanation_fa": "با «minä» از «olen» و با «sinä» از «olet» استفاده می‌کنیم؛ معنی جمله تازه است و شخصِ فعل باید با ضمیر هماهنگ بماند.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "olet",
+          "base_fi": "olla",
+          "feature_fa": "مرور صورت حال برای «من» و «تو»",
+          "prompt_fa": "در گفت‌وگوی معرفی، برای «تو در فنلاند هستی.» صورت مناسب olla را بنویس.",
+          "frame_fi": "Sinä _____ Suomessa.",
+          "expected_fi": "olet",
+          "accepted_answers": [
+            "olet"
+          ],
+          "explanation_fa": "با «minä» از «olen» و با «sinä» از «olet» استفاده می‌کنیم؛ معنی جمله تازه است و شخصِ فعل باید با ضمیر هماهنگ بماند.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        }
+      ],
+      "recycle_from": [
+        "a1.1-s1-l01",
+        "a1.1-s1-l02",
+        "a1.1-s1-l03",
+        "a1.1-s1-l06",
+        "a1.1-s1-l07"
       ]
     },
     {

@@ -35,6 +35,8 @@ function rawLessonScope(lesson) {
 
 test('reviewed morphology practice is present in the intended A1.1 lessons', () => {
   const expectedCurriculumIds = new Set([
+    'a1.1-s1-l02',
+    'a1.1-s1-l09',
     'a1.1-s2-l02',
     'a1.1-s2-l03',
     'a1.1-s2-l04',
@@ -62,8 +64,8 @@ test('reviewed morphology practice is present in the intended A1.1 lessons', () 
       return result;
     }, {});
   assert.deepEqual(counts, {
-    'morphology-choice': 5,
-    'inflection-production': 5,
+    'morphology-choice': 7,
+    'inflection-production': 8,
   });
 });
 

@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.36.2] - 2026-10-13
+
+### Added
+
+- Backfill canonical communicative, lexical and `a11-olla` grammar objectives in A1.1 introduction lesson 2 and dialogue review lesson 9, reusing existing `olen` completion rather than duplicating it.
+- Add explicit first/second-person agreement choices, supported `olet` production and later typed review of both forms in new introductory contexts; distinguish recognition and guided production without claiming full conjugation mastery.
+- Synchronize A1.1 grammar concepts from the master curriculum and allow declared morphology activities to occupy authored slots without replacing previous exercises. Preserve lesson IDs, original activity positions, checkpoints and historical scores.
+
 ## [1.36.1] - 2026-10-13
 
 ### Added

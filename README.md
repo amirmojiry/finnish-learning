@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.36.1`
+- Version: `1.36.2`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -151,3 +151,5 @@ GitHub Pages deployment depends on the complete validation job and cannot publis
 A1.1, A1.2 and A1.3 each have 40 playable lessons; the first twenty A2.1 travel/past and healthcare/public-service lessons are also playable (140 total). A2.1 Sections 3–4 and A2.2–C2 remain future design targets. All stages require independent pedagogical assessment; exercise scores are not CEFR/YKI certification. Read the live audit before making a completion claim. The syllabus is a planning framework, not a CEFR/YKI certificate.
 
 A2.1 travel lessons now pair plural-partitive recognition with supported typed production and later contextual review of `valokuvia`. These guided activities do not establish independent grammar mastery; see the [delivery roadmap](docs/ROADMAP.md).
+
+A1.1 now links `minä olen` / `sinä olet` to explicit grammar choices, supported typing and later contextual review in introduction lesson 2 and dialogue lesson 9. This is a limited guided contrast, not full conjugation mastery. See the [delivery roadmap](docs/ROADMAP.md).

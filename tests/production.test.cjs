@@ -37,7 +37,7 @@ test('all forty A1.1 lessons contain exactly one Persian-to-Finnish production a
   assert.equal(lessons.length, 40);
 
   for (const lesson of lessons) {
-    assert.equal(lesson.activities.length, 15, lesson.id);
+    assert.equal(lesson.activities.length, lesson.activity_count ?? 15, lesson.id);
     assert.equal(lesson.production_targets.length, 1, lesson.id);
     const production = lesson.activities.filter((activity) => activity.type === 'production');
     assert.equal(production.length, 1, lesson.id);
