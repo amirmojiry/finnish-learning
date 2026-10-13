@@ -76,7 +76,7 @@ test('production activities use the shared fuzzy typed-answer feedback path', ()
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.match(source, /activity\.type === 'production'/);
   assert.match(source, /فارسی را به فنلاندی بنویس/);
-  assert.match(source, /gradeTypedAnswer\(item, input\.value\)/);
+  assert.match(source, /gradeActivityAnswer\(activity, activity\.mode === 'cloze'/);
   assert.match(source, /showFeedback\(feedback, correct, item, grading\)/);
   assert.doesNotMatch(source, /production[\s\S]{0,300}(?:slice|substring|\+\s*['"][a-zäö])/i);
 });

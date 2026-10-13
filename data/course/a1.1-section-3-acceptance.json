@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "section_id": "a1.1-section-3",
+  "scope": "Authored assessment and review opportunities, not learner mastery, complete paradigms or CEFR/YKI certification.",
+  "summary": {
+    "lessons": 10,
+    "activities": 282,
+    "introduced_surface_forms_and_expressions": 80,
+    "surfaces_with_later_positive_review": 80,
+    "grammar_concepts_with_later_review": 5,
+    "missing_positive_targets": 0,
+    "repeated_new_labels": 0,
+    "formulaic_lessons": [],
+    "errors": 0
+  },
+  "boundaries": [
+    "Prerequisites and exact surface review status carry forward from Sections 1 and 2; no lexeme/sense or SRS identities are merged.",
+    "Whole hours 1–5, all seven weekdays and four times of day have authored positive assessment and later retrieval.",
+    "Five explicitly mapped first-person negative pairs are transformed and later reviewed; neither free verb formation nor full person paradigms are claimed.",
+    "Negative transforms and explicitly opted-in productive grammar evidence use morphology grading: exact normalized forms or diacritic-only equivalence, not edit-distance forgiveness.",
+    "Routine sentences and frames are introduced before review-only lessons 9–10. Ellipsis and arrow reference frames are recognized, never typed verbatim.",
+    "Eilen is a lexical time word; the illustrative past-tense sentence does not constitute assessed imperfect grammar."
+  ],
+  "lessons": [
+    {
+      "lesson_id": "section-3-lesson-1",
+      "order": 1,
+      "title_fa": "امروز و فردا",
+      "activities": 15,
+      "declared_targets": 5,
+      "introduced_surfaces": 5,
+      "positively_assessed_targets": 5,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-2",
+      "order": 2,
+      "title_fa": "روزهای هفته",
+      "activities": 18,
+      "declared_targets": 12,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 12,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-3",
+      "order": 3,
+      "title_fa": "ساعت‌های کامل",
+      "activities": 20,
+      "declared_targets": 11,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 11,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-4",
+      "order": 4,
+      "title_fa": "بخش‌های روز",
+      "activities": 22,
+      "declared_targets": 12,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 12,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-case-chunks"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-5",
+      "order": 5,
+      "title_fa": "کارهای روزمره: من",
+      "activities": 40,
+      "declared_targets": 21,
+      "introduced_surfaces": 18,
+      "positively_assessed_targets": 21,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-present-chunks",
+        "a11-case-chunks"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-6",
+      "order": 6,
+      "title_fa": "کارهای روزمره: تو",
+      "activities": 27,
+      "declared_targets": 13,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 13,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions",
+        "a11-present-chunks"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-7",
+      "order": 7,
+      "title_fa": "من ... نمی‌کنم",
+      "activities": 29,
+      "declared_targets": 19,
+      "introduced_surfaces": 15,
+      "positively_assessed_targets": 19,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-negation"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-8",
+      "order": 8,
+      "title_fa": "چه زمانی؟",
+      "activities": 26,
+      "declared_targets": 18,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 18,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-9",
+      "order": 9,
+      "title_fa": "روز سادهٔ من",
+      "activities": 48,
+      "declared_targets": 35,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 35,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-present-chunks",
+        "a11-case-chunks",
+        "a11-negation"
+      ]
+    },
+    {
+      "lesson_id": "section-3-lesson-10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۳",
+      "activities": 37,
+      "declared_targets": 33,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 33,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla",
+        "a11-present-chunks",
+        "a11-negation",
+        "a11-questions",
+        "a11-case-chunks"
+      ]
+    }
+  ],
+  "lexical_review": [
+    {
+      "form_id": "form:65-69-6c-65-6e",
+      "target_id": "s3-eilen",
+      "surface_form": "eilen",
+      "introduced_in": "section-3-lesson-1",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-6e-e4-e4-6e",
+      "target_id": "s3-tanaan",
+      "surface_form": "tänään",
+      "introduced_in": "section-3-lesson-1",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:68-75-6f-6d-65-6e-6e-61",
+      "target_id": "s3-huomenna",
+      "surface_form": "huomenna",
+      "introduced_in": "section-3-lesson-1",
+      "later_positive_lessons": [
+        "section-3-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-6e-e4-e4-6e-20-6f-6e-20-2026",
+      "target_id": "s3-tanaan-on-frame",
+      "surface_form": "Tänään on …",
+      "introduced_in": "section-3-lesson-1",
+      "later_positive_lessons": [
+        "section-3-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:68-75-6f-6d-65-6e-6e-61-20-6f-6e-20-2026",
+      "target_id": "s3-huomenna-on-frame",
+      "surface_form": "Huomenna on …",
+      "introduced_in": "section-3-lesson-1",
+      "later_positive_lessons": [
+        "section-3-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:6d-61-61-6e-61-6e-74-61-69",
+      "target_id": "s3-maanantai",
+      "surface_form": "maanantai",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:74-69-69-73-74-61-69",
+      "target_id": "s3-tiistai",
+      "surface_form": "tiistai",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-73-6b-69-76-69-69-6b-6b-6f",
+      "target_id": "s3-keskiviikko",
+      "surface_form": "keskiviikko",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:74-6f-72-73-74-61-69",
+      "target_id": "s3-torstai",
+      "surface_form": "torstai",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:70-65-72-6a-61-6e-74-61-69",
+      "target_id": "s3-perjantai",
+      "surface_form": "perjantai",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-3",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6c-61-75-61-6e-74-61-69",
+      "target_id": "s3-lauantai",
+      "surface_form": "lauantai",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:73-75-6e-6e-75-6e-74-61-69",
+      "target_id": "s3-sunnuntai",
+      "surface_form": "sunnuntai",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6e-e4-e4-6e-20-6f-6e-20-6d-61-61-6e-61-6e-74-61-69-2e",
+      "target_id": "s3-tanaan-maanantai",
+      "surface_form": "Tänään on maanantai.",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:68-75-6f-6d-65-6e-6e-61-20-6f-6e-20-74-69-69-73-74-61-69-2e",
+      "target_id": "s3-huomenna-tiistai",
+      "surface_form": "Huomenna on tiistai.",
+      "introduced_in": "section-3-lesson-2",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:61-61-6d-75",
+      "target_id": "s3-aamu",
+      "surface_form": "aamu",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:69-6c-74-61",
+      "target_id": "s3-ilta",
+      "surface_form": "ilta",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-6c-6c-6f",
+      "target_id": "s3-kello",
+      "surface_form": "kello",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:6b-65-6c-6c-6f-20-6f-6e-20-79-6b-73-69-2e",
+      "target_id": "s3-kello-yksi",
+      "surface_form": "Kello on yksi.",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:6b-65-6c-6c-6f-20-6f-6e-20-6b-61-6b-73-69-2e",
+      "target_id": "s3-kello-kaksi",
+      "surface_form": "Kello on kaksi.",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-4",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-65-6c-6c-6f-20-6f-6e-20-6b-6f-6c-6d-65-2e",
+      "target_id": "s3-kello-kolme",
+      "surface_form": "Kello on kolme.",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:6b-65-6c-6c-6f-20-6f-6e-20-6e-65-6c-6a-e4-2e",
+      "target_id": "s3-kello-nelja",
+      "surface_form": "Kello on neljä.",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-65-6c-6c-6f-20-6f-6e-20-76-69-69-73-69-2e",
+      "target_id": "s3-kello-viisi",
+      "surface_form": "Kello on viisi.",
+      "introduced_in": "section-3-lesson-3",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6e-79-74",
+      "target_id": "s3-nyt",
+      "surface_form": "nyt",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:61-61-6d-75-6c-6c-61",
+      "target_id": "s3-aamulla",
+      "surface_form": "aamulla",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:70-e4-69-76-e4-6c-6c-e4",
+      "target_id": "s3-paivalla",
+      "surface_form": "päivällä",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:69-6c-6c-61-6c-6c-61",
+      "target_id": "s3-illalla",
+      "surface_form": "illalla",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:79-f6-6c-6c-e4",
+      "target_id": "s3-yolla",
+      "surface_form": "yöllä",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-5",
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:61-61-6d-75-6c-6c-61-2e",
+      "target_id": "s3-aamulla-expr",
+      "surface_form": "Aamulla.",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:70-e4-69-76-e4-6c-6c-e4-2e",
+      "target_id": "s3-paivalla-expr",
+      "surface_form": "Päivällä.",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:69-6c-6c-61-6c-6c-61-2e",
+      "target_id": "s3-illalla-expr",
+      "surface_form": "Illalla.",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:79-f6-6c-6c-e4-2e",
+      "target_id": "s3-yolla-expr",
+      "surface_form": "Yöllä.",
+      "introduced_in": "section-3-lesson-4",
+      "later_positive_lessons": [
+        "section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:73-79-f6-6e",
+      "target_id": "s3-syon",
+      "surface_form": "syön",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6a-75-6f-6e",
+      "target_id": "s3-juon",
+      "surface_form": "juon",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6e-75-6b-75-6e",
+      "target_id": "s3-nukun",
+      "surface_form": "nukun",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6f-70-69-73-6b-65-6c-65-6e",
+      "target_id": "s3-opiskelen",
+      "surface_form": "opiskelen",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:74-79-f6-73-6b-65-6e-74-65-6c-65-6e",
+      "target_id": "s3-tyoskentelen",
+      "surface_form": "työskentelen",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6d-65-6e-65-6e",
+      "target_id": "s3-menen",
+      "surface_form": "menen",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:74-75-6c-65-6e",
+      "target_id": "s3-tulen",
+      "surface_form": "tulen",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6e-e4-20-73-79-f6-6e-2e",
+      "target_id": "s3-mina-syon",
+      "surface_form": "Minä syön.",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6e-e4-20-6a-75-6f-6e-20-6b-61-68-76-69-61-2e",
+      "target_id": "s3-mina-juon-kahvia",
+      "surface_form": "Minä juon kahvia.",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-6b-6f-74-69-69-6e-2e",
+      "target_id": "s3-menen-kotiin",
+      "surface_form": "Menen kotiin.",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:61-61-6d-75-6c-6c-61-20-2026",
+      "target_id": "s3-frame-aamulla",
+      "surface_form": "Aamulla …",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:70-e4-69-76-e4-6c-6c-e4-20-2026",
+      "target_id": "s3-frame-paivalla",
+      "surface_form": "Päivällä …",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:69-6c-6c-61-6c-6c-61-20-2026",
+      "target_id": "s3-frame-illalla",
+      "surface_form": "Illalla …",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:61-61-6d-75-6c-6c-61-20-73-79-f6-6e-2e",
+      "target_id": "s3-routine-1",
+      "surface_form": "Aamulla syön.",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-8",
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:70-e4-69-76-e4-6c-6c-e4-20-6f-70-69-73-6b-65-6c-65-6e-2e",
+      "target_id": "s3-routine-3",
+      "surface_form": "Päivällä opiskelen.",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-8",
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:79-f6-6c-6c-e4-20-6e-75-6b-75-6e-2e",
+      "target_id": "s3-routine-5",
+      "surface_form": "Yöllä nukun.",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-8",
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-68-76-69-61",
+      "target_id": "s3-kahvia",
+      "surface_form": "kahvia",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-74-69-69-6e",
+      "target_id": "s3-kotiin",
+      "surface_form": "kotiin",
+      "introduced_in": "section-3-lesson-5",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:74-79-f6",
+      "target_id": "s3-tyo",
+      "surface_form": "työ",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-75-6c-75",
+      "target_id": "s3-koulu",
+      "surface_form": "koulu",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:74-65-65-74",
+      "target_id": "s3-teet",
+      "surface_form": "teet",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-74-e4-20-74-65-65-74-3f",
+      "target_id": "s3-mita-teet",
+      "surface_form": "Mitä teet?",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-7",
+        "section-3-lesson-8",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-70-69-73-6b-65-6c-65-74-6b-6f-3f",
+      "target_id": "s3-opiskeletko",
+      "surface_form": "Opiskeletko?",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-7",
+        "section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:74-79-f6-73-6b-65-6e-74-65-6c-65-74-6b-f6-3f",
+      "target_id": "s3-tyoskenteletko",
+      "surface_form": "Työskenteletkö?",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:61-61-6d-75-6c-6c-61-20-6d-65-6e-65-6e-20-6b-6f-75-6c-75-75-6e-2e",
+      "target_id": "s3-routine-2",
+      "surface_form": "Aamulla menen kouluun.",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:69-6c-6c-61-6c-6c-61-20-74-75-6c-65-6e-20-6b-6f-74-69-69-6e-2e",
+      "target_id": "s3-routine-4",
+      "surface_form": "Illalla tulen kotiin.",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-8",
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-75-6c-75-75-6e",
+      "target_id": "s3-kouluun",
+      "surface_form": "kouluun",
+      "introduced_in": "section-3-lesson-6",
+      "later_positive_lessons": [
+        "section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-e4-20-73-79-f6-6e-2e-20-2192-20-65-6e-20-73-79-f6-2e",
+      "target_id": "s3-pair-syon",
+      "surface_form": "Minä syön. → En syö.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-e4-20-6a-75-6f-6e-2e-20-2192-20-65-6e-20-6a-75-6f-2e",
+      "target_id": "s3-pair-juon",
+      "surface_form": "Minä juon. → En juo.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-e4-20-6e-75-6b-75-6e-2e-20-2192-20-65-6e-20-6e-75-6b-75-2e",
+      "target_id": "s3-pair-nukun",
+      "surface_form": "Minä nukun. → En nuku.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-e4-20-6f-70-69-73-6b-65-6c-65-6e-2e-20-2192-20-65-6e-20-6f-70-69-73-6b-65-6c-65-2e",
+      "target_id": "s3-pair-opiskelen",
+      "surface_form": "Minä opiskelen. → En opiskele.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-e4-20-74-79-f6-73-6b-65-6e-74-65-6c-65-6e-2e-20-2192-20-65-6e-20-74-79-f6-73-6b-65-6e-74-65-6c-65-2e",
+      "target_id": "s3-pair-tyoskentelen",
+      "surface_form": "Minä työskentelen. → En työskentele.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:73-79-f6",
+      "target_id": "s3-connegative-syon",
+      "surface_form": "syö",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6a-75-6f",
+      "target_id": "s3-connegative-juon",
+      "surface_form": "juo",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6e-75-6b-75",
+      "target_id": "s3-connegative-nukun",
+      "surface_form": "nuku",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6f-70-69-73-6b-65-6c-65",
+      "target_id": "s3-connegative-opiskelen",
+      "surface_form": "opiskele",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:74-79-f6-73-6b-65-6e-74-65-6c-65",
+      "target_id": "s3-connegative-tyoskentelen",
+      "surface_form": "työskentele",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-73-79-f6-2e",
+      "target_id": "s3-negative-syon",
+      "surface_form": "En syö.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-6a-75-6f-2e",
+      "target_id": "s3-negative-juon",
+      "surface_form": "En juo.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-6e-75-6b-75-2e",
+      "target_id": "s3-negative-nukun",
+      "surface_form": "En nuku.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-6f-70-69-73-6b-65-6c-65-2e",
+      "target_id": "s3-negative-opiskelen",
+      "surface_form": "En opiskele.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-74-79-f6-73-6b-65-6e-74-65-6c-65-2e",
+      "target_id": "s3-negative-tyoskentelen",
+      "surface_form": "En työskentele.",
+      "introduced_in": "section-3-lesson-7",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:61-69-6b-61",
+      "target_id": "s3-aika",
+      "surface_form": "aika",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6c-6c-6f-69-6e",
+      "target_id": "s3-milloin",
+      "surface_form": "milloin",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6c-6c-6f-69-6e-3f",
+      "target_id": "s3-milloin-expr",
+      "surface_form": "Milloin?",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6e-e4-e4-6e-2e",
+      "target_id": "s3-tanaan-short",
+      "surface_form": "Tänään.",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:68-75-6f-6d-65-6e-6e-61-2e",
+      "target_id": "s3-huomenna-short",
+      "surface_form": "Huomenna.",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-65-6c-6c-6f-20-6b-6f-6c-6d-65-2e",
+      "target_id": "s3-kello-kolme-short",
+      "surface_form": "Kello kolme.",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:73-79-f6-6e-20-6b-65-6c-6c-6f-20-6b-6f-6c-6d-65-2e",
+      "target_id": "s3-event-syon-kello-kolme",
+      "surface_form": "Syön kello kolme.",
+      "introduced_in": "section-3-lesson-8",
+      "later_positive_lessons": [
+        "section-3-lesson-10"
+      ]
+    }
+  ],
+  "grammar_review": [
+    {
+      "concept_id": "a11-olla",
+      "introduced_in": "lesson-2",
+      "first_assessed_in_section": "section-3-lesson-1",
+      "later_review_lessons": [
+        "section-3-lesson-2",
+        "section-3-lesson-3",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-case-chunks",
+      "introduced_in": "section-2-lesson-2",
+      "first_assessed_in_section": "section-3-lesson-4",
+      "later_review_lessons": [
+        "section-3-lesson-5",
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-present-chunks",
+      "introduced_in": "lesson-3",
+      "first_assessed_in_section": "section-3-lesson-5",
+      "later_review_lessons": [
+        "section-3-lesson-6",
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-questions",
+      "introduced_in": "lesson-5",
+      "first_assessed_in_section": "section-3-lesson-6",
+      "later_review_lessons": [
+        "section-3-lesson-8",
+        "section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-negation",
+      "introduced_in": "lesson-4",
+      "first_assessed_in_section": "section-3-lesson-7",
+      "later_review_lessons": [
+        "section-3-lesson-9",
+        "section-3-lesson-10"
+      ]
+    }
+  ],
+  "errors": []
+}

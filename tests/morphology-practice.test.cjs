@@ -69,7 +69,7 @@ test('reviewed morphology practice is present in the intended A1.1 lessons', () 
     }, {});
   assert.deepEqual(counts, {
     'morphology-choice': 12,
-    'inflection-production': 10,
+    'inflection-production': 11,
   });
 });
 
