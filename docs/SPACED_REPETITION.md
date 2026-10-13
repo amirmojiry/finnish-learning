@@ -6,7 +6,7 @@ The review queue is implemented in `spaced-repetition.js` and stores learner pro
 
 - Previously reviewed words whose `dueAt` is in the past are selected first.
 - Due words are ordered by the oldest due time and then by vocabulary rank.
-- Unseen words fill the remaining session slots in frequency-rank order.
+- Unseen words fill remaining session slots within the existing daily-new cap; forms with recent *first-attempt* Course mistakes are suggested first using the exact P2 source-form mapping, then by frequency rank. Without valid Course evidence or map data, the original rank order remains.
 - A session contains at most 20 words.
 - At most 10 unseen words can be introduced during one local calendar day.
 
@@ -73,3 +73,9 @@ npm test
 ```
 
 The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, Word Practice and Settings ownership, four-destination navigation, active-review state preservation across navigation, asset loading order, and the public app/event contracts used by the integration.
+
+## P5 first-attempt Course evidence bridge (1.35.1)
+
+Course and Word Practice remain **separate ledgers**. `course-srs-bridge.js` reads Course answer history, maps actual `(sectionId, targetId)` to a *single dictionary surface form* through the generated `data/course/course-review-form-map.json`, and counts the first graded attempt per session/target in the last 30 days. Wrong first attempts may prioritize an **unseen** Word Practice form within the existing new-word daily budget. This is a review suggestion, not a due date, completed SRS review, proof of grammatical competence, or mastered/recognized word. Correct recognition clicks, immediate retries, repeated events, teaching cards, reading-only content, unknown expressions and unmapped forms never transfer mastery.
+
+The bridge **never mutates** `fiSrsProgressV1`: due reviews remain first by actual due time, and SRS counters/intervals change only when a real Word Practice answer is submitted. The preexisting Course store and its answer history remain unchanged. Missing, old or malformed Course/bridge data falls back safely to normal ranked unseen words, retaining offline/browser-only compatibility. The generated form map is validated with `npm run course:review:check` and rebuilt after changing course content, sidecar identities or the dictionary with `npm run course:review:write`.
