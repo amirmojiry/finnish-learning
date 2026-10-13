@@ -6,7 +6,7 @@ const curriculum=require('../data/course/a2.1-curriculum.json');
 const raw=[require('../data/course/a2.1-section-1.json'),require('../data/course/a2.1-section-2.json')];
 const sections=raw.map(section=>course.validateSection(section));
 const expectedCounts=[
- [17,18,20,18,18,18,19,18,19,15],
+ [17,18,20,18,18,18,20,18,20,15],
  [19,19,18,19,19,19,18,19,19,15],
 ];
 
@@ -15,7 +15,7 @@ test('all 20 shipped A2.1 lessons have exactly their authored length and retain 
  assert.equal(sections.flatMap(section=>section.lessons).length,20);
  sections.forEach((section,index)=>{
   assert.deepEqual(section.lessons.map(l=>l.activities.length),expectedCounts[index]);
-  assert.equal(section.lessons.reduce((sum,l)=>sum+l.activities.length,0),index===0?180:184);
+  assert.equal(section.lessons.reduce((sum,l)=>sum+l.activities.length,0),index===0?182:184);
   section.lessons.forEach((lesson,i)=>{
    assert.equal(lesson.activities.length,lesson.activity_count??15);
    assert.equal(lesson.activities.filter(a=>a.type==='production').length,1);
