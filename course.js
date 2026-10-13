@@ -1254,6 +1254,13 @@
     return { ...detail, structured: true, communicative, lexical, grammarGoals };
   }
 
+  function teachingActivityHeading(lesson, activity) {
+    const objective = lesson.learning_objectives?.lexical?.find(goal => goal.target_id === activity.item);
+    return objective?.status === 'reviewed'
+      ? 'عبارت آشنا را مرور کن و با صدای بلند تکرار کن.'
+      : 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
+  }
+
   function lessonDetailParagraphs(lesson) {
     const objective = String(lesson.objective_fa || '').trim();
     const summary = String(lesson.summary_fa || '').trim();
@@ -1270,6 +1277,9 @@
     if (data === undefined) return;
     const fail = (reason) => { throw new Error('Lesson ' + lesson.id + ': ' + reason); };
     if (!data || typeof data !== 'object' || Array.isArray(data)) fail('invalid learning objectives');
+    if (data.grammar_scope !== undefined && !['assessed', 'formulaic'].includes(data.grammar_scope)) fail('invalid grammar scope');
+    if (data.grammar_scope === 'formulaic' && data.grammar?.length) fail('formulaic lesson cannot claim grammar objectives');
+    if (data.grammar_scope === 'assessed' && !data.grammar?.length) fail('assessed lesson requires grammar objectives');
     const known = new Map((concepts || []).map((concept) => [concept.id, concept]));
     const activities = lesson.activities || [];
     const nonempty = (value) => typeof value === 'string' && Boolean(value.trim());
@@ -2837,7 +2847,7 @@
       if (activity.type === 'inflection-production') return 'شکل صرف‌شدهٔ درست را بنویس.';
       if (activity.type === 'production') return 'فارسی را به فنلاندی بنویس.';
       if (activity.type === 'dictation') return 'گوش کن و چیزی را که می‌شنوی به فنلاندی بنویس.';
-      if (activity.type === 'teach') return 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
+      if (activity.type === 'teach') return teachingActivityHeading(activeLesson, activity);
       if (activity.mode === 'meaning') return 'معنی درست را انتخاب کن.';
       if (activity.mode === 'finnish') return 'گزینهٔ فنلاندی درست را انتخاب کن.';
       if (activity.mode === 'listen') return 'گوش بده و معنی درست را انتخاب کن.';
@@ -3902,6 +3912,7 @@
     validateLessonObjectives,
     lessonDetailParagraphs,
     lessonObjectiveDisplay,
+    teachingActivityHeading,
     appendGrammarGoalDetails,
     initializeBrowser,
   };

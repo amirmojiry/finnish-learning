@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1463,
+    "graded_activity_slots": 1521,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 305,
+    "assessed_again_after_earlier_reference": 323,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 14,
-    "lessons_without_explicit_grammar_concept_ids": 115,
-    "graded_grammar_related_slots": 324,
-    "graded_morphology_slots": 70,
-    "lessons_with_declared_unassessed_forms": 112,
+    "grammar_concepts_with_explicit_lesson_ids": 17,
+    "lessons_without_explicit_grammar_concept_ids": 112,
+    "graded_grammar_related_slots": 333,
+    "graded_morphology_slots": 71,
+    "lessons_with_declared_unassessed_forms": 105,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -38,9 +38,9 @@
       "level": "A1.1",
       "id": "a1.1-section-1",
       "lessons": 10,
-      "graded_slots": 120,
-      "unassessed_target_forms": 13,
-      "lessons_missing_grammar_ids": 5
+      "graded_slots": 178,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 2
     },
     {
       "level": "A1.1",
@@ -160,7 +160,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "hei",
@@ -182,6 +182,7 @@
         ],
         "introduced": [
           "hei",
+          "huomenta",
           "hyvää huomenta",
           "ja",
           "moi",
@@ -190,6 +191,7 @@
         ],
         "correct_answer": [
           "hei",
+          "huomenta",
           "hyvää huomenta",
           "ja",
           "moi",
@@ -197,11 +199,9 @@
           "on"
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 3,
         "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "huomenta"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -222,6 +222,7 @@
         ],
         "authored_new_forms": [
           "hei",
+          "huomenta",
           "hyvää huomenta",
           "ja",
           "moi",
@@ -251,18 +252,23 @@
         "topic": 1,
         "expressions": 2
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
+          "hei! minun nimeni on",
+          "ja",
           "mikä sinun nimesi on?",
           "minun nimeni on",
           "minä",
           "nimi",
+          "näkemiin",
           "olen",
           "olet",
+          "on",
           "sinä"
         ],
         "first_referenced": [
+          "hei! minun nimeni on",
           "mikä sinun nimesi on?",
           "minun nimeni on",
           "minä",
@@ -272,30 +278,36 @@
           "sinä"
         ],
         "introduced": [
+          "hei! minun nimeni on",
           "mikä sinun nimesi on?",
           "minun nimeni on",
           "minä",
+          "nimi",
           "olen",
           "olet",
           "sinä"
         ],
         "correct_answer": [
+          "hei! minun nimeni on",
+          "ja",
           "mikä sinun nimesi on?",
           "minun nimeni on",
           "minä",
+          "nimi",
           "näkemiin",
           "olen",
           "olet",
+          "on",
           "sinä"
         ],
         "receptive_count": 4,
-        "productive_count": 5,
+        "productive_count": 9,
         "later_correct_retrieval": [
-          "näkemiin"
+          "ja",
+          "näkemiin",
+          "on"
         ],
-        "declared_unassessed": [
-          "nimi"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -312,9 +324,11 @@
           "minun nimeni on"
         ],
         "authored_new_forms": [
+          "hei! minun nimeni on",
           "mikä sinun nimesi on?",
           "minun nimeni on",
           "minä",
+          "nimi",
           "olen",
           "olet",
           "sinä"
@@ -344,7 +358,7 @@
         "topic": 1,
         "expressions": 3
       },
-      "authored_new_targets": 4,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "hyvä",
@@ -352,8 +366,11 @@
           "hyvää, kiitos",
           "ihan hyvää",
           "kiitos",
+          "mikä sinun nimesi on?",
+          "minun nimeni on",
           "mitä",
-          "mitä kuuluu?"
+          "mitä kuuluu?",
+          "olet"
         ],
         "first_referenced": [
           "hyvä",
@@ -365,30 +382,36 @@
           "mitä kuuluu?"
         ],
         "introduced": [
+          "hyvä",
           "hyvää",
+          "hyvää, kiitos",
           "ihan hyvää",
           "kiitos",
+          "mitä",
           "mitä kuuluu?"
         ],
         "correct_answer": [
+          "hyvä",
           "hyvää",
+          "hyvää, kiitos",
           "ihan hyvää",
           "kiitos",
+          "mikä sinun nimesi on?",
+          "minun nimeni on",
           "minä",
+          "mitä",
           "mitä kuuluu?",
           "olet"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 8,
         "later_correct_retrieval": [
+          "mikä sinun nimesi on?",
+          "minun nimeni on",
           "minä",
           "olet"
         ],
-        "declared_unassessed": [
-          "hyvä",
-          "hyvää, kiitos",
-          "mitä"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -405,20 +428,27 @@
           "mitä kuuluu?"
         ],
         "authored_new_forms": [
+          "hyvä",
           "hyvää",
+          "hyvää, kiitos",
           "ihan hyvää",
           "kiitos",
+          "mitä",
           "mitä kuuluu?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-present-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -433,11 +463,14 @@
         "topic": 1,
         "expressions": 3
       },
-      "authored_new_targets": 4,
+      "authored_new_targets": 5,
       "lexical": {
         "declared_forms": [
           "ei",
           "ei ole",
+          "hyvää",
+          "ihan hyvää",
+          "kiitos",
           "kyllä",
           "ole",
           "vastaus"
@@ -453,25 +486,29 @@
           "ei",
           "ei ole",
           "kyllä",
-          "ole"
+          "ole",
+          "vastaus"
         ],
         "correct_answer": [
           "ei",
           "ei ole",
           "hyvää",
+          "ihan hyvää",
+          "kiitos",
           "kyllä",
           "minun nimeni on",
-          "ole"
-        ],
-        "receptive_count": 6,
-        "productive_count": 3,
-        "later_correct_retrieval": [
-          "hyvää",
-          "minun nimeni on"
-        ],
-        "declared_unassessed": [
+          "ole",
           "vastaus"
         ],
+        "receptive_count": 6,
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "hyvää",
+          "ihan hyvää",
+          "kiitos",
+          "minun nimeni on"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -492,17 +529,22 @@
           "ei",
           "ei ole",
           "kyllä",
-          "ole"
+          "ole",
+          "vastaus"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-negation"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -517,9 +559,11 @@
         "topic": 3,
         "expressions": 2
       },
-      "authored_new_targets": 4,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
+          "ei",
+          "ei ole",
           "esine",
           "hän",
           "ihminen",
@@ -527,6 +571,7 @@
           "kuka hän on?",
           "mikä",
           "mikä tämä on?",
+          "ole",
           "tämä"
         ],
         "first_referenced": [
@@ -540,31 +585,38 @@
           "tämä"
         ],
         "introduced": [
+          "esine",
           "hän",
+          "ihminen",
+          "kuka",
           "kuka hän on?",
+          "mikä",
           "mikä tämä on?",
           "tämä"
         ],
         "correct_answer": [
           "ei",
+          "ei ole",
+          "esine",
           "hän",
           "ihan hyvää",
+          "ihminen",
+          "kuka",
           "kuka hän on?",
+          "mikä",
           "mikä tämä on?",
+          "ole",
           "tämä"
         ],
         "receptive_count": 5,
-        "productive_count": 4,
+        "productive_count": 10,
         "later_correct_retrieval": [
           "ei",
-          "ihan hyvää"
+          "ei ole",
+          "ihan hyvää",
+          "ole"
         ],
-        "declared_unassessed": [
-          "esine",
-          "ihminen",
-          "kuka",
-          "mikä"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -583,8 +635,12 @@
           "mikä tämä on?"
         ],
         "authored_new_forms": [
+          "esine",
           "hän",
+          "ihminen",
+          "kuka",
           "kuka hän on?",
+          "mikä",
           "mikä tämä on?",
           "tämä"
         ]
@@ -592,6 +648,7 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a11-pronouns",
           "a11-questions"
         ],
         "unknown_ids": [],
@@ -615,12 +672,15 @@
         "topic": 2,
         "expressions": 3
       },
-      "authored_new_targets": 3,
+      "authored_new_targets": 2,
       "lexical": {
         "declared_forms": [
           "anteeksi",
+          "hän",
           "kiitos",
-          "ole hyvä"
+          "mikä tämä on?",
+          "ole hyvä",
+          "tämä"
         ],
         "first_referenced": [
           "anteeksi",
@@ -633,23 +693,27 @@
         ],
         "correct_answer": [
           "anteeksi",
+          "hän",
           "ihan hyvää",
           "kiitos",
           "mikä tämä on?",
           "ole",
-          "ole hyvä"
+          "ole hyvä",
+          "tämä"
         ],
         "receptive_count": 4,
-        "productive_count": 4,
+        "productive_count": 6,
         "later_correct_retrieval": [
+          "hän",
           "ihan hyvää",
           "kiitos",
           "mikä tämä on?",
-          "ole"
+          "ole",
+          "tämä"
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 1,
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [
@@ -663,7 +727,6 @@
         ],
         "authored_new_forms": [
           "anteeksi",
-          "kiitos",
           "ole hyvä"
         ]
       },
@@ -689,18 +752,23 @@
         "topic": 2,
         "expressions": 3
       },
-      "authored_new_targets": 4,
+      "authored_new_targets": 6,
       "lexical": {
         "declared_forms": [
+          "anteeksi",
           "en",
           "en ymmärrä",
+          "en ymmärrä. uudestaan, kiitos.",
           "hitaammin, kiitos",
           "hitaasti",
+          "kiitos",
+          "ole hyvä",
           "uudestaan, kiitos"
         ],
         "first_referenced": [
           "en",
           "en ymmärrä",
+          "en ymmärrä. uudestaan, kiitos.",
           "hitaammin, kiitos",
           "hitaasti",
           "uudestaan, kiitos"
@@ -708,26 +776,32 @@
         "introduced": [
           "en",
           "en ymmärrä",
+          "en ymmärrä. uudestaan, kiitos.",
           "hitaammin, kiitos",
+          "hitaasti",
           "uudestaan, kiitos"
         ],
         "correct_answer": [
+          "anteeksi",
           "en",
           "en ymmärrä",
+          "en ymmärrä. uudestaan, kiitos.",
           "hitaammin, kiitos",
+          "hitaasti",
           "kiitos",
           "mikä tämä on?",
+          "ole hyvä",
           "uudestaan, kiitos"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 7,
         "later_correct_retrieval": [
+          "anteeksi",
           "kiitos",
-          "mikä tämä on?"
+          "mikä tämä on?",
+          "ole hyvä"
         ],
-        "declared_unassessed": [
-          "hitaasti"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -746,18 +820,24 @@
         "authored_new_forms": [
           "en",
           "en ymmärrä",
+          "en ymmärrä. uudestaan, kiitos.",
           "hitaammin, kiitos",
+          "hitaasti",
           "uudestaan, kiitos"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-negation"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 1,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -775,6 +855,8 @@
       "authored_new_targets": 6,
       "lexical": {
         "declared_forms": [
+          "en ymmärrä",
+          "hitaammin, kiitos",
           "kirja",
           "mikä tämä on?",
           "on",
@@ -783,7 +865,8 @@
           "se",
           "se on",
           "tämä",
-          "tämä on"
+          "tämä on",
+          "uudestaan, kiitos"
         ],
         "first_referenced": [
           "kirja",
@@ -799,30 +882,35 @@
           "ovi",
           "puhelin",
           "se",
-          "tämä"
+          "se on",
+          "tämä",
+          "tämä on"
         ],
         "correct_answer": [
           "en ymmärrä",
+          "hitaammin, kiitos",
           "kirja",
           "mikä tämä on?",
           "on",
           "ovi",
           "puhelin",
           "se",
-          "tämä"
+          "se on",
+          "tämä",
+          "tämä on",
+          "uudestaan, kiitos"
         ],
         "receptive_count": 4,
-        "productive_count": 6,
+        "productive_count": 11,
         "later_correct_retrieval": [
           "en ymmärrä",
+          "hitaammin, kiitos",
           "mikä tämä on?",
           "on",
-          "tämä"
+          "tämä",
+          "uudestaan, kiitos"
         ],
-        "declared_unassessed": [
-          "se on",
-          "tämä on"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -842,20 +930,22 @@
         ],
         "authored_new_forms": [
           "kirja",
-          "on",
           "ovi",
           "puhelin",
           "se",
-          "tämä"
+          "se on",
+          "tämä on"
         ]
       },
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a11-olla",
+          "a11-pronouns",
           "a11-questions"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -878,20 +968,30 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "en",
           "en ymmärrä",
           "en ymmärrä. uudestaan, kiitos.",
+          "esine",
           "hei",
           "hei! minun nimeni on",
+          "hitaasti",
+          "huomenta",
+          "hyvä",
+          "ihminen",
           "kiitos",
+          "kuka",
+          "mikä",
           "minun nimeni on",
+          "mitä",
           "mitä kuuluu?",
+          "moi",
+          "nimi",
           "olen",
-          "olet"
+          "olet",
+          "sinä",
+          "vastaus"
         ],
-        "first_referenced": [
-          "en ymmärrä. uudestaan, kiitos.",
-          "hei! minun nimeni on"
-        ],
+        "first_referenced": [],
         "introduced": [
           "en ymmärrä. uudestaan, kiitos.",
           "hei! minun nimeni on",
@@ -899,33 +999,61 @@
         ],
         "correct_answer": [
           "anteeksi",
+          "en",
           "en ymmärrä",
           "en ymmärrä. uudestaan, kiitos.",
+          "esine",
           "hei",
           "hei! minun nimeni on",
+          "hitaasti",
+          "huomenta",
+          "hyvä",
           "hyvää, kiitos",
+          "ihminen",
           "kiitos",
+          "kuka",
+          "mikä",
           "mikä sinun nimesi on?",
           "minun nimeni on",
+          "mitä",
           "mitä kuuluu?",
+          "moi",
+          "nimi",
           "olen",
           "olet",
-          "uudestaan, kiitos"
+          "sinä",
+          "uudestaan, kiitos",
+          "vastaus"
         ],
         "receptive_count": 11,
-        "productive_count": 6,
+        "productive_count": 19,
         "later_correct_retrieval": [
           "anteeksi",
+          "en",
           "en ymmärrä",
+          "en ymmärrä. uudestaan, kiitos.",
+          "esine",
           "hei",
+          "hei! minun nimeni on",
+          "hitaasti",
+          "huomenta",
+          "hyvä",
           "hyvää, kiitos",
+          "ihminen",
           "kiitos",
+          "kuka",
+          "mikä",
           "mikä sinun nimesi on?",
           "minun nimeni on",
+          "mitä",
           "mitä kuuluu?",
+          "moi",
+          "nimi",
           "olen",
           "olet",
-          "uudestaan, kiitos"
+          "sinä",
+          "uudestaan, kiitos",
+          "vastaus"
         ],
         "declared_unassessed": [],
         "teach_only": [],
@@ -943,13 +1071,16 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a11-negation",
           "a11-olla"
         ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 7,
         "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
-        "prerequisite_concept_ids": []
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -974,13 +1105,20 @@
           "hyvää",
           "hyvää huomenta",
           "kiitos",
+          "kirja",
           "kuka hän on?",
           "kyllä",
           "mikä sinun nimesi on?",
           "mikä tämä on?",
           "minun nimeni on",
           "mitä kuuluu?",
+          "on",
+          "ovi",
+          "puhelin",
+          "se",
+          "se on",
           "tämä",
+          "tämä on",
           "uudestaan, kiitos"
         ],
         "first_referenced": [],
@@ -993,17 +1131,24 @@
           "hyvää",
           "hyvää huomenta",
           "kiitos",
+          "kirja",
           "kuka hän on?",
           "kyllä",
           "mikä sinun nimesi on?",
           "mikä tämä on?",
           "minun nimeni on",
           "mitä kuuluu?",
+          "on",
+          "ovi",
+          "puhelin",
+          "se",
+          "se on",
           "tämä",
+          "tämä on",
           "uudestaan, kiitos"
         ],
         "receptive_count": 7,
-        "productive_count": 8,
+        "productive_count": 15,
         "later_correct_retrieval": [
           "anteeksi",
           "ei ole",
@@ -1012,13 +1157,20 @@
           "hyvää",
           "hyvää huomenta",
           "kiitos",
+          "kirja",
           "kuka hän on?",
           "kyllä",
           "mikä sinun nimesi on?",
           "mikä tämä on?",
           "minun nimeni on",
           "mitä kuuluu?",
+          "on",
+          "ovi",
+          "puhelin",
+          "se",
+          "se on",
           "tämä",
+          "tämä on",
           "uudestaan, kiitos"
         ],
         "declared_unassessed": [],
@@ -1033,14 +1185,19 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a11-pronouns",
           "a11-questions"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 5,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 0,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
-          "a11-olla"
+          "a11-olla",
+          "a11-present-chunks"
         ]
       }
     },
@@ -16557,54 +16714,6 @@
     ],
     "lessons_with_unassessed_declared_targets": [
       {
-        "lesson_id": "lesson-1",
-        "forms": [
-          "huomenta"
-        ]
-      },
-      {
-        "lesson_id": "lesson-2",
-        "forms": [
-          "nimi"
-        ]
-      },
-      {
-        "lesson_id": "lesson-3",
-        "forms": [
-          "hyvä",
-          "hyvää, kiitos",
-          "mitä"
-        ]
-      },
-      {
-        "lesson_id": "lesson-4",
-        "forms": [
-          "vastaus"
-        ]
-      },
-      {
-        "lesson_id": "lesson-5",
-        "forms": [
-          "esine",
-          "ihminen",
-          "kuka",
-          "mikä"
-        ]
-      },
-      {
-        "lesson_id": "lesson-7",
-        "forms": [
-          "hitaasti"
-        ]
-      },
-      {
-        "lesson_id": "lesson-8",
-        "forms": [
-          "se on",
-          "tämä on"
-        ]
-      },
-      {
         "lesson_id": "section-2-lesson-1",
         "forms": [
           "he ovat",
@@ -17425,35 +17534,11 @@
         "prerequisites": []
       },
       {
-        "id": "a11-present-chunks",
-        "level": "A1.1",
-        "title_en": "Present-tense formulae",
-        "prerequisites": [
-          "a11-olla"
-        ]
-      },
-      {
-        "id": "a11-negation",
-        "level": "A1.1",
-        "title_en": "Simple negation and memorized frames",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
-      },
-      {
         "id": "a11-case-chunks",
         "level": "A1.1",
         "title_en": "Locative and partitive chunks",
         "prerequisites": [
           "a11-present-chunks"
-        ]
-      },
-      {
-        "id": "a11-pronouns",
-        "level": "A1.1",
-        "title_en": "Basic pronouns and demonstratives",
-        "prerequisites": [
-          "a11-olla"
         ]
       },
       {

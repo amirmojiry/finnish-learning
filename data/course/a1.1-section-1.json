@@ -1332,14 +1332,15 @@
       "title_fa": "سلام و خداحافظی",
       "objective_fa": "در چند موقعیت روزمره سلام کن و خداحافظی کن.",
       "summary_fa": "چند سلام و خداحافظی بسیار رایج را یاد می‌گیری و تفاوت کاربرد آن‌ها را در موقعیت‌های ساده تمرین می‌کنی.",
-      "grammar_fa": "در این درس تمرکز روی عبارت‌های ثابت است؛ هنوز لازم نیست ساختار جمله را تحلیل کنی.",
+      "grammar_fa": "در این درس تمرکز روی عبارت‌های ثابت است؛ هنوز لازم نیست ساختار جمله را تحلیل کنی. این درس هدفِ صرفیِ مستقل ندارد؛ عبارت‌های ثابت و کاربرد آن‌ها سنجیده می‌شوند.",
       "new_targets": [
         "hei",
         "moi",
         "hyvaa-huomenta",
         "nakemiin",
         "on",
-        "ja"
+        "ja",
+        "huomenta"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1383,7 +1384,173 @@
           ],
           "expected_fi": "Näkemiin ja hyvää päivänjatkoa!"
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "hei"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hei",
+          "options": [
+            "hei",
+            "moi",
+            "hyvaa-huomenta",
+            "nakemiin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "moi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "moi",
+          "options": [
+            "hei",
+            "moi",
+            "hyvaa-huomenta",
+            "nakemiin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "hyvaa-huomenta"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hyvaa-huomenta",
+          "options": [
+            "hei",
+            "moi",
+            "hyvaa-huomenta",
+            "nakemiin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "nakemiin"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "nakemiin",
+          "options": [
+            "hei",
+            "moi",
+            "hyvaa-huomenta",
+            "nakemiin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "on",
+          "options": [
+            "on",
+            "hei",
+            "moi",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ja"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ja",
+          "options": [
+            "hei",
+            "ja",
+            "moi",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "hei",
+          "options": [
+            "moi",
+            "hyvaa-huomenta",
+            "hei",
+            "nakemiin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "moi"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "hyvaa-huomenta"
+        },
+        {
+          "type": "teach",
+          "item": "huomenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "huomenta"
+        }
+      ],
+      "review_targets": [],
+      "practice_targets": [],
+      "activity_count": 17,
+      "recycle_from": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l01-can-do",
+            "can_do_fa": "در موقعیت‌های روزمره سلام و خداحافظی کنم و واژه‌های کوتاهِ عبارت‌های آشنا را بازیابی کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ja",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hei",
+            "status": "introduced"
+          },
+          {
+            "target_id": "moi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "huomenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hyvaa-huomenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "nakemiin",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [],
+        "grammar_scope": "formulaic"
+      }
     },
     {
       "id": "lesson-2",
@@ -1399,7 +1566,9 @@
         "olen",
         "olet",
         "minun-nimeni-on",
-        "mika-sinun-nimesi-on"
+        "mika-sinun-nimesi-on",
+        "nimi",
+        "hei-minun-nimeni-on"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1601,14 +1770,42 @@
           "grammar_concept_ids": [
             "a11-olla"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "hei-minun-nimeni-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hei-minun-nimeni-on"
+        },
+        {
+          "type": "teach",
+          "item": "nimi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "nimi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ja"
         }
       ],
-      "activity_count": 18,
+      "activity_count": 24,
       "learning_objectives": {
         "communicative": [
           {
             "id": "a1.1-s1-l02-can-do",
-            "can_do_fa": "نام خود را بگویم، نام طرف مقابل را بپرسم و جمله‌های ساده با «من هستم» و «تو هستی» بسازم."
+            "can_do_fa": "نام خود را بگویم، نام طرف مقابل را بپرسم و صورت مناسب «من هستم» و «تو هستی» را به کار ببرم."
           }
         ],
         "lexical": [
@@ -1625,7 +1822,7 @@
             "status": "introduced"
           },
           {
-            "target_id": "olet",
+            "target_id": "nimi",
             "status": "introduced"
           },
           {
@@ -1635,6 +1832,26 @@
           {
             "target_id": "mika-sinun-nimesi-on",
             "status": "introduced"
+          },
+          {
+            "target_id": "olet",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hei-minun-nimeni-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "nakemiin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ja",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -1684,7 +1901,8 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "morphology_practice": [
         {
@@ -1744,6 +1962,17 @@
       ],
       "recycle_from": [
         "a1.1-s1-l01"
+      ],
+      "review_targets": [
+        "nakemiin",
+        "on",
+        "ja"
+      ],
+      "practice_targets": [
+        "hei-minun-nimeni-on",
+        "nakemiin",
+        "on",
+        "ja"
       ]
     },
     {
@@ -1753,12 +1982,15 @@
       "title_fa": "حالت چطور است؟",
       "objective_fa": "حال طرف مقابل را بپرس و یک پاسخ کوتاه و معمول بده.",
       "summary_fa": "Mitä kuuluu? و پاسخ‌های کوتاه Hyvää / Ihan hyvää را در گفت‌وگوهای خیلی کوتاه تمرین می‌کنی.",
-      "grammar_fa": "Mitä kuuluu? و Hyvää فعلاً به‌صورت عبارت‌های ثابت یاد گرفته می‌شوند.",
+      "grammar_fa": "Mitä kuuluu? و Hyvää فعلاً به‌صورت عبارت‌های ثابت یاد گرفته می‌شوند. «Mitä kuuluu?» را به‌صورت یک پرسش آمادهٔ زمان حال یاد می‌گیریم؛ «kuuluu» در همین عبارت ثابت تمرین می‌شود، نه صرف آزاد فعل kuulua.",
       "new_targets": [
         "mita-kuuluu",
         "hyvaa",
         "ihan-hyvaa",
-        "kiitos"
+        "kiitos",
+        "mita",
+        "hyva",
+        "hyvaa-kiitos"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1793,8 +2025,289 @@
           "accepted_answers": [
             "Ihan hyvää, entä sinulle?"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "mita-kuuluu",
+          "prompt_fi": "Mitä _____?",
+          "prompt_fa": "حالت چطور است؟",
+          "accepted_answers": [
+            "kuuluu"
+          ],
+          "expected_fi": "Mitä kuuluu?",
+          "expected_fa": "حالت چطور است؟",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "mita-kuuluu"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "mita-kuuluu",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "hyvaa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hyvaa",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ihan-hyvaa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ihan-hyvaa",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "kiitos"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "kiitos",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "mita-kuuluu",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "hyvaa",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "olet",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "olet",
+            "ihan-hyvaa"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "mita-kuuluu"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "mina",
+          "options": [
+            "mita-kuuluu",
+            "hyvaa",
+            "ihan-hyvaa",
+            "mina"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "ihan-hyvaa",
+          "options": [
+            "ihan-hyvaa",
+            "mita-kuuluu",
+            "hyvaa",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "mita-kuuluu",
+          "prompt_fi": "Mitä _____?",
+          "prompt_fa": "حالت چطور است؟",
+          "accepted_answers": [
+            "kuuluu"
+          ],
+          "expected_fi": "Mitä kuuluu?",
+          "expected_fa": "حالت چطور است؟",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "mita"
+        },
+        {
+          "type": "teach",
+          "item": "hyva"
+        },
+        {
+          "type": "teach",
+          "item": "hyvaa-kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "mita"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hyva"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hyvaa-kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "minun-nimeni-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "mika-sinun-nimesi-on"
+        }
+      ],
+      "review_targets": [
+        "olet",
+        "minun-nimeni-on",
+        "mika-sinun-nimesi-on"
+      ],
+      "practice_targets": [
+        "olet",
+        "minun-nimeni-on",
+        "mika-sinun-nimesi-on"
+      ],
+      "activity_count": 24,
+      "recycle_from": [
+        "a1.1-s1-l01",
+        "a1.1-s1-l02"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l03-can-do",
+            "can_do_fa": "حال طرف مقابل را با عبارت آماده بپرسم و پاسخ کوتاهِ معمول بدهم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "mita",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hyva",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hyvaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "mita-kuuluu",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hyvaa-kiitos",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ihan-hyvaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "kiitos",
+            "status": "introduced"
+          },
+          {
+            "target_id": "olet",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "minun-nimeni-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mika-sinun-nimesi-on",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Mitä kuuluu?» را به‌صورت یک پرسش آمادهٔ زمان حال یاد می‌گیریم؛ «kuuluu» در همین عبارت ثابت تمرین می‌شود، نه صرف آزاد فعل kuulua.",
+            "examples": [
+              {
+                "fi": "Mitä kuuluu?",
+                "fa": "حالت چطور است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "mita-kuuluu",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ],
+        "grammar_scope": "assessed"
+      }
     },
     {
       "id": "lesson-4",
@@ -1803,12 +2316,13 @@
       "title_fa": "بله، نه و نفی ساده",
       "objective_fa": "با بله و نه پاسخ بده و یک نفی خیلی ساده بساز.",
       "summary_fa": "با kyllä و ei پاسخ کوتاه می‌دهی و عبارت Ei ole را به‌عنوان یک الگوی پایه می‌شناسی.",
-      "grammar_fa": "در عبارت Ei ole، فعل منفی ei با شکل ole می‌آید. فعلاً این ترکیب را به‌صورت یک الگو یاد بگیر.",
+      "grammar_fa": "در عبارت Ei ole، فعل منفی ei با شکل ole می‌آید. فعلاً این ترکیب را به‌صورت یک الگو یاد بگیر. «Ei ole» یک الگوی منفیِ آماده است: بعد از «ei» صورت «ole» می‌آید. این تمرین فقط همین الگو را می‌سنجد؛ همهٔ اشخاص فعل منفی یا امر آموزش داده نمی‌شوند.",
       "new_targets": [
         "kylla",
         "ei",
         "ole",
-        "ei-ole"
+        "ei-ole",
+        "vastaus"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1845,8 +2359,263 @@
             0
           ],
           "expected_fi": "Ole hyvä."
+        },
+        {
+          "type": "expression-completion",
+          "item": "ole",
+          "prompt_fi": "Ei _____.",
+          "prompt_fa": "نیست.",
+          "accepted_answers": [
+            "ole"
+          ],
+          "expected_fi": "Ei ole.",
+          "expected_fa": "نیست.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "kylla"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "kylla",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ei"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ei",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ole"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ole",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ei-ole"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ei-ole",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "kylla",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "ei",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "hyvaa",
+          "options": [
+            "kylla",
+            "ei",
+            "hyvaa",
+            "ole"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ei-ole"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "kylla"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "minun-nimeni-on",
+          "options": [
+            "kylla",
+            "ei",
+            "ole",
+            "minun-nimeni-on"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "ole",
+          "options": [
+            "ole",
+            "kylla",
+            "ei",
+            "ei-ole"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "ole",
+          "prompt_fi": "Ei _____.",
+          "prompt_fa": "نیست.",
+          "accepted_answers": [
+            "ole"
+          ],
+          "expected_fi": "Ei ole.",
+          "expected_fa": "نیست.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "vastaus"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "vastaus"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ihan-hyvaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "kiitos"
+        }
+      ],
+      "review_targets": [
+        "hyvaa",
+        "ihan-hyvaa",
+        "kiitos"
+      ],
+      "practice_targets": [
+        "hyvaa",
+        "ihan-hyvaa",
+        "kiitos"
+      ],
+      "activity_count": 20,
+      "recycle_from": [
+        "a1.1-s1-l01",
+        "a1.1-s1-l02"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l04-can-do",
+            "can_do_fa": "با بله و نه پاسخ بدهم و الگوی محدود «نیست» را کامل کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "kylla",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ei",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ole",
+            "status": "introduced"
+          },
+          {
+            "target_id": "vastaus",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ei-ole",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hyvaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ihan-hyvaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kiitos",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-negation",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Ei ole» یک الگوی منفیِ آماده است: بعد از «ei» صورت «ole» می‌آید. این تمرین فقط همین الگو را می‌سنجد؛ همهٔ اشخاص فعل منفی یا امر آموزش داده نمی‌شوند.",
+            "examples": [
+              {
+                "fi": "Ei ole.",
+                "fa": "نیست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "ole",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ],
+        "grammar_scope": "assessed"
+      }
     },
     {
       "id": "lesson-5",
@@ -1855,12 +2624,16 @@
       "title_fa": "چه کسی و چه چیزی؟",
       "objective_fa": "بپرس یک شخص چه کسی است یا یک شیء آشنا چیست.",
       "summary_fa": "تفاوت Kuka hän on? و Mikä tämä on? را با ضمیرهای hän و tämä تمرین می‌کنی.",
-      "grammar_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+      "grammar_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها. در این نمونه، «hän» برای اشاره به یک شخص به کار می‌رود. ضمیر را در جملهٔ آشنا بازیابی می‌کنیم؛ صرف ضمیر یا زمان فعل asua از این تمرین نتیجه گرفته نمی‌شود.",
       "new_targets": [
         "kuka-han-on",
         "mika-tama-on",
         "han",
-        "tama"
+        "tama",
+        "mika",
+        "ihminen",
+        "esine",
+        "kuka"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1893,7 +2666,11 @@
           "accepted_answers": [
             "hän"
           ],
-          "expected_fi": "Hän asuu Vaasassa."
+          "expected_fi": "Hän asuu Vaasassa.",
+          "prompt_fa": "او در واسا زندگی می‌کند؛ ضمیر اشاره به این شخص را بنویس.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
         },
         {
           "type": "expression-completion",
@@ -2115,6 +2892,52 @@
           "grammar_concept_ids": [
             "a11-questions"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "mika"
+        },
+        {
+          "type": "teach",
+          "item": "ihminen"
+        },
+        {
+          "type": "teach",
+          "item": "esine"
+        },
+        {
+          "type": "teach",
+          "item": "kuka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "mika"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ihminen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "esine"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "kuka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ole"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ei-ole"
         }
       ],
       "morphology_practice": [
@@ -2157,21 +2980,17 @@
           "selection_kind": "question-word"
         }
       ],
-      "activity_count": 19,
+      "activity_count": 29,
       "learning_objectives": {
         "communicative": [
           {
             "id": "a1.1-s1-l05-can-do",
-            "can_do_fa": "بپرسم یک شخص چه کسی است یا یک شیء آشنا چیست."
+            "can_do_fa": "بپرسم یک شخص چه کسی است یا یک شیء چیست و ضمیر شخص را در جملهٔ آشنا به کار ببرم."
           }
         ],
         "lexical": [
           {
-            "target_id": "kuka-han-on",
-            "status": "introduced"
-          },
-          {
-            "target_id": "mika-tama-on",
+            "target_id": "mika",
             "status": "introduced"
           },
           {
@@ -2181,6 +3000,38 @@
           {
             "target_id": "tama",
             "status": "introduced"
+          },
+          {
+            "target_id": "ihminen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "esine",
+            "status": "introduced"
+          },
+          {
+            "target_id": "kuka",
+            "status": "introduced"
+          },
+          {
+            "target_id": "kuka-han-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "mika-tama-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ei",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ole",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ei-ole",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -2223,12 +3074,44 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a11-pronouns",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "در این نمونه، «hän» برای اشاره به یک شخص به کار می‌رود. ضمیر را در جملهٔ آشنا بازیابی می‌کنیم؛ صرف ضمیر یا زمان فعل asua از این تمرین نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Hän asuu Vaasassa.",
+                "fa": "او در واسا زندگی می‌کند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "han",
+                "mode": "supported_production"
+              }
+            ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "recycle_from": [
         "a1.1-s1-l02",
         "a1.1-s1-l04"
+      ],
+      "review_targets": [
+        "ei",
+        "ole",
+        "ei-ole"
+      ],
+      "practice_targets": [
+        "ei",
+        "ole",
+        "ei-ole"
       ]
     },
     {
@@ -2238,9 +3121,8 @@
       "title_fa": "عبارت‌های مودبانه",
       "objective_fa": "تشکر کن، عذرخواهی کن و یک پاسخ مودبانهٔ پایه بده.",
       "summary_fa": "سه عبارت کاربردی Kiitos، Anteeksi و Ole hyvä را در موقعیت‌های روزمره تمرین می‌کنی.",
-      "grammar_fa": "Ole hyvä از نظر دستوری فعل امری دارد، اما در این سطح آن را به‌صورت یک عبارت ثابت یاد می‌گیری.",
+      "grammar_fa": "Ole hyvä از نظر دستوری فعل امری دارد، اما در این سطح آن را به‌صورت یک عبارت ثابت یاد می‌گیری. این درس هدفِ صرفیِ مستقل ندارد؛ عبارت‌های ثابت و کاربرد آن‌ها سنجیده می‌شوند.",
       "new_targets": [
-        "kiitos",
         "anteeksi",
         "ole-hyva"
       ],
@@ -2276,7 +3158,196 @@
             "Kiitos avusta."
           ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "kiitos"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "kiitos",
+          "options": [
+            "kiitos",
+            "anteeksi",
+            "ole-hyva",
+            "tama"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "anteeksi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "anteeksi",
+          "options": [
+            "kiitos",
+            "anteeksi",
+            "ole-hyva",
+            "tama"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ole-hyva"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ole-hyva",
+          "options": [
+            "kiitos",
+            "anteeksi",
+            "ole-hyva",
+            "tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "kiitos",
+          "options": [
+            "anteeksi",
+            "ole-hyva",
+            "tama",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "anteeksi",
+          "options": [
+            "anteeksi",
+            "kiitos",
+            "ole-hyva",
+            "tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "mika-tama-on",
+          "options": [
+            "kiitos",
+            "mika-tama-on",
+            "anteeksi",
+            "ole-hyva"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "kiitos"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "anteeksi"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "ole",
+          "options": [
+            "kiitos",
+            "anteeksi",
+            "ole",
+            "ole-hyva"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "kiitos",
+          "options": [
+            "anteeksi",
+            "ole-hyva",
+            "tama",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "anteeksi",
+          "options": [
+            "anteeksi",
+            "kiitos",
+            "ole-hyva",
+            "tama"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ihan-hyvaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "han"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "tama"
+        }
+      ],
+      "review_targets": [
+        "mika-tama-on",
+        "han",
+        "tama"
+      ],
+      "practice_targets": [
+        "kiitos",
+        "mika-tama-on",
+        "han",
+        "tama"
+      ],
+      "activity_count": 17,
+      "recycle_from": [
+        "a1.1-s1-l01"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l06-can-do",
+            "can_do_fa": "تشکر کنم، عذرخواهی کنم و یک پاسخ مؤدبانهٔ آماده بدهم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "anteeksi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "kiitos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ole-hyva",
+            "status": "introduced"
+          },
+          {
+            "target_id": "mika-tama-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "han",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "tama",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [],
+        "grammar_scope": "formulaic"
+      }
     },
     {
       "id": "lesson-7",
@@ -2285,12 +3356,14 @@
       "title_fa": "متوجه نمی‌شوم",
       "objective_fa": "بگو متوجه نمی‌شوی و درخواست تکرار یا آهسته‌تر صحبت‌کردن کن.",
       "summary_fa": "سه عبارت نجات‌بخش برای زمانی که مکالمه سریع یا نامفهوم است یاد می‌گیری.",
-      "grammar_fa": "در En ymmärrä، en شکل منفی اول‌شخص است. فعلاً این جمله را به‌صورت کامل و آماده استفاده کن.",
+      "grammar_fa": "در En ymmärrä، en شکل منفی اول‌شخص است. فعلاً این جمله را به‌صورت کامل و آماده استفاده کن. در «En ymmärrä» صورت «en» برای خودِ گوینده است. «ei» در این جمله برای «من» درست نیست؛ فقط همین عبارتِ آشنا سنجیده می‌شود.",
       "new_targets": [
         "en",
         "en-ymmarra",
         "uudestaan",
-        "hitaammin"
+        "hitaammin",
+        "hitaasti",
+        "en-ymmarra-uudestaan"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2326,6 +3399,320 @@
             0
           ],
           "expected_fi": "Uudestaan, kiitos."
+        },
+        {
+          "type": "expression-completion",
+          "item": "en",
+          "prompt_fi": "_____ ymmärrä.",
+          "prompt_fa": "من متوجه نمی‌شوم.",
+          "accepted_answers": [
+            "En"
+          ],
+          "expected_fi": "En ymmärrä.",
+          "expected_fa": "من متوجه نمی‌شوم.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "en"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "en",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "en-ymmarra"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "en-ymmarra",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "uudestaan"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "uudestaan",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "hitaammin"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hitaammin",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "en",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "en-ymmarra",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "kiitos",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "kiitos",
+            "uudestaan"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hitaammin"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "en"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "mika-tama-on",
+          "options": [
+            "en",
+            "en-ymmarra",
+            "uudestaan",
+            "mika-tama-on"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "uudestaan",
+          "options": [
+            "uudestaan",
+            "en",
+            "en-ymmarra",
+            "hitaammin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "en-ymmarra-uudestaan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "en-ymmarra-uudestaan"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "en",
+          "base_fi": "ei",
+          "feature_fa": "نفیِ اول‌شخص در عبارت آماده",
+          "prompt_fa": "وقتی می‌گویی «من متوجه نمی‌شوم»، کدام صورت منفی را به کار می‌بری؟",
+          "frame_fi": "_____ ymmärrä.",
+          "options_fi": [
+            "ei",
+            "olen",
+            "En",
+            "olet"
+          ],
+          "expected_fi": "En",
+          "explanation_fa": "در «En ymmärrä» صورت «en» برای خودِ گوینده است. «ei» در این جمله برای «من» درست نیست؛ فقط همین عبارتِ آشنا سنجیده می‌شود.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "en",
+          "prompt_fi": "_____ ymmärrä.",
+          "prompt_fa": "من متوجه نمی‌شوم.",
+          "accepted_answers": [
+            "En"
+          ],
+          "expected_fi": "En ymmärrä.",
+          "expected_fa": "من متوجه نمی‌شوم.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "hitaasti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hitaasti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "anteeksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ole-hyva"
+        }
+      ],
+      "review_targets": [
+        "kiitos",
+        "anteeksi",
+        "ole-hyva"
+      ],
+      "practice_targets": [
+        "en-ymmarra-uudestaan",
+        "kiitos",
+        "anteeksi",
+        "ole-hyva"
+      ],
+      "activity_count": 23,
+      "recycle_from": [
+        "a1.1-s1-l04",
+        "a1.1-s1-l06"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l07-can-do",
+            "can_do_fa": "بگویم متوجه نمی‌شوم و درخواست تکرار یا صحبت آهسته‌تر کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "en",
+            "status": "introduced"
+          },
+          {
+            "target_id": "uudestaan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hitaasti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "en-ymmarra",
+            "status": "introduced"
+          },
+          {
+            "target_id": "hitaammin",
+            "status": "introduced"
+          },
+          {
+            "target_id": "en-ymmarra-uudestaan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "kiitos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "anteeksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ole-hyva",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-negation",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در «En ymmärrä» صورت «en» برای خودِ گوینده است. «ei» در این جمله برای «من» درست نیست؛ فقط همین عبارتِ آشنا سنجیده می‌شود.",
+            "examples": [
+              {
+                "fi": "En ymmärrä.",
+                "fa": "متوجه نمی‌شوم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "en",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "en",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ],
+        "grammar_scope": "assessed"
+      },
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "en",
+          "base_fi": "ei",
+          "feature_fa": "نفیِ اول‌شخص در عبارت آماده",
+          "prompt_fa": "وقتی می‌گویی «من متوجه نمی‌شوم»، کدام صورت منفی را به کار می‌بری؟",
+          "frame_fi": "_____ ymmärrä.",
+          "options_fi": [
+            "ei",
+            "olen",
+            "En",
+            "olet"
+          ],
+          "expected_fi": "En",
+          "explanation_fa": "در «En ymmärrä» صورت «en» برای خودِ گوینده است. «ei» در این جمله برای «من» درست نیست؛ فقط همین عبارتِ آشنا سنجیده می‌شود.",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
         }
       ]
     },
@@ -2336,14 +3723,14 @@
       "title_fa": "این و آن",
       "objective_fa": "چند شیء آشنا را با tämä و se معرفی کن.",
       "summary_fa": "با Tämä on… و Se on… چند شیء بسیار ساده را معرفی و تشخیص می‌دهی.",
-      "grammar_fa": "tämä یعنی «این» و se در این درس برای «آن» استفاده می‌شود؛ هر دو با on در جملهٔ اسنادی می‌آیند. برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+      "grammar_fa": "tämä یعنی «این» و se در این درس برای «آن» استفاده می‌شود؛ هر دو با on در جملهٔ اسنادی می‌آیند. برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها. در اشاره به شیء نزدیک از «tämä» و برای «آن» در این نمونه از «se» استفاده می‌کنیم. فقط همین کاربردهای پایه در جمله تمرین می‌شوند. در «Tämä on kirja» فعل «on» با اشاره به یک شیء می‌آید؛ صورت‌های آشنای olen/olet از درس معرفی با این نمونهٔ محدود مرور می‌شوند.",
       "new_targets": [
-        "tama",
         "se",
         "kirja",
         "puhelin",
         "ovi",
-        "on"
+        "tama-on",
+        "se-on"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2390,6 +3777,48 @@
           "expected_fa": "این چیست؟",
           "grammar_concept_ids": [
             "a11-questions"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "tama",
+          "prompt_fi": "_____ on kirja.",
+          "prompt_fa": "این یک کتاب است.",
+          "accepted_answers": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on kirja.",
+          "expected_fa": "این یک کتاب است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "se",
+          "prompt_fi": "_____ on puhelin.",
+          "prompt_fa": "آن یک تلفن است.",
+          "accepted_answers": [
+            "Se"
+          ],
+          "expected_fi": "Se on puhelin.",
+          "expected_fa": "آن یک تلفن است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "on",
+          "prompt_fi": "Tämä _____ kirja.",
+          "prompt_fa": "این یک کتاب است.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Tämä on kirja.",
+          "expected_fa": "این یک کتاب است.",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         }
       ],
@@ -2518,10 +3947,85 @@
           "grammar_concept_ids": [
             "a11-questions"
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "tama",
+          "prompt_fi": "_____ on kirja.",
+          "prompt_fa": "این یک کتاب است.",
+          "accepted_answers": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on kirja.",
+          "expected_fa": "این یک کتاب است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "se",
+          "prompt_fi": "_____ on puhelin.",
+          "prompt_fa": "آن یک تلفن است.",
+          "accepted_answers": [
+            "Se"
+          ],
+          "expected_fi": "Se on puhelin.",
+          "expected_fa": "آن یک تلفن است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "on",
+          "prompt_fi": "Tämä _____ kirja.",
+          "prompt_fa": "این یک کتاب است.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Tämä on kirja.",
+          "expected_fa": "این یک کتاب است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "tama-on"
+        },
+        {
+          "type": "teach",
+          "item": "se-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "tama-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "se-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "uudestaan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hitaammin"
         }
       ],
       "practice_targets": [
-        "mika-tama-on"
+        "mika-tama-on",
+        "tama",
+        "on",
+        "en-ymmarra",
+        "uudestaan",
+        "hitaammin"
       ],
       "review_targets": [
         "en-ymmarra",
@@ -2529,12 +4033,12 @@
         "hitaammin",
         "mika-tama-on"
       ],
-      "activity_count": 16,
+      "activity_count": 25,
       "learning_objectives": {
         "communicative": [
           {
             "id": "a1.1-s1-l08-can-do",
-            "can_do_fa": "چند شیء آشنا را معرفی کنم و برای پرسیدن نام یک شیء، واژهٔ پرسشی درست را به کار ببرم."
+            "can_do_fa": "شیء نزدیک و دور را با جملهٔ ساده معرفی کنم و نام یک شیء را بپرسم."
           }
         ],
         "lexical": [
@@ -2545,6 +4049,10 @@
           {
             "target_id": "se",
             "status": "introduced"
+          },
+          {
+            "target_id": "on",
+            "status": "reviewed"
           },
           {
             "target_id": "kirja",
@@ -2559,11 +4067,27 @@
             "status": "introduced"
           },
           {
-            "target_id": "on",
-            "status": "reviewed"
+            "target_id": "tama-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "se-on",
+            "status": "introduced"
           },
           {
             "target_id": "mika-tama-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "en-ymmarra",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "uudestaan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "hitaammin",
             "status": "reviewed"
           }
         ],
@@ -2592,8 +4116,58 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "در اشاره به شیء نزدیک از «tämä» و برای «آن» در این نمونه از «se» استفاده می‌کنیم. فقط همین کاربردهای پایه در جمله تمرین می‌شوند.",
+            "examples": [
+              {
+                "fi": "Tämä on kirja.",
+                "fa": "این یک کتاب است."
+              },
+              {
+                "fi": "Se on puhelin.",
+                "fa": "آن یک تلفن است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "tama",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "se",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در «Tämä on kirja» فعل «on» با اشاره به یک شیء می‌آید؛ صورت‌های آشنای olen/olet از درس معرفی با این نمونهٔ محدود مرور می‌شوند.",
+            "examples": [
+              {
+                "fi": "Tämä on kirja.",
+                "fa": "این یک کتاب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "on",
+                "mode": "supported_production"
+              }
+            ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "recycle_from": [
         "a1.1-s1-l04",
@@ -2607,7 +4181,7 @@
       "title_fa": "اولین گفت‌وگوهای کوتاه",
       "objective_fa": "سلام، معرفی، حال‌واحوال و درخواست کمک را در گفت‌وگوهای کوتاه ترکیب کن.",
       "summary_fa": "به‌جای واژهٔ جدید، عبارت‌های درس‌های قبل را کنار هم می‌گذاری تا چند گفت‌وگوی کوتاه واقعی بسازی.",
-      "grammar_fa": "این درس گرامر جدید ندارد؛ هدف، بازیابی و ترکیب الگوهای قبلی است. برای «من هستم» از «minä olen» و برای «تو هستی» از «sinä olet» استفاده می‌کنیم. انتخاب فعل به شخصِ ضمیر وابسته است. این تمرین‌ها فقط همین دو صورتِ حال را می‌سنجند، نه صرف کامل فعل olla.",
+      "grammar_fa": "این درس گرامر جدید ندارد؛ هدف، بازیابی و ترکیب الگوهای قبلی است. برای «من هستم» از «minä olen» و برای «تو هستی» از «sinä olet» استفاده می‌کنیم. انتخاب فعل به شخصِ ضمیر وابسته است. این تمرین‌ها فقط همین دو صورتِ حال را می‌سنجند، نه صرف کامل فعل olla. «Anteeksi, en ymmärrä» بازیابیِ همان عبارت منفی در یک درخواست مؤدبانه است؛ ادعای منفی‌سازی آزاد جمله‌های تازه نداریم.",
       "new_targets": [],
       "practice_targets": [
         "hei",
@@ -2616,7 +4190,22 @@
         "kiitos",
         "en-ymmarra",
         "olen",
-        "olet"
+        "olet",
+        "hei-minun-nimeni-on",
+        "en-ymmarra-uudestaan",
+        "moi",
+        "huomenta",
+        "sina",
+        "nimi",
+        "mita",
+        "hyva",
+        "vastaus",
+        "mika",
+        "ihminen",
+        "esine",
+        "kuka",
+        "en",
+        "hitaasti"
       ],
       "review_targets": [
         "hei",
@@ -2625,7 +4214,20 @@
         "kiitos",
         "en-ymmarra",
         "olen",
-        "olet"
+        "olet",
+        "moi",
+        "huomenta",
+        "sina",
+        "nimi",
+        "mita",
+        "hyva",
+        "vastaus",
+        "mika",
+        "ihminen",
+        "esine",
+        "kuka",
+        "en",
+        "hitaasti"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2810,6 +4412,71 @@
           "grammar_concept_ids": [
             "a11-olla"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "moi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "huomenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "sina"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "nimi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "mita"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hyva"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "vastaus"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "mika"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ihminen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "esine"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "kuka"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "en"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hitaasti"
         }
       ],
       "production_targets": [
@@ -2830,28 +4497,39 @@
           "expected_fi": "Anteeksi, en ymmärrä.",
           "accepted_answers": [
             "Anteeksi, en ymmärrä."
+          ],
+          "grammar_concept_ids": [
+            "a11-negation"
           ]
         }
       ],
-      "activity_count": 17,
+      "activity_count": 30,
       "learning_objectives": {
         "communicative": [
           {
             "id": "a1.1-s1-l09-can-do",
-            "can_do_fa": "سلام، معرفی، حال‌واحوال و درخواست کمک را در گفت‌وگوهای کوتاه ترکیب کنم و صورت «من هستم» و «تو هستی» را در جمله‌های تازه به کار ببرم."
+            "can_do_fa": "عبارت‌های قبلی را در گفت‌وگوهای کوتاه ترکیب کنم و صورت‌های آشنای معرفی و نفی را مرور کنم."
           }
         ],
         "lexical": [
+          {
+            "target_id": "hei-minun-nimeni-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mita-kuuluu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "en-ymmarra-uudestaan",
+            "status": "reviewed"
+          },
           {
             "target_id": "hei",
             "status": "reviewed"
           },
           {
             "target_id": "minun-nimeni-on",
-            "status": "reviewed"
-          },
-          {
-            "target_id": "mita-kuuluu",
             "status": "reviewed"
           },
           {
@@ -2868,6 +4546,58 @@
           },
           {
             "target_id": "olet",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "moi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "huomenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "sina",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "nimi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mita",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "hyva",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "vastaus",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mika",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ihminen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "esine",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kuka",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "en",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "hitaasti",
             "status": "reviewed"
           }
         ],
@@ -2899,8 +4629,30 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a11-negation",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Anteeksi, en ymmärrä» بازیابیِ همان عبارت منفی در یک درخواست مؤدبانه است؛ ادعای منفی‌سازی آزاد جمله‌های تازه نداریم.",
+            "examples": [
+              {
+                "fi": "Anteeksi, en ymmärrä.",
+                "fa": "ببخشید، متوجه نمی‌شوم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "en-ymmarra",
+                "mode": "supported_production"
+              }
+            ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "morphology_practice": [
         {
@@ -2951,7 +4703,7 @@
       "title_fa": "ایستگاه مرور بخش ۱",
       "objective_fa": "یک تعامل اولیهٔ کوتاه را با زبان اصلی این بخش انجام بده.",
       "summary_fa": "درس پایانی بخش، سلام، معرفی، حال‌واحوال، نفی، سؤال‌های پایه و درخواست کمک را با هم مرور می‌کند.",
-      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ هدف استفادهٔ ترکیبی از الگوهای قبلی است. برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ هدف استفادهٔ ترکیبی از الگوهای قبلی است. برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها. عبارتِ حال‌واحوال «Mitä kuuluu?» را با «tänään» در یک سؤال کوتاهِ راهنمایی‌شده مرور می‌کنیم؛ صرف آزاد زمان حال سنجیده نمی‌شود.",
       "new_targets": [],
       "checkpoint_targets": [
         "hei",
@@ -3081,6 +4833,37 @@
           "expected_fi": "Mitä kuuluu tänään?",
           "accepted_answers": [
             "Mitä kuuluu tänään?"
+          ],
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "on",
+          "prompt_fi": "Se _____ puhelin.",
+          "prompt_fa": "آن یک تلفن است.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Se on puhelin.",
+          "expected_fa": "آن یک تلفن است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "se",
+          "prompt_fi": "_____ on kirja.",
+          "prompt_fa": "آن یک کتاب است.",
+          "accepted_answers": [
+            "Se"
+          ],
+          "expected_fi": "Se on kirja.",
+          "expected_fa": "آن یک کتاب است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
           ]
         }
       ],
@@ -3128,10 +4911,22 @@
         "communicative": [
           {
             "id": "a1.1-s1-l10-can-do",
-            "can_do_fa": "در تعامل کوتاه، دربارهٔ هویت شخص یا نام یک شیء پرسش مناسب را انتخاب کنم."
+            "can_do_fa": "در تمرین ترکیبیِ بخش، به سلام، معرفی، پرسش، نفی و اشاره به اشیای آشنا پاسخ بدهم."
           }
         ],
         "lexical": [
+          {
+            "target_id": "puhelin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ovi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "on",
+            "status": "reviewed"
+          },
           {
             "target_id": "hei",
             "status": "reviewed"
@@ -3191,6 +4986,22 @@
           {
             "target_id": "tama",
             "status": "reviewed"
+          },
+          {
+            "target_id": "se",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kirja",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "tama-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "se-on",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -3223,8 +5034,91 @@
                 "mode": "recognition"
               }
             ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "عبارتِ حال‌واحوال «Mitä kuuluu?» را با «tänään» در یک سؤال کوتاهِ راهنمایی‌شده مرور می‌کنیم؛ صرف آزاد زمان حال سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Mitä kuuluu tänään?",
+                "fa": "امروز حالت چطور است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "controlled-production",
+                "item_id": "mita-kuuluu",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "«on» را در معرفی یک شیء مرور می‌کنیم؛ تمرین همچنان تولید راهنمایی‌شدهٔ صورت آشناست.",
+            "examples": [
+              {
+                "fi": "Se on puhelin.",
+                "fa": "آن یک تلفن است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "on",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "برای «آن یک کتاب است» ضمیر «se» را در جملهٔ آشنا بازیابی می‌کنیم؛ این کاربرد محدود است، نه صرف آزاد ضمیرها.",
+            "examples": [
+              {
+                "fi": "Se on kirja.",
+                "fa": "آن یک کتاب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "se",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-negation",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "عبارت ثابتِ منفی «Ei ole» را بازیابی می‌کنیم؛ انتقال به همهٔ جمله‌ها یا همهٔ اشخاص ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Ei ole.",
+                "fa": "نیست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "type",
+                "item_id": "ei-ole",
+                "mode": "supported_production"
+              }
+            ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "recycle_from": [
         "a1.1-s1-l01",
@@ -3236,7 +5130,244 @@
         "a1.1-s1-l07",
         "a1.1-s1-l08",
         "a1.1-s1-l09"
-      ]
+      ],
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "hei",
+          "options": [
+            "hei",
+            "moi",
+            "hyvaa-huomenta",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "hyvaa-huomenta",
+          "options": [
+            "hei",
+            "hyvaa-huomenta",
+            "moi",
+            "kiitos"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "minun-nimeni-on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "mika-sinun-nimesi-on",
+          "options": [
+            "hei",
+            "moi",
+            "hyvaa-huomenta",
+            "mika-sinun-nimesi-on"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "mita-kuuluu",
+          "options": [
+            "mita-kuuluu",
+            "hei",
+            "moi",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "hyvaa"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "kylla",
+          "options": [
+            "hei",
+            "moi",
+            "kylla",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ei-ole",
+          "grammar_concept_ids": [
+            "a11-negation"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "kuka-han-on",
+          "options": [
+            "kuka-han-on",
+            "hei",
+            "moi",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "mika-tama-on",
+          "options": [
+            "hei",
+            "mika-tama-on",
+            "moi",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "kiitos",
+          "options": [
+            "hei",
+            "moi",
+            "kiitos",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "anteeksi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "en-ymmarra",
+          "options": [
+            "en-ymmarra",
+            "hei",
+            "moi",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "uudestaan"
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "tama",
+          "options": [
+            "hei",
+            "moi",
+            "tama",
+            "hyvaa-huomenta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "puhelin"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "ovi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "se"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "kirja"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "tama-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "se-on"
+        },
+        {
+          "type": "expression-completion",
+          "item": "on",
+          "prompt_fi": "Se _____ puhelin.",
+          "prompt_fa": "آن یک تلفن است.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Se on puhelin.",
+          "expected_fa": "آن یک تلفن است.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "se",
+          "prompt_fi": "_____ on kirja.",
+          "prompt_fa": "آن یک کتاب است.",
+          "accepted_answers": [
+            "Se"
+          ],
+          "expected_fi": "Se on kirja.",
+          "expected_fa": "آن یک کتاب است.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        }
+      ],
+      "review_targets": [
+        "puhelin",
+        "ovi",
+        "on",
+        "se",
+        "kirja",
+        "tama-on",
+        "se-on"
+      ],
+      "practice_targets": [
+        "puhelin",
+        "ovi",
+        "on",
+        "hei",
+        "hyvaa-huomenta",
+        "minun-nimeni-on",
+        "mika-sinun-nimesi-on",
+        "mita-kuuluu",
+        "hyvaa",
+        "kylla",
+        "ei-ole",
+        "kuka-han-on",
+        "mika-tama-on",
+        "kiitos",
+        "anteeksi",
+        "en-ymmarra",
+        "uudestaan",
+        "tama",
+        "se",
+        "kirja",
+        "tama-on",
+        "se-on"
+      ],
+      "activity_count": 24
     }
   ],
   "curriculum_section_id": "a1.1-s1"

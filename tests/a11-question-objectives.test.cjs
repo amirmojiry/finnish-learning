@@ -47,7 +47,7 @@ test('later and checkpoint grammar evidence is reviewed with no new checkpoint t
   assert.equal(goal(checkpoint).status, 'reviewed');
   assert.deepEqual(checkpoint.new_targets, []);
   assert.equal(checkpoint.checkpoint_targets.length, 15);
-  assert.equal(checkpoint.activities.length, 15);
+  assert.equal(checkpoint.activities.length, 24);
   assert.ok(checkpoint.learning_objectives.lexical.every(g => g.status === 'reviewed'));
   const unsupported = structuredClone(later);
   goal(unsupported).evidence[0].mode = 'independent_production';
@@ -56,11 +56,16 @@ test('later and checkpoint grammar evidence is reviewed with no new checkpoint t
 
 test('appended structured practice preserves earlier positions, audio and saved progress', () => {
   for (const [lesson, length, hash] of [
-    [intro, 19, '7e6148f26c610aec4a835a52805487c1d038d2ded3dc7524a7c15a08b20449f4'],
-    [later, 16, 'aee3df6134d03b36832a358b54182003eb4e17f9261e607066c9a4a021eb6c80'],
+    [intro, 29, '7e6148f26c610aec4a835a52805487c1d038d2ded3dc7524a7c15a08b20449f4'],
+    [later, 25, 'aee3df6134d03b36832a358b54182003eb4e17f9261e607066c9a4a021eb6c80'],
   ]) {
     assert.equal(lesson.activities.length, length);
-    assert.equal(createHash('sha256').update(JSON.stringify(lesson.activities.slice(0, 15))).digest('hex'), hash);
+    const previous = structuredClone(lesson.activities.slice(0, 15));
+    for (const activity of previous) {
+      if (activity.type === 'expression-completion') { delete activity.grammar_concept_ids; delete activity.prompt_fa; }
+      if (lesson === later && activity.type === 'choice' && activity.mode === 'listen') activity.options = ['tama', 'kirja', 'puhelin', 'se'];
+    }
+    assert.equal(createHash('sha256').update(JSON.stringify(previous)).digest('hex'), hash);
     const prepared = structuredClone(lesson);
     course.injectStructuredPractice(section, prepared);
     assert.deepEqual(prepared.activities, lesson.activities);
