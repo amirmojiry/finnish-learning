@@ -1,0 +1,1531 @@
+{
+  "schema_version": 1,
+  "identity_scope": "reviewable_curated_dictionary_surface_forms_only",
+  "disclaimer": "Course authored target mapping is not user proficiency, SRS history, or lemma/sense transfer.",
+  "mappings": [
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "ei",
+      "form_id": "form:65-69",
+      "surface_form": "ei"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "en",
+      "form_id": "form:65-6e",
+      "surface_form": "en"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "han",
+      "form_id": "form:68-e4-6e",
+      "surface_form": "hän"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "hyva",
+      "form_id": "form:68-79-76-e4",
+      "surface_form": "hyvä"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "ihminen",
+      "form_id": "form:69-68-6d-69-6e-65-6e",
+      "surface_form": "ihminen"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "ja",
+      "form_id": "form:6a-61",
+      "surface_form": "ja"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "kuka",
+      "form_id": "form:6b-75-6b-61",
+      "surface_form": "kuka"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "kylla",
+      "form_id": "form:6b-79-6c-6c-e4",
+      "surface_form": "kyllä"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "mika",
+      "form_id": "form:6d-69-6b-e4",
+      "surface_form": "mikä"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "mina",
+      "form_id": "form:6d-69-6e-e4",
+      "surface_form": "minä"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "mita",
+      "form_id": "form:6d-69-74-e4",
+      "surface_form": "mitä"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "ole",
+      "form_id": "form:6f-6c-65",
+      "surface_form": "ole"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "olen",
+      "form_id": "form:6f-6c-65-6e",
+      "surface_form": "olen"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "on",
+      "form_id": "form:6f-6e",
+      "surface_form": "on"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "se",
+      "form_id": "form:73-65",
+      "surface_form": "se"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "sina",
+      "form_id": "form:73-69-6e-e4",
+      "surface_form": "sinä"
+    },
+    {
+      "section_id": "a1.1-section-1",
+      "item_id": "tama",
+      "form_id": "form:74-e4-6d-e4",
+      "surface_form": "tämä"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-han",
+      "form_id": "form:68-e4-6e",
+      "surface_form": "hän"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-he",
+      "form_id": "form:68-65",
+      "surface_form": "he"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-maa",
+      "form_id": "form:6d-61-61",
+      "surface_form": "maa"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-me",
+      "form_id": "form:6d-65",
+      "surface_form": "me"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-minun",
+      "form_id": "form:6d-69-6e-75-6e",
+      "surface_form": "minun"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-missa",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-mista",
+      "form_id": "form:6d-69-73-74-e4",
+      "surface_form": "mistä"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-num-kaksi",
+      "form_id": "form:6b-61-6b-73-69",
+      "surface_form": "kaksi"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-num-kolme",
+      "form_id": "form:6b-6f-6c-6d-65",
+      "surface_form": "kolme"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-num-kymmenen",
+      "form_id": "form:6b-79-6d-6d-65-6e-65-6e",
+      "surface_form": "kymmenen"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-num-nelja",
+      "form_id": "form:6e-65-6c-6a-e4",
+      "surface_form": "neljä"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-num-viisi",
+      "form_id": "form:76-69-69-73-69",
+      "surface_form": "viisi"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-num-yksi",
+      "form_id": "form:79-6b-73-69",
+      "surface_form": "yksi"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-olen",
+      "form_id": "form:6f-6c-65-6e",
+      "surface_form": "olen"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-suomi",
+      "form_id": "form:73-75-6f-6d-69",
+      "surface_form": "suomi"
+    },
+    {
+      "section_id": "a1.1-section-2",
+      "item_id": "s2-suomi-lang",
+      "form_id": "form:73-75-6f-6d-69",
+      "surface_form": "suomi"
+    },
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-aika",
+      "form_id": "form:61-69-6b-61",
+      "surface_form": "aika"
+    },
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-en",
+      "form_id": "form:65-6e",
+      "surface_form": "en"
+    },
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-mita",
+      "form_id": "form:6d-69-74-e4",
+      "surface_form": "mitä"
+    },
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-nyt",
+      "form_id": "form:6e-79-74",
+      "surface_form": "nyt"
+    },
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-tanaan",
+      "form_id": "form:74-e4-6e-e4-e4-6e",
+      "surface_form": "tänään"
+    },
+    {
+      "section_id": "a1.1-section-4",
+      "item_id": "s4-missa",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.1-section-4",
+      "item_id": "s4-on",
+      "form_id": "form:6f-6e",
+      "surface_form": "on"
+    },
+    {
+      "section_id": "a1.1-section-4",
+      "item_id": "s4-pieni",
+      "form_id": "form:70-69-65-6e-69",
+      "surface_form": "pieni"
+    },
+    {
+      "section_id": "a1.1-section-4",
+      "item_id": "s4-yksi",
+      "form_id": "form:79-6b-73-69",
+      "surface_form": "yksi"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-10",
+      "form_id": "form:31-30",
+      "surface_form": "10"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-20",
+      "form_id": "form:32-30",
+      "surface_form": "20"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-50",
+      "form_id": "form:35-30",
+      "surface_form": "50"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-antaa",
+      "form_id": "form:61-6e-74-61-61",
+      "surface_form": "antaa"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-ei",
+      "form_id": "form:65-69",
+      "surface_form": "ei"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-liian",
+      "form_id": "form:6c-69-69-61-6e",
+      "surface_form": "liian"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-lisaa",
+      "form_id": "form:6c-69-73-e4-e4",
+      "surface_form": "lisää"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-missa",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-mita",
+      "form_id": "form:6d-69-74-e4",
+      "surface_form": "mitä"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-mitaan",
+      "form_id": "form:6d-69-74-e4-e4-6e",
+      "surface_form": "mitään"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-ottaa",
+      "form_id": "form:6f-74-74-61-61",
+      "surface_form": "ottaa"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-paljon",
+      "form_id": "form:70-61-6c-6a-6f-6e",
+      "surface_form": "paljon"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-rahaa",
+      "form_id": "form:72-61-68-61-61",
+      "surface_form": "rahaa"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-siella",
+      "form_id": "form:73-69-65-6c-6c-e4",
+      "surface_form": "siellä"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-taalla",
+      "form_id": "form:74-e4-e4-6c-6c-e4",
+      "surface_form": "täällä"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-takaisin",
+      "form_id": "form:74-61-6b-61-69-73-69-6e",
+      "surface_form": "takaisin"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-tama",
+      "form_id": "form:74-e4-6d-e4",
+      "surface_form": "tämä"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-toinen",
+      "form_id": "form:74-6f-69-6e-65-6e",
+      "surface_form": "toinen"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-vahan",
+      "form_id": "form:76-e4-68-e4-6e",
+      "surface_form": "vähän"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-voi",
+      "form_id": "form:76-6f-69",
+      "surface_form": "voi"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-yksi",
+      "form_id": "form:79-6b-73-69",
+      "surface_form": "yksi"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-topic-maksaa",
+      "form_id": "form:6d-61-6b-73-61-61",
+      "surface_form": "maksaa"
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-topic-pieni",
+      "form_id": "form:70-69-65-6e-69",
+      "surface_form": "pieni"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-aikaa",
+      "form_id": "form:61-69-6b-61-61",
+      "surface_form": "aikaa"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-antaa",
+      "form_id": "form:61-6e-74-61-61",
+      "surface_form": "antaa"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-ennen",
+      "form_id": "form:65-6e-6e-65-6e",
+      "surface_form": "ennen"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-jalkeen",
+      "form_id": "form:6a-e4-6c-6b-65-65-6e",
+      "surface_form": "jälkeen"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-kaksi",
+      "form_id": "form:6b-61-6b-73-69",
+      "surface_form": "kaksi"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-kanssa",
+      "form_id": "form:6b-61-6e-73-73-61",
+      "surface_form": "kanssa"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-klo",
+      "form_id": "form:6b-6c-6f",
+      "surface_form": "klo"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-kohti",
+      "form_id": "form:6b-6f-68-74-69",
+      "surface_form": "kohti"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-kuinka",
+      "form_id": "form:6b-75-69-6e-6b-61",
+      "surface_form": "kuinka"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-missa",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-miten",
+      "form_id": "form:6d-69-74-65-6e",
+      "surface_form": "miten"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-pois",
+      "form_id": "form:70-6f-69-73",
+      "surface_form": "pois"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-siella",
+      "form_id": "form:73-69-65-6c-6c-e4",
+      "surface_form": "siellä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-siihen",
+      "form_id": "form:73-69-69-68-65-6e",
+      "surface_form": "siihen"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-siita",
+      "form_id": "form:73-69-69-74-e4",
+      "surface_form": "siitä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-taalla",
+      "form_id": "form:74-e4-e4-6c-6c-e4",
+      "surface_form": "täällä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-tahan",
+      "form_id": "form:74-e4-68-e4-6e",
+      "surface_form": "tähän"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-takaisin",
+      "form_id": "form:74-61-6b-61-69-73-69-6e",
+      "surface_form": "takaisin"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-tasta",
+      "form_id": "form:74-e4-73-74-e4",
+      "surface_form": "tästä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-tulee",
+      "form_id": "form:74-75-6c-65-65",
+      "surface_form": "tulee"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-usein",
+      "form_id": "form:75-73-65-69-6e",
+      "surface_form": "usein"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-valilla",
+      "form_id": "form:76-e4-6c-69-6c-6c-e4",
+      "surface_form": "välillä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-hf-yksi",
+      "form_id": "form:79-6b-73-69",
+      "surface_form": "yksi"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-topic-mista",
+      "form_id": "form:6d-69-73-74-e4",
+      "surface_form": "mistä"
+    },
+    {
+      "section_id": "a1.2-section-2",
+      "item_id": "a12s2-topic-suoraan",
+      "form_id": "form:73-75-6f-72-61-61-6e",
+      "surface_form": "suoraan"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-01",
+      "form_id": "form:74-65-6b-65-65",
+      "surface_form": "tekee"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-02",
+      "form_id": "form:74-75-6c-65-65",
+      "surface_form": "tulee"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-03",
+      "form_id": "form:6b-e4-79-74-74-e4-e4",
+      "surface_form": "käyttää"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-04",
+      "form_id": "form:61-69-6e-61",
+      "surface_form": "aina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-05",
+      "form_id": "form:75-73-65-69-6e",
+      "surface_form": "usein"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-06",
+      "form_id": "form:6a-6f-73-6b-75-73",
+      "surface_form": "joskus"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-07",
+      "form_id": "form:79-6c-65-65-6e-73-e4",
+      "surface_form": "yleensä"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-08",
+      "form_id": "form:74-65-68-64-e4",
+      "surface_form": "tehdä"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-09",
+      "form_id": "form:6d-61-61-6e",
+      "surface_form": "maan"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-10",
+      "form_id": "form:6b-61-75-70-75-6e-67-69-6e",
+      "surface_form": "kaupungin"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-11",
+      "form_id": "form:79-68-64-65-73-73-e4",
+      "surface_form": "yhdessä"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-12",
+      "form_id": "form:70-61-6c-6a-6f-6e",
+      "surface_form": "paljon"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-13",
+      "form_id": "form:70-69-74-e4-e4",
+      "surface_form": "pitää"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-14",
+      "form_id": "form:76-6f-69",
+      "surface_form": "voi"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-15",
+      "form_id": "form:73-69-74-74-65-6e",
+      "surface_form": "sitten"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-16",
+      "form_id": "form:65-68-6b-e4",
+      "surface_form": "ehkä"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-17",
+      "form_id": "form:6d-61-61-6e-61-6e-74-61-69-6e-61",
+      "surface_form": "maanantaina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-18",
+      "form_id": "form:74-69-69-73-74-61-69-6e-61",
+      "surface_form": "tiistaina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-19",
+      "form_id": "form:74-6f-72-73-74-61-69-6e-61",
+      "surface_form": "torstaina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-20",
+      "form_id": "form:65-6e-73-69",
+      "surface_form": "ensi"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-21",
+      "form_id": "form:76-69-69-6d-65",
+      "surface_form": "viime"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-22",
+      "form_id": "form:6b-61-6e-73-73-61",
+      "surface_form": "kanssa"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-23",
+      "form_id": "form:6b-79-6c-6c-e4",
+      "surface_form": "kyllä"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-24",
+      "form_id": "form:6e-79-74",
+      "surface_form": "nyt"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-25",
+      "form_id": "form:6d-79-f6-68-65-6d-6d-69-6e",
+      "surface_form": "myöhemmin"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-26",
+      "form_id": "form:68-65-74-69",
+      "surface_form": "heti"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-topic-08",
+      "form_id": "form:79-6c-69-6f-70-69-73-74-6f",
+      "surface_form": "yliopisto"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-topic-19",
+      "form_id": "form:6b-65-73-6b-69-76-69-69-6b-6b-6f-6e-61",
+      "surface_form": "keskiviikkona"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-topic-20",
+      "form_id": "form:70-65-72-6a-61-6e-74-61-69-6e-61",
+      "surface_form": "perjantaina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-topic-21",
+      "form_id": "form:6c-61-75-61-6e-74-61-69-6e-61",
+      "surface_form": "lauantaina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-topic-22",
+      "form_id": "form:73-75-6e-6e-75-6e-74-61-69-6e-61",
+      "surface_form": "sunnuntaina"
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-topic-23",
+      "form_id": "form:74-75-6c-6c-61",
+      "surface_form": "tulla"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-01",
+      "form_id": "form:6e-79-74",
+      "surface_form": "nyt"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-02",
+      "form_id": "form:68-79-76-69-6e",
+      "surface_form": "hyvin"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-03",
+      "form_id": "form:70-61-6c-6a-6f-6e",
+      "surface_form": "paljon"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-04",
+      "form_id": "form:61-69-6b-61-6e-61",
+      "surface_form": "aikana"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-05",
+      "form_id": "form:6c-69-69-61-6e",
+      "surface_form": "liian"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-06",
+      "form_id": "form:74-e4-6d-e4",
+      "surface_form": "tämä"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-07",
+      "form_id": "form:6d-69-6e-75-6e",
+      "surface_form": "minun"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-08",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-09",
+      "form_id": "form:76-e4-68-e4-6e",
+      "surface_form": "vähän"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-10",
+      "form_id": "form:6f-6c-65-6e",
+      "surface_form": "olen"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-11",
+      "form_id": "form:6d-69-74-e4",
+      "surface_form": "mitä"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-12",
+      "form_id": "form:73-61-61",
+      "surface_form": "saa"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-13",
+      "form_id": "form:6f-74-74-61-61",
+      "surface_form": "ottaa"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-14",
+      "form_id": "form:61-69-6b-61",
+      "surface_form": "aika"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-15",
+      "form_id": "form:68-65-74-69",
+      "surface_form": "heti"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-16",
+      "form_id": "form:74-e4-e4-6c-6c-e4",
+      "surface_form": "täällä"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-17",
+      "form_id": "form:76-6f-69",
+      "surface_form": "voi"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-18",
+      "form_id": "form:6a-6f-73",
+      "surface_form": "jos"
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-19",
+      "form_id": "form:65-68-6b-e4",
+      "surface_form": "ehkä"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-001",
+      "form_id": "form:6d-69-74-e4",
+      "surface_form": "mitä"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-002",
+      "form_id": "form:6e-79-74",
+      "surface_form": "nyt"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-003",
+      "form_id": "form:6d-79-f6-73",
+      "surface_form": "myös"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-011",
+      "form_id": "form:6b-61-6e-73-73-61",
+      "surface_form": "kanssa"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-012",
+      "form_id": "form:79-68-64-65-73-73-e4",
+      "surface_form": "yhdessä"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-013",
+      "form_id": "form:76-6f-69",
+      "surface_form": "voi"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-021",
+      "form_id": "form:6d-79-f6-68-65-6d-6d-69-6e",
+      "surface_form": "myöhemmin"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-022",
+      "form_id": "form:73-69-74-74-65-6e",
+      "surface_form": "sitten"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-023",
+      "form_id": "form:65-68-6b-e4",
+      "surface_form": "ehkä"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-031",
+      "form_id": "form:68-65-74-69",
+      "surface_form": "heti"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-032",
+      "form_id": "form:6d-69-6e-75-6c-6c-65",
+      "surface_form": "minulle"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-040",
+      "form_id": "form:73-61-6e-6f-6f",
+      "surface_form": "sanoo"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-048",
+      "form_id": "form:68-79-76-e4",
+      "surface_form": "hyvä"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-049",
+      "form_id": "form:65-6e-65-6d-6d-e4-6e",
+      "surface_form": "enemmän"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-057",
+      "form_id": "form:6b-6f-73-6b-61",
+      "surface_form": "koska"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-058",
+      "form_id": "form:6d-75-74-74-61",
+      "surface_form": "mutta"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-059",
+      "form_id": "form:73-69-6b-73-69",
+      "surface_form": "siksi"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-065",
+      "form_id": "form:76-6f-69-64-61-61-6e",
+      "surface_form": "voidaan"
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-t-005",
+      "form_id": "form:74-e4-6e-e4-e4-6e",
+      "surface_form": "tänään"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-001",
+      "form_id": "form:74-e4-73-73-e4",
+      "surface_form": "tässä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-002",
+      "form_id": "form:73-69-65-6c-6c-e4",
+      "surface_form": "siellä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-003",
+      "form_id": "form:6b-61-69-6b-6b-69",
+      "surface_form": "kaikki"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-010",
+      "form_id": "form:73-69-69-6e-e4",
+      "surface_form": "siinä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-017",
+      "form_id": "form:70-69-74-e4-e4",
+      "surface_form": "pitää"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-018",
+      "form_id": "form:74-65-68-64-e4",
+      "surface_form": "tehdä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-019",
+      "form_id": "form:6c-69-73-e4-e4",
+      "surface_form": "lisää"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-027",
+      "form_id": "form:65-69",
+      "surface_form": "ei"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-028",
+      "form_id": "form:76-69-65-6c-e4",
+      "surface_form": "vielä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-029",
+      "form_id": "form:6f-69-6b-65-69-6e",
+      "surface_form": "oikein"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-037",
+      "form_id": "form:76-6f-69",
+      "surface_form": "voi"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-038",
+      "form_id": "form:68-65-74-69",
+      "surface_form": "heti"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-039",
+      "form_id": "form:6d-69-6e-75-6c-6c-65",
+      "surface_form": "minulle"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-047",
+      "form_id": "form:74-e4-e4-6c-6c-e4",
+      "surface_form": "täällä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-048",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-049",
+      "form_id": "form:6d-79-f6-73",
+      "surface_form": "myös"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-057",
+      "form_id": "form:6b-69-69-6e-6e-69",
+      "surface_form": "kiinni"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-058",
+      "form_id": "form:6b-6c-6f",
+      "surface_form": "klo"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-059",
+      "form_id": "form:6a-e4-6c-6b-65-65-6e",
+      "surface_form": "jälkeen"
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-067",
+      "form_id": "form:73-61-61",
+      "surface_form": "saa"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-001",
+      "form_id": "form:74-65-68-64-e4",
+      "surface_form": "tehdä"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-002",
+      "form_id": "form:70-69-74-e4-e4",
+      "surface_form": "pitää"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-003",
+      "form_id": "form:74-e4-6e-e4",
+      "surface_form": "tänä"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-010",
+      "form_id": "form:6d-69-74-e4",
+      "surface_form": "mitä"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-011",
+      "form_id": "form:6d-69-74-65-6e",
+      "surface_form": "miten"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-012",
+      "form_id": "form:76-69-65-6c-e4",
+      "surface_form": "vielä"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-020",
+      "form_id": "form:65-6e-73-69-6e",
+      "surface_form": "ensin"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-021",
+      "form_id": "form:73-69-74-74-65-6e",
+      "surface_form": "sitten"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-022",
+      "form_id": "form:6a-e4-6c-6b-65-65-6e",
+      "surface_form": "jälkeen"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-029",
+      "form_id": "form:76-6f-69",
+      "surface_form": "voi"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-030",
+      "form_id": "form:76-e4-68-e4-6e",
+      "surface_form": "vähän"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-038",
+      "form_id": "form:6b-61-6e-73-73-61",
+      "surface_form": "kanssa"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-039",
+      "form_id": "form:79-68-64-65-73-73-e4",
+      "surface_form": "yhdessä"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-040",
+      "form_id": "form:6d-65-69-64-e4-6e",
+      "surface_form": "meidän"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-048",
+      "form_id": "form:6d-69-6e-75-6c-6c-65",
+      "surface_form": "minulle"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-049",
+      "form_id": "form:73-69-6e-e4",
+      "surface_form": "sinä"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-050",
+      "form_id": "form:65-74-74-e4",
+      "surface_form": "että"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-058",
+      "form_id": "form:65-6e-73-69",
+      "surface_form": "ensi"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-059",
+      "form_id": "form:76-69-69-6d-65",
+      "surface_form": "viime"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-067",
+      "form_id": "form:6b-6f-73-6b-61",
+      "surface_form": "koska"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-068",
+      "form_id": "form:70-6f-69-73",
+      "surface_form": "pois"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-069",
+      "form_id": "form:76-75-6f-6b-73-69",
+      "surface_form": "vuoksi"
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-t-061",
+      "form_id": "form:70-65-72-6a-61-6e-74-61-69-6e-61",
+      "surface_form": "perjantaina"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-001",
+      "form_id": "form:6f-6c-69",
+      "surface_form": "oli"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-002",
+      "form_id": "form:6f-6c-69-6e",
+      "surface_form": "olin"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-003",
+      "form_id": "form:74-75-6c-69",
+      "surface_form": "tuli"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-011",
+      "form_id": "form:74-65-6b-69",
+      "surface_form": "teki"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-012",
+      "form_id": "form:73-61-69",
+      "surface_form": "sai"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-013",
+      "form_id": "form:73-61-6e-6f-69",
+      "surface_form": "sanoi"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-022",
+      "form_id": "form:65-6e-73-69-6e",
+      "surface_form": "ensin"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-023",
+      "form_id": "form:73-69-74-74-65-6e",
+      "surface_form": "sitten"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-024",
+      "form_id": "form:6a-e4-6c-6b-65-65-6e",
+      "surface_form": "jälkeen"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-031",
+      "form_id": "form:6d-69-73-73-e4",
+      "surface_form": "missä"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-032",
+      "form_id": "form:73-69-65-6c-6c-e4",
+      "surface_form": "siellä"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-033",
+      "form_id": "form:6b-61-6e-73-73-61",
+      "surface_form": "kanssa"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-041",
+      "form_id": "form:65-6e-73-69",
+      "surface_form": "ensi"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-042",
+      "form_id": "form:65-68-6b-e4",
+      "surface_form": "ehkä"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-043",
+      "form_id": "form:74-75-6c-65-65",
+      "surface_form": "tulee"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-051",
+      "form_id": "form:65-6e-65-6d-6d-e4-6e",
+      "surface_form": "enemmän"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-052",
+      "form_id": "form:74-6f-69-6e-65-6e",
+      "surface_form": "toinen"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-053",
+      "form_id": "form:6c-69-69-61-6e",
+      "surface_form": "liian"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-061",
+      "form_id": "form:6d-69-65-6c-65-73-74-e4",
+      "surface_form": "mielestä"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-062",
+      "form_id": "form:68-79-76-e4",
+      "surface_form": "hyvä"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-063",
+      "form_id": "form:6d-75-74-74-61",
+      "surface_form": "mutta"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-070",
+      "form_id": "form:6a-61",
+      "surface_form": "ja"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-071",
+      "form_id": "form:6b-6f-73-6b-61",
+      "surface_form": "koska"
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-t-066",
+      "form_id": "form:76-61-69-6b-65-61",
+      "surface_form": "vaikea"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-001",
+      "form_id": "form:6f-6c-69-6e",
+      "surface_form": "olin"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-002",
+      "form_id": "form:6f-6c-69",
+      "surface_form": "oli"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-010",
+      "form_id": "form:74-75-6c-69",
+      "surface_form": "tuli"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-011",
+      "form_id": "form:65-6e-6e-65-6e",
+      "surface_form": "ennen"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-020",
+      "form_id": "form:6d-79-f6-73",
+      "surface_form": "myös"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-021",
+      "form_id": "form:70-61-6c-6a-6f-6e",
+      "surface_form": "paljon"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-030",
+      "form_id": "form:73-69-74-74-65-6e",
+      "surface_form": "sitten"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-039",
+      "form_id": "form:68-79-76-e4",
+      "surface_form": "hyvä"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-048",
+      "form_id": "form:6b-6f-73-6b-61",
+      "surface_form": "koska"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-065",
+      "form_id": "form:6a-e4-6c-6b-65-65-6e",
+      "surface_form": "jälkeen"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-073",
+      "form_id": "form:76-69-69-6d-65",
+      "surface_form": "viime"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-t-066",
+      "form_id": "form:65-6e-73-69-6e",
+      "surface_form": "ensin"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-t-074",
+      "form_id": "form:6c-61-75-61-6e-74-61-69-6e-61",
+      "surface_form": "lauantaina"
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-t-076",
+      "form_id": "form:73-75-6e-6e-75-6e-74-61-69-6e-61",
+      "surface_form": "sunnuntaina"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-001",
+      "form_id": "form:6f-6e",
+      "surface_form": "on"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-002",
+      "form_id": "form:6d-69-6e-75-6c-6c-65",
+      "surface_form": "minulle"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-011",
+      "form_id": "form:6d-69-6e-75-6e",
+      "surface_form": "minun"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-012",
+      "form_id": "form:70-69-74-e4-e4",
+      "surface_form": "pitää"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-021",
+      "form_id": "form:6f-6c-69",
+      "surface_form": "oli"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-038",
+      "form_id": "form:65-6e-6e-65-6e",
+      "surface_form": "ennen"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-039",
+      "form_id": "form:6a-6f-73",
+      "surface_form": "jos"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-048",
+      "form_id": "form:74-e4-6d-e4",
+      "surface_form": "tämä"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-057",
+      "form_id": "form:74-e4-68-e4-6e",
+      "surface_form": "tähän"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-066",
+      "form_id": "form:73-61-61-64-61",
+      "surface_form": "saada"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-075",
+      "form_id": "form:6d-79-f6-73",
+      "surface_form": "myös"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-t-003",
+      "form_id": "form:61-6a-61-6e",
+      "surface_form": "ajan"
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-t-076",
+      "form_id": "form:74-6f-72-73-74-61-69-6e-61",
+      "surface_form": "torstaina"
+    }
+  ]
+}
