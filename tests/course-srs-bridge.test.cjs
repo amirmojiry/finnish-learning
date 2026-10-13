@@ -54,13 +54,34 @@ test('legacy and malformed evidence never mutate SRS progress or synthesize mast
  srs.buildReviewQueue([{rank:1,word:'on'}],before,NOW,{coursePriorities:{on:12}});
  assert.deepEqual(before,srs.emptyProgress(NOW));
 });
+test('raw persisted Course events with missing grading flags are never synthesized into errors',()=>{
+ const raw=[
+  event({sessionId:'valid'}),
+  event({sessionId:'missing-correct',correct:undefined}),
+  event({sessionId:'missing-first',firstAttempt:undefined}),
+  event({sessionId:'both-missing',correct:undefined,firstAttempt:undefined}),
+  event({sessionId:'incorrect-types',correct:0,firstAttempt:'true'}),
+  event({sessionId:'genuine-right',correct:true}),
+ ];
+ const backing=JSON.stringify({version:1,answerHistory:raw});
+ const storage={getItem:key=>key==='fiCourseProgressV1'?backing:null,
+  setItem:()=>{throw Error('The bridge must be read-only');}};
+ assert.deepEqual(bridge.reviewPrioritiesFromStorage(storage,map,'fiCourseProgressV1',1,NOW),{on:1});
+ assert.deepEqual(bridge.reviewPrioritiesFromStorage(storage,map,'fiCourseProgressV1',2,NOW),{});
+ assert.deepEqual(bridge.reviewPrioritiesFromStorage({getItem:()=>'{invalid json'},map,'fiCourseProgressV1',1,NOW),{});
+ assert.deepEqual(bridge.reviewPrioritiesFromStorage({getItem:()=>{throw Error('storage blocked')}},map,'fiCourseProgressV1',1,NOW),{});
+ assert.deepEqual(bridge.reviewPrioritiesFromStorage({getItem:()=>JSON.stringify({version:1,answerHistory:[event({correct:undefined})]})},map,'fiCourseProgressV1',1,NOW),{});
+ assert.deepEqual(bridge.reviewPrioritiesFromStorage({getItem:()=>JSON.stringify({version:1,answerHistory:[event({firstAttempt:undefined})]})},map,'fiCourseProgressV1',1,NOW),{});
+ assert.equal(backing,JSON.stringify({version:1,answerHistory:raw}));
+});
 test('new bridge asset loads before Word Practice and reads current Course evidence only on review start',()=>{
  const html=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
  const course=html.indexOf('src="course.js?'),bridgeAsset=html.indexOf('src="course-srs-bridge.js?');
  const spaced=html.indexOf('src="spaced-repetition.js?');
  assert.ok(course>=0&&bridgeAsset>course&&spaced>bridgeAsset);
  const text=fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8');
- assert.match(text,/course\.loadProgress\(windowObject\.localStorage\)/);
+ assert.match(text,/reviewPrioritiesFromStorage\(/);
+ assert.match(text,/course\.STORAGE_KEY/);
  assert.match(text,/course-review-form-map\.json/);
  assert.match(text,/coursePriorities: courseReviewPriorities\(\)/);
 });
