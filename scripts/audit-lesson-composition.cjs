@@ -142,7 +142,7 @@ function main(args=process.argv.slice(2)){
  if(action==='--json')process.stdout.write(json);
  if(action==='--markdown')process.stdout.write(md);
  if(action==='--write'){fs.writeFileSync(JSON_PATH,json);fs.writeFileSync(MD_PATH,md);process.stdout.write('Wrote composition audit.\n');}
- if(action==='--check' && (report.summary.lessons<1 || JSON.stringify(load())!==json.trim()))
+ if(action==='--check' && (report.summary.lessons<1 || JSON.stringify(load(),null,2)!==json.trim()))
   throw Error('Non-deterministic or empty composition report');
  if(report.errors.length)throw Error('Strict lesson composition invalid: '+JSON.stringify(report.errors));
 }
