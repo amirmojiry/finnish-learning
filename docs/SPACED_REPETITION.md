@@ -74,7 +74,7 @@ npm test
 
 The tests cover interval progression, incorrect-answer retries, due-word priority, daily new-word limits, progress summaries, frequency coverage, reviewed-word ordering, per-word status, malformed storage, Word Practice and Settings ownership, four-destination navigation, active-review state preservation across navigation, asset loading order, and the public app/event contracts used by the integration.
 
-## P5 first-attempt Course evidence bridge (1.35.1)
+## P5 first-attempt Course evidence bridge (1.36.0)
 
 Course and Word Practice remain **separate ledgers**. `course-srs-bridge.js` reads Course answer history, maps actual `(sectionId, targetId)` to a *single dictionary surface form* through the generated `data/course/course-review-form-map.json`, and counts the first graded attempt per session/target in the last 30 days. Wrong first attempts may prioritize an **unseen** Word Practice form within the existing new-word daily budget. This is a review suggestion, not a due date, completed SRS review, proof of grammatical competence, or mastered/recognized word. Correct recognition clicks, immediate retries, repeated events, teaching cards, reading-only content, unknown expressions and unmapped forms never transfer mastery.
 
