@@ -106,3 +106,14 @@ test('the obsolete UD integration plan is archived and current guidance is clear
   assert.match(sources, /eight tracked/i);
   assert.match(sources, /license/i);
 });
+
+test('curriculum audit navigation entries render as independent Markdown table rows', () => {
+  const hub = read('docs/README.md');
+  const rows = hub.split('\n').filter(line => line.startsWith('|'));
+  for (const fragment of ['Lesson composition and lexical recycling', 'Shipped lexical and grammar evidence', 'P4 Parole source candidate review', 'A1.2 corpus-vocabulary gap']) {
+    const matching = rows.filter(row => row.includes(fragment));
+    assert.equal(matching.length, 1, fragment + ' must appear exactly once in a table row');
+    assert.equal(matching[0].split('|').length, 5, fragment + ' must have exactly three Markdown cells');
+    assert.ok(!matching[0].includes('\\n|'), fragment + ' contains escaped row separator');
+  }
+});
