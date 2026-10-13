@@ -1,10 +1,10 @@
 {
   "name": "finnish-learning",
-  "version": "1.34.2",
+  "version": "1.34.3",
   "private": true,
   "description": "A Persian-first Finnish vocabulary learning web application.",
   "scripts": {
-    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/audit-lesson-composition.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:js": "node --test tests/*.test.cjs",
     "test:data": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "build:vocabulary": "node scripts/build-vocabulary.mjs",
@@ -19,7 +19,11 @@
     "curriculum:coverage:write": "node scripts/audit-course-coverage.cjs --write",
     "curriculum:coverage:check": "node scripts/audit-course-coverage.cjs --check",
     "lexical:identity:check": "node scripts/build-lexical-identity.cjs --check",
-    "lexical:identity:write": "node scripts/build-lexical-identity.cjs --write"
+    "lexical:identity:write": "node scripts/build-lexical-identity.cjs --write",
+    "lesson:composition:check": "node scripts/audit-lesson-composition.cjs --check",
+    "lesson:composition:json": "node scripts/audit-lesson-composition.cjs --json",
+    "lesson:composition:report": "node scripts/audit-lesson-composition.cjs --markdown",
+    "lesson:composition:write": "node scripts/audit-lesson-composition.cjs --write"
   },
   "engines": {
     "node": ">=20",
