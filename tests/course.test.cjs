@@ -15,14 +15,14 @@ const section = sections[0];
 const section2 = sections[1];
 const section3 = sections[2];
 
-test('A1.1 Section 1 contains ten deterministic curriculum-driven fifteen-activity lessons', () => {
+test('A1.1 Section 1 contains ten deterministic lessons with authored grammar-practice lengths', () => {
   const rebuiltSection = course.validateSectionAgainstCurriculum(course.validateSection(rawSection), curriculum);
   assert.notEqual(section, rawSection);
   assert.equal(section.level, 'A1.1');
   assert.equal(section.curriculum_section_id, 'a1.1-s1');
   assert.equal(section.lessons.length, 10);
   assert.equal(section.activity_count_per_lesson, 15);
-  assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.equal(section.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 155);
   assert.equal(Object.keys(section.items).length, 74);
   assert.deepEqual(
     section.lessons.map((lesson) => lesson.curriculum_id),
@@ -227,8 +227,8 @@ test('six-target lessons expose every declared target in deterministic activitie
 test('review-only mini-dialogue lesson is deterministic and introduces no fake new target', () => {
   const lesson = section.lessons.find((entry) => entry.curriculum_id === 'a1.1-s1-l09');
   assert.deepEqual(lesson.new_targets, []);
-  assert.equal(lesson.practice_targets.length, 5);
-  assert.equal(lesson.activities.length, 15);
+  assert.equal(lesson.practice_targets.length, 7);
+  assert.equal(lesson.activities.length, 17);
 });
 
 test('course UI is wired to both curriculum and implemented section data', () => {

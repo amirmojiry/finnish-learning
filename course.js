@@ -1056,8 +1056,10 @@
         || activity.affirmative_item === spec.item
       );
 
-      let replacementIndex = -1;
-      if (spec.type === 'morphology-choice') {
+      let replacementIndex = lesson.activities.findIndex((activity, index) => (
+        !usedIndices.has(index) && activity.type === spec.type && activity.item === spec.item
+      ));
+      if (replacementIndex < 0 && spec.type === 'morphology-choice') {
         replacementIndex = lesson.activities.findLastIndex((activity, index) => (
           !usedIndices.has(index)
           && matchesTarget(activity)
@@ -1066,7 +1068,7 @@
             || activity.type === 'visual-choice'
           )
         ));
-      } else {
+      } else if (replacementIndex < 0) {
         replacementIndex = lesson.activities.findLastIndex((activity, index) => (
           !usedIndices.has(index)
           && matchesTarget(activity)

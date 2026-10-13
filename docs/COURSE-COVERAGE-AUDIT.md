@@ -5,18 +5,18 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 
 ## Key findings
 
-- 140 shipped lessons / 14 sections; 1453 graded slots after real runtime injection.
+- 140 shipped lessons / 14 sections; 1458 graded slots after real runtime injection.
 - 670 lexical target placements and 464 distinct surface forms; 431 lemma-field values (unverified) and 0 explicit sense IDs.
-- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 304 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
+- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 305 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 425 dictionary entries; 126 authored lexical target forms found in the curated dictionary; 338 missing, of which 332 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 13 with explicit lesson concept IDs. 120 lessons lack these links even though 312 structural/grammar slots exist (65 morphology slots).
+- 27 planned grammar concepts in shipped stages; 14 with explicit lesson concept IDs. 118 lessons lack these links even though 317 structural/grammar slots exist (70 morphology slots).
 - 112 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage
 
 | Level | Section | Lessons | Graded slots | Unassessed form occurrences | Missing grammar-ID lessons |
 | --- | --- | ---: | ---: | ---: | ---: |
-| A1.1 | a1.1-section-1 | 10 | 110 | 13 | 10 |
+| A1.1 | a1.1-section-1 | 10 | 115 | 13 | 8 |
 | A1.1 | a1.1-section-2 | 10 | 97 | 30 | 10 |
 | A1.1 | a1.1-section-3 | 10 | 89 | 22 | 10 |
 | A1.1 | a1.1-section-4 | 10 | 91 | 8 | 10 |
@@ -95,7 +95,6 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | Grammar ID | Stage | Prerequisites |
 | --- | --- | --- |
 | `a11-sounds` | A1.1 | — |
-| `a11-olla` | A1.1 | — |
 | `a11-present-chunks` | A1.1 | `a11-olla` |
 | `a11-negation` | A1.1 | `a11-present-chunks` |
 | `a11-case-chunks` | A1.1 | `a11-present-chunks` |
