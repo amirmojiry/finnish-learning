@@ -1,39 +1,39 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-07T06:00:05+00:00",
-  "target_word_count": 400,
-  "found_word_count": 399,
+  "generated_at": "2026-10-13T10:06:40+00:00",
+  "target_word_count": 425,
+  "found_word_count": 424,
   "missing_word_count": 1,
-  "coverage_percent": 99.75,
-  "total_matched_occurrences": 111833,
-  "words_with_multiple_upos": 136,
-  "words_with_multiple_lemmas": 118,
-  "words_with_examples": 399,
-  "selected_sentence_count": 1633,
+  "coverage_percent": 99.7647,
+  "total_matched_occurrences": 113534,
+  "words_with_multiple_upos": 144,
+  "words_with_multiple_lemmas": 129,
+  "words_with_examples": 424,
+  "selected_sentence_count": 1718,
   "treebanks": {
     "FTB": {
       "files": 3,
       "sentences": 18723,
       "tokens": 159625,
-      "matched_tokens": 47811
+      "matched_tokens": 48533
     },
     "OOD": {
       "files": 1,
       "sentences": 2122,
       "tokens": 19383,
-      "matched_tokens": 4952
+      "matched_tokens": 5021
     },
     "PUD": {
       "files": 1,
       "sentences": 1000,
       "tokens": 15813,
-      "matched_tokens": 4303
+      "matched_tokens": 4361
     },
     "TDT": {
       "files": 3,
       "sentences": 15136,
       "tokens": 202193,
-      "matched_tokens": 54519
+      "matched_tokens": 55371
     }
   },
   "missing_words": [

@@ -5,8 +5,8 @@
   "counts": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "dictionary_forms": 400,
-    "records": 1216
+    "dictionary_forms": 425,
+    "records": 1239
   },
   "records": [
     {
@@ -12423,6 +12423,23 @@
       ]
     },
     {
+      "id": "form:36",
+      "kind": "form",
+      "surface_form": "6",
+      "form_id": "form:36",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 425,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:61-61-6d-69-61-69-6e-65-6e",
       "kind": "form",
       "surface_form": "aamiainen",
@@ -12855,6 +12872,23 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 193,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
+      "id": "form:61-6c-6c-61",
+      "kind": "form",
+      "surface_form": "alla",
+      "form_id": "form:61-6c-6c-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 420,
       "source_position": null,
       "first_shipped_lesson": null,
       "review_lessons": [],
@@ -16330,6 +16364,23 @@
       "occurrences": []
     },
     {
+      "id": "form:6a-75-6b-6b-61",
+      "kind": "form",
+      "surface_form": "jukka",
+      "form_id": "form:6a-75-6b-6b-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 409,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6a-75-6e-61",
       "kind": "form",
       "surface_form": "juna",
@@ -16809,6 +16860,23 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 210,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
+      "id": "form:6b-61-69-6b-6b-65-61",
+      "kind": "form",
+      "surface_form": "kaikkea",
+      "form_id": "form:6b-61-69-6b-6b-65-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 403,
       "source_position": null,
       "first_shipped_lesson": null,
       "review_lessons": [],
@@ -19459,7 +19527,7 @@
       "sense_id": null,
       "morphology": null,
       "identity_review_status": "unresolved",
-      "provenance": "source_backed_outside_dictionary",
+      "provenance": "ranked",
       "source_rank": 416,
       "source_position": 416,
       "first_shipped_lesson": "a1.2-section-3-lesson-6",
@@ -19842,6 +19910,23 @@
       ]
     },
     {
+      "id": "form:6c-6f-70-70-75-75-6e",
+      "kind": "form",
+      "surface_form": "loppuun",
+      "form_id": "form:6c-6f-70-70-75-75-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 414,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6c-6f-70-75-6b-73-69",
       "kind": "form",
       "surface_form": "lopuksi",
@@ -19864,6 +19949,23 @@
           "role": "introduced"
         }
       ]
+    },
+    {
+      "id": "form:6c-6f-70-75-6c-74-61",
+      "kind": "form",
+      "surface_form": "lopulta",
+      "form_id": "form:6c-6f-70-75-6c-74-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 415,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:6c-75-6b-65-61",
@@ -20255,7 +20357,7 @@
       "sense_id": null,
       "morphology": null,
       "identity_review_status": "unresolved",
-      "provenance": "source_backed_outside_dictionary",
+      "provenance": "ranked",
       "source_rank": 417,
       "source_position": 417,
       "first_shipped_lesson": "section-2-lesson-2",
@@ -20498,6 +20600,23 @@
       "occurrences": []
     },
     {
+      "id": "form:6d-61-72-74-74-69",
+      "kind": "form",
+      "surface_form": "martti",
+      "form_id": "form:6d-61-72-74-74-69",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 421,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6d-61-74-6b-61",
       "kind": "form",
       "surface_form": "matka",
@@ -20650,6 +20769,23 @@
           "role": "introduced"
         }
       ]
+    },
+    {
+      "id": "form:6d-65-6e-69",
+      "kind": "form",
+      "surface_form": "meni",
+      "form_id": "form:6d-65-6e-69",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 419,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:6d-65-6e-6e-65-73-73-e4",
@@ -20855,6 +20991,23 @@
       ]
     },
     {
+      "id": "form:6d-69-65-6c-74-e4",
+      "kind": "form",
+      "surface_form": "mieltä",
+      "form_id": "form:6d-69-65-6c-74-e4",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 423,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6d-69-65-6c-75-75-6d-6d-69-6e",
       "kind": "form",
       "surface_form": "mieluummin",
@@ -20959,6 +21112,23 @@
           "role": "referenced"
         }
       ]
+    },
+    {
+      "id": "form:6d-69-6b-e4-e4-6e",
+      "kind": "form",
+      "surface_form": "mikään",
+      "form_id": "form:6d-69-6b-e4-e4-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 410,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:6d-69-6c-6a-61-72-64-69-61",
@@ -21892,6 +22062,23 @@
       "occurrences": []
     },
     {
+      "id": "form:6d-75-61-73-73-61",
+      "kind": "form",
+      "surface_form": "muassa",
+      "form_id": "form:6d-75-61-73-73-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 418,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6d-75-69-64-65-6e",
       "kind": "form",
       "surface_form": "muiden",
@@ -22647,6 +22834,23 @@
       "occurrences": []
     },
     {
+      "id": "form:6e-6f-75-73-69",
+      "kind": "form",
+      "surface_form": "nousi",
+      "form_id": "form:6e-6f-75-73-69",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 407,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6e-73",
       "kind": "form",
       "surface_form": "ns",
@@ -23347,6 +23551,23 @@
       "occurrences": []
     },
     {
+      "id": "form:6f-6d-61-61",
+      "kind": "form",
+      "surface_form": "omaa",
+      "form_id": "form:6f-6d-61-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 401,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:6f-6d-61-6e",
       "kind": "form",
       "surface_form": "oman",
@@ -23792,6 +24013,23 @@
           "role": "introduced"
         }
       ]
+    },
+    {
+      "id": "form:6f-74-74-69",
+      "kind": "form",
+      "surface_form": "otti",
+      "form_id": "form:6f-74-74-69",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 422,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:6f-76-61-74",
@@ -24280,6 +24518,23 @@
           "role": "introduced"
         }
       ]
+    },
+    {
+      "id": "form:70-69-61-6e",
+      "kind": "form",
+      "surface_form": "pian",
+      "form_id": "form:70-69-61-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 402,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:70-69-65-6e-69",
@@ -25572,6 +25827,23 @@
       "occurrences": []
     },
     {
+      "id": "form:73-61-6d-6f-69-6e",
+      "kind": "form",
+      "surface_form": "samoin",
+      "form_id": "form:73-61-6d-6f-69-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 413,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:73-61-6e-6f-61",
       "kind": "form",
       "surface_form": "sanoa",
@@ -26194,6 +26466,23 @@
       "occurrences": []
     },
     {
+      "id": "form:73-69-6e-6e-65",
+      "kind": "form",
+      "surface_form": "sinne",
+      "form_id": "form:73-69-6e-6e-65",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 406,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:73-69-6e-75-6e",
       "kind": "form",
       "surface_form": "sinun",
@@ -26716,6 +27005,40 @@
           "role": "introduced"
         }
       ]
+    },
+    {
+      "id": "form:73-75-6f-6d-61-6c-61-69-6e-65-6e",
+      "kind": "form",
+      "surface_form": "suomalainen",
+      "form_id": "form:73-75-6f-6d-61-6c-61-69-6e-65-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 424,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
+      "id": "form:73-75-6f-6d-61-6c-61-69-73-65-74",
+      "kind": "form",
+      "surface_form": "suomalaiset",
+      "form_id": "form:73-75-6f-6d-61-6c-61-69-73-65-74",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 407,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:73-75-6f-6d-65-65-6e",
@@ -28055,6 +28378,23 @@
       ]
     },
     {
+      "id": "form:74-6f-69-6d-69-74-75-73-6a-6f-68-74-61-6a-61",
+      "kind": "form",
+      "surface_form": "toimitusjohtaja",
+      "form_id": "form:74-6f-69-6d-69-74-75-73-6a-6f-68-74-61-6a-61",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 404,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:74-6f-69-6e-65-6e",
       "kind": "form",
       "surface_form": "toinen",
@@ -28955,6 +29295,23 @@
       "occurrences": []
     },
     {
+      "id": "form:74-e4-79-74-79-79",
+      "kind": "form",
+      "surface_form": "täytyy",
+      "form_id": "form:74-e4-79-74-79-79",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 404,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
       "id": "form:74-e4-e4-6c-6c-e4",
       "kind": "form",
       "surface_form": "täällä",
@@ -29599,6 +29956,23 @@
       "identity_review_status": "unresolved",
       "provenance": "ranked",
       "source_rank": 359,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
+    },
+    {
+      "id": "form:76-61-72-73-69-6e",
+      "kind": "form",
+      "surface_form": "varsin",
+      "form_id": "form:76-61-72-73-69-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 411,
       "source_position": null,
       "first_shipped_lesson": null,
       "review_lessons": [],
@@ -30776,6 +31150,23 @@
           "role": "introduced"
         }
       ]
+    },
+    {
+      "id": "form:79-68-64-79-73-76-61-6c-74-61-69-6e",
+      "kind": "form",
+      "surface_form": "yhdysvaltain",
+      "form_id": "form:79-68-64-79-73-76-61-6c-74-61-69-6e",
+      "expression_id": null,
+      "lexeme_id": null,
+      "sense_id": null,
+      "morphology": null,
+      "identity_review_status": "unresolved",
+      "provenance": "ranked",
+      "source_rank": 412,
+      "source_position": null,
+      "first_shipped_lesson": null,
+      "review_lessons": [],
+      "occurrences": []
     },
     {
       "id": "form:79-68-74-65-79-64-65-73-73-e4",
