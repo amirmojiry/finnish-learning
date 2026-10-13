@@ -18,7 +18,7 @@ test('all shipped lessons and dictionary forms have stable provenance-aware surf
  assert.deepEqual(sidecar.records.map(r=>r.id),sidecar.records.map(r=>r.id).sort());
  assert.ok(sidecar.records.some(r=>r.provenance==='source_backed_outside_dictionary'));
  assert.ok(sidecar.records.some(r=>r.provenance==='curated_unranked'));
- assert.ok(sidecar.records.every(r=>r.lexeme_id===null&&r.sense_id===null&&r.morphology===null&&r.identity_review_status==='unresolved'));
+ assert.ok(sidecar.records.every(r=>r.identity_review_status==='reviewed'||(r.lexeme_id===null&&r.sense_id===null&&r.morphology===null&&r.identity_review_status==='unresolved')));
  const on=sidecar.records.find(r=>r.id===generator.stableId('form','on'));
  const olin=sidecar.records.find(r=>r.id===generator.stableId('form','olin'));
  assert.ok(on&&olin);
@@ -52,7 +52,7 @@ test('source-ranked fields follow curated Parole entries, not guessed morphology
 test('real output reproducibility and no dictionary/course schema modifications',()=>{
  const stages=['a1.1','a1.2','a1.3','a2.1'].flatMap(level=>[1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
    .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
- const actual=generator.build(read('data/common-words.json'),stages,generator.readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))));
+ const actual=generator.build(read('data/common-words.json'),stages,generator.readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))),read('data/course/reviewed-lexical-identities.json'));
  assert.deepEqual(actual,sidecar);
  assert.equal(actual.counts.shipped_lessons,140);
 });
@@ -97,4 +97,22 @@ test('Parole provenance of uncurated taught forms is read from the full original
  assert.equal(olet.provenance,'source_backed_outside_dictionary');
  assert.equal(olet.source_rank,listed.frequency_rank);
  assert.equal(olet.source_position,listed.position);
+});
+
+
+test('reviewed pronoun cases share a lexeme but retain independent surface evidence',()=>{
+ const records=new Map(sidecar.records.map(r=>[r.surface_form,r]));
+ assert.equal(records.get('minä').lexeme_id,'lexeme:mina');
+ assert.equal(records.get('minun').lexeme_id,'lexeme:mina');
+ assert.notEqual(records.get('minä').form_id,records.get('minun').form_id);
+ assert.equal(records.get('minun').morphology.case,'genitive');
+ assert.equal(records.get('on').identity_review_status,'unresolved');
+ assert.equal(records.get('olin').sense_id,null);
+});
+test('unknown, duplicate and invalid editorial mappings are rejected',()=>{
+ const build=entries=>generator.build({words:[]},[],{forms:new Map()},{entries});
+ const valid={surface_form:'not-shipped',lexeme_id:'lexeme:test',sense_id:'sense:test-base',morphology:{part_of_speech:'noun',case:'nominative',number:'singular'}};
+ assert.throws(()=>build([valid]),/not found/);
+ assert.throws(()=>build([valid,{...valid}]),/Duplicate reviewed surface/);
+ assert.throws(()=>build([{...valid,sense_id:'bad'}]),/Invalid reviewed lexical identity/);
 });
