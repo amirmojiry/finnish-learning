@@ -1855,7 +1855,7 @@
       "title_fa": "چه کسی و چه چیزی؟",
       "objective_fa": "بپرس یک شخص چه کسی است یا یک شیء آشنا چیست.",
       "summary_fa": "تفاوت Kuka hän on? و Mikä tämä on? را با ضمیرهای hän و tämä تمرین می‌کنی.",
-      "grammar_fa": "kuka برای شخص و mikä برای چیز/شیء به‌کار می‌رود.",
+      "grammar_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
       "new_targets": [
         "kuka-han-on",
         "mika-tama-on",
@@ -1894,7 +1894,337 @@
             "hän"
           ],
           "expected_fi": "Hän asuu Vaasassa."
+        },
+        {
+          "type": "expression-completion",
+          "item": "kuka-han-on",
+          "prompt_fi": "_____ hän on?",
+          "prompt_fa": "در معرفی یک شخص، واژهٔ پرسشی را برای «او کیست؟» بنویس.",
+          "accepted_answers": [
+            "Kuka"
+          ],
+          "expected_fi": "Kuka hän on?",
+          "expected_fa": "او کیست؟",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "mika-tama-on",
+          "prompt_fi": "_____ tämä on?",
+          "prompt_fa": "برای پرسیدن نام یا نوع یک شیء، واژهٔ پرسشی را در «این چیست؟» بنویس.",
+          "accepted_answers": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä tämä on?",
+          "expected_fa": "این چیست؟",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "kuka-han-on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "kuka-han-on",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "tama"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "mika-tama-on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "mika-tama-on",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "tama"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "han"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "han",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "tama"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "tama"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "tama",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "kuka-han-on",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "mika-tama-on",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "ei",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "ei",
+            "han"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "tama"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "kuka-han-on"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "ihan-hyvaa",
+          "options": [
+            "kuka-han-on",
+            "mika-tama-on",
+            "han",
+            "ihan-hyvaa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "han",
+          "options": [
+            "han",
+            "kuka-han-on",
+            "mika-tama-on",
+            "tama"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "kuka-han-on",
+          "base_fi": "kuka / mikä",
+          "feature_fa": "انتخاب واژهٔ پرسشی برای شخص یا شیء",
+          "prompt_fa": "در کلاس شخص تازه‌ای می‌بینی و می‌خواهی بدانی او کیست. کدام واژهٔ پرسشی مناسب است؟",
+          "frame_fi": "_____ hän on?",
+          "options_fi": [
+            "Kuka",
+            "Mikä",
+            "Mitä"
+          ],
+          "expected_fi": "Kuka",
+          "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "mika-tama-on",
+          "base_fi": "kuka / mikä",
+          "feature_fa": "انتخاب واژهٔ پرسشی برای شخص یا شیء",
+          "prompt_fa": "یک شیء ناآشنا می‌بینی و می‌خواهی بدانی چیست. کدام واژهٔ پرسشی مناسب است؟",
+          "frame_fi": "_____ tämä on?",
+          "options_fi": [
+            "Kuka",
+            "Mikä",
+            "Mitä"
+          ],
+          "expected_fi": "Mikä",
+          "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "kuka-han-on",
+          "prompt_fi": "_____ hän on?",
+          "prompt_fa": "در معرفی یک شخص، واژهٔ پرسشی را برای «او کیست؟» بنویس.",
+          "accepted_answers": [
+            "Kuka"
+          ],
+          "expected_fi": "Kuka hän on?",
+          "expected_fa": "او کیست؟",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "mika-tama-on",
+          "prompt_fi": "_____ tämä on?",
+          "prompt_fa": "برای پرسیدن نام یا نوع یک شیء، واژهٔ پرسشی را در «این چیست؟» بنویس.",
+          "accepted_answers": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä tämä on?",
+          "expected_fa": "این چیست؟",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "kuka-han-on",
+          "base_fi": "kuka / mikä",
+          "feature_fa": "انتخاب واژهٔ پرسشی برای شخص یا شیء",
+          "prompt_fa": "در کلاس شخص تازه‌ای می‌بینی و می‌خواهی بدانی او کیست. کدام واژهٔ پرسشی مناسب است؟",
+          "frame_fi": "_____ hän on?",
+          "options_fi": [
+            "Kuka",
+            "Mikä",
+            "Mitä"
+          ],
+          "expected_fi": "Kuka",
+          "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "mika-tama-on",
+          "base_fi": "kuka / mikä",
+          "feature_fa": "انتخاب واژهٔ پرسشی برای شخص یا شیء",
+          "prompt_fa": "یک شیء ناآشنا می‌بینی و می‌خواهی بدانی چیست. کدام واژهٔ پرسشی مناسب است؟",
+          "frame_fi": "_____ tämä on?",
+          "options_fi": [
+            "Kuka",
+            "Mikä",
+            "Mitä"
+          ],
+          "expected_fi": "Mikä",
+          "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        }
+      ],
+      "activity_count": 19,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l05-can-do",
+            "can_do_fa": "بپرسم یک شخص چه کسی است یا یک شیء آشنا چیست."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "kuka-han-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "mika-tama-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "han",
+            "status": "introduced"
+          },
+          {
+            "target_id": "tama",
+            "status": "introduced"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+            "examples": [
+              {
+                "fi": "Kuka hän on?",
+                "fa": "او کیست؟"
+              },
+              {
+                "fi": "Mikä tämä on?",
+                "fa": "این چیست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "kuka-han-on",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "mika-tama-on",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "kuka-han-on",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "mika-tama-on",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l02",
+        "a1.1-s1-l04"
       ]
     },
     {
@@ -2002,7 +2332,7 @@
       "title_fa": "این و آن",
       "objective_fa": "چند شیء آشنا را با tämä و se معرفی کن.",
       "summary_fa": "با Tämä on… و Se on… چند شیء بسیار ساده را معرفی و تشخیص می‌دهی.",
-      "grammar_fa": "tämä یعنی «این» و se در این درس برای «آن» استفاده می‌شود؛ هر دو با on در جملهٔ اسنادی می‌آیند.",
+      "grammar_fa": "tämä یعنی «این» و se در این درس برای «آن» استفاده می‌شود؛ هر دو با on در جملهٔ اسنادی می‌آیند. برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
       "new_targets": [
         "tama",
         "se",
@@ -2043,7 +2373,227 @@
             "puhelin"
           ],
           "expected_fi": "Se on puhelin."
+        },
+        {
+          "type": "expression-completion",
+          "item": "mika-tama-on",
+          "prompt_fi": "_____ tämä on?",
+          "prompt_fa": "در اتاق یک وسیله می‌بینی و می‌خواهی نامش را بپرسی. واژهٔ پرسشی مناسب را بنویس: «این چیست؟»",
+          "accepted_answers": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä tämä on?",
+          "expected_fa": "این چیست؟",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "tama"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "tama",
+          "options": [
+            "tama",
+            "se",
+            "kirja",
+            "puhelin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "se"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "se",
+          "options": [
+            "tama",
+            "se",
+            "kirja",
+            "puhelin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "kirja"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "kirja",
+          "options": [
+            "tama",
+            "se",
+            "kirja",
+            "puhelin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "puhelin"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "puhelin",
+          "options": [
+            "tama",
+            "se",
+            "kirja",
+            "puhelin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "ovi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "ovi",
+          "options": [
+            "ovi",
+            "tama",
+            "se",
+            "kirja"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "on"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "on",
+          "options": [
+            "tama",
+            "on",
+            "se",
+            "kirja"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "tama",
+          "options": [
+            "se",
+            "kirja",
+            "tama",
+            "puhelin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "se"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "en-ymmarra"
+        },
+        {
+          "type": "expression-completion",
+          "item": "mika-tama-on",
+          "prompt_fi": "_____ tämä on?",
+          "prompt_fa": "در اتاق یک وسیله می‌بینی و می‌خواهی نامش را بپرسی. واژهٔ پرسشی مناسب را بنویس: «این چیست؟»",
+          "accepted_answers": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä tämä on?",
+          "expected_fa": "این چیست؟",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        }
+      ],
+      "practice_targets": [
+        "mika-tama-on"
+      ],
+      "review_targets": [
+        "en-ymmarra",
+        "uudestaan",
+        "hitaammin",
+        "mika-tama-on"
+      ],
+      "activity_count": 16,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l08-can-do",
+            "can_do_fa": "چند شیء آشنا را معرفی کنم و برای پرسیدن نام یک شیء، واژهٔ پرسشی درست را به کار ببرم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "tama",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "se",
+            "status": "introduced"
+          },
+          {
+            "target_id": "kirja",
+            "status": "introduced"
+          },
+          {
+            "target_id": "puhelin",
+            "status": "introduced"
+          },
+          {
+            "target_id": "ovi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mika-tama-on",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+            "examples": [
+              {
+                "fi": "Kuka hän on?",
+                "fa": "او کیست؟"
+              },
+              {
+                "fi": "Mikä tämä on?",
+                "fa": "این چیست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "mika-tama-on",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l04",
+        "a1.1-s1-l05"
       ]
     },
     {
@@ -2397,7 +2947,7 @@
       "title_fa": "ایستگاه مرور بخش ۱",
       "objective_fa": "یک تعامل اولیهٔ کوتاه را با زبان اصلی این بخش انجام بده.",
       "summary_fa": "درس پایانی بخش، سلام، معرفی، حال‌واحوال، نفی، سؤال‌های پایه و درخواست کمک را با هم مرور می‌کند.",
-      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ هدف استفادهٔ ترکیبی از الگوهای قبلی است.",
+      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ هدف استفادهٔ ترکیبی از الگوهای قبلی است. برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
       "new_targets": [],
       "checkpoint_targets": [
         "hei",
@@ -2529,6 +3079,157 @@
             "Mitä kuuluu tänään?"
           ]
         }
+      ],
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "kuka-han-on",
+          "base_fi": "kuka / mikä",
+          "feature_fa": "انتخاب واژهٔ پرسشی برای شخص یا شیء",
+          "prompt_fa": "در یک جمع، نام و هویت شخصی را نمی‌دانی. برای پرسیدن «او کیست؟» واژهٔ پرسشی مناسب را انتخاب کن.",
+          "frame_fi": "_____ hän on?",
+          "options_fi": [
+            "Kuka",
+            "Mikä",
+            "Mitä"
+          ],
+          "expected_fi": "Kuka",
+          "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "mika-tama-on",
+          "base_fi": "kuka / mikä",
+          "feature_fa": "انتخاب واژهٔ پرسشی برای شخص یا شیء",
+          "prompt_fa": "در خانه به یک شیء اشاره می‌کنی و نام آن را می‌پرسی. برای «این چیست؟» کدام واژه مناسب است؟",
+          "frame_fi": "_____ tämä on?",
+          "options_fi": [
+            "Kuka",
+            "Mikä",
+            "Mitä"
+          ],
+          "expected_fi": "Mikä",
+          "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        }
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s1-l10-can-do",
+            "can_do_fa": "در تعامل کوتاه، دربارهٔ هویت شخص یا نام یک شیء پرسش مناسب را انتخاب کنم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "hei",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "hyvaa-huomenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "minun-nimeni-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mika-sinun-nimesi-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mita-kuuluu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "hyvaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kylla",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "ei-ole",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kuka-han-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "mika-tama-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "kiitos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "anteeksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "en-ymmarra",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "uudestaan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "tama",
+            "status": "reviewed"
+          }
+        ],
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "برای پرسیدن هویت یک شخص از «kuka» (چه کسی؟) و برای پرسیدن نام یا نوع یک شیء از «mikä» (چه چیزی؟) استفاده می‌کنیم. این تمرین‌ها فقط همین تمایز را می‌سنجند، نه همهٔ پرسش‌ها یا صرف ضمیرها.",
+            "examples": [
+              {
+                "fi": "Kuka hän on?",
+                "fa": "او کیست؟"
+              },
+              {
+                "fi": "Mikä tämä on?",
+                "fa": "این چیست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "kuka-han-on",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "mika-tama-on",
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      },
+      "recycle_from": [
+        "a1.1-s1-l01",
+        "a1.1-s1-l02",
+        "a1.1-s1-l03",
+        "a1.1-s1-l04",
+        "a1.1-s1-l05",
+        "a1.1-s1-l06",
+        "a1.1-s1-l07",
+        "a1.1-s1-l08",
+        "a1.1-s1-l09"
       ]
     }
   ],

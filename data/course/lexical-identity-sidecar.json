@@ -967,6 +967,7 @@
       "source_position": null,
       "first_shipped_lesson": "lesson-7",
       "review_lessons": [
+        "lesson-8",
         "lesson-9",
         "lesson-10"
       ],
@@ -976,6 +977,12 @@
           "lesson_id": "lesson-7",
           "item_id": "en-ymmarra",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-8",
+          "item_id": "en-ymmarra",
+          "role": "referenced"
         },
         {
           "section_id": "a1.1-section-1",
@@ -1801,13 +1808,21 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "lesson-7",
-      "review_lessons": [],
+      "review_lessons": [
+        "lesson-8"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-1",
           "lesson_id": "lesson-7",
           "item_id": "hitaammin",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-8",
+          "item_id": "hitaammin",
+          "role": "referenced"
         }
       ]
     },
@@ -2072,13 +2087,21 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "lesson-3",
-      "review_lessons": [],
+      "review_lessons": [
+        "lesson-5"
+      ],
       "occurrences": [
         {
           "section_id": "a1.1-section-1",
           "lesson_id": "lesson-3",
           "item_id": "ihan-hyvaa",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-5",
+          "item_id": "ihan-hyvaa",
+          "role": "referenced"
         }
       ]
     },
@@ -4666,6 +4689,7 @@
       "source_position": null,
       "first_shipped_lesson": "lesson-5",
       "review_lessons": [
+        "lesson-8",
         "lesson-10"
       ],
       "occurrences": [
@@ -4674,6 +4698,12 @@
           "lesson_id": "lesson-5",
           "item_id": "mika-tama-on",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-8",
+          "item_id": "mika-tama-on",
+          "role": "referenced"
         },
         {
           "section_id": "a1.1-section-1",
@@ -10922,6 +10952,7 @@
       "source_position": null,
       "first_shipped_lesson": "lesson-7",
       "review_lessons": [
+        "lesson-8",
         "lesson-9",
         "lesson-10"
       ],
@@ -10931,6 +10962,12 @@
           "lesson_id": "lesson-7",
           "item_id": "uudestaan",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-8",
+          "item_id": "uudestaan",
+          "role": "referenced"
         },
         {
           "section_id": "a1.1-section-1",
@@ -13592,6 +13629,7 @@
       "source_position": 3,
       "first_shipped_lesson": "lesson-4",
       "review_lessons": [
+        "lesson-5",
         "a1.2-section-1-lesson-8",
         "a1.3-section-2-lesson-4",
         "a1.3-section-2-lesson-8"
@@ -13602,6 +13640,12 @@
           "lesson_id": "lesson-4",
           "item_id": "ei",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.1-section-1",
+          "lesson_id": "lesson-5",
+          "item_id": "ei",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",

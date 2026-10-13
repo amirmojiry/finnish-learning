@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.36.2`
+- Version: `1.36.3`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -153,3 +153,5 @@ A1.1, A1.2 and A1.3 each have 40 playable lessons; the first twenty A2.1 travel/
 A2.1 travel lessons now pair plural-partitive recognition with supported typed production and later contextual review of `valokuvia`. These guided activities do not establish independent grammar mastery; see the [delivery roadmap](docs/ROADMAP.md).
 
 A1.1 now links `minä olen` / `sinä olet` to explicit grammar choices, supported typing and later contextual review in introduction lesson 2 and dialogue lesson 9. This is a limited guided contrast, not full conjugation mastery. See the [delivery roadmap](docs/ROADMAP.md).
+
+A1.1 also assesses `kuka` for person identity versus `mikä` for an object's name/type, with supported question-word typing, later contextual review and a checkpoint that reuses its existing targets. See the [delivery roadmap](docs/ROADMAP.md).

@@ -1003,7 +1003,10 @@
         throw new Error(`Structured practice target must belong to the explicit lesson scope: ${lesson.id} / ${spec.item}`);
       }
 
-      let replacementIndex = lesson.activities.findLastIndex((activity, index) => (
+      let replacementIndex = lesson.activities.findIndex((activity, index) => (
+        !usedIndices.has(index) && activity.type === spec.type && activity.item === spec.item
+      ));
+      if (replacementIndex < 0) replacementIndex = lesson.activities.findLastIndex((activity, index) => (
         !usedIndices.has(index)
         && activity.item === spec.item
         && (

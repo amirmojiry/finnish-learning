@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.36.3] - 2026-10-13
+
+### Added
+
+- Introduce canonical `a11-questions` objectives in A1.1 Section 1 lesson 5 with contextual person/object question decisions and supported `kuka`/`mikä` completion; retain the existing pronoun exercise.
+- Review the object question in lesson 8 and replace two translation-only checkpoint choices with contextual grammar decisions, retaining all fifteen checkpoint targets and no new words.
+- Reuse explicitly authored structured-practice slots before legacy replacement, preserving earlier teaching/audio/production positions, learner scores and prerequisite links.
+
 ## [1.36.2] - 2026-10-13
 
 ### Added
