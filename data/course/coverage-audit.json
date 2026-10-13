@@ -13,16 +13,16 @@
     "shipped_sections": 14,
     "shipped_lessons": 140,
     "graded_activity_slots": 1452,
-    "dictionary_ranked_surface_entries": 400,
+    "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
     "distinct_lemma_field_values_unverified": 432,
     "reviewed_sense_ids_present": 0,
     "distinct_authored_expressions": 427,
     "lexical_forms_repeated_across_placements": 102,
-    "lexical_forms_matching_curated_dictionary": 124,
-    "lexical_forms_missing_dictionary": 340,
-    "outside_dictionary_but_in_original_parole": 334,
+    "lexical_forms_matching_curated_dictionary": 126,
+    "lexical_forms_missing_dictionary": 338,
+    "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
     "assessed_again_after_earlier_reference": 303,
     "grammar_concepts_planned_for_shipped_levels": 27,
@@ -14036,20 +14036,6 @@
   ],
   "gaps": {
     "lexical_forms_outside_dictionary": [
-      {
-        "surface_form": "lauantaina",
-        "source_position": 416,
-        "source_frequency_rank": 416,
-        "category": "parole_source_outside_curated_dictionary",
-        "authored_target_placements": 2
-      },
-      {
-        "surface_form": "maa",
-        "source_position": 417,
-        "source_frequency_rank": 417,
-        "category": "parole_source_outside_curated_dictionary",
-        "authored_target_placements": 1
-      },
       {
         "surface_form": "äiti",
         "source_position": 433,
