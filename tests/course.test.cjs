@@ -412,7 +412,7 @@ test('A1.1 Section 2 contains ten deterministic learner-facing lessons', () => {
   assert.equal(section2.curriculum_section_id, 'a1.1-s2');
   assert.equal(section2.lessons.length, 10);
   assert.equal(section2.activity_count_per_lesson, 15);
-  assert.equal(section2.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.equal(section2.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 270);
   assert.deepEqual(
     section2.lessons.map((lesson) => lesson.curriculum_id),
     curriculum.sections[1].lessons.map((lesson) => lesson.id),
@@ -538,6 +538,10 @@ test('all Section 2 activity references and typed answers are explicit', () => {
     for (const activity of lesson.activities) {
       if (activity.type === 'number-grid') {
         for (const itemId of activity.items) assert.ok(section2.items[itemId], lesson.id + ': ' + itemId);
+        continue;
+      }
+      if (activity.type === 'guided-writing') {
+        for (const itemId of activity.expected_items) assert.ok(section2.items[itemId], lesson.id + ': ' + itemId);
         continue;
       }
       if (activity.type === 'dialogue-order') {

@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1521,
+    "graded_activity_slots": 1637,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 323,
+    "assessed_again_after_earlier_reference": 373,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 17,
-    "lessons_without_explicit_grammar_concept_ids": 112,
-    "graded_grammar_related_slots": 333,
-    "graded_morphology_slots": 71,
-    "lessons_with_declared_unassessed_forms": 105,
+    "grammar_concepts_with_explicit_lesson_ids": 18,
+    "lessons_without_explicit_grammar_concept_ids": 102,
+    "graded_grammar_related_slots": 356,
+    "graded_morphology_slots": 73,
+    "lessons_with_declared_unassessed_forms": 96,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -46,9 +46,9 @@
       "level": "A1.1",
       "id": "a1.1-section-2",
       "lessons": 10,
-      "graded_slots": 97,
-      "unassessed_target_forms": 30,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 213,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.1",
@@ -1213,7 +1213,7 @@
         "topic": 2,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "he",
@@ -1238,30 +1238,32 @@
         ],
         "introduced": [
           "he",
+          "he ovat",
           "hän",
+          "hän on",
           "me",
           "me olemme",
           "te",
+          "te olette",
           "ystävä"
         ],
         "correct_answer": [
           "he",
+          "he ovat",
           "hän",
+          "hän on",
           "me",
           "me olemme",
           "te",
+          "te olette",
           "ystävä"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 7,
         "later_correct_retrieval": [
           "hän"
         ],
-        "declared_unassessed": [
-          "he ovat",
-          "hän on",
-          "te olette"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -1282,21 +1284,28 @@
         ],
         "authored_new_forms": [
           "he",
-          "hän",
+          "he ovat",
+          "hän on",
           "me",
           "me olemme",
           "te",
+          "te olette",
           "ystävä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-pronouns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -1311,7 +1320,7 @@
         "topic": 4,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "iran",
@@ -1336,6 +1345,7 @@
           "iran",
           "maa",
           "mistä",
+          "mistä olet?",
           "olen iranista.",
           "olen suomesta.",
           "suomi"
@@ -1344,20 +1354,24 @@
           "he",
           "iran",
           "maa",
+          "me olemme",
           "mistä",
+          "mistä olet?",
+          "olen",
           "olen iranista.",
           "olen suomesta.",
-          "suomi"
+          "suomi",
+          "ystävä"
         ],
         "receptive_count": 3,
-        "productive_count": 4,
+        "productive_count": 8,
         "later_correct_retrieval": [
-          "he"
+          "he",
+          "me olemme",
+          "olen",
+          "ystävä"
         ],
-        "declared_unassessed": [
-          "mistä olet?",
-          "olen"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -1379,6 +1393,7 @@
           "iran",
           "maa",
           "mistä",
+          "mistä olet?",
           "olen iranista.",
           "olen suomesta.",
           "suomi"
@@ -1386,12 +1401,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 4,
+        "morphology_slots": 2,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -1406,7 +1427,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "englanti",
@@ -1438,6 +1459,12 @@
           "suomi"
         ],
         "correct_answer": [
+          "englanti",
+          "maa",
+          "olen iranista.",
+          "olen suomesta.",
+          "persia",
+          "puhun",
           "puhun englantia.",
           "puhun persiaa.",
           "puhun suomea.",
@@ -1445,20 +1472,15 @@
           "suomi"
         ],
         "receptive_count": 1,
-        "productive_count": 4,
+        "productive_count": 10,
         "later_correct_retrieval": [
+          "maa",
+          "olen iranista.",
+          "olen suomesta.",
           "suomi"
         ],
-        "declared_unassessed": [
-          "englanti",
-          "persia",
-          "puhun"
-        ],
-        "teach_only": [
-          "englanti",
-          "persia",
-          "puhun"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -1478,19 +1500,26 @@
           "englanti",
           "persia",
           "puhun",
+          "puhun englantia.",
           "puhun persiaa.",
           "puhun suomea.",
-          "suomi"
+          "puhun vähän suomea."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -1505,10 +1534,11 @@
         "topic": 4,
         "expressions": 2
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "asun",
+          "asun helsingissä.",
           "asun vaasassa.",
           "helsinki",
           "kaupunki",
@@ -1518,6 +1548,7 @@
         ],
         "first_referenced": [
           "asun",
+          "asun helsingissä.",
           "asun vaasassa.",
           "helsinki",
           "kaupunki",
@@ -1526,6 +1557,8 @@
           "vaasa"
         ],
         "introduced": [
+          "asun",
+          "asun helsingissä.",
           "asun vaasassa.",
           "helsinki",
           "kaupunki",
@@ -1534,22 +1567,26 @@
           "vaasa"
         ],
         "correct_answer": [
+          "asun",
+          "asun helsingissä.",
           "asun vaasassa.",
           "helsinki",
           "kaupunki",
           "missä",
           "missä asut?",
           "puhun",
+          "puhun persiaa.",
+          "puhun suomea.",
           "vaasa"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
+        "productive_count": 8,
         "later_correct_retrieval": [
-          "puhun"
+          "puhun",
+          "puhun persiaa.",
+          "puhun suomea."
         ],
-        "declared_unassessed": [
-          "asun"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -1567,6 +1604,8 @@
           "missä asut?"
         ],
         "authored_new_forms": [
+          "asun",
+          "asun helsingissä.",
           "asun vaasassa.",
           "helsinki",
           "kaupunki",
@@ -1577,12 +1616,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -1597,7 +1642,7 @@
         "topic": 6,
         "expressions": 2
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "isä",
@@ -1622,14 +1667,20 @@
         "introduced": [
           "isä",
           "lapsi",
+          "minulla on lapsi.",
           "perhe",
           "sisar",
+          "tämä on minun äitini.",
           "veli",
           "äiti"
         ],
         "correct_answer": [
+          "asun vaasassa.",
+          "helsinki",
           "isä",
           "lapsi",
+          "minulla on lapsi.",
+          "missä asut?",
           "perhe",
           "sisar",
           "tämä on minun äitini.",
@@ -1637,11 +1688,13 @@
           "äiti"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "minulla on lapsi."
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "asun vaasassa.",
+          "helsinki",
+          "missä asut?"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -1661,20 +1714,26 @@
         "authored_new_forms": [
           "isä",
           "lapsi",
+          "minulla on lapsi.",
           "perhe",
           "sisar",
+          "tämä on minun äitini.",
           "veli",
           "äiti"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-pronouns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -1689,13 +1748,15 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "koti",
           "minun",
           "minun kotini",
           "minun nimeni",
+          "minun nimeni on",
+          "minun nimeni on sara.",
           "nimi",
           "sinun",
           "sinun nimesi"
@@ -1705,35 +1766,45 @@
           "minun",
           "minun kotini",
           "minun nimeni",
+          "minun nimeni on sara.",
           "sinun",
           "sinun nimesi"
         ],
         "introduced": [
           "koti",
           "minun",
+          "minun kotini",
           "minun nimeni",
+          "minun nimeni on",
+          "minun nimeni on sara.",
           "nimi",
           "sinun",
           "sinun nimesi"
         ],
         "correct_answer": [
           "koti",
+          "lapsi",
           "minun",
+          "minun kotini",
           "minun nimeni",
+          "minun nimeni on",
+          "minun nimeni on sara.",
           "nimi",
           "sinun",
           "sinun nimesi",
-          "sisar"
+          "sisar",
+          "veli"
         ],
         "receptive_count": 3,
-        "productive_count": 4,
+        "productive_count": 10,
         "later_correct_retrieval": [
+          "lapsi",
+          "minun nimeni on",
           "nimi",
-          "sisar"
+          "sisar",
+          "veli"
         ],
-        "declared_unassessed": [
-          "minun kotini"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -1753,20 +1824,25 @@
         "authored_new_forms": [
           "koti",
           "minun",
+          "minun kotini",
           "minun nimeni",
-          "nimi",
+          "minun nimeni on sara.",
           "sinun",
           "sinun nimesi"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-pronouns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -1781,7 +1857,7 @@
         "topic": 19,
         "expressions": 2
       },
-      "authored_new_targets": 22,
+      "authored_new_targets": 25,
       "lexical": {
         "declared_forms": [
           "ikä",
@@ -1800,6 +1876,7 @@
           "neljätoista",
           "nolla",
           "olen …-vuotias.",
+          "olen 12-vuotias.",
           "seitsemän",
           "seitsemäntoista",
           "viisi",
@@ -1826,6 +1903,7 @@
           "neljätoista",
           "nolla",
           "olen …-vuotias.",
+          "olen 12-vuotias.",
           "seitsemän",
           "seitsemäntoista",
           "viisi",
@@ -1864,40 +1942,44 @@
         ],
         "correct_answer": [
           "ikä",
+          "kahdeksan",
           "kahdeksantoista",
+          "kaksi",
           "kaksikymmentä",
           "kaksitoista",
-          "kuinka vanha olet?",
-          "kymmenen",
-          "neljä",
-          "nolla",
-          "olen 12-vuotias.",
-          "seitsemän",
-          "viisitoista"
-        ],
-        "receptive_count": 7,
-        "productive_count": 4,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "kahdeksan",
-          "kaksi",
           "kolme",
           "kolmetoista",
+          "koti",
+          "kuinka vanha olet?",
           "kuusi",
           "kuusitoista",
+          "kymmenen",
+          "minun nimeni",
+          "neljä",
           "neljätoista",
+          "nolla",
           "olen …-vuotias.",
+          "olen 12-vuotias.",
+          "seitsemän",
           "seitsemäntoista",
+          "sinun nimesi",
           "viisi",
+          "viisitoista",
           "yhdeksän",
           "yhdeksäntoista",
           "yksi",
           "yksitoista"
         ],
-        "teach_only": [
-          "olen …-vuotias."
+        "receptive_count": 8,
+        "productive_count": 20,
+        "later_correct_retrieval": [
+          "koti",
+          "minun nimeni",
+          "sinun nimesi"
         ],
-        "distractor_only_count": 11,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 4,
         "reading_only": [],
         "high_frequency_target_forms": [
           "kaksi",
@@ -1938,12 +2020,15 @@
           "kaksitoista",
           "kolme",
           "kolmetoista",
+          "kuinka vanha olet?",
           "kuusi",
           "kuusitoista",
           "kymmenen",
           "neljä",
           "neljätoista",
           "nolla",
+          "olen …-vuotias.",
+          "olen 12-vuotias.",
           "seitsemän",
           "seitsemäntoista",
           "viisi",
@@ -1956,12 +2041,17 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -1976,7 +2066,7 @@
         "topic": 4,
         "expressions": 2
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "katu",
@@ -1999,14 +2089,19 @@
         "introduced": [
           "katu",
           "mikä sinun puhelinnumerosi on?",
+          "minun numeroni on",
           "minun numeroni on 040 123 4567.",
           "numero",
           "osoite",
           "puhelinnumero"
         ],
         "correct_answer": [
+          "ikä",
+          "kaksikymmentä",
           "katu",
           "mikä sinun puhelinnumerosi on?",
+          "minun nimeni on sara.",
+          "minun numeroni on",
           "minun numeroni on 040 123 4567.",
           "numero",
           "osoite",
@@ -2014,13 +2109,14 @@
           "yhdeksäntoista"
         ],
         "receptive_count": 3,
-        "productive_count": 4,
+        "productive_count": 9,
         "later_correct_retrieval": [
+          "ikä",
+          "kaksikymmentä",
+          "minun nimeni on sara.",
           "yhdeksäntoista"
         ],
-        "declared_unassessed": [
-          "minun numeroni on"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -2038,6 +2134,7 @@
         "authored_new_forms": [
           "katu",
           "mikä sinun puhelinnumerosi on?",
+          "minun numeroni on",
           "minun numeroni on 040 123 4567.",
           "numero",
           "osoite",
@@ -2046,12 +2143,16 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -2080,11 +2181,7 @@
           "puhun persiaa.",
           "puhun suomea."
         ],
-        "first_referenced": [
-          "asun helsingissä.",
-          "minun nimeni on sara.",
-          "olen 12-vuotias."
-        ],
+        "first_referenced": [],
         "introduced": [
           "asun vaasassa.",
           "minun nimeni on sara.",
@@ -2093,32 +2190,43 @@
           "puhun persiaa."
         ],
         "correct_answer": [
+          "asun helsingissä.",
           "asun vaasassa.",
           "katu",
+          "mikä sinun puhelinnumerosi on?",
+          "minun nimeni on",
           "minun nimeni on sara.",
+          "minun numeroni on 040 123 4567.",
           "olen 12-vuotias.",
           "olen iranista.",
           "olen suomesta.",
-          "puhun persiaa."
-        ],
-        "receptive_count": 5,
-        "productive_count": 4,
-        "later_correct_retrieval": [
-          "asun vaasassa.",
-          "katu",
-          "olen iranista.",
-          "olen suomesta.",
-          "puhun persiaa."
-        ],
-        "declared_unassessed": [
-          "asun helsingissä.",
-          "minun nimeni on",
           "puhun englantia.",
+          "puhun persiaa.",
           "puhun suomea."
         ],
+        "receptive_count": 6,
+        "productive_count": 11,
+        "later_correct_retrieval": [
+          "asun helsingissä.",
+          "asun vaasassa.",
+          "katu",
+          "mikä sinun puhelinnumerosi on?",
+          "minun nimeni on",
+          "minun nimeni on sara.",
+          "minun numeroni on 040 123 4567.",
+          "olen 12-vuotias.",
+          "olen iranista.",
+          "olen suomesta.",
+          "puhun englantia.",
+          "puhun persiaa.",
+          "puhun suomea."
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
-        "reading_only": [],
+        "reading_only": [
+          "minun nimeni on sara. olen iranista. asun vaasassa. puhun persiaa."
+        ],
         "high_frequency_target_forms": [],
         "topic_target_forms": [],
         "expression_target_forms": [
@@ -2135,12 +2243,18 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 3,
+        "morphology_slots": 1,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -2158,20 +2272,64 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "asun",
           "asun vaasassa.",
+          "englanti",
+          "he ovat",
           "hei!",
           "hän",
+          "hän on",
+          "iran",
+          "isä",
+          "kahdeksan",
+          "kahdeksantoista",
+          "kaksi",
           "kaksitoista",
+          "kaupunki",
+          "kolme",
+          "kolmetoista",
           "kuinka vanha olet?",
+          "kuusi",
+          "kuusitoista",
+          "kymmenen",
+          "me",
+          "me olemme",
           "mikä sinun puhelinnumerosi on?",
+          "minulla on lapsi.",
           "minun",
+          "minun kotini",
           "minun nimeni on sara.",
+          "minun numeroni on",
+          "missä",
           "missä asut?",
+          "mistä",
           "mistä olet?",
+          "neljä",
+          "neljätoista",
+          "nolla",
+          "numero",
+          "olen …-vuotias.",
           "olen iranista.",
+          "osoite",
+          "perhe",
+          "persia",
           "puhelinnumero",
+          "puhun",
           "puhun persiaa.",
+          "puhun vähän suomea.",
+          "seitsemän",
+          "seitsemäntoista",
+          "sinun",
+          "sinun nimesi",
+          "te",
+          "te olette",
           "tämä on minun äitini.",
+          "vaasa",
+          "viisi",
+          "viisitoista",
+          "yhdeksän",
+          "yksi",
+          "yksitoista",
           "äiti"
         ],
         "first_referenced": [
@@ -2179,38 +2337,130 @@
         ],
         "introduced": [],
         "correct_answer": [
+          "asun",
           "asun vaasassa.",
+          "englanti",
+          "he ovat",
           "hei!",
           "hän",
+          "hän on",
+          "iran",
+          "isä",
+          "kahdeksan",
+          "kahdeksantoista",
+          "kaksi",
           "kaksitoista",
+          "katu",
+          "kaupunki",
+          "kolme",
+          "kolmetoista",
           "kuinka vanha olet?",
+          "kuusi",
+          "kuusitoista",
+          "kymmenen",
+          "me",
+          "me olemme",
           "mikä sinun puhelinnumerosi on?",
+          "minulla on lapsi.",
           "minun",
+          "minun kotini",
           "minun nimeni on sara.",
+          "minun numeroni on",
+          "minun numeroni on 040 123 4567.",
+          "missä",
           "missä asut?",
+          "mistä",
           "mistä olet?",
+          "neljä",
+          "neljätoista",
+          "nolla",
+          "numero",
+          "olen …-vuotias.",
           "olen iranista.",
+          "osoite",
+          "perhe",
+          "persia",
           "puhelinnumero",
+          "puhun",
           "puhun persiaa.",
+          "puhun vähän suomea.",
+          "seitsemän",
+          "seitsemäntoista",
+          "sinun",
+          "sinun nimesi",
+          "te",
+          "te olette",
           "tämä on minun äitini.",
+          "vaasa",
+          "viisi",
+          "viisitoista",
+          "yhdeksän",
+          "yksi",
+          "yksitoista",
           "äiti"
         ],
-        "receptive_count": 9,
-        "productive_count": 6,
+        "receptive_count": 10,
+        "productive_count": 52,
         "later_correct_retrieval": [
+          "asun",
           "asun vaasassa.",
+          "englanti",
+          "he ovat",
           "hän",
+          "hän on",
+          "iran",
+          "isä",
+          "kahdeksan",
+          "kahdeksantoista",
+          "kaksi",
           "kaksitoista",
+          "katu",
+          "kaupunki",
+          "kolme",
+          "kolmetoista",
           "kuinka vanha olet?",
+          "kuusi",
+          "kuusitoista",
+          "kymmenen",
+          "me",
+          "me olemme",
           "mikä sinun puhelinnumerosi on?",
+          "minulla on lapsi.",
           "minun",
+          "minun kotini",
           "minun nimeni on sara.",
+          "minun numeroni on",
+          "minun numeroni on 040 123 4567.",
+          "missä",
           "missä asut?",
+          "mistä",
           "mistä olet?",
+          "neljä",
+          "neljätoista",
+          "nolla",
+          "numero",
+          "olen …-vuotias.",
           "olen iranista.",
+          "osoite",
+          "perhe",
+          "persia",
           "puhelinnumero",
+          "puhun",
           "puhun persiaa.",
+          "puhun vähän suomea.",
+          "seitsemän",
+          "seitsemäntoista",
+          "sinun",
+          "sinun nimesi",
+          "te",
+          "te olette",
           "tämä on minun äitini.",
+          "vaasa",
+          "viisi",
+          "viisitoista",
+          "yhdeksän",
+          "yksi",
+          "yksitoista",
           "äiti"
         ],
         "declared_unassessed": [],
@@ -2224,12 +2474,21 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-present-chunks",
+          "a11-pronouns",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 8,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -16714,81 +16973,6 @@
     ],
     "lessons_with_unassessed_declared_targets": [
       {
-        "lesson_id": "section-2-lesson-1",
-        "forms": [
-          "he ovat",
-          "hän on",
-          "te olette"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-2",
-        "forms": [
-          "mistä olet?",
-          "olen"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-3",
-        "forms": [
-          "englanti",
-          "persia",
-          "puhun"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-4",
-        "forms": [
-          "asun"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-5",
-        "forms": [
-          "minulla on lapsi."
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-6",
-        "forms": [
-          "minun kotini"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-7",
-        "forms": [
-          "kahdeksan",
-          "kaksi",
-          "kolme",
-          "kolmetoista",
-          "kuusi",
-          "kuusitoista",
-          "neljätoista",
-          "olen …-vuotias.",
-          "seitsemäntoista",
-          "viisi",
-          "yhdeksän",
-          "yhdeksäntoista",
-          "yksi",
-          "yksitoista"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-8",
-        "forms": [
-          "minun numeroni on"
-        ]
-      },
-      {
-        "lesson_id": "section-2-lesson-9",
-        "forms": [
-          "asun helsingissä.",
-          "minun nimeni on",
-          "puhun englantia.",
-          "puhun suomea."
-        ]
-      },
-      {
         "lesson_id": "section-3-lesson-3",
         "forms": [
           "kello"
@@ -17532,14 +17716,6 @@
         "level": "A1.1",
         "title_en": "Basic phonology and vowel length",
         "prerequisites": []
-      },
-      {
-        "id": "a11-case-chunks",
-        "level": "A1.1",
-        "title_en": "Locative and partitive chunks",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
       },
       {
         "id": "a12-local-cases",

@@ -45,6 +45,7 @@ test('reviewed morphology practice is present in the intended A1.1 lessons', () 
     'a1.1-s2-l04',
     'a1.1-s2-l06',
     'a1.1-s2-l10',
+    'a1.1-s2-l09',
     'a1.1-s3-l04',
     'a1.1-s3-l05',
     'a1.1-s3-l06',
@@ -68,7 +69,7 @@ test('reviewed morphology practice is present in the intended A1.1 lessons', () 
     }, {});
   assert.deepEqual(counts, {
     'morphology-choice': 12,
-    'inflection-production': 8,
+    'inflection-production': 10,
   });
 });
 
@@ -145,7 +146,7 @@ test('morphology production accepts only explicit forms plus keyboard diacritic 
   assert.equal(keyboardOnly.diacriticAdjusted, true);
 });
 
-test('section checkpoints review explicit morphology without dropping the 15-activity contract', () => {
+test('section checkpoints review morphology and retain original targets with declared activity counts', () => {
   const section2Checkpoint = sections[1].lessons.at(-1);
   const section3Checkpoint = sections[2].lessons.at(-1);
   const finalCheckpoint = sections[3].lessons.at(-1);
@@ -154,9 +155,11 @@ test('section checkpoints review explicit morphology without dropping the 15-act
   assert.ok(section3Checkpoint.activities.some((activity) => activity.type === 'inflection-production' && activity.expected_fi === 'syön'));
   assert.ok(finalCheckpoint.activities.some((activity) => activity.type === 'morphology-choice' && activity.expected_fi === 'nuku'));
 
+  assert.equal(section2Checkpoint.checkpoint_targets.length, 15);
   for (const checkpoint of [section2Checkpoint, section3Checkpoint, finalCheckpoint]) {
     assert.equal(checkpoint.order, 10);
-    assert.equal(checkpoint.activities.length, 15);
+    assert.equal(checkpoint.activities.length, checkpoint.activity_count ?? 15);
+
   }
 });
 
