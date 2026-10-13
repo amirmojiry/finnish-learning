@@ -1590,6 +1590,24 @@
         "20",
         "۲۰"
       ]
+    },
+    "s2-profile-reading": {
+      "id": "s2-profile-reading",
+      "surface_form": "Minun nimeni on Sara. Olen Iranista. Asun Vaasassa. Puhun persiaa.",
+      "lemma": "Minun nimeni on Sara. Olen Iranista. Asun Vaasassa. Puhun persiaa.",
+      "translation_fa": "نام من سارا است. اهل ایران هستم. در واسا زندگی می‌کنم. فارسی صحبت می‌کنم.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "profile",
+        "recycling"
+      ],
+      "example_fi": "Minun nimeni on Sara. Olen Iranista. Asun Vaasassa. Puhun persiaa.",
+      "example_fa": "نام من سارا است. اهل ایران هستم. در واسا زندگی می‌کنم. فارسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "Minun nimeni on Sara. Olen Iranista. Asun Vaasassa. Puhun persiaa."
+      ]
     }
   },
   "lessons": [
@@ -1600,14 +1618,16 @@
       "title_fa": "افراد و ضمیرها",
       "objective_fa": "با ضمیرهای پایه دربارهٔ یک یا چند نفر صحبت کن.",
       "summary_fa": "hän، me، te و he را همراه با شکل‌های پرکاربرد فعل olla در جمله‌های کوتاه می‌بینی.",
-      "grammar_fa": "در این سطح شکل‌ها را به‌صورت chunk یاد می‌گیری: Hän on، Me olemme، Te olette، He ovat.",
+      "grammar_fa": "با «hän» از «on»، با «me» از «olemme»، با «te» از «olette» و با «he» از «ovat» استفاده می‌کنیم. فقط همین جمله‌های کوتاه و آشنا تمرین می‌شوند. «hän» یعنی او، «me» یعنی ما، «te» یعنی شما و «he» یعنی آن‌ها. در این تمرین ضمیر «ما» را در جملهٔ آشنا بازیابی می‌کنیم.",
       "new_targets": [
-        "s2-han",
         "s2-me",
-        "s2-te",
         "s2-he",
         "s2-ystava",
-        "s2-me-olemme"
+        "s2-te",
+        "s2-han-on",
+        "s2-me-olemme",
+        "s2-te-olette",
+        "s2-he-ovat"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1651,8 +1671,362 @@
             1
           ],
           "expected_fi": "He ovat täällä."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-han-on",
+          "prompt_fi": "Hän _____ ystävä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Hän on ystävä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-me-olemme",
+          "prompt_fi": "Me _____ ystäviä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olemme"
+          ],
+          "expected_fi": "Me olemme ystäviä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-te-olette",
+          "prompt_fi": "Te _____ täällä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olette"
+          ],
+          "expected_fi": "Te olette täällä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-he-ovat",
+          "prompt_fi": "He _____ täällä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "ovat"
+          ],
+          "expected_fi": "He ovat täällä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-me",
+          "prompt_fi": "_____ olemme ystäviä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "Me"
+          ],
+          "expected_fi": "Me olemme ystäviä.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-han"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-han",
+          "options": [
+            "s2-han",
+            "s2-me",
+            "s2-te",
+            "s2-he"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-me"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-me",
+          "options": [
+            "s2-me",
+            "s2-han",
+            "s2-te",
+            "s2-he"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-te"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-te"
+        },
+        {
+          "type": "teach",
+          "item": "s2-he"
+        },
+        {
+          "type": "sentence-order",
+          "item": "s2-he",
+          "tokens": [
+            "ovat",
+            "täällä.",
+            "He"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "He ovat täällä.",
+          "expected_fa": "آن‌ها اینجا هستند."
+        },
+        {
+          "type": "teach",
+          "item": "s2-ystava"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-ystava",
+          "options": [
+            "s2-ystava",
+            "s2-han",
+            "s2-me",
+            "s2-te"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-me-olemme"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-me-olemme",
+          "options": [
+            "s2-han",
+            "s2-me-olemme",
+            "s2-me",
+            "s2-te"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-han"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-me"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "s2-te"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-han-on",
+          "prompt_fi": "Hän _____ ystävä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "on"
+          ],
+          "expected_fi": "Hän on ystävä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-me-olemme",
+          "prompt_fi": "Me _____ ystäviä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olemme"
+          ],
+          "expected_fi": "Me olemme ystäviä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-te-olette",
+          "prompt_fi": "Te _____ täällä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olette"
+          ],
+          "expected_fi": "Te olette täällä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-he-ovat",
+          "prompt_fi": "He _____ täällä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "ovat"
+          ],
+          "expected_fi": "He ovat täällä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-me",
+          "prompt_fi": "_____ olemme ystäviä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "Me"
+          ],
+          "expected_fi": "Me olemme ystäviä.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        }
+      ],
+      "review_targets": [],
+      "activity_count": 20,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l01-can-do",
+            "can_do_fa": "با ضمیرهای پایه دربارهٔ یک یا چند نفر صحبت کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-han",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-me",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-he",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-ystava",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-te",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-han-on",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-me-olemme",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-te-olette",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-he-ovat",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "با «hän» از «on»، با «me» از «olemme»، با «te» از «olette» و با «he» از «ovat» استفاده می‌کنیم. فقط همین جمله‌های کوتاه و آشنا تمرین می‌شوند.",
+            "examples": [
+              {
+                "fi": "Hän on ystävä.",
+                "fa": "او یک دوست است."
+              },
+              {
+                "fi": "Me olemme ystäviä.",
+                "fa": "ما دوست هستیم."
+              },
+              {
+                "fi": "Te olette täällä.",
+                "fa": "شما اینجا هستید."
+              },
+              {
+                "fi": "He ovat täällä.",
+                "fa": "آن‌ها اینجا هستند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-han-on",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-me-olemme",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-te-olette",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-he-ovat",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«hän» یعنی او، «me» یعنی ما، «te» یعنی شما و «he» یعنی آن‌ها. در این تمرین ضمیر «ما» را در جملهٔ آشنا بازیابی می‌کنیم.",
+            "examples": [
+              {
+                "fi": "Me olemme ystäviä.",
+                "fa": "ما دوست هستیم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-me",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-2",
@@ -1661,14 +2035,15 @@
       "title_fa": "کشور و اهل کجا بودن",
       "objective_fa": "بگو اهل کجا هستی و همین سؤال را از دیگری بپرس.",
       "summary_fa": "دو پاسخ کامل «Olen Suomesta.» و «Olen Iranista.» را همراه با سؤال «Mistä olet?» تمرین می‌کنی.",
-      "grammar_fa": "برای این درس شکل‌های Suomesta و Iranista صریح و کامل یاد گرفته می‌شوند؛ برنامه در زمان اجرا پسوند -sta/-stä را نمی‌سازد.",
+      "grammar_fa": "برای گفتن اهل کجا بودن، دو عبارت «Olen Suomesta.» و «Olen Iranista.» را یاد می‌گیریم. صورت‌های «Suomesta» و «Iranista» در این جمله‌ها elatiivi هستند؛ صرف آزاد نام کشورهای دیگر از این تمرین نتیجه گرفته نمی‌شود. «Mistä olet?» دربارهٔ مبدأ و اهل کجا بودن می‌پرسد. در همین پرسش آماده واژهٔ «Mistä» را بازیابی می‌کنیم.",
       "new_targets": [
-        "s2-mista",
         "s2-suomi",
         "s2-iran",
         "s2-maa",
+        "s2-mista",
         "s2-olen-suomesta",
-        "s2-olen-iranista"
+        "s2-olen-iranista",
+        "s2-mista-olet"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1706,6 +2081,19 @@
             "Iran"
           ],
           "expected_fi": "Iran on maa."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-mista-olet",
+          "prompt_fi": "_____ olet?",
+          "prompt_fa": "اهل کجا هستی؟",
+          "accepted_answers": [
+            "Mistä"
+          ],
+          "expected_fi": "Mistä olet?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
       ],
       "morphology_practice": [
@@ -1723,9 +2111,290 @@
             "Iranin"
           ],
           "expected_fi": "Iranista",
-          "explanation_fa": "برای بیان مبدأ در این عبارت از elatiivi استفاده می‌شود: Iran → Iranista."
+          "explanation_fa": "برای بیان مبدأ در این عبارت از elatiivi استفاده می‌شود: Iran → Iranista.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "s2-olen-suomesta",
+          "base_fi": "Suomi",
+          "feature_fa": "elatiivi در عبارت مبدأ",
+          "prompt_fa": "شکل نام کشور را در پاسخِ «اهل فنلاند هستم» بنویس.",
+          "frame_fi": "Olen _____.",
+          "expected_fi": "Suomesta",
+          "accepted_answers": [
+            "Suomesta"
+          ],
+          "explanation_fa": "در این عبارت مبدأ، Suomi به صورت Suomesta می‌آید؛ این شکل را با جملهٔ کامل تمرین کن.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-mista"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-mista",
+          "options": [
+            "s2-mista",
+            "s2-suomi",
+            "s2-iran",
+            "s2-maa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-suomi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-suomi"
+        },
+        {
+          "type": "teach",
+          "item": "s2-iran"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-iran",
+          "prompt_fi": "_____ on maa.",
+          "accepted_answers": [
+            "Iran"
+          ],
+          "expected_fi": "Iran on maa."
+        },
+        {
+          "type": "teach",
+          "item": "s2-maa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-maa",
+          "options": [
+            "s2-mista",
+            "s2-suomi",
+            "s2-iran",
+            "s2-maa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-olen-suomesta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-olen-suomesta"
+        },
+        {
+          "type": "teach",
+          "item": "s2-olen-iranista"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "s2-olen-iranista",
+          "base_fi": "Iran",
+          "feature_fa": "elatiivi: مبدأ / «از»",
+          "prompt_fa": "برای گفتن «از ایران / اهل ایران» شکل درست Iran را انتخاب کن.",
+          "frame_fi": "Olen _____.",
+          "options_fi": [
+            "Iranissa",
+            "Iranista",
+            "Iraniin",
+            "Iranin"
+          ],
+          "expected_fi": "Iranista",
+          "explanation_fa": "برای بیان مبدأ در این عبارت از elatiivi استفاده می‌شود: Iran → Iranista."
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-mista",
+          "options": [
+            "s2-suomi",
+            "s2-mista",
+            "s2-iran",
+            "s2-maa"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-suomi"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "s2-he"
+        },
+        {
+          "type": "inflection-production",
+          "item": "s2-olen-suomesta",
+          "base_fi": "Suomi",
+          "feature_fa": "elatiivi در عبارت مبدأ",
+          "prompt_fa": "شکل نام کشور را در پاسخِ «اهل فنلاند هستم» بنویس.",
+          "frame_fi": "Olen _____.",
+          "expected_fi": "Suomesta",
+          "accepted_answers": [
+            "Suomesta"
+          ],
+          "explanation_fa": "در این عبارت مبدأ، Suomi به صورت Suomesta می‌آید؛ این شکل را با جملهٔ کامل تمرین کن.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-mista-olet",
+          "prompt_fi": "_____ olet?",
+          "prompt_fa": "اهل کجا هستی؟",
+          "accepted_answers": [
+            "Mistä"
+          ],
+          "expected_fi": "Mistä olet?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-olen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-ystava"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-me-olemme"
+        }
+      ],
+      "review_targets": [
+        "s2-he",
+        "s2-ystava",
+        "s2-me-olemme"
+      ],
+      "activity_count": 20,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l02-can-do",
+            "can_do_fa": "بگو اهل کجا هستی و همین سؤال را از دیگری بپرس."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-olen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-suomi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-iran",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-maa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-mista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-olen-suomesta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-olen-iranista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-mista-olet",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-he",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-ystava",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-me-olemme",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "برای گفتن اهل کجا بودن، دو عبارت «Olen Suomesta.» و «Olen Iranista.» را یاد می‌گیریم. صورت‌های «Suomesta» و «Iranista» در این جمله‌ها elatiivi هستند؛ صرف آزاد نام کشورهای دیگر از این تمرین نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olen Suomesta.",
+                "fa": "من اهل فنلاند هستم."
+              },
+              {
+                "fi": "Olen Iranista.",
+                "fa": "من اهل ایران هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "s2-olen-iranista",
+                "mode": "recognition"
+              },
+              {
+                "activity_type": "inflection-production",
+                "item_id": "s2-olen-suomesta",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Mistä olet?» دربارهٔ مبدأ و اهل کجا بودن می‌پرسد. در همین پرسش آماده واژهٔ «Mistä» را بازیابی می‌کنیم.",
+            "examples": [
+              {
+                "fi": "Mistä olet? Olen Iranista.",
+                "fa": "اهل کجایی؟ من اهل ایران هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-mista-olet",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-3",
@@ -1734,14 +2403,15 @@
       "title_fa": "زبان‌ها",
       "objective_fa": "بگو به چه زبان یا زبان‌هایی صحبت می‌کنی.",
       "summary_fa": "نام سه زبان را همراه با جمله‌های کامل Puhun suomea / persiaa / englantia تمرین می‌کنی.",
-      "grammar_fa": "شکل‌های suomea، persiaa و englantia بعد از puhua صریحاً ذخیره شده‌اند و با چسباندن پسوند ساخته نمی‌شوند.",
+      "grammar_fa": "بعد از «puhun» نام زبان در این جمله‌های آشنا به صورت partitiivi می‌آید: «suomea»، «persiaa» و «englantia». تمرین نوشتاری فقط «suomea» را در «Puhun vähän suomea.» می‌سنجد؛ این نمونه قاعدهٔ کامل partitiivi نیست. «Puhun» یعنی «من صحبت می‌کنم». آن را در جملهٔ آمادهٔ معرفی زبان به کار می‌بریم؛ صرف همهٔ اشخاصِ puhua سنجیده نمی‌شود.",
       "new_targets": [
-        "s2-suomi-lang",
         "s2-persia",
         "s2-englanti",
         "s2-puhun",
         "s2-puhun-suomea",
-        "s2-puhun-persiaa"
+        "s2-puhun-persiaa",
+        "s2-puhun-englantia",
+        "s2-puhun-vahan-suomea"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -1780,12 +2450,12 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "s2-suomi-lang",
           "options": [
             "s2-persia",
-            "s2-suomi-lang",
             "s2-englanti",
+            "s2-suomi-lang",
             "s2-puhun"
           ]
         },
@@ -1821,37 +2491,72 @@
           "item": "s2-puhun-vahan-suomea"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "inflection-production",
           "item": "s2-puhun-vahan-suomea",
-          "options": [
-            "s2-puhun-suomea",
-            "s2-puhun-vahan-suomea",
-            "s2-puhun-persiaa",
-            "s2-puhun-englantia"
-          ]
+          "base_fi": "suomi",
+          "feature_fa": "partitiivi بعد از puhua",
+          "prompt_fa": "شکل درست suomi را در عبارت زیر بنویس.",
+          "frame_fi": "Puhun vähän _____.",
+          "expected_fi": "suomea",
+          "accepted_answers": [
+            "suomea"
+          ],
+          "explanation_fa": "نام زبان بعد از puhua در این الگوی آموزشی به صورت partitiivi می‌آید: suomi → suomea."
         },
         {
-          "type": "choice",
-          "mode": "listen",
-          "item": "s2-puhun-englantia",
-          "options": [
-            "s2-puhun-persiaa",
-            "s2-puhun-englantia",
-            "s2-puhun-suomea",
-            "s2-puhun-vahan-suomea"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-englantia"
         },
         {
-          "type": "choice",
-          "mode": "cloze",
+          "type": "controlled-production",
           "item": "s2-puhun-persiaa",
-          "options": [
-            "s2-puhun-englantia",
-            "s2-puhun-suomea",
-            "s2-puhun-persiaa",
-            "s2-puhun-vahan-suomea"
+          "prompt_fa": "فارسی صحبت می‌کنم.",
+          "cues_fi": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "accepted_answers": [
+            "Puhun persiaa."
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-puhun",
+          "prompt_fi": "_____ persiaa.",
+          "prompt_fa": "من فارسی صحبت می‌کنم.",
+          "accepted_answers": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-persia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-englanti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-maa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-olen-suomesta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-olen-iranista"
         }
       ],
       "production_targets": [
@@ -1873,6 +2578,19 @@
           "accepted_answers": [
             "Puhun persiaa."
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-puhun",
+          "prompt_fi": "_____ persiaa.",
+          "prompt_fa": "من فارسی صحبت می‌کنم.",
+          "accepted_answers": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
         }
       ],
       "morphology_practice": [
@@ -1887,9 +2605,125 @@
           "accepted_answers": [
             "suomea"
           ],
-          "explanation_fa": "نام زبان بعد از puhua در این الگوی آموزشی به صورت partitiivi می‌آید: suomi → suomea."
+          "explanation_fa": "نام زبان بعد از puhua در این الگوی آموزشی به صورت partitiivi می‌آید: suomi → suomea.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
-      ]
+      ],
+      "review_targets": [
+        "s2-maa",
+        "s2-olen-suomesta",
+        "s2-olen-iranista"
+      ],
+      "activity_count": 21,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l03-can-do",
+            "can_do_fa": "بگو به چه زبان یا زبان‌هایی صحبت می‌کنی."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-suomi-lang",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-persia",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-englanti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhun",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhun-suomea",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhun-persiaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhun-englantia",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhun-vahan-suomea",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-maa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-olen-suomesta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-olen-iranista",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "بعد از «puhun» نام زبان در این جمله‌های آشنا به صورت partitiivi می‌آید: «suomea»، «persiaa» و «englantia». تمرین نوشتاری فقط «suomea» را در «Puhun vähän suomea.» می‌سنجد؛ این نمونه قاعدهٔ کامل partitiivi نیست.",
+            "examples": [
+              {
+                "fi": "Puhun suomea.",
+                "fa": "فنلاندی صحبت می‌کنم."
+              },
+              {
+                "fi": "Puhun persiaa.",
+                "fa": "فارسی صحبت می‌کنم."
+              },
+              {
+                "fi": "Puhun englantia.",
+                "fa": "انگلیسی صحبت می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "s2-puhun-vahan-suomea",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Puhun» یعنی «من صحبت می‌کنم». آن را در جملهٔ آمادهٔ معرفی زبان به کار می‌بریم؛ صرف همهٔ اشخاصِ puhua سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Puhun persiaa.",
+                "fa": "فارسی صحبت می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-puhun",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-4",
@@ -1898,14 +2732,16 @@
       "title_fa": "کجا زندگی می‌کنم",
       "objective_fa": "بگو کجا زندگی می‌کنی و محل زندگی دیگری را بپرس.",
       "summary_fa": "Missä asut?، Asun Vaasassa. و Asun Helsingissä. را با شکل‌های کامل شهرها تمرین می‌کنی.",
-      "grammar_fa": "Vaasassa و Helsingissä به‌صورت کامل ذخیره شده‌اند؛ UI شکل مکانی را از نام شهر تولید نمی‌کند.",
+      "grammar_fa": "برای محل زندگی می‌گوییم «Asun Vaasassa.» یا «Asun Helsingissä.». این دو صورت inessiivi را در جملهٔ آشنا تمرین می‌کنیم؛ به‌ویژه «Helsingissä» را باید به صورت کامل یاد گرفت. «Missä asut?» محل زندگی را می‌پرسد؛ «Mistä olet?» مبدأ را می‌پرسد. در این درس «Missä» را در پرسشِ محل زندگی بازیابی می‌کنیم.",
       "new_targets": [
         "s2-missa",
         "s2-kaupunki",
         "s2-vaasa",
         "s2-helsinki",
+        "s2-asun",
         "s2-asun-vaasassa",
-        "s2-missa-asut"
+        "s2-missa-asut",
+        "s2-asun-helsingissa"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1946,6 +2782,19 @@
             0
           ],
           "expected_fi": "Asun Vaasassa."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-missa-asut",
+          "prompt_fi": "_____ asut?",
+          "prompt_fa": "کجا زندگی می‌کنی؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä asut?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
       ],
       "morphology_practice": [
@@ -1963,9 +2812,270 @@
             "Helsinki"
           ],
           "expected_fi": "Helsingissä",
-          "explanation_fa": "برای بیان محل زندگی در این مثال از inessiivi استفاده می‌شود: Helsinki → Helsingissä."
+          "explanation_fa": "برای بیان محل زندگی در این مثال از inessiivi استفاده می‌شود: Helsinki → Helsingissä.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-missa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-missa",
+          "options": [
+            "s2-missa",
+            "s2-kaupunki",
+            "s2-vaasa",
+            "s2-helsinki"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-kaupunki"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-kaupunki"
+        },
+        {
+          "type": "teach",
+          "item": "s2-vaasa"
+        },
+        {
+          "type": "sentence-order",
+          "item": "s2-vaasa",
+          "tokens": [
+            "Vaasassa.",
+            "Asun"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Asun Vaasassa.",
+          "expected_fa": "در واسا زندگی می‌کنم."
+        },
+        {
+          "type": "teach",
+          "item": "s2-helsinki"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "s2-helsinki",
+          "base_fi": "Helsinki",
+          "feature_fa": "inessiivi: «در» یک مکان",
+          "prompt_fa": "برای گفتن «در هلسینکی» شکل درست Helsinki را انتخاب کن.",
+          "frame_fi": "Asun _____.",
+          "options_fi": [
+            "Helsingistä",
+            "Helsinkiin",
+            "Helsingissä",
+            "Helsinki"
+          ],
+          "expected_fi": "Helsingissä",
+          "explanation_fa": "برای بیان محل زندگی در این مثال از inessiivi استفاده می‌شود: Helsinki → Helsingissä."
+        },
+        {
+          "type": "teach",
+          "item": "s2-asun-vaasassa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-asun-vaasassa"
+        },
+        {
+          "type": "teach",
+          "item": "s2-missa-asut"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-missa-asut",
+          "options": [
+            "s2-missa",
+            "s2-missa-asut",
+            "s2-kaupunki",
+            "s2-vaasa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-missa",
+          "options": [
+            "s2-kaupunki",
+            "s2-vaasa",
+            "s2-helsinki",
+            "s2-missa"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-kaupunki"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "s2-puhun"
+        },
+        {
+          "type": "teach",
+          "item": "s2-asun-helsingissa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-asun-helsingissa"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-missa-asut",
+          "prompt_fi": "_____ asut?",
+          "prompt_fa": "کجا زندگی می‌کنی؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä asut?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-asun"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-suomea"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-persiaa"
+        }
+      ],
+      "review_targets": [
+        "s2-puhun",
+        "s2-puhun-suomea",
+        "s2-puhun-persiaa"
+      ],
+      "activity_count": 21,
+      "practice_targets": [
+        "s2-asun-helsingissa"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l04-can-do",
+            "can_do_fa": "بگو کجا زندگی می‌کنی و محل زندگی دیگری را بپرس."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-missa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-kaupunki",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-vaasa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-helsinki",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-asun",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-asun-vaasassa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-missa-asut",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-asun-helsingissa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhun",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-suomea",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-persiaa",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "برای محل زندگی می‌گوییم «Asun Vaasassa.» یا «Asun Helsingissä.». این دو صورت inessiivi را در جملهٔ آشنا تمرین می‌کنیم؛ به‌ویژه «Helsingissä» را باید به صورت کامل یاد گرفت.",
+            "examples": [
+              {
+                "fi": "Asun Vaasassa.",
+                "fa": "در واسا زندگی می‌کنم."
+              },
+              {
+                "fi": "Asun Helsingissä.",
+                "fa": "در هلسینکی زندگی می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "s2-helsinki",
+                "mode": "recognition"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Missä asut?» محل زندگی را می‌پرسد؛ «Mistä olet?» مبدأ را می‌پرسد. در این درس «Missä» را در پرسشِ محل زندگی بازیابی می‌کنیم.",
+            "examples": [
+              {
+                "fi": "Missä asut? Asun Vaasassa.",
+                "fa": "کجا زندگی می‌کنی؟ در واسا زندگی می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-missa-asut",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-5",
@@ -1974,14 +3084,16 @@
       "title_fa": "خانوادهٔ من",
       "objective_fa": "چند عضو نزدیک خانواده را نام ببر و یک نفر را معرفی کن.",
       "summary_fa": "واژه‌های پایهٔ خانواده را یاد می‌گیری و با «Tämä on minun äitini.» و «Minulla on lapsi.» در جمله استفاده می‌کنی.",
-      "grammar_fa": "مالکیت فعلاً با دو الگوی کامل و آماده تمرین می‌شود؛ صرف کامل مالکیت موضوع درس بعدی است.",
+      "grammar_fa": "در «Minulla on lapsi.» داشتن را با عبارت «Minulla on» بیان می‌کنیم. «Tämä on minun äitini.» یک عضو خانواده را معرفی می‌کند. فعلاً این‌ها الگوهای آماده‌اند؛ صرف کامل مالکیت آموزش داده نمی‌شود.",
       "new_targets": [
         "s2-perhe",
         "s2-aiti",
         "s2-isa",
         "s2-sisar",
         "s2-veli",
-        "s2-lapsi"
+        "s2-lapsi",
+        "s2-tama-on-minun-aitini",
+        "s2-minulla-on-lapsi"
       ],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2018,8 +3130,242 @@
             "äiti"
           ],
           "expected_fi": "Tämä on minun äitini."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-minulla-on-lapsi",
+          "prompt_fi": "_____ on lapsi.",
+          "prompt_fa": "من فرزند دارم.",
+          "accepted_answers": [
+            "Minulla"
+          ],
+          "expected_fi": "Minulla on lapsi.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-perhe"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-perhe",
+          "options": [
+            "s2-perhe",
+            "s2-aiti",
+            "s2-isa",
+            "s2-sisar"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-aiti"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-aiti",
+          "prompt_fi": "Tämä on minun _____ni.",
+          "accepted_answers": [
+            "äiti"
+          ],
+          "expected_fi": "Tämä on minun äitini."
+        },
+        {
+          "type": "teach",
+          "item": "s2-isa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-isa",
+          "options": [
+            "s2-perhe",
+            "s2-aiti",
+            "s2-isa",
+            "s2-sisar"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-sisar"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-sisar",
+          "options": [
+            "s2-perhe",
+            "s2-aiti",
+            "s2-isa",
+            "s2-sisar"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-veli"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-veli",
+          "options": [
+            "s2-veli",
+            "s2-perhe",
+            "s2-aiti",
+            "s2-isa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-lapsi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-lapsi"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-perhe",
+          "options": [
+            "s2-perhe",
+            "s2-aiti",
+            "s2-isa",
+            "s2-sisar"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-aiti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-tama-on-minun-aitini"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-minulla-on-lapsi",
+          "prompt_fi": "_____ on lapsi.",
+          "prompt_fa": "من فرزند دارم.",
+          "accepted_answers": [
+            "Minulla"
+          ],
+          "expected_fi": "Minulla on lapsi.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-helsinki"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-asun-vaasassa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-missa-asut"
+        }
+      ],
+      "review_targets": [
+        "s2-helsinki",
+        "s2-asun-vaasassa",
+        "s2-missa-asut"
+      ],
+      "activity_count": 19,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l05-can-do",
+            "can_do_fa": "چند عضو نزدیک خانواده را نام ببر و یک نفر را معرفی کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-perhe",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-aiti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-isa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-sisar",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-veli",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-lapsi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-tama-on-minun-aitini",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-minulla-on-lapsi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-helsinki",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-asun-vaasassa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-missa-asut",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "در «Minulla on lapsi.» داشتن را با عبارت «Minulla on» بیان می‌کنیم. «Tämä on minun äitini.» یک عضو خانواده را معرفی می‌کند. فعلاً این‌ها الگوهای آماده‌اند؛ صرف کامل مالکیت آموزش داده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Minulla on lapsi.",
+                "fa": "من فرزند دارم."
+              },
+              {
+                "fi": "Tämä on minun äitini.",
+                "fa": "این مادر من است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-minulla-on-lapsi",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-6",
@@ -2028,14 +3374,15 @@
       "title_fa": "مال چه کسی؟",
       "objective_fa": "مالکیت خیلی ساده را با minun و sinun بیان کن.",
       "summary_fa": "minun / sinun و سه ترکیب کامل minun nimeni، sinun nimesi و minun kotini را تمرین می‌کنی.",
-      "grammar_fa": "شکل‌های nimeni، nimesi و kotini به‌صورت chunk ذخیره شده‌اند و برنامه آن‌ها را در runtime صرف نمی‌کند.",
+      "grammar_fa": "«minun» برای «مال من» و «sinun» برای «مال تو» است. ترکیب‌های «minun nimeni»، «sinun nimesi» و «minun kotini» را کامل یاد می‌گیریم؛ این درس صرف آزاد پسوندهای ملکی را نمی‌سنجد.",
       "new_targets": [
         "s2-minun",
-        "s2-sinun",
-        "s2-nimi",
         "s2-koti",
+        "s2-sinun",
         "s2-minun-nimeni",
-        "s2-sinun-nimesi"
+        "s2-sinun-nimesi",
+        "s2-minun-kotini",
+        "s2-profile-name"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2075,6 +3422,45 @@
           "accepted_answers": [
             "Minun nimeni on Sara."
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-minun-nimeni",
+          "prompt_fi": "_____ nimeni",
+          "prompt_fa": "نام من",
+          "accepted_answers": [
+            "minun"
+          ],
+          "expected_fi": "minun nimeni",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-sinun-nimesi",
+          "prompt_fi": "_____ nimesi",
+          "prompt_fa": "نام تو",
+          "accepted_answers": [
+            "sinun"
+          ],
+          "expected_fi": "sinun nimesi",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-minun-kotini",
+          "prompt_fi": "_____ kotini",
+          "prompt_fa": "خانهٔ من",
+          "accepted_answers": [
+            "minun"
+          ],
+          "expected_fi": "minun kotini",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2089,9 +3475,304 @@
           "accepted_answers": [
             "sinun"
           ],
-          "explanation_fa": "genetiivi ضمیر sinä در این عبارت sinun است: sinun nimesi."
+          "explanation_fa": "genetiivi ضمیر sinä در این عبارت sinun است: sinun nimesi.",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-minun"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-minun",
+          "options": [
+            "s2-minun",
+            "s2-sinun",
+            "s2-nimi",
+            "s2-koti"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-sinun"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-sinun"
+        },
+        {
+          "type": "teach",
+          "item": "s2-nimi"
+        },
+        {
+          "type": "controlled-production",
+          "item": "s2-nimi",
+          "prompt_fa": "نام من سارا است.",
+          "cues_fi": [
+            "nimi"
+          ],
+          "expected_fi": "Minun nimeni on Sara.",
+          "accepted_answers": [
+            "Minun nimeni on Sara."
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-koti"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-koti",
+          "options": [
+            "s2-minun",
+            "s2-sinun",
+            "s2-nimi",
+            "s2-koti"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-minun-nimeni"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-nimeni"
+        },
+        {
+          "type": "teach",
+          "item": "s2-sinun-nimesi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-sinun-nimesi",
+          "options": [
+            "s2-minun",
+            "s2-sinun-nimesi",
+            "s2-sinun",
+            "s2-nimi"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-minun",
+          "options": [
+            "s2-sinun",
+            "s2-minun",
+            "s2-nimi",
+            "s2-koti"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "s2-sinun",
+          "base_fi": "sinä",
+          "feature_fa": "genetiivi ضمیر «تو»",
+          "prompt_fa": "شکل ملکیِ sinä را در عبارت زیر بنویس.",
+          "frame_fi": "_____ nimesi",
+          "expected_fi": "sinun",
+          "accepted_answers": [
+            "sinun"
+          ],
+          "explanation_fa": "genetiivi ضمیر sinä در این عبارت sinun است: sinun nimesi."
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "s2-sisar"
+        },
+        {
+          "type": "teach",
+          "item": "s2-profile-name"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-profile-name"
+        },
+        {
+          "type": "teach",
+          "item": "s2-minun-nimeni-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-nimeni-on"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-minun-nimeni",
+          "prompt_fi": "_____ nimeni",
+          "prompt_fa": "نام من",
+          "accepted_answers": [
+            "minun"
+          ],
+          "expected_fi": "minun nimeni",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-sinun-nimesi",
+          "prompt_fi": "_____ nimesi",
+          "prompt_fa": "نام تو",
+          "accepted_answers": [
+            "sinun"
+          ],
+          "expected_fi": "sinun nimesi",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-minun-kotini",
+          "prompt_fi": "_____ kotini",
+          "prompt_fa": "خانهٔ من",
+          "accepted_answers": [
+            "minun"
+          ],
+          "expected_fi": "minun kotini",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-veli"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-lapsi"
+        }
+      ],
+      "review_targets": [
+        "s2-sisar",
+        "s2-veli",
+        "s2-lapsi"
+      ],
+      "activity_count": 24,
+      "practice_targets": [
+        "s2-profile-name",
+        "s2-minun-nimeni-on"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l06-can-do",
+            "can_do_fa": "مالکیت خیلی ساده را با minun و sinun بیان کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-minun",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-nimi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-koti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-sinun",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-minun-nimeni",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-sinun-nimesi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-minun-kotini",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-profile-name",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-minun-nimeni-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-sisar",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-veli",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-lapsi",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«minun» برای «مال من» و «sinun» برای «مال تو» است. ترکیب‌های «minun nimeni»، «sinun nimesi» و «minun kotini» را کامل یاد می‌گیریم؛ این درس صرف آزاد پسوندهای ملکی را نمی‌سنجد.",
+            "examples": [
+              {
+                "fi": "Minun nimeni on Sara.",
+                "fa": "نام من سارا است."
+              },
+              {
+                "fi": "Sinun nimesi on Leo.",
+                "fa": "نام تو لئو است."
+              },
+              {
+                "fi": "Minun kotini on Vaasassa.",
+                "fa": "خانهٔ من در واسا است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "s2-sinun",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-minun-nimeni",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-sinun-nimesi",
+                "mode": "supported_production"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-minun-kotini",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-7",
@@ -2100,12 +3781,12 @@
       "title_fa": "سن و اعداد ۰ تا ۲۰",
       "objective_fa": "اعداد صفر تا بیست را بفهم و سن خود را با یک الگوی آماده بگو.",
       "summary_fa": "همهٔ اعداد ۰ تا ۲۰ در یک جدول مرجع دیده می‌شوند و سپس با شنیدن، انتخاب و نوشتن تمرین می‌شوند.",
-      "grammar_fa": "برای سن از الگوی Olen …-vuotias. استفاده می‌کنیم. نمونهٔ کامل Olen 12-vuotias. صریحاً در داده وجود دارد.",
+      "grammar_fa": "سن را با عبارت «Olen 12-vuotias.» بیان می‌کنیم. در این نمونه «Olen» برای خودِ گوینده است؛ اعداد صفر تا بیست جداگانه تمرین می‌شوند. «Kuinka vanha olet?» سن طرف مقابل را می‌پرسد. این سؤال و پاسخ آماده تمرین می‌شوند، نه ساخت آزاد تمام پرسش‌های «Kuinka».",
       "new_targets": [
-        "s2-num-nolla",
         "s2-num-yksi",
         "s2-num-kaksi",
         "s2-num-kolme",
+        "s2-num-nolla",
         "s2-num-nelja",
         "s2-num-viisi",
         "s2-num-kuusi",
@@ -2123,7 +3804,10 @@
         "s2-num-kahdeksantoista",
         "s2-num-yhdeksantoista",
         "s2-num-kaksikymmenta",
-        "s2-ika"
+        "s2-ika",
+        "s2-age-frame",
+        "s2-kuinka-vanha",
+        "s2-olen-12-vuotias"
       ],
       "display_targets": [
         "s2-num-nolla",
@@ -2200,25 +3884,30 @@
           "item": "s2-age-frame"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "sentence-order",
           "item": "s2-num-nolla",
-          "options": [
-            "s2-num-kaksi",
-            "s2-num-nolla",
-            "s2-num-viisi",
-            "s2-num-kymmenen"
-          ]
+          "tokens": [
+            "on",
+            "nolla.",
+            "Numero"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Numero on nolla.",
+          "expected_fa": "عدد ۰ است."
         },
         {
           "type": "choice",
           "mode": "listen",
           "item": "s2-num-seitseman",
           "options": [
-            "s2-num-kuusi",
-            "s2-num-kahdeksan",
+            "s2-num-nolla",
+            "s2-num-yksi",
             "s2-num-seitseman",
-            "s2-num-yhdeksan"
+            "s2-num-kaksi"
           ]
         },
         {
@@ -2239,7 +3928,7 @@
         },
         {
           "type": "choice",
-          "mode": "listen",
+          "mode": "finnish",
           "item": "s2-num-kaksikymmenta",
           "options": [
             "s2-num-kymmenen",
@@ -2285,7 +3974,7 @@
         },
         {
           "type": "choice",
-          "mode": "listen",
+          "mode": "finnish",
           "item": "s2-num-kahdeksantoista",
           "options": [
             "s2-num-kuusitoista",
@@ -2296,19 +3985,139 @@
         },
         {
           "type": "type",
-          "mode": "cloze",
+          "mode": "finnish",
           "item": "s2-olen-12-vuotias"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-kuinka-vanha"
+        },
+        {
+          "type": "teach",
+          "item": "s2-olen-12-vuotias"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-olen-12-vuotias"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-olen-12-vuotias",
+          "prompt_fi": "_____ 12-vuotias.",
+          "prompt_fa": "من ۱۲ ساله هستم.",
+          "accepted_answers": [
+            "Olen"
+          ],
+          "expected_fi": "Olen 12-vuotias.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-kuinka-vanha",
+          "prompt_fi": "Kuinka vanha _____?",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olet"
+          ],
+          "expected_fi": "Kuinka vanha olet?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kaksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kolme"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-viisi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kuusi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kahdeksan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yhdeksan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yksitoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kolmetoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-neljatoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kuusitoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-seitsemantoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yhdeksantoista"
         },
         {
           "type": "choice",
           "mode": "meaning",
-          "item": "s2-kuinka-vanha",
+          "item": "s2-age-frame",
           "options": [
+            "s2-age-frame",
             "s2-mista-olet",
             "s2-missa-asut",
-            "s2-kuinka-vanha",
-            "s2-mika-puhelinnumerosi"
+            "s2-kuinka-vanha"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-koti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-nimeni"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-sinun-nimesi"
         }
       ],
       "production_targets": [
@@ -2333,8 +4142,208 @@
             1
           ],
           "expected_fi": "Numero on nolla."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-olen-12-vuotias",
+          "prompt_fi": "_____ 12-vuotias.",
+          "prompt_fa": "من ۱۲ ساله هستم.",
+          "accepted_answers": [
+            "Olen"
+          ],
+          "expected_fi": "Olen 12-vuotias.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-kuinka-vanha",
+          "prompt_fi": "Kuinka vanha _____?",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olet"
+          ],
+          "expected_fi": "Kuinka vanha olet?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
-      ]
+      ],
+      "review_targets": [
+        "s2-koti",
+        "s2-minun-nimeni",
+        "s2-sinun-nimesi"
+      ],
+      "activity_count": 36,
+      "practice_targets": [
+        "s2-olen-12-vuotias"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l07-can-do",
+            "can_do_fa": "اعداد صفر تا بیست را بفهم و سن خود را با یک الگوی آماده بگو."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-num-yksi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kaksi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kolme",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-nolla",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-nelja",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-viisi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kuusi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-seitseman",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kahdeksan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-yhdeksan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kymmenen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-yksitoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kaksitoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kolmetoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-neljatoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-viisitoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kuusitoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-seitsemantoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kahdeksantoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-yhdeksantoista",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-kaksikymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-ika",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-age-frame",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-kuinka-vanha",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-olen-12-vuotias",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-koti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-minun-nimeni",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-sinun-nimesi",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "سن را با عبارت «Olen 12-vuotias.» بیان می‌کنیم. در این نمونه «Olen» برای خودِ گوینده است؛ اعداد صفر تا بیست جداگانه تمرین می‌شوند.",
+            "examples": [
+              {
+                "fi": "Olen 12-vuotias.",
+                "fa": "من ۱۲ ساله هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-olen-12-vuotias",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Kuinka vanha olet?» سن طرف مقابل را می‌پرسد. این سؤال و پاسخ آماده تمرین می‌شوند، نه ساخت آزاد تمام پرسش‌های «Kuinka».",
+            "examples": [
+              {
+                "fi": "Kuinka vanha olet?",
+                "fa": "چند سالت است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-kuinka-vanha",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-8",
@@ -2343,13 +4352,14 @@
       "title_fa": "اطلاعات تماس",
       "objective_fa": "شماره تلفن یا نشانی خیلی کوتاه را با کمک بفهم و بیان کن.",
       "summary_fa": "واژه‌های شماره، شماره تلفن، نشانی و خیابان را همراه با سؤال و پاسخ کوتاه تمرین می‌کنی.",
-      "grammar_fa": "شماره تلفن در این سطح می‌تواند رقم‌به‌رقم خوانده شود؛ الگوی سؤال و پاسخ کامل ذخیره شده است.",
+      "grammar_fa": "برای پرسیدن شماره تلفن می‌گوییم «Mikä sinun puhelinnumerosi on?». واژهٔ «Mikä» را در همین پرسش آماده بازیابی می‌کنیم. شماره را می‌توان رقم‌به‌رقم خواند.",
       "new_targets": [
         "s2-numero",
         "s2-puhelinnumero",
         "s2-osoite",
         "s2-katu",
         "s2-mika-puhelinnumerosi",
+        "s2-minun-numeroni",
         "s2-contact-example"
       ],
       "curriculum_target_refs": {
@@ -2385,8 +4395,235 @@
             "katu"
           ],
           "expected_fi": "Katu on pitkä."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-mika-puhelinnumerosi",
+          "prompt_fi": "_____ sinun puhelinnumerosi on?",
+          "prompt_fa": "شماره تلفن تو چیست؟",
+          "accepted_answers": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä sinun puhelinnumerosi on?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-numero"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-numero",
+          "options": [
+            "s2-numero",
+            "s2-puhelinnumero",
+            "s2-osoite",
+            "s2-katu"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-puhelinnumero"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhelinnumero"
+        },
+        {
+          "type": "teach",
+          "item": "s2-osoite"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-osoite",
+          "options": [
+            "s2-numero",
+            "s2-puhelinnumero",
+            "s2-osoite",
+            "s2-katu"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-katu"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-katu",
+          "prompt_fi": "_____ on pitkä.",
+          "accepted_answers": [
+            "katu"
+          ],
+          "expected_fi": "Katu on pitkä."
+        },
+        {
+          "type": "teach",
+          "item": "s2-mika-puhelinnumerosi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-mika-puhelinnumerosi"
+        },
+        {
+          "type": "teach",
+          "item": "s2-contact-example"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-contact-example",
+          "options": [
+            "s2-numero",
+            "s2-contact-example",
+            "s2-puhelinnumero",
+            "s2-osoite"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-numero",
+          "options": [
+            "s2-puhelinnumero",
+            "s2-osoite",
+            "s2-katu",
+            "s2-numero"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhelinnumero"
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "s2-num-yhdeksantoista"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-mika-puhelinnumerosi",
+          "prompt_fi": "_____ sinun puhelinnumerosi on?",
+          "prompt_fa": "شماره تلفن تو چیست؟",
+          "accepted_answers": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä sinun puhelinnumerosi on?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "expected_items": [
+            "s2-profile-name",
+            "s2-contact-example"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-numeroni"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kaksikymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-ika"
+        }
+      ],
+      "review_targets": [
+        "s2-num-yhdeksantoista",
+        "s2-num-kaksikymmenta",
+        "s2-ika"
+      ],
+      "activity_count": 20,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l08-can-do",
+            "can_do_fa": "شماره تلفن یا نشانی خیلی کوتاه را با کمک بفهم و بیان کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-numero",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-puhelinnumero",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-osoite",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-katu",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-mika-puhelinnumerosi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-minun-numeroni",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-contact-example",
+            "status": "introduced"
+          },
+          {
+            "target_id": "s2-num-yhdeksantoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kaksikymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-ika",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "برای پرسیدن شماره تلفن می‌گوییم «Mikä sinun puhelinnumerosi on?». واژهٔ «Mikä» را در همین پرسش آماده بازیابی می‌کنیم. شماره را می‌توان رقم‌به‌رقم خواند.",
+            "examples": [
+              {
+                "fi": "Mikä sinun puhelinnumerosi on?",
+                "fa": "شماره تلفن تو چیست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-mika-puhelinnumerosi",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "section-2-lesson-9",
@@ -2395,7 +4632,7 @@
       "title_fa": "پروفایل شخصی کوتاه",
       "objective_fa": "چند جملهٔ کوتاه و پیوسته دربارهٔ یک نفر بفهم و دربارهٔ خودت بساز.",
       "summary_fa": "نام، کشور، محل زندگی، زبان و سن را در قالب یک پروفایل کوتاه کنار هم می‌گذاری.",
-      "grammar_fa": "این درس گرامر جدید ندارد؛ فقط جمله‌های کامل و بازبینی‌شدهٔ درس‌های قبل را ترکیب می‌کند.",
+      "grammar_fa": "در پروفایل کوتاه، عبارت مبدأ «Olen Suomesta.» و محل زندگی «Asun Vaasassa.» را مرور می‌کنیم. پاسخ «Suomesta» در همان جملهٔ آشنا سنجیده می‌شود؛ ساخت صورت‌های تازه ادعا نمی‌شود. جملهٔ کاملِ آشنای «Puhun persiaa.» را در کنار نام، کشور و محل زندگی می‌نویسیم. این نوشتن راهنمایی‌شده است؛ مکالمه یا نوشتن مستقل ارزیابی نمی‌شود.",
       "new_targets": [],
       "practice_targets": [
         "s2-profile-name",
@@ -2445,6 +4682,369 @@
             "Asun Vaasassa."
           ]
         }
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "s2-profile-name"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-profile-name",
+          "options": [
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live",
+            "s2-profile-lang"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-profile-origin"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-profile-origin",
+          "options": [
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live",
+            "s2-profile-lang"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-profile-live"
+        },
+        {
+          "type": "controlled-production",
+          "item": "s2-profile-live",
+          "prompt_fa": "در واسا زندگی می‌کنم.",
+          "cues_fi": [
+            "Asun"
+          ],
+          "expected_fi": "Asun Vaasassa.",
+          "accepted_answers": [
+            "Asun Vaasassa."
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-profile-lang"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-profile-lang",
+          "options": [
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live",
+            "s2-profile-lang"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "s2-profile-age"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-profile-age",
+          "options": [
+            "s2-profile-age",
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-profile-name",
+          "options": [
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live",
+            "s2-profile-lang"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-profile-origin"
+        },
+        {
+          "type": "choice",
+          "mode": "cloze",
+          "item": "s2-katu",
+          "options": [
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live",
+            "s2-katu"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-profile-lang"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-olen-suomesta"
+        },
+        {
+          "type": "guided-writing",
+          "expected_items": [
+            "s2-profile-name",
+            "s2-profile-origin",
+            "s2-profile-live",
+            "s2-profile-lang"
+          ],
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "s2-olen-suomesta",
+          "base_fi": "Suomi",
+          "feature_fa": "elatiivi در عبارت مبدأ",
+          "prompt_fa": "شکل نام کشور را در پاسخِ «اهل فنلاند هستم» بنویس.",
+          "frame_fi": "Olen _____.",
+          "expected_fi": "Suomesta",
+          "accepted_answers": [
+            "Suomesta"
+          ],
+          "explanation_fa": "در این عبارت مبدأ، Suomi به صورت Suomesta می‌آید؛ این شکل را با جملهٔ کامل تمرین کن.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-nimeni-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-asun-helsingissa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-suomea"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-englantia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-mika-puhelinnumerosi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-contact-example"
+        },
+        {
+          "type": "short-reading",
+          "item": "s2-profile-reading",
+          "question_item": "s2-profile-name",
+          "options": [
+            "s2-profile-name",
+            "s2-olen-suomesta",
+            "s2-asun-helsingissa",
+            "s2-puhun-englantia"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s2-profile-reading",
+          "question_item": "s2-profile-origin",
+          "options": [
+            "s2-profile-origin",
+            "s2-olen-suomesta",
+            "s2-asun-helsingissa",
+            "s2-puhun-englantia"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s2-profile-reading",
+          "question_item": "s2-profile-live",
+          "options": [
+            "s2-profile-live",
+            "s2-olen-suomesta",
+            "s2-asun-helsingissa",
+            "s2-puhun-englantia"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "s2-profile-reading",
+          "question_item": "s2-profile-lang",
+          "options": [
+            "s2-profile-lang",
+            "s2-olen-suomesta",
+            "s2-asun-helsingissa",
+            "s2-puhun-englantia"
+          ]
+        }
+      ],
+      "review_targets": [
+        "s2-katu",
+        "s2-mika-puhelinnumerosi",
+        "s2-contact-example"
+      ],
+      "activity_count": 27,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l09-can-do",
+            "can_do_fa": "چند جملهٔ کوتاه و پیوسته دربارهٔ یک نفر بفهم و دربارهٔ خودت بساز."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-minun-nimeni-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-olen-suomesta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-olen-iranista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-asun-vaasassa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-asun-helsingissa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-suomea",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-persiaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-englantia",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-profile-name",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-profile-origin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-profile-live",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-profile-lang",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-profile-age",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-katu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-mika-puhelinnumerosi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-contact-example",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در پروفایل کوتاه، عبارت مبدأ «Olen Suomesta.» و محل زندگی «Asun Vaasassa.» را مرور می‌کنیم. پاسخ «Suomesta» در همان جملهٔ آشنا سنجیده می‌شود؛ ساخت صورت‌های تازه ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olen Suomesta.",
+                "fa": "من اهل فنلاند هستم."
+              },
+              {
+                "fi": "Asun Vaasassa.",
+                "fa": "در واسا زندگی می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "s2-olen-suomesta",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "جملهٔ کاملِ آشنای «Puhun persiaa.» را در کنار نام، کشور و محل زندگی می‌نویسیم. این نوشتن راهنمایی‌شده است؛ مکالمه یا نوشتن مستقل ارزیابی نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Puhun persiaa.",
+                "fa": "فارسی صحبت می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "morphology_practice": [
+        {
+          "type": "inflection-production",
+          "item": "s2-olen-suomesta",
+          "base_fi": "Suomi",
+          "feature_fa": "elatiivi در عبارت مبدأ",
+          "prompt_fa": "شکل نام کشور را در پاسخِ «اهل فنلاند هستم» بنویس.",
+          "frame_fi": "Olen _____.",
+          "expected_fi": "Suomesta",
+          "accepted_answers": [
+            "Suomesta"
+          ],
+          "explanation_fa": "در این عبارت مبدأ، Suomi به صورت Suomesta می‌آید؛ این شکل را با جملهٔ کامل تمرین کن.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        }
       ]
     },
     {
@@ -2454,7 +5054,7 @@
       "title_fa": "ایستگاه مرور بخش ۲",
       "objective_fa": "اطلاعات شخصی پایه را ردوبدل کن و افراد نزدیک را معرفی کن.",
       "summary_fa": "پایان بخش ۲، اطلاعات شخصی، خانواده، اعداد و چند عبارت بازیابی‌شده از بخش ۱ را با هم مرور می‌کند.",
-      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ هدف بازیابی سریع شکل‌های کامل و درست است.",
+      "grammar_fa": "«Asun Vaasassa.» و «Olen Iranista.» را از درس‌های قبل مرور می‌کنیم. در تمرین نوشتاریِ محل زندگی، پاسخ کاملِ «Vaasassa» لازم است. با «Me» در جملهٔ آشنای «Me olemme ystäviä.» از «olemme» استفاده می‌کنیم. این مرور همان الگوی درس اول است. ترکیب آشنای «sinun nimesi» را برای نام طرف مقابل بازیابی می‌کنیم؛ این مرورِ مالکیت ساده است، نه صرف کامل ضمیر یا اسم. «Missä asut?» را برای محل زندگی مرور می‌کنیم؛ آن را با پرسش مبدأ «Mistä olet?» اشتباه نکن. «Puhun persiaa.» را از معرفی زبان مرور می‌کنیم. پاسخ «Puhun» در همین جملهٔ آشنا به کار می‌رود.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2592,6 +5192,58 @@
           "accepted_answers": [
             "Puhun persiaa."
           ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-me-olemme",
+          "prompt_fi": "Me _____ ystäviä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olemme"
+          ],
+          "expected_fi": "Me olemme ystäviä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-sinun-nimesi",
+          "prompt_fi": "_____ nimesi",
+          "prompt_fa": "نام تو",
+          "accepted_answers": [
+            "sinun"
+          ],
+          "expected_fi": "sinun nimesi",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-missa-asut",
+          "prompt_fi": "_____ asut?",
+          "prompt_fa": "کجا زندگی می‌کنی؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä asut?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-puhun",
+          "prompt_fi": "_____ persiaa.",
+          "prompt_fa": "من فارسی صحبت می‌کنم.",
+          "accepted_answers": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2606,9 +5258,860 @@
           "accepted_answers": [
             "Vaasassa"
           ],
-          "explanation_fa": "در این جمله Vaasa به صورت inessiivi می‌آید: Vaasa → Vaasassa."
+          "explanation_fa": "در این جمله Vaasa به صورت inessiivi می‌آید: Vaasa → Vaasassa.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
+      ],
+      "activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-hei"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "s2-han",
+          "options": [
+            "s2-hei",
+            "s2-han",
+            "s2-olen-iranista",
+            "s2-mista-olet"
+          ]
+        },
+        {
+          "type": "sentence-order",
+          "item": "s2-olen-iranista",
+          "tokens": [
+            "Iranista.",
+            "Olen"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Olen Iranista.",
+          "expected_fa": "من اهل ایران هستم."
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-mista-olet",
+          "prompt_fi": "Mistä _____? Olen Iranista.",
+          "accepted_answers": [
+            "olet"
+          ],
+          "expected_fi": "Mistä olet? Olen Iranista."
+        },
+        {
+          "type": "controlled-production",
+          "item": "s2-puhun-persiaa",
+          "prompt_fa": "فارسی صحبت می‌کنم.",
+          "cues_fi": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "accepted_answers": [
+            "Puhun persiaa."
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "s2-asun-vaasassa",
+          "base_fi": "Vaasa",
+          "feature_fa": "inessiivi: «در واسا»",
+          "prompt_fa": "شکل درست Vaasa را برای بیان محل زندگی بنویس.",
+          "frame_fi": "Asun _____.",
+          "expected_fi": "Vaasassa",
+          "accepted_answers": [
+            "Vaasassa"
+          ],
+          "explanation_fa": "در این جمله Vaasa به صورت inessiivi می‌آید: Vaasa → Vaasassa."
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-missa-asut",
+          "options": [
+            "s2-hei",
+            "s2-minun-nimeni-on",
+            "s2-missa-asut",
+            "s2-tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "s2-aiti",
+          "options": [
+            "s2-hei",
+            "s2-minun-nimeni-on",
+            "s2-tama",
+            "s2-aiti"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-tama-on-minun-aitini",
+          "options": [
+            "s2-tama-on-minun-aitini",
+            "s2-hei",
+            "s2-minun-nimeni-on",
+            "s2-tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "s2-minun",
+          "options": [
+            "s2-hei",
+            "s2-minun",
+            "s2-minun-nimeni-on",
+            "s2-tama"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kaksitoista"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-kuinka-vanha",
+          "options": [
+            "s2-hei",
+            "s2-minun-nimeni-on",
+            "s2-tama",
+            "s2-kuinka-vanha"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-puhelinnumero",
+          "options": [
+            "s2-puhelinnumero",
+            "s2-hei",
+            "s2-minun-nimeni-on",
+            "s2-tama"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-mika-puhelinnumerosi",
+          "options": [
+            "s2-hei",
+            "s2-mika-puhelinnumerosi",
+            "s2-minun-nimeni-on",
+            "s2-tama"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-profile-name"
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-me-olemme",
+          "prompt_fi": "Me _____ ystäviä.",
+          "prompt_fa": "صورت مناسب را در عبارت آشنا بنویس.",
+          "accepted_answers": [
+            "olemme"
+          ],
+          "expected_fi": "Me olemme ystäviä.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-sinun-nimesi",
+          "prompt_fi": "_____ nimesi",
+          "prompt_fa": "نام تو",
+          "accepted_answers": [
+            "sinun"
+          ],
+          "expected_fi": "sinun nimesi",
+          "grammar_concept_ids": [
+            "a11-pronouns"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-missa-asut",
+          "prompt_fi": "_____ asut?",
+          "prompt_fa": "کجا زندگی می‌کنی؟",
+          "accepted_answers": [
+            "Missä"
+          ],
+          "expected_fi": "Missä asut?",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "expression-completion",
+          "item": "s2-puhun",
+          "prompt_fi": "_____ persiaa.",
+          "prompt_fa": "من فارسی صحبت می‌کنم.",
+          "accepted_answers": [
+            "Puhun"
+          ],
+          "expected_fi": "Puhun persiaa.",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-katu"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-contact-example"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-me"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-te"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-han-on"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-te-olette"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-he-ovat"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-iran"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-mista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-persia"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-englanti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-puhun-vahan-suomea"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-missa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-kaupunki"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-vaasa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-asun"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-perhe"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-isa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minulla-on-lapsi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-sinun"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-kotini"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kaksi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kolme"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-nolla"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-nelja"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-viisi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kuusi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-seitseman"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kahdeksan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yhdeksan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kymmenen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-yksitoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kolmetoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-neljatoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-viisitoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kuusitoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-seitsemantoista"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-num-kahdeksantoista"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "s2-age-frame",
+          "options": [
+            "s2-age-frame",
+            "s2-mista-olet",
+            "s2-missa-asut",
+            "s2-kuinka-vanha"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-numero"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-osoite"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "s2-minun-numeroni"
+        }
+      ],
+      "review_targets": [
+        "s2-katu",
+        "s2-mika-puhelinnumerosi",
+        "s2-contact-example"
+      ],
+      "activity_count": 62,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.1-s2-l10-can-do",
+            "can_do_fa": "اطلاعات شخصی پایه را ردوبدل کن و افراد نزدیک را معرفی کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "s2-me-olemme",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-sinun-nimesi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-me",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-te",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-han-on",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-te-olette",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-he-ovat",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-iran",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-mista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-persia",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-englanti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-vahan-suomea",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-missa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-kaupunki",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-vaasa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-asun",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-perhe",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-isa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-minulla-on-lapsi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-sinun",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-minun-kotini",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-yksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kaksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kolme",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-nolla",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-nelja",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-viisi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kuusi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-seitseman",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kahdeksan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-yhdeksan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kymmenen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-yksitoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kolmetoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-neljatoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-viisitoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kuusitoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-seitsemantoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kahdeksantoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-age-frame",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-numero",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-osoite",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-minun-numeroni",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-katu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-mika-puhelinnumerosi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-contact-example",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-hei",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-han",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-olen-iranista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-mista-olet",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhun-persiaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-asun-vaasassa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-missa-asut",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-aiti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-tama-on-minun-aitini",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-minun",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-num-kaksitoista",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-kuinka-vanha",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-puhelinnumero",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "s2-profile-name",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "«Asun Vaasassa.» و «Olen Iranista.» را از درس‌های قبل مرور می‌کنیم. در تمرین نوشتاریِ محل زندگی، پاسخ کاملِ «Vaasassa» لازم است.",
+            "examples": [
+              {
+                "fi": "Asun Vaasassa.",
+                "fa": "در واسا زندگی می‌کنم."
+              },
+              {
+                "fi": "Olen Iranista.",
+                "fa": "من اهل ایران هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "s2-asun-vaasassa",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "با «Me» در جملهٔ آشنای «Me olemme ystäviä.» از «olemme» استفاده می‌کنیم. این مرور همان الگوی درس اول است.",
+            "examples": [
+              {
+                "fi": "Me olemme ystäviä.",
+                "fa": "ما دوست هستیم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-me-olemme",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-pronouns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "ترکیب آشنای «sinun nimesi» را برای نام طرف مقابل بازیابی می‌کنیم؛ این مرورِ مالکیت ساده است، نه صرف کامل ضمیر یا اسم.",
+            "examples": [
+              {
+                "fi": "Sinun nimesi on Leo.",
+                "fa": "نام تو لئو است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-sinun-nimesi",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Missä asut?» را برای محل زندگی مرور می‌کنیم؛ آن را با پرسش مبدأ «Mistä olet?» اشتباه نکن.",
+            "examples": [
+              {
+                "fi": "Missä asut? Asun Vaasassa.",
+                "fa": "کجا زندگی می‌کنی؟ در واسا زندگی می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-missa-asut",
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "«Puhun persiaa.» را از معرفی زبان مرور می‌کنیم. پاسخ «Puhun» در همین جملهٔ آشنا به کار می‌رود.",
+            "examples": [
+              {
+                "fi": "Puhun persiaa.",
+                "fa": "فارسی صحبت می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "expression-completion",
+                "item_id": "s2-puhun",
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      },
+      "practice_targets": [
+        "s2-me-olemme",
+        "s2-sinun-nimesi",
+        "s2-puhun",
+        "s2-me",
+        "s2-te",
+        "s2-han-on",
+        "s2-te-olette",
+        "s2-he-ovat",
+        "s2-iran",
+        "s2-mista",
+        "s2-persia",
+        "s2-englanti",
+        "s2-puhun-vahan-suomea",
+        "s2-missa",
+        "s2-kaupunki",
+        "s2-vaasa",
+        "s2-asun",
+        "s2-perhe",
+        "s2-isa",
+        "s2-minulla-on-lapsi",
+        "s2-sinun",
+        "s2-minun-kotini",
+        "s2-num-yksi",
+        "s2-num-kaksi",
+        "s2-num-kolme",
+        "s2-num-nolla",
+        "s2-num-nelja",
+        "s2-num-viisi",
+        "s2-num-kuusi",
+        "s2-num-seitseman",
+        "s2-num-kahdeksan",
+        "s2-num-yhdeksan",
+        "s2-num-kymmenen",
+        "s2-num-yksitoista",
+        "s2-num-kolmetoista",
+        "s2-num-neljatoista",
+        "s2-num-viisitoista",
+        "s2-num-kuusitoista",
+        "s2-num-seitsemantoista",
+        "s2-num-kahdeksantoista",
+        "s2-age-frame",
+        "s2-numero",
+        "s2-osoite",
+        "s2-minun-numeroni"
       ]
     }
-  ]
+  ],
+  "prior_target_refs": {
+    "s2-hei": {
+      "section_id": "a1.1-section-1",
+      "item_id": "hei"
+    }
+  }
 }

@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- [A1.1 Section 2 acceptance](A11-SECTION2-ACCEPTANCE.md) / [فارسی](A11-SECTION2-ACCEPTANCE.fa.md) — complete section objectives, assessment and recycling.
 - [Lesson objectives contract](LESSON-OBJECTIVES-CONTRACT.md) — implemented metadata and validation rules.
 - [P1 grammar contract draft](P1-GRAMMAR-CONTRACT-DRAFT.md) — historical design rationale; prefer the implemented contract above.
 

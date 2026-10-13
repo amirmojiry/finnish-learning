@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.38.0] - 2026-10-13
+
+### Added
+
+- Complete all ten A1.1 Section 2 overviews and bounded grammar evidence, carrying prerequisite and surface-review context from Section 1.
+- Repair all 51 legacy declared positive-answer gaps; every one of the 77 newly introduced surfaces/expressions now has later retrieval. Assess and review the complete 0–20 number inventory separately from its reference grid.
+- Introduce full personal-profile frames before review-only lessons 9–10, add four profile reading questions and supported four-sentence writing, and reuse explicit origin, city, language and ownership examples without suffix synthesis or complete paradigm claims.
+- Add deterministic Section 2 acceptance snapshots, paired Persian documentation and regression checks; retain all original item records, stable lesson IDs, historical scores, core practice and fifteen checkpoint targets. Lessons vary from 19 to 62 activities (270 total). Corrected lesson scope may change listening distractors.
+- Replace learner-facing runtime implementation notes with Persian language explanations. Record the verified Hei/Hei! punctuation-equivalent review reference without merging source identities, senses or SRS history.
+
 ## [1.37.0] - 2026-10-13
 
 ### Added
