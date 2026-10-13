@@ -1,10 +1,10 @@
 {
   "name": "finnish-learning",
-  "version": "1.35.0",
+  "version": "1.35.1",
   "private": true,
   "description": "A Persian-first Finnish vocabulary learning web application.",
   "scripts": {
-    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:js": "node --test tests/*.test.cjs",
     "test:data": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "build:vocabulary": "node scripts/build-vocabulary.mjs",
@@ -26,7 +26,9 @@
     "lesson:composition:write": "node scripts/audit-lesson-composition.cjs --write",
     "parole:plan:check": "node scripts/plan-parole-expansion.cjs --check",
     "parole:plan:json": "node scripts/plan-parole-expansion.cjs --json",
-    "parole:plan:markdown": "node scripts/plan-parole-expansion.cjs --markdown"
+    "parole:plan:markdown": "node scripts/plan-parole-expansion.cjs --markdown",
+    "course:review:check": "node scripts/build-course-review-map.cjs --check",
+    "course:review:write": "node scripts/build-course-review-map.cjs --write"
   },
   "engines": {
     "node": ">=20",
