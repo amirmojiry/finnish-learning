@@ -63,8 +63,8 @@ test('all forty A1.1 lessons contain reviewed structured sentence-building pract
 
   assert.deepEqual(Object.fromEntries(counts), {
     'sentence-order': 16,
-    'expression-completion': 46,
-    'controlled-production': 16,
+    'expression-completion': 54,
+    'controlled-production': 17,
   });
 });
 
@@ -223,7 +223,7 @@ test('typed structured practice reuses fuzzy grading and character-level feedbac
   assert.match(source, /kلمات|کلمات/);
   assert.match(source, /بخش حذف‌شدهٔ عبارت را کامل کن/);
   assert.match(source, /با راهنماها جملهٔ فنلاندی را بنویس/);
-  assert.match(source, /gradeTypedAnswer\(expected, input\.value\)/);
+  assert.match(source, /gradeActivityAnswer\(activity, expected, input\.value\)/);
   assert.match(source, /createTypedDifference/);
 });
 
@@ -463,4 +463,22 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
     assert.equal(input.disabled, true);
     assert.equal(input.focused, true);
   }
+});
+
+test('grammar cloze DOM grading rejects the wrong form while retaining Finnish keyboard tolerance', () => {
+  const activity = rawSections[2].lessons[4].structured_practice.find(a => a.item === 's3-syon');
+  assert.equal(activity.answer_policy, 'morphology');
+  for (const [answer, correct] of [['syö', false], ['syön', true], ['syon', true]]) {
+    const { document, windowObject, createButton } = fakeDomHarness();
+    const card = document.createElement('div'), results = [];
+    course.renderStructuredPracticeActivity({ document, windowObject, createButton, card,
+      feedback: document.createElement('div'), activity, item: rawSections[2].items['s3-syon'],
+      nextActivity() {}, showFeedback() {}, recordResult(result) { results.push(result); } });
+    const form = card.children[2];
+    form.children[0].value = answer;
+    form.submit();
+    assert.deepEqual(results, [correct], answer);
+  }
+  const ordinary = course.gradeActivityAnswer({ type: 'expression-completion' }, { surface_form: 'nimesi', accepted_answers: ['nimesi'] }, 'nimes');
+  assert.equal(ordinary.accepted, true);
 });

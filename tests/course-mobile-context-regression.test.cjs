@@ -11,10 +11,10 @@ const section4 = read('data/course/a1.1-section-4.json');
 const courseSource = fs.readFileSync(path.join(root, 'course.js'), 'utf8');
 const courseCss = fs.readFileSync(path.join(root, 'css/course.css'), 'utf8');
 
-test('A1.1 multi-sentence final meaning choice keeps all four selectable answers', () => {
+test('A1.1 multi-sentence routine meaning choice keeps all four selectable answers', () => {
   const lesson = section3.lessons.find(row => row.id === 'section-3-lesson-9');
   assert.ok(lesson);
-  const last = lesson.activities.at(-1);
+  const last = lesson.activities.find(a => a.type === 'choice' && a.mode === 'meaning' && a.item === 's3-routine-reading');
   assert.equal(last.type, 'choice');
   assert.equal(last.mode, 'meaning');
   assert.equal(last.item, 's3-routine-reading');

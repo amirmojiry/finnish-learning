@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.38.0`
+- Version: `1.39.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -159,3 +159,5 @@ A1.1 also assesses `kuka` for person identity versus `mikä` for an object's nam
 A1.1 Section 1 now has canonical overviews for all ten lessons and a reproducible acceptance check: every declared target has positive-answer coverage, introduced forms are not relabelled as new, and later lexical/grammar review is traced. Greetings and politeness remain honestly formulaic. Run `npm run section:a11:check`; see the [acceptance report](docs/A11-SECTION1-ACCEPTANCE.md). Lesson lengths vary with outcomes; learner scores and the original checkpoint target set are preserved.
 
 A1.1 Section 2 also has complete ten-lesson overviews and a scoped acceptance gate: all 77 introduced surfaces/expressions have later positive retrieval, all numbers 0–20 are assessed, and profile review combines four reading facts with supported writing. Original checkpoint targets and saved scores remain intact; the section has 270 activities. Run `npm run section:a11:s2:check`; see the [Section 2 report](docs/A11-SECTION2-ACCEPTANCE.md). These opportunities do not certify grammar mastery or CEFR level.
+
+A1.1 Section 3 now has complete ten-lesson overviews and acceptance checks for weekdays, whole hours, routine and all five explicit first-person negative mappings. All 80 introduced surfaces/expressions have later positive retrieval; the section has 282 activities and preserves original checkpoint targets and scores. Wrong forms such as `En syön` are rejected in negative transformations and explicitly marked grammatical answer tasks, while Finnish keyboard tolerance is retained. Run `npm run section:a11:s3:check`; see the [Section 3 report](docs/A11-SECTION3-ACCEPTANCE.md). Routine reading/writing remains supported practice, not CEFR certification.

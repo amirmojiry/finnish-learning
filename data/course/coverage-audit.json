@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1637,
+    "graded_activity_slots": 1758,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 373,
+    "assessed_again_after_earlier_reference": 429,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 18,
-    "lessons_without_explicit_grammar_concept_ids": 102,
-    "graded_grammar_related_slots": 356,
-    "graded_morphology_slots": 73,
-    "lessons_with_declared_unassessed_forms": 96,
+    "lessons_without_explicit_grammar_concept_ids": 92,
+    "graded_grammar_related_slots": 372,
+    "graded_morphology_slots": 74,
+    "lessons_with_declared_unassessed_forms": 89,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -54,9 +54,9 @@
       "level": "A1.1",
       "id": "a1.1-section-3",
       "lessons": 10,
-      "graded_slots": 89,
-      "unassessed_target_forms": 22,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 210,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.1",
@@ -2560,11 +2560,13 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -2580,7 +2582,7 @@
         "topic": 7,
         "expressions": 2
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "huomenna on tiistai.",
@@ -2616,6 +2618,8 @@
           "tänään on maanantai."
         ],
         "correct_answer": [
+          "huomenna",
+          "huomenna on …",
           "huomenna on tiistai.",
           "keskiviikko",
           "lauantai",
@@ -2624,11 +2628,16 @@
           "sunnuntai",
           "tiistai",
           "torstai",
+          "tänään on …",
           "tänään on maanantai."
         ],
-        "receptive_count": 7,
-        "productive_count": 4,
-        "later_correct_retrieval": [],
+        "receptive_count": 9,
+        "productive_count": 5,
+        "later_correct_retrieval": [
+          "huomenna",
+          "huomenna on …",
+          "tänään on …"
+        ],
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
@@ -2648,22 +2657,26 @@
           "tänään on maanantai."
         ],
         "authored_new_forms": [
+          "huomenna on tiistai.",
           "keskiviikko",
           "lauantai",
           "maanantai",
           "perjantai",
           "sunnuntai",
           "tiistai",
-          "torstai"
+          "torstai",
+          "tänään on maanantai."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -2679,13 +2692,16 @@
         "topic": 3,
         "expressions": 2
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "aamu",
           "ilta",
           "kello",
           "kello on kaksi.",
+          "kello on kolme.",
+          "kello on neljä.",
+          "kello on viisi.",
           "kello on yksi."
         ],
         "first_referenced": [
@@ -2693,6 +2709,9 @@
           "ilta",
           "kello",
           "kello on kaksi.",
+          "kello on kolme.",
+          "kello on neljä.",
+          "kello on viisi.",
           "kello on yksi."
         ],
         "introduced": [
@@ -2700,26 +2719,33 @@
           "ilta",
           "kello",
           "kello on kaksi.",
-          "kello on yksi."
-        ],
-        "correct_answer": [
-          "aamu",
-          "ilta",
-          "kello on kaksi.",
           "kello on kolme.",
           "kello on neljä.",
           "kello on viisi.",
           "kello on yksi."
         ],
+        "correct_answer": [
+          "aamu",
+          "ilta",
+          "kello",
+          "kello on kaksi.",
+          "kello on kolme.",
+          "kello on neljä.",
+          "kello on viisi.",
+          "kello on yksi.",
+          "lauantai",
+          "perjantai",
+          "sunnuntai"
+        ],
         "receptive_count": 7,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "kello"
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "lauantai",
+          "perjantai",
+          "sunnuntai"
         ],
-        "teach_only": [
-          "kello"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -2737,16 +2763,21 @@
           "ilta",
           "kello",
           "kello on kaksi.",
+          "kello on kolme.",
+          "kello on neljä.",
+          "kello on viisi.",
           "kello on yksi."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -2762,7 +2793,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "aamulla",
@@ -2801,24 +2832,25 @@
           "aamulla",
           "aamulla.",
           "illalla",
+          "illalla.",
+          "kello",
+          "kello on kaksi.",
+          "kello on yksi.",
+          "nyt",
           "päivällä",
-          "yöllä"
+          "päivällä.",
+          "yöllä",
+          "yöllä."
         ],
         "receptive_count": 3,
-        "productive_count": 2,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "illalla.",
-          "nyt",
-          "päivällä.",
-          "yöllä."
+        "productive_count": 9,
+        "later_correct_retrieval": [
+          "kello",
+          "kello on kaksi.",
+          "kello on yksi."
         ],
-        "teach_only": [
-          "illalla.",
-          "nyt",
-          "päivällä.",
-          "yöllä."
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -2838,20 +2870,28 @@
         ],
         "authored_new_forms": [
           "aamulla",
+          "aamulla.",
           "illalla",
+          "illalla.",
           "nyt",
           "päivällä",
-          "yöllä"
+          "päivällä.",
+          "yöllä",
+          "yöllä."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -2866,68 +2906,100 @@
         "topic": 7,
         "expressions": 3
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 18,
       "lexical": {
         "declared_forms": [
+          "aamulla …",
+          "aamulla syön.",
+          "illalla …",
           "juon",
+          "kahvia",
+          "kotiin",
           "menen",
           "menen kotiin.",
           "minä juon kahvia.",
           "minä syön.",
           "nukun",
           "opiskelen",
+          "päivällä …",
+          "päivällä opiskelen.",
           "syön",
           "tulen",
-          "työskentelen"
+          "työskentelen",
+          "yöllä nukun."
         ],
         "first_referenced": [
+          "aamulla …",
+          "aamulla syön.",
+          "illalla …",
           "juon",
+          "kahvia",
+          "kotiin",
           "menen",
           "menen kotiin.",
           "minä juon kahvia.",
           "minä syön.",
           "nukun",
           "opiskelen",
+          "päivällä …",
+          "päivällä opiskelen.",
           "syön",
           "tulen",
-          "työskentelen"
+          "työskentelen",
+          "yöllä nukun."
         ],
         "introduced": [
+          "aamulla …",
+          "aamulla syön.",
+          "illalla …",
           "juon",
+          "kahvia",
+          "kotiin",
           "menen",
           "menen kotiin.",
           "minä juon kahvia.",
           "minä syön.",
           "nukun",
           "opiskelen",
+          "päivällä …",
+          "päivällä opiskelen.",
           "syön",
           "tulen",
-          "työskentelen"
+          "työskentelen",
+          "yöllä nukun."
         ],
         "correct_answer": [
+          "aamulla …",
+          "aamulla syön.",
+          "illalla",
+          "illalla …",
+          "juon",
+          "kahvia",
+          "kotiin",
+          "menen",
           "menen kotiin.",
           "minä juon kahvia.",
           "minä syön.",
           "nukun",
-          "työskentelen"
-        ],
-        "receptive_count": 1,
-        "productive_count": 4,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "juon",
-          "menen",
           "opiskelen",
+          "päivällä",
+          "päivällä …",
+          "päivällä opiskelen.",
           "syön",
-          "tulen"
+          "tulen",
+          "työskentelen",
+          "yöllä",
+          "yöllä nukun."
         ],
-        "teach_only": [
-          "juon",
-          "menen",
-          "opiskelen",
-          "syön",
-          "tulen"
+        "receptive_count": 4,
+        "productive_count": 17,
+        "later_correct_retrieval": [
+          "illalla",
+          "päivällä",
+          "yöllä"
         ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -2946,23 +3018,40 @@
           "minä syön."
         ],
         "authored_new_forms": [
+          "aamulla …",
+          "aamulla syön.",
+          "illalla …",
           "juon",
+          "kahvia",
+          "kotiin",
           "menen",
+          "menen kotiin.",
+          "minä juon kahvia.",
+          "minä syön.",
           "nukun",
           "opiskelen",
+          "päivällä …",
+          "päivällä opiskelen.",
           "syön",
           "tulen",
-          "työskentelen"
+          "työskentelen",
+          "yöllä nukun."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
-        "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 5,
+        "morphology_slots": 2,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -2977,10 +3066,13 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
+          "aamulla menen kouluun.",
+          "illalla tulen kotiin.",
           "koulu",
+          "kouluun",
           "mitä",
           "mitä teet?",
           "opiskeletko?",
@@ -2989,7 +3081,10 @@
           "työskenteletkö?"
         ],
         "first_referenced": [
+          "aamulla menen kouluun.",
+          "illalla tulen kotiin.",
           "koulu",
+          "kouluun",
           "mitä teet?",
           "opiskeletko?",
           "teet",
@@ -2997,7 +3092,10 @@
           "työskenteletkö?"
         ],
         "introduced": [
+          "aamulla menen kouluun.",
+          "illalla tulen kotiin.",
           "koulu",
+          "kouluun",
           "mitä",
           "mitä teet?",
           "opiskeletko?",
@@ -3006,22 +3104,30 @@
           "työskenteletkö?"
         ],
         "correct_answer": [
+          "aamulla menen kouluun.",
+          "illalla tulen kotiin.",
           "koulu",
+          "kouluun",
+          "menen",
+          "mitä",
           "mitä teet?",
           "opiskeletko?",
           "teet",
+          "tulen",
           "työ",
+          "työskentelen",
           "työskenteletkö?"
         ],
         "receptive_count": 3,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "mitä"
+        "productive_count": 11,
+        "later_correct_retrieval": [
+          "menen",
+          "mitä",
+          "tulen",
+          "työskentelen"
         ],
-        "teach_only": [
-          "mitä"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -3038,22 +3144,30 @@
           "työskenteletkö?"
         ],
         "authored_new_forms": [
+          "aamulla menen kouluun.",
+          "illalla tulen kotiin.",
           "koulu",
-          "mitä",
+          "kouluun",
           "mitä teet?",
           "opiskeletko?",
           "teet",
-          "työ"
+          "työ",
+          "työskenteletkö?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-present-chunks",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -3068,58 +3182,93 @@
         "topic": 0,
         "expressions": 5
       },
-      "authored_new_targets": 1,
+      "authored_new_targets": 15,
       "lexical": {
         "declared_forms": [
           "en",
-          "minä juon. → en juo.",
-          "minä nukun. → en nuku.",
-          "minä opiskelen. → en opiskele.",
-          "minä syön. → en syö.",
-          "minä työskentelen. → en työskentele."
-        ],
-        "first_referenced": [
-          "minä juon. → en juo.",
-          "minä nukun. → en nuku.",
-          "minä opiskelen. → en opiskele.",
-          "minä syön. → en syö.",
-          "minä työskentelen. → en työskentele."
-        ],
-        "introduced": [
-          "en",
-          "minä juon. → en juo.",
-          "minä nukun. → en nuku.",
-          "minä opiskelen. → en opiskele.",
-          "minä syön. → en syö.",
-          "minä työskentelen. → en työskentele."
-        ],
-        "correct_answer": [
           "en juo.",
           "en nuku.",
           "en opiskele.",
           "en syö.",
-          "en työskentele."
-        ],
-        "receptive_count": 2,
-        "productive_count": 5,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "en",
+          "en työskentele.",
+          "juo",
           "minä juon. → en juo.",
           "minä nukun. → en nuku.",
           "minä opiskelen. → en opiskele.",
           "minä syön. → en syö.",
-          "minä työskentelen. → en työskentele."
+          "minä työskentelen. → en työskentele.",
+          "nuku",
+          "opiskele",
+          "syö",
+          "työskentele"
         ],
-        "teach_only": [
-          "en",
+        "first_referenced": [
+          "en juo.",
+          "en nuku.",
+          "en opiskele.",
+          "en syö.",
+          "en työskentele.",
+          "juo",
           "minä juon. → en juo.",
           "minä nukun. → en nuku.",
           "minä opiskelen. → en opiskele.",
           "minä syön. → en syö.",
-          "minä työskentelen. → en työskentele."
+          "minä työskentelen. → en työskentele.",
+          "nuku",
+          "opiskele",
+          "syö",
+          "työskentele"
         ],
-        "distractor_only_count": 2,
+        "introduced": [
+          "en",
+          "en juo.",
+          "en nuku.",
+          "en opiskele.",
+          "en syö.",
+          "en työskentele.",
+          "juo",
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele.",
+          "nuku",
+          "opiskele",
+          "syö",
+          "työskentele"
+        ],
+        "correct_answer": [
+          "en",
+          "en juo.",
+          "en nuku.",
+          "en opiskele.",
+          "en syö.",
+          "en työskentele.",
+          "juo",
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele.",
+          "mitä teet?",
+          "nuku",
+          "opiskele",
+          "opiskeletko?",
+          "syö",
+          "teet",
+          "työskentele"
+        ],
+        "receptive_count": 7,
+        "productive_count": 14,
+        "later_correct_retrieval": [
+          "en",
+          "mitä teet?",
+          "opiskeletko?",
+          "teet"
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
           "en"
@@ -3133,17 +3282,35 @@
           "minä työskentelen. → en työskentele."
         ],
         "authored_new_forms": [
-          "en"
+          "en juo.",
+          "en nuku.",
+          "en opiskele.",
+          "en syö.",
+          "en työskentele.",
+          "juo",
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele.",
+          "nuku",
+          "opiskele",
+          "syö",
+          "työskentele"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-negation"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 6,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -3158,15 +3325,24 @@
         "topic": 2,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
+          "aamulla syön.",
+          "aamulla.",
           "aika",
           "huomenna.",
+          "illalla tulen kotiin.",
+          "illalla.",
           "kello kolme.",
           "milloin",
           "milloin?",
-          "tänään."
+          "päivällä opiskelen.",
+          "päivällä.",
+          "syön kello kolme.",
+          "tänään.",
+          "yöllä nukun.",
+          "yöllä."
         ],
         "first_referenced": [
           "aika",
@@ -3174,6 +3350,7 @@
           "kello kolme.",
           "milloin",
           "milloin?",
+          "syön kello kolme.",
           "tänään."
         ],
         "introduced": [
@@ -3182,34 +3359,46 @@
           "kello kolme.",
           "milloin",
           "milloin?",
+          "syön kello kolme.",
           "tänään."
         ],
         "correct_answer": [
+          "aamulla syön.",
           "aamulla.",
+          "aika",
+          "en",
           "huomenna.",
+          "illalla tulen kotiin.",
           "illalla.",
           "kello kolme.",
+          "milloin",
           "milloin?",
+          "mitä teet?",
+          "opiskeletko?",
+          "päivällä opiskelen.",
           "päivällä.",
+          "syön kello kolme.",
           "tänään.",
+          "yöllä nukun.",
           "yöllä."
         ],
         "receptive_count": 6,
-        "productive_count": 3,
+        "productive_count": 13,
         "later_correct_retrieval": [
+          "aamulla syön.",
           "aamulla.",
+          "en",
+          "illalla tulen kotiin.",
           "illalla.",
+          "mitä teet?",
+          "opiskeletko?",
+          "päivällä opiskelen.",
           "päivällä.",
+          "yöllä nukun.",
           "yöllä."
         ],
-        "declared_unassessed": [
-          "aika",
-          "milloin"
-        ],
-        "teach_only": [
-          "aika",
-          "milloin"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -3229,17 +3418,22 @@
           "kello kolme.",
           "milloin",
           "milloin?",
+          "syön kello kolme.",
           "tänään."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -3257,15 +3451,40 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "aamu",
           "aamulla …",
+          "aamulla menen kouluun.",
+          "aamulla syön.",
+          "eilen",
+          "en opiskele.",
+          "huomenna on tiistai.",
           "illalla …",
-          "päivällä …"
+          "illalla tulen kotiin.",
+          "ilta",
+          "juon",
+          "kahvia",
+          "kello on kolme.",
+          "kello on viisi.",
+          "keskiviikko",
+          "kotiin",
+          "koulu",
+          "kouluun",
+          "menen kotiin.",
+          "minä juon kahvia.",
+          "minä syön.",
+          "nukun",
+          "nyt",
+          "päivällä …",
+          "päivällä opiskelen.",
+          "tiistai",
+          "torstai",
+          "työ",
+          "työskenteletkö?",
+          "tänään on maanantai.",
+          "yöllä",
+          "yöllä nukun."
         ],
-        "first_referenced": [
-          "aamulla …",
-          "illalla …",
-          "päivällä …"
-        ],
+        "first_referenced": [],
         "introduced": [
           "aamulla …",
           "aamulla syön. aamulla menen kouluun. päivällä opiskelen. illalla tulen kotiin. yöllä nukun.",
@@ -3273,27 +3492,85 @@
           "päivällä …"
         ],
         "correct_answer": [
+          "aamu",
+          "aamulla …",
           "aamulla menen kouluun.",
           "aamulla syön.",
           "aamulla syön. aamulla menen kouluun. päivällä opiskelen. illalla tulen kotiin. yöllä nukun.",
+          "eilen",
+          "en opiskele.",
+          "huomenna on tiistai.",
+          "huomenna.",
+          "illalla …",
           "illalla tulen kotiin.",
+          "ilta",
+          "juon",
+          "kahvia",
+          "kello kolme.",
+          "kello on kolme.",
+          "kello on viisi.",
+          "keskiviikko",
+          "kotiin",
+          "koulu",
+          "kouluun",
+          "menen kotiin.",
+          "minä juon kahvia.",
+          "minä syön.",
+          "nukun",
+          "nyt",
+          "päivällä …",
           "päivällä opiskelen.",
+          "tiistai",
+          "torstai",
+          "työ",
+          "työskenteletkö?",
+          "tänään on maanantai.",
+          "tänään.",
+          "yöllä",
           "yöllä nukun."
         ],
-        "receptive_count": 6,
-        "productive_count": 4,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
+        "receptive_count": 9,
+        "productive_count": 31,
+        "later_correct_retrieval": [
+          "aamu",
           "aamulla …",
+          "aamulla menen kouluun.",
+          "aamulla syön.",
+          "eilen",
+          "en opiskele.",
+          "huomenna on tiistai.",
+          "huomenna.",
           "illalla …",
-          "päivällä …"
+          "illalla tulen kotiin.",
+          "ilta",
+          "juon",
+          "kahvia",
+          "kello kolme.",
+          "kello on kolme.",
+          "kello on viisi.",
+          "keskiviikko",
+          "kotiin",
+          "koulu",
+          "kouluun",
+          "menen kotiin.",
+          "minä juon kahvia.",
+          "minä syön.",
+          "nukun",
+          "nyt",
+          "päivällä …",
+          "päivällä opiskelen.",
+          "tiistai",
+          "torstai",
+          "työ",
+          "työskenteletkö?",
+          "tänään on maanantai.",
+          "tänään.",
+          "yöllä",
+          "yöllä nukun."
         ],
-        "teach_only": [
-          "aamulla …",
-          "illalla …",
-          "päivällä …"
-        ],
-        "distractor_only_count": 0,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 1,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [],
@@ -3306,12 +3583,19 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-present-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -3330,58 +3614,109 @@
       "lexical": {
         "declared_forms": [
           "aamulla",
+          "aika",
+          "en juo.",
           "en nuku.",
+          "en opiskele.",
           "en syö.",
+          "en työskentele.",
+          "juo",
           "kello kolme.",
           "kello on kaksi.",
           "kello on neljä.",
           "maanantai",
+          "milloin",
           "milloin?",
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele.",
           "mitä teet?",
+          "nuku",
+          "opiskele",
           "opiskelen",
           "perjantai",
           "päivällä opiskelen.",
+          "syö",
           "syön",
+          "syön kello kolme.",
+          "työskentele",
           "tänään",
           "yöllä"
         ],
-        "first_referenced": [
-          "en nuku.",
-          "en syö.",
-          "kello on neljä.",
-          "päivällä opiskelen."
-        ],
+        "first_referenced": [],
         "introduced": [],
         "correct_answer": [
           "aamulla",
+          "aika",
+          "en juo.",
           "en nuku.",
+          "en opiskele.",
           "en syö.",
+          "en työskentele.",
+          "huomenna.",
+          "juo",
           "kello kolme.",
           "kello on kaksi.",
           "kello on neljä.",
           "maanantai",
+          "milloin",
           "milloin?",
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele.",
           "mitä teet?",
+          "nuku",
+          "opiskele",
           "opiskelen",
           "perjantai",
           "päivällä opiskelen.",
+          "syö",
           "syön",
+          "syön kello kolme.",
+          "työskentele",
           "tänään",
+          "tänään.",
           "yöllä"
         ],
-        "receptive_count": 8,
-        "productive_count": 7,
+        "receptive_count": 13,
+        "productive_count": 23,
         "later_correct_retrieval": [
           "aamulla",
+          "aika",
+          "en juo.",
+          "en nuku.",
+          "en opiskele.",
+          "en syö.",
+          "en työskentele.",
+          "huomenna.",
+          "juo",
           "kello kolme.",
           "kello on kaksi.",
+          "kello on neljä.",
           "maanantai",
+          "milloin",
           "milloin?",
+          "minä juon. → en juo.",
+          "minä nukun. → en nuku.",
+          "minä opiskelen. → en opiskele.",
+          "minä syön. → en syö.",
+          "minä työskentelen. → en työskentele.",
           "mitä teet?",
+          "nuku",
+          "opiskele",
           "opiskelen",
           "perjantai",
+          "päivällä opiskelen.",
+          "syö",
           "syön",
+          "syön kello kolme.",
+          "työskentele",
           "tänään",
+          "tänään.",
           "yöllä"
         ],
         "declared_unassessed": [],
@@ -3395,12 +3730,21 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 11,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -4240,6 +4584,7 @@
         "receptive_count": 10,
         "productive_count": 9,
         "later_correct_retrieval": [
+          "aamulla syön.",
           "asun vaasassa.",
           "en nuku.",
           "haluan vettä.",
@@ -5525,7 +5870,6 @@
         "first_referenced": [
           "asemalle",
           "keskustaan",
-          "kotiin",
           "menen asemalle.",
           "menen keskustaan.",
           "mihin",
@@ -5556,6 +5900,7 @@
         "receptive_count": 4,
         "productive_count": 4,
         "later_correct_retrieval": [
+          "kotiin",
           "menen kotiin."
         ],
         "declared_unassessed": [
@@ -8263,7 +8608,6 @@
         ],
         "first_referenced": [
           "jos",
-          "juo",
           "juo vettä.",
           "lepää",
           "lepää kotona.",
@@ -16972,63 +17316,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "section-3-lesson-3",
-        "forms": [
-          "kello"
-        ]
-      },
-      {
-        "lesson_id": "section-3-lesson-4",
-        "forms": [
-          "illalla.",
-          "nyt",
-          "päivällä.",
-          "yöllä."
-        ]
-      },
-      {
-        "lesson_id": "section-3-lesson-5",
-        "forms": [
-          "juon",
-          "menen",
-          "opiskelen",
-          "syön",
-          "tulen"
-        ]
-      },
-      {
-        "lesson_id": "section-3-lesson-6",
-        "forms": [
-          "mitä"
-        ]
-      },
-      {
-        "lesson_id": "section-3-lesson-7",
-        "forms": [
-          "en",
-          "minä juon. → en juo.",
-          "minä nukun. → en nuku.",
-          "minä opiskelen. → en opiskele.",
-          "minä syön. → en syö.",
-          "minä työskentelen. → en työskentele."
-        ]
-      },
-      {
-        "lesson_id": "section-3-lesson-8",
-        "forms": [
-          "aika",
-          "milloin"
-        ]
-      },
-      {
-        "lesson_id": "section-3-lesson-9",
-        "forms": [
-          "aamulla …",
-          "illalla …",
-          "päivällä …"
-        ]
-      },
       {
         "lesson_id": "section-4-lesson-1",
         "forms": [

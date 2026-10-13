@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.39.0] - 2026-10-13
+
+### Added
+
+- Complete all ten A1.1 Section 3 overviews with bounded, positively graded grammar objectives and prerequisites inherited from Sections 1–2.
+- Repair the 48 legacy declared positive-assessment gaps; all 80 newly introduced exact surfaces/expressions have later retrieval. All seven weekdays, whole hours 1–5 and four times of day have assessment and review.
+- Teach complete routine sentences before review-only lessons 9–10, add three unambiguous reading questions to the existing routine passage, and retain supported three-sentence writing and event-time matching.
+- Link all five explicit first-person negative transformations to grammar evidence and review all five in the checkpoint. Preserve original item records, stable lesson IDs, saved scores, connegative mappings, core targets and fifteen checkpoint targets; the section has 282 activities with outcome-driven lengths. Corrected scope may change listening distractors.
+- Extend the shared acceptance evaluator to Section 3, add scoped negative/policy checks, committed reports, Persian documentation and regression tests. Ellipsis and arrow reference frames are recognized rather than typed literally.
+
+### Fixed
+
+- Reject grammatically wrong affirmative forms after En (such as En syön) in negative transformations. Add optional activity answer_policy: morphology for selected productive grammar evidence and negative-form typing; reuse existing exact-form/diacritic-only grading and preserve policy through production/dictation injection. Ordinary lexical fuzzy grading remains unchanged.
+
 ## [1.38.0] - 2026-10-13
 
 ### Added

@@ -604,7 +604,7 @@ test('A1.1 Section 3 contains ten deterministic learner-facing lessons', () => {
   assert.equal(section3.curriculum_section_id, 'a1.1-s3');
   assert.equal(section3.lessons.length, 10);
   assert.equal(section3.activity_count_per_lesson, 15);
-  assert.equal(section3.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.equal(section3.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 282);
   assert.deepEqual(
     section3.lessons.map((lesson) => lesson.curriculum_id),
     curriculum.sections[2].lessons.map((lesson) => lesson.id),
@@ -737,7 +737,7 @@ test('Section 3 checkpoint covers weekdays, whole hours, routine, negation and w
   assert.ok(surfaces.includes('syön'));
   assert.ok(surfaces.includes('En syö.'));
   assert.ok(surfaces.includes('Milloin?'));
-  assert.equal(lesson.activities.length, 15);
+  assert.equal(lesson.activities.length, lesson.activity_count ?? 15);
 });
 
 test('all Section 3 custom activity references and accepted answers are explicit', () => {
@@ -784,7 +784,7 @@ test('day-reference sentence frames are taught without grading the ellipsis plac
   const lesson = section3.lessons.find((entry) => entry.curriculum_id === 'a1.1-s3-l01');
   const frameIds = new Set(['s3-tanaan-on-frame', 's3-huomenna-on-frame']);
 
-  assert.equal(lesson.activities.length, 15);
+  assert.equal(lesson.activities.length, lesson.activity_count ?? 15);
   assert.ok(lesson.activities.some((activity) => activity.type === 'teach' && frameIds.has(activity.item)));
   assert.ok(lesson.activities.some((activity) => activity.type === 'choice' && frameIds.has(activity.item)));
   assert.ok(
@@ -970,7 +970,7 @@ test('teaching cards autoplay Finnish audio and feedback offers example playback
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
   assert.match(source, /Autoplay only on explicit teaching cards/);
   assert.match(source, /پخش تلفظ جملهٔ مثال/);
-  assert.match(source, /gradeTypedAnswer\(\{ \.\.\.item, accepted_answers: \[item\.surface_form\] \}, input\.value\)/);
+  assert.match(source, /gradeActivityAnswer\(activity, activity\.mode === 'cloze'[\s\S]*?accepted_answers: \[item\.surface_form\]/);
 });
 
 test('morning in Persian accepts both aamu and aamulla', () => {

@@ -193,7 +193,7 @@ test('dictation reuses typed grading without exposing the Finnish answer before 
   assert.match(source, /activity\.type === 'dictation'/);
   assert.match(source, /گوش کن و چیزی را که می‌شنوی به فنلاندی بنویس/);
   assert.match(source, /playSpeech\(windowObject, item\.surface_form\)/);
-  assert.match(source, /gradeTypedAnswer\(item, input\.value\)/);
+  assert.match(source, /gradeActivityAnswer\(activity, activity\.mode === 'cloze'/);
   assert.match(source, /showFeedback\(feedback, correct, item, grading\)/);
 
   const clozeBranchIndex = source.indexOf("} else if (activity.mode === 'cloze')");

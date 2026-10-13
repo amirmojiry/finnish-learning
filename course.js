@@ -699,6 +699,12 @@
     };
   }
 
+  function gradeActivityAnswer(activity, item, answer) {
+    return activity?.answer_policy === 'morphology' || activity?.type === 'negative-transform'
+      ? gradeMorphologyAnswer(item, answer)
+      : gradeTypedAnswer(item, answer);
+  }
+
   function isTypedAnswerCorrect(item, answer) {
     return gradeTypedAnswer(item, answer).accepted;
   }
@@ -952,7 +958,8 @@
     if (dictationIndex < 0) {
       throw new Error(`Lesson ${lesson.id} has no matching slot for dictation target ${dictationTargetId}.`);
     }
-    lesson.activities[dictationIndex] = { type: 'dictation', item: dictationTargetId };
+    lesson.activities[dictationIndex] = { type: 'dictation', item: dictationTargetId,
+      ...(lesson.activities[dictationIndex].answer_policy ? { answer_policy: lesson.activities[dictationIndex].answer_policy } : {}) };
   }
 
   const STRUCTURED_PRACTICE_TYPES = ['sentence-order', 'expression-completion', 'controlled-production'];
@@ -1166,7 +1173,8 @@
     if (replacementIndex < 0) throw new Error(`Lesson ${lesson.id} has no replaceable slot for production practice.`);
 
     lesson.activities = lesson.activities.map((activity, index) => (
-      index === replacementIndex ? { type: 'production', item: targetId } : activity
+      index === replacementIndex ? { type: 'production', item: targetId,
+        ...(activity.answer_policy ? { answer_policy: activity.answer_policy } : {}) } : activity
     ));
   }
 
@@ -1408,6 +1416,9 @@
       }
 
       for (const activity of lesson.activities) {
+        if (activity.answer_policy !== undefined && activity.answer_policy !== 'morphology') {
+          throw new Error(`Unknown activity answer policy in ${lesson.id}`);
+        }
         if (activity.type === 'morphology-choice') {
           if (activity.selection_kind !== undefined && activity.selection_kind !== 'question-word') {
             throw new Error(`Unknown choice selection kind in ${lesson.id}`);
@@ -1839,7 +1850,7 @@
           accepted_answers: activity.accepted_answers,
           example_fi: activity.expected_fi,
         };
-        const grading = gradeTypedAnswer(expected, input.value);
+        const grading = gradeActivityAnswer(activity, expected, input.value);
         recordResult(grading.accepted, grading);
         input.disabled = true;
         submit.disabled = true;
@@ -1871,7 +1882,7 @@
         example_fi: activity.expected_fi,
         example_fa: activity.prompt_fa,
       };
-      const grading = gradeTypedAnswer(expected, input.value);
+      const grading = gradeActivityAnswer(activity, expected, input.value);
       recordResult(grading.accepted, grading);
       input.disabled = true;
       submit.disabled = true;
@@ -3147,7 +3158,7 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          const grading = gradeTypedAnswer(negative, input.value);
+          const grading = gradeActivityAnswer(activity, negative, input.value);
           const correct = grading.accepted;
           recordActivityResult(activity, correct, grading);
           input.disabled = true;
@@ -3186,7 +3197,7 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || rows.some(({ input }) => !input.value.trim())) return;
-          const gradings = rows.map(({ input, expected }) => gradeTypedAnswer(expected, input.value));
+          const gradings = rows.map(({ input, expected }) => gradeActivityAnswer(activity, expected, input.value));
           const correct = gradings.every((grading) => grading.accepted);
           const hasFuzzy = gradings.some((grading) => grading.fuzzy);
           recordActivityResult(activity, correct, {
@@ -3565,9 +3576,8 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if (answered || !input.value.trim()) return;
-          const grading = activity.mode === 'cloze'
-            ? gradeTypedAnswer({ ...item, accepted_answers: [item.surface_form] }, input.value)
-            : gradeTypedAnswer(item, input.value);
+          const grading = gradeActivityAnswer(activity, activity.mode === 'cloze'
+            ? { ...item, accepted_answers: [item.surface_form] } : item, input.value);
           const correct = grading.accepted;
           recordActivityResult(activity, correct, grading);
           input.disabled = true;
@@ -3884,6 +3894,7 @@
     answerSimilarity,
     gradeTypedAnswer,
     gradeMorphologyAnswer,
+    gradeActivityAnswer,
     isTypedAnswerCorrect,
     speechApiAvailable,
     findFinnishVoice,
