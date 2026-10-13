@@ -2,7 +2,7 @@
 
 This document describes the live, deterministic reporting and strict future-authoring gate for [issue #138](https://github.com/amirmojiry/finnish-learning/issues/138), tracked by [parent #101](https://github.com/amirmojiry/finnish-learning/issues/101).
 
-Generate the current prioritized report with `npm run lesson:composition:report` and per-lesson machine-readable evidence with `npm run lesson:composition:json`. Run `npm run lesson:composition:check`, which is also included in `npm test`. Optional `npm run lesson:composition:write` saves both formats locally for editorial review.
+Generate the current prioritized report with `npm run lesson:composition:report` and per-lesson machine-readable evidence with `npm run lesson:composition:json`. Run `npm run lesson:composition:check`, which is also included in `npm test`. Optional `npm run lesson:composition:write` saves JSON to `data/course/lesson-composition-audit.json` and Markdown to `data/course/lesson-composition-audit.generated.md`; it never overwrites this authored guide.
 
 ## Review priorities
 
