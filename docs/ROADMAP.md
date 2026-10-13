@@ -82,3 +82,5 @@ Session length/difficulty, daily goals, streaks, bookmarks, word lists, progress
 6. Change milestones **only here and in the paired Persian roadmap**; root READMEs and Learning Design link here rather than maintaining separate phase checklists.
 
 P4 delivery, initial reviewed batch: issue #142, 25 original-source forms 401–425 (minor release 1.35.0). Future batches remain editorial review work; P5 Course/Word Practice review bridge follows after the first real batch meets source, UD and Persian-translation coverage gates.
+
+P5 minimal read-only evidence bridge: issue #144, first-attempt Course errors can prioritize unseen Word Practice forms without changing due SRS schedules or migrating history. Further Course-context review cards, skill analytics and deeper lexeme/sense review models remain separate follow-up work and are not general CEFR/YKI proficiency evidence.
