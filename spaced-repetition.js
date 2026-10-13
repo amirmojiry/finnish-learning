@@ -233,9 +233,10 @@
     function courseReviewPriorities() {
       const course = windowObject.FinnishCourse;
       const bridge = windowObject.FinnishCourseSrsBridge;
-      if (!courseReviewMap || !course?.loadProgress || !bridge?.reviewPriorities) return {};
-      try { return bridge.reviewPriorities(course.loadProgress(windowObject.localStorage), courseReviewMap); }
-      catch { return {}; }
+      if (!courseReviewMap || !course?.STORAGE_KEY || !bridge?.reviewPrioritiesFromStorage) return {};
+      return bridge.reviewPrioritiesFromStorage(
+        windowObject.localStorage, courseReviewMap, course.STORAGE_KEY, course.SCHEMA_VERSION
+      );
     }
     let active = false;
     let queue = [];
