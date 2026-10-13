@@ -85,10 +85,10 @@ test('later review summary counts distinct normalized forms once across repeated
 });
 test('snapshot generator never overwrites authored curriculum audit guide',()=>{
  const script=fs.readFileSync(path.join(ROOT,'scripts/audit-lesson-composition.cjs'),'utf8');
- assert.match(script,/data\\/course\\/lesson-composition-audit\\.generated\\.md/);
- assert.doesNotMatch(script,/MD_PATH=path\\.join\\(ROOT,'docs\\/LESSON-COMPOSITION-AUDIT\\.md'\\)/);
+ assert.ok(script.includes('data/course/lesson-composition-audit.generated.md'));
+ assert.ok(!script.includes("MD_PATH=path.join(ROOT,'docs/LESSON-COMPOSITION-AUDIT.md')"));
 });
 test('documentation hub links the canonical composition audit methodology',()=>{
  const hub=fs.readFileSync(path.join(ROOT,'docs/README.md'),'utf8');
- assert.match(hub,/\\[Lesson composition and recycling audit\\]\\(LESSON-COMPOSITION-AUDIT\\.md\\)/);
+ assert.ok(hub.includes('[Lesson composition and recycling audit](LESSON-COMPOSITION-AUDIT.md)'));
 });
