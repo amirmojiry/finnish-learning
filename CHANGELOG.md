@@ -6,7 +6,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
-## [1.35.1] - 2026-10-13
+## [1.36.0] - 2026-10-13
 
 ### Added
 
