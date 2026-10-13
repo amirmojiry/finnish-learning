@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.35.0] - 2026-10-13
+
+### Added
+
+- Curate the next 25 authentic consecutive Parole forms (source positions 401-425) with learner-facing Finnish lemmas, Persian translations, and two bilingual examples for every form, preserving official corpus rank/count/percentage.
+- Expand the dictionary to 425 forms and regenerate corresponding UD analyses, compact summaries, and complete Persian translations of any new displayed UD examples.
+- Retain existing learner history and Course/Word Practice separation. Rebuild and verify lexical identity and lesson coverage reports against the new dictionary.
+
+
 ## [1.34.4] - 2026-10-13
 
 ### Added
