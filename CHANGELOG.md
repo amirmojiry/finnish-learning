@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.34.3] - 2026-10-13
+
+### Added
+
+- Add a deterministic P3 lesson-composition and lexical-recycling audit that distinguishes positive answer evidence, supported production and subsequent authored review from teaching cards, distractors and learner SRS history.
+- Introduce an opt-in strict quality gate and an automatic gate for future A2.1 Section 3 lessons, while keeping 140 existing lesson records advisory and retaining flexible activity counts.
+- Publish review-first gap priorities and regression fixtures for lost correct-answer targets, repeated-new labels, checkpoint introductions, approved P2 semantic links and varied activity counts.
+
 ## [1.34.2] - 2026-10-13
 
 ### Added
