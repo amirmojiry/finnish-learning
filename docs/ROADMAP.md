@@ -54,6 +54,8 @@ The shipped dictionary has an independently generated count and Parole frequency
 - Author and independently review A2.1 Sections 3–4 (leisure and family narratives), then add playable files and regression tests; A2.2–C2 remain planning-only.
 - The current A1 convention of ten lessons and fifteen activities is a starting heuristic, **not** an obligatory prescription for B2/C1/C2.
 
+P3 composition audit pilot: issue [#138](https://github.com/amirmojiry/finnish-learning/issues/138) provides deterministic per-lesson positive assessment and planned later lexical review evidence. Legacy gaps stay advisory; a strict new-section gate applies before authoring A2.1 Section 3. This is an initial P3 quality gate, not completion of the broader editorial recycling/backfill work under #101.
+
 ## Cross-cutting quality work
 
 | Area | Current baseline | Outstanding work |
