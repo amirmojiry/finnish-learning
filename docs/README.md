@@ -4,7 +4,10 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
-- [Lesson objectives contract](LESSON-OBJECTIVES-CONTRACT.md) — implemented metadata and validation rules.\n- [P1 grammar contract draft](P1-GRAMMAR-CONTRACT-DRAFT.md) — historical design rationale; prefer the implemented contract above.\n\n## 1. Start here | شروع
+- [Lesson objectives contract](LESSON-OBJECTIVES-CONTRACT.md) — implemented metadata and validation rules.
+- [P1 grammar contract draft](P1-GRAMMAR-CONTRACT-DRAFT.md) — historical design rationale; prefer the implemented contract above.
+
+## 1. Start here | شروع
 
 | Need / موضوع | Recommended document / سند | Role / نقش |
 | --- | --- | --- |
@@ -21,6 +24,7 @@ This is the documentation entry point for **Finnish Learning**. Each subject has
 | Grammar dependencies / ترتیب قواعد | [Grammar roadmap](GRAMMAR-ROADMAP.md) | Focused explanation of the master JSON's concepts/prerequisites |
 | Topic and frequency vocabulary / تقسیم واژگان | [Vocabulary roadmap](VOCABULARY-ROADMAP.md) | Selection policy; does not replace actual Parole data |
 | A1.1 lesson-by-lesson matrix / ماتریس درس‌ها | [فارسی](A1.1-CURRICULUM.fa.md) · [English](A1.1-CURRICULUM.md) | Detailed readable plan of [A1.1 curriculum JSON](../data/course/a1.1-curriculum.json) |
+| A1.1 Section 1 acceptance / پذیرش بخش اول | [فارسی](A11-SECTION1-ACCEPTANCE.fa.md) · [English](A11-SECTION1-ACCEPTANCE.md) · [JSON](../data/course/a1.1-section-1-acceptance.json) | Reproducible section-level objective, positive-assessment, prerequisite and later-review checks; authored opportunities, not learner mastery |
 | Later A1 curriculum contracts | [A1.2 JSON](../data/course/a1.2-curriculum.json) · [A1.3 JSON](../data/course/a1.3-curriculum.json) | A1.2 and A1.3 each have four playable sections and 40 lessons; both follow their reviewed curriculum contracts |
 | A2.1 partially authored contract | [A2.1 curriculum](../data/course/a2.1-curriculum.json) | Sections 1–2 have twenty playable lessons (travel/past and health/public services); Sections 3–4 remain outline-only |
 | Existing content coverage / پوشش اجرایی | [ممیزی محتوایی فارسی](CURRICULUM-AUDIT.fa.md) | A dated snapshot; regenerate live inventory with `npm run curriculum:audit` |

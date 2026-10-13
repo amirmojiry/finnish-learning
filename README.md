@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.36.3`
+- Version: `1.37.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -155,3 +155,5 @@ A2.1 travel lessons now pair plural-partitive recognition with supported typed p
 A1.1 now links `minä olen` / `sinä olet` to explicit grammar choices, supported typing and later contextual review in introduction lesson 2 and dialogue lesson 9. This is a limited guided contrast, not full conjugation mastery. See the [delivery roadmap](docs/ROADMAP.md).
 
 A1.1 also assesses `kuka` for person identity versus `mikä` for an object's name/type, with supported question-word typing, later contextual review and a checkpoint that reuses its existing targets. See the [delivery roadmap](docs/ROADMAP.md).
+
+A1.1 Section 1 now has canonical overviews for all ten lessons and a reproducible acceptance check: every declared target has positive-answer coverage, introduced forms are not relabelled as new, and later lexical/grammar review is traced. Greetings and politeness remain honestly formulaic. Run `npm run section:a11:check`; see the [acceptance report](docs/A11-SECTION1-ACCEPTANCE.md). Lesson lengths vary with outcomes; learner scores and the original checkpoint target set are preserved.

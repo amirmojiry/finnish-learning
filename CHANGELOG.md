@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.37.0] - 2026-10-13
+
+### Added
+
+- Complete all ten A1.1 Section 1 lesson overviews with separate communicative/lexical/grammar outcomes, truthful formulaic-only greeting/politeness lessons and corrected introduction/review status.
+- Repair thirty declared positive-assessment gaps and three repeated-new labels; provide later positive retrieval for all 49 introduced surfaces/expressions and later review for five scoped grammar concepts.
+- Assess restricted present/negative frames and basic pronoun applications without claiming full paradigms. Introduce composite dialogue frames before the review-only lessons. Preserve original checkpoint targets, stable IDs, listening/dictation/production and historical scores while allowing 17–30 activities per lesson (233 total).
+- Add a deterministic section acceptance report and CI check, paired Persian explanation, negative regression fixtures and canonical metadata-driven review-card wording.
+
 ## [1.36.3] - 2026-10-13
 
 ### Added

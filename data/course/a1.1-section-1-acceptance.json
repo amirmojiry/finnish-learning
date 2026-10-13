@@ -1,0 +1,679 @@
+{
+  "schema_version": 1,
+  "section_id": "a1.1-section-1",
+  "scope": "Authored assessment and review opportunities, not learner mastery, complete paradigms or CEFR/YKI certification.",
+  "summary": {
+    "lessons": 10,
+    "activities": 233,
+    "introduced_surface_forms_and_expressions": 49,
+    "surfaces_with_later_positive_review": 49,
+    "grammar_concepts_with_later_review": 5,
+    "missing_positive_targets": 0,
+    "repeated_new_labels": 0,
+    "formulaic_lessons": [
+      "lesson-1",
+      "lesson-6"
+    ],
+    "errors": 0
+  },
+  "boundaries": [
+    "Greetings and politeness are formulaic lexical outcomes, without invented grammar IDs.",
+    "Present and negative frames assess reviewed chunks, not free conjugation or unrestricted negation.",
+    "Person/object questions and pronouns assess specified basic contexts; locative endings and full case paradigms are not claimed.",
+    "Only previously introduced targets appear in dialogue review and the checkpoint. Stable lesson IDs and historical scores are retained.",
+    "49 surface targets are not 49 verified lexemes or senses; P2 editorial identity work remains separate."
+  ],
+  "lessons": [
+    {
+      "lesson_id": "lesson-1",
+      "order": 1,
+      "title_fa": "سلام و خداحافظی",
+      "activities": 17,
+      "declared_targets": 7,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 7,
+      "grammar_scope": "formulaic",
+      "grammar_concepts": []
+    },
+    {
+      "lesson_id": "lesson-2",
+      "order": 2,
+      "title_fa": "نام من",
+      "activities": 24,
+      "declared_targets": 11,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 11,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "lesson-3",
+      "order": 3,
+      "title_fa": "حالت چطور است؟",
+      "activities": 24,
+      "declared_targets": 10,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 10,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-present-chunks"
+      ]
+    },
+    {
+      "lesson_id": "lesson-4",
+      "order": 4,
+      "title_fa": "بله، نه و نفی ساده",
+      "activities": 20,
+      "declared_targets": 8,
+      "introduced_surfaces": 5,
+      "positively_assessed_targets": 8,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-negation"
+      ]
+    },
+    {
+      "lesson_id": "lesson-5",
+      "order": 5,
+      "title_fa": "چه کسی و چه چیزی؟",
+      "activities": 29,
+      "declared_targets": 11,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 11,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions",
+        "a11-pronouns"
+      ]
+    },
+    {
+      "lesson_id": "lesson-6",
+      "order": 6,
+      "title_fa": "عبارت‌های مودبانه",
+      "activities": 17,
+      "declared_targets": 6,
+      "introduced_surfaces": 2,
+      "positively_assessed_targets": 6,
+      "grammar_scope": "formulaic",
+      "grammar_concepts": []
+    },
+    {
+      "lesson_id": "lesson-7",
+      "order": 7,
+      "title_fa": "متوجه نمی‌شوم",
+      "activities": 23,
+      "declared_targets": 9,
+      "introduced_surfaces": 6,
+      "positively_assessed_targets": 9,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-negation"
+      ]
+    },
+    {
+      "lesson_id": "lesson-8",
+      "order": 8,
+      "title_fa": "این و آن",
+      "activities": 25,
+      "declared_targets": 12,
+      "introduced_surfaces": 6,
+      "positively_assessed_targets": 12,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions",
+        "a11-pronouns",
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "lesson-9",
+      "order": 9,
+      "title_fa": "اولین گفت‌وگوهای کوتاه",
+      "activities": 30,
+      "declared_targets": 22,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 22,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla",
+        "a11-negation"
+      ]
+    },
+    {
+      "lesson_id": "lesson-10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۱",
+      "activities": 24,
+      "declared_targets": 22,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 22,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions",
+        "a11-present-chunks",
+        "a11-olla",
+        "a11-pronouns",
+        "a11-negation"
+      ]
+    }
+  ],
+  "lexical_review": [
+    {
+      "form_id": "form:6f-6e",
+      "target_id": "on",
+      "surface_form": "on",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-2",
+        "lesson-8",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6a-61",
+      "target_id": "ja",
+      "surface_form": "ja",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:68-65-69",
+      "target_id": "hei",
+      "surface_form": "Hei",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-6f-69",
+      "target_id": "moi",
+      "surface_form": "Moi",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:68-75-6f-6d-65-6e-74-61",
+      "target_id": "huomenta",
+      "surface_form": "huomenta",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:68-79-76-e4-e4-20-68-75-6f-6d-65-6e-74-61",
+      "target_id": "hyvaa-huomenta",
+      "surface_form": "Hyvää huomenta",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6e-e4-6b-65-6d-69-69-6e",
+      "target_id": "nakemiin",
+      "surface_form": "Näkemiin",
+      "introduced_in": "lesson-1",
+      "later_positive_lessons": [
+        "lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-e4",
+      "target_id": "mina",
+      "surface_form": "minä",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:73-69-6e-e4",
+      "target_id": "sina",
+      "surface_form": "sinä",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6f-6c-65-6e",
+      "target_id": "olen",
+      "surface_form": "olen",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6e-69-6d-69",
+      "target_id": "nimi",
+      "surface_form": "nimi",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-75-6e-20-6e-69-6d-65-6e-69-20-6f-6e",
+      "target_id": "minun-nimeni-on",
+      "surface_form": "Minun nimeni on",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-3",
+        "lesson-4",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6b-e4-20-73-69-6e-75-6e-20-6e-69-6d-65-73-69-20-6f-6e-3f",
+      "target_id": "mika-sinun-nimesi-on",
+      "surface_form": "Mikä sinun nimesi on?",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-3",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6f-6c-65-74",
+      "target_id": "olet",
+      "surface_form": "olet",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-3",
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:68-65-69-21-20-6d-69-6e-75-6e-20-6e-69-6d-65-6e-69-20-6f-6e",
+      "target_id": "hei-minun-nimeni-on",
+      "surface_form": "Hei! Minun nimeni on",
+      "introduced_in": "lesson-2",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-74-e4",
+      "target_id": "mita",
+      "surface_form": "mitä",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:68-79-76-e4",
+      "target_id": "hyva",
+      "surface_form": "hyvä",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:68-79-76-e4-e4",
+      "target_id": "hyvaa",
+      "surface_form": "Hyvää",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-4",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-74-e4-20-6b-75-75-6c-75-75-3f",
+      "target_id": "mita-kuuluu",
+      "surface_form": "Mitä kuuluu?",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:68-79-76-e4-e4-2c-20-6b-69-69-74-6f-73",
+      "target_id": "hyvaa-kiitos",
+      "surface_form": "Hyvää, kiitos",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:69-68-61-6e-20-68-79-76-e4-e4",
+      "target_id": "ihan-hyvaa",
+      "surface_form": "Ihan hyvää",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-4",
+        "lesson-5",
+        "lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6b-69-69-74-6f-73",
+      "target_id": "kiitos",
+      "surface_form": "Kiitos",
+      "introduced_in": "lesson-3",
+      "later_positive_lessons": [
+        "lesson-4",
+        "lesson-6",
+        "lesson-7",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-79-6c-6c-e4",
+      "target_id": "kylla",
+      "surface_form": "kyllä",
+      "introduced_in": "lesson-4",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:65-69",
+      "target_id": "ei",
+      "surface_form": "ei",
+      "introduced_in": "lesson-4",
+      "later_positive_lessons": [
+        "lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6f-6c-65",
+      "target_id": "ole",
+      "surface_form": "ole",
+      "introduced_in": "lesson-4",
+      "later_positive_lessons": [
+        "lesson-5",
+        "lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:76-61-73-74-61-75-73",
+      "target_id": "vastaus",
+      "surface_form": "vastaus",
+      "introduced_in": "lesson-4",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:65-69-20-6f-6c-65",
+      "target_id": "ei-ole",
+      "surface_form": "Ei ole",
+      "introduced_in": "lesson-4",
+      "later_positive_lessons": [
+        "lesson-5",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6b-e4",
+      "target_id": "mika",
+      "surface_form": "mikä",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:68-e4-6e",
+      "target_id": "han",
+      "surface_form": "hän",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-6d-e4",
+      "target_id": "tama",
+      "surface_form": "tämä",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-6",
+        "lesson-8",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:69-68-6d-69-6e-65-6e",
+      "target_id": "ihminen",
+      "surface_form": "ihminen",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:65-73-69-6e-65",
+      "target_id": "esine",
+      "surface_form": "esine",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-75-6b-61",
+      "target_id": "kuka",
+      "surface_form": "kuka",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:6b-75-6b-61-20-68-e4-6e-20-6f-6e-3f",
+      "target_id": "kuka-han-on",
+      "surface_form": "Kuka hän on?",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6b-e4-20-74-e4-6d-e4-20-6f-6e-3f",
+      "target_id": "mika-tama-on",
+      "surface_form": "Mikä tämä on?",
+      "introduced_in": "lesson-5",
+      "later_positive_lessons": [
+        "lesson-6",
+        "lesson-7",
+        "lesson-8",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:61-6e-74-65-65-6b-73-69",
+      "target_id": "anteeksi",
+      "surface_form": "Anteeksi",
+      "introduced_in": "lesson-6",
+      "later_positive_lessons": [
+        "lesson-7",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-6c-65-20-68-79-76-e4",
+      "target_id": "ole-hyva",
+      "surface_form": "Ole hyvä",
+      "introduced_in": "lesson-6",
+      "later_positive_lessons": [
+        "lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:65-6e",
+      "target_id": "en",
+      "surface_form": "en",
+      "introduced_in": "lesson-7",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:75-75-64-65-73-74-61-61-6e-2c-20-6b-69-69-74-6f-73",
+      "target_id": "uudestaan",
+      "surface_form": "Uudestaan, kiitos",
+      "introduced_in": "lesson-7",
+      "later_positive_lessons": [
+        "lesson-8",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:68-69-74-61-61-73-74-69",
+      "target_id": "hitaasti",
+      "surface_form": "hitaasti",
+      "introduced_in": "lesson-7",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-79-6d-6d-e4-72-72-e4",
+      "target_id": "en-ymmarra",
+      "surface_form": "En ymmärrä",
+      "introduced_in": "lesson-7",
+      "later_positive_lessons": [
+        "lesson-8",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:68-69-74-61-61-6d-6d-69-6e-2c-20-6b-69-69-74-6f-73",
+      "target_id": "hitaammin",
+      "surface_form": "Hitaammin, kiitos",
+      "introduced_in": "lesson-7",
+      "later_positive_lessons": [
+        "lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-20-79-6d-6d-e4-72-72-e4-2e-20-75-75-64-65-73-74-61-61-6e-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "en-ymmarra-uudestaan",
+      "surface_form": "En ymmärrä. Uudestaan, kiitos.",
+      "introduced_in": "lesson-7",
+      "later_positive_lessons": [
+        "lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:73-65",
+      "target_id": "se",
+      "surface_form": "se",
+      "introduced_in": "lesson-8",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-69-72-6a-61",
+      "target_id": "kirja",
+      "surface_form": "kirja",
+      "introduced_in": "lesson-8",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:70-75-68-65-6c-69-6e",
+      "target_id": "puhelin",
+      "surface_form": "puhelin",
+      "introduced_in": "lesson-8",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6f-76-69",
+      "target_id": "ovi",
+      "surface_form": "ovi",
+      "introduced_in": "lesson-8",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-6d-e4-20-6f-6e",
+      "target_id": "tama-on",
+      "surface_form": "Tämä on",
+      "introduced_in": "lesson-8",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:73-65-20-6f-6e",
+      "target_id": "se-on",
+      "surface_form": "Se on",
+      "introduced_in": "lesson-8",
+      "later_positive_lessons": [
+        "lesson-10"
+      ]
+    }
+  ],
+  "grammar_review": [
+    {
+      "concept_id": "a11-olla",
+      "introduced_in": "lesson-2",
+      "later_review_lessons": [
+        "lesson-8",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-present-chunks",
+      "introduced_in": "lesson-3",
+      "later_review_lessons": [
+        "lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-negation",
+      "introduced_in": "lesson-4",
+      "later_review_lessons": [
+        "lesson-7",
+        "lesson-9",
+        "lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-questions",
+      "introduced_in": "lesson-5",
+      "later_review_lessons": [
+        "lesson-8",
+        "lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-pronouns",
+      "introduced_in": "lesson-5",
+      "later_review_lessons": [
+        "lesson-8",
+        "lesson-10"
+      ]
+    }
+  ],
+  "errors": []
+}

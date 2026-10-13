@@ -62,26 +62,28 @@ test('later dialogue practice reviews both forms in fresh contexts without new w
     goal(badPrerequisite).prerequisite_concept_ids = ['a11-questions'];
     assert.throws(() => course.validateLessonObjectives(badPrerequisite, section, curriculum.grammar_concepts), /prerequisites differ/);
   }
-  for (const index of [0, 2, 5]) {
-    assert.equal(course.lessonObjectiveDisplay(section.lessons[index], section.items).structured, false);
+  for (const index of [0, 5]) {
+    assert.equal(course.lessonObjectiveDisplay(section.lessons[index], section.items).structured, true);
+    assert.equal(section.lessons[index].learning_objectives.grammar_scope, "formulaic");
+    assert.deepEqual(section.lessons[index].learning_objectives.grammar, []);
   }
 });
 
 test('appended authored morphology preserves original prepared positions and saved scores', () => {
   for (const [lesson, count, hash] of [
-    [intro, 18, '2395628f5a5e49b2d68e0d86dd9e6ff14d3d61c3502dd0a2472e987701ec6429'],
-    [review, 17, 'fa9bc078b1d71f0b94bc52a57c0a334b6a9061b3eb18dd142b50fee3d2d62161'],
+    [intro, 24, '2395628f5a5e49b2d68e0d86dd9e6ff14d3d61c3502dd0a2472e987701ec6429'],
+    [review, 30, 'fa9bc078b1d71f0b94bc52a57c0a334b6a9061b3eb18dd142b50fee3d2d62161'],
   ]) {
     assert.equal(lesson.activities.length, count);
     const previous = structuredClone(lesson.activities.slice(0, 15));
-    if (lesson === intro) delete previous.find(a => a.type === 'expression-completion').grammar_concept_ids;
+    for (const activity of previous) if (['expression-completion', 'controlled-production'].includes(activity.type)) delete activity.grammar_concept_ids;
     assert.equal(createHash('sha256').update(JSON.stringify(previous)).digest('hex'), hash);
     assert.equal(lesson.activities.filter(a => course.MORPHOLOGY_PRACTICE_TYPES.includes(a.type)).length, lesson.morphology_practice.length);
     const stored = course.recordLessonCompletion(course.emptyProgress(), lesson.id, 8, 10, 123);
     assert.deepEqual(course.sanitizeProgress(stored).lessonScores[lesson.id], { correct: 8, graded: 10, completedAt: 123 });
     for (const type of ['production', 'dictation']) assert.equal(lesson.activities.filter(a => a.type === type).length, 1);
   }
-  assert.equal(section.lessons[9].activities.length, 15);
+  assert.equal(section.lessons[9].activities.length, 24);
   assert.equal(section.lessons[9].checkpoint_targets.length, 15);
   assert.deepEqual(section.lessons[9].new_targets, []);
 });
