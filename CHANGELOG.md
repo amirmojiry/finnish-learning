@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.35.1] - 2026-10-13
+
+### Added
+
+- Build a compact deterministic Course target-to-dictionary-form bridge, preserving separate form IDs and never guessing cross-form or sense mastery.
+- Let recent first-attempt Course mistakes prioritize matching *unseen* Word Practice forms, after genuinely due SRS reviews and within daily new-word limits.
+- Preserve independent existing SRS histories, intervals, due times, daily counters and all Course progress; ignore retry spam, teaching-only events and unmapped expressions. Provide robust fallback when Course data or bridge mapping is unavailable.
+- Add regression checks for source mapping, idempotence, old storage, due ordering and asset loading.
+
 ## [1.35.0] - 2026-10-13
 
 ### Added
