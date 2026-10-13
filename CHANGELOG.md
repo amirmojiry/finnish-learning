@@ -8,6 +8,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [1.34.2] - 2026-10-13
 
+### Added
+
+- Add a curated review registry containing seven independently verified Finnish noun/pronoun forms, including separate nominative and genitive pronoun forms sharing reviewed lexical/sense identities.
+- Overlay editorially reviewed lexeme, sense and morphology metadata on stable surface identities, rejecting invalid, unknown or duplicate review entries without inferring relationships for unreviewed forms.
+- Add regressions for distinct form evidence, reviewed case metadata and safe unresolved fallback; leave course progress, Parole source ranks and Word Practice SRS untouched.
+
+## [1.34.1] - 2026-10-13
+
 ### Fixed
 
 - Make multi-sentence Finnish meaning questions render at readable passage size with a top-aligned, independently scrollable lesson card, keeping all four mobile answer options reachable.
