@@ -1326,7 +1326,7 @@
           'controlled-production', 'negative-transform', 'guided-writing'].includes(activity.type);
         if (item.mode !== 'recognition' && !productive) fail('production claim requires productive assessment');
         if (item.mode === 'independent_production' && (
-          !productive || activity.type === 'dictation' || Boolean(activity.frame_fi) || Boolean(activity.tokens) || Boolean(activity.hint_fi)
+          !productive || ['dictation', 'expression-completion'].includes(activity.type) || Boolean(activity.frame_fi) || Boolean(activity.tokens) || Boolean(activity.hint_fi)
         )) fail('independent production cannot use a scaffold');
       }
     }

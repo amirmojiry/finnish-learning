@@ -34,7 +34,7 @@ test('A2.1 travel lessons 7-10 assess reviewed imperfect using positive supporte
 
 test('lexical review statuses reflect earlier surface-form teaching, not source rank', () => {
   for (const lesson of lessons.slice(0, 3)) {
-    assert.deepEqual(lesson.learning_objectives.lexical.map(x => x.target_id), lesson.new_targets);
+    assert.deepEqual(lesson.learning_objectives.lexical.map(x => x.target_id), [...lesson.new_targets, ...(lesson.order === 9 ? ['a21s1-t-058'] : [])]);
   }
   const l7=lessons[0], l8=lessons[1], l9=lessons[2];
   assert.ok(l7.learning_objectives.lexical.every(x => x.status === 'introduced'));

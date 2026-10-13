@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.36.1] - 2026-10-13
+
+### Added
+
+- Pair the A2.1 travel lesson 7 plural-partitive decision with the existing supported typed completion of `valokuvia`, explicitly linked as grammar evidence without duplicating the prompt and explicitly review it in a new museum context in lesson 9.
+- Preserve all previous prepared activity positions, lesson identities, checkpoint targets and historical scores; distinguish recognition from supported production without claiming independent grammar mastery.
+- Refresh canonical learning objectives, bilingual examples and deterministic coverage/recycling reports, with regression tests for correct/wrong-case answers and progress compatibility.
+
 ## [1.36.0] - 2026-10-13
 
 ### Added

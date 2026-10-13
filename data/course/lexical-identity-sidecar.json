@@ -29837,13 +29837,21 @@
       "source_rank": 8414,
       "source_position": 8422,
       "first_shipped_lesson": "a2.1-section-1-lesson-7",
-      "review_lessons": [],
+      "review_lessons": [
+        "a2.1-section-1-lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a2.1-section-1",
           "lesson_id": "a2.1-section-1-lesson-7",
           "item_id": "a21s1-t-058",
           "role": "introduced"
+        },
+        {
+          "section_id": "a2.1-section-1",
+          "lesson_id": "a2.1-section-1-lesson-9",
+          "item_id": "a21s1-t-058",
+          "role": "referenced"
         }
       ]
     },

@@ -3633,7 +3633,7 @@
       "title_fa": "دیدنی‌ها و تجربه‌های سفر",
       "objective_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
       "summary_fa": "بگویم از کجا بازدید کردم، چه چیزی دیدم و دربارهٔ آن چه نظری داشتم.",
-      "grammar_fa": "«Näin» (دیدم)، «otin» (گرفتم) و «pidin» (دوست داشتم) شکل‌های گذشته‌اند. «Näin vanhan kirkon» مفعول کامل و «Otin valokuvia» مفعول جمعِ partitiivi دارد. «Pidin kaupungista» را یک‌جا تمرین کن. در «Otin valokuvia» کلمهٔ «valokuvia» نمونه‌ای از Partitiivi جمع است؛ صرف همهٔ گروه‌های اسمی از این مثال نتیجه گرفته نمی‌شود.",
+      "grammar_fa": "«Näin» (دیدم)، «otin» (گرفتم) و «pidin» (دوست داشتم) شکل‌های گذشته‌اند. «Näin vanhan kirkon» مفعول کامل و «Otin valokuvia» مفعول جمعِ partitiivi دارد. «Pidin kaupungista» را یک‌جا تمرین کن. در «Otin valokuvia» کلمهٔ «valokuvia» نمونه‌ای از Partitiivi جمع است؛ صرف همهٔ گروه‌های اسمی از این مثال نتیجه گرفته نمی‌شود. در «Otin valokuvia» تعداد عکس‌ها مشخص نیست و مفعول با پارتیتیو جمع می‌آید. «valokuvan» به یک عکس اشاره می‌کند؛ «valokuvia» صورت جمعِ مورد نیاز این جمله است.",
       "new_targets": [
         "a21s1-t-057",
         "a21s1-t-058",
@@ -3693,7 +3693,10 @@
             "valokuvia"
           ],
           "expected_fi": "Otin valokuvia.",
-          "expected_fa": "عکس گرفتم."
+          "expected_fa": "عکس گرفتم.",
+          "grammar_concept_ids": [
+            "a21-plural-partitive"
+          ]
         },
         {
           "type": "expression-completion",
@@ -4011,7 +4014,7 @@
             "prerequisite_concept_ids": [
               "a12-quantities"
             ],
-            "explanation_fa": "Partitiivi جمع در «Otin valokuvia» با صورت «valokuvia» دیده و در یک تصمیم گرامری سنجیده می‌شود؛ تعمیم به همهٔ اسم‌ها آموزش داده نشده است.",
+            "explanation_fa": "در «Otin valokuvia» تعداد عکس‌ها مشخص نیست و مفعول با پارتیتیو جمع می‌آید. «valokuvan» به یک عکس اشاره می‌کند؛ «valokuvia» صورت جمعِ مورد نیاز این جمله است. این صورت در انتخاب پاسخ و تولید راهنمایی‌شده سنجیده می‌شود؛ تسلط بر همهٔ الگوهای جمع نتیجه گرفته نمی‌شود.",
             "examples": [
               {
                 "fi": "Otin valokuvia.",
@@ -4023,6 +4026,11 @@
                 "activity_type": "morphology-choice",
                 "item_id": "a21s1-t-058",
                 "mode": "recognition"
+              },
+              {
+                "activity_type": "expression-completion",
+                "item_id": "a21s1-t-058",
+                "mode": "supported_production"
               }
             ]
           }
@@ -4416,7 +4424,7 @@
       "title_fa": "روایت کوتاه یک سفر",
       "objective_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
       "summary_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
-      "grammar_fa": "در روایت کوتاه، زمان را با «Viime lauantaina» مشخص کن و سپس مقصد، وسیلهٔ رفت‌وآمد، یک دیدار و بازگشت را با فعل‌های گذشته بیان کن. از جمله‌های کوتاه استفاده کن.",
+      "grammar_fa": "در روایت کوتاه، زمان را با «Viime lauantaina» مشخص کن و سپس مقصد، وسیلهٔ رفت‌وآمد، یک دیدار و بازگشت را با فعل‌های گذشته بیان کن. از جمله‌های کوتاه استفاده کن. «Näin valokuvia museossa» یعنی در موزه عکس‌هایی دیدم؛ برای تعداد نامشخص عکس‌ها «valokuvia» می‌آید. این مرورِ همان صورت جمع در موقعیتی تازه است، نه آموزش صرف همهٔ اسم‌ها.",
       "new_targets": [
         "a21s1-t-074",
         "a21s1-t-075",
@@ -4538,6 +4546,22 @@
           "explanation_fa": "برای بازگشت به خانه، مقصد با «kotiin» بیان می‌شود؛ «kotona» مکان ثابت و «kotoa» مبدأ است.",
           "grammar_concept_ids": [
             "a21-illative-patterns"
+          ]
+        },
+        {
+          "type": "inflection-production",
+          "item": "a21s1-t-058",
+          "base_fi": "valokuva",
+          "feature_fa": "پارتیتیو جمع برای تعداد نامشخص عکس‌ها",
+          "prompt_fa": "در روایت سفر بگو «در موزه عکس‌هایی دیدم»: صورت پارتیتیو جمعِ «valokuva» را در جای خالی بنویس.",
+          "frame_fi": "Näin _____ museossa.",
+          "expected_fi": "valokuvia",
+          "accepted_answers": [
+            "valokuvia"
+          ],
+          "explanation_fa": "«Näin valokuvia museossa» یعنی در موزه عکس‌هایی دیدم؛ برای تعداد نامشخص عکس‌ها «valokuvia» می‌آید. این مرورِ همان صورت جمع در موقعیتی تازه است، نه آموزش صرف همهٔ اسم‌ها.",
+          "grammar_concept_ids": [
+            "a21-plural-partitive"
           ]
         }
       ],
@@ -4718,6 +4742,11 @@
           "grammar_concept_ids": [
             "a21-sequencing"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a21s1-t-058"
         }
       ],
       "learning_objectives": {
@@ -4747,6 +4776,10 @@
           {
             "target_id": "a21s1-e-078",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-058",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -4813,10 +4846,34 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-plural-partitive",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "«Näin valokuvia museossa» یعنی در موزه عکس‌هایی دیدم؛ برای تعداد نامشخص عکس‌ها «valokuvia» می‌آید. این مرورِ همان صورت جمع در موقعیتی تازه است، نه آموزش صرف همهٔ اسم‌ها.",
+            "examples": [
+              {
+                "fi": "Näin valokuvia museossa.",
+                "fa": "در موزه عکس‌هایی دیدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "inflection-production",
+                "item_id": "a21s1-t-058",
+                "mode": "supported_production"
+              }
+            ]
           }
         ]
       },
-      "activity_count": 19
+      "activity_count": 20,
+      "practice_targets": [
+        "a21s1-t-058"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-10",

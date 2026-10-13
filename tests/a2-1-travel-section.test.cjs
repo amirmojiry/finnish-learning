@@ -32,9 +32,9 @@ test('A2.1 travel is an additional real stage without exposing planned A2 module
  assert.equal(stages.at(-1).sections.length,2);
 });
 
-test('ten A2.1 travel lessons map exact curriculum target forms and cover 180 activities',()=>{
+test('ten A2.1 travel lessons map exact curriculum target forms and cover 181 activities',()=>{
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),180);
+ assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),181);
  for(const lesson of section.lessons){
   const planned=contract.sections[0].lessons[lesson.order-1];
   assert.equal(lesson.curriculum_id,planned.id);
@@ -47,7 +47,8 @@ test('ten A2.1 travel lessons map exact curriculum target forms and cover 180 ac
   assert.equal(lesson.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1,lesson.id);
   assert.equal(lesson.activities.filter(a=>a.type==='dictation').length,1,lesson.id);
   assert.equal(lesson.activities.filter(a=>a.type==='sentence-order').length,1,lesson.id);
-  assert.equal(lesson.activities.filter(a=>a.type==='inflection-production').length,1,lesson.id);
+  assert.equal(lesson.activities.filter(a=>a.type==='inflection-production').length,lesson.morphology_practice.filter(a=>a.type==='inflection-production').length,lesson.id);
+  assert.ok(lesson.activities.some(a=>a.type==='inflection-production'),lesson.id);
  }
 });
 

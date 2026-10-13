@@ -50,7 +50,7 @@ The shipped dictionary has an independently generated count and Parole frequency
 
 ### 4. Complete A2.1 deliberately, then expand A2.2–C2
 
-- A2.1 Sections 1–2 are playable: 20 lessons covering travel/past and routine healthcare/public-service language, with varied listening, controlled production, contextual Finnish form completion, integrated reading and an 80% checkpoint. After the 2026-10-12 practice expansion, Section 1 has 180 activities and Section 2 has 184 (364 total); the two checkpoints retain 15 targets each. These remain learning opportunities, not evidence of independently mastered grammar or CEFR certification. Healthcare texts teach communication, never medication dosage or clinical advice.
+- A2.1 Sections 1–2 are playable: 20 lessons covering travel/past and routine healthcare/public-service language, with varied listening, controlled production, contextual Finnish form completion, integrated reading and an 80% checkpoint. After the practice expansion and 2026-10-13 plural-partitive follow-up, Section 1 has 181 activities and Section 2 has 184 (365 total); the two checkpoints retain 15 targets each. These remain learning opportunities, not evidence of independently mastered grammar or CEFR certification. Healthcare texts teach communication, never medication dosage or clinical advice.
 - Author and independently review A2.1 Sections 3–4 (leisure and family narratives), then add playable files and regression tests; A2.2–C2 remain planning-only.
 - The current A1 convention of ten lessons and fifteen activities is a starting heuristic, **not** an obligatory prescription for B2/C1/C2.
 
@@ -84,3 +84,5 @@ Session length/difficulty, daily goals, streaks, bookmarks, word lists, progress
 P4 delivery, initial reviewed batch: issue #142, 25 original-source forms 401–425 (minor release 1.35.0). Future batches remain editorial review work; P5 Course/Word Practice review bridge follows after the first real batch meets source, UD and Persian-translation coverage gates.
 
 P5 minimal read-only evidence bridge: issue #144, first-attempt Course errors can prioritize unseen Word Practice forms without changing due SRS schedules or migrating history. Further Course-context review cards, skill analytics and deeper lexeme/sense review models remain separate follow-up work and are not general CEFR/YKI proficiency evidence.
+
+P1/P3 grammar follow-up: [issue #146](https://github.com/amirmojiry/finnish-learning/issues/146) links the existing supported `valokuvia` completion in travel lesson 7 to its grammar objective and a later positively graded contextual review in lesson 9. Travel now has 181 activities; services remain at 184. Broader plural-pattern coverage, A1/A2 objective backfill, P2 reviewed identities, P3 recycling and R3 variable section lengths remain open under #101; Section 3 is still gated.
