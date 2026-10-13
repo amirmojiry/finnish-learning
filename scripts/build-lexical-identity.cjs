@@ -20,7 +20,19 @@ function readParoleSource(bytes){
  }
  return {forms,positions:position};
 }
-function build(dictionary,sections,parole){
+function validateReviews(reviews, available) {
+ const indexed=new Map();
+ for(const entry of reviews.entries||[]){
+  const form=normalize(entry.surface_form);
+  if(!form||indexed.has(form))throw Error('Duplicate reviewed surface: '+form);
+  if(!/^lexeme:[a-z0-9-]+$/.test(entry.lexeme_id)||!/^sense:[a-z0-9-]+$/.test(entry.sense_id)||!entry.sense_id.startsWith('sense:'+entry.lexeme_id.slice(7)+'-'))throw Error('Invalid reviewed lexical identity: '+form);
+  if(!entry.morphology||!['noun','pronoun'].includes(entry.morphology.part_of_speech)||!['nominative','genitive'].includes(entry.morphology.case)||entry.morphology.number!=='singular')throw Error('Invalid reviewed morphology: '+form);
+  if(!available.has(stableId('form',form)))throw Error('Reviewed surface not found in shipped forms: '+form);
+  indexed.set(form,entry);
+ }
+ return indexed;
+}
+function build(dictionary,sections,parole,reviews={entries:[]}){
  const dictionaryByForm=new Map();
  for(const w of dictionary.words||[]){
   const form=normalize(w.word);
@@ -75,7 +87,17 @@ function build(dictionary,sections,parole){
     lexeme_id:null,sense_id:null,morphology:null,identity_review_status:'unresolved',provenance:'ranked',
     source_rank:word.frequency_rank,source_position:null,first_shipped_lesson:null,review_lessons:[],occurrences:[]});
  }
- return {schema_version:1,identity_scope:'exact_normalized_surface_only',
+ const reviewed=validateReviews(reviews,entries);
+ for(const record of entries.values()){
+  if(record.kind!=='form')continue;
+  const match=reviewed.get(record.surface_form);
+  if(!match)continue;
+  record.lexeme_id=match.lexeme_id;
+  record.sense_id=match.sense_id;
+  record.morphology=match.morphology;
+  record.identity_review_status='reviewed';
+ }
+ return {schema_version:1,identity_scope:'reviewed_identity_overlay_on_normalized_surface',
   disclaimer:'Stable surface/expression IDs do not verify lexemes, senses, morphology, teaching mastery or SRS transfers.',
   counts:{shipped_sections:sections.length,shipped_lessons:sections.reduce((n,s)=>n+s.lessons.length,0),dictionary_forms:dictionaryByForm.size,records:entries.size},
   records:[...entries.values()].sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0)};
@@ -87,7 +109,7 @@ function main(args=process.argv.slice(2)){
  const names=['a1.1','a1.2','a1.3','a2.1'];
  const sections=names.flatMap(level=>[1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
   .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
- const data=build(read('data/common-words.json'),sections,readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))));
+ const data=build(read('data/common-words.json'),sections,readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))),read('data/course/reviewed-lexical-identities.json'));
  const serialized=JSON.stringify(data,null,2)+'\n';
  if(command==='--write'){fs.writeFileSync(OUT,serialized);process.stdout.write('Wrote lexical identity sidecar.\n');}
  else if(!fs.existsSync(OUT)||fs.readFileSync(OUT,'utf8')!==serialized){
@@ -96,4 +118,4 @@ function main(args=process.argv.slice(2)){
  } else process.stdout.write('Lexical identity sidecar current.\n');
 }
 if(require.main===module)main();
-module.exports={build,normalize,stableId,readParoleSource,main};
+module.exports={build,normalize,stableId,readParoleSource,validateReviews,main};
