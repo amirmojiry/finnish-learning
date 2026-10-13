@@ -113,6 +113,6 @@ test('unknown, duplicate and invalid editorial mappings are rejected',()=>{
  const build=entries=>generator.build({words:[]},[],{forms:new Map()},{entries});
  const valid={surface_form:'not-shipped',lexeme_id:'lexeme:test',sense_id:'sense:test-base',morphology:{part_of_speech:'noun',case:'nominative',number:'singular'}};
  assert.throws(()=>build([valid]),/not found/);
- assert.throws(()=>build([valid,{...valid}]),/Duplicate reviewed surface/);
+ assert.throws(()=>generator.build({words:[{word:'known',frequency_rank:1}]},[],{forms:new Map()},{entries:[{...valid,surface_form:'known'},{...valid,surface_form:'known'}]}),/Duplicate reviewed surface/);
  assert.throws(()=>build([{...valid,sense_id:'bad'}]),/Invalid reviewed lexical identity/);
 });
