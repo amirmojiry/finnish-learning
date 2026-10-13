@@ -56,6 +56,8 @@ The shipped dictionary has an independently generated count and Parole frequency
 
 P3 composition audit pilot: issue [#138](https://github.com/amirmojiry/finnish-learning/issues/138) provides deterministic per-lesson positive assessment and planned later lexical review evidence. Legacy gaps stay advisory; a strict new-section gate applies before authoring A2.1 Section 3. This is an initial P3 quality gate, not completion of the broader editorial recycling/backfill work under #101.
 
+P4 lexical selection preparation: [issue #140](https://github.com/amirmojiry/finnish-learning/issues/140) and the [Parole candidate-review guide](P4-PAROLE-REVIEW-QUEUE.md) establish source-grounded priorities. They do not satisfy the parent P4 first-reviewed-batch release gate, which still requires genuine curated forms, full UD and Persian corpus example translation regeneration.
+
 ## Cross-cutting quality work
 
 | Area | Current baseline | Outstanding work |
