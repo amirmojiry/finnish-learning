@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.41.0`
+- Version: `1.41.1`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -165,3 +165,5 @@ A1.1 Section 3 now has complete ten-lesson overviews and acceptance checks for w
 A1.1 Section 4 completes canonical overviews and scoped acceptance gates for all forty lessons of the four-section A1.1 path (1,030 activities). Section 4 has 245 activities; all 65 introduced surfaces/expressions have later retrieval, including all ten animal names. Cafe ordering remains formulaic, and familiar-world reading/writing is supported. The final checkpoint retains its original answer scope and 80% threshold. Run `npm run section:a11:s4:check`; see the [Section 4 report](docs/A11-SECTION4-ACCEPTANCE.md). Content acceptance does not certify learner proficiency or complete the wider identity/review backlog.
 
 A1.2 Section 1 now has canonical overviews for all ten shopping/services lessons (291 activities). All 71 introduced exact surfaces/expressions have later positive retrieval; six bounded grammar concepts have later review, with prerequisite context from all four A1.1 sections. Polite requests remain fixed phrases. The original fifteen checkpoint targets and 80% threshold are retained. Run `npm run section:a12:s1:check`; see the [acceptance report](docs/A12-SECTION1-ACCEPTANCE.md).
+
+Dialogue and sequence ordering use a selected-answer box: choose phrases/items, click a selection to return it to the pool, or reset before explicitly submitting. Finnish dialogue turns stay in a left-to-right vertical sequence.

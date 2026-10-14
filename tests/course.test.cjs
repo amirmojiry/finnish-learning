@@ -932,18 +932,6 @@ test('locked lesson previews keep details available while unavailable lessons di
 });
 
 
-test('sequence-order uses reversible selection and explicit submission', () => {
-  const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
-  const sequenceBranch = source.match(/else if \(activity\.type === 'sequence-order'\) \{[\s\S]*?\n      \} else if \(activity\.type === 'clock-choice'\)/)?.[0] || '';
-
-  assert.match(sequenceBranch, /course-sentence-answer-box/);
-  assert.match(sequenceBranch, /course-sentence-token-pool/);
-  assert.match(sequenceBranch, /ordered\.splice\(selectedPosition, 1\)/);
-  assert.match(sequenceBranch, /course-sentence-submit/);
-  assert.match(sequenceBranch, /submit\.disabled = answered \|\| ordered\.length !== activity\.items\.length/);
-  assert.doesNotMatch(sequenceBranch, /if \(ordered\.length === activity\.items\.length\) \{/);
-});
-
 test('lesson popover dismisses when the learner clicks outside it', () => {
   const source = fs.readFileSync(path.join(ROOT, 'course.js'), 'utf8');
 

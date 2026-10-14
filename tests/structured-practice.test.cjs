@@ -302,6 +302,83 @@ function fakeDomHarness() {
   return { document, windowObject, createButton };
 }
 
+for (const type of ['dialogue-order', 'sequence-order']) {
+  test(`${type} moves selections into the answer box and permits editing before submission`, () => {
+    const { document, createButton } = fakeDomHarness();
+    const card = document.createElement('div'), results = [];
+    const items = { hi: { surface_form: 'Hei' }, question: { surface_form: 'Mitä kuuluu?' }, thanks: { surface_form: 'Kiitos' } };
+    const activity = { type, [type === 'dialogue-order' ? 'turns' : 'items']: ['question', 'thanks', 'hi'], answer_order: [2, 0, 1] };
+    let advanced = 0;
+    course.renderItemOrderingActivity({ document, createButton, card, activity, items,
+      recordResult: correct => results.push(correct), nextActivity: () => advanced++ });
+    const [, answerBox, pool, submit, reset] = card.children;
+    assert.equal(card.classList.contains('is-long-content'), true, 'ordering stays reachable in short scrollable cards');
+    assert.equal(answerBox.dir, 'ltr');
+    assert.equal(answerBox.attributes.role, 'group');
+    assert.equal(pool.dir, 'ltr');
+    assert.equal(submit.disabled, true);
+    assert.equal(reset.disabled, true);
+    submit.click();
+    assert.deepEqual(results, []);
+    pool.children[2].click();
+    assert.equal(answerBox.children[0].textContent, 'Hei');
+    assert.equal(pool.children.length, 2);
+    assert.equal(pool.children[0].focused, true);
+    answerBox.children[0].click();
+    assert.equal(pool.children.length, 3);
+    assert.equal(pool.children[2].focused, true);
+    pool.children[2].click();
+    pool.children[0].click();
+    reset.click();
+    assert.equal(pool.children.length, 3);
+    assert.equal(pool.children[0].focused, true);
+    assert.equal(submit.disabled, true);
+    pool.children[2].click();
+    pool.children[0].click();
+    pool.children[0].click();
+    assert.deepEqual(answerBox.children.map(b => b.textContent), ['Hei', 'Mitä kuuluu?', 'Kiitos']);
+    assert.equal(pool.children.length, 0);
+    assert.equal(submit.disabled, false);
+    assert.equal(submit.focused, true);
+    assert.deepEqual(results, []);
+    submit.click();
+    assert.deepEqual(results, [true]);
+    assert.ok(answerBox.children.every(b => b.disabled));
+    assert.equal(reset.disabled, true);
+    reset.click();
+    answerBox.children[0].click();
+    submit.click();
+    assert.deepEqual(results, [true]);
+    const result = card.children.at(-1);
+    assert.equal(result.attributes.role, 'status');
+    assert.equal(result.children.at(-1).focused, true);
+    result.children.at(-1).click();
+    assert.equal(advanced, 1);
+  });
+}
+
+test('dialogue ordering grades incorrect and duplicate-text turns by their original indices', () => {
+  for (const [order, correct] of [[[2, 0, 1], true], [[0, 2, 1], false]]) {
+    const { document, createButton } = fakeDomHarness();
+    const card = document.createElement('div'), results = [];
+    const activity = { type: 'dialogue-order', turns: ['hi1', 'thanks', 'hi2'], answer_order: [2, 0, 1] };
+    const items = { hi1: { surface_form: 'Hei' }, hi2: { surface_form: 'Hei' }, thanks: { surface_form: 'Kiitos' } };
+    course.renderItemOrderingActivity({ document, createButton, card, activity, items,
+      recordResult: value => results.push(value), nextActivity() {} });
+    const [, box, pool, submit] = card.children;
+    const remaining = [0, 1, 2];
+    for (const index of order) {
+      const position = remaining.indexOf(index);
+      pool.children[position].click();
+      remaining.splice(position, 1);
+    }
+    assert.equal(box.children.length, 3);
+    submit.click();
+    assert.deepEqual(results, [correct]);
+    assert.deepEqual(card.children.at(-1).children[1].children.map(p => p.textContent), ['Hei', 'Hei', 'Kiitos']);
+  }
+});
+
 test('structured-practice DOM renderer handles ordering and typed interactions', () => {
   const { document, windowObject, createButton } = fakeDomHarness();
 
@@ -332,6 +409,7 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
       },
     });
     assert.equal(handled, true);
+    assert.equal(card.classList.contains('is-long-content'), true, 'sentence ordering stays reachable in short scrollable cards');
     const answerBox = card.children[0];
     const tokenPool = card.children[1];
     const submit = card.children[2];
