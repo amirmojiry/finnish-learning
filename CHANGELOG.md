@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.42.0] - 2026-10-14
+
+### Added
+
+- Complete all ten A1.2 Section 2 transport/directions overviews: 309 activities, later positive retrieval for 80 introduced exact surfaces/expressions and later review of five bounded grammar concepts.
+- Close 54 missing positive-answer target occurrences; teach new expressions before assessment, including filled inflection frames. Reject incorrect grammatical forms in bounded case, command, quantity and schedule tasks.
+- Add three sentence records, a timetable passage with two questions and supported three-sentence trip writing. Preserve original records, lesson IDs, production/listening targets, fifteen checkpoint targets and the 80% threshold.
+- Add deterministic acceptance checks, regression tests and bilingual reports; full paradigms, independent proficiency and the wider parent backlog remain outside this package.
+
 ## [1.41.1] - 2026-10-14
 
 ### Fixed

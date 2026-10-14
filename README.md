@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.41.1`
+- Version: `1.42.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -167,3 +167,5 @@ A1.1 Section 4 completes canonical overviews and scoped acceptance gates for all
 A1.2 Section 1 now has canonical overviews for all ten shopping/services lessons (291 activities). All 71 introduced exact surfaces/expressions have later positive retrieval; six bounded grammar concepts have later review, with prerequisite context from all four A1.1 sections. Polite requests remain fixed phrases. The original fifteen checkpoint targets and 80% threshold are retained. Run `npm run section:a12:s1:check`; see the [acceptance report](docs/A12-SECTION1-ACCEPTANCE.md).
 
 Dialogue and sequence ordering use a selected-answer box: choose phrases/items, click a selection to return it to the pool, or reset before explicitly submitting. Finnish dialogue turns stay in a left-to-right vertical sequence.
+
+A1.2 Section 2 completes all ten transport/directions lesson overviews with 309 activities, later positive retrieval for 80 introduced exact surfaces/expressions and later review of five bounded grammar concepts. Timetable reading and three-sentence trip writing remain supported practice. Original item records, lesson IDs, fifteen checkpoint targets and the 80% threshold are preserved. Run `npm run section:a12:s2:check`; see the [acceptance report](docs/A12-SECTION2-ACCEPTANCE.md). These checks do not certify full paradigms or CEFR proficiency.

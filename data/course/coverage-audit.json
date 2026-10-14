@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1960,
+    "graded_activity_slots": 2083,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 527,
+    "assessed_again_after_earlier_reference": 578,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 19,
-    "lessons_without_explicit_grammar_concept_ids": 73,
-    "graded_grammar_related_slots": 407,
+    "grammar_concepts_with_explicit_lesson_ids": 21,
+    "lessons_without_explicit_grammar_concept_ids": 63,
+    "graded_grammar_related_slots": 428,
     "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 74,
+    "lessons_with_declared_unassessed_forms": 66,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -78,9 +78,9 @@
       "level": "A1.2",
       "id": "a1.2-section-2",
       "lessons": 10,
-      "graded_slots": 90,
-      "unassessed_target_forms": 27,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 213,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.2",
@@ -6180,6 +6180,7 @@
           "missä",
           "missä apteekki on?",
           "missä asema on?",
+          "olen asemalla.",
           "pysäkki",
           "se on keskustassa.",
           "siellä",
@@ -6191,6 +6192,7 @@
           "keskusta",
           "missä apteekki on?",
           "missä asema on?",
+          "olen asemalla.",
           "pysäkki",
           "se on keskustassa."
         ],
@@ -6200,36 +6202,38 @@
           "kauppa",
           "keskusta",
           "missä",
+          "missä apteekki on?",
+          "missä asema on?",
+          "olen asemalla.",
           "pysäkki",
+          "se on keskustassa.",
           "siellä",
           "täällä"
         ],
         "correct_answer": [
           "apteekki",
           "asema",
+          "kauppa",
           "keskusta",
           "missä",
           "missä apteekki on?",
           "missä asema on?",
+          "olen asemalla.",
+          "pysäkki",
+          "se on keskustassa.",
+          "siellä",
           "täällä"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
+        "productive_count": 8,
         "later_correct_retrieval": [
+          "kauppa",
           "missä",
+          "siellä",
           "täällä"
         ],
-        "declared_unassessed": [
-          "kauppa",
-          "pysäkki",
-          "se on keskustassa.",
-          "siellä"
-        ],
-        "teach_only": [
-          "kauppa",
-          "pysäkki",
-          "siellä"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -6252,22 +6256,28 @@
         "authored_new_forms": [
           "apteekki",
           "asema",
-          "kauppa",
           "keskusta",
-          "missä",
+          "missä apteekki on?",
+          "missä asema on?",
+          "olen asemalla.",
           "pysäkki",
-          "siellä",
-          "täällä"
+          "se on keskustassa."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla"
+        ]
       }
     },
     {
@@ -6282,7 +6292,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "kohti",
@@ -6309,6 +6319,10 @@
         ],
         "introduced": [
           "kohti",
+          "käänny oikealle.",
+          "käänny vasemmalle.",
+          "mene suoraan.",
+          "mene takaisin.",
           "oikealle",
           "pois",
           "suoraan",
@@ -6316,24 +6330,31 @@
           "vasemmalle"
         ],
         "correct_answer": [
+          "apteekki",
+          "asema",
           "kohti",
+          "käänny oikealle.",
           "käänny vasemmalle.",
           "mene suoraan.",
+          "mene takaisin.",
+          "missä asema on?",
           "oikealle",
           "pois",
+          "se on keskustassa.",
           "suoraan",
           "takaisin",
           "vasemmalle"
         ],
         "receptive_count": 5,
-        "productive_count": 4,
+        "productive_count": 10,
         "later_correct_retrieval": [
+          "apteekki",
+          "asema",
+          "missä asema on?",
+          "se on keskustassa.",
           "takaisin"
         ],
-        "declared_unassessed": [
-          "käänny oikealle.",
-          "mene takaisin."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -6355,21 +6376,28 @@
         ],
         "authored_new_forms": [
           "kohti",
+          "käänny oikealle.",
+          "käänny vasemmalle.",
+          "mene suoraan.",
+          "mene takaisin.",
           "oikealle",
           "pois",
           "suoraan",
-          "takaisin",
           "vasemmalle"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-commands"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -6384,7 +6412,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "asemalle",
@@ -6414,35 +6442,53 @@
           "asemalle",
           "keskustaan",
           "kotiin",
+          "menen asemalle.",
+          "menen keskustaan.",
           "mihin",
+          "mihin menet?",
           "siihen",
           "tulee",
           "tähän"
         ],
         "correct_answer": [
           "asemalle",
+          "keskusta",
+          "keskustaan",
+          "kohti",
           "kotiin",
+          "käänny vasemmalle.",
+          "mene takaisin.",
+          "menen asemalle.",
           "menen keskustaan.",
           "menen kotiin.",
           "mihin",
+          "mihin menet?",
+          "missä apteekki on?",
+          "oikealle",
+          "olen asemalla.",
+          "pysäkki",
           "siihen",
+          "suoraan",
           "tulee",
           "tähän"
         ],
         "receptive_count": 4,
-        "productive_count": 4,
+        "productive_count": 16,
         "later_correct_retrieval": [
+          "keskusta",
+          "kohti",
           "kotiin",
-          "menen kotiin."
+          "käänny vasemmalle.",
+          "mene takaisin.",
+          "menen kotiin.",
+          "missä apteekki on?",
+          "oikealle",
+          "olen asemalla.",
+          "pysäkki",
+          "suoraan"
         ],
-        "declared_unassessed": [
-          "keskustaan",
-          "menen asemalle.",
-          "mihin menet?"
-        ],
-        "teach_only": [
-          "keskustaan"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -6465,8 +6511,10 @@
         "authored_new_forms": [
           "asemalle",
           "keskustaan",
-          "kotiin",
+          "menen asemalle.",
+          "menen keskustaan.",
           "mihin",
+          "mihin menet?",
           "siihen",
           "tulee",
           "tähän"
@@ -6474,12 +6522,16 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks"
+        ]
       }
     },
     {
@@ -6494,7 +6546,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "asemalta",
@@ -6525,34 +6577,51 @@
           "kaupasta",
           "kotoa",
           "mistä",
-          "siitä",
-          "tulee",
-          "tästä"
-        ],
-        "correct_answer": [
-          "asemalta",
-          "kotoa",
-          "mistä",
           "mistä tulet?",
           "siitä",
           "tulee",
+          "tulen asemalta.",
           "tulen kaupasta.",
+          "tulen kotoa.",
           "tästä"
         ],
-        "receptive_count": 4,
-        "productive_count": 4,
-        "later_correct_retrieval": [
-          "mistä",
-          "tulee"
-        ],
-        "declared_unassessed": [
+        "correct_answer": [
+          "asemalle",
+          "asemalta",
           "kaupasta",
+          "kotoa",
+          "käänny oikealle.",
+          "mene suoraan.",
+          "menen keskustaan.",
+          "mihin",
+          "mistä",
+          "mistä tulet?",
+          "pois",
+          "siihen",
+          "siitä",
+          "tulee",
           "tulen asemalta.",
-          "tulen kotoa."
+          "tulen kaupasta.",
+          "tulen kotoa.",
+          "tästä",
+          "vasemmalle"
         ],
-        "teach_only": [
-          "kaupasta"
+        "receptive_count": 4,
+        "productive_count": 15,
+        "later_correct_retrieval": [
+          "asemalle",
+          "käänny oikealle.",
+          "mene suoraan.",
+          "menen keskustaan.",
+          "mihin",
+          "mistä",
+          "pois",
+          "siihen",
+          "tulee",
+          "vasemmalle"
         ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -6576,20 +6645,26 @@
           "asemalta",
           "kaupasta",
           "kotoa",
-          "mistä",
+          "mistä tulet?",
           "siitä",
-          "tulee",
+          "tulen asemalta.",
+          "tulen kaupasta.",
+          "tulen kotoa.",
           "tästä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks"
+        ]
       }
     },
     {
@@ -6604,7 +6679,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "bussi",
@@ -6613,6 +6688,7 @@
           "menen bussilla.",
           "menen junalla.",
           "menen pyörällä.",
+          "menen usein bussilla.",
           "pyörä",
           "taksi",
           "tulee",
@@ -6626,6 +6702,7 @@
           "menen bussilla.",
           "menen junalla.",
           "menen pyörällä.",
+          "menen usein bussilla.",
           "pyörä",
           "taksi",
           "tulen taksilla.",
@@ -6635,34 +6712,55 @@
           "bussi",
           "juna",
           "kanssa",
+          "menen bussilla.",
+          "menen junalla.",
+          "menen pyörällä.",
+          "menen usein bussilla.",
           "pyörä",
           "taksi",
           "tulee",
-          "usein"
-        ],
-        "correct_answer": [
-          "bussi",
-          "juna",
-          "kanssa",
-          "menen bussilla.",
-          "menen pyörällä.",
-          "pyörä",
-          "taksi",
-          "tulee"
-        ],
-        "receptive_count": 4,
-        "productive_count": 4,
-        "later_correct_retrieval": [
-          "tulee"
-        ],
-        "declared_unassessed": [
-          "menen junalla.",
           "tulen taksilla.",
           "usein"
         ],
-        "teach_only": [
+        "correct_answer": [
+          "asemalta",
+          "bussi",
+          "juna",
+          "kanssa",
+          "keskustaan",
+          "kotoa",
+          "menen asemalle.",
+          "menen bussilla.",
+          "menen junalla.",
+          "menen pyörällä.",
+          "menen usein bussilla.",
+          "mihin menet?",
+          "pyörä",
+          "taksi",
+          "tulee",
+          "tulen asemalta.",
+          "tulen kotoa.",
+          "tulen taksilla.",
+          "tähän",
+          "tästä",
           "usein"
         ],
+        "receptive_count": 4,
+        "productive_count": 17,
+        "later_correct_retrieval": [
+          "asemalta",
+          "keskustaan",
+          "kotoa",
+          "menen asemalle.",
+          "mihin menet?",
+          "tulee",
+          "tulen asemalta.",
+          "tulen kotoa.",
+          "tähän",
+          "tästä"
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -6686,20 +6784,30 @@
           "bussi",
           "juna",
           "kanssa",
+          "menen bussilla.",
+          "menen junalla.",
+          "menen pyörällä.",
+          "menen usein bussilla.",
           "pyörä",
           "taksi",
-          "tulee",
+          "tulen taksilla.",
           "usein"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-frequency-adverbs",
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -6741,36 +6849,53 @@
           "antaa",
           "automaatti",
           "kaksi",
-          "lippu",
-          "meno-paluu",
-          "menolippu",
-          "yksi"
-        ],
-        "correct_answer": [
-          "antaa",
-          "kaksi",
           "kaksi lippua, kiitos.",
           "lippu",
           "meno-paluu",
+          "meno-paluu, kiitos.",
+          "menolippu",
+          "yksi",
+          "yksi lippu helsinkiin, kiitos."
+        ],
+        "correct_answer": [
+          "antaa",
+          "automaatti",
+          "juna",
+          "kaksi",
+          "kaksi lippua, kiitos.",
+          "kaupasta",
+          "lippu",
+          "menen junalla.",
+          "menen pyörällä.",
+          "meno-paluu",
+          "meno-paluu, kiitos.",
+          "menolippu",
+          "mistä tulet?",
+          "pyörä",
+          "siitä",
+          "tulen kaupasta.",
+          "usein",
           "yksi",
           "yksi lippu helsinkiin, kiitos."
         ],
         "receptive_count": 3,
-        "productive_count": 5,
+        "productive_count": 17,
         "later_correct_retrieval": [
           "antaa",
+          "juna",
           "kaksi",
+          "kaupasta",
+          "menen junalla.",
+          "menen pyörällä.",
+          "mistä tulet?",
+          "pyörä",
+          "siitä",
+          "tulen kaupasta.",
+          "usein",
           "yksi"
         ],
-        "declared_unassessed": [
-          "automaatti",
-          "meno-paluu, kiitos.",
-          "menolippu"
-        ],
-        "teach_only": [
-          "automaatti",
-          "menolippu"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -6790,23 +6915,27 @@
           "yksi lippu helsinkiin, kiitos."
         ],
         "authored_new_forms": [
-          "antaa",
           "automaatti",
-          "kaksi",
+          "kaksi lippua, kiitos.",
           "lippu",
           "meno-paluu",
+          "meno-paluu, kiitos.",
           "menolippu",
-          "yksi"
+          "yksi lippu helsinkiin, kiitos."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks"
+        ]
       }
     },
     {
@@ -6821,15 +6950,19 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 8,
+      "authored_new_targets": 16,
       "lexical": {
         "declared_forms": [
           "ajoissa",
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
           "bussi on myöhässä.",
           "ennen",
           "juna saapuu kello yhdeksän.",
           "jälkeen",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
           "klo",
           "lähtee",
           "myöhässä",
@@ -6840,10 +6973,14 @@
         "first_referenced": [
           "ajoissa",
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
           "bussi on myöhässä.",
           "ennen",
           "juna saapuu kello yhdeksän.",
           "jälkeen",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
           "klo",
           "lähtee",
           "myöhässä",
@@ -6853,42 +6990,70 @@
         ],
         "introduced": [
           "ajoissa",
+          "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
+          "bussi on myöhässä.",
           "ennen",
+          "juna saapuu kello yhdeksän.",
           "jälkeen",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
           "klo",
           "lähtee",
           "myöhässä",
           "saapuu",
-          "välillä"
-        ],
-        "correct_answer": [
-          "bussi lähtee kello kahdeksan.",
-          "ennen",
-          "juna saapuu kello yhdeksän.",
-          "kello kahdeksan",
-          "klo",
-          "lähtee",
-          "myöhässä"
-        ],
-        "receptive_count": 4,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "ajoissa",
-          "bussi on myöhässä.",
-          "jälkeen",
-          "saapuu",
           "se lähtee ennen kymmentä.",
           "välillä"
         ],
-        "teach_only": [
+        "correct_answer": [
           "ajoissa",
+          "bussi",
+          "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
+          "bussi on myöhässä.",
+          "ennen",
+          "juna saapuu kello yhdeksän.",
           "jälkeen",
+          "kanssa",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
+          "klo",
+          "lippu",
+          "lähtee",
+          "menen bussilla.",
+          "menen usein bussilla.",
+          "meno-paluu",
+          "meno-paluu, kiitos.",
+          "myöhässä",
           "saapuu",
-          "välillä"
+          "se lähtee ennen kymmentä.",
+          "taksi",
+          "tulen taksilla.",
+          "välillä",
+          "yksi lippu helsinkiin, kiitos."
         ],
-        "distractor_only_count": 2,
-        "reading_only": [],
+        "receptive_count": 5,
+        "productive_count": 22,
+        "later_correct_retrieval": [
+          "bussi",
+          "kanssa",
+          "lippu",
+          "menen bussilla.",
+          "menen usein bussilla.",
+          "meno-paluu",
+          "meno-paluu, kiitos.",
+          "taksi",
+          "tulen taksilla.",
+          "yksi lippu helsinkiin, kiitos."
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 3,
+        "reading_only": [
+          "bussi lähtee kello kahdeksan. juna saapuu kello yhdeksän."
+        ],
         "high_frequency_target_forms": [
           "ennen",
           "jälkeen",
@@ -6909,23 +7074,35 @@
         ],
         "authored_new_forms": [
           "ajoissa",
+          "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
+          "bussi on myöhässä.",
           "ennen",
+          "juna saapuu kello yhdeksän.",
           "jälkeen",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
           "klo",
           "lähtee",
           "myöhässä",
           "saapuu",
+          "se lähtee ennen kymmentä.",
           "välillä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-frequency-adverbs"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -6940,7 +7117,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "aikaa",
@@ -6973,31 +7150,55 @@
           "kauan",
           "kaukana",
           "kuinka",
-          "lähellä",
-          "minuutti",
-          "miten"
-        ],
-        "correct_answer": [
-          "aikaa",
-          "kauan",
-          "kuinka",
           "kuinka kauan matka kestää?",
           "lähellä",
           "minuutti",
           "miten",
-          "noin kymmenen minuuttia."
-        ],
-        "receptive_count": 3,
-        "productive_count": 5,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "kaukana",
+          "noin kymmenen minuuttia.",
           "se on kaukana.",
           "se on lähellä."
         ],
-        "teach_only": [
-          "kaukana"
+        "correct_answer": [
+          "aikaa",
+          "ajoissa",
+          "automaatti",
+          "bussi on myöhässä.",
+          "ennen",
+          "juna saapuu kello yhdeksän.",
+          "kaksi lippua, kiitos.",
+          "kauan",
+          "kaukana",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kuinka",
+          "kuinka kauan matka kestää?",
+          "lähellä",
+          "menolippu",
+          "minuutti",
+          "miten",
+          "noin kymmenen minuuttia.",
+          "saapuu",
+          "se on kaukana.",
+          "se on lähellä.",
+          "välillä"
         ],
+        "receptive_count": 3,
+        "productive_count": 19,
+        "later_correct_retrieval": [
+          "ajoissa",
+          "automaatti",
+          "bussi on myöhässä.",
+          "ennen",
+          "juna saapuu kello yhdeksän.",
+          "kaksi lippua, kiitos.",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "menolippu",
+          "saapuu",
+          "välillä"
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -7022,19 +7223,29 @@
           "kauan",
           "kaukana",
           "kuinka",
+          "kuinka kauan matka kestää?",
           "lähellä",
           "minuutti",
-          "miten"
+          "miten",
+          "noin kymmenen minuuttia.",
+          "se on kaukana.",
+          "se on lähellä."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla"
+        ]
       }
     },
     {
@@ -7053,7 +7264,10 @@
       "lexical": {
         "declared_forms": [
           "bussi lähtee kello kahdeksan.",
+          "mene suoraan.",
+          "menen asemalle.",
           "menen bussilla.",
+          "menen usein bussilla.",
           "missä asema on?",
           "yksi lippu helsinkiin, kiitos."
         ],
@@ -7066,19 +7280,45 @@
         ],
         "correct_answer": [
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
+          "jälkeen",
+          "kauan",
+          "kaukana",
+          "kello yhdeksän",
+          "klo",
+          "kuinka kauan matka kestää?",
+          "lähtee",
           "mene suoraan.",
+          "menen asemalle.",
           "menen bussilla.",
+          "menen usein bussilla.",
           "missä asema on?",
+          "miten",
+          "myöhässä",
+          "se lähtee ennen kymmentä.",
           "se on lähellä.",
           "yksi lippu helsinkiin, kiitos."
         ],
         "receptive_count": 6,
-        "productive_count": 3,
+        "productive_count": 18,
         "later_correct_retrieval": [
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
+          "jälkeen",
+          "kauan",
+          "kaukana",
+          "kello yhdeksän",
+          "klo",
+          "kuinka kauan matka kestää?",
+          "lähtee",
           "mene suoraan.",
+          "menen asemalle.",
           "menen bussilla.",
+          "menen usein bussilla.",
           "missä asema on?",
+          "miten",
+          "myöhässä",
+          "se lähtee ennen kymmentä.",
           "se on lähellä.",
           "yksi lippu helsinkiin, kiitos."
         ],
@@ -7100,12 +7340,19 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-commands",
+          "a12-frequency-adverbs",
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -7124,7 +7371,9 @@
       "lexical": {
         "declared_forms": [
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
           "bussi on myöhässä.",
+          "kaksi lippua, kiitos.",
           "kuinka kauan matka kestää?",
           "käänny oikealle.",
           "mene suoraan.",
@@ -7135,6 +7384,7 @@
           "missä asema on?",
           "mistä tulet?",
           "noin kymmenen minuuttia.",
+          "olen asemalla.",
           "se on lähellä.",
           "tulen asemalta.",
           "yksi lippu helsinkiin, kiitos."
@@ -7142,37 +7392,53 @@
         "first_referenced": [],
         "introduced": [],
         "correct_answer": [
+          "aikaa",
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
           "bussi on myöhässä.",
+          "kaksi lippua, kiitos.",
+          "kuinka",
           "kuinka kauan matka kestää?",
           "käänny oikealle.",
+          "lähellä",
           "mene suoraan.",
           "menen asemalle.",
           "menen bussilla.",
           "meno-paluu, kiitos.",
           "mihin menet?",
+          "minuutti",
           "missä asema on?",
           "mistä tulet?",
           "noin kymmenen minuuttia.",
+          "olen asemalla.",
+          "se on kaukana.",
           "se on lähellä.",
           "tulen asemalta.",
           "yksi lippu helsinkiin, kiitos."
         ],
         "receptive_count": 7,
-        "productive_count": 8,
+        "productive_count": 17,
         "later_correct_retrieval": [
+          "aikaa",
           "bussi lähtee kello kahdeksan.",
+          "bussi lähtee kymmenen jälkeen.",
           "bussi on myöhässä.",
+          "kaksi lippua, kiitos.",
+          "kuinka",
           "kuinka kauan matka kestää?",
           "käänny oikealle.",
+          "lähellä",
           "mene suoraan.",
           "menen asemalle.",
           "menen bussilla.",
           "meno-paluu, kiitos.",
           "mihin menet?",
+          "minuutti",
           "missä asema on?",
           "mistä tulet?",
           "noin kymmenen minuuttia.",
+          "olen asemalla.",
+          "se on kaukana.",
           "se on lähellä.",
           "tulen asemalta.",
           "yksi lippu helsinkiin, kiitos."
@@ -7188,12 +7454,22 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-commands",
+          "a12-frequency-adverbs",
+          "a12-local-cases",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 8,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -8942,6 +9218,7 @@
         "productive_count": 3,
         "later_correct_retrieval": [
           "aika",
+          "kello kymmenen",
           "milloin"
         ],
         "declared_unassessed": [
@@ -17849,73 +18126,6 @@
     ],
     "lessons_with_unassessed_declared_targets": [
       {
-        "lesson_id": "a1.2-section-2-lesson-1",
-        "forms": [
-          "kauppa",
-          "pysäkki",
-          "se on keskustassa.",
-          "siellä"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-2",
-        "forms": [
-          "käänny oikealle.",
-          "mene takaisin."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-3",
-        "forms": [
-          "keskustaan",
-          "menen asemalle.",
-          "mihin menet?"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-4",
-        "forms": [
-          "kaupasta",
-          "tulen asemalta.",
-          "tulen kotoa."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-5",
-        "forms": [
-          "menen junalla.",
-          "tulen taksilla.",
-          "usein"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-6",
-        "forms": [
-          "automaatti",
-          "meno-paluu, kiitos.",
-          "menolippu"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-7",
-        "forms": [
-          "ajoissa",
-          "bussi on myöhässä.",
-          "jälkeen",
-          "saapuu",
-          "se lähtee ennen kymmentä.",
-          "välillä"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-2-lesson-8",
-        "forms": [
-          "kaukana",
-          "se on kaukana.",
-          "se on lähellä."
-        ]
-      },
-      {
         "lesson_id": "a1.2-section-3-lesson-1",
         "forms": [
           "herään",
@@ -18425,22 +18635,6 @@
         "level": "A1.1",
         "title_en": "Basic phonology and vowel length",
         "prerequisites": []
-      },
-      {
-        "id": "a12-commands",
-        "level": "A1.2",
-        "title_en": "Singular imperatives and route instructions",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
-      },
-      {
-        "id": "a12-frequency-adverbs",
-        "level": "A1.2",
-        "title_en": "Simple frequency/time adverbs",
-        "prerequisites": [
-          "a11-present-chunks"
-        ]
       },
       {
         "id": "a13-verb-classes",
