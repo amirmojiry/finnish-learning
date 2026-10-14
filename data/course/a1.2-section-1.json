@@ -1465,14 +1465,16 @@
       "title_fa": "قیمت و پول",
       "objective_fa": "قیمت یک کالای آشنا را بپرسد و یک پاسخ ساده دربارهٔ قیمت را بفهمد.",
       "summary_fa": "قیمت یک کالای آشنا را بپرس و پاسخ سادهٔ قیمت را بفهم.",
-      "grammar_fa": "Paljonko…? را به‌عنوان پرسش ثابت قیمت تمرین می‌کنی و euro/sentti را در عبارت‌های کامل می‌بینی.",
+      "grammar_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند. پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?».",
       "new_targets": [
         "a12s1-hf-paljon",
         "a12s1-hf-rahaa",
-        "a12s1-hf-yksi",
         "a12s1-topic-hinta",
         "a12s1-topic-euro",
-        "a12s1-topic-sentti"
+        "a12s1-topic-sentti",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-se-maksaa-viisi-euroa-7",
+        "a12s1-expr-minulla-on-rahaa-8"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1516,9 +1518,296 @@
             0,
             1
           ],
-          "expected_fi": "Paljonko tämä maksaa?"
+          "expected_fi": "Paljonko tämä maksaa?",
+          "expected_fa": "این چقدر قیمت دارد؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-viisi-euroa-7",
+          "prompt_fa": "قیمت آن پنج یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa viisi euroa.",
+          "accepted_answers": [
+            "Se maksaa viisi euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "prompt_fa": "این چقدر قیمت دارد؟",
+          "cues_fi": [
+            "Paljonko"
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "accepted_answers": [
+            "Paljonko tämä maksaa?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-paljon"
+        },
+        {
+          "type": "sentence-order",
+          "item": "a12s1-hf-paljon",
+          "tokens": [
+            "tämä",
+            "maksaa?",
+            "Paljonko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "expected_fa": "این چقدر قیمت دارد؟"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-rahaa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-rahaa",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi",
+            "a12s1-topic-hinta"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-yksi"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-yksi",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi",
+            "a12s1-topic-hinta"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-hinta"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-hinta",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi",
+            "a12s1-topic-hinta"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-euro"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-topic-euro",
+          "mode": "finnish"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-sentti"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-sentti",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-topic-sentti",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s1-hf-paljon",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi",
+            "a12s1-topic-hinta"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-rahaa"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-viisi-euroa-7",
+          "prompt_fa": "قیمت آن پنج یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa viisi euroa.",
+          "accepted_answers": [
+            "Se maksaa viisi euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "prompt_fa": "این چقدر قیمت دارد؟",
+          "cues_fi": [
+            "Paljonko"
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "accepted_answers": [
+            "Paljonko tämä maksaa?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-minulla-on-rahaa-8",
+          "answer_policy": "morphology"
+        }
+      ],
+      "activity_count": 18,
+      "practice_targets": [
+        "a12s1-hf-paljon",
+        "a12s1-hf-rahaa",
+        "a12s1-hf-yksi",
+        "a12s1-topic-hinta",
+        "a12s1-topic-euro",
+        "a12s1-topic-sentti",
+        "a12s1-expr-paljonko-tama-maksaa-6"
+      ],
+      "review_targets": [
+        "a12s1-expr-se-maksaa-viisi-euroa-7",
+        "a12s1-expr-paljonko-tama-maksaa-6"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l01-can-do",
+            "can_do_fa": "قیمت یک کالای آشنا را بپرس و پاسخ سادهٔ قیمت را بفهم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-paljon",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-rahaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-yksi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-hinta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-euro",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-sentti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-paljonko-tama-maksaa-6",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-viisi-euroa-7",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-minulla-on-rahaa-8",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-quantities",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Se maksaa viisi euroa.",
+                "fa": "قیمت آن پنج یورو است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?».",
+            "examples": [
+              {
+                "fi": "Paljonko tämä maksaa?",
+                "fa": "قیمت این چقدر است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-2",
@@ -1527,7 +1816,7 @@
       "title_fa": "عددها برای قیمت‌های روزمره",
       "objective_fa": "قیمت‌های رُند و رایج بین ۲۰ تا ۱۰۰ را بفهمد و بگوید.",
       "summary_fa": "عددهای رُند ۲۰ تا ۱۰۰ را در قیمت‌ها بفهم و بگو.",
-      "grammar_fa": "دهگان‌ها و sata به‌صورت شکل‌های کامل و بازبینی‌شده یاد گرفته می‌شوند؛ چیزی در زمان اجرا ساخته نمی‌شود.",
+      "grammar_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
       "new_targets": [
         "a12s1-hf-10",
         "a12s1-hf-20",
@@ -1538,7 +1827,10 @@
         "a12s1-topic-seitsemankymmenta",
         "a12s1-topic-kahdeksankymmenta",
         "a12s1-topic-yhdeksankymmenta",
-        "a12s1-topic-sata"
+        "a12s1-topic-sata",
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+        "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+        "a12s1-expr-se-maksaa-sata-euroa-21"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1619,13 +1911,26 @@
           "item": "a12s1-topic-yhdeksankymmenta"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s1-hf-20"
+          "type": "sentence-order",
+          "item": "a12s1-hf-20",
+          "tokens": [
+            "euroa.",
+            "kaksikymmentä",
+            "maksaa",
+            "Se"
+          ],
+          "answer_order": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "expected_fa": "قیمت آن بیست یورو است."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a12s1-hf-20",
           "options": [
             "a12s1-hf-10",
@@ -1636,8 +1941,8 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s1-hf-50"
+          "item": "a12s1-hf-50",
+          "mode": "finnish"
         },
         {
           "type": "choice",
@@ -1652,8 +1957,115 @@
         },
         {
           "type": "type",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-paljon"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-rahaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-hinta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-euro"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-sentti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-maksaa-viisi-euroa-7",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-minulla-on-rahaa-8",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "prompt_fa": "قیمت آن بیست یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "accepted_answers": [
+            "Se maksaa kaksikymmentä euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-10"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-neljakymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kuusikymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-seitsemankymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kahdeksankymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-yhdeksankymmenta"
+        },
+        {
+          "type": "type",
           "mode": "finnish",
           "item": "a12s1-topic-sata"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-maksaa-sata-euroa-21",
+          "answer_policy": "morphology"
         }
       ],
       "production_targets": [
@@ -1679,9 +2091,161 @@
             1,
             0
           ],
-          "expected_fi": "Se maksaa kaksikymmentä euroa."
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "expected_fa": "قیمت آن بیست یورو است."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "prompt_fa": "قیمت آن بیست یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "accepted_answers": [
+            "Se maksaa kaksikymmentä euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
         }
-      ]
+      ],
+      "activity_count": 33,
+      "practice_targets": [
+        "a12s1-hf-20",
+        "a12s1-hf-50",
+        "a12s1-topic-kolmekymmenta",
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19"
+      ],
+      "review_targets": [
+        "a12s1-hf-paljon",
+        "a12s1-hf-rahaa",
+        "a12s1-topic-hinta",
+        "a12s1-topic-euro",
+        "a12s1-topic-sentti",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-se-maksaa-viisi-euroa-7",
+        "a12s1-expr-minulla-on-rahaa-8",
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l02-can-do",
+            "can_do_fa": "عددهای رُند ۲۰ تا ۱۰۰ را در قیمت‌ها بفهم و بگو."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-10",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-20",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-50",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kolmekymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-neljakymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kuusikymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-seitsemankymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kahdeksankymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-yhdeksankymmenta",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-sata",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-sata-euroa-21",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-paljon",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-rahaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-hinta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-euro",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-sentti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-paljonko-tama-maksaa-6",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-viisi-euroa-7",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-minulla-on-rahaa-8",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Se maksaa viisi euroa.",
+                "fa": "قیمت آن پنج یورو است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 23,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-3",
@@ -1690,14 +2254,16 @@
       "title_fa": "درخواست مودبانه",
       "objective_fa": "برای یک کالا یا خدمت آشنا یک درخواست کوتاه و مودبانه بیان کند.",
       "summary_fa": "برای یک کالا یا خدمت آشنا یک درخواست کوتاه و مودبانه بساز.",
-      "grammar_fa": "Haluaisin… و Saanko… به‌صورت چارچوب‌های کامل و آماده تمرین می‌شوند.",
+      "grammar_fa": "درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود.",
       "new_targets": [
-        "a12s1-hf-mita",
         "a12s1-hf-ottaa",
         "a12s1-hf-antaa",
         "a12s1-topic-haluaisin",
         "a12s1-topic-saanko",
-        "a12s1-topic-annos"
+        "a12s1-topic-annos",
+        "a12s1-expr-haluaisin-taman-kiitos-28",
+        "a12s1-expr-saanko-kahvin-kiitos-29",
+        "a12s1-expr-voitteko-antaa-taman-30"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1740,9 +2306,380 @@
           "expected_fi": "Haluaisin tämän, kiitos.",
           "accepted_answers": [
             "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
           ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-mita"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-mita",
+          "options": [
+            "a12s1-hf-mita",
+            "a12s1-hf-ottaa",
+            "a12s1-hf-antaa",
+            "a12s1-topic-haluaisin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-ottaa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-ottaa",
+          "options": [
+            "a12s1-hf-mita",
+            "a12s1-hf-ottaa",
+            "a12s1-hf-antaa",
+            "a12s1-topic-haluaisin"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-antaa"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-hf-antaa",
+          "mode": "finnish"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-haluaisin"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-topic-haluaisin",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin",
+            "kiitos"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-saanko"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-saanko",
+          "options": [
+            "a12s1-topic-saanko",
+            "a12s1-hf-mita",
+            "a12s1-hf-ottaa",
+            "a12s1-hf-antaa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-annos"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-annos",
+          "options": [
+            "a12s1-hf-mita",
+            "a12s1-topic-annos",
+            "a12s1-hf-ottaa",
+            "a12s1-hf-antaa"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s1-hf-mita",
+          "options": [
+            "a12s1-hf-ottaa",
+            "a12s1-hf-antaa",
+            "a12s1-hf-mita",
+            "a12s1-topic-haluaisin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-ottaa"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-10"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-50"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kolmekymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-neljakymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kuusikymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-seitsemankymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kahdeksankymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-yhdeksankymmenta"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-sata"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-maksaa-sata-euroa-21",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-saanko-kahvin-kiitos-29",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-voitteko-antaa-taman-30",
+          "answer_policy": "morphology"
+        }
+      ],
+      "activity_count": 31,
+      "practice_targets": [
+        "a12s1-hf-mita",
+        "a12s1-hf-ottaa",
+        "a12s1-hf-antaa",
+        "a12s1-topic-haluaisin",
+        "a12s1-topic-saanko",
+        "a12s1-topic-annos",
+        "a12s1-expr-haluaisin-taman-kiitos-28"
+      ],
+      "review_targets": [
+        "a12s1-hf-10",
+        "a12s1-hf-20",
+        "a12s1-hf-50",
+        "a12s1-topic-kolmekymmenta",
+        "a12s1-topic-neljakymmenta",
+        "a12s1-topic-kuusikymmenta",
+        "a12s1-topic-seitsemankymmenta",
+        "a12s1-topic-kahdeksankymmenta",
+        "a12s1-topic-yhdeksankymmenta",
+        "a12s1-topic-sata",
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+        "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+        "a12s1-expr-se-maksaa-sata-euroa-21",
+        "a12s1-expr-haluaisin-taman-kiitos-28"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l03-can-do",
+            "can_do_fa": "برای یک کالا یا خدمت آشنا یک درخواست کوتاه و مودبانه بساز."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-mita",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-ottaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-antaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-haluaisin",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-saanko",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-annos",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-saanko-kahvin-kiitos-29",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-voitteko-antaa-taman-30",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-10",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-50",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kolmekymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-neljakymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kuusikymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-seitsemankymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kahdeksankymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-yhdeksankymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-sata",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-sata-euroa-21",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-requests",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Haluaisin tämän, kiitos.",
+                "fa": "این را می‌خواهم، لطفاً."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 28,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-4",
@@ -1751,14 +2688,16 @@
       "title_fa": "مقدار و ظرف",
       "objective_fa": "مقدار ساده‌ای از یک خوراکی یا نوشیدنی آشنا را درخواست کند.",
       "summary_fa": "یک مقدار ساده از خوراکی یا نوشیدنی را درخواست کن.",
-      "grammar_fa": "شکل‌های partitiivi لازم بعد از مقدار در خود مثال‌ها و تمرین‌ها صریح ذخیره شده‌اند.",
+      "grammar_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
       "new_targets": [
         "a12s1-hf-vahan",
-        "a12s1-hf-paljon",
         "a12s1-hf-lisaa",
         "a12s1-topic-kilo",
         "a12s1-topic-litra",
-        "a12s1-topic-puoli"
+        "a12s1-topic-puoli",
+        "a12s1-expr-kilo-omenoita-kiitos-36",
+        "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+        "a12s1-expr-vahan-lisaa-kiitos-38"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1797,7 +2736,24 @@
           "accepted_answers": [
             "litraa"
           ],
-          "expected_fi": "Puoli litraa maitoa, kiitos."
+          "expected_fi": "Puoli litraa maitoa, kiitos.",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+          "prompt_fa": "نیم لیتر شیر، لطفاً.",
+          "cues_fi": [
+            "Puoli"
+          ],
+          "expected_fi": "Puoli litraa maitoa, kiitos.",
+          "accepted_answers": [
+            "Puoli litraa maitoa, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
         }
       ],
       "morphology_practice": [
@@ -1812,9 +2768,307 @@
           "accepted_answers": [
             "litraa"
           ],
-          "explanation_fa": "بعد از مقدار، litra در این عبارت به‌صورت partitiivi می‌آید: litra → litraa."
+          "explanation_fa": "بعد از مقدار، litra در این عبارت به‌صورت partitiivi می‌آید: litra → litraa.",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-vahan"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-vahan",
+          "options": [
+            "a12s1-hf-vahan",
+            "a12s1-hf-paljon",
+            "a12s1-hf-lisaa",
+            "a12s1-topic-kilo"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-paljon"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-paljon",
+          "options": [
+            "a12s1-hf-vahan",
+            "a12s1-hf-paljon",
+            "a12s1-hf-lisaa",
+            "a12s1-topic-kilo"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-lisaa"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-hf-lisaa",
+          "mode": "finnish"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kilo"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s1-topic-kilo",
+          "options": [
+            "a12s1-hf-vahan",
+            "a12s1-hf-paljon",
+            "a12s1-hf-lisaa",
+            "a12s1-topic-kilo"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-litra"
+        },
+        {
+          "type": "inflection-production",
+          "item": "a12s1-topic-litra",
+          "base_fi": "litra",
+          "feature_fa": "partitiivi بعد از مقدار",
+          "prompt_fa": "شکل درست litra را بعد از Puoli بنویس.",
+          "frame_fi": "Puoli _____ maitoa, kiitos.",
+          "expected_fi": "litraa",
+          "accepted_answers": [
+            "litraa"
+          ],
+          "explanation_fa": "بعد از مقدار، litra در این عبارت به‌صورت partitiivi می‌آید: litra → litraa.",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-puoli"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a12s1-topic-puoli",
+          "prompt_fi": "Puoli _____ maitoa, kiitos.",
+          "accepted_answers": [
+            "litraa"
+          ],
+          "expected_fi": "Puoli litraa maitoa, kiitos.",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-hf-vahan",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-lisaa",
+            "a12s1-hf-vahan",
+            "a12s1-topic-kilo"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-paljon"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-expr-kilo-omenoita-kiitos-36",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-ottaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-antaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-haluaisin"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-saanko"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-annos"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-saanko-kahvin-kiitos-29",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-voitteko-antaa-taman-30",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+          "prompt_fa": "نیم لیتر شیر، لطفاً.",
+          "cues_fi": [
+            "Puoli"
+          ],
+          "expected_fi": "Puoli litraa maitoa, kiitos.",
+          "accepted_answers": [
+            "Puoli litraa maitoa, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-vahan-lisaa-kiitos-38",
+          "answer_policy": "morphology"
+        }
+      ],
+      "activity_count": 25,
+      "practice_targets": [
+        "a12s1-hf-vahan",
+        "a12s1-hf-paljon",
+        "a12s1-hf-lisaa",
+        "a12s1-topic-kilo",
+        "a12s1-topic-litra",
+        "a12s1-topic-puoli",
+        "a12s1-expr-kilo-omenoita-kiitos-36"
+      ],
+      "review_targets": [
+        "a12s1-hf-ottaa",
+        "a12s1-hf-antaa",
+        "a12s1-topic-haluaisin",
+        "a12s1-topic-saanko",
+        "a12s1-topic-annos",
+        "a12s1-expr-haluaisin-taman-kiitos-28",
+        "a12s1-expr-saanko-kahvin-kiitos-29",
+        "a12s1-expr-voitteko-antaa-taman-30",
+        "a12s1-expr-puoli-litraa-maitoa-kiitos-37"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l04-can-do",
+            "can_do_fa": "یک مقدار ساده از خوراکی یا نوشیدنی را درخواست کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-vahan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-paljon",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-lisaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kilo",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-litra",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-puoli",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-kilo-omenoita-kiitos-36",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-vahan-lisaa-kiitos-38",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-ottaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-antaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-haluaisin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-saanko",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-annos",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-saanko-kahvin-kiitos-29",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-voitteko-antaa-taman-30",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Se maksaa viisi euroa.",
+                "fa": "قیمت آن پنج یورو است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 23,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-5",
@@ -1823,14 +3077,16 @@
       "title_fa": "پیدا کردن کالا در فروشگاه",
       "objective_fa": "بپرسد یک کالای آشنا یا بخش خدماتی کجاست و پاسخ مکانی کوتاه را بفهمد.",
       "summary_fa": "بپرس یک کالا یا بخش خدماتی کجاست و پاسخ کوتاه مکانی را بفهم.",
-      "grammar_fa": "Missä + on و قیدهای مکانی täällä/siellä/tuolla به‌صورت الگوهای کامل تمرین می‌شوند.",
+      "grammar_fa": "پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?».",
       "new_targets": [
-        "a12s1-hf-missa",
         "a12s1-hf-taalla",
         "a12s1-hf-siella",
         "a12s1-topic-kauppa",
         "a12s1-topic-kassa",
-        "a12s1-topic-osasto"
+        "a12s1-topic-osasto",
+        "a12s1-expr-missa-maito-on-45",
+        "a12s1-expr-kassa-on-tuolla-46",
+        "a12s1-expr-se-on-taalla-47"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1874,9 +3130,332 @@
             0,
             1
           ],
-          "expected_fi": "Missä maito on?"
+          "expected_fi": "Missä maito on?",
+          "expected_fa": "شیر کجاست؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-missa-maito-on-45",
+          "prompt_fa": "شیر کجاست؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä maito on?",
+          "accepted_answers": [
+            "Missä maito on?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-missa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-missa",
+          "options": [
+            "a12s1-hf-missa",
+            "a12s1-hf-taalla",
+            "a12s1-hf-siella",
+            "a12s1-topic-kauppa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-taalla"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-hf-taalla",
+          "mode": "finnish"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-siella"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-siella",
+          "options": [
+            "a12s1-hf-missa",
+            "a12s1-hf-taalla",
+            "a12s1-hf-siella",
+            "a12s1-topic-kauppa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kauppa"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-kauppa",
+          "options": [
+            "a12s1-hf-missa",
+            "a12s1-hf-taalla",
+            "a12s1-hf-siella",
+            "a12s1-topic-kauppa"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-kassa"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s1-topic-kassa",
+          "options": [
+            "a12s1-topic-kassa",
+            "a12s1-hf-missa",
+            "a12s1-hf-taalla",
+            "a12s1-hf-siella"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-osasto"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-osasto",
+          "options": [
+            "a12s1-hf-missa",
+            "a12s1-topic-osasto",
+            "a12s1-hf-taalla",
+            "a12s1-hf-siella"
+          ]
+        },
+        {
+          "type": "sentence-order",
+          "item": "a12s1-hf-missa",
+          "tokens": [
+            "maito",
+            "on?",
+            "Missä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Missä maito on?",
+          "expected_fa": "شیر کجاست؟"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-taalla"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-expr-missa-maito-on-45",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-vahan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-lisaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kilo"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-litra"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-puoli"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-kilo-omenoita-kiitos-36",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-vahan-lisaa-kiitos-38",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-missa-maito-on-45",
+          "prompt_fa": "شیر کجاست؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä maito on?",
+          "accepted_answers": [
+            "Missä maito on?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-kassa-on-tuolla-46",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-on-taalla-47",
+          "answer_policy": "morphology"
+        }
+      ],
+      "activity_count": 26,
+      "practice_targets": [
+        "a12s1-hf-missa",
+        "a12s1-hf-taalla",
+        "a12s1-hf-siella",
+        "a12s1-topic-kauppa",
+        "a12s1-topic-kassa",
+        "a12s1-topic-osasto",
+        "a12s1-expr-missa-maito-on-45"
+      ],
+      "review_targets": [
+        "a12s1-hf-vahan",
+        "a12s1-hf-lisaa",
+        "a12s1-topic-kilo",
+        "a12s1-topic-litra",
+        "a12s1-topic-puoli",
+        "a12s1-expr-kilo-omenoita-kiitos-36",
+        "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+        "a12s1-expr-vahan-lisaa-kiitos-38",
+        "a12s1-expr-missa-maito-on-45"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l05-can-do",
+            "can_do_fa": "بپرس یک کالا یا بخش خدماتی کجاست و پاسخ کوتاه مکانی را بفهم."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-missa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-taalla",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-siella",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kauppa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kassa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-osasto",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-missa-maito-on-45",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-kassa-on-tuolla-46",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-se-on-taalla-47",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-vahan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-lisaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kilo",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-litra",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-puoli",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-kilo-omenoita-kiitos-36",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-vahan-lisaa-kiitos-38",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?».",
+            "examples": [
+              {
+                "fi": "Paljonko tämä maksaa?",
+                "fa": "قیمت این چقدر است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 23,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-6",
@@ -1885,14 +3464,15 @@
       "title_fa": "اندازه و مناسب بودن",
       "objective_fa": "بگوید یک کالای آشنا بیش از حد بزرگ، کوچک یا مناسب است.",
       "summary_fa": "بگو یک کالا بیش از حد بزرگ، کوچک یا مناسب است.",
-      "grammar_fa": "ساخت liian + صفت و پرسش ثابت Onko toinen koko? را در موقعیت خرید تمرین می‌کنی.",
+      "grammar_fa": "با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
       "new_targets": [
         "a12s1-hf-liian",
-        "a12s1-hf-tama",
         "a12s1-hf-toinen",
-        "a12s1-topic-iso",
-        "a12s1-topic-pieni",
-        "a12s1-topic-sopiva"
+        "a12s1-topic-sopiva",
+        "a12s1-expr-tama-on-liian-iso-54",
+        "a12s1-expr-tama-on-liian-pieni-55",
+        "a12s1-expr-tama-on-sopiva-56",
+        "a12s1-expr-onko-toinen-koko-57"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1935,9 +3515,338 @@
           "expected_fi": "Tämä on sopiva.",
           "accepted_answers": [
             "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         }
-      ]
+      ],
+      "activities": [
+        {
+          "type": "teach",
+          "item": "a12s1-hf-liian"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-liian",
+          "options": [
+            "a12s1-hf-liian",
+            "a12s1-hf-tama",
+            "a12s1-hf-toinen",
+            "a12s1-topic-iso"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-tama"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-tama",
+          "options": [
+            "a12s1-hf-liian",
+            "a12s1-hf-tama",
+            "a12s1-hf-toinen",
+            "a12s1-topic-iso"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-hf-toinen"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-hf-toinen",
+          "mode": "finnish"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-iso"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s1-topic-iso",
+          "options": [
+            "a12s1-hf-liian",
+            "a12s1-topic-iso",
+            "a12s1-hf-tama",
+            "a12s1-hf-toinen"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-pieni"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-pieni",
+          "options": [
+            "a12s1-topic-pieni",
+            "a12s1-hf-liian",
+            "a12s1-hf-tama",
+            "a12s1-hf-toinen"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-topic-sopiva"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-topic-sopiva",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä",
+            "sopiva"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-hf-liian",
+          "options": [
+            "a12s1-hf-tama",
+            "a12s1-hf-toinen",
+            "a12s1-hf-liian",
+            "a12s1-topic-iso"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-tama"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-taalla"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-siella"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kauppa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kassa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-osasto"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-missa-maito-on-45",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-kassa-on-tuolla-46",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-se-on-taalla-47",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-liian-iso-54",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-liian-pieni-55",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-onko-toinen-koko-57",
+          "answer_policy": "morphology"
+        }
+      ],
+      "activity_count": 27,
+      "practice_targets": [
+        "a12s1-hf-liian",
+        "a12s1-hf-tama",
+        "a12s1-hf-toinen",
+        "a12s1-topic-iso",
+        "a12s1-topic-pieni",
+        "a12s1-topic-sopiva",
+        "a12s1-expr-tama-on-sopiva-56"
+      ],
+      "review_targets": [
+        "a12s1-hf-taalla",
+        "a12s1-hf-siella",
+        "a12s1-topic-kauppa",
+        "a12s1-topic-kassa",
+        "a12s1-topic-osasto",
+        "a12s1-expr-missa-maito-on-45",
+        "a12s1-expr-kassa-on-tuolla-46",
+        "a12s1-expr-se-on-taalla-47",
+        "a12s1-expr-tama-on-sopiva-56"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l06-can-do",
+            "can_do_fa": "بگو یک کالا بیش از حد بزرگ، کوچک یا مناسب است."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-liian",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-tama",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-toinen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-iso",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-pieni",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-sopiva",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-liian-iso-54",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-liian-pieni-55",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-sopiva-56",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-onko-toinen-koko-57",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-taalla",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-siella",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kauppa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kassa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-osasto",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-missa-maito-on-45",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-kassa-on-tuolla-46",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-on-taalla-47",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on sopiva.",
+                "fa": "این مناسب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 23,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-7",
@@ -1946,15 +3855,16 @@
       "title_fa": "پرداخت",
       "objective_fa": "درخواست پرداخت با کارت یا نقدی را بیان کند و پاسخ کوتاه مربوط به پرداخت را بفهمد.",
       "summary_fa": "روش پرداخت را بگو و رسید بخواه.",
-      "grammar_fa": "kortilla و käteisellä صورت‌های کامل و بازبینی‌شده‌اند و در زمان اجرا با پسوند ساخته نمی‌شوند.",
+      "grammar_fa": "برای روش پرداخت، صورت‌های کامل «kortilla» و «käteisellä» را یاد می‌گیری: با کارت و نقدی. از این دو نمونه، ساخت همهٔ حالت‌های مکانی نتیجه نمی‌گیریم. درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود.",
       "new_targets": [
         "a12s1-hf-voi",
-        "a12s1-hf-antaa",
-        "a12s1-hf-rahaa",
         "a12s1-topic-maksaa",
         "a12s1-topic-kortti",
         "a12s1-topic-kateinen",
-        "a12s1-topic-kuitti"
+        "a12s1-topic-kuitti",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-maksan-kateisella-64",
+        "a12s1-expr-kuitti-kiitos-65"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2024,31 +3934,35 @@
           "item": "a12s1-hf-antaa"
         },
         {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a12s1-hf-rahaa",
-          "options": [
-            "a12s1-hf-voi",
-            "a12s1-hf-antaa",
-            "a12s1-hf-rahaa",
-            "a12s1-topic-maksaa"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a12s1-topic-maksaa",
-          "options": [
-            "a12s1-hf-voi",
-            "a12s1-hf-antaa",
-            "a12s1-hf-rahaa",
-            "a12s1-topic-maksaa"
-          ]
-        },
-        {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s1-topic-kortti"
+          "item": "a12s1-hf-rahaa",
+          "mode": "finnish"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a12s1-topic-maksaa",
+          "prompt_fi": "Voinko maksaa _____?",
+          "accepted_answers": [
+            "kortilla"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a12s1-topic-kortti",
+          "base_fi": "kortti",
+          "feature_fa": "adessiivi برای ابزار پرداخت",
+          "prompt_fa": "برای گفتن «با کارت» شکل درست kortti را انتخاب کن.",
+          "frame_fi": "Maksan _____.",
+          "options_fi": [
+            "kortti",
+            "korttia",
+            "kortilla",
+            "kortissa"
+          ],
+          "expected_fi": "kortilla",
+          "explanation_fa": "برای روش پرداخت از adessiivi استفاده می‌کنیم: kortti → kortilla."
         },
         {
           "type": "choice",
@@ -2063,7 +3977,7 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a12s1-topic-kuitti",
           "options": [
             "a12s1-hf-voi",
@@ -2074,8 +3988,77 @@
         },
         {
           "type": "type",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
           "mode": "finnish",
-          "item": "a12s1-hf-voi"
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-liian"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-toinen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-sopiva"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-liian-iso-54",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-liian-pieni-55",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-onko-toinen-koko-57",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fa": "می‌توانم با کارت پرداخت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "accepted_answers": [
+            "Voinko maksaa kortilla?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases",
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-maksan-kateisella-64",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-kuitti-kiitos-65",
+          "answer_policy": "morphology"
         }
       ],
       "production_targets": [
@@ -2093,7 +4076,25 @@
           "accepted_answers": [
             "kortilla"
           ],
-          "expected_fi": "Voinko maksaa kortilla?"
+          "expected_fi": "Voinko maksaa kortilla?",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fa": "می‌توانم با کارت پرداخت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "accepted_answers": [
+            "Voinko maksaa kortilla?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases",
+            "a12-requests"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2113,7 +4114,149 @@
           "expected_fi": "kortilla",
           "explanation_fa": "برای روش پرداخت از adessiivi استفاده می‌کنیم: kortti → kortilla."
         }
-      ]
+      ],
+      "activity_count": 25,
+      "practice_targets": [
+        "a12s1-hf-voi",
+        "a12s1-hf-antaa",
+        "a12s1-hf-rahaa",
+        "a12s1-topic-maksaa",
+        "a12s1-topic-kortti",
+        "a12s1-topic-kateinen",
+        "a12s1-topic-kuitti",
+        "a12s1-expr-voinko-maksaa-kortilla-63"
+      ],
+      "review_targets": [
+        "a12s1-hf-liian",
+        "a12s1-hf-toinen",
+        "a12s1-topic-sopiva",
+        "a12s1-expr-tama-on-liian-iso-54",
+        "a12s1-expr-tama-on-liian-pieni-55",
+        "a12s1-expr-tama-on-sopiva-56",
+        "a12s1-expr-onko-toinen-koko-57",
+        "a12s1-expr-voinko-maksaa-kortilla-63"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l07-can-do",
+            "can_do_fa": "روش پرداخت را بگو و رسید بخواه."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-voi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-antaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-rahaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-maksaa",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kortti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kateinen",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-kuitti",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-voinko-maksaa-kortilla-63",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-maksan-kateisella-64",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-kuitti-kiitos-65",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-liian",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-toinen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-sopiva",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-liian-iso-54",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-liian-pieni-55",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-sopiva-56",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-onko-toinen-koko-57",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-local-cases",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "برای روش پرداخت، صورت‌های کامل «kortilla» و «käteisellä» را یاد می‌گیری: با کارت و نقدی. از این دو نمونه، ساخت همهٔ حالت‌های مکانی نتیجه نمی‌گیریم.",
+            "examples": [
+              {
+                "fi": "Voinko maksaa kortilla?",
+                "fa": "می‌توانم با کارت پرداخت کنم؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Haluaisin tämän, kiitos.",
+                "fa": "این را می‌خواهم، لطفاً."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-8",
@@ -2122,16 +4265,19 @@
       "title_fa": "یک مشکل ساده در خدمات",
       "objective_fa": "یک مشکل ساده دربارهٔ کالا یا خدمت را بیان کند و کمک بخواهد.",
       "summary_fa": "یک مشکل پایه را دربارهٔ کالا بیان کن و کمک بخواه.",
-      "grammar_fa": "در Tämä ei toimi صورت connegative یعنی toimi صریحاً ذخیره و تمرین می‌شود.",
+      "grammar_fa": "در جملهٔ «Tämä ei toimi.»، بعد از «ei» صورت «toimi» می‌آید، نه «toimii». همین جملهٔ مشکل در خرید را تمرین می‌کنی. با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
       "new_targets": [
-        "a12s1-hf-ei",
         "a12s1-hf-mitaan",
         "a12s1-hf-takaisin",
         "a12s1-topic-ongelma",
         "a12s1-topic-rikki",
         "a12s1-topic-vaara",
         "a12s1-topic-toimi",
-        "a12s1-topic-apu"
+        "a12s1-topic-apu",
+        "a12s1-expr-tama-on-rikki-74",
+        "a12s1-expr-tama-ei-toimi-75",
+        "a12s1-expr-tama-on-vaara-76",
+        "a12s1-expr-tarvitsen-apua-77"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2210,12 +4356,13 @@
         },
         {
           "type": "type",
+          "item": "a12s1-expr-tarvitsen-apua-77",
           "mode": "finnish",
-          "item": "a12s1-expr-tarvitsen-apua-77"
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a12s1-topic-ongelma",
           "options": [
             "a12s1-hf-ei",
@@ -2225,31 +4372,130 @@
           ]
         },
         {
+          "type": "controlled-production",
+          "item": "a12s1-topic-rikki",
+          "prompt_fa": "این خراب است.",
+          "cues_fi": [
+            "Tämä",
+            "rikki"
+          ],
+          "expected_fi": "Tämä on rikki.",
+          "accepted_answers": [
+            "Tämä on rikki."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-topic-vaara",
+          "mode": "finnish"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a12s1-topic-toimi",
+          "base_fi": "toimia",
+          "feature_fa": "منفی سوم‌شخص: ei + connegative",
+          "prompt_fa": "در جملهٔ «این کار نمی‌کند» شکل درست فعل را انتخاب کن.",
+          "frame_fi": "Tämä ei _____.",
+          "options_fi": [
+            "toimii",
+            "toimi",
+            "toimia",
+            "toimin"
+          ],
+          "expected_fi": "toimi",
+          "explanation_fa": "بعد از ei، صورت connegative می‌آید: toimii → ei toimi."
+        },
+        {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s1-topic-rikki"
+          "item": "a12s1-hf-voi"
         },
         {
-          "type": "choice",
+          "type": "type",
           "mode": "finnish",
-          "item": "a12s1-topic-vaara",
-          "options": [
-            "a12s1-hf-ei",
-            "a12s1-topic-vaara",
-            "a12s1-hf-mitaan",
-            "a12s1-hf-takaisin"
+          "item": "a12s1-topic-maksaa"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kortti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kateinen"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kuitti"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-maksan-kateisella-64",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-kuitti-kiitos-65",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "prompt_fa": "این کار نمی‌کند.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä ei toimi.",
+          "accepted_answers": [
+            "Tämä ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a12s1-topic-toimi",
-          "options": [
-            "a12s1-hf-ei",
-            "a12s1-hf-mitaan",
-            "a12s1-topic-toimi",
-            "a12s1-hf-takaisin"
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-rikki-74",
+          "prompt_fa": "این خراب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on rikki.",
+          "accepted_answers": [
+            "Tämä on rikki."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-takaisin"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-apu"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-vaara-76",
+          "answer_policy": "morphology"
         }
       ],
       "production_targets": [
@@ -2271,6 +4517,39 @@
           "expected_fi": "Tämä on rikki.",
           "accepted_answers": [
             "Tämä on rikki."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "prompt_fa": "این کار نمی‌کند.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä ei toimi.",
+          "accepted_answers": [
+            "Tämä ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-rikki-74",
+          "prompt_fa": "این خراب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on rikki.",
+          "accepted_answers": [
+            "Tämä on rikki."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         }
       ],
@@ -2291,7 +4570,160 @@
           "expected_fi": "toimi",
           "explanation_fa": "بعد از ei، صورت connegative می‌آید: toimii → ei toimi."
         }
-      ]
+      ],
+      "activity_count": 28,
+      "practice_targets": [
+        "a12s1-hf-ei",
+        "a12s1-hf-mitaan",
+        "a12s1-expr-tarvitsen-apua-77",
+        "a12s1-topic-ongelma",
+        "a12s1-topic-rikki",
+        "a12s1-topic-vaara",
+        "a12s1-topic-toimi"
+      ],
+      "review_targets": [
+        "a12s1-hf-voi",
+        "a12s1-topic-maksaa",
+        "a12s1-topic-kortti",
+        "a12s1-topic-kateinen",
+        "a12s1-topic-kuitti",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-maksan-kateisella-64",
+        "a12s1-expr-kuitti-kiitos-65",
+        "a12s1-expr-tama-ei-toimi-75",
+        "a12s1-expr-tama-on-rikki-74"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l08-can-do",
+            "can_do_fa": "یک مشکل پایه را دربارهٔ کالا بیان کن و کمک بخواه."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-ei",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-mitaan",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-takaisin",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-ongelma",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-rikki",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-vaara",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-toimi",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-topic-apu",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-rikki-74",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tama-ei-toimi-75",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-vaara-76",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-expr-tarvitsen-apua-77",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s1-hf-voi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-maksaa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kortti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kateinen",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kuitti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-voinko-maksaa-kortilla-63",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-maksan-kateisella-64",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-kuitti-kiitos-65",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در جملهٔ «Tämä ei toimi.»، بعد از «ei» صورت «toimi» می‌آید، نه «toimii». همین جملهٔ مشکل در خرید را تمرین می‌کنی.",
+            "examples": [
+              {
+                "fi": "Tämä ei toimi.",
+                "fa": "این کار نمی‌کند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 23,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on sopiva.",
+                "fa": "این مناسب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 24,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-9",
@@ -2300,7 +4732,7 @@
       "title_fa": "یک گفت‌وگوی کامل خرید",
       "objective_fa": "سلام، درخواست، مقدار، قیمت، پرداخت و تشکر را در یک گفت‌وگوی کوتاه خرید ترکیب کند.",
       "summary_fa": "سلام، درخواست، قیمت، پرداخت و تشکر را در یک گفت‌وگوی کوتاه کنار هم بگذار.",
-      "grammar_fa": "گرامر جدیدی اضافه نمی‌شود؛ تمرکز روی بازیابی و ترکیب عبارت‌های کامل بخش است.",
+      "grammar_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند. درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود. برای روش پرداخت، صورت‌های کامل «kortilla» و «käteisellä» را یاد می‌گیری: با کارت و نقدی. از این دو نمونه، ساخت همهٔ حالت‌های مکانی نتیجه نمی‌گیریم. در جملهٔ «Tämä ei toimi.»، بعد از «ei» صورت «toimi» می‌آید، نه «toimii». همین جملهٔ مشکل در خرید را تمرین می‌کنی. پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?». با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2401,51 +4833,194 @@
           ]
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s1-expr-haluaisin-taman-kiitos-28"
+          "type": "controlled-production",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin",
+            "kiitos"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a12s1-expr-paljonko-tama-maksaa-6",
           "options": [
+            "a12s1-expr-paljonko-tama-maksaa-6",
             "a12s1-expr-hei-78",
             "a12s1-expr-haluaisin-taman-kiitos-28",
-            "a12s1-expr-paljonko-tama-maksaa-6",
             "a12s1-expr-voinko-maksaa-kortilla-63"
           ]
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s1-expr-voinko-maksaa-kortilla-63"
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a12s1-expr-kuitti-kiitos-65",
-          "options": [
-            "a12s1-expr-kuitti-kiitos-65",
-            "a12s1-expr-hei-78",
-            "a12s1-expr-haluaisin-taman-kiitos-28",
-            "a12s1-expr-paljonko-tama-maksaa-6"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s1-expr-hei-78"
+          "item": "a12s1-expr-hei-78",
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a12s1-expr-haluaisin-taman-kiitos-28",
-          "options": [
-            "a12s1-expr-hei-78",
-            "a12s1-expr-paljonko-tama-maksaa-6",
-            "a12s1-expr-haluaisin-taman-kiitos-28",
-            "a12s1-expr-voinko-maksaa-kortilla-63"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-mitaan"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-hf-takaisin"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-ongelma"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-rikki"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-vaara"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-toimi"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-apu"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-rikki-74",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tama-on-vaara-76",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-expr-tarvitsen-apua-77",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "prompt_fa": "قیمت آن بیست یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "accepted_answers": [
+            "Se maksaa kaksikymmentä euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fa": "می‌توانم با کارت پرداخت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "accepted_answers": [
+            "Voinko maksaa kortilla?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "prompt_fa": "این کار نمی‌کند.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä ei toimi.",
+          "accepted_answers": [
+            "Tämä ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "prompt_fa": "این چقدر قیمت دارد؟",
+          "cues_fi": [
+            "Paljonko"
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "accepted_answers": [
+            "Paljonko tämä maksaa?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         }
       ],
@@ -2468,9 +5043,315 @@
           "expected_fi": "Haluaisin tämän, kiitos.",
           "accepted_answers": [
             "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "prompt_fa": "قیمت آن بیست یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "accepted_answers": [
+            "Se maksaa kaksikymmentä euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fa": "می‌توانم با کارت پرداخت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "accepted_answers": [
+            "Voinko maksaa kortilla?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "prompt_fa": "این کار نمی‌کند.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä ei toimi.",
+          "accepted_answers": [
+            "Tämä ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "prompt_fa": "این چقدر قیمت دارد؟",
+          "cues_fi": [
+            "Paljonko"
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "accepted_answers": [
+            "Paljonko tämä maksaa?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         }
-      ]
+      ],
+      "activity_count": 31,
+      "review_targets": [
+        "a12s1-hf-mitaan",
+        "a12s1-hf-takaisin",
+        "a12s1-topic-ongelma",
+        "a12s1-topic-rikki",
+        "a12s1-topic-vaara",
+        "a12s1-topic-toimi",
+        "a12s1-topic-apu",
+        "a12s1-expr-tama-on-rikki-74",
+        "a12s1-expr-tama-ei-toimi-75",
+        "a12s1-expr-tama-on-vaara-76",
+        "a12s1-expr-tarvitsen-apua-77",
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+        "a12s1-expr-haluaisin-taman-kiitos-28",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-tama-on-sopiva-56"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l09-can-do",
+            "can_do_fa": "سلام، درخواست، قیمت، پرداخت و تشکر را در یک گفت‌وگوی کوتاه کنار هم بگذار."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-expr-hei-78",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-paljonko-tama-maksaa-6",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-voinko-maksaa-kortilla-63",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-kuitti-kiitos-65",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-mitaan",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-takaisin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-ongelma",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-rikki",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-vaara",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-toimi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-apu",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-rikki-74",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-ei-toimi-75",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-vaara-76",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tarvitsen-apua-77",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-sopiva-56",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Se maksaa viisi euroa.",
+                "fa": "قیمت آن پنج یورو است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 26,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Haluaisin tämän, kiitos.",
+                "fa": "این را می‌خواهم، لطفاً."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 9,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-local-cases",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "برای روش پرداخت، صورت‌های کامل «kortilla» و «käteisellä» را یاد می‌گیری: با کارت و نقدی. از این دو نمونه، ساخت همهٔ حالت‌های مکانی نتیجه نمی‌گیریم.",
+            "examples": [
+              {
+                "fi": "Voinko maksaa kortilla?",
+                "fa": "می‌توانم با کارت پرداخت کنم؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 27,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در جملهٔ «Tämä ei toimi.»، بعد از «ei» صورت «toimi» می‌آید، نه «toimii». همین جملهٔ مشکل در خرید را تمرین می‌کنی.",
+            "examples": [
+              {
+                "fi": "Tämä ei toimi.",
+                "fa": "این کار نمی‌کند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 28,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?».",
+            "examples": [
+              {
+                "fi": "Paljonko tämä maksaa?",
+                "fa": "قیمت این چقدر است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 29,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on sopiva.",
+                "fa": "این مناسب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 30,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-1-lesson-10",
@@ -2479,7 +5360,7 @@
       "title_fa": "ایستگاه مرور بخش ۱",
       "objective_fa": "یک خرید یا تعامل خدماتی روزمره را با کمک محدود و زبان اصلی این بخش انجام دهد.",
       "summary_fa": "در یک خرید یا تعامل خدماتی روزمره از زبان اصلی بخش استفاده کن.",
-      "grammar_fa": "گرامر جدیدی معرفی نمی‌شود؛ قیمت، مقدار، درخواست مودبانه، مکان، پرداخت و مشکل ساده با هم سنجیده می‌شوند.",
+      "grammar_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند. درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود. برای روش پرداخت، صورت‌های کامل «kortilla» و «käteisellä» را یاد می‌گیری: با کارت و نقدی. از این دو نمونه، ساخت همهٔ حالت‌های مکانی نتیجه نمی‌گیریم. در جملهٔ «Tämä ei toimi.»، بعد از «ei» صورت «toimi» می‌آید، نه «toimii». همین جملهٔ مشکل در خرید را تمرین می‌کنی. پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?». با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2597,7 +5478,8 @@
             1,
             0
           ],
-          "expected_fi": "Paljonko tämä maksaa?"
+          "expected_fi": "Paljonko tämä maksaa?",
+          "expected_fa": "این چقدر قیمت دارد؟"
         },
         {
           "type": "expression-completion",
@@ -2606,7 +5488,8 @@
           "accepted_answers": [
             "kortilla"
           ],
-          "expected_fi": "Voinko maksaa kortilla?"
+          "expected_fi": "Voinko maksaa kortilla?",
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -2618,6 +5501,103 @@
           "expected_fi": "Tarvitsen apua.",
           "accepted_answers": [
             "Tarvitsen apua."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "prompt_fa": "قیمت آن بیست یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "accepted_answers": [
+            "Se maksaa kaksikymmentä euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fa": "می‌توانم با کارت پرداخت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "accepted_answers": [
+            "Voinko maksaa kortilla?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "prompt_fa": "این کار نمی‌کند.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä ei toimi.",
+          "accepted_answers": [
+            "Tämä ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "prompt_fa": "این چقدر قیمت دارد؟",
+          "cues_fi": [
+            "Paljonko"
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "accepted_answers": [
+            "Paljonko tämä maksaa?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         }
       ],
@@ -2639,7 +5619,484 @@
           "explanation_fa": "بعد از ei، صورت connegative می‌آید: ei toimi."
         }
       ],
-      "passing_score": 0.8
+      "passing_score": 0.8,
+      "activities": [
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-paljon",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi",
+            "a12s1-topic-hinta"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s1-topic-euro",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-topic-euro",
+            "a12s1-topic-kolmekymmenta",
+            "a12s1-topic-haluaisin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kolmekymmenta"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-haluaisin",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi",
+            "a12s1-topic-haluaisin"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-kilo"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-hf-missa",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-missa",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a12s1-topic-kassa",
+          "options": [
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-topic-kassa",
+            "a12s1-hf-yksi"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s1-topic-sopiva"
+        },
+        {
+          "type": "choice",
+          "mode": "meaning",
+          "item": "a12s1-topic-kortti",
+          "options": [
+            "a12s1-topic-kortti",
+            "a12s1-hf-paljon",
+            "a12s1-hf-rahaa",
+            "a12s1-hf-yksi"
+          ]
+        },
+        {
+          "type": "type",
+          "item": "a12s1-topic-kuitti",
+          "mode": "finnish"
+        },
+        {
+          "type": "type",
+          "item": "a12s1-topic-rikki",
+          "mode": "finnish"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a12s1-topic-toimi",
+          "base_fi": "toimia",
+          "feature_fa": "منفی سوم‌شخص",
+          "prompt_fa": "شکل درست فعل را بعد از ei انتخاب کن.",
+          "frame_fi": "Tämä ei _____.",
+          "options_fi": [
+            "toimii",
+            "toimi",
+            "toimia",
+            "toimin"
+          ],
+          "expected_fi": "toimi",
+          "explanation_fa": "بعد از ei، صورت connegative می‌آید: ei toimi."
+        },
+        {
+          "type": "sentence-order",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "tokens": [
+            "maksaa?",
+            "tämä",
+            "Paljonko"
+          ],
+          "answer_order": [
+            2,
+            1,
+            0
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "expected_fa": "این چقدر قیمت دارد؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fi": "Voinko maksaa _____?",
+          "accepted_answers": [
+            "kortilla"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tarvitsen-apua-77",
+          "prompt_fa": "به کمک نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen apua.",
+          "accepted_answers": [
+            "Tarvitsen apua."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "prompt_fa": "قیمت آن بیست یورو است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se maksaa kaksikymmentä euroa.",
+          "accepted_answers": [
+            "Se maksaa kaksikymmentä euroa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "prompt_fa": "این را می‌خواهم، متشکرم.",
+          "cues_fi": [
+            "Haluaisin"
+          ],
+          "expected_fi": "Haluaisin tämän, kiitos.",
+          "accepted_answers": [
+            "Haluaisin tämän, kiitos."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "prompt_fa": "می‌توانم با کارت پرداخت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko maksaa kortilla?",
+          "accepted_answers": [
+            "Voinko maksaa kortilla?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-ei-toimi-75",
+          "prompt_fa": "این کار نمی‌کند.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä ei toimi.",
+          "accepted_answers": [
+            "Tämä ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6",
+          "prompt_fa": "این چقدر قیمت دارد؟",
+          "cues_fi": [
+            "Paljonko"
+          ],
+          "expected_fi": "Paljonko tämä maksaa?",
+          "accepted_answers": [
+            "Paljonko tämä maksaa?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s1-expr-tama-on-sopiva-56",
+          "prompt_fa": "این مناسب است.",
+          "cues_fi": [
+            "Tämä"
+          ],
+          "expected_fi": "Tämä on sopiva.",
+          "accepted_answers": [
+            "Tämä on sopiva."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        }
+      ],
+      "activity_count": 21,
+      "practice_targets": [
+        "a12s1-hf-paljon",
+        "a12s1-topic-euro",
+        "a12s1-topic-kolmekymmenta",
+        "a12s1-topic-haluaisin",
+        "a12s1-topic-kilo",
+        "a12s1-hf-missa",
+        "a12s1-topic-kassa",
+        "a12s1-topic-sopiva",
+        "a12s1-topic-kortti",
+        "a12s1-topic-kuitti",
+        "a12s1-topic-rikki",
+        "a12s1-topic-toimi",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-tarvitsen-apua-77"
+      ],
+      "review_targets": [
+        "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+        "a12s1-expr-haluaisin-taman-kiitos-28",
+        "a12s1-expr-voinko-maksaa-kortilla-63",
+        "a12s1-expr-tama-ei-toimi-75",
+        "a12s1-expr-paljonko-tama-maksaa-6",
+        "a12s1-expr-tama-on-sopiva-56"
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s1-l10-can-do",
+            "can_do_fa": "در یک خرید یا تعامل خدماتی روزمره از زبان اصلی بخش استفاده کن."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s1-hf-paljon",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-euro",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kolmekymmenta",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-haluaisin",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kilo",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-hf-missa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kassa",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-sopiva",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kortti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-kuitti",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-rikki",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-topic-toimi",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-paljonko-tama-maksaa-6",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-voinko-maksaa-kortilla-63",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tarvitsen-apua-77",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-ei-toimi-75",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s1-expr-tama-on-sopiva-56",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در قیمت و مقدار، صورت‌های مشخص «euroa» و «litraa» را در عبارت کامل تمرین می‌کنی؛ این نمونه‌ها جدول کامل partitiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Se maksaa viisi euroa.",
+                "fa": "قیمت آن پنج یورو است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های مؤدبانهٔ «Haluaisin tämän, kiitos.» و «Voinko maksaa kortilla?» عبارت‌های ثابت این موقعیت‌اند؛ صرف آزاد شرطی تمرین نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Haluaisin tämän, kiitos.",
+                "fa": "این را می‌خواهم، لطفاً."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-local-cases",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "برای روش پرداخت، صورت‌های کامل «kortilla» و «käteisellä» را یاد می‌گیری: با کارت و نقدی. از این دو نمونه، ساخت همهٔ حالت‌های مکانی نتیجه نمی‌گیریم.",
+            "examples": [
+              {
+                "fi": "Voinko maksaa kortilla?",
+                "fa": "می‌توانم با کارت پرداخت کنم؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در جملهٔ «Tämä ei toimi.»، بعد از «ei» صورت «toimi» می‌آید، نه «toimii». همین جملهٔ مشکل در خرید را تمرین می‌کنی.",
+            "examples": [
+              {
+                "fi": "Tämä ei toimi.",
+                "fa": "این کار نمی‌کند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های آشنای قیمت و مکان را در جملهٔ کامل مرور می‌کنی: «Paljonko tämä maksaa?» و «Missä maito on?».",
+            "examples": [
+              {
+                "fi": "Paljonko tämä maksaa?",
+                "fa": "قیمت این چقدر است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "با «Tämä on…» یک کالای آشنا را توصیف می‌کنی؛ ترتیب همین جملهٔ ساده مرور می‌شود.",
+            "examples": [
+              {
+                "fi": "Tämä on sopiva.",
+                "fa": "این مناسب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

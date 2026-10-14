@@ -96,7 +96,7 @@ test('canonical registry synchronization detects drift and writes deterministica
   fs.mkdirSync(directory, { recursive: true });
   try {
     fs.writeFileSync(path.join(directory, 'master-curriculum.json'), JSON.stringify(master));
-    for (const level of ['a1.1', 'a2.1']) fs.copyFileSync(path.join(__dirname, '../data/course/' + level + '-curriculum.json'), path.join(directory, level + '-curriculum.json'));
+    for (const level of ['a1.1', 'a1.2', 'a2.1']) fs.copyFileSync(path.join(__dirname, '../data/course/' + level + '-curriculum.json'), path.join(directory, level + '-curriculum.json'));
     const filename = path.join(directory, 'a1.1-curriculum.json');
     const broken = structuredClone(curriculum);
     broken.grammar_concepts[1].prerequisites = ['fabricated'];

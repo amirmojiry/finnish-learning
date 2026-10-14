@@ -1,0 +1,899 @@
+{
+  "schema_version": 1,
+  "section_id": "a1.2-section-1",
+  "scope": "Authored assessment and review opportunities, not learner mastery, complete paradigms or CEFR/YKI certification.",
+  "summary": {
+    "lessons": 10,
+    "activities": 265,
+    "introduced_surface_forms_and_expressions": 71,
+    "surfaces_with_later_positive_review": 71,
+    "grammar_concepts_with_later_review": 6,
+    "missing_positive_targets": 0,
+    "repeated_new_labels": 0,
+    "formulaic_lessons": [],
+    "errors": 0
+  },
+  "boundaries": [
+    "Prerequisites and exact surface review carry forward from all four A1.1 sections; source identities and historical scores remain separate.",
+    "Quantity examples are bounded price and shopping chunks, not complete partitive paradigms.",
+    "Haluaisin, Saanko and Voinko are fixed polite requests; no productive conditional paradigm is claimed.",
+    "Kortilla and käteisellä are explicit payment forms; spatial local-case paradigms are not claimed.",
+    "Tämä ei toimi uses the explicit negative connegative; no unrestricted conjugation is claimed.",
+    "All current introductions have later positive retrieval; review and the 80% checkpoint introduce no new targets."
+  ],
+  "lessons": [
+    {
+      "lesson_id": "a1.2-section-1-lesson-1",
+      "order": 1,
+      "title_fa": "قیمت و پول",
+      "activities": 18,
+      "declared_targets": 9,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 9,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities",
+        "a11-questions"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-2",
+      "order": 2,
+      "title_fa": "عددها برای قیمت‌های روزمره",
+      "activities": 33,
+      "declared_targets": 21,
+      "introduced_surfaces": 13,
+      "positively_assessed_targets": 21,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-3",
+      "order": 3,
+      "title_fa": "درخواست مودبانه",
+      "activities": 31,
+      "declared_targets": 22,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 22,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-requests"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-4",
+      "order": 4,
+      "title_fa": "مقدار و ظرف",
+      "activities": 25,
+      "declared_targets": 17,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 17,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-5",
+      "order": 5,
+      "title_fa": "پیدا کردن کالا در فروشگاه",
+      "activities": 26,
+      "declared_targets": 17,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 17,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-6",
+      "order": 6,
+      "title_fa": "اندازه و مناسب بودن",
+      "activities": 27,
+      "declared_targets": 18,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 18,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-7",
+      "order": 7,
+      "title_fa": "پرداخت",
+      "activities": 25,
+      "declared_targets": 17,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 17,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-local-cases",
+        "a12-requests"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-8",
+      "order": 8,
+      "title_fa": "یک مشکل ساده در خدمات",
+      "activities": 28,
+      "declared_targets": 20,
+      "introduced_surfaces": 11,
+      "positively_assessed_targets": 20,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-negation-expand",
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-9",
+      "order": 9,
+      "title_fa": "یک گفت‌وگوی کامل خرید",
+      "activities": 31,
+      "declared_targets": 18,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 18,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities",
+        "a12-requests",
+        "a12-local-cases",
+        "a12-negation-expand",
+        "a11-questions",
+        "a11-olla"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-1-lesson-10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۱",
+      "activities": 21,
+      "declared_targets": 19,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 19,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities",
+        "a12-requests",
+        "a12-local-cases",
+        "a12-negation-expand",
+        "a11-questions",
+        "a11-olla"
+      ]
+    }
+  ],
+  "lexical_review": [
+    {
+      "form_id": "form:70-61-6c-6a-6f-6e",
+      "target_id": "a12s1-hf-paljon",
+      "surface_form": "paljon",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2",
+        "a1.2-section-1-lesson-4",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:72-61-68-61-61",
+      "target_id": "a12s1-hf-rahaa",
+      "surface_form": "rahaa",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2",
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:68-69-6e-74-61",
+      "target_id": "a12s1-topic-hinta",
+      "surface_form": "hinta",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:65-75-72-6f",
+      "target_id": "a12s1-topic-euro",
+      "surface_form": "euro",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:73-65-6e-74-74-69",
+      "target_id": "a12s1-topic-sentti",
+      "surface_form": "sentti",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2"
+      ]
+    },
+    {
+      "form_id": "expression:70-61-6c-6a-6f-6e-6b-6f-20-74-e4-6d-e4-20-6d-61-6b-73-61-61-3f",
+      "target_id": "a12s1-expr-paljonko-tama-maksaa-6",
+      "surface_form": "Paljonko tämä maksaa?",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6d-61-6b-73-61-61-20-76-69-69-73-69-20-65-75-72-6f-61-2e",
+      "target_id": "a12s1-expr-se-maksaa-viisi-euroa-7",
+      "surface_form": "Se maksaa viisi euroa.",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6e-75-6c-6c-61-20-6f-6e-20-72-61-68-61-61-2e",
+      "target_id": "a12s1-expr-minulla-on-rahaa-8",
+      "surface_form": "Minulla on rahaa.",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:31-30",
+      "target_id": "a12s1-hf-10",
+      "surface_form": "10",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:32-30",
+      "target_id": "a12s1-hf-20",
+      "surface_form": "20",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:35-30",
+      "target_id": "a12s1-hf-50",
+      "surface_form": "50",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-6c-6d-65-6b-79-6d-6d-65-6e-74-e4",
+      "target_id": "a12s1-topic-kolmekymmenta",
+      "surface_form": "kolmekymmentä",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6e-65-6c-6a-e4-6b-79-6d-6d-65-6e-74-e4",
+      "target_id": "a12s1-topic-neljakymmenta",
+      "surface_form": "neljäkymmentä",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:6b-75-75-73-69-6b-79-6d-6d-65-6e-74-e4",
+      "target_id": "a12s1-topic-kuusikymmenta",
+      "surface_form": "kuusikymmentä",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:73-65-69-74-73-65-6d-e4-6e-6b-79-6d-6d-65-6e-74-e4",
+      "target_id": "a12s1-topic-seitsemankymmenta",
+      "surface_form": "seitsemänkymmentä",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-68-64-65-6b-73-61-6e-6b-79-6d-6d-65-6e-74-e4",
+      "target_id": "a12s1-topic-kahdeksankymmenta",
+      "surface_form": "kahdeksankymmentä",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:79-68-64-65-6b-73-e4-6e-6b-79-6d-6d-65-6e-74-e4",
+      "target_id": "a12s1-topic-yhdeksankymmenta",
+      "surface_form": "yhdeksänkymmentä",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:73-61-74-61",
+      "target_id": "a12s1-topic-sata",
+      "surface_form": "sata",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6d-61-6b-73-61-61-20-6b-61-6b-73-69-6b-79-6d-6d-65-6e-74-e4-20-65-75-72-6f-61-2e",
+      "target_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+      "surface_form": "Se maksaa kaksikymmentä euroa.",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6d-61-6b-73-61-61-20-76-69-69-73-69-6b-79-6d-6d-65-6e-74-e4-20-65-75-72-6f-61-2e",
+      "target_id": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+      "surface_form": "Se maksaa viisikymmentä euroa.",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6d-61-6b-73-61-61-20-73-61-74-61-20-65-75-72-6f-61-2e",
+      "target_id": "a12s1-expr-se-maksaa-sata-euroa-21",
+      "surface_form": "Se maksaa sata euroa.",
+      "introduced_in": "a1.2-section-1-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:6f-74-74-61-61",
+      "target_id": "a12s1-hf-ottaa",
+      "surface_form": "ottaa",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:61-6e-74-61-61",
+      "target_id": "a12s1-hf-antaa",
+      "surface_form": "antaa",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4",
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:68-61-6c-75-61-69-73-69-6e",
+      "target_id": "a12s1-topic-haluaisin",
+      "surface_form": "haluaisin",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:73-61-61-6e-6b-6f",
+      "target_id": "a12s1-topic-saanko",
+      "surface_form": "Saanko",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:61-6e-6e-6f-73",
+      "target_id": "a12s1-topic-annos",
+      "surface_form": "annos",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:68-61-6c-75-61-69-73-69-6e-20-74-e4-6d-e4-6e-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+      "surface_form": "Haluaisin tämän, kiitos.",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:73-61-61-6e-6b-6f-20-6b-61-68-76-69-6e-2c-20-6b-69-69-74-6f-73-3f",
+      "target_id": "a12s1-expr-saanko-kahvin-kiitos-29",
+      "surface_form": "Saanko kahvin, kiitos?",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:76-6f-69-74-74-65-6b-6f-20-61-6e-74-61-61-20-74-e4-6d-e4-6e-3f",
+      "target_id": "a12s1-expr-voitteko-antaa-taman-30",
+      "surface_form": "Voitteko antaa tämän?",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:76-e4-68-e4-6e",
+      "target_id": "a12s1-hf-vahan",
+      "surface_form": "vähän",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6c-69-73-e4-e4",
+      "target_id": "a12s1-hf-lisaa",
+      "surface_form": "lisää",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6b-69-6c-6f",
+      "target_id": "a12s1-topic-kilo",
+      "surface_form": "kilo",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6c-69-74-72-61",
+      "target_id": "a12s1-topic-litra",
+      "surface_form": "litra",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:70-75-6f-6c-69",
+      "target_id": "a12s1-topic-puoli",
+      "surface_form": "puoli",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "expression:6b-69-6c-6f-20-6f-6d-65-6e-6f-69-74-61-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s1-expr-kilo-omenoita-kiitos-36",
+      "surface_form": "Kilo omenoita, kiitos.",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "expression:70-75-6f-6c-69-20-6c-69-74-72-61-61-20-6d-61-69-74-6f-61-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+      "surface_form": "Puoli litraa maitoa, kiitos.",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "expression:76-e4-68-e4-6e-20-6c-69-73-e4-e4-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s1-expr-vahan-lisaa-kiitos-38",
+      "surface_form": "Vähän lisää, kiitos.",
+      "introduced_in": "a1.2-section-1-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-e4-6c-6c-e4",
+      "target_id": "a12s1-hf-taalla",
+      "surface_form": "täällä",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:73-69-65-6c-6c-e4",
+      "target_id": "a12s1-hf-siella",
+      "surface_form": "siellä",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-75-70-70-61",
+      "target_id": "a12s1-topic-kauppa",
+      "surface_form": "kauppa",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-73-73-61",
+      "target_id": "a12s1-topic-kassa",
+      "surface_form": "kassa",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6f-73-61-73-74-6f",
+      "target_id": "a12s1-topic-osasto",
+      "surface_form": "osasto",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-73-73-e4-20-6d-61-69-74-6f-20-6f-6e-3f",
+      "target_id": "a12s1-expr-missa-maito-on-45",
+      "surface_form": "Missä maito on?",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:6b-61-73-73-61-20-6f-6e-20-74-75-6f-6c-6c-61-2e",
+      "target_id": "a12s1-expr-kassa-on-tuolla-46",
+      "surface_form": "Kassa on tuolla.",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6f-6e-20-74-e4-e4-6c-6c-e4-2e",
+      "target_id": "a12s1-expr-se-on-taalla-47",
+      "surface_form": "Se on täällä.",
+      "introduced_in": "a1.2-section-1-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6c-69-69-61-6e",
+      "target_id": "a12s1-hf-liian",
+      "surface_form": "liian",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:74-6f-69-6e-65-6e",
+      "target_id": "a12s1-hf-toinen",
+      "surface_form": "toinen",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:73-6f-70-69-76-61",
+      "target_id": "a12s1-topic-sopiva",
+      "surface_form": "sopiva",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-6f-6e-20-6c-69-69-61-6e-20-69-73-6f-2e",
+      "target_id": "a12s1-expr-tama-on-liian-iso-54",
+      "surface_form": "Tämä on liian iso.",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-6f-6e-20-6c-69-69-61-6e-20-70-69-65-6e-69-2e",
+      "target_id": "a12s1-expr-tama-on-liian-pieni-55",
+      "surface_form": "Tämä on liian pieni.",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-6f-6e-20-73-6f-70-69-76-61-2e",
+      "target_id": "a12s1-expr-tama-on-sopiva-56",
+      "surface_form": "Tämä on sopiva.",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-6e-6b-6f-20-74-6f-69-6e-65-6e-20-6b-6f-6b-6f-3f",
+      "target_id": "a12s1-expr-onko-toinen-koko-57",
+      "surface_form": "Onko toinen koko?",
+      "introduced_in": "a1.2-section-1-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:76-6f-69",
+      "target_id": "a12s1-hf-voi",
+      "surface_form": "voi",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6d-61-6b-73-61-61",
+      "target_id": "a12s1-topic-maksaa",
+      "surface_form": "maksaa",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-72-74-74-69",
+      "target_id": "a12s1-topic-kortti",
+      "surface_form": "kortti",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-e4-74-65-69-6e-65-6e",
+      "target_id": "a12s1-topic-kateinen",
+      "surface_form": "käteinen",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6b-75-69-74-74-69",
+      "target_id": "a12s1-topic-kuitti",
+      "surface_form": "kuitti",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:76-6f-69-6e-6b-6f-20-6d-61-6b-73-61-61-20-6b-6f-72-74-69-6c-6c-61-3f",
+      "target_id": "a12s1-expr-voinko-maksaa-kortilla-63",
+      "surface_form": "Voinko maksaa kortilla?",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-61-6b-73-61-6e-20-6b-e4-74-65-69-73-65-6c-6c-e4-2e",
+      "target_id": "a12s1-expr-maksan-kateisella-64",
+      "surface_form": "Maksan käteisellä.",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:6b-75-69-74-74-69-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s1-expr-kuitti-kiitos-65",
+      "surface_form": "Kuitti, kiitos.",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-8",
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-74-e4-e4-6e",
+      "target_id": "a12s1-hf-mitaan",
+      "surface_form": "mitään",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:74-61-6b-61-69-73-69-6e",
+      "target_id": "a12s1-hf-takaisin",
+      "surface_form": "takaisin",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6f-6e-67-65-6c-6d-61",
+      "target_id": "a12s1-topic-ongelma",
+      "surface_form": "ongelma",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:72-69-6b-6b-69",
+      "target_id": "a12s1-topic-rikki",
+      "surface_form": "rikki",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:76-e4-e4-72-e4",
+      "target_id": "a12s1-topic-vaara",
+      "surface_form": "väärä",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:74-6f-69-6d-69",
+      "target_id": "a12s1-topic-toimi",
+      "surface_form": "toimi",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:61-70-75",
+      "target_id": "a12s1-topic-apu",
+      "surface_form": "apu",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-6f-6e-20-72-69-6b-6b-69-2e",
+      "target_id": "a12s1-expr-tama-on-rikki-74",
+      "surface_form": "Tämä on rikki.",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-65-69-20-74-6f-69-6d-69-2e",
+      "target_id": "a12s1-expr-tama-ei-toimi-75",
+      "surface_form": "Tämä ei toimi.",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-6f-6e-20-76-e4-e4-72-e4-2e",
+      "target_id": "a12s1-expr-tama-on-vaara-76",
+      "surface_form": "Tämä on väärä.",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:74-61-72-76-69-74-73-65-6e-20-61-70-75-61-2e",
+      "target_id": "a12s1-expr-tarvitsen-apua-77",
+      "surface_form": "Tarvitsen apua.",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    }
+  ],
+  "grammar_review": [
+    {
+      "concept_id": "a12-quantities",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "first_assessed_in_section": "a1.2-section-1-lesson-1",
+      "later_review_lessons": [
+        "a1.2-section-1-lesson-2",
+        "a1.2-section-1-lesson-4",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-questions",
+      "introduced_in": "lesson-5",
+      "first_assessed_in_section": "a1.2-section-1-lesson-1",
+      "later_review_lessons": [
+        "a1.2-section-1-lesson-5",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-requests",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "first_assessed_in_section": "a1.2-section-1-lesson-3",
+      "later_review_lessons": [
+        "a1.2-section-1-lesson-7",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-olla",
+      "introduced_in": "lesson-2",
+      "first_assessed_in_section": "a1.2-section-1-lesson-6",
+      "later_review_lessons": [
+        "a1.2-section-1-lesson-8",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-local-cases",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "first_assessed_in_section": "a1.2-section-1-lesson-7",
+      "later_review_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-negation-expand",
+      "introduced_in": "a1.2-section-1-lesson-8",
+      "first_assessed_in_section": "a1.2-section-1-lesson-8",
+      "later_review_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ]
+    }
+  ],
+  "errors": []
+}

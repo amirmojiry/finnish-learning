@@ -46,7 +46,7 @@ test('A1.2 Section 1 maps all ten reviewed curriculum lessons', () => {
   }
 });
 
-test('multi-level validation prepares 50 globally unique A1 lessons and 150 A1.2 activities', () => {
+test('multi-level validation prepares 50 globally unique A1 lessons and 265 A1.2 activities', () => {
   const sections = course.validateImplementedPath([
     { level: 'A1.1', curriculum: a11Curriculum, sections: a11Sections },
     { level: 'A1.2', curriculum: a12Curriculum, sections: [a12Section1] },
@@ -60,9 +60,9 @@ test('multi-level validation prepares 50 globally unique A1 lessons and 150 A1.2
   assert.equal(new Set(lessonIds).size, 50);
 
   const a12 = sections.at(-1);
-  assert.equal(a12.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.equal(a12.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 265);
   for (const lesson of a12.lessons) {
-    assert.equal(lesson.activities.length, 15, lesson.id);
+    assert.equal(lesson.activities.length, lesson.activity_count, lesson.id);
     assert.equal(lesson.activities.filter((activity) => activity.type === 'production').length, 1, lesson.id);
     assert.equal(lesson.activities.filter((activity) => activity.type === 'choice' && activity.mode === 'listen').length, 1, lesson.id);
     assert.equal(lesson.activities.filter((activity) => activity.type === 'dictation').length, 1, lesson.id);

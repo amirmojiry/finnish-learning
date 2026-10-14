@@ -3,7 +3,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { lessonObjectiveDisplay } = require('../course.js');
 const section = require('../data/course/a2.1-section-2.json');
-const legacySection = require('../data/course/a1.2-section-1.json');
+const legacySection = structuredClone(require('../data/course/a1.2-section-1.json'));
+for (const lesson of legacySection.lessons) delete lesson.learning_objectives;
 
 test('authored lesson objectives are presented by category', () => {
   const lesson = section.lessons[2];

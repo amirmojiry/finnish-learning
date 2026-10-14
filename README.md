@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.40.0`
+- Version: `1.41.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -163,3 +163,5 @@ A1.1 Section 2 also has complete ten-lesson overviews and a scoped acceptance ga
 A1.1 Section 3 now has complete ten-lesson overviews and acceptance checks for weekdays, whole hours, routine and all five explicit first-person negative mappings. All 80 introduced surfaces/expressions have later positive retrieval; the section has 282 activities and preserves original checkpoint targets and scores. Wrong forms such as `En syön` are rejected in negative transformations and explicitly marked grammatical answer tasks, while Finnish keyboard tolerance is retained. Run `npm run section:a11:s3:check`; see the [Section 3 report](docs/A11-SECTION3-ACCEPTANCE.md). Routine reading/writing remains supported practice, not CEFR certification.
 
 A1.1 Section 4 completes canonical overviews and scoped acceptance gates for all forty lessons of the four-section A1.1 path (1,030 activities). Section 4 has 245 activities; all 65 introduced surfaces/expressions have later retrieval, including all ten animal names. Cafe ordering remains formulaic, and familiar-world reading/writing is supported. The final checkpoint retains its original answer scope and 80% threshold. Run `npm run section:a11:s4:check`; see the [Section 4 report](docs/A11-SECTION4-ACCEPTANCE.md). Content acceptance does not certify learner proficiency or complete the wider identity/review backlog.
+
+A1.2 Section 1 now has canonical overviews for all ten shopping/services lessons (265 activities). All 71 introduced exact surfaces/expressions have later positive retrieval; six bounded grammar concepts have later review, with prerequisite context from all four A1.1 sections. Polite requests remain fixed phrases. The original fifteen checkpoint targets and 80% threshold are retained. Run `npm run section:a12:s1:check`; see the [acceptance report](docs/A12-SECTION1-ACCEPTANCE.md).

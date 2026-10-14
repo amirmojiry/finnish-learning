@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1845,
+    "graded_activity_slots": 1960,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 482,
+    "assessed_again_after_earlier_reference": 527,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 18,
-    "lessons_without_explicit_grammar_concept_ids": 83,
-    "graded_grammar_related_slots": 386,
+    "grammar_concepts_with_explicit_lesson_ids": 19,
+    "lessons_without_explicit_grammar_concept_ids": 73,
+    "graded_grammar_related_slots": 407,
     "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 82,
+    "lessons_with_declared_unassessed_forms": 74,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -70,9 +70,9 @@
       "level": "A1.2",
       "id": "a1.2-section-1",
       "lessons": 10,
-      "graded_slots": 90,
-      "unassessed_target_forms": 27,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 205,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.2",
@@ -4929,7 +4929,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "euro",
@@ -4955,29 +4955,31 @@
         "introduced": [
           "euro",
           "hinta",
+          "minulla on rahaa.",
           "paljon",
+          "paljonko tämä maksaa?",
           "rahaa",
+          "se maksaa viisi euroa.",
           "sentti",
           "yksi"
         ],
         "correct_answer": [
           "euro",
           "hinta",
+          "minulla on rahaa.",
           "paljon",
           "paljonko tämä maksaa?",
           "rahaa",
+          "se maksaa viisi euroa.",
           "sentti",
           "yksi"
         ],
         "receptive_count": 5,
-        "productive_count": 3,
+        "productive_count": 5,
         "later_correct_retrieval": [
           "yksi"
         ],
-        "declared_unassessed": [
-          "minulla on rahaa.",
-          "se maksaa viisi euroa."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -4999,20 +5001,28 @@
         "authored_new_forms": [
           "euro",
           "hinta",
+          "minulla on rahaa.",
           "paljon",
+          "paljonko tämä maksaa?",
           "rahaa",
-          "sentti",
-          "yksi"
+          "se maksaa viisi euroa.",
+          "sentti"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla"
+        ]
       }
     },
     {
@@ -5027,7 +5037,7 @@
         "topic": 7,
         "expressions": 3
       },
-      "authored_new_targets": 10,
+      "authored_new_targets": 13,
       "lexical": {
         "declared_forms": [
           "10",
@@ -5068,37 +5078,49 @@
           "kuusikymmentä",
           "neljäkymmentä",
           "sata",
-          "seitsemänkymmentä",
-          "yhdeksänkymmentä"
-        ],
-        "correct_answer": [
-          "20",
-          "50",
-          "kolmekymmentä",
-          "se maksaa kaksikymmentä euroa."
-        ],
-        "receptive_count": 2,
-        "productive_count": 2,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "10",
-          "kahdeksankymmentä",
-          "kuusikymmentä",
-          "neljäkymmentä",
-          "sata",
+          "se maksaa kaksikymmentä euroa.",
           "se maksaa sata euroa.",
           "se maksaa viisikymmentä euroa.",
           "seitsemänkymmentä",
           "yhdeksänkymmentä"
         ],
-        "teach_only": [
+        "correct_answer": [
           "10",
+          "20",
+          "50",
+          "euro",
+          "hinta",
           "kahdeksankymmentä",
+          "kolmekymmentä",
           "kuusikymmentä",
+          "minulla on rahaa.",
           "neljäkymmentä",
+          "paljon",
+          "paljonko tämä maksaa?",
+          "rahaa",
+          "sata",
+          "se maksaa kaksikymmentä euroa.",
+          "se maksaa sata euroa.",
+          "se maksaa viisi euroa.",
+          "se maksaa viisikymmentä euroa.",
           "seitsemänkymmentä",
+          "sentti",
           "yhdeksänkymmentä"
         ],
+        "receptive_count": 2,
+        "productive_count": 19,
+        "later_correct_retrieval": [
+          "euro",
+          "hinta",
+          "minulla on rahaa.",
+          "paljon",
+          "paljonko tämä maksaa?",
+          "rahaa",
+          "se maksaa viisi euroa.",
+          "sentti"
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -5129,18 +5151,25 @@
           "kuusikymmentä",
           "neljäkymmentä",
           "sata",
+          "se maksaa kaksikymmentä euroa.",
+          "se maksaa sata euroa.",
+          "se maksaa viisikymmentä euroa.",
           "seitsemänkymmentä",
           "yhdeksänkymmentä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks"
+        ]
       }
     },
     {
@@ -5155,7 +5184,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "annos",
@@ -5182,28 +5211,56 @@
           "annos",
           "antaa",
           "haluaisin",
+          "haluaisin tämän, kiitos.",
           "mitä",
           "ottaa",
-          "saanko"
+          "saanko",
+          "saanko kahvin, kiitos?",
+          "voitteko antaa tämän?"
         ],
         "correct_answer": [
+          "10",
+          "20",
+          "50",
           "annos",
           "antaa",
           "haluaisin",
           "haluaisin tämän, kiitos.",
+          "kahdeksankymmentä",
+          "kolmekymmentä",
+          "kuusikymmentä",
           "mitä",
+          "neljäkymmentä",
           "ottaa",
-          "saanko"
+          "saanko",
+          "saanko kahvin, kiitos?",
+          "sata",
+          "se maksaa kaksikymmentä euroa.",
+          "se maksaa sata euroa.",
+          "se maksaa viisikymmentä euroa.",
+          "seitsemänkymmentä",
+          "voitteko antaa tämän?",
+          "yhdeksänkymmentä"
         ],
         "receptive_count": 4,
-        "productive_count": 4,
+        "productive_count": 19,
         "later_correct_retrieval": [
-          "mitä"
+          "10",
+          "20",
+          "50",
+          "kahdeksankymmentä",
+          "kolmekymmentä",
+          "kuusikymmentä",
+          "mitä",
+          "neljäkymmentä",
+          "sata",
+          "se maksaa kaksikymmentä euroa.",
+          "se maksaa sata euroa.",
+          "se maksaa viisikymmentä euroa.",
+          "seitsemänkymmentä",
+          "yhdeksänkymmentä"
         ],
-        "declared_unassessed": [
-          "saanko kahvin, kiitos?",
-          "voitteko antaa tämän?"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -5226,19 +5283,25 @@
           "annos",
           "antaa",
           "haluaisin",
-          "mitä",
+          "haluaisin tämän, kiitos.",
           "ottaa",
-          "saanko"
+          "saanko",
+          "saanko kahvin, kiitos?",
+          "voitteko antaa tämän?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -5253,7 +5316,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "kilo",
@@ -5278,30 +5341,48 @@
         ],
         "introduced": [
           "kilo",
-          "lisää",
-          "litra",
-          "paljon",
-          "puoli",
-          "vähän"
-        ],
-        "correct_answer": [
-          "kilo",
           "kilo omenoita, kiitos.",
           "lisää",
           "litra",
           "paljon",
           "puoli",
-          "vähän"
-        ],
-        "receptive_count": 3,
-        "productive_count": 5,
-        "later_correct_retrieval": [
-          "paljon"
-        ],
-        "declared_unassessed": [
           "puoli litraa maitoa, kiitos.",
+          "vähän",
           "vähän lisää, kiitos."
         ],
+        "correct_answer": [
+          "annos",
+          "antaa",
+          "haluaisin",
+          "haluaisin tämän, kiitos.",
+          "kilo",
+          "kilo omenoita, kiitos.",
+          "lisää",
+          "litra",
+          "ottaa",
+          "paljon",
+          "puoli",
+          "puoli litraa maitoa, kiitos.",
+          "saanko",
+          "saanko kahvin, kiitos?",
+          "voitteko antaa tämän?",
+          "vähän",
+          "vähän lisää, kiitos."
+        ],
+        "receptive_count": 3,
+        "productive_count": 15,
+        "later_correct_retrieval": [
+          "annos",
+          "antaa",
+          "haluaisin",
+          "haluaisin tämän, kiitos.",
+          "ottaa",
+          "paljon",
+          "saanko",
+          "saanko kahvin, kiitos?",
+          "voitteko antaa tämän?"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -5322,21 +5403,27 @@
         ],
         "authored_new_forms": [
           "kilo",
+          "kilo omenoita, kiitos.",
           "lisää",
           "litra",
-          "paljon",
           "puoli",
-          "vähän"
+          "puoli litraa maitoa, kiitos.",
+          "vähän",
+          "vähän lisää, kiitos."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks"
+        ]
       }
     },
     {
@@ -5351,7 +5438,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "kassa",
@@ -5376,30 +5463,48 @@
         ],
         "introduced": [
           "kassa",
+          "kassa on tuolla.",
           "kauppa",
           "missä",
+          "missä maito on?",
           "osasto",
+          "se on täällä.",
           "siellä",
           "täällä"
         ],
         "correct_answer": [
           "kassa",
+          "kassa on tuolla.",
           "kauppa",
+          "kilo",
+          "kilo omenoita, kiitos.",
+          "lisää",
+          "litra",
           "missä",
           "missä maito on?",
           "osasto",
+          "puoli",
+          "puoli litraa maitoa, kiitos.",
+          "se on täällä.",
           "siellä",
-          "täällä"
+          "täällä",
+          "vähän",
+          "vähän lisää, kiitos."
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 12,
         "later_correct_retrieval": [
-          "missä"
+          "kilo",
+          "kilo omenoita, kiitos.",
+          "lisää",
+          "litra",
+          "missä",
+          "puoli",
+          "puoli litraa maitoa, kiitos.",
+          "vähän",
+          "vähän lisää, kiitos."
         ],
-        "declared_unassessed": [
-          "kassa on tuolla.",
-          "se on täällä."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -5420,21 +5525,27 @@
         ],
         "authored_new_forms": [
           "kassa",
+          "kassa on tuolla.",
           "kauppa",
-          "missä",
+          "missä maito on?",
           "osasto",
+          "se on täällä.",
           "siellä",
           "täällä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -5449,7 +5560,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "iso",
@@ -5475,32 +5586,51 @@
         "introduced": [
           "iso",
           "liian",
-          "pieni",
-          "sopiva",
-          "toinen",
-          "tämä"
-        ],
-        "correct_answer": [
-          "iso",
-          "liian",
+          "onko toinen koko?",
           "pieni",
           "sopiva",
           "toinen",
           "tämä",
+          "tämä on liian iso.",
+          "tämä on liian pieni.",
           "tämä on sopiva."
         ],
+        "correct_answer": [
+          "iso",
+          "kassa",
+          "kassa on tuolla.",
+          "kauppa",
+          "liian",
+          "missä maito on?",
+          "onko toinen koko?",
+          "osasto",
+          "pieni",
+          "se on täällä.",
+          "siellä",
+          "sopiva",
+          "toinen",
+          "tämä",
+          "tämä on liian iso.",
+          "tämä on liian pieni.",
+          "tämä on sopiva.",
+          "täällä"
+        ],
         "receptive_count": 4,
-        "productive_count": 4,
+        "productive_count": 15,
         "later_correct_retrieval": [
           "iso",
+          "kassa",
+          "kassa on tuolla.",
+          "kauppa",
+          "missä maito on?",
+          "osasto",
           "pieni",
-          "tämä"
+          "se on täällä.",
+          "siellä",
+          "tämä",
+          "täällä"
         ],
-        "declared_unassessed": [
-          "onko toinen koko?",
-          "tämä on liian iso.",
-          "tämä on liian pieni."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -5521,21 +5651,24 @@
           "tämä on sopiva."
         ],
         "authored_new_forms": [
-          "iso",
           "liian",
-          "pieni",
+          "onko toinen koko?",
           "sopiva",
           "toinen",
-          "tämä"
+          "tämä on liian iso.",
+          "tämä on liian pieni.",
+          "tämä on sopiva."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -5551,7 +5684,7 @@
         "topic": 4,
         "expressions": 3
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "antaa",
@@ -5579,31 +5712,47 @@
           "antaa",
           "kortti",
           "kuitti",
+          "kuitti, kiitos.",
           "käteinen",
           "maksaa",
+          "maksan käteisellä.",
           "rahaa",
-          "voi"
+          "voi",
+          "voinko maksaa kortilla?"
         ],
         "correct_answer": [
           "antaa",
           "kortti",
           "kuitti",
+          "kuitti, kiitos.",
           "käteinen",
+          "liian",
           "maksaa",
+          "maksan käteisellä.",
+          "onko toinen koko?",
           "rahaa",
+          "sopiva",
+          "toinen",
+          "tämä on liian iso.",
+          "tämä on liian pieni.",
+          "tämä on sopiva.",
           "voi",
           "voinko maksaa kortilla?"
         ],
         "receptive_count": 4,
-        "productive_count": 4,
+        "productive_count": 13,
         "later_correct_retrieval": [
           "antaa",
-          "rahaa"
+          "liian",
+          "onko toinen koko?",
+          "rahaa",
+          "sopiva",
+          "toinen",
+          "tämä on liian iso.",
+          "tämä on liian pieni.",
+          "tämä on sopiva."
         ],
-        "declared_unassessed": [
-          "kuitti, kiitos.",
-          "maksan käteisellä."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -5624,23 +5773,30 @@
           "voinko maksaa kortilla?"
         ],
         "authored_new_forms": [
-          "antaa",
           "kortti",
           "kuitti",
+          "kuitti, kiitos.",
           "käteinen",
           "maksaa",
-          "rahaa",
-          "voi"
+          "maksan käteisellä.",
+          "voi",
+          "voinko maksaa kortilla?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-local-cases",
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -5655,7 +5811,7 @@
         "topic": 5,
         "expressions": 4
       },
-      "authored_new_targets": 8,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "apu",
@@ -5691,34 +5847,50 @@
           "ongelma",
           "rikki",
           "takaisin",
+          "tarvitsen apua.",
           "toimi",
+          "tämä ei toimi.",
+          "tämä on rikki.",
+          "tämä on väärä.",
           "väärä"
         ],
         "correct_answer": [
+          "apu",
           "ei",
+          "kortti",
+          "kuitti",
+          "kuitti, kiitos.",
+          "käteinen",
+          "maksaa",
+          "maksan käteisellä.",
           "mitään",
           "ongelma",
           "rikki",
+          "takaisin",
           "tarvitsen apua.",
           "toimi",
+          "tämä ei toimi.",
+          "tämä on rikki.",
+          "tämä on väärä.",
+          "voi",
+          "voinko maksaa kortilla?",
           "väärä"
         ],
         "receptive_count": 3,
-        "productive_count": 4,
+        "productive_count": 17,
         "later_correct_retrieval": [
-          "ei"
+          "ei",
+          "kortti",
+          "kuitti",
+          "kuitti, kiitos.",
+          "käteinen",
+          "maksaa",
+          "maksan käteisellä.",
+          "voi",
+          "voinko maksaa kortilla?"
         ],
-        "declared_unassessed": [
-          "apu",
-          "takaisin",
-          "tämä ei toimi.",
-          "tämä on rikki.",
-          "tämä on väärä."
-        ],
-        "teach_only": [
-          "apu",
-          "takaisin"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -5741,23 +5913,31 @@
         ],
         "authored_new_forms": [
           "apu",
-          "ei",
           "mitään",
           "ongelma",
           "rikki",
           "takaisin",
+          "tarvitsen apua.",
           "toimi",
+          "tämä ei toimi.",
+          "tämä on rikki.",
+          "tämä on väärä.",
           "väärä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation"
+        ]
       }
     },
     {
@@ -5790,24 +5970,50 @@
           "voinko maksaa kortilla?"
         ],
         "correct_answer": [
+          "apu",
           "haluaisin tämän, kiitos.",
           "hei!",
           "kuitti, kiitos.",
+          "mitään",
+          "ongelma",
           "paljonko tämä maksaa?",
-          "voinko maksaa kortilla?"
+          "rikki",
+          "se maksaa kaksikymmentä euroa.",
+          "takaisin",
+          "tarvitsen apua.",
+          "toimi",
+          "tämä ei toimi.",
+          "tämä on rikki.",
+          "tämä on sopiva.",
+          "tämä on väärä.",
+          "voinko maksaa kortilla?",
+          "väärä"
         ],
         "receptive_count": 5,
-        "productive_count": 4,
+        "productive_count": 18,
         "later_correct_retrieval": [
+          "apu",
           "haluaisin tämän, kiitos.",
           "hei!",
           "kuitti, kiitos.",
+          "mitään",
+          "ongelma",
           "paljonko tämä maksaa?",
-          "voinko maksaa kortilla?"
+          "rikki",
+          "se maksaa kaksikymmentä euroa.",
+          "takaisin",
+          "tarvitsen apua.",
+          "toimi",
+          "tämä ei toimi.",
+          "tämä on rikki.",
+          "tämä on sopiva.",
+          "tämä on väärä.",
+          "voinko maksaa kortilla?",
+          "väärä"
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 4,
+        "distractor_only_count": 3,
         "reading_only": [
           "hei! haluaisin tämän, kiitos. paljonko tämä maksaa? se maksaa kaksikymmentä euroa. voinko maksaa kortilla? kyllä. kuitti, kiitos."
         ],
@@ -5824,12 +6030,24 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-local-cases",
+          "a12-negation-expand",
+          "a12-quantities",
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -5868,6 +6086,7 @@
         "correct_answer": [
           "euro",
           "haluaisin",
+          "haluaisin tämän, kiitos.",
           "kassa",
           "kilo",
           "kolmekymmentä",
@@ -5877,16 +6096,20 @@
           "paljon",
           "paljonko tämä maksaa?",
           "rikki",
+          "se maksaa kaksikymmentä euroa.",
           "sopiva",
           "tarvitsen apua.",
           "toimi",
+          "tämä ei toimi.",
+          "tämä on sopiva.",
           "voinko maksaa kortilla?"
         ],
         "receptive_count": 8,
-        "productive_count": 7,
+        "productive_count": 12,
         "later_correct_retrieval": [
           "euro",
           "haluaisin",
+          "haluaisin tämän, kiitos.",
           "kassa",
           "kilo",
           "kolmekymmentä",
@@ -5896,9 +6119,12 @@
           "paljon",
           "paljonko tämä maksaa?",
           "rikki",
+          "se maksaa kaksikymmentä euroa.",
           "sopiva",
           "tarvitsen apua.",
           "toimi",
+          "tämä ei toimi.",
+          "tämä on sopiva.",
           "voinko maksaa kortilla?"
         ],
         "declared_unassessed": [],
@@ -5912,12 +6138,24 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-local-cases",
+          "a12-negation-expand",
+          "a12-quantities",
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 10,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -17611,73 +17849,6 @@
     ],
     "lessons_with_unassessed_declared_targets": [
       {
-        "lesson_id": "a1.2-section-1-lesson-1",
-        "forms": [
-          "minulla on rahaa.",
-          "se maksaa viisi euroa."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-2",
-        "forms": [
-          "10",
-          "kahdeksankymmentä",
-          "kuusikymmentä",
-          "neljäkymmentä",
-          "sata",
-          "se maksaa sata euroa.",
-          "se maksaa viisikymmentä euroa.",
-          "seitsemänkymmentä",
-          "yhdeksänkymmentä"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-3",
-        "forms": [
-          "saanko kahvin, kiitos?",
-          "voitteko antaa tämän?"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-4",
-        "forms": [
-          "puoli litraa maitoa, kiitos.",
-          "vähän lisää, kiitos."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-5",
-        "forms": [
-          "kassa on tuolla.",
-          "se on täällä."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-6",
-        "forms": [
-          "onko toinen koko?",
-          "tämä on liian iso.",
-          "tämä on liian pieni."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-7",
-        "forms": [
-          "kuitti, kiitos.",
-          "maksan käteisellä."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-1-lesson-8",
-        "forms": [
-          "apu",
-          "takaisin",
-          "tämä ei toimi.",
-          "tämä on rikki.",
-          "tämä on väärä."
-        ]
-      },
-      {
         "lesson_id": "a1.2-section-2-lesson-1",
         "forms": [
           "kauppa",
@@ -18254,14 +18425,6 @@
         "level": "A1.1",
         "title_en": "Basic phonology and vowel length",
         "prerequisites": []
-      },
-      {
-        "id": "a12-local-cases",
-        "level": "A1.2",
-        "title_en": "Internal and external local cases in reviewed forms",
-        "prerequisites": [
-          "a11-case-chunks"
-        ]
       },
       {
         "id": "a12-commands",

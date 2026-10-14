@@ -5,12 +5,12 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 
 ## Key findings
 
-- 140 shipped lessons / 14 sections; 1845 graded slots after real runtime injection.
+- 140 shipped lessons / 14 sections; 1960 graded slots after real runtime injection.
 - 670 lexical target placements and 464 distinct surface forms; 431 lemma-field values (unverified) and 0 explicit sense IDs.
-- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 482 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
+- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 527 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 425 dictionary entries; 126 authored lexical target forms found in the curated dictionary; 338 missing, of which 332 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 18 with explicit lesson concept IDs. 83 lessons lack these links even though 386 structural/grammar slots exist (75 morphology slots).
-- 82 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
+- 27 planned grammar concepts in shipped stages; 19 with explicit lesson concept IDs. 73 lessons lack these links even though 407 structural/grammar slots exist (75 morphology slots).
+- 74 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage
 
@@ -20,7 +20,7 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 | A1.1 | a1.1-section-2 | 10 | 213 | 0 | 0 |
 | A1.1 | a1.1-section-3 | 10 | 210 | 0 | 0 |
 | A1.1 | a1.1-section-4 | 10 | 178 | 0 | 1 |
-| A1.2 | a1.2-section-1 | 10 | 90 | 27 | 10 |
+| A1.2 | a1.2-section-1 | 10 | 205 | 0 | 0 |
 | A1.2 | a1.2-section-2 | 10 | 90 | 27 | 10 |
 | A1.2 | a1.2-section-3 | 10 | 75 | 44 | 10 |
 | A1.2 | a1.2-section-4 | 10 | 72 | 51 | 10 |
@@ -95,7 +95,6 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | Grammar ID | Stage | Prerequisites |
 | --- | --- | --- |
 | `a11-sounds` | A1.1 | — |
-| `a12-local-cases` | A1.2 | `a11-case-chunks` |
 | `a12-commands` | A1.2 | `a11-present-chunks` |
 | `a12-frequency-adverbs` | A1.2 | `a11-present-chunks` |
 | `a13-verb-classes` | A1.3 | `a13-present-paradigm` |
