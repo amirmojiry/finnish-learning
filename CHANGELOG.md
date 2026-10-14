@@ -6,6 +6,12 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.41.1] - 2026-10-14
+
+### Fixed
+
+- Move dialogue-order phrases into the selected-answer box used by sequence ordering. Allow removing phrases and resetting the order before explicit submission; keep Finnish turns left-to-right, keyboard focus and exact index-based grading.
+
 ## [1.41.0] - 2026-10-14
 
 ### Added
