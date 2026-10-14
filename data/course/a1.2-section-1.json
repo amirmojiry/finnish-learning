@@ -1560,6 +1560,10 @@
           "item": "a12s1-hf-paljon"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6"
+        },
+        {
           "type": "sentence-order",
           "item": "a12s1-hf-paljon",
           "tokens": [
@@ -1659,10 +1663,6 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-hf-rahaa"
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-paljonko-tama-maksaa-6"
         },
         {
           "type": "type",
@@ -1923,6 +1923,10 @@
           "item": "a12s1-topic-yhdeksankymmenta"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19"
+        },
+        {
           "type": "sentence-order",
           "item": "a12s1-hf-20",
           "tokens": [
@@ -1966,10 +1970,6 @@
             "a12s1-hf-50",
             "a12s1-topic-kolmekymmenta"
           ]
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19"
         },
         {
           "type": "type",
@@ -2395,6 +2395,10 @@
           "item": "a12s1-topic-haluaisin"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28"
+        },
+        {
           "type": "controlled-production",
           "item": "a12s1-topic-haluaisin",
           "prompt_fa": "این را می‌خواهم، متشکرم.",
@@ -2453,10 +2457,6 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-hf-ottaa"
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-haluaisin-taman-kiitos-28"
         },
         {
           "type": "type",
@@ -2886,6 +2886,10 @@
           "item": "a12s1-topic-puoli"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37"
+        },
+        {
           "type": "expression-completion",
           "item": "a12s1-topic-puoli",
           "prompt_fi": "Puoli _____ maitoa, kiitos.",
@@ -2963,10 +2967,6 @@
           "mode": "finnish",
           "item": "a12s1-expr-voitteko-antaa-taman-30",
           "answer_policy": "morphology"
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37"
         },
         {
           "type": "controlled-production",
@@ -3284,6 +3284,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-missa-maito-on-45"
+        },
+        {
           "type": "sentence-order",
           "item": "a12s1-hf-missa",
           "tokens": [
@@ -3303,10 +3307,6 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-hf-taalla"
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-missa-maito-on-45"
         },
         {
           "type": "type",
@@ -3670,6 +3670,10 @@
           "item": "a12s1-topic-sopiva"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-sopiva-56"
+        },
+        {
           "type": "controlled-production",
           "item": "a12s1-topic-sopiva",
           "prompt_fa": "این مناسب است.",
@@ -3698,10 +3702,6 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-hf-tama"
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-tama-on-sopiva-56"
         },
         {
           "type": "type",
@@ -4015,6 +4015,10 @@
           "mode": "finnish"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63"
+        },
+        {
           "type": "expression-completion",
           "item": "a12s1-topic-maksaa",
           "prompt_fi": "Voinko maksaa _____?",
@@ -4061,10 +4065,6 @@
             "a12s1-topic-kuitti",
             "a12s1-hf-rahaa"
           ]
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-voinko-maksaa-kortilla-63"
         },
         {
           "type": "type",
@@ -4464,6 +4464,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-rikki-74"
+        },
+        {
           "type": "controlled-production",
           "item": "a12s1-topic-rikki",
           "prompt_fa": "این خراب است.",
@@ -4560,10 +4564,6 @@
           "grammar_concept_ids": [
             "a12-negation-expand"
           ]
-        },
-        {
-          "type": "teach",
-          "item": "a12s1-expr-tama-on-rikki-74"
         },
         {
           "type": "controlled-production",
@@ -4803,7 +4803,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 25,
+                "activity_index": 26,
                 "mode": "supported_production"
               }
             ]

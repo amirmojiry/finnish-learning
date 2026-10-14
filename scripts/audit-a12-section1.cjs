@@ -6,6 +6,17 @@ const course = require('../course.js');
 const coverage = require('./audit-course-coverage.cjs');
 const shared = require('./audit-a11-section1.cjs');
 const ORIGINAL_CHECKPOINT_TARGETS = ['a12s1-hf-paljon', 'a12s1-topic-euro', 'a12s1-topic-kolmekymmenta', 'a12s1-topic-haluaisin', 'a12s1-topic-kilo', 'a12s1-hf-missa', 'a12s1-topic-kassa', 'a12s1-topic-sopiva', 'a12s1-topic-kortti', 'a12s1-topic-kuitti', 'a12s1-topic-rikki', 'a12s1-topic-toimi', 'a12s1-expr-paljonko-tama-maksaa-6', 'a12s1-expr-voinko-maksaa-kortilla-63', 'a12s1-expr-tarvitsen-apua-77'];
+function assessesExpression(activity, target, items) {
+  if (['teach', 'number-grid'].includes(activity.type)) return false;
+  const positiveTargets = coverage.positives(activity);
+  if (positiveTargets.includes(target)) return true;
+  const normalize = value => coverage.norm(value).replace(/[.,!?]/g, '').replace(/\s+/g, ' ');
+  const expression = items[target];
+  const forms = new Set([expression.surface_form, ...(expression.accepted_answers || [])].map(normalize));
+  const answers = [activity.expected_fi, ...(activity.accepted_answers || []),
+    ...positiveTargets.flatMap(id => [items[id]?.surface_form, ...(items[id]?.accepted_answers || [])])];
+  return answers.some(answer => answer && forms.has(normalize(answer)));
+}
 function evaluate(raw, curriculum, sidecar, preceding, priorCurriculum) {
   const report = shared.evaluate(raw, curriculum, sidecar, preceding, { 'A1.1': priorCurriculum });
   const section = course.validateSection(raw), checkpoint = section.lessons[9];
@@ -17,7 +28,7 @@ function evaluate(raw, curriculum, sidecar, preceding, priorCurriculum) {
   for (const lesson of section.lessons) for (const target of lesson.new_targets) {
     if (section.items[target].item_type !== 'expression') continue;
     const taught = lesson.activities.findIndex(a => a.type === 'teach' && a.item === target);
-    const tested = lesson.activities.findIndex(a => coverage.positives(a).includes(target));
+    const tested = lesson.activities.findIndex(a => assessesExpression(a, target, section.items));
     if (taught < 0 || taught >= tested) report.errors.push(lesson.id + ': new expression must be taught before assessment: ' + target);
   }
   for (const lesson of section.lessons) for (const goal of lesson.learning_objectives.grammar) {
@@ -42,4 +53,4 @@ function main(action = process.argv[2] || '--check') {
   }
 }
 if (require.main === module) main();
-module.exports = { evaluate, main, ORIGINAL_CHECKPOINT_TARGETS };
+module.exports = { evaluate, main, ORIGINAL_CHECKPOINT_TARGETS, assessesExpression };

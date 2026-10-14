@@ -1,7 +1,7 @@
 'use strict';
 const test = require('node:test'), assert = require('node:assert/strict');
 const course = require('../course.js');
-const { evaluate, ORIGINAL_CHECKPOINT_TARGETS } = require('../scripts/audit-a12-section1.cjs');
+const { evaluate, ORIGINAL_CHECKPOINT_TARGETS, assessesExpression } = require('../scripts/audit-a12-section1.cjs');
 const raw = require('../data/course/a1.2-section-1.json'), curriculum = require('../data/course/a1.2-curriculum.json');
 const prior = [1, 2, 3, 4].map(n => require(`../data/course/a1.1-section-${n}.json`));
 const a11 = require('../data/course/a1.1-curriculum.json'), sidecar = require('../data/course/lexical-identity-sidecar.json');
@@ -72,11 +72,29 @@ test('shopping backfill retains original item records and stable core lesson con
 });
 
 test('new shopping expressions are explicitly taught before the first graded answer', () => {
-  const positives = require('../scripts/audit-course-coverage.cjs').positives;
   for (const lesson of course.validateSection(raw).lessons) for (const target of lesson.new_targets) {
     if (raw.items[target].item_type !== 'expression') continue;
     const taught = lesson.activities.findIndex(a => a.type === 'teach' && a.item === target);
-    const tested = lesson.activities.findIndex(a => positives(a).includes(target));
+    const tested = lesson.activities.findIndex(a => assessesExpression(a, target, raw.items));
     assert.ok(taught >= 0 && taught < tested, target);
   }
+});
+
+test('expression teaching gate detects full answers attributed to component words', () => {
+  const target = 'a12s1-expr-haluaisin-taman-kiitos-28';
+  const component = 'a12s1-topic-haluaisin';
+  const fi = raw.items[target].surface_form;
+  assert.equal(assessesExpression({ type: 'controlled-production', item: component, expected_fi: fi }, target, raw.items), true);
+  assert.equal(assessesExpression({ type: 'controlled-production', item: component, accepted_answers: [fi.toUpperCase().replace('.', '')] }, target, raw.items), true);
+  assert.equal(assessesExpression({ type: 'choice', item: component, options: [component, target] }, target, raw.items), false);
+  assert.equal(assessesExpression({ type: 'teach', item: component, expected_fi: fi }, target, raw.items), false);
+  const broken = structuredClone(raw), lesson = broken.lessons[2];
+  const old = [...lesson.activities];
+  const evidence = lesson.learning_objectives.grammar.flatMap(g => g.evidence).map(e => [e, old[e.activity_index]]);
+  const taught = lesson.activities.findIndex(a => a.type === 'teach' && a.item === target);
+  const [card] = lesson.activities.splice(taught, 1);
+  const assessed = lesson.activities.findIndex(a => a.type === 'controlled-production' && a.item === component);
+  lesson.activities.splice(assessed + 1, 0, card);
+  for (const [entry, activity] of evidence) entry.activity_index = lesson.activities.indexOf(activity);
+  assert.ok(verify(broken).errors.some(e => e.includes('new expression must be taught before assessment: ' + target)));
 });
