@@ -32,6 +32,14 @@ function evaluate(raw, curriculum, sidecar, preceding, priorCurriculum) {
       if (evidence.mode !== 'recognition' && a.type !== 'inflection-production' && a.answer_policy !== 'morphology') report.errors.push(lesson.id + ': grammar production lacks morphology policy');
     }
   }
+  const temporalWeekdays = new Set(['maanantaina', 'tiistaina', 'keskiviikkona', 'torstaina', 'perjantaina', 'lauantaina', 'sunnuntaina']);
+  for (const lesson of section.lessons) for (const activity of lesson.activities) {
+    if (['type', 'production', 'dictation'].includes(activity.type)
+      && temporalWeekdays.has(section.items[activity.item]?.surface_form)
+      && activity.answer_policy !== 'morphology') {
+      report.errors.push(lesson.id + ': temporal weekday production lacks morphology policy: ' + activity.item);
+    }
+  }
   report.boundaries = [
     'Exact-form prior knowledge and grammar prerequisites carry forward from all four A1.1 sections and A1.2 Sections 1–2; senses and SRS histories remain separate.',
     'First-person routine sentences are supported chunks, not full verb-class conjugation. Routine writing contains four explicitly taught sentences.',

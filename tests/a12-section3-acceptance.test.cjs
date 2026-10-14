@@ -123,3 +123,22 @@ test('daily-life backfill preserves every original item record and core progress
   const core = raw.lessons.map(l => Object.fromEntries(['id', 'curriculum_id', 'production_targets', 'listening_targets', 'checkpoint_targets', 'passing_score', 'curriculum_target_refs'].map(k => [k, l[k] ?? null])));
   assert.equal(hash(core), 'e9234a6ed47b247f4f9505223f4a40b807b53dc9010f567b1af91e164f39e987');
 });
+
+test('temporal weekday typing and dictation reject nominatives in teaching and later review', () => {
+  const section = course.validateSection(raw);
+  const pairs = new Map([['maanantaina', 'maanantai'], ['tiistaina', 'tiistai'], ['keskiviikkona', 'keskiviikko'], ['torstaina', 'torstai'], ['perjantaina', 'perjantai'], ['lauantaina', 'lauantai'], ['sunnuntaina', 'sunnuntai']]);
+  const tested = new Set();
+  for (const l of section.lessons) for (const a of l.activities) {
+    const item = section.items[a.item], wrong = pairs.get(item?.surface_form);
+    if (!wrong || !['type', 'production', 'dictation'].includes(a.type)) continue;
+    tested.add(item.surface_form);
+    assert.equal(a.answer_policy, 'morphology');
+    assert.equal(course.gradeActivityAnswer(a, item, item.surface_form).accepted, true);
+    assert.equal(course.gradeActivityAnswer(a, item, wrong).accepted, false, l.id + '/' + wrong);
+  }
+  assert.deepEqual([...tested].sort(), [...pairs.keys()].sort());
+  const weak = structuredClone(raw), a = weak.lessons[8].activities.find(a => a.type === 'type' && raw.items[a.item]?.surface_form === 'keskiviikkona');
+  assert.ok(a);
+  delete a.answer_policy;
+  assert.ok(verify(weak).errors.some(e => e.includes('temporal weekday production lacks morphology policy')));
+});

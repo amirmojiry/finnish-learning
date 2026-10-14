@@ -4211,7 +4211,8 @@
         {
           "type": "type",
           "item": "a12s3-hf-18",
-          "mode": "finnish"
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "teach",
@@ -4284,7 +4285,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-19"
+          "item": "a12s3-hf-19",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -4299,22 +4301,26 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-19"
+          "item": "a12s3-topic-19",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-20"
+          "item": "a12s3-topic-20",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-21"
+          "item": "a12s3-topic-21",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-22"
+          "item": "a12s3-topic-22",
+          "answer_policy": "morphology"
         },
         {
           "type": "teach",
@@ -4804,12 +4810,14 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-17"
+          "item": "a12s3-hf-17",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-19"
+          "item": "a12s3-hf-19",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -4819,12 +4827,14 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-20"
+          "item": "a12s3-topic-20",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-22"
+          "item": "a12s3-topic-22",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -5173,7 +5183,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-18"
+          "item": "a12s3-hf-18",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -5183,12 +5194,14 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-19"
+          "item": "a12s3-topic-19",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-21"
+          "item": "a12s3-topic-21",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -5803,22 +5816,26 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-17"
+          "item": "a12s3-hf-17",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-19"
+          "item": "a12s3-topic-19",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-20"
+          "item": "a12s3-topic-20",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-22"
+          "item": "a12s3-topic-22",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -6618,17 +6635,20 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-18"
+          "item": "a12s3-hf-18",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-hf-19"
+          "item": "a12s3-hf-19",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-topic-21"
+          "item": "a12s3-topic-21",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
