@@ -1400,6 +1400,42 @@
       "accepted_answers": [
         "Valitettavasti en voi, koska olen kiireinen. Voidaan tavata myöhemmin."
       ]
+    },
+    "a13s1-e-tulet-pian": {
+      "id": "a13s1-e-tulet-pian",
+      "surface_form": "Tulet pian.",
+      "lemma": "Tulet pian.",
+      "translation_fa": "به‌زودی می‌آیی.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "social",
+        "messages"
+      ],
+      "example_fi": "Tulet pian.",
+      "example_fa": "به‌زودی می‌آیی.",
+      "accepted_answers": [
+        "Tulet pian."
+      ]
+    },
+    "a13s1-e-minun-taytyy-lahtea": {
+      "id": "a13s1-e-minun-taytyy-lahtea",
+      "surface_form": "Minun täytyy lähteä.",
+      "lemma": "Minun täytyy lähteä.",
+      "translation_fa": "باید بروم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "social",
+        "messages"
+      ],
+      "example_fi": "Minun täytyy lähteä.",
+      "example_fa": "باید بروم.",
+      "accepted_answers": [
+        "Minun täytyy lähteä."
+      ]
     }
   },
   "lessons": [
@@ -1410,14 +1446,16 @@
       "title_fa": "ادامه دادن یک گفت‌وگوی کوتاه",
       "objective_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
       "summary_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد.",
-      "grammar_fa": "برای گفت‌وگو از پرسش پیگیری «Mitä teet tänään?» و پاسخ «Entä sinä?» استفاده کن.",
+      "grammar_fa": "پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند.",
       "new_targets": [
-        "a13s1-h-001",
-        "a13s1-h-002",
         "a13s1-h-003",
         "a13s1-t-004",
-        "a13s1-t-005",
-        "a13s1-t-006"
+        "a13s1-t-006",
+        "a13s1-e-007",
+        "a13s1-e-008",
+        "a13s1-e-009",
+        "a13s1-e-010",
+        "a13s1-e-073"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1463,7 +1501,24 @@
             0,
             1
           ],
-          "expected_fi": "Mitä teet tänään?"
+          "expected_fi": "Mitä teet tänään?",
+          "expected_fa": "امروز چه کار می‌کنی؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-008",
+          "prompt_fa": "امروز چه کار می‌کنی؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "accepted_answers": [
+            "Mitä teet tänään?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
       ],
       "activities": [
@@ -1484,6 +1539,10 @@
           "item": "a13s1-t-004"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-007"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-007",
@@ -1492,7 +1551,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1514,22 +1574,32 @@
             "a13s1-h-001",
             "a13s1-h-003",
             "a13s1-t-004"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-008"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-008",
-          "options": [
-            "a13s1-e-008",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "teet",
+            "tänään?",
+            "Mitä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "expected_fa": "امروز چه کار می‌کنی؟"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-001",
           "options": [
             "a13s1-h-001",
@@ -1539,15 +1609,10 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-002",
-          "options": [
-            "a13s1-h-002",
-            "a13s1-h-001",
-            "a13s1-h-003",
-            "a13s1-t-004"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1583,6 +1648,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-006"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-t-006",
@@ -1594,17 +1663,142 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-007",
-          "options": [
-            "a13s1-e-007",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-008",
+          "prompt_fa": "امروز چه کار می‌کنی؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "accepted_answers": [
+            "Mitä teet tänään?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-009"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-009",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-010"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-010",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-073"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-073",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [],
+      "practice_targets": [
+        "a13s1-e-073",
+        "a13s1-e-008"
+      ],
+      "activity_count": 25,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l01-can-do",
+            "can_do_fa": "در یک گفت‌وگوی آشنا یک پرسش پیگیری ساده بپرسد و پاسخ کوتاه متقابل بدهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-001",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-003",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-004",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-005",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-006",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-007",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-008",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-009",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-010",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-073",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند.",
+            "examples": [
+              {
+                "fi": "Mitä teet tänään?",
+                "fa": "امروز چه کار می‌کنی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-2",
@@ -1613,14 +1807,14 @@
       "title_fa": "دعوت کردن و پاسخ دادن",
       "objective_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
       "summary_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند.",
-      "grammar_fa": "دعوت را با «Haluatko tulla minun kanssani?» بیان کن؛ «Kyllä, mielelläni.» پذیرش و «Valitettavasti en voi.» رد مؤدبانه است.",
+      "grammar_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
       "new_targets": [
-        "a13s1-h-011",
-        "a13s1-h-012",
-        "a13s1-h-013",
         "a13s1-t-014",
         "a13s1-t-015",
-        "a13s1-t-016"
+        "a13s1-t-016",
+        "a13s1-e-017",
+        "a13s1-e-019",
+        "a13s1-e-020"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1664,7 +1858,24 @@
             1,
             0
           ],
-          "expected_fi": "Kyllä, mielelläni."
+          "expected_fi": "Kyllä, mielelläni.",
+          "expected_fa": "بله، با کمال میل."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-019",
+          "prompt_fa": "متأسفانه نمی‌توانم.",
+          "cues_fi": [
+            "Valitettavasti"
+          ],
+          "expected_fi": "Valitettavasti en voi.",
+          "accepted_answers": [
+            "Valitettavasti en voi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -1685,6 +1896,10 @@
           "item": "a13s1-t-014"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-017"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-017",
@@ -1693,7 +1908,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1715,40 +1931,39 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "sentence-order",
           "item": "a13s1-e-018",
-          "options": [
-            "a13s1-e-018",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "mielelläni.",
+            "Kyllä,"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Kyllä, mielelläni.",
+          "expected_fa": "بله، با کمال میل."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-011",
           "options": [
+            "a13s1-h-012",
             "a13s1-h-011",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-h-013",
+            "a13s1-t-014"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-012",
-          "options": [
-            "a13s1-h-012",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1773,6 +1988,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-015"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s1-t-015",
@@ -1782,6 +2001,10 @@
             "a13s1-h-002",
             "a13s1-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-016"
         },
         {
           "type": "choice",
@@ -1795,17 +2018,166 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-017",
-          "options": [
-            "a13s1-e-017",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-019"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-019",
+          "prompt_fa": "متأسفانه نمی‌توانم.",
+          "cues_fi": [
+            "Valitettavasti"
+          ],
+          "expected_fi": "Valitettavasti en voi.",
+          "accepted_answers": [
+            "Valitettavasti en voi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-020"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-020",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-003",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-006",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-008",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-010",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-h-003",
+        "a13s1-t-006",
+        "a13s1-e-008",
+        "a13s1-e-010"
+      ],
+      "practice_targets": [
+        "a13s1-e-019"
+      ],
+      "activity_count": 26,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l02-can-do",
+            "can_do_fa": "کسی را به یک فعالیت آشنا دعوت کند و دعوت را مودبانه بپذیرد یا رد کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-011",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-012",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-013",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-014",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-015",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-016",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-017",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-018",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-019",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-020",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-003",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-006",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-010",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
+            "examples": [
+              {
+                "fi": "Valitettavasti en voi.",
+                "fa": "متأسفانه نمی‌توانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-3",
@@ -1814,14 +2186,15 @@
       "title_fa": "تغییر دادن برنامه",
       "objective_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
       "summary_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد.",
-      "grammar_fa": "«Voimmeko tavata myöhemmin?» تغییر قرار است؛ «täytyy + مصدر» مانند «Minun täytyy perua tapaaminen.» الزام را بیان می‌کند.",
+      "grammar_fa": "دو الگوی صریح Minun täytyy perua tapaaminen و Minun täytyy lähteä را با فاعل Minun و مصدر perua/lähteä تمرین می‌کنی؛ شرطی و قاعدهٔ آزاد همهٔ مفعول‌ها از این نمونه‌ها نتیجه گرفته نمی‌شود.",
       "new_targets": [
-        "a13s1-h-021",
-        "a13s1-h-022",
-        "a13s1-h-023",
         "a13s1-t-024",
         "a13s1-t-025",
-        "a13s1-t-026"
+        "a13s1-e-027",
+        "a13s1-e-028",
+        "a13s1-e-029",
+        "a13s1-e-030",
+        "a13s1-e-minun-taytyy-lahtea"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1869,7 +2242,40 @@
             1,
             2
           ],
-          "expected_fi": "Minun täytyy perua tapaaminen."
+          "expected_fi": "Minun täytyy perua tapaaminen.",
+          "expected_fa": "باید قرار ملاقات را لغو کنم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-028",
+          "prompt_fa": "باید قرار ملاقات را لغو کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy perua tapaaminen.",
+          "accepted_answers": [
+            "Minun täytyy perua tapaaminen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-minun-taytyy-lahtea",
+          "prompt_fa": "باید بروم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy lähteä.",
+          "accepted_answers": [
+            "Minun täytyy lähteä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "activities": [
@@ -1890,6 +2296,10 @@
           "item": "a13s1-t-024"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-027"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-027",
@@ -1898,7 +2308,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1920,40 +2331,47 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-028"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-028",
-          "options": [
-            "a13s1-e-028",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "täytyy",
+            "perua",
+            "tapaaminen.",
+            "Minun"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Minun täytyy perua tapaaminen.",
+          "expected_fa": "باید قرار ملاقات را لغو کنم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-021",
           "options": [
+            "a13s1-h-022",
+            "a13s1-h-023",
             "a13s1-h-021",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-t-024"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-022",
-          "options": [
-            "a13s1-h-022",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1978,6 +2396,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-025"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s1-t-025",
@@ -2000,17 +2422,238 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-027",
-          "options": [
-            "a13s1-e-027",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-028",
+          "prompt_fa": "باید قرار ملاقات را لغو کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy perua tapaaminen.",
+          "accepted_answers": [
+            "Minun täytyy perua tapaaminen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-minun-taytyy-lahtea"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-minun-taytyy-lahtea",
+          "prompt_fa": "باید بروم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy lähteä.",
+          "accepted_answers": [
+            "Minun täytyy lähteä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-029"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-029",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-030"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-030",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-004",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-007",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-009",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-073",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-014",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-016",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-019",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-t-004",
+        "a13s1-e-007",
+        "a13s1-e-009",
+        "a13s1-e-073",
+        "a13s1-t-014",
+        "a13s1-t-016",
+        "a13s1-e-019"
+      ],
+      "practice_targets": [
+        "a13s1-e-028",
+        "a13s1-e-minun-taytyy-lahtea"
+      ],
+      "activity_count": 32,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l03-can-do",
+            "can_do_fa": "بگوید که برنامه باید تغییر کند و یک زمان جایگزین ساده پیشنهاد دهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-021",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-022",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-023",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-024",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-025",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-026",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-027",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-028",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-029",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-030",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-minun-taytyy-lahtea",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-004",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-009",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-073",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-019",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-necessity",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "دو الگوی صریح Minun täytyy perua tapaaminen و Minun täytyy lähteä را با فاعل Minun و مصدر perua/lähteä تمرین می‌کنی؛ شرطی و قاعدهٔ آزاد همهٔ مفعول‌ها از این نمونه‌ها نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Minun täytyy perua tapaaminen.",
+                "fa": "باید قرار ملاقات را لغو کنم."
+              },
+              {
+                "fi": "Minun täytyy lähteä.",
+                "fa": "باید بروم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-4",
@@ -2019,14 +2662,16 @@
       "title_fa": "پیام‌های عملی کوتاه",
       "objective_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
       "summary_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد.",
-      "grammar_fa": "در پیام کوتاه «Tulen pian.» یعنی به‌زودی می‌آیم و «Vastaan myöhemmin.» یعنی بعداً پاسخ می‌دهم.",
+      "grammar_fa": "امر مفردِ Lähetä را در جملهٔ پیام تمرین می‌کنی؛ صرف آزاد همهٔ فعل‌های امر سنجیده نمی‌شود. گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند. فقط دو صورت شخصیِ صریح Tulen (من می‌آیم) و Tulet (تو می‌آیی) را با pian مقایسه می‌کنی؛ این تقابل جدول کامل شش شخص یا همهٔ انواع فعل نیست.",
       "new_targets": [
-        "a13s1-h-002",
-        "a13s1-h-031",
         "a13s1-h-032",
-        "a13s1-t-033",
         "a13s1-t-034",
-        "a13s1-t-035"
+        "a13s1-t-035",
+        "a13s1-e-036",
+        "a13s1-e-037",
+        "a13s1-e-038",
+        "a13s1-e-039",
+        "a13s1-e-tulet-pian"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2072,7 +2717,57 @@
             0,
             1
           ],
-          "expected_fi": "Lähetä minulle viesti."
+          "expected_fi": "Lähetä minulle viesti.",
+          "expected_fa": "برایم پیام بفرست."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-037",
+          "prompt_fa": "برایم پیام بفرست.",
+          "cues_fi": [
+            "Lähetä"
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "accepted_answers": [
+            "Lähetä minulle viesti."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-commands",
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-036",
+          "prompt_fa": "به‌زودی می‌آیم.",
+          "cues_fi": [
+            "Tulen"
+          ],
+          "expected_fi": "Tulen pian.",
+          "accepted_answers": [
+            "Tulen pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-tulet-pian",
+          "prompt_fa": "به‌زودی می‌آیی.",
+          "cues_fi": [
+            "Tulet"
+          ],
+          "expected_fi": "Tulet pian.",
+          "accepted_answers": [
+            "Tulet pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
         }
       ],
       "activities": [
@@ -2093,6 +2788,10 @@
           "item": "a13s1-t-033"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-036"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-036",
@@ -2101,7 +2800,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2123,40 +2823,45 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-037"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-037",
-          "options": [
-            "a13s1-e-037",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "minulle",
+            "viesti.",
+            "Lähetä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "expected_fa": "برایم پیام بفرست."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-002",
           "options": [
-            "a13s1-h-002",
-            "a13s1-h-001",
-            "a13s1-h-003",
-            "a13s1-t-004"
+            "a13s1-h-031",
+            "a13s1-h-032",
+            "a13s1-t-033",
+            "a13s1-h-002"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-031",
-          "options": [
-            "a13s1-h-031",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2181,6 +2886,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-034"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s1-t-034",
@@ -2190,6 +2899,10 @@
             "a13s1-h-002",
             "a13s1-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-035"
         },
         {
           "type": "choice",
@@ -2203,17 +2916,296 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-036",
-          "options": [
-            "a13s1-e-036",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-037",
+          "prompt_fa": "برایم پیام بفرست.",
+          "cues_fi": [
+            "Lähetä"
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "accepted_answers": [
+            "Lähetä minulle viesti."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-commands",
+            "a13-local-expansion"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-036",
+          "prompt_fa": "به‌زودی می‌آیم.",
+          "cues_fi": [
+            "Tulen"
+          ],
+          "expected_fi": "Tulen pian.",
+          "accepted_answers": [
+            "Tulen pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-tulet-pian"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-tulet-pian",
+          "prompt_fa": "به‌زودی می‌آیی.",
+          "cues_fi": [
+            "Tulet"
+          ],
+          "expected_fi": "Tulet pian.",
+          "accepted_answers": [
+            "Tulet pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-038"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-038",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-039"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-039",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-015",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-017",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-020",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-024",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-027",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-029",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-minun-taytyy-lahtea",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-t-015",
+        "a13s1-e-017",
+        "a13s1-e-020",
+        "a13s1-t-024",
+        "a13s1-e-027",
+        "a13s1-e-029",
+        "a13s1-e-minun-taytyy-lahtea"
+      ],
+      "practice_targets": [
+        "a13s1-e-037",
+        "a13s1-e-036",
+        "a13s1-e-tulet-pian"
+      ],
+      "activity_count": 34,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l04-can-do",
+            "can_do_fa": "یک پیام کوتاه دربارهٔ رسیدن، تأخیر یا تغییر زمان ملاقات بنویسد یا بفهمد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-031",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-032",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-033",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-034",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-035",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-036",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-037",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-038",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-039",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-tulet-pian",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-015",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-020",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-024",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-029",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-minun-taytyy-lahtea",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-commands",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "امر مفردِ Lähetä را در جملهٔ پیام تمرین می‌کنی؛ صرف آزاد همهٔ فعل‌های امر سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Lähetä minulle viesti.",
+                "fa": "برایم پیام بفرست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Lähetä minulle viesti.",
+                "fa": "برایم پیام بفرست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "فقط دو صورت شخصیِ صریح Tulen (من می‌آیم) و Tulet (تو می‌آیی) را با pian مقایسه می‌کنی؛ این تقابل جدول کامل شش شخص یا همهٔ انواع فعل نیست.",
+            "examples": [
+              {
+                "fi": "Tulen pian.",
+                "fa": "به‌زودی می‌آیم."
+              },
+              {
+                "fi": "Tulet pian.",
+                "fa": "به‌زودی می‌آیی."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-5",
@@ -2222,14 +3214,14 @@
       "title_fa": "یک گفت‌وگوی تلفنی ساده",
       "objective_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
       "summary_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد.",
-      "grammar_fa": "«täällä on Sara» برای معرفی تلفنی و «Voinko puhua Amirille?» برای درخواست صحبت است.",
+      "grammar_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند. رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
       "new_targets": [
         "a13s1-h-040",
-        "a13s1-h-013",
-        "a13s1-h-032",
-        "a13s1-t-041",
-        "a13s1-t-042",
-        "a13s1-t-043"
+        "a13s1-t-043",
+        "a13s1-e-044",
+        "a13s1-e-045",
+        "a13s1-e-046",
+        "a13s1-e-047"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2275,7 +3267,56 @@
             0,
             1
           ],
-          "expected_fi": "Voinko puhua Amirille?"
+          "expected_fi": "Voinko puhua Amirille?",
+          "expected_fa": "می‌توانم با امیر صحبت کنم؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-045",
+          "prompt_fa": "می‌توانم با امیر صحبت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko puhua Amirille?",
+          "accepted_answers": [
+            "Voinko puhua Amirille?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-047",
+          "prompt_fa": "می‌توانی بعداً با من تماس بگیری؟",
+          "cues_fi": [
+            "Voitko"
+          ],
+          "expected_fi": "Voitko soittaa minulle myöhemmin?",
+          "accepted_answers": [
+            "Voitko soittaa minulle myöhemmin?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-046",
+          "prompt_fa": "او الان اینجا نیست.",
+          "cues_fi": [
+            "Hän"
+          ],
+          "expected_fi": "Hän ei ole nyt täällä.",
+          "accepted_answers": [
+            "Hän ei ole nyt täällä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -2296,6 +3337,10 @@
           "item": "a13s1-t-041"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-044"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-044",
@@ -2304,7 +3349,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2326,40 +3372,45 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-045"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-045",
-          "options": [
-            "a13s1-e-045",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "puhua",
+            "Amirille?",
+            "Voinko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Voinko puhua Amirille?",
+          "expected_fa": "می‌توانم با امیر صحبت کنم؟"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-040",
           "options": [
             "a13s1-h-040",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-h-013",
+            "a13s1-h-032",
+            "a13s1-t-041"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-013",
-          "options": [
-            "a13s1-h-013",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2395,6 +3446,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-043"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-t-043",
@@ -2406,17 +3461,255 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-044",
-          "options": [
-            "a13s1-e-044",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-045",
+          "prompt_fa": "می‌توانم با امیر صحبت کنم؟",
+          "cues_fi": [
+            "Voinko"
+          ],
+          "expected_fi": "Voinko puhua Amirille?",
+          "accepted_answers": [
+            "Voinko puhua Amirille?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-047"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-047",
+          "prompt_fa": "می‌توانی بعداً با من تماس بگیری؟",
+          "cues_fi": [
+            "Voitko"
+          ],
+          "expected_fi": "Voitko soittaa minulle myöhemmin?",
+          "accepted_answers": [
+            "Voitko soittaa minulle myöhemmin?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-046"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-046",
+          "prompt_fa": "او الان اینجا نیست.",
+          "cues_fi": [
+            "Hän"
+          ],
+          "expected_fi": "Hän ei ole nyt täällä.",
+          "accepted_answers": [
+            "Hän ei ole nyt täällä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-025",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-028",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-030",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-034",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-036",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-038",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-tulet-pian",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-t-025",
+        "a13s1-e-028",
+        "a13s1-e-030",
+        "a13s1-t-034",
+        "a13s1-e-036",
+        "a13s1-e-038",
+        "a13s1-e-tulet-pian"
+      ],
+      "practice_targets": [
+        "a13s1-e-045",
+        "a13s1-e-047",
+        "a13s1-e-046"
+      ],
+      "activity_count": 30,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l05-can-do",
+            "can_do_fa": "یک گفت‌وگوی تلفنی بسیار کوتاه و قابل‌پیش‌بینی با فرد آشنا را انجام دهد و مشخص کند چه کسی باید دوباره تماس بگیرد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-040",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-013",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-032",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-041",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-042",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-043",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-044",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-045",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-046",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-047",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-025",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-030",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-034",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-036",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-038",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-tulet-pian",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Voinko puhua Amirille?",
+                "fa": "می‌توانم با امیر صحبت کنم؟"
+              },
+              {
+                "fi": "Voitko soittaa minulle myöhemmin?",
+                "fa": "می‌توانی بعداً با من تماس بگیری؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
+            "examples": [
+              {
+                "fi": "Hän ei ole nyt täällä.",
+                "fa": "او الان اینجا نیست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-6",
@@ -2425,14 +3718,16 @@
       "title_fa": "ترجیحات در گفت‌وگو",
       "objective_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
       "summary_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد.",
-      "grammar_fa": "«Pidän tästä.» علاقه و «Pidän enemmän teestä.» ترجیح را بیان می‌کند؛ شکل‌های دستوری را در عبارت بیاموز.",
+      "grammar_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند. صورت صریح kahvia را در Juon mieluummin kahvia تمرین می‌کنی؛ این نمونهٔ محدودِ مفعول پارتیتیو است، نه جدول صرف آزاد. پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند.",
       "new_targets": [
-        "a13s1-h-048",
         "a13s1-h-049",
-        "a13s1-h-003",
         "a13s1-t-050",
         "a13s1-t-051",
-        "a13s1-t-052"
+        "a13s1-t-052",
+        "a13s1-e-053",
+        "a13s1-e-054",
+        "a13s1-e-055",
+        "a13s1-e-056"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2477,7 +3772,72 @@
             0,
             1
           ],
-          "expected_fi": "Pidän enemmän teestä."
+          "expected_fi": "Pidän enemmän teestä.",
+          "expected_fa": "چای را بیشتر دوست دارم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-053",
+          "prompt_fa": "این را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän tästä.",
+          "accepted_answers": [
+            "Pidän tästä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "accepted_answers": [
+            "Pidän enemmän teestä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-055",
+          "prompt_fa": "ترجیح می‌دهم قهوه بنوشم.",
+          "cues_fi": [
+            "Juon"
+          ],
+          "expected_fi": "Juon mieluummin kahvia.",
+          "accepted_answers": [
+            "Juon mieluummin kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-056",
+          "prompt_fa": "موردعلاقهٔ تو چیست؟",
+          "cues_fi": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä on sinun suosikkisi?",
+          "accepted_answers": [
+            "Mikä on sinun suosikkisi?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
       ],
       "activities": [
@@ -2498,6 +3858,10 @@
           "item": "a13s1-t-050"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-053"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-053",
@@ -2506,7 +3870,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2528,40 +3893,45 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-054"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-054",
-          "options": [
-            "a13s1-e-054",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "enemmän",
+            "teestä.",
+            "Pidän"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "expected_fa": "چای را بیشتر دوست دارم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-048",
           "options": [
+            "a13s1-h-049",
             "a13s1-h-048",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-h-003",
+            "a13s1-t-050"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-049",
-          "options": [
-            "a13s1-h-049",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2586,6 +3956,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-051"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s1-t-051",
@@ -2595,6 +3969,10 @@
             "a13s1-h-002",
             "a13s1-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-052"
         },
         {
           "type": "choice",
@@ -2608,17 +3986,292 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-053",
-          "options": [
-            "a13s1-e-053",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-053",
+          "prompt_fa": "این را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän tästä.",
+          "accepted_answers": [
+            "Pidän tästä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "accepted_answers": [
+            "Pidän enemmän teestä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-055"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-055",
+          "prompt_fa": "ترجیح می‌دهم قهوه بنوشم.",
+          "cues_fi": [
+            "Juon"
+          ],
+          "expected_fi": "Juon mieluummin kahvia.",
+          "accepted_answers": [
+            "Juon mieluummin kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-056"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-056",
+          "prompt_fa": "موردعلاقهٔ تو چیست؟",
+          "cues_fi": [
+            "Mikä"
+          ],
+          "expected_fi": "Mikä on sinun suosikkisi?",
+          "accepted_answers": [
+            "Mikä on sinun suosikkisi?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-032",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-035",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-037",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-039",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-043",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-045",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-047",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-h-032",
+        "a13s1-t-035",
+        "a13s1-e-037",
+        "a13s1-e-039",
+        "a13s1-t-043",
+        "a13s1-e-045",
+        "a13s1-e-047"
+      ],
+      "practice_targets": [
+        "a13s1-e-053",
+        "a13s1-e-054",
+        "a13s1-e-055",
+        "a13s1-e-056"
+      ],
+      "activity_count": 32,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l06-can-do",
+            "can_do_fa": "یک ترجیح ساده را بیان کند و دربارهٔ ترجیح طرف مقابل بپرسد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-048",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-049",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-003",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-050",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-051",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-052",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-053",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-054",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-055",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-056",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-032",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-035",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-039",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-043",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-045",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-047",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Pidän tästä.",
+                "fa": "این را دوست دارم."
+              },
+              {
+                "fi": "Pidän enemmän teestä.",
+                "fa": "چای را بیشتر دوست دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "introduced",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "صورت صریح kahvia را در Juon mieluummin kahvia تمرین می‌کنی؛ این نمونهٔ محدودِ مفعول پارتیتیو است، نه جدول صرف آزاد.",
+            "examples": [
+              {
+                "fi": "Juon mieluummin kahvia.",
+                "fa": "ترجیح می‌دهم قهوه بنوشم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند.",
+            "examples": [
+              {
+                "fi": "Mikä on sinun suosikkisi?",
+                "fa": "موردعلاقهٔ تو چیست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 24,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-7",
@@ -2627,14 +4280,17 @@
       "title_fa": "گفتن یک دلیل ساده",
       "objective_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
       "summary_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند.",
-      "grammar_fa": "«koska» دلیل، «mutta» تضاد و «siksi» نتیجه را نشان می‌دهند.",
+      "grammar_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
       "new_targets": [
         "a13s1-h-057",
         "a13s1-h-058",
         "a13s1-h-059",
         "a13s1-t-060",
         "a13s1-t-061",
-        "a13s1-t-016"
+        "a13s1-e-062",
+        "a13s1-e-063",
+        "a13s1-e-064",
+        "a13s1-e-074"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2683,7 +4339,40 @@
             2,
             3
           ],
-          "expected_fi": "Haluaisin tulla, mutta olen kiireinen."
+          "expected_fi": "Haluaisin tulla, mutta olen kiireinen.",
+          "expected_fa": "دوست دارم بیایم، اما سرم شلوغ است."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-062",
+          "prompt_fa": "نمی‌آیم چون خسته‌ام.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "En tule, koska olen väsynyt.",
+          "accepted_answers": [
+            "En tule, koska olen väsynyt."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-074",
+          "prompt_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است.",
+          "cues_fi": [
+            "Valitettavasti"
+          ],
+          "expected_fi": "Valitettavasti en voi, koska olen kiireinen.",
+          "accepted_answers": [
+            "Valitettavasti en voi, koska olen kiireinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -2704,6 +4393,10 @@
           "item": "a13s1-t-060"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-062"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-062",
@@ -2712,7 +4405,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2734,40 +4428,49 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-063"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-063",
-          "options": [
-            "a13s1-e-063",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "tulla,",
+            "mutta",
+            "olen",
+            "kiireinen.",
+            "Haluaisin"
+          ],
+          "answer_order": [
+            4,
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected_fi": "Haluaisin tulla, mutta olen kiireinen.",
+          "expected_fa": "دوست دارم بیایم، اما سرم شلوغ است."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-057",
           "options": [
+            "a13s1-h-058",
+            "a13s1-h-059",
             "a13s1-h-057",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-t-060"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-058",
-          "options": [
-            "a13s1-h-058",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2792,6 +4495,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-061"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s1-t-061",
@@ -2814,17 +4521,224 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-062",
-          "options": [
-            "a13s1-e-062",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-062",
+          "prompt_fa": "نمی‌آیم چون خسته‌ام.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "En tule, koska olen väsynyt.",
+          "accepted_answers": [
+            "En tule, koska olen väsynyt."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-074"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-074",
+          "prompt_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است.",
+          "cues_fi": [
+            "Valitettavasti"
+          ],
+          "expected_fi": "Valitettavasti en voi, koska olen kiireinen.",
+          "accepted_answers": [
+            "Valitettavasti en voi, koska olen kiireinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-064"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-064",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-040",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-044",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-046",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-050",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-052",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-054",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-056",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-h-040",
+        "a13s1-e-044",
+        "a13s1-e-046",
+        "a13s1-t-050",
+        "a13s1-t-052",
+        "a13s1-e-054",
+        "a13s1-e-056"
+      ],
+      "practice_targets": [
+        "a13s1-e-074",
+        "a13s1-e-062"
+      ],
+      "activity_count": 30,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l07-can-do",
+            "can_do_fa": "برای یک تصمیم یا موقعیت آشنا یک دلیل کوتاه بیان کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-057",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-058",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-059",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-060",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-061",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-062",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-063",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-064",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-074",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-040",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-044",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-046",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-050",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-052",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-054",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-056",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
+            "examples": [
+              {
+                "fi": "En tule, koska olen väsynyt.",
+                "fa": "نمی‌آیم چون خسته‌ام."
+              },
+              {
+                "fi": "Valitettavasti en voi, koska olen kiireinen.",
+                "fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-8",
@@ -2833,14 +4747,16 @@
       "title_fa": "پیشنهاد ساده",
       "objective_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
       "summary_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد.",
-      "grammar_fa": "«Voidaan» و «Mennään» را در پیشنهادها فعلاً به‌شکل عبارت کامل تمرین کن.",
+      "grammar_fa": "پیشنهادهای Voidaan، Mennään و Sovitaan در عبارت‌های کامل و آماده تمرین می‌شوند؛ صرف مجهول یا شرطیِ آزاد از این جمله‌ها نتیجه گرفته نمی‌شود.",
       "new_targets": [
         "a13s1-h-065",
-        "a13s1-h-012",
-        "a13s1-h-022",
-        "a13s1-t-066",
         "a13s1-t-067",
-        "a13s1-t-068"
+        "a13s1-t-068",
+        "a13s1-e-069",
+        "a13s1-e-070",
+        "a13s1-e-071",
+        "a13s1-e-072",
+        "a13s1-e-075"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2884,7 +4800,8 @@
             1,
             0
           ],
-          "expected_fi": "Mennään yhdessä."
+          "expected_fi": "Mennään yhdessä.",
+          "expected_fa": "بیا با هم برویم."
         }
       ],
       "activities": [
@@ -2905,6 +4822,10 @@
           "item": "a13s1-t-066"
         },
         {
+          "type": "teach",
+          "item": "a13s1-e-069"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s1-e-069",
@@ -2913,7 +4834,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2935,40 +4857,43 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s1-e-070"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s1-e-070",
-          "options": [
-            "a13s1-e-070",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "yhdessä.",
+            "Mennään"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Mennään yhdessä.",
+          "expected_fa": "بیا با هم برویم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-h-065",
           "options": [
-            "a13s1-h-065",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
+            "a13s1-h-012",
+            "a13s1-h-022",
+            "a13s1-t-066",
+            "a13s1-h-065"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-h-012",
-          "options": [
-            "a13s1-h-012",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2993,6 +4918,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s1-t-067"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s1-t-067",
@@ -3002,6 +4931,10 @@
             "a13s1-h-002",
             "a13s1-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-t-068"
         },
         {
           "type": "choice",
@@ -3015,17 +4948,193 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-069",
-          "options": [
-            "a13s1-e-069",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-071"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-071",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-072"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-072",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s1-e-075"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-075",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-049",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-051",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-053",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-055",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-058",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-060",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-062",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-064",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-h-049",
+        "a13s1-t-051",
+        "a13s1-e-053",
+        "a13s1-e-055",
+        "a13s1-h-058",
+        "a13s1-t-060",
+        "a13s1-e-062",
+        "a13s1-e-064"
+      ],
+      "practice_targets": [
+        "a13s1-e-075"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l08-can-do",
+            "can_do_fa": "یک پیشنهاد ساده بدهد و دربارهٔ کار بعدی به توافق برسد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-h-065",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-012",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-022",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-066",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-067",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-t-068",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-069",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-070",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-071",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-072",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-e-075",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s1-h-049",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-051",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-053",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-058",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-060",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-062",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-064",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "formulaic",
+        "grammar": []
+      }
     },
     {
       "id": "a1.3-section-1-lesson-9",
@@ -3034,7 +5143,7 @@
       "title_fa": "یک هماهنگی اجتماعی کامل",
       "objective_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
       "summary_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند.",
-      "grammar_fa": "احوالپرسی، دعوت، دلیل، تغییر زمان و تأیید را در یک گفت‌وگوی مرتبط ترکیب کن.",
+      "grammar_fa": "پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند. رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته. دو الگوی صریح Minun täytyy perua tapaaminen و Minun täytyy lähteä را با فاعل Minun و مصدر perua/lähteä تمرین می‌کنی؛ شرطی و قاعدهٔ آزاد همهٔ مفعول‌ها از این نمونه‌ها نتیجه گرفته نمی‌شود. امر مفردِ Lähetä را در جملهٔ پیام تمرین می‌کنی؛ صرف آزاد همهٔ فعل‌های امر سنجیده نمی‌شود. فقط دو صورت شخصیِ صریح Tulen (من می‌آیم) و Tulet (تو می‌آیی) را با pian مقایسه می‌کنی؛ این تقابل جدول کامل شش شخص یا همهٔ انواع فعل نیست. گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند. صورت صریح kahvia را در Juon mieluummin kahvia تمرین می‌کنی؛ این نمونهٔ محدودِ مفعول پارتیتیو است، نه جدول صرف آزاد.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3080,7 +5189,136 @@
             1,
             2
           ],
-          "expected_fi": "Haluatko tulla minun kanssani?"
+          "expected_fi": "Haluatko tulla minun kanssani?",
+          "expected_fa": "می‌خواهی با من بیایی؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-008",
+          "prompt_fa": "امروز چه کار می‌کنی؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "accepted_answers": [
+            "Mitä teet tänään?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-074",
+          "prompt_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است.",
+          "cues_fi": [
+            "Valitettavasti"
+          ],
+          "expected_fi": "Valitettavasti en voi, koska olen kiireinen.",
+          "accepted_answers": [
+            "Valitettavasti en voi, koska olen kiireinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-minun-taytyy-lahtea",
+          "prompt_fa": "باید بروم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy lähteä.",
+          "accepted_answers": [
+            "Minun täytyy lähteä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-037",
+          "prompt_fa": "برایم پیام بفرست.",
+          "cues_fi": [
+            "Lähetä"
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "accepted_answers": [
+            "Lähetä minulle viesti."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-commands"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-036",
+          "prompt_fa": "به‌زودی می‌آیم.",
+          "cues_fi": [
+            "Tulen"
+          ],
+          "expected_fi": "Tulen pian.",
+          "accepted_answers": [
+            "Tulen pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-tulet-pian",
+          "prompt_fa": "به‌زودی می‌آیی.",
+          "cues_fi": [
+            "Tulet"
+          ],
+          "expected_fi": "Tulet pian.",
+          "accepted_answers": [
+            "Tulet pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "accepted_answers": [
+            "Pidän enemmän teestä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-055",
+          "prompt_fa": "ترجیح می‌دهم قهوه بنوشم.",
+          "cues_fi": [
+            "Juon"
+          ],
+          "expected_fi": "Juon mieluummin kahvia.",
+          "accepted_answers": [
+            "Juon mieluummin kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
         }
       ],
       "activities": [
@@ -3101,7 +5339,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3112,7 +5351,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3123,7 +5363,8 @@
             "a13s1-h-001",
             "a13s1-h-002",
             "a13s1-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3138,36 +5379,39 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-e-073",
           "options": [
             "a13s1-e-073",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+            "a13s1-t-066",
+            "a13s1-t-067",
+            "a13s1-t-068"
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "sentence-order",
           "item": "a13s1-e-017",
-          "options": [
-            "a13s1-e-017",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "tokens": [
+            "tulla",
+            "minun",
+            "kanssani?",
+            "Haluatko"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Haluatko tulla minun kanssani?",
+          "expected_fa": "می‌خواهی با من بیایی؟"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-074",
-          "options": [
-            "a13s1-e-074",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3192,15 +5436,10 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s1-e-073",
-          "options": [
-            "a13s1-e-073",
-            "a13s1-h-001",
-            "a13s1-h-002",
-            "a13s1-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "dialogue-order",
@@ -3240,8 +5479,471 @@
             "a13s1-e-008",
             "a13s1-e-009"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-008",
+          "prompt_fa": "امروز چه کار می‌کنی؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "accepted_answers": [
+            "Mitä teet tänään?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-074",
+          "prompt_fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است.",
+          "cues_fi": [
+            "Valitettavasti"
+          ],
+          "expected_fi": "Valitettavasti en voi, koska olen kiireinen.",
+          "accepted_answers": [
+            "Valitettavasti en voi, koska olen kiireinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-minun-taytyy-lahtea",
+          "prompt_fa": "باید بروم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy lähteä.",
+          "accepted_answers": [
+            "Minun täytyy lähteä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-037",
+          "prompt_fa": "برایم پیام بفرست.",
+          "cues_fi": [
+            "Lähetä"
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "accepted_answers": [
+            "Lähetä minulle viesti."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-commands"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-036",
+          "prompt_fa": "به‌زودی می‌آیم.",
+          "cues_fi": [
+            "Tulen"
+          ],
+          "expected_fi": "Tulen pian.",
+          "accepted_answers": [
+            "Tulen pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-tulet-pian",
+          "prompt_fa": "به‌زودی می‌آیی.",
+          "cues_fi": [
+            "Tulet"
+          ],
+          "expected_fi": "Tulet pian.",
+          "accepted_answers": [
+            "Tulet pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "accepted_answers": [
+            "Pidän enemmän teestä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-055",
+          "prompt_fa": "ترجیح می‌دهم قهوه بنوشم.",
+          "cues_fi": [
+            "Juon"
+          ],
+          "expected_fi": "Juon mieluummin kahvia.",
+          "accepted_answers": [
+            "Juon mieluummin kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s1-reading-1",
+          "question_item": "a13s1-e-017",
+          "options": [
+            "a13s1-e-017",
+            "a13s1-e-007",
+            "a13s1-e-008",
+            "a13s1-e-009"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s1-reading-2",
+          "question_item": "a13s1-e-075",
+          "options": [
+            "a13s1-e-075",
+            "a13s1-e-007",
+            "a13s1-e-008",
+            "a13s1-e-009"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "prompt_fa": "چهار جملهٔ پیام را بنویس: به‌زودی می‌آیم؛ بعداً پاسخ می‌دهم؛ ساعت شش آنجا هستم؛ برایم پیام بفرست.",
+          "expected_items": [
+            "a13s1-e-036",
+            "a13s1-e-038",
+            "a13s1-e-039",
+            "a13s1-e-037"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-057",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-059",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-061",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-063",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-h-065",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-068",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-070",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s1-h-057",
+        "a13s1-h-059",
+        "a13s1-t-061",
+        "a13s1-e-063",
+        "a13s1-e-074",
+        "a13s1-h-065",
+        "a13s1-t-068",
+        "a13s1-e-070",
+        "a13s1-e-072"
+      ],
+      "practice_targets": [
+        "a13s1-e-008",
+        "a13s1-e-074",
+        "a13s1-e-minun-taytyy-lahtea",
+        "a13s1-e-037",
+        "a13s1-e-036",
+        "a13s1-e-tulet-pian",
+        "a13s1-e-054",
+        "a13s1-e-055"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l09-can-do",
+            "can_do_fa": "سلام، دعوت، دلیل، تغییر برنامه و تأیید را در یک گفت‌وگوی کوتاه و آشنا ترکیب کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-e-073",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-074",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-075",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-072",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-minun-taytyy-lahtea",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-036",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-tulet-pian",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-054",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-057",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-059",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-061",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-063",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-h-065",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-068",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-070",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند.",
+            "examples": [
+              {
+                "fi": "Mitä teet tänään?",
+                "fa": "امروز چه کار می‌کنی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
+            "examples": [
+              {
+                "fi": "Valitettavasti en voi, koska olen kiireinen.",
+                "fa": "متأسفانه نمی‌توانم، چون سرم شلوغ است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "دو الگوی صریح Minun täytyy perua tapaaminen و Minun täytyy lähteä را با فاعل Minun و مصدر perua/lähteä تمرین می‌کنی؛ شرطی و قاعدهٔ آزاد همهٔ مفعول‌ها از این نمونه‌ها نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Minun täytyy lähteä.",
+                "fa": "باید بروم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-commands",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "امر مفردِ Lähetä را در جملهٔ پیام تمرین می‌کنی؛ صرف آزاد همهٔ فعل‌های امر سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Lähetä minulle viesti.",
+                "fa": "برایم پیام بفرست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "فقط دو صورت شخصیِ صریح Tulen (من می‌آیم) و Tulet (تو می‌آیی) را با pian مقایسه می‌کنی؛ این تقابل جدول کامل شش شخص یا همهٔ انواع فعل نیست.",
+            "examples": [
+              {
+                "fi": "Tulen pian.",
+                "fa": "به‌زودی می‌آیم."
+              },
+              {
+                "fi": "Tulet pian.",
+                "fa": "به‌زودی می‌آیی."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Pidän enemmän teestä.",
+                "fa": "چای را بیشتر دوست دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "صورت صریح kahvia را در Juon mieluummin kahvia تمرین می‌کنی؛ این نمونهٔ محدودِ مفعول پارتیتیو است، نه جدول صرف آزاد.",
+            "examples": [
+              {
+                "fi": "Juon mieluummin kahvia.",
+                "fa": "ترجیح می‌دهم قهوه بنوشم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-1-lesson-10",
@@ -3250,7 +5952,7 @@
       "title_fa": "ارزیابی بخش ۱",
       "objective_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
       "summary_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد.",
-      "grammar_fa": "این آزمون، احوالپرسی، دعوت، پیام، تماس، ترجیح، دلیل و پیشنهاد را مرور می‌کند.",
+      "grammar_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته. فقط دو صورت شخصیِ صریح Tulen (من می‌آیم) و Tulet (تو می‌آیی) را با pian مقایسه می‌کنی؛ این تقابل جدول کامل شش شخص یا همهٔ انواع فعل نیست. پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند. دو الگوی صریح Minun täytyy perua tapaaminen و Minun täytyy lähteä را با فاعل Minun و مصدر perua/lähteä تمرین می‌کنی؛ شرطی و قاعدهٔ آزاد همهٔ مفعول‌ها از این نمونه‌ها نتیجه گرفته نمی‌شود. امر مفردِ Lähetä را در جملهٔ پیام تمرین می‌کنی؛ صرف آزاد همهٔ فعل‌های امر سنجیده نمی‌شود. گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند. صورت صریح kahvia را در Juon mieluummin kahvia تمرین می‌کنی؛ این نمونهٔ محدودِ مفعول پارتیتیو است، نه جدول صرف آزاد.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3289,7 +5991,8 @@
             0,
             1
           ],
-          "expected_fi": "Mitä sinulle kuuluu?"
+          "expected_fi": "Mitä sinulle kuuluu?",
+          "expected_fa": "چه خبر؟"
         },
         {
           "type": "expression-completion",
@@ -3299,7 +6002,8 @@
           "accepted_answers": [
             "enemmän"
           ],
-          "expected_fi": "Pidän enemmän teestä."
+          "expected_fi": "Pidän enemmän teestä.",
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -3312,85 +6016,210 @@
           "expected_fi": "En tule, koska olen väsynyt.",
           "accepted_answers": [
             "En tule, koska olen väsynyt."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-008",
+          "prompt_fa": "امروز چه کار می‌کنی؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "accepted_answers": [
+            "Mitä teet tänään?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-028",
+          "prompt_fa": "باید قرار ملاقات را لغو کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy perua tapaaminen.",
+          "accepted_answers": [
+            "Minun täytyy perua tapaaminen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-037",
+          "prompt_fa": "برایم پیام بفرست.",
+          "cues_fi": [
+            "Lähetä"
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "accepted_answers": [
+            "Lähetä minulle viesti."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-commands"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-036",
+          "prompt_fa": "به‌زودی می‌آیم.",
+          "cues_fi": [
+            "Tulen"
+          ],
+          "expected_fi": "Tulen pian.",
+          "accepted_answers": [
+            "Tulen pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-tulet-pian",
+          "prompt_fa": "به‌زودی می‌آیی.",
+          "cues_fi": [
+            "Tulet"
+          ],
+          "expected_fi": "Tulet pian.",
+          "accepted_answers": [
+            "Tulet pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "accepted_answers": [
+            "Pidän enemmän teestä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-055",
+          "prompt_fa": "ترجیح می‌دهم قهوه بنوشم.",
+          "cues_fi": [
+            "Juon"
+          ],
+          "expected_fi": "Juon mieluummin kahvia.",
+          "accepted_answers": [
+            "Juon mieluummin kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
           ]
         }
       ],
       "activities": [
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s1-e-017",
-          "options": [
-            "a13s1-e-017",
-            "a13s1-e-054",
-            "a13s1-e-009",
-            "a13s1-e-037"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s1-e-027",
           "options": [
-            "a13s1-e-062",
+            "a13s1-e-017",
             "a13s1-e-027",
-            "a13s1-e-019",
-            "a13s1-e-047"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-044",
-          "options": [
-            "a13s1-e-036",
-            "a13s1-e-028",
             "a13s1-e-044",
-            "a13s1-e-055"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s1-e-007",
-          "options": [
-            "a13s1-e-009",
-            "a13s1-e-037",
-            "a13s1-e-069",
             "a13s1-e-007"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-054",
-          "options": [
-            "a13s1-e-054",
-            "a13s1-e-019",
-            "a13s1-e-047",
-            "a13s1-e-074"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s1-e-062",
-          "options": [
-            "a13s1-e-028",
-            "a13s1-e-062",
-            "a13s1-e-055",
-            "a13s1-e-017"
-          ]
-        },
-        {
-          "type": "choice",
+          "type": "type",
+          "item": "a13s1-e-044",
           "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "sentence-order",
+          "item": "a13s1-e-007",
+          "tokens": [
+            "sinulle",
+            "kuuluu?",
+            "Mitä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Mitä sinulle kuuluu?",
+          "expected_fa": "چه خبر؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a13s1-e-054",
+          "prompt_fi": "Pidän _____ teestä.",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "accepted_answers": [
+            "enemmän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-062",
+          "prompt_fa": "نمی‌آیم چون خسته‌ام.",
+          "cues_fi": [
+            "En",
+            "tule,"
+          ],
+          "expected_fi": "En tule, koska olen väsynyt.",
+          "accepted_answers": [
+            "En tule, koska olen väsynyt."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "morphology-choice",
           "item": "a13s1-e-036",
-          "options": [
-            "a13s1-e-037",
-            "a13s1-e-069",
-            "a13s1-e-036",
-            "a13s1-e-027"
+          "base_fi": "tulla",
+          "feature_fa": "حال اول‌شخص مفرد فعل آمدن",
+          "prompt_fa": "در جملهٔ «به‌زودی می‌آیم» صورت اول‌شخص درست را انتخاب کن.",
+          "frame_fi": "_____ pian.",
+          "options_fi": [
+            "Tulen",
+            "Tulet",
+            "Tulee",
+            "Tulla"
+          ],
+          "expected_fi": "Tulen",
+          "explanation_fa": "Tulen صورت اول‌شخص مفرد فعل tulla در زمان حال است.",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
           ]
         },
         {
@@ -3407,7 +6236,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s1-e-019"
+          "item": "a13s1-e-019",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3423,7 +6253,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s1-e-037"
+          "item": "a13s1-e-037",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3439,7 +6270,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s1-e-055"
+          "item": "a13s1-e-055",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3455,7 +6287,138 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s1-e-074"
+          "item": "a13s1-e-074",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-008",
+          "prompt_fa": "امروز چه کار می‌کنی؟",
+          "cues_fi": [
+            "Mitä"
+          ],
+          "expected_fi": "Mitä teet tänään?",
+          "accepted_answers": [
+            "Mitä teet tänään?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-028",
+          "prompt_fa": "باید قرار ملاقات را لغو کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun täytyy perua tapaaminen.",
+          "accepted_answers": [
+            "Minun täytyy perua tapaaminen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-037",
+          "prompt_fa": "برایم پیام بفرست.",
+          "cues_fi": [
+            "Lähetä"
+          ],
+          "expected_fi": "Lähetä minulle viesti.",
+          "accepted_answers": [
+            "Lähetä minulle viesti."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-commands"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-036",
+          "prompt_fa": "به‌زودی می‌آیم.",
+          "cues_fi": [
+            "Tulen"
+          ],
+          "expected_fi": "Tulen pian.",
+          "accepted_answers": [
+            "Tulen pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-tulet-pian",
+          "prompt_fa": "به‌زودی می‌آیی.",
+          "cues_fi": [
+            "Tulet"
+          ],
+          "expected_fi": "Tulet pian.",
+          "accepted_answers": [
+            "Tulet pian."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-054",
+          "prompt_fa": "چای را بیشتر دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän enemmän teestä.",
+          "accepted_answers": [
+            "Pidän enemmän teestä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s1-e-055",
+          "prompt_fa": "ترجیح می‌دهم قهوه بنوشم.",
+          "cues_fi": [
+            "Juon"
+          ],
+          "expected_fi": "Juon mieluummin kahvia.",
+          "accepted_answers": [
+            "Juon mieluummin kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-t-067",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-071",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s1-e-075",
+          "answer_policy": "morphology"
         }
       ],
       "passing_score": 0.8,
@@ -3491,7 +6454,10 @@
             "Tulla"
           ],
           "expected_fi": "Tulen",
-          "explanation_fa": "Tulen صورت اول‌شخص مفرد فعل tulla در زمان حال است."
+          "explanation_fa": "Tulen صورت اول‌شخص مفرد فعل tulla در زمان حال است.",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
         }
       ],
       "checkpoint_modes": [
@@ -3555,7 +6521,269 @@
           "type",
           "finnish"
         ]
-      ]
+      ],
+      "review_targets": [
+        "a13s1-t-067",
+        "a13s1-e-069",
+        "a13s1-e-071",
+        "a13s1-e-075"
+      ],
+      "practice_targets": [
+        "a13s1-e-008",
+        "a13s1-e-062",
+        "a13s1-e-028",
+        "a13s1-e-037",
+        "a13s1-e-036",
+        "a13s1-e-tulet-pian",
+        "a13s1-e-054",
+        "a13s1-e-055"
+      ],
+      "activity_count": 25,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s1-l10-can-do",
+            "can_do_fa": "یک تعامل اجتماعی ترکیبی و آشنا شامل پیام، دعوت، دلیل و تغییر برنامه را انجام دهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s1-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-062",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-036",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-tulet-pian",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-054",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-t-067",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-069",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-071",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-075",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-044",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-009",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-019",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-047",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s1-e-074",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "رد دعوت و نبودنِ شخص را با en voi، ei ole و en tule در جمله‌های مشخص مرور می‌کنی. پیوندهای koska، mutta و siksi در عبارت‌های کامل هستند، نه سنجش همهٔ جمله‌های وابسته.",
+            "examples": [
+              {
+                "fi": "En tule, koska olen väsynyt.",
+                "fa": "نمی‌آیم چون خسته‌ام."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 5,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "فقط دو صورت شخصیِ صریح Tulen (من می‌آیم) و Tulet (تو می‌آیی) را با pian مقایسه می‌کنی؛ این تقابل جدول کامل شش شخص یا همهٔ انواع فعل نیست.",
+            "examples": [
+              {
+                "fi": "Tulen pian.",
+                "fa": "به‌زودی می‌آیم."
+              },
+              {
+                "fi": "Tulet pian.",
+                "fa": "به‌زودی می‌آیی."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 6,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش پیگیری و ترجیح را در جمله‌های کاملِ Mitä teet tänään? و Mikä on sinun suosikkisi? مرور می‌کنی؛ همهٔ الگوهای پرسشی ادعا نمی‌شوند.",
+            "examples": [
+              {
+                "fi": "Mitä teet tänään?",
+                "fa": "امروز چه کار می‌کنی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "دو الگوی صریح Minun täytyy perua tapaaminen و Minun täytyy lähteä را با فاعل Minun و مصدر perua/lähteä تمرین می‌کنی؛ شرطی و قاعدهٔ آزاد همهٔ مفعول‌ها از این نمونه‌ها نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Minun täytyy perua tapaaminen.",
+                "fa": "باید قرار ملاقات را لغو کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-commands",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "امر مفردِ Lähetä را در جملهٔ پیام تمرین می‌کنی؛ صرف آزاد همهٔ فعل‌های امر سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Lähetä minulle viesti.",
+                "fa": "برایم پیام بفرست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "گیرنده را با minulle و Amirille و علاقه را با tästä و teestä در جمله‌های مشخص تمرین می‌کنی؛ صورت‌های حالت و وابستگی فعل‌ها از فهرست صریح می‌آیند، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Pidän enemmän teestä.",
+                "fa": "چای را بیشتر دوست دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "صورت صریح kahvia را در Juon mieluummin kahvia تمرین می‌کنی؛ این نمونهٔ محدودِ مفعول پارتیتیو است، نه جدول صرف آزاد.",
+            "examples": [
+              {
+                "fi": "Juon mieluummin kahvia.",
+                "fa": "ترجیح می‌دهم قهوه بنوشم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
