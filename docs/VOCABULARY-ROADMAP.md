@@ -186,3 +186,5 @@ When authoring a new stage: (1) identify the planned topic/grammar prerequisite,
 - [Finnish National Agency for Education evolving proficiency scale](https://www.oph.fi/fi/koulutus-ja-tutkinnot/kehittyvan-kielitaidon-tasojen-kuvausasteikko)
 - [University of Helsinki Finnish course contents](https://www.helsinki.fi/en/language-centre/teaching-and-research/finnish-foreigners/course-materials-objectives-and-contents)
 - [Institute for the Languages of Finland grammar overview](https://kotus.fi/kotus/kielet-ja-kielipolitiikka/kansalliskielet/suomen-kieli/)
+
+A1.2 Section 3 acceptance snapshot (1.43.0): 79 introduced exact surface/expression identities have later positive retrieval after comparison with six preceding sections. These are authored opportunities, not 79 verified lexemes/senses or learner SRS events. The original source metadata and dictionary are preserved; the Friday meeting sentence moves to teaching lesson 6 before review-only lesson 9. See [the section report](A12-SECTION3-ACCEPTANCE.md) and [delivery roadmap](ROADMAP.md).
