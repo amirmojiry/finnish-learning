@@ -1418,6 +1418,42 @@
       "accepted_answers": [
         "Sisäänkäynti on tästä. Voitteko auttaa minua?"
       ]
+    },
+    "a13s2-e-concrete-address": {
+      "id": "a13s2-e-concrete-address",
+      "surface_form": "Osoite on Koulukatu 5.",
+      "lemma": "Osoite on Koulukatu 5.",
+      "translation_fa": "نشانی خیابان Koulukatu شمارهٔ ۵ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "curated"
+      ],
+      "example_fi": "Osoite on Koulukatu 5.",
+      "example_fa": "نشانی خیابان Koulukatu شمارهٔ ۵ است.",
+      "accepted_answers": [
+        "Osoite on Koulukatu 5."
+      ]
+    },
+    "a13s2-reading-opening-hours": {
+      "id": "a13s2-reading-opening-hours",
+      "surface_form": "Se avautuu kello yhdeksän. Se menee kiinni kello kuusi.",
+      "lemma": "Se avautuu kello yhdeksän. Se menee kiinni kello kuusi.",
+      "translation_fa": "این مکان ساعت نه باز و ساعت شش بسته می‌شود.",
+      "item_type": "reading",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "a1.3-s2",
+        "integrated-reading"
+      ],
+      "example_fi": "Se avautuu kello yhdeksän. Se menee kiinni kello kuusi.",
+      "example_fa": "این مکان ساعت نه باز و ساعت شش بسته می‌شود.",
+      "accepted_answers": [
+        "Se avautuu kello yhdeksän. Se menee kiinni kello kuusi."
+      ]
     }
   },
   "lessons": [
@@ -1428,14 +1464,13 @@
       "title_fa": "اتاق‌ها و فضاهای خانه",
       "objective_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
       "summary_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست.",
-      "grammar_fa": "مکان اتاق را با «اسم + on + مکان» بگو؛ مانند «Keittiö on tässä.».",
+      "grammar_fa": "صورت on را در جمله‌های مشخصِ اتاق‌ها مرور می‌کنی؛ Kaikki on valmista عبارت کامل است و قاعدهٔ آزاد صفت خبری از آن نتیجه گرفته نمی‌شود.",
       "new_targets": [
         "a13s2-h-001",
-        "a13s2-h-002",
         "a13s2-h-003",
-        "a13s2-t-004",
-        "a13s2-t-005",
-        "a13s2-t-006"
+        "a13s2-e-007",
+        "a13s2-e-008",
+        "a13s2-e-009"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1480,7 +1515,40 @@
             0,
             1
           ],
-          "expected_fi": "Olohuone on siellä."
+          "expected_fi": "Olohuone on siellä.",
+          "expected_fa": "اتاق نشیمن آنجاست."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-007",
+          "prompt_fa": "آشپزخانه اینجاست.",
+          "cues_fi": [
+            "Keittiö"
+          ],
+          "expected_fi": "Keittiö on tässä.",
+          "accepted_answers": [
+            "Keittiö on tässä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-008",
+          "prompt_fa": "اتاق نشیمن آنجاست.",
+          "cues_fi": [
+            "Olohuone"
+          ],
+          "expected_fi": "Olohuone on siellä.",
+          "accepted_answers": [
+            "Olohuone on siellä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
         }
       ],
       "activities": [
@@ -1501,6 +1569,10 @@
           "item": "a13s2-t-004"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-007"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-007",
@@ -1509,7 +1581,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1531,22 +1604,32 @@
             "a13s2-h-001",
             "a13s2-h-003",
             "a13s2-t-004"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-008"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-008",
-          "options": [
-            "a13s2-e-008",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "on",
+            "siellä.",
+            "Olohuone"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Olohuone on siellä.",
+          "expected_fa": "اتاق نشیمن آنجاست."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-001",
           "options": [
             "a13s2-h-001",
@@ -1556,15 +1639,10 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-002",
-          "options": [
-            "a13s2-h-002",
-            "a13s2-h-001",
-            "a13s2-h-003",
-            "a13s2-t-004"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1611,17 +1689,136 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-007",
-          "options": [
-            "a13s2-e-007",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-007",
+          "prompt_fa": "آشپزخانه اینجاست.",
+          "cues_fi": [
+            "Keittiö"
+          ],
+          "expected_fi": "Keittiö on tässä.",
+          "accepted_answers": [
+            "Keittiö on tässä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-008",
+          "prompt_fa": "اتاق نشیمن آنجاست.",
+          "cues_fi": [
+            "Olohuone"
+          ],
+          "expected_fi": "Olohuone on siellä.",
+          "accepted_answers": [
+            "Olohuone on siellä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-009"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-009",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [],
+      "practice_targets": [
+        "a13s2-e-007",
+        "a13s2-e-008"
+      ],
+      "activity_count": 21,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l01-can-do",
+            "can_do_fa": "فضاهای اصلی یک خانهٔ آشنا را نام ببرد و بگوید چیزی کجاست."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-001",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-003",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-004",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-005",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-006",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-007",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-008",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-009",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "صورت on را در جمله‌های مشخصِ اتاق‌ها مرور می‌کنی؛ Kaikki on valmista عبارت کامل است و قاعدهٔ آزاد صفت خبری از آن نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Keittiö on tässä.",
+                "fa": "آشپزخانه اینجاست."
+              },
+              {
+                "fi": "Olohuone on siellä.",
+                "fa": "اتاق نشیمن آنجاست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-2",
@@ -1630,14 +1827,15 @@
       "title_fa": "جای وسایل",
       "objective_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
       "summary_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند.",
-      "grammar_fa": "«pöydällä» روی میز، «kaapissa» در کمد و «lattialla» روی زمین است؛ صورت‌ها را یک‌به‌یک تمرین کن.",
+      "grammar_fa": "جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند. در دو جملهٔ مشخص، Avain on و Kengät ovat را با فاعل مفرد/جمع مقایسه می‌کنی؛ این تمرین جدول کامل اشخاص یا انواع فعل نیست.",
       "new_targets": [
-        "a13s2-h-001",
         "a13s2-h-010",
-        "a13s2-h-002",
         "a13s2-t-011",
         "a13s2-t-012",
-        "a13s2-t-013"
+        "a13s2-t-013",
+        "a13s2-e-014",
+        "a13s2-e-015",
+        "a13s2-e-016"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1682,7 +1880,58 @@
             0,
             1
           ],
-          "expected_fi": "Lasi on kaapissa."
+          "expected_fi": "Lasi on kaapissa.",
+          "expected_fa": "لیوان داخل کمد است."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-014",
+          "prompt_fa": "کلید روی میز است.",
+          "cues_fi": [
+            "Avain"
+          ],
+          "expected_fi": "Avain on pöydällä.",
+          "accepted_answers": [
+            "Avain on pöydällä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion",
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-015",
+          "prompt_fa": "لیوان داخل کمد است.",
+          "cues_fi": [
+            "Lasi"
+          ],
+          "expected_fi": "Lasi on kaapissa.",
+          "accepted_answers": [
+            "Lasi on kaapissa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-016",
+          "prompt_fa": "کفش‌ها روی زمین‌اند.",
+          "cues_fi": [
+            "Kengät"
+          ],
+          "expected_fi": "Kengät ovat lattialla.",
+          "accepted_answers": [
+            "Kengät ovat lattialla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion",
+            "a13-present-paradigm"
+          ]
         }
       ],
       "activities": [
@@ -1703,6 +1952,10 @@
           "item": "a13s2-t-011"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-014"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-014",
@@ -1711,7 +1964,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1733,40 +1987,45 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-015"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-015",
-          "options": [
-            "a13s2-e-015",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "on",
+            "kaapissa.",
+            "Lasi"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Lasi on kaapissa.",
+          "expected_fa": "لیوان داخل کمد است."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-001",
-          "options": [
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003",
-            "a13s2-t-004"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s2-h-010",
           "options": [
             "a13s2-h-010",
             "a13s2-h-001",
             "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-t-011"
           ]
+        },
+        {
+          "type": "type",
+          "item": "a13s2-h-010",
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1791,6 +2050,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-012"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-012",
@@ -1800,6 +2063,10 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-t-013"
         },
         {
           "type": "choice",
@@ -1813,17 +2080,211 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-014",
-          "options": [
-            "a13s2-e-014",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-014",
+          "prompt_fa": "کلید روی میز است.",
+          "cues_fi": [
+            "Avain"
+          ],
+          "expected_fi": "Avain on pöydällä.",
+          "accepted_answers": [
+            "Avain on pöydällä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion",
+            "a13-present-paradigm"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-015",
+          "prompt_fa": "لیوان داخل کمد است.",
+          "cues_fi": [
+            "Lasi"
+          ],
+          "expected_fi": "Lasi on kaapissa.",
+          "accepted_answers": [
+            "Lasi on kaapissa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-016"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-016",
+          "prompt_fa": "کفش‌ها روی زمین‌اند.",
+          "cues_fi": [
+            "Kengät"
+          ],
+          "expected_fi": "Kengät ovat lattialla.",
+          "accepted_answers": [
+            "Kengät ovat lattialla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion",
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-007",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-009",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-h-001",
+        "a13s2-e-007",
+        "a13s2-e-009"
+      ],
+      "practice_targets": [
+        "a13s2-e-014",
+        "a13s2-e-015",
+        "a13s2-e-016"
+      ],
+      "activity_count": 25,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l02-can-do",
+            "can_do_fa": "محل چند وسیلهٔ آشنای خانه را با صورت‌های مکانی تمرین‌شده توصیف کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-001",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-010",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-011",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-012",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-013",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-014",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-015",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-016",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-009",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Avain on pöydällä.",
+                "fa": "کلید روی میز است."
+              },
+              {
+                "fi": "Lasi on kaapissa.",
+                "fa": "لیوان داخل کمد است."
+              },
+              {
+                "fi": "Kengät ovat lattialla.",
+                "fa": "کفش‌ها روی زمین‌اند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در دو جملهٔ مشخص، Avain on و Kengät ovat را با فاعل مفرد/جمع مقایسه می‌کنی؛ این تمرین جدول کامل اشخاص یا انواع فعل نیست.",
+            "examples": [
+              {
+                "fi": "Avain on pöydällä.",
+                "fa": "کلید روی میز است."
+              },
+              {
+                "fi": "Kengät ovat lattialla.",
+                "fa": "کفش‌ها روی زمین‌اند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-3",
@@ -1832,14 +2293,15 @@
       "title_fa": "کارهای خانه",
       "objective_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
       "summary_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند.",
-      "grammar_fa": "«pitää + مصدر» مانند «Pitää siivota.» بیانگر ضرورت انجام کار است.",
+      "grammar_fa": "دو عبارت Pitää siivota و Pitää pestä astiat ضرورت را با pitää + مصدر بیان می‌کنند؛ مصدر را با شکل شخصی فعل جایگزین نمی‌کنی. قاعدهٔ آزاد مفعول از این نمونه‌ها نتیجه گرفته نمی‌شود.",
       "new_targets": [
-        "a13s2-h-017",
-        "a13s2-h-018",
-        "a13s2-h-019",
         "a13s2-t-020",
         "a13s2-t-021",
-        "a13s2-t-022"
+        "a13s2-t-022",
+        "a13s2-e-023",
+        "a13s2-e-024",
+        "a13s2-e-025",
+        "a13s2-e-026"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1884,7 +2346,40 @@
             0,
             1
           ],
-          "expected_fi": "Pitää pestä astiat."
+          "expected_fi": "Pitää pestä astiat.",
+          "expected_fa": "باید ظرف‌ها را شست."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-023",
+          "prompt_fa": "باید نظافت کرد.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää siivota.",
+          "accepted_answers": [
+            "Pitää siivota."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-024",
+          "prompt_fa": "باید ظرف‌ها را شست.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää pestä astiat.",
+          "accepted_answers": [
+            "Pitää pestä astiat."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "activities": [
@@ -1905,6 +2400,10 @@
           "item": "a13s2-t-020"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-023"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-023",
@@ -1913,7 +2412,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1935,40 +2435,45 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-024"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-024",
-          "options": [
-            "a13s2-e-024",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "pestä",
+            "astiat.",
+            "Pitää"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Pitää pestä astiat.",
+          "expected_fa": "باید ظرف‌ها را شست."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-017",
           "options": [
+            "a13s2-h-018",
+            "a13s2-h-019",
             "a13s2-h-017",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-t-020"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-018",
-          "options": [
-            "a13s2-h-018",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1993,6 +2498,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-021"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-021",
@@ -2002,6 +2511,10 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-t-022"
         },
         {
           "type": "choice",
@@ -2015,17 +2528,208 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-023",
-          "options": [
-            "a13s2-e-023",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-023",
+          "prompt_fa": "باید نظافت کرد.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää siivota.",
+          "accepted_answers": [
+            "Pitää siivota."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-024",
+          "prompt_fa": "باید ظرف‌ها را شست.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää pestä astiat.",
+          "accepted_answers": [
+            "Pitää pestä astiat."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-025"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-025",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-026"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-026",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-003",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-008",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-011",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-013",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-015",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-h-003",
+        "a13s2-e-008",
+        "a13s2-t-011",
+        "a13s2-t-013",
+        "a13s2-e-015"
+      ],
+      "practice_targets": [
+        "a13s2-e-023",
+        "a13s2-e-024"
+      ],
+      "activity_count": 30,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l03-can-do",
+            "can_do_fa": "یک یا دو کار سادهٔ خانه را که باید انجام شوند بیان کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-018",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-019",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-020",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-021",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-022",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-023",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-024",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-025",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-026",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-003",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-011",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-013",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-015",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "دو عبارت Pitää siivota و Pitää pestä astiat ضرورت را با pitää + مصدر بیان می‌کنند؛ مصدر را با شکل شخصی فعل جایگزین نمی‌کنی. قاعدهٔ آزاد مفعول از این نمونه‌ها نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Pitää siivota.",
+                "fa": "باید نظافت کرد."
+              },
+              {
+                "fi": "Pitää pestä astiat.",
+                "fa": "باید ظرف‌ها را شست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-4",
@@ -2034,14 +2738,17 @@
       "title_fa": "یک مشکل در خانه",
       "objective_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
       "summary_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند.",
-      "grammar_fa": "با «ei» خرابی را گزارش کن؛ مانند «Hana ei toimi.» و «Valo ei pala.».",
+      "grammar_fa": "خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند.",
       "new_targets": [
-        "a13s2-h-027",
         "a13s2-h-028",
         "a13s2-h-029",
         "a13s2-t-030",
         "a13s2-t-031",
-        "a13s2-t-032"
+        "a13s2-t-032",
+        "a13s2-e-033",
+        "a13s2-e-034",
+        "a13s2-e-035",
+        "a13s2-e-036"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2087,7 +2794,56 @@
             0,
             1
           ],
-          "expected_fi": "Valo ei pala."
+          "expected_fi": "Valo ei pala.",
+          "expected_fa": "چراغ روشن نمی‌شود."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-033",
+          "prompt_fa": "شیر آب کار نمی‌کند.",
+          "cues_fi": [
+            "Hana"
+          ],
+          "expected_fi": "Hana ei toimi.",
+          "accepted_answers": [
+            "Hana ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-034",
+          "prompt_fa": "چراغ روشن نمی‌شود.",
+          "cues_fi": [
+            "Valo"
+          ],
+          "expected_fi": "Valo ei pala.",
+          "accepted_answers": [
+            "Valo ei pala."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-035",
+          "prompt_fa": "سیستم گرمایش درست کار نمی‌کند.",
+          "cues_fi": [
+            "Lämmitys"
+          ],
+          "expected_fi": "Lämmitys ei toimi oikein.",
+          "accepted_answers": [
+            "Lämmitys ei toimi oikein."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -2108,6 +2864,10 @@
           "item": "a13s2-t-030"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-033"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-033",
@@ -2116,7 +2876,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2138,40 +2899,45 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-034"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-034",
-          "options": [
-            "a13s2-e-034",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "ei",
+            "pala.",
+            "Valo"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Valo ei pala.",
+          "expected_fa": "چراغ روشن نمی‌شود."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-027",
           "options": [
-            "a13s2-h-027",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-h-028",
+            "a13s2-h-029",
+            "a13s2-t-030",
+            "a13s2-h-027"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-028",
-          "options": [
-            "a13s2-h-028",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2196,6 +2962,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-031"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-031",
@@ -2205,6 +2975,10 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-t-032"
         },
         {
           "type": "choice",
@@ -2218,17 +2992,260 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-033",
-          "options": [
-            "a13s2-e-033",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-033",
+          "prompt_fa": "شیر آب کار نمی‌کند.",
+          "cues_fi": [
+            "Hana"
+          ],
+          "expected_fi": "Hana ei toimi.",
+          "accepted_answers": [
+            "Hana ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-034",
+          "prompt_fa": "چراغ روشن نمی‌شود.",
+          "cues_fi": [
+            "Valo"
+          ],
+          "expected_fi": "Valo ei pala.",
+          "accepted_answers": [
+            "Valo ei pala."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-035"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-035",
+          "prompt_fa": "سیستم گرمایش درست کار نمی‌کند.",
+          "cues_fi": [
+            "Lämmitys"
+          ],
+          "expected_fi": "Lämmitys ei toimi oikein.",
+          "accepted_answers": [
+            "Lämmitys ei toimi oikein."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-036"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-036",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-010",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-012",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-014",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-016",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-020",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-022",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-024",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-026",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-h-010",
+        "a13s2-t-012",
+        "a13s2-e-014",
+        "a13s2-e-016",
+        "a13s2-t-020",
+        "a13s2-t-022",
+        "a13s2-e-024",
+        "a13s2-e-026"
+      ],
+      "practice_targets": [
+        "a13s2-e-033",
+        "a13s2-e-034",
+        "a13s2-e-035"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l04-can-do",
+            "can_do_fa": "یک مشکل سادهٔ خانه را توصیف کند و بگوید چیزی درست کار نمی‌کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-028",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-029",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-030",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-031",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-032",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-033",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-034",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-035",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-036",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-010",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-012",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-020",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-022",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-024",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-026",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند.",
+            "examples": [
+              {
+                "fi": "Hana ei toimi.",
+                "fa": "شیر آب کار نمی‌کند."
+              },
+              {
+                "fi": "Valo ei pala.",
+                "fa": "چراغ روشن نمی‌شود."
+              },
+              {
+                "fi": "Lämmitys ei toimi oikein.",
+                "fa": "سیستم گرمایش درست کار نمی‌کند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-5",
@@ -2237,14 +3254,16 @@
       "title_fa": "تماس با خدمات تعمیر و نگهداری",
       "objective_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
       "summary_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند.",
-      "grammar_fa": "«Tarvitsen huoltoa.» نیاز و «Voitteko lähettää korjaajan?» درخواست مؤدبانه است.",
+      "grammar_fa": "در Tarvitsen huoltoa مقدار نامشخص را با صورت صریح huoltoa تمرین می‌کنی؛ این نمونهٔ محدود مفعول پارتیتیو است، نه جدول کامل. درخواست‌های Voitteko را به‌شکل کامل و آماده تمرین می‌کنی؛ صرف مولد همهٔ صورت‌های مؤدبانه یا قاعدهٔ آزاد مفعول سنجیده نمی‌شود.",
       "new_targets": [
-        "a13s2-h-037",
-        "a13s2-h-038",
-        "a13s2-h-039",
         "a13s2-t-040",
         "a13s2-t-041",
-        "a13s2-t-042"
+        "a13s2-e-043",
+        "a13s2-e-044",
+        "a13s2-e-045",
+        "a13s2-e-046",
+        "a13s2-e-076",
+        "a13s2-e-concrete-address"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2290,7 +3309,71 @@
             0,
             1
           ],
-          "expected_fi": "Voitteko lähettää korjaajan?"
+          "expected_fi": "Voitteko lähettää korjaajan?",
+          "expected_fa": "می‌توانید تعمیرکار بفرستید؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-043",
+          "prompt_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen huoltoa.",
+          "accepted_answers": [
+            "Tarvitsen huoltoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-044",
+          "prompt_fa": "می‌توانید تعمیرکار بفرستید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko lähettää korjaajan?",
+          "accepted_answers": [
+            "Voitteko lähettää korjaajan?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-076",
+          "prompt_fa": "می‌توانید به من کمک کنید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko auttaa minua?",
+          "accepted_answers": [
+            "Voitteko auttaa minua?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-concrete-address",
+          "prompt_fa": "نشانی را بنویس: خیابان Koulukatu، شمارهٔ ۵.",
+          "cues_fi": [
+            "Osoite",
+            "Koulukatu",
+            "5"
+          ],
+          "expected_fi": "Osoite on Koulukatu 5.",
+          "accepted_answers": [
+            "Osoite on Koulukatu 5."
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "activities": [
@@ -2311,6 +3394,10 @@
           "item": "a13s2-t-040"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-043"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-043",
@@ -2319,7 +3406,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2341,40 +3429,45 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-044"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-044",
-          "options": [
-            "a13s2-e-044",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "lähettää",
+            "korjaajan?",
+            "Voitteko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Voitteko lähettää korjaajan?",
+          "expected_fa": "می‌توانید تعمیرکار بفرستید؟"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-037",
           "options": [
             "a13s2-h-037",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-h-038",
+            "a13s2-h-039",
+            "a13s2-t-040"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-038",
-          "options": [
-            "a13s2-h-038",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2399,6 +3492,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-041"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-041",
@@ -2421,17 +3518,304 @@
           ]
         },
         {
+          "type": "type",
+          "item": "a13s2-e-043",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-043",
+          "prompt_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen huoltoa.",
+          "accepted_answers": [
+            "Tarvitsen huoltoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-044",
+          "prompt_fa": "می‌توانید تعمیرکار بفرستید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko lähettää korjaajan?",
+          "accepted_answers": [
+            "Voitteko lähettää korjaajan?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-076"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-076",
+          "prompt_fa": "می‌توانید به من کمک کنید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko auttaa minua?",
+          "accepted_answers": [
+            "Voitteko auttaa minua?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-concrete-address"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-concrete-address",
+          "prompt_fa": "نشانی را بنویس: خیابان Koulukatu، شمارهٔ ۵.",
+          "cues_fi": [
+            "Osoite",
+            "Koulukatu",
+            "5"
+          ],
+          "expected_fi": "Osoite on Koulukatu 5.",
+          "accepted_answers": [
+            "Osoite on Koulukatu 5."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-045"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-043",
+          "item": "a13s2-e-045",
           "options": [
+            "a13s2-e-045",
             "a13s2-e-043",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-044",
+            "a13s2-e-046"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-046"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-046",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-021",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-023",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-025",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-029",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-031",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-033",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-035",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-t-021",
+        "a13s2-e-023",
+        "a13s2-e-025",
+        "a13s2-h-029",
+        "a13s2-t-031",
+        "a13s2-e-033",
+        "a13s2-e-035"
+      ],
+      "practice_targets": [
+        "a13s2-e-076",
+        "a13s2-e-043",
+        "a13s2-e-044",
+        "a13s2-e-concrete-address"
+      ],
+      "activity_count": 35,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l05-can-do",
+            "can_do_fa": "برای تعمیر یا نگهداری معمول خانه یک درخواست کوتاه بدهد و یک نکتهٔ مفید ارائه کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-038",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-039",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-040",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-041",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-042",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-043",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-044",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-045",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-046",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-076",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-concrete-address",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-021",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-023",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-025",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-029",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-031",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-033",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-035",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tarvitsen huoltoa مقدار نامشخص را با صورت صریح huoltoa تمرین می‌کنی؛ این نمونهٔ محدود مفعول پارتیتیو است، نه جدول کامل.",
+            "examples": [
+              {
+                "fi": "Tarvitsen huoltoa.",
+                "fa": "به خدمات تعمیر و نگهداری نیاز دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های Voitteko را به‌شکل کامل و آماده تمرین می‌کنی؛ صرف مولد همهٔ صورت‌های مؤدبانه یا قاعدهٔ آزاد مفعول سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Voitteko lähettää korjaajan?",
+                "fa": "می‌توانید تعمیرکار بفرستید؟"
+              },
+              {
+                "fi": "Voitteko auttaa minua?",
+                "fa": "می‌توانید به من کمک کنید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-6",
@@ -2440,14 +3824,15 @@
       "title_fa": "خدمات محله",
       "objective_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
       "summary_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد.",
-      "grammar_fa": "«Missä kirjasto on?» پرسش مکان و «Onko täällä posti?» پرسش بله/خیر است.",
+      "grammar_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است. جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند.",
       "new_targets": [
-        "a13s2-h-047",
-        "a13s2-h-048",
-        "a13s2-h-049",
         "a13s2-t-050",
         "a13s2-t-051",
-        "a13s2-t-052"
+        "a13s2-t-052",
+        "a13s2-e-053",
+        "a13s2-e-054",
+        "a13s2-e-055",
+        "a13s2-e-056"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2493,7 +3878,56 @@
             0,
             1
           ],
-          "expected_fi": "Onko täällä posti?"
+          "expected_fi": "Onko täällä posti?",
+          "expected_fa": "اینجا ادارهٔ پست هست؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-053",
+          "prompt_fa": "کتابخانه کجاست؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä kirjasto on?",
+          "accepted_answers": [
+            "Missä kirjasto on?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-054",
+          "prompt_fa": "اینجا ادارهٔ پست هست؟",
+          "cues_fi": [
+            "Onko"
+          ],
+          "expected_fi": "Onko täällä posti?",
+          "accepted_answers": [
+            "Onko täällä posti?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-055",
+          "prompt_fa": "بانک در مرکز شهر است.",
+          "cues_fi": [
+            "Pankki"
+          ],
+          "expected_fi": "Pankki on keskustassa.",
+          "accepted_answers": [
+            "Pankki on keskustassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
         }
       ],
       "activities": [
@@ -2514,6 +3948,10 @@
           "item": "a13s2-t-050"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-053"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-053",
@@ -2522,7 +3960,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2544,40 +3983,45 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-054"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-054",
-          "options": [
-            "a13s2-e-054",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "täällä",
+            "posti?",
+            "Onko"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Onko täällä posti?",
+          "expected_fa": "اینجا ادارهٔ پست هست؟"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-047",
           "options": [
+            "a13s2-h-048",
             "a13s2-h-047",
-            "a13s2-h-002",
-            "a13s2-h-003",
-            "a13s2-t-004"
+            "a13s2-h-049",
+            "a13s2-t-050"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-048",
-          "options": [
-            "a13s2-h-048",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2602,6 +4046,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-051"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-051",
@@ -2611,6 +4059,10 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-t-052"
         },
         {
           "type": "choice",
@@ -2624,17 +4076,288 @@
           ]
         },
         {
+          "type": "type",
+          "item": "a13s2-e-053",
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-053",
+          "prompt_fa": "کتابخانه کجاست؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä kirjasto on?",
+          "accepted_answers": [
+            "Missä kirjasto on?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-054",
+          "prompt_fa": "اینجا ادارهٔ پست هست؟",
+          "cues_fi": [
+            "Onko"
+          ],
+          "expected_fi": "Onko täällä posti?",
+          "accepted_answers": [
+            "Onko täällä posti?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-055"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-055",
+          "prompt_fa": "بانک در مرکز شهر است.",
+          "cues_fi": [
+            "Pankki"
+          ],
+          "expected_fi": "Pankki on keskustassa.",
+          "accepted_answers": [
+            "Pankki on keskustassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-056"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-056",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-028",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-030",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-032",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-034",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-036",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-040",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-043",
+          "answer_policy": "morphology"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
-          "item": "a13s2-e-053",
+          "item": "a13s2-e-045",
           "options": [
-            "a13s2-e-053",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-e-045",
+            "a13s2-e-043",
+            "a13s2-e-044",
+            "a13s2-e-046"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-076",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-h-028",
+        "a13s2-t-030",
+        "a13s2-t-032",
+        "a13s2-e-034",
+        "a13s2-e-036",
+        "a13s2-t-040",
+        "a13s2-e-043",
+        "a13s2-e-045",
+        "a13s2-e-076"
+      ],
+      "practice_targets": [
+        "a13s2-e-053",
+        "a13s2-e-054",
+        "a13s2-e-055"
+      ],
+      "activity_count": 34,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l06-can-do",
+            "can_do_fa": "بپرسد یک خدمت رایج محله کجاست و یک پاسخ مکانی کوتاه را بفهمد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-047",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-048",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-049",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-050",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-051",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-052",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-053",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-054",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-055",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-056",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-030",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-032",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-034",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-036",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-040",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-043",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-045",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-076",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است.",
+            "examples": [
+              {
+                "fi": "Missä kirjasto on?",
+                "fa": "کتابخانه کجاست؟"
+              },
+              {
+                "fi": "Onko täällä posti?",
+                "fa": "اینجا ادارهٔ پست هست؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Pankki on keskustassa.",
+                "fa": "بانک در مرکز شهر است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-7",
@@ -2643,14 +4366,17 @@
       "title_fa": "ساعت‌های باز بودن",
       "objective_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
       "summary_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته.",
-      "grammar_fa": "«Milloin ... on auki?» دربارهٔ ساعت باز بودن می‌پرسد؛ «avautuu» باز و «menee kiinni» بسته می‌شود.",
+      "grammar_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است. ساعت باز و بسته‌شدن و عبارت زمانی viiden jälkeen را در جمله‌های مشخص تمرین می‌کنی؛ این نمونهٔ محدود زمان‌بندی است.",
       "new_targets": [
         "a13s2-h-057",
-        "a13s2-h-058",
-        "a13s2-h-059",
         "a13s2-t-060",
         "a13s2-t-061",
-        "a13s2-t-062"
+        "a13s2-t-062",
+        "a13s2-e-063",
+        "a13s2-e-064",
+        "a13s2-e-065",
+        "a13s2-e-066",
+        "a13s2-e-075"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2698,7 +4424,72 @@
             1,
             2
           ],
-          "expected_fi": "Se avautuu kello yhdeksän."
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "expected_fa": "ساعت نه باز می‌شود."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-063",
+          "prompt_fa": "کتابخانه چه زمانی باز است؟",
+          "cues_fi": [
+            "Milloin"
+          ],
+          "expected_fi": "Milloin kirjasto on auki?",
+          "accepted_answers": [
+            "Milloin kirjasto on auki?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-064",
+          "prompt_fa": "ساعت نه باز می‌شود.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "accepted_answers": [
+            "Se avautuu kello yhdeksän."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-065",
+          "prompt_fa": "ساعت شش بسته می‌شود.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se menee kiinni kello kuusi.",
+          "accepted_answers": [
+            "Se menee kiinni kello kuusi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-066",
+          "prompt_fa": "بعد از ساعت پنج باز است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on auki viiden jälkeen.",
+          "accepted_answers": [
+            "Se on auki viiden jälkeen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
         }
       ],
       "activities": [
@@ -2719,6 +4510,10 @@
           "item": "a13s2-t-060"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-063"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-063",
@@ -2727,7 +4522,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2749,40 +4545,47 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-064"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-064",
-          "options": [
-            "a13s2-e-064",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "avautuu",
+            "kello",
+            "yhdeksän.",
+            "Se"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "expected_fa": "ساعت نه باز می‌شود."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-057",
           "options": [
+            "a13s2-h-058",
+            "a13s2-h-059",
             "a13s2-h-057",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-t-060"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-058",
-          "options": [
-            "a13s2-h-058",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2807,6 +4610,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-061"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-061",
@@ -2816,6 +4623,10 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-t-062"
         },
         {
           "type": "choice",
@@ -2829,17 +4640,328 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-063",
-          "options": [
-            "a13s2-e-063",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-063",
+          "prompt_fa": "کتابخانه چه زمانی باز است؟",
+          "cues_fi": [
+            "Milloin"
+          ],
+          "expected_fi": "Milloin kirjasto on auki?",
+          "accepted_answers": [
+            "Milloin kirjasto on auki?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-064",
+          "prompt_fa": "ساعت نه باز می‌شود.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "accepted_answers": [
+            "Se avautuu kello yhdeksän."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-065"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-065",
+          "prompt_fa": "ساعت شش بسته می‌شود.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se menee kiinni kello kuusi.",
+          "accepted_answers": [
+            "Se menee kiinni kello kuusi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-066"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-066",
+          "prompt_fa": "بعد از ساعت پنج باز است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on auki viiden jälkeen.",
+          "accepted_answers": [
+            "Se on auki viiden jälkeen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s2-reading-opening-hours",
+          "question_item": "a13s2-e-064",
+          "options": [
+            "a13s2-e-064",
+            "a13s2-e-007",
+            "a13s2-e-008",
+            "a13s2-e-009"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s2-reading-opening-hours",
+          "question_item": "a13s2-e-065",
+          "options": [
+            "a13s2-e-065",
+            "a13s2-e-007",
+            "a13s2-e-008",
+            "a13s2-e-009"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-075"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-075",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-041",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-044",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-046",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-concrete-address",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-050",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-052",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-054",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-056",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-t-041",
+        "a13s2-e-044",
+        "a13s2-e-046",
+        "a13s2-e-concrete-address",
+        "a13s2-t-050",
+        "a13s2-t-052",
+        "a13s2-e-054",
+        "a13s2-e-056"
+      ],
+      "practice_targets": [
+        "a13s2-e-075",
+        "a13s2-e-063",
+        "a13s2-e-064",
+        "a13s2-e-065",
+        "a13s2-e-066"
+      ],
+      "activity_count": 37,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l07-can-do",
+            "can_do_fa": "یک ساعت باز بودن ساده را پیدا کند یا دربارهٔ آن بپرسد و بفهمد مکانی باز است یا بسته."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-057",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-h-058",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-059",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-060",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-061",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-062",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-063",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-064",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-065",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-066",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-075",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-041",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-044",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-046",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-concrete-address",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-050",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-052",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-054",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-056",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است.",
+            "examples": [
+              {
+                "fi": "Milloin kirjasto on auki?",
+                "fa": "کتابخانه چه زمانی باز است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ساعت باز و بسته‌شدن و عبارت زمانی viiden jälkeen را در جمله‌های مشخص تمرین می‌کنی؛ این نمونهٔ محدود زمان‌بندی است.",
+            "examples": [
+              {
+                "fi": "Se avautuu kello yhdeksän.",
+                "fa": "ساعت نه باز می‌شود."
+              },
+              {
+                "fi": "Se menee kiinni kello kuusi.",
+                "fa": "ساعت شش بسته می‌شود."
+              },
+              {
+                "fi": "Se on auki viiden jälkeen.",
+                "fa": "بعد از ساعت پنج باز است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 24,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-8",
@@ -2848,14 +4970,15 @@
       "title_fa": "اعلان‌ها و قوانین ساده",
       "objective_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
       "summary_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه.",
-      "grammar_fa": "«saa + مصدر» اجازه و «ei saa + مصدر» ممنوعیت را بیان می‌کند.",
+      "grammar_fa": "خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند.",
       "new_targets": [
-        "a13s2-h-017",
-        "a13s2-h-027",
-        "a13s2-h-067",
         "a13s2-t-068",
         "a13s2-t-069",
-        "a13s2-t-070"
+        "a13s2-t-070",
+        "a13s2-e-071",
+        "a13s2-e-072",
+        "a13s2-e-073",
+        "a13s2-e-074"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2901,7 +5024,40 @@
             0,
             1
           ],
-          "expected_fi": "Sisäänkäynti on tästä."
+          "expected_fi": "Sisäänkäynti on tästä.",
+          "expected_fa": "ورودی از اینجاست."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-071",
+          "prompt_fa": "اینجا سیگار کشیدن ممنوع است.",
+          "cues_fi": [
+            "Täällä"
+          ],
+          "expected_fi": "Täällä ei saa tupakoida.",
+          "accepted_answers": [
+            "Täällä ei saa tupakoida."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-074",
+          "prompt_fa": "اینجا می‌توان منتظر ماند.",
+          "cues_fi": [
+            "Täällä"
+          ],
+          "expected_fi": "Täällä saa odottaa.",
+          "accepted_answers": [
+            "Täällä saa odottaa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -2922,6 +5078,10 @@
           "item": "a13s2-t-068"
         },
         {
+          "type": "teach",
+          "item": "a13s2-e-071"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s2-e-071",
@@ -2930,7 +5090,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2952,40 +5113,45 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s2-e-072"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s2-e-072",
-          "options": [
-            "a13s2-e-072",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "on",
+            "tästä.",
+            "Sisäänkäynti"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Sisäänkäynti on tästä.",
+          "expected_fa": "ورودی از اینجاست."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-h-017",
           "options": [
-            "a13s2-h-017",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+            "a13s2-h-027",
+            "a13s2-h-067",
+            "a13s2-t-068",
+            "a13s2-h-017"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-h-027",
-          "options": [
-            "a13s2-h-027",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3010,6 +5176,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s2-t-069"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s2-t-069",
@@ -3019,6 +5189,10 @@
             "a13s2-h-002",
             "a13s2-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-t-070"
         },
         {
           "type": "choice",
@@ -3032,17 +5206,224 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-071",
-          "options": [
-            "a13s2-e-071",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-071",
+          "prompt_fa": "اینجا سیگار کشیدن ممنوع است.",
+          "cues_fi": [
+            "Täällä"
+          ],
+          "expected_fi": "Täällä ei saa tupakoida.",
+          "accepted_answers": [
+            "Täällä ei saa tupakoida."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-074"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-074",
+          "prompt_fa": "اینجا می‌توان منتظر ماند.",
+          "cues_fi": [
+            "Täällä"
+          ],
+          "expected_fi": "Täällä saa odottaa.",
+          "accepted_answers": [
+            "Täällä saa odottaa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s2-e-073"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-073",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-051",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-053",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-055",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-060",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-062",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-064",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-066",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-t-051",
+        "a13s2-e-053",
+        "a13s2-e-055",
+        "a13s2-t-060",
+        "a13s2-t-062",
+        "a13s2-e-064",
+        "a13s2-e-066"
+      ],
+      "practice_targets": [
+        "a13s2-e-071",
+        "a13s2-e-074"
+      ],
+      "activity_count": 31,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l08-can-do",
+            "can_do_fa": "یک اعلان یا قانون کوتاه و آشنا را بفهمد و بگوید کاری مجاز است یا نه."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-h-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-067",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-068",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-069",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-070",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-071",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-072",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-073",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-e-074",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s2-t-051",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-053",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-060",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-062",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-064",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-066",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند.",
+            "examples": [
+              {
+                "fi": "Täällä ei saa tupakoida.",
+                "fa": "اینجا سیگار کشیدن ممنوع است."
+              },
+              {
+                "fi": "Täällä saa odottaa.",
+                "fa": "اینجا می‌توان منتظر ماند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-9",
@@ -3051,7 +5432,7 @@
       "title_fa": "یک کار محلی و مشکل روزمره",
       "objective_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
       "summary_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند.",
-      "grammar_fa": "مکان، ساعت کار، اعلان و درخواست کمک را در یک سناریوی محله ترکیب کن.",
+      "grammar_fa": "صورت on را در جمله‌های مشخصِ اتاق‌ها مرور می‌کنی؛ Kaikki on valmista عبارت کامل است و قاعدهٔ آزاد صفت خبری از آن نتیجه گرفته نمی‌شود. جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند. در دو جملهٔ مشخص، Avain on و Kengät ovat را با فاعل مفرد/جمع مقایسه می‌کنی؛ این تمرین جدول کامل اشخاص یا انواع فعل نیست. دو عبارت Pitää siivota و Pitää pestä astiat ضرورت را با pitää + مصدر بیان می‌کنند؛ مصدر را با شکل شخصی فعل جایگزین نمی‌کنی. قاعدهٔ آزاد مفعول از این نمونه‌ها نتیجه گرفته نمی‌شود. خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند. در Tarvitsen huoltoa مقدار نامشخص را با صورت صریح huoltoa تمرین می‌کنی؛ این نمونهٔ محدود مفعول پارتیتیو است، نه جدول کامل. درخواست‌های Voitteko را به‌شکل کامل و آماده تمرین می‌کنی؛ صرف مولد همهٔ صورت‌های مؤدبانه یا قاعدهٔ آزاد مفعول سنجیده نمی‌شود. پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است. ساعت باز و بسته‌شدن و عبارت زمانی viiden jälkeen را در جمله‌های مشخص تمرین می‌کنی؛ این نمونهٔ محدود زمان‌بندی است.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3096,7 +5477,152 @@
             1,
             2
           ],
-          "expected_fi": "Milloin se on auki?"
+          "expected_fi": "Milloin se on auki?",
+          "expected_fa": "چه زمانی باز است؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-007",
+          "prompt_fa": "آشپزخانه اینجاست.",
+          "cues_fi": [
+            "Keittiö"
+          ],
+          "expected_fi": "Keittiö on tässä.",
+          "accepted_answers": [
+            "Keittiö on tässä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-014",
+          "prompt_fa": "کلید روی میز است.",
+          "cues_fi": [
+            "Avain"
+          ],
+          "expected_fi": "Avain on pöydällä.",
+          "accepted_answers": [
+            "Avain on pöydällä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-016",
+          "prompt_fa": "کفش‌ها روی زمین‌اند.",
+          "cues_fi": [
+            "Kengät"
+          ],
+          "expected_fi": "Kengät ovat lattialla.",
+          "accepted_answers": [
+            "Kengät ovat lattialla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-023",
+          "prompt_fa": "باید نظافت کرد.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää siivota.",
+          "accepted_answers": [
+            "Pitää siivota."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-033",
+          "prompt_fa": "شیر آب کار نمی‌کند.",
+          "cues_fi": [
+            "Hana"
+          ],
+          "expected_fi": "Hana ei toimi.",
+          "accepted_answers": [
+            "Hana ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-043",
+          "prompt_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen huoltoa.",
+          "accepted_answers": [
+            "Tarvitsen huoltoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-076",
+          "prompt_fa": "می‌توانید به من کمک کنید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko auttaa minua?",
+          "accepted_answers": [
+            "Voitteko auttaa minua?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-075",
+          "prompt_fa": "چه زمانی باز است؟",
+          "cues_fi": [
+            "Milloin"
+          ],
+          "expected_fi": "Milloin se on auki?",
+          "accepted_answers": [
+            "Milloin se on auki?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-066",
+          "prompt_fa": "بعد از ساعت پنج باز است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on auki viiden jälkeen.",
+          "accepted_answers": [
+            "Se on auki viiden jälkeen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
         }
       ],
       "activities": [
@@ -3117,7 +5643,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3128,7 +5655,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3139,7 +5667,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3154,14 +5683,15 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-e-053",
           "options": [
             "a13s2-e-053",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+            "a13s2-t-068",
+            "a13s2-t-069",
+            "a13s2-t-070"
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3183,7 +5713,8 @@
             "a13s2-h-001",
             "a13s2-h-002",
             "a13s2-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3197,37 +5728,34 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-e-053",
-          "options": [
-            "a13s2-e-053",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s2-e-072",
-          "options": [
-            "a13s2-e-072",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "sentence-order",
           "item": "a13s2-e-075",
-          "options": [
-            "a13s2-e-075",
-            "a13s2-h-001",
-            "a13s2-h-002",
-            "a13s2-h-003"
-          ]
+          "tokens": [
+            "se",
+            "on",
+            "auki?",
+            "Milloin"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Milloin se on auki?",
+          "expected_fa": "چه زمانی باز است؟"
         },
         {
           "type": "short-reading",
@@ -3250,8 +5778,514 @@
             "a13s2-e-008",
             "a13s2-e-009"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-007",
+          "prompt_fa": "آشپزخانه اینجاست.",
+          "cues_fi": [
+            "Keittiö"
+          ],
+          "expected_fi": "Keittiö on tässä.",
+          "accepted_answers": [
+            "Keittiö on tässä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-014",
+          "prompt_fa": "کلید روی میز است.",
+          "cues_fi": [
+            "Avain"
+          ],
+          "expected_fi": "Avain on pöydällä.",
+          "accepted_answers": [
+            "Avain on pöydällä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-016",
+          "prompt_fa": "کفش‌ها روی زمین‌اند.",
+          "cues_fi": [
+            "Kengät"
+          ],
+          "expected_fi": "Kengät ovat lattialla.",
+          "accepted_answers": [
+            "Kengät ovat lattialla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-023",
+          "prompt_fa": "باید نظافت کرد.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää siivota.",
+          "accepted_answers": [
+            "Pitää siivota."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-033",
+          "prompt_fa": "شیر آب کار نمی‌کند.",
+          "cues_fi": [
+            "Hana"
+          ],
+          "expected_fi": "Hana ei toimi.",
+          "accepted_answers": [
+            "Hana ei toimi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-043",
+          "prompt_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen huoltoa.",
+          "accepted_answers": [
+            "Tarvitsen huoltoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-076",
+          "prompt_fa": "می‌توانید به من کمک کنید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko auttaa minua?",
+          "accepted_answers": [
+            "Voitteko auttaa minua?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-075",
+          "prompt_fa": "چه زمانی باز است؟",
+          "cues_fi": [
+            "Milloin"
+          ],
+          "expected_fi": "Milloin se on auki?",
+          "accepted_answers": [
+            "Milloin se on auki?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-066",
+          "prompt_fa": "بعد از ساعت پنج باز است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on auki viiden jälkeen.",
+          "accepted_answers": [
+            "Se on auki viiden jälkeen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s2-reading-1",
+          "question_item": "a13s2-e-075",
+          "options": [
+            "a13s2-e-075",
+            "a13s2-e-007",
+            "a13s2-e-008",
+            "a13s2-e-009"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s2-reading-2",
+          "question_item": "a13s2-e-076",
+          "options": [
+            "a13s2-e-076",
+            "a13s2-e-007",
+            "a13s2-e-008",
+            "a13s2-e-009"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "prompt_fa": "چهار جملهٔ پیام تعمیرات را بنویس: شیر آب کار نمی‌کند؛ به خدمات تعمیر و نگهداری نیاز دارم؛ نشانی خیابان Koulukatu شمارهٔ ۵ است؛ می‌توانید به من کمک کنید؟",
+          "expected_items": [
+            "a13s2-e-033",
+            "a13s2-e-043",
+            "a13s2-e-concrete-address",
+            "a13s2-e-076"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-h-057",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-061",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-063",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-065",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-068",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-070",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-074",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s2-h-057",
+        "a13s2-t-061",
+        "a13s2-e-063",
+        "a13s2-e-065",
+        "a13s2-e-075",
+        "a13s2-t-068",
+        "a13s2-t-070",
+        "a13s2-e-072",
+        "a13s2-e-074"
+      ],
+      "practice_targets": [
+        "a13s2-e-007",
+        "a13s2-e-014",
+        "a13s2-e-016",
+        "a13s2-e-023",
+        "a13s2-e-033",
+        "a13s2-e-043",
+        "a13s2-e-076",
+        "a13s2-e-075",
+        "a13s2-e-066"
+      ],
+      "activity_count": 34,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l09-can-do",
+            "can_do_fa": "مکان، ساعت باز بودن، یک اعلان ساده و درخواست کمک را در یک سناریوی آشنای محله ترکیب کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-e-053",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-075",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-072",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-076",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-023",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-033",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-043",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-066",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-h-057",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-061",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-063",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-065",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-068",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-070",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-074",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "صورت on را در جمله‌های مشخصِ اتاق‌ها مرور می‌کنی؛ Kaikki on valmista عبارت کامل است و قاعدهٔ آزاد صفت خبری از آن نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Keittiö on tässä.",
+                "fa": "آشپزخانه اینجاست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Avain on pöydällä.",
+                "fa": "کلید روی میز است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در دو جملهٔ مشخص، Avain on و Kengät ovat را با فاعل مفرد/جمع مقایسه می‌کنی؛ این تمرین جدول کامل اشخاص یا انواع فعل نیست.",
+            "examples": [
+              {
+                "fi": "Kengät ovat lattialla.",
+                "fa": "کفش‌ها روی زمین‌اند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "دو عبارت Pitää siivota و Pitää pestä astiat ضرورت را با pitää + مصدر بیان می‌کنند؛ مصدر را با شکل شخصی فعل جایگزین نمی‌کنی. قاعدهٔ آزاد مفعول از این نمونه‌ها نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Pitää siivota.",
+                "fa": "باید نظافت کرد."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند.",
+            "examples": [
+              {
+                "fi": "Hana ei toimi.",
+                "fa": "شیر آب کار نمی‌کند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tarvitsen huoltoa مقدار نامشخص را با صورت صریح huoltoa تمرین می‌کنی؛ این نمونهٔ محدود مفعول پارتیتیو است، نه جدول کامل.",
+            "examples": [
+              {
+                "fi": "Tarvitsen huoltoa.",
+                "fa": "به خدمات تعمیر و نگهداری نیاز دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های Voitteko را به‌شکل کامل و آماده تمرین می‌کنی؛ صرف مولد همهٔ صورت‌های مؤدبانه یا قاعدهٔ آزاد مفعول سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Voitteko auttaa minua?",
+                "fa": "می‌توانید به من کمک کنید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است.",
+            "examples": [
+              {
+                "fi": "Milloin se on auki?",
+                "fa": "چه زمانی باز است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ساعت باز و بسته‌شدن و عبارت زمانی viiden jälkeen را در جمله‌های مشخص تمرین می‌کنی؛ این نمونهٔ محدود زمان‌بندی است.",
+            "examples": [
+              {
+                "fi": "Se on auki viiden jälkeen.",
+                "fa": "بعد از ساعت پنج باز است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 23,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-2-lesson-10",
@@ -3260,7 +6294,7 @@
       "title_fa": "ارزیابی بخش ۲",
       "objective_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
       "summary_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد.",
-      "grammar_fa": "این آزمون، اتاق، وسایل، کارهای خانه، خرابی، خدمات، ساعت کار و اعلان‌ها را مرور می‌کند.",
+      "grammar_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است. صورت on را در جمله‌های مشخصِ اتاق‌ها مرور می‌کنی؛ Kaikki on valmista عبارت کامل است و قاعدهٔ آزاد صفت خبری از آن نتیجه گرفته نمی‌شود. جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند. در دو جملهٔ مشخص، Avain on و Kengät ovat را با فاعل مفرد/جمع مقایسه می‌کنی؛ این تمرین جدول کامل اشخاص یا انواع فعل نیست. دو عبارت Pitää siivota و Pitää pestä astiat ضرورت را با pitää + مصدر بیان می‌کنند؛ مصدر را با شکل شخصی فعل جایگزین نمی‌کنی. قاعدهٔ آزاد مفعول از این نمونه‌ها نتیجه گرفته نمی‌شود. خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند. در Tarvitsen huoltoa مقدار نامشخص را با صورت صریح huoltoa تمرین می‌کنی؛ این نمونهٔ محدود مفعول پارتیتیو است، نه جدول کامل. درخواست‌های Voitteko را به‌شکل کامل و آماده تمرین می‌کنی؛ صرف مولد همهٔ صورت‌های مؤدبانه یا قاعدهٔ آزاد مفعول سنجیده نمی‌شود. ساعت باز و بسته‌شدن و عبارت زمانی viiden jälkeen را در جمله‌های مشخص تمرین می‌کنی؛ این نمونهٔ محدود زمان‌بندی است.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3300,7 +6334,8 @@
             0,
             1
           ],
-          "expected_fi": "Pitää pestä astiat."
+          "expected_fi": "Pitää pestä astiat.",
+          "expected_fa": "باید ظرف‌ها را شست."
         },
         {
           "type": "expression-completion",
@@ -3310,7 +6345,8 @@
           "accepted_answers": [
             "keskustassa"
           ],
-          "expected_fi": "Pankki on keskustassa."
+          "expected_fi": "Pankki on keskustassa.",
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -3323,85 +6359,226 @@
           "expected_fi": "Milloin kirjasto on auki?",
           "accepted_answers": [
             "Milloin kirjasto on auki?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-007",
+          "prompt_fa": "آشپزخانه اینجاست.",
+          "cues_fi": [
+            "Keittiö"
+          ],
+          "expected_fi": "Keittiö on tässä.",
+          "accepted_answers": [
+            "Keittiö on tässä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-015",
+          "prompt_fa": "لیوان داخل کمد است.",
+          "cues_fi": [
+            "Lasi"
+          ],
+          "expected_fi": "Lasi on kaapissa.",
+          "accepted_answers": [
+            "Lasi on kaapissa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-016",
+          "prompt_fa": "کفش‌ها روی زمین‌اند.",
+          "cues_fi": [
+            "Kengät"
+          ],
+          "expected_fi": "Kengät ovat lattialla.",
+          "accepted_answers": [
+            "Kengät ovat lattialla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-024",
+          "prompt_fa": "باید ظرف‌ها را شست.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää pestä astiat.",
+          "accepted_answers": [
+            "Pitää pestä astiat."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-071",
+          "prompt_fa": "اینجا سیگار کشیدن ممنوع است.",
+          "cues_fi": [
+            "Täällä"
+          ],
+          "expected_fi": "Täällä ei saa tupakoida.",
+          "accepted_answers": [
+            "Täällä ei saa tupakoida."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-043",
+          "prompt_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen huoltoa.",
+          "accepted_answers": [
+            "Tarvitsen huoltoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-076",
+          "prompt_fa": "می‌توانید به من کمک کنید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko auttaa minua?",
+          "accepted_answers": [
+            "Voitteko auttaa minua?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-064",
+          "prompt_fa": "ساعت نه باز می‌شود.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "accepted_answers": [
+            "Se avautuu kello yhdeksän."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
           ]
         }
       ],
       "activities": [
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s2-e-043",
-          "options": [
-            "a13s2-e-043",
-            "a13s2-e-055",
-            "a13s2-e-008",
-            "a13s2-e-035"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s2-e-014",
           "options": [
-            "a13s2-e-063",
+            "a13s2-e-043",
             "a13s2-e-014",
-            "a13s2-e-015",
-            "a13s2-e-044"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-033",
-          "options": [
-            "a13s2-e-007",
-            "a13s2-e-025",
             "a13s2-e-033",
-            "a13s2-e-054"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s2-e-024",
-          "options": [
-            "a13s2-e-008",
-            "a13s2-e-035",
-            "a13s2-e-071",
             "a13s2-e-024"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-055",
-          "options": [
-            "a13s2-e-055",
-            "a13s2-e-015",
-            "a13s2-e-044",
-            "a13s2-e-076"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s2-e-063",
-          "options": [
-            "a13s2-e-025",
-            "a13s2-e-063",
-            "a13s2-e-054",
-            "a13s2-e-043"
-          ]
-        },
-        {
-          "type": "choice",
+          "type": "type",
+          "item": "a13s2-e-033",
           "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "sentence-order",
+          "item": "a13s2-e-024",
+          "tokens": [
+            "pestä",
+            "astiat.",
+            "Pitää"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Pitää pestä astiat.",
+          "expected_fa": "باید ظرف‌ها را شست."
+        },
+        {
+          "type": "expression-completion",
+          "item": "a13s2-e-055",
+          "prompt_fi": "Pankki on _____.",
+          "prompt_fa": "بانک در مرکز شهر است.",
+          "accepted_answers": [
+            "keskustassa"
+          ],
+          "expected_fi": "Pankki on keskustassa.",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-063",
+          "prompt_fa": "کتابخانه چه زمانی باز است؟",
+          "cues_fi": [
+            "Milloin",
+            "kirjasto"
+          ],
+          "expected_fi": "Milloin kirjasto on auki?",
+          "accepted_answers": [
+            "Milloin kirjasto on auki?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "morphology-choice",
           "item": "a13s2-e-007",
-          "options": [
-            "a13s2-e-035",
-            "a13s2-e-071",
-            "a13s2-e-007",
-            "a13s2-e-014"
+          "base_fi": "olla",
+          "feature_fa": "حال سوم‌شخص مفرد",
+          "prompt_fa": "در جملهٔ «آشپزخانه اینجاست» شکل صحیح olla را انتخاب کن.",
+          "frame_fi": "Keittiö _____ tässä.",
+          "options_fi": [
+            "on",
+            "olen",
+            "olet",
+            "ovat"
+          ],
+          "expected_fi": "on",
+          "explanation_fa": "برای فاعل مفرد Keittiö، صورت on به کار می‌رود.",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
         },
         {
@@ -3418,7 +6595,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s2-e-015"
+          "item": "a13s2-e-015",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3434,7 +6612,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s2-e-035"
+          "item": "a13s2-e-035",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3450,7 +6629,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s2-e-054"
+          "item": "a13s2-e-054",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3466,7 +6646,148 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s2-e-076"
+          "item": "a13s2-e-076",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-007",
+          "prompt_fa": "آشپزخانه اینجاست.",
+          "cues_fi": [
+            "Keittiö"
+          ],
+          "expected_fi": "Keittiö on tässä.",
+          "accepted_answers": [
+            "Keittiö on tässä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-015",
+          "prompt_fa": "لیوان داخل کمد است.",
+          "cues_fi": [
+            "Lasi"
+          ],
+          "expected_fi": "Lasi on kaapissa.",
+          "accepted_answers": [
+            "Lasi on kaapissa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-016",
+          "prompt_fa": "کفش‌ها روی زمین‌اند.",
+          "cues_fi": [
+            "Kengät"
+          ],
+          "expected_fi": "Kengät ovat lattialla.",
+          "accepted_answers": [
+            "Kengät ovat lattialla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-024",
+          "prompt_fa": "باید ظرف‌ها را شست.",
+          "cues_fi": [
+            "Pitää"
+          ],
+          "expected_fi": "Pitää pestä astiat.",
+          "accepted_answers": [
+            "Pitää pestä astiat."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-071",
+          "prompt_fa": "اینجا سیگار کشیدن ممنوع است.",
+          "cues_fi": [
+            "Täällä"
+          ],
+          "expected_fi": "Täällä ei saa tupakoida.",
+          "accepted_answers": [
+            "Täällä ei saa tupakoida."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-043",
+          "prompt_fa": "به خدمات تعمیر و نگهداری نیاز دارم.",
+          "cues_fi": [
+            "Tarvitsen"
+          ],
+          "expected_fi": "Tarvitsen huoltoa.",
+          "accepted_answers": [
+            "Tarvitsen huoltoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-076",
+          "prompt_fa": "می‌توانید به من کمک کنید؟",
+          "cues_fi": [
+            "Voitteko"
+          ],
+          "expected_fi": "Voitteko auttaa minua?",
+          "accepted_answers": [
+            "Voitteko auttaa minua?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-requests"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s2-e-064",
+          "prompt_fa": "ساعت نه باز می‌شود.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se avautuu kello yhdeksän.",
+          "accepted_answers": [
+            "Se avautuu kello yhdeksän."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-t-069",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s2-e-073",
+          "answer_policy": "morphology"
         }
       ],
       "passing_score": 0.8,
@@ -3502,7 +6823,10 @@
             "ovat"
           ],
           "expected_fi": "on",
-          "explanation_fa": "برای فاعل مفرد Keittiö، صورت on به کار می‌رود."
+          "explanation_fa": "برای فاعل مفرد Keittiö، صورت on به کار می‌رود.",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
         }
       ],
       "checkpoint_modes": [
@@ -3566,7 +6890,295 @@
           "type",
           "finnish"
         ]
-      ]
+      ],
+      "review_targets": [
+        "a13s2-t-069",
+        "a13s2-e-071",
+        "a13s2-e-073"
+      ],
+      "practice_targets": [
+        "a13s2-e-007",
+        "a13s2-e-015",
+        "a13s2-e-016",
+        "a13s2-e-024",
+        "a13s2-e-071",
+        "a13s2-e-043",
+        "a13s2-e-076",
+        "a13s2-e-063",
+        "a13s2-e-064"
+      ],
+      "activity_count": 25,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s2-l10-can-do",
+            "can_do_fa": "کارهای ترکیبی خانه و محله شامل مکان، مشکل، خدمت، ساعت باز بودن یا قانون ساده را انجام دهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s2-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-015",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-024",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-071",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-043",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-076",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-063",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-064",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-t-069",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-073",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-033",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-025",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-035",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-044",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s2-e-054",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش‌های کامل مکان و ساعت باز بودن را مرور می‌کنی؛ هدف کاربرد در همین بافت‌های خدمات و محله است.",
+            "examples": [
+              {
+                "fi": "Milloin kirjasto on auki?",
+                "fa": "کتابخانه چه زمانی باز است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 5,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "صورت on را در جمله‌های مشخصِ اتاق‌ها مرور می‌کنی؛ Kaikki on valmista عبارت کامل است و قاعدهٔ آزاد صفت خبری از آن نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Keittiö on tässä.",
+                "fa": "آشپزخانه اینجاست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 6,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "جای وسایل و خدمات را با pöydällä، kaapissa، lattialla و keskustassa در جملهٔ کامل تمرین می‌کنی؛ انتخاب حالت از نمونه‌های صریح می‌آید، نه چسباندن پسوند.",
+            "examples": [
+              {
+                "fi": "Lasi on kaapissa.",
+                "fa": "لیوان داخل کمد است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در دو جملهٔ مشخص، Avain on و Kengät ovat را با فاعل مفرد/جمع مقایسه می‌کنی؛ این تمرین جدول کامل اشخاص یا انواع فعل نیست.",
+            "examples": [
+              {
+                "fi": "Kengät ovat lattialla.",
+                "fa": "کفش‌ها روی زمین‌اند."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "دو عبارت Pitää siivota و Pitää pestä astiat ضرورت را با pitää + مصدر بیان می‌کنند؛ مصدر را با شکل شخصی فعل جایگزین نمی‌کنی. قاعدهٔ آزاد مفعول از این نمونه‌ها نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Pitää pestä astiat.",
+                "fa": "باید ظرف‌ها را شست."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "خرابی را با ei toimi/ei pala و اعلان را با دو نمونهٔ محدود saa/ei saa + مصدر تمرین می‌کنی. گزارشِ هنوز تعمیرنشدن عبارت آماده است و صرف مجهول یا کامل را ثابت نمی‌کند.",
+            "examples": [
+              {
+                "fi": "Täällä ei saa tupakoida.",
+                "fa": "اینجا سیگار کشیدن ممنوع است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tarvitsen huoltoa مقدار نامشخص را با صورت صریح huoltoa تمرین می‌کنی؛ این نمونهٔ محدود مفعول پارتیتیو است، نه جدول کامل.",
+            "examples": [
+              {
+                "fi": "Tarvitsen huoltoa.",
+                "fa": "به خدمات تعمیر و نگهداری نیاز دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-requests",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "درخواست‌های Voitteko را به‌شکل کامل و آماده تمرین می‌کنی؛ صرف مولد همهٔ صورت‌های مؤدبانه یا قاعدهٔ آزاد مفعول سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Voitteko auttaa minua?",
+                "fa": "می‌توانید به من کمک کنید؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ساعت باز و بسته‌شدن و عبارت زمانی viiden jälkeen را در جمله‌های مشخص تمرین می‌کنی؛ این نمونهٔ محدود زمان‌بندی است.",
+            "examples": [
+              {
+                "fi": "Se avautuu kello yhdeksän.",
+                "fa": "ساعت نه باز می‌شود."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

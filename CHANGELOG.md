@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.46.0] - 2026-10-14
+
+### Added
+
+- Complete all ten A1.3 Section 2 home/neighbourhood lessons: 305 activities, later positive retrieval for all 59 introduced exact surfaces/expressions, and later review of nine bounded grammar concepts.
+- Teach repair-help and opening-hours frames before review, add opening-hours reading and supported four-sentence repair writing, and assess both facts in each original passage.
+- Keep the address ellipsis in meaning recognition; teach a concrete address for strict productive recall. Preserve original records/core mappings, fifteen checkpoint targets and the 80% threshold.
+- Add deterministic acceptance reports, preservation and grammatical-answer regression tests, and synchronized bilingual documentation.
+
 ## [1.45.0] - 2026-10-14
 
 ### Added

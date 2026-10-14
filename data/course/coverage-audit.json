@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2514,
+    "graded_activity_slots": 2623,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 721,
+    "assessed_again_after_earlier_reference": 761,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 23,
-    "lessons_without_explicit_grammar_concept_ids": 35,
-    "graded_grammar_related_slots": 525,
+    "lessons_without_explicit_grammar_concept_ids": 25,
+    "graded_grammar_related_slots": 566,
     "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 42,
+    "lessons_with_declared_unassessed_forms": 34,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -110,9 +110,9 @@
       "level": "A1.3",
       "id": "a1.3-section-2",
       "lessons": 10,
-      "graded_slots": 116,
-      "unassessed_target_forms": 14,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 225,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.3",
@@ -11404,7 +11404,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 5,
       "lexical": {
         "declared_forms": [
           "kaikki",
@@ -11426,14 +11426,16 @@
         ],
         "introduced": [
           "kaikki",
+          "kaikki on valmista.",
           "keittiö",
-          "makuuhuone",
-          "olohuone",
+          "keittiö on tässä.",
+          "olohuone on siellä.",
           "siellä",
           "tässä"
         ],
         "correct_answer": [
           "kaikki",
+          "kaikki on valmista.",
           "keittiö",
           "keittiö on tässä.",
           "makuuhuone",
@@ -11442,17 +11444,15 @@
           "siellä",
           "tässä"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 4,
         "later_correct_retrieval": [
           "keittiö",
           "makuuhuone",
           "olohuone",
           "siellä"
         ],
-        "declared_unassessed": [
-          "kaikki on valmista."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -11473,20 +11473,21 @@
         ],
         "authored_new_forms": [
           "kaikki",
-          "keittiö",
-          "makuuhuone",
-          "olohuone",
-          "siellä",
+          "kaikki on valmista.",
+          "keittiö on tässä.",
+          "olohuone on siellä.",
           "tässä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -11502,7 +11503,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "avain on pöydällä.",
@@ -11525,7 +11526,10 @@
           "siinä"
         ],
         "introduced": [
+          "avain on pöydällä.",
           "kaapissa",
+          "kengät ovat lattialla.",
+          "lasi on kaapissa.",
           "lattialla",
           "pöydällä",
           "siellä",
@@ -11535,6 +11539,9 @@
         "correct_answer": [
           "avain on pöydällä.",
           "kaapissa",
+          "kaikki on valmista.",
+          "keittiö on tässä.",
+          "kengät ovat lattialla.",
           "lasi on kaapissa.",
           "lattialla",
           "pöydällä",
@@ -11542,15 +11549,15 @@
           "siinä",
           "tässä"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 6,
         "later_correct_retrieval": [
+          "kaikki on valmista.",
+          "keittiö on tässä.",
           "siellä",
           "tässä"
         ],
-        "declared_unassessed": [
-          "kengät ovat lattialla."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 2,
         "reading_only": [],
@@ -11570,22 +11577,29 @@
           "lasi on kaapissa."
         ],
         "authored_new_forms": [
+          "avain on pöydällä.",
           "kaapissa",
+          "kengät ovat lattialla.",
+          "lasi on kaapissa.",
           "lattialla",
           "pöydällä",
-          "siellä",
-          "siinä",
-          "tässä"
+          "siinä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-local-expansion",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-local-cases"
+        ]
       }
     },
     {
@@ -11600,7 +11614,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "lisää",
@@ -11627,33 +11641,46 @@
           "lisää",
           "pestä",
           "pitää",
-          "roskat",
-          "siivota",
-          "tehdä"
-        ],
-        "correct_answer": [
-          "lisää",
-          "pestä",
-          "pitää",
           "pitää pestä astiat.",
           "pitää siivota.",
           "roskat",
           "siivota",
-          "tehdä"
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "lisää",
-          "pitää",
-          "tehdä"
-        ],
-        "declared_unassessed": [
           "tarvitsen lisää aikaa.",
+          "tehdä",
           "vien roskat."
         ],
+        "correct_answer": [
+          "kaikki",
+          "lasi on kaapissa.",
+          "lattialla",
+          "lisää",
+          "olohuone on siellä.",
+          "pestä",
+          "pitää",
+          "pitää pestä astiat.",
+          "pitää siivota.",
+          "pöydällä",
+          "roskat",
+          "siivota",
+          "tarvitsen lisää aikaa.",
+          "tehdä",
+          "vien roskat."
+        ],
+        "receptive_count": 7,
+        "productive_count": 10,
+        "later_correct_retrieval": [
+          "kaikki",
+          "lasi on kaapissa.",
+          "lattialla",
+          "lisää",
+          "olohuone on siellä.",
+          "pitää",
+          "pöydällä",
+          "tehdä"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [
           "lisää",
@@ -11672,22 +11699,27 @@
           "vien roskat."
         ],
         "authored_new_forms": [
-          "lisää",
           "pestä",
-          "pitää",
+          "pitää pestä astiat.",
+          "pitää siivota.",
           "roskat",
           "siivota",
-          "tehdä"
+          "tarvitsen lisää aikaa.",
+          "vien roskat."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-necessity"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a12-requests"
+        ]
       }
     },
     {
@@ -11702,7 +11734,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "ei",
@@ -11730,30 +11762,49 @@
         "introduced": [
           "ei",
           "hana",
-          "lämmitys",
-          "oikein",
-          "valo",
-          "vielä"
-        ],
-        "correct_answer": [
-          "ei",
-          "hana",
           "hana ei toimi.",
           "lämmitys",
+          "lämmitys ei toimi oikein.",
           "oikein",
+          "ongelma ei ole vielä korjattu.",
           "valo",
           "valo ei pala.",
           "vielä"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "ei"
-        ],
-        "declared_unassessed": [
+        "correct_answer": [
+          "avain on pöydällä.",
+          "ei",
+          "hana",
+          "hana ei toimi.",
+          "kaapissa",
+          "kengät ovat lattialla.",
+          "lämmitys",
           "lämmitys ei toimi oikein.",
-          "ongelma ei ole vielä korjattu."
+          "oikein",
+          "ongelma ei ole vielä korjattu.",
+          "pitää pestä astiat.",
+          "roskat",
+          "siinä",
+          "siivota",
+          "tarvitsen lisää aikaa.",
+          "valo",
+          "valo ei pala.",
+          "vielä"
         ],
+        "receptive_count": 7,
+        "productive_count": 13,
+        "later_correct_retrieval": [
+          "avain on pöydällä.",
+          "ei",
+          "kaapissa",
+          "kengät ovat lattialla.",
+          "pitää pestä astiat.",
+          "roskat",
+          "siinä",
+          "siivota",
+          "tarvitsen lisää aikaa."
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -11774,22 +11825,29 @@
           "valo ei pala."
         ],
         "authored_new_forms": [
-          "ei",
           "hana",
+          "hana ei toimi.",
           "lämmitys",
+          "lämmitys ei toimi oikein.",
           "oikein",
+          "ongelma ei ole vielä korjattu.",
           "valo",
+          "valo ei pala.",
           "vielä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation"
+        ]
       }
     },
     {
@@ -11804,7 +11862,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "heti",
@@ -11813,8 +11871,10 @@
           "minulle",
           "osoite",
           "osoite on …",
+          "osoite on koulukatu 5.",
           "tarvitsen huoltoa.",
           "voi",
+          "voitteko auttaa minua?",
           "voitteko lähettää korjaajan?",
           "voitteko soittaa minulle?"
         ],
@@ -11822,7 +11882,9 @@
           "huolto",
           "korjaaja",
           "osoite on …",
+          "osoite on koulukatu 5.",
           "tarvitsen huoltoa.",
+          "voitteko auttaa minua?",
           "voitteko lähettää korjaajan?",
           "voitteko soittaa minulle?"
         ],
@@ -11831,31 +11893,51 @@
           "huolto",
           "korjaaja",
           "minulle",
-          "osoite",
-          "voi"
+          "osoite on …",
+          "osoite on koulukatu 5.",
+          "tarvitsen huoltoa.",
+          "voi",
+          "voitteko auttaa minua?",
+          "voitteko lähettää korjaajan?",
+          "voitteko soittaa minulle?"
         ],
         "correct_answer": [
+          "hana ei toimi.",
           "heti",
           "huolto",
           "korjaaja",
+          "lämmitys ei toimi oikein.",
           "minulle",
+          "oikein",
           "osoite",
-          "tarvitsen huoltoa.",
-          "voi",
-          "voitteko lähettää korjaajan?"
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "heti",
-          "minulle",
-          "osoite",
-          "voi"
-        ],
-        "declared_unassessed": [
           "osoite on …",
+          "osoite on koulukatu 5.",
+          "pestä",
+          "pitää siivota.",
+          "tarvitsen huoltoa.",
+          "valo",
+          "vien roskat.",
+          "voi",
+          "voitteko auttaa minua?",
+          "voitteko lähettää korjaajan?",
           "voitteko soittaa minulle?"
         ],
+        "receptive_count": 8,
+        "productive_count": 13,
+        "later_correct_retrieval": [
+          "hana ei toimi.",
+          "heti",
+          "lämmitys ei toimi oikein.",
+          "minulle",
+          "oikein",
+          "osoite",
+          "pestä",
+          "pitää siivota.",
+          "valo",
+          "vien roskat.",
+          "voi"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -11876,22 +11958,30 @@
           "voitteko soittaa minulle?"
         ],
         "authored_new_forms": [
-          "heti",
           "huolto",
           "korjaaja",
-          "minulle",
-          "osoite",
-          "voi"
+          "osoite on …",
+          "osoite on koulukatu 5.",
+          "tarvitsen huoltoa.",
+          "voitteko auttaa minua?",
+          "voitteko lähettää korjaajan?",
+          "voitteko soittaa minulle?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests",
+          "a13-partitive-patterns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-quantities"
+        ]
       }
     },
     {
@@ -11906,7 +11996,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "kirjasto",
@@ -11932,34 +12022,55 @@
         "introduced": [
           "kirjasto",
           "missä",
-          "myös",
-          "pankki",
-          "posti",
-          "täällä"
-        ],
-        "correct_answer": [
-          "kirjasto",
-          "missä",
           "missä kirjasto on?",
           "myös",
           "onko täällä posti?",
           "pankki",
-          "posti",
-          "täällä"
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "missä",
-          "myös",
-          "täällä"
-        ],
-        "declared_unassessed": [
           "pankki on keskustassa.",
+          "posti",
+          "täällä",
           "täällä on myös kirjasto."
         ],
+        "correct_answer": [
+          "hana",
+          "huolto",
+          "kirjasto",
+          "lämmitys",
+          "missä",
+          "missä kirjasto on?",
+          "myös",
+          "ongelma ei ole vielä korjattu.",
+          "onko täällä posti?",
+          "osoite on …",
+          "pankki",
+          "pankki on keskustassa.",
+          "posti",
+          "tarvitsen huoltoa.",
+          "täällä",
+          "täällä on myös kirjasto.",
+          "valo ei pala.",
+          "vielä",
+          "voitteko auttaa minua?"
+        ],
+        "receptive_count": 8,
+        "productive_count": 13,
+        "later_correct_retrieval": [
+          "hana",
+          "huolto",
+          "lämmitys",
+          "missä",
+          "myös",
+          "ongelma ei ole vielä korjattu.",
+          "osoite on …",
+          "tarvitsen huoltoa.",
+          "täällä",
+          "valo ei pala.",
+          "vielä",
+          "voitteko auttaa minua?"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 4,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "missä",
@@ -11979,21 +12090,28 @@
         ],
         "authored_new_forms": [
           "kirjasto",
-          "missä",
-          "myös",
+          "missä kirjasto on?",
+          "onko täällä posti?",
           "pankki",
+          "pankki on keskustassa.",
           "posti",
-          "täällä"
+          "täällä on myös kirjasto."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a13-local-expansion"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a12-local-cases"
+        ]
       }
     },
     {
@@ -12008,7 +12126,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "auki",
@@ -12017,6 +12135,7 @@
           "kiinni",
           "klo",
           "milloin kirjasto on auki?",
+          "milloin se on auki?",
           "se avautuu kello yhdeksän.",
           "se menee kiinni kello kuusi.",
           "se on auki viiden jälkeen.",
@@ -12027,6 +12146,7 @@
           "avautuu",
           "kiinni",
           "milloin kirjasto on auki?",
+          "milloin se on auki?",
           "se avautuu kello yhdeksän.",
           "se menee kiinni kello kuusi.",
           "se on auki viiden jälkeen.",
@@ -12038,6 +12158,11 @@
           "jälkeen",
           "kiinni",
           "klo",
+          "milloin kirjasto on auki?",
+          "milloin se on auki?",
+          "se avautuu kello yhdeksän.",
+          "se menee kiinni kello kuusi.",
+          "se on auki viiden jälkeen.",
           "sulkeutuu"
         ],
         "correct_answer": [
@@ -12045,24 +12170,42 @@
           "avautuu",
           "jälkeen",
           "kiinni",
+          "kirjasto",
           "klo",
+          "korjaaja",
           "milloin kirjasto on auki?",
+          "milloin se on auki?",
+          "onko täällä posti?",
+          "osoite on koulukatu 5.",
+          "pankki",
           "se avautuu kello yhdeksän.",
-          "sulkeutuu"
+          "se menee kiinni kello kuusi.",
+          "se on auki viiden jälkeen.",
+          "sulkeutuu",
+          "täällä on myös kirjasto.",
+          "voitteko lähettää korjaajan?",
+          "voitteko soittaa minulle?"
         ],
         "receptive_count": 8,
-        "productive_count": 2,
+        "productive_count": 14,
         "later_correct_retrieval": [
           "jälkeen",
-          "klo"
+          "kirjasto",
+          "klo",
+          "korjaaja",
+          "onko täällä posti?",
+          "osoite on koulukatu 5.",
+          "pankki",
+          "täällä on myös kirjasto.",
+          "voitteko lähettää korjaajan?",
+          "voitteko soittaa minulle?"
         ],
-        "declared_unassessed": [
-          "se menee kiinni kello kuusi.",
-          "se on auki viiden jälkeen."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
-        "reading_only": [],
+        "distractor_only_count": 6,
+        "reading_only": [
+          "se avautuu kello yhdeksän. se menee kiinni kello kuusi."
+        ],
         "high_frequency_target_forms": [
           "jälkeen",
           "kiinni",
@@ -12082,20 +12225,29 @@
         "authored_new_forms": [
           "auki",
           "avautuu",
-          "jälkeen",
           "kiinni",
-          "klo",
+          "milloin kirjasto on auki?",
+          "milloin se on auki?",
+          "se avautuu kello yhdeksän.",
+          "se menee kiinni kello kuusi.",
+          "se on auki viiden jälkeen.",
           "sulkeutuu"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-frequency-adverbs"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -12110,7 +12262,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "ei",
@@ -12139,29 +12291,46 @@
           "pitää",
           "saa",
           "sallittu",
-          "sisäänkäynti"
-        ],
-        "correct_answer": [
-          "ei",
-          "kielletty",
-          "pitää",
-          "saa",
-          "sallittu",
           "sisäänkäynti",
           "sisäänkäynti on tästä.",
-          "täällä ei saa tupakoida."
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "ei",
-          "pitää",
-          "saa"
-        ],
-        "declared_unassessed": [
           "tämä on kielletty.",
+          "täällä ei saa tupakoida.",
           "täällä saa odottaa."
         ],
+        "correct_answer": [
+          "auki",
+          "ei",
+          "kielletty",
+          "missä kirjasto on?",
+          "pankki on keskustassa.",
+          "pitää",
+          "posti",
+          "saa",
+          "sallittu",
+          "se avautuu kello yhdeksän.",
+          "se on auki viiden jälkeen.",
+          "sisäänkäynti",
+          "sisäänkäynti on tästä.",
+          "sulkeutuu",
+          "tämä on kielletty.",
+          "täällä ei saa tupakoida.",
+          "täällä saa odottaa."
+        ],
+        "receptive_count": 7,
+        "productive_count": 11,
+        "later_correct_retrieval": [
+          "auki",
+          "ei",
+          "missä kirjasto on?",
+          "pankki on keskustassa.",
+          "pitää",
+          "posti",
+          "saa",
+          "se avautuu kello yhdeksän.",
+          "se on auki viiden jälkeen.",
+          "sulkeutuu"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -12182,22 +12351,27 @@
           "täällä saa odottaa."
         ],
         "authored_new_forms": [
-          "ei",
           "kielletty",
-          "pitää",
-          "saa",
           "sallittu",
-          "sisäänkäynti"
+          "sisäänkäynti",
+          "sisäänkäynti on tästä.",
+          "tämä on kielletty.",
+          "täällä ei saa tupakoida.",
+          "täällä saa odottaa."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation"
+        ]
       }
     },
     {
@@ -12215,34 +12389,70 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "avain on pöydällä.",
+          "hana ei toimi.",
+          "keittiö on tässä.",
+          "kengät ovat lattialla.",
           "milloin se on auki?",
           "missä kirjasto on?",
+          "pitää siivota.",
+          "se on auki viiden jälkeen.",
           "sisäänkäynti on tästä.",
+          "tarvitsen huoltoa.",
           "voitteko auttaa minua?"
         ],
-        "first_referenced": [
-          "milloin se on auki?",
-          "voitteko auttaa minua?"
-        ],
+        "first_referenced": [],
         "introduced": [
           "milloin se on auki?",
           "missä kirjasto on?"
         ],
         "correct_answer": [
+          "avain on pöydällä.",
+          "avautuu",
+          "hana ei toimi.",
+          "keittiö on tässä.",
+          "kengät ovat lattialla.",
+          "kiinni",
+          "milloin kirjasto on auki?",
           "milloin se on auki?",
           "missä kirjasto on?",
+          "osoite on koulukatu 5.",
+          "pitää siivota.",
+          "sallittu",
+          "se menee kiinni kello kuusi.",
+          "se on auki viiden jälkeen.",
+          "sisäänkäynti",
           "sisäänkäynti on tästä.",
+          "tarvitsen huoltoa.",
+          "täällä saa odottaa.",
           "voitteko auttaa minua?"
         ],
         "receptive_count": 4,
-        "productive_count": 2,
+        "productive_count": 19,
         "later_correct_retrieval": [
+          "avain on pöydällä.",
+          "avautuu",
+          "hana ei toimi.",
+          "keittiö on tässä.",
+          "kengät ovat lattialla.",
+          "kiinni",
+          "milloin kirjasto on auki?",
+          "milloin se on auki?",
           "missä kirjasto on?",
-          "sisäänkäynti on tästä."
+          "osoite on koulukatu 5.",
+          "pitää siivota.",
+          "sallittu",
+          "se menee kiinni kello kuusi.",
+          "se on auki viiden jälkeen.",
+          "sisäänkäynti",
+          "sisäänkäynti on tästä.",
+          "tarvitsen huoltoa.",
+          "täällä saa odottaa.",
+          "voitteko auttaa minua?"
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 5,
         "reading_only": [
           "missä kirjasto on? milloin se on auki?",
           "sisäänkäynti on tästä. voitteko auttaa minua?"
@@ -12259,12 +12469,29 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-frequency-adverbs",
+          "a12-negation-expand",
+          "a12-requests",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 11,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -12285,6 +12512,7 @@
           "avain on pöydällä.",
           "hana ei toimi.",
           "keittiö on tässä.",
+          "kengät ovat lattialla.",
           "lasi on kaapissa.",
           "lämmitys ei toimi oikein.",
           "milloin kirjasto on auki?",
@@ -12292,6 +12520,7 @@
           "onko täällä posti?",
           "pankki on keskustassa.",
           "pitää pestä astiat.",
+          "se avautuu kello yhdeksän.",
           "tarvitsen huoltoa.",
           "täällä ei saa tupakoida.",
           "vien roskat.",
@@ -12304,6 +12533,8 @@
           "avain on pöydällä.",
           "hana ei toimi.",
           "keittiö on tässä.",
+          "kengät ovat lattialla.",
+          "kielletty",
           "lasi on kaapissa.",
           "lämmitys ei toimi oikein.",
           "milloin kirjasto on auki?",
@@ -12311,18 +12542,22 @@
           "onko täällä posti?",
           "pankki on keskustassa.",
           "pitää pestä astiat.",
+          "se avautuu kello yhdeksän.",
           "tarvitsen huoltoa.",
+          "tämä on kielletty.",
           "täällä ei saa tupakoida.",
           "vien roskat.",
           "voitteko auttaa minua?",
           "voitteko lähettää korjaajan?"
         ],
         "receptive_count": 7,
-        "productive_count": 8,
+        "productive_count": 15,
         "later_correct_retrieval": [
           "avain on pöydällä.",
           "hana ei toimi.",
           "keittiö on tässä.",
+          "kengät ovat lattialla.",
+          "kielletty",
           "lasi on kaapissa.",
           "lämmitys ei toimi oikein.",
           "milloin kirjasto on auki?",
@@ -12330,7 +12565,9 @@
           "onko täällä posti?",
           "pankki on keskustassa.",
           "pitää pestä astiat.",
+          "se avautuu kello yhdeksän.",
           "tarvitsen huoltoa.",
+          "tämä on kielletty.",
           "täällä ei saa tupakoida.",
           "vien roskat.",
           "voitteko auttaa minua?",
@@ -12347,12 +12584,29 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-frequency-adverbs",
+          "a12-negation-expand",
+          "a12-requests",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 12,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -18872,60 +19126,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "a1.3-section-2-lesson-1",
-        "forms": [
-          "kaikki on valmista."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-2",
-        "forms": [
-          "kengät ovat lattialla."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-3",
-        "forms": [
-          "tarvitsen lisää aikaa.",
-          "vien roskat."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-4",
-        "forms": [
-          "lämmitys ei toimi oikein.",
-          "ongelma ei ole vielä korjattu."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-5",
-        "forms": [
-          "osoite on …",
-          "voitteko soittaa minulle?"
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-6",
-        "forms": [
-          "pankki on keskustassa.",
-          "täällä on myös kirjasto."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-7",
-        "forms": [
-          "se menee kiinni kello kuusi.",
-          "se on auki viiden jälkeen."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-2-lesson-8",
-        "forms": [
-          "tämä on kielletty.",
-          "täällä saa odottaa."
-        ]
-      },
       {
         "lesson_id": "a1.3-section-3-lesson-1",
         "forms": [
