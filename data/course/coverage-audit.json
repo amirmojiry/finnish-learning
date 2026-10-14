@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2245,
+    "graded_activity_slots": 2411,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 625,
+    "assessed_again_after_earlier_reference": 685,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 21,
-    "lessons_without_explicit_grammar_concept_ids": 54,
-    "graded_grammar_related_slots": 459,
+    "lessons_without_explicit_grammar_concept_ids": 44,
+    "graded_grammar_related_slots": 493,
     "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 58,
+    "lessons_with_declared_unassessed_forms": 50,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -94,9 +94,9 @@
       "level": "A1.2",
       "id": "a1.2-section-4",
       "lessons": 10,
-      "graded_slots": 72,
-      "unassessed_target_forms": 51,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 238,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.3",
@@ -8814,7 +8814,7 @@
         "topic": 6,
         "expressions": 5
       },
-      "authored_new_targets": 9,
+      "authored_new_targets": 12,
       "lexical": {
         "declared_forms": [
           "aurinko",
@@ -8848,47 +8848,44 @@
         ],
         "introduced": [
           "aurinko",
-          "hyvin",
-          "kylmä",
-          "lämmin",
-          "nyt",
-          "paljon",
-          "sade",
-          "sää",
-          "tuuli",
-          "tänään on kylmä."
-        ],
-        "correct_answer": [
-          "aurinko",
-          "hyvin",
-          "nyt",
-          "tänään on kylmä.",
-          "tänään on lämmin."
-        ],
-        "receptive_count": 3,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "nyt"
-        ],
-        "declared_unassessed": [
           "aurinko paistaa.",
+          "hyvin",
           "kylmä",
           "lämmin",
+          "nyt",
           "paljon",
           "sade",
           "sataa.",
           "sää",
           "tuulee.",
-          "tuuli"
+          "tuuli",
+          "tänään on kylmä.",
+          "tänään on lämmin."
         ],
-        "teach_only": [
+        "correct_answer": [
+          "aurinko",
+          "aurinko paistaa.",
+          "hyvin",
           "kylmä",
           "lämmin",
+          "nyt",
           "paljon",
           "sade",
+          "sataa.",
           "sää",
-          "tuuli"
+          "tuulee.",
+          "tuuli",
+          "tänään on kylmä.",
+          "tänään on lämmin."
         ],
+        "receptive_count": 3,
+        "productive_count": 12,
+        "later_correct_retrieval": [
+          "nyt",
+          "paljon"
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -8913,23 +8910,28 @@
         ],
         "authored_new_forms": [
           "aurinko",
+          "aurinko paistaa.",
           "hyvin",
           "kylmä",
           "lämmin",
-          "nyt",
-          "paljon",
           "sade",
+          "sataa.",
           "sää",
-          "tuuli"
+          "tuulee.",
+          "tuuli",
+          "tänään on kylmä.",
+          "tänään on lämmin."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -8945,7 +8947,7 @@
         "topic": 6,
         "expressions": 4
       },
-      "authored_new_targets": 9,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "aikana",
@@ -8980,43 +8982,50 @@
           "hyvin",
           "kengät",
           "kesä",
+          "kesällä on lämmin.",
           "kevät",
           "liian",
+          "nämä kengät ovat hyvät.",
           "syksy",
           "takki",
           "talvella on kylmä.",
-          "talvi"
+          "talvi",
+          "tarvitsen takin."
         ],
         "correct_answer": [
           "aikana",
-          "kesällä on lämmin.",
-          "liian",
-          "takki",
-          "talvella on kylmä.",
-          "tarvitsen takin."
-        ],
-        "receptive_count": 3,
-        "productive_count": 3,
-        "later_correct_retrieval": [
-          "liian"
-        ],
-        "declared_unassessed": [
+          "aurinko",
           "hyvin",
           "kengät",
           "kesä",
+          "kesällä on lämmin.",
           "kevät",
+          "liian",
+          "lämmin",
           "nämä kengät ovat hyvät.",
           "syksy",
-          "talvi"
+          "takki",
+          "talvella on kylmä.",
+          "talvi",
+          "tarvitsen takin.",
+          "tuulee.",
+          "tuuli",
+          "tänään on lämmin."
         ],
-        "teach_only": [
+        "receptive_count": 3,
+        "productive_count": 16,
+        "later_correct_retrieval": [
+          "aurinko",
           "hyvin",
-          "kesä",
-          "kevät",
-          "syksy",
-          "talvi"
+          "liian",
+          "lämmin",
+          "tuulee.",
+          "tuuli",
+          "tänään on lämmin."
         ],
-        "distractor_only_count": 1,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
           "aikana",
@@ -9039,24 +9048,31 @@
         ],
         "authored_new_forms": [
           "aikana",
-          "hyvin",
           "kengät",
           "kesä",
+          "kesällä on lämmin.",
           "kevät",
-          "liian",
+          "nämä kengät ovat hyvät.",
           "syksy",
           "takki",
-          "talvi"
+          "talvella on kylmä.",
+          "talvi",
+          "tarvitsen takin."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a12-frequency-adverbs"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -9106,37 +9122,55 @@
           "pää",
           "tämä",
           "tämä on käsi.",
-          "vatsa"
+          "vatsa",
+          "vatsaan sattuu."
         ],
         "correct_answer": [
+          "aikana",
+          "aurinko paistaa.",
+          "jalka",
+          "kengät",
+          "kesä",
+          "kesällä on lämmin.",
+          "kevät",
+          "kurkku",
+          "kylmä",
+          "käsi",
           "minun",
           "minun päätäni särkee.",
+          "missä",
+          "nämä kengät ovat hyvät.",
+          "pää",
+          "sade",
+          "sataa.",
+          "sää",
           "tämä",
           "tämä on käsi.",
+          "tänään on kylmä.",
+          "vatsa",
           "vatsaan sattuu."
         ],
         "receptive_count": 2,
-        "productive_count": 3,
+        "productive_count": 21,
         "later_correct_retrieval": [
+          "aikana",
+          "aurinko paistaa.",
+          "kengät",
+          "kesä",
+          "kesällä on lämmin.",
+          "kevät",
+          "kylmä",
           "minun",
-          "tämä"
-        ],
-        "declared_unassessed": [
-          "jalka",
-          "kurkku",
-          "käsi",
           "missä",
-          "pää",
-          "vatsa"
+          "nämä kengät ovat hyvät.",
+          "sade",
+          "sataa.",
+          "sää",
+          "tämä",
+          "tänään on kylmä."
         ],
-        "teach_only": [
-          "jalka",
-          "kurkku",
-          "käsi",
-          "missä",
-          "pää",
-          "vatsa"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -9160,20 +9194,22 @@
           "jalka",
           "kurkku",
           "käsi",
-          "minun",
-          "missä",
+          "minun päätäni särkee.",
           "pää",
-          "tämä",
-          "vatsa"
+          "tämä on käsi.",
+          "vatsa",
+          "vatsaan sattuu."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -9189,7 +9225,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "en voi hyvin.",
@@ -9215,10 +9251,12 @@
           "yskä"
         ],
         "introduced": [
+          "en voi hyvin.",
           "hyvin",
           "kipeä",
           "kuume",
           "minulla on kuumetta.",
+          "minulla on yskä.",
           "olen",
           "olen sairas.",
           "sairas",
@@ -9228,31 +9266,43 @@
         "correct_answer": [
           "en voi hyvin.",
           "hyvin",
+          "kipeä",
+          "kuume",
+          "käsi",
           "minulla on kuumetta.",
           "minulla on yskä.",
+          "olen",
           "olen sairas.",
-          "vähän"
+          "sairas",
+          "syksy",
+          "takki",
+          "talvella on kylmä.",
+          "talvi",
+          "tarvitsen takin.",
+          "tämä on käsi.",
+          "vatsa",
+          "vatsaan sattuu.",
+          "vähän",
+          "yskä"
         ],
         "receptive_count": 4,
-        "productive_count": 2,
+        "productive_count": 19,
         "later_correct_retrieval": [
           "hyvin",
+          "käsi",
+          "olen",
+          "syksy",
+          "takki",
+          "talvella on kylmä.",
+          "talvi",
+          "tarvitsen takin.",
+          "tämä on käsi.",
+          "vatsa",
+          "vatsaan sattuu.",
           "vähän"
         ],
-        "declared_unassessed": [
-          "kipeä",
-          "kuume",
-          "olen",
-          "sairas",
-          "yskä"
-        ],
-        "teach_only": [
-          "kipeä",
-          "kuume",
-          "olen",
-          "sairas",
-          "yskä"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -9273,23 +9323,30 @@
           "olen sairas."
         ],
         "authored_new_forms": [
-          "hyvin",
+          "en voi hyvin.",
           "kipeä",
           "kuume",
-          "olen",
+          "minulla on kuumetta.",
+          "minulla on yskä.",
+          "olen sairas.",
           "sairas",
-          "vähän",
           "yskä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-pronouns",
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a11-olla"
+        ]
       }
     },
     {
@@ -9304,10 +9361,11 @@
         "topic": 4,
         "expressions": 3
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "apteekki",
+          "apteekki on lähellä.",
           "kipu",
           "lääke",
           "mitä",
@@ -9316,54 +9374,73 @@
           "ottaa",
           "saa",
           "tarvitsen",
-          "tarvitsen lääkettä kipuun."
+          "tarvitsen lääkettä kipuun.",
+          "tarvitsen lääkettä."
         ],
         "first_referenced": [
+          "apteekki on lähellä.",
           "kipu",
           "lääke",
           "mitä tähän voi ottaa?",
           "onko teillä lääkettä?",
           "saa",
           "tarvitsen",
-          "tarvitsen lääkettä kipuun."
+          "tarvitsen lääkettä kipuun.",
+          "tarvitsen lääkettä."
         ],
         "introduced": [
           "apteekki",
+          "apteekki on lähellä.",
           "kipu",
           "lääke",
           "mitä",
+          "mitä tähän voi ottaa?",
           "onko teillä lääkettä?",
           "ottaa",
           "saa",
           "tarvitsen",
-          "tarvitsen lääkettä kipuun."
+          "tarvitsen lääkettä kipuun.",
+          "tarvitsen lääkettä."
         ],
         "correct_answer": [
+          "apteekki",
+          "apteekki on lähellä.",
+          "en voi hyvin.",
+          "jalka",
+          "kipeä",
+          "kipu",
+          "kurkku",
+          "lääke",
+          "minulla on kuumetta.",
+          "minun päätäni särkee.",
           "mitä",
           "mitä tähän voi ottaa?",
           "onko teillä lääkettä?",
+          "ottaa",
+          "pää",
           "saa",
-          "tarvitsen lääkettä kipuun."
+          "tarvitsen",
+          "tarvitsen lääkettä kipuun.",
+          "tarvitsen lääkettä.",
+          "yskä"
         ],
         "receptive_count": 3,
-        "productive_count": 3,
+        "productive_count": 18,
         "later_correct_retrieval": [
-          "mitä"
-        ],
-        "declared_unassessed": [
           "apteekki",
-          "kipu",
-          "lääke",
+          "en voi hyvin.",
+          "jalka",
+          "kipeä",
+          "kurkku",
+          "minulla on kuumetta.",
+          "minun päätäni särkee.",
+          "mitä",
           "ottaa",
-          "tarvitsen"
+          "pää",
+          "yskä"
         ],
-        "teach_only": [
-          "apteekki",
-          "kipu",
-          "lääke",
-          "ottaa",
-          "tarvitsen"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -9383,23 +9460,33 @@
           "tarvitsen lääkettä kipuun."
         ],
         "authored_new_forms": [
-          "apteekki",
+          "apteekki on lähellä.",
           "kipu",
           "lääke",
-          "mitä",
-          "ottaa",
+          "mitä tähän voi ottaa?",
+          "onko teillä lääkettä?",
           "saa",
-          "tarvitsen"
+          "tarvitsen",
+          "tarvitsen lääkettä kipuun.",
+          "tarvitsen lääkettä."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-questions",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -9414,13 +9501,18 @@
         "topic": 6,
         "expressions": 3
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "aika",
           "ajanvaraus",
+          "haluaisin kahvia.",
           "haluaisin varata ajan.",
           "huomenna",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
+          "kello yksitoista",
           "lääkäri",
           "milloin",
           "onko aikaa huomenna?",
@@ -9430,7 +9522,9 @@
         ],
         "first_referenced": [
           "ajanvaraus",
+          "haluaisin kahvia.",
           "haluaisin varata ajan.",
+          "kello yksitoista",
           "lääkäri",
           "onko aikaa huomenna?",
           "sopiiko kello kymmenen?",
@@ -9440,44 +9534,63 @@
         "introduced": [
           "aika",
           "ajanvaraus",
+          "haluaisin kahvia.",
           "haluaisin varata ajan.",
           "huomenna",
+          "kello yksitoista",
           "lääkäri",
           "milloin",
           "onko aikaa huomenna?",
+          "sopiiko kello kymmenen?",
           "terveysasema",
           "varata"
         ],
         "correct_answer": [
           "aika",
+          "ajanvaraus",
+          "haluaisin kahvia.",
           "haluaisin varata ajan.",
+          "huomenna",
+          "kello kahdeksan",
           "kello kymmenen",
+          "kello yhdeksän",
+          "kello yksitoista",
+          "kuume",
+          "lääke",
+          "lääkäri",
           "milloin",
-          "onko aikaa huomenna?"
+          "minulla on yskä.",
+          "olen sairas.",
+          "onko aikaa huomenna?",
+          "onko teillä lääkettä?",
+          "sairas",
+          "sopiiko kello kymmenen?",
+          "tarvitsen",
+          "tarvitsen lääkettä.",
+          "terveysasema",
+          "varata"
         ],
         "receptive_count": 3,
-        "productive_count": 3,
+        "productive_count": 21,
         "later_correct_retrieval": [
           "aika",
+          "huomenna",
+          "kello kahdeksan",
           "kello kymmenen",
-          "milloin"
+          "kello yhdeksän",
+          "kuume",
+          "lääke",
+          "milloin",
+          "minulla on yskä.",
+          "olen sairas.",
+          "onko teillä lääkettä?",
+          "sairas",
+          "tarvitsen",
+          "tarvitsen lääkettä."
         ],
-        "declared_unassessed": [
-          "ajanvaraus",
-          "huomenna",
-          "lääkäri",
-          "sopiiko kello kymmenen?",
-          "terveysasema",
-          "varata"
-        ],
-        "teach_only": [
-          "ajanvaraus",
-          "huomenna",
-          "lääkäri",
-          "terveysasema",
-          "varata"
-        ],
-        "distractor_only_count": 3,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
           "aika"
@@ -9496,23 +9609,31 @@
           "sopiiko kello kymmenen?"
         ],
         "authored_new_forms": [
-          "aika",
           "ajanvaraus",
-          "huomenna",
+          "haluaisin kahvia.",
+          "haluaisin varata ajan.",
+          "kello yksitoista",
           "lääkäri",
-          "milloin",
+          "onko aikaa huomenna?",
+          "sopiiko kello kymmenen?",
           "terveysasema",
           "varata"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-frequency-adverbs"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -9527,7 +9648,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 6,
       "lexical": {
         "declared_forms": [
           "apu",
@@ -9540,6 +9661,7 @@
           "tarvitsen apua.",
           "täällä",
           "voi",
+          "voinko auttaa?",
           "voitko auttaa?"
         ],
         "first_referenced": [
@@ -9547,6 +9669,7 @@
           "hätä",
           "minulla on ongelma.",
           "tarvitsen apua heti.",
+          "voinko auttaa?",
           "voitko auttaa?"
         ],
         "introduced": [
@@ -9554,41 +9677,61 @@
           "auttaa",
           "heti",
           "hätä",
-          "tarvitsen",
-          "tarvitsen apua.",
-          "täällä",
-          "voi",
-          "voitko auttaa?"
-        ],
-        "correct_answer": [
-          "heti",
           "minulla on ongelma.",
+          "tarvitsen",
           "tarvitsen apua heti.",
           "tarvitsen apua.",
           "täällä",
+          "voi",
+          "voinko auttaa?",
+          "voitko auttaa?"
+        ],
+        "correct_answer": [
+          "ajanvaraus",
+          "apteekki on lähellä.",
+          "apu",
+          "auttaa",
+          "haluaisin varata ajan.",
+          "heti",
+          "hätä",
+          "kello yksitoista",
+          "kipu",
+          "lääkäri",
+          "minulla on ongelma.",
+          "mitä tähän voi ottaa?",
+          "saa",
+          "sopiiko kello kymmenen?",
+          "tarvitsen",
+          "tarvitsen apua heti.",
+          "tarvitsen apua.",
+          "tarvitsen lääkettä kipuun.",
+          "täällä",
+          "voi",
+          "voinko auttaa?",
           "voitko auttaa?"
         ],
         "receptive_count": 4,
-        "productive_count": 2,
+        "productive_count": 19,
         "later_correct_retrieval": [
+          "ajanvaraus",
+          "apteekki on lähellä.",
+          "apu",
+          "haluaisin varata ajan.",
           "heti",
+          "kello yksitoista",
+          "kipu",
+          "lääkäri",
+          "mitä tähän voi ottaa?",
+          "saa",
+          "sopiiko kello kymmenen?",
+          "tarvitsen",
           "tarvitsen apua.",
-          "täällä"
-        ],
-        "declared_unassessed": [
-          "apu",
-          "auttaa",
-          "hätä",
-          "tarvitsen",
+          "tarvitsen lääkettä kipuun.",
+          "täällä",
           "voi"
         ],
-        "teach_only": [
-          "apu",
-          "auttaa",
-          "hätä",
-          "tarvitsen",
-          "voi"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -9609,23 +9752,28 @@
           "voitko auttaa?"
         ],
         "authored_new_forms": [
-          "apu",
           "auttaa",
-          "heti",
           "hätä",
-          "tarvitsen",
-          "täällä",
-          "voi"
+          "minulla on ongelma.",
+          "tarvitsen apua heti.",
+          "voinko auttaa?",
+          "voitko auttaa?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla"
+        ]
       }
     },
     {
@@ -9640,7 +9788,7 @@
         "topic": 5,
         "expressions": 4
       },
-      "authored_new_targets": 8,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "ehkä",
@@ -9674,40 +9822,50 @@
           "juo",
           "juo vettä.",
           "lepää",
+          "lepää kotona.",
           "ota",
           "ota takki.",
+          "pysy sisällä.",
           "sisällä",
           "ulkona"
         ],
         "correct_answer": [
           "ehkä",
-          "jos",
-          "juo vettä.",
-          "ota takki."
-        ],
-        "receptive_count": 2,
-        "productive_count": 3,
-        "later_correct_retrieval": [
-          "ehkä"
-        ],
-        "declared_unassessed": [
+          "haluaisin kahvia.",
           "heti",
+          "hätä",
+          "jos",
           "juo",
+          "juo vettä.",
           "lepää",
           "lepää kotona.",
+          "minulla on ongelma.",
+          "onko aikaa huomenna?",
           "ota",
+          "ota takki.",
           "pysy sisällä.",
           "sisällä",
-          "ulkona"
+          "terveysasema",
+          "ulkona",
+          "varata",
+          "voinko auttaa?"
         ],
-        "teach_only": [
+        "receptive_count": 2,
+        "productive_count": 18,
+        "later_correct_retrieval": [
+          "ehkä",
+          "haluaisin kahvia.",
           "heti",
+          "hätä",
           "juo",
-          "lepää",
-          "ota",
-          "sisällä",
-          "ulkona"
+          "minulla on ongelma.",
+          "onko aikaa huomenna?",
+          "terveysasema",
+          "varata",
+          "voinko auttaa?"
         ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -9729,24 +9887,29 @@
           "pysy sisällä."
         ],
         "authored_new_forms": [
-          "ehkä",
-          "heti",
           "jos",
-          "juo",
+          "juo vettä.",
           "lepää",
+          "lepää kotona.",
           "ota",
+          "ota takki.",
+          "pysy sisällä.",
           "sisällä",
           "ulkona"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-commands"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -9764,44 +9927,79 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "en voi hyvin.",
           "haluaisin varata ajan.",
+          "juo vettä.",
           "kyllä, sopii.",
           "minulla on kuumetta.",
           "sopiiko kello kymmenen?",
           "tarvitsen lääkettä.",
+          "tarvitsen takin.",
+          "tänään on kylmä.",
           "voinko auttaa?",
           "voitko auttaa?"
         ],
-        "first_referenced": [
-          "tarvitsen lääkettä.",
-          "voinko auttaa?"
-        ],
+        "first_referenced": [],
         "introduced": [
           "haluaisin varata ajan.",
           "minulla on kuumetta.",
           "tarvitsen lääkettä."
         ],
         "correct_answer": [
+          "apteekki on lähellä.",
+          "auttaa",
+          "en voi hyvin.",
           "haluaisin varata ajan.",
+          "juo vettä.",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
+          "kello yksitoista",
           "kyllä, sopii.",
+          "lepää kotona.",
           "minulla on kuumetta.",
+          "olen sairas.",
+          "ota",
+          "ota takki.",
+          "sisällä",
           "sopiiko kello kymmenen?",
+          "tarvitsen apua heti.",
           "tarvitsen lääkettä.",
+          "tarvitsen takin.",
+          "tänään on kylmä.",
           "voinko auttaa?",
           "voitko auttaa?"
         ],
-        "receptive_count": 6,
-        "productive_count": 4,
+        "receptive_count": 10,
+        "productive_count": 20,
         "later_correct_retrieval": [
+          "apteekki on lähellä.",
+          "auttaa",
+          "en voi hyvin.",
           "haluaisin varata ajan.",
+          "juo vettä.",
+          "kello kahdeksan",
+          "kello kymmenen",
+          "kello yhdeksän",
+          "kello yksitoista",
           "kyllä, sopii.",
+          "lepää kotona.",
           "minulla on kuumetta.",
+          "olen sairas.",
+          "ota",
+          "ota takki.",
+          "sisällä",
           "sopiiko kello kymmenen?",
+          "tarvitsen apua heti.",
+          "tarvitsen lääkettä.",
+          "tarvitsen takin.",
+          "tänään on kylmä.",
+          "voinko auttaa?",
           "voitko auttaa?"
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 6,
+        "distractor_only_count": 3,
         "reading_only": [
           "apteekki on lähellä. tarvitsen lääkettä. voitko auttaa? lepää kotona.",
           "olen sairas. minulla on kuumetta. haluaisin varata ajan. sopiiko kello kymmenen?"
@@ -9818,12 +10016,26 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-pronouns",
+          "a11-questions",
+          "a12-commands",
+          "a12-frequency-adverbs",
+          "a12-negation-expand",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 10,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -9841,11 +10053,14 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "en voi hyvin.",
           "haluaisin kahvia.",
           "haluaisin varata ajan.",
           "juo vettä.",
+          "kesällä on lämmin.",
           "menen bussilla.",
           "minulla on kuumetta.",
+          "minulla on yskä.",
           "missä asema on?",
           "nähdään perjantaina.",
           "opiskelen joka päivä.",
@@ -9855,45 +10070,61 @@
           "tarvitsen apua.",
           "tarvitsen lääkettä kipuun.",
           "tänään on kylmä.",
+          "tänään on lämmin.",
           "voitko auttaa?"
         ],
-        "first_referenced": [
-          "haluaisin kahvia."
-        ],
+        "first_referenced": [],
         "introduced": [],
         "correct_answer": [
+          "en voi hyvin.",
           "haluaisin kahvia.",
           "haluaisin varata ajan.",
+          "jos",
           "juo vettä.",
+          "kesällä on lämmin.",
+          "lepää",
           "menen bussilla.",
           "minulla on kuumetta.",
+          "minulla on yskä.",
           "missä asema on?",
           "nähdään perjantaina.",
           "opiskelen joka päivä.",
           "ota takki.",
           "paljonko tämä maksaa?",
+          "pysy sisällä.",
           "sopiiko kello kuusi?",
           "tarvitsen apua.",
           "tarvitsen lääkettä kipuun.",
           "tänään on kylmä.",
+          "tänään on lämmin.",
+          "ulkona",
           "voitko auttaa?"
         ],
         "receptive_count": 9,
-        "productive_count": 6,
+        "productive_count": 17,
         "later_correct_retrieval": [
+          "en voi hyvin.",
+          "haluaisin kahvia.",
           "haluaisin varata ajan.",
+          "jos",
           "juo vettä.",
+          "kesällä on lämmin.",
+          "lepää",
           "menen bussilla.",
           "minulla on kuumetta.",
+          "minulla on yskä.",
           "missä asema on?",
           "nähdään perjantaina.",
           "opiskelen joka päivä.",
           "ota takki.",
           "paljonko tämä maksaa?",
+          "pysy sisällä.",
           "sopiiko kello kuusi?",
           "tarvitsen apua.",
           "tarvitsen lääkettä kipuun.",
           "tänään on kylmä.",
+          "tänään on lämmin.",
+          "ulkona",
           "voitko auttaa?"
         ],
         "declared_unassessed": [],
@@ -9907,12 +10138,26 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-pronouns",
+          "a11-questions",
+          "a12-commands",
+          "a12-frequency-adverbs",
+          "a12-negation-expand",
+          "a12-quantities"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 11,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -18366,97 +18611,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "a1.2-section-4-lesson-1",
-        "forms": [
-          "aurinko paistaa.",
-          "kylmä",
-          "lämmin",
-          "paljon",
-          "sade",
-          "sataa.",
-          "sää",
-          "tuulee.",
-          "tuuli"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-2",
-        "forms": [
-          "hyvin",
-          "kengät",
-          "kesä",
-          "kevät",
-          "nämä kengät ovat hyvät.",
-          "syksy",
-          "talvi"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-3",
-        "forms": [
-          "jalka",
-          "kurkku",
-          "käsi",
-          "missä",
-          "pää",
-          "vatsa"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-4",
-        "forms": [
-          "kipeä",
-          "kuume",
-          "olen",
-          "sairas",
-          "yskä"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-5",
-        "forms": [
-          "apteekki",
-          "kipu",
-          "lääke",
-          "ottaa",
-          "tarvitsen"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-6",
-        "forms": [
-          "ajanvaraus",
-          "huomenna",
-          "lääkäri",
-          "sopiiko kello kymmenen?",
-          "terveysasema",
-          "varata"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-7",
-        "forms": [
-          "apu",
-          "auttaa",
-          "hätä",
-          "tarvitsen",
-          "voi"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-4-lesson-8",
-        "forms": [
-          "heti",
-          "juo",
-          "lepää",
-          "lepää kotona.",
-          "ota",
-          "pysy sisällä.",
-          "sisällä",
-          "ulkona"
-        ]
-      },
       {
         "lesson_id": "a1.3-section-1-lesson-1",
         "forms": [

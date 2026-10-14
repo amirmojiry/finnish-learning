@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- A1.2 Section 4 acceptance: [English](A12-SECTION4-ACCEPTANCE.md) / [فارسی](A12-SECTION4-ACCEPTANCE.fa.md) — weather, health communication, help and cumulative review.
 - A1.2 Section 3 acceptance: [English](A12-SECTION3-ACCEPTANCE.md) / [فارسی](A12-SECTION3-ACCEPTANCE.fa.md) — routine, study/work, interests and arrangements.
 - A1.2 Section 2 acceptance: [English](A12-SECTION2-ACCEPTANCE.md) / [فارسی](A12-SECTION2-ACCEPTANCE.fa.md).
 - [A1.2 Section 1 acceptance](A12-SECTION1-ACCEPTANCE.md) / [فارسی](A12-SECTION1-ACCEPTANCE.fa.md) — shopping and services across the stage boundary.

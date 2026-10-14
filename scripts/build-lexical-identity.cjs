@@ -110,7 +110,7 @@ function main(args=process.argv.slice(2)){
  const sections=names.flatMap(level=>[1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
   .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
  const data=build(read('data/common-words.json'),sections,readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))),read('data/course/reviewed-lexical-identities.json'));
- const serialized=JSON.stringify(data,null,2)+'\n';
+ const serialized=JSON.stringify(data)+'\n';
  if(command==='--write'){fs.writeFileSync(OUT,serialized);process.stdout.write('Wrote lexical identity sidecar.\n');}
  else if(!fs.existsSync(OUT)||fs.readFileSync(OUT,'utf8')!==serialized){
   process.stderr.write('Lexical identity sidecar stale; run node scripts/build-lexical-identity.cjs --write.\n');
