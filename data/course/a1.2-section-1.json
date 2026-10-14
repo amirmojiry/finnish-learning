@@ -1661,10 +1661,18 @@
           "item": "a12s1-hf-rahaa"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-paljonko-tama-maksaa-6"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-paljonko-tama-maksaa-6",
           "mode": "finnish",
           "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-se-maksaa-viisi-euroa-7"
         },
         {
           "type": "controlled-production",
@@ -1699,13 +1707,17 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-minulla-on-rahaa-8"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-minulla-on-rahaa-8",
           "answer_policy": "morphology"
         }
       ],
-      "activity_count": 18,
+      "activity_count": 21,
       "practice_targets": [
         "a12s1-hf-paljon",
         "a12s1-hf-rahaa",
@@ -1781,7 +1793,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 15,
+                "activity_index": 17,
                 "mode": "supported_production"
               }
             ]
@@ -1801,7 +1813,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 16,
+                "activity_index": 18,
                 "mode": "supported_production"
               }
             ]
@@ -1956,6 +1968,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
           "mode": "finnish",
@@ -2056,10 +2072,18 @@
           "item": "a12s1-topic-sata"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
           "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-se-maksaa-sata-euroa-21"
         },
         {
           "type": "type",
@@ -2111,7 +2135,7 @@
           ]
         }
       ],
-      "activity_count": 33,
+      "activity_count": 36,
       "practice_targets": [
         "a12s1-hf-20",
         "a12s1-hf-50",
@@ -2239,7 +2263,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 23,
+                "activity_index": 24,
                 "mode": "supported_production"
               }
             ]
@@ -2431,6 +2455,10 @@
           "item": "a12s1-hf-ottaa"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-haluaisin-taman-kiitos-28"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-haluaisin-taman-kiitos-28",
           "mode": "finnish",
@@ -2521,10 +2549,18 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-saanko-kahvin-kiitos-29"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-saanko-kahvin-kiitos-29",
           "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-voitteko-antaa-taman-30"
         },
         {
           "type": "type",
@@ -2533,7 +2569,7 @@
           "answer_policy": "morphology"
         }
       ],
-      "activity_count": 31,
+      "activity_count": 34,
       "practice_targets": [
         "a12s1-hf-mita",
         "a12s1-hf-ottaa",
@@ -2673,7 +2709,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 28,
+                "activity_index": 29,
                 "mode": "supported_production"
               }
             ]
@@ -2876,6 +2912,10 @@
           "item": "a12s1-hf-paljon"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-kilo-omenoita-kiitos-36"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-kilo-omenoita-kiitos-36",
           "mode": "finnish",
@@ -2925,6 +2965,10 @@
           "answer_policy": "morphology"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37"
+        },
+        {
           "type": "controlled-production",
           "item": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
           "prompt_fa": "نیم لیتر شیر، لطفاً.",
@@ -2941,13 +2985,17 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-vahan-lisaa-kiitos-38"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-vahan-lisaa-kiitos-38",
           "answer_policy": "morphology"
         }
       ],
-      "activity_count": 25,
+      "activity_count": 28,
       "practice_targets": [
         "a12s1-hf-vahan",
         "a12s1-hf-paljon",
@@ -3062,7 +3110,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 23,
+                "activity_index": 25,
                 "mode": "supported_production"
               }
             ]
@@ -3257,6 +3305,10 @@
           "item": "a12s1-hf-taalla"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-missa-maito-on-45"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-missa-maito-on-45",
           "mode": "finnish",
@@ -3322,10 +3374,18 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-kassa-on-tuolla-46"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-kassa-on-tuolla-46",
           "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-se-on-taalla-47"
         },
         {
           "type": "type",
@@ -3334,7 +3394,7 @@
           "answer_policy": "morphology"
         }
       ],
-      "activity_count": 26,
+      "activity_count": 29,
       "practice_targets": [
         "a12s1-hf-missa",
         "a12s1-hf-taalla",
@@ -3449,7 +3509,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 23,
+                "activity_index": 24,
                 "mode": "supported_production"
               }
             ]
@@ -3640,6 +3700,10 @@
           "item": "a12s1-hf-tama"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-sopiva-56"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-tama-on-sopiva-56",
           "mode": "finnish",
@@ -3705,10 +3769,18 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-liian-iso-54"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-tama-on-liian-iso-54",
           "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-liian-pieni-55"
         },
         {
           "type": "type",
@@ -3717,13 +3789,17 @@
           "answer_policy": "morphology"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-onko-toinen-koko-57"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-onko-toinen-koko-57",
           "answer_policy": "morphology"
         }
       ],
-      "activity_count": 27,
+      "activity_count": 31,
       "practice_targets": [
         "a12s1-hf-liian",
         "a12s1-hf-tama",
@@ -3840,7 +3916,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 23,
+                "activity_index": 24,
                 "mode": "supported_production"
               }
             ]
@@ -3987,6 +4063,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-voinko-maksaa-kortilla-63"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-voinko-maksaa-kortilla-63",
           "mode": "finnish",
@@ -4049,10 +4129,18 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-maksan-kateisella-64"
+        },
+        {
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-expr-maksan-kateisella-64",
           "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-kuitti-kiitos-65"
         },
         {
           "type": "type",
@@ -4115,7 +4203,7 @@
           "explanation_fa": "برای روش پرداخت از adessiivi استفاده می‌کنیم: kortti → kortilla."
         }
       ],
-      "activity_count": 25,
+      "activity_count": 28,
       "practice_targets": [
         "a12s1-hf-voi",
         "a12s1-hf-antaa",
@@ -4230,7 +4318,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 22,
+                "activity_index": 23,
                 "mode": "supported_production"
               }
             ]
@@ -4250,7 +4338,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 22,
+                "activity_index": 23,
                 "mode": "supported_production"
               }
             ]
@@ -4355,6 +4443,10 @@
           "item": "a12s1-hf-mitaan"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-tarvitsen-apua-77"
+        },
+        {
           "type": "type",
           "item": "a12s1-expr-tarvitsen-apua-77",
           "mode": "finnish",
@@ -4450,6 +4542,10 @@
           "answer_policy": "morphology"
         },
         {
+          "type": "teach",
+          "item": "a12s1-expr-tama-ei-toimi-75"
+        },
+        {
           "type": "controlled-production",
           "item": "a12s1-expr-tama-ei-toimi-75",
           "prompt_fa": "این کار نمی‌کند.",
@@ -4464,6 +4560,10 @@
           "grammar_concept_ids": [
             "a12-negation-expand"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-rikki-74"
         },
         {
           "type": "controlled-production",
@@ -4490,6 +4590,10 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s1-topic-apu"
+        },
+        {
+          "type": "teach",
+          "item": "a12s1-expr-tama-on-vaara-76"
         },
         {
           "type": "type",
@@ -4571,7 +4675,7 @@
           "explanation_fa": "بعد از ei، صورت connegative می‌آید: toimii → ei toimi."
         }
       ],
-      "activity_count": 28,
+      "activity_count": 32,
       "practice_targets": [
         "a12s1-hf-ei",
         "a12s1-hf-mitaan",
@@ -4699,7 +4803,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 23,
+                "activity_index": 25,
                 "mode": "supported_production"
               }
             ]
@@ -4717,7 +4821,7 @@
             ],
             "evidence": [
               {
-                "activity_index": 24,
+                "activity_index": 27,
                 "mode": "supported_production"
               }
             ]

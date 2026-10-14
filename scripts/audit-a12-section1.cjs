@@ -14,6 +14,12 @@ function evaluate(raw, curriculum, sidecar, preceding, priorCurriculum) {
   const answers = new Set(checkpoint.activities.flatMap(coverage.positives));
   for (const target of ORIGINAL_CHECKPOINT_TARGETS) if (!answers.has(target)) report.errors.push('Checkpoint lost original positive target: ' + target);
   for (const type of ['sentence-order', 'expression-completion', 'controlled-production']) if (!checkpoint.activities.some(a => a.type === type)) report.errors.push('Checkpoint lost structured task: ' + type);
+  for (const lesson of section.lessons) for (const target of lesson.new_targets) {
+    if (section.items[target].item_type !== 'expression') continue;
+    const taught = lesson.activities.findIndex(a => a.type === 'teach' && a.item === target);
+    const tested = lesson.activities.findIndex(a => coverage.positives(a).includes(target));
+    if (taught < 0 || taught >= tested) report.errors.push(lesson.id + ': new expression must be taught before assessment: ' + target);
+  }
   for (const lesson of section.lessons) for (const goal of lesson.learning_objectives.grammar) {
     for (const evidence of goal.evidence) {
       const a = lesson.activities[evidence.activity_index];

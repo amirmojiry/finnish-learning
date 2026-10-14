@@ -12,7 +12,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 - Complete all ten A1.2 Section 1 shopping/services lessons with canonical communicative, lexical and bounded grammar objectives. Carry prior A1.1 concepts and prerequisites into the A1.2 registry from the master curriculum.
 - Repair missing correct-answer opportunities; all 71 newly introduced exact surfaces/expressions have later retrieval distributed between following lessons. Six scoped grammar concepts have later review. Fixed polite requests do not claim a productive conditional paradigm.
-- Retain original item records, stable IDs, core listening/production targets, the fifteen-target checkpoint and 80% pass threshold. Lessons have 18/33/31/25/26/27/25/28/31/21 activities (265 total); review-only lessons introduce no new targets.
+- Retain original item records, stable IDs, core listening/production targets, the fifteen-target checkpoint and 80% pass threshold. Lessons have 21/36/34/28/29/31/28/32/31/21 activities (291 total); review-only lessons introduce no new targets.
 - Add cross-stage acceptance reports and regressions. Quantity, payment and negative production decisions use exact-form/diacritic-only grading. Wider #101 identity, review and integration gates remain open.
 
 ## [1.40.0] - 2026-10-14

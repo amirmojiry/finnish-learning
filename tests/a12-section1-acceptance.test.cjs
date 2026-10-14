@@ -9,7 +9,7 @@ const verify = r => evaluate(r, curriculum, sidecar, prior, a11);
 test('A1.2 shopping has full positive coverage and later retrieval across the stage boundary', () => {
   const report = verify(raw);
   assert.deepEqual(report.errors, []);
-  assert.equal(report.summary.activities, 265);
+  assert.equal(report.summary.activities, 291);
   assert.equal(report.summary.introduced_surface_forms_and_expressions, 71);
   assert.equal(report.summary.surfaces_with_later_positive_review, 71);
   assert.equal(report.summary.grammar_concepts_with_later_review, 6);
@@ -69,4 +69,14 @@ test('shopping backfill retains original item records and stable core lesson con
   assert.equal(hash(raw.items), '7b87c9200ddf26151d54aeb3bdd200f39ad3e807f354b294af29e2a4e67f8225');
   const core = raw.lessons.map(l => Object.fromEntries(['id', 'curriculum_id', 'production_targets', 'listening_targets', 'checkpoint_targets', 'passing_score', 'curriculum_target_refs'].map(k => [k, l[k] ?? null])));
   assert.equal(hash(core), 'aceb30f37b072b3a2ac4604ba7f181535f49453d82a14446044201fa09663433');
+});
+
+test('new shopping expressions are explicitly taught before the first graded answer', () => {
+  const positives = require('../scripts/audit-course-coverage.cjs').positives;
+  for (const lesson of course.validateSection(raw).lessons) for (const target of lesson.new_targets) {
+    if (raw.items[target].item_type !== 'expression') continue;
+    const taught = lesson.activities.findIndex(a => a.type === 'teach' && a.item === target);
+    const tested = lesson.activities.findIndex(a => positives(a).includes(target));
+    assert.ok(taught >= 0 && taught < tested, target);
+  }
 });

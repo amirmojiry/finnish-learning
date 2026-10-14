@@ -6,20 +6,20 @@ Authored assessment and review opportunities, not learner mastery, complete para
 
 [نسخهٔ فارسی](A12-SECTION1-ACCEPTANCE.fa.md) · [Documentation hub](README.md) · [Delivery roadmap](ROADMAP.md)
 
-- 10 lessons / 265 activities.
+- 10 lessons / 291 activities.
 - 71 introduced surfaces/expressions with later positive review; 6 grammar concepts with later review.
 - 0 missing positive targets; 0 repeated-new labels; 0 acceptance errors.
 
 | Lesson | Activities | Declared targets | New surfaces | Grammar scope |
 | --- | ---: | ---: | ---: | --- |
-| 1: قیمت و پول | 18 | 9 | 8 | a12-quantities, a11-questions |
-| 2: عددها برای قیمت‌های روزمره | 33 | 21 | 13 | a12-quantities |
-| 3: درخواست مودبانه | 31 | 22 | 8 | a12-requests |
-| 4: مقدار و ظرف | 25 | 17 | 8 | a12-quantities |
-| 5: پیدا کردن کالا در فروشگاه | 26 | 17 | 8 | a11-questions |
-| 6: اندازه و مناسب بودن | 27 | 18 | 7 | a11-olla |
-| 7: پرداخت | 25 | 17 | 8 | a12-local-cases, a12-requests |
-| 8: یک مشکل ساده در خدمات | 28 | 20 | 11 | a12-negation-expand, a11-olla |
+| 1: قیمت و پول | 21 | 9 | 8 | a12-quantities, a11-questions |
+| 2: عددها برای قیمت‌های روزمره | 36 | 21 | 13 | a12-quantities |
+| 3: درخواست مودبانه | 34 | 22 | 8 | a12-requests |
+| 4: مقدار و ظرف | 28 | 17 | 8 | a12-quantities |
+| 5: پیدا کردن کالا در فروشگاه | 29 | 17 | 8 | a11-questions |
+| 6: اندازه و مناسب بودن | 31 | 18 | 7 | a11-olla |
+| 7: پرداخت | 28 | 17 | 8 | a12-local-cases, a12-requests |
+| 8: یک مشکل ساده در خدمات | 32 | 20 | 11 | a12-negation-expand, a11-olla |
 | 9: یک گفت‌وگوی کامل خرید | 31 | 18 | 0 | a12-quantities, a12-requests, a12-local-cases, a12-negation-expand, a11-questions, a11-olla |
 | 10: ایستگاه مرور بخش ۱ | 21 | 19 | 0 | a12-quantities, a12-requests, a12-local-cases, a12-negation-expand, a11-questions, a11-olla |
 
