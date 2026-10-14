@@ -169,3 +169,5 @@ Each stage specifies four thematic modules, introduced and recycled grammatical 
 - [Institute for the Languages of Finland grammar overview](https://kotus.fi/kotus/kielet-ja-kielipolitiikka/kansalliskielet/suomen-kieli/) — Reference morphology and descriptive grammatical categories.
 
 A1.2 Section 3 implementation snapshot (1.43.0): ten existing lessons now have canonical objectives and scoped assessment/recycling acceptance, including supported routine/week writing and arrangements. This backfill preserves the syllabus and prerequisite graph; it does not certify proficiency. See [the acceptance report](A12-SECTION3-ACCEPTANCE.md) and [delivery roadmap](ROADMAP.md).
+
+A1.2 Section 4 implementation snapshot (1.44.0): all forty existing A1.2 lessons have canonical overviews and four scoped acceptance gates (1,267 activities). Section 4 health material teaches communication through supported reading/writing and preserves the cumulative checkpoint; it does not establish medical guidance or proficiency. The syllabus/prerequisite graph is preserved. See [the acceptance report](A12-SECTION4-ACCEPTANCE.md) and [delivery roadmap](ROADMAP.md).

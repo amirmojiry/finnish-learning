@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.44.0] - 2026-10-14
+
+### Added
+
+- Serialize the generated lexical-identity sidecar compactly while preserving every data value and deterministic checks.
+- Complete all ten A1.2 Section 4 weather, health communication and help overviews: 338 activities, later positive retrieval for 72 introduced exact surfaces/expressions and later review of eight bounded grammar concepts. Close 78 previously missing positive-answer target occurrences.
+- Teach medicine/help requests and clock answers before integrated review. Preserve exact-answer clock review references across existing time/expression records; add one pharmacy-location expression while retaining every original record.
+- Extend both original passages to four reading facts each, add supported four-sentence appointment writing and enforce strict grading of grammatical phrases and command forms.
+- Complete scoped acceptance checks for all forty A1.2 lessons (1,267 activities), preserving the original cumulative checkpoint targets, 80% threshold and saved-progress contracts. Wider identity/review/section-sizing gates remain open.
+
 ## [1.43.0] - 2026-10-14
 
 ### Added
