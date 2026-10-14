@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2411,
+    "graded_activity_slots": 2514,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 685,
+    "assessed_again_after_earlier_reference": 721,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 21,
-    "lessons_without_explicit_grammar_concept_ids": 44,
-    "graded_grammar_related_slots": 493,
+    "grammar_concepts_with_explicit_lesson_ids": 23,
+    "lessons_without_explicit_grammar_concept_ids": 35,
+    "graded_grammar_related_slots": 525,
     "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 50,
+    "lessons_with_declared_unassessed_forms": 42,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -102,9 +102,9 @@
       "level": "A1.3",
       "id": "a1.3-section-1",
       "lessons": 10,
-      "graded_slots": 116,
-      "unassessed_target_forms": 15,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 219,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 1
     },
     {
       "level": "A1.3",
@@ -10172,10 +10172,11 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "entä sinä?",
+          "hei! mitä kuuluu?",
           "kuulumiset",
           "minulle kuuluu hyvää.",
           "mitä",
@@ -10188,6 +10189,7 @@
         ],
         "first_referenced": [
           "entä sinä?",
+          "hei! mitä kuuluu?",
           "kuulumiset",
           "minulle kuuluu hyvää.",
           "mitä sinulle kuuluu?",
@@ -10196,15 +10198,22 @@
           "vapaa-aika"
         ],
         "introduced": [
+          "entä sinä?",
+          "hei! mitä kuuluu?",
           "kuulumiset",
+          "minulle kuuluu hyvää.",
           "mitä",
+          "mitä sinulle kuuluu?",
+          "mitä teet tänään?",
           "myös",
           "nyt",
-          "tänään",
           "vapaa-aika"
         ],
         "correct_answer": [
+          "entä sinä?",
+          "hei! mitä kuuluu?",
           "kuulumiset",
+          "minulle kuuluu hyvää.",
           "mitä",
           "mitä sinulle kuuluu?",
           "mitä teet tänään?",
@@ -10213,17 +10222,14 @@
           "tänään",
           "vapaa-aika"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 6,
         "later_correct_retrieval": [
           "mitä",
           "nyt",
           "tänään"
         ],
-        "declared_unassessed": [
-          "entä sinä?",
-          "minulle kuuluu hyvää."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -10244,22 +10250,28 @@
           "mitä teet tänään?"
         ],
         "authored_new_forms": [
+          "entä sinä?",
+          "hei! mitä kuuluu?",
           "kuulumiset",
-          "mitä",
+          "minulle kuuluu hyvää.",
+          "mitä sinulle kuuluu?",
+          "mitä teet tänään?",
           "myös",
-          "nyt",
-          "tänään",
           "vapaa-aika"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -10297,11 +10309,14 @@
           "voidaan mennä yhdessä."
         ],
         "introduced": [
+          "haluatko tulla minun kanssani?",
           "kanssa",
           "mielelläni",
           "valitettavasti",
+          "valitettavasti en voi.",
           "vapaa",
           "voi",
+          "voidaan mennä yhdessä.",
           "yhdessä"
         ],
         "correct_answer": [
@@ -10309,25 +10324,32 @@
           "kanssa",
           "kyllä, mielelläni.",
           "mielelläni",
+          "minulle kuuluu hyvää.",
+          "mitä teet tänään?",
+          "myös",
           "valitettavasti",
+          "valitettavasti en voi.",
           "vapaa",
+          "vapaa-aika",
           "voi",
+          "voidaan mennä yhdessä.",
           "yhdessä"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 8,
         "later_correct_retrieval": [
           "kanssa",
           "kyllä, mielelläni.",
+          "minulle kuuluu hyvää.",
+          "mitä teet tänään?",
+          "myös",
+          "vapaa-aika",
           "voi",
           "yhdessä"
         ],
-        "declared_unassessed": [
-          "valitettavasti en voi.",
-          "voidaan mennä yhdessä."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [
           "kanssa",
@@ -10346,22 +10368,26 @@
           "voidaan mennä yhdessä."
         ],
         "authored_new_forms": [
-          "kanssa",
+          "haluatko tulla minun kanssani?",
           "mielelläni",
           "valitettavasti",
+          "valitettavasti en voi.",
           "vapaa",
-          "voi",
-          "yhdessä"
+          "voidaan mennä yhdessä."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation"
+        ]
       }
     },
     {
@@ -10376,11 +10402,12 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "ehkä",
           "ehkä sitten huomenna.",
+          "minun täytyy lähteä.",
           "minun täytyy perua tapaaminen.",
           "myöhemmin",
           "myöhässä",
@@ -10392,6 +10419,7 @@
         ],
         "first_referenced": [
           "ehkä sitten huomenna.",
+          "minun täytyy lähteä.",
           "minun täytyy perua tapaaminen.",
           "olen myöhässä.",
           "perua",
@@ -10400,34 +10428,52 @@
         ],
         "introduced": [
           "ehkä",
-          "myöhemmin",
-          "myöhässä",
-          "perua",
-          "siirtää",
-          "sitten"
-        ],
-        "correct_answer": [
-          "ehkä",
+          "ehkä sitten huomenna.",
+          "minun täytyy lähteä.",
           "minun täytyy perua tapaaminen.",
           "myöhemmin",
-          "myöhässä",
+          "olen myöhässä.",
           "perua",
           "siirtää",
           "sitten",
           "voimmeko tavata myöhemmin?"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
+        "correct_answer": [
           "ehkä",
+          "ehkä sitten huomenna.",
+          "entä sinä?",
+          "hei! mitä kuuluu?",
+          "kuulumiset",
+          "mielelläni",
+          "minun täytyy lähteä.",
+          "minun täytyy perua tapaaminen.",
+          "mitä sinulle kuuluu?",
           "myöhemmin",
           "myöhässä",
-          "sitten"
+          "olen myöhässä.",
+          "perua",
+          "siirtää",
+          "sitten",
+          "valitettavasti en voi.",
+          "vapaa",
+          "voimmeko tavata myöhemmin?"
         ],
-        "declared_unassessed": [
-          "ehkä sitten huomenna.",
-          "olen myöhässä."
+        "receptive_count": 7,
+        "productive_count": 13,
+        "later_correct_retrieval": [
+          "ehkä",
+          "entä sinä?",
+          "hei! mitä kuuluu?",
+          "kuulumiset",
+          "mielelläni",
+          "mitä sinulle kuuluu?",
+          "myöhemmin",
+          "myöhässä",
+          "sitten",
+          "valitettavasti en voi.",
+          "vapaa"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -10448,22 +10494,27 @@
           "voimmeko tavata myöhemmin?"
         ],
         "authored_new_forms": [
-          "ehkä",
-          "myöhemmin",
-          "myöhässä",
+          "ehkä sitten huomenna.",
+          "minun täytyy lähteä.",
+          "minun täytyy perua tapaaminen.",
+          "olen myöhässä.",
           "perua",
           "siirtää",
-          "sitten"
+          "voimmeko tavata myöhemmin?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-necessity"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a12-requests"
+        ]
       }
     },
     {
@@ -10478,7 +10529,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "heti",
@@ -10488,6 +10539,7 @@
           "olen siellä kello kuusi.",
           "saapua",
           "tulen pian.",
+          "tulet pian.",
           "vastaan myöhemmin.",
           "vastata",
           "viesti"
@@ -10498,38 +10550,58 @@
           "olen siellä kello kuusi.",
           "saapua",
           "tulen pian.",
+          "tulet pian.",
           "vastaan myöhemmin.",
           "vastata"
         ],
         "introduced": [
           "heti",
+          "lähetä minulle viesti.",
           "minulle",
           "nyt",
+          "olen siellä kello kuusi.",
           "saapua",
+          "tulen pian.",
+          "tulet pian.",
+          "vastaan myöhemmin.",
           "vastata",
           "viesti"
         ],
         "correct_answer": [
+          "haluatko tulla minun kanssani?",
           "heti",
           "lähetä minulle viesti.",
           "minulle",
+          "minun täytyy lähteä.",
           "nyt",
-          "saapua",
-          "tulen pian.",
-          "vastata",
-          "viesti"
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "heti",
-          "nyt",
-          "viesti"
-        ],
-        "declared_unassessed": [
+          "olen myöhässä.",
           "olen siellä kello kuusi.",
-          "vastaan myöhemmin."
+          "saapua",
+          "siirtää",
+          "tulen pian.",
+          "tulet pian.",
+          "valitettavasti",
+          "vastaan myöhemmin.",
+          "vastata",
+          "viesti",
+          "voidaan mennä yhdessä.",
+          "voimmeko tavata myöhemmin?"
         ],
+        "receptive_count": 7,
+        "productive_count": 13,
+        "later_correct_retrieval": [
+          "haluatko tulla minun kanssani?",
+          "heti",
+          "minun täytyy lähteä.",
+          "nyt",
+          "olen myöhässä.",
+          "siirtää",
+          "valitettavasti",
+          "viesti",
+          "voidaan mennä yhdessä.",
+          "voimmeko tavata myöhemmin?"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -10550,22 +10622,31 @@
           "vastaan myöhemmin."
         ],
         "authored_new_forms": [
-          "heti",
+          "lähetä minulle viesti.",
           "minulle",
-          "nyt",
+          "olen siellä kello kuusi.",
           "saapua",
-          "vastata",
-          "viesti"
+          "tulen pian.",
+          "tulet pian.",
+          "vastaan myöhemmin.",
+          "vastata"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-commands",
+          "a13-local-expansion",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-local-cases"
+        ]
       }
     },
     {
@@ -10603,35 +10684,51 @@
           "voitko soittaa minulle myöhemmin?"
         ],
         "introduced": [
-          "minulle",
-          "numero",
-          "puhelin",
-          "sanoo",
-          "soittaa",
-          "voi"
-        ],
-        "correct_answer": [
           "hei, täällä on sara.",
+          "hän ei ole nyt täällä.",
           "minulle",
-          "numero",
           "puhelin",
           "sanoo",
           "soittaa",
           "voi",
-          "voinko puhua amirille?"
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "minulle",
-          "numero",
-          "puhelin",
-          "voi"
-        ],
-        "declared_unassessed": [
-          "hän ei ole nyt täällä.",
+          "voinko puhua amirille?",
           "voitko soittaa minulle myöhemmin?"
         ],
+        "correct_answer": [
+          "ehkä sitten huomenna.",
+          "hei, täällä on sara.",
+          "hän ei ole nyt täällä.",
+          "minulle",
+          "minun täytyy perua tapaaminen.",
+          "numero",
+          "perua",
+          "puhelin",
+          "saapua",
+          "sanoo",
+          "soittaa",
+          "tulen pian.",
+          "tulet pian.",
+          "vastaan myöhemmin.",
+          "voi",
+          "voinko puhua amirille?",
+          "voitko soittaa minulle myöhemmin?"
+        ],
+        "receptive_count": 7,
+        "productive_count": 12,
+        "later_correct_retrieval": [
+          "ehkä sitten huomenna.",
+          "minulle",
+          "minun täytyy perua tapaaminen.",
+          "numero",
+          "perua",
+          "puhelin",
+          "saapua",
+          "tulen pian.",
+          "tulet pian.",
+          "vastaan myöhemmin.",
+          "voi"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -10652,22 +10749,28 @@
           "voitko soittaa minulle myöhemmin?"
         ],
         "authored_new_forms": [
-          "minulle",
-          "numero",
-          "puhelin",
+          "hei, täällä on sara.",
+          "hän ei ole nyt täällä.",
           "sanoo",
           "soittaa",
-          "voi"
+          "voinko puhua amirille?",
+          "voitko soittaa minulle myöhemmin?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand",
+          "a13-local-expansion"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a12-local-cases"
+        ]
       }
     },
     {
@@ -10682,7 +10785,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "enemmän",
@@ -10709,31 +10812,48 @@
         "introduced": [
           "enemmän",
           "hyvä",
+          "juon mieluummin kahvia.",
           "lempiruoka",
           "mieluummin",
-          "myös",
-          "suosikki"
-        ],
-        "correct_answer": [
-          "enemmän",
-          "hyvä",
-          "lempiruoka",
-          "mieluummin",
+          "mikä on sinun suosikkisi?",
           "myös",
           "pidän enemmän teestä.",
           "pidän tästä.",
           "suosikki"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "correct_answer": [
+          "enemmän",
+          "hyvä",
+          "juon mieluummin kahvia.",
+          "lempiruoka",
+          "lähetä minulle viesti.",
+          "mieluummin",
+          "mikä on sinun suosikkisi?",
+          "minulle",
+          "myös",
+          "olen siellä kello kuusi.",
+          "pidän enemmän teestä.",
+          "pidän tästä.",
+          "soittaa",
+          "suosikki",
+          "vastata",
+          "voinko puhua amirille?",
+          "voitko soittaa minulle myöhemmin?"
+        ],
+        "receptive_count": 7,
+        "productive_count": 12,
         "later_correct_retrieval": [
           "hyvä",
-          "myös"
+          "lähetä minulle viesti.",
+          "minulle",
+          "myös",
+          "olen siellä kello kuusi.",
+          "soittaa",
+          "vastata",
+          "voinko puhua amirille?",
+          "voitko soittaa minulle myöhemmin?"
         ],
-        "declared_unassessed": [
-          "juon mieluummin kahvia.",
-          "mikä on sinun suosikkisi?"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -10755,21 +10875,31 @@
         ],
         "authored_new_forms": [
           "enemmän",
-          "hyvä",
+          "juon mieluummin kahvia.",
           "lempiruoka",
           "mieluummin",
-          "myös",
+          "mikä on sinun suosikkisi?",
+          "pidän enemmän teestä.",
+          "pidän tästä.",
           "suosikki"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a13-local-expansion",
+          "a13-partitive-patterns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a12-local-cases",
+          "a12-quantities"
+        ]
       }
     },
     {
@@ -10784,7 +10914,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "en tule, koska olen väsynyt.",
@@ -10794,6 +10924,7 @@
           "mutta",
           "olen väsynyt, siksi menen kotiin.",
           "siksi",
+          "valitettavasti en voi, koska olen kiireinen.",
           "vapaa",
           "väsynyt"
         ],
@@ -10805,34 +10936,52 @@
           "mutta",
           "olen väsynyt, siksi menen kotiin.",
           "siksi",
+          "valitettavasti en voi, koska olen kiireinen.",
           "väsynyt"
         ],
         "introduced": [
-          "kiireinen",
-          "koska",
-          "mutta",
-          "siksi",
-          "vapaa",
-          "väsynyt"
-        ],
-        "correct_answer": [
           "en tule, koska olen väsynyt.",
           "haluaisin tulla, mutta olen kiireinen.",
           "kiireinen",
           "koska",
           "mutta",
+          "olen väsynyt, siksi menen kotiin.",
           "siksi",
+          "valitettavasti en voi, koska olen kiireinen.",
+          "väsynyt"
+        ],
+        "correct_answer": [
+          "en tule, koska olen väsynyt.",
+          "haluaisin tulla, mutta olen kiireinen.",
+          "hei, täällä on sara.",
+          "hän ei ole nyt täällä.",
+          "kiireinen",
+          "koska",
+          "lempiruoka",
+          "mieluummin",
+          "mikä on sinun suosikkisi?",
+          "mutta",
+          "olen väsynyt, siksi menen kotiin.",
+          "pidän enemmän teestä.",
+          "sanoo",
+          "siksi",
+          "valitettavasti en voi, koska olen kiireinen.",
           "vapaa",
           "väsynyt"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 11,
         "later_correct_retrieval": [
+          "hei, täällä on sara.",
+          "hän ei ole nyt täällä.",
+          "lempiruoka",
+          "mieluummin",
+          "mikä on sinun suosikkisi?",
+          "pidän enemmän teestä.",
+          "sanoo",
           "vapaa"
         ],
-        "declared_unassessed": [
-          "olen väsynyt, siksi menen kotiin."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -10852,22 +11001,29 @@
           "olen väsynyt, siksi menen kotiin."
         ],
         "authored_new_forms": [
+          "en tule, koska olen väsynyt.",
+          "haluaisin tulla, mutta olen kiireinen.",
           "kiireinen",
           "koska",
           "mutta",
+          "olen väsynyt, siksi menen kotiin.",
           "siksi",
-          "vapaa",
+          "valitettavasti en voi, koska olen kiireinen.",
           "väsynyt"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation"
+        ]
       }
     },
     {
@@ -10882,7 +11038,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "mennään",
@@ -10894,6 +11050,7 @@
           "tavataan",
           "voidaan",
           "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin.",
           "yhdessä"
         ],
         "first_referenced": [
@@ -10903,37 +11060,59 @@
           "sovitaan niin.",
           "tavataan",
           "voidaan",
-          "voidaan tavata huomenna."
+          "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin."
         ],
         "introduced": [
           "mennään",
-          "sitten",
-          "sopimus",
-          "tavataan",
-          "voidaan",
-          "yhdessä"
-        ],
-        "correct_answer": [
-          "mennään",
           "mennään yhdessä.",
           "sitten",
+          "sitten mennään kahville.",
           "sopimus",
+          "sovitaan niin.",
           "tavataan",
           "voidaan",
           "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin.",
           "yhdessä"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
+        "correct_answer": [
+          "en tule, koska olen väsynyt.",
+          "enemmän",
+          "juon mieluummin kahvia.",
           "mennään",
+          "mennään yhdessä.",
+          "mutta",
+          "olen väsynyt, siksi menen kotiin.",
+          "pidän tästä.",
           "sitten",
+          "sitten mennään kahville.",
+          "sopimus",
+          "sovitaan niin.",
+          "suosikki",
+          "tavataan",
+          "voidaan",
+          "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin.",
+          "väsynyt",
           "yhdessä"
         ],
-        "declared_unassessed": [
-          "sitten mennään kahville.",
-          "sovitaan niin."
+        "receptive_count": 7,
+        "productive_count": 13,
+        "later_correct_retrieval": [
+          "en tule, koska olen väsynyt.",
+          "enemmän",
+          "juon mieluummin kahvia.",
+          "mennään",
+          "mutta",
+          "olen väsynyt, siksi menen kotiin.",
+          "pidän tästä.",
+          "sitten",
+          "suosikki",
+          "väsynyt",
+          "yhdessä"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -10954,12 +11133,14 @@
           "voidaan tavata huomenna."
         ],
         "authored_new_forms": [
-          "mennään",
-          "sitten",
+          "mennään yhdessä.",
+          "sitten mennään kahville.",
           "sopimus",
+          "sovitaan niin.",
           "tavataan",
           "voidaan",
-          "yhdessä"
+          "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin."
         ]
       },
       "grammar": {
@@ -10989,35 +11170,73 @@
         "declared_forms": [
           "haluatko tulla minun kanssani?",
           "hei! mitä kuuluu?",
+          "juon mieluummin kahvia.",
+          "lähetä minulle viesti.",
+          "minun täytyy lähteä.",
+          "mitä teet tänään?",
+          "pidän enemmän teestä.",
           "sovitaan niin.",
+          "tulen pian.",
+          "tulet pian.",
           "valitettavasti en voi, koska olen kiireinen.",
           "voidaan tavata myöhemmin."
         ],
-        "first_referenced": [
-          "hei! mitä kuuluu?",
-          "valitettavasti en voi, koska olen kiireinen.",
-          "voidaan tavata myöhemmin."
-        ],
+        "first_referenced": [],
         "introduced": [
           "haluatko tulla minun kanssani?",
           "hei! mitä kuuluu?"
         ],
         "correct_answer": [
+          "haluaisin tulla, mutta olen kiireinen.",
           "haluatko tulla minun kanssani?",
           "hei! mitä kuuluu?",
+          "juon mieluummin kahvia.",
+          "kiireinen",
+          "koska",
+          "lähetä minulle viesti.",
+          "mennään yhdessä.",
+          "minun täytyy lähteä.",
+          "mitä teet tänään?",
+          "olen siellä kello kuusi.",
+          "pidän enemmän teestä.",
+          "siksi",
+          "sopimus",
           "sovitaan niin.",
+          "tulen pian.",
+          "tulet pian.",
           "valitettavasti en voi, koska olen kiireinen.",
+          "vastaan myöhemmin.",
+          "voidaan",
           "voidaan tavata myöhemmin."
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 18,
         "later_correct_retrieval": [
+          "haluaisin tulla, mutta olen kiireinen.",
           "haluatko tulla minun kanssani?",
-          "sovitaan niin."
+          "hei! mitä kuuluu?",
+          "juon mieluummin kahvia.",
+          "kiireinen",
+          "koska",
+          "lähetä minulle viesti.",
+          "mennään yhdessä.",
+          "minun täytyy lähteä.",
+          "mitä teet tänään?",
+          "olen siellä kello kuusi.",
+          "pidän enemmän teestä.",
+          "siksi",
+          "sopimus",
+          "sovitaan niin.",
+          "tulen pian.",
+          "tulet pian.",
+          "valitettavasti en voi, koska olen kiireinen.",
+          "vastaan myöhemmin.",
+          "voidaan",
+          "voidaan tavata myöhemmin."
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 5,
         "reading_only": [
           "hei! mitä kuuluu? haluatko tulla minun kanssani?",
           "valitettavasti en voi, koska olen kiireinen. voidaan tavata myöhemmin."
@@ -11035,12 +11254,27 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-commands",
+          "a12-negation-expand",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 11,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -11066,8 +11300,10 @@
           "lähetä minulle viesti.",
           "minun täytyy perua tapaaminen.",
           "mitä sinulle kuuluu?",
+          "mitä teet tänään?",
           "pidän enemmän teestä.",
           "tulen pian.",
+          "tulet pian.",
           "valitettavasti en voi, koska olen kiireinen.",
           "valitettavasti en voi.",
           "voidaan tavata huomenna.",
@@ -11085,16 +11321,21 @@
           "lähetä minulle viesti.",
           "minun täytyy perua tapaaminen.",
           "mitä sinulle kuuluu?",
+          "mitä teet tänään?",
           "pidän enemmän teestä.",
+          "sitten mennään kahville.",
+          "tavataan",
           "tulen pian.",
+          "tulet pian.",
           "valitettavasti en voi, koska olen kiireinen.",
           "valitettavasti en voi.",
           "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin.",
           "voimmeko tavata myöhemmin?",
           "voitko soittaa minulle myöhemmin?"
         ],
         "receptive_count": 7,
-        "productive_count": 8,
+        "productive_count": 15,
         "later_correct_retrieval": [
           "en tule, koska olen väsynyt.",
           "entä sinä?",
@@ -11104,11 +11345,16 @@
           "lähetä minulle viesti.",
           "minun täytyy perua tapaaminen.",
           "mitä sinulle kuuluu?",
+          "mitä teet tänään?",
           "pidän enemmän teestä.",
+          "sitten mennään kahville.",
+          "tavataan",
           "tulen pian.",
+          "tulet pian.",
           "valitettavasti en voi, koska olen kiireinen.",
           "valitettavasti en voi.",
           "voidaan tavata huomenna.",
+          "voidaan tavata myöhemmin.",
           "voimmeko tavata myöhemmin?",
           "voitko soittaa minulle myöhemmin?"
         ],
@@ -11123,12 +11369,27 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-commands",
+          "a12-negation-expand",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 11,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -18612,61 +18873,6 @@
     ],
     "lessons_with_unassessed_declared_targets": [
       {
-        "lesson_id": "a1.3-section-1-lesson-1",
-        "forms": [
-          "entä sinä?",
-          "minulle kuuluu hyvää."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-2",
-        "forms": [
-          "valitettavasti en voi.",
-          "voidaan mennä yhdessä."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-3",
-        "forms": [
-          "ehkä sitten huomenna.",
-          "olen myöhässä."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-4",
-        "forms": [
-          "olen siellä kello kuusi.",
-          "vastaan myöhemmin."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-5",
-        "forms": [
-          "hän ei ole nyt täällä.",
-          "voitko soittaa minulle myöhemmin?"
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-6",
-        "forms": [
-          "juon mieluummin kahvia.",
-          "mikä on sinun suosikkisi?"
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-7",
-        "forms": [
-          "olen väsynyt, siksi menen kotiin."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-1-lesson-8",
-        "forms": [
-          "sitten mennään kahville.",
-          "sovitaan niin."
-        ]
-      },
-      {
         "lesson_id": "a1.3-section-2-lesson-1",
         "forms": [
           "kaikki on valmista."
@@ -18961,22 +19167,6 @@
         "title_en": "Selected consonant gradation",
         "prerequisites": [
           "a13-verb-classes"
-        ]
-      },
-      {
-        "id": "a13-local-expansion",
-        "level": "A1.3",
-        "title_en": "Expanded local-case patterns",
-        "prerequisites": [
-          "a12-local-cases"
-        ]
-      },
-      {
-        "id": "a13-partitive-patterns",
-        "level": "A1.3",
-        "title_en": "Partitive in familiar object frames",
-        "prerequisites": [
-          "a12-quantities"
         ]
       },
       {

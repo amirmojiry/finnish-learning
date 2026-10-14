@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.45.0] - 2026-10-14
+
+### Added
+
+- Complete all ten A1.3 Section 1 social/message/invitation overviews: 300 activities, later positive retrieval for 60 introduced exact surfaces/expressions and later review of seven bounded grammar concepts. Close 42 missing positive-answer target occurrences.
+- Synchronize the previously absent A1.3 grammar registry from the canonical master spine, carrying A1.1/A1.2 prerequisites. Assess explicit two-person Tulen/Tulet, necessity/infinitive, recipient/liking case and partitive examples without claiming full paradigms.
+- Teach three formerly review-only frames earlier; assess both facts in each original passage and add supported four-sentence message writing. Keep passive/conditional suggestion phrases formulaic and grade productive recall strictly.
+- Preserve every original item record, core lesson mapping, fifteen checkpoint targets and 80% threshold; add only two explicit sentence records. Add deterministic acceptance reports, regression tests and bilingual documentation.
+
 ## [1.44.0] - 2026-10-14
 
 ### Added

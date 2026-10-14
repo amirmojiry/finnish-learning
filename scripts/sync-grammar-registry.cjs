@@ -17,7 +17,7 @@ function synchronize(root, action) {
   if (!['--check', '--write'].includes(action)) throw new Error('Usage: sync-grammar-registry.cjs --check|--write');
   const read = name => JSON.parse(fs.readFileSync(path.join(root, name), 'utf8'));
   const master = read('data/course/master-curriculum.json');
-  for (const level of ['A1.1', 'A1.2', 'A2.1']) {
+  for (const level of ['A1.1', 'A1.2', 'A1.3', 'A2.1']) {
     const filename = 'data/course/' + level.toLowerCase() + '-curriculum.json';
     const curriculum = read(filename);
     const expected = registryFor(master, level);
@@ -35,7 +35,7 @@ function synchronize(root, action) {
 if (require.main === module) {
   try {
     synchronize(ROOT, process.argv[2]);
-    console.log('A1.1, A1.2 and A2.1 grammar registries match canonical master curriculum.');
+    console.log('A1.1, A1.2, A1.3 and A2.1 grammar registries match canonical master curriculum.');
   } catch (error) {
     console.error(error.message);
     process.exitCode = 1;

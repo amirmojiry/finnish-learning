@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.44.0`
+- Version: `1.45.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -173,3 +173,5 @@ A1.2 Section 2 completes all ten transport/directions lesson overviews with 309 
 A1.2 Section 3 completes all ten routine, study/work, interests and arrangements overviews with 329 activities. All 79 introduced exact surfaces/expressions have later positive retrieval and six bounded grammar concepts have later review. Both existing passages assess four facts each; routine and week writing each use four taught sentences. All seven temporal weekdays are assessed and retrieved later. Original records, core lesson mappings, fifteen checkpoint targets and the 80% threshold remain intact. Run `npm run section:a12:s3:check`; see [the acceptance report](docs/A12-SECTION3-ACCEPTANCE.md). Invitations/cancellation remain fixed phrases; these tasks do not establish full paradigms or independent CEFR proficiency.
 
 A1.2 Section 4 completes all forty lesson overviews and four scoped acceptance gates in the A1.2 path (1,267 activities). Section 4 has 338 activities; all 72 introduced exact surfaces/expressions have later retrieval and eight bounded grammar concepts have later review. Two original passages now assess four facts each, with supported four-sentence appointment writing. Every original record, core mapping, cumulative checkpoint target and the 80% threshold is preserved. Run `npm run section:a12:s4:check`; see [the acceptance report](docs/A12-SECTION4-ACCEPTANCE.md). Health content teaches language communication; fixed pain/polite requests do not establish full paradigms or independent CEFR proficiency.
+
+A1.3 Section 1 now has canonical overviews for all ten messages/invitations/social lessons (300 activities). All 60 introduced exact surfaces/expressions have later retrieval and seven bounded grammar concepts have later review, with prerequisites from all eight A1.1/A1.2 sections. The A1.3 registry follows the existing master spine. Both original passages assess two facts each; four-sentence message writing is supported. Original records/core mappings, fifteen checkpoint targets and 80% threshold are retained. Run `npm run section:a13:s1:check`; see [the acceptance report](docs/A13-SECTION1-ACCEPTANCE.md). Tulen/Tulet is a two-person contrast; fixed suggestions do not establish full passive/conditional paradigms or CEFR proficiency.

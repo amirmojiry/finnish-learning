@@ -1,10 +1,10 @@
 {
   "name": "finnish-learning",
-  "version": "1.44.0",
+  "version": "1.45.0",
   "private": true,
   "description": "A Persian-first Finnish vocabulary learning web application.",
   "scripts": {
-    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/audit-a11-section1.cjs --check && node scripts/audit-a11-section2.cjs --check && node scripts/audit-a11-section3.cjs --check && node scripts/audit-a11-section4.cjs --check && node scripts/audit-a12-section1.cjs --check && node scripts/audit-a12-section2.cjs --check && node scripts/audit-a12-section3.cjs --check && node scripts/audit-a12-section4.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/audit-a11-section1.cjs --check && node scripts/audit-a11-section2.cjs --check && node scripts/audit-a11-section3.cjs --check && node scripts/audit-a11-section4.cjs --check && node scripts/audit-a12-section1.cjs --check && node scripts/audit-a12-section2.cjs --check && node scripts/audit-a12-section3.cjs --check && node scripts/audit-a12-section4.cjs --check && node scripts/audit-a13-section1.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:js": "node --test tests/*.test.cjs",
     "test:data": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "build:vocabulary": "node scripts/build-vocabulary.mjs",
@@ -52,7 +52,10 @@
     "section:a12:s3:report": "node scripts/audit-a12-section3.cjs --markdown",
     "section:a12:s4:check": "node scripts/audit-a12-section4.cjs --check",
     "section:a12:s4:write": "node scripts/audit-a12-section4.cjs --write",
-    "section:a12:s4:report": "node scripts/audit-a12-section4.cjs --markdown"
+    "section:a12:s4:report": "node scripts/audit-a12-section4.cjs --markdown",
+    "section:a13:s1:check": "node scripts/audit-a13-section1.cjs --check",
+    "section:a13:s1:write": "node scripts/audit-a13-section1.cjs --write",
+    "section:a13:s1:report": "node scripts/audit-a13-section1.cjs --markdown"
   },
   "engines": {
     "node": ">=20",

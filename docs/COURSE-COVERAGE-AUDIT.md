@@ -5,12 +5,12 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 
 ## Key findings
 
-- 140 shipped lessons / 14 sections; 2411 graded slots after real runtime injection.
+- 140 shipped lessons / 14 sections; 2514 graded slots after real runtime injection.
 - 670 lexical target placements and 464 distinct surface forms; 431 lemma-field values (unverified) and 0 explicit sense IDs.
-- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 685 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
+- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 721 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 425 dictionary entries; 126 authored lexical target forms found in the curated dictionary; 338 missing, of which 332 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 21 with explicit lesson concept IDs. 44 lessons lack these links even though 493 structural/grammar slots exist (75 morphology slots).
-- 50 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
+- 27 planned grammar concepts in shipped stages; 23 with explicit lesson concept IDs. 35 lessons lack these links even though 525 structural/grammar slots exist (75 morphology slots).
+- 42 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage
 
@@ -24,7 +24,7 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 | A1.2 | a1.2-section-2 | 10 | 213 | 0 | 0 |
 | A1.2 | a1.2-section-3 | 10 | 237 | 0 | 1 |
 | A1.2 | a1.2-section-4 | 10 | 238 | 0 | 0 |
-| A1.3 | a1.3-section-1 | 10 | 116 | 15 | 10 |
+| A1.3 | a1.3-section-1 | 10 | 219 | 0 | 1 |
 | A1.3 | a1.3-section-2 | 10 | 116 | 14 | 10 |
 | A1.3 | a1.3-section-3 | 10 | 116 | 14 | 10 |
 | A1.3 | a1.3-section-4 | 10 | 116 | 15 | 10 |
@@ -97,8 +97,6 @@ Grammar notes and individual morphology exercises do not establish concept trace
 | `a11-sounds` | A1.1 | — |
 | `a13-verb-classes` | A1.3 | `a13-present-paradigm` |
 | `a13-kpt-preview` | A1.3 | `a13-verb-classes` |
-| `a13-local-expansion` | A1.3 | `a12-local-cases` |
-| `a13-partitive-patterns` | A1.3 | `a12-quantities` |
 | `a13-past-recognition` | A1.3 | `a13-present-paradigm` |
 
 ## Next work according to issue #101

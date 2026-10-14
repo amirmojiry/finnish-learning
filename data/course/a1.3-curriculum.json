@@ -1939,5 +1939,143 @@
         }
       ]
     }
+  ],
+  "grammar_concepts": [
+    {
+      "id": "a11-sounds",
+      "prerequisites": [],
+      "title_fa": "واج‌ها، واکه‌های کوتاه/بلند و آهنگ پایه"
+    },
+    {
+      "id": "a11-olla",
+      "prerequisites": [],
+      "title_fa": "فعل olla و معرفی ساده"
+    },
+    {
+      "id": "a11-questions",
+      "prerequisites": [
+        "a11-olla"
+      ],
+      "title_fa": "واژه‌های پرسشی kuka/mikä/missä و پرسش‌های کوتاه"
+    },
+    {
+      "id": "a11-present-chunks",
+      "prerequisites": [
+        "a11-olla"
+      ],
+      "title_fa": "شکل‌های پرتکرار حال به‌صورت عبارت‌های آماده"
+    },
+    {
+      "id": "a11-negation",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "منفی‌سازی ساده با en/ei و عبارت‌های ثابت"
+    },
+    {
+      "id": "a11-case-chunks",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "حالت‌های مکانی و Partitive در عبارت‌های آماده، نه صرف آزاد"
+    },
+    {
+      "id": "a11-pronouns",
+      "prerequisites": [
+        "a11-olla"
+      ],
+      "title_fa": "ضمایر شخصی و اشاری پایه، مالکیت در عبارت‌های ثابت"
+    },
+    {
+      "id": "a12-quantities",
+      "prerequisites": [
+        "a11-case-chunks"
+      ],
+      "title_fa": "مقدار، عدد و کاربردهای محدود Partitive"
+    },
+    {
+      "id": "a12-local-cases",
+      "prerequisites": [
+        "a11-case-chunks"
+      ],
+      "title_fa": "حالت‌های در/از/به مکان، با صورت‌های صحیح و بازبینی‌شده"
+    },
+    {
+      "id": "a12-requests",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "درخواست مودبانهٔ ثابت (haluaisin، saanko)"
+    },
+    {
+      "id": "a12-commands",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "امر مفرد و دستورهای جهت‌یابی"
+    },
+    {
+      "id": "a12-negation-expand",
+      "prerequisites": [
+        "a11-negation"
+      ],
+      "title_fa": "منفی‌سازی درخواست‌ها و جمله‌های روزمره"
+    },
+    {
+      "id": "a12-frequency-adverbs",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "قیدهای بسامد و زمان‌بندی ساده"
+    },
+    {
+      "id": "a13-present-paradigm",
+      "prerequisites": [
+        "a11-present-chunks"
+      ],
+      "title_fa": "توسعهٔ شکل‌های شخصی حال در فعل‌های پرتکرار"
+    },
+    {
+      "id": "a13-verb-classes",
+      "prerequisites": [
+        "a13-present-paradigm"
+      ],
+      "title_fa": "آشنایی تدریجی با انواع فعل و ریشه‌های متداول"
+    },
+    {
+      "id": "a13-kpt-preview",
+      "prerequisites": [
+        "a13-verb-classes"
+      ],
+      "title_fa": "درجه‌بندی همخوان (KPT) در واژه‌های منتخب"
+    },
+    {
+      "id": "a13-local-expansion",
+      "prerequisites": [
+        "a12-local-cases"
+      ],
+      "title_fa": "تقویت کاربرد حالت‌های مکانی و فعل + حالت"
+    },
+    {
+      "id": "a13-partitive-patterns",
+      "prerequisites": [
+        "a12-quantities"
+      ],
+      "title_fa": "مفعول Partitive در جمله‌های آشنا"
+    },
+    {
+      "id": "a13-necessity",
+      "prerequisites": [
+        "a12-requests"
+      ],
+      "title_fa": "الگوهای اجبار/توانایی (pitää، täytyy، voin)"
+    },
+    {
+      "id": "a13-past-recognition",
+      "prerequisites": [
+        "a13-present-paradigm"
+      ],
+      "title_fa": "تشخیص چند شکل پرتکرار گذشته، بدون الزام صرف آزاد"
+    }
   ]
 }
