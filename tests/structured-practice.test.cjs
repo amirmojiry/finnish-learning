@@ -312,6 +312,7 @@ for (const type of ['dialogue-order', 'sequence-order']) {
     course.renderItemOrderingActivity({ document, createButton, card, activity, items,
       recordResult: correct => results.push(correct), nextActivity: () => advanced++ });
     const [, answerBox, pool, submit, reset] = card.children;
+    assert.equal(card.classList.contains('is-long-content'), true, 'ordering stays reachable in short scrollable cards');
     assert.equal(answerBox.dir, 'ltr');
     assert.equal(answerBox.attributes.role, 'group');
     assert.equal(pool.dir, 'ltr');
@@ -408,6 +409,7 @@ test('structured-practice DOM renderer handles ordering and typed interactions',
       },
     });
     assert.equal(handled, true);
+    assert.equal(card.classList.contains('is-long-content'), true, 'sentence ordering stays reachable in short scrollable cards');
     const answerBox = card.children[0];
     const tokenPool = card.children[1];
     const submit = card.children[2];

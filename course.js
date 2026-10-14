@@ -1709,6 +1709,7 @@
   }
 
   function renderItemOrderingActivity({ document, activity, items, card, createButton, nextActivity, recordResult }) {
+    card.classList.add('is-long-content');
     const isDialogue = activity.type === 'dialogue-order';
     const targetIds = isDialogue ? activity.turns : activity.items;
     let answered = false;
@@ -1839,6 +1840,7 @@
 
     if (activity.type === 'sentence-order') {
       const ordered = [];
+      card.classList.add('is-long-content');
       const answerBox = document.createElement('div');
       answerBox.className = 'course-sentence-answer-box';
       answerBox.lang = 'fi';
