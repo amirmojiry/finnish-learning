@@ -1408,18 +1408,32 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
       "review_lessons": [
-        "a1.2-section-1-lesson-9"
+        "a1.2-section-1-lesson-4",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-expr-haluaisin-taman-kiitos-28",
           "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-expr-haluaisin-taman-kiitos-28",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-10",
           "item_id": "a12s1-expr-haluaisin-taman-kiitos-28",
           "role": "referenced"
         }
@@ -2646,11 +2660,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-6"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-expr-kassa-on-tuolla-46",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-expr-kassa-on-tuolla-46",
           "role": "referenced"
         }
@@ -3123,11 +3145,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-5"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-expr-kilo-omenoita-kiitos-36",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-expr-kilo-omenoita-kiitos-36",
           "role": "referenced"
         }
@@ -3339,12 +3369,19 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [
+        "a1.2-section-1-lesson-8",
         "a1.2-section-1-lesson-9"
       ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-expr-kuitti-kiitos-65",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-expr-kuitti-kiitos-65",
           "role": "referenced"
         },
@@ -4185,11 +4222,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-8"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-expr-maksan-kateisella-64",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-expr-maksan-kateisella-64",
           "role": "referenced"
         }
@@ -5421,11 +5466,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-2"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-1",
+          "item_id": "a12s1-expr-minulla-on-rahaa-8",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-expr-minulla-on-rahaa-8",
           "role": "referenced"
         }
@@ -6068,11 +6121,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-6"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-expr-missa-maito-on-45",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-expr-missa-maito-on-45",
           "role": "referenced"
         }
@@ -7699,11 +7760,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-7"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-expr-onko-toinen-koko-57",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-expr-onko-toinen-koko-57",
           "role": "referenced"
         }
@@ -8209,6 +8278,7 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
       "review_lessons": [
+        "a1.2-section-1-lesson-2",
         "a1.2-section-1-lesson-9",
         "a1.2-section-1-lesson-10",
         "a1.2-section-4-lesson-10"
@@ -8217,6 +8287,12 @@
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-1",
+          "item_id": "a12s1-expr-paljonko-tama-maksaa-6",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-expr-paljonko-tama-maksaa-6",
           "role": "referenced"
         },
@@ -8759,11 +8835,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-5"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-expr-puoli-litraa-maitoa-kiitos-37",
           "role": "referenced"
         }
@@ -8909,11 +8993,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-4"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-expr-saanko-kahvin-kiitos-29",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-expr-saanko-kahvin-kiitos-29",
           "role": "referenced"
         }
@@ -9005,11 +9097,33 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-10",
           "item_id": "a12s1-expr-se-maksaa-kaksikymmenta-euroa-19",
           "role": "referenced"
         }
@@ -9029,11 +9143,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-expr-se-maksaa-sata-euroa-21",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-expr-se-maksaa-sata-euroa-21",
           "role": "referenced"
         }
@@ -9053,11 +9175,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-2"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-1",
+          "item_id": "a12s1-expr-se-maksaa-viisi-euroa-7",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-expr-se-maksaa-viisi-euroa-7",
           "role": "referenced"
         }
@@ -9077,11 +9207,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-expr-se-maksaa-viisikymmenta-euroa-20",
           "role": "referenced"
         }
@@ -9420,11 +9558,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-6"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-expr-se-on-taalla-47",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-expr-se-on-taalla-47",
           "role": "referenced"
         }
@@ -10010,6 +10156,7 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [
+        "a1.2-section-1-lesson-9",
         "a1.2-section-1-lesson-10",
         "a1.2-section-4-lesson-7",
         "a1.2-section-4-lesson-10",
@@ -10021,6 +10168,12 @@
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-expr-tarvitsen-apua-77",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
           "item_id": "a12s1-expr-tarvitsen-apua-77",
           "role": "referenced"
         },
@@ -10812,11 +10965,26 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-expr-tama-ei-toimi-75",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-expr-tama-ei-toimi-75",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-10",
           "item_id": "a12s1-expr-tama-ei-toimi-75",
           "role": "referenced"
         }
@@ -11044,11 +11212,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-7"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-expr-tama-on-liian-iso-54",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-expr-tama-on-liian-iso-54",
           "role": "referenced"
         }
@@ -11068,11 +11244,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-7"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-expr-tama-on-liian-pieni-55",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-expr-tama-on-liian-pieni-55",
           "role": "referenced"
         }
@@ -11193,11 +11377,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-expr-tama-on-rikki-74",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
           "item_id": "a12s1-expr-tama-on-rikki-74",
           "role": "referenced"
         }
@@ -11217,11 +11409,33 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-7",
+        "a1.2-section-1-lesson-9",
+        "a1.2-section-1-lesson-10"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-expr-tama-on-sopiva-56",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-expr-tama-on-sopiva-56",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-expr-tama-on-sopiva-56",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-10",
           "item_id": "a12s1-expr-tama-on-sopiva-56",
           "role": "referenced"
         }
@@ -11241,11 +11455,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-expr-tama-on-vaara-76",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
           "item_id": "a12s1-expr-tama-on-vaara-76",
           "role": "referenced"
         }
@@ -12093,6 +12315,7 @@
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [
+        "a1.2-section-1-lesson-8",
         "a1.2-section-1-lesson-9",
         "a1.2-section-1-lesson-10"
       ],
@@ -12100,6 +12323,12 @@
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-expr-voinko-maksaa-kortilla-63",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-expr-voinko-maksaa-kortilla-63",
           "role": "referenced"
         },
@@ -12377,11 +12606,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-4"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-expr-voitteko-antaa-taman-30",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-expr-voitteko-antaa-taman-30",
           "role": "referenced"
         }
@@ -12633,11 +12870,19 @@
       "source_rank": null,
       "source_position": null,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-5"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-expr-vahan-lisaa-kiitos-38",
+          "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-expr-vahan-lisaa-kiitos-38",
           "role": "referenced"
         }
@@ -12848,13 +13093,21 @@
       "source_rank": 256,
       "source_position": 256,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-hf-10",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-hf-10",
+          "role": "referenced"
         }
       ]
     },
@@ -12940,13 +13193,21 @@
       "source_rank": 228,
       "source_position": 228,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-hf-20",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-hf-20",
+          "role": "referenced"
         }
       ]
     },
@@ -13032,13 +13293,21 @@
       "source_rank": 241,
       "source_position": 241,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-hf-50",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-hf-50",
+          "role": "referenced"
         }
       ]
     },
@@ -13609,13 +13878,21 @@
       "source_rank": 11658,
       "source_position": 11667,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-4"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-topic-annos",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-topic-annos",
+          "role": "referenced"
         }
       ]
     },
@@ -13634,6 +13911,7 @@
       "source_position": 164,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
       "review_lessons": [
+        "a1.2-section-1-lesson-4",
         "a1.2-section-1-lesson-7",
         "a1.2-section-2-lesson-6"
       ],
@@ -13646,9 +13924,15 @@
         },
         {
           "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-hf-antaa",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-hf-antaa",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-2",
@@ -13782,6 +14066,7 @@
       "source_position": 5863,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [
+        "a1.2-section-1-lesson-9",
         "a1.2-section-4-lesson-7"
       ],
       "occurrences": [
@@ -13790,6 +14075,12 @@
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-topic-apu",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-topic-apu",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-4",
@@ -14264,7 +14555,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-hf-ei",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.3-section-2",
@@ -14869,6 +15160,7 @@
       "source_position": 31648,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
       "review_lessons": [
+        "a1.2-section-1-lesson-2",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -14877,6 +15169,12 @@
           "lesson_id": "a1.2-section-1-lesson-1",
           "item_id": "a12s1-topic-euro",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-topic-euro",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -14969,6 +15267,7 @@
       "source_position": 4672,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
       "review_lessons": [
+        "a1.2-section-1-lesson-4",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -14977,6 +15276,12 @@
           "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-topic-haluaisin",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-topic-haluaisin",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -15624,13 +15929,21 @@
       "source_rank": 690,
       "source_position": 690,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-2"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-1",
           "item_id": "a12s1-topic-hinta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-topic-hinta",
+          "role": "referenced"
         }
       ]
     },
@@ -16662,7 +16975,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-topic-iso",
-          "role": "introduced"
+          "role": "referenced"
         }
       ]
     },
@@ -17670,13 +17983,21 @@
       "source_rank": 55572,
       "source_position": 57064,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-kahdeksankymmenta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-kahdeksankymmenta",
+          "role": "referenced"
         }
       ]
     },
@@ -18241,6 +18562,7 @@
       "source_position": 27590,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
       "review_lessons": [
+        "a1.2-section-1-lesson-6",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -18249,6 +18571,12 @@
           "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-topic-kassa",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-topic-kassa",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -18432,6 +18760,7 @@
       "source_position": 754,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
       "review_lessons": [
+        "a1.2-section-1-lesson-6",
         "a1.2-section-2-lesson-1"
       ],
       "occurrences": [
@@ -18440,6 +18769,12 @@
           "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-topic-kauppa",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-topic-kauppa",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-2",
@@ -19096,6 +19431,7 @@
       "source_position": 19051,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
       "review_lessons": [
+        "a1.2-section-1-lesson-5",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -19104,6 +19440,12 @@
           "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-topic-kilo",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-topic-kilo",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -19526,6 +19868,7 @@
       "source_position": 7336,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
       "review_lessons": [
+        "a1.2-section-1-lesson-3",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -19534,6 +19877,12 @@
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-kolmekymmenta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-kolmekymmenta",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -19679,6 +20028,7 @@
       "source_position": 10123,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [
+        "a1.2-section-1-lesson-8",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -19687,6 +20037,12 @@
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-topic-kortti",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-topic-kortti",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -20109,6 +20465,7 @@
       "source_position": 31382,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [
+        "a1.2-section-1-lesson-8",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -20117,6 +20474,12 @@
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-topic-kuitti",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-topic-kuitti",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -20392,13 +20755,21 @@
       "source_rank": 24175,
       "source_position": 24410,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-kuusikymmenta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-kuusikymmenta",
+          "role": "referenced"
         }
       ]
     },
@@ -20601,13 +20972,21 @@
       "source_rank": 174303,
       "source_position": 182485,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-8"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-topic-kateinen",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-topic-kateinen",
+          "role": "referenced"
         }
       ]
     },
@@ -20996,6 +21375,7 @@
       "source_position": 166,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
       "review_lessons": [
+        "a1.2-section-1-lesson-7",
         "a1.2-section-4-lesson-2",
         "a1.3-section-4-lesson-6"
       ],
@@ -21005,6 +21385,12 @@
           "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-hf-liian",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-hf-liian",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-4",
@@ -21188,6 +21574,7 @@
       "source_position": 189,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
       "review_lessons": [
+        "a1.2-section-1-lesson-5",
         "a1.3-section-2-lesson-3"
       ],
       "occurrences": [
@@ -21196,6 +21583,12 @@
           "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-hf-lisaa",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-hf-lisaa",
+          "role": "referenced"
         },
         {
           "section_id": "a1.3-section-2",
@@ -21219,13 +21612,21 @@
       "source_rank": 32942,
       "source_position": 33455,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-5"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-topic-litra",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-topic-litra",
+          "role": "referenced"
         }
       ]
     },
@@ -21883,13 +22284,21 @@
       "source_rank": 383,
       "source_position": 383,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-8"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-topic-maksaa",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-topic-maksaa",
+          "role": "referenced"
         }
       ]
     },
@@ -23213,7 +23622,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-hf-missa",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -23411,7 +23820,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-hf-mita",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-4",
@@ -23519,13 +23928,21 @@
       "source_rank": 74,
       "source_position": 74,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-hf-mitaan",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-hf-mitaan",
+          "role": "referenced"
         }
       ]
     },
@@ -24191,13 +24608,21 @@
       "source_rank": 15900,
       "source_position": 15961,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-neljakymmenta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-neljakymmenta",
+          "role": "referenced"
         }
       ]
     },
@@ -25389,13 +25814,21 @@
       "source_rank": 739,
       "source_position": 739,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-topic-ongelma",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-topic-ongelma",
+          "role": "referenced"
         }
       ]
     },
@@ -25638,13 +26071,21 @@
       "source_rank": 5578,
       "source_position": 5589,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-6"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-topic-osasto",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-topic-osasto",
+          "role": "referenced"
         }
       ]
     },
@@ -25774,6 +26215,7 @@
       "source_position": 192,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
       "review_lessons": [
+        "a1.2-section-1-lesson-4",
         "a1.2-section-4-lesson-5"
       ],
       "occurrences": [
@@ -25782,6 +26224,12 @@
           "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-hf-ottaa",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-hf-ottaa",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-4",
@@ -25913,6 +26361,7 @@
       "source_position": 60,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
       "review_lessons": [
+        "a1.2-section-1-lesson-2",
         "a1.2-section-1-lesson-4",
         "a1.2-section-1-lesson-10",
         "a1.2-section-3-lesson-4",
@@ -25929,9 +26378,15 @@
         },
         {
           "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-hf-paljon",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-hf-paljon",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -26386,7 +26841,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-topic-pieni",
-          "role": "introduced"
+          "role": "referenced"
         }
       ]
     },
@@ -26870,13 +27325,21 @@
       "source_rank": 544,
       "source_position": 544,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-5"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-topic-puoli",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-topic-puoli",
+          "role": "referenced"
         }
       ]
     },
@@ -27196,6 +27659,7 @@
       "source_position": 297,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
       "review_lessons": [
+        "a1.2-section-1-lesson-2",
         "a1.2-section-1-lesson-7"
       ],
       "occurrences": [
@@ -27207,9 +27671,15 @@
         },
         {
           "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-hf-rahaa",
+          "role": "referenced"
+        },
+        {
+          "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-hf-rahaa",
-          "role": "introduced"
+          "role": "referenced"
         }
       ]
     },
@@ -27228,6 +27698,7 @@
       "source_position": 5789,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [
+        "a1.2-section-1-lesson-9",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -27236,6 +27707,12 @@
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-topic-rikki",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-topic-rikki",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -27429,13 +27906,21 @@
       "source_rank": 16267,
       "source_position": 16356,
       "first_shipped_lesson": "a1.2-section-1-lesson-3",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-4"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-3",
           "item_id": "a12s1-topic-saanko",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-4",
+          "item_id": "a12s1-topic-saanko",
+          "role": "referenced"
         }
       ]
     },
@@ -27806,13 +28291,21 @@
       "source_rank": 1039,
       "source_position": 1041,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-sata",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-sata",
+          "role": "referenced"
         }
       ]
     },
@@ -27926,13 +28419,21 @@
       "source_rank": 47164,
       "source_position": 48340,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-seitsemankymmenta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-seitsemankymmenta",
+          "role": "referenced"
         }
       ]
     },
@@ -28057,13 +28558,21 @@
       "source_rank": 65454,
       "source_position": 66478,
       "first_shipped_lesson": "a1.2-section-1-lesson-1",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-2"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-1",
           "item_id": "a12s1-topic-sentti",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-2",
+          "item_id": "a12s1-topic-sentti",
+          "role": "referenced"
         }
       ]
     },
@@ -28106,6 +28615,7 @@
       "source_position": 149,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
       "review_lessons": [
+        "a1.2-section-1-lesson-6",
         "a1.2-section-2-lesson-1",
         "a1.3-section-2-lesson-1",
         "a1.3-section-2-lesson-2",
@@ -28117,6 +28627,12 @@
           "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-hf-siella",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-hf-siella",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-2",
@@ -28848,6 +29364,7 @@
       "source_position": 2856,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
       "review_lessons": [
+        "a1.2-section-1-lesson-7",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -28856,6 +29373,12 @@
           "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-topic-sopiva",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-topic-sopiva",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -29496,6 +30019,7 @@
       "source_position": 224,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [
+        "a1.2-section-1-lesson-9",
         "a1.2-section-2-lesson-2"
       ],
       "occurrences": [
@@ -29504,6 +30028,12 @@
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-hf-takaisin",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-hf-takaisin",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-2",
@@ -30371,6 +30901,7 @@
       "source_position": 635,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
       "review_lessons": [
+        "a1.2-section-1-lesson-9",
         "a1.2-section-1-lesson-10"
       ],
       "occurrences": [
@@ -30379,6 +30910,12 @@
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-topic-toimi",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-topic-toimi",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-1",
@@ -30444,6 +30981,7 @@
       "source_position": 119,
       "first_shipped_lesson": "a1.2-section-1-lesson-6",
       "review_lessons": [
+        "a1.2-section-1-lesson-7",
         "a1.3-section-4-lesson-6"
       ],
       "occurrences": [
@@ -30452,6 +30990,12 @@
           "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-hf-toinen",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-7",
+          "item_id": "a12s1-hf-toinen",
+          "role": "referenced"
         },
         {
           "section_id": "a1.3-section-4",
@@ -31140,7 +31684,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-6",
           "item_id": "a12s1-hf-tama",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-4",
@@ -31462,6 +32006,7 @@
       "source_position": 229,
       "first_shipped_lesson": "a1.2-section-1-lesson-5",
       "review_lessons": [
+        "a1.2-section-1-lesson-6",
         "a1.2-section-2-lesson-1",
         "a1.2-section-4-lesson-7",
         "a1.3-section-2-lesson-6"
@@ -31472,6 +32017,12 @@
           "lesson_id": "a1.2-section-1-lesson-5",
           "item_id": "a12s1-hf-taalla",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-6",
+          "item_id": "a12s1-hf-taalla",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-2",
@@ -32757,6 +33308,7 @@
       "source_position": 25,
       "first_shipped_lesson": "a1.2-section-1-lesson-7",
       "review_lessons": [
+        "a1.2-section-1-lesson-8",
         "a1.2-section-3-lesson-5",
         "a1.2-section-4-lesson-7",
         "a1.3-section-1-lesson-2",
@@ -32770,6 +33322,12 @@
           "lesson_id": "a1.2-section-1-lesson-7",
           "item_id": "a12s1-hf-voi",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-8",
+          "item_id": "a12s1-hf-voi",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-3",
@@ -33121,6 +33679,7 @@
       "source_position": 139,
       "first_shipped_lesson": "a1.2-section-1-lesson-4",
       "review_lessons": [
+        "a1.2-section-1-lesson-5",
         "a1.2-section-4-lesson-4",
         "a1.3-section-3-lesson-4"
       ],
@@ -33130,6 +33689,12 @@
           "lesson_id": "a1.2-section-1-lesson-4",
           "item_id": "a12s1-hf-vahan",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-5",
+          "item_id": "a12s1-hf-vahan",
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-4",
@@ -33207,13 +33772,21 @@
       "source_rank": 4263,
       "source_position": 4277,
       "first_shipped_lesson": "a1.2-section-1-lesson-8",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-9"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-8",
           "item_id": "a12s1-topic-vaara",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-9",
+          "item_id": "a12s1-topic-vaara",
+          "role": "referenced"
         }
       ]
     },
@@ -33295,13 +33868,21 @@
       "source_rank": 76570,
       "source_position": 76601,
       "first_shipped_lesson": "a1.2-section-1-lesson-2",
-      "review_lessons": [],
+      "review_lessons": [
+        "a1.2-section-1-lesson-3"
+      ],
       "occurrences": [
         {
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-2",
           "item_id": "a12s1-topic-yhdeksankymmenta",
           "role": "introduced"
+        },
+        {
+          "section_id": "a1.2-section-1",
+          "lesson_id": "a1.2-section-1-lesson-3",
+          "item_id": "a12s1-topic-yhdeksankymmenta",
+          "role": "referenced"
         }
       ]
     },
@@ -33525,7 +34106,7 @@
           "section_id": "a1.2-section-1",
           "lesson_id": "a1.2-section-1-lesson-1",
           "item_id": "a12s1-hf-yksi",
-          "role": "introduced"
+          "role": "referenced"
         },
         {
           "section_id": "a1.2-section-2",
