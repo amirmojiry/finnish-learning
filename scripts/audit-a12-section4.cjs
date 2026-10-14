@@ -33,7 +33,7 @@ function evaluate(raw, curriculum, sidecar, preceding, priorCurriculum) {
     }
   }
   const productive = new Set(['type', 'production', 'dictation', 'controlled-production', 'expression-completion']);
-  const grammaticalForms = new Set(['ota', 'juo', 'lepää', 'sisällä', 'ulkona']);
+  const grammaticalForms = new Set(['ota', 'juo', 'lepää', 'sisällä', 'ulkona', 'kuume']);
   for (const lesson of section.lessons) for (const activity of lesson.activities) {
     const item = section.items[activity.item];
     if (productive.has(activity.type) && (item?.item_type === 'expression' || grammaticalForms.has(item?.surface_form))

@@ -120,3 +120,23 @@ test('Section 4 retains every original item and stable core progress contracts',
   const core = raw.lessons.map(l => Object.fromEntries(['id', 'curriculum_id', 'production_targets', 'listening_targets', 'checkpoint_targets', 'passing_score', 'curriculum_target_refs'].map(k => [k, l[k] ?? null])));
   assert.equal(hash(core), 'd4f4517421fd08207976abb3f841fbfc7ef976b0f197dae4ca47c74cbd842597');
 });
+
+test('kuume teaching and later retrieval reject the different word kuuma', () => {
+  const section = course.validateSection(raw);
+  const hits = [];
+  for (const lesson of section.lessons) for (const activity of lesson.activities) {
+    const item = section.items[activity.item];
+    if (item?.surface_form !== 'kuume' || !['type', 'production', 'dictation'].includes(activity.type)) continue;
+    hits.push(lesson.order);
+    assert.equal(activity.answer_policy, 'morphology');
+    assert.equal(course.gradeActivityAnswer(activity, item, 'kuume').accepted, true);
+    assert.equal(course.gradeActivityAnswer(activity, item, 'kuuma').accepted, false, lesson.id);
+  }
+  assert.ok(hits.includes(4));
+  assert.ok(hits.some(order => order > 4));
+  const weak = structuredClone(raw);
+  const activity = weak.lessons[3].activities.find(a => a.type === 'type' && raw.items[a.item]?.surface_form === 'kuume');
+  assert.ok(activity);
+  delete activity.answer_policy;
+  assert.ok(verify(weak).errors.some(e => e.includes('grammatical phrase/form lacks morphology policy')));
+});

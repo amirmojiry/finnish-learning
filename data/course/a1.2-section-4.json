@@ -3543,7 +3543,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s4-topic-20"
+          "item": "a12s4-topic-20",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -4598,7 +4599,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s4-topic-20"
+          "item": "a12s4-topic-20",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
