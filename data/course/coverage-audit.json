@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2083,
+    "graded_activity_slots": 2245,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 578,
+    "assessed_again_after_earlier_reference": 625,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 21,
-    "lessons_without_explicit_grammar_concept_ids": 63,
-    "graded_grammar_related_slots": 428,
+    "lessons_without_explicit_grammar_concept_ids": 54,
+    "graded_grammar_related_slots": 459,
     "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 66,
+    "lessons_with_declared_unassessed_forms": 58,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -86,9 +86,9 @@
       "level": "A1.2",
       "id": "a1.2-section-3",
       "lessons": 10,
-      "graded_slots": 75,
-      "unassessed_target_forms": 44,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 237,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 1
     },
     {
       "level": "A1.2",
@@ -7484,7 +7484,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "herään",
@@ -7512,38 +7512,34 @@
         "introduced": [
           "herään",
           "herään aamulla.",
+          "illalla käytän puhelinta.",
           "käyttää",
           "lähden",
           "lähden kotoa.",
           "palaan",
+          "palaan kotiin.",
           "tekee",
           "tulee"
         ],
         "correct_answer": [
+          "herään",
           "herään aamulla.",
           "illalla käytän puhelinta.",
+          "käyttää",
+          "lähden",
           "lähden kotoa.",
+          "palaan",
           "palaan kotiin.",
           "tekee",
           "tulee"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
+        "productive_count": 10,
         "later_correct_retrieval": [
           "tulee"
         ],
-        "declared_unassessed": [
-          "herään",
-          "käyttää",
-          "lähden",
-          "palaan"
-        ],
-        "teach_only": [
-          "herään",
-          "käyttää",
-          "lähden",
-          "palaan"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -7564,21 +7560,32 @@
         ],
         "authored_new_forms": [
           "herään",
+          "herään aamulla.",
+          "illalla käytän puhelinta.",
           "käyttää",
           "lähden",
+          "lähden kotoa.",
           "palaan",
-          "tekee",
-          "tulee"
+          "palaan kotiin.",
+          "tekee"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks",
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -7593,7 +7600,7 @@
         "topic": 2,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "aina",
@@ -7620,10 +7627,12 @@
         ],
         "introduced": [
           "aina",
+          "en käy siellä koskaan.",
           "harvoin",
           "joka päivä",
           "joskus",
           "käyn siellä usein.",
+          "opiskelen joka päivä.",
           "teen sen joskus.",
           "usein",
           "yleensä"
@@ -7631,28 +7640,32 @@
         "correct_answer": [
           "aina",
           "en käy siellä koskaan.",
+          "harvoin",
+          "herään",
+          "illalla käytän puhelinta.",
+          "joka päivä",
+          "joskus",
           "käyn siellä usein.",
+          "lähden kotoa.",
           "opiskelen joka päivä.",
+          "palaan",
           "teen sen joskus.",
-          "usein"
+          "tekee",
+          "usein",
+          "yleensä"
         ],
         "receptive_count": 3,
-        "productive_count": 4,
+        "productive_count": 15,
         "later_correct_retrieval": [
+          "herään",
+          "illalla käytän puhelinta.",
+          "lähden kotoa.",
+          "palaan",
+          "tekee",
           "usein"
         ],
-        "declared_unassessed": [
-          "harvoin",
-          "joka päivä",
-          "joskus",
-          "yleensä"
-        ],
-        "teach_only": [
-          "harvoin",
-          "joka päivä",
-          "joskus",
-          "yleensä"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -7673,21 +7686,32 @@
         ],
         "authored_new_forms": [
           "aina",
+          "en käy siellä koskaan.",
           "harvoin",
           "joka päivä",
           "joskus",
-          "usein",
+          "käyn siellä usein.",
+          "opiskelen joka päivä.",
+          "teen sen joskus.",
           "yleensä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-present-chunks",
+          "a12-frequency-adverbs",
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -7702,7 +7726,7 @@
         "topic": 5,
         "expressions": 3
       },
-      "authored_new_targets": 8,
+      "authored_new_targets": 10,
       "lexical": {
         "declared_forms": [
           "kaupungin",
@@ -7733,6 +7757,7 @@
           "kaupungin",
           "koulu",
           "maan",
+          "missä työskentelet?",
           "opiskelen yliopistossa.",
           "opiskelija",
           "tehdä",
@@ -7742,30 +7767,41 @@
           "yliopisto"
         ],
         "correct_answer": [
+          "harvoin",
+          "herään aamulla.",
+          "joskus",
+          "kaupungin",
+          "koulu",
+          "käyn siellä usein.",
+          "käyttää",
+          "lähden",
           "maan",
+          "missä työskentelet?",
+          "opiskelen joka päivä.",
           "opiskelen yliopistossa.",
+          "opiskelija",
+          "palaan kotiin.",
           "tehdä",
           "toimisto",
-          "työskentelen toimistossa."
+          "työpaikka",
+          "työskentelen toimistossa.",
+          "yliopisto"
         ],
         "receptive_count": 2,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "kaupungin",
+        "productive_count": 17,
+        "later_correct_retrieval": [
+          "harvoin",
+          "herään aamulla.",
+          "joskus",
           "koulu",
-          "missä työskentelet?",
-          "opiskelija",
-          "työpaikka",
-          "yliopisto"
+          "käyn siellä usein.",
+          "käyttää",
+          "lähden",
+          "opiskelen joka päivä.",
+          "palaan kotiin."
         ],
-        "teach_only": [
-          "kaupungin",
-          "koulu",
-          "opiskelija",
-          "työpaikka",
-          "yliopisto"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -7787,23 +7823,31 @@
         ],
         "authored_new_forms": [
           "kaupungin",
-          "koulu",
           "maan",
+          "missä työskentelet?",
+          "opiskelen yliopistossa.",
           "opiskelija",
           "tehdä",
           "toimisto",
           "työpaikka",
+          "työskentelen toimistossa.",
           "yliopisto"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-local-cases"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-olla"
+        ]
       }
     },
     {
@@ -7818,7 +7862,7 @@
         "topic": 5,
         "expressions": 4
       },
-      "authored_new_targets": 8,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "harrastus",
@@ -7850,7 +7894,9 @@
         "introduced": [
           "harrastus",
           "katsoa",
+          "katson elokuvia.",
           "liikunta",
+          "luen vapaa-ajalla.",
           "lukea",
           "musiikki",
           "paljon",
@@ -7860,33 +7906,46 @@
           "yhdessä"
         ],
         "correct_answer": [
-          "musiikki",
-          "paljon",
-          "pidän liikunnasta.",
-          "pidän musiikista.",
-          "yhdessä"
-        ],
-        "receptive_count": 3,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "paljon"
-        ],
-        "declared_unassessed": [
+          "aina",
+          "en käy siellä koskaan.",
           "harrastus",
+          "joka päivä",
           "katsoa",
           "katson elokuvia.",
+          "kaupungin",
           "liikunta",
           "luen vapaa-ajalla.",
           "lukea",
-          "pitää"
+          "musiikki",
+          "opiskelija",
+          "paljon",
+          "pidän liikunnasta.",
+          "pidän musiikista.",
+          "pitää",
+          "teen sen joskus.",
+          "tehdä",
+          "työskentelen toimistossa.",
+          "yhdessä",
+          "yleensä",
+          "yliopisto"
         ],
-        "teach_only": [
-          "harrastus",
-          "katsoa",
-          "liikunta",
-          "lukea",
-          "pitää"
+        "receptive_count": 3,
+        "productive_count": 20,
+        "later_correct_retrieval": [
+          "aina",
+          "en käy siellä koskaan.",
+          "joka päivä",
+          "kaupungin",
+          "opiskelija",
+          "paljon",
+          "teen sen joskus.",
+          "tehdä",
+          "työskentelen toimistossa.",
+          "yleensä",
+          "yliopisto"
         ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -7910,22 +7969,29 @@
         "authored_new_forms": [
           "harrastus",
           "katsoa",
+          "katson elokuvia.",
           "liikunta",
+          "luen vapaa-ajalla.",
           "lukea",
           "musiikki",
-          "paljon",
+          "pidän liikunnasta.",
+          "pidän musiikista.",
           "pitää",
           "yhdessä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -7940,7 +8006,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "ehkä",
@@ -7967,6 +8033,8 @@
         ],
         "introduced": [
           "ehkä",
+          "ei, ehkä myöhemmin.",
+          "kyllä, sopii.",
           "sitten",
           "sopia",
           "sopiiko",
@@ -7976,30 +8044,46 @@
           "voimmeko tavata huomenna?"
         ],
         "correct_answer": [
+          "ehkä",
           "ei, ehkä myöhemmin.",
+          "harrastus",
+          "katsoa",
+          "katson elokuvia.",
           "kyllä, sopii.",
+          "liikunta",
+          "maan",
+          "missä työskentelet?",
+          "opiskelen yliopistossa.",
+          "pidän liikunnasta.",
           "sitten",
+          "sopia",
+          "sopiiko",
           "sopiiko kello kuusi?",
+          "tavata",
+          "toimisto",
+          "työpaikka",
           "voi",
-          "voimmeko tavata huomenna?"
+          "voimmeko tavata huomenna?",
+          "yhdessä"
         ],
         "receptive_count": 3,
-        "productive_count": 4,
+        "productive_count": 19,
         "later_correct_retrieval": [
-          "voi"
+          "harrastus",
+          "katsoa",
+          "katson elokuvia.",
+          "liikunta",
+          "maan",
+          "missä työskentelet?",
+          "opiskelen yliopistossa.",
+          "pidän liikunnasta.",
+          "toimisto",
+          "työpaikka",
+          "voi",
+          "yhdessä"
         ],
-        "declared_unassessed": [
-          "ehkä",
-          "sopia",
-          "sopiiko",
-          "tavata"
-        ],
-        "teach_only": [
-          "ehkä",
-          "sopia",
-          "sopiiko",
-          "tavata"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -8020,21 +8104,28 @@
         ],
         "authored_new_forms": [
           "ehkä",
+          "ei, ehkä myöhemmin.",
+          "kyllä, sopii.",
           "sitten",
           "sopia",
           "sopiiko",
+          "sopiiko kello kuusi?",
           "tavata",
-          "voi"
+          "voimmeko tavata huomenna?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -8049,7 +8140,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 9,
+      "authored_new_targets": 14,
       "lexical": {
         "declared_forms": [
           "ensi",
@@ -8061,6 +8152,7 @@
           "perjantaina",
           "sunnuntaina",
           "tavataan maanantaina.",
+          "tavataan perjantaina.",
           "tiistaina",
           "torstaina",
           "viime",
@@ -8076,6 +8168,7 @@
           "perjantaina",
           "sunnuntaina",
           "tavataan maanantaina.",
+          "tavataan perjantaina.",
           "tiistaina",
           "torstaina",
           "viime",
@@ -8083,45 +8176,60 @@
         ],
         "introduced": [
           "ensi",
-          "keskiviikkona",
-          "lauantaina",
-          "maanantaina",
-          "perjantaina",
-          "sunnuntaina",
-          "tavataan maanantaina.",
-          "tiistaina",
-          "torstaina",
-          "viime"
-        ],
-        "correct_answer": [
-          "maanantaina",
-          "nähdään perjantaina.",
-          "tavataan maanantaina.",
-          "tiistaina"
-        ],
-        "receptive_count": 1,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "ensi",
           "ensi viikolla.",
           "keskiviikkona",
           "lauantaina",
+          "maanantaina",
+          "nähdään perjantaina.",
           "perjantaina",
           "sunnuntaina",
+          "tavataan maanantaina.",
+          "tavataan perjantaina.",
+          "tiistaina",
           "torstaina",
           "viime",
           "viime viikolla."
         ],
-        "teach_only": [
+        "correct_answer": [
+          "ehkä",
           "ensi",
+          "ensi viikolla.",
           "keskiviikkona",
+          "kyllä, sopii.",
           "lauantaina",
+          "luen vapaa-ajalla.",
+          "lukea",
+          "maanantaina",
+          "musiikki",
+          "nähdään perjantaina.",
           "perjantaina",
+          "pidän musiikista.",
+          "pitää",
+          "sopia",
           "sunnuntaina",
+          "tavataan maanantaina.",
+          "tavataan perjantaina.",
+          "tiistaina",
           "torstaina",
-          "viime"
+          "viime",
+          "viime viikolla.",
+          "voimmeko tavata huomenna?"
         ],
+        "receptive_count": 1,
+        "productive_count": 22,
+        "later_correct_retrieval": [
+          "ehkä",
+          "kyllä, sopii.",
+          "luen vapaa-ajalla.",
+          "lukea",
+          "musiikki",
+          "pidän musiikista.",
+          "pitää",
+          "sopia",
+          "voimmeko tavata huomenna?"
+        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -8145,24 +8253,33 @@
         ],
         "authored_new_forms": [
           "ensi",
+          "ensi viikolla.",
           "keskiviikkona",
           "lauantaina",
           "maanantaina",
+          "nähdään perjantaina.",
           "perjantaina",
           "sunnuntaina",
+          "tavataan maanantaina.",
+          "tavataan perjantaina.",
           "tiistaina",
           "torstaina",
-          "viime"
+          "viime",
+          "viime viikolla."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-frequency-adverbs"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -8177,7 +8294,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "anteeksi, en voi.",
@@ -8203,11 +8320,13 @@
           "tulla"
         ],
         "introduced": [
+          "anteeksi, en voi.",
           "elokuviin",
           "haluatko tulla kahville?",
           "kahville",
           "kanssa",
           "kyllä",
+          "kyllä, mielelläni.",
           "mennään",
           "mennäänkö elokuviin?",
           "tulla",
@@ -8215,32 +8334,50 @@
         ],
         "correct_answer": [
           "anteeksi, en voi.",
+          "ei, ehkä myöhemmin.",
+          "elokuviin",
           "haluatko tulla kahville?",
+          "kahville",
           "kanssa",
+          "kyllä",
           "kyllä, mielelläni.",
+          "maanantaina",
+          "mennään",
           "mennäänkö elokuviin?",
+          "nähdään perjantaina.",
+          "perjantaina",
+          "sitten",
+          "sopiiko",
+          "sopiiko kello kuusi?",
+          "sunnuntaina",
+          "tavata",
+          "torstaina",
+          "tulla",
+          "viime",
+          "viime viikolla.",
           "yhdessä"
         ],
         "receptive_count": 4,
-        "productive_count": 2,
+        "productive_count": 20,
         "later_correct_retrieval": [
+          "ei, ehkä myöhemmin.",
           "kanssa",
+          "kyllä",
+          "maanantaina",
+          "nähdään perjantaina.",
+          "perjantaina",
+          "sitten",
+          "sopiiko",
+          "sopiiko kello kuusi?",
+          "sunnuntaina",
+          "tavata",
+          "torstaina",
+          "viime",
+          "viime viikolla.",
           "yhdessä"
         ],
-        "declared_unassessed": [
-          "elokuviin",
-          "kahville",
-          "kyllä",
-          "mennään",
-          "tulla"
-        ],
-        "teach_only": [
-          "elokuviin",
-          "kahville",
-          "kyllä",
-          "mennään",
-          "tulla"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -8261,23 +8398,28 @@
           "mennäänkö elokuviin?"
         ],
         "authored_new_forms": [
+          "anteeksi, en voi.",
           "elokuviin",
+          "haluatko tulla kahville?",
           "kahville",
-          "kanssa",
-          "kyllä",
+          "kyllä, mielelläni.",
           "mennään",
-          "tulla",
-          "yhdessä"
+          "mennäänkö elokuviin?",
+          "tulla"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-negation"
+        ]
       }
     },
     {
@@ -8292,7 +8434,7 @@
         "topic": 4,
         "expressions": 4
       },
-      "authored_new_targets": 7,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "heti",
@@ -8326,36 +8468,54 @@
           "nähdään myöhemmin.",
           "olen vähän myöhässä.",
           "perun",
+          "perun tämän päivän tapaamisen.",
           "sopii",
+          "sopiiko kello seitsemän?",
           "viesti"
         ],
         "correct_answer": [
+          "ensi",
+          "ensi viikolla.",
+          "haluatko tulla kahville?",
+          "heti",
+          "kahville",
+          "keskiviikkona",
+          "kyllä, mielelläni.",
+          "lauantaina",
           "myöhemmin",
+          "myöhässä",
           "nyt",
           "nähdään myöhemmin.",
           "olen vähän myöhässä.",
+          "perun",
           "perun tämän päivän tapaamisen.",
-          "sopiiko kello seitsemän?"
+          "sopii",
+          "sopiiko kello seitsemän?",
+          "tavataan maanantaina.",
+          "tavataan perjantaina.",
+          "tiistaina",
+          "tulla",
+          "viesti"
         ],
         "receptive_count": 3,
-        "productive_count": 3,
+        "productive_count": 19,
         "later_correct_retrieval": [
-          "nyt"
-        ],
-        "declared_unassessed": [
-          "heti",
+          "ensi",
+          "ensi viikolla.",
+          "haluatko tulla kahville?",
+          "kahville",
+          "keskiviikkona",
+          "kyllä, mielelläni.",
+          "lauantaina",
           "myöhässä",
-          "perun",
-          "sopii",
-          "viesti"
+          "nyt",
+          "tavataan maanantaina.",
+          "tavataan perjantaina.",
+          "tiistaina",
+          "tulla"
         ],
-        "teach_only": [
-          "heti",
-          "myöhässä",
-          "perun",
-          "sopii",
-          "viesti"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
@@ -8378,10 +8538,12 @@
         "authored_new_forms": [
           "heti",
           "myöhemmin",
-          "myöhässä",
-          "nyt",
+          "nähdään myöhemmin.",
+          "olen vähän myöhässä.",
           "perun",
+          "perun tämän päivän tapaamisen.",
           "sopii",
+          "sopiiko kello seitsemän?",
           "viesti"
         ]
       },
@@ -8410,40 +8572,73 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "en käy siellä koskaan.",
+          "herään aamulla.",
           "kyllä, sopii.",
           "nähdään myöhemmin.",
           "opiskelen joka päivä.",
+          "opiskelen yliopistossa.",
           "pidän musiikista.",
+          "sopiiko kello kuusi?",
           "tavataan perjantaina.",
           "voimmeko tavata huomenna?"
         ],
-        "first_referenced": [
-          "tavataan perjantaina."
-        ],
+        "first_referenced": [],
         "introduced": [
           "opiskelen joka päivä.",
           "pidän musiikista.",
           "tavataan perjantaina."
         ],
         "correct_answer": [
+          "anteeksi, en voi.",
+          "elokuviin",
+          "en käy siellä koskaan.",
+          "herään aamulla.",
+          "keskiviikkona",
           "kyllä, sopii.",
+          "maanantaina",
+          "mennään",
+          "mennäänkö elokuviin?",
+          "myöhemmin",
           "nähdään myöhemmin.",
           "olen vähän myöhässä.",
           "opiskelen joka päivä.",
+          "opiskelen yliopistossa.",
+          "perjantaina",
+          "perun tämän päivän tapaamisen.",
           "pidän musiikista.",
+          "sopii",
           "sopiiko kello kuusi?",
+          "sunnuntaina",
           "tavataan perjantaina.",
+          "viesti",
           "voimmeko tavata huomenna?"
         ],
-        "receptive_count": 7,
-        "productive_count": 4,
+        "receptive_count": 8,
+        "productive_count": 21,
         "later_correct_retrieval": [
+          "anteeksi, en voi.",
+          "elokuviin",
+          "en käy siellä koskaan.",
+          "herään aamulla.",
+          "keskiviikkona",
           "kyllä, sopii.",
+          "maanantaina",
+          "mennään",
+          "mennäänkö elokuviin?",
+          "myöhemmin",
           "nähdään myöhemmin.",
           "olen vähän myöhässä.",
           "opiskelen joka päivä.",
+          "opiskelen yliopistossa.",
+          "perjantaina",
+          "perun tämän päivän tapaamisen.",
           "pidän musiikista.",
+          "sopii",
           "sopiiko kello kuusi?",
+          "sunnuntaina",
+          "tavataan perjantaina.",
+          "viesti",
           "voimmeko tavata huomenna?"
         ],
         "declared_unassessed": [],
@@ -8465,12 +8660,24 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks",
+          "a11-questions",
+          "a12-frequency-adverbs",
+          "a12-local-cases",
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 9,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -8488,6 +8695,7 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "anteeksi, en voi.",
           "haluatko tulla kahville?",
           "herään aamulla.",
           "illalla käytän puhelinta.",
@@ -8499,17 +8707,23 @@
           "opiskelen joka päivä.",
           "opiskelen yliopistossa.",
           "perun tämän päivän tapaamisen.",
+          "pidän liikunnasta.",
           "pidän musiikista.",
           "sopiiko kello kuusi?",
+          "sopiiko kello seitsemän?",
           "tavataan maanantaina.",
+          "teen sen joskus.",
           "voimmeko tavata huomenna?"
         ],
         "first_referenced": [],
         "introduced": [],
         "correct_answer": [
+          "anteeksi, en voi.",
           "haluatko tulla kahville?",
           "herään aamulla.",
+          "heti",
           "illalla käytän puhelinta.",
+          "lauantaina",
           "lähden kotoa.",
           "mennäänkö elokuviin?",
           "nähdään myöhemmin.",
@@ -8517,18 +8731,27 @@
           "olen vähän myöhässä.",
           "opiskelen joka päivä.",
           "opiskelen yliopistossa.",
+          "perun",
           "perun tämän päivän tapaamisen.",
+          "pidän liikunnasta.",
           "pidän musiikista.",
           "sopiiko kello kuusi?",
+          "sopiiko kello seitsemän?",
           "tavataan maanantaina.",
+          "teen sen joskus.",
+          "tiistaina",
+          "torstaina",
           "voimmeko tavata huomenna?"
         ],
         "receptive_count": 8,
-        "productive_count": 7,
+        "productive_count": 17,
         "later_correct_retrieval": [
+          "anteeksi, en voi.",
           "haluatko tulla kahville?",
           "herään aamulla.",
+          "heti",
           "illalla käytän puhelinta.",
+          "lauantaina",
           "lähden kotoa.",
           "mennäänkö elokuviin?",
           "nähdään myöhemmin.",
@@ -8536,10 +8759,16 @@
           "olen vähän myöhässä.",
           "opiskelen joka päivä.",
           "opiskelen yliopistossa.",
+          "perun",
           "perun tämän päivän tapaamisen.",
+          "pidän liikunnasta.",
           "pidän musiikista.",
           "sopiiko kello kuusi?",
+          "sopiiko kello seitsemän?",
           "tavataan maanantaina.",
+          "teen sen joskus.",
+          "tiistaina",
+          "torstaina",
           "voimmeko tavata huomenna?"
         ],
         "declared_unassessed": [],
@@ -8553,12 +8782,24 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks",
+          "a11-questions",
+          "a12-frequency-adverbs",
+          "a12-local-cases",
+          "a12-negation-expand"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
+        "structured_or_morphology_slots": 10,
         "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -18125,90 +18366,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "a1.2-section-3-lesson-1",
-        "forms": [
-          "herään",
-          "käyttää",
-          "lähden",
-          "palaan"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-2",
-        "forms": [
-          "harvoin",
-          "joka päivä",
-          "joskus",
-          "yleensä"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-3",
-        "forms": [
-          "kaupungin",
-          "koulu",
-          "missä työskentelet?",
-          "opiskelija",
-          "työpaikka",
-          "yliopisto"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-4",
-        "forms": [
-          "harrastus",
-          "katsoa",
-          "katson elokuvia.",
-          "liikunta",
-          "luen vapaa-ajalla.",
-          "lukea",
-          "pitää"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-5",
-        "forms": [
-          "ehkä",
-          "sopia",
-          "sopiiko",
-          "tavata"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-6",
-        "forms": [
-          "ensi",
-          "ensi viikolla.",
-          "keskiviikkona",
-          "lauantaina",
-          "perjantaina",
-          "sunnuntaina",
-          "torstaina",
-          "viime",
-          "viime viikolla."
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-7",
-        "forms": [
-          "elokuviin",
-          "kahville",
-          "kyllä",
-          "mennään",
-          "tulla"
-        ]
-      },
-      {
-        "lesson_id": "a1.2-section-3-lesson-8",
-        "forms": [
-          "heti",
-          "myöhässä",
-          "perun",
-          "sopii",
-          "viesti"
-        ]
-      },
       {
         "lesson_id": "a1.2-section-4-lesson-1",
         "forms": [

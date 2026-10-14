@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.43.0] - 2026-10-14
+
+### Added
+
+- Complete all ten A1.2 Section 3 routine, study/work, interests and arrangements overviews: 329 activities, later positive retrieval of 79 introduced exact surfaces/expressions and later review of six bounded grammar concepts.
+- Close 71 previously missing positive-answer target occurrences. Teach the existing Friday meeting sentence in lesson 6 before review-only lesson 9; assess and later retrieve all seven temporal weekdays.
+- Extend both existing passages to four reading facts each; add supported four-sentence routine and week writing. Mark grammar production with strict grammatical answer policies; keep invitations and cancellation phrases bounded.
+- Add deterministic acceptance snapshots, mutation/regression tests and bilingual guidance while preserving all original records, core lesson mappings, fifteen checkpoint targets and the 80% threshold.
+
 ## [1.42.0] - 2026-10-14
 
 ### Added

@@ -33,7 +33,7 @@ test('A1.1 through A1.2 now contains eight playable sections and 80 uniquely map
   assert.equal(course.COURSE_STAGES[2].sectionUrls.length, 4);
 });
 
-test('Sections 3 and 4 deliver every planned lesson and exactly 300 validated activities', () => {
+test('Sections 3 and 4 deliver every planned lesson with authored activity counts', () => {
   for(const sectionIndex of [2,3]) {
     const raw = a12Sections[sectionIndex];
     const section = prepared[4+sectionIndex];
@@ -42,9 +42,9 @@ test('Sections 3 and 4 deliver every planned lesson and exactly 300 validated ac
     assert.equal(section.activity_count_per_lesson, 15);
     assert.equal(section.lessons.length, 10);
     assert.deepEqual(section.lessons.map(lesson=>lesson.curriculum_id), planned.lessons.map(lesson=>lesson.id));
-    assert.equal(section.lessons.reduce((sum,lesson)=>sum+lesson.activities.length,0),150);
+    assert.equal(section.lessons.reduce((sum,lesson)=>sum+lesson.activities.length,0),sectionIndex === 2 ? 329 : 150);
     for (const lesson of section.lessons) {
-      assert.equal(lesson.activities.length, 15, lesson.id);
+      assert.equal(lesson.activities.length, lesson.activity_count ?? 15, lesson.id);
       assert.ok(lesson.objective_fa && lesson.summary_fa && lesson.grammar_fa);
       assert.equal(lesson.activities.filter(a=>a.type==='production').length,1,lesson.id);
       assert.equal(lesson.activities.filter(a=>a.type==='choice' && a.mode==='listen').length,1,lesson.id);
@@ -102,7 +102,7 @@ test('Section 3 covers daily routines, university, partitive complements and cal
   assert.ok(byId('a1.2-s3-l06').activities.some(a=>a.type==='morphology-choice'&&a.expected_fi==='maanantaina'));
   const integration=byId('a1.2-s3-l09');
   assert.ok(integration.activities.some(a=>a.type==='dialogue-order'));
-  assert.equal(integration.activities.filter(a=>a.type==='short-reading').length,2);
+  assert.equal(integration.activities.filter(a=>a.type==='short-reading').length,8);
 });
 
 test('Section 4 provides weather visuals, clothing cues, clock appointments and imperatives', () => {
@@ -146,7 +146,7 @@ test('checkpoint 3 and cumulative checkpoint 4 keep 80% passing and all structur
   for(const section of prepared.slice(6)) {
     const checkpoint=section.lessons.at(-1);
     assert.equal(checkpoint.passing_score,0.8,checkpoint.id);
-    assert.equal(checkpoint.activities.length,15);
+    assert.equal(checkpoint.activities.length,section.id === 'a1.2-section-3' ? 26 : 15);
     for(const type of ['sentence-order','expression-completion','controlled-production','morphology-choice']){
       assert.ok(checkpoint.activities.some(a=>a.type===type),checkpoint.id+' / '+type);
     }

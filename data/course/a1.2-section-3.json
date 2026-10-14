@@ -1644,14 +1644,17 @@
       "title_fa": "برنامهٔ روزانهٔ کامل‌تر",
       "objective_fa": "سه یا چهار کار روزمرهٔ آشنا را در یک توالی ساده بیان کند.",
       "summary_fa": "کارهای روزانه را در یک توالی ساده توضیح بده.",
-      "grammar_fa": "عبارت‌های کامل زمان حال اول‌شخص و قید زمان؛ صرف جدید را حدس نزن.",
+      "grammar_fa": "صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود. مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود. صورت مشخص puhelinta را پس از käytän در عبارت کامل تمرین می‌کنی؛ این یک نمونهٔ محدودِ مفعول پارتیتیو است، نه آموزش صرف آزاد.",
       "new_targets": [
         "a12s3-hf-01",
-        "a12s3-hf-02",
         "a12s3-hf-03",
         "a12s3-topic-01",
         "a12s3-topic-02",
-        "a12s3-topic-03"
+        "a12s3-topic-03",
+        "a12s3-expr-01",
+        "a12s3-expr-02",
+        "a12s3-expr-03",
+        "a12s3-expr-04"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1697,6 +1700,70 @@
           ],
           "expected_fi": "Lähden kotoa.",
           "expected_fa": "از خانه بیرون می‌روم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-01",
+          "prompt_fa": "صبح بیدار می‌شوم.",
+          "cues_fi": [
+            "Herään"
+          ],
+          "expected_fi": "Herään aamulla.",
+          "accepted_answers": [
+            "Herään aamulla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-02",
+          "prompt_fa": "از خانه بیرون می‌روم.",
+          "cues_fi": [
+            "Lähden"
+          ],
+          "expected_fi": "Lähden kotoa.",
+          "accepted_answers": [
+            "Lähden kotoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-03",
+          "prompt_fa": "به خانه برمی‌گردم.",
+          "cues_fi": [
+            "Palaan"
+          ],
+          "expected_fi": "Palaan kotiin.",
+          "accepted_answers": [
+            "Palaan kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-04",
+          "prompt_fa": "عصر از تلفنم استفاده می‌کنم.",
+          "cues_fi": [
+            "Illalla"
+          ],
+          "expected_fi": "Illalla käytän puhelinta.",
+          "accepted_answers": [
+            "Illalla käytän puhelinta."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
       ],
       "activities": [
@@ -1734,29 +1801,42 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-01"
+          "item": "a12s3-expr-01",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-01",
           "options": [
-            "a12s3-hf-02",
             "a12s3-hf-01",
+            "a12s3-hf-02",
             "a12s3-hf-03",
             "a12s3-topic-01"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-02"
+          "item": "a12s3-hf-02",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-02"
+          "type": "sentence-order",
+          "item": "a12s3-expr-02",
+          "tokens": [
+            "kotoa.",
+            "Lähden"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Lähden kotoa.",
+          "expected_fa": "از خانه بیرون می‌روم."
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-03"
         },
         {
           "type": "choice",
@@ -1768,6 +1848,10 @@
             "a12s3-hf-02",
             "a12s3-hf-03"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-04"
         },
         {
           "type": "choice",
@@ -1784,8 +1868,233 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s3-hf-01"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-01",
+          "prompt_fa": "صبح بیدار می‌شوم.",
+          "cues_fi": [
+            "Herään"
+          ],
+          "expected_fi": "Herään aamulla.",
+          "accepted_answers": [
+            "Herään aamulla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-02",
+          "prompt_fa": "از خانه بیرون می‌روم.",
+          "cues_fi": [
+            "Lähden"
+          ],
+          "expected_fi": "Lähden kotoa.",
+          "accepted_answers": [
+            "Lähden kotoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-03",
+          "prompt_fa": "به خانه برمی‌گردم.",
+          "cues_fi": [
+            "Palaan"
+          ],
+          "expected_fi": "Palaan kotiin.",
+          "accepted_answers": [
+            "Palaan kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-04",
+          "prompt_fa": "عصر از تلفنم استفاده می‌کنم.",
+          "cues_fi": [
+            "Illalla"
+          ],
+          "expected_fi": "Illalla käytän puhelinta.",
+          "accepted_answers": [
+            "Illalla käytän puhelinta."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "prompt_fa": "چهار جملهٔ برنامهٔ روزانه را به‌ترتیب بنویس: صبح بیدار می‌شوم؛ از خانه راه می‌افتم؛ به خانه برمی‌گردم؛ عصر از تلفن استفاده می‌کنم.",
+          "expected_items": [
+            "a12s3-expr-01",
+            "a12s3-expr-02",
+            "a12s3-expr-03",
+            "a12s3-expr-04"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-03"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-01"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-02"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-03"
         }
-      ]
+      ],
+      "review_targets": [],
+      "practice_targets": [
+        "a12s3-expr-01",
+        "a12s3-expr-02",
+        "a12s3-expr-03",
+        "a12s3-expr-04"
+      ],
+      "activity_count": 26,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l01-can-do",
+            "can_do_fa": "سه یا چهار کار روزمرهٔ آشنا را در یک توالی ساده بیان کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-01",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-02",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-03",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-01",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-02",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-03",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-01",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-02",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-03",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-04",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Herään aamulla.",
+                "fa": "صبح بیدار می‌شوم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-local-cases",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Lähden kotoa.",
+                "fa": "از خانه بیرون می‌روم."
+              },
+              {
+                "fi": "Palaan kotiin.",
+                "fa": "به خانه برمی‌گردم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "صورت مشخص puhelinta را پس از käytän در عبارت کامل تمرین می‌کنی؛ این یک نمونهٔ محدودِ مفعول پارتیتیو است، نه آموزش صرف آزاد.",
+            "examples": [
+              {
+                "fi": "Illalla käytän puhelinta.",
+                "fa": "عصر از تلفنم استفاده می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-2",
@@ -1794,14 +2103,17 @@
       "title_fa": "هر چند وقت یک‌بار؟",
       "objective_fa": "با واژه‌های رایج بسامد بگوید یک فعالیت آشنا هر چند وقت یک‌بار انجام می‌شود.",
       "summary_fa": "تفاوت همیشه، اغلب، گاهی و به‌ندرت را در برنامهٔ روزانه تمرین کن.",
-      "grammar_fa": "جای قید بسامد در جمله‌های کوتاه مثل käyn usein و opiskelen joka päivä.",
+      "grammar_fa": "بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند. صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود. در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
       "new_targets": [
         "a12s3-hf-04",
-        "a12s3-hf-05",
         "a12s3-hf-06",
         "a12s3-hf-07",
         "a12s3-topic-04",
-        "a12s3-topic-05"
+        "a12s3-topic-05",
+        "a12s3-expr-05",
+        "a12s3-expr-06",
+        "a12s3-expr-07",
+        "a12s3-expr-08"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1843,6 +2155,70 @@
             "joskus"
           ],
           "expected_fi": "Teen sen joskus."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-05",
+          "prompt_fa": "اغلب به آنجا می‌روم.",
+          "cues_fi": [
+            "Käyn"
+          ],
+          "expected_fi": "Käyn siellä usein.",
+          "accepted_answers": [
+            "Käyn siellä usein."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-06",
+          "prompt_fa": "گاهی آن کار را انجام می‌دهم.",
+          "cues_fi": [
+            "Teen"
+          ],
+          "expected_fi": "Teen sen joskus.",
+          "accepted_answers": [
+            "Teen sen joskus."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-07",
+          "prompt_fa": "هر روز درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen joka päivä.",
+          "accepted_answers": [
+            "Opiskelen joka päivä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-08",
+          "prompt_fa": "هیچ‌وقت به آنجا نمی‌روم.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "En käy siellä koskaan.",
+          "accepted_answers": [
+            "En käy siellä koskaan."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -1880,12 +2256,12 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-05"
+          "item": "a12s3-expr-05",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-04",
           "options": [
             "a12s3-hf-05",
@@ -1896,13 +2272,22 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-05"
+          "item": "a12s3-hf-05",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-06"
+          "type": "expression-completion",
+          "item": "a12s3-expr-06",
+          "prompt_fi": "Teen sen _____.",
+          "prompt_fa": "گاهی آن کار را انجام می‌دهم.",
+          "accepted_answers": [
+            "joskus"
+          ],
+          "expected_fi": "Teen sen joskus."
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-07"
         },
         {
           "type": "choice",
@@ -1914,6 +2299,10 @@
             "a12s3-hf-05",
             "a12s3-hf-06"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-08"
         },
         {
           "type": "choice",
@@ -1930,8 +2319,275 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s3-hf-04"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-05",
+          "prompt_fa": "اغلب به آنجا می‌روم.",
+          "cues_fi": [
+            "Käyn"
+          ],
+          "expected_fi": "Käyn siellä usein.",
+          "accepted_answers": [
+            "Käyn siellä usein."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-06",
+          "prompt_fa": "گاهی آن کار را انجام می‌دهم.",
+          "cues_fi": [
+            "Teen"
+          ],
+          "expected_fi": "Teen sen joskus.",
+          "accepted_answers": [
+            "Teen sen joskus."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-07",
+          "prompt_fa": "هر روز درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen joka päivä.",
+          "accepted_answers": [
+            "Opiskelen joka päivä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-08",
+          "prompt_fa": "هیچ‌وقت به آنجا نمی‌روم.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "En käy siellä koskaan.",
+          "accepted_answers": [
+            "En käy siellä koskaan."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-06"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-07"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-04"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-05"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-01"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-01"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-03"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-02",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-04",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-01",
+        "a12s3-topic-01",
+        "a12s3-topic-03",
+        "a12s3-expr-02",
+        "a12s3-expr-04"
+      ],
+      "practice_targets": [
+        "a12s3-expr-05",
+        "a12s3-expr-06",
+        "a12s3-expr-07",
+        "a12s3-expr-08"
+      ],
+      "activity_count": 30,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l02-can-do",
+            "can_do_fa": "با واژه‌های رایج بسامد بگوید یک فعالیت آشنا هر چند وقت یک‌بار انجام می‌شود."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-04",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-05",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-06",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-07",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-04",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-05",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-05",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-06",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-07",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-08",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-01",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-01",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-03",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-02",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-04",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Käyn siellä usein.",
+                "fa": "اغلب به آنجا می‌روم."
+              },
+              {
+                "fi": "Teen sen joskus.",
+                "fa": "گاهی آن کار را انجام می‌دهم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Opiskelen joka päivä.",
+                "fa": "هر روز درس می‌خوانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
+            "examples": [
+              {
+                "fi": "En käy siellä koskaan.",
+                "fa": "هیچ‌وقت به آنجا نمی‌روم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-3",
@@ -1940,16 +2596,18 @@
       "title_fa": "محل تحصیل و کار",
       "objective_fa": "در یک یا دو جمله بگوید کجا درس می‌خواند یا کار می‌کند.",
       "summary_fa": "دربارهٔ محل کار یا تحصیل با جمله‌های کوتاه صحبت کن.",
-      "grammar_fa": "صورت‌های مکانی بازبینی‌شدهٔ yliopistossa و toimistossa برای «در».",
+      "grammar_fa": "مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود. پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند.",
       "new_targets": [
         "a12s3-hf-08",
         "a12s3-hf-09",
         "a12s3-hf-10",
         "a12s3-topic-06",
-        "a12s3-topic-07",
         "a12s3-topic-08",
         "a12s3-topic-09",
-        "a12s3-topic-10"
+        "a12s3-topic-10",
+        "a12s3-expr-09",
+        "a12s3-expr-10",
+        "a12s3-expr-11"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1994,6 +2652,42 @@
           "expected_fi": "Työskentelen toimistossa.",
           "accepted_answers": [
             "Työskentelen toimistossa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-09",
+          "prompt_fa": "در دانشگاه درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen yliopistossa.",
+          "accepted_answers": [
+            "Opiskelen yliopistossa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-11",
+          "prompt_fa": "کجا کار می‌کنی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä työskentelet?",
+          "accepted_answers": [
+            "Missä työskentelet?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
           ]
         }
       ],
@@ -2012,7 +2706,10 @@
             "toimistoon"
           ],
           "expected_fi": "toimistossa",
-          "explanation_fa": "شکل «در دفتر» در این جمله toimistossa است."
+          "explanation_fa": "شکل «در دفتر» در این جمله toimistossa است.",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
         }
       ],
       "activities": [
@@ -2058,42 +2755,324 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-09"
+          "item": "a12s3-expr-09",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-08",
           "options": [
             "a12s3-hf-09",
-            "a12s3-hf-08",
             "a12s3-hf-10",
+            "a12s3-hf-08",
             "a12s3-topic-06"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-09"
+          "item": "a12s3-hf-09",
+          "mode": "finnish"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-10",
+          "prompt_fa": "در دفتر کار می‌کنم.",
+          "cues_fi": [
+            "Työskentelen",
+            "toimistossa."
+          ],
+          "expected_fi": "Työskentelen toimistossa.",
+          "accepted_answers": [
+            "Työskentelen toimistossa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a12s3-topic-09",
+          "base_fi": "toimisto",
+          "feature_fa": "inessiivi، محل کار",
+          "prompt_fa": "«در دفتر کار می‌کنم» را با حالت مکانی «در دفتر» کامل کن.",
+          "frame_fi": "Työskentelen _____.",
+          "options_fi": [
+            "toimisto",
+            "toimistossa",
+            "toimistosta",
+            "toimistoon"
+          ],
+          "expected_fi": "toimistossa",
+          "explanation_fa": "شکل «در دفتر» در این جمله toimistossa است.",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-09",
+          "prompt_fa": "در دانشگاه درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen yliopistossa.",
+          "accepted_answers": [
+            "Opiskelen yliopistossa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-11"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-11",
+          "prompt_fa": "کجا کار می‌کنی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä työskentelet?",
+          "accepted_answers": [
+            "Missä työskentelet?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a12s3-expr-10"
+          "item": "a12s3-hf-10"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a12s3-topic-09",
-          "options": [
-            "a12s3-hf-08",
-            "a12s3-topic-09",
-            "a12s3-hf-09",
-            "a12s3-hf-10"
-          ]
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-06"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-07"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-08"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-10"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-03"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-02"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-01",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-03",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-06"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-04"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-05",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-07",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-03",
+        "a12s3-topic-02",
+        "a12s3-expr-01",
+        "a12s3-expr-03",
+        "a12s3-hf-06",
+        "a12s3-topic-04",
+        "a12s3-expr-05",
+        "a12s3-expr-07"
+      ],
+      "practice_targets": [
+        "a12s3-expr-09",
+        "a12s3-expr-10",
+        "a12s3-expr-11"
+      ],
+      "activity_count": 31,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l03-can-do",
+            "can_do_fa": "در یک یا دو جمله بگوید کجا درس می‌خواند یا کار می‌کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-08",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-09",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-10",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-06",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-07",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-08",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-09",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-10",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-09",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-10",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-11",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-03",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-02",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-01",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-03",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-06",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-04",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-05",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-07",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-local-cases",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Työskentelen toimistossa.",
+                "fa": "در دفتر کار می‌کنم."
+              },
+              {
+                "fi": "Opiskelen yliopistossa.",
+                "fa": "در دانشگاه درس می‌خوانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 13,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 14,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند.",
+            "examples": [
+              {
+                "fi": "Missä työskentelet?",
+                "fa": "کجا کار می‌کنی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-4",
@@ -2102,16 +3081,19 @@
       "title_fa": "اوقات فراغت و علاقه‌ها",
       "objective_fa": "با چند عبارت تمرین‌شده بگوید در اوقات فراغت چه کاری را دوست دارد.",
       "summary_fa": "با عبارت Pidän + elatiivi از علاقه‌هایت بگو.",
-      "grammar_fa": "Pidän musiikista و Pidän liikunnasta؛ elatiivi در بیان علاقه.",
+      "grammar_fa": "در جمله‌های همین درس، puhelinta و elokuvia مفعول پارتیتیو هستند و پس از Pidän از musiikista یا liikunnasta استفاده می‌شود. این کاربردِ علاقه با مبدأ مکانی فرق دارد؛ جدول کامل پارتیتیو یا وابستگی همهٔ فعل‌ها سنجیده نمی‌شود.",
       "new_targets": [
         "a12s3-hf-11",
-        "a12s3-hf-12",
         "a12s3-hf-13",
         "a12s3-topic-11",
         "a12s3-topic-12",
         "a12s3-topic-13",
         "a12s3-topic-14",
-        "a12s3-topic-15"
+        "a12s3-topic-15",
+        "a12s3-expr-12",
+        "a12s3-expr-13",
+        "a12s3-expr-14",
+        "a12s3-expr-15"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2158,6 +3140,54 @@
           ],
           "expected_fi": "Pidän liikunnasta.",
           "expected_fa": "ورزش را دوست دارم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-12",
+          "prompt_fa": "موسیقی را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän musiikista.",
+          "accepted_answers": [
+            "Pidän musiikista."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-13",
+          "prompt_fa": "ورزش را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän liikunnasta.",
+          "accepted_answers": [
+            "Pidän liikunnasta."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-15",
+          "prompt_fa": "فیلم تماشا می‌کنم.",
+          "cues_fi": [
+            "Katson"
+          ],
+          "expected_fi": "Katson elokuvia.",
+          "accepted_answers": [
+            "Katson elokuvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
       ],
       "morphology_practice": [
@@ -2175,7 +3205,10 @@
             "musiikissa"
           ],
           "expected_fi": "musiikista",
-          "explanation_fa": "در این کاربرد پس از Pidän از حالت elatiivi استفاده می‌شود: musiikista."
+          "explanation_fa": "در این کاربرد پس از Pidän از حالت elatiivi استفاده می‌شود: musiikista.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
         }
       ],
       "activities": [
@@ -2221,42 +3254,358 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-12"
+          "item": "a12s3-expr-12",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-11",
           "options": [
             "a12s3-hf-12",
-            "a12s3-hf-11",
             "a12s3-hf-13",
-            "a12s3-topic-11"
+            "a12s3-topic-11",
+            "a12s3-hf-11"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-12"
+          "item": "a12s3-hf-12",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-13"
+          "type": "sentence-order",
+          "item": "a12s3-expr-13",
+          "tokens": [
+            "liikunnasta.",
+            "Pidän"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Pidän liikunnasta.",
+          "expected_fa": "ورزش را دوست دارم."
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "morphology-choice",
           "item": "a12s3-topic-12",
-          "options": [
-            "a12s3-hf-11",
-            "a12s3-topic-12",
-            "a12s3-hf-12",
-            "a12s3-hf-13"
+          "base_fi": "musiikki",
+          "feature_fa": "elatiivi در ساختار pitää",
+          "prompt_fa": "در جملهٔ «موسیقی را دوست دارم» کدام شکل درست است؟",
+          "frame_fi": "Pidän _____.",
+          "options_fi": [
+            "musiikki",
+            "musiikkia",
+            "musiikista",
+            "musiikissa"
+          ],
+          "expected_fi": "musiikista",
+          "explanation_fa": "در این کاربرد پس از Pidän از حالت elatiivi استفاده می‌شود: musiikista.",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-12",
+          "prompt_fa": "موسیقی را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän musiikista.",
+          "accepted_answers": [
+            "Pidän musiikista."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-13",
+          "prompt_fa": "ورزش را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän liikunnasta.",
+          "accepted_answers": [
+            "Pidän liikunnasta."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-15"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-15",
+          "prompt_fa": "فیلم تماشا می‌کنم.",
+          "cues_fi": [
+            "Katson"
+          ],
+          "expected_fi": "Katson elokuvia.",
+          "accepted_answers": [
+            "Katson elokuvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-13"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-11"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-13"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-14"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-15"
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-14"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-14",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-04"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-07"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-05"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-06",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-08",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-08"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-10"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-08"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-10"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-10",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-04",
+        "a12s3-hf-07",
+        "a12s3-topic-05",
+        "a12s3-expr-06",
+        "a12s3-expr-08",
+        "a12s3-hf-08",
+        "a12s3-hf-10",
+        "a12s3-topic-08",
+        "a12s3-topic-10",
+        "a12s3-expr-10"
+      ],
+      "practice_targets": [
+        "a12s3-expr-12",
+        "a12s3-expr-13",
+        "a12s3-expr-15"
+      ],
+      "activity_count": 36,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l04-can-do",
+            "can_do_fa": "با چند عبارت تمرین‌شده بگوید در اوقات فراغت چه کاری را دوست دارد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-11",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-12",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-13",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-11",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-12",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-13",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-14",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-15",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-12",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-13",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-14",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-15",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-04",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-07",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-05",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-06",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-08",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-08",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-10",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-08",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-10",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-10",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در جمله‌های همین درس، puhelinta و elokuvia مفعول پارتیتیو هستند و پس از Pidän از musiikista یا liikunnasta استفاده می‌شود. این کاربردِ علاقه با مبدأ مکانی فرق دارد؛ جدول کامل پارتیتیو یا وابستگی همهٔ فعل‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Pidän musiikista.",
+                "fa": "موسیقی را دوست دارم."
+              },
+              {
+                "fi": "Pidän liikunnasta.",
+                "fa": "ورزش را دوست دارم."
+              },
+              {
+                "fi": "Katson elokuvia.",
+                "fa": "فیلم تماشا می‌کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 14,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-5",
@@ -2265,14 +3614,17 @@
       "title_fa": "تنظیم یک برنامهٔ ساده",
       "objective_fa": "یک زمان ساده برای دیدار پیشنهاد کند و پاسخ مثبت یا منفی بدهد.",
       "summary_fa": "زمانی برای دیدار پیشنهاد کن و پاسخ بده.",
-      "grammar_fa": "سؤال Voimmeko tavata…? و Sopiiko kello…? به‌عنوان عبارت آماده.",
+      "grammar_fa": "پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند.",
       "new_targets": [
-        "a12s3-hf-14",
         "a12s3-hf-15",
         "a12s3-hf-16",
         "a12s3-topic-16",
         "a12s3-topic-17",
-        "a12s3-topic-18"
+        "a12s3-topic-18",
+        "a12s3-expr-16",
+        "a12s3-expr-17",
+        "a12s3-expr-18",
+        "a12s3-expr-19"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2314,6 +3666,22 @@
             "kuusi"
           ],
           "expected_fi": "Sopiiko kello kuusi?"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-17",
+          "prompt_fa": "ساعت شش مناسب است؟",
+          "cues_fi": [
+            "Sopiiko"
+          ],
+          "expected_fi": "Sopiiko kello kuusi?",
+          "accepted_answers": [
+            "Sopiiko kello kuusi?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
         }
       ],
       "activities": [
@@ -2351,29 +3719,38 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-16"
+          "item": "a12s3-expr-16",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-14",
           "options": [
-            "a12s3-hf-15",
             "a12s3-hf-14",
+            "a12s3-hf-15",
             "a12s3-hf-16",
             "a12s3-topic-16"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-15"
+          "item": "a12s3-hf-15",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-17"
+          "type": "expression-completion",
+          "item": "a12s3-expr-17",
+          "prompt_fi": "Sopiiko kello _____?",
+          "prompt_fa": "ساعت شش مناسب است؟",
+          "accepted_answers": [
+            "kuusi"
+          ],
+          "expected_fi": "Sopiiko kello kuusi?"
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-18"
         },
         {
           "type": "choice",
@@ -2385,6 +3762,10 @@
             "a12s3-hf-15",
             "a12s3-hf-16"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-19"
         },
         {
           "type": "choice",
@@ -2401,8 +3782,238 @@
           "type": "type",
           "mode": "finnish",
           "item": "a12s3-hf-14"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-17",
+          "prompt_fa": "ساعت شش مناسب است؟",
+          "cues_fi": [
+            "Sopiiko"
+          ],
+          "expected_fi": "Sopiiko kello kuusi?",
+          "accepted_answers": [
+            "Sopiiko kello kuusi?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-16"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-16"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-17"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-18"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-09"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-06"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-09"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-09",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-11",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-11"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-11"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-13"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-15"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-13",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-15",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-09",
+        "a12s3-topic-06",
+        "a12s3-topic-09",
+        "a12s3-expr-09",
+        "a12s3-expr-11",
+        "a12s3-hf-11",
+        "a12s3-topic-11",
+        "a12s3-topic-13",
+        "a12s3-topic-15",
+        "a12s3-expr-13",
+        "a12s3-expr-15"
+      ],
+      "practice_targets": [
+        "a12s3-expr-17"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l05-can-do",
+            "can_do_fa": "یک زمان ساده برای دیدار پیشنهاد کند و پاسخ مثبت یا منفی بدهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-14",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-15",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-16",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-16",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-17",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-18",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-16",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-17",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-18",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-19",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-09",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-06",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-09",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-09",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-11",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-11",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-11",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-13",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-15",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-13",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-15",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند.",
+            "examples": [
+              {
+                "fi": "Sopiiko kello kuusi?",
+                "fa": "ساعت شش مناسب است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-6",
@@ -2411,7 +4022,7 @@
       "title_fa": "روزهای هفته در قرارها",
       "objective_fa": "بگوید یک رویداد یا قرار ساده در چه روزی انجام می‌شود.",
       "summary_fa": "نام روزهای هفته را برای هماهنگی یک قرار به کار ببر.",
-      "grammar_fa": "روزهای هفته در حالت زمانی essiivi: maanantaina و perjantaina.",
+      "grammar_fa": "بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند.",
       "new_targets": [
         "a12s3-hf-17",
         "a12s3-hf-18",
@@ -2421,7 +4032,12 @@
         "a12s3-topic-19",
         "a12s3-topic-20",
         "a12s3-topic-21",
-        "a12s3-topic-22"
+        "a12s3-topic-22",
+        "a12s3-expr-20",
+        "a12s3-expr-21",
+        "a12s3-expr-22",
+        "a12s3-expr-23",
+        "a12s3-expr-32"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2467,6 +4083,42 @@
           "expected_fi": "Nähdään perjantaina.",
           "accepted_answers": [
             "Nähdään perjantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-20",
+          "prompt_fa": "دوشنبه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Tavataan"
+          ],
+          "expected_fi": "Tavataan maanantaina.",
+          "accepted_answers": [
+            "Tavataan maanantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-32",
+          "prompt_fa": "جمعه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Tavataan"
+          ],
+          "expected_fi": "Tavataan perjantaina.",
+          "accepted_answers": [
+            "Tavataan perjantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
           ]
         }
       ],
@@ -2485,7 +4137,10 @@
             "maanantaita"
           ],
           "expected_fi": "maanantaina",
-          "explanation_fa": "برای گفتن «در روز دوشنبه» از maanantaina استفاده می‌شود."
+          "explanation_fa": "برای گفتن «در روز دوشنبه» از maanantaina استفاده می‌شود.",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
         }
       ],
       "activities": [
@@ -2531,33 +4186,57 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-20"
+          "item": "a12s3-expr-20",
+          "mode": "finnish"
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "morphology-choice",
           "item": "a12s3-hf-17",
-          "options": [
-            "a12s3-hf-18",
-            "a12s3-hf-17",
-            "a12s3-hf-19",
-            "a12s3-hf-20"
+          "base_fi": "maanantai",
+          "feature_fa": "essiivi روز هفته",
+          "prompt_fa": "برای «دوشنبه همدیگر را می‌بینیم»، شکل زمانیِ «دوشنبه» را انتخاب کن.",
+          "frame_fi": "Tavataan _____.",
+          "options_fi": [
+            "maanantai",
+            "maanantaina",
+            "maanantain",
+            "maanantaita"
+          ],
+          "expected_fi": "maanantaina",
+          "explanation_fa": "برای گفتن «در روز دوشنبه» از maanantaina استفاده می‌شود.",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-18"
+          "item": "a12s3-hf-18",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
+          "type": "teach",
           "item": "a12s3-expr-21"
         },
         {
+          "type": "controlled-production",
+          "item": "a12s3-expr-21",
+          "prompt_fa": "جمعه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Nähdään",
+            "perjantaina."
+          ],
+          "expected_fi": "Nähdään perjantaina.",
+          "accepted_answers": [
+            "Nähdään perjantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a12s3-hf-17",
           "options": [
             "a12s3-hf-18",
@@ -2565,8 +4244,310 @@
             "a12s3-hf-19",
             "a12s3-hf-20"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-20",
+          "prompt_fa": "دوشنبه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Tavataan"
+          ],
+          "expected_fi": "Tavataan maanantaina.",
+          "accepted_answers": [
+            "Tavataan maanantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-32"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-32",
+          "prompt_fa": "جمعه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Tavataan"
+          ],
+          "expected_fi": "Tavataan perjantaina.",
+          "accepted_answers": [
+            "Tavataan perjantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-21"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-21"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-22"
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-22"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-22",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-23"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-23",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-13"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-12"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-14"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-12",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-14",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-16"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-17"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-16",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-18",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-13",
+        "a12s3-topic-12",
+        "a12s3-topic-14",
+        "a12s3-expr-12",
+        "a12s3-expr-14",
+        "a12s3-hf-16",
+        "a12s3-topic-17",
+        "a12s3-expr-16",
+        "a12s3-expr-18"
+      ],
+      "practice_targets": [
+        "a12s3-expr-32",
+        "a12s3-expr-20",
+        "a12s3-expr-21"
+      ],
+      "activity_count": 39,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l06-can-do",
+            "can_do_fa": "بگوید یک رویداد یا قرار ساده در چه روزی انجام می‌شود."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-17",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-18",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-19",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-20",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-21",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-19",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-20",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-21",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-22",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-20",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-21",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-22",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-23",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-32",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-13",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-12",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-14",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-12",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-14",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-16",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-17",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-16",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-18",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Nähdään perjantaina.",
+                "fa": "جمعه همدیگر را می‌بینیم."
+              },
+              {
+                "fi": "Tavataan maanantaina.",
+                "fa": "دوشنبه همدیگر را می‌بینیم."
+              },
+              {
+                "fi": "Tavataan perjantaina.",
+                "fa": "جمعه همدیگر را می‌بینیم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 11,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 14,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-7",
@@ -2575,15 +4556,16 @@
       "title_fa": "دعوت کردن",
       "objective_fa": "کسی را به یک فعالیت ساده و آشنا دعوت کند و دعوت را بپذیرد یا رد کند.",
       "summary_fa": "دعوت ساده‌ای مطرح کن و بپذیر یا رد کن.",
-      "grammar_fa": "دعوت با Haluatko tulla…? و پاسخ مودبانه.",
+      "grammar_fa": "در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
       "new_targets": [
-        "a12s3-hf-22",
-        "a12s3-hf-11",
-        "a12s3-hf-23",
         "a12s3-topic-23",
         "a12s3-topic-24",
         "a12s3-topic-25",
-        "a12s3-topic-26"
+        "a12s3-topic-26",
+        "a12s3-expr-24",
+        "a12s3-expr-25",
+        "a12s3-expr-26",
+        "a12s3-expr-27"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2631,6 +4613,22 @@
           ],
           "expected_fi": "Mennäänkö elokuviin?",
           "expected_fa": "برویم سینما؟"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-27",
+          "prompt_fa": "متأسفم، نمی‌توانم.",
+          "cues_fi": [
+            "Anteeksi,"
+          ],
+          "expected_fi": "Anteeksi, en voi.",
+          "accepted_answers": [
+            "Anteeksi, en voi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "activities": [
@@ -2672,29 +4670,42 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-24"
+          "item": "a12s3-expr-24",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-22",
           "options": [
             "a12s3-hf-11",
-            "a12s3-hf-22",
             "a12s3-hf-23",
+            "a12s3-hf-22",
             "a12s3-topic-23"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-11"
+          "item": "a12s3-hf-11",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-25"
+          "type": "sentence-order",
+          "item": "a12s3-expr-25",
+          "tokens": [
+            "elokuviin?",
+            "Mennäänkö"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Mennäänkö elokuviin?",
+          "expected_fa": "برویم سینما؟"
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-26"
         },
         {
           "type": "choice",
@@ -2708,6 +4719,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s3-expr-27"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a12s3-expr-27",
@@ -2717,8 +4732,257 @@
             "a12s3-hf-11",
             "a12s3-hf-23"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-27",
+          "prompt_fa": "متأسفم، نمی‌توانم.",
+          "cues_fi": [
+            "Anteeksi,"
+          ],
+          "expected_fi": "Anteeksi, en voi.",
+          "accepted_answers": [
+            "Anteeksi, en voi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-23"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-23"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-24"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-25"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-26"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-15"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-16"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-18"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-17",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-19",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-17"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-21"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-22"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-21",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-23",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-15",
+        "a12s3-topic-16",
+        "a12s3-topic-18",
+        "a12s3-expr-17",
+        "a12s3-expr-19",
+        "a12s3-hf-17",
+        "a12s3-hf-19",
+        "a12s3-hf-21",
+        "a12s3-topic-20",
+        "a12s3-topic-22",
+        "a12s3-expr-21",
+        "a12s3-expr-23"
+      ],
+      "practice_targets": [
+        "a12s3-expr-27"
+      ],
+      "activity_count": 35,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l07-can-do",
+            "can_do_fa": "کسی را به یک فعالیت ساده و آشنا دعوت کند و دعوت را بپذیرد یا رد کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-22",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-11",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-23",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-23",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-24",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-25",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-26",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-24",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-25",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-26",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-27",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-15",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-16",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-18",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-17",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-17",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-21",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-22",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-21",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-23",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
+            "examples": [
+              {
+                "fi": "Anteeksi, en voi.",
+                "fa": "متأسفم، نمی‌توانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-8",
@@ -2727,15 +4991,17 @@
       "title_fa": "پیام‌های کوتاه کاربردی",
       "objective_fa": "یک پیام بسیار کوتاه و تمرین‌شده دربارهٔ دیر رسیدن، دیدار در زمان بعد یا تغییر زمان را بفهمد و بنویسد.",
       "summary_fa": "پیام کوتاه دربارهٔ دیر رسیدن یا تغییر قرار بنویس.",
-      "grammar_fa": "فرمول‌های پیام کوتاه Olen myöhässä و Perun tapaamisen.",
+      "grammar_fa": "پیام و لغو قرار با عبارت‌های ثابتِ همین درس تمرین می‌شوند؛ صرف کامل فعل، مجهول یا ساختار مفعولِ آزاد از این عبارت‌ها نتیجه گرفته نمی‌شود.",
       "new_targets": [
-        "a12s3-hf-24",
         "a12s3-hf-25",
         "a12s3-hf-26",
         "a12s3-topic-27",
-        "a12s3-topic-28",
         "a12s3-topic-29",
-        "a12s3-topic-30"
+        "a12s3-topic-30",
+        "a12s3-expr-28",
+        "a12s3-expr-29",
+        "a12s3-expr-30",
+        "a12s3-expr-31"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2820,29 +5086,38 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-28"
+          "item": "a12s3-expr-28",
+          "mode": "finnish"
         },
         {
           "type": "choice",
-          "mode": "finnish",
+          "mode": "listen",
           "item": "a12s3-hf-24",
           "options": [
             "a12s3-hf-25",
-            "a12s3-hf-24",
             "a12s3-hf-26",
-            "a12s3-topic-27"
+            "a12s3-topic-27",
+            "a12s3-hf-24"
           ]
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-hf-25"
+          "item": "a12s3-hf-25",
+          "mode": "finnish"
         },
         {
-          "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-29"
+          "type": "expression-completion",
+          "item": "a12s3-expr-29",
+          "prompt_fi": "Nähdään _____.",
+          "prompt_fa": "بعداً می‌بینمت.",
+          "accepted_answers": [
+            "myöhemmin"
+          ],
+          "expected_fi": "Nähdään myöhemmin."
+        },
+        {
+          "type": "teach",
+          "item": "a12s3-expr-30"
         },
         {
           "type": "choice",
@@ -2856,6 +5131,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a12s3-expr-31"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a12s3-expr-31",
@@ -2865,8 +5144,208 @@
             "a12s3-hf-25",
             "a12s3-hf-26"
           ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-26"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-27"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-28"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-29"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-30"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-18"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-21"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-20",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-22",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-32",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-23"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-25"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-24",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-26",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-18",
+        "a12s3-hf-20",
+        "a12s3-topic-19",
+        "a12s3-topic-21",
+        "a12s3-expr-20",
+        "a12s3-expr-22",
+        "a12s3-expr-32",
+        "a12s3-topic-23",
+        "a12s3-topic-25",
+        "a12s3-expr-24",
+        "a12s3-expr-26"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l08-can-do",
+            "can_do_fa": "یک پیام بسیار کوتاه و تمرین‌شده دربارهٔ دیر رسیدن، دیدار در زمان بعد یا تغییر زمان را بفهمد و بنویسد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-hf-24",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-25",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-26",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-27",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-28",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-29",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-topic-30",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-28",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-29",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-30",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-expr-31",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a12s3-hf-18",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-21",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-22",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-32",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-23",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-25",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-24",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-26",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "formulaic",
+        "grammar": []
+      }
     },
     {
       "id": "a1.2-section-3-lesson-9",
@@ -2875,7 +5354,7 @@
       "title_fa": "هفتهٔ من",
       "objective_fa": "چند فعالیت روزمره، یک علاقه و یک برنامهٔ ساده را در یک متن کوتاه و تمرین‌شده توصیف کند.",
       "summary_fa": "برنامه، علاقه و قرار را در یک گفت‌وگوی کوتاه ترکیب کن.",
-      "grammar_fa": "مرور زمان، علاقه و قرار در بافت پیام و مکالمه.",
+      "grammar_fa": "صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود. مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود. در جمله‌های همین درس، puhelinta و elokuvia مفعول پارتیتیو هستند و پس از Pidän از musiikista یا liikunnasta استفاده می‌شود. این کاربردِ علاقه با مبدأ مکانی فرق دارد؛ جدول کامل پارتیتیو یا وابستگی همهٔ فعل‌ها سنجیده نمی‌شود. بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند. پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند. در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -2917,6 +5396,102 @@
           "accepted_answers": [
             "Nähdään myöhemmin."
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-01",
+          "prompt_fa": "صبح بیدار می‌شوم.",
+          "cues_fi": [
+            "Herään"
+          ],
+          "expected_fi": "Herään aamulla.",
+          "accepted_answers": [
+            "Herään aamulla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-09",
+          "prompt_fa": "در دانشگاه درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen yliopistossa.",
+          "accepted_answers": [
+            "Opiskelen yliopistossa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-12",
+          "prompt_fa": "موسیقی را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän musiikista.",
+          "accepted_answers": [
+            "Pidän musiikista."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-32",
+          "prompt_fa": "جمعه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Tavataan"
+          ],
+          "expected_fi": "Tavataan perjantaina.",
+          "accepted_answers": [
+            "Tavataan perjantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-17",
+          "prompt_fa": "ساعت شش مناسب است؟",
+          "cues_fi": [
+            "Sopiiko"
+          ],
+          "expected_fi": "Sopiiko kello kuusi?",
+          "accepted_answers": [
+            "Sopiiko kello kuusi?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-08",
+          "prompt_fa": "هیچ‌وقت به آنجا نمی‌روم.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "En käy siellä koskaan.",
+          "accepted_answers": [
+            "En käy siellä koskaan."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "practice_targets": [
@@ -2925,7 +5500,11 @@
         "a12s3-expr-32",
         "a12s3-expr-29",
         "a12s3-expr-16",
-        "a12s3-expr-18"
+        "a12s3-expr-18",
+        "a12s3-expr-01",
+        "a12s3-expr-09",
+        "a12s3-expr-17",
+        "a12s3-expr-08"
       ],
       "activities": [
         {
@@ -2979,8 +5558,8 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-32"
+          "item": "a12s3-expr-32",
+          "mode": "finnish"
         },
         {
           "type": "choice",
@@ -3004,14 +5583,16 @@
           "item": "a12s3-expr-29"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "controlled-production",
           "item": "a12s3-expr-29",
-          "options": [
-            "a12s3-expr-07",
-            "a12s3-expr-29",
-            "a12s3-expr-12",
-            "a12s3-expr-32"
+          "prompt_fa": "بعداً می‌بینمت.",
+          "cues_fi": [
+            "Nähdään",
+            "myöhemmin."
+          ],
+          "expected_fi": "Nähdään myöhemmin.",
+          "accepted_answers": [
+            "Nähdään myöhemmin."
           ]
         },
         {
@@ -3031,9 +5612,14 @@
           "item": "a12s3-expr-18"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a12s3-expr-07",
+          "mode": "finnish"
+        },
+        {
+          "type": "choice",
+          "mode": "listen",
+          "item": "a12s3-expr-12",
           "options": [
             "a12s3-expr-12",
             "a12s3-expr-07",
@@ -3042,17 +5628,480 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "controlled-production",
+          "item": "a12s3-expr-01",
+          "prompt_fa": "صبح بیدار می‌شوم.",
+          "cues_fi": [
+            "Herään"
+          ],
+          "expected_fi": "Herään aamulla.",
+          "accepted_answers": [
+            "Herään aamulla."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-09",
+          "prompt_fa": "در دانشگاه درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen yliopistossa.",
+          "accepted_answers": [
+            "Opiskelen yliopistossa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
           "item": "a12s3-expr-12",
+          "prompt_fa": "موسیقی را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän musiikista.",
+          "accepted_answers": [
+            "Pidän musiikista."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-32",
+          "prompt_fa": "جمعه همدیگر را می‌بینیم.",
+          "cues_fi": [
+            "Tavataan"
+          ],
+          "expected_fi": "Tavataan perjantaina.",
+          "accepted_answers": [
+            "Tavataan perjantaina."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-17",
+          "prompt_fa": "ساعت شش مناسب است؟",
+          "cues_fi": [
+            "Sopiiko"
+          ],
+          "expected_fi": "Sopiiko kello kuusi?",
+          "accepted_answers": [
+            "Sopiiko kello kuusi?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-08",
+          "prompt_fa": "هیچ‌وقت به آنجا نمی‌روم.",
+          "cues_fi": [
+            "En"
+          ],
+          "expected_fi": "En käy siellä koskaan.",
+          "accepted_answers": [
+            "En käy siellä koskaan."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s3-reading-week",
+          "question_item": "a12s3-expr-12",
           "options": [
+            "a12s3-expr-12",
+            "a12s3-expr-17",
+            "a12s3-expr-24",
+            "a12s3-expr-28"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s3-reading-week",
+          "question_item": "a12s3-expr-32",
+          "options": [
+            "a12s3-expr-32",
+            "a12s3-expr-17",
+            "a12s3-expr-24",
+            "a12s3-expr-28"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s3-reading-week",
+          "question_item": "a12s3-expr-29",
+          "options": [
+            "a12s3-expr-29",
+            "a12s3-expr-17",
+            "a12s3-expr-24",
+            "a12s3-expr-28"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s3-reading-time",
+          "question_item": "a12s3-expr-16",
+          "options": [
+            "a12s3-expr-16",
+            "a12s3-expr-12",
+            "a12s3-expr-02",
+            "a12s3-expr-25"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s3-reading-time",
+          "question_item": "a12s3-expr-17",
+          "options": [
+            "a12s3-expr-17",
+            "a12s3-expr-12",
+            "a12s3-expr-02",
+            "a12s3-expr-25"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a12s3-reading-time",
+          "question_item": "a12s3-expr-18",
+          "options": [
+            "a12s3-expr-18",
+            "a12s3-expr-12",
+            "a12s3-expr-02",
+            "a12s3-expr-25"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "prompt_fa": "چهار جمله دربارهٔ هفته‌ات بنویس: هر روز درس می‌خوانم؛ موسیقی را دوست دارم؛ جمعه همدیگر را ببینیم؛ بعداً می‌بینمت.",
+          "expected_items": [
             "a12s3-expr-07",
             "a12s3-expr-12",
             "a12s3-expr-32",
             "a12s3-expr-29"
-          ]
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-17"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-20"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-22"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-24"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-26"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-25",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-27",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-25"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-27"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-30"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-expr-31",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-17",
+        "a12s3-topic-19",
+        "a12s3-topic-20",
+        "a12s3-topic-22",
+        "a12s3-topic-24",
+        "a12s3-topic-26",
+        "a12s3-expr-25",
+        "a12s3-expr-27",
+        "a12s3-hf-25",
+        "a12s3-topic-27",
+        "a12s3-topic-30",
+        "a12s3-expr-29",
+        "a12s3-expr-31"
+      ],
+      "activity_count": 40,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l09-can-do",
+            "can_do_fa": "چند فعالیت روزمره، یک علاقه و یک برنامهٔ ساده را در یک متن کوتاه و تمرین‌شده توصیف کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-expr-07",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-12",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-32",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-29",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-16",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-18",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-01",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-09",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-17",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-08",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-17",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-22",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-24",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-26",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-25",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-27",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-25",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-27",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-30",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-31",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Herään aamulla.",
+                "fa": "صبح بیدار می‌شوم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-local-cases",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Opiskelen yliopistossa.",
+                "fa": "در دانشگاه درس می‌خوانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در جمله‌های همین درس، puhelinta و elokuvia مفعول پارتیتیو هستند و پس از Pidän از musiikista یا liikunnasta استفاده می‌شود. این کاربردِ علاقه با مبدأ مکانی فرق دارد؛ جدول کامل پارتیتیو یا وابستگی همهٔ فعل‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Pidän musiikista.",
+                "fa": "موسیقی را دوست دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Tavataan perjantaina.",
+                "fa": "جمعه همدیگر را می‌بینیم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند.",
+            "examples": [
+              {
+                "fi": "Sopiiko kello kuusi?",
+                "fa": "ساعت شش مناسب است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
+            "examples": [
+              {
+                "fi": "En käy siellä koskaan.",
+                "fa": "هیچ‌وقت به آنجا نمی‌روم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.2-section-3-lesson-10",
@@ -3061,7 +6110,7 @@
       "title_fa": "ایستگاه مرور بخش ۳",
       "objective_fa": "یک تعامل هدایت‌شده دربارهٔ برنامهٔ روزمره، تحصیل/کار، علاقه‌ها و یک قرار ساده انجام دهد.",
       "summary_fa": "تمام مطالب بخش را در آزمون نهایی بازیابی کن.",
-      "grammar_fa": "مرور یکپارچهٔ برنامه روزانه، بسامد، تحصیل/کار، دعوت و پیام.",
+      "grammar_fa": "مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود. صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود. در جمله‌های همین درس، puhelinta و elokuvia مفعول پارتیتیو هستند و پس از Pidän از musiikista یا liikunnasta استفاده می‌شود. این کاربردِ علاقه با مبدأ مکانی فرق دارد؛ جدول کامل پارتیتیو یا وابستگی همهٔ فعل‌ها سنجیده نمی‌شود. بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند. پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند. در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3202,6 +6251,102 @@
           "accepted_answers": [
             "Perun tämän päivän tapaamisen."
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-07",
+          "prompt_fa": "هر روز درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen joka päivä.",
+          "accepted_answers": [
+            "Opiskelen joka päivä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-02",
+          "prompt_fa": "از خانه بیرون می‌روم.",
+          "cues_fi": [
+            "Lähden"
+          ],
+          "expected_fi": "Lähden kotoa.",
+          "accepted_answers": [
+            "Lähden kotoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-13",
+          "prompt_fa": "ورزش را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän liikunnasta.",
+          "accepted_answers": [
+            "Pidän liikunnasta."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-06",
+          "prompt_fa": "گاهی آن کار را انجام می‌دهم.",
+          "cues_fi": [
+            "Teen"
+          ],
+          "expected_fi": "Teen sen joskus.",
+          "accepted_answers": [
+            "Teen sen joskus."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-30",
+          "prompt_fa": "ساعت هفت مناسب است؟",
+          "cues_fi": [
+            "Sopiiko"
+          ],
+          "expected_fi": "Sopiiko kello seitsemän?",
+          "accepted_answers": [
+            "Sopiiko kello seitsemän?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-27",
+          "prompt_fa": "متأسفم، نمی‌توانم.",
+          "cues_fi": [
+            "Anteeksi,"
+          ],
+          "expected_fi": "Anteeksi, en voi.",
+          "accepted_answers": [
+            "Anteeksi, en voi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
         }
       ],
       "morphology_practice": [
@@ -3209,7 +6354,7 @@
           "type": "morphology-choice",
           "item": "a12s3-expr-02",
           "base_fi": "koti",
-          "feature_fa": "elatiivi / صورت مبدأ در عبارت ثابت",
+          "feature_fa": "صورت ثابت مبدأ: «از خانه»",
           "prompt_fa": "برای گفتن «از خانه راه می‌افتم»، کدام شکل خانه را انتخاب می‌کنی؟",
           "frame_fi": "Lähden _____.",
           "options_fi": [
@@ -3219,7 +6364,10 @@
             "kotiin"
           ],
           "expected_fi": "kotoa",
-          "explanation_fa": "در عبارت Lähden kotoa شکلِ مبدأ «از خانه» به‌صورت kotoa است."
+          "explanation_fa": "در عبارت Lähden kotoa شکلِ مبدأ «از خانه» به‌صورت kotoa است.",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
         }
       ],
       "passing_score": 0.8,
@@ -3241,15 +6389,18 @@
           "item": "a12s3-expr-07"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "sentence-order",
           "item": "a12s3-expr-09",
-          "options": [
-            "a12s3-expr-01",
-            "a12s3-expr-09",
-            "a12s3-expr-07",
-            "a12s3-expr-12"
-          ]
+          "tokens": [
+            "yliopistossa.",
+            "Opiskelen"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Opiskelen yliopistossa.",
+          "expected_fa": "در دانشگاه درس می‌خوانم."
         },
         {
           "type": "choice",
@@ -3264,23 +6415,22 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-16"
+          "item": "a12s3-expr-16",
+          "mode": "finnish"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "expression-completion",
           "item": "a12s3-expr-17",
-          "options": [
-            "a12s3-expr-01",
-            "a12s3-expr-17",
-            "a12s3-expr-07",
-            "a12s3-expr-09"
-          ]
+          "prompt_fi": "Sopiiko kello _____?",
+          "prompt_fa": "ساعت شش مناسب است؟",
+          "accepted_answers": [
+            "kuusi"
+          ],
+          "expected_fi": "Sopiiko kello kuusi?"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a12s3-expr-20",
           "options": [
             "a12s3-expr-01",
@@ -3318,29 +6468,39 @@
         },
         {
           "type": "type",
-          "mode": "finnish",
-          "item": "a12s3-expr-28"
+          "item": "a12s3-expr-28",
+          "mode": "finnish"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "controlled-production",
           "item": "a12s3-expr-31",
-          "options": [
-            "a12s3-expr-01",
-            "a12s3-expr-31",
-            "a12s3-expr-07",
-            "a12s3-expr-09"
+          "prompt_fa": "قرار امروز را لغو می‌کنم.",
+          "cues_fi": [
+            "Perun",
+            "tämän"
+          ],
+          "expected_fi": "Perun tämän päivän tapaamisen.",
+          "accepted_answers": [
+            "Perun tämän päivän tapaamisen."
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "morphology-choice",
           "item": "a12s3-expr-02",
-          "options": [
-            "a12s3-expr-01",
-            "a12s3-expr-02",
-            "a12s3-expr-07",
-            "a12s3-expr-09"
+          "base_fi": "koti",
+          "feature_fa": "صورت ثابت مبدأ: «از خانه»",
+          "prompt_fa": "برای گفتن «از خانه راه می‌افتم»، کدام شکل خانه را انتخاب می‌کنی؟",
+          "frame_fi": "Lähden _____.",
+          "options_fi": [
+            "koti",
+            "kotoa",
+            "kotona",
+            "kotiin"
+          ],
+          "expected_fi": "kotoa",
+          "explanation_fa": "در عبارت Lähden kotoa شکلِ مبدأ «از خانه» به‌صورت kotoa است.",
+          "grammar_concept_ids": [
+            "a12-local-cases"
           ]
         },
         {
@@ -3358,8 +6518,380 @@
             "a12s3-expr-07",
             "a12s3-expr-09"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-07",
+          "prompt_fa": "هر روز درس می‌خوانم.",
+          "cues_fi": [
+            "Opiskelen"
+          ],
+          "expected_fi": "Opiskelen joka päivä.",
+          "accepted_answers": [
+            "Opiskelen joka päivä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-present-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-02",
+          "prompt_fa": "از خانه بیرون می‌روم.",
+          "cues_fi": [
+            "Lähden"
+          ],
+          "expected_fi": "Lähden kotoa.",
+          "accepted_answers": [
+            "Lähden kotoa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-local-cases"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-13",
+          "prompt_fa": "ورزش را دوست دارم.",
+          "cues_fi": [
+            "Pidän"
+          ],
+          "expected_fi": "Pidän liikunnasta.",
+          "accepted_answers": [
+            "Pidän liikunnasta."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-case-chunks"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-06",
+          "prompt_fa": "گاهی آن کار را انجام می‌دهم.",
+          "cues_fi": [
+            "Teen"
+          ],
+          "expected_fi": "Teen sen joskus.",
+          "accepted_answers": [
+            "Teen sen joskus."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-30",
+          "prompt_fa": "ساعت هفت مناسب است؟",
+          "cues_fi": [
+            "Sopiiko"
+          ],
+          "expected_fi": "Sopiiko kello seitsemän?",
+          "accepted_answers": [
+            "Sopiiko kello seitsemän?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a12s3-expr-27",
+          "prompt_fa": "متأسفم، نمی‌توانم.",
+          "cues_fi": [
+            "Anteeksi,"
+          ],
+          "expected_fi": "Anteeksi, en voi.",
+          "accepted_answers": [
+            "Anteeksi, en voi."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-negation-expand"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-18"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-19"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-21"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-hf-26"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a12s3-topic-29"
         }
-      ]
+      ],
+      "review_targets": [
+        "a12s3-hf-18",
+        "a12s3-hf-19",
+        "a12s3-topic-21",
+        "a12s3-hf-26",
+        "a12s3-topic-29",
+        "a12s3-expr-28",
+        "a12s3-expr-30"
+      ],
+      "practice_targets": [
+        "a12s3-expr-07",
+        "a12s3-expr-02",
+        "a12s3-expr-13",
+        "a12s3-expr-06",
+        "a12s3-expr-30",
+        "a12s3-expr-27"
+      ],
+      "activity_count": 26,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.2-s3-l10-can-do",
+            "can_do_fa": "یک تعامل هدایت‌شده دربارهٔ برنامهٔ روزمره، تحصیل/کار، علاقه‌ها و یک قرار ساده انجام دهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a12s3-expr-07",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-02",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-13",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-06",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-30",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-27",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-18",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-19",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-21",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-hf-26",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-topic-29",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-28",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-01",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-09",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-12",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-16",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-17",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-20",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-21",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-24",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-25",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-31",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-29",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a12s3-expr-04",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-local-cases",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "مبدأ، مقصد و مکان ثابت را با kotoa، kotiin، yliopistossa و toimistossa در جملهٔ کامل مرور می‌کنی؛ صرف کامل حالت‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Lähden kotoa.",
+                "fa": "از خانه بیرون می‌روم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 12,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-present-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "صورت‌های کاملِ اول‌شخص مثل Herään و Opiskelen را در جمله‌های مشخص مرور می‌کنی؛ صرف آزاد همهٔ فعل‌ها ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Opiskelen joka päivä.",
+                "fa": "هر روز درس می‌خوانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-case-chunks",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در جمله‌های همین درس، puhelinta و elokuvia مفعول پارتیتیو هستند و پس از Pidän از musiikista یا liikunnasta استفاده می‌شود. این کاربردِ علاقه با مبدأ مکانی فرق دارد؛ جدول کامل پارتیتیو یا وابستگی همهٔ فعل‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Pidän liikunnasta.",
+                "fa": "ورزش را دوست دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "بسامد و زمان را در جمله‌های کوتاه با usein، joskus، joka päivä و صورت‌های آمادهٔ روزهای هفته به کار می‌بری؛ این نمونه‌ها آموزش کامل essiivi نیستند.",
+            "examples": [
+              {
+                "fi": "Teen sen joskus.",
+                "fa": "گاهی آن کار را انجام می‌دهم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "پرسش کامل دربارهٔ محل کار و مناسب‌بودن ساعت را از جملهٔ خبری تشخیص می‌دهی و به‌صورت راهنمایی‌شده می‌نویسی؛ دعوت‌ها همچنان عبارت آماده‌اند.",
+            "examples": [
+              {
+                "fi": "Sopiiko kello seitsemän?",
+                "fa": "ساعت هفت مناسب است؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-negation-expand",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-negation"
+            ],
+            "explanation_fa": "در دو عبارت محدود، En käy و en voi را مرور می‌کنی؛ پس از فعل منفی، صورت مثبت käy یا voin را به‌دلخواه صرف نمی‌کنی. این تمرین صرف آزاد همهٔ فعل‌ها نیست.",
+            "examples": [
+              {
+                "fi": "Anteeksi, en voi.",
+                "fa": "متأسفم، نمی‌توانم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

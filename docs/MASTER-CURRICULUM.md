@@ -167,3 +167,5 @@ Each stage specifies four thematic modules, introduced and recycled grammatical 
 - [Finnish National Agency for Education YKI correspondence](https://www.oph.fi/en/education-and-qualifications/selecting-right-yki-test-test-days) — Six-level YKI to A1–C2 correspondence.
 - [University of Helsinki Finnish course contents](https://www.helsinki.fi/en/language-centre/teaching-and-research/finnish-foreigners/course-materials-objectives-and-contents) — Practical Finnish grammatical sequencing; not an official prescription.
 - [Institute for the Languages of Finland grammar overview](https://kotus.fi/kotus/kielet-ja-kielipolitiikka/kansalliskielet/suomen-kieli/) — Reference morphology and descriptive grammatical categories.
+
+A1.2 Section 3 implementation snapshot (1.43.0): ten existing lessons now have canonical objectives and scoped assessment/recycling acceptance, including supported routine/week writing and arrangements. This backfill preserves the syllabus and prerequisite graph; it does not certify proficiency. See [the acceptance report](A12-SECTION3-ACCEPTANCE.md) and [delivery roadmap](ROADMAP.md).

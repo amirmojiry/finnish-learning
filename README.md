@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.42.0`
+- Version: `1.43.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -169,3 +169,5 @@ A1.2 Section 1 now has canonical overviews for all ten shopping/services lessons
 Dialogue and sequence ordering use a selected-answer box: choose phrases/items, click a selection to return it to the pool, or reset before explicitly submitting. Finnish dialogue turns stay in a left-to-right vertical sequence.
 
 A1.2 Section 2 completes all ten transport/directions lesson overviews with 309 activities, later positive retrieval for 80 introduced exact surfaces/expressions and later review of five bounded grammar concepts. Timetable reading and three-sentence trip writing remain supported practice. Original item records, lesson IDs, fifteen checkpoint targets and the 80% threshold are preserved. Run `npm run section:a12:s2:check`; see the [acceptance report](docs/A12-SECTION2-ACCEPTANCE.md). These checks do not certify full paradigms or CEFR proficiency.
+
+A1.2 Section 3 completes all ten routine, study/work, interests and arrangements overviews with 329 activities. All 79 introduced exact surfaces/expressions have later positive retrieval and six bounded grammar concepts have later review. Both existing passages assess four facts each; routine and week writing each use four taught sentences. All seven temporal weekdays are assessed and retrieved later. Original records, core lesson mappings, fifteen checkpoint targets and the 80% threshold remain intact. Run `npm run section:a12:s3:check`; see [the acceptance report](docs/A12-SECTION3-ACCEPTANCE.md). Invitations/cancellation remain fixed phrases; these tasks do not establish full paradigms or independent CEFR proficiency.
