@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 1758,
+    "graded_activity_slots": 1845,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 429,
+    "assessed_again_after_earlier_reference": 482,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 18,
-    "lessons_without_explicit_grammar_concept_ids": 92,
-    "graded_grammar_related_slots": 372,
-    "graded_morphology_slots": 74,
-    "lessons_with_declared_unassessed_forms": 89,
+    "lessons_without_explicit_grammar_concept_ids": 83,
+    "graded_grammar_related_slots": 386,
+    "graded_morphology_slots": 75,
+    "lessons_with_declared_unassessed_forms": 82,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -62,9 +62,9 @@
       "level": "A1.1",
       "id": "a1.1-section-4",
       "lessons": 10,
-      "graded_slots": 91,
-      "unassessed_target_forms": 8,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 178,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 1
     },
     {
       "level": "A1.2",
@@ -3000,7 +3000,7 @@
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 0,
+        "distractor_only_count": 1,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [
@@ -3570,7 +3570,7 @@
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 1,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [],
@@ -3759,57 +3759,62 @@
         "topic": 6,
         "expressions": 2
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "huone",
           "keittiö",
           "koti",
+          "kotona",
           "makuuhuone",
           "olen kotona.",
           "olohuone",
           "tämä on keittiö.",
+          "tämä on minun kotini.",
           "wc"
         ],
         "first_referenced": [
           "huone",
           "keittiö",
+          "kotona",
           "makuuhuone",
           "olen kotona.",
           "olohuone",
           "tämä on keittiö.",
+          "tämä on minun kotini.",
           "wc"
         ],
         "introduced": [
           "huone",
           "keittiö",
           "koti",
+          "kotona",
           "makuuhuone",
           "olen kotona.",
           "olohuone",
           "tämä on keittiö.",
+          "tämä on minun kotini.",
           "wc"
         ],
         "correct_answer": [
+          "huone",
           "keittiö",
           "koti",
+          "kotona",
           "makuuhuone",
           "olen kotona.",
           "olohuone",
           "tämä on keittiö.",
+          "tämä on minun kotini.",
           "wc"
         ],
         "receptive_count": 5,
-        "productive_count": 2,
+        "productive_count": 5,
         "later_correct_retrieval": [
           "koti"
         ],
-        "declared_unassessed": [
-          "huone"
-        ],
-        "teach_only": [
-          "huone"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -3828,20 +3833,30 @@
         "authored_new_forms": [
           "huone",
           "keittiö",
-          "koti",
+          "kotona",
           "makuuhuone",
+          "olen kotona.",
           "olohuone",
+          "tämä on keittiö.",
+          "tämä on minun kotini.",
           "wc"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-pronouns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -3856,37 +3871,16 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
+          "keittiössä",
+          "keittiössä on …",
+          "keittiössä on pöytä.",
           "missä",
-          "missä puhelin on?",
-          "on",
-          "pöytä",
-          "se on huoneessa.",
-          "se on pöydällä.",
-          "sänky",
-          "tuoli"
-        ],
-        "first_referenced": [
-          "missä puhelin on?",
-          "pöytä",
-          "se on huoneessa.",
-          "se on pöydällä.",
-          "sänky",
-          "tuoli"
-        ],
-        "introduced": [
-          "missä",
-          "missä puhelin on?",
-          "on",
-          "pöytä",
-          "sänky",
-          "tuoli"
-        ],
-        "correct_answer": [
           "missä puhelin on?",
           "olen kotona.",
+          "on",
           "pöytä",
           "se on huoneessa.",
           "se on pöydällä.",
@@ -3895,20 +3889,66 @@
           "sänky",
           "tuoli"
         ],
-        "receptive_count": 6,
-        "productive_count": 3,
+        "first_referenced": [
+          "keittiössä",
+          "keittiössä on …",
+          "keittiössä on pöytä.",
+          "missä puhelin on?",
+          "pöytä",
+          "se on huoneessa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
+          "sänky",
+          "tuoli"
+        ],
+        "introduced": [
+          "keittiössä",
+          "keittiössä on …",
+          "keittiössä on pöytä.",
+          "missä",
+          "missä puhelin on?",
+          "on",
+          "pöytä",
+          "se on huoneessa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
+          "sänky",
+          "tuoli"
+        ],
+        "correct_answer": [
+          "keittiössä",
+          "keittiössä on …",
+          "keittiössä on pöytä.",
+          "koti",
+          "makuuhuone",
+          "missä",
+          "missä puhelin on?",
+          "olen kotona.",
+          "on",
+          "pöytä",
+          "se on huoneessa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
+          "sänky",
+          "tuoli",
+          "wc"
+        ],
+        "receptive_count": 7,
+        "productive_count": 11,
         "later_correct_retrieval": [
-          "olen kotona."
-        ],
-        "declared_unassessed": [
+          "koti",
+          "makuuhuone",
           "missä",
-          "on"
+          "olen kotona.",
+          "on",
+          "wc"
         ],
-        "teach_only": [
-          "missä",
-          "on"
-        ],
-        "distractor_only_count": 1,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 3,
         "reading_only": [],
         "high_frequency_target_forms": [
           "missä",
@@ -3925,21 +3965,33 @@
           "se on pöydällä."
         ],
         "authored_new_forms": [
-          "missä",
-          "on",
+          "keittiössä",
+          "keittiössä on …",
+          "keittiössä on pöytä.",
+          "missä puhelin on?",
           "pöytä",
+          "se on huoneessa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
           "sänky",
           "tuoli"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -3954,10 +4006,11 @@
         "topic": 6,
         "expressions": 2
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "kahvi",
+          "kahvia",
           "leipä",
           "maito",
           "ruoka",
@@ -3988,22 +4041,28 @@
         ],
         "correct_answer": [
           "kahvi",
+          "kahvia",
           "leipä",
           "maito",
+          "pöytä",
+          "ruoka",
+          "sänky",
           "tee",
+          "tuoli",
           "tämä on kahvia.",
           "tämä on leipä.",
           "vesi"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "ruoka"
+        "productive_count": 8,
+        "later_correct_retrieval": [
+          "kahvia",
+          "pöytä",
+          "sänky",
+          "tuoli"
         ],
-        "teach_only": [
-          "ruoka"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -4025,17 +4084,23 @@
           "maito",
           "ruoka",
           "tee",
+          "tämä on kahvia.",
+          "tämä on leipä.",
           "vesi"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -4050,51 +4115,69 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 3,
+      "authored_new_targets": 10,
       "lexical": {
         "declared_forms": [
           "haluan",
+          "haluan …",
           "haluan kahvia.",
           "haluan vettä.",
           "jano",
+          "minulla on …",
+          "minulla on jano.",
           "minulla on nälkä.",
-          "nälkä"
+          "nälkä",
+          "vettä"
         ],
         "first_referenced": [
           "haluan",
+          "haluan …",
           "haluan kahvia.",
           "haluan vettä.",
           "jano",
+          "minulla on …",
+          "minulla on jano.",
           "minulla on nälkä.",
-          "nälkä"
+          "nälkä",
+          "vettä"
         ],
         "introduced": [
           "haluan",
+          "haluan …",
           "haluan kahvia.",
           "haluan vettä.",
           "jano",
+          "minulla on …",
           "minulla on jano.",
           "minulla on nälkä.",
-          "nälkä"
+          "nälkä",
+          "vettä"
         ],
         "correct_answer": [
+          "haluan",
+          "haluan …",
           "haluan kahvia.",
           "haluan vettä.",
           "jano",
+          "leipä",
+          "minulla on …",
           "minulla on jano.",
           "minulla on nälkä.",
-          "nälkä"
+          "nälkä",
+          "ruoka",
+          "vesi",
+          "vettä"
         ],
-        "receptive_count": 4,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "haluan"
+        "receptive_count": 6,
+        "productive_count": 8,
+        "later_correct_retrieval": [
+          "leipä",
+          "ruoka",
+          "vesi"
         ],
-        "teach_only": [
-          "haluan"
-        ],
-        "distractor_only_count": 2,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 3,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [
@@ -4109,18 +4192,31 @@
         ],
         "authored_new_forms": [
           "haluan",
+          "haluan …",
+          "haluan kahvia.",
+          "haluan vettä.",
           "jano",
-          "nälkä"
+          "minulla on …",
+          "minulla on jano.",
+          "minulla on nälkä.",
+          "nälkä",
+          "vettä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-present-chunks"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -4135,10 +4231,11 @@
         "topic": 1,
         "expressions": 3
       },
-      "authored_new_targets": 2,
+      "authored_new_targets": 3,
       "lexical": {
         "declared_forms": [
           "kahvila",
+          "kiitos.",
           "ole hyvä.",
           "vettä, kiitos.",
           "yksi",
@@ -4146,6 +4243,7 @@
         ],
         "first_referenced": [
           "kahvila",
+          "kiitos.",
           "ole hyvä.",
           "vettä, kiitos.",
           "yksi kahvi, kiitos."
@@ -4158,22 +4256,27 @@
           "yksi kahvi, kiitos."
         ],
         "correct_answer": [
+          "haluan",
+          "jano",
           "kahvila",
           "kiitos.",
+          "nälkä",
           "ole hyvä.",
           "vettä, kiitos.",
+          "yksi",
           "yksi kahvi, kiitos."
         ],
         "receptive_count": 5,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "haluan",
+          "jano",
+          "nälkä",
           "yksi"
         ],
-        "teach_only": [
-          "yksi"
-        ],
-        "distractor_only_count": 2,
+        "declared_unassessed": [],
+        "teach_only": [],
+        "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [
           "yksi"
@@ -4188,7 +4291,8 @@
         ],
         "authored_new_forms": [
           "kahvila",
-          "yksi"
+          "vettä, kiitos.",
+          "yksi kahvi, kiitos."
         ]
       },
       "grammar": {
@@ -4213,7 +4317,7 @@
         "topic": 5,
         "expressions": 2
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "hevonen",
@@ -4221,6 +4325,7 @@
           "kissa",
           "koira",
           "lintu",
+          "minulla on kissa.",
           "se on kissa.",
           "tämä on koira."
         ],
@@ -4230,6 +4335,7 @@
           "kissa",
           "koira",
           "lintu",
+          "minulla on kissa.",
           "se on kissa.",
           "tämä on koira."
         ],
@@ -4239,21 +4345,30 @@
           "kissa",
           "koira",
           "lintu",
+          "minulla on kissa.",
           "se on kissa.",
           "tämä on koira."
         ],
         "correct_answer": [
+          "haluan",
           "hevonen",
+          "kahvila",
           "kala",
           "kissa",
           "koira",
           "lintu",
+          "minulla on kissa.",
           "se on kissa.",
-          "tämä on koira."
+          "tämä on koira.",
+          "yksi"
         ],
         "receptive_count": 4,
-        "productive_count": 3,
-        "later_correct_retrieval": [],
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "haluan",
+          "kahvila",
+          "yksi"
+        ],
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
@@ -4275,17 +4390,24 @@
           "kala",
           "kissa",
           "koira",
-          "lintu"
+          "lintu",
+          "minulla on kissa.",
+          "se on kissa.",
+          "tämä on koira."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-pronouns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla"
+        ]
       }
     },
     {
@@ -4300,7 +4422,7 @@
         "topic": 5,
         "expressions": 2
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "hirvi",
@@ -4330,22 +4452,26 @@
           "susi"
         ],
         "correct_answer": [
+          "hevonen",
           "hirvi",
+          "kala",
           "karhu",
           "karhu on eläin.",
           "lammas",
           "lehmä",
-          "lehmä on eläin."
+          "lehmä on eläin.",
+          "lintu",
+          "susi"
         ],
         "receptive_count": 4,
-        "productive_count": 2,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "susi"
+        "productive_count": 6,
+        "later_correct_retrieval": [
+          "hevonen",
+          "kala",
+          "lintu"
         ],
-        "teach_only": [
-          "susi"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
         "high_frequency_target_forms": [],
@@ -4363,18 +4489,22 @@
         "authored_new_forms": [
           "hirvi",
           "karhu",
+          "karhu on eläin.",
           "lammas",
           "lehmä",
+          "lehmä on eläin.",
           "susi"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 1,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -4390,36 +4520,9 @@
         "topic": 5,
         "expressions": 2
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
-          "iso",
-          "kissa on pieni.",
-          "koira on iso.",
-          "musta",
-          "pieni",
-          "punainen",
-          "valkoinen"
-        ],
-        "first_referenced": [
-          "iso",
-          "kissa on pieni.",
-          "koira on iso.",
-          "musta",
-          "pieni",
-          "punainen",
-          "valkoinen"
-        ],
-        "introduced": [
-          "iso",
-          "kissa on pieni.",
-          "koira on iso.",
-          "musta",
-          "pieni",
-          "punainen",
-          "valkoinen"
-        ],
-        "correct_answer": [
           "hevonen on iso.",
           "iso",
           "kissa on pieni.",
@@ -4430,9 +4533,49 @@
           "punainen",
           "valkoinen"
         ],
+        "first_referenced": [
+          "hevonen on iso.",
+          "iso",
+          "kissa on pieni.",
+          "koira on iso.",
+          "lintu on pieni.",
+          "musta",
+          "pieni",
+          "punainen",
+          "valkoinen"
+        ],
+        "introduced": [
+          "hevonen on iso.",
+          "iso",
+          "kissa on pieni.",
+          "koira on iso.",
+          "lintu on pieni.",
+          "musta",
+          "pieni",
+          "punainen",
+          "valkoinen"
+        ],
+        "correct_answer": [
+          "hevonen on iso.",
+          "hirvi",
+          "iso",
+          "karhu",
+          "kissa on pieni.",
+          "koira on iso.",
+          "lintu on pieni.",
+          "musta",
+          "pieni",
+          "punainen",
+          "susi",
+          "valkoinen"
+        ],
         "receptive_count": 4,
-        "productive_count": 5,
-        "later_correct_retrieval": [],
+        "productive_count": 8,
+        "later_correct_retrieval": [
+          "hirvi",
+          "karhu",
+          "susi"
+        ],
         "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
@@ -4450,7 +4593,11 @@
           "koira on iso."
         ],
         "authored_new_forms": [
+          "hevonen on iso.",
           "iso",
+          "kissa on pieni.",
+          "koira on iso.",
+          "lintu on pieni.",
           "musta",
           "pieni",
           "punainen",
@@ -4459,11 +4606,13 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
         "structured_or_morphology_slots": 2,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -4482,17 +4631,42 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "en nuku.",
           "haluan …",
+          "haluan kahvia.",
+          "huone",
+          "kahvi",
+          "karhu on eläin.",
+          "keittiössä",
           "keittiössä on …",
+          "keittiössä on pöytä.",
+          "kissa",
+          "kissa on pieni.",
+          "kotona",
+          "lammas",
+          "lehmä",
+          "lehmä on eläin.",
+          "maito",
           "minulla on …",
-          "tämä on minun kotini."
+          "minulla on jano.",
+          "minulla on kissa.",
+          "minulla on nälkä.",
+          "olohuone",
+          "se on huoneessa.",
+          "se on kissa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
+          "tee",
+          "tämä on kahvia.",
+          "tämä on keittiö.",
+          "tämä on koira.",
+          "tämä on leipä.",
+          "tämä on minun kotini.",
+          "vettä",
+          "vettä, kiitos."
         ],
-        "first_referenced": [
-          "haluan …",
-          "keittiössä on …",
-          "minulla on …",
-          "tämä on minun kotini."
-        ],
+        "first_referenced": [],
         "introduced": [
           "haluan …",
           "keittiössä on …",
@@ -4500,26 +4674,87 @@
           "tämä on minun kotini."
         ],
         "correct_answer": [
+          "en nuku.",
           "haluan …",
           "haluan kahvia.",
+          "huone",
+          "iso",
+          "kahvi",
+          "karhu on eläin.",
+          "keittiössä",
+          "keittiössä on …",
           "keittiössä on pöytä.",
+          "kissa",
           "kissa on pieni.",
+          "kotona",
+          "lammas",
+          "lehmä",
+          "lehmä on eläin.",
+          "maito",
           "minulla on …",
+          "minulla on jano.",
           "minulla on kissa.",
-          "tämä on minun kotini."
+          "minulla on nälkä.",
+          "musta",
+          "olohuone",
+          "pieni",
+          "se on huoneessa.",
+          "se on kissa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
+          "tee",
+          "tämä on kahvia.",
+          "tämä on keittiö.",
+          "tämä on koira.",
+          "tämä on leipä.",
+          "tämä on minun kotini.",
+          "vettä",
+          "vettä, kiitos."
         ],
-        "receptive_count": 5,
-        "productive_count": 5,
+        "receptive_count": 8,
+        "productive_count": 34,
         "later_correct_retrieval": [
+          "en nuku.",
+          "haluan …",
           "haluan kahvia.",
-          "kissa on pieni."
+          "huone",
+          "iso",
+          "kahvi",
+          "karhu on eläin.",
+          "keittiössä",
+          "keittiössä on …",
+          "keittiössä on pöytä.",
+          "kissa",
+          "kissa on pieni.",
+          "kotona",
+          "lammas",
+          "lehmä",
+          "lehmä on eläin.",
+          "maito",
+          "minulla on …",
+          "minulla on jano.",
+          "minulla on kissa.",
+          "minulla on nälkä.",
+          "musta",
+          "olohuone",
+          "pieni",
+          "se on huoneessa.",
+          "se on kissa.",
+          "se on pöydällä.",
+          "se on sängyllä.",
+          "se on tuolilla.",
+          "tee",
+          "tämä on kahvia.",
+          "tämä on keittiö.",
+          "tämä on koira.",
+          "tämä on leipä.",
+          "tämä on minun kotini.",
+          "vettä",
+          "vettä, kiitos."
         ],
-        "declared_unassessed": [
-          "keittiössä on …"
-        ],
-        "teach_only": [
-          "keittiössä on …"
-        ],
+        "declared_unassessed": [],
+        "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [
           "tämä on minun kotini. keittiössä on pöytä. minulla on kissa. haluan kahvia. kissa on pieni."
@@ -4536,12 +4771,20 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-present-chunks",
+          "a11-pronouns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 2,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -4558,7 +4801,31 @@
       },
       "authored_new_targets": 0,
       "lexical": {
-        "declared_forms": [],
+        "declared_forms": [
+          "aamulla syön.",
+          "asun vaasassa.",
+          "en nuku.",
+          "haluan vettä.",
+          "hei!",
+          "hevonen on iso.",
+          "keittiö",
+          "kello on kaksi.",
+          "kiitos.",
+          "kissa on pieni.",
+          "koira",
+          "koira on iso.",
+          "lintu on pieni.",
+          "minun nimeni on sara.",
+          "missä puhelin on?",
+          "ole hyvä.",
+          "olen iranista.",
+          "puhun persiaa.",
+          "punainen",
+          "tämä on minun kotini.",
+          "tänään on maanantai.",
+          "valkoinen",
+          "yksi kahvi, kiitos."
+        ],
         "first_referenced": [],
         "introduced": [],
         "correct_answer": [
@@ -4567,44 +4834,61 @@
           "en nuku.",
           "haluan vettä.",
           "hei!",
+          "hevonen on iso.",
+          "iso",
           "keittiö",
           "kello on kaksi.",
           "kiitos.",
           "kissa on pieni.",
           "koira",
           "koira on iso.",
+          "lintu on pieni.",
           "minun nimeni on sara.",
+          "missä puhelin on?",
+          "musta",
           "ole hyvä.",
           "olen iranista.",
+          "pieni",
           "puhun persiaa.",
+          "punainen",
           "tämä on minun kotini.",
           "tänään on maanantai.",
+          "valkoinen",
           "yksi kahvi, kiitos."
         ],
         "receptive_count": 10,
-        "productive_count": 9,
+        "productive_count": 18,
         "later_correct_retrieval": [
           "aamulla syön.",
           "asun vaasassa.",
           "en nuku.",
           "haluan vettä.",
           "hei!",
+          "hevonen on iso.",
+          "iso",
           "keittiö",
           "kello on kaksi.",
+          "kiitos.",
           "kissa on pieni.",
           "koira",
           "koira on iso.",
+          "lintu on pieni.",
           "minun nimeni on sara.",
+          "missä puhelin on?",
+          "musta",
           "ole hyvä.",
           "olen iranista.",
+          "pieni",
           "puhun persiaa.",
+          "punainen",
           "tämä on minun kotini.",
           "tänään on maanantai.",
+          "valkoinen",
           "yksi kahvi, kiitos."
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 15,
+        "distractor_only_count": 12,
         "reading_only": [
           "tämä on minun kotini. keittiössä on pöytä. minulla on kissa. haluan kahvia. kissa on pieni."
         ],
@@ -4615,12 +4899,22 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-case-chunks",
+          "a11-negation",
+          "a11-olla",
+          "a11-present-chunks",
+          "a11-pronouns",
+          "a11-questions"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 6,
-        "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 9,
+        "morphology_slots": 2,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -11795,7 +12089,6 @@
           "bussi tuli myöhässä.",
           "eilen oli kylmä.",
           "eilen olin kotona.",
-          "kotona",
           "oli",
           "olin",
           "olin töissä.",
@@ -11823,7 +12116,8 @@
         "receptive_count": 8,
         "productive_count": 2,
         "later_correct_retrieval": [
-          "eilen"
+          "eilen",
+          "kotona"
         ],
         "declared_unassessed": [
           "bussi tuli myöhässä.",
@@ -17316,49 +17610,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "section-4-lesson-1",
-        "forms": [
-          "huone"
-        ]
-      },
-      {
-        "lesson_id": "section-4-lesson-2",
-        "forms": [
-          "missä",
-          "on"
-        ]
-      },
-      {
-        "lesson_id": "section-4-lesson-3",
-        "forms": [
-          "ruoka"
-        ]
-      },
-      {
-        "lesson_id": "section-4-lesson-4",
-        "forms": [
-          "haluan"
-        ]
-      },
-      {
-        "lesson_id": "section-4-lesson-5",
-        "forms": [
-          "yksi"
-        ]
-      },
-      {
-        "lesson_id": "section-4-lesson-7",
-        "forms": [
-          "susi"
-        ]
-      },
-      {
-        "lesson_id": "section-4-lesson-9",
-        "forms": [
-          "keittiössä on …"
-        ]
-      },
       {
         "lesson_id": "a1.2-section-1-lesson-1",
         "forms": [

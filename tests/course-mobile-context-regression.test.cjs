@@ -54,5 +54,5 @@ test('each location question has a Finnish scene clue and the matching bilingual
     assert.equal(prompt.example_fa, prompt.translation_fa);
     assert.deepEqual(prompt.accepted_answers, [prompt.surface_form]);
   }
-  assert.equal(lesson.activities.length, 15);
+  assert.equal(lesson.activities.length, lesson.activity_count);
 });

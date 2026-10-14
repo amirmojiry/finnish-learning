@@ -40,6 +40,11 @@ function evaluate(raw, curriculum, sidecar, preceding = []) {
     const objectives = lesson.learning_objectives;
     if (!objectives?.communicative?.length || !objectives.lexical?.length) throw Error('Missing section objectives: ' + lesson.id);
     if (!['formulaic', 'assessed'].includes(objectives.grammar_scope)) throw Error('Missing explicit grammar scope: ' + lesson.id);
+    for (const a of lesson.activities) {
+      if (a.type === 'choice' && (a.options.length < 2 || new Set(a.options.map(t => course.normalizeAnswer(course.optionLabel(section.items[t], a.mode)))).size < 2)) {
+        errors.push(lesson.id + ': recognition choice requires meaningful alternatives');
+      }
+    }
     const targets = composition.targets(lesson);
     if (JSON.stringify([...objectives.lexical.map(goal => goal.target_id)].sort()) !== JSON.stringify([...targets].sort())) {
       errors.push(lesson.id + ': lexical overview must match all declared targets');
@@ -95,7 +100,14 @@ function evaluate(raw, curriculum, sidecar, preceding = []) {
       grammar_concepts_with_later_review: grammarReview.filter(row => row.later_review_lessons.length).length,
       missing_positive_targets: composed.summary.declared_missing_positive, repeated_new_labels: composed.summary.duplicate_new_labels,
       formulaic_lessons: rows.filter(row => row.grammar_scope === 'formulaic').map(row => row.lesson_id), errors: errors.length },
-    boundaries: section.id === 'a1.1-section-3' ? [
+    boundaries: section.id === 'a1.1-section-4' ? [
+      'Prerequisites and exact surface review status carry forward from Sections 1–3. Explicit punctuation-equivalent politeness references do not merge source identities or SRS.',
+      'The cafe lesson is formulaic, with no invented imperative or independent grammar goal.',
+      'Home, location, food, wants, possession and descriptions use complete restricted examples; full case, adjective and possessive paradigms are not claimed.',
+      'All ten animal names have positive assessment and later retrieval. Complete familiar-world frames precede review-only lessons 9–10.',
+      'The final checkpoint retains its original positive answer scope, cafe dialogue, supported writing/reading and 80% passing threshold; it is authored practice, not CEFR/YKI certification.',
+      'Productive grammar evidence uses exact-form/diacritic-only morphology grading; ellipsis reference frames are recognized, never typed literally.'
+    ] : section.id === 'a1.1-section-3' ? [
       'Prerequisites and exact surface review status carry forward from Sections 1 and 2; no lexeme/sense or SRS identities are merged.',
       'Whole hours 1–5, all seven weekdays and four times of day have authored positive assessment and later retrieval.',
       'Five explicitly mapped first-person negative pairs are transformed and later reviewed; neither free verb formation nor full person paradigms are claimed.',
@@ -134,7 +146,7 @@ function markdown(report) {
 function main(args = process.argv.slice(2)) {
   const selector = args.find(arg => arg.startsWith('--section='));
   const number = selector ? Number(selector.split('=')[1]) : 1;
-  if (![1, 2, 3].includes(number)) throw Error('Unsupported A1.1 acceptance section');
+  if (![1, 2, 3, 4].includes(number)) throw Error('Unsupported A1.1 acceptance section');
   const jsonPath = JSON_PATH.replace('-1-', `-${number}-`);
   const mdPath = MD_PATH.replace('SECTION1', `SECTION${number}`);
   const action = args.find(arg => !arg.startsWith('--section=')) || '--check';
