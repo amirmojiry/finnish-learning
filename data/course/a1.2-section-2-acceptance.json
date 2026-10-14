@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "section_id": "a1.2-section-2",
+  "scope": "Authored assessment and review opportunities, not learner mastery, complete paradigms or CEFR/YKI certification.",
+  "summary": {
+    "lessons": 10,
+    "activities": 309,
+    "introduced_surface_forms_and_expressions": 80,
+    "surfaces_with_later_positive_review": 80,
+    "grammar_concepts_with_later_review": 5,
+    "missing_positive_targets": 0,
+    "repeated_new_labels": 0,
+    "formulaic_lessons": [],
+    "errors": 0
+  },
+  "boundaries": [
+    "Prerequisites and exact-form review carry forward from four A1.1 sections and A1.2 Section 1; lexical senses and SRS histories remain separate.",
+    "Location, destination, source and transport use explicit examples such as asemalla/asemalle/asemalta and bussilla, not full local-case paradigms.",
+    "Mene and Käänny are bounded singular direction commands, not unrestricted imperative conjugation.",
+    "Usein, departure/arrival times, ennen kymmentä and kymmenen jälkeen are limited scheduling applications; välillä remains lexical exposure.",
+    "Kaksi lippua and kymmenen minuuttia require exact grammatical forms; ticket requests remain supported phrases.",
+    "Timetable reading and three-sentence trip writing are supported tasks, not independent CEFR/YKI proficiency assessments.",
+    "All introductions have later retrieval. Review-only lessons introduce no targets; original checkpoint targets and the 80% threshold are retained."
+  ],
+  "lessons": [
+    {
+      "lesson_id": "a1.2-section-2-lesson-1",
+      "order": 1,
+      "title_fa": "مکان‌های شهر",
+      "activities": 25,
+      "declared_targets": 12,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 12,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-local-cases",
+        "a11-questions"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-2",
+      "order": 2,
+      "title_fa": "جهت‌های پایه",
+      "activities": 26,
+      "declared_targets": 14,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 14,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-commands"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-3",
+      "order": 3,
+      "title_fa": "به کجا؟",
+      "activities": 30,
+      "declared_targets": 20,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 20,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-local-cases"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-4",
+      "order": 4,
+      "title_fa": "از کجا؟",
+      "activities": 30,
+      "declared_targets": 19,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 19,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-local-cases"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-5",
+      "order": 5,
+      "title_fa": "حمل‌ونقل",
+      "activities": 33,
+      "declared_targets": 21,
+      "introduced_surfaces": 11,
+      "positively_assessed_targets": 21,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-local-cases",
+        "a12-frequency-adverbs"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-6",
+      "order": 6,
+      "title_fa": "بلیت",
+      "activities": 32,
+      "declared_targets": 19,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 19,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-7",
+      "order": 7,
+      "title_fa": "جدول زمان‌بندی",
+      "activities": 44,
+      "declared_targets": 26,
+      "introduced_surfaces": 16,
+      "positively_assessed_targets": 26,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-frequency-adverbs"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-8",
+      "order": 8,
+      "title_fa": "چقدر دور و چقدر طول می‌کشد؟",
+      "activities": 35,
+      "declared_targets": 22,
+      "introduced_surfaces": 11,
+      "positively_assessed_targets": 22,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-quantities",
+        "a11-questions"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-9",
+      "order": 9,
+      "title_fa": "یک سفر کوتاه",
+      "activities": 30,
+      "declared_targets": 19,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 19,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-commands",
+        "a12-local-cases",
+        "a12-frequency-adverbs"
+      ]
+    },
+    {
+      "lesson_id": "a1.2-section-2-lesson-10",
+      "order": 10,
+      "title_fa": "ایستگاه مرور بخش ۲",
+      "activities": 24,
+      "declared_targets": 23,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 23,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-local-cases",
+        "a11-questions",
+        "a12-commands",
+        "a12-frequency-adverbs",
+        "a12-quantities"
+      ]
+    }
+  ],
+  "lexical_review": [
+    {
+      "form_id": "form:61-73-65-6d-61",
+      "target_id": "a12s2-topic-asema",
+      "surface_form": "asema",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:70-79-73-e4-6b-6b-69",
+      "target_id": "a12s2-topic-pysakki",
+      "surface_form": "pysäkki",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:61-70-74-65-65-6b-6b-69",
+      "target_id": "a12s2-topic-apteekki",
+      "surface_form": "apteekki",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-73-6b-75-73-74-61",
+      "target_id": "a12s2-topic-keskusta",
+      "surface_form": "keskusta",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-73-73-e4-20-61-73-65-6d-61-20-6f-6e-3f",
+      "target_id": "a12s2-expr-missa-asema-on-8",
+      "surface_form": "Missä asema on?",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-2",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-73-73-e4-20-61-70-74-65-65-6b-6b-69-20-6f-6e-3f",
+      "target_id": "a12s2-expr-missa-apteekki-on-9",
+      "surface_form": "Missä apteekki on?",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6f-6e-20-6b-65-73-6b-75-73-74-61-73-73-61-2e",
+      "target_id": "a12s2-expr-se-on-keskustassa-10",
+      "surface_form": "Se on keskustassa.",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-2"
+      ]
+    },
+    {
+      "form_id": "expression:6f-6c-65-6e-20-61-73-65-6d-61-6c-6c-61-2e",
+      "target_id": "a12s2-expr-olen-asemalla",
+      "surface_form": "Olen asemalla.",
+      "introduced_in": "a1.2-section-2-lesson-1",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-68-74-69",
+      "target_id": "a12s2-hf-kohti",
+      "surface_form": "kohti",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:70-6f-69-73",
+      "target_id": "a12s2-hf-pois",
+      "surface_form": "pois",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:73-75-6f-72-61-61-6e",
+      "target_id": "a12s2-topic-suoraan",
+      "surface_form": "suoraan",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:76-61-73-65-6d-6d-61-6c-6c-65",
+      "target_id": "a12s2-topic-vasemmalle",
+      "surface_form": "vasemmalle",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:6f-69-6b-65-61-6c-6c-65",
+      "target_id": "a12s2-topic-oikealle",
+      "surface_form": "oikealle",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-20-73-75-6f-72-61-61-6e-2e",
+      "target_id": "a12s2-expr-mene-suoraan-17",
+      "surface_form": "Mene suoraan.",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-e4-e4-6e-6e-79-20-76-61-73-65-6d-6d-61-6c-6c-65-2e",
+      "target_id": "a12s2-expr-kaanny-vasemmalle-18",
+      "surface_form": "Käänny vasemmalle.",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:6b-e4-e4-6e-6e-79-20-6f-69-6b-65-61-6c-6c-65-2e",
+      "target_id": "a12s2-expr-kaanny-oikealle-19",
+      "surface_form": "Käänny oikealle.",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-20-74-61-6b-61-69-73-69-6e-2e",
+      "target_id": "a12s2-expr-mene-takaisin-20",
+      "surface_form": "Mene takaisin.",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-68-e4-6e",
+      "target_id": "a12s2-hf-tahan",
+      "surface_form": "tähän",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:73-69-69-68-65-6e",
+      "target_id": "a12s2-hf-siihen",
+      "surface_form": "siihen",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:74-75-6c-65-65",
+      "target_id": "a12s2-hf-tulee",
+      "surface_form": "tulee",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4",
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-68-69-6e",
+      "target_id": "a12s2-topic-mihin",
+      "surface_form": "mihin",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-73-6b-75-73-74-61-61-6e",
+      "target_id": "a12s2-topic-keskustaan",
+      "surface_form": "keskustaan",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:61-73-65-6d-61-6c-6c-65",
+      "target_id": "a12s2-topic-asemalle",
+      "surface_form": "asemalle",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-68-69-6e-20-6d-65-6e-65-74-3f",
+      "target_id": "a12s2-expr-mihin-menet-28",
+      "surface_form": "Mihin menet?",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-6b-65-73-6b-75-73-74-61-61-6e-2e",
+      "target_id": "a12s2-expr-menen-keskustaan-30",
+      "surface_form": "Menen keskustaan.",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-61-73-65-6d-61-6c-6c-65-2e",
+      "target_id": "a12s2-expr-menen-asemalle-31",
+      "surface_form": "Menen asemalle.",
+      "introduced_in": "a1.2-section-2-lesson-3",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:74-e4-73-74-e4",
+      "target_id": "a12s2-hf-tasta",
+      "surface_form": "tästä",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:73-69-69-74-e4",
+      "target_id": "a12s2-hf-siita",
+      "surface_form": "siitä",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:61-73-65-6d-61-6c-74-61",
+      "target_id": "a12s2-topic-asemalta",
+      "surface_form": "asemalta",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-75-70-61-73-74-61",
+      "target_id": "a12s2-topic-kaupasta",
+      "surface_form": "kaupasta",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6b-6f-74-6f-61",
+      "target_id": "a12s2-topic-kotoa",
+      "surface_form": "kotoa",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-73-74-e4-20-74-75-6c-65-74-3f",
+      "target_id": "a12s2-expr-mista-tulet-38",
+      "surface_form": "Mistä tulet?",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-75-6c-65-6e-20-61-73-65-6d-61-6c-74-61-2e",
+      "target_id": "a12s2-expr-tulen-asemalta-39",
+      "surface_form": "Tulen asemalta.",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-75-6c-65-6e-20-6b-61-75-70-61-73-74-61-2e",
+      "target_id": "a12s2-expr-tulen-kaupasta-40",
+      "surface_form": "Tulen kaupasta.",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:74-75-6c-65-6e-20-6b-6f-74-6f-61-2e",
+      "target_id": "a12s2-expr-tulen-kotoa-41",
+      "surface_form": "Tulen kotoa.",
+      "introduced_in": "a1.2-section-2-lesson-4",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-6e-73-73-61",
+      "target_id": "a12s2-hf-kanssa",
+      "surface_form": "kanssa",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:75-73-65-69-6e",
+      "target_id": "a12s2-hf-usein",
+      "surface_form": "usein",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:62-75-73-73-69",
+      "target_id": "a12s2-topic-bussi",
+      "surface_form": "bussi",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:6a-75-6e-61",
+      "target_id": "a12s2-topic-juna",
+      "surface_form": "juna",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:74-61-6b-73-69",
+      "target_id": "a12s2-topic-taksi",
+      "surface_form": "taksi",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:70-79-f6-72-e4",
+      "target_id": "a12s2-topic-pyora",
+      "surface_form": "pyörä",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-62-75-73-73-69-6c-6c-61-2e",
+      "target_id": "a12s2-expr-menen-bussilla-48",
+      "surface_form": "Menen bussilla.",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-6a-75-6e-61-6c-6c-61-2e",
+      "target_id": "a12s2-expr-menen-junalla-49",
+      "surface_form": "Menen junalla.",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:74-75-6c-65-6e-20-74-61-6b-73-69-6c-6c-61-2e",
+      "target_id": "a12s2-expr-tulen-taksilla-50",
+      "surface_form": "Tulen taksilla.",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-70-79-f6-72-e4-6c-6c-e4-2e",
+      "target_id": "a12s2-expr-menen-pyoralla-51",
+      "surface_form": "Menen pyörällä.",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-65-6e-20-75-73-65-69-6e-20-62-75-73-73-69-6c-6c-61-2e",
+      "target_id": "a12s2-expr-menen-usein-bussilla",
+      "surface_form": "Menen usein bussilla.",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7",
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6c-69-70-70-75",
+      "target_id": "a12s2-topic-lippu",
+      "surface_form": "lippu",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:6d-65-6e-6f-6c-69-70-70-75",
+      "target_id": "a12s2-topic-menolippu",
+      "surface_form": "menolippu",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6d-65-6e-6f-2d-70-61-6c-75-75",
+      "target_id": "a12s2-topic-meno-paluu",
+      "surface_form": "meno-paluu",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:61-75-74-6f-6d-61-61-74-74-69",
+      "target_id": "a12s2-topic-automaatti",
+      "surface_form": "automaatti",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:79-6b-73-69-20-6c-69-70-70-75-20-68-65-6c-73-69-6e-6b-69-69-6e-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s2-expr-yksi-lippu-helsinkiin-kiitos-59",
+      "surface_form": "Yksi lippu Helsinkiin, kiitos.",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-61-6b-73-69-20-6c-69-70-70-75-61-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s2-expr-kaksi-lippua-kiitos-60",
+      "surface_form": "Kaksi lippua, kiitos.",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-6e-6f-2d-70-61-6c-75-75-2c-20-6b-69-69-74-6f-73-2e",
+      "target_id": "a12s2-expr-meno-paluu-kiitos-61",
+      "surface_form": "Meno-paluu, kiitos.",
+      "introduced_in": "a1.2-section-2-lesson-6",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-7",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-6c-6f",
+      "target_id": "a12s2-hf-klo",
+      "surface_form": "klo",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:65-6e-6e-65-6e",
+      "target_id": "a12s2-hf-ennen",
+      "surface_form": "ennen",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6a-e4-6c-6b-65-65-6e",
+      "target_id": "a12s2-hf-jalkeen",
+      "surface_form": "jälkeen",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:76-e4-6c-69-6c-6c-e4",
+      "target_id": "a12s2-hf-valilla",
+      "surface_form": "välillä",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6c-e4-68-74-65-65",
+      "target_id": "a12s2-topic-lahtee",
+      "surface_form": "lähtee",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:73-61-61-70-75-75",
+      "target_id": "a12s2-topic-saapuu",
+      "surface_form": "saapuu",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6d-79-f6-68-e4-73-73-e4",
+      "target_id": "a12s2-topic-myohassa",
+      "surface_form": "myöhässä",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:61-6a-6f-69-73-73-61",
+      "target_id": "a12s2-topic-ajoissa",
+      "surface_form": "ajoissa",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:62-75-73-73-69-20-6c-e4-68-74-65-65-20-6b-65-6c-6c-6f-20-6b-61-68-64-65-6b-73-61-6e-2e",
+      "target_id": "a12s2-expr-bussi-lahtee-kello-kahdeksan-70",
+      "surface_form": "Bussi lähtee kello kahdeksan.",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6a-75-6e-61-20-73-61-61-70-75-75-20-6b-65-6c-6c-6f-20-79-68-64-65-6b-73-e4-6e-2e",
+      "target_id": "a12s2-expr-juna-saapuu-kello-yhdeksan-71",
+      "surface_form": "Juna saapuu kello yhdeksän.",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6c-e4-68-74-65-65-20-65-6e-6e-65-6e-20-6b-79-6d-6d-65-6e-74-e4-2e",
+      "target_id": "a12s2-expr-se-lahtee-ennen-kymmenta-72",
+      "surface_form": "Se lähtee ennen kymmentä.",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:62-75-73-73-69-20-6f-6e-20-6d-79-f6-68-e4-73-73-e4-2e",
+      "target_id": "a12s2-expr-bussi-on-myohassa-73",
+      "surface_form": "Bussi on myöhässä.",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:62-75-73-73-69-20-6c-e4-68-74-65-65-20-6b-79-6d-6d-65-6e-65-6e-20-6a-e4-6c-6b-65-65-6e-2e",
+      "target_id": "a12s2-expr-bussi-lahtee-kymmenen-jalkeen",
+      "surface_form": "Bussi lähtee kymmenen jälkeen.",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-6c-6c-6f-20-6b-61-68-64-65-6b-73-61-6e",
+      "target_id": "a12s2-time-8",
+      "surface_form": "kello kahdeksan",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-6c-6c-6f-20-79-68-64-65-6b-73-e4-6e",
+      "target_id": "a12s2-time-9",
+      "surface_form": "kello yhdeksän",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6b-65-6c-6c-6f-20-6b-79-6d-6d-65-6e-65-6e",
+      "target_id": "a12s2-time-10",
+      "surface_form": "kello kymmenen",
+      "introduced_in": "a1.2-section-2-lesson-7",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6b-75-69-6e-6b-61",
+      "target_id": "a12s2-hf-kuinka",
+      "surface_form": "kuinka",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-74-65-6e",
+      "target_id": "a12s2-hf-miten",
+      "surface_form": "miten",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:61-69-6b-61-61",
+      "target_id": "a12s2-hf-aikaa",
+      "surface_form": "aikaa",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-75-61-6e",
+      "target_id": "a12s2-topic-kauan",
+      "surface_form": "kauan",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6c-e4-68-65-6c-6c-e4",
+      "target_id": "a12s2-topic-lahella",
+      "surface_form": "lähellä",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6b-61-75-6b-61-6e-61",
+      "target_id": "a12s2-topic-kaukana",
+      "surface_form": "kaukana",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:6d-69-6e-75-75-74-74-69",
+      "target_id": "a12s2-topic-minuutti",
+      "surface_form": "minuutti",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-75-69-6e-6b-61-20-6b-61-75-61-6e-20-6d-61-74-6b-61-20-6b-65-73-74-e4-e4-3f",
+      "target_id": "a12s2-expr-kuinka-kauan-matka-kestaa-81",
+      "surface_form": "Kuinka kauan matka kestää?",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6e-6f-69-6e-20-6b-79-6d-6d-65-6e-65-6e-20-6d-69-6e-75-75-74-74-69-61-2e",
+      "target_id": "a12s2-expr-noin-kymmenen-minuuttia-82",
+      "surface_form": "Noin kymmenen minuuttia.",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6f-6e-20-6c-e4-68-65-6c-6c-e4-2e",
+      "target_id": "a12s2-expr-se-on-lahella-83",
+      "surface_form": "Se on lähellä.",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:73-65-20-6f-6e-20-6b-61-75-6b-61-6e-61-2e",
+      "target_id": "a12s2-expr-se-on-kaukana-84",
+      "surface_form": "Se on kaukana.",
+      "introduced_in": "a1.2-section-2-lesson-8",
+      "later_positive_lessons": [
+        "a1.2-section-2-lesson-10"
+      ]
+    }
+  ],
+  "grammar_review": [
+    {
+      "concept_id": "a12-local-cases",
+      "introduced_in": "a1.2-section-1-lesson-7",
+      "first_assessed_in_section": "a1.2-section-2-lesson-1",
+      "later_review_lessons": [
+        "a1.2-section-2-lesson-3",
+        "a1.2-section-2-lesson-4",
+        "a1.2-section-2-lesson-5",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-questions",
+      "introduced_in": "lesson-5",
+      "first_assessed_in_section": "a1.2-section-2-lesson-1",
+      "later_review_lessons": [
+        "a1.2-section-2-lesson-8",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-commands",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "first_assessed_in_section": "a1.2-section-2-lesson-2",
+      "later_review_lessons": [
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-frequency-adverbs",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "first_assessed_in_section": "a1.2-section-2-lesson-5",
+      "later_review_lessons": [
+        "a1.2-section-2-lesson-7",
+        "a1.2-section-2-lesson-9",
+        "a1.2-section-2-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-quantities",
+      "introduced_in": "a1.2-section-1-lesson-1",
+      "first_assessed_in_section": "a1.2-section-2-lesson-6",
+      "later_review_lessons": [
+        "a1.2-section-2-lesson-8",
+        "a1.2-section-2-lesson-10"
+      ]
+    }
+  ],
+  "errors": []
+}

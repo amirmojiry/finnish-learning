@@ -48,7 +48,7 @@ test('A1.2 Section 2 maps all ten reviewed travel lessons', () => {
   }
 });
 
-test('multi-level validation prepares 60 unique A1 lessons and 150 Section 2 activities', () => {
+test('multi-level validation prepares 60 unique A1 lessons and 309 Section 2 activities', () => {
   const sections = course.validateImplementedPath([
     { level: 'A1.1', curriculum: a11Curriculum, sections: a11Sections },
     { level: 'A1.2', curriculum: a12Curriculum, sections: [a12Section1, a12Section2] },
@@ -65,9 +65,9 @@ test('multi-level validation prepares 60 unique A1 lessons and 150 Section 2 act
   assert.equal(new Set(lessonIds).size, 60);
 
   const travel = sections.at(-1);
-  assert.equal(travel.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 150);
+  assert.equal(travel.lessons.reduce((sum, lesson) => sum + lesson.activities.length, 0), 309);
   for (const lesson of travel.lessons) {
-    assert.equal(lesson.activities.length, 15, lesson.id);
+    assert.equal(lesson.activities.length, lesson.activity_count, lesson.id);
     assert.equal(lesson.activities.filter((activity) => activity.type === 'production').length, 1, lesson.id);
     assert.equal(lesson.activities.filter((activity) => activity.type === 'choice' && activity.mode === 'listen').length, 1, lesson.id);
     assert.equal(lesson.activities.filter((activity) => activity.type === 'dictation').length, 1, lesson.id);
@@ -212,5 +212,5 @@ test('Section 2 checkpoint requires 80 percent and covers mixed travel structure
     assert.ok(types.has(type), `checkpoint missing ${type}`);
   }
   assert.equal(checkpoint.passing_score, 0.8);
-  assert.equal(checkpoint.activities.length, 15);
+  assert.equal(checkpoint.activities.length, 24);
 });
