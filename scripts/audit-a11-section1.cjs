@@ -40,6 +40,11 @@ function evaluate(raw, curriculum, sidecar, preceding = []) {
     const objectives = lesson.learning_objectives;
     if (!objectives?.communicative?.length || !objectives.lexical?.length) throw Error('Missing section objectives: ' + lesson.id);
     if (!['formulaic', 'assessed'].includes(objectives.grammar_scope)) throw Error('Missing explicit grammar scope: ' + lesson.id);
+    for (const a of lesson.activities) {
+      if (a.type === 'choice' && (a.options.length < 2 || new Set(a.options.map(t => course.normalizeAnswer(course.optionLabel(section.items[t], a.mode)))).size < 2)) {
+        errors.push(lesson.id + ': recognition choice requires meaningful alternatives');
+      }
+    }
     const targets = composition.targets(lesson);
     if (JSON.stringify([...objectives.lexical.map(goal => goal.target_id)].sort()) !== JSON.stringify([...targets].sort())) {
       errors.push(lesson.id + ': lexical overview must match all declared targets');

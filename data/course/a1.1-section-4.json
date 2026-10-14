@@ -2458,7 +2458,10 @@
           "mode": "meaning",
           "item": "s4-keittiossa-on-frame",
           "options": [
-            "s4-keittiossa-on-frame"
+            "s4-keittiossa-on-frame",
+            "s4-olen-kotona",
+            "s4-tama-on-minun-kotini",
+            "s4-tama-on-keittio"
           ]
         },
         {
@@ -3194,7 +3197,10 @@
           "mode": "meaning",
           "item": "s4-haluan-frame",
           "options": [
-            "s4-haluan-frame"
+            "s4-haluan-frame",
+            "s4-keittiossa-on-frame",
+            "s4-minulla-on-frame",
+            "s4-tama-on-minun-kotini"
           ]
         },
         {
@@ -3206,7 +3212,10 @@
           "mode": "meaning",
           "item": "s4-minulla-on-frame",
           "options": [
-            "s4-minulla-on-frame"
+            "s4-minulla-on-frame",
+            "s4-keittiossa-on-frame",
+            "s4-haluan-frame",
+            "s4-tama-on-minun-kotini"
           ]
         },
         {
@@ -4271,7 +4280,7 @@
                 "fa": "گاو حیوان است."
               },
               {
-                "fi": "lammas on eläin.",
+                "fi": "Lammas on eläin.",
                 "fa": "گوسفند حیوان است."
               }
             ],
@@ -4825,7 +4834,10 @@
           "mode": "meaning",
           "item": "s4-keittiossa-on-frame",
           "options": [
-            "s4-keittiossa-on-frame"
+            "s4-keittiossa-on-frame",
+            "s4-haluan-frame",
+            "s4-minulla-on-frame",
+            "s4-tama-on-minun-kotini"
           ]
         },
         {

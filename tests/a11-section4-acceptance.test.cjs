@@ -102,3 +102,20 @@ test('grammatical decisions reject incorrect Finnish forms and reference frames 
   }
   assert.ok(verify(missingPolicy).errors.some(e => e.includes('grammar production lacks morphology policy')));
 });
+
+
+test('reference frames require meaningful alternatives and grammar examples use sentence capitalization', () => {
+  const section = course.validateSection(raw);
+  for (const section of course.validateImplementedCourse([...prior, raw], curriculum)) for (const l of section.lessons) for (const a of l.activities) {
+    if (a.type !== 'choice') continue;
+    assert.ok(a.options.length >= 2, l.id);
+    assert.ok(new Set(a.options.map(t => course.normalizeAnswer(course.optionLabel(section.items[t], a.mode)))).size >= 2, l.id);
+  }
+  const broken = structuredClone(raw);
+  const frame = broken.lessons[8].activities.find(a => a.type === 'choice' && a.item === 's4-keittiossa-on-frame');
+  frame.options = [frame.item];
+  assert.ok(verify(broken).errors.some(e => e.includes('requires meaningful alternatives')));
+  const examples = raw.lessons[6].learning_objectives.grammar.flatMap(g => g.examples);
+  assert.ok(examples.some(e => e.fi === 'Lammas on eläin.'));
+  assert.ok(examples.every(e => e.fi[0] === e.fi[0].toLocaleUpperCase('fi-FI')));
+});

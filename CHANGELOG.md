@@ -17,6 +17,10 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 - Reuse exact-form/diacritic-only grammatical answer policies for limited location, partitive, possession, description and negative decisions; reference ellipsis frames are recognized rather than typed literally.
 - Add deterministic Section 4 acceptance snapshots, Persian explanation and regressions. All forty A1.1 lessons now have canonical overviews and scoped section gates (1,030 activities), while broader identity/review/integration work under #101 remains open.
 
+### Fixed
+
+- Replace single-option reference-frame recognition in Sections 3–4 with distinct answer alternatives and reject this false retrieval in the shared section acceptance gate. Correct the newly displayed Lammas sentence capitalization without changing original item records.
+
 ## [1.39.0] - 2026-10-13
 
 ### Added

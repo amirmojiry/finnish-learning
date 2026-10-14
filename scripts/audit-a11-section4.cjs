@@ -30,6 +30,7 @@ function evaluate(raw, curriculum, sidecar, preceding) {
       if (evidence.mode !== 'recognition' && a.type !== 'inflection-production' && a.answer_policy !== 'morphology') report.errors.push(current.id + ': grammar production lacks morphology policy');
     }
     for (const a of current.activities) {
+
       if (!['type', 'production', 'dictation', 'controlled-production', 'guided-writing'].includes(a.type)) continue;
       if ((a.expected_items || [a.item]).some(t => /…/u.test(section.items[t]?.surface_form || ''))) report.errors.push(current.id + ': literal reference-frame typing');
     }

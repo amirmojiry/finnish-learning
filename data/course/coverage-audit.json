@@ -3000,7 +3000,7 @@
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 0,
+        "distractor_only_count": 1,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [
@@ -3570,7 +3570,7 @@
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 1,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [],
@@ -3948,7 +3948,7 @@
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 0,
+        "distractor_only_count": 3,
         "reading_only": [],
         "high_frequency_target_forms": [
           "missä",
@@ -4177,7 +4177,7 @@
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 1,
+        "distractor_only_count": 3,
         "reading_only": [],
         "high_frequency_target_forms": [],
         "topic_target_forms": [
