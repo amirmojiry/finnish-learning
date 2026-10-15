@@ -93,16 +93,6 @@
       }
     },
     {
-      "surface_form": "ajan",
-      "lexeme_id": "lexeme:aika",
-      "sense_id": "sense:aika-time",
-      "morphology": {
-        "part_of_speech": "noun",
-        "case": "genitive",
-        "number": "singular"
-      }
-    },
-    {
       "surface_form": "apteekki",
       "lexeme_id": "lexeme:apteekki",
       "sense_id": "sense:apteekki-pharmacy",
@@ -459,6 +449,16 @@
       "morphology": {
         "part_of_speech": "pronoun",
         "case": "elative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "vesi",
+      "lexeme_id": "lexeme:vesi",
+      "sense_id": "sense:vesi-water",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
         "number": "singular"
       }
     },

@@ -20,16 +20,16 @@ The sidecar's reviewed `lexeme_id` and `sense_id` are editorial groupings within
 | Proximal demonstrative | `tämä` nominative; `tässä` inessive, `tästä` elative, `tähän` illative |
 | Referential demonstrative | `se` nominative; `siinä` inessive, `siitä` elative, `siihen` illative |
 | Interrogative | `mikä` nominative |
-| Time noun, in an explicit nominal context | `ajan` genitive **surface**, `aikaa` partitive, `aikana` essive |
+| Time noun, in an explicit nominal context | `aikaa` partitive, `aikana` essive |
 | Home | `koti` nominative, `kotiin` illative goal |
 | City | `kaupunki` nominative, `kaupungin` genitive |
-| Clear nominative common nouns | `apteekki`, `viesti`, `kauppa`, `koulu`, `asema`, `bussi`, `lippu`, `numero`, `nimi`, `puhelin`, `osoite`, `keittiö`, `olohuone`, `makuuhuone`, `kuitti`, `kortti` |
+| Clear nominative common nouns | `apteekki`, `viesti`, `kauppa`, `koulu`, `asema`, `bussi`, `lippu`, `numero`, `nimi`, `puhelin`, `osoite`, `keittiö`, `olohuone`, `makuuhuone`, `kuitti`, `kortti`, `vesi` (water) |
 
-The remaining 40-record source of truth, including exact case/number on **each** form, is `data/course/reviewed-lexical-identities.json`. The generated report enumerates every verified form/sense family. The simple noun senses above were checked against actual authored Finnish example contexts and Persian item glosses in the 14 shipped course sections, **not** assigned to every possible dictionary meaning. In particular, `lippu` is the travel *ticket* sense, `asema` the *station* sense, and `kauppa` the *shop* sense. `ajan` is morphologically a genitive-shaped form; its lesson uses it as a total-object expression in `varata ajan` rather than asserting the entire noun phrase has a genitive syntactic function.
+The full 47-entry reviewed form source of truth, including exact case/number on **each** form, is `data/course/reviewed-lexical-identities.json`. The generated report enumerates every verified form/sense family. The simple noun senses above were checked against actual authored Finnish example contexts and Persian item glosses in the 14 shipped course sections, **not** assigned to every possible dictionary meaning. In particular, `lippu` is the travel *ticket* sense, `asema` the *station* sense, and `kauppa` the *shop* sense. The course uses `ajan` as the nominal object in `varata ajan`, but **its surface is not globally reviewed**: `ajan` is also the first-person present-tense form of `ajaa` (I drive). A subsequent occurrence-specific sense audit is necessary.
 
 ## Deferred rather than guessed
 
-- **`aika`** is unresolved as an isolated surface because current dictionary entries mix noun *time* and adverbial *fairly*. The three individually verified nominal forms remain linked only to the noun reading.
+- **`aika`** is unresolved as an isolated surface because current dictionary entries mix noun *time* and adverbial *fairly*. **`ajan`** is also deferred: it can be a time-noun form or the present-tense verb *I drive*. Only `aikaa` and `aikana` are currently reviewed under the noun interpretation.
 - **`kotona`** is a lexicalized old locative (*at home*), not treated as an automatically productive essive from modern `koti`. Unlike `kotiin`, it is deferred for a dedicated lexicalized-form review.
 - **`voi`** (can/butter), **`pitää`** (different government and meanings), **`tuli`** (came/fire) and other homographs remain unresolved pending sense-by-context review.
 - The `se` group is limited to its attested demonstrative interpretation, not automatic identity for all colloquial personal uses.
@@ -41,6 +41,7 @@ The remaining 40-record source of truth, including exact case/number on **each**
 - [Handbook of Finnish: personal pronoun nominative/genitive/allative forms](https://jkorpela.fi/finnish/Personal_pronouns.html).
 - [Handbook of Finnish: demonstrative pronoun case patterns](https://jkorpela.fi/finnish/Demonstrative_pronouns_t%C3%A4m%C3%A4%2C_1.html).
 - [Uusi kielemme: `aika` and the `ajan / aikaa / aikana` case forms](https://uusikielemme.fi/finnish-vocabulary/interesting-words/aikaa-ajaksi-aikana-ajassa-using-aika-in-sentences).
+- [Kieli.net: `ajan` has both noun and verb analyses](https://www.kieli.net/sana/ajan).
 - [Handbook of Finnish: historical locative `kotona`](https://jkorpela.fi/finnish/Essive.html).
 
 ## Next editorial batches

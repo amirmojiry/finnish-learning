@@ -47,7 +47,7 @@ test('personal and demonstrative pronouns share lexeme/sense, not surface identi
    ['minä','minun'],['minä','minulle'],['hän','hänen'],
    ['me','meidän'],['he','heidän'],['se','siinä'],['se','siitä'],['se','siihen'],
    ['tämä','tässä'],['tämä','tästä'],['tämä','tähän'],
-   ['kaupunki','kaupungin'],['koti','kotiin'],['ajan','aikaa'],['ajan','aikana']
+   ['kaupunki','kaupungin'],['koti','kotiin'],['aikaa','aikana']
  ])family(a,b);
  assert.equal(records.get('meidän').morphology.number,'plural');
  assert.equal(records.get('heidän').morphology.case,'genitive');
@@ -57,10 +57,12 @@ test('personal and demonstrative pronouns share lexeme/sense, not surface identi
  assert.equal(records.get('aikaa').morphology.case,'partitive');
  assert.equal(records.get('aikana').morphology.case,'essive');
  assert.equal(records.get('kotiin').morphology.case,'illative');
+ assert.equal(records.get('vesi').morphology.case,'nominative');
+ assert.equal(records.get('vesi').sense_id,'sense:vesi-water');
 });
 
 test('context-sensitive homographs and lexicalized locatives remain explicitly unresolved',()=>{
- for(const form of ['aika','kotona','voi','pitää','tuli','on','olin']){
+ for(const form of ['aika','ajan','kotona','voi','pitää','tuli','on','olin']){
    const row=records.get(form);
    assert.ok(row,form);
    assert.equal(row.identity_review_status,'unresolved',form);

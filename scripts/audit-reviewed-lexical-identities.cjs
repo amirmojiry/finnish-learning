@@ -13,10 +13,10 @@ const BATCH_FORMS=Object.freeze([
  'se','siinä','siitä','siihen','minulle','mikä',
  'apteekki','viesti','kauppa','koulu','koti','kotiin','asema','bussi','lippu',
  'numero','nimi','puhelin','osoite','keittiö','olohuone','makuuhuone',
- 'kuitti','kortti','ajan','aikaa','aikana','kaupunki','kaupungin'
+ 'kuitti','kortti','vesi','aikaa','aikana','kaupunki','kaupungin'
 ]);
 const BASE_FORMS=Object.freeze(['kissa','koira','kirja','minä','minun','sinä','sinun']);
-const DEFERRED_FORMS=Object.freeze(['aika','kotona','voi','pitää','tuli']);
+const DEFERRED_FORMS=Object.freeze(['aika','ajan','kotona','voi','pitää','tuli']);
 function evaluate(sidecar, reviews) {
  const errors=[],records=sidecar.records||[],entries=reviews.entries||[];
  const byForm=new Map(records.filter(r=>r.kind==='form').map(r=>[normalize(r.surface_form),r]));
@@ -127,7 +127,7 @@ function markdown(report){
  +'| Lexeme | Context-bounded sense | Exact reviewed forms |\n| --- | --- | --- |\n'
  +rows+'\n\n'
  +'## Explicitly deferred\n\n'
- +'No automatic sense assignment for \`aika\` (noun/adverb), \`voi\` (verb/noun), \`pitää\` (multiple verb senses), \`tuli\` (past tense verb/fire), or frozen locative \`kotona\`. Only the separately attested nominal \`ajan / aikaa / aikana\` and goal \`kotiin\` are reviewed.\n\n'
+ +'No automatic sense assignment for \`aika\` (noun/adverb), \`ajan\` (time / I drive), \`voi\` (verb/noun), \`pitää\` (multiple verb senses), \`tuli\` (past tense verb/fire), or frozen locative \`kotona\`. Only the separately attested nominal \`aikaa / aikana\`, water noun \`vesi\` and goal \`kotiin\` are reviewed.\n\n'
  +'## Reproducibility\n\n'
  +'- \`npm run lexical:identity:check\`: source-to-sidecar deterministic overlay.\n'
  +'- \`npm run p2:identity:check\`: this editorial batch inventory is current.\n'
