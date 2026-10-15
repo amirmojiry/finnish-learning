@@ -56,12 +56,16 @@ function evaluate(sidecar, reviews) {
  const selection=BATCH_FORMS.map(form=>byForm.get(form)).filter(Boolean);
  const families=new Map();
  for(const row of reviewed){
+   if(!row.lexeme_id||!row.sense_id||!row.morphology||!row.form_id){
+     errors.push('Malformed reviewed identity: '+row.surface_form);
+     continue;
+   }
    const key=row.lexeme_id+' / '+row.sense_id;
    if(!families.has(key))families.set(key,{lexeme_id:row.lexeme_id,sense_id:row.sense_id,
      forms:[]});
    families.get(key).forms.push({surface_form:row.surface_form,form_id:row.form_id,
      case:row.morphology.case,number:row.morphology.number,
-     provenance:row.provenance,shipped_lesson_count:new Set(row.occurrences.map(o=>o.lesson_id)).size});
+     provenance:row.provenance,shipped_lesson_count:new Set((row.occurrences||[]).map(o=>o.lesson_id)).size});
  }
  const familyRows=[...families.values()].sort((a,b)=>a.lexeme_id.localeCompare(b.lexeme_id,'en'));
  for(const family of familyRows)family.forms.sort((a,b)=>a.surface_form.localeCompare(b.surface_form,'fi-FI'));
