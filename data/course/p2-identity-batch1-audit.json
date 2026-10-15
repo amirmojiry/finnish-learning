@@ -13,19 +13,20 @@
     "reviewed_pronouns_in_batch": 17,
     "unresolved_forms": 777,
     "unresolved_expressions": 440,
-    "distinct_reviewed_lexemes": 31,
-    "distinct_reviewed_senses": 31,
+    "distinct_reviewed_lexemes": 32,
+    "distinct_reviewed_senses": 32,
     "new_forms_in_shipped_lessons": 38,
     "new_dictionary_only_forms": 2,
     "new_course_occurrences": 108
   },
   "batch_provenance": {
-    "ranked": 20,
-    "source_backed_outside_dictionary": 20,
+    "ranked": 19,
+    "source_backed_outside_dictionary": 21,
     "curated_unranked": 0
   },
   "deliberately_unresolved": [
     "aika",
+    "ajan",
     "kotona",
     "voi",
     "pitää",
@@ -48,14 +49,6 @@
           "surface_form": "aikana",
           "form_id": "form:61-69-6b-61-6e-61",
           "case": "essive",
-          "number": "singular",
-          "provenance": "ranked",
-          "shipped_lesson_count": 2
-        },
-        {
-          "surface_form": "ajan",
-          "form_id": "form:61-6a-61-6e",
-          "case": "genitive",
           "number": "singular",
           "provenance": "ranked",
           "shipped_lesson_count": 2
@@ -575,6 +568,20 @@
           "form_id": "form:74-65",
           "case": "nominative",
           "number": "plural",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:vesi",
+      "sense_id": "sense:vesi-water",
+      "forms": [
+        {
+          "surface_form": "vesi",
+          "form_id": "form:76-65-73-69",
+          "case": "nominative",
+          "number": "singular",
           "provenance": "source_backed_outside_dictionary",
           "shipped_lesson_count": 2
         }
