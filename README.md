@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.49.0`
+- Version: `1.50.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -19,7 +19,7 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 
 ## Current features
 
-A2.1 Section 1 has a scoped exact-form assessment/retrieval gate: [section acceptance](docs/A21-SECTION1-ACCEPTANCE.md). This is not CEFR/YKI certification; P2/P5/R3 integration gates remain open.
+Both shipped A2.1 sections now have scoped exact-form assessment and later-retrieval gates: [travel/past](docs/A21-SECTION1-ACCEPTANCE.md) and [healthcare/public services](docs/A21-SECTION2-ACCEPTANCE.md). This is not CEFR/YKI certification; P2/P5/R3 integration gates remain open.
 
 
 - 400 high-frequency written Finnish word forms with Persian translations

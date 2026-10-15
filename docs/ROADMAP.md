@@ -6,7 +6,7 @@ This document is the **single maintained delivery roadmap**. [Learning Design](L
 
 ## Content acceptance progress (2026-10-15)
 
-A1 content acceptance is complete across twelve sections. [Issue #178](https://github.com/amirmojiry/finnish-learning/issues/178) scopes ten-lesson A2.1 Section 1 acceptance ([audit](A21-SECTION1-ACCEPTANCE.md)). A2.1 Section 2 services follows; do not author playable Section 3 before parent #101's gates. CEFR/YKI certification, P2/P5/R3 remain open.
+All twelve A1 section packages and A2.1 Section 1 travel/past (#178/#179) are accepted for authored content. [Issue #180](https://github.com/amirmojiry/finnish-learning/issues/180) covers A2.1 Section 2 healthcare/public services ([scoped acceptance](A21-SECTION2-ACCEPTANCE.md)), with explicit positive/recycled forms, bounded grammar and supported reading/writing. All 140 playable lessons across the 14 implemented sections have scoped content checks. The next work is assessing open P2/P5/R3 and independent skills evidence under parent #101, **not** launching A2.1 Section 3 before prerequisites. CEFR/YKI certification remains open.
 
 ## Baseline and source of truth
 
@@ -17,7 +17,7 @@ This status snapshot was checked on **2026-10-09**. For fresh implementation cou
 | A1.1 | 4 sections, 40 lessons in [A1.1 curriculum](../data/course/a1.1-curriculum.json) | 4 sections / 40 lessons | Maintain correctness, review exercise quality and skills evidence |
 | A1.2 | 4 sections, 40 lessons in [A1.2 curriculum](../data/course/a1.2-curriculum.json) | **4 sections / 40 lessons** | Continue correctness, device/audio and proficiency-evidence auditing |
 | A1.3 | 4 sections, 40 lessons in [A1.3 curriculum](../data/course/a1.3-curriculum.json) | 4 sections / 40 lessons | Language review, device testing and independent proficiency-evidence audit |
-| A2.1 | [40-lesson curriculum outline](../data/course/a2.1-curriculum.json), first 20 lesson contracts detailed | **2 sections / 20 playable lessons** | Review naturalness, confirm accessible service interactions, and author Sections 3–4 before shipping them |
+| A2.1 | [40-lesson curriculum outline](../data/course/a2.1-curriculum.json), first 20 lesson contracts detailed | **2 sections / 20 playable lessons** | Keep Sections 3–4 outline-only until parent #101 prerequisites and independent quality gates are met |
 | A2.2–C2 | Four proposed modules per level in the [master plan](../data/course/master-curriculum.json) | 0 | Author and review full level curricula before writing lessons |
 
 The shipped dictionary has an independently generated count and Parole frequency fields. Do not interpret stage lexical targets as existing dictionary entries or attained proficiency. Consult the [vocabulary gap report](../data/course/a1.2-vocabulary-gap.json) and [vocabulary roadmap](VOCABULARY-ROADMAP.md) when sourcing new items.

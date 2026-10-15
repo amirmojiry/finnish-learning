@@ -1,10 +1,11 @@
-- A2.1 Section 1 acceptance: [English](A21-SECTION1-ACCEPTANCE.md) / [فارسی](A21-SECTION1-ACCEPTANCE.fa.md) — travel and past, grammar and positive review.
 # Documentation hub | راهنمای مستندات
 
 این صفحه نقطهٔ شروع مستندات **Finnish Learning** است. برای اینکه مطالب تکراری یا متناقض نشوند، هر موضوع یک مرجع اصلی دارد. فایل‌های فارسی و انگلیسیِ یک سند، دو نسخهٔ زبانی از همان موضوعند؛ نه دو مرجع مستقل.
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- A2.1 Section 2 acceptance: [English](A21-SECTION2-ACCEPTANCE.md) / [فارسی](A21-SECTION2-ACCEPTANCE.fa.md) — healthcare and public services, assessed grammar and review.
+- A2.1 Section 1 acceptance: [English](A21-SECTION1-ACCEPTANCE.md) / [فارسی](A21-SECTION1-ACCEPTANCE.fa.md) — travel and past, grammar and positive review.
 - A1.3 Section 4 acceptance: [English](A13-SECTION4-ACCEPTANCE.md) / [فارسی](A13-SECTION4-ACCEPTANCE.fa.md) — recent events, plans and cumulative A1 practice.
 - A1.3 Section 3 acceptance: [English](A13-SECTION3-ACCEPTANCE.md) / [فارسی](A13-SECTION3-ACCEPTANCE.fa.md) — study, work and simple instructions.
 - A1.3 Section 2 acceptance: [English](A13-SECTION2-ACCEPTANCE.md) / [فارسی](A13-SECTION2-ACCEPTANCE.fa.md) — home, neighbourhood and everyday problems.
