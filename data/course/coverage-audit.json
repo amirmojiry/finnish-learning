@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2733,
+    "graded_activity_slots": 2847,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 799,
+    "assessed_again_after_earlier_reference": 838,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 26,
-    "lessons_without_explicit_grammar_concept_ids": 15,
-    "graded_grammar_related_slots": 614,
-    "graded_morphology_slots": 78,
-    "lessons_with_declared_unassessed_forms": 26,
+    "lessons_without_explicit_grammar_concept_ids": 6,
+    "graded_grammar_related_slots": 669,
+    "graded_morphology_slots": 102,
+    "lessons_with_declared_unassessed_forms": 18,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -126,9 +126,9 @@
       "level": "A1.3",
       "id": "a1.3-section-4",
       "lessons": 10,
-      "graded_slots": 116,
-      "unassessed_target_forms": 15,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 230,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 1
     },
     {
       "level": "A2.1",
@@ -13873,7 +13873,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "bussi tuli myöhässä.",
@@ -13898,15 +13898,20 @@
           "töissä"
         ],
         "introduced": [
+          "bussi tuli myöhässä.",
           "eilen",
-          "kotona",
+          "eilen oli kylmä.",
+          "eilen olin kotona.",
           "oli",
           "olin",
+          "olin töissä.",
           "tuli",
           "töissä"
         ],
         "correct_answer": [
+          "bussi tuli myöhässä.",
           "eilen",
+          "eilen oli kylmä.",
           "eilen olin kotona.",
           "kotona",
           "oli",
@@ -13915,16 +13920,13 @@
           "tuli",
           "töissä"
         ],
-        "receptive_count": 8,
+        "receptive_count": 9,
         "productive_count": 2,
         "later_correct_retrieval": [
           "eilen",
           "kotona"
         ],
-        "declared_unassessed": [
-          "bussi tuli myöhässä.",
-          "eilen oli kylmä."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -13945,22 +13947,28 @@
           "olin töissä."
         ],
         "authored_new_forms": [
-          "eilen",
-          "kotona",
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
+          "eilen olin kotona.",
           "oli",
           "olin",
+          "olin töissä.",
           "tuli",
           "töissä"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-past-recognition"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 4,
+        "morphology_slots": 3,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -13975,7 +13983,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "hän sanoi kiitos.",
@@ -14004,16 +14012,11 @@
           "teki"
         ],
         "introduced": [
+          "hän sanoi kiitos.",
           "join",
+          "join kahvia.",
           "ostin",
-          "sai",
-          "sanoi",
-          "söin",
-          "teki"
-        ],
-        "correct_answer": [
-          "join",
-          "ostin",
+          "ostin lipun.",
           "sai",
           "sanoi",
           "söin",
@@ -14021,16 +14024,34 @@
           "tein ruokaa.",
           "teki"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
+        "correct_answer": [
+          "bussi tuli myöhässä.",
+          "eilen olin kotona.",
           "hän sanoi kiitos.",
+          "join",
           "join kahvia.",
-          "ostin lipun."
+          "oli",
+          "ostin",
+          "ostin lipun.",
+          "sai",
+          "sanoi",
+          "söin",
+          "söin kotona.",
+          "tein ruokaa.",
+          "teki",
+          "tuli"
         ],
+        "receptive_count": 10,
+        "productive_count": 7,
+        "later_correct_retrieval": [
+          "bussi tuli myöhässä.",
+          "eilen olin kotona.",
+          "oli",
+          "tuli"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
+        "distractor_only_count": 1,
         "reading_only": [],
         "high_frequency_target_forms": [
           "sai",
@@ -14050,22 +14071,33 @@
           "tein ruokaa."
         ],
         "authored_new_forms": [
+          "hän sanoi kiitos.",
           "join",
+          "join kahvia.",
           "ostin",
+          "ostin lipun.",
           "sai",
           "sanoi",
           "söin",
+          "söin kotona.",
+          "tein ruokaa.",
           "teki"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-partitive-patterns",
+          "a13-past-recognition"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 8,
+        "morphology_slots": 5,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a12-quantities",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -14080,7 +14112,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 4,
       "lexical": {
         "declared_forms": [
           "aamulla",
@@ -14101,39 +14133,60 @@
           "sitten menin kauppaan."
         ],
         "introduced": [
-          "aamulla",
           "eilen",
           "ensin",
-          "illalla",
+          "ensin olin töissä.",
+          "illalla söin kotona.",
           "jälkeen",
-          "sitten"
+          "sen jälkeen menin kotiin.",
+          "sitten",
+          "sitten menin kauppaan."
         ],
         "correct_answer": [
           "aamulla",
           "eilen",
+          "eilen oli kylmä.",
           "ensin",
           "ensin olin töissä.",
+          "hän sanoi kiitos.",
           "illalla",
+          "illalla söin kotona.",
+          "join",
+          "join kahvia.",
           "jälkeen",
+          "olin",
+          "olin töissä.",
+          "sanoi",
+          "sen jälkeen menin kotiin.",
           "sitten",
-          "sitten menin kauppaan."
+          "sitten menin kauppaan.",
+          "tein ruokaa.",
+          "teki",
+          "töissä"
         ],
         "receptive_count": 8,
-        "productive_count": 2,
+        "productive_count": 15,
         "later_correct_retrieval": [
           "aamulla",
           "eilen",
+          "eilen oli kylmä.",
           "ensin",
+          "hän sanoi kiitos.",
           "illalla",
+          "join",
+          "join kahvia.",
           "jälkeen",
-          "sitten"
+          "olin",
+          "olin töissä.",
+          "sanoi",
+          "sitten",
+          "tein ruokaa.",
+          "teki",
+          "töissä"
         ],
-        "declared_unassessed": [
-          "illalla söin kotona.",
-          "sen jälkeen menin kotiin."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [
           "ensin",
@@ -14152,22 +14205,28 @@
           "sitten menin kauppaan."
         ],
         "authored_new_forms": [
-          "aamulla",
-          "eilen",
-          "ensin",
-          "illalla",
-          "jälkeen",
-          "sitten"
+          "ensin olin töissä.",
+          "illalla söin kotona.",
+          "sen jälkeen menin kotiin.",
+          "sitten menin kauppaan."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-frequency-adverbs",
+          "a13-local-expansion",
+          "a13-past-recognition"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 5,
+        "morphology_slots": 1,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -14182,7 +14241,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "kanssa",
@@ -14211,29 +14270,46 @@
           "keskustassa",
           "koulussa",
           "missä",
+          "missä olit eilen?",
+          "olin kaupassa.",
+          "olin keskustassa ystävän kanssa.",
+          "olin koulussa.",
           "siellä"
         ],
         "correct_answer": [
+          "illalla söin kotona.",
           "kanssa",
           "kaupassa",
           "keskustassa",
           "koulussa",
           "missä",
           "missä olit eilen?",
+          "olin kaupassa.",
+          "olin keskustassa ystävän kanssa.",
           "olin koulussa.",
-          "siellä"
+          "ostin",
+          "ostin lipun.",
+          "sai",
+          "siellä",
+          "sitten menin kauppaan.",
+          "söin",
+          "söin kotona."
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 12,
         "later_correct_retrieval": [
+          "illalla söin kotona.",
           "kanssa",
           "missä",
-          "siellä"
+          "ostin",
+          "ostin lipun.",
+          "sai",
+          "siellä",
+          "sitten menin kauppaan.",
+          "söin",
+          "söin kotona."
         ],
-        "declared_unassessed": [
-          "olin kaupassa.",
-          "olin keskustassa ystävän kanssa."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -14254,22 +14330,31 @@
           "olin koulussa."
         ],
         "authored_new_forms": [
-          "kanssa",
           "kaupassa",
           "keskustassa",
           "koulussa",
-          "missä",
-          "siellä"
+          "missä olit eilen?",
+          "olin kaupassa.",
+          "olin keskustassa ystävän kanssa.",
+          "olin koulussa."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a13-local-expansion",
+          "a13-past-recognition"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 6,
+        "morphology_slots": 1,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a12-local-cases",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -14308,34 +14393,47 @@
         ],
         "introduced": [
           "ehkä",
-          "ensi",
-          "huomenna",
-          "suunnitelma",
-          "tulee",
-          "viikonloppuna"
-        ],
-        "correct_answer": [
-          "ehkä",
+          "ehkä menen elokuviin.",
           "ensi",
           "ensi viikolla tapaan ystävän.",
           "huomenna",
           "huomenna menen töihin.",
           "suunnitelma",
           "tulee",
-          "viikonloppuna"
+          "viikonloppuna",
+          "viikonloppuna olen kotona."
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "correct_answer": [
+          "ehkä",
+          "ehkä menen elokuviin.",
+          "ensi",
+          "ensi viikolla tapaan ystävän.",
+          "ensin olin töissä.",
+          "huomenna",
+          "huomenna menen töihin.",
+          "kaupassa",
+          "missä olit eilen?",
+          "olin kaupassa.",
+          "sen jälkeen menin kotiin.",
+          "suunnitelma",
+          "tulee",
+          "viikonloppuna",
+          "viikonloppuna olen kotona."
+        ],
+        "receptive_count": 7,
+        "productive_count": 10,
         "later_correct_retrieval": [
           "ehkä",
           "ensi",
+          "ensin olin töissä.",
           "huomenna",
+          "kaupassa",
+          "missä olit eilen?",
+          "olin kaupassa.",
+          "sen jälkeen menin kotiin.",
           "tulee"
         ],
-        "declared_unassessed": [
-          "ehkä menen elokuviin.",
-          "viikonloppuna olen kotona."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -14356,22 +14454,29 @@
           "viikonloppuna olen kotona."
         ],
         "authored_new_forms": [
-          "ehkä",
-          "ensi",
-          "huomenna",
+          "ehkä menen elokuviin.",
+          "ensi viikolla tapaan ystävän.",
+          "huomenna menen töihin.",
           "suunnitelma",
-          "tulee",
-          "viikonloppuna"
+          "viikonloppuna",
+          "viikonloppuna olen kotona."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-frequency-adverbs",
+          "a13-local-expansion",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-local-cases"
+        ]
       }
     },
     {
@@ -14386,7 +14491,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "enemmän",
@@ -14415,29 +14520,46 @@
           "kalliimpi",
           "liian",
           "parempi",
-          "toinen"
+          "pidän tästä enemmän.",
+          "toinen",
+          "toinen on liian kallis.",
+          "tämä on halvempi.",
+          "tämä on parempi."
         ],
         "correct_answer": [
           "enemmän",
           "halvempi",
+          "huomenna menen töihin.",
           "kalliimpi",
+          "keskustassa",
+          "koulussa",
           "liian",
+          "olin keskustassa ystävän kanssa.",
+          "olin koulussa.",
           "parempi",
+          "pidän tästä enemmän.",
           "toinen",
+          "toinen on liian kallis.",
           "tämä on halvempi.",
-          "tämä on parempi."
+          "tämä on parempi.",
+          "viikonloppuna",
+          "viikonloppuna olen kotona."
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 11,
         "later_correct_retrieval": [
           "enemmän",
+          "huomenna menen töihin.",
+          "keskustassa",
+          "koulussa",
           "liian",
-          "toinen"
+          "olin keskustassa ystävän kanssa.",
+          "olin koulussa.",
+          "toinen",
+          "viikonloppuna",
+          "viikonloppuna olen kotona."
         ],
-        "declared_unassessed": [
-          "pidän tästä enemmän.",
-          "toinen on liian kallis."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -14458,12 +14580,13 @@
           "tämä on parempi."
         ],
         "authored_new_forms": [
-          "enemmän",
           "halvempi",
           "kalliimpi",
-          "liian",
           "parempi",
-          "toinen"
+          "pidän tästä enemmän.",
+          "toinen on liian kallis.",
+          "tämä on halvempi.",
+          "tämä on parempi."
         ]
       },
       "grammar": {
@@ -14488,7 +14611,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "huono",
@@ -14515,28 +14638,44 @@
           "hyvä",
           "mielenkiintoinen",
           "mielestä",
+          "minun mielestäni tämä on hyvä.",
           "mutta",
+          "se on mielenkiintoinen.",
+          "se on vaikea, mutta hyvä.",
           "vaikea"
         ],
         "correct_answer": [
+          "ehkä menen elokuviin.",
+          "ensi viikolla tapaan ystävän.",
           "huono",
           "hyvä",
+          "kalliimpi",
           "mielenkiintoinen",
           "mielestä",
           "minun mielestäni tämä on hyvä.",
           "mutta",
+          "parempi",
+          "pidän tästä enemmän.",
           "se on mielenkiintoinen.",
+          "se on vaikea, mutta hyvä.",
+          "suunnitelma",
+          "tämä on halvempi.",
           "vaikea"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 11,
         "later_correct_retrieval": [
+          "ehkä menen elokuviin.",
+          "ensi viikolla tapaan ystävän.",
           "hyvä",
-          "mutta"
+          "kalliimpi",
+          "mutta",
+          "parempi",
+          "pidän tästä enemmän.",
+          "suunnitelma",
+          "tämä on halvempi."
         ],
-        "declared_unassessed": [
-          "se on vaikea, mutta hyvä."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -14557,20 +14696,23 @@
         ],
         "authored_new_forms": [
           "huono",
-          "hyvä",
           "mielenkiintoinen",
           "mielestä",
-          "mutta",
+          "minun mielestäni tämä on hyvä.",
+          "se on mielenkiintoinen.",
+          "se on vaikea, mutta hyvä.",
           "vaikea"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": []
       }
     },
@@ -14586,7 +14728,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 4,
       "lexical": {
         "declared_forms": [
           "eilen olin kotona ja tein ruokaa.",
@@ -14606,35 +14748,50 @@
           "tarina"
         ],
         "introduced": [
+          "eilen olin kotona ja tein ruokaa.",
+          "huomenna menen kauppaan, koska tarvitsen ruokaa.",
           "ja",
           "koska",
           "mutta",
-          "suunnitelma",
+          "pidän tästä, mutta se on kallis.",
           "tarina",
           "viesti"
         ],
         "correct_answer": [
           "eilen olin kotona ja tein ruokaa.",
+          "halvempi",
+          "huomenna menen kauppaan, koska tarvitsen ruokaa.",
+          "huono",
           "ja",
           "koska",
+          "minun mielestäni tämä on hyvä.",
           "mutta",
           "pidän tästä, mutta se on kallis.",
+          "se on mielenkiintoinen.",
           "suunnitelma",
           "tarina",
+          "toinen on liian kallis.",
+          "tämä on parempi.",
+          "vaikea",
           "viesti"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 11,
         "later_correct_retrieval": [
+          "halvempi",
+          "huono",
           "ja",
           "koska",
+          "minun mielestäni tämä on hyvä.",
           "mutta",
+          "se on mielenkiintoinen.",
           "suunnitelma",
+          "toinen on liian kallis.",
+          "tämä on parempi.",
+          "vaikea",
           "viesti"
         ],
-        "declared_unassessed": [
-          "huomenna menen kauppaan, koska tarvitsen ruokaa."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -14654,22 +14811,26 @@
           "pidän tästä, mutta se on kallis."
         ],
         "authored_new_forms": [
-          "ja",
-          "koska",
-          "mutta",
-          "suunnitelma",
-          "tarina",
-          "viesti"
+          "eilen olin kotona ja tein ruokaa.",
+          "huomenna menen kauppaan, koska tarvitsen ruokaa.",
+          "pidän tästä, mutta se on kallis.",
+          "tarina"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-local-expansion",
+          "a13-partitive-patterns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a12-local-cases",
+          "a12-quantities"
+        ]
       }
     },
     {
@@ -14687,11 +14848,20 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
           "eilen olin kotona.",
           "huomenna menen töihin.",
+          "join kahvia.",
+          "minun pitää harjoitella.",
+          "missä olit eilen?",
           "mitä sinulle kuuluu?",
           "mitä tämä tarkoittaa?",
-          "tarvitsen apua."
+          "olin kaupassa.",
+          "se on mielenkiintoinen.",
+          "sen jälkeen menin kotiin.",
+          "tarvitsen apua.",
+          "tein ruokaa."
         ],
         "first_referenced": [],
         "introduced": [
@@ -14699,24 +14869,54 @@
           "tarvitsen apua."
         ],
         "correct_answer": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
           "eilen olin kotona.",
           "huomenna menen töihin.",
+          "join kahvia.",
+          "mielenkiintoinen",
+          "mielestä",
+          "minun mielestäni tämä on hyvä.",
+          "minun pitää harjoitella.",
+          "missä olit eilen?",
           "mitä sinulle kuuluu?",
           "mitä tämä tarkoittaa?",
-          "tarvitsen apua."
+          "olin kaupassa.",
+          "pidän tästä, mutta se on kallis.",
+          "se on mielenkiintoinen.",
+          "se on vaikea, mutta hyvä.",
+          "sen jälkeen menin kotiin.",
+          "tarina",
+          "tarvitsen apua.",
+          "tein ruokaa."
         ],
-        "receptive_count": 5,
-        "productive_count": 2,
+        "receptive_count": 9,
+        "productive_count": 17,
         "later_correct_retrieval": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
           "eilen olin kotona.",
           "huomenna menen töihin.",
+          "join kahvia.",
+          "mielenkiintoinen",
+          "mielestä",
+          "minun mielestäni tämä on hyvä.",
+          "minun pitää harjoitella.",
+          "missä olit eilen?",
           "mitä sinulle kuuluu?",
           "mitä tämä tarkoittaa?",
-          "tarvitsen apua."
+          "olin kaupassa.",
+          "pidän tästä, mutta se on kallis.",
+          "se on mielenkiintoinen.",
+          "se on vaikea, mutta hyvä.",
+          "sen jälkeen menin kotiin.",
+          "tarina",
+          "tarvitsen apua.",
+          "tein ruokaa."
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 4,
         "reading_only": [
           "mitä sinulle kuuluu? tarvitsen apua.",
           "mitä tämä tarkoittaa? eilen olin kotona."
@@ -14734,12 +14934,28 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-frequency-adverbs",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-past-recognition",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 14,
+        "morphology_slots": 5,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -14757,58 +14973,90 @@
       "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
           "eilen olin kotona ja tein ruokaa.",
           "eilen olin kotona.",
           "ensi viikolla tapaan ystävän.",
           "ensin olin töissä.",
           "haluatko tulla minun kanssani?",
           "huomenna menen töihin.",
+          "hän sanoi kiitos.",
+          "join kahvia.",
           "minun mielestäni tämä on hyvä.",
           "minun pitää harjoitella.",
           "missä kirjasto on?",
           "missä olit eilen?",
           "mitä tämä tarkoittaa?",
+          "olin kaupassa.",
+          "ostin lipun.",
           "pidän tästä, mutta se on kallis.",
+          "se on mielenkiintoinen.",
+          "sen jälkeen menin kotiin.",
+          "sitten menin kauppaan.",
           "söin kotona.",
           "tarvitsen apua.",
+          "tein ruokaa.",
           "tämä on halvempi."
         ],
         "first_referenced": [],
         "introduced": [],
         "correct_answer": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
           "eilen olin kotona ja tein ruokaa.",
           "eilen olin kotona.",
           "ensi viikolla tapaan ystävän.",
           "ensin olin töissä.",
           "haluatko tulla minun kanssani?",
+          "huomenna menen kauppaan, koska tarvitsen ruokaa.",
           "huomenna menen töihin.",
+          "hän sanoi kiitos.",
+          "join kahvia.",
           "minun mielestäni tämä on hyvä.",
           "minun pitää harjoitella.",
           "missä kirjasto on?",
           "missä olit eilen?",
           "mitä tämä tarkoittaa?",
+          "olin kaupassa.",
+          "ostin lipun.",
           "pidän tästä, mutta se on kallis.",
+          "se on mielenkiintoinen.",
+          "sen jälkeen menin kotiin.",
+          "sitten menin kauppaan.",
           "söin kotona.",
           "tarvitsen apua.",
+          "tein ruokaa.",
           "tämä on halvempi."
         ],
-        "receptive_count": 7,
-        "productive_count": 8,
+        "receptive_count": 14,
+        "productive_count": 15,
         "later_correct_retrieval": [
+          "bussi tuli myöhässä.",
+          "eilen oli kylmä.",
           "eilen olin kotona ja tein ruokaa.",
           "eilen olin kotona.",
           "ensi viikolla tapaan ystävän.",
           "ensin olin töissä.",
           "haluatko tulla minun kanssani?",
+          "huomenna menen kauppaan, koska tarvitsen ruokaa.",
           "huomenna menen töihin.",
+          "hän sanoi kiitos.",
+          "join kahvia.",
           "minun mielestäni tämä on hyvä.",
           "minun pitää harjoitella.",
           "missä kirjasto on?",
           "missä olit eilen?",
           "mitä tämä tarkoittaa?",
+          "olin kaupassa.",
+          "ostin lipun.",
           "pidän tästä, mutta se on kallis.",
+          "se on mielenkiintoinen.",
+          "sen jälkeen menin kotiin.",
+          "sitten menin kauppaan.",
           "söin kotona.",
           "tarvitsen apua.",
+          "tein ruokaa.",
           "tämä on halvempi."
         ],
         "declared_unassessed": [],
@@ -14822,12 +15070,28 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-frequency-adverbs",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-past-recognition",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
-        "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 20,
+        "morphology_slots": 10,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -19412,61 +19676,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "a1.3-section-4-lesson-1",
-        "forms": [
-          "bussi tuli myöhässä.",
-          "eilen oli kylmä."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-2",
-        "forms": [
-          "hän sanoi kiitos.",
-          "join kahvia.",
-          "ostin lipun."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-3",
-        "forms": [
-          "illalla söin kotona.",
-          "sen jälkeen menin kotiin."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-4",
-        "forms": [
-          "olin kaupassa.",
-          "olin keskustassa ystävän kanssa."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-5",
-        "forms": [
-          "ehkä menen elokuviin.",
-          "viikonloppuna olen kotona."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-6",
-        "forms": [
-          "pidän tästä enemmän.",
-          "toinen on liian kallis."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-7",
-        "forms": [
-          "se on vaikea, mutta hyvä."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-4-lesson-8",
-        "forms": [
-          "huomenna menen kauppaan, koska tarvitsen ruokaa."
-        ]
-      },
       {
         "lesson_id": "a2.1-section-1-lesson-1",
         "forms": [

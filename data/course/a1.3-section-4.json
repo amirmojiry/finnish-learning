@@ -1590,14 +1590,16 @@
       "title_fa": "دیروز و زمان اخیر",
       "objective_fa": "بگوید در یک موقعیت ساده و آشنای اخیر کجا بوده یا چه اتفاقی افتاده است.",
       "summary_fa": "بگوید در یک موقعیت ساده و آشنای اخیر کجا بوده یا چه اتفاقی افتاده است.",
-      "grammar_fa": "«olin» بودم، «oli» بود و «tuli» آمد است؛ این صورت‌های گذشته را در مثال مشخص تمرین کن.",
+      "grammar_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
       "new_targets": [
         "a13s4-h-001",
         "a13s4-h-002",
         "a13s4-h-003",
-        "a13s4-t-004",
-        "a13s4-t-005",
-        "a13s4-t-006"
+        "a13s4-t-006",
+        "a13s4-e-007",
+        "a13s4-e-008",
+        "a13s4-e-009",
+        "a13s4-e-010"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1641,7 +1643,8 @@
             1,
             0
           ],
-          "expected_fi": "Olin töissä."
+          "expected_fi": "Olin töissä.",
+          "expected_fa": "سر کار بودم."
         }
       ],
       "activities": [
@@ -1662,6 +1665,10 @@
           "item": "a13s4-t-004"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-007"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-007",
@@ -1670,7 +1677,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1692,22 +1700,30 @@
             "a13s4-h-001",
             "a13s4-h-003",
             "a13s4-t-004"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-008"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-008",
-          "options": [
-            "a13s4-e-008",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "töissä.",
+            "Olin"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Olin töissä.",
+          "expected_fa": "سر کار بودم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-001",
           "options": [
             "a13s4-h-001",
@@ -1717,15 +1733,10 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-002",
-          "options": [
-            "a13s4-h-002",
-            "a13s4-h-001",
-            "a13s4-h-003",
-            "a13s4-t-004"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1761,6 +1772,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-006"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-t-006",
@@ -1772,17 +1787,232 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-007",
-          "options": [
-            "a13s4-e-007",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-007",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز خانه بودم.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kotona.",
+          "options_fi": [
+            "olen",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olin",
+          "explanation_fa": "صورت olin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-010"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-010",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز هوا سرد بود.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kylmä.",
+          "options_fi": [
+            "on",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "oli",
+          "explanation_fa": "صورت oli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-009"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-009",
+          "base_fi": "tulla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «اتوبوس دیر رسید.» را انتخاب کن.",
+          "frame_fi": "Bussi _____ myöhässä.",
+          "options_fi": [
+            "tulee",
+            "tulin",
+            "tuli",
+            "tulit"
+          ],
+          "expected_fi": "tuli",
+          "explanation_fa": "صورت tuli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
           ]
         }
-      ]
+      ],
+      "review_targets": [],
+      "practice_targets": [
+        "a13s4-e-007",
+        "a13s4-e-010",
+        "a13s4-e-009"
+      ],
+      "activity_count": 23,
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-007",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز خانه بودم.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kotona.",
+          "options_fi": [
+            "olen",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olin",
+          "explanation_fa": "صورت olin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-010",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز هوا سرد بود.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kylmä.",
+          "options_fi": [
+            "on",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "oli",
+          "explanation_fa": "صورت oli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-009",
+          "base_fi": "tulla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «اتوبوس دیر رسید.» را انتخاب کن.",
+          "frame_fi": "Bussi _____ myöhässä.",
+          "options_fi": [
+            "tulee",
+            "tulin",
+            "tuli",
+            "tulit"
+          ],
+          "expected_fi": "tuli",
+          "explanation_fa": "صورت tuli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        }
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l01-can-do",
+            "can_do_fa": "بگوید در یک موقعیت ساده و آشنای اخیر کجا بوده یا چه اتفاقی افتاده است."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-001",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-002",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-003",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-004",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-005",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-006",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-007",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-008",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-009",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-010",
+            "status": "introduced"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-past-recognition",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-present-paradigm"
+            ],
+            "explanation_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
+            "examples": [
+              {
+                "fi": "Eilen olin kotona.",
+                "fa": "دیروز خانه بودم."
+              },
+              {
+                "fi": "Eilen oli kylmä.",
+                "fa": "دیروز هوا سرد بود."
+              },
+              {
+                "fi": "Bussi tuli myöhässä.",
+                "fa": "اتوبوس دیر رسید."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 20,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 22,
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-2",
@@ -1791,14 +2021,19 @@
       "title_fa": "کارهای رایج در گذشته",
       "objective_fa": "چند صورت گذشتهٔ بازبینی‌شده برای کارهای روزمرهٔ آشنا را بفهمد و استفاده کند.",
       "summary_fa": "چند صورت گذشتهٔ بازبینی‌شده برای کارهای روزمرهٔ آشنا را بفهمد و استفاده کند.",
-      "grammar_fa": "«tein»، «söin»، «join» و «ostin» صورت‌های گذشتهٔ پرکاربردند؛ آن‌ها را بدون تعمیم خودکار تمرین کن.",
+      "grammar_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است. صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
       "new_targets": [
         "a13s4-h-011",
         "a13s4-h-012",
         "a13s4-h-013",
         "a13s4-t-014",
         "a13s4-t-015",
-        "a13s4-t-016"
+        "a13s4-t-016",
+        "a13s4-e-017",
+        "a13s4-e-018",
+        "a13s4-e-019",
+        "a13s4-e-020",
+        "a13s4-e-021"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1844,7 +2079,40 @@
             1,
             0
           ],
-          "expected_fi": "Söin kotona."
+          "expected_fi": "Söin kotona.",
+          "expected_fa": "در خانه غذا خوردم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-017",
+          "prompt_fa": "غذا درست کردم.",
+          "cues_fi": [
+            "Tein"
+          ],
+          "expected_fi": "Tein ruokaa.",
+          "accepted_answers": [
+            "Tein ruokaa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-019",
+          "prompt_fa": "قهوه نوشیدم.",
+          "cues_fi": [
+            "Join"
+          ],
+          "expected_fi": "Join kahvia.",
+          "accepted_answers": [
+            "Join kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
         }
       ],
       "activities": [
@@ -1865,6 +2133,10 @@
           "item": "a13s4-t-014"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-017"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-017",
@@ -1873,7 +2145,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1895,40 +2168,43 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-018"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-018",
-          "options": [
-            "a13s4-e-018",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "kotona.",
+            "Söin"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Söin kotona.",
+          "expected_fa": "در خانه غذا خوردم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-011",
           "options": [
+            "a13s4-h-012",
             "a13s4-h-011",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-013",
+            "a13s4-t-014"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-012",
-          "options": [
-            "a13s4-h-012",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1953,6 +2229,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-015"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s4-t-015",
@@ -1962,6 +2242,10 @@
             "a13s4-h-002",
             "a13s4-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-t-016"
         },
         {
           "type": "choice",
@@ -1975,17 +2259,439 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-017",
-          "options": [
-            "a13s4-e-017",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-017",
+          "prompt_fa": "غذا درست کردم.",
+          "cues_fi": [
+            "Tein"
+          ],
+          "expected_fi": "Tein ruokaa.",
+          "accepted_answers": [
+            "Tein ruokaa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-019"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-019",
+          "prompt_fa": "قهوه نوشیدم.",
+          "cues_fi": [
+            "Join"
+          ],
+          "expected_fi": "Join kahvia.",
+          "accepted_answers": [
+            "Join kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-017",
+          "base_fi": "tehdä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «غذا درست کردم.» را انتخاب کن.",
+          "frame_fi": "_____ ruokaa.",
+          "options_fi": [
+            "Teen",
+            "Tein",
+            "Teki",
+            "Teit"
+          ],
+          "expected_fi": "Tein",
+          "explanation_fa": "صورت Tein در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-018",
+          "base_fi": "syödä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «در خانه غذا خوردم.» را انتخاب کن.",
+          "frame_fi": "_____ kotona.",
+          "options_fi": [
+            "Syön",
+            "Söi",
+            "Söit",
+            "Söin"
+          ],
+          "expected_fi": "Söin",
+          "explanation_fa": "صورت Söin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-019",
+          "base_fi": "juoda",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «قهوه نوشیدم.» را انتخاب کن.",
+          "frame_fi": "_____ kahvia.",
+          "options_fi": [
+            "Juon",
+            "Joi",
+            "Join",
+            "Joit"
+          ],
+          "expected_fi": "Join",
+          "explanation_fa": "صورت Join در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-020"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-020",
+          "base_fi": "ostaa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بلیط خریدم.» را انتخاب کن.",
+          "frame_fi": "_____ lipun.",
+          "options_fi": [
+            "Osti",
+            "Ostan",
+            "Ostit",
+            "Ostin"
+          ],
+          "expected_fi": "Ostin",
+          "explanation_fa": "صورت Ostin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-021"
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-021",
+          "base_fi": "sanoa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «او تشکر کرد.» را انتخاب کن.",
+          "frame_fi": "Hän _____ kiitos.",
+          "options_fi": [
+            "sanoo",
+            "sanoin",
+            "sanoi",
+            "sanoit"
+          ],
+          "expected_fi": "sanoi",
+          "explanation_fa": "صورت sanoi در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-001",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-003",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-007",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-009",
+          "answer_policy": "morphology"
+        }
+      ],
+      "review_targets": [
+        "a13s4-h-001",
+        "a13s4-h-003",
+        "a13s4-e-007",
+        "a13s4-e-009"
+      ],
+      "practice_targets": [
+        "a13s4-e-017",
+        "a13s4-e-019",
+        "a13s4-e-018",
+        "a13s4-e-020",
+        "a13s4-e-021"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-017",
+          "base_fi": "tehdä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «غذا درست کردم.» را انتخاب کن.",
+          "frame_fi": "_____ ruokaa.",
+          "options_fi": [
+            "Teen",
+            "Tein",
+            "Teki",
+            "Teit"
+          ],
+          "expected_fi": "Tein",
+          "explanation_fa": "صورت Tein در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-018",
+          "base_fi": "syödä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «در خانه غذا خوردم.» را انتخاب کن.",
+          "frame_fi": "_____ kotona.",
+          "options_fi": [
+            "Syön",
+            "Söi",
+            "Söit",
+            "Söin"
+          ],
+          "expected_fi": "Söin",
+          "explanation_fa": "صورت Söin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-019",
+          "base_fi": "juoda",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «قهوه نوشیدم.» را انتخاب کن.",
+          "frame_fi": "_____ kahvia.",
+          "options_fi": [
+            "Juon",
+            "Joi",
+            "Join",
+            "Joit"
+          ],
+          "expected_fi": "Join",
+          "explanation_fa": "صورت Join در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-020",
+          "base_fi": "ostaa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بلیط خریدم.» را انتخاب کن.",
+          "frame_fi": "_____ lipun.",
+          "options_fi": [
+            "Osti",
+            "Ostan",
+            "Ostit",
+            "Ostin"
+          ],
+          "expected_fi": "Ostin",
+          "explanation_fa": "صورت Ostin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-021",
+          "base_fi": "sanoa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «او تشکر کرد.» را انتخاب کن.",
+          "frame_fi": "Hän _____ kiitos.",
+          "options_fi": [
+            "sanoo",
+            "sanoin",
+            "sanoi",
+            "sanoit"
+          ],
+          "expected_fi": "sanoi",
+          "explanation_fa": "صورت sanoi در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l02-can-do",
+            "can_do_fa": "چند صورت گذشتهٔ بازبینی‌شده برای کارهای روزمرهٔ آشنا را بفهمد و استفاده کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-011",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-012",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-013",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-014",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-015",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-016",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-017",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-018",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-019",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-020",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-021",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-001",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-003",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-009",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است.",
+            "examples": [
+              {
+                "fi": "Tein ruokaa.",
+                "fa": "غذا درست کردم."
+              },
+              {
+                "fi": "Join kahvia.",
+                "fa": "قهوه نوشیدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-past-recognition",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-present-paradigm"
+            ],
+            "explanation_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
+            "examples": [
+              {
+                "fi": "Tein ruokaa.",
+                "fa": "غذا درست کردم."
+              },
+              {
+                "fi": "Söin kotona.",
+                "fa": "در خانه غذا خوردم."
+              },
+              {
+                "fi": "Join kahvia.",
+                "fa": "قهوه نوشیدم."
+              },
+              {
+                "fi": "Ostin lipun.",
+                "fa": "بلیط خریدم."
+              },
+              {
+                "fi": "Hän sanoi kiitos.",
+                "fa": "او تشکر کرد."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 23,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 24,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 26,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 28,
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-3",
@@ -1994,14 +2700,12 @@
       "title_fa": "مرتب کردن رویدادهای اخیر",
       "objective_fa": "یک توالی دو یا سه‌مرحله‌ای از رویداد اخیر را با پیوندهای زمانی ساده بیان کند.",
       "summary_fa": "یک توالی دو یا سه‌مرحله‌ای از رویداد اخیر را با پیوندهای زمانی ساده بیان کند.",
-      "grammar_fa": "«ensin» اول، «sitten» سپس و «sen jälkeen» بعد از آن است؛ ترتیب رویدادهای گذشته را با آن‌ها بیان کن.",
+      "grammar_fa": "ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد. مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود. صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
       "new_targets": [
-        "a13s4-h-022",
-        "a13s4-h-023",
-        "a13s4-h-024",
-        "a13s4-t-004",
-        "a13s4-t-025",
-        "a13s4-t-026"
+        "a13s4-e-027",
+        "a13s4-e-028",
+        "a13s4-e-029",
+        "a13s4-e-030"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2047,7 +2751,58 @@
             0,
             1
           ],
-          "expected_fi": "Sitten menin kauppaan."
+          "expected_fi": "Sitten menin kauppaan.",
+          "expected_fa": "بعد به فروشگاه رفتم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-027",
+          "prompt_fa": "اول سر کار بودم.",
+          "cues_fi": [
+            "Ensin"
+          ],
+          "expected_fi": "Ensin olin töissä.",
+          "accepted_answers": [
+            "Ensin olin töissä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-028",
+          "prompt_fa": "بعد به فروشگاه رفتم.",
+          "cues_fi": [
+            "Sitten"
+          ],
+          "expected_fi": "Sitten menin kauppaan.",
+          "accepted_answers": [
+            "Sitten menin kauppaan."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs",
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-029",
+          "prompt_fa": "بعد از آن به خانه رفتم.",
+          "cues_fi": [
+            "Sen"
+          ],
+          "expected_fi": "Sen jälkeen menin kotiin.",
+          "accepted_answers": [
+            "Sen jälkeen menin kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs",
+            "a13-local-expansion"
+          ]
         }
       ],
       "activities": [
@@ -2068,6 +2823,10 @@
           "item": "a13s4-t-004"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-027"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-027",
@@ -2076,7 +2835,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2098,40 +2858,45 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-028"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-028",
-          "options": [
-            "a13s4-e-028",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "menin",
+            "kauppaan.",
+            "Sitten"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Sitten menin kauppaan.",
+          "expected_fa": "بعد به فروشگاه رفتم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-022",
           "options": [
+            "a13s4-h-023",
+            "a13s4-h-024",
             "a13s4-h-022",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-t-004"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-023",
-          "options": [
-            "a13s4-h-023",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2178,17 +2943,385 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-027",
-          "options": [
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-027",
+          "prompt_fa": "اول سر کار بودم.",
+          "cues_fi": [
+            "Ensin"
+          ],
+          "expected_fi": "Ensin olin töissä.",
+          "accepted_answers": [
+            "Ensin olin töissä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-028",
+          "prompt_fa": "بعد به فروشگاه رفتم.",
+          "cues_fi": [
+            "Sitten"
+          ],
+          "expected_fi": "Sitten menin kauppaan.",
+          "accepted_answers": [
+            "Sitten menin kauppaan."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs",
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-029"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-029",
+          "prompt_fa": "بعد از آن به خانه رفتم.",
+          "cues_fi": [
+            "Sen"
+          ],
+          "expected_fi": "Sen jälkeen menin kotiin.",
+          "accepted_answers": [
+            "Sen jälkeen menin kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs",
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-028",
+          "base_fi": "mennä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بعد به فروشگاه رفتم.» را انتخاب کن.",
+          "frame_fi": "Sitten _____ kauppaan.",
+          "options_fi": [
+            "menen",
+            "menin",
+            "meni",
+            "menit"
+          ],
+          "expected_fi": "menin",
+          "explanation_fa": "صورت menin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "sequence-order",
+          "label_fa": "رویدادهای این روایت را مرتب کن: اول سر کار بودم، بعد به فروشگاه رفتم و پس از آن به خانه رفتم.",
+          "items": [
+            "a13s4-e-029",
             "a13s4-e-027",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-e-028"
+          ],
+          "answer_order": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-030"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-030",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-002",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-006",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-008",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-010",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-011",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-013",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-015",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-017",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-019",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-021",
+          "answer_policy": "morphology"
+        }
+      ],
+      "review_targets": [
+        "a13s4-h-002",
+        "a13s4-t-006",
+        "a13s4-e-008",
+        "a13s4-e-010",
+        "a13s4-h-011",
+        "a13s4-h-013",
+        "a13s4-t-015",
+        "a13s4-e-017",
+        "a13s4-e-019",
+        "a13s4-e-021"
+      ],
+      "practice_targets": [
+        "a13s4-e-027",
+        "a13s4-e-028",
+        "a13s4-e-029"
+      ],
+      "activity_count": 35,
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-028",
+          "base_fi": "mennä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بعد به فروشگاه رفتم.» را انتخاب کن.",
+          "frame_fi": "Sitten _____ kauppaan.",
+          "options_fi": [
+            "menen",
+            "menin",
+            "meni",
+            "menit"
+          ],
+          "expected_fi": "menin",
+          "explanation_fa": "صورت menin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l03-can-do",
+            "can_do_fa": "یک توالی دو یا سه‌مرحله‌ای از رویداد اخیر را با پیوندهای زمانی ساده بیان کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-022",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-023",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-024",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-004",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-025",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-026",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-027",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-028",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-029",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-030",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-006",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-010",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-011",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-013",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-015",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-019",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-021",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد.",
+            "examples": [
+              {
+                "fi": "Ensin olin töissä.",
+                "fa": "اول سر کار بودم."
+              },
+              {
+                "fi": "Sitten menin kauppaan.",
+                "fa": "بعد به فروشگاه رفتم."
+              },
+              {
+                "fi": "Sen jälkeen menin kotiin.",
+                "fa": "بعد از آن به خانه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Sitten menin kauppaan.",
+                "fa": "بعد به فروشگاه رفتم."
+              },
+              {
+                "fi": "Sen jälkeen menin kotiin.",
+                "fa": "بعد از آن به خانه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-past-recognition",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-present-paradigm"
+            ],
+            "explanation_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
+            "examples": [
+              {
+                "fi": "Sitten menin kauppaan.",
+                "fa": "بعد به فروشگاه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-4",
@@ -2197,14 +3330,15 @@
       "title_fa": "کجا بودی؟",
       "objective_fa": "در یک موقعیت اخیر و آشنا بپرسد کسی کجا بوده و پاسخ دهد.",
       "summary_fa": "در یک موقعیت اخیر و آشنا بپرسد کسی کجا بوده و پاسخ دهد.",
-      "grammar_fa": "«Missä olit eilen?» یعنی دیروز کجا بودی؟ با «Olin ...» و مکان پاسخ بده.",
+      "grammar_fa": "در Missä olit eilen? دربارهٔ جای دیروز می‌پرسی و با Olin و مکان پاسخ می‌دهی. پرسش‌های معنی و کتابخانه نیز از بخش‌های قبلی مرور می‌شوند؛ صرف آزاد گذشته از این پرسش نتیجه گرفته نمی‌شود. مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود. صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
       "new_targets": [
-        "a13s4-h-031",
-        "a13s4-h-032",
-        "a13s4-h-033",
         "a13s4-t-034",
         "a13s4-t-035",
-        "a13s4-t-036"
+        "a13s4-t-036",
+        "a13s4-e-037",
+        "a13s4-e-038",
+        "a13s4-e-039",
+        "a13s4-e-040"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2248,7 +3382,72 @@
             1,
             0
           ],
-          "expected_fi": "Olin koulussa."
+          "expected_fi": "Olin koulussa.",
+          "expected_fa": "در مدرسه بودم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-037",
+          "prompt_fa": "دیروز کجا بودی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "accepted_answers": [
+            "Missä olit eilen?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-038",
+          "prompt_fa": "در مدرسه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin koulussa.",
+          "accepted_answers": [
+            "Olin koulussa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-039",
+          "prompt_fa": "در فروشگاه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin kaupassa.",
+          "accepted_answers": [
+            "Olin kaupassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-040",
+          "prompt_fa": "با دوستم در مرکز شهر بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin keskustassa ystävän kanssa.",
+          "accepted_answers": [
+            "Olin keskustassa ystävän kanssa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
         }
       ],
       "activities": [
@@ -2269,6 +3468,10 @@
           "item": "a13s4-t-034"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-037"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-037",
@@ -2277,7 +3480,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2299,40 +3503,43 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-038"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-038",
-          "options": [
-            "a13s4-e-038",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "koulussa.",
+            "Olin"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Olin koulussa.",
+          "expected_fa": "در مدرسه بودم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-031",
           "options": [
-            "a13s4-h-031",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-032",
+            "a13s4-h-033",
+            "a13s4-t-034",
+            "a13s4-h-031"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-032",
-          "options": [
-            "a13s4-h-032",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2357,6 +3564,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-035"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s4-t-035",
@@ -2366,6 +3577,10 @@
             "a13s4-h-002",
             "a13s4-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-t-036"
         },
         {
           "type": "choice",
@@ -2379,17 +3594,339 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-037",
-          "options": [
-            "a13s4-e-037",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-037",
+          "prompt_fa": "دیروز کجا بودی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "accepted_answers": [
+            "Missä olit eilen?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-038",
+          "prompt_fa": "در مدرسه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin koulussa.",
+          "accepted_answers": [
+            "Olin koulussa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-039"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-039",
+          "prompt_fa": "در فروشگاه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin kaupassa.",
+          "accepted_answers": [
+            "Olin kaupassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-040"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-040",
+          "prompt_fa": "با دوستم در مرکز شهر بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin keskustassa ystävän kanssa.",
+          "accepted_answers": [
+            "Olin keskustassa ystävän kanssa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-037",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز کجا بودی؟» را انتخاب کن.",
+          "frame_fi": "Missä _____ eilen?",
+          "options_fi": [
+            "olet",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olit",
+          "explanation_fa": "صورت olit در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-012",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-014",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-016",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-018",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-020",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-028",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-030",
+          "answer_policy": "morphology"
+        }
+      ],
+      "review_targets": [
+        "a13s4-h-012",
+        "a13s4-t-014",
+        "a13s4-t-016",
+        "a13s4-e-018",
+        "a13s4-e-020",
+        "a13s4-e-028",
+        "a13s4-e-030"
+      ],
+      "practice_targets": [
+        "a13s4-e-037",
+        "a13s4-e-038",
+        "a13s4-e-039",
+        "a13s4-e-040"
+      ],
+      "activity_count": 33,
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-037",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز کجا بودی؟» را انتخاب کن.",
+          "frame_fi": "Missä _____ eilen?",
+          "options_fi": [
+            "olet",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olit",
+          "explanation_fa": "صورت olit در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
           ]
         }
-      ]
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l04-can-do",
+            "can_do_fa": "در یک موقعیت اخیر و آشنا بپرسد کسی کجا بوده و پاسخ دهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-031",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-032",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-033",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-034",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-035",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-036",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-037",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-038",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-039",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-040",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-012",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-016",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-018",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-020",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-030",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "در Missä olit eilen? دربارهٔ جای دیروز می‌پرسی و با Olin و مکان پاسخ می‌دهی. پرسش‌های معنی و کتابخانه نیز از بخش‌های قبلی مرور می‌شوند؛ صرف آزاد گذشته از این پرسش نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Missä olit eilen?",
+                "fa": "دیروز کجا بودی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olin koulussa.",
+                "fa": "در مدرسه بودم."
+              },
+              {
+                "fi": "Olin kaupassa.",
+                "fa": "در فروشگاه بودم."
+              },
+              {
+                "fi": "Olin keskustassa ystävän kanssa.",
+                "fa": "با دوستم در مرکز شهر بودم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 24,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-past-recognition",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-present-paradigm"
+            ],
+            "explanation_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
+            "examples": [
+              {
+                "fi": "Missä olit eilen?",
+                "fa": "دیروز کجا بودی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 25,
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-5",
@@ -2398,14 +3935,14 @@
       "title_fa": "برنامه‌های سادهٔ آینده",
       "objective_fa": "یک برنامهٔ سادهٔ آینده را با یک ساخت حال آشنا همراه با عبارت زمان بیان کند.",
       "summary_fa": "یک برنامهٔ سادهٔ آینده را با یک ساخت حال آشنا همراه با عبارت زمان بیان کند.",
-      "grammar_fa": "زمان حال همراه با قید آینده می‌تواند برنامه را نشان دهد: «Huomenna menen töihin.».",
+      "grammar_fa": "در برنامه‌های مشخص از menen، tapaan و olen استفاده می‌کنی. فعل حال همراه با قید فردا یا هفتهٔ بعد برنامه را نشان می‌دهد؛ زمان آیندهٔ صرفی یا جدول کامل اشخاص ادعا نمی‌شود. ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد. مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
       "new_targets": [
-        "a13s4-h-041",
-        "a13s4-h-042",
-        "a13s4-h-043",
-        "a13s4-t-044",
         "a13s4-t-045",
-        "a13s4-t-046"
+        "a13s4-t-046",
+        "a13s4-e-047",
+        "a13s4-e-048",
+        "a13s4-e-049",
+        "a13s4-e-050"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2453,7 +3990,60 @@
             1,
             2
           ],
-          "expected_fi": "Ensi viikolla tapaan ystävän."
+          "expected_fi": "Ensi viikolla tapaan ystävän.",
+          "expected_fa": "هفتهٔ بعد دوستم را می‌بینم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-047",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "accepted_answers": [
+            "Huomenna menen töihin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm",
+            "a12-frequency-adverbs",
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-048",
+          "prompt_fa": "هفتهٔ بعد دوستم را می‌بینم.",
+          "cues_fi": [
+            "Ensi"
+          ],
+          "expected_fi": "Ensi viikolla tapaan ystävän.",
+          "accepted_answers": [
+            "Ensi viikolla tapaan ystävän."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm",
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-049",
+          "prompt_fa": "آخر هفته در خانه هستم.",
+          "cues_fi": [
+            "Viikonloppuna"
+          ],
+          "expected_fi": "Viikonloppuna olen kotona.",
+          "accepted_answers": [
+            "Viikonloppuna olen kotona."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm",
+            "a12-frequency-adverbs"
+          ]
         }
       ],
       "activities": [
@@ -2474,6 +4064,10 @@
           "item": "a13s4-t-044"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-047"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-047",
@@ -2482,7 +4076,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2504,40 +4099,47 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-048"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-048",
-          "options": [
-            "a13s4-e-048",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "viikolla",
+            "tapaan",
+            "ystävän.",
+            "Ensi"
+          ],
+          "answer_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "expected_fi": "Ensi viikolla tapaan ystävän.",
+          "expected_fa": "هفتهٔ بعد دوستم را می‌بینم."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-041",
           "options": [
             "a13s4-h-041",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-042",
+            "a13s4-h-043",
+            "a13s4-t-044"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-042",
-          "options": [
-            "a13s4-h-042",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2562,6 +4164,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-045"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s4-t-045",
@@ -2571,6 +4177,10 @@
             "a13s4-h-002",
             "a13s4-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-t-046"
         },
         {
           "type": "choice",
@@ -2584,17 +4194,287 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-047",
-          "options": [
-            "a13s4-e-047",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-047",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "accepted_answers": [
+            "Huomenna menen töihin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm",
+            "a12-frequency-adverbs",
+            "a13-local-expansion"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-048",
+          "prompt_fa": "هفتهٔ بعد دوستم را می‌بینم.",
+          "cues_fi": [
+            "Ensi"
+          ],
+          "expected_fi": "Ensi viikolla tapaan ystävän.",
+          "accepted_answers": [
+            "Ensi viikolla tapaan ystävän."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm",
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-049"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-049",
+          "prompt_fa": "آخر هفته در خانه هستم.",
+          "cues_fi": [
+            "Viikonloppuna"
+          ],
+          "expected_fi": "Viikonloppuna olen kotona.",
+          "accepted_answers": [
+            "Viikonloppuna olen kotona."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm",
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-050"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-050",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-027",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-029",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-035",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-037",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-039",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s4-e-027",
+        "a13s4-e-029",
+        "a13s4-t-035",
+        "a13s4-e-037",
+        "a13s4-e-039"
+      ],
+      "practice_targets": [
+        "a13s4-e-047",
+        "a13s4-e-048",
+        "a13s4-e-049"
+      ],
+      "activity_count": 30,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l05-can-do",
+            "can_do_fa": "یک برنامهٔ سادهٔ آینده را با یک ساخت حال آشنا همراه با عبارت زمان بیان کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-041",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-042",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-043",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-044",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-045",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-046",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-047",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-048",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-049",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-050",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-029",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-035",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-039",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در برنامه‌های مشخص از menen، tapaan و olen استفاده می‌کنی. فعل حال همراه با قید فردا یا هفتهٔ بعد برنامه را نشان می‌دهد؛ زمان آیندهٔ صرفی یا جدول کامل اشخاص ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Huomenna menen töihin.",
+                "fa": "فردا سر کار می‌روم."
+              },
+              {
+                "fi": "Ensi viikolla tapaan ystävän.",
+                "fa": "هفتهٔ بعد دوستم را می‌بینم."
+              },
+              {
+                "fi": "Viikonloppuna olen kotona.",
+                "fa": "آخر هفته در خانه هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد.",
+            "examples": [
+              {
+                "fi": "Huomenna menen töihin.",
+                "fa": "فردا سر کار می‌روم."
+              },
+              {
+                "fi": "Ensi viikolla tapaan ystävän.",
+                "fa": "هفتهٔ بعد دوستم را می‌بینم."
+              },
+              {
+                "fi": "Viikonloppuna olen kotona.",
+                "fa": "آخر هفته در خانه هستم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 22,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Huomenna menen töihin.",
+                "fa": "فردا سر کار می‌روم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-6",
@@ -2603,14 +4483,15 @@
       "title_fa": "انتخاب میان گزینه‌های ساده",
       "objective_fa": "دو گزینهٔ آشنا را با مجموعه‌ای کوچک از عبارت‌های مقایسه‌ای تمرین‌شده مقایسه کند.",
       "summary_fa": "دو گزینهٔ آشنا را با مجموعه‌ای کوچک از عبارت‌های مقایسه‌ای تمرین‌شده مقایسه کند.",
-      "grammar_fa": "«parempi» بهتر، «halvempi» ارزان‌تر و «kalliimpi» گران‌تر است؛ صورت‌های صریح را بیاموز.",
+      "grammar_fa": "parempi، halvempi و kalliimpi و عبارت‌های مقایسه، صورت‌های مشخص و آماده‌اند؛ ساخت مولد صفت تفضیلی یا قاعدهٔ همهٔ صفت‌ها در این درس سنجیده نمی‌شود.",
       "new_targets": [
-        "a13s4-h-051",
-        "a13s4-h-052",
-        "a13s4-h-053",
         "a13s4-t-054",
         "a13s4-t-055",
-        "a13s4-t-056"
+        "a13s4-t-056",
+        "a13s4-e-057",
+        "a13s4-e-058",
+        "a13s4-e-059",
+        "a13s4-e-060"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2656,7 +4537,8 @@
             0,
             1
           ],
-          "expected_fi": "Tämä on halvempi."
+          "expected_fi": "Tämä on halvempi.",
+          "expected_fa": "این ارزان‌تر است."
         }
       ],
       "activities": [
@@ -2677,6 +4559,10 @@
           "item": "a13s4-t-054"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-057"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-057",
@@ -2685,7 +4571,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2707,40 +4594,45 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-058"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-058",
-          "options": [
-            "a13s4-e-058",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "on",
+            "halvempi.",
+            "Tämä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Tämä on halvempi.",
+          "expected_fa": "این ارزان‌تر است."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-051",
           "options": [
+            "a13s4-h-052",
             "a13s4-h-051",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-053",
+            "a13s4-t-054"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-052",
-          "options": [
-            "a13s4-h-052",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2765,6 +4657,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-055"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s4-t-055",
@@ -2774,6 +4670,10 @@
             "a13s4-h-002",
             "a13s4-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-t-056"
         },
         {
           "type": "choice",
@@ -2787,17 +4687,165 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-057",
-          "options": [
-            "a13s4-e-057",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-059"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-059",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-060"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-060",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-034",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-036",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-038",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-040",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-045",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-047",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-049",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s4-t-034",
+        "a13s4-t-036",
+        "a13s4-e-038",
+        "a13s4-e-040",
+        "a13s4-t-045",
+        "a13s4-e-047",
+        "a13s4-e-049"
+      ],
+      "activity_count": 30,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l06-can-do",
+            "can_do_fa": "دو گزینهٔ آشنا را با مجموعه‌ای کوچک از عبارت‌های مقایسه‌ای تمرین‌شده مقایسه کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-051",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-052",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-053",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-054",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-055",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-056",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-057",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-058",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-059",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-060",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-034",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-036",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-038",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-040",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-045",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-047",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-049",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "formulaic",
+        "grammar": []
+      }
     },
     {
       "id": "a1.3-section-4-lesson-7",
@@ -2806,14 +4854,15 @@
       "title_fa": "یک نظر ساده",
       "objective_fa": "دربارهٔ یک موضوع آشنا نظر کوتاهی بدهد و یک تضاد یا دلیل ساده اضافه کند.",
       "summary_fa": "دربارهٔ یک موضوع آشنا نظر کوتاهی بدهد و یک تضاد یا دلیل ساده اضافه کند.",
-      "grammar_fa": "«Minun mielestäni ...» نظر شخصی و «mutta» تضاد کوتاه را بیان می‌کند.",
+      "grammar_fa": "در Se on mielenkiintoinen و Se on vaikea, mutta hyvä صورت on برای توصیف مرور می‌شود. Minun mielestäni عبارت نظر آماده است؛ صرف کامل پسوند مالکیت یا صفت مقایسه‌ای از آن نتیجه گرفته نمی‌شود.",
       "new_targets": [
         "a13s4-h-061",
-        "a13s4-h-062",
-        "a13s4-h-063",
         "a13s4-t-064",
         "a13s4-t-065",
-        "a13s4-t-066"
+        "a13s4-t-066",
+        "a13s4-e-067",
+        "a13s4-e-068",
+        "a13s4-e-069"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2858,7 +4907,40 @@
             0,
             1
           ],
-          "expected_fi": "Se on mielenkiintoinen."
+          "expected_fi": "Se on mielenkiintoinen.",
+          "expected_fa": "جالب است."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-068",
+          "prompt_fa": "جالب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "accepted_answers": [
+            "Se on mielenkiintoinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-069",
+          "prompt_fa": "سخت است، اما خوب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on vaikea, mutta hyvä.",
+          "accepted_answers": [
+            "Se on vaikea, mutta hyvä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
         }
       ],
       "activities": [
@@ -2879,6 +4961,10 @@
           "item": "a13s4-t-064"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-067"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-067",
@@ -2887,7 +4973,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2909,40 +4996,45 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-068"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-068",
-          "options": [
-            "a13s4-e-068",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "on",
+            "mielenkiintoinen.",
+            "Se"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "expected_fa": "جالب است."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-061",
           "options": [
+            "a13s4-h-062",
+            "a13s4-h-063",
             "a13s4-h-061",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-t-064"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-062",
-          "options": [
-            "a13s4-h-062",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2967,6 +5059,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-065"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s4-t-065",
@@ -2976,6 +5072,10 @@
             "a13s4-h-002",
             "a13s4-h-003"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-t-066"
         },
         {
           "type": "choice",
@@ -2989,17 +5089,208 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-067",
-          "options": [
-            "a13s4-e-067",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-068",
+          "prompt_fa": "جالب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "accepted_answers": [
+            "Se on mielenkiintoinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
           ]
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-069"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-069",
+          "prompt_fa": "سخت است، اما خوب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on vaikea, mutta hyvä.",
+          "accepted_answers": [
+            "Se on vaikea, mutta hyvä."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-046",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-048",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-050",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-054",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-056",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-058",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-060",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s4-t-046",
+        "a13s4-e-048",
+        "a13s4-e-050",
+        "a13s4-t-054",
+        "a13s4-t-056",
+        "a13s4-e-058",
+        "a13s4-e-060"
+      ],
+      "practice_targets": [
+        "a13s4-e-068",
+        "a13s4-e-069"
+      ],
+      "activity_count": 29,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l07-can-do",
+            "can_do_fa": "دربارهٔ یک موضوع آشنا نظر کوتاهی بدهد و یک تضاد یا دلیل ساده اضافه کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-061",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-h-062",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-063",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-064",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-065",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-066",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-067",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-068",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-069",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-046",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-048",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-050",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-054",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-056",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-058",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-060",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در Se on mielenkiintoinen و Se on vaikea, mutta hyvä صورت on برای توصیف مرور می‌شود. Minun mielestäni عبارت نظر آماده است؛ صرف کامل پسوند مالکیت یا صفت مقایسه‌ای از آن نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Se on mielenkiintoinen.",
+                "fa": "جالب است."
+              },
+              {
+                "fi": "Se on vaikea, mutta hyvä.",
+                "fa": "سخت است، اما خوب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              },
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-8",
@@ -3008,14 +5299,12 @@
       "title_fa": "یک متن شخصی کوتاه",
       "objective_fa": "سه یا چهار جملهٔ ساده و پیوسته دربارهٔ برنامه روزانه، رویداد اخیر، ترجیح یا برنامهٔ آینده بنویسد.",
       "summary_fa": "سه یا چهار جملهٔ ساده و پیوسته دربارهٔ برنامه روزانه، رویداد اخیر، ترجیح یا برنامهٔ آینده بنویسد.",
-      "grammar_fa": "برای نوشتن متن مرتبط از «ja» (و)، «mutta» (اما) و «koska» (چون) استفاده کن.",
+      "grammar_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است. مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
       "new_targets": [
-        "a13s4-h-070",
-        "a13s4-h-063",
-        "a13s4-h-071",
-        "a13s4-t-072",
         "a13s4-t-073",
-        "a13s4-t-046"
+        "a13s4-e-074",
+        "a13s4-e-075",
+        "a13s4-e-076"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -3068,7 +5357,25 @@
             3,
             4
           ],
-          "expected_fi": "Pidän tästä, mutta se on kallis."
+          "expected_fi": "Pidän tästä, mutta se on kallis.",
+          "expected_fa": "این را دوست دارم، اما گران است."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-076",
+          "prompt_fa": "فردا به فروشگاه می‌روم چون غذا لازم دارم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen kauppaan, koska tarvitsen ruokaa.",
+          "accepted_answers": [
+            "Huomenna menen kauppaan, koska tarvitsen ruokaa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns",
+            "a13-local-expansion"
+          ]
         }
       ],
       "activities": [
@@ -3089,6 +5396,10 @@
           "item": "a13s4-t-072"
         },
         {
+          "type": "teach",
+          "item": "a13s4-e-074"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a13s4-e-074",
@@ -3097,7 +5408,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3119,40 +5431,51 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "teach",
+          "item": "a13s4-e-075"
+        },
+        {
+          "type": "sentence-order",
           "item": "a13s4-e-075",
-          "options": [
-            "a13s4-e-075",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "tästä,",
+            "mutta",
+            "se",
+            "on",
+            "kallis.",
+            "Pidän"
+          ],
+          "answer_order": [
+            5,
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected_fi": "Pidän tästä, mutta se on kallis.",
+          "expected_fa": "این را دوست دارم، اما گران است."
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-h-070",
           "options": [
-            "a13s4-h-070",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+            "a13s4-h-063",
+            "a13s4-h-071",
+            "a13s4-t-072",
+            "a13s4-h-070"
           ]
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-h-063",
-          "options": [
-            "a13s4-h-063",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3177,6 +5500,10 @@
           ]
         },
         {
+          "type": "teach",
+          "item": "a13s4-t-073"
+        },
+        {
           "type": "choice",
           "mode": "finnish",
           "item": "a13s4-t-073",
@@ -3199,17 +5526,206 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-074",
-          "options": [
-            "a13s4-e-074",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
+          "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "teach",
+          "item": "a13s4-e-076"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-076",
+          "prompt_fa": "فردا به فروشگاه می‌روم چون غذا لازم دارم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen kauppaan, koska tarvitsen ruokaa.",
+          "accepted_answers": [
+            "Huomenna menen kauppaan, koska tarvitsen ruokaa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns",
+            "a13-local-expansion"
           ]
+        },
+        {
+          "type": "guided-writing",
+          "prompt_fa": "چهار جملهٔ متن شخصی را بنویس: دیروز خانه بودم و غذا درست کردم؛ این را دوست دارم، اما گران است؛ فردا به فروشگاه می‌روم چون غذا لازم دارم؛ به نظر من این خوب است.",
+          "expected_items": [
+            "a13s4-e-074",
+            "a13s4-e-075",
+            "a13s4-e-076",
+            "a13s4-e-067"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-055",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-057",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-059",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-064",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-066",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-068",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s4-t-055",
+        "a13s4-e-057",
+        "a13s4-e-059",
+        "a13s4-t-064",
+        "a13s4-t-066",
+        "a13s4-e-068"
+      ],
+      "practice_targets": [
+        "a13s4-e-076"
+      ],
+      "activity_count": 27,
+      "morphology_practice": [],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l08-can-do",
+            "can_do_fa": "سه یا چهار جملهٔ ساده و پیوسته دربارهٔ برنامه روزانه، رویداد اخیر، ترجیح یا برنامهٔ آینده بنویسد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-h-070",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-063",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-071",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-072",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-073",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-046",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-074",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-075",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-e-076",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a13s4-t-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-057",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-059",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-064",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-066",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-068",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است.",
+            "examples": [
+              {
+                "fi": "Huomenna menen kauppaan, koska tarvitsen ruokaa.",
+                "fa": "فردا به فروشگاه می‌روم چون غذا لازم دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Huomenna menen kauppaan, koska tarvitsen ruokaa.",
+                "fa": "فردا به فروشگاه می‌روم چون غذا لازم دارم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-9",
@@ -3218,7 +5734,7 @@
       "title_fa": "یک سناریوی یکپارچهٔ روزمره در سطح A1",
       "objective_fa": "ارتباط اجتماعی، مشکل عملی، اطلاعات روزمره، رویداد اخیر و برنامهٔ آینده را در یک سناریوی آشنا و هدایت‌شده ترکیب کند.",
       "summary_fa": "ارتباط اجتماعی، مشکل عملی، اطلاعات روزمره، رویداد اخیر و برنامهٔ آینده را در یک سناریوی آشنا و هدایت‌شده ترکیب کند.",
-      "grammar_fa": "گفت‌وگو، درخواست کمک، پرسیدن معنی، رویداد دیروز و برنامهٔ فردا را ترکیب کن.",
+      "grammar_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است. ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد. مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود. در Missä olit eilen? دربارهٔ جای دیروز می‌پرسی و با Olin و مکان پاسخ می‌دهی. پرسش‌های معنی و کتابخانه نیز از بخش‌های قبلی مرور می‌شوند؛ صرف آزاد گذشته از این پرسش نتیجه گرفته نمی‌شود. در برنامه‌های مشخص از menen، tapaan و olen استفاده می‌کنی. فعل حال همراه با قید فردا یا هفتهٔ بعد برنامه را نشان می‌دهد؛ زمان آیندهٔ صرفی یا جدول کامل اشخاص ادعا نمی‌شود. در Se on mielenkiintoinen و Se on vaikea, mutta hyvä صورت on برای توصیف مرور می‌شود. Minun mielestäni عبارت نظر آماده است؛ صرف کامل پسوند مالکیت یا صفت مقایسه‌ای از آن نتیجه گرفته نمی‌شود. Minun pitää harjoitella از بخش تحصیل و کار مرور می‌شود؛ Minun و مصدر harjoitella را در همین عبارت حفظ می‌کنی. قاعدهٔ آزاد همهٔ افعال و مفعول‌ها سنجیده نمی‌شود. صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3263,7 +5779,120 @@
             1,
             0
           ],
-          "expected_fi": "Tarvitsen apua."
+          "expected_fi": "Tarvitsen apua.",
+          "expected_fa": "به کمک نیاز دارم."
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-019",
+          "prompt_fa": "قهوه نوشیدم.",
+          "cues_fi": [
+            "Join"
+          ],
+          "expected_fi": "Join kahvia.",
+          "accepted_answers": [
+            "Join kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-029",
+          "prompt_fa": "بعد از آن به خانه رفتم.",
+          "cues_fi": [
+            "Sen"
+          ],
+          "expected_fi": "Sen jälkeen menin kotiin.",
+          "accepted_answers": [
+            "Sen jälkeen menin kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-039",
+          "prompt_fa": "در فروشگاه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin kaupassa.",
+          "accepted_answers": [
+            "Olin kaupassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-037",
+          "prompt_fa": "دیروز کجا بودی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "accepted_answers": [
+            "Missä olit eilen?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-047",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "accepted_answers": [
+            "Huomenna menen töihin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-068",
+          "prompt_fa": "جالب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "accepted_answers": [
+            "Se on mielenkiintoinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-cross-4",
+          "prompt_fa": "باید تمرین کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun pitää harjoitella.",
+          "accepted_answers": [
+            "Minun pitää harjoitella."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
         }
       ],
       "activities": [
@@ -3284,7 +5913,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3295,7 +5925,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3306,7 +5937,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3321,25 +5953,29 @@
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-e-077",
           "options": [
             "a13s4-e-077",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+            "a13s4-t-072",
+            "a13s4-t-073",
+            "a13s4-t-046"
+          ],
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "sentence-order",
           "item": "a13s4-e-078",
-          "options": [
-            "a13s4-e-078",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "tokens": [
+            "apua.",
+            "Tarvitsen"
+          ],
+          "answer_order": [
+            1,
+            0
+          ],
+          "expected_fi": "Tarvitsen apua.",
+          "expected_fa": "به کمک نیاز دارم."
         },
         {
           "type": "choice",
@@ -3350,7 +5986,8 @@
             "a13s4-h-001",
             "a13s4-h-002",
             "a13s4-h-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3375,26 +6012,16 @@
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-077",
-          "options": [
-            "a13s4-e-077",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
-          "type": "choice",
-          "mode": "meaning",
+          "type": "type",
           "item": "a13s4-e-079",
-          "options": [
-            "a13s4-e-079",
-            "a13s4-h-001",
-            "a13s4-h-002",
-            "a13s4-h-003"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "short-reading",
@@ -3417,8 +6044,680 @@
             "a13s4-e-008",
             "a13s4-e-009"
           ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-019",
+          "prompt_fa": "قهوه نوشیدم.",
+          "cues_fi": [
+            "Join"
+          ],
+          "expected_fi": "Join kahvia.",
+          "accepted_answers": [
+            "Join kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-029",
+          "prompt_fa": "بعد از آن به خانه رفتم.",
+          "cues_fi": [
+            "Sen"
+          ],
+          "expected_fi": "Sen jälkeen menin kotiin.",
+          "accepted_answers": [
+            "Sen jälkeen menin kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-039",
+          "prompt_fa": "در فروشگاه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin kaupassa.",
+          "accepted_answers": [
+            "Olin kaupassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-037",
+          "prompt_fa": "دیروز کجا بودی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "accepted_answers": [
+            "Missä olit eilen?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-047",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "accepted_answers": [
+            "Huomenna menen töihin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-068",
+          "prompt_fa": "جالب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "accepted_answers": [
+            "Se on mielenkiintoinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-cross-4",
+          "prompt_fa": "باید تمرین کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun pitää harjoitella.",
+          "accepted_answers": [
+            "Minun pitää harjoitella."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-007",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز خانه بودم.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kotona.",
+          "options_fi": [
+            "olen",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olin",
+          "explanation_fa": "صورت olin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-010",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز هوا سرد بود.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kylmä.",
+          "options_fi": [
+            "on",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "oli",
+          "explanation_fa": "صورت oli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-009",
+          "base_fi": "tulla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «اتوبوس دیر رسید.» را انتخاب کن.",
+          "frame_fi": "Bussi _____ myöhässä.",
+          "options_fi": [
+            "tulee",
+            "tulin",
+            "tuli",
+            "tulit"
+          ],
+          "expected_fi": "tuli",
+          "explanation_fa": "صورت tuli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-017",
+          "base_fi": "tehdä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «غذا درست کردم.» را انتخاب کن.",
+          "frame_fi": "_____ ruokaa.",
+          "options_fi": [
+            "Teen",
+            "Tein",
+            "Teki",
+            "Teit"
+          ],
+          "expected_fi": "Tein",
+          "explanation_fa": "صورت Tein در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-037",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز کجا بودی؟» را انتخاب کن.",
+          "frame_fi": "Missä _____ eilen?",
+          "options_fi": [
+            "olet",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olit",
+          "explanation_fa": "صورت olit در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s4-reading-1",
+          "question_item": "a13s4-e-078",
+          "options": [
+            "a13s4-e-078",
+            "a13s4-e-008",
+            "a13s4-e-009",
+            "a13s4-e-010"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a13s4-reading-2",
+          "question_item": "a13s4-e-007",
+          "options": [
+            "a13s4-e-007",
+            "a13s4-e-008",
+            "a13s4-e-009",
+            "a13s4-e-010"
+          ]
+        },
+        {
+          "type": "guided-writing",
+          "prompt_fa": "چهار جمله را بنویس: دیروز خانه بودم؛ غذا درست کردم؛ این را دوست دارم، اما گران است؛ فردا سر کار می‌روم.",
+          "expected_items": [
+            "a13s4-e-007",
+            "a13s4-e-017",
+            "a13s4-e-075",
+            "a13s4-e-047"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-h-061",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-065",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-067",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-069",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-t-073",
+          "answer_policy": "morphology"
         }
-      ]
+      ],
+      "review_targets": [
+        "a13s4-h-061",
+        "a13s4-t-065",
+        "a13s4-e-067",
+        "a13s4-e-069",
+        "a13s4-t-073",
+        "a13s4-e-075"
+      ],
+      "practice_targets": [
+        "a13s4-e-019",
+        "a13s4-e-029",
+        "a13s4-e-039",
+        "a13s4-e-037",
+        "a13s4-e-047",
+        "a13s4-e-068",
+        "a13s4-cross-4",
+        "a13s4-e-007",
+        "a13s4-e-010",
+        "a13s4-e-009",
+        "a13s4-e-017"
+      ],
+      "activity_count": 35,
+      "morphology_practice": [
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-007",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز خانه بودم.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kotona.",
+          "options_fi": [
+            "olen",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olin",
+          "explanation_fa": "صورت olin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-010",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز هوا سرد بود.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kylmä.",
+          "options_fi": [
+            "on",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "oli",
+          "explanation_fa": "صورت oli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-009",
+          "base_fi": "tulla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «اتوبوس دیر رسید.» را انتخاب کن.",
+          "frame_fi": "Bussi _____ myöhässä.",
+          "options_fi": [
+            "tulee",
+            "tulin",
+            "tuli",
+            "tulit"
+          ],
+          "expected_fi": "tuli",
+          "explanation_fa": "صورت tuli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-017",
+          "base_fi": "tehdä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «غذا درست کردم.» را انتخاب کن.",
+          "frame_fi": "_____ ruokaa.",
+          "options_fi": [
+            "Teen",
+            "Tein",
+            "Teki",
+            "Teit"
+          ],
+          "expected_fi": "Tein",
+          "explanation_fa": "صورت Tein در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-037",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز کجا بودی؟» را انتخاب کن.",
+          "frame_fi": "Missä _____ eilen?",
+          "options_fi": [
+            "olet",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olit",
+          "explanation_fa": "صورت olit در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        }
+      ],
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l09-can-do",
+            "can_do_fa": "ارتباط اجتماعی، مشکل عملی، اطلاعات روزمره، رویداد اخیر و برنامهٔ آینده را در یک سناریوی آشنا و هدایت‌شده ترکیب کند."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-e-077",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-078",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-079",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-047",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-019",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-029",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-039",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-068",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-cross-4",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-010",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-009",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-h-061",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-065",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-067",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-069",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-t-073",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-075",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است.",
+            "examples": [
+              {
+                "fi": "Join kahvia.",
+                "fa": "قهوه نوشیدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد.",
+            "examples": [
+              {
+                "fi": "Sen jälkeen menin kotiin.",
+                "fa": "بعد از آن به خانه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olin kaupassa.",
+                "fa": "در فروشگاه بودم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "در Missä olit eilen? دربارهٔ جای دیروز می‌پرسی و با Olin و مکان پاسخ می‌دهی. پرسش‌های معنی و کتابخانه نیز از بخش‌های قبلی مرور می‌شوند؛ صرف آزاد گذشته از این پرسش نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Missä olit eilen?",
+                "fa": "دیروز کجا بودی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در برنامه‌های مشخص از menen، tapaan و olen استفاده می‌کنی. فعل حال همراه با قید فردا یا هفتهٔ بعد برنامه را نشان می‌دهد؛ زمان آیندهٔ صرفی یا جدول کامل اشخاص ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Huomenna menen töihin.",
+                "fa": "فردا سر کار می‌روم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در Se on mielenkiintoinen و Se on vaikea, mutta hyvä صورت on برای توصیف مرور می‌شود. Minun mielestäni عبارت نظر آماده است؛ صرف کامل پسوند مالکیت یا صفت مقایسه‌ای از آن نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Se on mielenkiintoinen.",
+                "fa": "جالب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "Minun pitää harjoitella از بخش تحصیل و کار مرور می‌شود؛ Minun و مصدر harjoitella را در همین عبارت حفظ می‌کنی. قاعدهٔ آزاد همهٔ افعال و مفعول‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Minun pitää harjoitella.",
+                "fa": "باید تمرین کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-past-recognition",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-present-paradigm"
+            ],
+            "explanation_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
+            "examples": [
+              {
+                "fi": "Eilen olin kotona.",
+                "fa": "دیروز خانه بودم."
+              },
+              {
+                "fi": "Eilen oli kylmä.",
+                "fa": "دیروز هوا سرد بود."
+              },
+              {
+                "fi": "Bussi tuli myöhässä.",
+                "fa": "اتوبوس دیر رسید."
+              },
+              {
+                "fi": "Tein ruokaa.",
+                "fa": "غذا درست کردم."
+              },
+              {
+                "fi": "Missä olit eilen?",
+                "fa": "دیروز کجا بودی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 22,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 23,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 24,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 25,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 26,
+                "mode": "recognition"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "a1.3-section-4-lesson-10",
@@ -3427,7 +6726,7 @@
       "title_fa": "ارزیابی نهایی A1.3",
       "objective_fa": "در مجموعه‌ای از کارهای آشنای اجتماعی و عملی و تمرین‌های خواندن، شنیدن، گفتن و نوشتن در سطح A1 عملکرد کاربردی نشان دهد.",
       "summary_fa": "در مجموعه‌ای از کارهای آشنای اجتماعی و عملی و تمرین‌های خواندن، شنیدن، گفتن و نوشتن در سطح A1 عملکرد کاربردی نشان دهد.",
-      "grammar_fa": "آزمون نهایی، ارتباط اجتماعی، مسائل خانه و محله، کار، گذشته و آینده را مرور می‌کند؛ گواهی رسمی نیست.",
+      "grammar_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی. در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است. ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد. مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود. در Missä olit eilen? دربارهٔ جای دیروز می‌پرسی و با Olin و مکان پاسخ می‌دهی. پرسش‌های معنی و کتابخانه نیز از بخش‌های قبلی مرور می‌شوند؛ صرف آزاد گذشته از این پرسش نتیجه گرفته نمی‌شود. در برنامه‌های مشخص از menen، tapaan و olen استفاده می‌کنی. فعل حال همراه با قید فردا یا هفتهٔ بعد برنامه را نشان می‌دهد؛ زمان آیندهٔ صرفی یا جدول کامل اشخاص ادعا نمی‌شود. در Se on mielenkiintoinen و Se on vaikea, mutta hyvä صورت on برای توصیف مرور می‌شود. Minun mielestäni عبارت نظر آماده است؛ صرف کامل پسوند مالکیت یا صفت مقایسه‌ای از آن نتیجه گرفته نمی‌شود. Minun pitää harjoitella از بخش تحصیل و کار مرور می‌شود؛ Minun و مصدر harjoitella را در همین عبارت حفظ می‌کنی. قاعدهٔ آزاد همهٔ افعال و مفعول‌ها سنجیده نمی‌شود.",
       "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [],
@@ -3469,7 +6768,8 @@
             0,
             1
           ],
-          "expected_fi": "Missä olit eilen?"
+          "expected_fi": "Missä olit eilen?",
+          "expected_fa": "دیروز کجا بودی؟"
         },
         {
           "type": "expression-completion",
@@ -3479,7 +6779,8 @@
           "accepted_answers": [
             "menen"
           ],
-          "expected_fi": "Huomenna menen töihin."
+          "expected_fi": "Huomenna menen töihin.",
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -3492,85 +6793,204 @@
           "expected_fi": "Tämä on halvempi.",
           "accepted_answers": [
             "Tämä on halvempi."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-019",
+          "prompt_fa": "قهوه نوشیدم.",
+          "cues_fi": [
+            "Join"
+          ],
+          "expected_fi": "Join kahvia.",
+          "accepted_answers": [
+            "Join kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-029",
+          "prompt_fa": "بعد از آن به خانه رفتم.",
+          "cues_fi": [
+            "Sen"
+          ],
+          "expected_fi": "Sen jälkeen menin kotiin.",
+          "accepted_answers": [
+            "Sen jälkeen menin kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-039",
+          "prompt_fa": "در فروشگاه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin kaupassa.",
+          "accepted_answers": [
+            "Olin kaupassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-037",
+          "prompt_fa": "دیروز کجا بودی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "accepted_answers": [
+            "Missä olit eilen?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-047",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "accepted_answers": [
+            "Huomenna menen töihin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-068",
+          "prompt_fa": "جالب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "accepted_answers": [
+            "Se on mielenkiintoinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-cross-4",
+          "prompt_fa": "باید تمرین کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun pitää harjoitella.",
+          "accepted_answers": [
+            "Minun pitää harjoitella."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
           ]
         }
       ],
       "activities": [
         {
-          "type": "choice",
-          "mode": "finnish",
+          "type": "type",
           "item": "a13s4-e-074",
-          "options": [
-            "a13s4-e-074",
-            "a13s4-e-047",
-            "a13s4-e-067",
-            "a13s4-cross-1"
-          ]
+          "mode": "finnish",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
-          "mode": "meaning",
+          "mode": "listen",
           "item": "a13s4-e-018",
           "options": [
-            "a13s4-e-058",
+            "a13s4-e-074",
             "a13s4-e-018",
-            "a13s4-e-075",
-            "a13s4-cross-2"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-027",
-          "options": [
-            "a13s4-e-007",
-            "a13s4-e-078",
             "a13s4-e-027",
-            "a13s4-e-079"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "finnish",
-          "item": "a13s4-e-037",
-          "options": [
-            "a13s4-e-067",
-            "a13s4-cross-1",
-            "a13s4-cross-4",
             "a13s4-e-037"
           ]
         },
         {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-047",
-          "options": [
-            "a13s4-e-047",
-            "a13s4-e-075",
-            "a13s4-cross-2",
-            "a13s4-e-048"
-          ]
-        },
-        {
-          "type": "choice",
-          "mode": "meaning",
-          "item": "a13s4-e-058",
-          "options": [
-            "a13s4-e-078",
-            "a13s4-e-058",
-            "a13s4-e-079",
-            "a13s4-e-074"
-          ]
-        },
-        {
-          "type": "choice",
+          "type": "type",
+          "item": "a13s4-e-027",
           "mode": "finnish",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "sentence-order",
+          "item": "a13s4-e-037",
+          "tokens": [
+            "olit",
+            "eilen?",
+            "Missä"
+          ],
+          "answer_order": [
+            2,
+            0,
+            1
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "expected_fa": "دیروز کجا بودی؟"
+        },
+        {
+          "type": "expression-completion",
+          "item": "a13s4-e-047",
+          "prompt_fi": "Huomenna _____ töihin.",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "accepted_answers": [
+            "menen"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-058",
+          "prompt_fa": "این ارزان‌تر است.",
+          "cues_fi": [
+            "Tämä",
+            "on"
+          ],
+          "expected_fi": "Tämä on halvempi.",
+          "accepted_answers": [
+            "Tämä on halvempi."
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "morphology-choice",
           "item": "a13s4-e-007",
-          "options": [
-            "a13s4-cross-1",
-            "a13s4-cross-4",
-            "a13s4-e-007",
-            "a13s4-e-018"
+          "base_fi": "olla",
+          "feature_fa": "گذشتهٔ اول‌شخص مفرد",
+          "prompt_fa": "برای «دیروز خانه بودم» صورت گذشتهٔ صحیح را انتخاب کن.",
+          "frame_fi": "Eilen _____ kotona.",
+          "options_fi": [
+            "olin",
+            "oli",
+            "olit",
+            "olen"
+          ],
+          "expected_fi": "olin",
+          "explanation_fa": "olin صورت گذشتهٔ اول‌شخص مفرد از olla است.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
           ]
         },
         {
@@ -3587,7 +7007,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s4-e-075"
+          "item": "a13s4-e-075",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3603,7 +7024,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s4-cross-1"
+          "item": "a13s4-cross-1",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3619,7 +7041,8 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s4-e-079"
+          "item": "a13s4-e-079",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3635,7 +7058,297 @@
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a13s4-e-048"
+          "item": "a13s4-e-048",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-019",
+          "prompt_fa": "قهوه نوشیدم.",
+          "cues_fi": [
+            "Join"
+          ],
+          "expected_fi": "Join kahvia.",
+          "accepted_answers": [
+            "Join kahvia."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-partitive-patterns"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-029",
+          "prompt_fa": "بعد از آن به خانه رفتم.",
+          "cues_fi": [
+            "Sen"
+          ],
+          "expected_fi": "Sen jälkeen menin kotiin.",
+          "accepted_answers": [
+            "Sen jälkeen menin kotiin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a12-frequency-adverbs"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-039",
+          "prompt_fa": "در فروشگاه بودم.",
+          "cues_fi": [
+            "Olin"
+          ],
+          "expected_fi": "Olin kaupassa.",
+          "accepted_answers": [
+            "Olin kaupassa."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-local-expansion"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-037",
+          "prompt_fa": "دیروز کجا بودی؟",
+          "cues_fi": [
+            "Missä"
+          ],
+          "expected_fi": "Missä olit eilen?",
+          "accepted_answers": [
+            "Missä olit eilen?"
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-questions"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-047",
+          "prompt_fa": "فردا سر کار می‌روم.",
+          "cues_fi": [
+            "Huomenna"
+          ],
+          "expected_fi": "Huomenna menen töihin.",
+          "accepted_answers": [
+            "Huomenna menen töihin."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-present-paradigm"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-e-068",
+          "prompt_fa": "جالب است.",
+          "cues_fi": [
+            "Se"
+          ],
+          "expected_fi": "Se on mielenkiintoinen.",
+          "accepted_answers": [
+            "Se on mielenkiintoinen."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a11-olla"
+          ]
+        },
+        {
+          "type": "controlled-production",
+          "item": "a13s4-cross-4",
+          "prompt_fa": "باید تمرین کنم.",
+          "cues_fi": [
+            "Minun"
+          ],
+          "expected_fi": "Minun pitää harjoitella.",
+          "accepted_answers": [
+            "Minun pitää harjoitella."
+          ],
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a13-necessity"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-010",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز هوا سرد بود.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kylmä.",
+          "options_fi": [
+            "on",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "oli",
+          "explanation_fa": "صورت oli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-009",
+          "base_fi": "tulla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «اتوبوس دیر رسید.» را انتخاب کن.",
+          "frame_fi": "Bussi _____ myöhässä.",
+          "options_fi": [
+            "tulee",
+            "tulin",
+            "tuli",
+            "tulit"
+          ],
+          "expected_fi": "tuli",
+          "explanation_fa": "صورت tuli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-017",
+          "base_fi": "tehdä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «غذا درست کردم.» را انتخاب کن.",
+          "frame_fi": "_____ ruokaa.",
+          "options_fi": [
+            "Teen",
+            "Tein",
+            "Teki",
+            "Teit"
+          ],
+          "expected_fi": "Tein",
+          "explanation_fa": "صورت Tein در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-018",
+          "base_fi": "syödä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «در خانه غذا خوردم.» را انتخاب کن.",
+          "frame_fi": "_____ kotona.",
+          "options_fi": [
+            "Syön",
+            "Söi",
+            "Söit",
+            "Söin"
+          ],
+          "expected_fi": "Söin",
+          "explanation_fa": "صورت Söin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-019",
+          "base_fi": "juoda",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «قهوه نوشیدم.» را انتخاب کن.",
+          "frame_fi": "_____ kahvia.",
+          "options_fi": [
+            "Juon",
+            "Joi",
+            "Join",
+            "Joit"
+          ],
+          "expected_fi": "Join",
+          "explanation_fa": "صورت Join در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-020",
+          "base_fi": "ostaa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بلیط خریدم.» را انتخاب کن.",
+          "frame_fi": "_____ lipun.",
+          "options_fi": [
+            "Osti",
+            "Ostan",
+            "Ostit",
+            "Ostin"
+          ],
+          "expected_fi": "Ostin",
+          "explanation_fa": "صورت Ostin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-021",
+          "base_fi": "sanoa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «او تشکر کرد.» را انتخاب کن.",
+          "frame_fi": "Hän _____ kiitos.",
+          "options_fi": [
+            "sanoo",
+            "sanoin",
+            "sanoi",
+            "sanoit"
+          ],
+          "expected_fi": "sanoi",
+          "explanation_fa": "صورت sanoi در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-028",
+          "base_fi": "mennä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بعد به فروشگاه رفتم.» را انتخاب کن.",
+          "frame_fi": "Sitten _____ kauppaan.",
+          "options_fi": [
+            "menen",
+            "menin",
+            "meni",
+            "menit"
+          ],
+          "expected_fi": "menin",
+          "explanation_fa": "صورت menin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-037",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز کجا بودی؟» را انتخاب کن.",
+          "frame_fi": "Missä _____ eilen?",
+          "options_fi": [
+            "olet",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olit",
+          "explanation_fa": "صورت olit در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "a13s4-e-076",
+          "answer_policy": "morphology"
         }
       ],
       "passing_score": 0.8,
@@ -3671,7 +7384,181 @@
             "olen"
           ],
           "expected_fi": "olin",
-          "explanation_fa": "olin صورت گذشتهٔ اول‌شخص مفرد از olla است."
+          "explanation_fa": "olin صورت گذشتهٔ اول‌شخص مفرد از olla است.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-010",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز هوا سرد بود.» را انتخاب کن.",
+          "frame_fi": "Eilen _____ kylmä.",
+          "options_fi": [
+            "on",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "oli",
+          "explanation_fa": "صورت oli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-009",
+          "base_fi": "tulla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «اتوبوس دیر رسید.» را انتخاب کن.",
+          "frame_fi": "Bussi _____ myöhässä.",
+          "options_fi": [
+            "tulee",
+            "tulin",
+            "tuli",
+            "tulit"
+          ],
+          "expected_fi": "tuli",
+          "explanation_fa": "صورت tuli در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-017",
+          "base_fi": "tehdä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «غذا درست کردم.» را انتخاب کن.",
+          "frame_fi": "_____ ruokaa.",
+          "options_fi": [
+            "Teen",
+            "Tein",
+            "Teki",
+            "Teit"
+          ],
+          "expected_fi": "Tein",
+          "explanation_fa": "صورت Tein در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-018",
+          "base_fi": "syödä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «در خانه غذا خوردم.» را انتخاب کن.",
+          "frame_fi": "_____ kotona.",
+          "options_fi": [
+            "Syön",
+            "Söi",
+            "Söit",
+            "Söin"
+          ],
+          "expected_fi": "Söin",
+          "explanation_fa": "صورت Söin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-019",
+          "base_fi": "juoda",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «قهوه نوشیدم.» را انتخاب کن.",
+          "frame_fi": "_____ kahvia.",
+          "options_fi": [
+            "Juon",
+            "Joi",
+            "Join",
+            "Joit"
+          ],
+          "expected_fi": "Join",
+          "explanation_fa": "صورت Join در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-020",
+          "base_fi": "ostaa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بلیط خریدم.» را انتخاب کن.",
+          "frame_fi": "_____ lipun.",
+          "options_fi": [
+            "Osti",
+            "Ostan",
+            "Ostit",
+            "Ostin"
+          ],
+          "expected_fi": "Ostin",
+          "explanation_fa": "صورت Ostin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-021",
+          "base_fi": "sanoa",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «او تشکر کرد.» را انتخاب کن.",
+          "frame_fi": "Hän _____ kiitos.",
+          "options_fi": [
+            "sanoo",
+            "sanoin",
+            "sanoi",
+            "sanoit"
+          ],
+          "expected_fi": "sanoi",
+          "explanation_fa": "صورت sanoi در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-028",
+          "base_fi": "mennä",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «بعد به فروشگاه رفتم.» را انتخاب کن.",
+          "frame_fi": "Sitten _____ kauppaan.",
+          "options_fi": [
+            "menen",
+            "menin",
+            "meni",
+            "menit"
+          ],
+          "expected_fi": "menin",
+          "explanation_fa": "صورت menin در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a13s4-e-037",
+          "base_fi": "olla",
+          "feature_fa": "تشخیص صورت منتخب گذشته",
+          "prompt_fa": "در بافت گذشته، صورت متناسب با معنی «دیروز کجا بودی؟» را انتخاب کن.",
+          "frame_fi": "Missä _____ eilen?",
+          "options_fi": [
+            "olet",
+            "olin",
+            "oli",
+            "olit"
+          ],
+          "expected_fi": "olit",
+          "explanation_fa": "صورت olit در این جملهٔ مشخص گذشته به کار می‌رود؛ صورت حال یا شخص دیگر با معنی داده‌شده مطابق نیست.",
+          "grammar_concept_ids": [
+            "a13-past-recognition"
+          ]
         }
       ],
       "checkpoint_modes": [
@@ -3735,7 +7622,376 @@
           "type",
           "finnish"
         ]
-      ]
+      ],
+      "review_targets": [
+        "a13s4-e-074",
+        "a13s4-e-076"
+      ],
+      "practice_targets": [
+        "a13s4-e-019",
+        "a13s4-e-029",
+        "a13s4-e-039",
+        "a13s4-e-037",
+        "a13s4-e-047",
+        "a13s4-e-068",
+        "a13s4-cross-4",
+        "a13s4-e-007",
+        "a13s4-e-010",
+        "a13s4-e-009",
+        "a13s4-e-017",
+        "a13s4-e-018",
+        "a13s4-e-020",
+        "a13s4-e-021",
+        "a13s4-e-028"
+      ],
+      "activity_count": 32,
+      "learning_objectives": {
+        "communicative": [
+          {
+            "id": "a1.3-s4-l10-can-do",
+            "can_do_fa": "در مجموعه‌ای از کارهای آشنای اجتماعی و عملی و تمرین‌های خواندن، شنیدن، گفتن و نوشتن در سطح A1 عملکرد کاربردی نشان دهد."
+          }
+        ],
+        "lexical": [
+          {
+            "target_id": "a13s4-e-019",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-029",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-039",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-047",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-068",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-cross-4",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-010",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-009",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-018",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-020",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-021",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-074",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-076",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-027",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-058",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-067",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-075",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-078",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-cross-1",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-cross-2",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-079",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a13s4-e-048",
+            "status": "reviewed"
+          }
+        ],
+        "grammar_scope": "assessed",
+        "grammar": [
+          {
+            "concept_id": "a13-past-recognition",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-present-paradigm"
+            ],
+            "explanation_fa": "صورت‌های مشخص olin/oli/tuli، tein/söin/join/ostin/sanoi، menin و olit را با بافت گذشته تشخیص می‌دهی. انتخاب شخص و زمان در همین نمونه‌ها سنجیده می‌شود؛ تایپ جملهٔ کامل بازیابی عبارت است، نه صرف آزاد ماضی یا ماضی نقلی.",
+            "examples": [
+              {
+                "fi": "Eilen olin kotona.",
+                "fa": "دیروز خانه بودم."
+              },
+              {
+                "fi": "Eilen oli kylmä.",
+                "fa": "دیروز هوا سرد بود."
+              },
+              {
+                "fi": "Bussi tuli myöhässä.",
+                "fa": "اتوبوس دیر رسید."
+              },
+              {
+                "fi": "Tein ruokaa.",
+                "fa": "غذا درست کردم."
+              },
+              {
+                "fi": "Söin kotona.",
+                "fa": "در خانه غذا خوردم."
+              },
+              {
+                "fi": "Join kahvia.",
+                "fa": "قهوه نوشیدم."
+              },
+              {
+                "fi": "Ostin lipun.",
+                "fa": "بلیط خریدم."
+              },
+              {
+                "fi": "Hän sanoi kiitos.",
+                "fa": "او تشکر کرد."
+              },
+              {
+                "fi": "Sitten menin kauppaan.",
+                "fa": "بعد به فروشگاه رفتم."
+              },
+              {
+                "fi": "Missä olit eilen?",
+                "fa": "دیروز کجا بودی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 6,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 22,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 23,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 24,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 25,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 26,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 27,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 28,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 29,
+                "mode": "recognition"
+              },
+              {
+                "activity_index": 30,
+                "mode": "recognition"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-partitive-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-quantities"
+            ],
+            "explanation_fa": "در Tein ruokaa، Join kahvia و tarvitsen ruokaa صورت‌های صریح ruokaa و kahvia را مرور می‌کنی؛ این کاربرد محدود، جدول کامل حالت مفعول نیست. فعل گذشته در جمله، عبارت آموزش‌داده‌شده است.",
+            "examples": [
+              {
+                "fi": "Join kahvia.",
+                "fa": "قهوه نوشیدم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 15,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a12-frequency-adverbs",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "ترتیب را با Ensin، Sitten و Sen jälkeen و برنامه را با Huomenna، Ensi viikolla و Viikonloppuna بیان می‌کنی. زمان از عبارت صریح فهمیده می‌شود؛ جملهٔ حال با قید آینده، زمان صرفی جداگانه‌ای نمی‌سازد.",
+            "examples": [
+              {
+                "fi": "Sen jälkeen menin kotiin.",
+                "fa": "بعد از آن به خانه رفتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 16,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-local-expansion",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-local-cases"
+            ],
+            "explanation_fa": "مکان ثابت را با koulussa/kaupassa/keskustassa و مقصد را با kauppaan/kotiin/töihin در جمله‌های صریح مقایسه می‌کنی. فعل‌های گذشته به‌شکل عبارت مرور می‌شوند؛ پسوند به‌صورت خودکار ساخته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Olin kaupassa.",
+                "fa": "در فروشگاه بودم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 17,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-questions",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-olla"
+            ],
+            "explanation_fa": "در Missä olit eilen? دربارهٔ جای دیروز می‌پرسی و با Olin و مکان پاسخ می‌دهی. پرسش‌های معنی و کتابخانه نیز از بخش‌های قبلی مرور می‌شوند؛ صرف آزاد گذشته از این پرسش نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Missä olit eilen?",
+                "fa": "دیروز کجا بودی؟"
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 18,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-present-paradigm",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-present-chunks"
+            ],
+            "explanation_fa": "در برنامه‌های مشخص از menen، tapaan و olen استفاده می‌کنی. فعل حال همراه با قید فردا یا هفتهٔ بعد برنامه را نشان می‌دهد؛ زمان آیندهٔ صرفی یا جدول کامل اشخاص ادعا نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Huomenna menen töihin.",
+                "fa": "فردا سر کار می‌روم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 19,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a11-olla",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [],
+            "explanation_fa": "در Se on mielenkiintoinen و Se on vaikea, mutta hyvä صورت on برای توصیف مرور می‌شود. Minun mielestäni عبارت نظر آماده است؛ صرف کامل پسوند مالکیت یا صفت مقایسه‌ای از آن نتیجه گرفته نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Se on mielenkiintoinen.",
+                "fa": "جالب است."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 20,
+                "mode": "supported_production"
+              }
+            ]
+          },
+          {
+            "concept_id": "a13-necessity",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a12-requests"
+            ],
+            "explanation_fa": "Minun pitää harjoitella از بخش تحصیل و کار مرور می‌شود؛ Minun و مصدر harjoitella را در همین عبارت حفظ می‌کنی. قاعدهٔ آزاد همهٔ افعال و مفعول‌ها سنجیده نمی‌شود.",
+            "examples": [
+              {
+                "fi": "Minun pitää harjoitella.",
+                "fa": "باید تمرین کنم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_index": 21,
+                "mode": "supported_production"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

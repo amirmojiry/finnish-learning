@@ -5,12 +5,12 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 
 ## Key findings
 
-- 140 shipped lessons / 14 sections; 2733 graded slots after real runtime injection.
+- 140 shipped lessons / 14 sections; 2847 graded slots after real runtime injection.
 - 670 lexical target placements and 464 distinct surface forms; 431 lemma-field values (unverified) and 0 explicit sense IDs.
-- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 799 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
+- 427 expression surfaces; 102 lexical surfaces appear in multiple target placements. 838 forms receive a correct-answer opportunity in later lessons (NOT an actual learner SRS event).
 - 425 dictionary entries; 126 authored lexical target forms found in the curated dictionary; 338 missing, of which 332 exist in original Parole and 6 were not found.
-- 27 planned grammar concepts in shipped stages; 26 with explicit lesson concept IDs. 15 lessons lack these links even though 614 structural/grammar slots exist (78 morphology slots).
-- 26 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
+- 27 planned grammar concepts in shipped stages; 26 with explicit lesson concept IDs. 6 lessons lack these links even though 669 structural/grammar slots exist (102 morphology slots).
+- 18 lessons declare at least one form without a positive correct-answer activity in the same lesson; some could be intentional and need review.
 
 ## Per-section coverage
 
@@ -27,7 +27,7 @@ Reproducible audit: `npm run curriculum:coverage:report`. Data: `data/course/cov
 | A1.3 | a1.3-section-1 | 10 | 219 | 0 | 1 |
 | A1.3 | a1.3-section-2 | 10 | 225 | 0 | 0 |
 | A1.3 | a1.3-section-3 | 10 | 226 | 0 | 0 |
-| A1.3 | a1.3-section-4 | 10 | 116 | 15 | 10 |
+| A1.3 | a1.3-section-4 | 10 | 230 | 0 | 1 |
 | A2.1 | a2.1-section-1 | 10 | 136 | 10 | 0 |
 | A2.1 | a2.1-section-2 | 10 | 139 | 10 | 0 |
 

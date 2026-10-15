@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.48.0] - 2026-10-15
+
+### Added
+
+- Complete all ten A1.3 Section 4 recent-event/plan lessons: 307 activities, later positive retrieval for all 54 introduced exact surfaces/expressions and later review of eight bounded grammar concepts.
+- Recognize ten selected past forms with later checkpoint recognition. Keep whole-phrase recall distinct from free imperfect production and comparatives as fixed lexical chunks.
+- Add three-step event sequencing, two facts per original reading and two supported four-sentence writing tasks. Preserve every original item, stable core mappings, fifteen cumulative checkpoint targets and the 80% threshold.
+- Complete canonical overviews and twelve scoped section gates across all 120 A1 lessons (3,512 activities); add ten regression tests and bilingual documentation. Wider identity/review/structural and proficiency gates remain open.
+
 ## [1.47.0] - 2026-10-14
 
 ### Added
