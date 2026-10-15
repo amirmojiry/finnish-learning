@@ -91,6 +91,8 @@ test('review coverage is exhaustive for exactly five globally unresolved surface
  }
  assert.equal(prior.records.filter(x=>x.identity_review_status==='reviewed').length,47);
  assert.equal(prior.records.length,1264);
+ assert.ok(built.items.every(x=>!Object.hasOwn(x,'mastered')&&
+   !Object.hasOwn(x,'nextReviewAt')&&!Object.hasOwn(x,'dueAt')&&!Object.hasOwn(x,'score')));
  assert.equal(prior.records.filter(x=>x.kind==='expression'&&x.identity_review_status==='reviewed').length,0);
 });
 test('invalid contextual identity duplicates, unknown keys, mismatched examples and senses fail closed',()=>{
@@ -103,9 +105,13 @@ test('invalid contextual identity duplicates, unknown keys, mismatched examples 
  assert.throws(()=>validate(modify(a=>a[0].surface_form='pitää')),/Stale surface mapping/);
  assert.throws(()=>validate(modify(a=>a[0].sense_id='sense:aika-mystery')),/Unreviewed sense\/example combination/);
  assert.throws(()=>validate(modify(a=>a.pop())),/Missing reviewed contextual item/);
+ assert.throws(()=>validate(modify(a=>{a[0].mastered=true;})),
+   /Unsupported contextual editorial metadata/);
+ assert.throws(()=>validate(modify(a=>{a[0].nextReviewAt=123;})),
+   /Unsupported contextual editorial metadata/);
  const tampered=structuredClone(prior),f=tampered.records.find(r=>r.kind==='form'&&r.surface_form==='ajan');
  f.identity_review_status='reviewed';
- assert.throws(()=>engine.build(reviews,stages,tampered),/must remain globally unresolved/);
+ assert.throws(()=>engine.build(reviews,stages,tampered),/must remain unresolved/);
  const stale=structuredClone(stages),section=stale.find(s=>s.id==='a1.1-section-3');
  section.items['s3-aika'].example_fi='Aika on huomenna.';
  assert.throws(()=>engine.build(reviews,stale,prior),/Changed\/missing|Missing\/changed/i);

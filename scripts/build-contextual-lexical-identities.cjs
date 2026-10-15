@@ -76,6 +76,11 @@ function build(reviews,sections,sidecar){
  const entries=new Map();
  for(const e of reviews.entries){
   const k=itemKey(e.section_id,e.item_id),ex=expected.get(k);
+  const permitted=new Set(['section_id','item_id','surface_form','lemma_fi','lexeme_id',
+    'sense_id','sense_gloss_en','context_fi','morphology',
+    'legacy_source_lemma_exception','legacy_gloss_note_en']);
+  const extra=Object.keys(e).filter(name=>!permitted.has(name));
+  if(extra.length)throw Error('Unsupported contextual editorial metadata: '+k+' / '+extra.join(','));
   if(entries.has(k))throw Error('Duplicate item mapping: '+k);
   if(!ex)throw Error('Unknown or unreferenced item: '+k);
   if(e.surface_form!==ex.surface||normalize(e.surface_form)!==e.surface_form)
