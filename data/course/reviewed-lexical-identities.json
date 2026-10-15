@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_policy": "Only explicit editorial form, sense and morphology decisions; never transfer learner mastery between forms.",
+  "review_policy": "Only explicit editorial form, sense and morphology decisions; never transfer learner mastery between forms. Each reviewed entry is a single bounded contextual sense; unresolved homographs remain unresolved.",
   "entries": [
     {
       "surface_form": "kissa",
@@ -69,6 +69,406 @@
       "morphology": {
         "part_of_speech": "pronoun",
         "case": "genitive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "aikaa",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "partitive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "aikana",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "essive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "ajan",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "apteekki",
+      "lexeme_id": "lexeme:apteekki",
+      "sense_id": "sense:apteekki-pharmacy",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "asema",
+      "lexeme_id": "lexeme:asema",
+      "sense_id": "sense:asema-station",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "bussi",
+      "lexeme_id": "lexeme:bussi",
+      "sense_id": "sense:bussi-bus",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "he",
+      "lexeme_id": "lexeme:he",
+      "sense_id": "sense:he-third-person-plural",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "plural"
+      }
+    },
+    {
+      "surface_form": "heidän",
+      "lexeme_id": "lexeme:he",
+      "sense_id": "sense:he-third-person-plural",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "genitive",
+        "number": "plural"
+      }
+    },
+    {
+      "surface_form": "hän",
+      "lexeme_id": "lexeme:han",
+      "sense_id": "sense:han-third-person-singular",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "hänen",
+      "lexeme_id": "lexeme:han",
+      "sense_id": "sense:han-third-person-singular",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kauppa",
+      "lexeme_id": "lexeme:kauppa",
+      "sense_id": "sense:kauppa-shop",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kaupungin",
+      "lexeme_id": "lexeme:kaupunki",
+      "sense_id": "sense:kaupunki-city",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kaupunki",
+      "lexeme_id": "lexeme:kaupunki",
+      "sense_id": "sense:kaupunki-city",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "keittiö",
+      "lexeme_id": "lexeme:keittio",
+      "sense_id": "sense:keittio-kitchen",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kortti",
+      "lexeme_id": "lexeme:kortti",
+      "sense_id": "sense:kortti-card",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "koti",
+      "lexeme_id": "lexeme:koti",
+      "sense_id": "sense:koti-home",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kotiin",
+      "lexeme_id": "lexeme:koti",
+      "sense_id": "sense:koti-home",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "illative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "koulu",
+      "lexeme_id": "lexeme:koulu",
+      "sense_id": "sense:koulu-school",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "kuitti",
+      "lexeme_id": "lexeme:kuitti",
+      "sense_id": "sense:kuitti-receipt",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "lippu",
+      "lexeme_id": "lexeme:lippu",
+      "sense_id": "sense:lippu-ticket",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "makuuhuone",
+      "lexeme_id": "lexeme:makuuhuone",
+      "sense_id": "sense:makuuhuone-bedroom",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "me",
+      "lexeme_id": "lexeme:me",
+      "sense_id": "sense:me-first-person-plural",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "plural"
+      }
+    },
+    {
+      "surface_form": "meidän",
+      "lexeme_id": "lexeme:me",
+      "sense_id": "sense:me-first-person-plural",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "genitive",
+        "number": "plural"
+      }
+    },
+    {
+      "surface_form": "mikä",
+      "lexeme_id": "lexeme:mika",
+      "sense_id": "sense:mika-interrogative-what-which",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "minulle",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "allative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "nimi",
+      "lexeme_id": "lexeme:nimi",
+      "sense_id": "sense:nimi-name",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "numero",
+      "lexeme_id": "lexeme:numero",
+      "sense_id": "sense:numero-number",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "olohuone",
+      "lexeme_id": "lexeme:olohuone",
+      "sense_id": "sense:olohuone-living-room",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "osoite",
+      "lexeme_id": "lexeme:osoite",
+      "sense_id": "sense:osoite-address",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "puhelin",
+      "lexeme_id": "lexeme:puhelin",
+      "sense_id": "sense:puhelin-phone",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "se",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "siihen",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "illative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "siinä",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "inessive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "siitä",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "elative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "te",
+      "lexeme_id": "lexeme:te",
+      "sense_id": "sense:te-second-person-plural-or-polite",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "plural"
+      }
+    },
+    {
+      "surface_form": "tähän",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "illative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "tämä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "tässä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "inessive",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "tästä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "morphology": {
+        "part_of_speech": "pronoun",
+        "case": "elative",
+        "number": "singular"
+      }
+    },
+    {
+      "surface_form": "viesti",
+      "lexeme_id": "lexeme:viesti",
+      "sense_id": "sense:viesti-message",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
         "number": "singular"
       }
     }
