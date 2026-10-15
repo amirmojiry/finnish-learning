@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "review_policy": "Manual review of Finnish examples per section+item, never a global surface homograph decision or learner mastery transfer.",
+  "entries": [
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-aika",
+      "surface_form": "aika",
+      "lemma_fi": "aika",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "sense_gloss_en": "time in general",
+      "context_fi": "Aika on nyt.",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-voi",
+      "surface_form": "voi",
+      "lemma_fi": "voida",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-ability",
+      "sense_gloss_en": "ability or possibility to help",
+      "context_fi": "Hän voi auttaa sinua.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-13",
+      "surface_form": "pitää",
+      "lemma_fi": "pitää",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "necessity or obligation",
+      "context_fi": "Minun pitää lähteä.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-14",
+      "surface_form": "voi",
+      "lemma_fi": "voida",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-ability",
+      "sense_gloss_en": "inability in a polite refusal",
+      "context_fi": "Anteeksi, en voi.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "connegative",
+        "polarity": "negative"
+      }
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-14",
+      "surface_form": "aika",
+      "lemma_fi": "aika",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-appointment",
+      "sense_gloss_en": "scheduled appointment",
+      "context_fi": "Minulla on aika lääkärille.",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-17",
+      "surface_form": "voi",
+      "lemma_fi": "voida",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "to feel (un)well",
+      "context_fi": "En voi hyvin.",
+      "legacy_gloss_note_en": "Original word-level Persian gloss describes ability; its attested 'En voi hyvin.' example denotes wellbeing.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "connegative",
+        "polarity": "negative"
+      }
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-013",
+      "surface_form": "voi",
+      "lemma_fi": "voida",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "to feel (un)well",
+      "context_fi": "En voi hyvin.",
+      "legacy_gloss_note_en": "Original word-level Persian gloss describes ability; its attested 'En voi hyvin.' example denotes wellbeing.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "connegative",
+        "polarity": "negative"
+      }
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-017",
+      "surface_form": "pitää",
+      "lemma_fi": "pitää",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "necessity or obligation",
+      "context_fi": "Minun pitää lähteä.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-037",
+      "surface_form": "voi",
+      "lemma_fi": "voida",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "to feel (un)well",
+      "context_fi": "En voi hyvin.",
+      "legacy_gloss_note_en": "Original word-level Persian gloss describes ability; its attested 'En voi hyvin.' example denotes wellbeing.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "connegative",
+        "polarity": "negative"
+      }
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-002",
+      "surface_form": "pitää",
+      "lemma_fi": "pitää",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "necessity or obligation",
+      "context_fi": "Minun pitää lähteä.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-029",
+      "surface_form": "voi",
+      "lemma_fi": "voida",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "to feel (un)well",
+      "context_fi": "En voi hyvin.",
+      "legacy_gloss_note_en": "Original word-level Persian gloss describes ability; its attested 'En voi hyvin.' example denotes wellbeing.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "connegative",
+        "polarity": "negative"
+      }
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-003",
+      "surface_form": "tuli",
+      "lemma_fi": "tulla",
+      "lexeme_id": "lexeme:tulla",
+      "sense_id": "sense:tulla-arrival",
+      "sense_gloss_en": "came or arrived (bus)",
+      "context_fi": "Bussi tuli myöhässä.",
+      "legacy_source_lemma_exception": "tuli",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "past",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-010",
+      "surface_form": "tuli",
+      "lemma_fi": "tulla",
+      "lexeme_id": "lexeme:tulla",
+      "sense_id": "sense:tulla-arrival",
+      "sense_gloss_en": "came or arrived at the station (bus)",
+      "context_fi": "Sitten bussi tuli asemalle.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "past",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-012",
+      "surface_form": "pitää",
+      "lemma_fi": "pitää",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "necessity to reschedule an appointment",
+      "context_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "morphology": {
+        "part_of_speech": "verb",
+        "tense": "present",
+        "verb_form": "finite",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-t-003",
+      "surface_form": "ajan",
+      "lemma_fi": "aika",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-appointment",
+      "sense_gloss_en": "medical appointment (total object form)",
+      "context_fi": "Hei, haluaisin varata ajan lääkärille.",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    }
+  ]
+}
