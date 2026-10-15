@@ -6727,7 +6727,8 @@
         ],
         "grammar_scope": "assessed"
       },
-      "activity_count": 15
+      "activity_count": 15,
+      "review_targets": []
     }
   ]
 }
