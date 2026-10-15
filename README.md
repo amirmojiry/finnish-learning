@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.48.0`
+- Version: `1.49.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,9 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+A2.1 Section 1 has a scoped exact-form assessment/retrieval gate: [section acceptance](docs/A21-SECTION1-ACCEPTANCE.md). This is not CEFR/YKI certification; P2/P5/R3 integration gates remain open.
+
 
 - 400 high-frequency written Finnish word forms with Persian translations
 - exact Parole source rank, corpus occurrence count, and occurrence percentage

@@ -1,3 +1,4 @@
+- A2.1 Section 1 acceptance: [English](A21-SECTION1-ACCEPTANCE.md) / [فارسی](A21-SECTION1-ACCEPTANCE.fa.md) — travel and past, grammar and positive review.
 # Documentation hub | راهنمای مستندات
 
 این صفحه نقطهٔ شروع مستندات **Finnish Learning** است. برای اینکه مطالب تکراری یا متناقض نشوند، هر موضوع یک مرجع اصلی دارد. فایل‌های فارسی و انگلیسیِ یک سند، دو نسخهٔ زبانی از همان موضوعند؛ نه دو مرجع مستقل.
