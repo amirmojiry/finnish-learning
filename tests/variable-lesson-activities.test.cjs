@@ -38,7 +38,7 @@ test('saved progress and scores remain valid independent of future activity coun
  assert.deepEqual(restored.lessonScores['legacy-lesson'],{correct:8,graded:10,completedAt:123});
  assert.equal(restored.completedLessons.includes('legacy-lesson'),true);
  const current=course.validateSection(raw);
- assert.equal(current.lessons.reduce((sum,l)=>sum+l.activities.length,0),184);
+ assert.equal(current.lessons.reduce((sum,l)=>sum+l.activities.length,0),275);
 });
 test('best score compares percentage before raw count when lesson size changes',()=>{
  const base=course.recordLessonCompletion(course.emptyProgress(),'resized',8,10,100);

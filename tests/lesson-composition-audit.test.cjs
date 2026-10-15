@@ -30,7 +30,7 @@ test('P3 audit reports shipped authored evidence without claiming SRS progress',
  assert.equal(r.summary.strictly_validated_lessons,0);
  assert.deepEqual(r.errors,[]);
  assert.ok(r.lessons.every(l=>l.authored_activities>0));
- assert.ok(r.lessons.some(l=>l.missing_positive_surface_ids.length));
+ assert.ok(r.lessons.every(l=>l.missing_positive_surface_ids.length===0), 'All fourteen shipped sections have explicitly graded correct answers for declared targets.');
  assert.ok(!JSON.stringify(r).includes('completedLessons'));
  assert.match(comp.markdown(r),/authored opportunities/i);
 });

@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.50.0] - 2026-10-15
+
+### Added
+
+- Complete ten A2.1 Section 2 healthcare/public-service lessons: positive correct-answer assessment and later exact-form retrieval of every new item, full canonical communicative/lexical/grammar goals and audited prerequisites from all twelve A1 sections and A2.1 Section 1.
+- Move integrated service phrases to prior teaching lessons, add follow-up service negotiation practice, staff negation, symptom-onset imperfect, bounded quantity/partitive, questions and pharmacy rection review.
+- Add second independent factual question for each existing service reading and guided four-phrase writing in lessons 8 and 9. Preserve 85 original item records, stable lesson/curriculum/progress identifiers, original 15 checkpoint targets and 80% pass mark.
+- Add bilingual deterministic section acceptance reports and adversarial regression tests. The broader P2/P5/R3, independent CEFR/YKI and A2.1 Sections 3–4 gates remain open.
+
+
 ## [1.49.0] - 2026-10-15
 
 ### Added

@@ -48,11 +48,12 @@ jobs:
           npm run lexical:identity:write
           npm run course:review:write
           npm run section:a21:s1:write
-          if ! git diff --quiet -- data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md; then
+          npm run section:a21:s2:write
+          git add data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md data/course/a2.1-section-2-acceptance.json docs/A21-SECTION2-ACCEPTANCE.md
+          if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md
-            git commit -m 'chore: regenerate course coverage snapshots'
+            git commit -m 'chore: regenerate course coverage and acceptance snapshots'
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
       - name: Compile Python sources
