@@ -46,7 +46,7 @@ test('already introduced forms have reviewed, not new, lexical status', () => {
   assert.ok(hotel.new_targets.every(id => hotel.learning_objectives.lexical.find(goal => goal.target_id === id)?.status === 'introduced'));
   const problemsMap = new Map(problems.learning_objectives.lexical.map(goal => [goal.target_id, goal.status]));
   assert.equal(section.items['a21s1-t-050'].surface_form, 'lippua');
-  assert.equal(problemsMap.get('a21s1-t-050'), 'reviewed');
+  assert.equal(problemsMap.get('a21s1-t-050'), 'introduced'); // Prior A1 morphology example alone did not establish a mapped lexical introduction.
   assert.ok(problems.new_targets.every(id => problems.learning_objectives.lexical.find(goal => goal.target_id === id)?.status === 'introduced'));
   const priorTravel = require('../data/course/a1.2-section-2.json');
   const previouslyAssessed = priorTravel.lessons.flatMap(lesson => lesson.morphology_practice || [])

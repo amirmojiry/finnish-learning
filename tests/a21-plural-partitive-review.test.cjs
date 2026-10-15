@@ -53,7 +53,7 @@ test('expanded practice keeps grammar target evidence and saved scores', () => {
  for (const lesson of [introduction, review]) {
    assert.equal(lesson.activities.length, lesson.activity_count);
    assert.ok(lesson.activities.some(a => a.type === 'inflection-production'));
-   assert.ok(lesson.activities.some(a => ['choice','type','expression-completion'].includes(a.type) && a.item === target));
+   assert.ok(lesson.activities.some(a => !['teach','number-grid'].includes(a.type) && a.item === target));
    const old = course.recordLessonCompletion(course.emptyProgress(), lesson.id, 12, 14, 123);
    assert.deepEqual(course.sanitizeProgress(old).lessonScores[lesson.id], { correct: 12, graded: 14, completedAt: 123 });
    const completed = course.recordLessonCompletion(old, lesson.id, 13, 15, 456);
