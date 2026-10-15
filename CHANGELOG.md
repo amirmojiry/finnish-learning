@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.49.0] - 2026-10-15
+
+### Added
+
+- Complete A2.1 Section 1 travel/past content acceptance across ten existing lessons, with positive assessment and later exact-form retrieval.
+- Teach expressions before assessment, exercise restricted imperfect/partitive/object/location and travel storytelling patterns, and extend reading/writing.
+- Add deterministic acceptance checks and maintain existing curriculum IDs, 15 checkpoint targets and 80% threshold; broader P2/P5/R3/CEFR gates remain open.
+
 ## [1.48.0] - 2026-10-15
 
 ### Added

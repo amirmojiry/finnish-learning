@@ -45,10 +45,13 @@ jobs:
           git fetch origin '${{ github.event.pull_request.head.ref }}'
           git checkout -B '${{ github.event.pull_request.head.ref }}' 'origin/${{ github.event.pull_request.head.ref }}'
           npm run curriculum:coverage:write
-          if ! git diff --quiet -- data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md; then
+          npm run lexical:identity:write
+          npm run course:review:write
+          npm run section:a21:s1:write
+          if ! git diff --quiet -- data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md
+            git add data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md
             git commit -m 'chore: regenerate course coverage snapshots'
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
