@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2908,
+    "graded_activity_slots": 2977,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 883,
+    "assessed_again_after_earlier_reference": 934,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 26,
     "lessons_without_explicit_grammar_concept_ids": 6,
-    "graded_grammar_related_slots": 671,
-    "graded_morphology_slots": 103,
-    "lessons_with_declared_unassessed_forms": 9,
+    "graded_grammar_related_slots": 675,
+    "graded_morphology_slots": 105,
+    "lessons_with_declared_unassessed_forms": 0,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -142,8 +142,8 @@
       "level": "A2.1",
       "id": "a2.1-section-2",
       "lessons": 10,
-      "graded_slots": 139,
-      "unassessed_target_forms": 10,
+      "graded_slots": 208,
+      "unassessed_target_forms": 0,
       "lessons_missing_grammar_ids": 0
     }
   ],
@@ -16295,58 +16295,73 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 11,
       "lexical": {
         "declared_forms": [
           "ajan",
           "hei, haluaisin varata ajan lääkärille.",
+          "hei, haluaisin varata ajan.",
           "lääkärille",
           "mihin aikaan vastaanotto alkaa?",
           "minulle",
           "on",
           "onko teillä vapaita aikoja tiistaina?",
+          "onko torstaina vapaita aikoja?",
           "tarvitsen ajan ensi viikolle.",
           "tiistai kello kymmenen sopii minulle.",
+          "torstai sopii minulle.",
           "vastaanotto"
         ],
         "first_referenced": [
           "ajan",
           "hei, haluaisin varata ajan lääkärille.",
+          "hei, haluaisin varata ajan.",
           "lääkärille",
           "mihin aikaan vastaanotto alkaa?",
           "onko teillä vapaita aikoja tiistaina?",
+          "onko torstaina vapaita aikoja?",
           "tarvitsen ajan ensi viikolle.",
           "tiistai kello kymmenen sopii minulle.",
+          "torstai sopii minulle.",
           "vastaanotto"
         ],
         "introduced": [
           "ajan",
           "hei, haluaisin varata ajan lääkärille.",
+          "hei, haluaisin varata ajan.",
           "lääkärille",
+          "mihin aikaan vastaanotto alkaa?",
           "onko teillä vapaita aikoja tiistaina?",
+          "onko torstaina vapaita aikoja?",
+          "tarvitsen ajan ensi viikolle.",
+          "tiistai kello kymmenen sopii minulle.",
+          "torstai sopii minulle.",
           "vastaanotto"
         ],
         "correct_answer": [
           "ajan",
           "hei, haluaisin varata ajan lääkärille.",
+          "hei, haluaisin varata ajan.",
           "lääkärille",
           "mihin aikaan vastaanotto alkaa?",
+          "minulle",
           "on",
           "onko teillä vapaita aikoja tiistaina?",
+          "onko torstaina vapaita aikoja?",
           "tarvitsen ajan ensi viikolle.",
           "tiistai kello kymmenen sopii minulle.",
+          "torstai sopii minulle.",
           "vastaanotto"
         ],
-        "receptive_count": 5,
-        "productive_count": 7,
+        "receptive_count": 6,
+        "productive_count": 10,
         "later_correct_retrieval": [
+          "minulle",
           "on"
         ],
-        "declared_unassessed": [
-          "minulle"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 8,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minulle",
@@ -16367,8 +16382,14 @@
         "authored_new_forms": [
           "ajan",
           "hei, haluaisin varata ajan lääkärille.",
+          "hei, haluaisin varata ajan.",
           "lääkärille",
+          "mihin aikaan vastaanotto alkaa?",
           "onko teillä vapaita aikoja tiistaina?",
+          "onko torstaina vapaita aikoja?",
+          "tarvitsen ajan ensi viikolle.",
+          "tiistai kello kymmenen sopii minulle.",
+          "torstai sopii minulle.",
           "vastaanotto"
         ]
       },
@@ -16398,7 +16419,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 6,
       "lexical": {
         "declared_forms": [
           "en pääse vastaanotolle huomenna.",
@@ -16422,34 +16443,47 @@
         ],
         "introduced": [
           "en pääse vastaanotolle huomenna.",
-          "minun pitää siirtää vastaanottoaikaani.",
-          "perua",
-          "siirtää",
-          "vastaanotolle"
-        ],
-        "correct_answer": [
-          "en pääse vastaanotolle huomenna.",
           "kiitos, uusi aika sopii.",
-          "minun",
           "minun pitää siirtää vastaanottoaikaani.",
           "onko perjantaina vapaita aikoja?",
-          "perua",
-          "siirtää",
           "vastaanotolle",
           "voinko perua ajan?"
         ],
-        "receptive_count": 5,
-        "productive_count": 7,
-        "later_correct_retrieval": [
+        "correct_answer": [
+          "ajan",
+          "en pääse vastaanotolle huomenna.",
+          "kiitos, uusi aika sopii.",
+          "lääkärille",
+          "mihin aikaan vastaanotto alkaa?",
           "minun",
+          "minun pitää siirtää vastaanottoaikaani.",
+          "onko perjantaina vapaita aikoja?",
+          "onko teillä vapaita aikoja tiistaina?",
           "perua",
-          "siirtää"
+          "pitää",
+          "siirtää",
+          "tarvitsen ajan ensi viikolle.",
+          "vastaanotolle",
+          "vastaanotto",
+          "voinko perua ajan?"
         ],
-        "declared_unassessed": [
-          "pitää"
+        "receptive_count": 9,
+        "productive_count": 10,
+        "later_correct_retrieval": [
+          "ajan",
+          "lääkärille",
+          "mihin aikaan vastaanotto alkaa?",
+          "minun",
+          "onko teillä vapaita aikoja tiistaina?",
+          "perua",
+          "pitää",
+          "siirtää",
+          "tarvitsen ajan ensi viikolle.",
+          "vastaanotto"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 7,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -16469,10 +16503,11 @@
         ],
         "authored_new_forms": [
           "en pääse vastaanotolle huomenna.",
+          "kiitos, uusi aika sopii.",
           "minun pitää siirtää vastaanottoaikaani.",
-          "perua",
-          "siirtää",
-          "vastaanotolle"
+          "onko perjantaina vapaita aikoja?",
+          "vastaanotolle",
+          "voinko perua ajan?"
         ]
       },
       "grammar": {
@@ -16503,7 +16538,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "kurkkuni on kipeä.",
@@ -16527,32 +16562,42 @@
           "päänsärkyä"
         ],
         "introduced": [
+          "kurkkuni on kipeä.",
           "kuumetta",
-          "minulla on kuumetta.",
+          "minulla oli kuumetta eilen.",
           "minulla on päänsärkyä.",
           "oireet",
+          "oireet alkoivat maanantaina.",
           "päänsärkyä"
         ],
         "correct_answer": [
+          "kiitos, uusi aika sopii.",
           "kurkkuni on kipeä.",
           "kuumetta",
           "minulla oli kuumetta eilen.",
           "minulla on kuumetta.",
           "minulla on päänsärkyä.",
+          "minun pitää siirtää vastaanottoaikaani.",
           "oireet",
           "oireet alkoivat maanantaina.",
+          "oli",
           "on",
-          "päänsärkyä"
+          "onko perjantaina vapaita aikoja?",
+          "päänsärkyä",
+          "vastaanotolle"
         ],
-        "receptive_count": 5,
-        "productive_count": 7,
+        "receptive_count": 7,
+        "productive_count": 10,
         "later_correct_retrieval": [
+          "kiitos, uusi aika sopii.",
           "minulla on kuumetta.",
-          "on"
+          "minun pitää siirtää vastaanottoaikaani.",
+          "oli",
+          "on",
+          "onko perjantaina vapaita aikoja?",
+          "vastaanotolle"
         ],
-        "declared_unassessed": [
-          "oli"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
@@ -16573,10 +16618,12 @@
           "oireet alkoivat maanantaina."
         ],
         "authored_new_forms": [
+          "kurkkuni on kipeä.",
           "kuumetta",
-          "minulla on kuumetta.",
+          "minulla oli kuumetta eilen.",
           "minulla on päänsärkyä.",
           "oireet",
+          "oireet alkoivat maanantaina.",
           "päänsärkyä"
         ]
       },
@@ -16609,7 +16656,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "en ymmärtänyt viimeistä sanaa.",
@@ -16634,7 +16681,10 @@
           "voitteko toistaa ohjeen?"
         ],
         "introduced": [
+          "en ymmärtänyt viimeistä sanaa.",
           "hitaammin",
+          "mitä minun pitää tehdä seuraavaksi?",
+          "odota tässä, ole hyvä.",
           "ohjeen",
           "seuraavaksi",
           "voitteko puhua hitaammin?",
@@ -16643,24 +16693,34 @@
         "correct_answer": [
           "en ymmärtänyt viimeistä sanaa.",
           "hitaammin",
+          "kurkkuni on kipeä.",
+          "kuumetta",
+          "minulla oli kuumetta eilen.",
           "minun",
           "mitä minun pitää tehdä seuraavaksi?",
           "odota tässä, ole hyvä.",
           "ohjeen",
+          "oireet",
+          "pitää",
+          "päänsärkyä",
           "seuraavaksi",
           "voitteko puhua hitaammin?",
           "voitteko toistaa ohjeen?"
         ],
-        "receptive_count": 5,
-        "productive_count": 8,
+        "receptive_count": 9,
+        "productive_count": 10,
         "later_correct_retrieval": [
-          "minun"
+          "kurkkuni on kipeä.",
+          "kuumetta",
+          "minulla oli kuumetta eilen.",
+          "minun",
+          "oireet",
+          "pitää",
+          "päänsärkyä"
         ],
-        "declared_unassessed": [
-          "pitää"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -16679,7 +16739,10 @@
           "voitteko toistaa ohjeen?"
         ],
         "authored_new_forms": [
+          "en ymmärtänyt viimeistä sanaa.",
           "hitaammin",
+          "mitä minun pitää tehdä seuraavaksi?",
+          "odota tässä, ole hyvä.",
           "ohjeen",
           "seuraavaksi",
           "voitteko puhua hitaammin?",
@@ -16714,7 +16777,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "anteeksi, missä apteekki on?",
@@ -16739,15 +16802,6 @@
         ],
         "introduced": [
           "anteeksi, missä apteekki on?",
-          "apteekki",
-          "haluaisin kysyä tästä lääkkeestä.",
-          "käyttöohjeen",
-          "lääkkeestä"
-        ],
-        "correct_answer": [
-          "anteeksi, missä apteekki on?",
-          "apteekki",
-          "ennen",
           "haluaisin kysyä tästä lääkkeestä.",
           "kysyn apteekista, jos en ymmärrä.",
           "käyttöohjeen",
@@ -16755,17 +16809,42 @@
           "lääkkeestä",
           "voitteko selittää käyttöohjeen?"
         ],
-        "receptive_count": 6,
-        "productive_count": 8,
+        "correct_answer": [
+          "anteeksi, missä apteekki on?",
+          "apteekki",
+          "en ymmärtänyt viimeistä sanaa.",
+          "ennen",
+          "haluaisin kysyä tästä lääkkeestä.",
+          "hitaammin",
+          "jos",
+          "kysyn apteekista, jos en ymmärrä.",
+          "käyttöohjeen",
+          "luen ohjeen ennen käyttöä.",
+          "lääkkeestä",
+          "mitä minun pitää tehdä seuraavaksi?",
+          "odota tässä, ole hyvä.",
+          "ohjeen",
+          "seuraavaksi",
+          "voitteko puhua hitaammin?",
+          "voitteko selittää käyttöohjeen?"
+        ],
+        "receptive_count": 10,
+        "productive_count": 12,
         "later_correct_retrieval": [
           "apteekki",
-          "ennen"
+          "en ymmärtänyt viimeistä sanaa.",
+          "ennen",
+          "hitaammin",
+          "jos",
+          "mitä minun pitää tehdä seuraavaksi?",
+          "odota tässä, ole hyvä.",
+          "ohjeen",
+          "seuraavaksi",
+          "voitteko puhua hitaammin?"
         ],
-        "declared_unassessed": [
-          "jos"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 10,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "ennen",
@@ -16785,10 +16864,12 @@
         ],
         "authored_new_forms": [
           "anteeksi, missä apteekki on?",
-          "apteekki",
           "haluaisin kysyä tästä lääkkeestä.",
+          "kysyn apteekista, jos en ymmärrä.",
           "käyttöohjeen",
-          "lääkkeestä"
+          "luen ohjeen ennen käyttöä.",
+          "lääkkeestä",
+          "voitteko selittää käyttöohjeen?"
         ]
       },
       "grammar": {
@@ -16820,7 +16901,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "luukulle",
@@ -16846,14 +16927,23 @@
         ],
         "introduced": [
           "luukulle",
+          "mille luukulle minun pitää mennä?",
           "missä palvelupiste sijaitsee?",
+          "odotan vuoroani tässä.",
           "onko tämä oikea paikka?",
           "palvelupiste",
+          "tarvitsen apua ajanvarauksessa.",
           "vuoroani"
         ],
         "correct_answer": [
+          "anteeksi, missä apteekki on?",
+          "kysyn apteekista, jos en ymmärrä.",
+          "käyttöohjeen",
+          "luen ohjeen ennen käyttöä.",
           "luukulle",
+          "lääkkeestä",
           "mille luukulle minun pitää mennä?",
+          "minun",
           "missä palvelupiste sijaitsee?",
           "odotan vuoroani tässä.",
           "onko tämä oikea paikka?",
@@ -16862,16 +16952,20 @@
           "tämä",
           "vuoroani"
         ],
-        "receptive_count": 5,
-        "productive_count": 7,
+        "receptive_count": 8,
+        "productive_count": 10,
         "later_correct_retrieval": [
+          "anteeksi, missä apteekki on?",
+          "kysyn apteekista, jos en ymmärrä.",
+          "käyttöohjeen",
+          "luen ohjeen ennen käyttöä.",
+          "lääkkeestä",
+          "minun",
           "tämä"
         ],
-        "declared_unassessed": [
-          "minun"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 11,
+        "distractor_only_count": 10,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -16891,9 +16985,12 @@
         ],
         "authored_new_forms": [
           "luukulle",
+          "mille luukulle minun pitää mennä?",
           "missä palvelupiste sijaitsee?",
+          "odotan vuoroani tässä.",
           "onko tämä oikea paikka?",
           "palvelupiste",
+          "tarvitsen apua ajanvarauksessa.",
           "vuoroani"
         ]
       },
@@ -16925,7 +17022,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "allekirjoittaa",
@@ -16951,10 +17048,13 @@
         ],
         "introduced": [
           "allekirjoittaa",
+          "en ymmärrä tätä kohtaa.",
           "kirjoitan nimeni tähän.",
           "lomakkeessa",
           "lomakkeessa kysytään osoitetta.",
-          "osoitetta"
+          "minun pitää allekirjoittaa lomake.",
+          "osoitetta",
+          "pitääkö tähän kirjoittaa päivämäärä?"
         ],
         "correct_answer": [
           "allekirjoittaa",
@@ -16962,21 +17062,33 @@
           "kirjoitan nimeni tähän.",
           "lomakkeessa",
           "lomakkeessa kysytään osoitetta.",
+          "luukulle",
+          "minun",
           "minun pitää allekirjoittaa lomake.",
+          "odotan vuoroani tässä.",
+          "onko tämä oikea paikka?",
           "osoitetta",
+          "palvelupiste",
           "pitääkö tähän kirjoittaa päivämäärä?",
-          "tähän"
+          "tarvitsen apua ajanvarauksessa.",
+          "tähän",
+          "vuoroani"
         ],
-        "receptive_count": 4,
-        "productive_count": 6,
+        "receptive_count": 7,
+        "productive_count": 9,
         "later_correct_retrieval": [
-          "tähän"
+          "luukulle",
+          "minun",
+          "odotan vuoroani tässä.",
+          "onko tämä oikea paikka?",
+          "palvelupiste",
+          "tarvitsen apua ajanvarauksessa.",
+          "tähän",
+          "vuoroani"
         ],
-        "declared_unassessed": [
-          "minun"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 11,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "minun",
@@ -16996,23 +17108,28 @@
         ],
         "authored_new_forms": [
           "allekirjoittaa",
+          "en ymmärrä tätä kohtaa.",
           "kirjoitan nimeni tähän.",
           "lomakkeessa",
           "lomakkeessa kysytään osoitetta.",
-          "osoitetta"
+          "minun pitää allekirjoittaa lomake.",
+          "osoitetta",
+          "pitääkö tähän kirjoittaa päivämäärä?"
         ]
       },
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a12-negation-expand",
           "a13-necessity",
           "a13-present-paradigm"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 6,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 7,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a11-negation",
           "a11-present-chunks",
           "a12-requests"
         ]
@@ -17030,7 +17147,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 12,
       "lexical": {
         "declared_forms": [
           "kopion",
@@ -17039,10 +17156,13 @@
           "on",
           "saada",
           "sähköpostilla",
+          "tarvitsen myös todistuksen.",
           "tarvitsen todistuksen työnantajalle.",
           "todistuksen",
+          "vahvistuksen",
           "voinko saada kopion tästä?",
-          "voitteko lähettää sen sähköpostilla?"
+          "voitteko lähettää sen sähköpostilla?",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
         "first_referenced": [
           "kopion",
@@ -17050,35 +17170,63 @@
           "minulla on henkilöllisyystodistus mukana.",
           "saada",
           "sähköpostilla",
+          "tarvitsen myös todistuksen.",
           "tarvitsen todistuksen työnantajalle.",
           "todistuksen",
+          "vahvistuksen",
           "voinko saada kopion tästä?",
-          "voitteko lähettää sen sähköpostilla?"
+          "voitteko lähettää sen sähköpostilla?",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
         "introduced": [
-          "kopion",
-          "sähköpostilla",
-          "tarvitsen todistuksen työnantajalle.",
-          "todistuksen",
-          "voinko saada kopion tästä?"
-        ],
-        "correct_answer": [
           "kopion",
           "milloin todistus valmistuu?",
           "minulla on henkilöllisyystodistus mukana.",
           "saada",
           "sähköpostilla",
+          "tarvitsen myös todistuksen.",
           "tarvitsen todistuksen työnantajalle.",
           "todistuksen",
+          "vahvistuksen",
           "voinko saada kopion tästä?",
-          "voitteko lähettää sen sähköpostilla?"
+          "voitteko lähettää sen sähköpostilla?",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
-        "receptive_count": 6,
-        "productive_count": 8,
-        "later_correct_retrieval": [],
-        "declared_unassessed": [
-          "on"
+        "correct_answer": [
+          "allekirjoittaa",
+          "en ymmärrä tätä kohtaa.",
+          "kopion",
+          "lomakkeessa",
+          "lomakkeessa kysytään osoitetta.",
+          "milloin todistus valmistuu?",
+          "minulla on henkilöllisyystodistus mukana.",
+          "minun pitää allekirjoittaa lomake.",
+          "on",
+          "osoitetta",
+          "pitääkö tähän kirjoittaa päivämäärä?",
+          "saada",
+          "sähköpostilla",
+          "tarvitsen myös todistuksen.",
+          "tarvitsen todistuksen työnantajalle.",
+          "todistuksen",
+          "vahvistuksen",
+          "voinko saada kopion tästä?",
+          "voitteko lähettää sen sähköpostilla?",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
+        "receptive_count": 11,
+        "productive_count": 14,
+        "later_correct_retrieval": [
+          "allekirjoittaa",
+          "en ymmärrä tätä kohtaa.",
+          "lomakkeessa",
+          "lomakkeessa kysytään osoitetta.",
+          "minun pitää allekirjoittaa lomake.",
+          "on",
+          "osoitetta",
+          "pitääkö tähän kirjoittaa päivämäärä?"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 9,
         "reading_only": [],
@@ -17100,10 +17248,17 @@
         ],
         "authored_new_forms": [
           "kopion",
+          "milloin todistus valmistuu?",
+          "minulla on henkilöllisyystodistus mukana.",
+          "saada",
           "sähköpostilla",
+          "tarvitsen myös todistuksen.",
           "tarvitsen todistuksen työnantajalle.",
           "todistuksen",
-          "voinko saada kopion tästä?"
+          "vahvistuksen",
+          "voinko saada kopion tästä?",
+          "voitteko lähettää sen sähköpostilla?",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
         ]
       },
       "grammar": {
@@ -17112,7 +17267,7 @@
           "a12-requests"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 6,
+        "structured_or_morphology_slots": 7,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -17132,12 +17287,15 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
+          "haluaisin kysyä tästä lääkkeestä.",
           "hei, haluaisin varata ajan.",
+          "minulla on kuumetta.",
           "minulle",
           "myös",
+          "oireet alkoivat maanantaina.",
           "onko torstaina vapaita aikoja?",
           "sähköpostilla",
           "tarvitsen myös todistuksen.",
@@ -17146,43 +17304,55 @@
           "vahvistuksen",
           "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
-        "first_referenced": [
-          "hei, haluaisin varata ajan.",
-          "onko torstaina vapaita aikoja?",
-          "tarvitsen myös todistuksen.",
-          "torstai sopii minulle.",
-          "vahvistuksen",
-          "voitteko lähettää vahvistuksen sähköpostilla?"
-        ],
-        "introduced": [
-          "hei, haluaisin varata ajan.",
-          "onko torstaina vapaita aikoja?",
-          "sähköpostilla",
-          "torstaina",
-          "vahvistuksen"
-        ],
+        "first_referenced": [],
+        "introduced": [],
         "correct_answer": [
+          "haluaisin kysyä tästä lääkkeestä.",
           "hei, haluaisin varata ajan.",
+          "kopion",
+          "milloin todistus valmistuu?",
+          "minulla on henkilöllisyystodistus mukana.",
+          "minulla on kuumetta.",
+          "minulle",
+          "myös",
+          "oireet alkoivat maanantaina.",
           "onko torstaina vapaita aikoja?",
+          "saada",
           "sähköpostilla",
           "tarvitsen myös todistuksen.",
+          "todistuksen",
           "torstai sopii minulle.",
           "torstaina",
           "vahvistuksen",
+          "voinko saada kopion tästä?",
           "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
-        "receptive_count": 4,
-        "productive_count": 7,
+        "receptive_count": 10,
+        "productive_count": 12,
         "later_correct_retrieval": [
-          "sähköpostilla",
-          "torstaina"
-        ],
-        "declared_unassessed": [
+          "haluaisin kysyä tästä lääkkeestä.",
+          "hei, haluaisin varata ajan.",
+          "kopion",
+          "milloin todistus valmistuu?",
+          "minulla on henkilöllisyystodistus mukana.",
+          "minulla on kuumetta.",
           "minulle",
-          "myös"
+          "myös",
+          "oireet alkoivat maanantaina.",
+          "onko torstaina vapaita aikoja?",
+          "saada",
+          "sähköpostilla",
+          "tarvitsen myös todistuksen.",
+          "todistuksen",
+          "torstai sopii minulle.",
+          "torstaina",
+          "vahvistuksen",
+          "voinko saada kopion tästä?",
+          "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 12,
+        "distractor_only_count": 15,
         "reading_only": [
           "hei, haluaisin varata ajan. onko torstaina vapaita aikoja?",
           "tarvitsen myös todistuksen. voitteko lähettää vahvistuksen sähköpostilla?"
@@ -17203,26 +17373,29 @@
           "torstai sopii minulle.",
           "voitteko lähettää vahvistuksen sähköpostilla?"
         ],
-        "authored_new_forms": [
-          "hei, haluaisin varata ajan.",
-          "onko torstaina vapaita aikoja?",
-          "sähköpostilla",
-          "torstaina",
-          "vahvistuksen"
-        ]
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a11-questions",
+          "a12-quantities",
           "a12-requests",
-          "a13-present-paradigm"
+          "a13-present-paradigm",
+          "a21-imperfect",
+          "a21-rections"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 6,
-        "morphology_slots": 1,
+        "structured_or_morphology_slots": 8,
+        "morphology_slots": 2,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
-          "a11-present-chunks"
+          "a11-case-chunks",
+          "a11-olla",
+          "a11-present-chunks",
+          "a13-local-expansion",
+          "a13-past-recognition",
+          "a13-verb-classes"
         ]
       }
     },
@@ -19812,63 +19985,7 @@
         "placements": 3
       }
     ],
-    "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "a2.1-section-2-lesson-1",
-        "forms": [
-          "minulle"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-2",
-        "forms": [
-          "pitää"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-3",
-        "forms": [
-          "oli"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-4",
-        "forms": [
-          "pitää"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-5",
-        "forms": [
-          "jos"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-6",
-        "forms": [
-          "minun"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-7",
-        "forms": [
-          "minun"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-8",
-        "forms": [
-          "on"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-2-lesson-9",
-        "forms": [
-          "minulle",
-          "myös"
-        ]
-      }
-    ],
+    "lessons_with_unassessed_declared_targets": [],
     "grammar_concepts_without_lesson_ids": [
       {
         "id": "a11-sounds",
