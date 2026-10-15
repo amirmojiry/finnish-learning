@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.52.0] - 2026-10-15
+
+### Added
+
+- P2 contextual editorial identity overlay for 15 section/item pairs across 24 lesson references to five ambiguous surfaces: aika, ajan, voi, pitää and tuli.
+- Strict validation against attested Finnish examples, six context-bounded senses, finite/connegative past/present morphology and explicit legacy lemma/gloss caveats; preserve original global homograph uncertainty, form IDs, Parole and Course/Word Practice SRS semantics.
+- Reproducible item-scoped JSON/readable audit, bilingual linguistic notes and negative tests for stale/false senses and accidental proficiency transfer. P2/P5/R3 and A2.1 Section 3 release gates remain open.
+
+
 ## [1.51.0] - 2026-10-15
 
 ### Added

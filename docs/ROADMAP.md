@@ -12,6 +12,10 @@ All twelve A1 section packages and A2.1 Section 1 travel/past (#178/#179) are ac
 
 First editorial batch [#182](https://github.com/amirmojiry/finnish-learning/issues/182) adds 40 deliberate nominal/pronoun form-and-context-sense links to the original seven. See [review methodology](P2-LEXICAL-IDENTITIES-BATCH1.md) and the [deterministic report](P2-IDENTITY-BATCH1-REPORT.md). This identifies written forms only; it does not transfer Word Practice SRS mastery, assert general declension competence, or close the remaining P2/P5/R3 release gates. A2.1 Section 3 remains outline-only.
 
+## P2 contextual senses, batch 2 (2026-10-15)
+
+The scoped [batch #184](https://github.com/amirmojiry/finnish-learning/issues/184) differentiates five globally unresolved homographs in 15 source course items and 24 lesson references, using a [new item-scoped sense contract](P2-CONTEXTUAL-IDENTITY-BATCH2.md) and [deterministic report](P2-CONTEXTUAL-IDENTITY-BATCH2-REPORT.md). Existing exact form IDs and Word Practice SRS never become lexeme/sense mastery automatically. P2 overall, P5/R3 and independent language assessment are outstanding; no playable A2.1 Section 3.
+
 ## Baseline and source of truth
 
 This status snapshot was checked on **2026-10-09**. For fresh implementation counts use `npm run curriculum:audit`, which reads the actual course JSON files. A planned level is not a playable level.
