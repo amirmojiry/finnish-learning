@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2623,
+    "graded_activity_slots": 2733,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 761,
+    "assessed_again_after_earlier_reference": 799,
     "grammar_concepts_planned_for_shipped_levels": 27,
-    "grammar_concepts_with_explicit_lesson_ids": 23,
-    "lessons_without_explicit_grammar_concept_ids": 25,
-    "graded_grammar_related_slots": 566,
-    "graded_morphology_slots": 75,
-    "lessons_with_declared_unassessed_forms": 34,
+    "grammar_concepts_with_explicit_lesson_ids": 26,
+    "lessons_without_explicit_grammar_concept_ids": 15,
+    "graded_grammar_related_slots": 614,
+    "graded_morphology_slots": 78,
+    "lessons_with_declared_unassessed_forms": 26,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -118,9 +118,9 @@
       "level": "A1.3",
       "id": "a1.3-section-3",
       "lessons": 10,
-      "graded_slots": 116,
-      "unassessed_target_forms": 14,
-      "lessons_missing_grammar_ids": 10
+      "graded_slots": 226,
+      "unassessed_target_forms": 0,
+      "lessons_missing_grammar_ids": 0
     },
     {
       "level": "A1.3",
@@ -12621,13 +12621,14 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "kurssi",
           "kurssi alkaa aamulla.",
           "minulla on iltavuoro.",
           "pitää",
+          "teen tämän tänään.",
           "tehdä",
           "tehtävä",
           "tämä tehtävä pitää tehdä tänään.",
@@ -12638,6 +12639,7 @@
           "kurssi",
           "kurssi alkaa aamulla.",
           "minulla on iltavuoro.",
+          "teen tämän tänään.",
           "tehtävä",
           "tämä tehtävä pitää tehdä tänään.",
           "tänä",
@@ -12645,31 +12647,35 @@
         ],
         "introduced": [
           "kurssi",
-          "pitää",
-          "tehdä",
-          "tehtävä",
-          "tänä",
-          "vuoro"
-        ],
-        "correct_answer": [
-          "kurssi",
           "kurssi alkaa aamulla.",
+          "minulla on iltavuoro.",
           "pitää",
+          "teen tämän tänään.",
           "tehdä",
           "tehtävä",
           "tämä tehtävä pitää tehdä tänään.",
           "tänä",
           "vuoro"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "correct_answer": [
+          "kurssi",
+          "kurssi alkaa aamulla.",
+          "minulla on iltavuoro.",
+          "pitää",
+          "teen tämän tänään.",
+          "tehdä",
+          "tehtävä",
+          "tämä tehtävä pitää tehdä tänään.",
+          "tänä",
+          "vuoro"
+        ],
+        "receptive_count": 7,
+        "productive_count": 4,
         "later_correct_retrieval": [
           "pitää",
           "tehdä"
         ],
-        "declared_unassessed": [
-          "minulla on iltavuoro."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 0,
         "reading_only": [],
@@ -12690,21 +12696,31 @@
         ],
         "authored_new_forms": [
           "kurssi",
-          "pitää",
-          "tehdä",
+          "kurssi alkaa aamulla.",
+          "minulla on iltavuoro.",
+          "teen tämän tänään.",
           "tehtävä",
+          "tämä tehtävä pitää tehdä tänään.",
           "tänä",
           "vuoro"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-necessity",
+          "a13-present-paradigm",
+          "a13-verb-classes"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-requests",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -12719,7 +12735,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "miten",
@@ -12744,35 +12760,46 @@
         ],
         "introduced": [
           "miten",
-          "mitä",
-          "selittää",
-          "tarkoittaa",
-          "uudestaan",
-          "vielä"
-        ],
-        "correct_answer": [
-          "miten",
+          "miten tämä tehdään?",
           "mitä",
           "mitä tämä tarkoittaa?",
           "selittää",
           "tarkoittaa",
           "uudestaan",
           "vielä",
+          "voitko sanoa uudestaan?",
           "voitko selittää?"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "correct_answer": [
+          "kurssi",
+          "minulla on iltavuoro.",
+          "miten",
+          "miten tämä tehdään?",
+          "mitä",
+          "mitä tämä tarkoittaa?",
+          "selittää",
+          "tarkoittaa",
+          "tämä tehtävä pitää tehdä tänään.",
+          "tänä",
+          "uudestaan",
+          "vielä",
+          "voitko sanoa uudestaan?",
+          "voitko selittää?"
+        ],
+        "receptive_count": 7,
+        "productive_count": 9,
         "later_correct_retrieval": [
+          "kurssi",
+          "minulla on iltavuoro.",
           "miten",
           "mitä",
+          "tämä tehtävä pitää tehdä tänään.",
+          "tänä",
           "vielä"
         ],
-        "declared_unassessed": [
-          "miten tämä tehdään?",
-          "voitko sanoa uudestaan?"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [
           "miten",
@@ -12791,22 +12818,29 @@
           "voitko selittää?"
         ],
         "authored_new_forms": [
-          "miten",
-          "mitä",
+          "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
           "selittää",
           "tarkoittaa",
           "uudestaan",
-          "vielä"
+          "voitko sanoa uudestaan?",
+          "voitko selittää?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-questions",
+          "a12-requests"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -12821,7 +12855,7 @@
         "topic": 3,
         "expressions": 3
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 7,
       "lexical": {
         "declared_forms": [
           "avaa",
@@ -12845,10 +12879,13 @@
         ],
         "introduced": [
           "avaa",
+          "avaa tiedosto ensin.",
           "ensin",
           "jälkeen",
           "kirjoita",
+          "kirjoita nimi.",
           "lähetä",
+          "lähetä viesti sen jälkeen.",
           "sitten"
         ],
         "correct_answer": [
@@ -12858,18 +12895,33 @@
           "jälkeen",
           "kirjoita",
           "kirjoita nimi.",
+          "kurssi alkaa aamulla.",
           "lähetä",
-          "sitten"
+          "lähetä viesti sen jälkeen.",
+          "sitten",
+          "tarkoittaa",
+          "teen tämän tänään.",
+          "tehtävä",
+          "uudestaan",
+          "voitko sanoa uudestaan?",
+          "voitko selittää?",
+          "vuoro"
         ],
         "receptive_count": 8,
-        "productive_count": 2,
+        "productive_count": 12,
         "later_correct_retrieval": [
           "jälkeen",
-          "sitten"
+          "kurssi alkaa aamulla.",
+          "sitten",
+          "tarkoittaa",
+          "teen tämän tänään.",
+          "tehtävä",
+          "uudestaan",
+          "voitko sanoa uudestaan?",
+          "voitko selittää?",
+          "vuoro"
         ],
-        "declared_unassessed": [
-          "lähetä viesti sen jälkeen."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -12890,21 +12942,27 @@
         ],
         "authored_new_forms": [
           "avaa",
+          "avaa tiedosto ensin.",
           "ensin",
-          "jälkeen",
           "kirjoita",
+          "kirjoita nimi.",
           "lähetä",
-          "sitten"
+          "lähetä viesti sen jälkeen."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-commands",
+          "a12-frequency-adverbs"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -12919,7 +12977,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 5,
       "lexical": {
         "declared_forms": [
           "harjoitella",
@@ -12942,37 +13000,50 @@
         ],
         "introduced": [
           "harjoitella",
-          "osaan",
-          "pitää",
-          "tarvitsen",
-          "voi",
-          "vähän"
-        ],
-        "correct_answer": [
-          "harjoitella",
+          "minun pitää harjoitella.",
           "osaan",
           "osaan vähän suomea.",
           "pitää",
-          "tarvitsen",
-          "tarvitsen apua.",
           "voi",
+          "voin tehdä tämän.",
           "vähän"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "pitää",
-          "tarvitsen",
-          "tarvitsen apua.",
-          "voi",
-          "vähän"
-        ],
-        "declared_unassessed": [
+        "correct_answer": [
+          "avaa",
+          "harjoitella",
+          "kirjoita nimi.",
+          "lähetä",
           "minun pitää harjoitella.",
-          "voin tehdä tämän."
+          "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
+          "osaan",
+          "osaan vähän suomea.",
+          "pitää",
+          "selittää",
+          "tarvitsen",
+          "tarvitsen apua.",
+          "voi",
+          "voin tehdä tämän.",
+          "vähän"
         ],
+        "receptive_count": 7,
+        "productive_count": 11,
+        "later_correct_retrieval": [
+          "avaa",
+          "kirjoita nimi.",
+          "lähetä",
+          "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
+          "pitää",
+          "selittää",
+          "tarvitsen",
+          "tarvitsen apua.",
+          "voi",
+          "vähän"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 3,
+        "distractor_only_count": 2,
         "reading_only": [],
         "high_frequency_target_forms": [
           "pitää",
@@ -12992,21 +13063,26 @@
         ],
         "authored_new_forms": [
           "harjoitella",
+          "minun pitää harjoitella.",
           "osaan",
-          "pitää",
-          "tarvitsen",
-          "voi",
-          "vähän"
+          "osaan vähän suomea.",
+          "voin tehdä tämän."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-necessity",
+          "a13-partitive-patterns"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 5,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a12-quantities",
+          "a12-requests"
+        ]
       }
     },
     {
@@ -13021,7 +13097,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "kanssa",
@@ -13048,31 +13124,48 @@
         "introduced": [
           "kanssa",
           "meidän",
-          "opettaja",
-          "ryhmä",
-          "työkaveri",
-          "yhdessä"
-        ],
-        "correct_answer": [
-          "kanssa",
-          "meidän",
+          "meidän opettajamme on täällä.",
           "opettaja",
           "opiskelen tässä ryhmässä.",
           "ryhmä",
+          "teemme tämän yhdessä.",
           "työkaveri",
           "työskentelen hänen kanssaan.",
           "yhdessä"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
+        "correct_answer": [
+          "avaa tiedosto ensin.",
+          "ensin",
           "kanssa",
+          "kirjoita",
+          "lähetä viesti sen jälkeen.",
+          "meidän",
+          "meidän opettajamme on täällä.",
+          "opettaja",
+          "opiskelen tässä ryhmässä.",
+          "osaan",
+          "osaan vähän suomea.",
+          "ryhmä",
+          "teemme tämän yhdessä.",
+          "työkaveri",
+          "työskentelen hänen kanssaan.",
+          "voin tehdä tämän.",
           "yhdessä"
         ],
-        "declared_unassessed": [
-          "meidän opettajamme on täällä.",
-          "teemme tämän yhdessä."
+        "receptive_count": 7,
+        "productive_count": 12,
+        "later_correct_retrieval": [
+          "avaa tiedosto ensin.",
+          "ensin",
+          "kanssa",
+          "kirjoita",
+          "lähetä viesti sen jälkeen.",
+          "osaan",
+          "osaan vähän suomea.",
+          "voin tehdä tämän.",
+          "yhdessä"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -13093,22 +13186,30 @@
           "työskentelen hänen kanssaan."
         ],
         "authored_new_forms": [
-          "kanssa",
           "meidän",
+          "meidän opettajamme on täällä.",
           "opettaja",
+          "opiskelen tässä ryhmässä.",
           "ryhmä",
+          "teemme tämän yhdessä.",
           "työkaveri",
-          "yhdessä"
+          "työskentelen hänen kanssaan."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a13-local-expansion",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-local-cases"
+        ]
       }
     },
     {
@@ -13123,7 +13224,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 6,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "että",
@@ -13132,6 +13233,7 @@
           "liite",
           "liite on mukana.",
           "lähettää",
+          "lähetän sinulle viestin.",
           "minulle",
           "sinä",
           "sähköposti",
@@ -13144,37 +13246,55 @@
           "liite",
           "liite on mukana.",
           "lähettää",
+          "lähetän sinulle viestin.",
           "sähköposti",
           "voitko lähettää sen minulle?"
         ],
         "introduced": [
           "että",
-          "liite",
-          "lähettää",
-          "minulle",
-          "sinä",
-          "sähköposti"
-        ],
-        "correct_answer": [
-          "että",
           "hei! lähetän sinulle viestin.",
+          "kiitos avusta.",
           "liite",
           "liite on mukana.",
           "lähettää",
+          "lähetän sinulle viestin.",
           "minulle",
           "sinä",
-          "sähköposti"
-        ],
-        "receptive_count": 8,
-        "productive_count": 2,
-        "later_correct_retrieval": [
-          "minulle",
-          "sinä"
-        ],
-        "declared_unassessed": [
-          "kiitos avusta.",
+          "sähköposti",
           "voitko lähettää sen minulle?"
         ],
+        "correct_answer": [
+          "että",
+          "harjoitella",
+          "hei! lähetän sinulle viestin.",
+          "kiitos avusta.",
+          "liite",
+          "liite on mukana.",
+          "lähettää",
+          "lähetän sinulle viestin.",
+          "minulle",
+          "minun pitää harjoitella.",
+          "opiskelen tässä ryhmässä.",
+          "ryhmä",
+          "sinä",
+          "sähköposti",
+          "teemme tämän yhdessä.",
+          "työkaveri",
+          "voitko lähettää sen minulle?"
+        ],
+        "receptive_count": 7,
+        "productive_count": 11,
+        "later_correct_retrieval": [
+          "harjoitella",
+          "minulle",
+          "minun pitää harjoitella.",
+          "opiskelen tässä ryhmässä.",
+          "ryhmä",
+          "sinä",
+          "teemme tämän yhdessä.",
+          "työkaveri"
+        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -13196,21 +13316,34 @@
         ],
         "authored_new_forms": [
           "että",
+          "hei! lähetän sinulle viestin.",
+          "kiitos avusta.",
           "liite",
+          "liite on mukana.",
           "lähettää",
-          "minulle",
-          "sinä",
-          "sähköposti"
+          "lähetän sinulle viestin.",
+          "sähköposti",
+          "voitko lähettää sen minulle?"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-requests",
+          "a13-kpt-preview",
+          "a13-local-expansion",
+          "a13-verb-classes"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 3,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a13-present-paradigm",
+          "a13-verb-classes"
+        ]
       }
     },
     {
@@ -13249,34 +13382,52 @@
         ],
         "introduced": [
           "ensi",
-          "määräaika",
-          "perjantaina",
-          "tänä",
-          "viikolla",
-          "viime"
-        ],
-        "correct_answer": [
-          "ensi",
+          "ensi viikolla on uusi tehtävä.",
           "määräaika",
           "määräaika on perjantaina.",
-          "perjantaina",
           "teen sen tällä viikolla.",
           "tänä",
           "viikolla",
-          "viime"
+          "viime",
+          "viime viikolla olin poissa."
+        ],
+        "correct_answer": [
+          "ensi",
+          "ensi viikolla on uusi tehtävä.",
+          "kiitos avusta.",
+          "liite on mukana.",
+          "lähettää",
+          "meidän",
+          "meidän opettajamme on täällä.",
+          "määräaika",
+          "määräaika on perjantaina.",
+          "opettaja",
+          "perjantaina",
+          "sähköposti",
+          "teen sen tällä viikolla.",
+          "työskentelen hänen kanssaan.",
+          "tänä",
+          "viikolla",
+          "viime",
+          "viime viikolla olin poissa."
         ],
         "receptive_count": 8,
-        "productive_count": 2,
+        "productive_count": 12,
         "later_correct_retrieval": [
           "ensi",
+          "kiitos avusta.",
+          "liite on mukana.",
+          "lähettää",
+          "meidän",
+          "meidän opettajamme on täällä.",
+          "opettaja",
           "perjantaina",
+          "sähköposti",
+          "työskentelen hänen kanssaan.",
           "tänä",
           "viime"
         ],
-        "declared_unassessed": [
-          "ensi viikolla on uusi tehtävä.",
-          "viime viikolla olin poissa."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -13297,22 +13448,28 @@
           "viime viikolla olin poissa."
         ],
         "authored_new_forms": [
-          "ensi",
+          "ensi viikolla on uusi tehtävä.",
           "määräaika",
-          "perjantaina",
-          "tänä",
+          "määräaika on perjantaina.",
+          "teen sen tällä viikolla.",
           "viikolla",
-          "viime"
+          "viime viikolla olin poissa."
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a12-frequency-adverbs",
+          "a13-past-recognition"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 5,
+        "morphology_slots": 1,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks",
+          "a13-present-paradigm"
+        ]
       }
     },
     {
@@ -13351,34 +13508,51 @@
         ],
         "introduced": [
           "koska",
-          "myöhässä",
+          "olen myöhässä, koska bussi on myöhässä.",
+          "olen poissa sairauden vuoksi.",
+          "olen tänään poissa.",
           "pois",
           "poissa",
-          "sairas",
+          "tulen huomenna takaisin.",
           "vuoksi"
         ],
         "correct_answer": [
+          "ensi viikolla on uusi tehtävä.",
+          "että",
+          "hei! lähetän sinulle viestin.",
           "koska",
+          "liite",
+          "lähetän sinulle viestin.",
           "myöhässä",
+          "määräaika",
+          "määräaika on perjantaina.",
           "olen myöhässä, koska bussi on myöhässä.",
+          "olen poissa sairauden vuoksi.",
           "olen tänään poissa.",
           "pois",
           "poissa",
           "sairas",
+          "tulen huomenna takaisin.",
+          "voitko lähettää sen minulle?",
           "vuoksi"
         ],
-        "receptive_count": 8,
-        "productive_count": 2,
+        "receptive_count": 7,
+        "productive_count": 13,
         "later_correct_retrieval": [
+          "ensi viikolla on uusi tehtävä.",
+          "että",
+          "hei! lähetän sinulle viestin.",
           "koska",
+          "liite",
+          "lähetän sinulle viestin.",
           "myöhässä",
+          "määräaika",
+          "määräaika on perjantaina.",
           "pois",
-          "sairas"
+          "sairas",
+          "voitko lähettää sen minulle?"
         ],
-        "declared_unassessed": [
-          "olen poissa sairauden vuoksi.",
-          "tulen huomenna takaisin."
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
         "distractor_only_count": 3,
         "reading_only": [],
@@ -13399,22 +13573,27 @@
           "tulen huomenna takaisin."
         ],
         "authored_new_forms": [
-          "koska",
-          "myöhässä",
-          "pois",
+          "olen myöhässä, koska bussi on myöhässä.",
+          "olen poissa sairauden vuoksi.",
+          "olen tänään poissa.",
           "poissa",
-          "sairas",
+          "tulen huomenna takaisin.",
           "vuoksi"
         ]
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a13-present-paradigm"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
+        "structured_or_morphology_slots": 4,
         "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-present-chunks"
+        ]
       }
     },
     {
@@ -13433,10 +13612,19 @@
       "lexical": {
         "declared_forms": [
           "avaa tiedosto ensin.",
+          "lähetä viesti sen jälkeen.",
+          "lähetän sinulle viestin.",
+          "minun pitää harjoitella.",
           "mitä tämä tarkoittaa?",
           "määräaika on perjantaina.",
           "olen tänään poissa.",
-          "voitko lähettää sen minulle?"
+          "opiskelen tässä ryhmässä.",
+          "tarvitsen apua.",
+          "teemme tämän yhdessä.",
+          "teen tämän tänään.",
+          "viime viikolla olin poissa.",
+          "voitko lähettää sen minulle?",
+          "voitko sanoa uudestaan?"
         ],
         "first_referenced": [],
         "introduced": [
@@ -13445,23 +13633,55 @@
         ],
         "correct_answer": [
           "avaa tiedosto ensin.",
+          "hei! lähetän sinulle viestin.",
+          "kiitos avusta.",
+          "liite on mukana.",
+          "lähetä viesti sen jälkeen.",
+          "lähetän sinulle viestin.",
+          "minun pitää harjoitella.",
           "mitä tämä tarkoittaa?",
           "määräaika on perjantaina.",
+          "olen poissa sairauden vuoksi.",
           "olen tänään poissa.",
-          "voitko lähettää sen minulle?"
+          "opiskelen tässä ryhmässä.",
+          "tarvitsen apua.",
+          "teemme tämän yhdessä.",
+          "teen sen tällä viikolla.",
+          "teen tämän tänään.",
+          "viikolla",
+          "viime viikolla olin poissa.",
+          "voitko lähettää sen minulle?",
+          "voitko sanoa uudestaan?",
+          "vuoksi"
         ],
-        "receptive_count": 5,
-        "productive_count": 2,
+        "receptive_count": 6,
+        "productive_count": 19,
         "later_correct_retrieval": [
           "avaa tiedosto ensin.",
+          "hei! lähetän sinulle viestin.",
+          "kiitos avusta.",
+          "liite on mukana.",
+          "lähetä viesti sen jälkeen.",
+          "lähetän sinulle viestin.",
+          "minun pitää harjoitella.",
           "mitä tämä tarkoittaa?",
           "määräaika on perjantaina.",
+          "olen poissa sairauden vuoksi.",
           "olen tänään poissa.",
-          "voitko lähettää sen minulle?"
+          "opiskelen tässä ryhmässä.",
+          "tarvitsen apua.",
+          "teemme tämän yhdessä.",
+          "teen sen tällä viikolla.",
+          "teen tämän tänään.",
+          "viikolla",
+          "viime viikolla olin poissa.",
+          "voitko lähettää sen minulle?",
+          "voitko sanoa uudestaan?",
+          "vuoksi"
         ],
         "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 6,
         "reading_only": [
           "mitä tämä tarkoittaa? avaa tiedosto ensin.",
           "voitko lähettää sen minulle? määräaika on perjantaina."
@@ -13479,12 +13699,33 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-commands",
+          "a12-frequency-adverbs",
+          "a12-requests",
+          "a13-kpt-preview",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-past-recognition",
+          "a13-present-paradigm",
+          "a13-verb-classes"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 1,
-        "morphology_slots": 0,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 14,
+        "morphology_slots": 1,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests",
+          "a13-present-paradigm",
+          "a13-verb-classes"
+        ]
       }
     },
     {
@@ -13505,16 +13746,22 @@
           "avaa tiedosto ensin.",
           "hei! lähetän sinulle viestin.",
           "lähetä viesti sen jälkeen.",
+          "lähetän sinulle viestin.",
           "minulla on iltavuoro.",
           "minun pitää harjoitella.",
           "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
           "määräaika on perjantaina.",
           "olen poissa sairauden vuoksi.",
           "olen tänään poissa.",
           "opiskelen tässä ryhmässä.",
           "osaan vähän suomea.",
+          "tarvitsen apua.",
+          "teemme tämän yhdessä.",
+          "teen tämän tänään.",
           "työskentelen hänen kanssaan.",
           "tämä tehtävä pitää tehdä tänään.",
+          "viime viikolla olin poissa.",
           "voitko lähettää sen minulle?",
           "voitko sanoa uudestaan?"
         ],
@@ -13524,35 +13771,53 @@
           "avaa tiedosto ensin.",
           "hei! lähetän sinulle viestin.",
           "lähetä viesti sen jälkeen.",
+          "lähetän sinulle viestin.",
           "minulla on iltavuoro.",
           "minun pitää harjoitella.",
           "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
           "määräaika on perjantaina.",
+          "olen myöhässä, koska bussi on myöhässä.",
           "olen poissa sairauden vuoksi.",
           "olen tänään poissa.",
           "opiskelen tässä ryhmässä.",
           "osaan vähän suomea.",
+          "poissa",
+          "tarvitsen apua.",
+          "teemme tämän yhdessä.",
+          "teen tämän tänään.",
+          "tulen huomenna takaisin.",
           "työskentelen hänen kanssaan.",
           "tämä tehtävä pitää tehdä tänään.",
+          "viime viikolla olin poissa.",
           "voitko lähettää sen minulle?",
           "voitko sanoa uudestaan?"
         ],
-        "receptive_count": 7,
-        "productive_count": 8,
+        "receptive_count": 8,
+        "productive_count": 17,
         "later_correct_retrieval": [
           "avaa tiedosto ensin.",
           "hei! lähetän sinulle viestin.",
           "lähetä viesti sen jälkeen.",
+          "lähetän sinulle viestin.",
           "minulla on iltavuoro.",
           "minun pitää harjoitella.",
           "miten tämä tehdään?",
+          "mitä tämä tarkoittaa?",
           "määräaika on perjantaina.",
+          "olen myöhässä, koska bussi on myöhässä.",
           "olen poissa sairauden vuoksi.",
           "olen tänään poissa.",
           "opiskelen tässä ryhmässä.",
           "osaan vähän suomea.",
+          "poissa",
+          "tarvitsen apua.",
+          "teemme tämän yhdessä.",
+          "teen tämän tänään.",
+          "tulen huomenna takaisin.",
           "työskentelen hänen kanssaan.",
           "tämä tehtävä pitää tehdä tänään.",
+          "viime viikolla olin poissa.",
           "voitko lähettää sen minulle?",
           "voitko sanoa uudestaan?"
         ],
@@ -13567,12 +13832,33 @@
       },
       "grammar": {
         "note_present": true,
-        "concept_ids": [],
+        "concept_ids": [
+          "a11-olla",
+          "a11-questions",
+          "a12-commands",
+          "a12-frequency-adverbs",
+          "a12-requests",
+          "a13-kpt-preview",
+          "a13-local-expansion",
+          "a13-necessity",
+          "a13-partitive-patterns",
+          "a13-past-recognition",
+          "a13-present-paradigm",
+          "a13-verb-classes"
+        ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 4,
-        "morphology_slots": 1,
-        "evidence_status": "unmapped",
-        "prerequisite_concept_ids": []
+        "structured_or_morphology_slots": 15,
+        "morphology_slots": 2,
+        "evidence_status": "explicit_ids_need_activity_mapping_review",
+        "prerequisite_concept_ids": [
+          "a11-olla",
+          "a11-present-chunks",
+          "a12-local-cases",
+          "a12-quantities",
+          "a12-requests",
+          "a13-present-paradigm",
+          "a13-verb-classes"
+        ]
       }
     },
     {
@@ -19127,60 +19413,6 @@
     ],
     "lessons_with_unassessed_declared_targets": [
       {
-        "lesson_id": "a1.3-section-3-lesson-1",
-        "forms": [
-          "minulla on iltavuoro."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-2",
-        "forms": [
-          "miten tämä tehdään?",
-          "voitko sanoa uudestaan?"
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-3",
-        "forms": [
-          "lähetä viesti sen jälkeen."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-4",
-        "forms": [
-          "minun pitää harjoitella.",
-          "voin tehdä tämän."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-5",
-        "forms": [
-          "meidän opettajamme on täällä.",
-          "teemme tämän yhdessä."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-6",
-        "forms": [
-          "kiitos avusta.",
-          "voitko lähettää sen minulle?"
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-7",
-        "forms": [
-          "ensi viikolla on uusi tehtävä.",
-          "viime viikolla olin poissa."
-        ]
-      },
-      {
-        "lesson_id": "a1.3-section-3-lesson-8",
-        "forms": [
-          "olen poissa sairauden vuoksi.",
-          "tulen huomenna takaisin."
-        ]
-      },
-      {
         "lesson_id": "a1.3-section-4-lesson-1",
         "forms": [
           "bussi tuli myöhässä.",
@@ -19352,30 +19584,6 @@
         "level": "A1.1",
         "title_en": "Basic phonology and vowel length",
         "prerequisites": []
-      },
-      {
-        "id": "a13-verb-classes",
-        "level": "A1.3",
-        "title_en": "Selected verb types and stems",
-        "prerequisites": [
-          "a13-present-paradigm"
-        ]
-      },
-      {
-        "id": "a13-kpt-preview",
-        "level": "A1.3",
-        "title_en": "Selected consonant gradation",
-        "prerequisites": [
-          "a13-verb-classes"
-        ]
-      },
-      {
-        "id": "a13-past-recognition",
-        "level": "A1.3",
-        "title_en": "Recognition of common past forms",
-        "prerequisites": [
-          "a13-present-paradigm"
-        ]
       }
     ],
     "unresolved_grammar_dependencies": [],
