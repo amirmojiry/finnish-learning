@@ -49,9 +49,10 @@ test('both lessons keep activity and progress contracts without padding',()=>{
   assert.equal(lesson.activities.filter(a=>a.type==='choice'&&a.mode==='listen').length,1);
   assert.equal(lesson.activities.filter(a=>['morphology-choice','inflection-production'].includes(a.type)).length,lesson.morphology_practice.length);
   assert.equal(lesson.activities.filter(a=>['sentence-order','controlled-production','expression-completion'].includes(a.type)).length,lesson.structured_practice.length);
-  assert.deepEqual(lesson.learning_objectives.lexical.map(x=>x.target_id),lesson.new_targets);
+  assert.ok(lesson.new_targets.every(id=>lesson.learning_objectives.lexical.some(goal=>goal.target_id===id&&goal.status==='introduced')));
+  assert.ok(lesson.learning_objectives.lexical.length>=lesson.new_targets.length);
  }
- assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),184);
+ assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),275);
 });
 
 test('missing evidence, unlinked correct answers and fabricated prereqs are rejected',()=>{

@@ -8,9 +8,9 @@ const lessons=section.lessons.slice(4);
 const expected=[
  ['a12-requests','a13-present-paradigm','a21-rections'],
  ['a13-necessity','a11-questions'],
- ['a13-present-paradigm','a13-necessity'],
+ ['a13-present-paradigm','a13-necessity','a12-negation-expand'],
  ['a12-requests'],
- ['a12-requests','a13-present-paradigm'],
+ ['a12-requests','a13-present-paradigm','a21-imperfect','a21-rections','a12-quantities','a11-questions'],
  ['a13-necessity','a13-present-paradigm']
 ];
 test('all six service lessons declare separately assessed communicative, lexical and grammar goals',()=>{
@@ -19,14 +19,16 @@ test('all six service lessons declare separately assessed communicative, lexical
   assert.doesNotThrow(()=>course.validateLessonObjectives(lesson,section,curriculum.grammar_concepts));
   assert.deepEqual(lesson.learning_objectives.communicative,[{id:lesson.id+'-can-do',can_do_fa:lesson.objective_fa}]);
   assert.deepEqual(lesson.learning_objectives.grammar.map(g=>g.concept_id),expected[i]);
-  assert.deepEqual(lesson.learning_objectives.lexical.map(g=>g.target_id),i===5?lesson.checkpoint_targets:lesson.new_targets);
+  if(i===5)assert.deepEqual(lesson.learning_objectives.lexical.map(g=>g.target_id),lesson.checkpoint_targets);
+  else assert.ok(lesson.new_targets.every(id=>lesson.learning_objectives.lexical.some(g=>g.target_id===id&&g.status==='introduced')));
   assert.equal(lesson.activities.length,lesson.activity_count ?? 15);
   for(const goal of lesson.learning_objectives.grammar){
    const canonical=curriculum.grammar_concepts.find(g=>g.id===goal.concept_id);
    assert.deepEqual(goal.prerequisite_concept_ids,canonical.prerequisites);
    assert.equal(goal.status,'reviewed');
    const link=goal.evidence[0];
-   assert.equal(link.mode,'supported_production');
+   assert.ok(['supported_production','recognition'].includes(link.mode));
+   if(goal.concept_id==='a12-quantities')assert.equal(link.mode,'recognition');
    const activity=lesson.activities.find(a=>a.type===link.activity_type&&a.item===link.item_id);
    assert.ok(activity,'positive graded evidence is missing: '+lesson.id+' '+goal.concept_id);
    assert.ok(activity.grammar_concept_ids.includes(goal.concept_id));

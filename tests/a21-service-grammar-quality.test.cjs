@@ -52,5 +52,5 @@ test('grammar evidence requires real linked graded decisions and canonical prere
   assert.throws(()=>course.validateLessonObjectives(badPrereq,section,curriculum.grammar_concepts),/prerequisites differ/);
  }
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),184);
+ assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),275);
 });

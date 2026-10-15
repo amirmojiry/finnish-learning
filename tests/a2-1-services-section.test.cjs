@@ -35,7 +35,7 @@ test('A2.1 Section 2 is the 14th playable section, with 140 existing and new les
 
 test('A2.1 service lessons map all authored Finnish/Persian contract targets',()=>{
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),184);
+ assert.equal(section.lessons.reduce((total,l)=>total+l.activities.length,0),275);
  for(let i=0;i<10;i++){
   const l=section.lessons[i],spec=contract.sections[1].lessons[i];
   assert.equal(l.curriculum_id,spec.id);
@@ -93,7 +93,7 @@ test('all service grammar prompts reconstruct their explicitly taught Finnish ex
 test('service reading prompts offer one answer explicitly supported by the short passage',()=>{
  const lesson=section.lessons[8];
  const readings=lesson.activities.filter(a=>a.type==='short-reading');
- assert.equal(readings.length,2);
+ assert.equal(readings.length,4);
  for(const a of readings){
   const passage=section.items[a.item],answer=section.items[a.question_item];
   assert.ok(passage.surface_form.includes(answer.surface_form),a.item);
