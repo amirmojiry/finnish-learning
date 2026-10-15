@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "parent_issue": 101,
+  "batch_issue": 182,
+  "scope": "Explicit, bounded noun/pronoun form+sense editorial decisions; no learner proficiency claim",
+  "disclaimer": "No Course scores, review due dates, Word Practice SRS history or lexeme-wide mastery is inferred or transferred.",
+  "counts": {
+    "total_records": 1264,
+    "reviewed_forms": 47,
+    "previously_reviewed_forms": 7,
+    "first_batch_new_forms": 40,
+    "reviewed_nouns_in_batch": 23,
+    "reviewed_pronouns_in_batch": 17,
+    "unresolved_forms": 777,
+    "unresolved_expressions": 440,
+    "distinct_reviewed_lexemes": 31,
+    "distinct_reviewed_senses": 31,
+    "new_forms_in_shipped_lessons": 38,
+    "new_dictionary_only_forms": 2,
+    "new_course_occurrences": 108
+  },
+  "batch_provenance": {
+    "ranked": 20,
+    "source_backed_outside_dictionary": 20,
+    "curated_unranked": 0
+  },
+  "deliberately_unresolved": [
+    "aika",
+    "kotona",
+    "voi",
+    "pitää",
+    "tuli"
+  ],
+  "families": [
+    {
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "forms": [
+        {
+          "surface_form": "aikaa",
+          "form_id": "form:61-69-6b-61-61",
+          "case": "partitive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "aikana",
+          "form_id": "form:61-69-6b-61-6e-61",
+          "case": "essive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "ajan",
+          "form_id": "form:61-6a-61-6e",
+          "case": "genitive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:apteekki",
+      "sense_id": "sense:apteekki-pharmacy",
+      "forms": [
+        {
+          "surface_form": "apteekki",
+          "form_id": "form:61-70-74-65-65-6b-6b-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 4
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:asema",
+      "sense_id": "sense:asema-station",
+      "forms": [
+        {
+          "surface_form": "asema",
+          "form_id": "form:61-73-65-6d-61",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:bussi",
+      "sense_id": "sense:bussi-bus",
+      "forms": [
+        {
+          "surface_form": "bussi",
+          "form_id": "form:62-75-73-73-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:han",
+      "sense_id": "sense:han-third-person-singular",
+      "forms": [
+        {
+          "surface_form": "hän",
+          "form_id": "form:68-e4-6e",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 4
+        },
+        {
+          "surface_form": "hänen",
+          "form_id": "form:68-e4-6e-65-6e",
+          "case": "genitive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 0
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:he",
+      "sense_id": "sense:he-third-person-plural",
+      "forms": [
+        {
+          "surface_form": "he",
+          "form_id": "form:68-65",
+          "case": "nominative",
+          "number": "plural",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "heidän",
+          "form_id": "form:68-65-69-64-e4-6e",
+          "case": "genitive",
+          "number": "plural",
+          "provenance": "ranked",
+          "shipped_lesson_count": 0
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:kauppa",
+      "sense_id": "sense:kauppa-shop",
+      "forms": [
+        {
+          "surface_form": "kauppa",
+          "form_id": "form:6b-61-75-70-70-61",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:kaupunki",
+      "sense_id": "sense:kaupunki-city",
+      "forms": [
+        {
+          "surface_form": "kaupungin",
+          "form_id": "form:6b-61-75-70-75-6e-67-69-6e",
+          "case": "genitive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "kaupunki",
+          "form_id": "form:6b-61-75-70-75-6e-6b-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:keittio",
+      "sense_id": "sense:keittio-kitchen",
+      "forms": [
+        {
+          "surface_form": "keittiö",
+          "form_id": "form:6b-65-69-74-74-69-f6",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:kirja",
+      "sense_id": "sense:kirja-book",
+      "forms": [
+        {
+          "surface_form": "kirja",
+          "form_id": "form:6b-69-72-6a-61",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:kissa",
+      "sense_id": "sense:kissa-animal",
+      "forms": [
+        {
+          "surface_form": "kissa",
+          "form_id": "form:6b-69-73-73-61",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:koira",
+      "sense_id": "sense:koira-animal",
+      "forms": [
+        {
+          "surface_form": "koira",
+          "form_id": "form:6b-6f-69-72-61",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:kortti",
+      "sense_id": "sense:kortti-card",
+      "forms": [
+        {
+          "surface_form": "kortti",
+          "form_id": "form:6b-6f-72-74-74-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:koti",
+      "sense_id": "sense:koti-home",
+      "forms": [
+        {
+          "surface_form": "koti",
+          "form_id": "form:6b-6f-74-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 4
+        },
+        {
+          "surface_form": "kotiin",
+          "form_id": "form:6b-6f-74-69-69-6e",
+          "case": "illative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:koulu",
+      "sense_id": "sense:koulu-school",
+      "forms": [
+        {
+          "surface_form": "koulu",
+          "form_id": "form:6b-6f-75-6c-75",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:kuitti",
+      "sense_id": "sense:kuitti-receipt",
+      "forms": [
+        {
+          "surface_form": "kuitti",
+          "form_id": "form:6b-75-69-74-74-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:lippu",
+      "sense_id": "sense:lippu-ticket",
+      "forms": [
+        {
+          "surface_form": "lippu",
+          "form_id": "form:6c-69-70-70-75",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:makuuhuone",
+      "sense_id": "sense:makuuhuone-bedroom",
+      "forms": [
+        {
+          "surface_form": "makuuhuone",
+          "form_id": "form:6d-61-6b-75-75-68-75-6f-6e-65",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:me",
+      "sense_id": "sense:me-first-person-plural",
+      "forms": [
+        {
+          "surface_form": "me",
+          "form_id": "form:6d-65",
+          "case": "nominative",
+          "number": "plural",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "meidän",
+          "form_id": "form:6d-65-69-64-e4-6e",
+          "case": "genitive",
+          "number": "plural",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:mika",
+      "sense_id": "sense:mika-interrogative-what-which",
+      "forms": [
+        {
+          "surface_form": "mikä",
+          "form_id": "form:6d-69-6b-e4",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "forms": [
+        {
+          "surface_form": "minulle",
+          "form_id": "form:6d-69-6e-75-6c-6c-65",
+          "case": "allative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 7
+        },
+        {
+          "surface_form": "minun",
+          "form_id": "form:6d-69-6e-75-6e",
+          "case": "genitive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 7
+        },
+        {
+          "surface_form": "minä",
+          "form_id": "form:6d-69-6e-e4",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:nimi",
+      "sense_id": "sense:nimi-name",
+      "forms": [
+        {
+          "surface_form": "nimi",
+          "form_id": "form:6e-69-6d-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:numero",
+      "sense_id": "sense:numero-number",
+      "forms": [
+        {
+          "surface_form": "numero",
+          "form_id": "form:6e-75-6d-65-72-6f",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:olohuone",
+      "sense_id": "sense:olohuone-living-room",
+      "forms": [
+        {
+          "surface_form": "olohuone",
+          "form_id": "form:6f-6c-6f-68-75-6f-6e-65",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:osoite",
+      "sense_id": "sense:osoite-address",
+      "forms": [
+        {
+          "surface_form": "osoite",
+          "form_id": "form:6f-73-6f-69-74-65",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:puhelin",
+      "sense_id": "sense:puhelin-phone",
+      "forms": [
+        {
+          "surface_form": "puhelin",
+          "form_id": "form:70-75-68-65-6c-69-6e",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "forms": [
+        {
+          "surface_form": "se",
+          "form_id": "form:73-65",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "siihen",
+          "form_id": "form:73-69-69-68-65-6e",
+          "case": "illative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "siinä",
+          "form_id": "form:73-69-69-6e-e4",
+          "case": "inessive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "siitä",
+          "form_id": "form:73-69-69-74-e4",
+          "case": "elative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:sina",
+      "sense_id": "sense:sina-second-person",
+      "forms": [
+        {
+          "surface_form": "sinun",
+          "form_id": "form:73-69-6e-75-6e",
+          "case": "genitive",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "sinä",
+          "form_id": "form:73-69-6e-e4",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 3
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "forms": [
+        {
+          "surface_form": "tähän",
+          "form_id": "form:74-e4-68-e4-6e",
+          "case": "illative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 3
+        },
+        {
+          "surface_form": "tämä",
+          "form_id": "form:74-e4-6d-e4",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 7
+        },
+        {
+          "surface_form": "tässä",
+          "form_id": "form:74-e4-73-73-e4",
+          "case": "inessive",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        },
+        {
+          "surface_form": "tästä",
+          "form_id": "form:74-e4-73-74-e4",
+          "case": "elative",
+          "number": "singular",
+          "provenance": "ranked",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:te",
+      "sense_id": "sense:te-second-person-plural-or-polite",
+      "forms": [
+        {
+          "surface_form": "te",
+          "form_id": "form:74-65",
+          "case": "nominative",
+          "number": "plural",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 2
+        }
+      ]
+    },
+    {
+      "lexeme_id": "lexeme:viesti",
+      "sense_id": "sense:viesti-message",
+      "forms": [
+        {
+          "surface_form": "viesti",
+          "form_id": "form:76-69-65-73-74-69",
+          "case": "nominative",
+          "number": "singular",
+          "provenance": "source_backed_outside_dictionary",
+          "shipped_lesson_count": 4
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
