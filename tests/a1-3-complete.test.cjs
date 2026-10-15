@@ -23,13 +23,13 @@ test('A1.1 to A1.3 offers 12 sections and 120 independent lessons',()=>{
   assert.deepEqual(prepared.slice(8).map(s=>s.curriculum_section_id),[1,2,3,4].map(n=>'a1.3-s'+n));
 });
 
-test('A1.3 delivers 40 contract-mapped lessons and 1058 graded/teaching activities',()=>{
+test('A1.3 delivers 40 contract-mapped lessons and 1215 graded/teaching activities',()=>{
   const curriculum=payloads[2].curriculum;
   for(let n=0;n<4;n++){
     const s=prepared[n+8],contract=curriculum.sections[n];
     assert.equal(s.activity_count_per_lesson,15);
     assert.deepEqual(s.lessons.map(l=>l.curriculum_id),contract.lessons.map(l=>l.id));
-    assert.equal(s.lessons.reduce((sum,l)=>sum+l.activities.length,0),n === 0 ? 300 : n === 1 ? 305 : n === 2 ? 303 : 150);
+    assert.equal(s.lessons.reduce((sum,l)=>sum+l.activities.length,0),n === 0 ? 300 : n === 1 ? 305 : n === 2 ? 303 : 307);
     for(const l of s.lessons){
       const cl=contract.lessons[l.order-1];
       for(const [key,source] of [['high_frequency','high_frequency_targets'],['topic','topic_targets'],['expressions','expressions']]){
@@ -73,7 +73,7 @@ test('integrated lessons have source-matched bilingual reading comprehension',()
   for(const section of prepared.slice(8)){
     const lesson=section.lessons[8];
     const readings=lesson.activities.filter(a=>a.type==='short-reading');
-    assert.equal(readings.length,['a1.3-section-1', 'a1.3-section-2', 'a1.3-section-3'].includes(section.id) ? 4 : 2,section.id);
+    assert.equal(readings.length,4,section.id);
     for(const a of readings){
       const passage=section.items[a.item].surface_form;
       const expected=section.items[a.question_item].surface_form;
@@ -171,7 +171,7 @@ test('every A1.3 checkpoint samples all nine preceding lessons with varied grade
     const checkpoint = section.lessons.at(-1);
     const forms = checkpoint.activities.map(a => section.items[a.item]?.surface_form).filter(Boolean);
     const checked = new Set(forms);
-    assert.equal(checkpoint.activities.length, sectionIndex < 2 ? 25 : sectionIndex === 2 ? 29 : 15);
+    assert.equal(checkpoint.activities.length, sectionIndex < 2 ? 25 : sectionIndex === 2 ? 29 : 32);
     assert.equal(checkpoint.checkpoint_targets.length, 15);
     assert.equal(new Set(checkpoint.checkpoint_targets).size, 15, section.id);
     for (const target of checkpoint.checkpoint_targets) assert.ok(checkpoint.activities.flatMap(require('../scripts/audit-course-coverage.cjs').positives).includes(target), section.id + '/' + target);

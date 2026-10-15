@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.47.0`
+- Version: `1.48.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -179,3 +179,5 @@ A1.3 Section 1 now has canonical overviews for all ten messages/invitations/soci
 A1.3 Section 2 completes all ten home/neighbourhood lesson overviews (305 activities). All 59 introduced exact surfaces/expressions have later positive retrieval; nine bounded grammar concepts have later review. Opening-hours reading and four-sentence repair writing are supported practice. The address ellipsis stays in recognition; a concrete address supports strict productive recall. Original records/core mappings, fifteen checkpoint targets and the 80% threshold are preserved. Run `npm run section:a13:s2:check`; see [the acceptance report](docs/A13-SECTION2-ACCEPTANCE.md). These checks do not certify full paradigms or CEFR proficiency.
 
 A1.3 Section 3 completes all ten study/work lesson overviews (303 activities). All 56 introduced exact surfaces/expressions have later positive retrieval; twelve bounded grammar concepts have later review. Selected tehdä/Teen and lähettää/Lähetän pairs assess stems and one tt/t alternation; olin is past recognition, not free imperfect production. Three-step instructions, four reading facts and four-sentence message writing are supported practice. Original records/core mappings, fifteen checkpoint targets and the 80% threshold are preserved. Run `npm run section:a13:s3:check`; see [the acceptance report](docs/A13-SECTION3-ACCEPTANCE.md). These checks do not certify full paradigms or CEFR proficiency.
+
+A1.3 Section 4 completes all ten recent-event/plan lesson overviews (307 activities). All 54 introduced exact surfaces/expressions have later retrieval; eight bounded grammar concepts have later review. Ten selected past forms have explicit recognition and checkpoint recognition; comparatives stay fixed phrases. Event ordering, four original reading facts and two four-sentence writing tasks are supported practice. Every original item/core mapping, fifteen cumulative checkpoint targets and the 80% threshold are preserved. All 120 A1 lessons now have canonical overviews and twelve scoped section gates (3,512 activities; A1.3: 1,215). Run `npm run section:a13:s4:check`; see [the acceptance report](docs/A13-SECTION4-ACCEPTANCE.md). Full paradigms, independent CEFR proficiency and wider parent-issue gates remain outside this acceptance.
