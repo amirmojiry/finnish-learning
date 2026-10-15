@@ -12,7 +12,7 @@
   "summary": {
     "shipped_sections": 14,
     "shipped_lessons": 140,
-    "graded_activity_slots": 2847,
+    "graded_activity_slots": 2908,
     "dictionary_ranked_surface_entries": 425,
     "distinct_authored_lexical_surfaces": 464,
     "lexical_target_placements": 670,
@@ -24,13 +24,13 @@
     "lexical_forms_missing_dictionary": 338,
     "outside_dictionary_but_in_original_parole": 332,
     "outside_dictionary_and_not_in_original_parole": 6,
-    "assessed_again_after_earlier_reference": 838,
+    "assessed_again_after_earlier_reference": 883,
     "grammar_concepts_planned_for_shipped_levels": 27,
     "grammar_concepts_with_explicit_lesson_ids": 26,
     "lessons_without_explicit_grammar_concept_ids": 6,
-    "graded_grammar_related_slots": 669,
-    "graded_morphology_slots": 102,
-    "lessons_with_declared_unassessed_forms": 18,
+    "graded_grammar_related_slots": 671,
+    "graded_morphology_slots": 103,
+    "lessons_with_declared_unassessed_forms": 9,
     "ranked_metadata_conflicts": 0
   },
   "sections": [
@@ -134,8 +134,8 @@
       "level": "A2.1",
       "id": "a2.1-section-1",
       "lessons": 10,
-      "graded_slots": 136,
-      "unassessed_target_forms": 10,
+      "graded_slots": 197,
+      "unassessed_target_forms": 0,
       "lessons_missing_grammar_ids": 0
     },
     {
@@ -15106,7 +15106,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 6,
       "lexical": {
         "declared_forms": [
           "kävin",
@@ -15131,8 +15131,9 @@
           "kävin",
           "kävin eilen turussa.",
           "matka",
+          "matka oli mukava.",
           "missä kävit viime viikonloppuna?",
-          "viikonloppuna"
+          "olin siellä kaksi päivää."
         ],
         "correct_answer": [
           "kävin",
@@ -15140,21 +15141,21 @@
           "matka",
           "matka oli mukava.",
           "missä kävit viime viikonloppuna?",
+          "oli",
           "olin",
           "olin siellä kaksi päivää.",
           "viikonloppuna"
         ],
-        "receptive_count": 5,
+        "receptive_count": 6,
         "productive_count": 4,
         "later_correct_retrieval": [
+          "oli",
           "olin",
           "viikonloppuna"
         ],
-        "declared_unassessed": [
-          "oli"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 11,
         "reading_only": [],
         "high_frequency_target_forms": [
           "oli",
@@ -15175,8 +15176,9 @@
           "kävin",
           "kävin eilen turussa.",
           "matka",
+          "matka oli mukava.",
           "missä kävit viime viikonloppuna?",
-          "viikonloppuna"
+          "olin siellä kaksi päivää."
         ]
       },
       "grammar": {
@@ -15206,7 +15208,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "asemalle",
@@ -15215,6 +15217,7 @@
           "lähdin ennen kahdeksaa.",
           "lähdin vaasasta aikaisin.",
           "matkustin junalla.",
+          "matkustin sinne junalla.",
           "menin asemalle aamulla.",
           "tuli",
           "tulin kotiin illalla.",
@@ -15225,39 +15228,54 @@
           "lähdin ennen kahdeksaa.",
           "lähdin vaasasta aikaisin.",
           "matkustin junalla.",
+          "matkustin sinne junalla.",
           "menin asemalle aamulla.",
           "tulin kotiin illalla.",
           "vaasasta"
         ],
         "introduced": [
-          "asemalle",
-          "junalla",
-          "lähdin vaasasta aikaisin.",
-          "menin asemalle aamulla.",
-          "vaasasta"
-        ],
-        "correct_answer": [
-          "asemalle",
           "junalla",
           "lähdin ennen kahdeksaa.",
           "lähdin vaasasta aikaisin.",
           "matkustin junalla.",
+          "matkustin sinne junalla.",
           "menin asemalle aamulla.",
+          "tulin kotiin illalla.",
+          "vaasasta"
+        ],
+        "correct_answer": [
+          "asemalle",
+          "ennen",
+          "junalla",
+          "kävin",
+          "kävin eilen turussa.",
+          "lähdin ennen kahdeksaa.",
+          "lähdin vaasasta aikaisin.",
+          "matka",
+          "matka oli mukava.",
+          "matkustin junalla.",
+          "matkustin sinne junalla.",
+          "menin asemalle aamulla.",
+          "olin siellä kaksi päivää.",
           "tuli",
           "tulin kotiin illalla.",
           "vaasasta"
         ],
-        "receptive_count": 5,
+        "receptive_count": 12,
         "productive_count": 5,
         "later_correct_retrieval": [
           "asemalle",
+          "ennen",
+          "kävin",
+          "kävin eilen turussa.",
+          "matka",
+          "matka oli mukava.",
+          "olin siellä kaksi päivää.",
           "tuli"
         ],
-        "declared_unassessed": [
-          "ennen"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 13,
         "reading_only": [],
         "high_frequency_target_forms": [
           "ennen",
@@ -15276,10 +15294,13 @@
           "tulin kotiin illalla."
         ],
         "authored_new_forms": [
-          "asemalle",
           "junalla",
+          "lähdin ennen kahdeksaa.",
           "lähdin vaasasta aikaisin.",
+          "matkustin junalla.",
+          "matkustin sinne junalla.",
           "menin asemalle aamulla.",
+          "tulin kotiin illalla.",
           "vaasasta"
         ]
       },
@@ -15310,7 +15331,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "kortilla",
@@ -15337,34 +15358,49 @@
         ],
         "introduced": [
           "kortilla",
-          "lippu",
-          "maksoin lipun kortilla.",
-          "ostin lipun etukäteen.",
-          "paluulippu"
-        ],
-        "correct_answer": [
-          "kortilla",
-          "lippu",
           "lippu maksoi kaksikymmentä euroa.",
           "lähdin ostamaan lippua.",
           "maksoiko lippu paljon?",
           "maksoin lipun kortilla.",
-          "myös",
           "ostin lipun etukäteen.",
           "ostin myös paluulipun.",
           "paluulippu"
         ],
-        "receptive_count": 6,
+        "correct_answer": [
+          "junalla",
+          "kortilla",
+          "lippu",
+          "lippu maksoi kaksikymmentä euroa.",
+          "lähdin ennen kahdeksaa.",
+          "lähdin ostamaan lippua.",
+          "maksoiko lippu paljon?",
+          "maksoin lipun kortilla.",
+          "matkustin junalla.",
+          "menin asemalle aamulla.",
+          "myös",
+          "ostin lipun etukäteen.",
+          "ostin myös paluulipun.",
+          "paljon",
+          "paluulippu",
+          "tulin kotiin illalla.",
+          "vaasasta"
+        ],
+        "receptive_count": 13,
         "productive_count": 6,
         "later_correct_retrieval": [
+          "junalla",
           "lippu",
-          "myös"
+          "lähdin ennen kahdeksaa.",
+          "matkustin junalla.",
+          "menin asemalle aamulla.",
+          "myös",
+          "paljon",
+          "tulin kotiin illalla.",
+          "vaasasta"
         ],
-        "declared_unassessed": [
-          "paljon"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 6,
+        "distractor_only_count": 12,
         "reading_only": [],
         "high_frequency_target_forms": [
           "myös",
@@ -15384,9 +15420,12 @@
         ],
         "authored_new_forms": [
           "kortilla",
-          "lippu",
+          "lippu maksoi kaksikymmentä euroa.",
+          "lähdin ostamaan lippua.",
+          "maksoiko lippu paljon?",
           "maksoin lipun kortilla.",
           "ostin lipun etukäteen.",
+          "ostin myös paluulipun.",
           "paluulippu"
         ]
       },
@@ -15420,7 +15459,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 6,
       "lexical": {
         "declared_forms": [
           "ajoissa",
@@ -15443,35 +15482,46 @@
           "tuntia"
         ],
         "introduced": [
-          "ajoissa",
           "juna lähti ajoissa.",
           "juna saapui myöhässä.",
-          "myöhässä",
+          "matka kesti kaksi tuntia.",
+          "odotin asemalla.",
+          "sitten bussi tuli asemalle.",
           "tuntia"
         ],
         "correct_answer": [
           "ajoissa",
           "juna lähti ajoissa.",
           "juna saapui myöhässä.",
+          "kortilla",
+          "maksoiko lippu paljon?",
+          "maksoin lipun kortilla.",
           "matka kesti kaksi tuntia.",
           "myöhässä",
           "odotin asemalla.",
           "oli",
+          "ostin myös paluulipun.",
+          "paluulippu",
+          "sitten",
           "sitten bussi tuli asemalle.",
           "tuntia"
         ],
-        "receptive_count": 5,
+        "receptive_count": 11,
         "productive_count": 5,
         "later_correct_retrieval": [
           "ajoissa",
+          "kortilla",
+          "maksoiko lippu paljon?",
+          "maksoin lipun kortilla.",
           "myöhässä",
-          "oli"
-        ],
-        "declared_unassessed": [
+          "oli",
+          "ostin myös paluulipun.",
+          "paluulippu",
           "sitten"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 6,
+        "distractor_only_count": 12,
         "reading_only": [],
         "high_frequency_target_forms": [
           "oli",
@@ -15490,10 +15540,11 @@
           "sitten bussi tuli asemalle."
         ],
         "authored_new_forms": [
-          "ajoissa",
           "juna lähti ajoissa.",
           "juna saapui myöhässä.",
-          "myöhässä",
+          "matka kesti kaksi tuntia.",
+          "odotin asemalla.",
+          "sitten bussi tuli asemalle.",
           "tuntia"
         ]
       },
@@ -15526,7 +15577,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "aamiainen",
@@ -15552,7 +15603,10 @@
         ],
         "introduced": [
           "aamiainen",
+          "aamiainen kuului hintaan.",
+          "aamiainen oli hyvä.",
           "hotellissa",
+          "huone oli siisti.",
           "huoneen",
           "varasin huoneen hotellista.",
           "yövyin hotellissa yhden yön."
@@ -15564,20 +15618,28 @@
           "hotellissa",
           "huone oli siisti.",
           "huoneen",
+          "hyvä",
+          "juna saapui myöhässä.",
+          "odotin asemalla.",
           "oli",
+          "sitten bussi tuli asemalle.",
+          "tuntia",
           "varasin huoneen hotellista.",
           "yövyin hotellissa yhden yön."
         ],
-        "receptive_count": 5,
+        "receptive_count": 10,
         "productive_count": 5,
         "later_correct_retrieval": [
-          "oli"
+          "hyvä",
+          "juna saapui myöhässä.",
+          "odotin asemalla.",
+          "oli",
+          "sitten bussi tuli asemalle.",
+          "tuntia"
         ],
-        "declared_unassessed": [
-          "hyvä"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 6,
+        "distractor_only_count": 9,
         "reading_only": [],
         "high_frequency_target_forms": [
           "hyvä",
@@ -15597,7 +15659,10 @@
         ],
         "authored_new_forms": [
           "aamiainen",
+          "aamiainen kuului hintaan.",
+          "aamiainen oli hyvä.",
           "hotellissa",
+          "huone oli siisti.",
           "huoneen",
           "varasin huoneen hotellista.",
           "yövyin hotellissa yhden yön."
@@ -15632,7 +15697,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 8,
       "lexical": {
         "declared_forms": [
           "en löytänyt lippua.",
@@ -15657,15 +15722,25 @@
           "neuvoa"
         ],
         "introduced": [
+          "en löytänyt lippua.",
           "juna oli myöhässä.",
+          "kysyin neuvoa asemalla.",
           "lippua",
           "myöhästyin",
           "myöhästyin bussista.",
+          "myöhästyin, koska juna oli myöhässä.",
           "neuvoa"
         ],
         "correct_answer": [
+          "aamiainen",
+          "aamiainen kuului hintaan.",
+          "aamiainen oli hyvä.",
           "en löytänyt lippua.",
+          "hotellissa",
+          "huone oli siisti.",
+          "huoneen",
           "juna oli myöhässä.",
+          "koska",
           "kysyin neuvoa asemalla.",
           "lippua",
           "myöhästyin",
@@ -15674,16 +15749,21 @@
           "neuvoa",
           "oli"
         ],
-        "receptive_count": 5,
+        "receptive_count": 12,
         "productive_count": 5,
         "later_correct_retrieval": [
+          "aamiainen",
+          "aamiainen kuului hintaan.",
+          "aamiainen oli hyvä.",
+          "hotellissa",
+          "huone oli siisti.",
+          "huoneen",
+          "koska",
           "oli"
         ],
-        "declared_unassessed": [
-          "koska"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 6,
+        "distractor_only_count": 12,
         "reading_only": [],
         "high_frequency_target_forms": [
           "koska",
@@ -15702,10 +15782,13 @@
           "myöhästyin, koska juna oli myöhässä."
         ],
         "authored_new_forms": [
+          "en löytänyt lippua.",
           "juna oli myöhässä.",
+          "kysyin neuvoa asemalla.",
           "lippua",
           "myöhästyin",
           "myöhästyin bussista.",
+          "myöhästyin, koska juna oli myöhässä.",
           "neuvoa"
         ]
       },
@@ -15738,7 +15821,7 @@
         "topic": 3,
         "expressions": 5
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "hyvä",
@@ -15750,6 +15833,7 @@
           "otin valokuvia.",
           "paljon",
           "pidin kaupungista.",
+          "tapasin ystäväni.",
           "valokuvia"
         ],
         "first_referenced": [
@@ -15760,17 +15844,10 @@
           "näin vanhan kirkon.",
           "otin valokuvia.",
           "pidin kaupungista.",
+          "tapasin ystäväni.",
           "valokuvia"
         ],
         "introduced": [
-          "kirkon",
-          "kävin museossa.",
-          "museossa",
-          "näin vanhan kirkon.",
-          "valokuvia"
-        ],
-        "correct_answer": [
-          "hyvä",
           "kirkon",
           "kävin museossa.",
           "museo oli hyvä.",
@@ -15778,18 +15855,43 @@
           "näin vanhan kirkon.",
           "otin valokuvia.",
           "pidin kaupungista.",
+          "tapasin ystäväni.",
           "valokuvia"
         ],
-        "receptive_count": 6,
+        "correct_answer": [
+          "hyvä",
+          "juna oli myöhässä.",
+          "kirkon",
+          "kysyin neuvoa asemalla.",
+          "kävin museossa.",
+          "lippua",
+          "museo oli hyvä.",
+          "museossa",
+          "myöhästyin",
+          "myöhästyin, koska juna oli myöhässä.",
+          "neuvoa",
+          "näin vanhan kirkon.",
+          "otin valokuvia.",
+          "paljon",
+          "pidin kaupungista.",
+          "tapasin ystäväni.",
+          "valokuvia"
+        ],
+        "receptive_count": 14,
         "productive_count": 5,
         "later_correct_retrieval": [
-          "hyvä"
-        ],
-        "declared_unassessed": [
+          "hyvä",
+          "juna oli myöhässä.",
+          "kysyin neuvoa asemalla.",
+          "lippua",
+          "myöhästyin",
+          "myöhästyin, koska juna oli myöhässä.",
+          "neuvoa",
           "paljon"
         ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 5,
+        "distractor_only_count": 8,
         "reading_only": [],
         "high_frequency_target_forms": [
           "hyvä",
@@ -15810,8 +15912,12 @@
         "authored_new_forms": [
           "kirkon",
           "kävin museossa.",
+          "museo oli hyvä.",
           "museossa",
           "näin vanhan kirkon.",
+          "otin valokuvia.",
+          "pidin kaupungista.",
+          "tapasin ystäväni.",
           "valokuvia"
         ]
       },
@@ -15846,7 +15952,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 9,
       "lexical": {
         "declared_forms": [
           "ensin",
@@ -15856,48 +15962,71 @@
           "lopuksi",
           "lopuksi palasin kotiin.",
           "lähdin ostamaan lippua.",
+          "palasin kotiin sunnuntaina.",
           "sen jälkeen kävelin hotelliin.",
           "sitten",
-          "sitten nousin junaan."
+          "sitten nousin junaan.",
+          "tampereella",
+          "viime lauantaina kävin tampereella."
         ],
         "first_referenced": [
           "ensin ostin lipun.",
           "junaan",
           "lopuksi",
           "lopuksi palasin kotiin.",
+          "palasin kotiin sunnuntaina.",
           "sen jälkeen kävelin hotelliin.",
-          "sitten nousin junaan."
+          "sitten nousin junaan.",
+          "tampereella",
+          "viime lauantaina kävin tampereella."
         ],
         "introduced": [
-          "ensin",
           "ensin ostin lipun.",
           "junaan",
           "lopuksi",
-          "sitten nousin junaan."
+          "lopuksi palasin kotiin.",
+          "palasin kotiin sunnuntaina.",
+          "sen jälkeen kävelin hotelliin.",
+          "sitten nousin junaan.",
+          "tampereella",
+          "viime lauantaina kävin tampereella."
         ],
         "correct_answer": [
           "ensin",
           "ensin ostin lipun.",
           "junaan",
+          "jälkeen",
+          "kirkon",
+          "kävin museossa.",
           "lopuksi",
           "lopuksi palasin kotiin.",
           "lähdin ostamaan lippua.",
+          "museo oli hyvä.",
+          "museossa",
+          "palasin kotiin sunnuntaina.",
+          "pidin kaupungista.",
           "sen jälkeen kävelin hotelliin.",
           "sitten",
-          "sitten nousin junaan."
+          "sitten nousin junaan.",
+          "tampereella",
+          "viime lauantaina kävin tampereella."
         ],
-        "receptive_count": 5,
+        "receptive_count": 14,
         "productive_count": 6,
         "later_correct_retrieval": [
           "ensin",
+          "jälkeen",
+          "kirkon",
+          "kävin museossa.",
           "lähdin ostamaan lippua.",
+          "museo oli hyvä.",
+          "museossa",
+          "pidin kaupungista.",
           "sitten"
         ],
-        "declared_unassessed": [
-          "jälkeen"
-        ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 5,
+        "distractor_only_count": 10,
         "reading_only": [],
         "high_frequency_target_forms": [
           "jälkeen",
@@ -15915,11 +16044,15 @@
           "sitten nousin junaan."
         ],
         "authored_new_forms": [
-          "ensin",
           "ensin ostin lipun.",
           "junaan",
           "lopuksi",
-          "sitten nousin junaan."
+          "lopuksi palasin kotiin.",
+          "palasin kotiin sunnuntaina.",
+          "sen jälkeen kävelin hotelliin.",
+          "sitten nousin junaan.",
+          "tampereella",
+          "viime lauantaina kävin tampereella."
         ]
       },
       "grammar": {
@@ -15930,7 +16063,7 @@
           "a21-sequencing"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 5,
+        "structured_or_morphology_slots": 6,
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
@@ -15952,7 +16085,7 @@
         "topic": 3,
         "expressions": 4
       },
-      "authored_new_targets": 5,
+      "authored_new_targets": 0,
       "lexical": {
         "declared_forms": [
           "lauantaina",
@@ -15966,43 +16099,49 @@
           "viime",
           "viime lauantaina kävin tampereella."
         ],
-        "first_referenced": [
-          "matkustin sinne junalla.",
-          "palasin kotiin sunnuntaina.",
-          "tampereella",
-          "tapasin ystäväni.",
-          "viime lauantaina kävin tampereella."
-        ],
-        "introduced": [
-          "lauantaina",
-          "matkustin sinne junalla.",
-          "sunnuntaina",
-          "tampereella",
-          "viime lauantaina kävin tampereella."
-        ],
+        "first_referenced": [],
+        "introduced": [],
         "correct_answer": [
+          "ensin ostin lipun.",
+          "junaan",
           "lauantaina",
+          "lopuksi",
+          "lopuksi palasin kotiin.",
+          "matka kesti kaksi tuntia.",
           "matkustin sinne junalla.",
           "palasin kotiin sunnuntaina.",
+          "sen jälkeen kävelin hotelliin.",
+          "sitten",
           "sunnuntaina",
           "tampereella",
           "tapasin ystäväni.",
           "valokuvia",
+          "viime",
           "viime lauantaina kävin tampereella."
         ],
-        "receptive_count": 4,
+        "receptive_count": 12,
         "productive_count": 6,
         "later_correct_retrieval": [
+          "ensin ostin lipun.",
+          "junaan",
           "lauantaina",
-          "sunnuntaina",
-          "valokuvia"
-        ],
-        "declared_unassessed": [
+          "lopuksi",
+          "lopuksi palasin kotiin.",
+          "matka kesti kaksi tuntia.",
+          "matkustin sinne junalla.",
+          "palasin kotiin sunnuntaina.",
+          "sen jälkeen kävelin hotelliin.",
           "sitten",
-          "viime"
+          "sunnuntaina",
+          "tampereella",
+          "tapasin ystäväni.",
+          "valokuvia",
+          "viime",
+          "viime lauantaina kävin tampereella."
         ],
+        "declared_unassessed": [],
         "teach_only": [],
-        "distractor_only_count": 9,
+        "distractor_only_count": 15,
         "reading_only": [
           "tapasin ystäväni. palasin kotiin sunnuntaina.",
           "viime lauantaina kävin tampereella. matkustin sinne junalla."
@@ -16022,27 +16161,23 @@
           "tapasin ystäväni.",
           "viime lauantaina kävin tampereella."
         ],
-        "authored_new_forms": [
-          "lauantaina",
-          "matkustin sinne junalla.",
-          "sunnuntaina",
-          "tampereella",
-          "viime lauantaina kävin tampereella."
-        ]
+        "authored_new_forms": []
       },
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a12-quantities",
           "a21-illative-patterns",
           "a21-imperfect",
           "a21-plural-partitive",
           "a21-sequencing"
         ],
         "unknown_ids": [],
-        "structured_or_morphology_slots": 8,
-        "morphology_slots": 3,
+        "structured_or_morphology_slots": 9,
+        "morphology_slots": 4,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a11-case-chunks",
           "a12-quantities",
           "a13-local-expansion",
           "a13-past-recognition",
@@ -16132,6 +16267,7 @@
       "grammar": {
         "note_present": true,
         "concept_ids": [
+          "a21-illative-patterns",
           "a21-imperfect",
           "a21-object-core"
         ],
@@ -16140,6 +16276,7 @@
         "morphology_slots": 1,
         "evidence_status": "explicit_ids_need_activity_mapping_review",
         "prerequisite_concept_ids": [
+          "a13-local-expansion",
           "a13-partitive-patterns",
           "a13-past-recognition",
           "a13-verb-classes"
@@ -19676,61 +19813,6 @@
       }
     ],
     "lessons_with_unassessed_declared_targets": [
-      {
-        "lesson_id": "a2.1-section-1-lesson-1",
-        "forms": [
-          "oli"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-2",
-        "forms": [
-          "ennen"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-3",
-        "forms": [
-          "paljon"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-4",
-        "forms": [
-          "sitten"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-5",
-        "forms": [
-          "hyvä"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-6",
-        "forms": [
-          "koska"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-7",
-        "forms": [
-          "paljon"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-8",
-        "forms": [
-          "jälkeen"
-        ]
-      },
-      {
-        "lesson_id": "a2.1-section-1-lesson-9",
-        "forms": [
-          "sitten",
-          "viime"
-        ]
-      },
       {
         "lesson_id": "a2.1-section-2-lesson-1",
         "forms": [

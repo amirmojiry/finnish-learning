@@ -4,6 +4,10 @@
 
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
+## Content acceptance progress (2026-10-15)
+
+A1 content acceptance is complete across twelve sections. [Issue #178](https://github.com/amirmojiry/finnish-learning/issues/178) scopes ten-lesson A2.1 Section 1 acceptance ([audit](A21-SECTION1-ACCEPTANCE.md)). A2.1 Section 2 services follows; do not author playable Section 3 before parent #101's gates. CEFR/YKI certification, P2/P5/R3 remain open.
+
 ## Baseline and source of truth
 
 This status snapshot was checked on **2026-10-09**. For fresh implementation counts use `npm run curriculum:audit`, which reads the actual course JSON files. A planned level is not a playable level.

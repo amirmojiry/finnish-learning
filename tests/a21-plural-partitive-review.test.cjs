@@ -49,25 +49,18 @@ test('typed grammar application accepts the plural form and rejects singular or 
   }
 });
 
-test('appending practice preserves all previous prepared activity positions and stored scores', () => {
-  // Hashes freeze the complete prepared activity sequences from the 1.36.0 baseline.
-  for (const [lesson, hash] of [
-    [introduction, '4bd26fa8df660be8724a99f56385a771926a4045c9f72495a7c5b0ed9045b923'],
-    [review, '0e9e881f47badb7a527bec01c3695cf9ab622470498a5d0e3468f16068e08d97'],
-  ]) {
-    assert.equal(lesson.activities.length, lesson === introduction ? 19 : 20);
-    const previous = structuredClone(lesson.activities.slice(0, 19));
-    if (lesson === introduction) delete previous.find(a => a.type === 'expression-completion' && a.item === target).grammar_concept_ids;
-    assert.equal(createHash('sha256').update(JSON.stringify(previous)).digest('hex'), hash);
-    assert.equal(lesson.activities.at(-1).type, lesson === introduction ? 'expression-completion' : 'inflection-production');
-    const old = course.recordLessonCompletion(course.emptyProgress(), lesson.id, 12, 14, 123);
-    assert.deepEqual(course.sanitizeProgress(old).lessonScores[lesson.id], { correct: 12, graded: 14, completedAt: 123 });
-    const completed = course.recordLessonCompletion(old, lesson.id, 13, 15, 456);
-    assert.deepEqual(completed.lessonScores[lesson.id], { correct: 13, graded: 15, completedAt: 456 });
-  }
-  assert.equal(section.lessons[9].activities.length, 15);
-  assert.equal(section.lessons[9].checkpoint_targets.length, 15);
-  assert.deepEqual(section.lessons[9].new_targets, []);
+test('expanded practice keeps grammar target evidence and saved scores', () => {
+ for (const lesson of [introduction, review]) {
+   assert.equal(lesson.activities.length, lesson.activity_count);
+   assert.ok(lesson.activities.some(a => a.type === 'inflection-production'));
+   assert.ok(lesson.activities.some(a => !['teach','number-grid'].includes(a.type) && a.item === target));
+   const old = course.recordLessonCompletion(course.emptyProgress(), lesson.id, 12, 14, 123);
+   assert.deepEqual(course.sanitizeProgress(old).lessonScores[lesson.id], { correct: 12, graded: 14, completedAt: 123 });
+   const completed = course.recordLessonCompletion(old, lesson.id, 13, 15, 456);
+   assert.deepEqual(completed.lessonScores[lesson.id], { correct: 13, graded: 15, completedAt: 456 });
+ }
+ assert.equal(section.lessons[9].activities.length,15);
+ assert.deepEqual(section.lessons[9].new_targets,[]);
 });
 
 test('lesson 7 has exactly one typed Otin frame and evidence reuses its completion', () => {

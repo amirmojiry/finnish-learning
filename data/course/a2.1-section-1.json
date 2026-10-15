@@ -1521,11 +1521,12 @@
       "summary_fa": "بپرسم آخر هفته کسی کجا رفته و بگویم خودم کجا و چه مدتی بوده‌ام.",
       "grammar_fa": "«Kävin» (رفتم/بازدید کردم)، «kävit» (رفتی)، «olin» (بودم) و «oli» (بود) شکل‌های گذشته‌اند. «Missä kävit?» را با «Kävin ...» پاسخ بده.",
       "new_targets": [
-        "a21s1-t-003",
         "a21s1-t-004",
         "a21s1-t-005",
         "a21s1-e-006",
-        "a21s1-e-007"
+        "a21s1-e-007",
+        "a21s1-e-008",
+        "a21s1-e-009"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1580,7 +1581,8 @@
             "Matka"
           ],
           "expected_fi": "Matka oli mukava.",
-          "expected_fa": "سفر دلپذیر بود."
+          "expected_fa": "سفر دلپذیر بود.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -1590,7 +1592,8 @@
             "Kävin"
           ],
           "expected_fi": "Kävin eilen Turussa.",
-          "expected_fa": "دیروز به تورکو رفتم."
+          "expected_fa": "دیروز به تورکو رفتم.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -1614,10 +1617,6 @@
       "activities": [
         {
           "type": "teach",
-          "item": "a21s1-t-003"
-        },
-        {
-          "type": "teach",
           "item": "a21s1-t-004"
         },
         {
@@ -1633,6 +1632,14 @@
           "item": "a21s1-e-007"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-008"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-009"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-006",
@@ -1641,7 +1648,8 @@
             "a21s1-e-007",
             "a21s1-e-008",
             "a21s1-e-009"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1652,7 +1660,8 @@
             "a21s1-e-006",
             "a21s1-e-017",
             "a21s1-e-018"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1663,7 +1672,8 @@
             "a21s1-e-026",
             "a21s1-e-007",
             "a21s1-e-027"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1674,7 +1684,8 @@
             "a21s1-e-034",
             "a21s1-e-035",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1685,7 +1696,8 @@
             "a21s1-e-037",
             "a21s1-e-038",
             "a21s1-e-043"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1696,7 +1708,8 @@
             "a21s1-e-008",
             "a21s1-e-046",
             "a21s1-e-047"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1707,7 +1720,8 @@
             "a21s1-e-054",
             "a21s1-e-009",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1718,7 +1732,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-009"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1729,7 +1744,8 @@
             "a21s1-t-003",
             "a21s1-t-004",
             "a21s1-t-005"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1740,7 +1756,8 @@
             "a21s1-t-004",
             "a21s1-t-005",
             "a21s1-h-001"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1751,7 +1768,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1762,7 +1780,20 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-002",
+          "options": [
+            "a21s1-t-005",
+            "a21s1-h-002",
+            "a21s1-h-010",
+            "a21s1-h-011"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -1774,8 +1805,16 @@
         ],
         "lexical": [
           {
+            "target_id": "a21s1-h-001",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-002",
+            "status": "reviewed"
+          },
+          {
             "target_id": "a21s1-t-003",
-            "status": "introduced"
+            "status": "reviewed"
           },
           {
             "target_id": "a21s1-t-004",
@@ -1791,6 +1830,14 @@
           },
           {
             "target_id": "a21s1-e-007",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-008",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-009",
             "status": "introduced"
           }
         ],
@@ -1817,9 +1864,10 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 17
+      "activity_count": 19
     },
     {
       "id": "a2.1-section-1-lesson-2",
@@ -1830,11 +1878,14 @@
       "summary_fa": "با فعل‌های گذشتهٔ تمرین‌شده بگویم از کجا حرکت کردم و به کجا رسیدم.",
       "grammar_fa": "«Menin» (رفتم)، «lähdin» (حرکت کردم)، «tulin» (آمدم) و «matkustin» (سفر کردم) نمونه‌های گذشتهٔ اول‌شخص‌اند. «Vaasasta» مبدأ و «asemalle» مقصد را نشان می‌دهند.",
       "new_targets": [
-        "a21s1-t-012",
         "a21s1-t-013",
         "a21s1-t-014",
         "a21s1-e-015",
-        "a21s1-e-016"
+        "a21s1-e-016",
+        "a21s1-e-017",
+        "a21s1-e-018",
+        "a21s1-e-019",
+        "a21s1-e-078"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -1888,7 +1939,8 @@
             "Vaasasta"
           ],
           "expected_fi": "Lähdin Vaasasta aikaisin.",
-          "expected_fa": "زود از واسا حرکت کردم."
+          "expected_fa": "زود از واسا حرکت کردم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -1898,7 +1950,8 @@
             "junalla"
           ],
           "expected_fi": "Matkustin junalla.",
-          "expected_fa": "با قطار سفر کردم."
+          "expected_fa": "با قطار سفر کردم.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -1922,10 +1975,6 @@
       "activities": [
         {
           "type": "teach",
-          "item": "a21s1-t-012"
-        },
-        {
-          "type": "teach",
           "item": "a21s1-t-013"
         },
         {
@@ -1941,6 +1990,22 @@
           "item": "a21s1-e-016"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-017"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-018"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-019"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-078"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-015",
@@ -1949,7 +2014,8 @@
             "a21s1-e-015",
             "a21s1-e-017",
             "a21s1-e-018"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1960,7 +2026,8 @@
             "a21s1-e-026",
             "a21s1-e-015",
             "a21s1-e-027"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1971,7 +2038,8 @@
             "a21s1-e-034",
             "a21s1-e-035",
             "a21s1-e-016"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1982,7 +2050,8 @@
             "a21s1-e-037",
             "a21s1-e-038",
             "a21s1-e-043"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -1993,7 +2062,8 @@
             "a21s1-e-017",
             "a21s1-e-046",
             "a21s1-e-047"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2004,7 +2074,8 @@
             "a21s1-e-054",
             "a21s1-e-017",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2015,7 +2086,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-018"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2026,7 +2098,8 @@
             "a21s1-e-064",
             "a21s1-e-069",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2037,7 +2110,8 @@
             "a21s1-t-012",
             "a21s1-t-013",
             "a21s1-t-014"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2048,7 +2122,8 @@
             "a21s1-t-013",
             "a21s1-t-014",
             "a21s1-h-010"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2059,7 +2134,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2070,12 +2146,98 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-019"
+          "item": "a21s1-e-019",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-011",
+          "options": [
+            "a21s1-t-032",
+            "a21s1-h-011",
+            "a21s1-t-033",
+            "a21s1-h-039"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-078",
+          "options": [
+            "a21s1-e-017",
+            "a21s1-e-078",
+            "a21s1-e-018",
+            "a21s1-e-019"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-004",
+          "options": [
+            "a21s1-t-032",
+            "a21s1-t-004",
+            "a21s1-t-033",
+            "a21s1-h-039"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-005",
+          "options": [
+            "a21s1-t-032",
+            "a21s1-t-005",
+            "a21s1-t-033",
+            "a21s1-h-039"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-007",
+          "options": [
+            "a21s1-e-018",
+            "a21s1-e-007",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-008",
+          "options": [
+            "a21s1-e-018",
+            "a21s1-e-008",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-009",
+          "options": [
+            "a21s1-e-018",
+            "a21s1-e-009",
+            "a21s1-e-019",
+            "a21s1-e-025"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -2087,8 +2249,16 @@
         ],
         "lexical": [
           {
+            "target_id": "a21s1-h-010",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-011",
+            "status": "reviewed"
+          },
+          {
             "target_id": "a21s1-t-012",
-            "status": "introduced"
+            "status": "reviewed"
           },
           {
             "target_id": "a21s1-t-013",
@@ -2105,6 +2275,42 @@
           {
             "target_id": "a21s1-e-016",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-017",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-018",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-019",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-078",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-004",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-005",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-007",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-008",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-009",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -2130,9 +2336,20 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 18
+      "activity_count": 28,
+      "practice_targets": [
+        "a21s1-e-078"
+      ],
+      "review_targets": [
+        "a21s1-t-004",
+        "a21s1-t-005",
+        "a21s1-e-007",
+        "a21s1-e-008",
+        "a21s1-e-009"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-3",
@@ -2143,11 +2360,14 @@
       "summary_fa": "بگویم چه بلیتی خریدم، چقدر قیمت داشت و چگونه پرداخت کردم.",
       "grammar_fa": "«Ostin» (خریدم)، «maksoin» (پرداخت کردم) و «maksoi» (قیمت داشت) گذشته‌اند. «Lipun» و «paluulipun» در جملهٔ خرید بلیت مفعول کامل‌اند؛ صورت‌ها را در عبارت یاد بگیر. «Lähdin ostamaan lippua» یک نمونهٔ مشخص از فعل حرکت + مصدر -maan برای بیان هدف حرکت است؛ صرف همهٔ افعال در این الگو هنوز آموزش داده نمی‌شود.",
       "new_targets": [
-        "a21s1-t-022",
         "a21s1-t-023",
         "a21s1-t-024",
         "a21s1-e-025",
-        "a21s1-e-026"
+        "a21s1-e-026",
+        "a21s1-e-027",
+        "a21s1-e-028",
+        "a21s1-e-029",
+        "a21s1-e-maan-001"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2203,7 +2423,8 @@
             "kortilla"
           ],
           "expected_fi": "Maksoin lipun kortilla.",
-          "expected_fa": "بلیت را با کارت پرداخت کردم."
+          "expected_fa": "بلیت را با کارت پرداخت کردم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -2219,7 +2440,8 @@
           ],
           "grammar_concept_ids": [
             "a21-maan"
-          ]
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -2281,10 +2503,6 @@
       "activities": [
         {
           "type": "teach",
-          "item": "a21s1-t-022"
-        },
-        {
-          "type": "teach",
           "item": "a21s1-t-023"
         },
         {
@@ -2300,6 +2518,22 @@
           "item": "a21s1-e-026"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-027"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-028"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-029"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-maan-001"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-025",
@@ -2308,7 +2542,8 @@
             "a21s1-e-026",
             "a21s1-e-025",
             "a21s1-e-027"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2319,7 +2554,8 @@
             "a21s1-e-034",
             "a21s1-e-035",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2330,7 +2566,8 @@
             "a21s1-e-037",
             "a21s1-e-038",
             "a21s1-e-043"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2341,7 +2578,8 @@
             "a21s1-e-026",
             "a21s1-e-046",
             "a21s1-e-047"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2352,7 +2590,8 @@
             "a21s1-e-054",
             "a21s1-e-027",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2363,7 +2602,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-027"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2374,7 +2614,8 @@
             "a21s1-e-064",
             "a21s1-e-069",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2385,7 +2626,8 @@
             "a21s1-e-028",
             "a21s1-e-077",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2396,7 +2638,8 @@
             "a21s1-t-022",
             "a21s1-t-023",
             "a21s1-t-024"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2407,7 +2650,8 @@
             "a21s1-t-023",
             "a21s1-t-024",
             "a21s1-h-020"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2418,17 +2662,20 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-t-024"
+          "item": "a21s1-t-024",
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-029"
+          "item": "a21s1-e-029",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2439,7 +2686,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2450,7 +2698,92 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-021",
+          "options": [
+            "a21s1-h-065",
+            "a21s1-h-021",
+            "a21s1-t-066",
+            "a21s1-t-067"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-013",
+          "options": [
+            "a21s1-h-065",
+            "a21s1-t-013",
+            "a21s1-t-066",
+            "a21s1-t-067"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-014",
+          "options": [
+            "a21s1-h-065",
+            "a21s1-t-014",
+            "a21s1-t-066",
+            "a21s1-t-067"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-015",
+          "options": [
+            "a21s1-e-044",
+            "a21s1-e-015",
+            "a21s1-e-045",
+            "a21s1-e-046"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-017",
+          "options": [
+            "a21s1-e-044",
+            "a21s1-e-017",
+            "a21s1-e-045",
+            "a21s1-e-046"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-018",
+          "options": [
+            "a21s1-e-044",
+            "a21s1-e-018",
+            "a21s1-e-045",
+            "a21s1-e-046"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-019",
+          "options": [
+            "a21s1-e-044",
+            "a21s1-e-019",
+            "a21s1-e-045",
+            "a21s1-e-046"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -2462,8 +2795,16 @@
         ],
         "lexical": [
           {
+            "target_id": "a21s1-h-020",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-021",
+            "status": "reviewed"
+          },
+          {
             "target_id": "a21s1-t-022",
-            "status": "introduced"
+            "status": "reviewed"
           },
           {
             "target_id": "a21s1-t-023",
@@ -2480,6 +2821,46 @@
           {
             "target_id": "a21s1-e-026",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-027",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-028",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-029",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-maan-001",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-013",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-014",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-015",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-017",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-018",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-019",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -2552,12 +2933,21 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "practice_targets": [
         "a21s1-e-maan-001"
       ],
-      "activity_count": 20
+      "activity_count": 30,
+      "review_targets": [
+        "a21s1-t-013",
+        "a21s1-t-014",
+        "a21s1-e-015",
+        "a21s1-e-017",
+        "a21s1-e-018",
+        "a21s1-e-019"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-4",
@@ -2568,11 +2958,12 @@
       "summary_fa": "بگویم قطار چه زمانی حرکت کرد، آیا تأخیر داشت و سفر چقدر طول کشید.",
       "grammar_fa": "«Lähti» (حرکت کرد)، «saapui» (رسید) و «kesti» (طول کشید) گذشتهٔ سوم‌شخص‌اند. «Odotin asemalla» یعنی در ایستگاه منتظر ماندم؛ «kaksi tuntia» یعنی دو ساعت.",
       "new_targets": [
-        "a21s1-t-031",
-        "a21s1-t-032",
         "a21s1-t-033",
         "a21s1-e-034",
-        "a21s1-e-035"
+        "a21s1-e-035",
+        "a21s1-e-036",
+        "a21s1-e-037",
+        "a21s1-e-038"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2630,7 +3021,8 @@
             "myöhässä"
           ],
           "expected_fi": "Juna saapui myöhässä.",
-          "expected_fa": "قطار با تأخیر رسید."
+          "expected_fa": "قطار با تأخیر رسید.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -2640,7 +3032,8 @@
             "tuntia"
           ],
           "expected_fi": "Matka kesti kaksi tuntia.",
-          "expected_fa": "سفر دو ساعت طول کشید."
+          "expected_fa": "سفر دو ساعت طول کشید.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -2683,14 +3076,6 @@
       "activities": [
         {
           "type": "teach",
-          "item": "a21s1-t-031"
-        },
-        {
-          "type": "teach",
-          "item": "a21s1-t-032"
-        },
-        {
-          "type": "teach",
           "item": "a21s1-t-033"
         },
         {
@@ -2702,6 +3087,18 @@
           "item": "a21s1-e-035"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-036"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-037"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-038"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-034",
@@ -2710,7 +3107,8 @@
             "a21s1-e-029",
             "a21s1-e-035",
             "a21s1-e-034"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2721,7 +3119,8 @@
             "a21s1-e-037",
             "a21s1-e-038",
             "a21s1-e-043"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2732,7 +3131,8 @@
             "a21s1-e-035",
             "a21s1-e-046",
             "a21s1-e-047"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2743,7 +3143,8 @@
             "a21s1-e-054",
             "a21s1-e-035",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2754,7 +3155,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-036"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2765,7 +3167,8 @@
             "a21s1-e-064",
             "a21s1-e-069",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2776,7 +3179,8 @@
             "a21s1-e-037",
             "a21s1-e-077",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2787,7 +3191,8 @@
             "a21s1-e-006",
             "a21s1-e-037",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2798,7 +3203,8 @@
             "a21s1-t-031",
             "a21s1-t-032",
             "a21s1-t-033"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2809,7 +3215,8 @@
             "a21s1-t-032",
             "a21s1-t-033",
             "a21s1-h-002"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2820,7 +3227,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -2831,12 +3239,86 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-038"
+          "item": "a21s1-e-038",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-030",
+          "options": [
+            "a21s1-h-010",
+            "a21s1-h-030",
+            "a21s1-h-011",
+            "a21s1-t-012"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-023",
+          "options": [
+            "a21s1-h-010",
+            "a21s1-t-023",
+            "a21s1-h-011",
+            "a21s1-t-012"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-024",
+          "options": [
+            "a21s1-h-010",
+            "a21s1-t-024",
+            "a21s1-h-011",
+            "a21s1-t-012"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-026",
+          "options": [
+            "a21s1-e-064",
+            "a21s1-e-026",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-028",
+          "options": [
+            "a21s1-e-064",
+            "a21s1-e-028",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-029",
+          "options": [
+            "a21s1-e-064",
+            "a21s1-e-029",
+            "a21s1-e-069",
+            "a21s1-e-070"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -2847,6 +3329,14 @@
           }
         ],
         "lexical": [
+          {
+            "target_id": "a21s1-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-030",
+            "status": "reviewed"
+          },
           {
             "target_id": "a21s1-t-031",
             "status": "reviewed"
@@ -2866,6 +3356,38 @@
           {
             "target_id": "a21s1-e-035",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-036",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-037",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-038",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-023",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-024",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-026",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-028",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-029",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -2912,9 +3434,17 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 18
+      "activity_count": 25,
+      "review_targets": [
+        "a21s1-t-023",
+        "a21s1-t-024",
+        "a21s1-e-026",
+        "a21s1-e-028",
+        "a21s1-e-029"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-5",
@@ -2929,7 +3459,10 @@
         "a21s1-t-041",
         "a21s1-t-042",
         "a21s1-e-043",
-        "a21s1-e-044"
+        "a21s1-e-044",
+        "a21s1-e-045",
+        "a21s1-e-046",
+        "a21s1-e-047"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -2985,7 +3518,8 @@
             "hotellissa"
           ],
           "expected_fi": "Yövyin hotellissa yhden yön.",
-          "expected_fa": "یک شب در هتل اقامت کردم."
+          "expected_fa": "یک شب در هتل اقامت کردم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -2995,7 +3529,8 @@
             "Aamiainen"
           ],
           "expected_fi": "Aamiainen kuului hintaan.",
-          "expected_fa": "صبحانه در قیمت اقامت گنجانده شده بود."
+          "expected_fa": "صبحانه در قیمت اقامت گنجانده شده بود.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -3057,6 +3592,18 @@
           "item": "a21s1-e-044"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-045"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-046"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-047"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-043",
@@ -3065,7 +3612,8 @@
             "a21s1-e-036",
             "a21s1-e-037",
             "a21s1-e-038"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3076,7 +3624,8 @@
             "a21s1-e-043",
             "a21s1-e-046",
             "a21s1-e-047"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3087,7 +3636,8 @@
             "a21s1-e-054",
             "a21s1-e-044",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3098,7 +3648,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-044"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3109,7 +3660,8 @@
             "a21s1-e-064",
             "a21s1-e-069",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3120,7 +3672,8 @@
             "a21s1-e-045",
             "a21s1-e-077",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3131,7 +3684,8 @@
             "a21s1-e-006",
             "a21s1-e-046",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3142,7 +3696,8 @@
             "a21s1-e-015",
             "a21s1-e-016",
             "a21s1-e-046"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3153,7 +3708,8 @@
             "a21s1-t-040",
             "a21s1-t-041",
             "a21s1-t-042"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3164,7 +3720,8 @@
             "a21s1-t-041",
             "a21s1-t-042",
             "a21s1-h-002"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3175,7 +3732,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3186,12 +3744,74 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-047"
+          "item": "a21s1-e-047",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-039",
+          "options": [
+            "a21s1-t-033",
+            "a21s1-h-039",
+            "a21s1-t-040",
+            "a21s1-t-041"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-033",
+          "options": [
+            "a21s1-h-039",
+            "a21s1-t-033",
+            "a21s1-t-040",
+            "a21s1-t-041"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-035",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-035",
+            "a21s1-e-015",
+            "a21s1-e-016"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-036",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-036",
+            "a21s1-e-015",
+            "a21s1-e-016"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-038",
+          "options": [
+            "a21s1-e-009",
+            "a21s1-e-038",
+            "a21s1-e-015",
+            "a21s1-e-016"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -3202,6 +3822,14 @@
           }
         ],
         "lexical": [
+          {
+            "target_id": "a21s1-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-039",
+            "status": "reviewed"
+          },
           {
             "target_id": "a21s1-t-040",
             "status": "introduced"
@@ -3221,6 +3849,34 @@
           {
             "target_id": "a21s1-e-044",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-045",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-046",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-047",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-033",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-035",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-036",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-038",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -3267,9 +3923,16 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 18
+      "activity_count": 26,
+      "review_targets": [
+        "a21s1-t-033",
+        "a21s1-e-035",
+        "a21s1-e-036",
+        "a21s1-e-038"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-6",
@@ -3284,7 +3947,10 @@
         "a21s1-t-050",
         "a21s1-t-051",
         "a21s1-e-052",
-        "a21s1-e-053"
+        "a21s1-e-053",
+        "a21s1-e-054",
+        "a21s1-e-055",
+        "a21s1-e-056"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -3340,7 +4006,8 @@
             "lippua"
           ],
           "expected_fi": "En löytänyt lippua.",
-          "expected_fa": "بلیت را پیدا نکردم."
+          "expected_fa": "بلیت را پیدا نکردم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -3350,7 +4017,8 @@
             "neuvoa"
           ],
           "expected_fi": "Kysyin neuvoa asemalla.",
-          "expected_fa": "در ایستگاه راهنمایی خواستم."
+          "expected_fa": "در ایستگاه راهنمایی خواستم.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -3412,6 +4080,18 @@
           "item": "a21s1-e-053"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-054"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-055"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-056"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-052",
@@ -3420,7 +4100,8 @@
             "a21s1-e-052",
             "a21s1-e-045",
             "a21s1-e-046"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3431,7 +4112,8 @@
             "a21s1-e-054",
             "a21s1-e-052",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3442,7 +4124,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-053"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3453,7 +4136,8 @@
             "a21s1-e-064",
             "a21s1-e-069",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3464,7 +4148,8 @@
             "a21s1-e-054",
             "a21s1-e-077",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3475,7 +4160,8 @@
             "a21s1-e-006",
             "a21s1-e-054",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3486,7 +4172,8 @@
             "a21s1-e-015",
             "a21s1-e-016",
             "a21s1-e-055"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3497,7 +4184,8 @@
             "a21s1-e-018",
             "a21s1-e-019",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3508,7 +4196,8 @@
             "a21s1-t-049",
             "a21s1-t-050",
             "a21s1-t-051"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3519,7 +4208,8 @@
             "a21s1-t-050",
             "a21s1-t-051",
             "a21s1-h-002"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3530,7 +4220,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3541,12 +4232,98 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-056"
+          "item": "a21s1-e-056",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-048",
+          "options": [
+            "a21s1-t-067",
+            "a21s1-h-048",
+            "a21s1-t-068",
+            "a21s1-h-073"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-040",
+          "options": [
+            "a21s1-t-067",
+            "a21s1-t-040",
+            "a21s1-t-068",
+            "a21s1-h-073"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-041",
+          "options": [
+            "a21s1-t-067",
+            "a21s1-t-041",
+            "a21s1-t-068",
+            "a21s1-h-073"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-042",
+          "options": [
+            "a21s1-t-067",
+            "a21s1-t-042",
+            "a21s1-t-068",
+            "a21s1-h-073"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-045",
+          "options": [
+            "a21s1-e-036",
+            "a21s1-e-045",
+            "a21s1-e-037",
+            "a21s1-e-038"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-046",
+          "options": [
+            "a21s1-e-036",
+            "a21s1-e-046",
+            "a21s1-e-037",
+            "a21s1-e-038"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-047",
+          "options": [
+            "a21s1-e-036",
+            "a21s1-e-047",
+            "a21s1-e-037",
+            "a21s1-e-038"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -3558,12 +4335,20 @@
         ],
         "lexical": [
           {
+            "target_id": "a21s1-h-002",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-048",
+            "status": "reviewed"
+          },
+          {
             "target_id": "a21s1-t-049",
             "status": "introduced"
           },
           {
             "target_id": "a21s1-t-050",
-            "status": "reviewed"
+            "status": "introduced"
           },
           {
             "target_id": "a21s1-t-051",
@@ -3576,6 +4361,42 @@
           {
             "target_id": "a21s1-e-053",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-054",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-055",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-056",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-040",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-041",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-042",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-045",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-046",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-047",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -3622,9 +4443,18 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 18
+      "activity_count": 28,
+      "review_targets": [
+        "a21s1-t-040",
+        "a21s1-t-041",
+        "a21s1-t-042",
+        "a21s1-e-045",
+        "a21s1-e-046",
+        "a21s1-e-047"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-7",
@@ -3639,7 +4469,11 @@
         "a21s1-t-058",
         "a21s1-t-059",
         "a21s1-e-060",
-        "a21s1-e-061"
+        "a21s1-e-061",
+        "a21s1-e-062",
+        "a21s1-e-063",
+        "a21s1-e-064",
+        "a21s1-e-079"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -3696,7 +4530,8 @@
           "expected_fa": "عکس گرفتم.",
           "grammar_concept_ids": [
             "a21-plural-partitive"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -3706,7 +4541,8 @@
             "kirkon"
           ],
           "expected_fi": "Näin vanhan kirkon.",
-          "expected_fa": "یک کلیسای قدیمی را دیدم."
+          "expected_fa": "یک کلیسای قدیمی را دیدم.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -3787,6 +4623,22 @@
           "item": "a21s1-e-061"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-062"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-063"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-064"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-079"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-060",
@@ -3795,7 +4647,8 @@
             "a21s1-e-053",
             "a21s1-e-060",
             "a21s1-e-054"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3806,7 +4659,8 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-060"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3817,7 +4671,8 @@
             "a21s1-e-064",
             "a21s1-e-069",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3828,7 +4683,8 @@
             "a21s1-e-061",
             "a21s1-e-077",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3839,7 +4695,8 @@
             "a21s1-e-006",
             "a21s1-e-062",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3850,7 +4707,8 @@
             "a21s1-e-015",
             "a21s1-e-016",
             "a21s1-e-062"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3861,7 +4719,8 @@
             "a21s1-e-018",
             "a21s1-e-019",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3872,7 +4731,8 @@
             "a21s1-e-063",
             "a21s1-e-028",
             "a21s1-e-029"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3883,7 +4743,8 @@
             "a21s1-t-057",
             "a21s1-t-058",
             "a21s1-t-059"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3894,7 +4755,8 @@
             "a21s1-t-058",
             "a21s1-t-059",
             "a21s1-h-039"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3905,7 +4767,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3916,12 +4779,14 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-064"
+          "item": "a21s1-e-064",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -3932,7 +4797,104 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-021",
+          "options": [
+            "a21s1-t-012",
+            "a21s1-h-021",
+            "a21s1-t-013",
+            "a21s1-t-014"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-079",
+          "options": [
+            "a21s1-e-060",
+            "a21s1-e-079",
+            "a21s1-e-061",
+            "a21s1-e-062"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-049",
+          "options": [
+            "a21s1-t-012",
+            "a21s1-t-049",
+            "a21s1-t-013",
+            "a21s1-t-014"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-050",
+          "options": [
+            "a21s1-t-012",
+            "a21s1-t-050",
+            "a21s1-t-013",
+            "a21s1-t-014"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-051",
+          "options": [
+            "a21s1-t-012",
+            "a21s1-t-051",
+            "a21s1-t-013",
+            "a21s1-t-014"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-052",
+          "options": [
+            "a21s1-e-061",
+            "a21s1-e-052",
+            "a21s1-e-062",
+            "a21s1-e-063"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-055",
+          "options": [
+            "a21s1-e-061",
+            "a21s1-e-055",
+            "a21s1-e-062",
+            "a21s1-e-063"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-056",
+          "options": [
+            "a21s1-e-061",
+            "a21s1-e-056",
+            "a21s1-e-062",
+            "a21s1-e-063"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -3943,6 +4905,14 @@
           }
         ],
         "lexical": [
+          {
+            "target_id": "a21s1-h-039",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-021",
+            "status": "reviewed"
+          },
           {
             "target_id": "a21s1-t-057",
             "status": "introduced"
@@ -3962,6 +4932,46 @@
           {
             "target_id": "a21s1-e-061",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-062",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-063",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-064",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-079",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-049",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-050",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-051",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-052",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-055",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-056",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -4034,9 +5044,21 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 19
+      "activity_count": 31,
+      "practice_targets": [
+        "a21s1-e-079"
+      ],
+      "review_targets": [
+        "a21s1-t-049",
+        "a21s1-t-050",
+        "a21s1-t-051",
+        "a21s1-e-052",
+        "a21s1-e-055",
+        "a21s1-e-056"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-8",
@@ -4047,11 +5069,15 @@
       "summary_fa": "چهار اتفاق گذشته را با «اول»، «بعد»، «پس از آن» و «در پایان» به‌ترتیب تعریف کنم.",
       "grammar_fa": "«Ensin» یعنی اول، «sitten» یعنی بعد، «sen jälkeen» یعنی پس از آن و «lopuksi» یعنی در پایان. با این پیوندها فعل‌های گذشته را مرتب کن؛ «junaan» و «hotelliin» مقصد هستند.",
       "new_targets": [
-        "a21s1-t-066",
         "a21s1-t-067",
         "a21s1-t-068",
         "a21s1-e-069",
-        "a21s1-e-070"
+        "a21s1-e-070",
+        "a21s1-e-071",
+        "a21s1-e-072",
+        "a21s1-t-075",
+        "a21s1-e-077",
+        "a21s1-e-080"
       ],
       "curriculum_target_refs": {
         "high_frequency": [
@@ -4113,7 +5139,8 @@
           ],
           "grammar_concept_ids": [
             "a21-sequencing"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -4123,7 +5150,8 @@
             "junaan"
           ],
           "expected_fi": "Sitten nousin junaan.",
-          "expected_fa": "بعد سوار قطار شدم."
+          "expected_fa": "بعد سوار قطار شدم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -4133,7 +5161,8 @@
             "Lopuksi"
           ],
           "expected_fi": "Lopuksi palasin kotiin.",
-          "expected_fa": "در پایان به خانه برگشتم."
+          "expected_fa": "در پایان به خانه برگشتم.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -4157,10 +5186,6 @@
       "activities": [
         {
           "type": "teach",
-          "item": "a21s1-t-066"
-        },
-        {
-          "type": "teach",
           "item": "a21s1-t-067"
         },
         {
@@ -4176,6 +5201,26 @@
           "item": "a21s1-e-070"
         },
         {
+          "type": "teach",
+          "item": "a21s1-e-071"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-072"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-t-075"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-077"
+        },
+        {
+          "type": "teach",
+          "item": "a21s1-e-080"
+        },
+        {
           "type": "choice",
           "mode": "meaning",
           "item": "a21s1-e-069",
@@ -4184,7 +5229,8 @@
             "a21s1-e-060",
             "a21s1-e-061",
             "a21s1-e-069"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4195,7 +5241,8 @@
             "a21s1-e-063",
             "a21s1-e-064",
             "a21s1-e-070"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4206,7 +5253,8 @@
             "a21s1-e-070",
             "a21s1-e-077",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4217,7 +5265,8 @@
             "a21s1-e-006",
             "a21s1-e-070",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4228,7 +5277,8 @@
             "a21s1-e-015",
             "a21s1-e-016",
             "a21s1-e-071"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4239,7 +5289,8 @@
             "a21s1-e-018",
             "a21s1-e-019",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4250,7 +5301,8 @@
             "a21s1-e-072",
             "a21s1-e-028",
             "a21s1-e-029"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4261,7 +5313,8 @@
             "a21s1-e-036",
             "a21s1-e-072",
             "a21s1-e-037"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4272,7 +5325,8 @@
             "a21s1-t-066",
             "a21s1-t-067",
             "a21s1-t-068"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4283,7 +5337,8 @@
             "a21s1-t-067",
             "a21s1-t-068",
             "a21s1-h-030"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4294,7 +5349,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4305,7 +5361,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
@@ -4313,7 +5370,131 @@
           "item": "a21s1-e-maan-001",
           "grammar_concept_ids": [
             "a21-maan"
-          ]
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-065",
+          "options": [
+            "a21s1-t-040",
+            "a21s1-h-065",
+            "a21s1-t-041",
+            "a21s1-t-042"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-075",
+          "options": [
+            "a21s1-t-040",
+            "a21s1-t-075",
+            "a21s1-t-041",
+            "a21s1-t-042"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-077",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-077",
+            "a21s1-e-007",
+            "a21s1-e-008"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-080",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-080",
+            "a21s1-e-007",
+            "a21s1-e-008"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "guided-writing",
+          "item": "a21s1-e-069",
+          "expected_items": [
+            "a21s1-e-069",
+            "a21s1-e-070",
+            "a21s1-e-071",
+            "a21s1-e-072"
+          ],
+          "prompt_fa": "چهار مرحلهٔ سفر را به‌ترتیب و با جمله‌های آموزش‌داده‌شده بنویس: خرید بلیت، سوار شدن، رفتن به هتل و بازگشت به خانه.",
+          "grammar_concept_ids": [
+            "a21-sequencing"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-057",
+          "options": [
+            "a21s1-t-040",
+            "a21s1-t-057",
+            "a21s1-t-041",
+            "a21s1-t-042"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-059",
+          "options": [
+            "a21s1-t-040",
+            "a21s1-t-059",
+            "a21s1-t-041",
+            "a21s1-t-042"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-060",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-060",
+            "a21s1-e-007",
+            "a21s1-e-008"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-063",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-063",
+            "a21s1-e-007",
+            "a21s1-e-008"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-064",
+          "options": [
+            "a21s1-e-006",
+            "a21s1-e-064",
+            "a21s1-e-007",
+            "a21s1-e-008"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -4324,6 +5505,14 @@
           }
         ],
         "lexical": [
+          {
+            "target_id": "a21s1-h-030",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-065",
+            "status": "reviewed"
+          },
           {
             "target_id": "a21s1-t-066",
             "status": "reviewed"
@@ -4343,6 +5532,50 @@
           {
             "target_id": "a21s1-e-070",
             "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-071",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-072",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-t-075",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-077",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-080",
+            "status": "introduced"
+          },
+          {
+            "target_id": "a21s1-e-maan-001",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-057",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-059",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-060",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-063",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-064",
+            "status": "reviewed"
           }
         ],
         "grammar": [
@@ -4410,12 +5643,23 @@
               }
             ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
       "practice_targets": [
-        "a21s1-e-maan-001"
+        "a21s1-e-maan-001",
+        "a21s1-t-075",
+        "a21s1-e-077",
+        "a21s1-e-080"
       ],
-      "activity_count": 18
+      "activity_count": 32,
+      "review_targets": [
+        "a21s1-t-057",
+        "a21s1-t-059",
+        "a21s1-e-060",
+        "a21s1-e-063",
+        "a21s1-e-064"
+      ]
     },
     {
       "id": "a2.1-section-1-lesson-9",
@@ -4425,13 +5669,7 @@
       "objective_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
       "summary_fa": "یک پیام چهار‌جمله‌ای دربارهٔ زمان، مقصد، دیدار و بازگشت از سفر بخوانم و بنویسم.",
       "grammar_fa": "در روایت کوتاه، زمان را با «Viime lauantaina» مشخص کن و سپس مقصد، وسیلهٔ رفت‌وآمد، یک دیدار و بازگشت را با فعل‌های گذشته بیان کن. از جمله‌های کوتاه استفاده کن. «Näin valokuvia museossa» یعنی در موزه عکس‌هایی دیدم؛ برای تعداد نامشخص عکس‌ها «valokuvia» می‌آید. این مرورِ همان صورت جمع در موقعیتی تازه است، نه آموزش صرف همهٔ اسم‌ها.",
-      "new_targets": [
-        "a21s1-t-074",
-        "a21s1-t-075",
-        "a21s1-t-076",
-        "a21s1-e-077",
-        "a21s1-e-078"
-      ],
+      "new_targets": [],
       "curriculum_target_refs": {
         "high_frequency": [
           "a21s1-h-073",
@@ -4489,7 +5727,8 @@
             "lauantaina"
           ],
           "expected_fi": "Viime lauantaina kävin Tampereella.",
-          "expected_fa": "شنبهٔ گذشته به تامپره رفتم."
+          "expected_fa": "شنبهٔ گذشته به تامپره رفتم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -4499,7 +5738,8 @@
             "Tampereella"
           ],
           "expected_fi": "Viime lauantaina kävin Tampereella.",
-          "expected_fa": "شنبهٔ گذشته به تامپره رفتم."
+          "expected_fa": "شنبهٔ گذشته به تامپره رفتم.",
+          "answer_policy": "morphology"
         },
         {
           "type": "expression-completion",
@@ -4509,7 +5749,8 @@
             "sunnuntaina"
           ],
           "expected_fi": "Palasin kotiin sunnuntaina.",
-          "expected_fa": "یکشنبه به خانه برگشتم."
+          "expected_fa": "یکشنبه به خانه برگشتم.",
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -4563,29 +5804,28 @@
           "grammar_concept_ids": [
             "a21-plural-partitive"
           ]
+        },
+        {
+          "type": "morphology-choice",
+          "item": "a21s1-e-037",
+          "base_fi": "tunti",
+          "feature_fa": "Partitiivi مفرد پس از عدد",
+          "prompt_fa": "سفر دو ساعت طول کشید. پس از عدد kaksi چه شکلی از «tunti» لازم است؟",
+          "frame_fi": "Matka kesti kaksi _____.",
+          "options_fi": [
+            "tunti",
+            "tunnit",
+            "tuntia",
+            "tunnin"
+          ],
+          "expected_fi": "tuntia",
+          "explanation_fa": "در عبارت «kaksi tuntia» اسم شمارش‌شده پس از kaksi در پارتیتیو مفرد می‌آید؛ این قانون به همین مثال محدود سنجیده می‌شود.",
+          "grammar_concept_ids": [
+            "a12-quantities"
+          ]
         }
       ],
       "activities": [
-        {
-          "type": "teach",
-          "item": "a21s1-t-074"
-        },
-        {
-          "type": "teach",
-          "item": "a21s1-t-075"
-        },
-        {
-          "type": "teach",
-          "item": "a21s1-t-076"
-        },
-        {
-          "type": "teach",
-          "item": "a21s1-e-077"
-        },
-        {
-          "type": "teach",
-          "item": "a21s1-e-078"
-        },
         {
           "type": "choice",
           "mode": "meaning",
@@ -4595,7 +5835,8 @@
             "a21s1-e-063",
             "a21s1-e-064",
             "a21s1-e-069"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4606,7 +5847,8 @@
             "a21s1-e-077",
             "a21s1-e-072",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4617,7 +5859,8 @@
             "a21s1-e-006",
             "a21s1-e-078",
             "a21s1-e-007"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4628,7 +5871,8 @@
             "a21s1-e-015",
             "a21s1-e-016",
             "a21s1-e-078"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4639,7 +5883,8 @@
             "a21s1-e-018",
             "a21s1-e-019",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4650,7 +5895,8 @@
             "a21s1-e-079",
             "a21s1-e-028",
             "a21s1-e-029"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4661,7 +5907,8 @@
             "a21s1-e-036",
             "a21s1-e-080",
             "a21s1-e-037"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4672,7 +5919,8 @@
             "a21s1-e-044",
             "a21s1-e-045",
             "a21s1-e-080"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "short-reading",
@@ -4705,7 +5953,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4716,7 +5965,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -4727,7 +5977,8 @@
             "a21s1-h-001",
             "a21s1-h-002",
             "a21s1-t-003"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "guided-writing",
@@ -4741,12 +5992,132 @@
           "prompt_fa": "داستان سفر را در چهار جملهٔ متصل بازنویسی کن: زمان و مکان، وسیلهٔ سفر، دیدار و بازگشت.",
           "grammar_concept_ids": [
             "a21-sequencing"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-t-058"
+          "item": "a21s1-t-058",
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-073",
+          "options": [
+            "a21s1-t-068",
+            "a21s1-h-073",
+            "a21s1-t-074",
+            "a21s1-t-075"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-h-030",
+          "options": [
+            "a21s1-h-073",
+            "a21s1-h-030",
+            "a21s1-t-074",
+            "a21s1-t-075"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "short-reading",
+          "item": "a21s1-reading-1",
+          "question_item": "a21s1-e-078",
+          "options": [
+            "a21s1-e-018",
+            "a21s1-e-078",
+            "a21s1-e-019",
+            "a21s1-e-034"
+          ]
+        },
+        {
+          "type": "short-reading",
+          "item": "a21s1-reading-2",
+          "question_item": "a21s1-e-080",
+          "options": [
+            "a21s1-e-080",
+            "a21s1-e-061",
+            "a21s1-e-062",
+            "a21s1-e-063"
+          ]
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-037",
+          "options": [
+            "a21s1-e-036",
+            "a21s1-e-037",
+            "a21s1-e-038",
+            "a21s1-e-047"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-067",
+          "options": [
+            "a21s1-h-073",
+            "a21s1-t-067",
+            "a21s1-t-074",
+            "a21s1-t-075"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-t-068",
+          "options": [
+            "a21s1-h-073",
+            "a21s1-t-068",
+            "a21s1-t-074",
+            "a21s1-t-075"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-069",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-069",
+            "a21s1-e-034",
+            "a21s1-e-035"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-071",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-071",
+            "a21s1-e-034",
+            "a21s1-e-035"
+          ],
+          "answer_policy": "morphology"
+        },
+        {
+          "type": "choice",
+          "mode": "finnish",
+          "item": "a21s1-e-072",
+          "options": [
+            "a21s1-e-029",
+            "a21s1-e-072",
+            "a21s1-e-034",
+            "a21s1-e-035"
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "learning_objectives": {
@@ -4758,12 +6129,20 @@
         ],
         "lexical": [
           {
+            "target_id": "a21s1-h-073",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-h-030",
+            "status": "reviewed"
+          },
+          {
             "target_id": "a21s1-t-074",
             "status": "reviewed"
           },
           {
             "target_id": "a21s1-t-075",
-            "status": "introduced"
+            "status": "reviewed"
           },
           {
             "target_id": "a21s1-t-076",
@@ -4771,14 +6150,46 @@
           },
           {
             "target_id": "a21s1-e-077",
-            "status": "introduced"
+            "status": "reviewed"
           },
           {
             "target_id": "a21s1-e-078",
-            "status": "introduced"
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-079",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-080",
+            "status": "reviewed"
           },
           {
             "target_id": "a21s1-t-058",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-037",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-067",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-t-068",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-069",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-071",
+            "status": "reviewed"
+          },
+          {
+            "target_id": "a21s1-e-072",
             "status": "reviewed"
           }
         ],
@@ -4867,12 +6278,42 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a12-quantities",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a11-case-chunks"
+            ],
+            "explanation_fa": "در روایت سفر هم بعد از عدد kaksi از «tuntia» استفاده می‌کنیم؛ این بازبینی یک نمونهٔ مشخص است، نه صرف آزاد اسم‌ها.",
+            "examples": [
+              {
+                "fi": "Matka kesti kaksi tuntia.",
+                "fa": "سفر دو ساعت طول کشید."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "morphology-choice",
+                "item_id": "a21s1-e-037",
+                "mode": "recognition"
+              }
+            ]
           }
-        ]
+        ],
+        "grammar_scope": "assessed"
       },
-      "activity_count": 20,
+      "activity_count": 25,
       "practice_targets": [
         "a21s1-t-058"
+      ],
+      "review_targets": [
+        "a21s1-e-037",
+        "a21s1-t-067",
+        "a21s1-t-068",
+        "a21s1-e-069",
+        "a21s1-e-071",
+        "a21s1-e-072"
       ]
     },
     {
@@ -4935,7 +6376,8 @@
           ],
           "grammar_concept_ids": [
             "a21-object-core"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "controlled-production",
@@ -4948,7 +6390,8 @@
           "expected_fi": "En löytänyt lippua.",
           "accepted_answers": [
             "En löytänyt lippua."
-          ]
+          ],
+          "answer_policy": "morphology"
         }
       ],
       "morphology_practice": [
@@ -4996,7 +6439,8 @@
             "a21s1-e-006",
             "a21s1-e-015",
             "a21s1-e-016"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5007,7 +6451,8 @@
             "a21s1-e-019",
             "a21s1-e-016",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5018,7 +6463,8 @@
             "a21s1-e-028",
             "a21s1-e-029",
             "a21s1-e-025"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5029,7 +6475,8 @@
             "a21s1-e-035",
             "a21s1-e-036",
             "a21s1-e-037"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5040,7 +6487,8 @@
             "a21s1-e-043",
             "a21s1-e-044",
             "a21s1-e-045"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5051,7 +6499,8 @@
             "a21s1-e-047",
             "a21s1-e-054",
             "a21s1-e-052"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5062,7 +6511,8 @@
             "a21s1-e-055",
             "a21s1-e-056",
             "a21s1-e-061"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5073,12 +6523,14 @@
             "a21s1-e-061",
             "a21s1-e-062",
             "a21s1-e-063"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-077"
+          "item": "a21s1-e-077",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5089,12 +6541,14 @@
             "a21s1-e-079",
             "a21s1-e-027",
             "a21s1-e-080"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-037"
+          "item": "a21s1-e-037",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5105,12 +6559,14 @@
             "a21s1-e-016",
             "a21s1-e-017",
             "a21s1-e-018"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-053"
+          "item": "a21s1-e-053",
+          "answer_policy": "morphology"
         },
         {
           "type": "choice",
@@ -5121,12 +6577,17 @@
             "a21s1-e-034",
             "a21s1-e-062",
             "a21s1-e-035"
-          ]
+          ],
+          "answer_policy": "morphology"
         },
         {
           "type": "type",
           "mode": "finnish",
-          "item": "a21s1-e-080"
+          "item": "a21s1-e-080",
+          "answer_policy": "morphology",
+          "grammar_concept_ids": [
+            "a21-illative-patterns"
+          ]
         }
       ],
       "learning_objectives": {
@@ -5241,9 +6702,33 @@
                 "mode": "supported_production"
               }
             ]
+          },
+          {
+            "concept_id": "a21-illative-patterns",
+            "status": "reviewed",
+            "prerequisite_concept_ids": [
+              "a13-local-expansion"
+            ],
+            "explanation_fa": "در بازگشت به خانه، «kotiin» مقصد است؛ در برابر «kotona» برای محل ثابت و «kotoa» برای مبدأ.",
+            "examples": [
+              {
+                "fi": "Palasin kotiin sunnuntaina.",
+                "fa": "یکشنبه به خانه برگشتم."
+              }
+            ],
+            "evidence": [
+              {
+                "activity_type": "type",
+                "item_id": "a21s1-e-080",
+                "mode": "supported_production"
+              }
+            ]
           }
-        ]
-      }
+        ],
+        "grammar_scope": "assessed"
+      },
+      "activity_count": 15,
+      "review_targets": []
     }
   ]
 }

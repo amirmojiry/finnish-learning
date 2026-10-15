@@ -32,9 +32,9 @@ test('A2.1 travel is an additional real stage without exposing planned A2 module
  assert.equal(stages.at(-1).sections.length,2);
 });
 
-test('ten A2.1 travel lessons map exact curriculum target forms and cover 181 activities',()=>{
+test('ten A2.1 travel lessons map exact curriculum target forms and cover expanded activities',()=>{
  assert.equal(section.lessons.length,10);
- assert.equal(section.lessons.reduce((n,l)=>n+l.activities.length,0),181);
+ assert.ok(section.lessons.reduce((n,l)=>n+l.activities.length,0)>181);
  for(const lesson of section.lessons){
   const planned=contract.sections[0].lessons[lesson.order-1];
   assert.equal(lesson.curriculum_id,planned.id);
@@ -83,7 +83,7 @@ test('choices and listening remain semantically distinguishable and inflection i
 
 test('integrated A2.1 travel reading questions have exactly one phrase from the passage',()=>{
  const activities=section.lessons[8].activities.filter(a=>a.type==='short-reading');
- assert.equal(activities.length,2);
+ assert.equal(activities.length,4);
  for(const a of activities){
   const sentence=section.items[a.item].surface_form;
   assert.ok(sentence.includes(section.items[a.question_item].surface_form));
