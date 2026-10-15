@@ -1,0 +1,850 @@
+{
+  "schema_version": 1,
+  "section_id": "a1.3-section-3",
+  "scope": "Authored assessment and review opportunities, not learner mastery, complete paradigms or CEFR/YKI certification.",
+  "summary": {
+    "lessons": 10,
+    "activities": 303,
+    "introduced_surface_forms_and_expressions": 56,
+    "surfaces_with_later_positive_review": 56,
+    "grammar_concepts_with_later_review": 12,
+    "missing_positive_targets": 0,
+    "repeated_new_labels": 0,
+    "formulaic_lessons": [],
+    "errors": 0
+  },
+  "boundaries": [
+    "Exact prior knowledge and grammar prerequisites carry forward from all ten preceding A1.1/A1.2/A1.3 sections; lexical senses and SRS histories remain separate.",
+    "Verb-class evidence is bounded to tehdä/Teen and lähettää/Lähetän; KPT evidence covers only the explicit tt/t pair. No general suffix generator or full paradigm is claimed.",
+    "Pitää and voin take explicit infinitives; apua/suomea, ryhmässä and minulle/sinulle use reviewed complete sentences, not unrestricted object/case rules.",
+    "Miten tämä tehdään stays formulaic. Meidän opettajamme and hänen kanssaan do not establish full possessive-suffix paradigms; että is lexical recognition here.",
+    "Olin is assessed as past recognition against olen in a stated previous-week context; whole-phrase lexical retrieval does not claim free imperfect production.",
+    "Three explicit singular commands have supported sentence production and an ordered instruction task. Temporal deadlines keep perjantaina/tällä viikolla/ensi viikolla distinct.",
+    "Both original readings assess two facts; four-sentence study/work message writing uses previously taught complete phrases and remains supported practice.",
+    "All 56 introductions and twelve bounded grammar concepts have later review. Strict productive recall, original records/core mappings, fifteen checkpoint targets and the 80% threshold are preserved; wider P2/P5/R3 and final gates remain open."
+  ],
+  "lessons": [
+    {
+      "lesson_id": "a1.3-section-3-lesson-1",
+      "order": 1,
+      "title_fa": "کارها و برنامه‌ها",
+      "activities": 24,
+      "declared_targets": 10,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 10,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a13-necessity",
+        "a13-verb-classes",
+        "a13-present-paradigm"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-2",
+      "order": 2,
+      "title_fa": "درخواست توضیح",
+      "activities": 29,
+      "declared_targets": 14,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 14,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-questions",
+        "a12-requests"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-3",
+      "order": 3,
+      "title_fa": "پیروی از دستورهای ساده",
+      "activities": 32,
+      "declared_targets": 17,
+      "introduced_surfaces": 7,
+      "positively_assessed_targets": 17,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-commands",
+        "a12-frequency-adverbs"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-4",
+      "order": 4,
+      "title_fa": "توانایی و نیاز",
+      "activities": 29,
+      "declared_targets": 16,
+      "introduced_surfaces": 5,
+      "positively_assessed_targets": 16,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a13-necessity",
+        "a13-partitive-patterns"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-5",
+      "order": 5,
+      "title_fa": "افراد در محیط تحصیل و کار",
+      "activities": 32,
+      "declared_targets": 17,
+      "introduced_surfaces": 8,
+      "positively_assessed_targets": 17,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a13-local-expansion",
+        "a13-present-paradigm"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-6",
+      "order": 6,
+      "title_fa": "یک ایمیل یا پیام کوتاه",
+      "activities": 31,
+      "declared_targets": 17,
+      "introduced_surfaces": 9,
+      "positively_assessed_targets": 17,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a13-kpt-preview",
+        "a13-verb-classes",
+        "a12-requests",
+        "a13-local-expansion"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-7",
+      "order": 7,
+      "title_fa": "تاریخ‌ها و مهلت‌ها",
+      "activities": 32,
+      "declared_targets": 18,
+      "introduced_surfaces": 6,
+      "positively_assessed_targets": 18,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-frequency-adverbs",
+        "a13-past-recognition"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-8",
+      "order": 8,
+      "title_fa": "غیبت و تأخیر",
+      "activities": 31,
+      "declared_targets": 18,
+      "introduced_surfaces": 6,
+      "positively_assessed_targets": 18,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a11-olla",
+        "a13-present-paradigm"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-9",
+      "order": 9,
+      "title_fa": "یک روز کامل تحصیل یا کار",
+      "activities": 34,
+      "declared_targets": 18,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 18,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a13-necessity",
+        "a13-verb-classes",
+        "a13-present-paradigm",
+        "a11-questions",
+        "a12-requests",
+        "a12-commands",
+        "a12-frequency-adverbs",
+        "a13-partitive-patterns",
+        "a13-local-expansion",
+        "a13-kpt-preview",
+        "a11-olla",
+        "a13-past-recognition"
+      ]
+    },
+    {
+      "lesson_id": "a1.3-section-3-lesson-10",
+      "order": 10,
+      "title_fa": "ارزیابی بخش ۳",
+      "activities": 29,
+      "declared_targets": 24,
+      "introduced_surfaces": 0,
+      "positively_assessed_targets": 24,
+      "grammar_scope": "assessed",
+      "grammar_concepts": [
+        "a12-frequency-adverbs",
+        "a13-necessity",
+        "a13-verb-classes",
+        "a13-present-paradigm",
+        "a11-questions",
+        "a12-requests",
+        "a12-commands",
+        "a13-partitive-patterns",
+        "a13-local-expansion",
+        "a13-kpt-preview",
+        "a11-olla",
+        "a13-past-recognition"
+      ]
+    }
+  ],
+  "lexical_review": [
+    {
+      "form_id": "form:74-e4-6e-e4",
+      "target_id": "a13s3-h-003",
+      "surface_form": "tänä",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-2",
+        "a1.3-section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:74-65-68-74-e4-76-e4",
+      "target_id": "a13s3-t-004",
+      "surface_form": "tehtävä",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:6b-75-72-73-73-69",
+      "target_id": "a13s3-t-005",
+      "surface_form": "kurssi",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-2"
+      ]
+    },
+    {
+      "form_id": "form:76-75-6f-72-6f",
+      "target_id": "a13s3-t-006",
+      "surface_form": "vuoro",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:74-e4-6d-e4-20-74-65-68-74-e4-76-e4-20-70-69-74-e4-e4-20-74-65-68-64-e4-20-74-e4-6e-e4-e4-6e-2e",
+      "target_id": "a13s3-e-007",
+      "surface_form": "Tämä tehtävä pitää tehdä tänään.",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-2",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-75-72-73-73-69-20-61-6c-6b-61-61-20-61-61-6d-75-6c-6c-61-2e",
+      "target_id": "a13s3-e-008",
+      "surface_form": "Kurssi alkaa aamulla.",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6e-75-6c-6c-61-20-6f-6e-20-69-6c-74-61-76-75-6f-72-6f-2e",
+      "target_id": "a13s3-e-009",
+      "surface_form": "Minulla on iltavuoro.",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-2",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-65-65-6e-20-74-e4-6d-e4-6e-20-74-e4-6e-e4-e4-6e-2e",
+      "target_id": "a13s3-e-present-task",
+      "surface_form": "Teen tämän tänään.",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:74-61-72-6b-6f-69-74-74-61-61",
+      "target_id": "a13s3-t-013",
+      "surface_form": "tarkoittaa",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "form:73-65-6c-69-74-74-e4-e4",
+      "target_id": "a13s3-t-014",
+      "surface_form": "selittää",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:75-75-64-65-73-74-61-61-6e",
+      "target_id": "a13s3-t-015",
+      "surface_form": "uudestaan",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-74-e4-20-74-e4-6d-e4-20-74-61-72-6b-6f-69-74-74-61-61-3f",
+      "target_id": "a13s3-e-016",
+      "surface_form": "Mitä tämä tarkoittaa?",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-4",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:76-6f-69-74-6b-6f-20-73-65-6c-69-74-74-e4-e4-3f",
+      "target_id": "a13s3-e-017",
+      "surface_form": "Voitko selittää?",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-74-65-6e-20-74-e4-6d-e4-20-74-65-68-64-e4-e4-6e-3f",
+      "target_id": "a13s3-e-018",
+      "surface_form": "Miten tämä tehdään?",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-4",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:76-6f-69-74-6b-6f-20-73-61-6e-6f-61-20-75-75-64-65-73-74-61-61-6e-3f",
+      "target_id": "a13s3-e-019",
+      "surface_form": "Voitko sanoa uudestaan?",
+      "introduced_in": "a1.3-section-3-lesson-2",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-3",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:65-6e-73-69-6e",
+      "target_id": "a13s3-h-020",
+      "surface_form": "ensin",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:61-76-61-61",
+      "target_id": "a13s3-t-023",
+      "surface_form": "avaa",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-4"
+      ]
+    },
+    {
+      "form_id": "form:6b-69-72-6a-6f-69-74-61",
+      "target_id": "a13s3-t-024",
+      "surface_form": "kirjoita",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6c-e4-68-65-74-e4",
+      "target_id": "a13s3-t-025",
+      "surface_form": "lähetä",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:61-76-61-61-20-74-69-65-64-6f-73-74-6f-20-65-6e-73-69-6e-2e",
+      "target_id": "a13s3-e-026",
+      "surface_form": "Avaa tiedosto ensin.",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-69-72-6a-6f-69-74-61-20-6e-69-6d-69-2e",
+      "target_id": "a13s3-e-027",
+      "surface_form": "Kirjoita nimi.",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-4"
+      ]
+    },
+    {
+      "form_id": "expression:6c-e4-68-65-74-e4-20-76-69-65-73-74-69-20-73-65-6e-20-6a-e4-6c-6b-65-65-6e-2e",
+      "target_id": "a13s3-e-028",
+      "surface_form": "Lähetä viesti sen jälkeen.",
+      "introduced_in": "a1.3-section-3-lesson-3",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6f-73-61-61-6e",
+      "target_id": "a13s3-t-031",
+      "surface_form": "osaan",
+      "introduced_in": "a1.3-section-3-lesson-4",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:68-61-72-6a-6f-69-74-65-6c-6c-61",
+      "target_id": "a13s3-t-032",
+      "surface_form": "harjoitella",
+      "introduced_in": "a1.3-section-3-lesson-4",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:6f-73-61-61-6e-20-76-e4-68-e4-6e-20-73-75-6f-6d-65-61-2e",
+      "target_id": "a13s3-e-034",
+      "surface_form": "Osaan vähän suomea.",
+      "introduced_in": "a1.3-section-3-lesson-4",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-69-6e-75-6e-20-70-69-74-e4-e4-20-68-61-72-6a-6f-69-74-65-6c-6c-61-2e",
+      "target_id": "a13s3-e-036",
+      "surface_form": "Minun pitää harjoitella.",
+      "introduced_in": "a1.3-section-3-lesson-4",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-6",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:76-6f-69-6e-20-74-65-68-64-e4-20-74-e4-6d-e4-6e-2e",
+      "target_id": "a13s3-e-037",
+      "surface_form": "Voin tehdä tämän.",
+      "introduced_in": "a1.3-section-3-lesson-4",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-5"
+      ]
+    },
+    {
+      "form_id": "form:6d-65-69-64-e4-6e",
+      "target_id": "a13s3-h-040",
+      "surface_form": "meidän",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:74-79-f6-6b-61-76-65-72-69",
+      "target_id": "a13s3-t-041",
+      "surface_form": "työkaveri",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-6"
+      ]
+    },
+    {
+      "form_id": "form:6f-70-65-74-74-61-6a-61",
+      "target_id": "a13s3-t-042",
+      "surface_form": "opettaja",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:72-79-68-6d-e4",
+      "target_id": "a13s3-t-043",
+      "surface_form": "ryhmä",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-6"
+      ]
+    },
+    {
+      "form_id": "expression:74-79-f6-73-6b-65-6e-74-65-6c-65-6e-20-68-e4-6e-65-6e-20-6b-61-6e-73-73-61-61-6e-2e",
+      "target_id": "a13s3-e-044",
+      "surface_form": "Työskentelen hänen kanssaan.",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-70-69-73-6b-65-6c-65-6e-20-74-e4-73-73-e4-20-72-79-68-6d-e4-73-73-e4-2e",
+      "target_id": "a13s3-e-045",
+      "surface_form": "Opiskelen tässä ryhmässä.",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-6",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6d-65-69-64-e4-6e-20-6f-70-65-74-74-61-6a-61-6d-6d-65-20-6f-6e-20-74-e4-e4-6c-6c-e4-2e",
+      "target_id": "a13s3-e-046",
+      "surface_form": "Meidän opettajamme on täällä.",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "expression:74-65-65-6d-6d-65-20-74-e4-6d-e4-6e-20-79-68-64-65-73-73-e4-2e",
+      "target_id": "a13s3-e-047",
+      "surface_form": "Teemme tämän yhdessä.",
+      "introduced_in": "a1.3-section-3-lesson-5",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-6",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:65-74-74-e4",
+      "target_id": "a13s3-h-050",
+      "surface_form": "että",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:73-e4-68-6b-f6-70-6f-73-74-69",
+      "target_id": "a13s3-t-051",
+      "surface_form": "sähköposti",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "form:6c-69-69-74-65",
+      "target_id": "a13s3-t-052",
+      "surface_form": "liite",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:6c-e4-68-65-74-74-e4-e4",
+      "target_id": "a13s3-t-053",
+      "surface_form": "lähettää",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7"
+      ]
+    },
+    {
+      "form_id": "expression:68-65-69-21-20-6c-e4-68-65-74-e4-6e-20-73-69-6e-75-6c-6c-65-20-76-69-65-73-74-69-6e-2e",
+      "target_id": "a13s3-e-054",
+      "surface_form": "Hei! Lähetän sinulle viestin.",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6c-69-69-74-65-20-6f-6e-20-6d-75-6b-61-6e-61-2e",
+      "target_id": "a13s3-e-055",
+      "surface_form": "Liite on mukana.",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7",
+        "a1.3-section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:76-6f-69-74-6b-6f-20-6c-e4-68-65-74-74-e4-e4-20-73-65-6e-20-6d-69-6e-75-6c-6c-65-3f",
+      "target_id": "a13s3-e-056",
+      "surface_form": "Voitko lähettää sen minulle?",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6b-69-69-74-6f-73-20-61-76-75-73-74-61-2e",
+      "target_id": "a13s3-e-057",
+      "surface_form": "Kiitos avusta.",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-7",
+        "a1.3-section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:6c-e4-68-65-74-e4-6e-20-73-69-6e-75-6c-6c-65-20-76-69-65-73-74-69-6e-2e",
+      "target_id": "a13s3-e-send-message",
+      "surface_form": "Lähetän sinulle viestin.",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:6d-e4-e4-72-e4-61-69-6b-61",
+      "target_id": "a13s3-t-060",
+      "surface_form": "määräaika",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "form:76-69-69-6b-6f-6c-6c-61",
+      "target_id": "a13s3-t-062",
+      "surface_form": "viikolla",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:6d-e4-e4-72-e4-61-69-6b-61-20-6f-6e-20-70-65-72-6a-61-6e-74-61-69-6e-61-2e",
+      "target_id": "a13s3-e-063",
+      "surface_form": "Määräaika on perjantaina.",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-65-65-6e-20-73-65-6e-20-74-e4-6c-6c-e4-20-76-69-69-6b-6f-6c-6c-61-2e",
+      "target_id": "a13s3-e-064",
+      "surface_form": "Teen sen tällä viikolla.",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "expression:65-6e-73-69-20-76-69-69-6b-6f-6c-6c-61-20-6f-6e-20-75-75-73-69-20-74-65-68-74-e4-76-e4-2e",
+      "target_id": "a13s3-e-065",
+      "surface_form": "Ensi viikolla on uusi tehtävä.",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-8"
+      ]
+    },
+    {
+      "form_id": "expression:76-69-69-6d-65-20-76-69-69-6b-6f-6c-6c-61-20-6f-6c-69-6e-20-70-6f-69-73-73-61-2e",
+      "target_id": "a13s3-e-066",
+      "surface_form": "Viime viikolla olin poissa.",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "form:76-75-6f-6b-73-69",
+      "target_id": "a13s3-h-069",
+      "surface_form": "vuoksi",
+      "introduced_in": "a1.3-section-3-lesson-8",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-9"
+      ]
+    },
+    {
+      "form_id": "form:70-6f-69-73-73-61",
+      "target_id": "a13s3-t-070",
+      "surface_form": "poissa",
+      "introduced_in": "a1.3-section-3-lesson-8",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-6c-65-6e-20-74-e4-6e-e4-e4-6e-20-70-6f-69-73-73-61-2e",
+      "target_id": "a13s3-e-073",
+      "surface_form": "Olen tänään poissa.",
+      "introduced_in": "a1.3-section-3-lesson-8",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-6c-65-6e-20-6d-79-f6-68-e4-73-73-e4-2c-20-6b-6f-73-6b-61-20-62-75-73-73-69-20-6f-6e-20-6d-79-f6-68-e4-73-73-e4-2e",
+      "target_id": "a13s3-e-074",
+      "surface_form": "Olen myöhässä, koska bussi on myöhässä.",
+      "introduced_in": "a1.3-section-3-lesson-8",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:6f-6c-65-6e-20-70-6f-69-73-73-61-20-73-61-69-72-61-75-64-65-6e-20-76-75-6f-6b-73-69-2e",
+      "target_id": "a13s3-e-075",
+      "surface_form": "Olen poissa sairauden vuoksi.",
+      "introduced_in": "a1.3-section-3-lesson-8",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "form_id": "expression:74-75-6c-65-6e-20-68-75-6f-6d-65-6e-6e-61-20-74-61-6b-61-69-73-69-6e-2e",
+      "target_id": "a13s3-e-076",
+      "surface_form": "Tulen huomenna takaisin.",
+      "introduced_in": "a1.3-section-3-lesson-8",
+      "later_positive_lessons": [
+        "a1.3-section-3-lesson-10"
+      ]
+    }
+  ],
+  "grammar_review": [
+    {
+      "concept_id": "a13-necessity",
+      "introduced_in": "a1.3-section-1-lesson-3",
+      "first_assessed_in_section": "a1.3-section-3-lesson-1",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-4",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a13-verb-classes",
+      "introduced_in": "a1.3-section-3-lesson-1",
+      "first_assessed_in_section": "a1.3-section-3-lesson-1",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-6",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a13-present-paradigm",
+      "introduced_in": "a1.3-section-1-lesson-4",
+      "first_assessed_in_section": "a1.3-section-3-lesson-1",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-5",
+        "a1.3-section-3-lesson-8",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-questions",
+      "introduced_in": "lesson-5",
+      "first_assessed_in_section": "a1.3-section-3-lesson-2",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-requests",
+      "introduced_in": "a1.2-section-1-lesson-3",
+      "first_assessed_in_section": "a1.3-section-3-lesson-2",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-6",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-commands",
+      "introduced_in": "a1.2-section-2-lesson-2",
+      "first_assessed_in_section": "a1.3-section-3-lesson-3",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a12-frequency-adverbs",
+      "introduced_in": "a1.2-section-2-lesson-5",
+      "first_assessed_in_section": "a1.3-section-3-lesson-3",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-7",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a13-partitive-patterns",
+      "introduced_in": "a1.3-section-1-lesson-6",
+      "first_assessed_in_section": "a1.3-section-3-lesson-4",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a13-local-expansion",
+      "introduced_in": "a1.3-section-1-lesson-4",
+      "first_assessed_in_section": "a1.3-section-3-lesson-5",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-6",
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a13-kpt-preview",
+      "introduced_in": "a1.3-section-3-lesson-6",
+      "first_assessed_in_section": "a1.3-section-3-lesson-6",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a13-past-recognition",
+      "introduced_in": "a1.3-section-3-lesson-7",
+      "first_assessed_in_section": "a1.3-section-3-lesson-7",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    },
+    {
+      "concept_id": "a11-olla",
+      "introduced_in": "lesson-2",
+      "first_assessed_in_section": "a1.3-section-3-lesson-8",
+      "later_review_lessons": [
+        "a1.3-section-3-lesson-9",
+        "a1.3-section-3-lesson-10"
+      ]
+    }
+  ],
+  "errors": []
+}

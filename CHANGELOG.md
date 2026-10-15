@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.47.0] - 2026-10-14
+
+### Added
+
+- Complete all ten A1.3 Section 3 study/work lessons: 303 activities, later positive retrieval for all 56 introduced exact surfaces/expressions and later review of twelve bounded grammar concepts.
+- Assess explicit tehdä/Teen and lähettää/Lähetän pairs, including the selected tt/t alternation; recognize olin against olen without claiming free past production or full paradigms.
+- Teach full expressions before assessment; add a three-step instruction sequence, two facts per original reading and supported four-sentence message writing. Preserve all original records/core mappings, fifteen checkpoint targets and the 80% threshold.
+- Add deterministic acceptance reports, ten regression tests and synchronized bilingual documentation.
+
 ## [1.46.0] - 2026-10-14
 
 ### Added
