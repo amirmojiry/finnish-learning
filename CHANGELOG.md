@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.51.0] - 2026-10-15
+
+### Added
+
+- Review 40 previously unresolved noun/pronoun surface forms (17 pronoun, 23 noun), with 7 original reviewed forms preserved and no source-frequency rank or learner-mastery changes.
+- Link selected pronoun, nominal case and irregular surface patterns to explicitly bounded lexeme/sense identities; keep ambiguous `voi`, `pitää`, `tuli`, `aika`, and frozen `kotona` unresolved for sense-specific follow-ups.
+- Expand editorial-case validation to eight attested Finnish cases and both singular/plural; add deterministic P2 coverage reports, mutation tests, source-provenance checks, and bilingual methodology.
+- Keep Course progress, authored lessons, 425-entry Parole dictionary, Word Practice SRS, A2.1 Section 3, and parent P2/P5/R3 release gates unchanged.
+
+
 ## [1.50.0] - 2026-10-15
 
 ### Added

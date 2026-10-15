@@ -8,6 +8,10 @@ This document is the **single maintained delivery roadmap**. [Learning Design](L
 
 All twelve A1 section packages and A2.1 Section 1 travel/past (#178/#179) are accepted for authored content. [Issue #180](https://github.com/amirmojiry/finnish-learning/issues/180) covers A2.1 Section 2 healthcare/public services ([scoped acceptance](A21-SECTION2-ACCEPTANCE.md)), with explicit positive/recycled forms, bounded grammar and supported reading/writing. All 140 playable lessons across the 14 implemented sections have scoped content checks. The next work is assessing open P2/P5/R3 and independent skills evidence under parent #101, **not** launching A2.1 Section 3 before prerequisites. CEFR/YKI certification remains open.
 
+## P2 lexical identity progress (2026-10-15)
+
+First editorial batch [#182](https://github.com/amirmojiry/finnish-learning/issues/182) adds 40 deliberate nominal/pronoun form-and-context-sense links to the original seven. See [review methodology](P2-LEXICAL-IDENTITIES-BATCH1.md) and the [deterministic report](P2-IDENTITY-BATCH1-REPORT.md). This identifies written forms only; it does not transfer Word Practice SRS mastery, assert general declension competence, or close the remaining P2/P5/R3 release gates. A2.1 Section 3 remains outline-only.
+
 ## Baseline and source of truth
 
 This status snapshot was checked on **2026-10-09**. For fresh implementation counts use `npm run curriculum:audit`, which reads the actual course JSON files. A planned level is not a playable level.

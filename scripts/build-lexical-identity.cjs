@@ -20,14 +20,22 @@ function readParoleSource(bytes){
  }
  return {forms,positions:position};
 }
+const REVIEW_CASES = new Set(['nominative','genitive','partitive','inessive','elative','illative','allative','essive']);
+const REVIEW_NUMBERS = new Set(['singular','plural']);
+// An editorially reviewed case label is a property of ONE observed surface; it does not
+// license synthesizing unreviewed inflections or transferring SRS mastery between forms.
 function validateReviews(reviews, available) {
- const indexed=new Map();
+ const indexed=new Map(), lexemePartsOfSpeech=new Map();
  for(const entry of reviews.entries||[]){
   const form=normalize(entry.surface_form);
   if(!form||indexed.has(form))throw Error('Duplicate reviewed surface: '+form);
   if(!/^lexeme:[a-z0-9-]+$/.test(entry.lexeme_id)||!/^sense:[a-z0-9-]+$/.test(entry.sense_id)||!entry.sense_id.startsWith('sense:'+entry.lexeme_id.slice(7)+'-'))throw Error('Invalid reviewed lexical identity: '+form);
-  if(!entry.morphology||!['noun','pronoun'].includes(entry.morphology.part_of_speech)||!['nominative','genitive'].includes(entry.morphology.case)||entry.morphology.number!=='singular')throw Error('Invalid reviewed morphology: '+form);
+  const morph=entry.morphology;
+  if(!morph||!['noun','pronoun'].includes(morph.part_of_speech)||!REVIEW_CASES.has(morph.case)||!REVIEW_NUMBERS.has(morph.number))throw Error('Invalid reviewed morphology: '+form);
   if(!available.has(stableId('form',form)))throw Error('Reviewed surface not found in shipped forms: '+form);
+  const oldPos=lexemePartsOfSpeech.get(entry.lexeme_id);
+  if(oldPos&&oldPos!==morph.part_of_speech)throw Error('Conflicting reviewed part of speech for lexeme: '+entry.lexeme_id);
+  lexemePartsOfSpeech.set(entry.lexeme_id,morph.part_of_speech);
   indexed.set(form,entry);
  }
  return indexed;
