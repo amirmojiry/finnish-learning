@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.50.0`
+- Version: `1.51.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -19,10 +19,12 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 
 ## Current features
 
+P2 lexical identity batch 1 adds 40 explicitly reviewed noun/pronoun surface identities (47 total) with no learner mastery transfer: [review method](docs/P2-LEXICAL-IDENTITIES-BATCH1.md) and [reproducible report](docs/P2-IDENTITY-BATCH1-REPORT.md). Further P2/P5/R3 acceptance remains open.
+
 Both shipped A2.1 sections now have scoped exact-form assessment and later-retrieval gates: [travel/past](docs/A21-SECTION1-ACCEPTANCE.md) and [healthcare/public services](docs/A21-SECTION2-ACCEPTANCE.md). This is not CEFR/YKI certification; P2/P5/R3 integration gates remain open.
 
 
-- 400 high-frequency written Finnish word forms with Persian translations
+- 425 high-frequency written Finnish word forms with Persian translations
 - exact Parole source rank, corpus occurrence count, and occurrence percentage
 - dictionary search and alphabetical or frequency sorting
 - part-of-speech filters generated only from categories present in the current vocabulary

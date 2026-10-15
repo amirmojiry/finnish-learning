@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- P2 lexical identity editorial batch 1: [methodology](P2-LEXICAL-IDENTITIES-BATCH1.md) / [فارسی](P2-LEXICAL-IDENTITIES-BATCH1.fa.md) / [deterministic report](P2-IDENTITY-BATCH1-REPORT.md) — 40 form/sense decisions, source provenance, no SRS mastery transfer.
 - A2.1 Section 2 acceptance: [English](A21-SECTION2-ACCEPTANCE.md) / [فارسی](A21-SECTION2-ACCEPTANCE.fa.md) — healthcare and public services, assessed grammar and review.
 - A2.1 Section 1 acceptance: [English](A21-SECTION1-ACCEPTANCE.md) / [فارسی](A21-SECTION1-ACCEPTANCE.fa.md) — travel and past, grammar and positive review.
 - A1.3 Section 4 acceptance: [English](A13-SECTION4-ACCEPTANCE.md) / [فارسی](A13-SECTION4-ACCEPTANCE.fa.md) — recent events, plans and cumulative A1 practice.
