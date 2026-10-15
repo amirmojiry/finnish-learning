@@ -25,13 +25,14 @@ test('complete expressions are introduced before assessment',()=>{
  }
  const altered=structuredClone(raw),lesson=altered.lessons[0],id=lesson.new_targets.find(x=>raw.items[x].item_type==='expression');
  lesson.activities=lesson.activities.filter(a=>!(a.type==='teach'&&a.item===id));
+ lesson.activity_count=lesson.activities.length;
  assert.ok(verify(altered).errors.some(error=>error.includes('expression assessed before teaching: '+id)));
 });
 test('missing positives and vacuous alternatives fail section audit',()=>{
  const altered=structuredClone(raw),lesson=altered.lessons[0],id=lesson.learning_objectives.lexical[0].target_id;
  lesson.activities=lesson.activities.map(a=>a.item===id&&a.type!=='teach'?{type:'teach',item:id}:a);
  assert.ok(verify(altered).errors.some(e=>e.includes('target lacks positive answer: '+id)));
- const second=structuredClone(raw),choice=second.lessons[0].activities.find(a=>a.type==='choice');choice.options=[choice.item];
+ const second=structuredClone(raw),choice=second.lessons[0].activities.find(a=>a.type==='choice' && !second.lessons[0].production_targets.includes(a.item) && !second.lessons[0].listening_targets.includes(a.item));choice.options=[choice.item];
  assert.ok(verify(second).errors.some(e=>e.includes('meaningful alternatives')));
 });
 test('reading and writing use taught material and strict grading',()=>{

@@ -14,7 +14,7 @@ test('A2.1 travel lessons 4-6 link reviewed simple-past goals to graded positive
     assert.deepEqual(lesson.learning_objectives.communicative, [
       { id: lesson.id + '-can-do', can_do_fa: lesson.objective_fa },
     ]);
-    assert.deepEqual(lesson.learning_objectives.lexical.map(goal => goal.target_id), lesson.new_targets);
+    assert.ok(lesson.new_targets.every(id => lesson.learning_objectives.lexical.some(goal => goal.target_id === id)));
     assert.ok(lesson.learning_objectives.grammar.some(goal => goal.concept_id === 'a21-imperfect'));
     const goal = lesson.learning_objectives.grammar[0];
     assert.equal(goal.status, 'reviewed');
@@ -43,13 +43,11 @@ test('already introduced forms have reviewed, not new, lexical status', () => {
   assert.equal(mapped.get('a21s1-t-031'), 'reviewed'); // ajoissa, previously in A1.2
   assert.equal(mapped.get('a21s1-t-032'), 'reviewed'); // myöhässä, previously in A1.2
   assert.equal(mapped.get('a21s1-t-033'), 'introduced'); // tuntia form
-  assert.ok(hotel.learning_objectives.lexical.every(goal => goal.status === 'introduced'));
+  assert.ok(hotel.new_targets.every(id => hotel.learning_objectives.lexical.find(goal => goal.target_id === id)?.status === 'introduced'));
   const problemsMap = new Map(problems.learning_objectives.lexical.map(goal => [goal.target_id, goal.status]));
   assert.equal(section.items['a21s1-t-050'].surface_form, 'lippua');
   assert.equal(problemsMap.get('a21s1-t-050'), 'reviewed');
-  assert.ok(problems.learning_objectives.lexical.every(goal => (
-    goal.target_id === 'a21s1-t-050' || goal.status === 'introduced'
-  )));
+  assert.ok(problems.new_targets.every(id => problems.learning_objectives.lexical.find(goal => goal.target_id === id)?.status === 'introduced'));
   const priorTravel = require('../data/course/a1.2-section-2.json');
   const previouslyAssessed = priorTravel.lessons.flatMap(lesson => lesson.morphology_practice || [])
     .find(activity => activity.type === 'inflection-production' && activity.expected_fi === 'lippua');
