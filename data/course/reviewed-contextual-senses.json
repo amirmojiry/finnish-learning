@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "review_policy": "A contextual sense applies to exactly one authored section/item and its observed lesson uses, never to a surface form globally or to learner SRS mastery.",
+  "entries": [
+    {
+      "section_id": "a1.1-section-3",
+      "item_id": "s3-aika",
+      "surface_form": "aika",
+      "context_fi": "Aika on nyt.",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "sense_gloss_en": "time",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-14",
+      "surface_form": "aika",
+      "context_fi": "Minulla on aika lääkärille.",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-appointment",
+      "sense_gloss_en": "appointment time",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      }
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-t-003",
+      "surface_form": "ajan",
+      "context_fi": "Hei, haluaisin varata ajan lääkärille.",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-appointment",
+      "sense_gloss_en": "appointment slot as a total object",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "genitive",
+        "number": "singular"
+      }
+    },
+    {
+      "section_id": "a1.2-section-1",
+      "item_id": "a12s1-hf-voi",
+      "surface_form": "voi",
+      "context_fi": "Hän voi auttaa sinua.",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-ability",
+      "sense_gloss_en": "can, be able to",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "present",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      }
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-14",
+      "surface_form": "voi",
+      "context_fi": "Anteeksi, en voi.",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-ability",
+      "sense_gloss_en": "cannot, be unable to",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "connegative",
+        "tense": "present",
+        "mood": "indicative",
+        "polarity": "negative"
+      },
+      "source_exception": {
+        "code": "generic_source_gloss",
+        "reason_en": "The existing Persian item gloss describes the general ability sense, while this attested negative/health-context example needs contextual disambiguation. The original item gloss is preserved."
+      }
+    },
+    {
+      "section_id": "a1.2-section-4",
+      "item_id": "a12s4-hf-17",
+      "surface_form": "voi",
+      "context_fi": "En voi hyvin.",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "feel, be doing (in an expression about well-being)",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "connegative",
+        "tense": "present",
+        "mood": "indicative",
+        "polarity": "negative"
+      },
+      "source_exception": {
+        "code": "generic_source_gloss",
+        "reason_en": "The existing Persian item gloss describes the general ability sense, while this attested negative/health-context example needs contextual disambiguation. The original item gloss is preserved."
+      }
+    },
+    {
+      "section_id": "a1.3-section-1",
+      "item_id": "a13s1-h-013",
+      "surface_form": "voi",
+      "context_fi": "En voi hyvin.",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "feel, be doing (in an expression about well-being)",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "connegative",
+        "tense": "present",
+        "mood": "indicative",
+        "polarity": "negative"
+      },
+      "source_exception": {
+        "code": "generic_source_gloss",
+        "reason_en": "The existing Persian item gloss describes the general ability sense, while this attested negative/health-context example needs contextual disambiguation. The original item gloss is preserved."
+      }
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-037",
+      "surface_form": "voi",
+      "context_fi": "En voi hyvin.",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "feel, be doing (in an expression about well-being)",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "connegative",
+        "tense": "present",
+        "mood": "indicative",
+        "polarity": "negative"
+      },
+      "source_exception": {
+        "code": "generic_source_gloss",
+        "reason_en": "The existing Persian item gloss describes the general ability sense, while this attested negative/health-context example needs contextual disambiguation. The original item gloss is preserved."
+      }
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-029",
+      "surface_form": "voi",
+      "context_fi": "En voi hyvin.",
+      "lexeme_id": "lexeme:voida",
+      "sense_id": "sense:voida-wellbeing",
+      "sense_gloss_en": "feel, be doing (in an expression about well-being)",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "connegative",
+        "tense": "present",
+        "mood": "indicative",
+        "polarity": "negative"
+      },
+      "source_exception": {
+        "code": "generic_source_gloss",
+        "reason_en": "The existing Persian item gloss describes the general ability sense, while this attested negative/health-context example needs contextual disambiguation. The original item gloss is preserved."
+      }
+    },
+    {
+      "section_id": "a1.2-section-3",
+      "item_id": "a12s3-hf-13",
+      "surface_form": "pitää",
+      "context_fi": "Minun pitää lähteä.",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "must, need to",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "present",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      },
+      "source_exception": {
+        "code": "polysemous_source_gloss",
+        "reason_en": "The existing item gloss lists several different meanings of pitää. Only the necessity construction Minun pitää + infinitive is verified for this authored example."
+      }
+    },
+    {
+      "section_id": "a1.3-section-2",
+      "item_id": "a13s2-h-017",
+      "surface_form": "pitää",
+      "context_fi": "Minun pitää lähteä.",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "must, need to",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "present",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      },
+      "source_exception": {
+        "code": "polysemous_source_gloss",
+        "reason_en": "The existing item gloss lists several different meanings of pitää. Only the necessity construction Minun pitää + infinitive is verified for this authored example."
+      }
+    },
+    {
+      "section_id": "a1.3-section-3",
+      "item_id": "a13s3-h-002",
+      "surface_form": "pitää",
+      "context_fi": "Minun pitää lähteä.",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "must, need to",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "present",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      },
+      "source_exception": {
+        "code": "polysemous_source_gloss",
+        "reason_en": "The existing item gloss lists several different meanings of pitää. Only the necessity construction Minun pitää + infinitive is verified for this authored example."
+      }
+    },
+    {
+      "section_id": "a2.1-section-2",
+      "item_id": "a21s2-h-012",
+      "surface_form": "pitää",
+      "context_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "lexeme_id": "lexeme:pitaa",
+      "sense_id": "sense:pitaa-necessity",
+      "sense_gloss_en": "must, need to",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "present",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      },
+      "source_exception": {
+        "code": "polysemous_source_gloss",
+        "reason_en": "The existing item gloss lists several different meanings of pitää. Only the necessity construction Minun pitää + infinitive is verified for this authored example."
+      }
+    },
+    {
+      "section_id": "a1.3-section-4",
+      "item_id": "a13s4-h-003",
+      "surface_form": "tuli",
+      "context_fi": "Bussi tuli myöhässä.",
+      "lexeme_id": "lexeme:tulla",
+      "sense_id": "sense:tulla-arrive",
+      "sense_gloss_en": "arrived, came",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "past",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      },
+      "source_exception": {
+        "code": "incorrect_source_lemma",
+        "reason_en": "The legacy item lists tuli as the lemma, but the attested Bussi tuli example is the past of tulla ('to come/arrive'), not the noun tuli ('fire'). The lesson source is not edited."
+      }
+    },
+    {
+      "section_id": "a2.1-section-1",
+      "item_id": "a21s1-h-010",
+      "surface_form": "tuli",
+      "context_fi": "Sitten bussi tuli asemalle.",
+      "lexeme_id": "lexeme:tulla",
+      "sense_id": "sense:tulla-arrive",
+      "sense_gloss_en": "arrived, came",
+      "morphology": {
+        "part_of_speech": "verb",
+        "verb_form": "finite",
+        "tense": "past",
+        "mood": "indicative",
+        "person": 3,
+        "number": "singular",
+        "polarity": "affirmative"
+      },
+      "source_exception": {
+        "code": "polysemous_source_gloss",
+        "reason_en": "The original Persian item gloss includes 'fire', but the attested bus-arrival example selects past tense of tulla only. Source metadata is preserved."
+      }
+    }
+  ]
+}
