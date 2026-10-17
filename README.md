@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.52.0`
+- Version: `1.53.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+R3 supports curriculum-aligned **variable lesson counts per shipped section** (7/10/13 regression fixtures), with the last authored lesson as checkpoint. [English design](docs/VARIABLE-SECTION-LENGTHS.md) · [shipped/planned report](docs/SECTION-STRUCTURE-AUDIT.md). A2.1 Section 3 remains outline-only.
 
 P2 contextual sense batch 2 maps five ambiguous forms to **15 reviewed course items / 24 lesson references** without globally merging homographs or transferring SRS mastery: [method](docs/P2-CONTEXTUAL-IDENTITY-BATCH2.md), [report](docs/P2-CONTEXTUAL-IDENTITY-BATCH2-REPORT.md).
 
