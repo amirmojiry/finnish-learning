@@ -1414,7 +1414,7 @@
         && lesson.activity_budget_policy !== 'enforced';
       const maxActivities = legacyBudget ? 200 : 30;
       if (!Number.isSafeInteger(declaredCount) || declaredCount < 1 || declaredCount > maxActivities || lesson.activities.length !== declaredCount) {
-        throw new Error(`Lesson ${lesson.id} activity count must match its positive declared count and not exceed ${maxActivities} visible slides.`);
+        throw new Error(`Lesson ${lesson.id} activity count differs from its declared positive count or exceeds ${maxActivities} visible slides.`);
       }
       const productionActivities = lesson.activities.filter((activity) => activity.type === 'production');
       if (productionActivities.length !== 1 || productionActivities[0].item !== lesson.production_targets[0]) {
