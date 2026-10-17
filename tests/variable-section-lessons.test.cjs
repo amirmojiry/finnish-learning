@@ -25,6 +25,8 @@ function fixture(count) {
   last.id='variable-'+count+'-lesson-'+count;
   last.curriculum_id='variable-'+count+'-l'+String(count).padStart(2,'0');
   last.order=count;
+  // Synthetic structural checkpoints exercise the score gate without altering source lessons.
+  last.passing_score=0.8;
   last.recycle_from=[];
   lessons.push(last);
   const originalPlans=[...samples.map(i=>originalContracts[i]),baseCurriculum.sections[0].lessons.at(-1)];

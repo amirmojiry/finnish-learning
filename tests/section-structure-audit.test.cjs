@@ -49,7 +49,7 @@ test('changing a shipped manifest changes the recorded playable count, without c
 test('audit refuses unknown shipped sections, missing stages and disconnected plans',()=>{
  const rogue=structuredClone(stages);
  rogue[0].sections[0].curriculum_section_id='no-plan';
- assert.throws(()=>audit.build(master,rogue),/missing from the curriculum/i);
+ assert.throws(()=>audit.build(master,rogue),/missing from (the curriculum|master plan)/i);
  const missing=structuredClone(stages);
  missing[0].sections[0].lessons.pop();
  assert.throws(()=>audit.build(master,missing),/checkpoint|count/i);
