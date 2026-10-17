@@ -1376,16 +1376,23 @@
       curriculumIds.add(lesson.curriculum_id);
       const isLastLesson = index === section.lessons.length - 1;
       const hasCheckpointTargets = Array.isArray(lesson.checkpoint_targets) && lesson.checkpoint_targets.length > 0;
-      // A1.1 Section 4 has a longstanding scored final assessment with no separate
-      // checkpoint_targets. Preserve that legacy contract; all others use explicit targets.
-      const hasScoredLegacyCheckpoint = Number.isFinite(lesson.passing_score)
+      // Only the pre-existing A1.1 Section 4 final assessment lacks explicit
+      // checkpoint_targets. Do not infer legacy status from a score or practice
+      // shape alone: doing so would accept deleted targets on other checkpoints.
+      const hasScoredCheckpointShape = Number.isFinite(lesson.passing_score)
         && lesson.passing_score > 0 && lesson.passing_score <= 1
         && Array.isArray(lesson.structured_practice)
         && STRUCTURED_PRACTICE_TYPES.every((type) => lesson.structured_practice.some((spec) => spec.type === type));
+      const isOriginalLegacyCheckpoint = section.id === 'a1.1-section-4'
+        && section.curriculum_section_id === 'a1.1-s4'
+        && lesson.id === 'section-4-lesson-10'
+        && lesson.curriculum_id === 'a1.1-s4-l10'
+        && isLastLesson;
+      const hasScoredLegacyCheckpoint = isOriginalLegacyCheckpoint && hasScoredCheckpointShape;
       if (isLastLesson && !hasCheckpointTargets && !hasScoredLegacyCheckpoint) {
         throw new Error(`Last lesson must be the section checkpoint: ${lesson.id}.`);
       }
-      if (!isLastLesson && (hasCheckpointTargets || hasScoredLegacyCheckpoint)) {
+      if (!isLastLesson && (hasCheckpointTargets || hasScoredCheckpointShape)) {
         throw new Error(`Checkpoint must be the final lesson: ${lesson.id}.`);
       }
       if (isLastLesson && lesson.new_targets?.length) throw new Error(`Checkpoint cannot introduce new targets: ${lesson.id}.`);

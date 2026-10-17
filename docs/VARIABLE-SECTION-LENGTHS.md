@@ -4,7 +4,7 @@
 
 ## What changed
 
-There is **no universal fixed ten-lesson rule** for a section. The authored `section.lessons` array, its consecutive one-based `order`, and the corresponding curriculum section contract determine how many lessons are playable. A section must be nonempty; the **last** lesson, whatever its ordinal, remains a real checkpoint with explicit `checkpoint_targets` **or** the existing A1.1 Section 4-style scored structural assessment, its preserved passing threshold, no first-time lexical introductions, and all required structured/practice evidence. Earlier lessons may not claim to be the checkpoint.
+There is **no universal fixed ten-lesson rule** for a section. The authored `section.lessons` array, its consecutive one-based `order`, and the corresponding curriculum section contract determine how many lessons are playable. A section must be nonempty; the **last** lesson, whatever its ordinal, remains a real checkpoint with explicit `checkpoint_targets`, its preserved passing threshold, no first-time lexical introductions, and all required structured/practice evidence. The sole backwards-compatible exception is the **original A1.1 Section 4 / section-4-lesson-10** checkpoint: it has a scored structural assessment without explicit targets. Neither a different section nor a copied checkpoint can claim this exception. Earlier lessons may not claim to be the checkpoint.
 
 A section with seven lessons has a seventh-lesson checkpoint; a section with thirteen lessons has a thirteenth-lesson checkpoint. The authored curriculum IDs and order must match exactly, even when the counts match. Duplicate IDs or gaps are rejected rather than silently reindexed.
 

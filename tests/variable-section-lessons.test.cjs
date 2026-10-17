@@ -130,6 +130,37 @@ test('A1.1 Section 4 legacy final assessment remains valid without checkpoint_ta
  assert.throws(()=>course.validateSection(invalid),/Last lesson must be the section checkpoint/);
 });
 
+test('only the exact A1.1 Section 4 final checkpoint can omit checkpoint_targets',()=>{
+  // Full scored structured practice never substitutes for an explicit checkpoint
+  // contract in a different shipped section, even when everything else is valid.
+  for (const file of ['a1.2-section-1.json','a2.1-section-2.json']) {
+    const raw=require('../data/course/'+file);
+    const original=course.validateSection(raw);
+    assert.equal(original.lessons.at(-1).checkpoint_targets.length,15);
+    const missing=structuredClone(raw);
+    delete missing.lessons.at(-1).checkpoint_targets;
+    assert.throws(()=>course.validateSection(missing),/Last lesson must be the section checkpoint/);
+    // Missing targets cannot be disguised as an empty array.
+    missing.lessons.at(-1).checkpoint_targets=[];
+    assert.throws(()=>course.validateSection(missing),/Last lesson must be the section checkpoint/);
+  }
+  const legacy=require('../data/course/a1.1-section-4.json');
+  assert.doesNotThrow(()=>course.validateSection(legacy));
+  const spoof=structuredClone(legacy);
+  spoof.id='new-section-copy';
+  assert.throws(()=>course.validateSection(spoof),/Last lesson must be the section checkpoint/);
+  const differentCurriculum=structuredClone(legacy);
+  differentCurriculum.curriculum_section_id='not-a1.1-s4';
+  assert.throws(()=>course.validateSection(differentCurriculum),/Last lesson must be the section checkpoint/);
+  const differentFinalLesson=structuredClone(legacy);
+  differentFinalLesson.lessons.at(-1).id='not-original-legacy-checkpoint';
+  assert.throws(()=>course.validateSection(differentFinalLesson),/Last lesson must be the section checkpoint/);
+  const moved=structuredClone(legacy);
+  [moved.lessons[8],moved.lessons[9]]=[moved.lessons[9],moved.lessons[8]];
+  moved.lessons.forEach((lesson,index)=>{lesson.order=index+1;});
+  assert.throws(()=>course.validateSection(moved),/Checkpoint must be the final lesson/);
+});
+
 test('a previously stored ten-lesson section continues to unlock exactly as before',()=>{
  const sample=course.validateSection(source);
  const stored=source.lessons.map(l=>l.id);
