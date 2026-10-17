@@ -4,6 +4,10 @@
 
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
+## R3 flexible lesson counts (2026-10-17)
+
+[Issue #186](https://github.com/amirmojiry/finnish-learning/issues/186) enables variable number of lessons per section while preserving all shipped identifiers and checkpoints, with a separate [shipped/planned inventory](SECTION-STRUCTURE-AUDIT.md). Existing 14 sections / 140 lessons stay intact; A2.1 Sections 3–4 are still outlines. Parent #101 P2/P5/release gates remain open.
+
 ## Content acceptance progress (2026-10-15)
 
 All twelve A1 section packages and A2.1 Section 1 travel/past (#178/#179) are accepted for authored content. [Issue #180](https://github.com/amirmojiry/finnish-learning/issues/180) covers A2.1 Section 2 healthcare/public services ([scoped acceptance](A21-SECTION2-ACCEPTANCE.md)), with explicit positive/recycled forms, bounded grammar and supported reading/writing. All 140 playable lessons across the 14 implemented sections have scoped content checks. The next work is assessing open P2/P5/R3 and independent skills evidence under parent #101, **not** launching A2.1 Section 3 before prerequisites. CEFR/YKI certification remains open.

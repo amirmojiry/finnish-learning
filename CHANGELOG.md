@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.53.0] - 2026-10-17
+
+### Added
+
+- Allow curriculum-aligned nonempty sections with variable authored lesson counts rather than a hard-coded ten, with contiguous, unique lesson/curriculum IDs and the checkpoint required at the true final lesson.
+- Preserve all existing 14 shipped sections, 140 lesson records, checkpoints, learner progress and Word Practice review state. Add 7/10/13-lesson structural tests for navigation, progress, validation and cross-section unlock.
+- Add deterministic shipped-versus-planned section inventory so future master-curriculum designs and A2.1 outline-only Sections 3–4 cannot be mistaken for playable lessons.
+
+
 ## [1.52.0] - 2026-10-15
 
 ### Added
