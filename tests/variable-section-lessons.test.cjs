@@ -70,7 +70,7 @@ test('invalid cardinality, order, identity and misplaced checkpoints fail closed
  assert.throws(()=>course.validateSection(mutate(s=>s.lessons[1].order=5)),/consecutive/);
  assert.throws(()=>course.validateSection(mutate(s=>s.lessons[1].id=s.lessons[0].id)),/Duplicate or missing lesson ID/);
  assert.throws(()=>course.validateSection(mutate(s=>s.lessons[1].curriculum_id=s.lessons[0].curriculum_id)),/Duplicate or missing curriculum lesson ID/);
- assert.throws(()=>course.validateSection(mutate(s=>{delete s.lessons.at(-1).checkpoint_targets;})),/Last lesson must be the section checkpoint/);
+ assert.throws(()=>course.validateSection(mutate(s=>{delete s.lessons.at(-1).checkpoint_targets;delete s.lessons.at(-1).passing_score;})),/Last lesson must be the section checkpoint/);
  assert.throws(()=>course.validateSection(mutate(s=>{s.lessons[1].checkpoint_targets=[...s.lessons.at(-1).checkpoint_targets];})),/Checkpoint must be the final lesson/);
  assert.throws(()=>course.validateSection(mutate(s=>s.lessons.at(-1).new_targets=['s1-hei'])),/Checkpoint cannot introduce new targets/);
  const good=fixture(7),wrong=structuredClone(good.curriculum);
@@ -113,6 +113,19 @@ test('saved lesson completions and section unlocks rely on actual seven/ten/thir
  assert.equal(course.isSectionComplete(third,saved),true);
  assert.equal(saved.completedLessons.length,30);
  assert.deepEqual(course.sanitizeProgress(saved).lessonScores[third.lessons.at(-1).id],{correct:12,graded:15,completedAt:2200});
+});
+
+test('A1.1 Section 4 legacy final assessment remains valid without checkpoint_targets',()=>{
+ const legacy=require('../data/course/a1.1-section-4.json');
+ const final=legacy.lessons.at(-1);
+ assert.equal(final.checkpoint_targets,undefined);
+ assert.equal(final.passing_score,0.8);
+ const prepared=course.validateSection(legacy);
+ assert.equal(prepared.lessons.length,10);
+ assert.equal(prepared.lessons.at(-1).activities.length,final.activity_count);
+ const invalid=structuredClone(legacy);
+ delete invalid.lessons.at(-1).passing_score;
+ assert.throws(()=>course.validateSection(invalid),/Last lesson must be the section checkpoint/);
 });
 
 test('a previously stored ten-lesson section continues to unlock exactly as before',()=>{
