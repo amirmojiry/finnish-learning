@@ -1363,8 +1363,22 @@
     if (section.can_do_fa.some((goal) => /^می‌توانم(?:\s|$)/u.test(goal.trim()))) {
       throw new Error(`Section ${section.id || '?'} goals must not repeat the first-person ability heading.`);
     }
-    if (section.lessons.length !== 10) throw new Error('The sample section must contain exactly ten lessons.');
-    for (const lesson of section.lessons) {
+    // The manifest, not a global ten-lesson quota, determines a shipped section's length.
+    if (!section.lessons.length) throw new Error('Section requires at least one authored lesson.');
+    const lessonIds = new Set(), curriculumIds = new Set();
+    for (const [index, lesson] of section.lessons.entries()) {
+      if (!Number.isSafeInteger(lesson.order) || lesson.order !== index + 1) {
+        throw new Error(`Lesson order must be consecutive from one in section ${section.id}.`);
+      }
+      if (!lesson.id || lessonIds.has(lesson.id)) throw new Error(`Duplicate or missing lesson ID in section ${section.id}.`);
+      if (!lesson.curriculum_id || curriculumIds.has(lesson.curriculum_id)) throw new Error(`Duplicate or missing curriculum lesson ID in section ${section.id}.`);
+      lessonIds.add(lesson.id);
+      curriculumIds.add(lesson.curriculum_id);
+      const isLastLesson = index === section.lessons.length - 1;
+      const hasCheckpoint = Array.isArray(lesson.checkpoint_targets) && lesson.checkpoint_targets.length > 0;
+      if (isLastLesson && !hasCheckpoint) throw new Error(`Last lesson must be the section checkpoint: ${lesson.id}.`);
+      if (!isLastLesson && hasCheckpoint) throw new Error(`Checkpoint must be the final lesson: ${lesson.id}.`);
+      if (isLastLesson && lesson.new_targets?.length) throw new Error(`Checkpoint cannot introduce new targets: ${lesson.id}.`);
       if (!lesson.id || !lesson.curriculum_id || !lesson.summary_fa || !lesson.grammar_fa || !Array.isArray(lesson.activities) || !lesson.activities.length) {
         throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or nonempty deterministic activities.`);
       }
@@ -1397,7 +1411,7 @@
         const matches = structuredActivities.filter((activity) => activity.type === spec.type && activity.item === spec.item);
         if (matches.length !== 1) throw new Error(`Structured-practice contract mismatch in ${lesson.id}: ${spec.type} / ${spec.item}`);
       }
-      if (lesson.order === 10) {
+      if (lesson.order === section.lessons.length) {
         for (const type of STRUCTURED_PRACTICE_TYPES) {
           if (!structuredActivities.some((activity) => activity.type === type)) {
             throw new Error(`Checkpoint ${lesson.id} must assess ${type}.`);
@@ -1597,7 +1611,17 @@
     if (!curriculum || !Array.isArray(curriculum.sections)) throw new Error('Invalid curriculum data.');
     const contract = curriculum.sections.find((entry) => entry.id === section.curriculum_section_id);
     if (!contract) throw new Error('Implemented section is missing from the curriculum.');
-    if (contract.lessons.length !== section.lessons.length) throw new Error('Implemented lesson count does not match the curriculum.');
+    if (!Array.isArray(contract.lessons) || contract.lessons.length !== section.lessons.length) {
+      throw new Error('Implemented lesson count does not match the curriculum.');
+    }
+    // A matching count alone is insufficient: planned lesson order and identity must agree
+    // with the shipped manifest, including a non-tenth checkpoint.
+    for (let index = 0; index < contract.lessons.length; index += 1) {
+      if (contract.lessons[index].order !== index + 1
+        || contract.lessons[index].id !== section.lessons[index].curriculum_id) {
+        throw new Error(`Curriculum and authored lesson order mismatch: ${section.id} / ${index + 1}.`);
+      }
+    }
 
     const implementedByCurriculumId = new Map(section.lessons.map((lesson) => [lesson.curriculum_id, lesson]));
     for (const contractLesson of contract.lessons) {
@@ -1631,6 +1655,7 @@
     for (const implemented of validated) {
       for (const lesson of implemented.lessons) {
         if (lessonIds.has(lesson.id)) throw new Error(`Duplicate implemented lesson id: ${lesson.id}`);
+        if (curriculumLessonIds.has(lesson.curriculum_id)) throw new Error(`Duplicate implemented curriculum lesson id: ${lesson.curriculum_id}`);
         lessonIds.add(lesson.id);
         curriculumLessonIds.add(lesson.curriculum_id);
 
