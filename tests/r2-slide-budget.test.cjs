@@ -32,3 +32,13 @@ test('R2 rejects zero or dishonest authored activity counts', () => {
   section.lessons[0].activity_count = 0;
   assert.throws(() => course.validateSection(section), /declared positive count/);
 });
+
+test('R2 disallows fake legacy aliases even in a real shipped section', () => {
+  const section = clone();
+  const lesson = section.lessons[0];
+  lesson.id = 'lesson-1'; // Never shipped for A1.1 Section 2.
+  const teaching = lesson.activities.find(a => a.type === 'teach');
+  while (lesson.activities.length <= 30) lesson.activities.push(structuredClone(teaching));
+  lesson.activity_count = lesson.activities.length;
+  assert.throws(() => course.validateSection(section), /exceeds 30 visible slides/);
+});
