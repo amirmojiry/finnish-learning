@@ -23,12 +23,12 @@ test('R2 enforces 30 visible slides on opted-in authored lessons', () => {
   assert.doesNotThrow(() => course.validateSection(section));
   lesson.activities.push(structuredClone(teaching));
   lesson.activity_count = 31;
-  assert.throws(() => course.validateSection(section), /not exceed 30 visible slides/);
+  assert.throws(() => course.validateSection(section), /exceeds 30 visible slides/);
 });
 
 test('R2 rejects zero or dishonest authored activity counts', () => {
   const section = clone();
   section.lessons[0].activity_budget_policy = 'enforced';
   section.lessons[0].activity_count = 0;
-  assert.throws(() => course.validateSection(section), /positive declared count/);
+  assert.throws(() => course.validateSection(section), /declared positive count/);
 });
