@@ -1400,8 +1400,19 @@
         throw new Error(`Lesson ${lesson.id || '?'} is missing curriculum metadata or nonempty deterministic activities.`);
       }
       const declaredCount = lesson.activity_count ?? (Array.isArray(rawSection.lessons.find((entry) => entry.id === lesson.id)?.activities) ? lesson.activities.length : section.activity_count_per_lesson ?? 15);
-      if (!Number.isSafeInteger(declaredCount) || declaredCount < 1 || declaredCount > 200 || lesson.activities.length !== declaredCount) {
-        throw new Error(`Lesson ${lesson.id} activity count differs from its declared positive count.`);
+      // R2: legacy deployed lessons retain their exact authored/prepared slides.
+      // New or explicitly migrated lessons have a bounded visible-slide budget.
+      // This does not alter checkpoint target identities or graded denominators.
+      const legacyLevels = new Set(['A1.1', 'A1.2', 'A1.3', 'A2.1']);
+      const originalSection = /^a(?:1\.[123]|2\.1)-section-[1-4]$/.test(section.id)
+        && (section.level !== 'A2.1' || /^[12]$/.test(section.id.slice(-1)));
+      const originalLesson = lesson.order >= 1 && lesson.order <= 10
+        && /^section-[1-4]-lesson-(?:[1-9]|10)$/.test(lesson.id);
+      const legacyBudget = legacyLevels.has(section.level) && originalSection && originalLesson
+        && lesson.activity_budget_policy !== 'enforced';
+      const maxActivities = legacyBudget ? 200 : 30;
+      if (!Number.isSafeInteger(declaredCount) || declaredCount < 1 || declaredCount > maxActivities || lesson.activities.length !== declaredCount) {
+        throw new Error(`Lesson ${lesson.id} activity count must match its positive declared count and not exceed ${maxActivities} visible slides.`);
       }
       const productionActivities = lesson.activities.filter((activity) => activity.type === 'production');
       if (productionActivities.length !== 1 || productionActivities[0].item !== lesson.production_targets[0]) {
