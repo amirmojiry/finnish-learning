@@ -1408,7 +1408,8 @@
         && (section.level !== 'A2.1' || /^[12]$/.test(section.id.slice(-1)));
       const originalLesson = lesson.order >= 1 && lesson.order <= 10
         && (lesson.id === `lesson-${lesson.order}`
-          || lesson.id === `section-${section.id.slice(-1)}-lesson-${lesson.order}`);
+          || lesson.id === `section-${section.id.slice(-1)}-lesson-${lesson.order}`
+          || lesson.id === `${section.id}-lesson-${lesson.order}`);
       const legacyBudget = legacyLevels.has(section.level) && originalSection && originalLesson
         && lesson.activity_budget_policy !== 'enforced';
       const maxActivities = legacyBudget ? 200 : 30;
