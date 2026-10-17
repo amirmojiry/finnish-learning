@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.54.0] - 2026-10-18
+
+### Added
+
+- Enforce a 30-visible-activity budget for new and explicitly migrated authored lessons while retaining exact deployed legacy lesson identities and historical progress, checkpoint and SRS records.
+- Document 55 over-budget authored lessons among 140 shipped lessons and follow-up consolidation work in #189; add compatibility and spoofed-ID regression tests.
+
+
 ## [1.53.0] - 2026-10-17
 
 ### Added
