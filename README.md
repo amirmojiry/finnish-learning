@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.51.0`
+- Version: `1.52.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+P2 contextual sense batch 2 maps five ambiguous forms to **15 reviewed course items / 24 lesson references** without globally merging homographs or transferring SRS mastery: [method](docs/P2-CONTEXTUAL-IDENTITY-BATCH2.md), [report](docs/P2-CONTEXTUAL-IDENTITY-BATCH2-REPORT.md).
 
 P2 lexical identity batch 1 adds 40 explicitly reviewed noun/pronoun surface identities (47 total) with no learner mastery transfer: [review method](docs/P2-LEXICAL-IDENTITIES-BATCH1.md) and [reproducible report](docs/P2-IDENTITY-BATCH1-REPORT.md). Further P2/P5/R3 acceptance remains open.
 
