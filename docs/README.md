@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- R2 learner-fatigue slide budget: [English policy and baseline audit](R2-LESSON-SLIDE-BUDGET.md) — 30-slide cap on new lessons and exact shipped-lesson compatibility.
 - R3 variable authored lessons: [English](VARIABLE-SECTION-LENGTHS.md) / [فارسی](VARIABLE-SECTION-LENGTHS.fa.md) / [shipped/planned audit](SECTION-STRUCTURE-AUDIT.md) — 7, 10, 13 lessons, accurate progress and checkpoint position.
 - P2 contextual-sense editorial batch 2: [English](P2-CONTEXTUAL-IDENTITY-BATCH2.md) / [فارسی](P2-CONTEXTUAL-IDENTITY-BATCH2.fa.md) / [audit](P2-CONTEXTUAL-IDENTITY-BATCH2-REPORT.md) — five ambiguous written forms, item-specific meanings, 15 item mappings and no global mastery transfer.
 - P2 lexical identity editorial batch 1: [methodology](P2-LEXICAL-IDENTITIES-BATCH1.md) / [فارسی](P2-LEXICAL-IDENTITIES-BATCH1.fa.md) / [deterministic report](P2-IDENTITY-BATCH1-REPORT.md) — 40 form/sense decisions, source provenance, no SRS mastery transfer.

@@ -148,7 +148,7 @@ test('only the exact A1.1 Section 4 final checkpoint can omit checkpoint_targets
   assert.doesNotThrow(()=>course.validateSection(legacy));
   const spoof=structuredClone(legacy);
   spoof.id='new-section-copy';
-  assert.throws(()=>course.validateSection(spoof),/Last lesson must be the section checkpoint/);
+  assert.throws(()=>course.validateSection(spoof),/Last lesson must be the section checkpoint|exceeds 30 visible slides/);
   const differentCurriculum=structuredClone(legacy);
   differentCurriculum.curriculum_section_id='not-a1.1-s4';
   assert.throws(()=>course.validateSection(differentCurriculum),/Last lesson must be the section checkpoint/);
