@@ -2,7 +2,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const course = require('../course.js');
-const original = require('../data/course/a1.1-section-1.json');
+const original = require('../data/course/a1.1-section-2.json');
 const clone = () => structuredClone(original);
 
 test('R2 retains published lessons longer than 30 slides', () => {
