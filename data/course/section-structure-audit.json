@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "scope": "Shipped lessons are authored, playable manifests only; section plans and outlines are non-playable.",
+  "disclaimer": "A curriculum outline is not a completed lesson, a course score, or CEFR/YKI achievement.",
+  "totals": {
+    "planned_section_slots": 44,
+    "shipped_sections": 14,
+    "shipped_playable_lessons": 140,
+    "outline_only_sections": 2,
+    "documented_unshipped_lesson_outlines": 20,
+    "planned_only_section_slots": 28,
+    "shipped_section_lesson_counts": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "levels": [
+    {
+      "level": "A1.1",
+      "delivery_status": "implemented",
+      "planned_section_slots": 4,
+      "shipped_sections": 4,
+      "shipped_lessons": 40,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 0
+    },
+    {
+      "level": "A1.2",
+      "delivery_status": "implemented",
+      "planned_section_slots": 4,
+      "shipped_sections": 4,
+      "shipped_lessons": 40,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 0
+    },
+    {
+      "level": "A1.3",
+      "delivery_status": "implemented",
+      "planned_section_slots": 4,
+      "shipped_sections": 4,
+      "shipped_lessons": 40,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 0
+    },
+    {
+      "level": "A2.1",
+      "delivery_status": "partially_implemented",
+      "planned_section_slots": 4,
+      "shipped_sections": 2,
+      "shipped_lessons": 20,
+      "outline_only_sections": 2,
+      "documented_unshipped_lesson_outlines": 20,
+      "planned_only_sections": 0
+    },
+    {
+      "level": "A2.2",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    },
+    {
+      "level": "B1.1",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    },
+    {
+      "level": "B1.2",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    },
+    {
+      "level": "B2.1",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    },
+    {
+      "level": "B2.2",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    },
+    {
+      "level": "C1",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    },
+    {
+      "level": "C2",
+      "delivery_status": "planned",
+      "planned_section_slots": 4,
+      "shipped_sections": 0,
+      "shipped_lessons": 0,
+      "outline_only_sections": 0,
+      "documented_unshipped_lesson_outlines": 0,
+      "planned_only_sections": 4
+    }
+  ],
+  "sections": [
+    {
+      "level": "A1.1",
+      "curriculum_section_id": "a1.1-s1",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.1-section-1",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.1",
+      "curriculum_section_id": "a1.1-s2",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.1-section-2",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.1",
+      "curriculum_section_id": "a1.1-s3",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.1-section-3",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.1",
+      "curriculum_section_id": "a1.1-s4",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.1-section-4",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.2",
+      "curriculum_section_id": "a1.2-s1",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.2-section-1",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.2",
+      "curriculum_section_id": "a1.2-s2",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.2-section-2",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.2",
+      "curriculum_section_id": "a1.2-s3",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.2-section-3",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.2",
+      "curriculum_section_id": "a1.2-s4",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.2-section-4",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.3",
+      "curriculum_section_id": "a1.3-s1",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.3-section-1",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.3",
+      "curriculum_section_id": "a1.3-s2",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.3-section-2",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.3",
+      "curriculum_section_id": "a1.3-s3",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.3-section-3",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A1.3",
+      "curriculum_section_id": "a1.3-s4",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a1.3-section-4",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A2.1",
+      "curriculum_section_id": "a2.1-s1",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a2.1-section-1",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A2.1",
+      "curriculum_section_id": "a2.1-s2",
+      "shipping_status": "shipped",
+      "shipped_section_id": "a2.1-section-2",
+      "shipped_lesson_count": 10,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A2.1",
+      "curriculum_section_id": "a2.1-s3",
+      "shipping_status": "outline_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 10
+    },
+    {
+      "level": "A2.1",
+      "curriculum_section_id": "a2.1-s4",
+      "shipping_status": "outline_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 10
+    },
+    {
+      "level": "A2.2",
+      "curriculum_section_id": "a2.2-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A2.2",
+      "curriculum_section_id": "a2.2-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A2.2",
+      "curriculum_section_id": "a2.2-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "A2.2",
+      "curriculum_section_id": "a2.2-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.1",
+      "curriculum_section_id": "b1.1-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.1",
+      "curriculum_section_id": "b1.1-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.1",
+      "curriculum_section_id": "b1.1-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.1",
+      "curriculum_section_id": "b1.1-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.2",
+      "curriculum_section_id": "b1.2-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.2",
+      "curriculum_section_id": "b1.2-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.2",
+      "curriculum_section_id": "b1.2-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B1.2",
+      "curriculum_section_id": "b1.2-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.1",
+      "curriculum_section_id": "b2.1-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.1",
+      "curriculum_section_id": "b2.1-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.1",
+      "curriculum_section_id": "b2.1-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.1",
+      "curriculum_section_id": "b2.1-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.2",
+      "curriculum_section_id": "b2.2-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.2",
+      "curriculum_section_id": "b2.2-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.2",
+      "curriculum_section_id": "b2.2-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "B2.2",
+      "curriculum_section_id": "b2.2-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C1",
+      "curriculum_section_id": "c1-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C1",
+      "curriculum_section_id": "c1-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C1",
+      "curriculum_section_id": "c1-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C1",
+      "curriculum_section_id": "c1-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C2",
+      "curriculum_section_id": "c2-s1",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C2",
+      "curriculum_section_id": "c2-s2",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C2",
+      "curriculum_section_id": "c2-s3",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    },
+    {
+      "level": "C2",
+      "curriculum_section_id": "c2-s4",
+      "shipping_status": "planned_only",
+      "shipped_section_id": null,
+      "shipped_lesson_count": 0,
+      "outline_lesson_count": 0
+    }
+  ]
+}
