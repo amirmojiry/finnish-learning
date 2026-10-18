@@ -98,3 +98,43 @@ test('per-row grouped answer grading preserves independent correct and wrong evi
   assert.equal(course.assessCompactActivityGroup(choices,['invalid','moi'],items)[0].correct,false);
   assert.throws(()=>course.assessCompactActivityGroup(choices,['hei'],items),/one response/);
 });
+
+
+test('grouped teaching distinguishes newly introduced from reviewed vocabulary', () => {
+  const lesson = {
+    learning_objectives: {
+      lexical: [
+        { target_id: 'new', status: 'introduced' },
+        { target_id: 'old', status: 'reviewed' },
+      ],
+    },
+  };
+  assert.equal(course.teachingActivityStatus(lesson, { type: 'teach', item: 'new' }), 'introduced');
+  assert.equal(course.teachingActivityStatus(lesson, { type: 'teach', item: 'old' }), 'reviewed');
+  assert.equal(course.teachingActivityStatus(lesson, { type: 'teach', item: 'unlisted' }), 'introduced');
+  assert.match(course.teachingActivityHeading(lesson, { type: 'teach', item: 'new' }), /جدید/);
+  assert.match(course.teachingActivityHeading(lesson, { type: 'teach', item: 'old' }), /آشنا/);
+
+  // The visible lesson may contain adjacent teaching cards with both statuses.
+  // Grouping must not replace per-target lexical metadata with a generic review label.
+  let groupedTeachCards = 0;
+  let introducedCards = 0;
+  for (const { sectionId, lesson: shippedLesson } of shipped()) {
+    const slides = course.compactLessonActivities(shippedLesson.activities);
+    for (const slide of slides) {
+      if (slide.type !== 'activity-group' || slide.group_kind !== 'teach') continue;
+      for (const activity of slide.activities) {
+        const lexical = shippedLesson.learning_objectives?.lexical?.find(
+          ({ target_id }) => target_id === activity.item
+        );
+        const expected = lexical?.status === 'reviewed' ? 'reviewed' : 'introduced';
+        const actual = course.teachingActivityStatus(shippedLesson, activity);
+        assert.equal(actual, expected, sectionId + '/' + shippedLesson.id + '/' + activity.item);
+        if (actual === 'introduced') introducedCards++;
+        groupedTeachCards++;
+      }
+    }
+  }
+  assert.ok(groupedTeachCards > 0, 'Expected grouped teaching content in shipped lessons');
+  assert.ok(introducedCards > 0, 'Grouped teaching must include newly introduced words');
+});
