@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.55.0] - 2026-10-18
+
+### Added
+
+- Compact consecutively authored teaching/meaning/Finnish-choice/typed/controlled-production activities into screens of up to four independently graded prompts; preserve the full original activity sequence and existing progress, first-attempt evidence, SRS and checkpoint contracts.
+- Add a responsive RTL grouped-matching/typing interface with keyboard-operable controls and per-answer feedback. No automatic deletion, activity ID migration or invented proficiency evidence.
+- Audit all 140 shipped lessons for original versus rendered screen counts and separate assessed-answer opportunities; block >30 initial rendered slides. Document limitations and deferred editorial splitting under #189.
+
+
 ## [1.54.0] - 2026-10-18
 
 ### Added
