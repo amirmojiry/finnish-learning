@@ -1190,6 +1190,35 @@
     return null;
   }
 
+  function assessCompactActivityGroup(group, answers, items) {
+    if (!group || group.type !== 'activity-group' || group.group_kind === 'teach'
+      || !Array.isArray(answers) || answers.length !== group.activities.length) {
+      throw new Error('Grouped assessment requires one response for each graded subactivity.');
+    }
+    return group.activities.map((activity, index) => {
+      const item = items[activity.item];
+      if (!item) throw new Error('Unknown grouped assessment target: ' + activity.item);
+      const answer = String(answers[index] || '');
+      if (activity.type === 'choice') {
+        return {
+          activity, item, correct: activity.options.includes(answer) && answer === activity.item,
+          grading: null, expected: optionLabel(item, activity.mode),
+        };
+      }
+      const expectedItem = activity.type === 'controlled-production'
+        ? { ...item, surface_form: activity.expected_fi,
+            accepted_answers: activity.accepted_answers, example_fi: activity.expected_fi,
+            example_fa: activity.prompt_fa }
+        : item;
+      if (activity.type !== 'type' && activity.type !== 'controlled-production') {
+        throw new Error('Unsupported grouped graded activity: ' + activity.type);
+      }
+      const grading = gradeActivityAnswer(activity, expectedItem, answer);
+      return { activity, item, grading, correct: grading.accepted,
+        expected: expectedItem.surface_form };
+    });
+  }
+
   function flattenLessonSlides(slides) {
     return slides.flatMap((slide) => slide.type === 'activity-group' ? slide.activities : [slide]);
   }
@@ -3155,22 +3184,11 @@
         const feedback = document.createElement('div');
         feedback.className = 'course-grouped-feedback';
         feedback.setAttribute('role', 'status');
-        rows.forEach(({ sub, item, control }, index) => {
-          let grading = null;
-          let correct;
-          let expected;
-          if (sub.type === 'choice') {
-            correct = control.value === sub.item;
-            expected = optionLabel(item, sub.mode);
-          } else {
-            const expectedItem = sub.type === 'controlled-production'
-              ? { ...item, surface_form: sub.expected_fi, accepted_answers: sub.accepted_answers,
-                  example_fi: sub.expected_fi, example_fa: sub.prompt_fa }
-              : item;
-            grading = gradeActivityAnswer(sub, expectedItem, control.value);
-            correct = grading.accepted;
-            expected = expectedItem.surface_form;
-          }
+        const assessments = assessCompactActivityGroup(
+          group, rows.map(({ control }) => control.value), section.items
+        );
+        assessments.forEach(({ activity: sub, item, grading, correct, expected }, index) => {
+          const control = rows[index].control;
           recordActivityResult(sub, correct, grading);
           control.disabled = true;
           control.classList.add(correct ? 'correct' : 'wrong');
@@ -4152,6 +4170,7 @@
     buildCheckpointActivities,
     compactLessonActivities,
     flattenLessonSlides,
+    assessCompactActivityGroup,
     prepareSection,
     validateSection,
     validateSectionAgainstCurriculum,
