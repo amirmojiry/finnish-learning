@@ -2429,3 +2429,14 @@ body.course-lesson-active .course-question-card.is-long-content {
   .course-pacing-break { min-height: min(350px, 70dvh); padding: 20px; }
   .course-grouped-answer { font-size: 16px; }
 }
+
+.course-pacing-progress-label {
+  display: block;
+  padding-bottom: 6px;
+  color: var(--muted);
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
