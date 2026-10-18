@@ -1332,9 +1332,13 @@
     return { ...detail, structured: true, communicative, lexical, grammarGoals };
   }
 
+  function teachingActivityStatus(lesson, activity) {
+    const objective = lesson?.learning_objectives?.lexical?.find(goal => goal.target_id === activity.item);
+    return objective?.status === 'reviewed' ? 'reviewed' : 'introduced';
+  }
+
   function teachingActivityHeading(lesson, activity) {
-    const objective = lesson.learning_objectives?.lexical?.find(goal => goal.target_id === activity.item);
-    return objective?.status === 'reviewed'
+    return teachingActivityStatus(lesson, activity) === 'reviewed'
       ? 'عبارت آشنا را مرور کن و با صدای بلند تکرار کن.'
       : 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
   }
@@ -3097,7 +3101,10 @@
           heading.dir = 'ltr';
           heading.textContent = item.surface_form;
           const meaning = document.createElement('span');
-          meaning.textContent = item.translation_fa;
+          const status = document.createElement('span');
+          status.className = 'course-grouped-status';
+          status.textContent = teachingActivityStatus(activeLesson, sub) === 'reviewed' ? 'مرور' : 'جدید';
+          meaning.append(status, document.createTextNode(' ' + item.translation_fa));
           entry.append(heading, meaning);
           const example = document.createElement('small');
           example.lang = 'fi';
@@ -3222,7 +3229,7 @@
 
     function questionHeading(activity) {
       if (activity.type === 'activity-group') return activity.group_kind === 'teach'
-        ? 'چند واژه را با هم مرور کن.'
+        ? 'واژه‌ها و عبارت‌ها را ببین و با صدای بلند تکرار کن.'
         : 'برای هر مورد پاسخ مستقل بده؛ سپس همه را بررسی کن.';
       if (activity.type === 'number-grid') return 'اعداد را ببین و با صدای بلند مرور کن.';
       if (activity.type === 'sequence-order') return activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
@@ -4181,6 +4188,7 @@
     validateLessonObjectives,
     lessonDetailParagraphs,
     lessonObjectiveDisplay,
+    teachingActivityStatus,
     teachingActivityHeading,
     appendGrammarGoalDetails,
     initializeBrowser,
