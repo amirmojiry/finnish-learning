@@ -2955,9 +2955,9 @@
         const actions = document.createElement('div');
         actions.className = 'course-lesson-popover-actions';
         const draft = loadPacedLessonDraft(windowObject.localStorage, section.id, lesson);
+        const continueLabel = jumpAvailable ? 'پرش به این درس' : unlocked ? 'ادامه درس' : 'قفل است';
         const continueButton = createButton(
-          jumpAvailable ? 'پرش به این درس'
-            : unlocked ? (draft ? 'ادامهٔ نوبت ذخیره‌شده' : 'ادامه درس') : 'قفل است',
+          draft && unlocked && !jumpAvailable ? 'ادامهٔ نوبت ذخیره‌شده' : continueLabel,
           'primary-button course-lesson-continue',
           () => startLesson(lesson),
         );
@@ -3275,7 +3275,7 @@
         activityStartedAt = 0;
         activityTimingIndex = -1;
       } else {
-        beginCourseSession('lesson', authored.id);
+        beginCourseSession('lesson', lesson.id);
       }
       setHash(`#course-${authored.id}`);
       showCourseView();
