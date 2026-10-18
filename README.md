@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.55.0`
+- Version: `1.56.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+Four high-load lessons now support optional, locally saved study sittings of at most 15 visible slides and 20 graded responses per sitting, with resume/restart controls and unchanged authored questions/checkpoint thresholds. [Read the pacing and accessibility limitations](docs/LESSON-PACING.md) · Run `npm run lesson:load:report`. This changes the burden per *sitting*, not the overall number of graded questions.
 
 Grouped-slide practice compresses originally long lessons to at most 30 initial screens without changing their stored activities or removing independently graded word/grammar/sentence responses. [English policy](docs/LESSON-SLIDE-COMPACTION.md) · [فارسی](docs/LESSON-SLIDE-COMPACTION.fa.md) · Run `npm run lesson:slides:report` for per-lesson data. Further editorial improvements remain in [issue #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
