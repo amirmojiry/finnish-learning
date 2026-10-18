@@ -2622,6 +2622,12 @@
         diacriticAdjusted: Boolean(grading?.diacriticAdjusted),
       });
       progress = saveProgress(windowObject.localStorage, progress);
+      // A submitted single-item answer is committed before the next-click action.
+      // Grouped answers are committed together after every row has been graded.
+      if (activeLesson?.study_pacing
+        && activeLesson.activities[activityIndex]?.type !== 'activity-group') {
+        persistCurrentPacedDraft(activityIndex + 1);
+      }
     }
 
     function createSpeechStatusNotice(status) {
@@ -3172,23 +3178,110 @@
       root.scrollTop = 0;
     }
 
+    function currentAuthoredLesson() {
+      return section?.lessons.find((candidate) => candidate.id === activeLesson?.id) || null;
+    }
+
+    function persistCurrentPacedDraft(nextIndex) {
+      const authored = currentAuthoredLesson();
+      if (!authored?.study_pacing || !activeLesson || !section) return false;
+      const retryIndices = retryActivities.map((activity) => authored.activities.indexOf(activity));
+      if (retryIndices.some((index) => index < 0)) return false;
+      return savePacedLessonDraft(windowObject.localStorage, section.id, authored, {
+        nextIndex,
+        correct: sessionCorrect,
+        graded: sessionGraded,
+        retryIndices,
+        retryPhase: lessonRetryPhase,
+        sessionId: activeSessionId,
+        sessionStartedAt,
+      });
+    }
+
+    function pacingBreakForNextIndex(nextIndex) {
+      if (lessonRetryPhase) return null;
+      const authored = currentAuthoredLesson();
+      if (!authored?.study_pacing) return null;
+      const sittings = planPacedLessonSessions(
+        compactLessonActivities(authored.activities), authored.study_pacing
+      );
+      const found = sittings.findIndex((sitting, index) => index < sittings.length - 1
+        && sitting.end === nextIndex);
+      return found >= 0 ? { completed: found + 1, total: sittings.length } : null;
+    }
+
+    function renderPacingBreak(breakpoint) {
+      audioSlideToken += 1;
+      stopSpeech(windowObject);
+      root.replaceChildren();
+      const card = document.createElement('section');
+      card.className = 'course-completion-card course-pacing-break';
+      const title = document.createElement('h1');
+      title.textContent = 'یک بخش کوتاه تمام شد';
+      const message = document.createElement('p');
+      message.textContent = `نوبت ${toPersianNumber(breakpoint.completed)} از ${toPersianNumber(breakpoint.total)} کامل شد. می‌توانی اکنون ادامه بدهی یا برای استراحت برگردی.`;
+      const note = document.createElement('p');
+      note.className = 'course-completion-note';
+      note.textContent = 'پیشرفت این نوبت در همین مرورگر ذخیره می‌شود؛ درس و نمرهٔ نهایی پس از پایان همهٔ نوبت‌ها کامل می‌شوند.';
+      card.append(title, message, note);
+      card.append(createButton('ادامهٔ نوبت بعد', 'primary-button', renderActivity));
+      const authored = currentAuthoredLesson();
+      const saved = authored && loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
+      if (saved) {
+        card.append(createButton('ذخیره و بازگشت به درس‌ها', 'course-secondary-button', renderSectionMap));
+      } else {
+        const warning = document.createElement('p');
+        warning.className = 'course-pacing-storage-warning';
+        warning.setAttribute('role', 'status');
+        warning.textContent = 'ذخیره در این مرورگر در دسترس نیست؛ برای حفظ پیشرفت، درس را ادامه بده.';
+        card.append(warning);
+      }
+      root.append(card);
+      root.scrollTop = 0;
+    }
+
     function startLesson(lesson) {
       if (!section || !lesson) return;
       const sectionIndex = sections.indexOf(section);
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
-      activeLesson = { ...lesson, activities: compactLessonActivities(lesson.activities) };
-      retryActivities = [];
-      lessonRetryPhase = false;
+      const authored = section.lessons[index];
+      const saved = loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
+      const initialSlides = compactLessonActivities(authored.activities);
+      retryActivities = saved ? saved.retryIndices.map((entry) => authored.activities[entry]) : [];
+      lessonRetryPhase = saved?.retryPhase === true;
+      activeLesson = {
+        ...authored,
+        activities: lessonRetryPhase ? [...initialSlides, ...retryActivities] : initialSlides,
+      };
       setLessonFocusMode(true);
-      activityIndex = 0;
-      sessionCorrect = 0;
-      sessionGraded = 0;
+      activityIndex = saved?.nextIndex || 0;
+      sessionCorrect = saved?.correct || 0;
+      sessionGraded = saved?.graded || 0;
       answered = false;
-      beginCourseSession('lesson', lesson.id);
-      setHash(`#course-${lesson.id}`);
+      if (saved) {
+        activeSessionId = saved.sessionId;
+        sessionStartedAt = saved.sessionStartedAt;
+        activityStartedAt = 0;
+        activityTimingIndex = -1;
+      } else {
+        beginCourseSession('lesson', authored.id);
+      }
+      setHash(`#course-${authored.id}`);
       showCourseView();
-      renderActivity();
+      if (activityIndex >= activeLesson.activities.length) {
+        if (!lessonRetryPhase && retryActivities.length) {
+          lessonRetryPhase = true;
+          activeLesson.activities = [...initialSlides, ...retryActivities];
+          persistCurrentPacedDraft(activityIndex);
+        } else {
+          completeLesson();
+          return;
+        }
+      }
+      const breakpoint = pacingBreakForNextIndex(activityIndex);
+      if (breakpoint) renderPacingBreak(breakpoint);
+      else renderActivity();
     }
 
     function startFocusedPractice() {
@@ -3351,6 +3444,7 @@
           }
           feedback.append(result);
         });
+        persistCurrentPacedDraft(activityIndex + 1);
         feedback.tabIndex = -1;
         card.append(feedback, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
         feedback.focus();
@@ -4025,19 +4119,28 @@
       audioSlideToken += 1;
       stopSpeech(windowObject);
       activityIndex += 1;
+      persistCurrentPacedDraft(activityIndex);
       if (activityIndex >= activeLesson.activities.length) {
         if (!activeLesson.focused_practice && !lessonRetryPhase && retryActivities.length) {
           lessonRetryPhase = true;
           activeLesson = { ...activeLesson, activities: [...activeLesson.activities, ...retryActivities] };
+          persistCurrentPacedDraft(activityIndex);
           renderActivity();
         } else completeLesson();
-      } else renderActivity();
+      } else {
+        const breakpoint = pacingBreakForNextIndex(activityIndex);
+        if (breakpoint) renderPacingBreak(breakpoint);
+        else renderActivity();
+      }
     }
 
     function completeLesson() {
       audioSlideToken += 1;
       stopSpeech(windowObject);
       if (!activeLesson) return renderSectionMap();
+      if (!activeLesson.focused_practice) {
+        clearPacedLessonDraft(windowObject.localStorage, activeLesson.id);
+      }
       if (activeLesson.focused_practice) {
         const remainingActivities = buildFocusedPracticeActivities(section, progress);
         const remainingTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
@@ -4096,7 +4199,7 @@
       card.append(badge, title, message, note);
 
       if (!passed) {
-        card.append(createButton('تلاش دوباره', 'primary-button', () => startLesson(activeLesson)));
+        card.append(createButton('تلاش دوباره', 'primary-button', () => startLesson(section.lessons[currentIndex])));
         card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
         root.append(card);
         root.scrollTop = 0;
