@@ -3533,6 +3533,21 @@
       const counter = document.createElement('strong');
       counter.className = 'course-activity-progress-count';
       counter.textContent = `${toPersianNumber(activityIndex + 1)} / ${toPersianNumber(activeLesson.activities.length)}`;
+      const authored = currentAuthoredLesson();
+      if (authored?.study_pacing && !lessonRetryPhase) {
+        const sittings = planPacedLessonSessions(
+          compactLessonActivities(authored.activities), authored.study_pacing
+        );
+        const index = sittings.findIndex((sitting) => (
+          activityIndex >= sitting.start && activityIndex < sitting.end
+        ));
+        if (index >= 0) {
+          const sitting = sittings[index];
+          const sessionLabel = `نوبت ${toPersianNumber(index + 1)} از ${toPersianNumber(sittings.length)}: ${toPersianNumber(activityIndex - sitting.start + 1)} از ${toPersianNumber(sitting.screens)} اسلاید`;
+          counter.textContent = `${sessionLabel} · مجموع ${toPersianNumber(activityIndex + 1)} / ${toPersianNumber(activeLesson.activities.length)}`;
+          track.setAttribute('aria-label', sessionLabel);
+        }
+      }
       track.append(bar, counter);
       progressWrap.append(track);
       top.append(close, progressWrap);
