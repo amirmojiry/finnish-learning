@@ -3174,11 +3174,25 @@
           recordActivityResult(sub, correct, grading);
           control.disabled = true;
           control.classList.add(correct ? 'correct' : 'wrong');
-          const result = document.createElement('p');
+          const result = document.createElement('div');
           result.className = correct ? 'course-grouped-correct' : 'course-grouped-wrong';
-          result.textContent = toPersianNumber(index + 1) + '. '
-            + (correct ? 'درست' : 'پاسخ درست: ' + expected)
-            + (grading?.diacriticAdjusted ? ' — املای استاندارد را مرور کن.' : '');
+          const title = document.createElement('strong');
+          title.textContent = toPersianNumber(index + 1) + '. '
+            + (correct
+              ? (grading && !grading.exact ? 'پاسخ پذیرفته شد؛ صورت استاندارد: ' + expected : 'درست')
+              : 'پاسخ درست: ' + expected);
+          result.append(title);
+          if (!correct || (grading && !grading.exact)) {
+            const fi = document.createElement('small');
+            fi.lang = 'fi';
+            fi.dir = 'ltr';
+            fi.textContent = sub.type === 'controlled-production' ? sub.expected_fi : item.example_fi || item.surface_form;
+            const fa = document.createElement('small');
+            fa.lang = 'fa';
+            fa.dir = 'rtl';
+            fa.textContent = sub.type === 'controlled-production' ? sub.prompt_fa : item.example_fa || '';
+            result.append(fi, fa);
+          }
           feedback.append(result);
         });
         card.append(feedback, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
