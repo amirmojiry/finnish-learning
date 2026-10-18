@@ -3053,7 +3053,139 @@
       renderActivity();
     }
 
+    function renderCompactActivityGroup(group, card) {
+      const stack = document.createElement('div');
+      stack.className = 'course-grouped-items';
+      card.classList.add('is-grouped', 'is-long-content');
+      if (group.group_kind === 'teach') {
+        for (const sub of group.activities) {
+          const item = section.items[sub.item];
+          const entry = document.createElement('div');
+          entry.className = 'course-grouped-item';
+          const heading = document.createElement('strong');
+          heading.className = 'course-grouped-term';
+          heading.lang = 'fi';
+          heading.dir = 'ltr';
+          heading.textContent = item.surface_form;
+          const meaning = document.createElement('span');
+          meaning.textContent = item.translation_fa;
+          entry.append(heading, meaning);
+          const example = document.createElement('small');
+          example.lang = 'fi';
+          example.dir = 'ltr';
+          example.textContent = item.example_fi || '';
+          entry.append(example);
+          if (finnishSpeechStatus(windowObject).state === 'ready') {
+            const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
+            speak.setAttribute('aria-label', 'پخش تلفظ ' + item.surface_form);
+            entry.append(speak);
+          }
+          stack.append(entry);
+        }
+        card.append(stack, createButton('ادامه', 'primary-button course-next-button', nextActivity));
+        return;
+      }
+
+      const form = document.createElement('form');
+      form.className = 'course-grouped-form';
+      const rows = [];
+      group.activities.forEach((sub, index) => {
+        const item = section.items[sub.item];
+        const label = document.createElement('label');
+        label.className = 'course-grouped-item';
+        const title = document.createElement('span');
+        title.className = 'course-grouped-prompt';
+        if (sub.type === 'controlled-production') {
+          title.textContent = sub.prompt_fa + ' (راهنما: ' + sub.cues_fi.join(' + ') + ')';
+        } else if (sub.type === 'choice' && sub.mode === 'meaning') {
+          title.textContent = item.surface_form;
+          title.lang = 'fi';
+          title.dir = 'ltr';
+        } else {
+          title.textContent = item.translation_fa;
+        }
+        const numbering = document.createElement('span');
+        numbering.className = 'course-grouped-number';
+        numbering.textContent = toPersianNumber(index + 1) + '.';
+        label.append(numbering, title);
+        const control = document.createElement(sub.type === 'choice' ? 'select' : 'input');
+        control.className = 'course-grouped-answer';
+        control.setAttribute('aria-label', 'پاسخ ' + toPersianNumber(index + 1));
+        control.required = true;
+        if (sub.type === 'choice') {
+          const prompt = document.createElement('option');
+          prompt.value = '';
+          prompt.textContent = 'انتخاب کن…';
+          control.append(prompt);
+          for (const optionId of sub.options) {
+            const option = document.createElement('option');
+            option.value = optionId;
+            option.textContent = optionLabel(section.items[optionId], sub.mode);
+            control.append(option);
+          }
+          if (sub.mode === 'finnish') {
+            control.lang = 'fi';
+            control.dir = 'ltr';
+          }
+        } else {
+          control.type = 'text';
+          control.lang = 'fi';
+          control.dir = 'ltr';
+          control.autocomplete = 'off';
+          control.autocapitalize = 'none';
+          control.spellcheck = false;
+        }
+        label.append(control);
+        stack.append(label);
+        rows.push({ sub, item, control });
+      });
+      const submit = document.createElement('button');
+      submit.type = 'submit';
+      submit.className = 'primary-button compact';
+      submit.textContent = 'بررسی پاسخ‌ها';
+      form.append(stack, submit);
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (answered || rows.some(({ control }) => !control.value.trim())) return;
+        submit.disabled = true;
+        const feedback = document.createElement('div');
+        feedback.className = 'course-grouped-feedback';
+        feedback.setAttribute('role', 'status');
+        rows.forEach(({ sub, item, control }, index) => {
+          let grading = null;
+          let correct;
+          let expected;
+          if (sub.type === 'choice') {
+            correct = control.value === sub.item;
+            expected = optionLabel(item, sub.mode);
+          } else {
+            const expectedItem = sub.type === 'controlled-production'
+              ? { ...item, surface_form: sub.expected_fi, accepted_answers: sub.accepted_answers,
+                  example_fi: sub.expected_fi, example_fa: sub.prompt_fa }
+              : item;
+            grading = gradeActivityAnswer(sub, expectedItem, control.value);
+            correct = grading.accepted;
+            expected = expectedItem.surface_form;
+          }
+          recordActivityResult(sub, correct, grading);
+          control.disabled = true;
+          control.classList.add(correct ? 'correct' : 'wrong');
+          const result = document.createElement('p');
+          result.className = correct ? 'course-grouped-correct' : 'course-grouped-wrong';
+          result.textContent = toPersianNumber(index + 1) + '. '
+            + (correct ? 'درست' : 'پاسخ درست: ' + expected)
+            + (grading?.diacriticAdjusted ? ' — املای استاندارد را مرور کن.' : '');
+          feedback.append(result);
+        });
+        card.append(feedback, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+      });
+      card.append(form);
+    }
+
     function questionHeading(activity) {
+      if (activity.type === 'activity-group') return activity.group_kind === 'teach'
+        ? 'چند واژه را با هم مرور کن.'
+        : 'برای هر مورد پاسخ مستقل بده؛ سپس همه را بررسی کن.';
       if (activity.type === 'number-grid') return 'اعداد را ببین و با صدای بلند مرور کن.';
       if (activity.type === 'sequence-order') return activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
       if (activity.type === 'clock-choice') return 'ساعت درست را به فنلاندی انتخاب کن.';
@@ -3090,7 +3222,7 @@
         activityStartedAt = Date.now();
       }
       answered = false;
-      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
+      const item = ['activity-group', 'dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
         : section.items[activity.item];
       root.replaceChildren();
@@ -3161,7 +3293,9 @@
         card.append(example);
       }
 
-      if (STRUCTURED_PRACTICE_TYPES.includes(activity.type)) {
+      if (activity.type === 'activity-group') {
+        renderCompactActivityGroup(activity, card);
+      } else if (STRUCTURED_PRACTICE_TYPES.includes(activity.type)) {
         renderStructuredPracticeActivity({
           document,
           windowObject,
