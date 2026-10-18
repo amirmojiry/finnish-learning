@@ -4,6 +4,10 @@
 
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
+## R2 pacing and remaining editorial workload (2026-10-18)
+
+The grouped-slide work in [#189](https://github.com/amirmojiry/finnish-learning/issues/189) now offers optional **locally resumable** study sittings for four heavy A1 lessons via [child #192](https://github.com/amirmojiry/finnish-learning/issues/192). Each sitting has at most 15 visible screens and 20 independently graded answers, with unchanged legacy lesson IDs, checkpoint targets and total question count. [English details](LESSON-PACING.md) / [فارسی](LESSON-PACING.fa.md). Parent #189 remains open for *actual* editorial shortening, tested mobile/screen-reader accessibility and responsible learner-duration evidence; this is not proof of reduced total course workload.
+
 ## R3 flexible lesson counts (2026-10-17)
 
 [Issue #186](https://github.com/amirmojiry/finnish-learning/issues/186) enables variable number of lessons per section while preserving all shipped identifiers and checkpoints, with a separate [shipped/planned inventory](SECTION-STRUCTURE-AUDIT.md). Existing 14 sections / 140 lessons stay intact; A2.1 Sections 3–4 are still outlines. Parent #101 P2/P5/release gates remain open.
