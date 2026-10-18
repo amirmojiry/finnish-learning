@@ -2954,12 +2954,22 @@
 
         const actions = document.createElement('div');
         actions.className = 'course-lesson-popover-actions';
+        const draft = loadPacedLessonDraft(windowObject.localStorage, section.id, lesson);
         const continueButton = createButton(
-          jumpAvailable ? 'پرش به این درس' : unlocked ? 'ادامه درس' : 'قفل است',
+          jumpAvailable ? 'پرش به این درس'
+            : unlocked ? (draft ? 'ادامهٔ نوبت ذخیره‌شده' : 'ادامه درس') : 'قفل است',
           'primary-button course-lesson-continue',
           () => startLesson(lesson),
         );
         continueButton.disabled = !unlocked;
+        if (draft && unlocked) {
+          const restart = createButton('شروع از ابتدا', 'course-secondary-button', () => {
+            clearPacedLessonDraft(windowObject.localStorage, lesson.id);
+            startLesson(lesson);
+          });
+          restart.setAttribute('aria-label', 'شروع دوبارهٔ درس از ابتدا؛ پاسخ‌های قبلی در تاریخچه باقی می‌مانند');
+          actions.append(restart);
+        }
 
         const detailsButton = createButton('جزئیات درس', 'course-secondary-button course-lesson-details-toggle', () => {
           const expanded = detailsButton.getAttribute('aria-expanded') === 'true';
@@ -3374,7 +3384,8 @@
         label.append(numbering, title);
         const control = document.createElement(sub.type === 'choice' ? 'select' : 'input');
         control.className = 'course-grouped-answer';
-        control.setAttribute('aria-label', 'پاسخ ' + toPersianNumber(index + 1));
+        // The wrapping native label contains the numbered, language-tagged
+        // prompt: do not override it with an uninformative generic aria-label.
         control.required = true;
         if (sub.type === 'choice') {
           const prompt = document.createElement('option');
@@ -4268,8 +4279,8 @@
     regularLinks.forEach((link) => link.addEventListener('click', hideCourseView));
     windowObject.addEventListener('hashchange', syncFromHash);
     windowObject.addEventListener('storage', (event) => {
-      if (event.key !== STORAGE_KEY) return;
-      progress = loadProgress(windowObject.localStorage);
+      if (event.key !== STORAGE_KEY && event.key !== PACED_DRAFT_STORAGE_KEY) return;
+      if (event.key === STORAGE_KEY) progress = loadProgress(windowObject.localStorage);
       if (isCourseHash() && !activeLesson) renderSectionMap();
     });
 
