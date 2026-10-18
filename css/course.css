@@ -2307,3 +2307,92 @@ body.course-lesson-active .course-question-card.is-long-content {
     line-height: 1.5;
   }
 }
+
+
+/* Bounded R2/R3 lesson slides: independent answers in one accessible screen. */
+.course-question-card.is-grouped {
+  justify-content: flex-start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.course-grouped-items {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+.course-grouped-form {
+  display: grid;
+  gap: 16px;
+}
+.course-grouped-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  min-width: 0;
+}
+.course-grouped-item > .course-grouped-answer,
+.course-grouped-item > small,
+.course-grouped-item > .course-speak-button {
+  grid-column: 2;
+}
+.course-grouped-item > .course-grouped-term {
+  font-size: 1.15rem;
+}
+.course-grouped-item > small {
+  overflow-wrap: anywhere;
+}
+.course-grouped-status {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-inline-end: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.course-grouped-prompt {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.course-grouped-number {
+  color: var(--muted);
+}
+.course-grouped-answer {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 11px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font: inherit;
+}
+.course-grouped-answer:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.course-grouped-answer.correct { border-color: var(--success, #237c56); }
+.course-grouped-answer.wrong { border-color: var(--danger, #b54844); }
+.course-grouped-feedback {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  line-height: 1.65;
+}
+.course-grouped-feedback > div { display: grid; gap: 4px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.course-grouped-feedback small { display: block; font-size: .9rem; line-height: 1.6; overflow-wrap: anywhere; }
+.course-grouped-correct { color: var(--success, #237c56); }
+.course-grouped-wrong { color: var(--danger, #b54844); }
+@media (max-width: 480px) {
+  .course-grouped-item { padding: 10px; }
+  .course-grouped-form { gap: 12px; }
+}

@@ -1178,6 +1178,76 @@
     ));
   }
 
+  // Preserve the exact authored activity sequence. Bundles change only the number
+  // of visible screens, never their subquestion IDs, scoring or mastery evidence.
+  function compactableActivityKind(activity) {
+    if (activity?.type === 'teach') return 'teach';
+    if (activity?.type === 'type' && activity.mode === 'finnish') return 'typed';
+    if (activity?.type === 'controlled-production') return 'controlled';
+    if (activity?.type === 'choice' && ['meaning', 'finnish'].includes(activity.mode)) {
+      return 'choice-' + activity.mode;
+    }
+    return null;
+  }
+
+  function assessCompactActivityGroup(group, answers, items) {
+    if (!group || group.type !== 'activity-group' || group.group_kind === 'teach'
+      || !Array.isArray(answers) || answers.length !== group.activities.length) {
+      throw new Error('Grouped assessment requires one response for each graded subactivity.');
+    }
+    return group.activities.map((activity, index) => {
+      const item = items[activity.item];
+      if (!item) throw new Error('Unknown grouped assessment target: ' + activity.item);
+      const answer = String(answers[index] || '');
+      if (activity.type === 'choice') {
+        return {
+          activity, item, correct: activity.options.includes(answer) && answer === activity.item,
+          grading: null, expected: optionLabel(item, activity.mode),
+        };
+      }
+      const expectedItem = activity.type === 'controlled-production'
+        ? { ...item, surface_form: activity.expected_fi,
+            accepted_answers: activity.accepted_answers, example_fi: activity.expected_fi,
+            example_fa: activity.prompt_fa }
+        : item;
+      if (activity.type !== 'type' && activity.type !== 'controlled-production') {
+        throw new Error('Unsupported grouped graded activity: ' + activity.type);
+      }
+      const grading = gradeActivityAnswer(activity, expectedItem, answer);
+      return { activity, item, grading, correct: grading.accepted,
+        expected: expectedItem.surface_form };
+    });
+  }
+
+  function flattenLessonSlides(slides) {
+    return slides.flatMap((slide) => slide.type === 'activity-group' ? slide.activities : [slide]);
+  }
+
+  function compactLessonActivities(activities, slideBudget = 30) {
+    if (!Array.isArray(activities) || !Number.isSafeInteger(slideBudget) || slideBudget < 1) {
+      throw new Error('Invalid authored activities or slide budget.');
+    }
+    if (activities.length <= slideBudget) return activities.slice();
+    const slides = [];
+    for (let index = 0; index < activities.length;) {
+      const kind = compactableActivityKind(activities[index]);
+      if (!kind) {
+        slides.push(activities[index++]);
+        continue;
+      }
+      const grouped = [];
+      while (index < activities.length && grouped.length < 4
+        && compactableActivityKind(activities[index]) === kind) {
+        grouped.push(activities[index++]);
+      }
+      if (grouped.length === 1) slides.push(grouped[0]);
+      else slides.push({ type: 'activity-group', group_kind: kind, activities: grouped });
+    }
+    // A genuine learning objective may still need editorial splitting. Never
+    // truncate questions to meet the visual budget.
+    return slides;
+  }
+
   function prepareSection(rawSection) {
     if (!rawSection || rawSection.schema_version !== 1 || !rawSection.items || !Array.isArray(rawSection.lessons)) {
       throw new Error('Invalid course section data.');
@@ -1262,9 +1332,13 @@
     return { ...detail, structured: true, communicative, lexical, grammarGoals };
   }
 
+  function teachingActivityStatus(lesson, activity) {
+    const objective = lesson?.learning_objectives?.lexical?.find(goal => goal.target_id === activity.item);
+    return objective?.status === 'reviewed' ? 'reviewed' : 'introduced';
+  }
+
   function teachingActivityHeading(lesson, activity) {
-    const objective = lesson.learning_objectives?.lexical?.find(goal => goal.target_id === activity.item);
-    return objective?.status === 'reviewed'
+    return teachingActivityStatus(lesson, activity) === 'reviewed'
       ? 'عبارت آشنا را مرور کن و با صدای بلند تکرار کن.'
       : 'عبارت جدید را ببین و با صدای بلند تکرار کن.';
   }
@@ -2972,7 +3046,7 @@
       const sectionIndex = sections.indexOf(section);
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
-      activeLesson = lesson;
+      activeLesson = { ...lesson, activities: compactLessonActivities(lesson.activities) };
       retryActivities = [];
       lessonRetryPhase = false;
       setLessonFocusMode(true);
@@ -3012,7 +3086,151 @@
       renderActivity();
     }
 
+    function renderCompactActivityGroup(group, card) {
+      const stack = document.createElement('div');
+      stack.className = 'course-grouped-items';
+      card.classList.add('is-grouped', 'is-long-content');
+      if (group.group_kind === 'teach') {
+        for (const sub of group.activities) {
+          const item = section.items[sub.item];
+          const entry = document.createElement('div');
+          entry.className = 'course-grouped-item';
+          const heading = document.createElement('strong');
+          heading.className = 'course-grouped-term';
+          heading.lang = 'fi';
+          heading.dir = 'ltr';
+          heading.textContent = item.surface_form;
+          const meaning = document.createElement('span');
+          const status = document.createElement('span');
+          status.className = 'course-grouped-status';
+          status.textContent = teachingActivityStatus(activeLesson, sub) === 'reviewed' ? 'مرور' : 'جدید';
+          meaning.append(status, document.createTextNode(' ' + item.translation_fa));
+          entry.append(heading, meaning);
+          const example = document.createElement('small');
+          example.lang = 'fi';
+          example.dir = 'ltr';
+          example.textContent = item.example_fi || '';
+          const exampleFa = document.createElement('small');
+          exampleFa.lang = 'fa';
+          exampleFa.dir = 'rtl';
+          exampleFa.textContent = item.example_fa || '';
+          entry.append(example, exampleFa);
+          if (finnishSpeechStatus(windowObject).state === 'ready') {
+            const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
+            speak.setAttribute('aria-label', 'پخش تلفظ ' + item.surface_form);
+            entry.append(speak);
+          }
+          stack.append(entry);
+        }
+        card.append(stack, createButton('ادامه', 'primary-button course-next-button', nextActivity));
+        return;
+      }
+
+      const form = document.createElement('form');
+      form.className = 'course-grouped-form';
+      const rows = [];
+      group.activities.forEach((sub, index) => {
+        const item = section.items[sub.item];
+        const label = document.createElement('label');
+        label.className = 'course-grouped-item';
+        const title = document.createElement('span');
+        title.className = 'course-grouped-prompt';
+        if (sub.type === 'controlled-production') {
+          title.textContent = sub.prompt_fa + ' (راهنما: ' + sub.cues_fi.join(' + ') + ')';
+        } else if (sub.type === 'choice' && sub.mode === 'meaning') {
+          title.textContent = item.surface_form;
+          title.lang = 'fi';
+          title.dir = 'ltr';
+        } else {
+          title.textContent = item.translation_fa;
+        }
+        const numbering = document.createElement('span');
+        numbering.className = 'course-grouped-number';
+        numbering.textContent = toPersianNumber(index + 1) + '.';
+        label.append(numbering, title);
+        const control = document.createElement(sub.type === 'choice' ? 'select' : 'input');
+        control.className = 'course-grouped-answer';
+        control.setAttribute('aria-label', 'پاسخ ' + toPersianNumber(index + 1));
+        control.required = true;
+        if (sub.type === 'choice') {
+          const prompt = document.createElement('option');
+          prompt.value = '';
+          prompt.textContent = 'انتخاب کن…';
+          control.append(prompt);
+          for (const optionId of sub.options) {
+            const option = document.createElement('option');
+            option.value = optionId;
+            option.textContent = optionLabel(section.items[optionId], sub.mode);
+            control.append(option);
+          }
+          if (sub.mode === 'finnish') {
+            control.lang = 'fi';
+            control.dir = 'ltr';
+          }
+        } else {
+          control.type = 'text';
+          control.lang = 'fi';
+          control.dir = 'ltr';
+          control.autocomplete = 'off';
+          control.autocapitalize = 'none';
+          control.spellcheck = false;
+        }
+        label.append(control);
+        stack.append(label);
+        rows.push({ sub, item, control });
+      });
+      const submit = document.createElement('button');
+      submit.type = 'submit';
+      submit.className = 'primary-button compact';
+      submit.textContent = 'بررسی پاسخ‌ها';
+      form.append(stack, submit);
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (answered || rows.some(({ control }) => !control.value.trim())) return;
+        submit.disabled = true;
+        const feedback = document.createElement('div');
+        feedback.className = 'course-grouped-feedback';
+        feedback.setAttribute('role', 'status');
+        const assessments = assessCompactActivityGroup(
+          group, rows.map(({ control }) => control.value), section.items
+        );
+        assessments.forEach(({ activity: sub, item, grading, correct, expected }, index) => {
+          const control = rows[index].control;
+          recordActivityResult(sub, correct, grading);
+          control.disabled = true;
+          control.classList.add(correct ? 'correct' : 'wrong');
+          const result = document.createElement('div');
+          result.className = correct ? 'course-grouped-correct' : 'course-grouped-wrong';
+          const title = document.createElement('strong');
+          title.textContent = toPersianNumber(index + 1) + '. '
+            + (correct
+              ? (grading && !grading.exact ? 'پاسخ پذیرفته شد؛ صورت استاندارد: ' + expected : 'درست')
+              : 'پاسخ درست: ' + expected);
+          result.append(title);
+          if (!correct || (grading && !grading.exact)) {
+            const fi = document.createElement('small');
+            fi.lang = 'fi';
+            fi.dir = 'ltr';
+            fi.textContent = sub.type === 'controlled-production' ? sub.expected_fi : item.example_fi || item.surface_form;
+            const fa = document.createElement('small');
+            fa.lang = 'fa';
+            fa.dir = 'rtl';
+            fa.textContent = sub.type === 'controlled-production' ? sub.prompt_fa : item.example_fa || '';
+            result.append(fi, fa);
+          }
+          feedback.append(result);
+        });
+        feedback.tabIndex = -1;
+        card.append(feedback, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+        feedback.focus();
+      });
+      card.append(form);
+    }
+
     function questionHeading(activity) {
+      if (activity.type === 'activity-group') return activity.group_kind === 'teach'
+        ? 'واژه‌ها و عبارت‌ها را ببین و با صدای بلند تکرار کن.'
+        : 'برای هر مورد پاسخ مستقل بده؛ سپس همه را بررسی کن.';
       if (activity.type === 'number-grid') return 'اعداد را ببین و با صدای بلند مرور کن.';
       if (activity.type === 'sequence-order') return activity.label_fa || 'موارد را به‌ترتیب درست بچین.';
       if (activity.type === 'clock-choice') return 'ساعت درست را به فنلاندی انتخاب کن.';
@@ -3049,7 +3267,7 @@
         activityStartedAt = Date.now();
       }
       answered = false;
-      const item = ['dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
+      const item = ['activity-group', 'dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
         : section.items[activity.item];
       root.replaceChildren();
@@ -3120,7 +3338,9 @@
         card.append(example);
       }
 
-      if (STRUCTURED_PRACTICE_TYPES.includes(activity.type)) {
+      if (activity.type === 'activity-group') {
+        renderCompactActivityGroup(activity, card);
+      } else if (STRUCTURED_PRACTICE_TYPES.includes(activity.type)) {
         renderStructuredPracticeActivity({
           document,
           windowObject,
@@ -3957,6 +4177,9 @@
     uniqueOptions,
     buildStandardActivities,
     buildCheckpointActivities,
+    compactLessonActivities,
+    flattenLessonSlides,
+    assessCompactActivityGroup,
     prepareSection,
     validateSection,
     validateSectionAgainstCurriculum,
@@ -3965,6 +4188,7 @@
     validateLessonObjectives,
     lessonDetailParagraphs,
     lessonObjectiveDisplay,
+    teachingActivityStatus,
     teachingActivityHeading,
     appendGrammarGoalDetails,
     initializeBrowser,
