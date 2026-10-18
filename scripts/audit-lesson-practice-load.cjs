@@ -21,12 +21,34 @@ function report() {
         const slides = course.compactLessonActivities(lesson.activities);
         const graded = slides.reduce((sum, slide) => sum + course.scoredOpportunitiesOnSlide(slide), 0);
         const sittings = course.planPacedLessonSessions(slides, lesson.study_pacing);
+        const activityKinds = {};
+        for (const activity of lesson.activities) {
+          const kind = activity.type + (activity.mode ? ':' + activity.mode : '');
+          activityKinds[kind] = (activityKinds[kind] || 0) + 1;
+        }
+        const productive = lesson.activities.filter(course.isProductiveCourseActivity).length;
+        const listening = lesson.activities.filter((activity) => (
+          activity.type === 'dictation' || activity.mode === 'listen'
+        )).length;
+        const morphology = lesson.activities.filter((activity) => (
+          ['morphology-choice', 'inflection-production'].includes(activity.type)
+        )).length;
+        const teaching = lesson.activities.filter((activity) => activity.type === 'teach').length;
+        const distinctGradedTargets = new Set(
+          lesson.activities.map(course.activityPrimaryTargetId).filter(Boolean)
+        ).size;
         rows.push({
           section: section.id,
           lesson: lesson.id,
           authored: lesson.activities.length,
           screens: slides.length,
           graded,
+          teaching,
+          productive,
+          listening,
+          morphology,
+          distinct_graded_targets: distinctGradedTargets,
+          activity_kinds: activityKinds,
           checkpoint_targets: lesson.checkpoint_targets?.length || 0,
           sittings: sittings.length || 1,
           worst_sitting_screens: Math.max(...(sittings.length ? sittings.map(s => s.screens) : [slides.length])),
@@ -52,6 +74,14 @@ function markdown(rows) {
   focus.forEach(row => lines.push(
     `| ${row.section}/${row.lesson} | ${row.authored} | ${row.screens} | ${row.graded} | ${row.sittings} | ${row.worst_sitting_screens} | ${row.worst_sitting_answers} |`
   ));
+  lines.push(
+    '',
+    '| Lesson | Teaching cards | Productive answers | Listening/dictation | Morphology | Distinct target IDs | Activity families |',
+    '| --- | ---: | ---: | ---: | ---: | ---: | ---: |'
+  );
+  focus.forEach((row) => lines.push(
+    `| ${row.section}/${row.lesson} | ${row.teaching} | ${row.productive} | ${row.listening} | ${row.morphology} | ${row.distinct_graded_targets} | ${Object.keys(row.activity_kinds).length} |`
+  ));
   lines.push('', 'Pacing divides one unchanged lesson into multiple *optional sittings* with safe local resume. It does not reduce the total assessment burden or certify CEFR/YKI. In a later editorial migration, genuine lesson splitting and activity reduction require independent mastery and progress analysis.', '');
   return lines.join('\n');
 }
@@ -66,6 +96,8 @@ function check(rows) {
     assert.equal(r.sitting_details[0].start,0);
     assert.equal(r.sitting_details.at(-1).end,r.screens);
     assert.equal(r.sitting_details.reduce((n,s)=>n+s.graded,0),r.graded);
+    assert.ok(r.productive > 0 && r.listening > 0 && r.distinct_graded_targets > 0);
+    assert.ok(Object.keys(r.activity_kinds).length >= 4);
   }
   assert.equal(rows.filter(r=>r.screens>30).length,0);
   console.log('Practice load: all four heavy lessons have bounded sittings; 140 lesson slides remain valid.');
