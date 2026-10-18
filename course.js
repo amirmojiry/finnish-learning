@@ -3213,7 +3213,9 @@
           }
           feedback.append(result);
         });
+        feedback.tabIndex = -1;
         card.append(feedback, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
+        feedback.focus();
       });
       card.append(form);
     }
