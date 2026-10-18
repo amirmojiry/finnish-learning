@@ -13,7 +13,7 @@ Finnish Learning should evolve from a high-frequency vocabulary trainer into a s
 The course should:
 
 - progress through CEFR-aligned stages, beginning with A1.1 and A1.2 and continuing toward later levels;
-- divide each stage into sections, each section into 10 lessons, and each lesson into approximately 15 questions or activities;
+- divide each stage into sections with pedagogically variable lesson counts, aiming for 12–20 visible screens per new lesson and a hard maximum of 30; grouped screens may contain multiple independently graded answers;
 - introduce high-frequency vocabulary in broadly descending frequency order;
 - supplement frequency vocabulary with curated topic vocabulary and useful multiword expressions;
 - revisit vocabulary through multiple task types and spaced retrieval;
@@ -45,7 +45,7 @@ Course
 └── CEFR stage, for example A1.1
     └── Section
         └── Lesson, normally 10 per section
-            └── Activity, normally about 15 per lesson
+            └── Visible activity screens: usually 12–20, never more than 30 for new lessons
 ```
 
 ### CEFR stage
@@ -73,7 +73,7 @@ Examples include introductions, family, food, animals, time, home, transport, sh
 
 ### Lesson
 
-A lesson should not simply expose 15 new items. Its approximately 15 activities should mix:
+A lesson should not simply expose many new items. Its 12–20 target visible screens should mix:
 
 - introduction of a small number of new targets;
 - recognition and meaning retrieval;
@@ -293,7 +293,7 @@ The scheduler should choose task type according to learning state. A learner mus
 
 ## 9. Lesson composition and recycling
 
-A lesson of approximately 15 activities should be generated from a reviewed lesson manifest rather than from unrestricted randomness.
+A lesson with a bounded but flexible screen count should be generated from a reviewed lesson manifest rather than unrestricted randomness.
 
 An illustrative lesson mix:
 
@@ -427,7 +427,7 @@ The current product direction is therefore:
 - GitHub Pages remains the target platform for the current development stage;
 - A1.1 is already authored; current delivery priorities are maintained in the roadmap (maintain and audit the playable A1.2/A1.3 content, and only then author later levels);
 - each lesson combines communicative goals with high-frequency vocabulary, curated topic vocabulary, useful sentences or expressions, and grammar;
-- sections normally contain about 10 lessons and lessons normally contain about 15 activities, but pedagogical completeness matters more than fixed counts;
+- sections have variable authored lesson counts, with an advisory 12–20 visible screens per new lesson and a maximum of 30; graded answer items remain independent even when several share a screen;
 - frequency vocabulary is distributed through the curriculum without overriding source frequency data;
 - topic vocabulary and useful expressions may be introduced even when unranked or low-frequency;
 - lexeme-centered knowledge is practiced through real surface forms;
