@@ -2376,7 +2376,8 @@ body.course-lesson-active .course-question-card.is-long-content {
   margin-top: 10px;
   line-height: 1.65;
 }
-.course-grouped-feedback p { margin: 0; }
+.course-grouped-feedback > div { display: grid; gap: 4px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.course-grouped-feedback small { display: block; font-size: .9rem; line-height: 1.6; overflow-wrap: anywhere; }
 .course-grouped-correct { color: var(--success, #237c56); }
 .course-grouped-wrong { color: var(--danger, #b54844); }
 @media (max-width: 480px) {
