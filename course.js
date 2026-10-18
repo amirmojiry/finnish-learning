@@ -3074,7 +3074,11 @@
           example.lang = 'fi';
           example.dir = 'ltr';
           example.textContent = item.example_fi || '';
-          entry.append(example);
+          const exampleFa = document.createElement('small');
+          exampleFa.lang = 'fa';
+          exampleFa.dir = 'rtl';
+          exampleFa.textContent = item.example_fa || '';
+          entry.append(example, exampleFa);
           if (finnishSpeechStatus(windowObject).state === 'ready') {
             const speak = createButton('🔊', 'course-speak-button', () => playSpeech(windowObject, item.surface_form));
             speak.setAttribute('aria-label', 'پخش تلفظ ' + item.surface_form);
