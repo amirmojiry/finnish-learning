@@ -39,3 +39,10 @@ test('saved study breaks never offer leave-as-saved without successful local sto
   assert.match(pause, /ذخیره و بازگشت به درس‌ها/);
   assert.match(pause, /ذخیره در این مرورگر در دسترس نیست/);
 });
+
+test('study-sitting progress stays outside the small global progress bar', () => {
+  assert.match(courseSource, /sittingCaption\.className = 'course-pacing-progress-label'/);
+  assert.match(courseSource, /progressWrap\.append\(sittingCaption\)/);
+  assert.match(courseSource, /counter\.textContent = \x60\$\{toPersianNumber\(activityIndex \+ 1\)\} \/ \$\{toPersianNumber\(activeLesson\.activities\.length\)\}\x60/);
+  assert.match(cssSource, /\.course-pacing-progress-label\s*\{[^}]*overflow-wrap: anywhere/s);
+});
