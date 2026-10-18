@@ -1178,6 +1178,47 @@
     ));
   }
 
+  // Preserve the exact authored activity sequence. Bundles change only the number
+  // of visible screens, never their subquestion IDs, scoring or mastery evidence.
+  function compactableActivityKind(activity) {
+    if (activity?.type === 'teach') return 'teach';
+    if (activity?.type === 'type' && activity.mode === 'finnish') return 'typed';
+    if (activity?.type === 'controlled-production') return 'controlled';
+    if (activity?.type === 'choice' && ['meaning', 'finnish'].includes(activity.mode)) {
+      return 'choice-' + activity.mode;
+    }
+    return null;
+  }
+
+  function flattenLessonSlides(slides) {
+    return slides.flatMap((slide) => slide.type === 'activity-group' ? slide.activities : [slide]);
+  }
+
+  function compactLessonActivities(activities, slideBudget = 30) {
+    if (!Array.isArray(activities) || !Number.isSafeInteger(slideBudget) || slideBudget < 1) {
+      throw new Error('Invalid authored activities or slide budget.');
+    }
+    if (activities.length <= slideBudget) return activities.slice();
+    const slides = [];
+    for (let index = 0; index < activities.length;) {
+      const kind = compactableActivityKind(activities[index]);
+      if (!kind) {
+        slides.push(activities[index++]);
+        continue;
+      }
+      const grouped = [];
+      while (index < activities.length && grouped.length < 4
+        && compactableActivityKind(activities[index]) === kind) {
+        grouped.push(activities[index++]);
+      }
+      if (grouped.length === 1) slides.push(grouped[0]);
+      else slides.push({ type: 'activity-group', group_kind: kind, activities: grouped });
+    }
+    // A genuine learning objective may still need editorial splitting. Never
+    // truncate questions to meet the visual budget.
+    return slides;
+  }
+
   function prepareSection(rawSection) {
     if (!rawSection || rawSection.schema_version !== 1 || !rawSection.items || !Array.isArray(rawSection.lessons)) {
       throw new Error('Invalid course section data.');
@@ -2972,7 +3013,7 @@
       const sectionIndex = sections.indexOf(section);
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
-      activeLesson = lesson;
+      activeLesson = { ...lesson, activities: compactLessonActivities(lesson.activities) };
       retryActivities = [];
       lessonRetryPhase = false;
       setLessonFocusMode(true);
@@ -3957,6 +3998,8 @@
     uniqueOptions,
     buildStandardActivities,
     buildCheckpointActivities,
+    compactLessonActivities,
+    flattenLessonSlides,
     prepareSection,
     validateSection,
     validateSectionAgainstCurriculum,
