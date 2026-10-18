@@ -2346,6 +2346,18 @@ body.course-lesson-active .course-question-card.is-long-content {
 .course-grouped-item > small {
   overflow-wrap: anywhere;
 }
+.course-grouped-status {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-inline-end: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
 .course-grouped-prompt {
   line-height: 1.6;
   overflow-wrap: anywhere;
