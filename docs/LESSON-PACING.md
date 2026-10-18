@@ -15,7 +15,7 @@ The grouped-slide UI introduced in v1.55.0 limits **initial rendered screens**, 
 | A1.2 S2 L7 | 44 | 27 | 28 | 15/8, 12/20 |
 | A1.3 S4 L10 checkpoint | 32 | 27 | 32 | 15/15, 12/17 |
 
-Reproduce with `npm run lesson:load:report` or `npm run lesson:load:check`. Calculations are derived from validated authored data and the actual grouped-slide plan, without changing assessment objects or order.
+Reproduce with `npm run lesson:load:report` or `npm run lesson:load:check`. The report additionally distinguishes teaching, productive, listening/dictation and morphology opportunities, distinct assessed targets and activity-family diversity. Calculations are derived from validated authored data and the actual grouped-slide plan, without changing assessment objects or order.
 
 ## Learner behavior and data privacy
 
