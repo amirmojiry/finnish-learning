@@ -58,3 +58,16 @@ test('bundling is deterministic and never erases first-attempt target evidence',
     assert.equal(progress.targetPerformance[key].attempts,1);
   }
 });
+
+test('normal-length lessons remain unchanged and grouped answers keep separate evidence modes', () => {
+  const normal = [
+    { type: 'teach', item: 'one' },
+    { type: 'choice', mode: 'meaning', item: 'one', options: ['one','two'] },
+    { type: 'type', mode: 'finnish', item: 'two' },
+  ];
+  assert.deepEqual(course.compactLessonActivities(normal), normal);
+  assert.equal(course.isProductiveCourseActivity(normal[1]), false);
+  assert.equal(course.isProductiveCourseActivity(normal[2]), true);
+  assert.equal(course.courseActivityDirection(normal[1]), 'fi-to-fa');
+  assert.equal(course.courseActivityDirection(normal[2]), 'fa-to-fi');
+});
