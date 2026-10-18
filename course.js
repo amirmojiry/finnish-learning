@@ -3544,7 +3544,10 @@
         if (index >= 0) {
           const sitting = sittings[index];
           const sessionLabel = `نوبت ${toPersianNumber(index + 1)} از ${toPersianNumber(sittings.length)}: ${toPersianNumber(activityIndex - sitting.start + 1)} از ${toPersianNumber(sitting.screens)} اسلاید`;
-          counter.textContent = `${sessionLabel} · مجموع ${toPersianNumber(activityIndex + 1)} / ${toPersianNumber(activeLesson.activities.length)}`;
+          const sittingCaption = document.createElement('span');
+          sittingCaption.className = 'course-pacing-progress-label';
+          sittingCaption.textContent = sessionLabel;
+          progressWrap.append(sittingCaption);
           track.setAttribute('aria-label', sessionLabel);
         }
       }
