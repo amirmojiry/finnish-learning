@@ -1572,6 +1572,13 @@
       if (!lesson.curriculum_id || curriculumIds.has(lesson.curriculum_id)) throw new Error(`Duplicate or missing curriculum lesson ID in section ${section.id}.`);
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
+      if (lesson.study_pacing !== undefined) {
+        // A pacing setting must never silently discard an authored question.
+        const sessions = planPacedLessonSessions(compactLessonActivities(lesson.activities), lesson.study_pacing);
+        if (sessions.length < 2 || sessions.some((sitting) => sitting.screens < 1)) {
+          throw new Error(`Lesson ${lesson.id} pacing requires two or more valid study sittings.`);
+        }
+      }
       const isLastLesson = index === section.lessons.length - 1;
       const hasCheckpointTargets = Array.isArray(lesson.checkpoint_targets) && lesson.checkpoint_targets.length > 0;
       // Only the pre-existing A1.1 Section 4 final assessment lacks explicit
