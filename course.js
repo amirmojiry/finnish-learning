@@ -6,6 +6,7 @@
   'use strict';
 
   const STORAGE_KEY = 'fiCourseProgressV1';
+  const PACED_DRAFT_STORAGE_KEY = 'fiCoursePacedLessonDraftsV1';
   const SCHEMA_VERSION = 1;
   const COURSE_STAGES = [
     {
@@ -230,6 +231,11 @@
   }
 
   function resetProgress(storage) {
+    try {
+      storage?.removeItem?.(PACED_DRAFT_STORAGE_KEY);
+    } catch {
+      // A blocked local storage must not prevent progress reset in memory.
+    }
     return saveProgress(storage, emptyProgress());
   }
 
@@ -1246,6 +1252,124 @@
     // A genuine learning objective may still need editorial splitting. Never
     // truncate questions to meet the visual budget.
     return slides;
+  }
+
+  // Each sitting limits BOTH on-screen steps and independently scored answers.
+  // All originally authored questions stay in the same order and lesson ID.
+  function scoredOpportunitiesOnSlide(slide) {
+    const activities = slide?.type === 'activity-group' ? slide.activities : [slide];
+    return activities.filter((activity) => activity && activity.type !== 'teach' && activity.type !== 'number-grid').length;
+  }
+
+  function planPacedLessonSessions(slides, pacing) {
+    if (!Array.isArray(slides) || !pacing) return [];
+    const maxSlides = pacing.max_slides;
+    const maxGraded = pacing.max_graded;
+    if (!Number.isSafeInteger(maxSlides) || maxSlides < 5 || maxSlides > 20
+      || !Number.isSafeInteger(maxGraded) || maxGraded < 1 || maxGraded > 30) {
+      throw new Error('Invalid paced lesson screen/assessment budget.');
+    }
+    const sessions = [];
+    let start = 0;
+    let graded = 0;
+    for (let index = 0; index < slides.length; index++) {
+      const answers = scoredOpportunitiesOnSlide(slides[index]);
+      if (answers > maxGraded) throw new Error('One activity slide exceeds its graded-answer budget.');
+      if (index > start && (index - start >= maxSlides || graded + answers > maxGraded)) {
+        sessions.push({ start, end: index, screens: index - start, graded });
+        start = index;
+        graded = 0;
+      }
+      graded += answers;
+    }
+    if (start < slides.length) {
+      sessions.push({ start, end: slides.length, screens: slides.length - start, graded });
+    }
+    return sessions;
+  }
+
+  function pacedLessonFingerprint(lesson) {
+    const source = JSON.stringify([lesson.id, lesson.study_pacing, lesson.activities]);
+    let hash = 2166136261;
+    for (let index = 0; index < source.length; index++) {
+      hash = Math.imul(hash ^ source.charCodeAt(index), 16777619) >>> 0;
+    }
+    return hash.toString(36);
+  }
+
+  function readPacedDraftStore(storage) {
+    if (!storage || typeof storage.getItem !== 'function') return {};
+    try {
+      const raw = storage.getItem(PACED_DRAFT_STORAGE_KEY);
+      if (!raw || typeof raw !== 'string' || raw.length > 100000) return {};
+      const store = JSON.parse(raw);
+      return store && typeof store === 'object' && !Array.isArray(store) ? store : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function loadPacedLessonDraft(storage, sectionId, lesson) {
+    if (!lesson?.study_pacing || !sectionId) return null;
+    const saved = readPacedDraftStore(storage)[lesson.id];
+    if (!saved || saved.version !== 1 || saved.sectionId !== sectionId
+      || saved.lessonId !== lesson.id || saved.fingerprint !== pacedLessonFingerprint(lesson)) return null;
+    const slides = compactLessonActivities(lesson.activities);
+    const initialGraded = slides.reduce((sum, slide) => sum + scoredOpportunitiesOnSlide(slide), 0);
+    const retryIndices = saved.retryIndices;
+    if (!Array.isArray(retryIndices) || retryIndices.length > initialGraded
+      || new Set(retryIndices).size !== retryIndices.length
+      || retryIndices.some((index) => !Number.isSafeInteger(index)
+        || index < 0 || index >= lesson.activities.length
+        || ['teach', 'number-grid'].includes(lesson.activities[index].type))) return null;
+    const inRetry = saved.retryPhase === true;
+    const maxIndex = slides.length + (inRetry ? retryIndices.length : 0);
+    if (typeof saved.retryPhase !== 'boolean'
+      || !Number.isSafeInteger(saved.nextIndex) || saved.nextIndex < 0 || saved.nextIndex > maxIndex
+      || !Number.isSafeInteger(saved.correct) || saved.correct < 0
+      || !Number.isSafeInteger(saved.graded) || saved.graded < saved.correct
+      || saved.graded > initialGraded + (inRetry ? retryIndices.length : 0)
+      || typeof saved.sessionId !== 'string' || saved.sessionId.length < 1 || saved.sessionId.length > 350
+      || !Number.isSafeInteger(saved.sessionStartedAt) || saved.sessionStartedAt < 0) return null;
+    return {
+      nextIndex: saved.nextIndex, correct: saved.correct, graded: saved.graded,
+      retryIndices: retryIndices.slice(), retryPhase: inRetry,
+      sessionId: saved.sessionId, sessionStartedAt: saved.sessionStartedAt,
+    };
+  }
+
+  function savePacedLessonDraft(storage, sectionId, lesson, state) {
+    if (!lesson?.study_pacing || !sectionId || !storage || typeof storage.setItem !== 'function') return false;
+    try {
+      const drafts = readPacedDraftStore(storage);
+      drafts[lesson.id] = {
+        version: 1, sectionId, lessonId: lesson.id,
+        fingerprint: pacedLessonFingerprint(lesson),
+        nextIndex: state.nextIndex, correct: state.correct, graded: state.graded,
+        retryIndices: state.retryIndices.slice(), retryPhase: state.retryPhase,
+        sessionId: state.sessionId, sessionStartedAt: state.sessionStartedAt,
+      };
+      storage.setItem(PACED_DRAFT_STORAGE_KEY, JSON.stringify(drafts));
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function clearPacedLessonDraft(storage, lessonId) {
+    if (!storage || !lessonId || typeof storage.setItem !== 'function') return;
+    try {
+      const drafts = readPacedDraftStore(storage);
+      if (!Object.hasOwn(drafts, lessonId)) return;
+      delete drafts[lessonId];
+      if (!Object.keys(drafts).length && typeof storage.removeItem === 'function') {
+        storage.removeItem(PACED_DRAFT_STORAGE_KEY);
+      } else {
+        storage.setItem(PACED_DRAFT_STORAGE_KEY, JSON.stringify(drafts));
+      }
+    } catch {
+      // Local storage may be unavailable; course progress must remain playable.
+    }
   }
 
   function prepareSection(rawSection) {
@@ -4179,6 +4303,13 @@
     buildCheckpointActivities,
     compactLessonActivities,
     flattenLessonSlides,
+    scoredOpportunitiesOnSlide,
+    planPacedLessonSessions,
+    pacedLessonFingerprint,
+    PACED_DRAFT_STORAGE_KEY,
+    loadPacedLessonDraft,
+    savePacedLessonDraft,
+    clearPacedLessonDraft,
     assessCompactActivityGroup,
     prepareSection,
     validateSection,
