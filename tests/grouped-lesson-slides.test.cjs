@@ -71,3 +71,30 @@ test('normal-length lessons remain unchanged and grouped answers keep separate e
   assert.equal(course.courseActivityDirection(normal[1]), 'fi-to-fa');
   assert.equal(course.courseActivityDirection(normal[2]), 'fa-to-fi');
 });
+
+test('per-row grouped answer grading preserves independent correct and wrong evidence', () => {
+  const items = {
+    hei: {surface_form:'hei', translation_fa:'سلام', accepted_answers:['hei']},
+    moi: {surface_form:'moi', translation_fa:'درود', accepted_answers:['moi']},
+  };
+  const group = {type:'activity-group', group_kind:'typed', activities:[
+    {type:'type',mode:'finnish',item:'hei'},
+    {type:'type',mode:'finnish',item:'moi'},
+  ]};
+  const rows = course.assessCompactActivityGroup(group,['hei','wrong'],items);
+  assert.deepEqual(rows.map(r=>r.correct),[true,false]);
+  assert.deepEqual(rows.map(r=>r.activity.item),['hei','moi']);
+  assert.equal(rows[1].expected,'moi');
+  let progress=course.emptyProgress();
+  for(const r of rows)progress=course.recordTargetAttempt(progress,'fixture',r.activity.item,r.correct,200,false);
+  assert.equal(progress.targetPerformance[course.targetPerformanceKey('fixture','hei')].correct,1);
+  assert.equal(progress.targetPerformance[course.targetPerformanceKey('fixture','moi')].correct,0);
+
+  const choices={type:'activity-group',group_kind:'choice-meaning',activities:[
+    {type:'choice',mode:'meaning',item:'hei',options:['hei','moi']},
+    {type:'choice',mode:'meaning',item:'moi',options:['hei','moi']},
+  ]};
+  assert.deepEqual(course.assessCompactActivityGroup(choices,['hei','hei'],items).map(r=>r.correct),[true,false]);
+  assert.equal(course.assessCompactActivityGroup(choices,['invalid','moi'],items)[0].correct,false);
+  assert.throws(()=>course.assessCompactActivityGroup(choices,['hei'],items),/one response/);
+});
