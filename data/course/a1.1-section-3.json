@@ -2699,6 +2699,7 @@
     },
     {
       "id": "section-3-lesson-5",
+      "study_pacing": { "max_slides": 15, "max_graded": 20 },
       "curriculum_id": "a1.1-s3-l05",
       "order": 5,
       "title_fa": "کارهای روزمره: من",
