@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.56.0] - 2026-10-18
+
+### Added
+
+- Provide safely resumable local study sittings (at most 15 initial visible slides and 20 graded answers per sitting) for four high-load A1 lessons, including two cumulative checkpoints, without renaming lessons, dropping prompts or changing score thresholds.
+- Persist validated per-lesson continuation, independent wrong-answer retries, score and session identity across reloads; expose explicit restart and fail-safe when storage is unavailable.
+- Improve grouped input native accessible labels, mobile touch sizes and stop/continue focus, with deterministic 140-lesson pacing audits and compatibility tests. Further *total* lesson burden reduction remains editorial work under #189.
+
+
 ## [1.55.0] - 2026-10-18
 
 ### Added
