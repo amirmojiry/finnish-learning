@@ -21,6 +21,14 @@ function report() {
         const slides = course.compactLessonActivities(lesson.activities);
         const graded = slides.reduce((sum, slide) => sum + course.scoredOpportunitiesOnSlide(slide), 0);
         const sittings = course.planPacedLessonSessions(slides, lesson.study_pacing);
+        // Worst case includes every originally missed graded question as a separate
+        // retry slide; a rendered-screen cap alone is insufficient for this phase.
+        const allWrongRetries = lesson.activities.filter(
+          (activity) => course.scoredOpportunitiesOnSlide(activity) > 0
+        );
+        const worstCase = course.planPacedLessonFlow(
+          slides, allWrongRetries, lesson.study_pacing
+        );
         const activityKinds = {};
         for (const activity of lesson.activities) {
           const kind = activity.type + (activity.mode ? ':' + activity.mode : '');
@@ -54,6 +62,11 @@ function report() {
           worst_sitting_screens: Math.max(...(sittings.length ? sittings.map(s => s.screens) : [slides.length])),
           worst_sitting_answers: Math.max(...(sittings.length ? sittings.map(s => s.graded) : [graded])),
           sitting_details: sittings,
+          all_wrong_retry_sittings: Math.max(0, worstCase.length - sittings.length),
+          all_wrong_sittings_total: worstCase.length || 1,
+          all_wrong_max_screens: Math.max(...(worstCase.length ? worstCase.map(x => x.screens) : [slides.length])),
+          all_wrong_max_answers: Math.max(...(worstCase.length ? worstCase.map(x => x.graded) : [graded])),
+          all_wrong_sitting_details: worstCase,
           paced: Boolean(lesson.study_pacing),
         });
       }
@@ -82,7 +95,15 @@ function markdown(rows) {
   focus.forEach((row) => lines.push(
     `| ${row.section}/${row.lesson} | ${row.teaching} | ${row.productive} | ${row.listening} | ${row.morphology} | ${row.distinct_graded_targets} | ${Object.keys(row.activity_kinds).length} |`
   ));
-  lines.push('', 'Pacing divides one unchanged lesson into multiple *optional sittings* with safe local resume. It does not reduce the total assessment burden or certify CEFR/YKI. In a later editorial migration, genuine lesson splitting and activity reduction require independent mastery and progress analysis.', '');
+  lines.push(
+    '',
+    '| Lesson | Initial sittings | Additional retry sittings if all wrong | Worst-case total sittings | Maximum screens per sitting | Maximum answers per sitting |',
+    '| --- | ---: | ---: | ---: | ---: | ---: |'
+  );
+  focus.forEach((row) => lines.push(
+    `| ${row.section}/${row.lesson} | ${row.sittings} | ${row.all_wrong_retry_sittings} | ${row.all_wrong_sittings_total} | ${row.all_wrong_max_screens} | ${row.all_wrong_max_answers} |`
+  ));
+  lines.push('', 'Pacing divides one unchanged lesson into multiple *optional sittings* with safe local resume, and bounds retry sittings separately. It does not reduce the total assessment burden or certify CEFR/YKI. In a later editorial migration, genuine lesson splitting and activity reduction require independent mastery and progress analysis.', '');
   return lines.join('\n');
 }
 function check(rows) {
@@ -98,6 +119,13 @@ function check(rows) {
     assert.equal(r.sitting_details.reduce((n,s)=>n+s.graded,0),r.graded);
     assert.ok(r.productive > 0 && r.listening > 0 && r.distinct_graded_targets > 0);
     assert.ok(Object.keys(r.activity_kinds).length >= 4);
+    assert.ok(r.all_wrong_retry_sittings > 0);
+    assert.ok(r.all_wrong_max_screens <= 15 && r.all_wrong_max_answers <= 20);
+    assert.equal(r.all_wrong_sitting_details.at(-1).end, r.screens + r.graded);
+    for (let index = 1; index < r.all_wrong_sitting_details.length; index++) {
+      assert.equal(r.all_wrong_sitting_details[index - 1].end,
+        r.all_wrong_sitting_details[index].start);
+    }
   }
   assert.equal(rows.filter(r=>r.screens>30).length,0);
   console.log('Practice load: all four heavy lessons have bounded sittings; 140 lesson slides remain valid.');
