@@ -10,7 +10,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ### Changed
 
-- Publish explicitly curated short editions for four heavy A1 lessons: **52 fewer scored answer opportunities** (144 to 92 total) and 19/20/24/24 initial visible screens for fresh attempts, retaining the original 15 checkpoint target identities, all declared grammar evidence and first-time teaching opportunities.
+- Publish explicitly curated short editions for four heavy A1 lessons: **52 fewer scored answer opportunities** (144 to 92 total) and 18/20/21/24 initial visible screens for fresh attempts, retaining the original 15 checkpoint target identities, all declared grammar evidence and at least one independent graded response for every introduced lexical target.
 - Preserve legacy v1.56 lesson activities and saved draft fingerprint for existing in-progress learners. Fresh attempts and explicit restarts select the shorter revision; revision-fingerprinted drafts resume safely. Completed lesson progress, SRS and answer-history records retain their historical identifiers and data.
 - Add a full 140-lesson editorial load audit, explicit selection contract with coverage validation, compatibility regression tests and bilingual editing rationale. Remaining lesson editorial revisions and real-device usability evaluation remain open under #189.
 
