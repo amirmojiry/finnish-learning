@@ -46,3 +46,26 @@ test('study-sitting progress stays outside the small global progress bar', () =>
   assert.match(courseSource, /counter\.textContent = \x60\$\{toPersianNumber\(activityIndex \+ 1\)\} \/ \$\{toPersianNumber\(activeLesson\.activities\.length\)\}\x60/);
   assert.match(cssSource, /\.course-pacing-progress-label\s*\{[^}]*overflow-wrap: anywhere/s);
 });
+
+
+test('retry-phase transition displays a paced break instead of unbounded retry questions', () => {
+  const start = courseSource.indexOf('function nextActivity()');
+  const end = courseSource.indexOf('function completeLesson()', start);
+  assert.ok(start > 0 && end > start);
+  const next = courseSource.slice(start, end);
+  assert.match(next, /lessonRetryPhase = true;[\s\S]*?const breakpoint = pacingBreakForNextIndex\(activityIndex\);/);
+  assert.match(next, /if \(breakpoint\) renderPacingBreak\(breakpoint\);/);
+
+  const breakStart = courseSource.indexOf('function pacingBreakForNextIndex(');
+  const breakEnd = courseSource.indexOf('function renderPacingBreak(', breakStart);
+  const pauses = courseSource.slice(breakStart, breakEnd);
+  assert.match(pauses, /planPacedLessonFlow\(/);
+  assert.match(pauses, /lessonRetryPhase \? retryActivities : \[\]/);
+  assert.doesNotMatch(pauses, /if \(lessonRetryPhase\) return null/);
+
+  const renderStart = courseSource.indexOf('function renderActivity()');
+  const renderEnd = courseSource.indexOf('function showFeedback(', renderStart);
+  const renderer = courseSource.slice(renderStart, renderEnd);
+  assert.match(renderer, /const phaseLabel = sitting\.phase === 'retry'/);
+  assert.match(renderer, /course-pacing-progress-label/);
+});
