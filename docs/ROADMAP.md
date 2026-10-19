@@ -6,7 +6,7 @@ This document is the **single maintained delivery roadmap**. [Learning Design](L
 
 ## R2 editorial shortening of priority A1 lessons (2026-10-19)
 
-[Child #194](https://github.com/amirmojiry/finnish-learning/issues/194) introduces genuinely shorter edited editions for four overlong A1 lessons, reducing their combined independently graded answers from **144 to 92** while retaining checkpoint targets, explicit grammar evidence and the original archived activity arrays for resuming v1.56 drafts. Fresh attempts use 19/20/21/24 initial visible screens; paused old attempts use the historical question sequence. [Rationale and side-by-side audit](LESSON-EDITORIAL-REDUCTION.md). Parent #189 remains open for editorial work on the other 51 historically long lessons, reinforcement redistribution and real-device UX/retention verification.
+[Child #194](https://github.com/amirmojiry/finnish-learning/issues/194) introduces genuinely shorter edited editions for four overlong A1 lessons, reducing their combined independently graded answers from **144 to 92** while retaining checkpoint targets, explicit grammar evidence and the original archived activity arrays for resuming v1.56 drafts. Fresh attempts use 18/20/21/24 initial visible screens; paused old attempts use the historical question sequence. [Rationale and side-by-side audit](LESSON-EDITORIAL-REDUCTION.md). Parent #189 remains open for editorial work on the other 51 historically long lessons, reinforcement redistribution and real-device UX/retention verification.
 
 ## R2 pacing and remaining editorial workload (2026-10-18)
 
