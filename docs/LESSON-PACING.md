@@ -15,15 +15,17 @@ The grouped-slide UI introduced in v1.55.0 limits **initial rendered screens**, 
 | A1.2 S2 L7 | 44 | 27 | 28 | 15/8, 12/20 |
 | A1.3 S4 L10 checkpoint | 32 | 27 | 32 | 15/15, 12/17 |
 
+Wrong-answer retries form a **separate, equally bounded phase**: if all 62 checkpoint answers are wrong, five additional retry sittings (15, 15, 15, 15 and 2 screens/answers) follow the four initial sittings. A break is offered before the first retry and between retry sittings; the draft cursor and first-attempt score are preserved across pauses. The report now includes these all-wrong worst-case bounds.
+
 Reproduce with `npm run lesson:load:report` or `npm run lesson:load:check`. The report additionally distinguishes teaching, productive, listening/dictation and morphology opportunities, distinct assessed targets and activity-family diversity. Calculations are derived from validated authored data and the actual grouped-slide plan, without changing assessment objects or order.
 
 ## Learner behavior and data privacy
 
 - At the end of each sitting, the learner can **continue immediately** or **save locally and return to the section map**. From that map, they can resume or explicitly restart at the beginning.
-- Per-answer correctness, total graded denominator, per-target attempts/history, wrong-answer retries and original checkpoint score thresholds remain intact, including after resuming across reloads.
+- Per-answer correctness, total graded denominator, per-target attempts/history, **separately paced wrong-answer retries** and original checkpoint score thresholds remain intact, including after resuming across reloads.
 - A separate local-only draft record includes the section/lesson IDs, content fingerprint, next screen index, cumulative score, retry activity indices and session identity. A stale/corrupt draft is ignored; an explicit reset or final completion clears its draft. Saved scores/history in the existing key are not rewritten by this feature.
 - If local storage is unavailable, the break allows continuing, but does **not** present a misleading save-and-leave action.
-- No background sync, analytics or fatigue measurements are added. A whole 62-answer checkpoint remains demanding in total even when spread across four sittings; a later editorial project may split it into actual new lessons with an explicit migration.
+- No background sync, analytics or fatigue measurements are added. A whole 62-answer checkpoint remains demanding in total even when its initial questions are spread across four sittings and any needed retries across additional bounded sittings; a later editorial project may split it into actual new lessons with an explicit migration.
 
 ## Grouped UI / accessibility QA
 
