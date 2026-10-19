@@ -1633,6 +1633,13 @@
       if (introducedWithTeaching && !selected.some((activity) => activity.type === 'teach' && activity.item === goal.target_id)) {
         fail('removes the first teaching card for new target: ' + goal.target_id);
       }
+      const previouslyAssessed = lesson.activities.some((activity) =>
+        activity.item === goal.target_id && scoredOpportunitiesOnSlide(activity) > 0);
+      const assessedInEdition = selected.some((activity) =>
+        activity.item === goal.target_id && scoredOpportunitiesOnSlide(activity) > 0);
+      if (previouslyAssessed && !assessedInEdition) {
+        fail('removes the only independent assessment for introduced target: ' + goal.target_id);
+      }
     }
     for (const goal of lesson.learning_objectives?.grammar || []) {
       for (const evidence of goal.evidence || []) {
