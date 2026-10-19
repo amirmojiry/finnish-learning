@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.56.0`
+- Version: `1.57.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+Four prioritized A1 lessons now have **genuinely shorter** fresh-attempt editions: 52 fewer independently graded answers across those lessons and 19–24 initial visible screens per lesson, without weakening stated checkpoint target identities or grammar evidence. Paused v1.56 attempts resume the original version without losing their saved cursor. [English rationale and limitations](docs/LESSON-EDITORIAL-REDUCTION.md) · [فارسی](docs/LESSON-EDITORIAL-REDUCTION.fa.md) · `npm run lesson:editorial:report`. Other long lessons still need editorial work under #189.
 
 Four high-load lessons now support optional, locally saved study sittings of at most 15 visible slides and 20 graded responses per sitting, with resume/restart controls and unchanged authored questions/checkpoint thresholds. [Read the pacing and accessibility limitations](docs/LESSON-PACING.md) · Run `npm run lesson:load:report`. This changes the burden per *sitting*, not the overall number of graded questions.
 
