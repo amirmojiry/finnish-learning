@@ -8,18 +8,18 @@ Version 1.57.0 goes beyond grouping and short sittings: **fresh attempts actuall
 
 | Lesson | Original activities | New activities | Original graded | New graded | Original initial slides | New initial slides |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| A1.1 S3 L5: daily routines | 40 | 35 | 22 | 17 | 30 | 19 |
-| A1.1 S2 L10: section checkpoint | 62 | 28 | 62 | 28 | 29 | 20 |
+| A1.1 S3 L5: daily routines | 40 | 36 | 22 | 18 | 30 | 18 |
+| A1.1 S2 L10: section checkpoint | 62 | 27 | 62 | 27 | 29 | 20 |
 | A1.2 S2 L7: transit timetable | 44 | 34 | 28 | 18 | 27 | 21 |
 | A1.3 S4 L10: cumulative checkpoint | 32 | 29 | 32 | 29 | 27 | 24 |
-| **Total** | **178** | **126** | **144** | **92** | **113** | **84** |
+| **Total** | **178** | **126** | **144** | **92** | **113** | **83** |
 
 These are static content and scoring opportunities, not measured minutes, completion rates or learner fatigue. Run `npm run lesson:editorial:report`, `npm run lesson:editorial:json` or `npm run lesson:editorial:check` to regenerate the audit.
 
 ## Why these particular questions were removed
 
-- **A1.1 S3 L5:** retains **all 18 first-time teaching cards**, listening, grammar evidence, inflection and contextual Finnish production. Removes two isolated `juon` / `menen` repetitions already expressed in the contextual `Minä juon kahvia` / `Menen kotiin` tasks and three prior-review time-word typing repetitions. The reviewed time words remain in the section/earlier lessons. Moves same-category time-phrase and routine cards into teach-then-assess sets so **35 retained activities become 19 screens**; individual answer attribution remains unchanged.
-- **A1.1 S2 L10:** preserves **every one of its 15 checkpoint targets**, all five positive grammar evidence examples, one listening response, productive tasks, and nine representative additional contextual and number reviews. Removes 34 ancillary single-word typing responses, including repetitive isolated number drills, which were outside the designated checkpoint target identity list. This checkpoint remains a multi-skill assessment; its passing threshold is unchanged and now uses the revised 28-answer denominator.
+- **A1.1 S3 L5:** retains **all 18 first-time teaching cards**, listening, grammar evidence, inflection and contextual Finnish production. Retains independent first-attempt recall for `juon` and `menen`. Removes the redundant standalone `kotiin` spelling drill (already assessed by its required inflection-production exercise) and three prior-review time-word typing repetitions. The reviewed time words remain in the section/earlier lessons. Moves same-category time-phrase and routine cards into teach-then-assess sets so **36 retained activities become 18 screens**; individual answer attribution remains unchanged.
+- **A1.1 S2 L10:** preserves **every one of its 15 checkpoint targets**, all five positive grammar evidence examples, one listening response, productive tasks, and nine representative additional contextual and number reviews. Removes 35 ancillary single-word typing responses, including repetitive isolated number drills, which were outside the designated checkpoint target identity list. This checkpoint remains a multi-skill assessment; its passing threshold is unchanged and now uses the revised 28-answer denominator.
 - **A1.2 S2 L7:** preserves all **16 introduced teaching targets**, the clock choice, listening, two short timetable readings, both controlled before/after sentence productions and explicit grammar evidence. Removes ten already-reviewed transport/ticket vocabulary typing prompts not central to the timetable objective; the earlier lessons and Word Practice remain available for separate reinforcement.
 - **A1.3 S4 L10:** preserves **all 15 checkpoint identities**, the ten explicitly evidenced past-tense morphology checks, seven contextual productions, listening and remaining language functions. Removes a pair of scaffolded first-phase tasks subsequently tested by more productive tasks and one ancillary reviewed typing prompt. Unlike arbitrary pruning, it protects all declared grammar evidence references.
 
