@@ -1608,6 +1608,56 @@
     }
   }
 
+  function validateLessonEditorialRevision(lesson) {
+    const revision = lesson.editorial_revision;
+    if (revision === undefined) return;
+    const fail = (reason) => { throw new Error('Lesson ' + lesson.id + ': editorial revision ' + reason); };
+    if (!revision || typeof revision !== 'object' || Array.isArray(revision)
+      || typeof revision.id !== 'string' || !/^r[0-9]+-[a-z0-9-]+-v[0-9]+$/.test(revision.id)
+      || !Array.isArray(revision.activity_indices) || !revision.activity_indices.length
+      || revision.activity_indices.length >= lesson.activities.length) fail('requires a valid shorter authored selection');
+    const indices = revision.activity_indices;
+    const selectedIds = new Set(indices);
+    if (selectedIds.size !== indices.length
+      || indices.some((index) => !Number.isSafeInteger(index) || index < 0 || index >= lesson.activities.length)) {
+      fail('activity indices must be unique and refer to existing authored activities');
+    }
+    const selected = lessonEditionActivities(lesson, 'editorial');
+    const selectedTargets = new Set(selected.map((activity) => activityPrimaryTargetId(activity)).filter(Boolean));
+    for (const targetId of lesson.checkpoint_targets || []) {
+      if (!selectedTargets.has(targetId)) fail('removes a checkpoint target: ' + targetId);
+    }
+    for (const goal of lesson.learning_objectives?.lexical || []) {
+      if (goal.status !== 'introduced') continue;
+      const introducedWithTeaching = lesson.activities.some((activity) => activity.type === 'teach' && activity.item === goal.target_id);
+      if (introducedWithTeaching && !selected.some((activity) => activity.type === 'teach' && activity.item === goal.target_id)) {
+        fail('removes the first teaching card for new target: ' + goal.target_id);
+      }
+    }
+    for (const goal of lesson.learning_objectives?.grammar || []) {
+      for (const evidence of goal.evidence || []) {
+        if (Number.isSafeInteger(evidence.activity_index)) {
+          if (!selectedIds.has(evidence.activity_index)) fail('removes explicit grammar evidence: ' + goal.concept_id);
+        } else if (!selected.some((activity) => activity.type === evidence.activity_type
+          && activity.item === evidence.item_id)) {
+          fail('removes grammar evidence: ' + goal.concept_id);
+        }
+      }
+    }
+    const isListening = (activity) => activity.type === 'dictation' || activity.mode === 'listen';
+    if (lesson.activities.some(isListening) && !selected.some(isListening)) fail('removes all listening evidence');
+    if (lesson.activities.some(isProductiveCourseActivity)
+      && !selected.some(isProductiveCourseActivity)) fail('removes all productive evidence');
+    const slides = lessonEditionSlides(lesson, 'editorial');
+    if (slides.length > 30) fail('exceeds 30 visible slides');
+    if (slides.reduce((n, slide) => n + scoredOpportunitiesOnSlide(slide), 0) < 1) {
+      fail('requires independently graded answers');
+    }
+    if (lesson.study_pacing && planPacedLessonSessions(slides, lesson.study_pacing).length < 2) {
+      fail('paced editorial content must retain at least two short sittings');
+    }
+  }
+
   function validateSection(rawSection) {
     const section = prepareSection(rawSection);
     if (!Array.isArray(section.can_do_fa) || section.can_do_fa.length === 0 || section.can_do_fa.some((goal) => typeof goal !== 'string' || !goal.trim())) {
@@ -1627,6 +1677,7 @@
       if (!lesson.curriculum_id || curriculumIds.has(lesson.curriculum_id)) throw new Error(`Duplicate or missing curriculum lesson ID in section ${section.id}.`);
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
+      validateLessonEditorialRevision(lesson);
       if (lesson.study_pacing !== undefined) {
         // A pacing setting must never silently discard an authored question.
         const sessions = planPacedLessonSessions(compactLessonActivities(lesson.activities), lesson.study_pacing);
@@ -4509,6 +4560,7 @@
     lessonEditionActivities,
     lessonEditionSlides,
     editorialLessonFingerprint,
+    validateLessonEditorialRevision,
     scoredOpportunitiesOnSlide,
     planPacedLessonSessions,
     planPacedLessonFlow,
