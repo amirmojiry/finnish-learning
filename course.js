@@ -1288,6 +1288,25 @@
     return sessions;
   }
 
+  // Retry questions are each an independent visible slide. Make them a separate
+  // bounded phase, never append an unbounded tail to the final initial sitting.
+  function planPacedLessonFlow(initialSlides, retrySlides, pacing) {
+    if (!pacing) return [];
+    const initial = planPacedLessonSessions(initialSlides, pacing);
+    const retries = Array.isArray(retrySlides) && retrySlides.length
+      ? planPacedLessonSessions(retrySlides, pacing) : [];
+    const offset = initialSlides.length;
+    return [
+      ...initial.map((sitting) => ({ ...sitting, phase: 'initial' })),
+      ...retries.map((sitting) => ({
+        ...sitting,
+        phase: 'retry',
+        start: offset + sitting.start,
+        end: offset + sitting.end,
+      })),
+    ];
+  }
+
   function pacedLessonFingerprint(lesson) {
     const source = JSON.stringify([lesson.id, lesson.study_pacing, lesson.activities]);
     let hash = 2166136261;
@@ -3209,15 +3228,17 @@
     }
 
     function pacingBreakForNextIndex(nextIndex) {
-      if (lessonRetryPhase) return null;
       const authored = currentAuthoredLesson();
       if (!authored?.study_pacing) return null;
-      const sittings = planPacedLessonSessions(
-        compactLessonActivities(authored.activities), authored.study_pacing
+      const initialSlides = compactLessonActivities(authored.activities);
+      const sittings = planPacedLessonFlow(
+        initialSlides, lessonRetryPhase ? retryActivities : [], authored.study_pacing
       );
       const found = sittings.findIndex((sitting, index) => index < sittings.length - 1
         && sitting.end === nextIndex);
-      return found >= 0 ? { completed: found + 1, total: sittings.length } : null;
+      return found >= 0
+        ? { completed: found + 1, total: sittings.length, nextPhase: sittings[found + 1].phase }
+        : null;
     }
 
     function renderPacingBreak(breakpoint) {
@@ -3227,7 +3248,9 @@
       const card = document.createElement('section');
       card.className = 'course-completion-card course-pacing-break';
       const title = document.createElement('h1');
-      title.textContent = 'یک بخش کوتاه تمام شد';
+      title.textContent = breakpoint.nextPhase === 'retry'
+        ? 'نوبت‌های مرور پاسخ‌های نادرست'
+        : 'یک بخش کوتاه تمام شد';
       const message = document.createElement('p');
       message.textContent = `نوبت ${toPersianNumber(breakpoint.completed)} از ${toPersianNumber(breakpoint.total)} کامل شد. می‌توانی اکنون ادامه بدهی یا برای استراحت برگردی.`;
       const note = document.createElement('p');
@@ -3534,16 +3557,19 @@
       counter.className = 'course-activity-progress-count';
       counter.textContent = `${toPersianNumber(activityIndex + 1)} / ${toPersianNumber(activeLesson.activities.length)}`;
       const authored = currentAuthoredLesson();
-      if (authored?.study_pacing && !lessonRetryPhase) {
-        const sittings = planPacedLessonSessions(
-          compactLessonActivities(authored.activities), authored.study_pacing
+      if (authored?.study_pacing) {
+        const sittings = planPacedLessonFlow(
+          compactLessonActivities(authored.activities),
+          lessonRetryPhase ? retryActivities : [],
+          authored.study_pacing
         );
         const index = sittings.findIndex((sitting) => (
           activityIndex >= sitting.start && activityIndex < sitting.end
         ));
         if (index >= 0) {
           const sitting = sittings[index];
-          const sessionLabel = `نوبت ${toPersianNumber(index + 1)} از ${toPersianNumber(sittings.length)}: ${toPersianNumber(activityIndex - sitting.start + 1)} از ${toPersianNumber(sitting.screens)} اسلاید`;
+          const phaseLabel = sitting.phase === 'retry' ? 'مرور جبرانی · ' : '';
+          const sessionLabel = `${phaseLabel}نوبت ${toPersianNumber(index + 1)} از ${toPersianNumber(sittings.length)}: ${toPersianNumber(activityIndex - sitting.start + 1)} از ${toPersianNumber(sitting.screens)} اسلاید`;
           const sittingCaption = document.createElement('span');
           sittingCaption.className = 'course-pacing-progress-label';
           sittingCaption.textContent = sessionLabel;
@@ -4154,7 +4180,9 @@
           lessonRetryPhase = true;
           activeLesson = { ...activeLesson, activities: [...activeLesson.activities, ...retryActivities] };
           persistCurrentPacedDraft(activityIndex);
-          renderActivity();
+          const breakpoint = pacingBreakForNextIndex(activityIndex);
+          if (breakpoint) renderPacingBreak(breakpoint);
+          else renderActivity();
         } else completeLesson();
       } else {
         const breakpoint = pacingBreakForNextIndex(activityIndex);
@@ -4444,6 +4472,7 @@
     flattenLessonSlides,
     scoredOpportunitiesOnSlide,
     planPacedLessonSessions,
+    planPacedLessonFlow,
     pacedLessonFingerprint,
     PACED_DRAFT_STORAGE_KEY,
     loadPacedLessonDraft,
