@@ -134,3 +134,66 @@ test('validation rejects overly large sittings and invalid local storage is harm
     retryPhase: false, sessionId: 'x', sessionStartedAt: 0,
   }), false);
 });
+
+
+test('all-wrong checkpoint retry phase is split into bounded additional sittings', () => {
+  const sectionId = 'a1.1-section-2';
+  const lesson = course.validateSection(sectionFixture(sectionId)).lessons.at(-1);
+  const initialSlides = course.compactLessonActivities(lesson.activities);
+  const missed = lesson.activities.slice(); // Worst case: all 62 graded questions were missed.
+  const firstAttempt = course.planPacedLessonSessions(initialSlides, lesson.study_pacing);
+  const allSittings = course.planPacedLessonFlow(initialSlides, missed, lesson.study_pacing);
+  assert.equal(initialSlides.length, 29);
+  assert.equal(missed.length, 62);
+  assert.equal(firstAttempt.length, 4);
+  assert.equal(allSittings.length, 9); // Four initial + five independently bounded retry sittings.
+  assert.deepEqual(allSittings.map(s => s.screens), [15, 6, 5, 3, 15, 15, 15, 15, 2]);
+  assert.deepEqual(allSittings.map(s => s.graded), [17, 18, 20, 7, 15, 15, 15, 15, 2]);
+  assert.deepEqual(allSittings.map(s => s.phase),
+    [...Array(4).fill('initial'), ...Array(5).fill('retry')]);
+  assert.equal(allSittings[3].end, initialSlides.length);
+  assert.equal(allSittings[4].start, initialSlides.length);
+  assert.equal(allSittings.at(-1).end, initialSlides.length + missed.length);
+  assert.equal(allSittings.reduce((n, s) => n + s.graded, 0), 124);
+  for (let i = 0; i < allSittings.length; i++) {
+    const sitting = allSittings[i];
+    assert.ok(sitting.screens <= 15 && sitting.graded <= 20);
+    assert.equal(sitting.end - sitting.start, sitting.screens);
+    if (i > 0) assert.equal(allSittings[i - 1].end, sitting.start);
+  }
+});
+
+test('partial retry, no-retry and interrupted retry remain bounded with stable draft restore', () => {
+  const sectionId = 'a1.3-section-4';
+  const lesson = course.validateSection(sectionFixture(sectionId)).lessons.at(-1);
+  const initial = course.compactLessonActivities(lesson.activities);
+  const noRetry = course.planPacedLessonFlow(initial, [], lesson.study_pacing);
+  assert.equal(noRetry.length, 2);
+  assert.equal(noRetry.at(-1).end, initial.length);
+  assert.deepEqual(noRetry.map(s => s.phase), ['initial', 'initial']);
+
+  const missedIndices = Array.from({ length: 17 }, (_, index) => index);
+  const missedActivities = missedIndices.map(index => lesson.activities[index]);
+  const sessions = course.planPacedLessonFlow(initial, missedActivities, lesson.study_pacing);
+  assert.equal(sessions.length, 4);
+  assert.deepEqual(sessions.map(s => s.screens), [15, 12, 15, 2]);
+  assert.deepEqual(sessions.map(s => s.graded), [15, 17, 15, 2]);
+  assert.equal(sessions[1].end, sessions[2].start); // First retry is a separate sitting.
+  const storage = memoryStorage();
+  const savedState = {
+    nextIndex: initial.length + 15,
+    correct: 5,
+    graded: 32 + 15,
+    retryIndices: missedIndices,
+    retryPhase: true,
+    sessionId: 'retry-in-progress',
+    sessionStartedAt: 2000,
+  };
+  assert.equal(course.savePacedLessonDraft(storage, sectionId, lesson, savedState), true);
+  assert.deepEqual(course.loadPacedLessonDraft(storage, sectionId, lesson), savedState);
+  assert.equal(sessions[2].end, savedState.nextIndex);
+  assert.equal(sessions[3].start, savedState.nextIndex);
+  const restored = savedState.retryIndices.map(index => lesson.activities[index]);
+  assert.deepEqual(course.planPacedLessonFlow(initial, restored, lesson.study_pacing), sessions);
+  assert.deepEqual(course.flattenLessonSlides(initial), lesson.activities);
+});
