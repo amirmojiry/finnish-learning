@@ -3311,13 +3311,15 @@
         retryPhase: lessonRetryPhase,
         sessionId: activeSessionId,
         sessionStartedAt,
+        ...(activeLesson.editorialEdition === 'editorial'
+          ? { editorialEdition: authored.editorial_revision.id } : {}),
       });
     }
 
     function pacingBreakForNextIndex(nextIndex) {
       const authored = currentAuthoredLesson();
       if (!authored?.study_pacing) return null;
-      const initialSlides = compactLessonActivities(authored.activities);
+      const initialSlides = lessonEditionSlides(authored, activeLesson.editorialEdition);
       const sittings = planPacedLessonFlow(
         initialSlides, lessonRetryPhase ? retryActivities : [], authored.study_pacing
       );
@@ -3367,11 +3369,16 @@
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
       const authored = section.lessons[index];
       const saved = loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
-      const initialSlides = compactLessonActivities(authored.activities);
+      // Old v1.56 drafts have no edition marker: resume their original activity
+      // order without replaying scored questions. Fresh starts are concise.
+      const editorialEdition = !authored.editorial_revision ? 'legacy'
+        : saved && !saved.editorialEdition ? 'legacy' : 'editorial';
+      const initialSlides = lessonEditionSlides(authored, editorialEdition);
       retryActivities = saved ? saved.retryIndices.map((entry) => authored.activities[entry]) : [];
       lessonRetryPhase = saved?.retryPhase === true;
       activeLesson = {
         ...authored,
+        editorialEdition,
         activities: lessonRetryPhase ? [...initialSlides, ...retryActivities] : initialSlides,
       };
       setLessonFocusMode(true);
@@ -3646,7 +3653,7 @@
       const authored = currentAuthoredLesson();
       if (authored?.study_pacing) {
         const sittings = planPacedLessonFlow(
-          compactLessonActivities(authored.activities),
+          lessonEditionSlides(authored, activeLesson.editorialEdition),
           lessonRetryPhase ? retryActivities : [],
           authored.study_pacing
         );
