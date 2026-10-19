@@ -2,7 +2,11 @@
 
 # نوبت‌های کوتاهِ قابل ذخیره و ادامه برای درس‌های سنگین
 
-[English](LESSON-PACING.md) · [ایشوی مادر #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [تمرین‌های گروهی](LESSON-SLIDE-COMPACTION.fa.md)
+[English](LESSON-PACING.md) · [ویرایش کوتاه‌شدهٔ جدید](LESSON-EDITORIAL-REDUCTION.fa.md) · [ایشوی مادر #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [تمرین‌های گروهی](LESSON-SLIDE-COMPACTION.fa.md)
+
+## دربارهٔ نسخهٔ قدیمی و جدید
+
+جدول‌های این سند وضعِ نسخهٔ 1.56.0 و نوبت‌بندی محتوای قدیمی را نشان می‌دهند که برای ادامهٔ درس‌های نیمه‌تمام حفظ شده است. کاربران با شروع جدید در نسخهٔ 1.57.0 ویرایش واقعاً کوتاه‌شده را می‌بینند؛ [مقایسهٔ فارسیِ قبل و بعد](LESSON-EDITORIAL-REDUCTION.fa.md).
 
 ## تغییر دقیق چیست؟
 
