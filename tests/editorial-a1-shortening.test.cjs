@@ -154,7 +154,7 @@ test('only the four audited lessons have curated content; all others preserve th
         } else {
           assert.deepEqual(course.lessonEditionActivities(lesson, 'editorial'), lesson.activities);
           assert.deepEqual(course.lessonEditionSlides(lesson, 'editorial'),
-            course.compactLessonActivities(lesson.activities, 1),
+            course.compactLessonActivities(lesson.activities, 30),
             'Unedited edition helper remains deterministic');
         }
       }
