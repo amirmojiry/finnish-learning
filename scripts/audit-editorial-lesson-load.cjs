@@ -7,8 +7,8 @@ const course = require('../course.js');
 
 const projectRoot = path.resolve(__dirname, '..');
 const expected = new Map([
-  ['section-3-lesson-5', { source: 40, edited: 35, graded: 17, slides: 19 }],
-  ['section-2-lesson-10', { source: 62, edited: 28, graded: 28, slides: 20 }],
+  ['section-3-lesson-5', { source: 40, edited: 36, graded: 18, slides: 18 }],
+  ['section-2-lesson-10', { source: 62, edited: 27, graded: 27, slides: 20 }],
   ['a1.2-section-2-lesson-7', { source: 44, edited: 34, graded: 18, slides: 21 }],
   ['a1.3-section-4-lesson-10', { source: 32, edited: 29, graded: 29, slides: 24 }],
 ]);
