@@ -1265,7 +1265,7 @@
     const activities = lessonEditionActivities(lesson, edition);
     // Editorial revisions deliberately group compatible cards even below the
     // legacy 30-screen threshold; independent graded answers stay intact.
-    return compactLessonActivities(activities, edition === 'editorial' ? 1 : 30);
+    return compactLessonActivities(activities, edition === 'editorial' && lesson.editorial_revision ? 1 : 30);
   }
 
   function hashCourseText(source) {
