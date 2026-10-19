@@ -10,9 +10,9 @@ Version 1.57.0 goes beyond grouping and short sittings: **fresh attempts actuall
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | A1.1 S3 L5: daily routines | 40 | 35 | 22 | 17 | 30 | 19 |
 | A1.1 S2 L10: section checkpoint | 62 | 28 | 62 | 28 | 29 | 20 |
-| A1.2 S2 L7: transit timetable | 44 | 34 | 28 | 18 | 27 | 24 |
+| A1.2 S2 L7: transit timetable | 44 | 34 | 28 | 18 | 27 | 21 |
 | A1.3 S4 L10: cumulative checkpoint | 32 | 29 | 32 | 29 | 27 | 24 |
-| **Total** | **178** | **126** | **144** | **92** | **113** | **98** |
+| **Total** | **178** | **126** | **144** | **92** | **113** | **84** |
 
 These are static content and scoring opportunities, not measured minutes, completion rates or learner fatigue. Run `npm run lesson:editorial:report`, `npm run lesson:editorial:json` or `npm run lesson:editorial:check` to regenerate the audit.
 
