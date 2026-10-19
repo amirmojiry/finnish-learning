@@ -4344,6 +4344,7 @@
     },
     {
       "id": "a1.2-section-2-lesson-7",
+      "study_pacing": { "max_slides": 15, "max_graded": 20 },
       "curriculum_id": "a1.2-s2-l07",
       "order": 7,
       "title_fa": "جدول زمان‌بندی",

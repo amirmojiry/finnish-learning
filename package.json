@@ -1,10 +1,10 @@
 {
   "name": "finnish-learning",
-  "version": "1.55.0",
+  "version": "1.56.0",
   "private": true,
   "description": "A Persian-first Finnish vocabulary learning web application.",
   "scripts": {
-    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/audit-reviewed-lexical-identities.cjs --check && node scripts/build-contextual-lexical-identities.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/audit-section-structure.cjs --check && node scripts/audit-lesson-slide-budget.cjs --check && node scripts/audit-a11-section1.cjs --check && node scripts/audit-a11-section2.cjs --check && node scripts/audit-a11-section3.cjs --check && node scripts/audit-a11-section4.cjs --check && node scripts/audit-a12-section1.cjs --check && node scripts/audit-a12-section2.cjs --check && node scripts/audit-a12-section3.cjs --check && node scripts/audit-a12-section4.cjs --check && node scripts/audit-a13-section1.cjs --check && node scripts/audit-a13-section2.cjs --check && node scripts/audit-a13-section3.cjs --check && node scripts/audit-a13-section4.cjs --check && node scripts/audit-a21-section1.cjs --check && node scripts/audit-a21-section2.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/audit-reviewed-lexical-identities.cjs --check && node scripts/build-contextual-lexical-identities.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/audit-section-structure.cjs --check && node scripts/audit-lesson-slide-budget.cjs --check && node scripts/audit-lesson-practice-load.cjs --check && node scripts/audit-a11-section1.cjs --check && node scripts/audit-a11-section2.cjs --check && node scripts/audit-a11-section3.cjs --check && node scripts/audit-a11-section4.cjs --check && node scripts/audit-a12-section1.cjs --check && node scripts/audit-a12-section2.cjs --check && node scripts/audit-a12-section3.cjs --check && node scripts/audit-a12-section4.cjs --check && node scripts/audit-a13-section1.cjs --check && node scripts/audit-a13-section2.cjs --check && node scripts/audit-a13-section3.cjs --check && node scripts/audit-a13-section4.cjs --check && node scripts/audit-a21-section1.cjs --check && node scripts/audit-a21-section2.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:js": "node --test tests/*.test.cjs",
     "test:data": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "build:vocabulary": "node scripts/build-vocabulary.mjs",
@@ -82,7 +82,10 @@
     "r3:structure:report": "node scripts/audit-section-structure.cjs --markdown",
     "lesson:slides:check": "node scripts/audit-lesson-slide-budget.cjs --check",
     "lesson:slides:json": "node scripts/audit-lesson-slide-budget.cjs --json",
-    "lesson:slides:report": "node scripts/audit-lesson-slide-budget.cjs --markdown"
+    "lesson:slides:report": "node scripts/audit-lesson-slide-budget.cjs --markdown",
+    "lesson:load:check": "node scripts/audit-lesson-practice-load.cjs --check",
+    "lesson:load:report": "node scripts/audit-lesson-practice-load.cjs --markdown",
+    "lesson:load:json": "node scripts/audit-lesson-practice-load.cjs --json"
   },
   "engines": {
     "node": ">=20",

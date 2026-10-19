@@ -1,6 +1,6 @@
 # Grouped lessons and learner-fatigue slide budget
 
-[Persian version](LESSON-SLIDE-COMPACTION.fa.md) · [Issue #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [R2 contract](R2-LESSON-SLIDE-BUDGET.md)
+[Persian version](LESSON-SLIDE-COMPACTION.fa.md) · [Short resumable sittings](LESSON-PACING.md) · [Issue #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [R2 contract](R2-LESSON-SLIDE-BUDGET.md)
 
 ## Shipped baseline and observed limits
 

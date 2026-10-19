@@ -5049,6 +5049,7 @@
     },
     {
       "id": "section-2-lesson-10",
+      "study_pacing": { "max_slides": 15, "max_graded": 20 },
       "curriculum_id": "a1.1-s2-l10",
       "order": 10,
       "title_fa": "ایستگاه مرور بخش ۲",

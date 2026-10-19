@@ -2,7 +2,7 @@
 
 # گروه‌بندی تمرین‌ها و کاهش طول نمایشی درس‌ها
 
-[سند انگلیسی](LESSON-SLIDE-COMPACTION.md) · [ایشوی #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [سیاست R2](R2-LESSON-SLIDE-BUDGET.md)
+[سند انگلیسی](LESSON-SLIDE-COMPACTION.md) · [نوبت‌های کوتاه قابل ادامه](LESSON-PACING.fa.md) · [ایشوی #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [سیاست R2](R2-LESSON-SLIDE-BUDGET.md)
 
 در ۱۴۰ درس اجرایی، ۵۵ درس بیش از ۳۰ فعالیت تألیف‌شده و چهار درس بیش از ۴۰ فعالیت دارند. بیشترین تعداد ۶۲ فعالیت است. این آمار **محتوای ثبت‌شده** است، نه مدت واقعی مطالعه یا خستگی ثبت‌شدهٔ کاربران.
 

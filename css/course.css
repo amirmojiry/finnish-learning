@@ -2396,3 +2396,47 @@ body.course-lesson-active .course-question-card.is-long-content {
   .course-grouped-item { padding: 10px; }
   .course-grouped-form { gap: 12px; }
 }
+
+
+/* Resumable study sittings: compact, keyboard-operable stop/continue controls. */
+.course-pacing-break {
+  min-height: min(430px, 70dvh);
+  gap: 12px;
+  justify-content: center;
+}
+.course-pacing-break h1 { margin: 0; line-height: 1.45; }
+.course-pacing-break > p { line-height: 1.8; max-width: 35rem; }
+.course-pacing-break button {
+  min-height: 48px;
+  font: inherit;
+}
+.course-pacing-break button:focus-visible,
+.course-lesson-popover-actions button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+.course-pacing-storage-warning {
+  color: var(--muted);
+  font-size: .9rem;
+  padding: 12px;
+  background: var(--surface-soft);
+  border-radius: 12px;
+}
+.course-grouped-item label,
+.course-grouped-item select,
+.course-grouped-item input { max-width: 100%; }
+@media (max-width: 480px) {
+  .course-pacing-break { min-height: min(350px, 70dvh); padding: 20px; }
+  .course-grouped-answer { font-size: 16px; }
+}
+
+.course-pacing-progress-label {
+  display: block;
+  padding-bottom: 6px;
+  color: var(--muted);
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+  overflow-wrap: anywhere;
+}

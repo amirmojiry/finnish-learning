@@ -6,6 +6,7 @@
   'use strict';
 
   const STORAGE_KEY = 'fiCourseProgressV1';
+  const PACED_DRAFT_STORAGE_KEY = 'fiCoursePacedLessonDraftsV1';
   const SCHEMA_VERSION = 1;
   const COURSE_STAGES = [
     {
@@ -230,6 +231,11 @@
   }
 
   function resetProgress(storage) {
+    try {
+      storage?.removeItem?.(PACED_DRAFT_STORAGE_KEY);
+    } catch {
+      // A blocked local storage must not prevent progress reset in memory.
+    }
     return saveProgress(storage, emptyProgress());
   }
 
@@ -1248,6 +1254,143 @@
     return slides;
   }
 
+  // Each sitting limits BOTH on-screen steps and independently scored answers.
+  // All originally authored questions stay in the same order and lesson ID.
+  function scoredOpportunitiesOnSlide(slide) {
+    const activities = slide?.type === 'activity-group' ? slide.activities : [slide];
+    return activities.filter((activity) => activity && activity.type !== 'teach' && activity.type !== 'number-grid').length;
+  }
+
+  function planPacedLessonSessions(slides, pacing) {
+    if (!Array.isArray(slides) || !pacing) return [];
+    const maxSlides = pacing.max_slides;
+    const maxGraded = pacing.max_graded;
+    if (!Number.isSafeInteger(maxSlides) || maxSlides < 5 || maxSlides > 20
+      || !Number.isSafeInteger(maxGraded) || maxGraded < 1 || maxGraded > 30) {
+      throw new Error('Invalid paced lesson screen/assessment budget.');
+    }
+    const sessions = [];
+    let start = 0;
+    let graded = 0;
+    for (let index = 0; index < slides.length; index++) {
+      const answers = scoredOpportunitiesOnSlide(slides[index]);
+      if (answers > maxGraded) throw new Error('One activity slide exceeds its graded-answer budget.');
+      if (index > start && (index - start >= maxSlides || graded + answers > maxGraded)) {
+        sessions.push({ start, end: index, screens: index - start, graded });
+        start = index;
+        graded = 0;
+      }
+      graded += answers;
+    }
+    if (start < slides.length) {
+      sessions.push({ start, end: slides.length, screens: slides.length - start, graded });
+    }
+    return sessions;
+  }
+
+  // Retry questions are each an independent visible slide. Make them a separate
+  // bounded phase, never append an unbounded tail to the final initial sitting.
+  function planPacedLessonFlow(initialSlides, retrySlides, pacing) {
+    if (!pacing) return [];
+    const initial = planPacedLessonSessions(initialSlides, pacing);
+    const retries = Array.isArray(retrySlides) && retrySlides.length
+      ? planPacedLessonSessions(retrySlides, pacing) : [];
+    const offset = initialSlides.length;
+    return [
+      ...initial.map((sitting) => ({ ...sitting, phase: 'initial' })),
+      ...retries.map((sitting) => ({
+        ...sitting,
+        phase: 'retry',
+        start: offset + sitting.start,
+        end: offset + sitting.end,
+      })),
+    ];
+  }
+
+  function pacedLessonFingerprint(lesson) {
+    const source = JSON.stringify([lesson.id, lesson.study_pacing, lesson.activities]);
+    let hash = 2166136261;
+    for (let index = 0; index < source.length; index++) {
+      hash = Math.imul(hash ^ source.charCodeAt(index), 16777619) >>> 0;
+    }
+    return hash.toString(36);
+  }
+
+  function readPacedDraftStore(storage) {
+    if (!storage || typeof storage.getItem !== 'function') return {};
+    try {
+      const raw = storage.getItem(PACED_DRAFT_STORAGE_KEY);
+      if (!raw || typeof raw !== 'string' || raw.length > 100000) return {};
+      const store = JSON.parse(raw);
+      return store && typeof store === 'object' && !Array.isArray(store) ? store : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function loadPacedLessonDraft(storage, sectionId, lesson) {
+    if (!lesson?.study_pacing || !sectionId) return null;
+    const saved = readPacedDraftStore(storage)[lesson.id];
+    if (!saved || saved.version !== 1 || saved.sectionId !== sectionId
+      || saved.lessonId !== lesson.id || saved.fingerprint !== pacedLessonFingerprint(lesson)) return null;
+    const slides = compactLessonActivities(lesson.activities);
+    const initialGraded = slides.reduce((sum, slide) => sum + scoredOpportunitiesOnSlide(slide), 0);
+    const retryIndices = saved.retryIndices;
+    if (!Array.isArray(retryIndices) || retryIndices.length > initialGraded
+      || new Set(retryIndices).size !== retryIndices.length
+      || retryIndices.some((index) => !Number.isSafeInteger(index)
+        || index < 0 || index >= lesson.activities.length
+        || ['teach', 'number-grid'].includes(lesson.activities[index].type))) return null;
+    const inRetry = saved.retryPhase === true;
+    const maxIndex = slides.length + (inRetry ? retryIndices.length : 0);
+    if (typeof saved.retryPhase !== 'boolean'
+      || !Number.isSafeInteger(saved.nextIndex) || saved.nextIndex < 0 || saved.nextIndex > maxIndex
+      || !Number.isSafeInteger(saved.correct) || saved.correct < 0
+      || !Number.isSafeInteger(saved.graded) || saved.graded < saved.correct
+      || saved.graded > initialGraded + (inRetry ? retryIndices.length : 0)
+      || typeof saved.sessionId !== 'string' || saved.sessionId.length < 1 || saved.sessionId.length > 350
+      || !Number.isSafeInteger(saved.sessionStartedAt) || saved.sessionStartedAt < 0) return null;
+    return {
+      nextIndex: saved.nextIndex, correct: saved.correct, graded: saved.graded,
+      retryIndices: retryIndices.slice(), retryPhase: inRetry,
+      sessionId: saved.sessionId, sessionStartedAt: saved.sessionStartedAt,
+    };
+  }
+
+  function savePacedLessonDraft(storage, sectionId, lesson, state) {
+    if (!lesson?.study_pacing || !sectionId || !storage || typeof storage.setItem !== 'function') return false;
+    try {
+      const drafts = readPacedDraftStore(storage);
+      drafts[lesson.id] = {
+        version: 1, sectionId, lessonId: lesson.id,
+        fingerprint: pacedLessonFingerprint(lesson),
+        nextIndex: state.nextIndex, correct: state.correct, graded: state.graded,
+        retryIndices: state.retryIndices.slice(), retryPhase: state.retryPhase,
+        sessionId: state.sessionId, sessionStartedAt: state.sessionStartedAt,
+      };
+      storage.setItem(PACED_DRAFT_STORAGE_KEY, JSON.stringify(drafts));
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function clearPacedLessonDraft(storage, lessonId) {
+    if (!storage || !lessonId || typeof storage.setItem !== 'function') return;
+    try {
+      const drafts = readPacedDraftStore(storage);
+      if (!Object.hasOwn(drafts, lessonId)) return;
+      delete drafts[lessonId];
+      if (!Object.keys(drafts).length && typeof storage.removeItem === 'function') {
+        storage.removeItem(PACED_DRAFT_STORAGE_KEY);
+      } else {
+        storage.setItem(PACED_DRAFT_STORAGE_KEY, JSON.stringify(drafts));
+      }
+    } catch {
+      // Local storage may be unavailable; course progress must remain playable.
+    }
+  }
+
   function prepareSection(rawSection) {
     if (!rawSection || rawSection.schema_version !== 1 || !rawSection.items || !Array.isArray(rawSection.lessons)) {
       throw new Error('Invalid course section data.');
@@ -1448,6 +1591,13 @@
       if (!lesson.curriculum_id || curriculumIds.has(lesson.curriculum_id)) throw new Error(`Duplicate or missing curriculum lesson ID in section ${section.id}.`);
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
+      if (lesson.study_pacing !== undefined) {
+        // A pacing setting must never silently discard an authored question.
+        const sessions = planPacedLessonSessions(compactLessonActivities(lesson.activities), lesson.study_pacing);
+        if (sessions.length < 2 || sessions.some((sitting) => sitting.screens < 1)) {
+          throw new Error(`Lesson ${lesson.id} pacing requires two or more valid study sittings.`);
+        }
+      }
       const isLastLesson = index === section.lessons.length - 1;
       const hasCheckpointTargets = Array.isArray(lesson.checkpoint_targets) && lesson.checkpoint_targets.length > 0;
       // Only the pre-existing A1.1 Section 4 final assessment lacks explicit
@@ -2491,6 +2641,12 @@
         diacriticAdjusted: Boolean(grading?.diacriticAdjusted),
       });
       progress = saveProgress(windowObject.localStorage, progress);
+      // A submitted single-item answer is committed before the next-click action.
+      // Grouped answers are committed together after every row has been graded.
+      if (activeLesson?.study_pacing
+        && activeLesson.activities[activityIndex]?.type !== 'activity-group') {
+        persistCurrentPacedDraft(activityIndex + 1);
+      }
     }
 
     function createSpeechStatusNotice(status) {
@@ -2817,12 +2973,22 @@
 
         const actions = document.createElement('div');
         actions.className = 'course-lesson-popover-actions';
+        const draft = loadPacedLessonDraft(windowObject.localStorage, section.id, lesson);
+        const continueLabel = jumpAvailable ? 'پرش به این درس' : unlocked ? 'ادامه درس' : 'قفل است';
         const continueButton = createButton(
-          jumpAvailable ? 'پرش به این درس' : unlocked ? 'ادامه درس' : 'قفل است',
+          draft && unlocked && !jumpAvailable ? 'ادامهٔ نوبت ذخیره‌شده' : continueLabel,
           'primary-button course-lesson-continue',
           () => startLesson(lesson),
         );
         continueButton.disabled = !unlocked;
+        if (draft && unlocked) {
+          const restart = createButton('شروع از ابتدا', 'course-secondary-button', () => {
+            clearPacedLessonDraft(windowObject.localStorage, lesson.id);
+            startLesson(lesson);
+          });
+          restart.setAttribute('aria-label', 'شروع دوبارهٔ درس از ابتدا؛ پاسخ‌های قبلی در تاریخچه باقی می‌مانند');
+          actions.append(restart);
+        }
 
         const detailsButton = createButton('جزئیات درس', 'course-secondary-button course-lesson-details-toggle', () => {
           const expanded = detailsButton.getAttribute('aria-expanded') === 'true';
@@ -3041,23 +3207,114 @@
       root.scrollTop = 0;
     }
 
+    function currentAuthoredLesson() {
+      return section?.lessons.find((candidate) => candidate.id === activeLesson?.id) || null;
+    }
+
+    function persistCurrentPacedDraft(nextIndex) {
+      const authored = currentAuthoredLesson();
+      if (!authored?.study_pacing || !activeLesson || !section) return false;
+      const retryIndices = retryActivities.map((activity) => authored.activities.indexOf(activity));
+      if (retryIndices.some((index) => index < 0)) return false;
+      return savePacedLessonDraft(windowObject.localStorage, section.id, authored, {
+        nextIndex,
+        correct: sessionCorrect,
+        graded: sessionGraded,
+        retryIndices,
+        retryPhase: lessonRetryPhase,
+        sessionId: activeSessionId,
+        sessionStartedAt,
+      });
+    }
+
+    function pacingBreakForNextIndex(nextIndex) {
+      const authored = currentAuthoredLesson();
+      if (!authored?.study_pacing) return null;
+      const initialSlides = compactLessonActivities(authored.activities);
+      const sittings = planPacedLessonFlow(
+        initialSlides, lessonRetryPhase ? retryActivities : [], authored.study_pacing
+      );
+      const found = sittings.findIndex((sitting, index) => index < sittings.length - 1
+        && sitting.end === nextIndex);
+      return found >= 0
+        ? { completed: found + 1, total: sittings.length, nextPhase: sittings[found + 1].phase }
+        : null;
+    }
+
+    function renderPacingBreak(breakpoint) {
+      audioSlideToken += 1;
+      stopSpeech(windowObject);
+      root.replaceChildren();
+      const card = document.createElement('section');
+      card.className = 'course-completion-card course-pacing-break';
+      const title = document.createElement('h1');
+      title.textContent = breakpoint.nextPhase === 'retry'
+        ? 'نوبت‌های مرور پاسخ‌های نادرست'
+        : 'یک بخش کوتاه تمام شد';
+      const message = document.createElement('p');
+      message.textContent = `نوبت ${toPersianNumber(breakpoint.completed)} از ${toPersianNumber(breakpoint.total)} کامل شد. می‌توانی اکنون ادامه بدهی یا برای استراحت برگردی.`;
+      const note = document.createElement('p');
+      note.className = 'course-completion-note';
+      note.textContent = 'پیشرفت این نوبت در همین مرورگر ذخیره می‌شود؛ درس و نمرهٔ نهایی پس از پایان همهٔ نوبت‌ها کامل می‌شوند.';
+      card.append(title, message, note);
+      card.append(createButton('ادامهٔ نوبت بعد', 'primary-button', renderActivity));
+      const authored = currentAuthoredLesson();
+      const saved = authored && loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
+      if (saved) {
+        card.append(createButton('ذخیره و بازگشت به درس‌ها', 'course-secondary-button', renderSectionMap));
+      } else {
+        const warning = document.createElement('p');
+        warning.className = 'course-pacing-storage-warning';
+        warning.setAttribute('role', 'status');
+        warning.textContent = 'ذخیره در این مرورگر در دسترس نیست؛ برای حفظ پیشرفت، درس را ادامه بده.';
+        card.append(warning);
+      }
+      root.append(card);
+      root.scrollTop = 0;
+    }
+
     function startLesson(lesson) {
       if (!section || !lesson) return;
       const sectionIndex = sections.indexOf(section);
       const index = section.lessons.findIndex((entry) => entry.id === lesson.id);
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
-      activeLesson = { ...lesson, activities: compactLessonActivities(lesson.activities) };
-      retryActivities = [];
-      lessonRetryPhase = false;
+      const authored = section.lessons[index];
+      const saved = loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
+      const initialSlides = compactLessonActivities(authored.activities);
+      retryActivities = saved ? saved.retryIndices.map((entry) => authored.activities[entry]) : [];
+      lessonRetryPhase = saved?.retryPhase === true;
+      activeLesson = {
+        ...authored,
+        activities: lessonRetryPhase ? [...initialSlides, ...retryActivities] : initialSlides,
+      };
       setLessonFocusMode(true);
-      activityIndex = 0;
-      sessionCorrect = 0;
-      sessionGraded = 0;
+      activityIndex = saved?.nextIndex || 0;
+      sessionCorrect = saved?.correct || 0;
+      sessionGraded = saved?.graded || 0;
       answered = false;
-      beginCourseSession('lesson', lesson.id);
-      setHash(`#course-${lesson.id}`);
+      if (saved) {
+        activeSessionId = saved.sessionId;
+        sessionStartedAt = saved.sessionStartedAt;
+        activityStartedAt = 0;
+        activityTimingIndex = -1;
+      } else {
+        beginCourseSession('lesson', lesson.id);
+      }
+      setHash(`#course-${authored.id}`);
       showCourseView();
-      renderActivity();
+      if (activityIndex >= activeLesson.activities.length) {
+        if (!lessonRetryPhase && retryActivities.length) {
+          lessonRetryPhase = true;
+          activeLesson.activities = [...initialSlides, ...retryActivities];
+          persistCurrentPacedDraft(activityIndex);
+        } else {
+          completeLesson();
+          return;
+        }
+      }
+      const breakpoint = pacingBreakForNextIndex(activityIndex);
+      if (breakpoint) renderPacingBreak(breakpoint);
+      else renderActivity();
     }
 
     function startFocusedPractice() {
@@ -3150,7 +3407,8 @@
         label.append(numbering, title);
         const control = document.createElement(sub.type === 'choice' ? 'select' : 'input');
         control.className = 'course-grouped-answer';
-        control.setAttribute('aria-label', 'پاسخ ' + toPersianNumber(index + 1));
+        // The wrapping native label contains the numbered, language-tagged
+        // prompt: do not override it with an uninformative generic aria-label.
         control.required = true;
         if (sub.type === 'choice') {
           const prompt = document.createElement('option');
@@ -3220,6 +3478,7 @@
           }
           feedback.append(result);
         });
+        persistCurrentPacedDraft(activityIndex + 1);
         feedback.tabIndex = -1;
         card.append(feedback, createButton('سؤال بعدی', 'primary-button course-next-button', nextActivity));
         feedback.focus();
@@ -3297,6 +3556,27 @@
       const counter = document.createElement('strong');
       counter.className = 'course-activity-progress-count';
       counter.textContent = `${toPersianNumber(activityIndex + 1)} / ${toPersianNumber(activeLesson.activities.length)}`;
+      const authored = currentAuthoredLesson();
+      if (authored?.study_pacing) {
+        const sittings = planPacedLessonFlow(
+          compactLessonActivities(authored.activities),
+          lessonRetryPhase ? retryActivities : [],
+          authored.study_pacing
+        );
+        const index = sittings.findIndex((sitting) => (
+          activityIndex >= sitting.start && activityIndex < sitting.end
+        ));
+        if (index >= 0) {
+          const sitting = sittings[index];
+          const phaseLabel = sitting.phase === 'retry' ? 'مرور جبرانی · ' : '';
+          const sessionLabel = `${phaseLabel}نوبت ${toPersianNumber(index + 1)} از ${toPersianNumber(sittings.length)}: ${toPersianNumber(activityIndex - sitting.start + 1)} از ${toPersianNumber(sitting.screens)} اسلاید`;
+          const sittingCaption = document.createElement('span');
+          sittingCaption.className = 'course-pacing-progress-label';
+          sittingCaption.textContent = sessionLabel;
+          progressWrap.append(sittingCaption);
+          track.setAttribute('aria-label', sessionLabel);
+        }
+      }
       track.append(bar, counter);
       progressWrap.append(track);
       top.append(close, progressWrap);
@@ -3894,19 +4174,30 @@
       audioSlideToken += 1;
       stopSpeech(windowObject);
       activityIndex += 1;
+      persistCurrentPacedDraft(activityIndex);
       if (activityIndex >= activeLesson.activities.length) {
         if (!activeLesson.focused_practice && !lessonRetryPhase && retryActivities.length) {
           lessonRetryPhase = true;
           activeLesson = { ...activeLesson, activities: [...activeLesson.activities, ...retryActivities] };
-          renderActivity();
+          persistCurrentPacedDraft(activityIndex);
+          const breakpoint = pacingBreakForNextIndex(activityIndex);
+          if (breakpoint) renderPacingBreak(breakpoint);
+          else renderActivity();
         } else completeLesson();
-      } else renderActivity();
+      } else {
+        const breakpoint = pacingBreakForNextIndex(activityIndex);
+        if (breakpoint) renderPacingBreak(breakpoint);
+        else renderActivity();
+      }
     }
 
     function completeLesson() {
       audioSlideToken += 1;
       stopSpeech(windowObject);
       if (!activeLesson) return renderSectionMap();
+      if (!activeLesson.focused_practice) {
+        clearPacedLessonDraft(windowObject.localStorage, activeLesson.id);
+      }
       if (activeLesson.focused_practice) {
         const remainingActivities = buildFocusedPracticeActivities(section, progress);
         const remainingTargets = weakTargetsForSection(section, progress, Number.POSITIVE_INFINITY);
@@ -3965,7 +4256,7 @@
       card.append(badge, title, message, note);
 
       if (!passed) {
-        card.append(createButton('تلاش دوباره', 'primary-button', () => startLesson(activeLesson)));
+        card.append(createButton('تلاش دوباره', 'primary-button', () => startLesson(section.lessons[currentIndex])));
         card.append(createButton('بازگشت به نقشهٔ بخش', 'course-secondary-button', renderSectionMap));
         root.append(card);
         root.scrollTop = 0;
@@ -4034,8 +4325,8 @@
     regularLinks.forEach((link) => link.addEventListener('click', hideCourseView));
     windowObject.addEventListener('hashchange', syncFromHash);
     windowObject.addEventListener('storage', (event) => {
-      if (event.key !== STORAGE_KEY) return;
-      progress = loadProgress(windowObject.localStorage);
+      if (event.key !== STORAGE_KEY && event.key !== PACED_DRAFT_STORAGE_KEY) return;
+      if (event.key === STORAGE_KEY) progress = loadProgress(windowObject.localStorage);
       if (isCourseHash() && !activeLesson) renderSectionMap();
     });
 
@@ -4179,6 +4470,14 @@
     buildCheckpointActivities,
     compactLessonActivities,
     flattenLessonSlides,
+    scoredOpportunitiesOnSlide,
+    planPacedLessonSessions,
+    planPacedLessonFlow,
+    pacedLessonFingerprint,
+    PACED_DRAFT_STORAGE_KEY,
+    loadPacedLessonDraft,
+    savePacedLessonDraft,
+    clearPacedLessonDraft,
     assessCompactActivityGroup,
     prepareSection,
     validateSection,

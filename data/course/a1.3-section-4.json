@@ -6721,6 +6721,7 @@
     },
     {
       "id": "a1.3-section-4-lesson-10",
+      "study_pacing": { "max_slides": 15, "max_graded": 20 },
       "curriculum_id": "a1.3-s4-l10",
       "order": 10,
       "title_fa": "ارزیابی نهایی A1.3",
