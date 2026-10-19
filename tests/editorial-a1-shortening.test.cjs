@@ -7,8 +7,8 @@ const path = require('node:path');
 const course = require('../course.js');
 
 const cases = [
-  ['a1.1-section-3', 'section-3-lesson-5', 40, 22, 35, 17, 19, 0],
-  ['a1.1-section-2', 'section-2-lesson-10', 62, 62, 28, 28, 20, 15],
+  ['a1.1-section-3', 'section-3-lesson-5', 40, 22, 36, 18, 18, 0],
+  ['a1.1-section-2', 'section-2-lesson-10', 62, 62, 27, 27, 20, 15],
   ['a1.2-section-2', 'a1.2-section-2-lesson-7', 44, 28, 34, 18, 21, 0],
   ['a1.3-section-4', 'a1.3-section-4-lesson-10', 32, 32, 29, 29, 24, 15],
 ];
@@ -134,10 +134,16 @@ test('malformed or pedagogically incomplete edits fail closed without touching t
   assert.throws(() => course.validateSection(base), /editorial revision activity indices must be unique/);
   checkpoint.editorial_revision.activity_indices = [0, 1, 2, 3];
   assert.throws(() => course.validateSection(base), /editorial revision removes a checkpoint target/);
-  const section = fixture('a1.1-section-3');
-  section.lessons[4].editorial_revision.activity_indices =
-    section.lessons[4].editorial_revision.activity_indices.filter((index) => index !== 31);
-  assert.throws(() => course.validateSection(section), /editorial revision removes explicit grammar evidence/);
+  const intro = fixture('a1.1-section-3');
+  intro.lessons[4].editorial_revision.activity_indices =
+    intro.lessons[4].editorial_revision.activity_indices.filter((index) => index !== 35);
+  assert.throws(() => course.validateSection(intro),
+    /editorial revision removes the only independent assessment for introduced target/);
+  const grammar = fixture('a1.1-section-2');
+  grammar.lessons.at(-1).editorial_revision.activity_indices =
+    grammar.lessons.at(-1).editorial_revision.activity_indices.filter((index) => index !== 15);
+  assert.throws(() => course.validateSection(grammar),
+    /editorial revision removes grammar evidence/);
 });
 
 test('only the four audited lessons have curated content; all others preserve their original editions', () => {
