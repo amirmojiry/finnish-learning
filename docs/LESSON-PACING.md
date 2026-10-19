@@ -1,10 +1,14 @@
 # Resumable study sittings for high-load lessons
 
-[فارسی](LESSON-PACING.fa.md) · [Parent issue #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Grouped slides](LESSON-SLIDE-COMPACTION.md)
+[فارسی](LESSON-PACING.fa.md) · [Fresh shorter editorial editions](LESSON-EDITORIAL-REDUCTION.md) · [Parent issue #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Grouped slides](LESSON-SLIDE-COMPACTION.md)
 
 ## Why this is pacing, not editorial deletion
 
 The grouped-slide UI introduced in v1.55.0 limits **initial rendered screens**, not the independent answer burden. The four largest remaining sittings retain all original 40–62 authored activities. Altering checkpoint targets or removing previously graded items would jeopardize previously saved user progress and grammar/retrieval evidence. This v1.56.0 delivery therefore sets explicit **optional local, resumable study sittings**, with no more than **15 visible slides and 20 independent graded answers per sitting**. Each original lesson is still a single lesson, and completion/80% checkpoint assessment is awarded only after finishing its full original first-attempt sequence.
+
+## Original v1.56 course baseline (not user telemetry)
+
+The table below records the *legacy version*, which remains resumable for paused v1.56 lessons. Fresh starts in v1.57 use the shorter content edition described in [the editorial audit](LESSON-EDITORIAL-REDUCTION.md).
 
 ## Static content audit (not user telemetry)
 
