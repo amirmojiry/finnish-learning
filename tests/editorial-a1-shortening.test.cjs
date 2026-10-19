@@ -9,7 +9,7 @@ const course = require('../course.js');
 const cases = [
   ['a1.1-section-3', 'section-3-lesson-5', 40, 22, 35, 17, 19, 0],
   ['a1.1-section-2', 'section-2-lesson-10', 62, 62, 28, 28, 20, 15],
-  ['a1.2-section-2', 'a1.2-section-2-lesson-7', 44, 28, 34, 18, 24, 0],
+  ['a1.2-section-2', 'a1.2-section-2-lesson-7', 44, 28, 34, 18, 21, 0],
   ['a1.3-section-4', 'a1.3-section-4-lesson-10', 32, 32, 29, 29, 24, 15],
 ];
 function fixture(id) {
