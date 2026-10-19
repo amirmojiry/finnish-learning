@@ -4,6 +4,10 @@
 
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
+## R2 editorial shortening of priority A1 lessons (2026-10-19)
+
+[Child #194](https://github.com/amirmojiry/finnish-learning/issues/194) introduces genuinely shorter edited editions for four overlong A1 lessons, reducing their combined independently graded answers from **144 to 92** while retaining checkpoint targets, explicit grammar evidence and the original archived activity arrays for resuming v1.56 drafts. Fresh attempts use 19/20/24/24 initial visible screens; paused old attempts use the historical question sequence. [Rationale and side-by-side audit](LESSON-EDITORIAL-REDUCTION.md). Parent #189 remains open for editorial work on the other 51 historically long lessons, reinforcement redistribution and real-device UX/retention verification.
+
 ## R2 pacing and remaining editorial workload (2026-10-18)
 
 The grouped-slide work in [#189](https://github.com/amirmojiry/finnish-learning/issues/189) now offers optional **locally resumable** study sittings for four heavy A1 lessons via [child #192](https://github.com/amirmojiry/finnish-learning/issues/192). Each sitting has at most 15 visible screens and 20 independently graded answers, with unchanged legacy lesson IDs, checkpoint targets and total question count. [English details](LESSON-PACING.md) / [فارسی](LESSON-PACING.fa.md). Parent #189 remains open for *actual* editorial shortening, tested mobile/screen-reader accessibility and responsible learner-duration evidence; this is not proof of reduced total course workload.
