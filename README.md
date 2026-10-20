@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.56.0`
+- Version: `1.57.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -19,9 +19,11 @@ A lightweight, mobile-friendly web app for learning and practicing high-frequenc
 
 ## Current features
 
-Four high-load lessons now support optional, locally saved study sittings of at most 15 visible slides and 20 graded responses per sitting, with resume/restart controls and unchanged authored questions/checkpoint thresholds. [Read the pacing and accessibility limitations](docs/LESSON-PACING.md) · Run `npm run lesson:load:report`. This changes the burden per *sitting*, not the overall number of graded questions.
+Four prioritized A1 lessons now have **genuinely shorter** fresh-attempt editions: 52 fewer independently graded answers across those lessons and 18–24 initial visible screens per lesson, without weakening stated checkpoint target identities or grammar evidence. Paused v1.56 attempts resume the original version without losing their saved cursor. [English rationale and limitations](docs/LESSON-EDITORIAL-REDUCTION.md) · [فارسی](docs/LESSON-EDITORIAL-REDUCTION.fa.md) · `npm run lesson:editorial:report`. Other long lessons still need editorial work under #189.
 
-Grouped-slide practice compresses originally long lessons to at most 30 initial screens without changing their stored activities or removing independently graded word/grammar/sentence responses. [English policy](docs/LESSON-SLIDE-COMPACTION.md) · [فارسی](docs/LESSON-SLIDE-COMPACTION.fa.md) · Run `npm run lesson:slides:report` for per-lesson data. Further editorial improvements remain in [issue #189](https://github.com/amirmojiry/finnish-learning/issues/189).
+Four high-load lessons support optional, locally saved study sittings of at most 15 visible slides and 20 graded responses per sitting, with resume/restart controls and unchanged checkpoint pass thresholds. **The original question count and sequence apply only when resuming a saved v1.56 legacy attempt**; fresh attempts use the shorter v1.57 editorial edition described above. [Read the pacing and accessibility limitations](docs/LESSON-PACING.md) · Run `npm run lesson:load:report` for the original-version pacing audit.
+
+Grouped-slide presentation alone compresses originally long lessons to at most 30 initial screens **without changing scored answers**. This display-only behavior is distinct from the **four v1.57 editorial revisions above**, which intentionally remove 52 graded answers for fresh attempts while preserving v1.56 legacy drafts. [English grouping policy](docs/LESSON-SLIDE-COMPACTION.md) · [فارسی](docs/LESSON-SLIDE-COMPACTION.fa.md) · Run `npm run lesson:slides:report` for the historical content audit. Further editorial work remains in [issue #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
 R2 enforces a 30-visible-slide ceiling for new authored lessons while preserving shipped lesson IDs; [learner-fatigue policy](docs/R2-LESSON-SLIDE-BUDGET.md). Existing long lessons are queued for editorial reduction under #189.
 

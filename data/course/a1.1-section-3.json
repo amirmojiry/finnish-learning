@@ -2699,6 +2699,10 @@
     },
     {
       "id": "section-3-lesson-5",
+      "editorial_revision": {
+        "id": "r189-a11-s3-l05-v1",
+        "activity_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 16, 18, 20, 21, 23, 25, 27, 29, 22, 24, 26, 28, 31, 32, 33, 34, 35, 36]
+      },
       "study_pacing": { "max_slides": 15, "max_graded": 20 },
       "curriculum_id": "a1.1-s3-l05",
       "order": 5,

@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- Editorially shortened A1 editions: [English](LESSON-EDITORIAL-REDUCTION.md) / [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) — actual 52-answer reduction for four priority lessons, with v1.56 draft compatibility and full-course audit.
 - Pacing for four heavy A1 lessons: [English](LESSON-PACING.md) / [فارسی](LESSON-PACING.fa.md) — local resumable sittings capped at 15 screens and 20 graded answers, without deleting original assessments.
 - Live grouped-slide compaction: [English](LESSON-SLIDE-COMPACTION.md) / [فارسی](LESSON-SLIDE-COMPACTION.fa.md) — independently scored matching/typing and ≤30 initial screens, with an on-demand audit.
 - R2 learner-fatigue slide budget: [English policy and baseline audit](R2-LESSON-SLIDE-BUDGET.md) — 30-slide cap on new lessons and exact shipped-lesson compatibility.

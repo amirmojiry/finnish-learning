@@ -1254,6 +1254,32 @@
     return slides;
   }
 
+  // The original authored activity array is retained for v1.56 in-progress
+  // drafts. New sessions use a per-lesson explicitly curated edition.
+  function lessonEditionActivities(lesson, edition = 'legacy') {
+    if (edition !== 'editorial' || !lesson.editorial_revision) return lesson.activities;
+    return lesson.editorial_revision.activity_indices.map((index) => lesson.activities[index]);
+  }
+
+  function lessonEditionSlides(lesson, edition = 'legacy') {
+    const activities = lessonEditionActivities(lesson, edition);
+    // Editorial revisions deliberately group compatible cards even below the
+    // legacy 30-screen threshold; independent graded answers stay intact.
+    return compactLessonActivities(activities, edition === 'editorial' && lesson.editorial_revision ? 1 : 30);
+  }
+
+  function hashCourseText(source) {
+    let hash = 2166136261;
+    for (let index = 0; index < source.length; index++) {
+      hash = Math.imul(hash ^ source.charCodeAt(index), 16777619) >>> 0;
+    }
+    return hash.toString(36);
+  }
+
+  function editorialLessonFingerprint(lesson) {
+    return hashCourseText(JSON.stringify([lesson.id, lesson.editorial_revision]));
+  }
+
   // Each sitting limits BOTH on-screen steps and independently scored answers.
   // All originally authored questions stay in the same order and lesson ID.
   function scoredOpportunitiesOnSlide(slide) {
@@ -1308,12 +1334,8 @@
   }
 
   function pacedLessonFingerprint(lesson) {
-    const source = JSON.stringify([lesson.id, lesson.study_pacing, lesson.activities]);
-    let hash = 2166136261;
-    for (let index = 0; index < source.length; index++) {
-      hash = Math.imul(hash ^ source.charCodeAt(index), 16777619) >>> 0;
-    }
-    return hash.toString(36);
+    // Keep this exact v1.56 input tuple unchanged for existing saved drafts.
+    return hashCourseText(JSON.stringify([lesson.id, lesson.study_pacing, lesson.activities]));
   }
 
   function readPacedDraftStore(storage) {
@@ -1333,13 +1355,22 @@
     const saved = readPacedDraftStore(storage)[lesson.id];
     if (!saved || saved.version !== 1 || saved.sectionId !== sectionId
       || saved.lessonId !== lesson.id || saved.fingerprint !== pacedLessonFingerprint(lesson)) return null;
-    const slides = compactLessonActivities(lesson.activities);
+    // No editorialEdition field means this is a genuine v1.56 legacy draft.
+    const isEditorial = saved.editorialEdition !== undefined;
+    if (isEditorial && (!lesson.editorial_revision
+      || saved.editorialEdition !== lesson.editorial_revision.id
+      || saved.editorialFingerprint !== editorialLessonFingerprint(lesson))) return null;
+    const edition = isEditorial ? 'editorial' : 'legacy';
+    const slides = lessonEditionSlides(lesson, edition);
     const initialGraded = slides.reduce((sum, slide) => sum + scoredOpportunitiesOnSlide(slide), 0);
+    const permittedIndices = isEditorial
+      ? new Set(lesson.editorial_revision.activity_indices) : null;
     const retryIndices = saved.retryIndices;
     if (!Array.isArray(retryIndices) || retryIndices.length > initialGraded
       || new Set(retryIndices).size !== retryIndices.length
       || retryIndices.some((index) => !Number.isSafeInteger(index)
         || index < 0 || index >= lesson.activities.length
+        || (permittedIndices && !permittedIndices.has(index))
         || ['teach', 'number-grid'].includes(lesson.activities[index].type))) return null;
     const inRetry = saved.retryPhase === true;
     const maxIndex = slides.length + (inRetry ? retryIndices.length : 0);
@@ -1354,6 +1385,7 @@
       nextIndex: saved.nextIndex, correct: saved.correct, graded: saved.graded,
       retryIndices: retryIndices.slice(), retryPhase: inRetry,
       sessionId: saved.sessionId, sessionStartedAt: saved.sessionStartedAt,
+      ...(isEditorial ? { editorialEdition: saved.editorialEdition } : {}),
     };
   }
 
@@ -1367,6 +1399,10 @@
         nextIndex: state.nextIndex, correct: state.correct, graded: state.graded,
         retryIndices: state.retryIndices.slice(), retryPhase: state.retryPhase,
         sessionId: state.sessionId, sessionStartedAt: state.sessionStartedAt,
+        ...(state.editorialEdition ? {
+          editorialEdition: state.editorialEdition,
+          editorialFingerprint: editorialLessonFingerprint(lesson),
+        } : {}),
       };
       storage.setItem(PACED_DRAFT_STORAGE_KEY, JSON.stringify(drafts));
       return true;
@@ -1572,6 +1608,63 @@
     }
   }
 
+  function validateLessonEditorialRevision(lesson) {
+    const revision = lesson.editorial_revision;
+    if (revision === undefined) return;
+    const fail = (reason) => { throw new Error('Lesson ' + lesson.id + ': editorial revision ' + reason); };
+    if (!revision || typeof revision !== 'object' || Array.isArray(revision)
+      || typeof revision.id !== 'string' || !/^r[0-9]+-[a-z0-9-]+-v[0-9]+$/.test(revision.id)
+      || !Array.isArray(revision.activity_indices) || !revision.activity_indices.length
+      || revision.activity_indices.length >= lesson.activities.length) fail('requires a valid shorter authored selection');
+    const indices = revision.activity_indices;
+    const selectedIds = new Set(indices);
+    if (selectedIds.size !== indices.length
+      || indices.some((index) => !Number.isSafeInteger(index) || index < 0 || index >= lesson.activities.length)) {
+      fail('activity indices must be unique and refer to existing authored activities');
+    }
+    const selected = lessonEditionActivities(lesson, 'editorial');
+    const selectedTargets = new Set(selected.map((activity) => activityPrimaryTargetId(activity)).filter(Boolean));
+    for (const targetId of lesson.checkpoint_targets || []) {
+      if (!selectedTargets.has(targetId)) fail('removes a checkpoint target: ' + targetId);
+    }
+    for (const goal of lesson.learning_objectives?.lexical || []) {
+      if (goal.status !== 'introduced') continue;
+      const introducedWithTeaching = lesson.activities.some((activity) => activity.type === 'teach' && activity.item === goal.target_id);
+      if (introducedWithTeaching && !selected.some((activity) => activity.type === 'teach' && activity.item === goal.target_id)) {
+        fail('removes the first teaching card for new target: ' + goal.target_id);
+      }
+      const previouslyAssessed = lesson.activities.some((activity) =>
+        activity.item === goal.target_id && scoredOpportunitiesOnSlide(activity) > 0);
+      const assessedInEdition = selected.some((activity) =>
+        activity.item === goal.target_id && scoredOpportunitiesOnSlide(activity) > 0);
+      if (previouslyAssessed && !assessedInEdition) {
+        fail('removes the only independent assessment for introduced target: ' + goal.target_id);
+      }
+    }
+    for (const goal of lesson.learning_objectives?.grammar || []) {
+      for (const evidence of goal.evidence || []) {
+        if (Number.isSafeInteger(evidence.activity_index)) {
+          if (!selectedIds.has(evidence.activity_index)) fail('removes explicit grammar evidence: ' + goal.concept_id);
+        } else if (!selected.some((activity) => activity.type === evidence.activity_type
+          && activity.item === evidence.item_id)) {
+          fail('removes grammar evidence: ' + goal.concept_id);
+        }
+      }
+    }
+    const isListening = (activity) => activity.type === 'dictation' || activity.mode === 'listen';
+    if (lesson.activities.some(isListening) && !selected.some(isListening)) fail('removes all listening evidence');
+    if (lesson.activities.some(isProductiveCourseActivity)
+      && !selected.some(isProductiveCourseActivity)) fail('removes all productive evidence');
+    const slides = lessonEditionSlides(lesson, 'editorial');
+    if (slides.length > 30) fail('exceeds 30 visible slides');
+    if (slides.reduce((n, slide) => n + scoredOpportunitiesOnSlide(slide), 0) < 1) {
+      fail('requires independently graded answers');
+    }
+    if (lesson.study_pacing && planPacedLessonSessions(slides, lesson.study_pacing).length < 2) {
+      fail('paced editorial content must retain at least two short sittings');
+    }
+  }
+
   function validateSection(rawSection) {
     const section = prepareSection(rawSection);
     if (!Array.isArray(section.can_do_fa) || section.can_do_fa.length === 0 || section.can_do_fa.some((goal) => typeof goal !== 'string' || !goal.trim())) {
@@ -1591,6 +1684,7 @@
       if (!lesson.curriculum_id || curriculumIds.has(lesson.curriculum_id)) throw new Error(`Duplicate or missing curriculum lesson ID in section ${section.id}.`);
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
+      validateLessonEditorialRevision(lesson);
       if (lesson.study_pacing !== undefined) {
         // A pacing setting must never silently discard an authored question.
         const sessions = planPacedLessonSessions(compactLessonActivities(lesson.activities), lesson.study_pacing);
@@ -3224,13 +3318,15 @@
         retryPhase: lessonRetryPhase,
         sessionId: activeSessionId,
         sessionStartedAt,
+        ...(activeLesson.editorialEdition === 'editorial'
+          ? { editorialEdition: authored.editorial_revision.id } : {}),
       });
     }
 
     function pacingBreakForNextIndex(nextIndex) {
       const authored = currentAuthoredLesson();
       if (!authored?.study_pacing) return null;
-      const initialSlides = compactLessonActivities(authored.activities);
+      const initialSlides = lessonEditionSlides(authored, activeLesson.editorialEdition);
       const sittings = planPacedLessonFlow(
         initialSlides, lessonRetryPhase ? retryActivities : [], authored.study_pacing
       );
@@ -3280,11 +3376,16 @@
       if (!isCourseLessonAccessible(sections, progress, sectionIndex, index)) return;
       const authored = section.lessons[index];
       const saved = loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
-      const initialSlides = compactLessonActivities(authored.activities);
+      // Old v1.56 drafts have no edition marker: resume their original activity
+      // order without replaying scored questions. Fresh starts are concise.
+      const editorialEdition = !authored.editorial_revision ? 'legacy'
+        : saved && !saved.editorialEdition ? 'legacy' : 'editorial';
+      const initialSlides = lessonEditionSlides(authored, editorialEdition);
       retryActivities = saved ? saved.retryIndices.map((entry) => authored.activities[entry]) : [];
       lessonRetryPhase = saved?.retryPhase === true;
       activeLesson = {
         ...authored,
+        editorialEdition,
         activities: lessonRetryPhase ? [...initialSlides, ...retryActivities] : initialSlides,
       };
       setLessonFocusMode(true);
@@ -3559,7 +3660,7 @@
       const authored = currentAuthoredLesson();
       if (authored?.study_pacing) {
         const sittings = planPacedLessonFlow(
-          compactLessonActivities(authored.activities),
+          lessonEditionSlides(authored, activeLesson.editorialEdition),
           lessonRetryPhase ? retryActivities : [],
           authored.study_pacing
         );
@@ -4470,6 +4571,10 @@
     buildCheckpointActivities,
     compactLessonActivities,
     flattenLessonSlides,
+    lessonEditionActivities,
+    lessonEditionSlides,
+    editorialLessonFingerprint,
+    validateLessonEditorialRevision,
     scoredOpportunitiesOnSlide,
     planPacedLessonSessions,
     planPacedLessonFlow,
