@@ -194,3 +194,14 @@ test('deferred-reviewed-target audit excludes targets still assessed in the cura
     'Unedited lessons have no deferred review targets');
   audit.check(report);
 });
+
+test('both README languages clearly distinguish shorter fresh lessons from unchanged legacy resumes', () => {
+  const en = fs.readFileSync(path.join(__dirname, '..', 'README.md'), 'utf8');
+  const fa = fs.readFileSync(path.join(__dirname, '..', 'README.fa.md'), 'utf8');
+  assert.match(en, /52 fewer independently graded answers/);
+  assert.match(en, /original question count and sequence apply only when resuming a saved v1\.56 legacy attempt/);
+  assert.match(en, /Grouped-slide presentation alone/);
+  assert.match(fa, /۵۲ پاسخ نمره‌دار کمتر/);
+  assert.match(fa, /تعداد سؤال‌ها و ترتیب قدیمی فقط برای ادامهٔ درس نیمه‌تمام/);
+  assert.match(fa, /گروه‌بندی اسلایدها به‌تنهایی تعداد پاسخ‌های نمره‌دار را کاهش نمی‌دهد/);
+});
