@@ -28,13 +28,22 @@ function buildReport() {
         const editedSlides = course.lessonEditionSlides(lesson, 'editorial');
         const preserved = course.flattenLessonSlides(editedSlides);
         assert.deepEqual(preserved, edited);
+        // A target is deferred only if its final graded opportunity was removed.
+        // Removing one repeated activity does not remove an otherwise retained target.
         const selectedIndices = new Set(lesson.editorial_revision?.activity_indices || []);
-        const deferredReviewedTargets = [...new Set(historical.flatMap((activity, index) => {
-          if (selectedIndices.has(index) || !activity.item) return [];
-          const objective = lesson.learning_objectives?.lexical?.find((goal) =>
-            goal.target_id === activity.item);
-          return objective?.status === 'reviewed' ? [activity.item] : [];
-        }))];
+        const editedAssessedTargets = new Set(edited.flatMap((activity) => {
+          if (scored([activity]) === 0) return [];
+          return [course.activityPrimaryTargetId(activity), activity.item].filter(Boolean);
+        }));
+        const reviewedIds = new Set((lesson.learning_objectives?.lexical || [])
+          .filter((goal) => goal.status === 'reviewed').map((goal) => goal.target_id));
+        const deferredReviewedTargets = lesson.editorial_revision
+          ? [...new Set(historical.flatMap((activity, index) => {
+            if (selectedIndices.has(index) || scored([activity]) === 0) return [];
+            const id = course.activityPrimaryTargetId(activity) || activity.item;
+            return id && reviewedIds.has(id) && !editedAssessedTargets.has(id) ? [id] : [];
+          }))]
+          : [];
         const historicalGraded = scored(historical);
         const editedGraded = scored(edited);
         lessons.push({
