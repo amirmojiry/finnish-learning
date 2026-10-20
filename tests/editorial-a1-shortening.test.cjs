@@ -169,3 +169,28 @@ test('only the four audited lessons have curated content; all others preserve th
   assert.equal(total, 140);
   assert.equal(curated, 4);
 });
+
+test('deferred-reviewed-target audit excludes targets still assessed in the curated edition', () => {
+  const audit = require('../scripts/audit-editorial-lesson-load.cjs');
+  const report = audit.buildReport();
+  const checkpoint = report.lessons.find((lesson) => lesson.lesson_id === 'a1.3-section-4-lesson-10');
+  assert.ok(checkpoint && checkpoint.revised);
+  assert.ok(!checkpoint.deferred_review_target_ids.includes('a13s4-e-037'),
+    'e-037 is retained by contextual production and morphology assessment');
+  assert.ok(!checkpoint.deferred_review_target_ids.includes('a13s4-e-047'),
+    'e-047 is retained by contextual production');
+  const retainedGraded = course.lessonEditionActivities(
+    course.validateSection(fixture('a1.3-section-4')).lessons.at(-1), 'editorial'
+  );
+  for (const target of checkpoint.deferred_review_target_ids) {
+    assert.ok(!retainedGraded.some((activity) =>
+      course.scoredOpportunitiesOnSlide(activity) > 0
+      && (activity.item === target || course.activityPrimaryTargetId(activity) === target)),
+    'Audit must not defer a target with surviving graded evidence: ' + target);
+  }
+  const nonRevised = report.lessons.filter((lesson) => !lesson.revised);
+  assert.equal(nonRevised.length, 136);
+  assert.ok(nonRevised.every((lesson) => lesson.deferred_review_target_ids.length === 0),
+    'Unedited lessons have no deferred review targets');
+  audit.check(report);
+});
