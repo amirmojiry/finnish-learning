@@ -146,9 +146,13 @@ test('malformed or pedagogically incomplete edits fail closed without touching t
     /editorial revision removes grammar evidence/);
 });
 
-test('only the four audited lessons have curated content; all others preserve their original editions', () => {
+test('all six audited lessons have curated content; the other 134 retain their original editions', () => {
   let curated = 0, total = 0;
-  const selected = new Set(cases.map(([,id])=>id));
+  const selected = new Set([
+    ...cases.map(([,id])=>id),
+    'section-3-lesson-9',
+    'section-4-lesson-9',
+  ]);
   for (const stage of course.COURSE_STAGES) {
     for (const file of stage.sectionUrls) {
       const section = course.validateSection(fixture(path.basename(file, '.json')));
@@ -167,7 +171,7 @@ test('only the four audited lessons have curated content; all others preserve th
     }
   }
   assert.equal(total, 140);
-  assert.equal(curated, 4);
+  assert.equal(curated, 6);
 });
 
 test('deferred-reviewed-target audit excludes targets still assessed in the curated edition', () => {
@@ -189,7 +193,7 @@ test('deferred-reviewed-target audit excludes targets still assessed in the cura
     'Audit must not defer a target with surviving graded evidence: ' + target);
   }
   const nonRevised = report.lessons.filter((lesson) => !lesson.revised);
-  assert.equal(nonRevised.length, 136);
+  assert.equal(nonRevised.length, 134);
   assert.ok(nonRevised.every((lesson) => lesson.deferred_review_target_ids.length === 0),
     'Unedited lessons have no deferred review targets');
   audit.check(report);
