@@ -11,6 +11,8 @@ const expected = new Map([
   ['section-2-lesson-10', { source: 62, edited: 27, graded: 27, slides: 20 }],
   ['a1.2-section-2-lesson-7', { source: 44, edited: 34, graded: 18, slides: 21 }],
   ['a1.3-section-4-lesson-10', { source: 32, edited: 29, graded: 29, slides: 24 }],
+  ['section-3-lesson-9', { source: 48, edited: 28, graded: 24, slides: 18 }],
+  ['section-4-lesson-9', { source: 48, edited: 28, graded: 24, slides: 18 }],
 ]);
 const scored = (list) => list.reduce((total, slide) =>
   total + course.scoredOpportunitiesOnSlide(slide), 0);
@@ -100,7 +102,7 @@ function markdown(report) {
     '',
     'Original activity objects and IDs remain in the manifests for incomplete pre-release lesson drafts. Fresh attempts use the selected editorial edition. The selection is reviewed against all checkpoint IDs, introducing teaching cards, listening/productive evidence and explicit grammar references. Reviewed-only targets removed from these specific lessons remain in earlier course contexts, and any further reinforcement belongs in regular Word Practice or subsequent lessons.',
     '',
-    'Only the four priority lessons were editorially shortened. Other grouped long lessons, manual screen-reader/mobile QA and any privacy-appropriate duration or dropout analytics remain in parent #189.',
+    'The first six priority lessons have now been shortened (including the two 48-activity A1.1 integrated-reading lessons). Remaining grouped long lessons, review redistribution, manual screen-reader/mobile QA and any privacy-appropriate duration or dropout analytics remain in parent #189.',
     ''
   );
   return lines.join('\n');
@@ -108,9 +110,9 @@ function markdown(report) {
 
 function check(report) {
   assert.equal(report.summary.shipped_lessons, 140);
-  assert.equal(report.summary.editorially_revised_lessons, 4);
+  assert.equal(report.summary.editorially_revised_lessons, 6);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
-  assert.equal(report.summary.removed_grading_opportunities, 52);
+  assert.equal(report.summary.removed_grading_opportunities, 92);
   for (const row of report.lessons) {
     if (!row.revised) {
       assert.equal(row.original_activities, row.learner_activities);
@@ -127,7 +129,7 @@ function check(report) {
     assert.ok(row.learner_graded_answers < row.original_graded_answers);
     assert.ok(row.learner_visible_slides >= 12 && row.learner_visible_slides <= 25);
   }
-  console.log('Editorial reductions: 4 shorter lessons, 52 fewer graded answers, 140 stable lesson IDs.');
+  console.log(`Editorial reductions: ${report.summary.editorially_revised_lessons} shorter lessons, ${report.summary.removed_grading_opportunities} fewer graded answers, ${report.summary.shipped_lessons} stable lesson IDs.`);
 }
 if (require.main === module) {
   const mode = process.argv[2] || '--check';
