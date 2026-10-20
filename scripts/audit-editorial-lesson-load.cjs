@@ -129,11 +129,13 @@ function check(report) {
   }
   console.log('Editorial reductions: 4 shorter lessons, 52 fewer graded answers, 140 stable lesson IDs.');
 }
-const mode = process.argv[2] || '--check';
-const report = buildReport();
-if (mode === '--check') check(report);
-else if (mode === '--json') process.stdout.write(JSON.stringify(report, null, 2) + '\n');
-else if (mode === '--markdown') process.stdout.write(markdown(report));
-else throw new Error('Usage: --check|--markdown|--json');
+if (require.main === module) {
+  const mode = process.argv[2] || '--check';
+  const report = buildReport();
+  if (mode === '--check') check(report);
+  else if (mode === '--json') process.stdout.write(JSON.stringify(report, null, 2) + '\n');
+  else if (mode === '--markdown') process.stdout.write(markdown(report));
+  else throw new Error('Usage: --check|--markdown|--json');
+}
 
 module.exports = { buildReport, markdown, check };
