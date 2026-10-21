@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.62.0] - 2026-10-21
+
+### Fixed
+
+- Correct **eight previously curated A1.2 Section 4 lessons (2–9)**. Independent self-review revealed 28 of 72 newly introduced exact targets had lost their *only later* independently graded retrieval in effective versions after v1.60.0. Restore one necessary subsequent scored review per target, leaving **282→267 authored activities and 196→181 scored answers** (15 genuinely redundant reviewed typing prompts omitted).
+- New regression checks **all 72 introduced targets** retain later positive retrieval in actual effective editions, plus original activity identity, introductions, listening/DICTATION, grammar evidence and the integrated two-passage reading/writing.
+- Advance each affected editorial revision ID from `-v1` to `-v2`; the eight lessons have no `study_pacing` or saved paced-course drafts, and the old original arrays, stable IDs, checkpoint, completion history and SRS remain intact.
+- Update English/Persian release notes and roadmap. Cumulative **23 curated lessons / 129 fewer graded answers** versus original authored content (the historical v1.61.0 reduction of 157 is 28 higher because of omitted later reviews). 117 lessons have not been individually curated. No measured learning gain is claimed.
+
+
 ## [1.61.0] - 2026-10-21
 
 ### Changed
