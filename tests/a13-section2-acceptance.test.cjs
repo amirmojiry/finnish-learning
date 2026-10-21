@@ -39,6 +39,10 @@ test('late help and opening-hour phrases move to teaching and all expressions pr
     const taught = l.activities.findIndex(a => a.type === 'teach' && a.item === t), tested = l.activities.findIndex(a => assessesExpression(a, t, raw.items)); assert.ok(taught >= 0 && taught < tested, t);
   }
   const broken = structuredClone(raw), l = broken.lessons[4], target = 'a13s2-e-concrete-address', old = [...l.activities];
+  // This negative fixture intentionally reorders the original authored cards.
+  // Remove its curated index selection so the old teaching-order validation
+  // remains isolated; the real editorial edition is checked in separate tests.
+  delete l.editorial_revision;
   const evidence = l.learning_objectives.grammar.flatMap(g => g.evidence).map(e => [e, old[e.activity_index]]);
   const [card] = l.activities.splice(l.activities.findIndex(a => a.type === 'teach' && a.item === target), 1); l.activities.push(card);
   for (const [entry, a] of evidence) entry.activity_index = l.activities.indexOf(a);

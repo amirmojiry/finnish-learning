@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.63.0] - 2026-10-21
+
+### Changed
+
+- Curate **eight A1.3 Section 2** home, chores, repair, neighborhood-services, opening-hours and local-rules lessons (Lessons 2–9), **259→239 authored activities** and **186→166 independently graded answers**, with **18–24 learner-visible slides** per edited lesson.
+- Omit only 20 already-graded reviewed Finnish typing responses; independent positive practice in earlier **effective** lessons is verified for each omission. **All 59 newly introduced Section 2 exact-form targets** retain a subsequent positively graded review in later effective lessons. Every first teaching/assessment, indexed grammar evidence, listening and prepared Finnish dictation, contextual production, integrated local reading and guided writing remain.
+- All original activity arrays, stable 140 lesson/checkpoint identities, previous completion history, legacy lesson progress and Word Practice SRS remain intact. Expand deterministic course regressions, bilingual pedagogical documentation and release cache markers.
+- Cumulative **31 individually curated lessons / 149 fewer independently graded answers** versus original authored editions, 109 lessons not yet individually curated. This count alone does not show measured retention, completion-time or CEFR gains.
+
+
 ## [1.62.0] - 2026-10-21
 
 ### Fixed
