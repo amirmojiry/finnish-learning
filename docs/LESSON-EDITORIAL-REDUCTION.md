@@ -152,3 +152,39 @@ The fifteen remaining omissions each have a scored positive response in a previo
 | S4 L9 | `a12s4-extra-10`, `a12s4-extra-11`, `a12s4-extra-12` |
 
 Integrated Lesson 9 still includes two passages, eight separate reading-comprehension questions, protected Finnish dictation, contextual grammar/production and guided writing. **Corrected cumulative: 23 curated lessons / 129 fewer scored answers** compared with original historical editions, while 117 other lessons have no separate editorial revision. The v1.60.0 and v1.61.0 figures above are intentionally left as historically accurate release notes. This quality fix is not evidence of measured learning improvement.
+
+
+## Phase 9 — eight housing and neighborhood lessons (v1.63.0; issue #209)
+
+A1.3 Section 2 Lessons 2–9 are curated together as one coherent editorial batch. Only previously scored reviewed-form Finnish typing is omitted. The original course activities and IDs remain untouched for historical completions and SRS; a strictly increasing `editorial_revision.activity_indices` selection is used for new starts.
+
+Earlier reviews alone are insufficient protection: after the Section 3/4 audit regressions, the latest acceptance gate explicitly enforces *both sides* of spacing. Each of the **20 omitted reviewed exact forms** must already have an independently graded positive response in an **earlier effective Section 2 lesson**, and **all 59 newly introduced Section 2 exact targets** must still have an independently scored retrieval in a **later effective lesson**. The test compares effective learner editions, not only original arrays.
+
+| Lesson | Authored original → new | Graded original → new | Initial learner screens | Omitted reviewed typing |
+| --- | ---: | ---: | ---: | ---: |
+| A1.3 S2 L2 | 25 → 24 | 16 → 15 | 18 | 1 |
+| A1.3 S2 L3 | 30 → 28 | 20 → 18 | 19 | 2 |
+| A1.3 S2 L4 | 33 → 30 | 23 → 20 | 20 | 3 |
+| A1.3 S2 L5 | 35 → 31 | 24 → 20 | 22 | 4 |
+| A1.3 S2 L6 | 34 → 32 | 24 → 22 | 21 | 2 |
+| A1.3 S2 L7 | 37 → 34 | 26 → 23 | 24 | 3 |
+| A1.3 S2 L8 | 31 → 27 | 21 → 17 | 19 | 4 |
+| A1.3 S2 L9 | 34 → 33 | 32 → 31 | 19 | 1 |
+| **Eight-lesson total** | **259 → 239** | **186 → 166** | **162** | **20** |
+
+### Exact reviewed target omissions
+
+The table lists each omitted item, not the full review list. Every removed form has independently assessed practice earlier in this section, and none eliminates the later graded practice of an introduced item.
+
+| Edited lesson | Previously assessed reviewed exact target ID(s) |
+| --- | --- |
+| S2 L2 | `a13s2-e-007` |
+| S2 L3 | `a13s2-e-008`, `a13s2-e-015` |
+| S2 L4 | `a13s2-e-014`, `a13s2-e-016`, `a13s2-e-024` |
+| S2 L5 | `a13s2-e-023`, `a13s2-e-025`, `a13s2-e-033`, `a13s2-e-035` |
+| S2 L6 | `a13s2-e-043`, `a13s2-e-076` |
+| S2 L7 | `a13s2-e-044`, `a13s2-e-concrete-address`, `a13s2-e-054` |
+| S2 L8 | `a13s2-e-053`, `a13s2-e-055`, `a13s2-e-064`, `a13s2-e-066` |
+| S2 L9 | `a13s2-e-063` |
+
+First teaching always precedes first graded introduction; referenced grammar evidence, prepared Finnish dictation and listening recognition, contextual production, the opening-hours questions, and the integrated neighborhood scenario's reading/writing all remain. No Section 2 final checkpoint is edited. **Project totals** after this release: 31 curated lessons and 149 fewer independently graded answers compared with historical editions; 109 lessons still have no individual editorial revision, of which 27 belong to the original >30-authored-activity candidate pool. Static authored counts are not fatigue, proficiency or retention measurements.

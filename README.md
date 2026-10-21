@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.62.0`
+- Version: `1.63.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.63.0: eight A1.3 Section 2 housing and neighborhood lessons** (household objects, chores, home repairs, local services, opening hours and community notices). New starts use **239 rather than 259 authored activities**, with **166 rather than 186 independently graded answers** and 18–24 initial screens per lesson. Crucially, **all 59 newly introduced exact targets retain subsequent graded retrieval in later effective lessons**; earlier scoring for each omitted reviewed item, introductory teaching/assessment, Finnish listening and prepared dictation, grammar, comprehension and writing are preserved. Original arrays, learner histories and SRS are unchanged. Overall **31 curated lessons / 149 fewer graded opportunities** than historical editions. [Bilingual editorial rationale](docs/LESSON-EDITORIAL-REDUCTION.md) · [#189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
 **v1.62.0: restore spaced-review integrity in eight A1.2 Section 4 lessons.** The original v1.60.0 editorial edit inadvertently removed every *later* scored retrieval of 28 of 72 introduced targets. Revision `v2` restores the necessary reviews and adds a gate for **all 72** targets. The eight health/weather lessons now have **267 instead of 282 activities and 181 instead of 196 graded answers**, preserving original histories, SRS, dictation, grammar and integrated comprehension. Project-wide **23 curated lessons / 129 fewer graded opportunities** than original (the v1.61.0 total of 157 is historical, before the repair). [Editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md) · [Issue #207](https://github.com/amirmojiry/finnish-learning/issues/207).
 

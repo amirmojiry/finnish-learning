@@ -152,7 +152,8 @@ test('only explicitly audited lessons have curated content; all others preserve 
   let curated = 0, total = 0;
   const selected = new Set([...cases.map(([,id])=>id), 'a1.2-section-1-lesson-9',
     ...Array.from({ length: 8 }, (_, i) => `a1.2-section-4-lesson-${i + 2}`),
-    ...Array.from({ length: 8 }, (_, i) => `a1.2-section-3-lesson-${i + 2}`)]);
+    ...Array.from({ length: 8 }, (_, i) => `a1.2-section-3-lesson-${i + 2}`),
+    ...Array.from({ length: 8 }, (_, i) => `a1.3-section-2-lesson-${i + 2}`)]);
   for (const stage of course.COURSE_STAGES) {
     for (const file of stage.sectionUrls) {
       const section = course.validateSection(fixture(path.basename(file, '.json')));
@@ -171,7 +172,7 @@ test('only explicitly audited lessons have curated content; all others preserve 
     }
   }
   assert.equal(total, 140);
-  assert.equal(curated, 23);
+  assert.equal(curated, 31);
 });
 
 test('deferred-reviewed-target audit excludes targets still assessed in the curated edition', () => {
@@ -193,8 +194,8 @@ test('deferred-reviewed-target audit excludes targets still assessed in the cura
     'Audit must not defer a target with surviving graded evidence: ' + target);
   }
   const nonRevised = report.lessons.filter((lesson) => !lesson.revised);
-  assert.equal(nonRevised.length, 117);
-  assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*117\*\*; all \*\*23\*\* previously curated lessons are excluded\./);
+  assert.equal(nonRevised.length, 109);
+  assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*109\*\*; all \*\*31\*\* previously curated lessons are excluded\./);
   assert.ok(nonRevised.every((lesson) => lesson.deferred_review_target_ids.length === 0),
     'Unedited lessons have no deferred review targets');
   audit.check(report);
@@ -224,9 +225,9 @@ test('Persian release history and generated editorial report describe both batch
   const audit = require('../scripts/audit-editorial-lesson-load.cjs');
   const report = audit.buildReport();
   const markdown = audit.markdown(report);
-  assert.equal(report.summary.editorially_revised_lessons, 23);
-  assert.equal(report.summary.removed_grading_opportunities, 129);
-  assert.match(markdown, /To date, 23 priority lessons have been editorially shortened/);
+  assert.equal(report.summary.editorially_revised_lessons, 31);
+  assert.equal(report.summary.removed_grading_opportunities, 149);
+  assert.match(markdown, /To date, 31 priority lessons have been editorially shortened/);
   assert.match(en, /seven curated lessons/);
   assert.match(fa, /هفت درس بازنگری‌شده/);
   assert.doesNotMatch(markdown, /Only the four priority lessons/);
