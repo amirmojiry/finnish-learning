@@ -5,6 +5,10 @@
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
 
+## R2 phase 5 — shopping dialogue editorial release (2026-10-21, v1.59.0)
+
+[Child #201](https://github.com/amirmojiry/finnish-learning/issues/201) / [PR #202](https://github.com/amirmojiry/finnish-learning/pull/202) curates A1.2 Section 1 Lesson 9: 31→22 original activities, 26→17 graded answers, 13 new-learner screens, preserving the contextual dialogue, reading, listening and all six grammar evidence indices. Across seven curated lessons there are **94 fewer independently graded answers**; historical A1 six-lesson reductions remain 85 in v1.58.0. Unmodified legacy activity arrays and learner history remain supported. For upcoming #189 work, aim for **8–10 high-load lessons per reviewable, section-coherent PR**, falling back to smaller batches for checkpoints and unusually complex grammar/migration cases; no automatic trimming or unreviewed release. [Editorial method](LESSON-EDITORIAL-REDUCTION.md).
+
 ## R2 phase 4 — additional integrated-reading edits (2026-10-21)
 
 [Issue #197](https://github.com/amirmojiry/finnish-learning/issues/197) introduces curated editions of two 48-activity A1.1 integrated-reading lessons with 21 and 20 visible screens respectively and 16 + 17 fewer graded answers, preserving all indexed grammar and reading evidence. This brings the audited historical-versus-new reduction to **85 graded answers across six lessons**. Parent #189 remains open for other long lessons, reinforcement design and UX outcome validation. [Editorial details](LESSON-EDITORIAL-REDUCTION.md).

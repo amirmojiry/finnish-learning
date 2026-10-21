@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.58.0`
+- Version: `1.59.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+In **v1.59.0**, the A1.2 Section 1 Lesson 9 shopping dialogue has a reviewed 13-slide, 22-activity edition for fresh learners (26→17 independently graded responses, removing nine redundant typing drills). Its contextual dialogue, two reading questions, listening, six grammar-evidence activities and productive sentences remain; prior lesson histories and archived original activities are preserved. Across **seven curated lessons**, there are now **94 fewer graded opportunities** than in the original editions. Earlier v1.58.0 covered only the **six edited A1 lessons** (85 fewer). [Detailed English/Persian editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent issue #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
 Two additional A1.1 integrated-reading lessons (S3 L9 and S4 L9) now offer curated 21/20-slide fresh-attempt editions, with 28 and 27 graded answers instead of 44 each. Across the six edited A1 lessons, 85 graded answers are removed compared with the legacy editions; older saved drafts retain their original questions. See [editorial QA](docs/LESSON-EDITORIAL-REDUCTION.md) and `npm run lesson:editorial:report`.
 

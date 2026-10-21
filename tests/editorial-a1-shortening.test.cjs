@@ -150,7 +150,7 @@ test('malformed or pedagogically incomplete edits fail closed without touching t
 
 test('only the four audited lessons have curated content; all others preserve their original editions', () => {
   let curated = 0, total = 0;
-  const selected = new Set(cases.map(([,id])=>id));
+  const selected = new Set([...cases.map(([,id])=>id), 'a1.2-section-1-lesson-9']);
   for (const stage of course.COURSE_STAGES) {
     for (const file of stage.sectionUrls) {
       const section = course.validateSection(fixture(path.basename(file, '.json')));
@@ -169,7 +169,7 @@ test('only the four audited lessons have curated content; all others preserve th
     }
   }
   assert.equal(total, 140);
-  assert.equal(curated, 6);
+  assert.equal(curated, 7);
 });
 
 test('deferred-reviewed-target audit excludes targets still assessed in the curated edition', () => {
@@ -191,7 +191,8 @@ test('deferred-reviewed-target audit excludes targets still assessed in the cura
     'Audit must not defer a target with surviving graded evidence: ' + target);
   }
   const nonRevised = report.lessons.filter((lesson) => !lesson.revised);
-  assert.equal(nonRevised.length, 134);
+  assert.equal(nonRevised.length, 133);
+  assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*133\*\*; all \*\*7\*\* previously curated lessons are excluded\./);
   assert.ok(nonRevised.every((lesson) => lesson.deferred_review_target_ids.length === 0),
     'Unedited lessons have no deferred review targets');
   audit.check(report);
@@ -221,9 +222,11 @@ test('Persian release history and generated editorial report describe both batch
   const audit = require('../scripts/audit-editorial-lesson-load.cjs');
   const report = audit.buildReport();
   const markdown = audit.markdown(report);
-  assert.equal(report.summary.editorially_revised_lessons, 6);
-  assert.equal(report.summary.removed_grading_opportunities, 85);
-  assert.match(markdown, /To date, 6 priority lessons have been editorially shortened/);
+  assert.equal(report.summary.editorially_revised_lessons, 7);
+  assert.equal(report.summary.removed_grading_opportunities, 94);
+  assert.match(markdown, /To date, 7 priority lessons have been editorially shortened/);
+  assert.match(en, /seven curated lessons/);
+  assert.match(fa, /هفت درس بازنگری‌شده/);
   assert.doesNotMatch(markdown, /Only the four priority lessons/);
 });
 
@@ -241,4 +244,24 @@ test('integrated-reading editorial editions retain original comprehension and ex
     assert.ok(edited.some(a => course.isProductiveCourseActivity(a)));
     assert.deepEqual(course.flattenLessonSlides(course.lessonEditionSlides(lesson, 'editorial')), edited);
   }
+});
+
+
+test('A1.2 shopping dialogue revision preserves six graded grammar references and legacy lesson', () => {
+  const lesson = course.validateSection(fixture('a1.2-section-1')).lessons[8];
+  const selected = new Set(lesson.editorial_revision.activity_indices);
+  assert.equal(lesson.activities.length, 31);
+  assert.equal(course.lessonEditionActivities(lesson, 'legacy').length, 31);
+  assert.equal(course.lessonEditionActivities(lesson, 'editorial').length, 22);
+  assert.equal(assessed(course.lessonEditionActivities(lesson, 'editorial')), 17);
+  assert.equal(course.lessonEditionSlides(lesson, 'editorial').length, 13);
+  for (const index of [0, 1, 2, 9, 10, 11, 26, 27, 28, 29, 30]) {
+    assert.ok(selected.has(index), 'lost dialogue, reading, listening or production at ' + index);
+  }
+  for (const goal of lesson.learning_objectives.grammar) {
+    for (const evidence of goal.evidence) {
+      assert.ok(selected.has(evidence.activity_index), 'lost grammar evidence ' + goal.concept_id);
+    }
+  }
+  assert.deepEqual(lesson.activities.map((a, i) => a), course.lessonEditionActivities(lesson, 'legacy'));
 });

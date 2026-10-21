@@ -6,6 +6,14 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.59.0] - 2026-10-21
+
+### Changed
+
+- Shorten the A1.2 Section 1 Lesson 9 shopping dialogue for **new attempts only**: 31 to 22 authored activities, 26 to 17 independently graded responses and 13 visible slides. Preserve the dialogue, two reading questions, listening, all six indexed grammar-evidence activities and contextual sentence production.
+- Keep original activity objects, lesson/checkpoint IDs, saved legacy drafts, completion history and SRS data intact. Across **seven curated lessons**, there are now **94 fewer graded answers** compared with the original editions; the six A1 editions and their 85-answer reduction were already shipped in v1.58.0.
+- Derive the curated-lesson count dynamically in the editorial-priority report; update synchronized English/Persian learning documentation and add count/version consistency regression checks.
+
 ## [1.58.0] - 2026-10-21
 
 ### Changed
