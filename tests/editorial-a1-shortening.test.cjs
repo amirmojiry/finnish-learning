@@ -209,6 +209,24 @@ test('both README languages clearly distinguish shorter fresh lessons from uncha
 });
 
 
+test('Persian release history and generated editorial report describe both batches correctly', () => {
+  const fa = fs.readFileSync(path.join(__dirname, '..', 'README.fa.md'), 'utf8');
+  const en = fs.readFileSync(path.join(__dirname, '..', 'README.md'), 'utf8');
+  const previousBatch = fa.slice(fa.indexOf('چهار درس اولویت‌دار'), fa.indexOf('گروه‌بندی اسلایدها'));
+  assert.match(previousBatch, /1\.57\.0/, 'The original four-lesson batch belongs to v1.57.0');
+  assert.doesNotMatch(previousBatch, /1\.58\.0/, 'Do not rewrite history for the original four-lesson batch');
+  assert.match(fa, /شش درس بازنگری‌شدهٔ A1/);
+  assert.match(en, /six edited A1 lessons/);
+
+  const audit = require('../scripts/audit-editorial-lesson-load.cjs');
+  const report = audit.buildReport();
+  const markdown = audit.markdown(report);
+  assert.equal(report.summary.editorially_revised_lessons, 6);
+  assert.equal(report.summary.removed_grading_opportunities, 85);
+  assert.match(markdown, /To date, 6 priority lessons have been editorially shortened/);
+  assert.doesNotMatch(markdown, /Only the four priority lessons/);
+});
+
 test('integrated-reading editorial editions retain original comprehension and explicit production evidence', () => {
   for (const [sectionId, lessonId, kept] of [
     ['a1.1-section-3', 'section-3-lesson-9', [4, 5, 11, 15, 16, 17, 18, 19]],
