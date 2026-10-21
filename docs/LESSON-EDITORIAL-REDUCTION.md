@@ -169,8 +169,8 @@ Earlier reviews alone are insufficient protection: after the Section 3/4 audit r
 | A1.3 S2 L6 | 34 → 32 | 24 → 22 | 21 | 2 |
 | A1.3 S2 L7 | 37 → 34 | 26 → 23 | 24 | 3 |
 | A1.3 S2 L8 | 31 → 27 | 21 → 17 | 19 | 4 |
-| A1.3 S2 L9 | 34 → 33 | 32 → 31 | 19 | 1 |
-| **Eight-lesson total** | **259 → 239** | **186 → 166** | **162** | **20** |
+| A1.3 S2 L9 | 34 → 33 | 32 → 31 | 21 | 1 |
+| **Eight-lesson total** | **259 → 239** | **186 → 166** | **164** | **20** |
 
 ### Exact reviewed target omissions
 
