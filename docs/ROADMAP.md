@@ -5,6 +5,10 @@
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
 
+## R2 phase 7 — eight-lesson A1.2 Section 3 curation (2026-10-21, v1.61.0)
+
+[Issue #205](https://github.com/amirmojiry/finnish-learning/issues/205) / [PR #206](https://github.com/amirmojiry/finnish-learning/pull/206) curate Lessons 2–9 in a section-coherent release: **277→257 authored activities and 195→175 graded responses**. Self-review restored 30 necessary later retrievals of newly introduced targets; a new effective-edition coverage gate verifies **all 79 introduced Section 3 targets** retain scored practice in subsequent lessons. Grammar evidence, all original listening and dictation, two reading passages with eight questions, guided writing, IDs, history and SRS remain. Cumulative **23 curated / 157 fewer graded**; parent #189 remains open for next batches, accessibility checks and measured outcomes.
+
 ## R2 phase 6 — eight-lesson A1.2 Section 4 curation (2026-10-21, v1.60.0)
 
 [Child #203](https://github.com/amirmojiry/finnish-learning/issues/203) delivers **eight coherent high-load Lessons 2–9 in A1.2 Section 4** under parent #189. Across these lessons there are **43 fewer independent graded typing prompts**, from 196 to 153, with 13–23 visible slides each. All introduced-form first learning and graded retrieval, indexed grammar evidence, listening, contextual production, both integrated-health passages, eight reading questions and guided writing remain. Historical activities, progress and SRS identities are preserved; total editorial reductions now **15 lessons / 137 graded answers**. Next batches prioritize actual assessment workload and verified teaching goals, not blanket shortening. [Bilingual audit](LESSON-EDITORIAL-REDUCTION.md) · [Issue #189](https://github.com/amirmojiry/finnish-learning/issues/189). Manual RTL/screen-reader QA and privacy-appropriate learner outcome measurements are still open.

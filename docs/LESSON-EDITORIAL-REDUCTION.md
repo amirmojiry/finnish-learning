@@ -79,3 +79,40 @@ Each target below remains part of the unchanged course source and has independen
 The Section 4 Lesson 9 integrated dialogue retains original dialogue ordering, **both passages and all eight independently graded comprehension questions**, Finnish listening, **all eight indexed grammar evidence activities**, and guided writing. In Lessons 2–8, all exact introduced surfaces retain their teaching cards and first scored answers; every positive grammar evidence index, listening and contextual production remain. Lesson 6 also preserves the only original `a12s4-extra-11` graded recall, which has **no earlier positively graded Section 4 retrieval**; it was intentionally excluded from the deletion list.
 
 **Lifetime totals:** 15 editorially revised lessons, **137 fewer independently graded answers** versus legacy (94 through v1.59.0 plus 43 here). The 125 uncurated lessons are **not** an automatic deletion queue; 40 of the original 55 >30-authored-activity cohort remain uncurated. The original 140 lesson IDs, checkpoint thresholds, stored completions, first-attempt history and Word Practice SRS are preserved. Use `npm run lesson:editorial:json`, `npm run lesson:editorial:priority` and `npm test` for reproductions. No claims about measured fatigue or CEFR/YKI outcomes.
+
+
+## Phase 7 — daily routines, work/study and invitations (v1.61.0, #205)
+
+Eight A1.2 Section 3 lessons (2–9) are curated together for new attempts; the original activity arrays and stable lesson IDs remain unchanged for all saved history, SRS and legacy attempts. The manually selected index lists shorten redundant reviewed-form isolated typing, while preserving first teaching, first independent graded answers, listening/dictation, positive grammar evidence and productive language.
+
+The independent self-review caught a serious coverage regression in the first proposal: **30 of the 79 newly introduced exact targets lost their only later scored retrieval** when their reviewed tail drills were removed. We restored one later positive retrieval per affected target. A regression now checks **all 79** against effective lesson editions rather than only raw authored arrays. Lesson 10 checkpoint remains unchanged.
+
+| Lesson | Original → new activities | Original → new graded answers | Initial screens | Omitted redundant typing |
+| --- | ---: | ---: | ---: | ---: |
+| S3 L2 | 30 → 29 | 20 → 19 | 14 | 1 |
+| S3 L3 | 31 → 30 | 20 → 19 | 14 | 1 |
+| S3 L4 | 36 → 35 | 24 → 23 | 17 | 1 |
+| S3 L5 | 33 → 30 | 23 → 20 | 15 | 3 |
+| S3 L6 | 39 → 37 | 25 → 23 | 19 | 2 |
+| S3 L7 | 35 → 30 | 24 → 19 | 15 | 5 |
+| S3 L8 | 33 → 30 | 22 → 19 | 15 | 3 |
+| S3 L9 | 40 → 36 | 37 → 33 | 23 | 4 |
+| **Total** | **277 → 257** | **195 → 175** | **132** | **20** |
+
+### Deferred-review inventory after preservation
+
+For each remaining omitted review below, the regression verifies a previously scored positive response in a preceding effective lesson. **No target loses all later independently scored retrieval following introduction.** Intentional spaced recall remains, rather than maximizing the number of questions removed.
+
+| Lesson | Omitted already-reviewed exact target |
+| --- | --- |
+| S3 L2 | `a12s3-expr-02` |
+| S3 L3 | `a12s3-expr-01` |
+| S3 L4 | `a12s3-expr-06` |
+| S3 L5 | `a12s3-expr-09`, `a12s3-hf-11`, `a12s3-expr-13` |
+| S3 L6 | `a12s3-expr-12`, `a12s3-expr-18` |
+| S3 L7 | `a12s3-expr-17`, `a12s3-hf-17`, `a12s3-hf-19`, `a12s3-topic-20`, `a12s3-expr-21` |
+| S3 L8 | `a12s3-hf-18`, `a12s3-topic-21`, `a12s3-expr-32` |
+| S3 L9 | `a12s3-topic-19`, `a12s3-topic-22`, `a12s3-expr-25`, `a12s3-expr-31` |
+
+The integrated Lesson 9 still presents the dialogue, two authentic passages with **eight distinct graded comprehension questions**, six referenced grammar productions, Finnish recognition and dictated recall, and four-phrase guided writing. All original teaching and scoring IDs are stable. Cumulative: **23 curated lessons / 157 fewer graded opportunities** against historical content; **117 lessons remain individually uncurated**. This is not evidence of improved measured completion time or learning outcomes.
+
