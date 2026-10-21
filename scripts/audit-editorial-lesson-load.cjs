@@ -142,11 +142,11 @@ function priorityMarkdown(report) {
     '| ---: | --- | --- | ---: | ---: | ---: | --- | ---: |',
   ];
   for (const [index, row] of rows.slice(0, 25).entries()) {
-    lines.push(`| ${index + 1} | ${row.section_id}/${row.lesson_id} | ${row.title_fa.replace(/\\|/g, '\\|')} | ${row.graded_answers} | ${row.visible_slides} | ${row.activities} | ${row.checkpoint ? 'yes' : 'no'} | ${row.grammar_evidence} |`);
+    lines.push(`| ${index + 1} | ${row.section_id}/${row.lesson_id} | ${row.title_fa.replace(/[|]/g, '\\|')} | ${row.graded_answers} | ${row.visible_slides} | ${row.activities} | ${row.checkpoint ? 'yes' : 'no'} | ${row.grammar_evidence} |`);
   }
   lines.push('', `Remaining uncurated lessons: **${rows.length}**; all six previously curated lessons are excluded.`, '',
     'Review each candidate in its section context before selecting activity indices. Protect grammar evidence, first introductions, independently graded retrieval, listening/production and existing drafts. Rank alone does not authorize automatically deleting activities.', '');
-  return lines.join('\\n');
+  return lines.join('\n');
 }
 
 function check(report) {
