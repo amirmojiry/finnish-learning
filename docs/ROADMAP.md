@@ -7,7 +7,7 @@ This document is the **single maintained delivery roadmap**. [Learning Design](L
 
 ## R2 phase 4 — additional integrated-reading edits (2026-10-21)
 
-[Issue #197](https://github.com/amirmojiry/finnish-learning/issues/197) introduces curated editions of two 48-activity A1.1 integrated-reading lessons with 21 visible screens each and 16 + 17 fewer graded answers, preserving all indexed grammar and reading evidence. This brings the audited historical-versus-new reduction to **85 graded answers across six lessons**. Parent #189 remains open for other long lessons, reinforcement design and UX outcome validation. [Editorial details](LESSON-EDITORIAL-REDUCTION.md).
+[Issue #197](https://github.com/amirmojiry/finnish-learning/issues/197) introduces curated editions of two 48-activity A1.1 integrated-reading lessons with 21 and 20 visible screens respectively and 16 + 17 fewer graded answers, preserving all indexed grammar and reading evidence. This brings the audited historical-versus-new reduction to **85 graded answers across six lessons**. Parent #189 remains open for other long lessons, reinforcement design and UX outcome validation. [Editorial details](LESSON-EDITORIAL-REDUCTION.md).
 
 ## R2 editorial shortening of priority A1 lessons (2026-10-19)
 
