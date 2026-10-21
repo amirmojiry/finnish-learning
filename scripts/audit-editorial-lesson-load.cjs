@@ -29,7 +29,7 @@ const expected = new Map([
   ['a1.2-section-3-lesson-6', { source: 39, edited: 37, graded: 23, slides: 19 }],
   ['a1.2-section-3-lesson-7', { source: 35, edited: 30, graded: 19, slides: 15 }],
   ['a1.2-section-3-lesson-8', { source: 33, edited: 30, graded: 19, slides: 15 }],
-  ['a1.2-section-3-lesson-9', { source: 40, edited: 36, graded: 33, slides: 22 }],
+  ['a1.2-section-3-lesson-9', { source: 40, edited: 36, graded: 33, slides: 23 }],
 ]);
 const scored = (list) => list.reduce((total, slide) =>
   total + course.scoredOpportunitiesOnSlide(slide), 0);

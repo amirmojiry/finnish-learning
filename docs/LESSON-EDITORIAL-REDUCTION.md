@@ -96,8 +96,8 @@ The independent self-review caught a serious coverage regression in the first pr
 | S3 L6 | 39 → 37 | 25 → 23 | 19 | 2 |
 | S3 L7 | 35 → 30 | 24 → 19 | 15 | 5 |
 | S3 L8 | 33 → 30 | 22 → 19 | 15 | 3 |
-| S3 L9 | 40 → 36 | 37 → 33 | 22 | 4 |
-| **Total** | **277 → 257** | **195 → 175** | **131** | **20** |
+| S3 L9 | 40 → 36 | 37 → 33 | 23 | 4 |
+| **Total** | **277 → 257** | **195 → 175** | **132** | **20** |
 
 ### Deferred-review inventory after preservation
 

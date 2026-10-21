@@ -113,7 +113,7 @@ const specs = [
     "edited": 36,
     "oldGraded": 37,
     "newGraded": 33,
-    "slides": 22,
+    "slides": 23,
     "hash": "fb3c4bd0"
   }
 ];
