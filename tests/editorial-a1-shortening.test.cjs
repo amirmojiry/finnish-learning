@@ -11,6 +11,8 @@ const cases = [
   ['a1.1-section-2', 'section-2-lesson-10', 62, 62, 27, 27, 20, 15],
   ['a1.2-section-2', 'a1.2-section-2-lesson-7', 44, 28, 34, 18, 21, 0],
   ['a1.3-section-4', 'a1.3-section-4-lesson-10', 32, 32, 29, 29, 24, 15],
+  ['a1.1-section-3', 'section-3-lesson-9', 48, 44, 32, 28, 21, 0],
+  ['a1.1-section-4', 'section-4-lesson-9', 48, 44, 31, 27, 20, 0],
 ];
 function fixture(id) {
   return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data/course', id + '.json'), 'utf8'));
@@ -28,7 +30,7 @@ function assessed(activities) {
   return activities.filter((activity) => course.scoredOpportunitiesOnSlide(activity) > 0).length;
 }
 
-test('all four curated editions genuinely reduce independently graded answers and reach 19-24 slides', () => {
+test('all six curated editions genuinely reduce independently graded answers and reach 18-24 slides', () => {
   for (const [sectionId, lessonId, oldCount, oldGraded, newCount, newGraded, screens, checkpoints] of cases) {
     const section = course.validateSection(fixture(sectionId));
     const lesson = section.lessons.find((candidate) => candidate.id === lessonId);
@@ -167,7 +169,7 @@ test('only the four audited lessons have curated content; all others preserve th
     }
   }
   assert.equal(total, 140);
-  assert.equal(curated, 4);
+  assert.equal(curated, 6);
 });
 
 test('deferred-reviewed-target audit excludes targets still assessed in the curated edition', () => {
@@ -189,7 +191,7 @@ test('deferred-reviewed-target audit excludes targets still assessed in the cura
     'Audit must not defer a target with surviving graded evidence: ' + target);
   }
   const nonRevised = report.lessons.filter((lesson) => !lesson.revised);
-  assert.equal(nonRevised.length, 136);
+  assert.equal(nonRevised.length, 134);
   assert.ok(nonRevised.every((lesson) => lesson.deferred_review_target_ids.length === 0),
     'Unedited lessons have no deferred review targets');
   audit.check(report);
@@ -204,4 +206,39 @@ test('both README languages clearly distinguish shorter fresh lessons from uncha
   assert.match(fa, /۵۲ پاسخ نمره‌دار کمتر/);
   assert.match(fa, /تعداد سؤال‌ها و ترتیب قدیمی فقط برای ادامهٔ درس نیمه‌تمام/);
   assert.match(fa, /گروه‌بندی اسلایدها به‌تنهایی تعداد پاسخ‌های نمره‌دار را کاهش نمی‌دهد/);
+});
+
+
+test('Persian release history and generated editorial report describe both batches correctly', () => {
+  const fa = fs.readFileSync(path.join(__dirname, '..', 'README.fa.md'), 'utf8');
+  const en = fs.readFileSync(path.join(__dirname, '..', 'README.md'), 'utf8');
+  const previousBatch = fa.slice(fa.indexOf('چهار درس اولویت‌دار'), fa.indexOf('گروه‌بندی اسلایدها'));
+  assert.match(previousBatch, /1\.57\.0/, 'The original four-lesson batch belongs to v1.57.0');
+  assert.doesNotMatch(previousBatch, /1\.58\.0/, 'Do not rewrite history for the original four-lesson batch');
+  assert.match(fa, /شش درس بازنگری‌شدهٔ A1/);
+  assert.match(en, /six edited A1 lessons/);
+
+  const audit = require('../scripts/audit-editorial-lesson-load.cjs');
+  const report = audit.buildReport();
+  const markdown = audit.markdown(report);
+  assert.equal(report.summary.editorially_revised_lessons, 6);
+  assert.equal(report.summary.removed_grading_opportunities, 85);
+  assert.match(markdown, /To date, 6 priority lessons have been editorially shortened/);
+  assert.doesNotMatch(markdown, /Only the four priority lessons/);
+});
+
+test('integrated-reading editorial editions retain original comprehension and explicit production evidence', () => {
+  for (const [sectionId, lessonId, kept] of [
+    ['a1.1-section-3', 'section-3-lesson-9', [4, 5, 11, 15, 16, 17, 18, 19]],
+    ['a1.1-section-4', 'section-4-lesson-9', [4, 5, 6, 8, 10, 15, 16, 17, 18, 19]],
+  ]) {
+    const lesson = course.validateSection(fixture(sectionId)).lessons.find(l => l.id === lessonId);
+    const indices = new Set(lesson.editorial_revision.activity_indices);
+    for (const index of kept) assert.ok(indices.has(index), lessonId + ': lost reading, listening or grammar evidence at ' + index);
+    const edited = course.lessonEditionActivities(lesson, 'editorial');
+    assert.ok(edited.some(a => a.mode === 'listen'));
+    assert.ok(edited.filter(a => a.type === 'short-reading').length >= 3);
+    assert.ok(edited.some(a => course.isProductiveCourseActivity(a)));
+    assert.deepEqual(course.flattenLessonSlides(course.lessonEditionSlides(lesson, 'editorial')), edited);
+  }
 });

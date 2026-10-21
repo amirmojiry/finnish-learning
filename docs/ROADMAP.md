@@ -4,6 +4,11 @@
 
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
+
+## R2 phase 4 — additional integrated-reading edits (2026-10-21)
+
+[Issue #197](https://github.com/amirmojiry/finnish-learning/issues/197) introduces curated editions of two 48-activity A1.1 integrated-reading lessons with 21 and 20 visible screens respectively and 16 + 17 fewer graded answers, preserving all indexed grammar and reading evidence. This brings the audited historical-versus-new reduction to **85 graded answers across six lessons**. Parent #189 remains open for other long lessons, reinforcement design and UX outcome validation. [Editorial details](LESSON-EDITORIAL-REDUCTION.md).
+
 ## R2 editorial shortening of priority A1 lessons (2026-10-19)
 
 [Child #194](https://github.com/amirmojiry/finnish-learning/issues/194) introduces genuinely shorter edited editions for four overlong A1 lessons, reducing their combined independently graded answers from **144 to 92** while retaining checkpoint targets, explicit grammar evidence and the original archived activity arrays for resuming v1.56 drafts. Fresh attempts use 18/20/21/24 initial visible screens; paused old attempts use the historical question sequence. [Rationale and side-by-side audit](LESSON-EDITORIAL-REDUCTION.md). Parent #189 remains open for editorial work on the other 51 historically long lessons, reinforcement redistribution and real-device UX/retention verification.

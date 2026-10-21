@@ -54,7 +54,7 @@ test('all four heavy authored lessons have bounded sittings without losing any s
   }
 });
 
-test('other 136 published lessons remain unpaced and unchanged', () => {
+test('other 134 published lessons remain unpaced and unchanged', () => {
   let unpaced = 0;
   for (const stage of course.COURSE_STAGES) {
     for (const url of stage.sectionUrls) {
@@ -68,7 +68,7 @@ test('other 136 published lessons remain unpaced and unchanged', () => {
       }
     }
   }
-  assert.equal(unpaced, 136);
+  assert.equal(unpaced, 134);
 });
 
 test('resume draft round-trips and rejects wrong lesson, tampering and changed source', () => {
