@@ -10,7 +10,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ### Changed
 
-- Add shorter authored editions for two 48-activity A1.1 integrated-reading lessons: S3 L9 48→32 activities (44→28 graded; 19 learner screens), and S4 L9 48→31 activities (44→27 graded; 19 learner screens). Preserve reading comprehension, listening and explicit grammar/production evidence, and archived original activities for historical draft continuity.
+- Add shorter authored editions for two 48-activity A1.1 integrated-reading lessons: S3 L9 48→32 activities (44→28 graded; 21 learner screens), and S4 L9 48→31 activities (44→27 graded; 21 learner screens). Preserve reading comprehension, listening and explicit grammar/production evidence, and archived original activities for historical draft continuity.
 - Expand the deterministic editorial audit and regression suite to six revisions across 140 stable lessons. Total reduction from legacy baseline: 85 independently graded opportunities. Still no claims about real completion time, retention, or fatigue.
 
 
