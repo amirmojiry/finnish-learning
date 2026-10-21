@@ -43,3 +43,39 @@ The same compatibility contract applies to A1.1 S3 L9 (**روز سادهٔ من*
 A1.2 Section 1 Lesson 9 (**یک گفت‌وگوی کامل خرید**) now gives new learners **22 rather than 31 original activities**, **17 rather than 26 independently graded answers**, and **13 visible slides**. Nine redundant standalone typing drills are omitted, while the shopping dialogue, both reading-comprehension questions, listening, and all **six indexed positive grammar evidence** activities (requests, quantities, method of payment, negation, questions, and *olla*) remain. The concluding five controlled sentence productions are all retained.
 
 As before, original activities and identities remain in the manifest for older saved learner drafts; this is not a rewrite of progress, historical answers, or SRS. **Cumulative total: seven curated lessons / 94 fewer graded opportunities** (including the six A1 lessons / 85 reductions already reported for v1.58.0). There are **133 shipped lessons without an editorial revision**, not necessarily 133 lessons that need shortening. Future batches under #189 should prioritize the strongest remaining graded workload, with independent teaching, grammar, listening, reading, and stored-draft compatibility checks. Fewer questions are not evidence of better learning outcomes.
+
+
+## Phase 6 — eight coherent health/weather lessons (v1.60.0; #203)
+
+The following **eight A1.2 Section 4 lessons (2–9)** are curated together, not one PR per lesson. Each retained original activity array is unchanged; a validated ordered `editorial_revision.activity_indices` subset is used only for **new starts**. Selection removes **reviewed-form isolated typing** with previously independent correct-answer assessment (or an explicitly retained same-lesson answer), not grammar or first teaching.
+
+| Lesson | Activities, original → new | Graded answers, original → new | New initial screens | Removed reviewed typing |
+| --- | ---: | ---: | ---: | ---: |
+| A1.2 S4 L2 | 34 → 30 | 21 → 17 | 18 | 4 |
+| A1.2 S4 L3 | 35 → 28 | 24 → 17 | 13 | 7 |
+| A1.2 S4 L4 | 34 → 29 | 23 → 18 | 15 | 5 |
+| A1.2 S4 L5 | 35 → 30 | 23 → 18 | 17 | 5 |
+| A1.2 S4 L6 | 36 → 30 | 24 → 18 | 18 | 6 |
+| A1.2 S4 L7 | 36 → 30 | 24 → 18 | 17 | 6 |
+| A1.2 S4 L8 | 34 → 30 | 22 → 18 | 16 | 4 |
+| A1.2 S4 L9 | 38 → 32 | 35 → 29 | 22 | 6 |
+| **Eight-lesson total** | **282 → 239** | **196 → 153** | **136** | **43** |
+
+### Explicit review-deferral mapping
+
+Each target below remains part of the unchanged course source and has independently scored evidence in an **earlier edited-effective lesson of this section**, checked by the regression suite. A blank same-lesson column means the trimmed standalone typing was the only retrieval for that target *in the affected lesson*, not that the target is absent from the course. The last lesson drops one duplicated `a12s4-expr-24` typing response while retaining its other graded retrieval.
+
+| Lesson | Fully deferred here: target IDs with earlier graded retrieval | Removed duplicate still assessed here |
+| --- | --- | --- |
+| S4 L2 | `a12s4-topic-02`, `a12s4-topic-04`, `a12s4-topic-06`, `a12s4-expr-02` | — |
+| S4 L3 | `a12s4-topic-03`, `a12s4-topic-05`, `a12s4-expr-01`, `a12s4-expr-03`, `a12s4-hf-04`, `a12s4-topic-10`, `a12s4-expr-07` | — |
+| S4 L4 | `a12s4-topic-09`, `a12s4-topic-11`, `a12s4-expr-08`, `a12s4-topic-14`, `a12s4-expr-10` | — |
+| S4 L5 | `a12s4-topic-15`, `a12s4-expr-11`, `a12s4-topic-19`, `a12s4-topic-21`, `a12s4-expr-16` | — |
+| S4 L6 | `a12s4-topic-18`, `a12s4-topic-20`, `a12s4-expr-15`, `a12s4-topic-23`, `a12s4-topic-25`, `a12s4-expr-18` | — |
+| S4 L7 | `a12s4-hf-12`, `a12s4-expr-17`, `a12s4-expr-19`, `a12s4-topic-30`, `a12s4-expr-20`, `a12s4-extra-13` | — |
+| S4 L8 | `a12s4-topic-31`, `a12s4-extra-02`, `a12s4-topic-34`, `a12s4-extra-08` | — |
+| S4 L9 | `a12s4-extra-10`, `a12s4-extra-12`, `a12s4-extra-13`, `a12s4-topic-35`, `a12s4-topic-38` | `a12s4-expr-24` |
+
+The Section 4 Lesson 9 integrated dialogue retains original dialogue ordering, **both passages and all eight independently graded comprehension questions**, Finnish listening, **all eight indexed grammar evidence activities**, and guided writing. In Lessons 2–8, all exact introduced surfaces retain their teaching cards and first scored answers; every positive grammar evidence index, listening and contextual production remain. Lesson 6 also preserves the only original `a12s4-extra-11` graded recall, which has **no earlier positively graded Section 4 retrieval**; it was intentionally excluded from the deletion list.
+
+**Lifetime totals:** 15 editorially revised lessons, **137 fewer independently graded answers** versus legacy (94 through v1.59.0 plus 43 here). The 125 uncurated lessons are **not** an automatic deletion queue; 40 of the original 55 >30-authored-activity cohort remain uncurated. The original 140 lesson IDs, checkpoint thresholds, stored completions, first-attempt history and Word Practice SRS are preserved. Use `npm run lesson:editorial:json`, `npm run lesson:editorial:priority` and `npm test` for reproductions. No claims about measured fatigue or CEFR/YKI outcomes.

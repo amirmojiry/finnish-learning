@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.60.0] - 2026-10-21
+
+### Changed
+
+- Introduce eight manually selected **A1.2 Section 4** shortened editions (Lessons 2–9, seasons/clothes, health, pharmacy, appointments, asking for help and integrated dialogue): **282→239 authored activities, 196→153 graded opportunities, 136 initial visible slides across the eight edited lessons**. The 43 removed graded opportunities are only redundant reviewed-form typing with prior scored evidence or same-lesson duplicate assessment.
+- Retain every introduced exact-form teaching/positive assessment and indexed grammar evidence, listening and contextual production, plus all eight reading questions, both original passages and guided writing in integrated Lesson 9. Keep all original activity arrays/lesson IDs, checkpoint targets, Course history and Word Practice SRS untouched for legacy progress.
+- Extend the deterministic 140-lesson editorial audit and per-target review-deferral tests. **15 curated lessons total, 137 fewer independently graded opportunities** vs. legacy, with 125 other lessons not yet curated. This authored reduction is not measured fatigue or demonstrated language proficiency.
+- Update English/Persian editorial rationale, roadmap, release metadata and asset-cache versions for v1.60.0.
+
+
 ## [1.59.0] - 2026-10-21
 
 ### Changed
