@@ -205,8 +205,8 @@ A1.3 Section 3 Lessons 2–9 are edited as one coherent bundle. Only previously 
 | A1.3 S3 L6 | 31 → 28 | 20 → 17 | 20 | 3 |
 | A1.3 S3 L7 | 32 → 29 | 23 → 20 | 20 | 3 |
 | A1.3 S3 L8 | 31 → 27 | 23 → 19 | 18 | 4 |
-| A1.3 S3 L9 | 34 → 33 | 32 → 31 | 19 | 1 |
-| **Total** | **250 → 229** | **183 → 162** | **153** | **21** |
+| A1.3 S3 L9 | 34 → 33 | 32 → 31 | 21 | 1 |
+| **Total** | **250 → 229** | **183 → 162** | **155** | **21** |
 
 ### Verified omitted reviewed exact-form targets
 
