@@ -50,6 +50,9 @@ test('all new Section 4 expressions are taught before full answers and review ex
   }
   for (const [i, target] of [[4, 'a12s4-expr-31'], [6, 'a12s4-extra-08']]) assert.ok(raw.lessons[i].activities.some(a => a.type === 'teach' && a.item === target));
   const target = 'a12s4-expr-31', broken = structuredClone(raw), l = broken.lessons[4], old = [...l.activities];
+  // This negative test isolates the expression-order acceptance gate. The curated
+  // index plan would separately reject moving its first teaching card.
+  delete l.editorial_revision;
   const evidence = l.learning_objectives.grammar.flatMap(g => g.evidence).map(e => [e, old[e.activity_index]]);
   const [card] = l.activities.splice(l.activities.findIndex(a => a.type === 'teach' && a.item === target), 1); l.activities.push(card);
   for (const [entry, a] of evidence) entry.activity_index = l.activities.indexOf(a);
