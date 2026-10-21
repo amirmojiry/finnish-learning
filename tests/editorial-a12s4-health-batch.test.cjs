@@ -249,7 +249,7 @@ test('release metadata, cumulative editorial totals and uncurated priority list 
   const report=audit.buildReport();
   assert.equal(report.summary.shipped_lessons,140);
   assert.equal(report.summary.editorially_revised_lessons,23);
-  assert.equal(report.summary.removed_grading_opportunities,187);
+  assert.equal(report.summary.removed_grading_opportunities,157);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides,0);
   assert.equal(audit.priorityRows(report).length,117);
   assert.match(audit.priorityMarkdown(report),/Remaining uncurated lessons: \*\*117\*\*; all \*\*23\*\* previously curated lessons are excluded\./);

@@ -225,7 +225,7 @@ test('Persian release history and generated editorial report describe both batch
   const report = audit.buildReport();
   const markdown = audit.markdown(report);
   assert.equal(report.summary.editorially_revised_lessons, 23);
-  assert.equal(report.summary.removed_grading_opportunities, 187);
+  assert.equal(report.summary.removed_grading_opportunities, 157);
   assert.match(markdown, /To date, 23 priority lessons have been editorially shortened/);
   assert.match(en, /seven curated lessons/);
   assert.match(fa, /هفت درس بازنگری‌شده/);

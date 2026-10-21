@@ -11,91 +11,69 @@ const specs = [
   {
     "n": 2,
     "removed": [
-      25,
-      27,
       28
     ],
     "old": 30,
-    "edited": 27,
+    "edited": 29,
     "oldGraded": 20,
-    "newGraded": 17,
+    "newGraded": 19,
     "slides": 14,
     "hash": "8397d286"
   },
   {
     "n": 3,
     "removed": [
-      23,
-      24,
-      25,
-      26,
-      28,
-      29
+      25
     ],
     "old": 31,
-    "edited": 25,
+    "edited": 30,
     "oldGraded": 20,
-    "newGraded": 14,
-    "slides": 13,
+    "newGraded": 19,
+    "slides": 14,
     "hash": "909556db"
   },
   {
     "n": 4,
     "removed": [
-      26,
-      28,
-      29,
-      31,
-      33,
-      34
+      29
     ],
     "old": 36,
-    "edited": 30,
+    "edited": 35,
     "oldGraded": 24,
-    "newGraded": 18,
-    "slides": 16,
+    "newGraded": 23,
+    "slides": 17,
     "hash": "04dedc15"
   },
   {
     "n": 5,
     "removed": [
-      22,
-      23,
       25,
       27,
-      28,
-      30,
       31
     ],
     "old": 33,
-    "edited": 26,
+    "edited": 30,
     "oldGraded": 23,
-    "newGraded": 16,
-    "slides": 14,
+    "newGraded": 20,
+    "slides": 15,
     "hash": "040c5731"
   },
   {
     "n": 6,
     "removed": [
-      30,
-      32,
       33,
-      35,
-      36,
       38
     ],
     "old": 39,
-    "edited": 33,
+    "edited": 37,
     "oldGraded": 25,
-    "newGraded": 19,
-    "slides": 18,
+    "newGraded": 23,
+    "slides": 19,
     "hash": "53448f22"
   },
   {
     "n": 7,
     "removed": [
-      23,
-      24,
       26,
       28,
       29,
@@ -103,9 +81,9 @@ const specs = [
       33
     ],
     "old": 35,
-    "edited": 28,
+    "edited": 30,
     "oldGraded": 24,
-    "newGraded": 17,
+    "newGraded": 19,
     "slides": 15,
     "hash": "99e7ca57"
   },
@@ -113,36 +91,28 @@ const specs = [
     "n": 8,
     "removed": [
       22,
-      23,
       25,
-      27,
-      28,
-      30,
-      32
+      28
     ],
     "old": 33,
-    "edited": 26,
+    "edited": 30,
     "oldGraded": 22,
-    "newGraded": 15,
-    "slides": 14,
+    "newGraded": 19,
+    "slides": 15,
     "hash": "c517bf5d"
   },
   {
     "n": 9,
     "removed": [
-      28,
       29,
       31,
-      32,
       34,
-      36,
-      37,
       39
     ],
     "old": 40,
-    "edited": 32,
+    "edited": 36,
     "oldGraded": 37,
-    "newGraded": 29,
+    "newGraded": 33,
     "slides": 22,
     "hash": "fb3c4bd0"
   }
@@ -233,7 +203,27 @@ test('every omitted type-only reviewed item was graded in an earlier effective A
     assert.deepEqual(new Set(entry.deferred_review_target_ids), deferred, lesson.id + ': audit deferred review mismatch');
     assert.equal(entry.original_graded_answers - entry.learner_graded_answers, spec.removed.length);
   }
-  assert.equal(removedTotal, 50);
+  assert.equal(removedTotal, 20);
+});
+
+
+test('all 79 introduced Section 3 exact targets keep independent positive retrieval in a LATER EFFECTIVE lesson', () => {
+  const prepared = section();
+  const { positives } = require('../scripts/audit-course-coverage.cjs');
+  let checked = 0;
+  for (const [index, lesson] of prepared.lessons.entries()) {
+    for (const id of lesson.new_targets || []) {
+      const historicalLater = prepared.lessons.slice(index + 1)
+        .some(later => later.activities.some(a => positives(a).includes(id)));
+      assert.ok(historicalLater, lesson.id + ': historical later retrieval missing for ' + id);
+      const effectiveLater = prepared.lessons.slice(index + 1)
+        .some(later => course.lessonEditionActivities(later, 'editorial')
+          .some(a => positives(a).includes(id)));
+      assert.ok(effectiveLater, lesson.id + ': editorial selection silently erased all later spaced retrieval for ' + id);
+      checked++;
+    }
+  }
+  assert.equal(checked, 79);
 });
 
 test('integrated weekly reading and guided writing retain two full passages and dictated recall', () => {
@@ -271,12 +261,12 @@ test('current version, cumulative counts and priority report reflect eight more 
   assert.equal(version, '1.61.0');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.61\.0\]/);
-  assert.match(en, /23 curated lessons \/ 187 fewer graded opportunities/);
-  assert.match(fa, /۲۳ درس بازنگری‌شده و ۱۸۷ پاسخ نمره‌دار کمتر/);
+  assert.match(en, /23 curated lessons \/ 157 fewer graded opportunities/);
+  assert.match(fa, /۲۳ درس بازنگری‌شده و ۱۵۷ پاسخ نمره‌دار کمتر/);
   const report = audit.buildReport();
   assert.equal(report.summary.shipped_lessons, 140);
   assert.equal(report.summary.editorially_revised_lessons, 23);
-  assert.equal(report.summary.removed_grading_opportunities, 187);
+  assert.equal(report.summary.removed_grading_opportunities, 157);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
   assert.equal(audit.priorityRows(report).length, 117);
   assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*117\*\*; all \*\*23\*\* previously curated lessons are excluded\./);

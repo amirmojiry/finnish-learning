@@ -22,14 +22,14 @@ const expected = new Map([
   ['a1.2-section-4-lesson-7', { source: 36, edited: 30, graded: 18, slides: 17 }],
   ['a1.2-section-4-lesson-8', { source: 34, edited: 30, graded: 18, slides: 16 }],
   ['a1.2-section-4-lesson-9', { source: 38, edited: 32, graded: 29, slides: 23 }],
-  ['a1.2-section-3-lesson-2', { source: 30, edited: 27, graded: 17, slides: 14 }],
-  ['a1.2-section-3-lesson-3', { source: 31, edited: 25, graded: 14, slides: 13 }],
-  ['a1.2-section-3-lesson-4', { source: 36, edited: 30, graded: 18, slides: 16 }],
-  ['a1.2-section-3-lesson-5', { source: 33, edited: 26, graded: 16, slides: 14 }],
-  ['a1.2-section-3-lesson-6', { source: 39, edited: 33, graded: 19, slides: 18 }],
-  ['a1.2-section-3-lesson-7', { source: 35, edited: 28, graded: 17, slides: 15 }],
-  ['a1.2-section-3-lesson-8', { source: 33, edited: 26, graded: 15, slides: 14 }],
-  ['a1.2-section-3-lesson-9', { source: 40, edited: 32, graded: 29, slides: 22 }],
+  ['a1.2-section-3-lesson-2', { source: 30, edited: 29, graded: 19, slides: 14 }],
+  ['a1.2-section-3-lesson-3', { source: 31, edited: 30, graded: 19, slides: 14 }],
+  ['a1.2-section-3-lesson-4', { source: 36, edited: 35, graded: 23, slides: 17 }],
+  ['a1.2-section-3-lesson-5', { source: 33, edited: 30, graded: 20, slides: 15 }],
+  ['a1.2-section-3-lesson-6', { source: 39, edited: 37, graded: 23, slides: 19 }],
+  ['a1.2-section-3-lesson-7', { source: 35, edited: 30, graded: 19, slides: 15 }],
+  ['a1.2-section-3-lesson-8', { source: 33, edited: 30, graded: 19, slides: 15 }],
+  ['a1.2-section-3-lesson-9', { source: 40, edited: 36, graded: 33, slides: 22 }],
 ]);
 const scored = (list) => list.reduce((total, slide) =>
   total + course.scoredOpportunitiesOnSlide(slide), 0);
@@ -182,7 +182,7 @@ function check(report) {
   }
   assert.equal(report.summary.editorially_revised_lessons, 23);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
-  assert.equal(report.summary.removed_grading_opportunities, 187);
+  assert.equal(report.summary.removed_grading_opportunities, 157);
   for (const row of report.lessons) {
     if (!row.revised) {
       assert.equal(row.original_activities, row.learner_activities);
@@ -199,7 +199,7 @@ function check(report) {
     assert.ok(row.learner_graded_answers < row.original_graded_answers);
     assert.ok(row.learner_visible_slides >= 12 && row.learner_visible_slides <= 25);
   }
-  console.log('Editorial reductions: 23 shorter lessons, 187 fewer graded answers, 140 stable lesson IDs.');
+  console.log('Editorial reductions: 23 shorter lessons, 157 fewer graded answers, 140 stable lesson IDs.');
 }
 if (require.main === module) {
   const mode = process.argv[2] || '--check';

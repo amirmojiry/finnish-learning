@@ -5,9 +5,9 @@
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
 
-## R2 phase 7 — eight-lesson A1.2 Section 3 review (2026-10-21, v1.61.0)
+## R2 phase 7 — eight-lesson A1.2 Section 3 curation (2026-10-21, v1.61.0)
 
-[Child #205](https://github.com/amirmojiry/finnish-learning/issues/205) covers **Lessons 2–9 of A1.2 Section 3** as a single curriculum-coherent set (routine-frequency, work/school, interests, weekly plans, invitations and message writing). Eight lessons: **277→227 authored activities, 195→145 graded opportunities**, with first introductions, indexed grammar evidence, both integrated week passages and their eight questions, Finnish recognition/dictation and guided writing preserved. Historical arrays/IDs and stored progress/SRS are unchanged. Cumulative **23 editorial revisions / 187 fewer graded opportunities** than historical, **117 uncurated** lessons, and **33 of the originally >30-activity lessons** not yet reviewed. Parent #189 remains open for other high-load lessons, manual mobile/RTL accessibility checks and privacy-appropriate learning-outcome research. [Editorial reasoning and deferrals](LESSON-EDITORIAL-REDUCTION.md).
+[Issue #205](https://github.com/amirmojiry/finnish-learning/issues/205) / [PR #206](https://github.com/amirmojiry/finnish-learning/pull/206) curate Lessons 2–9 in a section-coherent release: **277→257 authored activities and 195→175 graded responses**. Self-review restored 30 necessary later retrievals of newly introduced targets; a new effective-edition coverage gate verifies **all 79 introduced Section 3 targets** retain scored practice in subsequent lessons. Grammar evidence, all original listening and dictation, two reading passages with eight questions, guided writing, IDs, history and SRS remain. Cumulative **23 curated / 157 fewer graded**; parent #189 remains open for next batches, accessibility checks and measured outcomes.
 
 ## R2 phase 6 — eight-lesson A1.2 Section 4 curation (2026-10-21, v1.60.0)
 

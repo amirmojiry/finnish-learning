@@ -81,37 +81,38 @@ The Section 4 Lesson 9 integrated dialogue retains original dialogue ordering, *
 **Lifetime totals:** 15 editorially revised lessons, **137 fewer independently graded answers** versus legacy (94 through v1.59.0 plus 43 here). The 125 uncurated lessons are **not** an automatic deletion queue; 40 of the original 55 >30-authored-activity cohort remain uncurated. The original 140 lesson IDs, checkpoint thresholds, stored completions, first-attempt history and Word Practice SRS are preserved. Use `npm run lesson:editorial:json`, `npm run lesson:editorial:priority` and `npm test` for reproductions. No claims about measured fatigue or CEFR/YKI outcomes.
 
 
-## Phase 7 — daily routines, study/work and invitations (v1.61.0, #205)
+## Phase 7 — daily routines, work/study and invitations (v1.61.0, #205)
 
-One **eight-lesson package** curates A1.2 Section 3 Lessons 2–9. Fresh-start learners receive ordered editorial subsets while all original authored activity objects, lesson IDs, progress history, drafts and SRS records remain unchanged. The selection omits only reviewed **standalone Finnish typing** with positive independent assessment in the **effective preceding lesson editions** of this section; it keeps representative later review, all new-target teaching and scored first recall, grammar, listening and production.
+Eight A1.2 Section 3 lessons (2–9) are curated together for new attempts; the original activity arrays and stable lesson IDs remain unchanged for all saved history, SRS and legacy attempts. The manually selected index lists shorten redundant reviewed-form isolated typing, while preserving first teaching, first independent graded answers, listening/dictation, positive grammar evidence and productive language.
 
-| Lesson | Authored activities, old → new | Independent graded answers, old → new | New initial screens | Removed reviewed typing |
+The independent self-review caught a serious coverage regression in the first proposal: **30 of the 79 newly introduced exact targets lost their only later scored retrieval** when their reviewed tail drills were removed. We restored one later positive retrieval per affected target. A regression now checks **all 79** against effective lesson editions rather than only raw authored arrays. Lesson 10 checkpoint remains unchanged.
+
+| Lesson | Original → new activities | Original → new graded answers | Initial screens | Omitted redundant typing |
 | --- | ---: | ---: | ---: | ---: |
-| S3 L2 | 30 → 27 | 20 → 17 | 14 | 3 |
-| S3 L3 | 31 → 25 | 20 → 14 | 13 | 6 |
-| S3 L4 | 36 → 30 | 24 → 18 | 16 | 6 |
-| S3 L5 | 33 → 26 | 23 → 16 | 14 | 7 |
-| S3 L6 | 39 → 33 | 25 → 19 | 18 | 6 |
-| S3 L7 | 35 → 28 | 24 → 17 | 15 | 7 |
-| S3 L8 | 33 → 26 | 22 → 15 | 14 | 7 |
-| S3 L9 | 40 → 32 | 37 → 29 | 22 | 8 |
-| **Total** | **277 → 227** | **195 → 145** | **126** | **50** |
+| S3 L2 | 30 → 29 | 20 → 19 | 14 | 1 |
+| S3 L3 | 31 → 30 | 20 → 19 | 14 | 1 |
+| S3 L4 | 36 → 35 | 24 → 23 | 17 | 1 |
+| S3 L5 | 33 → 30 | 23 → 20 | 15 | 3 |
+| S3 L6 | 39 → 37 | 25 → 23 | 19 | 2 |
+| S3 L7 | 35 → 30 | 24 → 19 | 15 | 5 |
+| S3 L8 | 33 → 30 | 22 → 19 | 15 | 3 |
+| S3 L9 | 40 → 36 | 37 → 33 | 22 | 4 |
+| **Total** | **277 → 257** | **195 → 175** | **131** | **20** |
 
-### Explicit deferred reviewed-target inventory
+### Deferred-review inventory after preservation
 
-For each dropped target below, a regression test verifies an earlier independently graded positive response in a prior **edited-effective** lesson in this section, not just a declaration that the target was reviewed. The original activity arrays still contain the historical responses. No first positive assessment is deferred.
+For each remaining omitted review below, the regression verifies a previously scored positive response in a preceding effective lesson. **No target loses all later independently scored retrieval following introduction.** Intentional spaced recall remains, rather than maximizing the number of questions removed.
 
-| Edited lesson | Exact-form targets with the redundant local typing removed |
+| Lesson | Omitted already-reviewed exact target |
 | --- | --- |
-| S3 L2 | `a12s3-hf-01`, `a12s3-topic-03`, `a12s3-expr-02` |
-| S3 L3 | `a12s3-hf-03`, `a12s3-topic-02`, `a12s3-expr-01`, `a12s3-expr-03`, `a12s3-topic-04`, `a12s3-expr-05` |
-| S3 L4 | `a12s3-hf-04`, `a12s3-topic-05`, `a12s3-expr-06`, `a12s3-hf-08`, `a12s3-topic-08`, `a12s3-topic-10` |
-| S3 L5 | `a12s3-hf-09`, `a12s3-topic-06`, `a12s3-expr-09`, `a12s3-hf-11`, `a12s3-topic-11`, `a12s3-topic-15`, `a12s3-expr-13` |
-| S3 L6 | `a12s3-hf-13`, `a12s3-topic-14`, `a12s3-expr-12`, `a12s3-hf-16`, `a12s3-topic-17`, `a12s3-expr-18` |
-| S3 L7 | `a12s3-hf-15`, `a12s3-topic-16`, `a12s3-expr-17`, `a12s3-hf-17`, `a12s3-hf-19`, `a12s3-topic-20`, `a12s3-expr-21` |
-| S3 L8 | `a12s3-hf-18`, `a12s3-hf-20`, `a12s3-topic-21`, `a12s3-expr-22`, `a12s3-expr-32`, `a12s3-topic-25`, `a12s3-expr-26` |
-| S3 L9 | `a12s3-hf-17`, `a12s3-topic-19`, `a12s3-topic-22`, `a12s3-topic-24`, `a12s3-expr-25`, `a12s3-hf-25`, `a12s3-topic-27`, `a12s3-expr-31` |
+| S3 L2 | `a12s3-expr-02` |
+| S3 L3 | `a12s3-expr-01` |
+| S3 L4 | `a12s3-expr-06` |
+| S3 L5 | `a12s3-expr-09`, `a12s3-hf-11`, `a12s3-expr-13` |
+| S3 L6 | `a12s3-expr-12`, `a12s3-expr-18` |
+| S3 L7 | `a12s3-expr-17`, `a12s3-hf-17`, `a12s3-hf-19`, `a12s3-topic-20`, `a12s3-expr-21` |
+| S3 L8 | `a12s3-hf-18`, `a12s3-topic-21`, `a12s3-expr-32` |
+| S3 L9 | `a12s3-topic-19`, `a12s3-topic-22`, `a12s3-expr-25`, `a12s3-expr-31` |
 
-Lesson 9 retains the original dialogue order, both passages, **all eight distinct reading-comprehension questions**, six indexed grammar-evidence productions, listening recognition, its prepared original Finnish dictation and guided four-phrase writing. The section checkpoint (Lesson 10) is unchanged. All eight lessons retain **every prepared original dictation** and explicit grammar evidence. The first introduced assessment still comes after teaching. This is a content-load proxy, **not** measured learner fatigue or a retention/CEFR certification.
+The integrated Lesson 9 still presents the dialogue, two authentic passages with **eight distinct graded comprehension questions**, six referenced grammar productions, Finnish recognition and dictated recall, and four-phrase guided writing. All original teaching and scoring IDs are stable. Cumulative: **23 curated lessons / 157 fewer graded opportunities** against historical content; **117 lessons remain individually uncurated**. This is not evidence of improved measured completion time or learning outcomes.
 
-**Cumulative**: 23 curated lessons and 187 fewer independently scored answers versus historical editions, with 117 lessons not curated. Of the original 55 lessons with more than 30 authored activities, 33 remain not individually shortened (one 30-activity lesson was included as a coherent section member). No automatic reduction is authorized for the other 117 lessons without pedagogical review. Reproduce counts using the editorial audit and the section-specific regression suite.
