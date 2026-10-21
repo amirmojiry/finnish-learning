@@ -133,8 +133,8 @@ The eight new edition identities advance from `-v1` to `-v2`. They had no `study
 | S4 L6 | 36 → 34 | 24 → 22 | 19 | 2 |
 | S4 L7 | 36 → 33 | 24 → 21 | 17 | 3 |
 | S4 L8 | 34 → 32 | 22 → 20 | 16 | 2 |
-| S4 L9 | 38 → 35 | 35 → 32 | 25 | 3 |
-| **Eight-lesson total** | **282 → 267** | **196 → 181** | **144** | **15** |
+| S4 L9 | 38 → 35 | 35 → 32 | 24 | 3 |
+| **Eight-lesson total** | **282 → 267** | **196 → 181** | **143** | **15** |
 
 ### Consciously deferred reviewed typing
 

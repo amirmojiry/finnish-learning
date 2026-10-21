@@ -101,7 +101,7 @@ const specs = [
     "curated": 35,
     "gradedOld": 35,
     "gradedNew": 32,
-    "slides": 25
+    "slides": 24
   }
 ];
 const sectionPath = path.join(__dirname, '..', 'data/course/a1.2-section-4.json');

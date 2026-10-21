@@ -21,7 +21,7 @@ const expected = new Map([
   ['a1.2-section-4-lesson-6', { source: 36, edited: 34, graded: 22, slides: 19 }],
   ['a1.2-section-4-lesson-7', { source: 36, edited: 33, graded: 21, slides: 17 }],
   ['a1.2-section-4-lesson-8', { source: 34, edited: 32, graded: 20, slides: 16 }],
-  ['a1.2-section-4-lesson-9', { source: 38, edited: 35, graded: 32, slides: 25 }],
+  ['a1.2-section-4-lesson-9', { source: 38, edited: 35, graded: 32, slides: 24 }],
   ['a1.2-section-3-lesson-2', { source: 30, edited: 29, graded: 19, slides: 14 }],
   ['a1.2-section-3-lesson-3', { source: 31, edited: 30, graded: 19, slides: 14 }],
   ['a1.2-section-3-lesson-4', { source: 36, edited: 35, graded: 23, slides: 17 }],
