@@ -125,7 +125,7 @@ function check(report) {
     assert.equal(row.original_activities, baseline.source);
     assert.equal(row.learner_activities, baseline.edited);
     assert.equal(row.learner_graded_answers, baseline.graded);
-    assert.equal(row.learner_visible_slides, baseline.slides);
+    assert.equal(row.learner_visible_slides, baseline.slides, row.lesson_id);
     assert.ok(row.learner_graded_answers < row.original_graded_answers);
     assert.ok(row.learner_visible_slides >= 12 && row.learner_visible_slides <= 25);
   }
