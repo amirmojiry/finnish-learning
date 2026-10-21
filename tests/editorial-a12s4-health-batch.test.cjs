@@ -11,108 +11,83 @@ const specs = [
   {
     "n": 2,
     "removed": [
-      29,
-      30,
-      31,
       32
     ],
     "old": 34,
-    "curated": 30,
+    "curated": 33,
     "gradedOld": 21,
-    "gradedNew": 17,
-    "slides": 18
+    "gradedNew": 20,
+    "slides": 19
   },
   {
     "n": 3,
     "removed": [
-      24,
-      25,
       26,
-      27,
-      29,
-      31,
       33
     ],
     "old": 35,
-    "curated": 28,
+    "curated": 33,
     "gradedOld": 24,
-    "gradedNew": 17,
-    "slides": 13
+    "gradedNew": 22,
+    "slides": 14
   },
   {
     "n": 4,
     "removed": [
-      26,
-      27,
-      29,
-      30,
-      32
+      29
     ],
     "old": 34,
-    "curated": 29,
+    "curated": 33,
     "gradedOld": 23,
-    "gradedNew": 18,
-    "slides": 15
+    "gradedNew": 22,
+    "slides": 16
   },
   {
     "n": 5,
     "removed": [
-      28,
-      30,
-      31,
-      32,
       34
     ],
     "old": 35,
-    "curated": 30,
+    "curated": 34,
     "gradedOld": 23,
-    "gradedNew": 18,
-    "slides": 17
+    "gradedNew": 22,
+    "slides": 18
   },
   {
     "n": 6,
     "removed": [
-      28,
-      29,
       31,
-      32,
-      33,
-      34
+      33
     ],
     "old": 36,
-    "curated": 30,
+    "curated": 34,
     "gradedOld": 24,
-    "gradedNew": 18,
-    "slides": 18
+    "gradedNew": 22,
+    "slides": 19
   },
   {
     "n": 7,
     "removed": [
-      26,
       28,
-      29,
-      32,
       33,
       35
     ],
     "old": 36,
-    "curated": 30,
+    "curated": 33,
     "gradedOld": 24,
-    "gradedNew": 18,
+    "gradedNew": 21,
     "slides": 17
   },
   {
     "n": 8,
     "removed": [
-      28,
       30,
-      31,
       33
     ],
     "old": 34,
-    "curated": 30,
+    "curated": 32,
     "gradedOld": 22,
-    "gradedNew": 18,
+    "gradedNew": 20,
     "slides": 16
   },
   {
@@ -120,16 +95,13 @@ const specs = [
     "removed": [
       29,
       30,
-      31,
-      32,
-      35,
-      36
+      31
     ],
     "old": 38,
-    "curated": 32,
+    "curated": 35,
     "gradedOld": 35,
-    "gradedNew": 29,
-    "slides": 23
+    "gradedNew": 32,
+    "slides": 24
   }
 ];
 const sectionPath = path.join(__dirname, '..', 'data/course/a1.2-section-4.json');
@@ -142,8 +114,11 @@ test('eight A1.2 Section 4 edits retain unchanged originals and independently sc
   const section = loadSection();
   const checkpoint = section.lessons[9];
   assert.equal(checkpoint.editorial_revision, undefined);
+  assert.equal(section.lessons[0].editorial_revision, undefined);
   for (const spec of specs) {
     const lesson = section.lessons[spec.n - 1];
+    assert.equal(lesson.editorial_revision.id, 'r189-a12s4-l' + String(spec.n).padStart(2, '0') + '-v2');
+    assert.equal(lesson.study_pacing, undefined, 'Section 4 did not save paced editorial drafts in v1.60');
     const original = course.lessonEditionActivities(lesson, 'legacy');
     const edited = course.lessonEditionActivities(lesson, 'editorial');
     const slides = course.lessonEditionSlides(lesson, 'editorial');
@@ -212,6 +187,23 @@ test('every omitted A1.2 S4 drill is reviewed and previously graded in an earlie
   }
 });
 
+
+test('all 72 introduced Section 4 targets retain independent graded retrieval in later EFFECTIVE lessons', () => {
+  const section = loadSection();
+  const { positives } = require('../scripts/audit-course-coverage.cjs');
+  let count = 0;
+  for (const [index, lesson] of section.lessons.entries()) {
+    for (const target of lesson.new_targets || []) {
+      assert.ok(section.lessons.slice(index + 1).some(later => later.activities.some(a => positives(a).includes(target))),
+        lesson.id + ': original later retrieval missing for ' + target);
+      assert.ok(section.lessons.slice(index + 1).some(later =>
+        course.lessonEditionActivities(later, 'editorial').some(a => positives(a).includes(target))),
+        lesson.id + ': edited editions lost every later scored answer for ' + target);
+      count++;
+    }
+  }
+  assert.equal(count, 72);
+});
 test('integrated health dialogue retains both passages, all reading assessments, writing and grammar', () => {
   const section = loadSection();
   const lesson = section.lessons[8];
@@ -241,7 +233,7 @@ test('release metadata, cumulative editorial totals and uncurated priority list 
   const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
   const readme=fs.readFileSync(path.join(root,'README.md'),'utf8');
   const readmeFa=fs.readFileSync(path.join(root,'README.fa.md'),'utf8');
-  assert.equal(version,'1.61.0');
+  assert.equal(version,'1.62.0');
   assert.equal(pkg.version,version);
   assert.match(changelog,/\[1\.60\.0\]/);
   assert.match(readme,/15 curated lessons \/ 137 fewer graded opportunities/);
@@ -249,7 +241,7 @@ test('release metadata, cumulative editorial totals and uncurated priority list 
   const report=audit.buildReport();
   assert.equal(report.summary.shipped_lessons,140);
   assert.equal(report.summary.editorially_revised_lessons,23);
-  assert.equal(report.summary.removed_grading_opportunities,157);
+  assert.equal(report.summary.removed_grading_opportunities,129);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides,0);
   assert.equal(audit.priorityRows(report).length,117);
   assert.match(audit.priorityMarkdown(report),/Remaining uncurated lessons: \*\*117\*\*; all \*\*23\*\* previously curated lessons are excluded\./);

@@ -116,3 +116,39 @@ For each remaining omitted review below, the regression verifies a previously sc
 
 The integrated Lesson 9 still presents the dialogue, two authentic passages with **eight distinct graded comprehension questions**, six referenced grammar productions, Finnish recognition and dictated recall, and four-phrase guided writing. All original teaching and scoring IDs are stable. Cumulative: **23 curated lessons / 157 fewer graded opportunities** against historical content; **117 lessons remain individually uncurated**. This is not evidence of improved measured completion time or learning outcomes.
 
+
+
+## Phase 8 — correct Section 4 spaced-review regression (v1.62.0, issue #207)
+
+The effective-learner self-review exposed that **28 of the 72 introduced A1.2 Section 4 targets** lost the only subsequent independently graded retrieval in the v1.60.0 short edition. That flaw was invisible to historical/raw activity acceptance. These eight already-curated lessons now restore a necessary *later* answer for every affected target and add an acceptance regression for **all 72** introduced targets in the actual edited-effective lesson sequence.
+
+The eight new edition identities advance from `-v1` to `-v2`. They had no `study_pacing`, so no paused paced-lesson drafts depend on the former edition fingerprints. All original activity objects/positions, 140 course lesson IDs, checkpoint, completion records and Word Practice SRS remain unchanged; this edits only ordered indices for new starts.
+
+| Lesson | Original → corrected activities | Original → corrected graded answers | Fresh-start slides | Still omitted reviewed typing |
+| --- | ---: | ---: | ---: | ---: |
+| S4 L2 | 34 → 33 | 21 → 20 | 19 | 1 |
+| S4 L3 | 35 → 33 | 24 → 22 | 14 | 2 |
+| S4 L4 | 34 → 33 | 23 → 22 | 16 | 1 |
+| S4 L5 | 35 → 34 | 23 → 22 | 18 | 1 |
+| S4 L6 | 36 → 34 | 24 → 22 | 19 | 2 |
+| S4 L7 | 36 → 33 | 24 → 21 | 17 | 3 |
+| S4 L8 | 34 → 32 | 22 → 20 | 16 | 2 |
+| S4 L9 | 38 → 35 | 35 → 32 | 24 | 3 |
+| **Eight-lesson total** | **282 → 267** | **196 → 181** | **143** | **15** |
+
+### Consciously deferred reviewed typing
+
+The fifteen remaining omissions each have a scored positive response in a previous **effective** lesson. A separate gate ensures none of the 72 introduced targets loses all *later* positive retrieval; these are not indiscriminate deletions.
+
+| Lesson | Exact reviewed targets still deferred here |
+| --- | --- |
+| S4 L2 | `a12s4-expr-02` |
+| S4 L3 | `a12s4-expr-01`, `a12s4-expr-07` |
+| S4 L4 | `a12s4-expr-08` |
+| S4 L5 | `a12s4-expr-16` |
+| S4 L6 | `a12s4-expr-15`, `a12s4-topic-25` |
+| S4 L7 | `a12s4-expr-17`, `a12s4-expr-20`, `a12s4-extra-13` |
+| S4 L8 | `a12s4-extra-02`, `a12s4-extra-08` |
+| S4 L9 | `a12s4-extra-10`, `a12s4-extra-11`, `a12s4-extra-12` |
+
+Integrated Lesson 9 still includes two passages, eight separate reading-comprehension questions, protected Finnish dictation, contextual grammar/production and guided writing. **Corrected cumulative: 23 curated lessons / 129 fewer scored answers** compared with original historical editions, while 117 other lessons have no separate editorial revision. The v1.60.0 and v1.61.0 figures above are intentionally left as historically accurate release notes. This quality fix is not evidence of measured learning improvement.

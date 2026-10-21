@@ -5,6 +5,9 @@
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
 
+## R2 phase 8 — repair Section 4 later-review regression (2026-10-21, v1.62.0)
+
+[Issue #207](https://github.com/amirmojiry/finnish-learning/issues/207) repairs the eight A1.2 Section 4 revisions from v1.60.0. **28 of 72 newly introduced targets** had lost all later scored practice in the effective editions. Restore that necessary practice; advance editorial identities to `-v2` (no paced drafts in these lessons) while keeping original arrays, progress, SRS and checkpoints unchanged. Corrected eight lessons: **282→267 activities, 196→181 scored answers**. A new test verifies later positive retrieval for **all 72**; the course total becomes **23 curated lessons / 129 fewer graded answers** versus original authored lessons, while 117 remain individually uncurated. Accessibility/manual device testing and measured learning outcomes remain open.
 ## R2 phase 7 — eight-lesson A1.2 Section 3 curation (2026-10-21, v1.61.0)
 
 [Issue #205](https://github.com/amirmojiry/finnish-learning/issues/205) / [PR #206](https://github.com/amirmojiry/finnish-learning/pull/206) curate Lessons 2–9 in a section-coherent release: **277→257 authored activities and 195→175 graded responses**. Self-review restored 30 necessary later retrievals of newly introduced targets; a new effective-edition coverage gate verifies **all 79 introduced Section 3 targets** retain scored practice in subsequent lessons. Grammar evidence, all original listening and dictation, two reading passages with eight questions, guided writing, IDs, history and SRS remain. Cumulative **23 curated / 157 fewer graded**; parent #189 remains open for next batches, accessibility checks and measured outcomes.
