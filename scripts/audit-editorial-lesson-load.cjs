@@ -61,6 +61,9 @@ function buildReport() {
           original_visible_slides: historicalSlides.length,
           learner_visible_slides: editedSlides.length,
           checkpoint_target_count: (lesson.checkpoint_targets || []).length,
+          // validateSection enforces the final-lesson checkpoint contract,
+          // including the one supported legacy checkpoint without targets.
+          is_checkpoint: lesson === section.lessons[section.lessons.length - 1],
           deferred_review_target_ids: deferredReviewedTargets,
           original_grammar_evidence_count: (lesson.learning_objectives?.grammar || [])
             .reduce((count, goal) => count + (goal.evidence || []).length, 0),
@@ -108,8 +111,58 @@ function markdown(report) {
   return lines.join('\n');
 }
 
+
+// Ranking is based on the edition a *new learner* will receive, never the
+// retained historical array used to resume earlier drafts.
+function priorityRows(report) {
+  return report.lessons.filter((row) => !row.revised)
+    .map((row) => ({
+      section_id: row.section_id,
+      lesson_id: row.lesson_id,
+      title_fa: row.title_fa,
+      graded_answers: row.learner_graded_answers,
+      visible_slides: row.learner_visible_slides,
+      activities: row.learner_activities,
+      checkpoint: row.is_checkpoint,
+      grammar_evidence: row.original_grammar_evidence_count,
+    }))
+    .sort((a, b) =>
+      b.graded_answers - a.graded_answers ||
+      b.visible_slides - a.visible_slides ||
+      b.activities - a.activities ||
+      a.section_id.localeCompare(b.section_id, 'en') ||
+      a.lesson_id.localeCompare(b.lesson_id, 'en'));
+}
+
+function priorityMarkdown(report) {
+  const rows = priorityRows(report);
+  const lines = [
+    '# Next R2 editorial-review candidates',
+    '',
+    'Derived from the effective fresh-learner editions across all 140 shipped lessons; already revised lessons are excluded. Rank is deterministic by graded answers, then learner-visible slides and activities. This is a static curricular load proxy, **not** fatigue, duration or learner attainment data.',
+    '',
+    '| Rank | Lesson | Title (fa) | Graded answers | Visible slides | Activities | Checkpoint | Grammar evidence |',
+    '| ---: | --- | --- | ---: | ---: | ---: | --- | ---: |',
+  ];
+  for (const [index, row] of rows.slice(0, 25).entries()) {
+    lines.push(`| ${index + 1} | ${row.section_id}/${row.lesson_id} | ${row.title_fa.replace(/[|]/g, '\\|')} | ${row.graded_answers} | ${row.visible_slides} | ${row.activities} | ${row.checkpoint ? 'yes' : 'no'} | ${row.grammar_evidence} |`);
+  }
+  lines.push('', `Remaining uncurated lessons: **${rows.length}**; all six previously curated lessons are excluded.`, '',
+    'Review each candidate in its section context before selecting activity indices. Protect grammar evidence, first introductions, independently graded retrieval, listening/production and existing drafts. Rank alone does not authorize automatically deleting activities.', '');
+  return lines.join('\n');
+}
+
 function check(report) {
   assert.equal(report.summary.shipped_lessons, 140);
+  const priorities = priorityRows(report);
+  assert.equal(priorities.length, 134);
+  assert.equal(new Set(priorities.map(row => row.lesson_id)).size, 134);
+  const legacyFinal = priorities.find(row => row.section_id === 'a1.1-section-4' && row.lesson_id === 'section-4-lesson-10');
+  assert.ok(legacyFinal?.checkpoint, 'Legacy A1.1 S4 final lesson must be recognized as checkpoint');
+  assert.equal(priorities.filter(row => row.checkpoint).length, 12);
+  for (let i = 1; i < priorities.length; i++) {
+    assert.ok(priorities[i - 1].graded_answers >= priorities[i].graded_answers);
+  }
   assert.equal(report.summary.editorially_revised_lessons, 6);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
   assert.equal(report.summary.removed_grading_opportunities, 85);
@@ -137,7 +190,8 @@ if (require.main === module) {
   if (mode === '--check') check(report);
   else if (mode === '--json') process.stdout.write(JSON.stringify(report, null, 2) + '\n');
   else if (mode === '--markdown') process.stdout.write(markdown(report));
-  else throw new Error('Usage: --check|--markdown|--json');
+  else if (mode === '--priority') process.stdout.write(priorityMarkdown(report));
+  else throw new Error('Usage: --check|--markdown|--json|--priority');
 }
 
-module.exports = { buildReport, markdown, check };
+module.exports = { buildReport, markdown, check, priorityRows, priorityMarkdown };
