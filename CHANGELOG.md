@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.64.0] - 2026-10-21
+
+### Changed
+
+- Curate **eight A1.3 Section 3 lessons (Lessons 2–9)** about clarification, workplace instructions, expressing needs, study/work roles, messages, deadlines, delays and integrated study/work: **250→229 authored activities** and **183→162 independently graded answers** (21 redundant reviewed Finnish typing prompts omitted), with **17–21 initial visible slides per edited lesson**.
+- Every omitted exact-form review has previously scored positive practice in a preceding **effective** lesson. **All 56 newly introduced Section 3 exact targets** retain later independently graded positive review in a subsequent effective lesson; teaching, first scored answers, grammar evidence, Finnish listening and prepared dictation, sequence ordering, contextual production, both integrated reading passages and guided writing are preserved.
+- Keep every historical original activity object, 140 stable lesson/checkpoint identities, saved learner progress and Word Practice SRS unchanged. Add section-specific source-fingerprint, listening/grammar/reading and bidirectional spaced-review regressions; synchronize release metadata, caches and English/Persian educational documentation.
+- Cumulative **39 curated lessons / 170 fewer independently graded opportunities** than original authored editions, with 101 lessons not individually revised. Static activity counts do not measure retention, fatigue, session time or CEFR performance.
+
+
 ## [1.63.0] - 2026-10-21
 
 ### Changed

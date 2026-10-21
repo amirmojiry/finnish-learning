@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.63.0`
+- Version: `1.64.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.64.0: eight A1.3 Section 3 study/work and communication lessons** (clarification, instructions, needs, people, messages, deadlines, absence and an integrated workday). For fresh starts, the eight lessons have **229 instead of 250 authored activities** and **162 instead of 183 independent graded responses**, retaining grammar, Finnish recognition/dictation, productive speaking/writing, integrated reading and **later graded practice for all 56 newly introduced exact targets** in effective lesson editions. Archived originals, user progress and SRS are unchanged. Overall **39 curated lessons / 170 fewer graded opportunities** than original. [Editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
 **v1.63.0: eight A1.3 Section 2 housing and neighborhood lessons** (household objects, chores, home repairs, local services, opening hours and community notices). New starts use **239 rather than 259 authored activities**, with **166 rather than 186 independently graded answers** and 18–24 initial screens per lesson. Crucially, **all 59 newly introduced exact targets retain subsequent graded retrieval in later effective lessons**; earlier scoring for each omitted reviewed item, introductory teaching/assessment, Finnish listening and prepared dictation, grammar, comprehension and writing are preserved. Original arrays, learner histories and SRS are unchanged. Overall **31 curated lessons / 149 fewer graded opportunities** than historical editions. [Bilingual editorial rationale](docs/LESSON-EDITORIAL-REDUCTION.md) · [#189](https://github.com/amirmojiry/finnish-learning/issues/189).
 

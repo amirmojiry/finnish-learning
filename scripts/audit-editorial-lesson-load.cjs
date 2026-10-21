@@ -38,6 +38,14 @@ const expected = new Map([
   ['a1.3-section-2-lesson-7', { source: 37, edited: 34, graded: 23, slides: 24 }],
   ['a1.3-section-2-lesson-8', { source: 31, edited: 27, graded: 17, slides: 19 }],
   ['a1.3-section-2-lesson-9', { source: 34, edited: 33, graded: 31, slides: 21 }],
+  ['a1.3-section-3-lesson-2', { source: 29, edited: 26, graded: 16, slides: 19 }],
+  ['a1.3-section-3-lesson-3', { source: 32, edited: 30, graded: 21, slides: 20 }],
+  ['a1.3-section-3-lesson-4', { source: 29, edited: 27, graded: 19, slides: 17 }],
+  ['a1.3-section-3-lesson-5', { source: 32, edited: 29, graded: 19, slides: 20 }],
+  ['a1.3-section-3-lesson-6', { source: 31, edited: 28, graded: 17, slides: 20 }],
+  ['a1.3-section-3-lesson-7', { source: 32, edited: 29, graded: 20, slides: 20 }],
+  ['a1.3-section-3-lesson-8', { source: 31, edited: 27, graded: 19, slides: 18 }],
+  ['a1.3-section-3-lesson-9', { source: 34, edited: 33, graded: 31, slides: 19 }],
 ]);
 const scored = (list) => list.reduce((total, slide) =>
   total + course.scoredOpportunitiesOnSlide(slide), 0);
@@ -180,17 +188,17 @@ function priorityMarkdown(report) {
 function check(report) {
   assert.equal(report.summary.shipped_lessons, 140);
   const priorities = priorityRows(report);
-  assert.equal(priorities.length, 109);
-  assert.equal(new Set(priorities.map(row => row.lesson_id)).size, 109);
+  assert.equal(priorities.length, 101);
+  assert.equal(new Set(priorities.map(row => row.lesson_id)).size, 101);
   const legacyFinal = priorities.find(row => row.section_id === 'a1.1-section-4' && row.lesson_id === 'section-4-lesson-10');
   assert.ok(legacyFinal?.checkpoint, 'Legacy A1.1 S4 final lesson must be recognized as checkpoint');
   assert.equal(priorities.filter(row => row.checkpoint).length, 12);
   for (let i = 1; i < priorities.length; i++) {
     assert.ok(priorities[i - 1].graded_answers >= priorities[i].graded_answers);
   }
-  assert.equal(report.summary.editorially_revised_lessons, 31);
+  assert.equal(report.summary.editorially_revised_lessons, 39);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
-  assert.equal(report.summary.removed_grading_opportunities, 149);
+  assert.equal(report.summary.removed_grading_opportunities, 170);
   for (const row of report.lessons) {
     if (!row.revised) {
       assert.equal(row.original_activities, row.learner_activities);
@@ -207,7 +215,7 @@ function check(report) {
     assert.ok(row.learner_graded_answers < row.original_graded_answers);
     assert.ok(row.learner_visible_slides >= 12 && row.learner_visible_slides <= 25);
   }
-  console.log('Editorial reductions: 31 shorter lessons, 149 fewer graded answers, 140 stable lesson IDs.');
+  console.log('Editorial reductions: 39 shorter lessons, 170 fewer graded answers, 140 stable lesson IDs.');
 }
 if (require.main === module) {
   const mode = process.argv[2] || '--check';
