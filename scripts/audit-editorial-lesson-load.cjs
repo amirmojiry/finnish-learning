@@ -61,6 +61,9 @@ function buildReport() {
           original_visible_slides: historicalSlides.length,
           learner_visible_slides: editedSlides.length,
           checkpoint_target_count: (lesson.checkpoint_targets || []).length,
+          // validateSection enforces the final-lesson checkpoint contract,
+          // including the one supported legacy checkpoint without targets.
+          is_checkpoint: lesson === section.lessons[section.lessons.length - 1],
           deferred_review_target_ids: deferredReviewedTargets,
           original_grammar_evidence_count: (lesson.learning_objectives?.grammar || [])
             .reduce((count, goal) => count + (goal.evidence || []).length, 0),
@@ -120,7 +123,7 @@ function priorityRows(report) {
       graded_answers: row.learner_graded_answers,
       visible_slides: row.learner_visible_slides,
       activities: row.learner_activities,
-      checkpoint: row.checkpoint_target_count > 0,
+      checkpoint: row.is_checkpoint,
       grammar_evidence: row.original_grammar_evidence_count,
     }))
     .sort((a, b) =>
@@ -154,6 +157,9 @@ function check(report) {
   const priorities = priorityRows(report);
   assert.equal(priorities.length, 134);
   assert.equal(new Set(priorities.map(row => row.lesson_id)).size, 134);
+  const legacyFinal = priorities.find(row => row.section_id === 'a1.1-section-4' && row.lesson_id === 'section-4-lesson-10');
+  assert.ok(legacyFinal?.checkpoint, 'Legacy A1.1 S4 final lesson must be recognized as checkpoint');
+  assert.equal(priorities.filter(row => row.checkpoint).length, 12);
   for (let i = 1; i < priorities.length; i++) {
     assert.ok(priorities[i - 1].graded_answers >= priorities[i].graded_answers);
   }
