@@ -102,7 +102,7 @@ function markdown(report) {
     '',
     'Original activity objects and IDs remain in the manifests for incomplete pre-release lesson drafts. Fresh attempts use the selected editorial edition. The selection is reviewed against all checkpoint IDs, introducing teaching cards, listening/productive evidence and explicit grammar references. Reviewed-only targets removed from these specific lessons remain in earlier course contexts, and any further reinforcement belongs in regular Word Practice or subsequent lessons.',
     '',
-    'Only the four priority lessons were editorially shortened. Other grouped long lessons, manual screen-reader/mobile QA and any privacy-appropriate duration or dropout analytics remain in parent #189.',
+    `To date, ${report.summary.editorially_revised_lessons} priority lessons have been editorially shortened. Other grouped long lessons, manual screen-reader/mobile QA and any privacy-appropriate duration or dropout analytics remain in parent #189.`,
     ''
   );
   return lines.join('\n');
