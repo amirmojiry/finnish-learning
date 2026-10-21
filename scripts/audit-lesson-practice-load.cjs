@@ -10,6 +10,8 @@ const selected = new Set([
   'section-2-lesson-10',
   'a1.2-section-2-lesson-7',
   'a1.3-section-4-lesson-10',
+  'section-3-lesson-9',
+  'section-4-lesson-9',
 ]);
 function report() {
   const rows = [];
@@ -109,7 +111,7 @@ function markdown(rows) {
 function check(rows) {
   assert.equal(rows.length, 140);
   const paced = rows.filter(r => r.paced);
-  assert.equal(paced.length, 4);
+  assert.equal(paced.length, 6);
   assert.deepEqual(new Set(paced.map(r => r.lesson)), selected);
   for(const r of paced) {
     assert.ok(r.sittings >= 2);
@@ -128,7 +130,7 @@ function check(rows) {
     }
   }
   assert.equal(rows.filter(r=>r.screens>30).length,0);
-  console.log('Practice load: all four heavy lessons have bounded sittings; 140 lesson slides remain valid.');
+  console.log('Practice load: all six paced lessons have bounded sittings; 140 lesson slides remain valid.');
 }
 const mode = process.argv[2] || '--check';
 const rows = report();
