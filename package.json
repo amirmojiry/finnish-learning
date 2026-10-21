@@ -88,7 +88,8 @@
     "lesson:load:json": "node scripts/audit-lesson-practice-load.cjs --json",
     "lesson:editorial:check": "node scripts/audit-editorial-lesson-load.cjs --check",
     "lesson:editorial:json": "node scripts/audit-editorial-lesson-load.cjs --json",
-    "lesson:editorial:report": "node scripts/audit-editorial-lesson-load.cjs --markdown"
+    "lesson:editorial:report": "node scripts/audit-editorial-lesson-load.cjs --markdown",
+    "lesson:editorial:priority": "node scripts/audit-editorial-lesson-load.cjs --priority"
   },
   "engines": {
     "node": ">=20",
