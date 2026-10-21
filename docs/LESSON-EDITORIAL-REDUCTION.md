@@ -47,7 +47,7 @@ As before, original activities and identities remain in the manifest for older s
 
 ## Phase 6 — eight coherent health/weather lessons (v1.60.0; #203)
 
-The following **eight A1.2 Section 4 lessons (2–9)** are curated together, not one PR per lesson. Each retained original activity array is unchanged; a validated ordered `editorial_revision.activity_indices` subset is used only for **new starts**. Selection removes **reviewed-form isolated typing** with previously independent correct-answer assessment (or an explicitly retained same-lesson answer), not grammar or first teaching.
+The following **eight A1.2 Section 4 lessons (2–9)** are curated together, not one PR per lesson. Each retained original activity array is unchanged; a validated ordered `editorial_revision.activity_indices` subset is used only for **new starts**. Selection removes **reviewed-form isolated typing** with previously independent correct-answer assessment while preserving BOTH original listening recognition and Finnish dictation, not grammar or first teaching.
 
 | Lesson | Activities, original → new | Graded answers, original → new | New initial screens | Removed reviewed typing |
 | --- | ---: | ---: | ---: | ---: |
@@ -58,14 +58,14 @@ The following **eight A1.2 Section 4 lessons (2–9)** are curated together, not
 | A1.2 S4 L6 | 36 → 30 | 24 → 18 | 18 | 6 |
 | A1.2 S4 L7 | 36 → 30 | 24 → 18 | 17 | 6 |
 | A1.2 S4 L8 | 34 → 30 | 22 → 18 | 16 | 4 |
-| A1.2 S4 L9 | 38 → 32 | 35 → 29 | 22 | 6 |
-| **Eight-lesson total** | **282 → 239** | **196 → 153** | **136** | **43** |
+| A1.2 S4 L9 | 38 → 32 | 35 → 29 | 23 | 6 |
+| **Eight-lesson total** | **282 → 239** | **196 → 153** | **137** | **43** |
 
 ### Explicit review-deferral mapping
 
-Each target below remains part of the unchanged course source and has independently scored evidence in an **earlier edited-effective lesson of this section**, checked by the regression suite. A blank same-lesson column means the trimmed standalone typing was the only retrieval for that target *in the affected lesson*, not that the target is absent from the course. The last lesson drops one duplicated `a12s4-expr-24` typing response while retaining its other graded retrieval.
+Each target below remains part of the unchanged course source and has independently scored evidence in an **earlier edited-effective lesson of this section**, checked by the regression suite. Targets are deferred only within the indicated lesson, not from the course. Lesson 9 deliberately **retains its `a12s4-expr-24` dictation**: although its raw source slot looks like typing, course preparation converts it to required dictated recall. Every one of the 43 removed typed reviews has a prior positive assessment in an earlier *effective* Section 4 lesson.
 
-| Lesson | Fully deferred here: target IDs with earlier graded retrieval | Removed duplicate still assessed here |
+| Lesson | Fully deferred here: target IDs with earlier graded retrieval | Same-lesson duplicate removed |
 | --- | --- | --- |
 | S4 L2 | `a12s4-topic-02`, `a12s4-topic-04`, `a12s4-topic-06`, `a12s4-expr-02` | — |
 | S4 L3 | `a12s4-topic-03`, `a12s4-topic-05`, `a12s4-expr-01`, `a12s4-expr-03`, `a12s4-hf-04`, `a12s4-topic-10`, `a12s4-expr-07` | — |
@@ -74,7 +74,7 @@ Each target below remains part of the unchanged course source and has independen
 | S4 L6 | `a12s4-topic-18`, `a12s4-topic-20`, `a12s4-expr-15`, `a12s4-topic-23`, `a12s4-topic-25`, `a12s4-expr-18` | — |
 | S4 L7 | `a12s4-hf-12`, `a12s4-expr-17`, `a12s4-expr-19`, `a12s4-topic-30`, `a12s4-expr-20`, `a12s4-extra-13` | — |
 | S4 L8 | `a12s4-topic-31`, `a12s4-extra-02`, `a12s4-topic-34`, `a12s4-extra-08` | — |
-| S4 L9 | `a12s4-extra-10`, `a12s4-extra-12`, `a12s4-extra-13`, `a12s4-topic-35`, `a12s4-topic-38` | `a12s4-expr-24` |
+| S4 L9 | `a12s4-extra-10`, `a12s4-extra-11`, `a12s4-extra-12`, `a12s4-extra-13`, `a12s4-topic-35`, `a12s4-topic-38` | — |
 
 The Section 4 Lesson 9 integrated dialogue retains original dialogue ordering, **both passages and all eight independently graded comprehension questions**, Finnish listening, **all eight indexed grammar evidence activities**, and guided writing. In Lessons 2–8, all exact introduced surfaces retain their teaching cards and first scored answers; every positive grammar evidence index, listening and contextual production remain. Lesson 6 also preserves the only original `a12s4-extra-11` graded recall, which has **no earlier positively graded Section 4 retrieval**; it was intentionally excluded from the deletion list.
 

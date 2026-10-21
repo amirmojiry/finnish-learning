@@ -118,8 +118,8 @@ const specs = [
   {
     "n": 9,
     "removed": [
-      10,
       29,
+      30,
       31,
       32,
       35,
@@ -129,7 +129,7 @@ const specs = [
     "curated": 32,
     "gradedOld": 35,
     "gradedNew": 29,
-    "slides": 22
+    "slides": 23
   }
 ];
 const sectionPath = path.join(__dirname, '..', 'data/course/a1.2-section-4.json');
@@ -162,6 +162,9 @@ test('eight A1.2 Section 4 edits retain unchanged originals and independently sc
       assert.strictEqual(edited[i], original[retainedIndices[i]], lesson.id + ': original object identity');
     }
     assert.ok(edited.some(activity => activity.mode === 'listen'), lesson.id + ': missing listening');
+    for (const dictation of original.filter(a => a.type === 'dictation')) {
+      assert.ok(edited.includes(dictation), lesson.id + ': lost dictated recall ' + dictation.item);
+    }
     assert.ok(edited.some(course.isProductiveCourseActivity), lesson.id + ': missing production');
     for (const goal of lesson.learning_objectives?.grammar || []) {
       for (const evidence of goal.evidence || []) {
@@ -225,6 +228,8 @@ test('integrated health dialogue retains both passages, all reading assessments,
   assert.ok(edited.some(a => a.type === 'dialogue-order'));
   assert.ok(edited.some(a => a.type === 'guided-writing'));
   assert.ok(edited.some(a => a.mode === 'listen'));
+  assert.equal(original[10].type, 'dictation', 'legacy listening preparation converts this slot to Finnish dictation');
+  assert.ok(edited.includes(original[10]), 'retain the first dictation in the edited dialogue');
   assert.equal(lesson.learning_objectives.grammar.flatMap(g => g.evidence || []).length, 8);
   assert.equal(original.length, 38, 'archive needed for historical progress continuity');
 });
