@@ -192,6 +192,7 @@ test('deferred-reviewed-target audit excludes targets still assessed in the cura
   }
   const nonRevised = report.lessons.filter((lesson) => !lesson.revised);
   assert.equal(nonRevised.length, 133);
+  assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*133\*\*; all \*\*7\*\* previously curated lessons are excluded\./);
   assert.ok(nonRevised.every((lesson) => lesson.deferred_review_target_ids.length === 0),
     'Unedited lessons have no deferred review targets');
   audit.check(report);
@@ -224,6 +225,8 @@ test('Persian release history and generated editorial report describe both batch
   assert.equal(report.summary.editorially_revised_lessons, 7);
   assert.equal(report.summary.removed_grading_opportunities, 94);
   assert.match(markdown, /To date, 7 priority lessons have been editorially shortened/);
+  assert.match(en, /seven curated lessons/);
+  assert.match(fa, /هفت درس بازنگری‌شده/);
   assert.doesNotMatch(markdown, /Only the four priority lessons/);
 });
 
