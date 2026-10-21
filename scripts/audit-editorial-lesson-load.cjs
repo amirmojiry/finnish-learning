@@ -11,6 +11,8 @@ const expected = new Map([
   ['section-2-lesson-10', { source: 62, edited: 27, graded: 27, slides: 20 }],
   ['a1.2-section-2-lesson-7', { source: 44, edited: 34, graded: 18, slides: 21 }],
   ['a1.3-section-4-lesson-10', { source: 32, edited: 29, graded: 29, slides: 24 }],
+  ['section-3-lesson-9', { source: 48, edited: 32, graded: 28, slides: 19 }],
+  ['section-4-lesson-9', { source: 48, edited: 31, graded: 27, slides: 19 }],
 ]);
 const scored = (list) => list.reduce((total, slide) =>
   total + course.scoredOpportunitiesOnSlide(slide), 0);
@@ -108,9 +110,9 @@ function markdown(report) {
 
 function check(report) {
   assert.equal(report.summary.shipped_lessons, 140);
-  assert.equal(report.summary.editorially_revised_lessons, 4);
+  assert.equal(report.summary.editorially_revised_lessons, 6);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
-  assert.equal(report.summary.removed_grading_opportunities, 52);
+  assert.equal(report.summary.removed_grading_opportunities, 85);
   for (const row of report.lessons) {
     if (!row.revised) {
       assert.equal(row.original_activities, row.learner_activities);
@@ -127,7 +129,7 @@ function check(report) {
     assert.ok(row.learner_graded_answers < row.original_graded_answers);
     assert.ok(row.learner_visible_slides >= 12 && row.learner_visible_slides <= 25);
   }
-  console.log('Editorial reductions: 4 shorter lessons, 52 fewer graded answers, 140 stable lesson IDs.');
+  console.log('Editorial reductions: 6 shorter lessons, 85 fewer graded answers, 140 stable lesson IDs.');
 }
 if (require.main === module) {
   const mode = process.argv[2] || '--check';
