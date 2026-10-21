@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.60.0`
+- Version: `1.61.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.61.0: eight coherent A1.2 Section 3 lesson edits** (frequency of activities, school/work, free time, weekly arrangements, invitations and messages). New starts now have **227 rather than 277 authored activities** and **145 rather than 195 independently graded opportunities**, with all first introductions and assessments, grammar, listening, Finnish dictation, sentence production and integrated week comprehension/guided writing kept. Original lessons and historical local progress/SRS remain available for older sessions. Overall **23 curated lessons / 187 fewer graded opportunities** than legacy, up from the **15 lessons / 137** historical in v1.60.0. See [editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md) and [#189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
 **v1.60.0, eight-lesson health/weather editorial batch:** A1.2 Section 4 Lessons 2–9 now have shorter fresh-start editions (282→239 activities; 196→153 independently graded responses; 13–23 initial screens per lesson). All new-target teaching and correct-answer retrieval, the indexed grammar assessments, Finnish listening/production, and Lesson 9's full two-passage comprehension and guided writing remain. Original activities and historical progress/SRS are preserved. **15 curated lessons / 137 fewer graded opportunities** in total; historical v1.59.0 introduced seven editions / 94 fewer. [English rationale and per-target deferral QA](docs/LESSON-EDITORIAL-REDUCTION.md) · [فارسی](docs/LESSON-EDITORIAL-REDUCTION.fa.md) · [Tracking #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 

@@ -6,6 +6,16 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.61.0] - 2026-10-21
+
+### Changed
+
+- Curate **eight A1.2 Section 3** lessons (Lessons 2–9: frequency, education/work, free time, appointments, invitations, practical messages, integrated week): **277→227 activity opportunities**, **195→145 independently graded answers** (50 redundant reviewed-form typing drills removed), keeping **13–22 visible screens per lesson** for fresh learners.
+- Preserve all new-target teaching/first independently graded retrievals, six indexed grammar examples in the integrated reading lesson, both original passages, eight reading questions, guided writing, contextual production, Finnish listening and prepared dictation. Each fully deferred reviewed exact target already had a scored response in an earlier *effective* Section 3 lesson; representative review remains.
+- Keep original activity objects, stable 140 lesson/checkpoint IDs, archived progress/history/drafts and Word Practice SRS intact. Add per-lesson editorial load and prior-retrieval checks and English/Persian editorial explanations.
+- Cumulative **23 curated lessons / 187 fewer independent scored responses** vs. historical authored editions; 117 lessons have no separate editorial revision. This is not an estimate of study-time savings, retention or CEFR/YKI attainment.
+
+
 ## [1.60.0] - 2026-10-21
 
 ### Changed
