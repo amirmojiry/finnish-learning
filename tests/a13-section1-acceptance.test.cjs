@@ -51,6 +51,9 @@ test('three formerly review-only social frames are taught earlier and all expres
     assert.ok(taught >= 0 && taught < tested, target);
   }
   const broken = structuredClone(raw), l = broken.lessons[3], target = 'a13s1-e-tulet-pian', old = [...l.activities];
+  // This fixture tests original authoring order independently of the editorial
+  // revision's saved source indices, which intentionally reject reordered data.
+  delete l.editorial_revision;
   const evidence = l.learning_objectives.grammar.flatMap(g => g.evidence).map(e => [e, old[e.activity_index]]);
   const [card] = l.activities.splice(l.activities.findIndex(a => a.type === 'teach' && a.item === target), 1); l.activities.push(card);
   for (const [entry, a] of evidence) entry.activity_index = l.activities.indexOf(a);
