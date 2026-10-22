@@ -188,3 +188,37 @@ The table lists each omitted item, not the full review list. Every removed form 
 | S2 L9 | `a13s2-e-063` |
 
 First teaching always precedes first graded introduction; referenced grammar evidence, prepared Finnish dictation and listening recognition, contextual production, the opening-hours questions, and the integrated neighborhood scenario's reading/writing all remain. No Section 2 final checkpoint is edited. **Project totals** after this release: 31 curated lessons and 149 fewer independently graded answers compared with historical editions; 109 lessons still have no individual editorial revision, of which 27 belong to the original >30-authored-activity candidate pool. Static authored counts are not fatigue, proficiency or retention measurements.
+
+
+## Phase 10 — eight A1.3 study, workplace and communication lessons (v1.64.0; issue #211)
+
+A1.3 Section 3 Lessons 2–9 are edited as one coherent bundle. Only previously positively graded and reviewed-form standalone Finnish typing is omitted from new starts. Existing original activity arrays, 140 lesson IDs, old completions/drafts and Word Practice SRS remain unchanged; original objects are selected by ordered `editorial_revision.activity_indices`.
+
+**Safety gate:** every one of the **21 omitted reviewed exact-target drills** must already have positive independently graded practice in an **earlier effective section lesson**. Crucially **all 56 first-introduced Section 3 targets** must still have at least one independently graded positive retrieval in a **later effective section lesson** (not just the authored raw archive). No first teaching/scoring, required grammar evidence, listening or transformed dictation, productive speaking/writing, instructions sequence, two integrated reading passages or guided writing are removed.
+
+| Lesson | Original → new activities | Original → new graded answers | Initial learner screens | Omitted reviewed typing |
+| --- | ---: | ---: | ---: | ---: |
+| A1.3 S3 L2 | 29 → 26 | 19 → 16 | 19 | 3 |
+| A1.3 S3 L3 | 32 → 30 | 23 → 21 | 20 | 2 |
+| A1.3 S3 L4 | 29 → 27 | 21 → 19 | 17 | 2 |
+| A1.3 S3 L5 | 32 → 29 | 22 → 19 | 20 | 3 |
+| A1.3 S3 L6 | 31 → 28 | 20 → 17 | 20 | 3 |
+| A1.3 S3 L7 | 32 → 29 | 23 → 20 | 20 | 3 |
+| A1.3 S3 L8 | 31 → 27 | 23 → 19 | 18 | 4 |
+| A1.3 S3 L9 | 34 → 33 | 32 → 31 | 21 | 1 |
+| **Total** | **250 → 229** | **183 → 162** | **155** | **21** |
+
+### Verified omitted reviewed exact-form targets
+
+| Lesson | Exact target IDs with redundant local typing omitted |
+| --- | --- |
+| S3 L2 | `a13s3-h-003`, `a13s3-e-007`, `a13s3-e-009` |
+| S3 L3 | `a13s3-e-present-task`, `a13s3-e-019` |
+| S3 L4 | `a13s3-e-016`, `a13s3-e-018` |
+| S3 L5 | `a13s3-e-026`, `a13s3-e-028`, `a13s3-e-034` |
+| S3 L6 | `a13s3-e-036`, `a13s3-e-045`, `a13s3-e-047` |
+| S3 L7 | `a13s3-e-044`, `a13s3-e-055`, `a13s3-e-057` |
+| S3 L8 | `a13s3-e-054`, `a13s3-e-056`, `a13s3-e-send-message`, `a13s3-e-063` |
+| S3 L9 | `a13s3-e-075` |
+
+Lesson 9 retains both two-question reading passages (four unique comprehension questions), twelve indexed grammar evidence activities, Finnish recognition and dictation, the guided-writing output and contextual production. Lesson 10 checkpoint remains identical. **Project-level after this proposal: 39 curated lessons / 170 fewer independently graded answers** versus historical activities, 101 without individual curations. Static reductions are not evidence of shorter real study time or better outcomes.
