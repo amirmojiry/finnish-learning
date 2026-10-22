@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.64.0`
+- Version: `1.65.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.65.0: eight A1.3 Section 4 recent-past and end-of-A1 lessons.** Eight coherent fresh-start lessons about earlier events, places, plans, choices and short written narratives now have **233 rather than 252 authored activities** and **165 rather than 184 graded answers**. All 19 omitted reviews were independently graded earlier, and all **54 introduced targets** retain later independently graded retrieval in effective lesson editions. Past grammar, Finnish listening and dictation, event ordering, two integrated passages and writing tasks stay intact. The already-curated **final A1.3 Lesson 10 checkpoint (80% required)** and historic lesson progress/SRS remain untouched. Course-wide **47 curated lessons / 189 fewer graded opportunities** against original authored editions. [Editorial details](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
 **v1.64.0: eight A1.3 Section 3 study/work and communication lessons** (clarification, instructions, needs, people, messages, deadlines, absence and an integrated workday). For fresh starts, the eight lessons have **229 instead of 250 authored activities** and **162 instead of 183 independent graded responses**, retaining grammar, Finnish recognition/dictation, productive speaking/writing, integrated reading and **later graded practice for all 56 newly introduced exact targets** in effective lesson editions. Archived originals, user progress and SRS are unchanged. Overall **39 curated lessons / 170 fewer graded opportunities** than original. [Editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 
