@@ -222,3 +222,39 @@ A1.3 Section 3 Lessons 2–9 are edited as one coherent bundle. Only previously 
 | S3 L9 | `a13s3-e-075` |
 
 Lesson 9 retains both two-question reading passages (four unique comprehension questions), twelve indexed grammar evidence activities, Finnish recognition and dictation, the guided-writing output and contextual production. Lesson 10 checkpoint remains identical. **Project-level after this proposal: 39 curated lessons / 170 fewer independently graded answers** versus historical activities, 101 without individual curations. Static reductions are not evidence of shorter real study time or better outcomes.
+
+
+## Phase 11 — A1.3 Section 4 past, future and cumulative A1 review (v1.65.0, issue #213)
+
+Eight fresh-learner Lessons 2–9 of A1.3 Section 4 are curated together: common past forms, ordering recent events, describing previous locations, making simple future plans, stating preferences and opinions, and personal/integrated writing. The edited editions select a stable, sorted subset of each original activity array; **no authored original activity IDs or content are changed**. Existing completed scores/drafts and Word Practice SRS are left intact.
+
+**Two-sided graded-review gate:** each of **19 omitted reviewed Finnish typing prompts** already had a separate positively scored answer in an **earlier effective Section 4 lesson**, while **53 of the 54 newly introduced exact target IDs** retain an independently positively graded opportunity in a **later effective Section 4 lesson**, exactly matching the v1.64.0 baseline. The exception, `a13s4-e-076`, was already excluded at original final-checkpoint source index 31 by the previously paced `r189-a13-s4-l10-v1` editorial revision. Its safe remediation is tracked separately in [issue #215](https://github.com/amirmojiry/finnish-learning/issues/215) rather than silently changing persisted checkpoint drafts. **The eight new editorial edits introduce no additional later-review loss.** This checks the learner-visible editorial pathway, not just the archived raw syllabus. First teaching/first grading, indexed grammar and Finnish past recognition, listening and prepared dictation, production, event ordering, four graded integrated reading questions and both guided-writing exercises remain.
+
+| Lesson | Authored old → new | Independently graded old → new | Initial learner screens | Omitted reviewed typing |
+| --- | ---: | ---: | ---: | ---: |
+| A1.3 S4 L2 | 33 → 31 | 22 → 20 | 25 | 2 |
+| A1.3 S4 L3 | 35 → 31 | 27 → 23 | 20 | 4 |
+| A1.3 S4 L4 | 33 → 30 | 23 → 20 | 21 | 3 |
+| A1.3 S4 L5 | 30 → 26 | 20 → 16 | 19 | 4 |
+| A1.3 S4 L6 | 30 → 29 | 20 → 19 | 19 | 1 |
+| A1.3 S4 L7 | 29 → 26 | 20 → 17 | 18 | 3 |
+| A1.3 S4 L8 | 27 → 26 | 19 → 18 | 18 | 1 |
+| A1.3 S4 L9 | 35 → 34 | 33 → 32 | 24 | 1 |
+| **Eight-lesson total** | **252 → 233** | **184 → 165** | **164** | **19** |
+
+### Phase 11 exact deferred reviewed targets
+
+| Edited lesson | Previously independently assessed target IDs with redundant typing deferred |
+| --- | --- |
+| S4 L2 | `a13s4-e-007`, `a13s4-e-009` |
+| S4 L3 | `a13s4-e-010`, `a13s4-e-017`, `a13s4-e-019`, `a13s4-e-021` |
+| S4 L4 | `a13s4-e-018`, `a13s4-e-020`, `a13s4-e-028` |
+| S4 L5 | `a13s4-e-027`, `a13s4-e-029`, `a13s4-e-037`, `a13s4-e-039` |
+| S4 L6 | `a13s4-e-047` |
+| S4 L7 | `a13s4-t-046`, `a13s4-e-048`, `a13s4-e-058` |
+| S4 L8 | `a13s4-e-068` |
+| S4 L9 | `a13s4-e-067` |
+
+The integrated Lesson 9 retains two full passages and their four distinct comprehension questions, twelve explicit grammar-evidence activities, Finnish listening/dictation and four-phrase guided writing. Lesson 8 retains its separate personal writing; Lesson 3 retains the three-event sequence task. **Lesson 10 was already curated and paced** and stays completely unchanged, including its 80% pass threshold and legacy/draft metadata.
+
+After this review, the proposed project count is **47 curated lessons / 189 fewer independently graded answers** compared with original lessons and 93 lessons not independently curated (not all necessarily overlong). No measurable learning, fatigue, time-on-task or CEFR/YKI performance claim is inferred.
