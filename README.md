@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.66.0`
+- Version: `1.67.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.67.0: eight A1.3 Section 1 social coordination lessons curated for fresh attempts.** Lessons 2–9 (invitations, rescheduling, messages, phone calls, preferences, reasons, suggestions and integrated communication) now contain **229 rather than 250 activities** and **158 rather than 179 independently graded answers**, omitting 19 redundant reviewed-form typing drills plus two within-lesson duplicate assessments. A bidirectional audit protects prior positive review of each deferred target and **later independently graded retrieval of all 60 newly introduced exact-form targets** in effective editions. Lesson 9 retains both passages/four comprehension questions, dialogue ordering, all eight indexed grammar assessments, Finnish listening/dictation and the four-sentence writing activity. Original activities, lesson IDs and local learner history/SRS are unchanged; Lessons 1 and 10 and the **80% section checkpoint** are untouched. Course-wide total: **55 curated lessons / 209 fewer graded opportunities** than original editions, 85 not individually curated. [Issue #217](https://github.com/amirmojiry/finnish-learning/issues/217) · [Editorial details](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189). These are static workload changes, not observed improvements in learning or time-on-task.
 
 **v1.66.0: restore the missing final A1.3 spaced-retrieval check.** Fresh starts of A1.3 Section 4 Lesson 10 now independently grade `a13s4-e-076`, previously assessed in Lesson 8 but absent from the old shortened checkpoint. The new `r215-a13-s4-l10-v2` edition has **30 assessed activities rather than 29**, with **25 initial screens** and the same **80% pass threshold**. A frozen `v1` edition still resumes already saved/retrying local checkpoint drafts with their original 24-screen order, fingerprints and scores. All 140 lesson IDs, authored originals and Word Practice SRS remain unchanged. Current overall audit: **47 curated lessons / 188 fewer graded opportunities** versus original authored lessons (previous 189 was the v1.65.0 snapshot). [Issue #215](https://github.com/amirmojiry/finnish-learning/issues/215) · [Editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md). No measured user fatigue or retention claim is implied.
 

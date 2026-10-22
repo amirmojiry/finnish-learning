@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.67.0] - 2026-10-22
+
+### Changed
+
+- Curate **eight A1.3 Section 1 Lessons 2–9** into shorter fresh-start editions covering invitations, changing plans, practical messages, phone calls, preferences, explanations, suggestions and integrated social coordination. **250→229 original activities; 179→158 independently graded answers** (21 omissions); original authored arrays, lesson IDs, historical progress/SRS and the untouched 80% Section 1 checkpoint are retained.
+- Defer **19 reviewed standalone Finnish typing drills** only after confirming prior independent positive assessment in an earlier effective learner edition. Remove one repeated same-lesson meaning recognition and one redundant typed answer in integrated Lesson 9, which retains graded dictated/production recall of those exact targets. Keep first teaching/assessment and later independently scored retrieval of **all 60 introduced Section 1 target forms**; protect independent typed follow-up when a multi-item guided-writing aggregate would otherwise be the only later assessment.
+- Preserve every indexed grammar assessment (including eight in integrated Lesson 9), Finnish listening and prepared dictation, controlled production, meaningful dialogue ordering, both complete Lesson 9 passages, four separately graded reading questions and four-sentence guided writing. Each revised lesson has **17–22 initial prepared screens**.
+- Add deterministic original-source fingerprints, 60-target effective retrieval and deferred-review tests; extend all-140-lesson editorial audit and cumulative priority report. Current static totals: **55 individually curated lessons / 209 fewer graded opportunities**, with **85** not yet curated. Update bilingual editorial rationale, roadmaps, README status and versioned cache/deployment assets. No observed fatigue, retention or CEFR outcome claim.
+
 ## [1.66.0] - 2026-10-22
 
 ### Fixed
