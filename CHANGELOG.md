@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.66.0] - 2026-10-22
+
+### Fixed
+
+- Restore later independently graded retrieval of `a13s4-e-076` in the final A1.3 Section 4 checkpoint for **fresh starts**. The checkpoint now uses `r215-a13-s4-l10-v2` with original source index 31 appended (30 selected activities, 25 prepared initial screens); no source activities or original lesson IDs are changed.
+- Freeze `r189-a13-s4-l10-v1` as a historic editorial snapshot for **existing local paced drafts** (including retry sittings). Resumption uses the saved revision's exact activity selection, grouped slides, original fingerprint and unchanged session/score identity; legacy v1.56 drafts remain supported. Invalid or tampered edition fingerprints fail closed.
+- Keep the checkpoint passing threshold **80%** and study pacing **at most 15 slides / 20 graded answers per sitting**. Add tests for historical saved-draft compatibility, versioned revision selection, checkpoints and effective later retrieval of all **54** introduced Section 4 targets.
+- Update bilingual release and editorial/roadmap docs, version/cache markers, and deterministic audit totals: **47 curated lessons / 188 fewer graded responses** than historical originals (vs. 189 fewer before this one-question restoration). No measured learning-effect claim.
+
 ## [1.65.0] - 2026-10-22
 
 ### Changed

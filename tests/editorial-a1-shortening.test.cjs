@@ -10,7 +10,7 @@ const cases = [
   ['a1.1-section-3', 'section-3-lesson-5', 40, 22, 36, 18, 18, 0],
   ['a1.1-section-2', 'section-2-lesson-10', 62, 62, 27, 27, 20, 15],
   ['a1.2-section-2', 'a1.2-section-2-lesson-7', 44, 28, 34, 18, 21, 0],
-  ['a1.3-section-4', 'a1.3-section-4-lesson-10', 32, 32, 29, 29, 24, 15],
+  ['a1.3-section-4', 'a1.3-section-4-lesson-10', 32, 32, 30, 30, 25, 15],
   ['a1.1-section-3', 'section-3-lesson-9', 48, 44, 32, 28, 21, 0],
   ['a1.1-section-4', 'section-4-lesson-9', 48, 44, 31, 27, 20, 0],
 ];
@@ -30,7 +30,7 @@ function assessed(activities) {
   return activities.filter((activity) => course.scoredOpportunitiesOnSlide(activity) > 0).length;
 }
 
-test('all six curated editions genuinely reduce independently graded answers and reach 18-24 slides', () => {
+test('all six curated editions genuinely reduce independently graded answers and reach 18-25 slides', () => {
   for (const [sectionId, lessonId, oldCount, oldGraded, newCount, newGraded, screens, checkpoints] of cases) {
     const section = course.validateSection(fixture(sectionId));
     const lesson = section.lessons.find((candidate) => candidate.id === lessonId);
@@ -228,7 +228,7 @@ test('Persian release history and generated editorial report describe both batch
   const report = audit.buildReport();
   const markdown = audit.markdown(report);
   assert.equal(report.summary.editorially_revised_lessons, 47);
-  assert.equal(report.summary.removed_grading_opportunities, 189);
+  assert.equal(report.summary.removed_grading_opportunities, 188);
   assert.match(markdown, /To date, 47 priority lessons have been editorially shortened/);
   assert.match(en, /seven curated lessons/);
   assert.match(fa, /هفت درس بازنگری‌شده/);

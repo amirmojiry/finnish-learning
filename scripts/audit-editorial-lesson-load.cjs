@@ -10,7 +10,7 @@ const expected = new Map([
   ['section-3-lesson-5', { source: 40, edited: 36, graded: 18, slides: 18 }],
   ['section-2-lesson-10', { source: 62, edited: 27, graded: 27, slides: 20 }],
   ['a1.2-section-2-lesson-7', { source: 44, edited: 34, graded: 18, slides: 21 }],
-  ['a1.3-section-4-lesson-10', { source: 32, edited: 29, graded: 29, slides: 24 }],
+  ['a1.3-section-4-lesson-10', { source: 32, edited: 30, graded: 30, slides: 25 }],
   ['section-3-lesson-9', { source: 48, edited: 32, graded: 28, slides: 21 }],
   ['section-4-lesson-9', { source: 48, edited: 31, graded: 27, slides: 20 }],
   ['a1.2-section-1-lesson-9', { source: 31, edited: 22, graded: 17, slides: 13 }],
@@ -206,7 +206,7 @@ function check(report) {
   }
   assert.equal(report.summary.editorially_revised_lessons, 47);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
-  assert.equal(report.summary.removed_grading_opportunities, 189);
+  assert.equal(report.summary.removed_grading_opportunities, 188);
   for (const row of report.lessons) {
     if (!row.revised) {
       assert.equal(row.original_activities, row.learner_activities);
@@ -223,7 +223,7 @@ function check(report) {
     assert.ok(row.learner_graded_answers < row.original_graded_answers);
     assert.ok(row.learner_visible_slides >= 12 && row.learner_visible_slides <= 25);
   }
-  console.log('Editorial reductions: 47 shorter lessons, 189 fewer graded answers, 140 stable lesson IDs.');
+  console.log('Editorial reductions: 47 shorter lessons, 188 fewer graded answers, 140 stable lesson IDs.');
 }
 if (require.main === module) {
   const mode = process.argv[2] || '--check';

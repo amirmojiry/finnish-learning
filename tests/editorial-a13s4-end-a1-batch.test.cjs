@@ -192,7 +192,7 @@ test('19 omitted Finnish typed reviews already had independent scored evidence i
  }assert.equal(count,19);
 });
 
-test('all 54 introduced targets preserve the original 53-of-54 later effective retrieval baseline without new loss',()=>{
+test('all 54 introduced targets now have later independent graded retrieval in effective lessons',()=>{
  const s=section();let checked=0;const missing=[];
  for(const [i,l] of s.lessons.entries())for(const id of l.new_targets||[]){
   assert.ok(s.lessons.slice(i+1).some(later=>later.activities.some(a=>scored(a)&&positives(a).includes(id))),l.id+': missing original later practice '+id);
@@ -201,39 +201,40 @@ test('all 54 introduced targets preserve the original 53-of-54 later effective r
   checked++;
  }
  assert.equal(checked,54);
- // Known pre-existing v1.64.0 gap: a13s4-e-076 is taught/graded in Lesson 8, but
- // its only later source typing (final checkpoint index 31) was already omitted by
- // the existing paced checkpoint's v1 editorial revision. Track #215; do not mutate
- // that revision and invalidate stored in-progress checkpoint drafts in this PR.
- assert.deepEqual(missing,['a13s4-e-076'],'this eight-lesson edit must not introduce any new later-review gap');
- const final=s.lessons[9];assert.ok(!final.editorial_revision.activity_indices.includes(31));
+ // The v1.65.0 frozen checkpoint omitted the only later review for e-076.
+ // Its saved drafts retain v1 while fresh starts now include index 31 in v2.
+ assert.deepEqual(missing,[],'every introduced target needs later effective graded retrieval');
+ const final=s.lessons[9];assert.ok(final.editorial_revision.activity_indices.includes(31));
+ assert.ok(!final.editorial_revision_history[0].activity_indices.includes(31));
  const lesson8=course.lessonEditionActivities(s.lessons[7],'editorial');
  assert.ok(lesson8.some(a=>a.type==='controlled-production'&&a.item==='a13s4-e-076'));
 });
 
-test('original A1.3 end-of-level final checkpoint and 80 percent threshold remain unchanged',()=>{
- const s=section(),cp=s.lessons[9];assert.equal(cp.editorial_revision.id,'r189-a13-s4-l10-v1');
- assert.equal(cp.editorial_revision.activity_indices.length,29);assert.equal(cp.activities.length,32);
+test('A1.3 final checkpoint preserves 80 percent threshold and historical v1 editorial edition',()=>{
+ const s=section(),cp=s.lessons[9];assert.equal(cp.editorial_revision.id,'r215-a13-s4-l10-v2');
+ assert.equal(cp.editorial_revision.activity_indices.length,30);assert.equal(cp.activities.length,32);
+ assert.equal(cp.editorial_revision_history[0].id,'r189-a13-s4-l10-v1');
+ assert.equal(cp.editorial_revision_history[0].activity_indices.length,29);
  assert.equal(cp.study_pacing.max_slides,15);assert.equal(cp.study_pacing.max_graded,20);
  assert.equal(course.passesLessonRequirement(cp,26,32),true);assert.equal(course.passesLessonRequirement(cp,25,32),false);
- assert.equal(course.lessonEditionActivities(cp,'legacy').length,32);assert.equal(course.lessonEditionActivities(cp,'editorial').length,29);
+ assert.equal(course.lessonEditionActivities(cp,'legacy').length,32);assert.equal(course.lessonEditionActivities(cp,'editorial').length,30);
  const l3=course.lessonEditionActivities(s.lessons[2],'editorial');assert.equal(l3.filter(a=>a.type==='sequence-order').length,1);
  for(const n of [7,8]){let l=course.lessonEditionActivities(s.lessons[n],'editorial'),w=l.filter(a=>a.type==='guided-writing');assert.equal(w.length,1);assert.equal(w[0].expected_items.length,4);}
  const integrated=s.lessons[8],edited=course.lessonEditionActivities(integrated,'editorial');assert.equal(integrated.learning_objectives.grammar.flatMap(g=>g.evidence||[]).length,12);
  for(const passage of ['a13s4-reading-1','a13s4-reading-2']){const questions=edited.filter(a=>a.type==='short-reading'&&a.item===passage);assert.equal(questions.length,2);assert.equal(new Set(questions.map(a=>a.question_item)).size,2);}
 });
 
-test('v1.65.0 bilingual release and 140-lesson audit reflect updated editorial totals',()=>{
+test('v1.66.0 bilingual release and 140-lesson audit reflect checkpoint retrieval restored',()=>{
  const root=path.join(__dirname,'..'),version=fs.readFileSync(path.join(root,'VERSION'),'utf8').trim();
  const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
  const en=fs.readFileSync(path.join(root,'README.md'),'utf8'),fa=fs.readFileSync(path.join(root,'README.fa.md'),'utf8');
  const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
- assert.equal(version,'1.65.0');assert.equal(pkg.version,version);assert.match(changelog,/\[1\.65\.0\]/);
+ assert.equal(version,'1.66.0');assert.equal(pkg.version,version);assert.match(changelog,/\[1\.66\.0\]/);
  assert.match(en,/47 curated lessons \/ 189 fewer graded opportunities/);
  assert.match(fa,/۴۷ درس بازنگری‌شده و ۱۸۹ پاسخ نمره‌دار کمتر/);
  const report=audit.buildReport();assert.equal(report.summary.shipped_lessons,140);
  assert.equal(report.summary.editorially_revised_lessons,47);
- assert.equal(report.summary.removed_grading_opportunities,189);
+ assert.equal(report.summary.removed_grading_opportunities,188);
  assert.equal(report.summary.learner_lessons_exceeding_30_slides,0);
  assert.equal(audit.priorityRows(report).length,93);
  assert.match(audit.priorityMarkdown(report),/Remaining uncurated lessons: \*\*93\*\*; all \*\*47\*\* previously curated lessons are excluded\./);

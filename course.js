@@ -1256,16 +1256,22 @@
 
   // The original authored activity array is retained for v1.56 in-progress
   // drafts. New sessions use a per-lesson explicitly curated edition.
+  // Older revisions remain available only for drafts that began under them.
+  // Original authored activities always remain the stable legacy edition.
+  function lessonEditorialRevision(lesson, edition) {
+    if (edition === 'editorial') return lesson.editorial_revision || null;
+    return (lesson.editorial_revision_history || []).find((revision) => revision.id === edition) || null;
+  }
+
   function lessonEditionActivities(lesson, edition = 'legacy') {
-    if (edition !== 'editorial' || !lesson.editorial_revision) return lesson.activities;
-    return lesson.editorial_revision.activity_indices.map((index) => lesson.activities[index]);
+    const revision = lessonEditorialRevision(lesson, edition);
+    return revision ? revision.activity_indices.map((index) => lesson.activities[index]) : lesson.activities;
   }
 
   function lessonEditionSlides(lesson, edition = 'legacy') {
     const activities = lessonEditionActivities(lesson, edition);
-    // Editorial revisions deliberately group compatible cards even below the
-    // legacy 30-screen threshold; independent graded answers stay intact.
-    return compactLessonActivities(activities, edition === 'editorial' && lesson.editorial_revision ? 1 : 30);
+    // Frozen revisions must retain the same grouping as their original release.
+    return compactLessonActivities(activities, lessonEditorialRevision(lesson, edition) ? 1 : 30);
   }
 
   function hashCourseText(source) {
@@ -1276,8 +1282,8 @@
     return hash.toString(36);
   }
 
-  function editorialLessonFingerprint(lesson) {
-    return hashCourseText(JSON.stringify([lesson.id, lesson.editorial_revision]));
+  function editorialLessonFingerprint(lesson, revision = lesson.editorial_revision) {
+    return hashCourseText(JSON.stringify([lesson.id, revision]));
   }
 
   // Each sitting limits BOTH on-screen steps and independently scored answers.
@@ -1357,14 +1363,15 @@
       || saved.lessonId !== lesson.id || saved.fingerprint !== pacedLessonFingerprint(lesson)) return null;
     // No editorialEdition field means this is a genuine v1.56 legacy draft.
     const isEditorial = saved.editorialEdition !== undefined;
-    if (isEditorial && (!lesson.editorial_revision
-      || saved.editorialEdition !== lesson.editorial_revision.id
-      || saved.editorialFingerprint !== editorialLessonFingerprint(lesson))) return null;
-    const edition = isEditorial ? 'editorial' : 'legacy';
+    const revision = isEditorial ? [lesson.editorial_revision, ...(lesson.editorial_revision_history || [])]
+      .find((entry) => entry?.id === saved.editorialEdition) : null;
+    if (isEditorial && (!revision
+      || saved.editorialFingerprint !== editorialLessonFingerprint(lesson, revision))) return null;
+    const edition = !isEditorial ? 'legacy'
+      : revision === lesson.editorial_revision ? 'editorial' : revision.id;
     const slides = lessonEditionSlides(lesson, edition);
     const initialGraded = slides.reduce((sum, slide) => sum + scoredOpportunitiesOnSlide(slide), 0);
-    const permittedIndices = isEditorial
-      ? new Set(lesson.editorial_revision.activity_indices) : null;
+    const permittedIndices = isEditorial ? new Set(revision.activity_indices) : null;
     const retryIndices = saved.retryIndices;
     if (!Array.isArray(retryIndices) || retryIndices.length > initialGraded
       || new Set(retryIndices).size !== retryIndices.length
@@ -1392,6 +1399,9 @@
   function savePacedLessonDraft(storage, sectionId, lesson, state) {
     if (!lesson?.study_pacing || !sectionId || !storage || typeof storage.setItem !== 'function') return false;
     try {
+      const revision = state.editorialEdition ? [lesson.editorial_revision, ...(lesson.editorial_revision_history || [])]
+        .find((entry) => entry?.id === state.editorialEdition) : null;
+      if (state.editorialEdition && !revision) return false;
       const drafts = readPacedDraftStore(storage);
       drafts[lesson.id] = {
         version: 1, sectionId, lessonId: lesson.id,
@@ -1401,7 +1411,7 @@
         sessionId: state.sessionId, sessionStartedAt: state.sessionStartedAt,
         ...(state.editorialEdition ? {
           editorialEdition: state.editorialEdition,
-          editorialFingerprint: editorialLessonFingerprint(lesson),
+          editorialFingerprint: editorialLessonFingerprint(lesson, revision),
         } : {}),
       };
       storage.setItem(PACED_DRAFT_STORAGE_KEY, JSON.stringify(drafts));
@@ -1685,6 +1695,24 @@
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
       validateLessonEditorialRevision(lesson);
+      if (lesson.editorial_revision_history !== undefined) {
+        const history = lesson.editorial_revision_history;
+        if (!lesson.editorial_revision || !Array.isArray(history) || !history.length) {
+          throw new Error('Historical editorial revisions require a current revision and nonempty history.');
+        }
+        const knownIds = new Set([lesson.editorial_revision.id]);
+        for (const revision of history) {
+          if (!revision?.id || knownIds.has(revision.id)) {
+            throw new Error('Historical editorial revision IDs must be unique.');
+          }
+          knownIds.add(revision.id);
+          validateLessonEditorialRevision({ ...lesson, editorial_revision: revision });
+          if (revision.activity_indices.some((index, position) =>
+            position > 0 && index <= revision.activity_indices[position - 1])) {
+            throw new Error('Historical editorial activity indices must stay in source order.');
+          }
+        }
+      }
       if (lesson.study_pacing !== undefined) {
         // A pacing setting must never silently discard an authored question.
         const sessions = planPacedLessonSessions(compactLessonActivities(lesson.activities), lesson.study_pacing);
@@ -3318,8 +3346,9 @@
         retryPhase: lessonRetryPhase,
         sessionId: activeSessionId,
         sessionStartedAt,
-        ...(activeLesson.editorialEdition === 'editorial'
-          ? { editorialEdition: authored.editorial_revision.id } : {}),
+        ...(activeLesson.editorialEdition !== 'legacy'
+          ? { editorialEdition: activeLesson.editorialEdition === 'editorial'
+            ? authored.editorial_revision.id : activeLesson.editorialEdition } : {}),
       });
     }
 
@@ -3379,7 +3408,9 @@
       // Old v1.56 drafts have no edition marker: resume their original activity
       // order without replaying scored questions. Fresh starts are concise.
       const editorialEdition = !authored.editorial_revision ? 'legacy'
-        : saved && !saved.editorialEdition ? 'legacy' : 'editorial';
+        : saved && !saved.editorialEdition ? 'legacy'
+        : saved && saved.editorialEdition !== authored.editorial_revision.id
+          ? saved.editorialEdition : 'editorial';
       const initialSlides = lessonEditionSlides(authored, editorialEdition);
       retryActivities = saved ? saved.retryIndices.map((entry) => authored.activities[entry]) : [];
       lessonRetryPhase = saved?.retryPhase === true;
