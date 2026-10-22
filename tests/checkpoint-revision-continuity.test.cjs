@@ -7,10 +7,13 @@ const path = require('node:path');
 const course = require('../course.js');
 const { positives } = require('../scripts/audit-course-coverage.cjs');
 
-function loadSection(id) {
-  return course.validateSection(JSON.parse(fs.readFileSync(
+function rawSection(id) {
+  return JSON.parse(fs.readFileSync(
     path.join(__dirname, '..', 'data/course', id + '.json'), 'utf8'
-  )));
+  ));
+}
+function loadSection(id) {
+  return course.validateSection(rawSection(id));
 }
 function memoryStorage() {
   const values = new Map();
@@ -110,10 +113,10 @@ test('frozen editions obey pacing limits and historical revision metadata is val
     assert.equal(plan.at(-1).end, slides.length + assessed.length);
     assert.ok(plan.every(s => s.screens <= 15 && s.graded <= 20));
   }
-  const invalid = structuredClone(section);
+  const invalid = rawSection('a1.3-section-4');
   invalid.lessons.at(-1).editorial_revision_history[0].activity_indices.reverse();
   assert.throws(() => course.validateSection(invalid), /Historical editorial activity indices must stay in source order/);
-  const repeated = structuredClone(section);
+  const repeated = rawSection('a1.3-section-4');
   repeated.lessons.at(-1).editorial_revision_history[0].id = checkpoint.editorial_revision.id;
   assert.throws(() => course.validateSection(repeated), /Historical editorial revision IDs must be unique/);
 });
