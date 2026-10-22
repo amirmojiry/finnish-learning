@@ -2,6 +2,10 @@
 
 [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Implementation #194](https://github.com/amirmojiry/finnish-learning/issues/194) · [Resumable pacing](LESSON-PACING.md)
 
+## Checkpoint recovery — v1.66.0 (issue #215)
+
+A1.3 Section 4 Lesson 10 now has a **new-start** revision `r215-a13-s4-l10-v2` that adds the previously omitted final independently graded recall of `a13s4-e-076` (original index 31). The previous selection `r189-a13-s4-l10-v1` is preserved as an immutable historic revision so paused v1 attempts and their retry indexes continue with exactly 29 selected activities and 24 prepared initial slides. Fresh attempts use 30 selected activities and 25 slides; source stays at 32 authored activities. Both editions preserve 80% passing, 15-screen / 20-graded-answer sittings and the original learner/lesson identities. This closes the last **effective later scored retrieval** gap for A1.3 Section 4: all 54 introduced targets are now recalled in later graded activities. Project-wide current snapshot after this change: **47 curated lessons / 188 fewer independently graded answers** (vs. 189 before this correction), with 93 not individually curated. These figures do not measure real learning or time.
+
 ## Purpose and actual reductions
 
 Version 1.57.0 goes beyond grouping and short sittings: **fresh attempts actually receive fewer independently graded questions**. Unlike presentation-only compaction, these revised lessons do not score or require the removed opportunities.

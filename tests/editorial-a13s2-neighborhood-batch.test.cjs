@@ -251,7 +251,7 @@ test('v1.63.0 bilingual release metadata and cumulative priority report stay syn
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, '1.65.0');
+  assert.equal(version, '1.66.0');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.63\.0\]/);
   assert.match(en, /31 curated lessons \/ 149 fewer graded opportunities/);
@@ -259,7 +259,7 @@ test('v1.63.0 bilingual release metadata and cumulative priority report stay syn
   const report = audit.buildReport();
   assert.equal(report.summary.shipped_lessons, 140);
   assert.equal(report.summary.editorially_revised_lessons, 47);
-  assert.equal(report.summary.removed_grading_opportunities, 189);
+  assert.equal(report.summary.removed_grading_opportunities, 188);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
   assert.equal(audit.priorityRows(report).length, 93);
   assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*93\*\*; all \*\*47\*\* previously curated lessons are excluded\./);

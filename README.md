@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.65.0`
+- Version: `1.66.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.66.0: restore the missing final A1.3 spaced-retrieval check.** Fresh starts of A1.3 Section 4 Lesson 10 now independently grade `a13s4-e-076`, previously assessed in Lesson 8 but absent from the old shortened checkpoint. The new `r215-a13-s4-l10-v2` edition has **30 assessed activities rather than 29**, with **25 initial screens** and the same **80% pass threshold**. A frozen `v1` edition still resumes already saved/retrying local checkpoint drafts with their original 24-screen order, fingerprints and scores. All 140 lesson IDs, authored originals and Word Practice SRS remain unchanged. Current overall audit: **47 curated lessons / 188 fewer graded opportunities** versus original authored lessons (previous 189 was the v1.65.0 snapshot). [Issue #215](https://github.com/amirmojiry/finnish-learning/issues/215) · [Editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md). No measured user fatigue or retention claim is implied.
 
 **v1.65.0: eight A1.3 Section 4 recent-past and end-of-A1 lessons.** Eight coherent fresh-start lessons about earlier events, places, plans, choices and short written narratives now have **233 rather than 252 authored activities** and **165 rather than 184 graded answers**. All 19 omitted reviews were independently graded earlier, and a two-sided audit confirms that **53 of 54 introduced targets** have later graded retrieval in effective lessons; the pre-existing checkpoint exception `a13s4-e-076` is tracked separately in [#215](https://github.com/amirmojiry/finnish-learning/issues/215) and **no new loss** is introduced. Past grammar, Finnish listening and dictation, event ordering, two integrated passages and writing tasks stay intact. The already-curated **final A1.3 Lesson 10 checkpoint (80% required)** and historic lesson progress/SRS remain untouched. Course-wide **47 curated lessons / 189 fewer graded opportunities** against original authored editions. [Editorial details](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189).
 

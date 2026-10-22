@@ -258,7 +258,7 @@ test('current version, cumulative counts and priority report reflect eight more 
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, '1.65.0');
+  assert.equal(version, '1.66.0');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.61\.0\]/);
   assert.match(en, /23 curated lessons \/ 129 fewer graded opportunities/);
@@ -266,7 +266,7 @@ test('current version, cumulative counts and priority report reflect eight more 
   const report = audit.buildReport();
   assert.equal(report.summary.shipped_lessons, 140);
   assert.equal(report.summary.editorially_revised_lessons, 47);
-  assert.equal(report.summary.removed_grading_opportunities, 189);
+  assert.equal(report.summary.removed_grading_opportunities, 188);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
   assert.equal(audit.priorityRows(report).length, 93);
   assert.match(audit.priorityMarkdown(report), /Remaining uncurated lessons: \*\*93\*\*; all \*\*47\*\* previously curated lessons are excluded\./);
