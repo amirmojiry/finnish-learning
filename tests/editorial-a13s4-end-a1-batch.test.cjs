@@ -132,7 +132,7 @@ const specs = [
     "edited": 34,
     "origGraded": 33,
     "graded": 32,
-    "slides": 22,
+    "slides": 24,
     "hash": "8b88969e",
     "reading": 4,
     "writing": 1,

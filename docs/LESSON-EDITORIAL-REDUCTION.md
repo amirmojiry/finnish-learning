@@ -239,8 +239,8 @@ Eight fresh-learner Lessons 2–9 of A1.3 Section 4 are curated together: common
 | A1.3 S4 L6 | 30 → 29 | 20 → 19 | 19 | 1 |
 | A1.3 S4 L7 | 29 → 26 | 20 → 17 | 18 | 3 |
 | A1.3 S4 L8 | 27 → 26 | 19 → 18 | 18 | 1 |
-| A1.3 S4 L9 | 35 → 34 | 33 → 32 | 22 | 1 |
-| **Eight-lesson total** | **252 → 233** | **184 → 165** | **162** | **19** |
+| A1.3 S4 L9 | 35 → 34 | 33 → 32 | 24 | 1 |
+| **Eight-lesson total** | **252 → 233** | **184 → 165** | **164** | **19** |
 
 ### Phase 11 exact deferred reviewed targets
 
