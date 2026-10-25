@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.69.0] - 2026-10-26
+
+### Changed
+
+- Curate **A2.1 Section 1 Lessons 2–9** (travel, imperfect past-tense forms, tickets, stays, travel problems, sightseeing and sequencing) into fresh-start editorial editions with **225→214 authored activities and 169→158 independently graded answers**. Preserve all historical activity arrays, 140 lesson IDs, saved completion/progress and Word Practice SRS; Lesson 1 and the 80%-pass Lesson 10 checkpoint remain unchanged.
+- Remove **five already-reviewed high-frequency choices** supported by prior independently graded positive evidence in earlier effective section lessons, and **six duplicated recognition questions** while retaining graded same-lesson sentence ordering, Finnish listening or dictation for the same exact target. A new effective-edition regression verifies **all 62 introduced exact-form targets retain their exact later graded-retrieval lesson positions** and protects the 57 forms with only one later individual graded activity.
+- Keep Finnish recognition and dictation, imperfect past morphology, -maan and plural-partitive/illative/object grammar evidence, event sequencing, guided writing in Lessons 8 and 9, and both Lesson 9 reading passages with four graded comprehension questions. Curated initial learner screens range **15–19 per lesson**.
+- Pin source-array fingerprints and reviewed omission rationale, extend course-wide audit and bilingual roadmaps/editorial documentation, update version/cache/deployment markers. Current static totals: **71 revised lessons, 232 fewer independently graded opportunities, 69 not yet individually curated**. Do not infer real completion time, fatigue, learning retention or language proficiency from these counts.
+
 ## [1.68.0] - 2026-10-26
 
 ### Changed

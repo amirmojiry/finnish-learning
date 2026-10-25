@@ -5,6 +5,14 @@
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
 
+## R2 phase 14 — A2.1 Section 1 travel, past tense and sequencing (2026-10-26, v1.69.0)
+
+[Issue #221](https://github.com/amirmojiry/finnish-learning/issues/221), under parent #189, curates A2.1 Section 1 Lessons 2–9 (past trips, tickets, arrival and duration, hotels, travel problems, sights, event sequencing and travel narration). For new starts, **225→214 activities** and **169→158 independently graded answers** (11 omissions), with **15–19 prepared screens per lesson**. Five removed high-frequency reviewed choices had prior independently graded positive evidence in earlier effective lessons; six duplicate recognition choices retain scored same-lesson sentence ordering, Finnish listening or dictation.
+
+The section has **62 introduced target forms**; **57** originally had only one later independently graded activity. Tests require *exactly the same later graded-retrieval lesson positions* for all 62 in the effective edition. All original activity arrays, 140 lesson IDs, saved scores, Word Practice SRS, first teaching, grammar (including imperfect, -maan, plural partitive and sequencing), audio, Lesson 8/9 guided writing and Lesson 9 two passages/four questions are kept. Lessons 1 and 10 and the 80%-pass checkpoint are unchanged.
+
+Proposed full-course total: **71 curated lessons, 232 fewer independent graded answers, 69 uncurated**. CI/UD, generated-file consistency and review gates remain mandatory. Manual mobile/RTL/screen-reader and privacy-respecting learner-outcome QA remain in #189. This is a static workload change, not observed retention or CEFR progress.
+
 ## R2 phase 13 — A2.1 Section 2 healthcare and public-service curation (2026-10-26, proposed v1.68.0)
 
 [Child issue #219](https://github.com/amirmojiry/finnish-learning/issues/219), under parent #189, curates A2.1 Section 2 Lessons **2–9** (rescheduling, symptoms, clarifying staff instructions, pharmacy, service counters, forms, requesting documents and integrated service visits). The original/prepared eight-lesson batch has **231 activities and 175 independently graded responses**. The fresh-learner editorial selection conservatively retains **219 activities and 163 graded responses** (-12), with **16–21 initial learner-visible screens per lesson**. It deliberately avoids wholesale pruning of reviewed questions: most of the **67 introduced targets** have only one later independently graded recall in the existing section.
