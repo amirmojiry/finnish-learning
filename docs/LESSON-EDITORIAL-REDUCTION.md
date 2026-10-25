@@ -2,6 +2,28 @@
 
 [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Implementation #194](https://github.com/amirmojiry/finnish-learning/issues/194) · [Resumable pacing](LESSON-PACING.md)
 
+## Phase 14 — A2.1 Section 1 travel and imperfect-past narrative (v1.69.0, #221)
+
+Conservative fresh-start editorial revisions retain historical original arrays, all 140 lesson identities, saved grades and Word Practice SRS.
+
+| Lesson | Activities original → effective | Graded answers original → effective | Initial screens | Removed |
+| --- | ---: | ---: | ---: | ---: |
+| L2: moving in the past | 28 → 27 | 20 → 19 | 16 | 1 |
+| L3: ticket and payment | 30 → 29 | 22 → 21 | 17 | 1 |
+| L4: departures and duration | 25 → 23 | 19 → 17 | 15 | 2 |
+| L5: hotel stays | 26 → 25 | 18 → 17 | 16 | 1 |
+| L6: travel problems | 28 → 27 | 20 → 19 | 16 | 1 |
+| L7: sightseeing | 31 → 29 | 22 → 20 | 18 | 2 |
+| L8: ordering events | 32 → 31 | 23 → 22 | 19 | 1 |
+| L9: integrated narration | 25 → 23 | 25 → 23 | 19 | 2 |
+| **Total** | **225 → 214** | **169 → 158** | **136** | **11** |
+
+**Five reviewed high-frequency choices with earlier effective independently graded practice** are deferred: L4 index 14 (a21s1-h-002), L5 index 16 (a21s1-h-002), L7 indices 17 (a21s1-h-039) and 23 (a21s1-h-021), and L8 index 17 (a21s1-h-030). **Six duplicate recognitions retain stronger same-lesson grading:** L2 index 14 (a21s1-e-018, sentence order); L3 index 12 (a21s1-e-027, dictation); L4 index 10 (a21s1-e-036, dictation); L6 index 14 (a21s1-e-055, sentence order); L9 indices 2 (a21s1-e-078, listening) and 4 (a21s1-e-079, dictation).
+
+The section introduces **62 exact-form targets**, including **57 with only one later independently graded activity** in the original edition. Hard bidirectional tests preserve their *exact later graded-retrieval lesson positions*, first teaching/graded responses, original source fingerprints and all indexed or type-matched grammar evidence. Imperfect, -maan, plural-partitive and illative constructions, listening and dictation, event sequencing, Lesson 8 and Lesson 9 four-item guided writing, two Lesson 9 passages and four reading questions remain. Lessons 1 and 10, original 15-target checkpoint (80% pass), historical arrays, IDs and SRS are not changed.
+
+Projected full-course audit **71 curated lessons / 232 fewer graded opportunities**, **69** not individually curated. Manual mobile/RTL/screen-reader and real learner results remain in #189. These are workload counts, not measured learning or completion time.
+
 ## Phase 13 — A2.1 Section 2 healthcare and service encounters (proposed v1.68.0, issue #219)
 
 Eight A2.1 Section 2 lessons receive conservative **fresh-start only** editorial selections. The original authored arrays (including all 67 introductions, original grammar and reading evidence) remain untouched, so earlier lesson completion and Word Practice SRS data retain their identities. Counts below derive from prepared learner-effective activity editions, not elapsed time.
