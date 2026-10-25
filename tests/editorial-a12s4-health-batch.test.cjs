@@ -233,7 +233,7 @@ test('release metadata, cumulative editorial totals and uncurated priority list 
   const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
   const readme=fs.readFileSync(path.join(root,'README.md'),'utf8');
   const readmeFa=fs.readFileSync(path.join(root,'README.fa.md'),'utf8');
-  assert.equal(version, '1.70.0');
+  assert.equal(version, '1.71.0');
   assert.equal(pkg.version,version);
   assert.match(changelog,/\[1\.60\.0\]/);
   assert.match(readme,/15 curated lessons \/ 137 fewer graded opportunities/);

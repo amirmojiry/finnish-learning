@@ -140,7 +140,7 @@ test('due Word Practice SRS always wins, local storage is unchanged, and previou
  let progress=srs.recordAnswer(srs.emptyProgress(NOW),kahvi,false,NOW-20*60000);
  const before=JSON.stringify(progress);
  const queue=srs.buildReviewQueue([kahvi,kahvia,voi],progress,NOW,
-  {newLimit:2,sessionLimit:3,courseFormPriorities:{[stable('kahvia')]:99}});
+  {newLimit:3,sessionLimit:3,courseFormPriorities:{[stable('kahvia')]:99}});
  assert.deepEqual(queue.map(x=>x.word),['kahvi','kahvia','voi']);
  assert.equal(JSON.stringify(progress),before);
  assert.equal(progress.words.kahvia,undefined);

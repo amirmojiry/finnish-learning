@@ -20,6 +20,16 @@ const DEFERRED_FORMS=Object.freeze(['aika','ajan','kotona','voi','pitää','tuli
 function evaluate(sidecar, reviews) {
  const errors=[],entries=reviews.entries||[];
  const approved=new Map(entries.map(e=>[normalize(e.surface_form),e]));
+ // The historical projection must never hide a newly, incorrectly reclassified
+ // ambiguous global form. Only separately approved noun reviews may be extra.
+ const rawForms=new Map((sidecar.records||[]).filter(r=>r.kind==='form')
+  .map(r=>[normalize(r.surface_form),r]));
+ for(const form of DEFERRED_FORMS){
+  const raw=rawForms.get(form);
+  if(!raw||raw.identity_review_status!=='unresolved'||raw.lexeme_id!==null||
+    raw.sense_id!==null||raw.morphology!==null)
+   errors.push('Ambiguous or frozen form must remain unresolved: '+form);
+ }
  // Historical batch-1 report is frozen to its 47 originally reviewed forms.
  // Later separately verified batches retain their real reviewed status in the
  // live sidecar, but are projected as unresolved solely for this old report.
