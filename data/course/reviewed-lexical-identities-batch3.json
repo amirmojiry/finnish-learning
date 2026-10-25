@@ -2,7 +2,7 @@
   "schema_version": 1,
   "parent_issue": 101,
   "batch_issue": 225,
-  "review_policy": "Human-reviewed bounded nominative, singular partitive, elative and allative noun forms with exact course/dictionary witnesses; never infer unrelated senses or word practice mastery.",
+  "review_policy": "AI-assisted editorial noun decisions checked against exact authored course/dictionary witnesses and pinned case interpretations; independent Finnish linguistic sign-off is still recommended. No other senses or SRS mastery inferred.",
   "entries": [
     {
       "surface_form": "takki",

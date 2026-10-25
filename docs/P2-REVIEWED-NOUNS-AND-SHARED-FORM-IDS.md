@@ -6,6 +6,8 @@
 
 This is one **bounded editorial delivery**, not the completion of all P2 lexical meanings. We added **25 manually selected, cross-checked noun surface readings** to the previous 47. The resulting stable global `form_id` and reviewed `lexeme_id`/`sense_id` mapping covers **72 of 1,264** exact surface/expression records; **1,192 remain unreviewed**, including **440 multiword expressions**. There are still 15 explicitly reviewed **course item contexts** for `aika`, `ajan`, `voi`, `pitää`, `tuli` (24 lesson occurrences), and none is converted to a globally valid sense merely because the spelling matches.
 
+**Review status:** these 25 decisions were checked against actual authored examples and source glosses using AI-assisted editorial analysis, not independent human linguistic peer review. A Finnish-language expert should confirm nuanced case and sense choices before final pedagogical sign-off. No uncertain cases were automatically approved.
+
 Each new editorial row in `data/course/reviewed-lexical-identities-batch3.json` carries the **exact section/item ID and authored Finnish example plus Persian item gloss**, or, for dictionary-only `työtä`, its checked dictionary witness. Original authored items (including older lemma-field inaccuracies), Parole source rank/count/percentage, dictionary schema and all Course/Word Practice progress are unchanged. The read-only overlay documents the interpretation, not a student achievement.
 
 ## Reviewed forms and grammatical readings
