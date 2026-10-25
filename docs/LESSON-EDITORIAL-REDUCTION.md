@@ -1,6 +1,42 @@
-# Curated editorial editions of four long A1 lessons
+# Editorial lesson revisions and graded workload audit
 
 [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Implementation #194](https://github.com/amirmojiry/finnish-learning/issues/194) · [Resumable pacing](LESSON-PACING.md)
+
+## Phase 12 — A1.3 Section 1 social invitations, messages and plans (proposed v1.67.0, issue #217)
+
+The new-start editorial revisions for Lessons 2–9 preserve the full original authored manifests but reduce repeated independently graded work. These static counts are produced from the learner-effective curated edition after Finnish listening, dictation and structured-practice preparation (not estimates of minutes or mastery).
+
+| Lesson | Activities, original → edited | Graded answers, original → edited | Edited initial screens | Removed graded responses |
+| --- | ---: | ---: | ---: | ---: |
+| S1 L2: invitations and responses | 26 → 24 | 17 → 15 | 17 | 2 |
+| S1 L3: changing plans | 32 → 27 | 22 → 17 | 20 | 5 |
+| S1 L4: practical messages | 34 → 31 | 23 → 20 | 22 | 3 |
+| S1 L5: phone calls | 30 → 27 | 21 → 18 | 19 | 3 |
+| S1 L6: preferences | 32 → 30 | 22 → 20 | 21 | 2 |
+| S1 L7: giving reasons | 30 → 28 | 21 → 19 | 19 | 2 |
+| S1 L8: simple suggestions | 33 → 31 | 22 → 20 | 21 | 2 |
+| S1 L9: integrated coordination | 33 → 31 | 31 → 29 | 19 | 2 |
+| **Eight-lesson total** | **250 → 229** | **179 → 158** | **158** | **21** |
+
+### Exact reviewed-target deferrals and retention
+
+Only these **19 already-graded reviewed typing responses** are omitted from Lessons 2–8. Every target has prior independently graded positive retrieval in an **earlier effective** Section 1 lesson, and none is newly introduced in the lesson where it is deferred.
+
+| Lesson | Deferred reviewed target IDs (original activity source indices) |
+| --- | --- |
+| S1 L2 | a13s1-h-003 (22), a13s1-e-008 (24) |
+| S1 L3 | a13s1-e-007 (26), a13s1-e-009 (27), a13s1-e-073 (28), a13s1-t-016 (30), a13s1-e-019 (31) |
+| S1 L4 | a13s1-e-017 (28), a13s1-e-027 (31), a13s1-e-minun-taytyy-lahtea (33) |
+| S1 L5 | a13s1-e-028 (24), a13s1-e-036 (27), a13s1-e-tulet-pian (29) |
+| S1 L6 | a13s1-e-037 (27), a13s1-e-047 (31) |
+| S1 L7 | a13s1-e-044 (24), a13s1-e-054 (28) |
+| S1 L8 | a13s1-e-055 (28), a13s1-e-062 (31) |
+
+In the integrated **S1 L9**, original index 3 is a second meaning-recognition choice for a13s1-e-073 (another scored meaning choice and independent contextual production remain), and index 8 is a redundant Finnish typed recall of a13s1-e-074 (its prepared Finnish dictation and contextual controlled production survive, plus later checkpoint retrieval). These **two** are not counted as completely deferred targets. The complete dialogue-order exercise, two readings with four distinct questions, four-sentence guided writing, eight indexed grammar evidences and both listening modalities all remain.
+
+The strict two-direction regression tests check **all 60 introduced target IDs**: each first positive assessment is preserved and each has at least one independently graded positive retrieval in a **later effective lesson**, including the unchanged 80%-pass Lesson 10 checkpoint. In particular, standalone later typed responses for a13s1-e-038 (Lesson 5) and a13s1-e-039 (Lesson 6) were **retained**, since their only other later evidence would be a single four-item guided-writing aggregate. The original activities, 140 IDs, saved lesson results and Word Practice SRS are unchanged; no separate per-lesson paced draft migration is needed because these eight lessons have no study_pacing field.
+
+Current proposed project total: **55 curated lessons / 209 fewer independently graded answers** versus historical activities, with **85 lessons not individually curated**. Manual mobile/RTL/screen-reader checks and evidence on real learning, time-on-task and abandonment remain open under parent #189.
 
 ## Checkpoint recovery — v1.66.0 (issue #215)
 
