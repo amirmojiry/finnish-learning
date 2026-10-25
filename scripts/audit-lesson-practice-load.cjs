@@ -6,6 +6,8 @@ const fs = require('node:fs');
 const course = require('../course.js');
 
 const selected = new Set([
+  'section-2-lesson-7',
+  'section-3-lesson-10',
   'section-3-lesson-5',
   'section-2-lesson-10',
   'a1.2-section-2-lesson-7',
@@ -105,13 +107,13 @@ function markdown(rows) {
   focus.forEach((row) => lines.push(
     `| ${row.section}/${row.lesson} | ${row.sittings} | ${row.all_wrong_retry_sittings} | ${row.all_wrong_sittings_total} | ${row.all_wrong_max_screens} | ${row.all_wrong_max_answers} |`
   ));
-  lines.push('', 'Pacing divides one unchanged lesson into multiple *optional sittings* with safe local resume, and bounds retry sittings separately. It does not reduce the total assessment burden or certify CEFR/YKI. In a later editorial migration, genuine lesson splitting and activity reduction require independent mastery and progress analysis.', '');
+  lines.push('', 'Pacing divides each learner-effective lesson edition into multiple *optional sittings* with safe local resume, and bounds retry sittings separately. Editorial revisions can reduce total graded work; pacing alone does not reduce it or certify CEFR/YKI. In a later editorial migration, genuine lesson splitting and activity reduction require independent mastery and progress analysis.', '');
   return lines.join('\n');
 }
 function check(rows) {
   assert.equal(rows.length, 140);
   const paced = rows.filter(r => r.paced);
-  assert.equal(paced.length, 6);
+  assert.equal(paced.length, 8);
   assert.deepEqual(new Set(paced.map(r => r.lesson)), selected);
   for(const r of paced) {
     assert.ok(r.sittings >= 2);
@@ -130,7 +132,7 @@ function check(rows) {
     }
   }
   assert.equal(rows.filter(r=>r.screens>30).length,0);
-  console.log('Practice load: all six paced lessons have bounded sittings; 140 lesson slides remain valid.');
+  console.log('Practice load: all eight paced lessons have bounded sittings; 140 lesson slides remain valid.');
 }
 const mode = process.argv[2] || '--check';
 const rows = report();
