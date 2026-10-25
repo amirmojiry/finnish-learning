@@ -230,11 +230,12 @@ test('numbers, negative transformations, both A1.1 checkpoint bounds and section
   assert.ok(edited.some(a => a.type === 'expression-completion' && a.item === 's3-milloin-expr'));
   assert.ok(edited.some(a => a.type === 'expression-completion' && a.item === 's3-yolla'));
 
-  // Explicit regression if grammar evidence or checkpoint identities are dropped.
+  // This negative-transform is both explicit grammar evidence and a
+  // checkpoint target. The checkpoint-target guard is evaluated first.
   const bad = source('a1.1-section-3');
   bad.lessons[9].editorial_revision.activity_indices =
     bad.lessons[9].editorial_revision.activity_indices.filter(i => i !== 15);
-  assert.throws(() => course.validateSection(bad), /removes explicit grammar evidence/);
+  assert.throws(() => course.validateSection(bad), /removes a checkpoint target/);
   const badTarget = source('a1.1-section-3');
   badTarget.lessons[9].editorial_revision.activity_indices =
     badTarget.lessons[9].editorial_revision.activity_indices.filter(i => i !== 0);

@@ -51,6 +51,9 @@ test('new travel expressions precede full answers including filled inflection fr
   const target = 'a12s2-expr-kaksi-lippua-kiitos-60';
   assert.equal(assessesExpression({ type: 'inflection-production', item: 'a12s2-topic-lippu', frame_fi: 'Kaksi _____, kiitos.', expected_fi: 'lippua' }, target, raw.items), true);
   const broken = structuredClone(raw), lesson = broken.lessons[5], old = [...lesson.activities];
+  // The deliberately reordered authored sequence must be assessed without
+  // treating its original editorial source indices as a separate failure.
+  delete lesson.editorial_revision;
   const evidence = lesson.learning_objectives.grammar.flatMap(g => g.evidence).map(e => [e, old[e.activity_index]]);
   const [card] = lesson.activities.splice(lesson.activities.findIndex(a => a.type === 'teach' && a.item === target), 1);
   lesson.activities.push(card);

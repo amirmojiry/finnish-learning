@@ -47,8 +47,12 @@ test('every 0–20 number has an actual positive answer and later retrieval, not
   }
   const missing = structuredClone(raw);
   for (const lesson of missing.lessons) {
+    const originalCount = lesson.activities.length;
     lesson.activities = lesson.activities.filter(a => a.item !== 's2-num-yhdeksantoista');
     lesson.activity_count = lesson.activities.length;
+    // This negative fixture tests missing authored target evidence, not stale
+    // editorial source indices after intentionally removing an activity.
+    if (lesson.activities.length !== originalCount) delete lesson.editorial_revision;
   }
   assert.ok(verify(missing).errors.some(e => e.includes('target lacks positive answer: s2-num-yhdeksantoista')));
   assert.ok(verify(missing).errors.some(e => e.includes('no later positive review: s2-num-yhdeksantoista')));
