@@ -193,26 +193,26 @@ test('checkpoint, all 140 lesson IDs, and course-wide editorial totals remain in
 
   const report = audit.buildReport();
   assert.equal(report.summary.shipped_lessons, 140);
-  assert.equal(report.summary.editorially_revised_lessons, 55);
-  assert.equal(report.summary.removed_grading_opportunities, 209);
+  assert.equal(report.summary.editorially_revised_lessons, 63);
+  assert.equal(report.summary.removed_grading_opportunities, 221);
   assert.equal(report.summary.learner_lessons_exceeding_30_slides, 0);
-  assert.equal(audit.priorityRows(report).length, 85);
+  assert.equal(audit.priorityRows(report).length, 77);
   assert.match(audit.priorityMarkdown(report),
-    /Remaining uncurated lessons: \*\*85\*\*; all \*\*55\*\* previously curated lessons are excluded\./);
+    /Remaining uncurated lessons: \*\*77\*\*; all \*\*63\*\* previously curated lessons are excluded\./);
   const ids = report.lessons.map(entry => entry.lesson_id);
   assert.equal(new Set(ids).size, 140);
 });
 
-test('v1.67.0 release and bilingual summary are synchronized', () => {
+test('current release and bilingual summary remain synchronized', () => {
   const root = path.join(__dirname, '..');
   const version = fs.readFileSync(path.join(root, 'VERSION'), 'utf8').trim();
   const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, '1.67.0');
+  assert.equal(version, '1.68.0');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.67\.0\]/);
-  assert.match(en, /55 curated lessons \/ 209 fewer graded opportunities/);
-  assert.match(fa, /۵۵ درس بازنگری‌شده و ۲۰۹ پاسخ نمره‌دار کمتر/);
+  assert.match(en, /63 curated lessons \/ 221 fewer graded opportunities/);
+  assert.match(fa, /۶۳ درس بازنگری‌شده و ۲۲۱ پاسخ نمره‌دار کمتر/);
 });

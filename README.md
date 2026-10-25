@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.67.0`
+- Version: `1.68.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.68.0: conservative shortening of eight A2.1 Section 2 healthcare and public-service lessons.** For new attempts, Lessons 2–9 (appointments, symptoms, instructions, pharmacy, service counters, forms, certificates and an integrated service visit) have **219 instead of 231 activities**, including **163 instead of 175 independently graded answers**. Five already-reviewed high-frequency recognition questions with earlier independently scored practice, and seven redundant recognition choices with surviving same-lesson typed, contextual-production or sentence-order grading, were omitted. An effective-edition spacing regression protects **later independently graded retrieval of all 67 newly introduced exact-form targets**. Finnish listening/dictation, explicit grammar and morphology, guided writing and both integrated reading passages with four questions remain. The original authored activity arrays and **140 lesson IDs**, previous scores and Word Practice SRS, plus Lessons 1 and 10 and the **80%-pass checkpoint** remain unchanged. All eight curated lessons now fit **16–21 prepared initial screens**. Course-wide: **63 curated lessons / 221 fewer graded opportunities** than historical originals, with 77 not individually curated. [Issue #219](https://github.com/amirmojiry/finnish-learning/issues/219) · [Editorial audit](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189). These are static workload counts, not observed learning improvement or time saved.
 
 **v1.67.0: eight A1.3 Section 1 social coordination lessons curated for fresh attempts.** Lessons 2–9 (invitations, rescheduling, messages, phone calls, preferences, reasons, suggestions and integrated communication) now contain **229 rather than 250 activities** and **158 rather than 179 independently graded answers**, omitting 19 redundant reviewed-form typing drills plus two within-lesson duplicate assessments. A bidirectional audit protects prior positive review of each deferred target and **later independently graded retrieval of all 60 newly introduced exact-form targets** in effective editions. Lesson 9 retains both passages/four comprehension questions, dialogue ordering, all eight indexed grammar assessments, Finnish listening/dictation and the four-sentence writing activity. Original activities, lesson IDs and local learner history/SRS are unchanged; Lessons 1 and 10 and the **80% section checkpoint** are untouched. Course-wide total: **55 curated lessons / 209 fewer graded opportunities** than original editions, 85 not individually curated. [Issue #217](https://github.com/amirmojiry/finnish-learning/issues/217) · [Editorial details](docs/LESSON-EDITORIAL-REDUCTION.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189). These are static workload changes, not observed improvements in learning or time-on-task.
 
