@@ -14,7 +14,8 @@ const map={schema_version:1,mappings:[
 const event=(changes={})=>({sequence:1,answeredAt:NOW-60000,sessionId:'lesson-123',sectionId:'s1',targetId:'on',
  activityType:'choice',firstAttempt:true,productive:false,correct:false,...changes});
 test('Course bridge maps exact dictionary form IDs and excludes expressions from compact manifest',()=>{
- const expected=builder.build(read('data/course/lexical-identity-sidecar.json'),read('data/common-words.json'));
+ const expected=builder.build(read('data/course/lexical-identity-sidecar.json'),read('data/common-words.json'),
+  read('data/course/contextual-lexical-identity-map.json'));
  assert.deepEqual(read('data/course/course-review-form-map.json'),expected);
  assert.ok(expected.mappings.length>100);
  const available=new Set(read('data/common-words.json').words.map(w=>w.word.toLocaleLowerCase('fi-FI')));
@@ -80,8 +81,8 @@ test('new bridge asset loads before Word Practice and reads current Course evide
  const spaced=html.indexOf('src="spaced-repetition.js?');
  assert.ok(course>=0&&bridgeAsset>course&&spaced>bridgeAsset);
  const text=fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8');
- assert.match(text,/reviewPrioritiesFromStorage\(/);
+ assert.match(text,/reviewPrioritiesByFormIdFromStorage\(/);
  assert.match(text,/course\.STORAGE_KEY/);
  assert.match(text,/course-review-form-map\.json/);
- assert.match(text,/coursePriorities: courseReviewPriorities\(\)/);
+ assert.match(text,/courseFormPriorities: courseReviewPriorities\(\)/);
 });

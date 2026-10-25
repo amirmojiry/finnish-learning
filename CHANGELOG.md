@@ -6,6 +6,19 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.71.0] - 2026-10-26
+
+### Added
+
+- Add **25 explicitly reviewed noun forms** (original A1/A2 course item or current dictionary witnesses), with documented exact `lexeme_id`, scoped `sense_id`, and noun singular-case readings. Preserve the previous 47 reviewed global identities and 15 previously reviewed item-scoped homograph contexts. Current live coverage: **72/1,264 global forms/expressions reviewed, 1,192 unresolved** (752 forms / 440 expressions). No user mastery or unreviewed morphology is inferred.
+- Add a reproducible **complete 1,192-record unresolved P2 review queue** and English/Persian editorial methodology. Keep the original 47-form P2 batch-1 snapshot historical rather than rewriting it as a new review.
+
+### Changed
+
+- Upgrade Course→Word Practice review hints to **canonical, validated exact `form_id`** routing with fail-closed invalid/conflicting mapping handling. Exclude five globally ambiguous, context-sensitive written forms (`aika`, `ajan`, `pitää`, `voi`, `tuli`) from context-free dictionary review hints. Respect reviewed `section_id + item_id` semantic cases without conflating all senses.
+- Keep Word Practice local SRS records keyed by existing exact surface strings and **due reviews first**, with unchanged daily limits, historical intervals, scores, 425 dictionary entries, original Parole frequency fields, Course activities, 140 lesson IDs, and stored completion/history. No migration or SRS mastery transfer is performed.
+- Extend P2 witness validation, total and unresolved counts, deterministic generator checks, Unicode exact-form safety, cross-app isolation, user data read-only tests, and synchronized bilingual release/roadmap documentation. **P2's complete semantic identity acceptance remains open** in parent issue #101.
+
 ## [1.70.0] - 2026-10-26
 
 ### Changed

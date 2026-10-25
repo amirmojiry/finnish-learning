@@ -16,6 +16,8 @@
     return String(value || '').trim().normalize('NFC').toLocaleLowerCase('fi-FI');
   }
 
+  const stableFormId = value => 'form:' + [...normalizeWord(value)].map(c => c.codePointAt(0).toString(16)).join('-');
+
   function localDateKey(timestamp) {
     const date = new Date(timestamp);
     const year = date.getFullYear();
@@ -129,10 +131,13 @@
       else if (record.dueAt <= now) due.push({ word, dueAt: record.dueAt });
     }
     due.sort((left, right) => left.dueAt - right.dueAt || Number(left.word.rank) - Number(right.word.rank));
+    const formPriorities = options.courseFormPriorities && typeof options.courseFormPriorities === 'object'
+      ? options.courseFormPriorities : null;
     const priorities = options.coursePriorities && typeof options.coursePriorities === 'object'
       ? options.coursePriorities : {};
     const priorityOf = word => {
-      const value = Number(priorities[normalizeWord(word.word)]);
+      // Canonical form IDs prevent cross-lemma or cross-case priority inheritance.
+      const value = Number(formPriorities ? formPriorities[stableFormId(word.word)] : priorities[normalizeWord(word.word)]);
       return Number.isFinite(value) && value > 0 ? Math.min(1000, value) : 0;
     };
     unseen.sort((left, right) => priorityOf(right) - priorityOf(left) || Number(left.rank) - Number(right.rank));
@@ -233,8 +238,8 @@
     function courseReviewPriorities() {
       const course = windowObject.FinnishCourse;
       const bridge = windowObject.FinnishCourseSrsBridge;
-      if (!courseReviewMap || !course?.STORAGE_KEY || !bridge?.reviewPrioritiesFromStorage) return {};
-      return bridge.reviewPrioritiesFromStorage(
+      if (!courseReviewMap || !course?.STORAGE_KEY || !bridge?.reviewPrioritiesByFormIdFromStorage) return {};
+      return bridge.reviewPrioritiesByFormIdFromStorage(
         windowObject.localStorage, courseReviewMap, course.STORAGE_KEY, course.SCHEMA_VERSION
       );
     }
@@ -346,7 +351,7 @@
         return;
       }
       progress = loadProgress(windowObject.localStorage);
-      queue = buildReviewQueue(words, progress, Date.now(), { coursePriorities: courseReviewPriorities() });
+      queue = buildReviewQueue(words, progress, Date.now(), { courseFormPriorities: courseReviewPriorities() });
       if (queue.length === 0) {
         completionMessage = 'در حال حاضر واژه موعددار یا سهمیه واژه جدیدی باقی نمانده است.';
         updatePanel();

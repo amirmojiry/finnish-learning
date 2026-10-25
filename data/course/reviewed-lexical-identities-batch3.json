@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "parent_issue": 101,
+  "batch_issue": 225,
+  "review_policy": "Human-reviewed bounded nominative, singular partitive, elative and allative noun forms with exact course/dictionary witnesses; never infer unrelated senses or word practice mastery.",
+  "entries": [
+    {
+      "surface_form": "takki",
+      "lexeme_id": "lexeme:takki",
+      "sense_id": "sense:takki-jacket",
+      "sense_gloss_en": "jacket",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-4",
+        "item_id": "a12s4-topic-11",
+        "example_fi": "Ota takki.",
+        "gloss_fa": "کاپشن / کت",
+        "source_lemma_fi": "takki"
+      }
+    },
+    {
+      "surface_form": "juna",
+      "lexeme_id": "lexeme:juna",
+      "sense_id": "sense:juna-train",
+      "sense_gloss_en": "train",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-2",
+        "item_id": "a12s2-topic-juna",
+        "example_fi": "Menen junalla.",
+        "gloss_fa": "قطار",
+        "source_lemma_fi": "juna"
+      }
+    },
+    {
+      "surface_form": "kirjasto",
+      "lexeme_id": "lexeme:kirjasto",
+      "sense_id": "sense:kirjasto-library",
+      "sense_gloss_en": "library",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.3-section-2",
+        "item_id": "a13s2-t-050",
+        "example_fi": "Missä kirjasto on?",
+        "gloss_fa": "کتابخانه",
+        "source_lemma_fi": "kirjasto"
+      }
+    },
+    {
+      "surface_form": "ystävä",
+      "lexeme_id": "lexeme:ystava",
+      "sense_id": "sense:ystava-friend",
+      "sense_gloss_en": "friend",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-2",
+        "item_id": "s2-ystava",
+        "example_fi": "Hän on ystävä.",
+        "gloss_fa": "دوست",
+        "source_lemma_fi": "ystävä"
+      }
+    },
+    {
+      "surface_form": "ruoka",
+      "lexeme_id": "lexeme:ruoka",
+      "sense_id": "sense:ruoka-food",
+      "sense_gloss_en": "food",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-4",
+        "item_id": "s4-ruoka",
+        "example_fi": "Tämä on ruokaa.",
+        "gloss_fa": "غذا",
+        "source_lemma_fi": "ruoka"
+      }
+    },
+    {
+      "surface_form": "kahvi",
+      "lexeme_id": "lexeme:kahvi",
+      "sense_id": "sense:kahvi-coffee",
+      "sense_gloss_en": "coffee",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-4",
+        "item_id": "s4-kahvi",
+        "example_fi": "Tämä on kahvia.",
+        "gloss_fa": "قهوه",
+        "source_lemma_fi": "kahvi"
+      }
+    },
+    {
+      "surface_form": "kahvia",
+      "lexeme_id": "lexeme:kahvi",
+      "sense_id": "sense:kahvi-coffee",
+      "sense_gloss_en": "coffee",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "partitive",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-3",
+        "item_id": "s3-kahvia",
+        "example_fi": "Minä juon kahvia.",
+        "gloss_fa": "قهوه (پارتی‌تیو)",
+        "source_lemma_fi": "kahvia"
+      }
+    },
+    {
+      "surface_form": "vettä",
+      "lexeme_id": "lexeme:vesi",
+      "sense_id": "sense:vesi-water",
+      "sense_gloss_en": "water",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "partitive",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-4",
+        "item_id": "s4-vetta",
+        "example_fi": "Haluan vettä.",
+        "gloss_fa": "آب (پارتی‌تیو)",
+        "source_lemma_fi": "vettä"
+      }
+    },
+    {
+      "surface_form": "euro",
+      "lexeme_id": "lexeme:euro",
+      "sense_id": "sense:euro-currency",
+      "sense_gloss_en": "currency",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-1",
+        "item_id": "a12s1-topic-euro",
+        "example_fi": "Se maksaa viisi euroa.",
+        "gloss_fa": "یورو",
+        "source_lemma_fi": "euro"
+      }
+    },
+    {
+      "surface_form": "työ",
+      "lexeme_id": "lexeme:tyo",
+      "sense_id": "sense:tyo-work",
+      "sense_gloss_en": "work",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-3",
+        "item_id": "s3-tyo",
+        "example_fi": "Työ on täällä.",
+        "gloss_fa": "کار",
+        "source_lemma_fi": "työ"
+      }
+    },
+    {
+      "surface_form": "työtä",
+      "lexeme_id": "lexeme:tyo",
+      "sense_id": "sense:tyo-work",
+      "sense_gloss_en": "work",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "partitive",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "dictionary",
+        "example_fi": "Minulla on paljon työtä.",
+        "gloss_fa": "کار؛ مقداری کار",
+        "source_lemma_fi": "työ"
+      }
+    },
+    {
+      "surface_form": "lääkäri",
+      "lexeme_id": "lexeme:laakari",
+      "sense_id": "sense:laakari-doctor",
+      "sense_gloss_en": "doctor",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-4",
+        "item_id": "a12s4-topic-28",
+        "example_fi": "Lääkäri on täällä.",
+        "gloss_fa": "پزشک",
+        "source_lemma_fi": "lääkäri"
+      }
+    },
+    {
+      "surface_form": "lääkärille",
+      "lexeme_id": "lexeme:laakari",
+      "sense_id": "sense:laakari-doctor",
+      "sense_gloss_en": "doctor",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "allative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a2.1-section-2",
+        "item_id": "a21s2-t-004",
+        "example_fi": "Hei, haluaisin varata ajan lääkärille.",
+        "gloss_fa": "برای پزشک / نزد پزشک",
+        "source_lemma_fi": "lääkäri"
+      }
+    },
+    {
+      "surface_form": "kaupasta",
+      "lexeme_id": "lexeme:kauppa",
+      "sense_id": "sense:kauppa-shop",
+      "sense_gloss_en": "shop",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "elative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-2",
+        "item_id": "a12s2-topic-kaupasta",
+        "example_fi": "Tulen kaupasta.",
+        "gloss_fa": "از فروشگاه",
+        "source_lemma_fi": "kaupasta"
+      }
+    },
+    {
+      "surface_form": "asemalle",
+      "lexeme_id": "lexeme:asema",
+      "sense_id": "sense:asema-station",
+      "sense_gloss_en": "station",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "allative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-2",
+        "item_id": "a12s2-topic-asemalle",
+        "example_fi": "Menen asemalle.",
+        "gloss_fa": "به ایستگاه",
+        "source_lemma_fi": "asemalle"
+      }
+    },
+    {
+      "surface_form": "lippua",
+      "lexeme_id": "lexeme:lippu",
+      "sense_id": "sense:lippu-ticket",
+      "sense_gloss_en": "ticket",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "partitive",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a2.1-section-1",
+        "item_id": "a21s1-t-050",
+        "example_fi": "En löytänyt lippua.",
+        "gloss_fa": "بلیت (مفعول جزئی)",
+        "source_lemma_fi": "lippu"
+      }
+    },
+    {
+      "surface_form": "musiikki",
+      "lexeme_id": "lexeme:musiikki",
+      "sense_id": "sense:musiikki-music",
+      "sense_gloss_en": "music",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-3",
+        "item_id": "a12s3-topic-12",
+        "example_fi": "Musiikki on mukavaa.",
+        "gloss_fa": "موسیقی",
+        "source_lemma_fi": "musiikki"
+      }
+    },
+    {
+      "surface_form": "harrastus",
+      "lexeme_id": "lexeme:harrastus",
+      "sense_id": "sense:harrastus-hobby",
+      "sense_gloss_en": "hobby",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-3",
+        "item_id": "a12s3-topic-11",
+        "example_fi": "Tämä harrastus on mukava.",
+        "gloss_fa": "سرگرمی",
+        "source_lemma_fi": "harrastus"
+      }
+    },
+    {
+      "surface_form": "apu",
+      "lexeme_id": "lexeme:apu",
+      "sense_id": "sense:apu-help",
+      "sense_gloss_en": "help",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.2-section-1",
+        "item_id": "a12s1-topic-apu",
+        "example_fi": "Tarvitsen apua.",
+        "gloss_fa": "کمک",
+        "source_lemma_fi": "apu"
+      }
+    },
+    {
+      "surface_form": "ilta",
+      "lexeme_id": "lexeme:ilta",
+      "sense_id": "sense:ilta-evening",
+      "sense_gloss_en": "evening",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-3",
+        "item_id": "s3-ilta",
+        "example_fi": "Ilta alkaa.",
+        "gloss_fa": "عصر / شب",
+        "source_lemma_fi": "ilta"
+      }
+    },
+    {
+      "surface_form": "huone",
+      "lexeme_id": "lexeme:huone",
+      "sense_id": "sense:huone-room",
+      "sense_gloss_en": "room",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-4",
+        "item_id": "s4-huone",
+        "example_fi": "Tämä on huone.",
+        "gloss_fa": "اتاق",
+        "source_lemma_fi": "huone"
+      }
+    },
+    {
+      "surface_form": "sänky",
+      "lexeme_id": "lexeme:sanky",
+      "sense_id": "sense:sanky-bed",
+      "sense_gloss_en": "bed",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-4",
+        "item_id": "s4-sanky",
+        "example_fi": "Kissa on sängyllä.",
+        "gloss_fa": "تخت",
+        "source_lemma_fi": "sänky"
+      }
+    },
+    {
+      "surface_form": "perhe",
+      "lexeme_id": "lexeme:perhe",
+      "sense_id": "sense:perhe-family",
+      "sense_gloss_en": "family",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-2",
+        "item_id": "s2-perhe",
+        "example_fi": "Minulla on perhe.",
+        "gloss_fa": "خانواده",
+        "source_lemma_fi": "perhe"
+      }
+    },
+    {
+      "surface_form": "lapsi",
+      "lexeme_id": "lexeme:lapsi",
+      "sense_id": "sense:lapsi-child",
+      "sense_gloss_en": "child",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.1-section-2",
+        "item_id": "s2-lapsi",
+        "example_fi": "Minulla on lapsi.",
+        "gloss_fa": "کودک / فرزند",
+        "source_lemma_fi": "lapsi"
+      }
+    },
+    {
+      "surface_form": "pankki",
+      "lexeme_id": "lexeme:pankki",
+      "sense_id": "sense:pankki-bank",
+      "sense_gloss_en": "bank",
+      "morphology": {
+        "part_of_speech": "noun",
+        "case": "nominative",
+        "number": "singular"
+      },
+      "witness": {
+        "source": "course",
+        "section_id": "a1.3-section-2",
+        "item_id": "a13s2-t-052",
+        "example_fi": "Pankki on keskustassa.",
+        "gloss_fa": "بانک",
+        "source_lemma_fi": "pankki"
+      }
+    }
+  ]
+}

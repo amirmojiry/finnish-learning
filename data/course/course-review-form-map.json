@@ -1,7 +1,14 @@
 {
   "schema_version": 1,
   "identity_scope": "reviewable_curated_dictionary_surface_forms_only",
-  "disclaimer": "Course authored target mapping is not user proficiency, SRS history, or lemma/sense transfer.",
+  "disclaimer": "Course authored exact-form mistakes only prioritize unseen dictionary forms. Known context-sensitive homographs are deliberately excluded; no SRS history, sense or lexeme mastery is transferred.",
+  "excluded_ambiguous_form_ids": [
+    "form:61-69-6b-61",
+    "form:61-6a-61-6e",
+    "form:70-69-74-e4-e4",
+    "form:74-75-6c-69",
+    "form:76-6f-69"
+  ],
   "mappings": [
     {
       "section_id": "a1.1-section-1",
@@ -203,12 +210,6 @@
     },
     {
       "section_id": "a1.1-section-3",
-      "item_id": "s3-aika",
-      "form_id": "form:61-69-6b-61",
-      "surface_form": "aika"
-    },
-    {
-      "section_id": "a1.1-section-3",
       "item_id": "s3-en",
       "form_id": "form:65-6e",
       "surface_form": "en"
@@ -368,12 +369,6 @@
       "item_id": "a12s1-hf-vahan",
       "form_id": "form:76-e4-68-e4-6e",
       "surface_form": "vähän"
-    },
-    {
-      "section_id": "a1.2-section-1",
-      "item_id": "a12s1-hf-voi",
-      "form_id": "form:76-6f-69",
-      "surface_form": "voi"
     },
     {
       "section_id": "a1.2-section-1",
@@ -617,18 +612,6 @@
     },
     {
       "section_id": "a1.2-section-3",
-      "item_id": "a12s3-hf-13",
-      "form_id": "form:70-69-74-e4-e4",
-      "surface_form": "pitää"
-    },
-    {
-      "section_id": "a1.2-section-3",
-      "item_id": "a12s3-hf-14",
-      "form_id": "form:76-6f-69",
-      "surface_form": "voi"
-    },
-    {
-      "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-15",
       "form_id": "form:73-69-74-74-65-6e",
       "surface_form": "sitten"
@@ -815,12 +798,6 @@
     },
     {
       "section_id": "a1.2-section-4",
-      "item_id": "a12s4-hf-14",
-      "form_id": "form:61-69-6b-61",
-      "surface_form": "aika"
-    },
-    {
-      "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-15",
       "form_id": "form:68-65-74-69",
       "surface_form": "heti"
@@ -830,12 +807,6 @@
       "item_id": "a12s4-hf-16",
       "form_id": "form:74-e4-e4-6c-6c-e4",
       "surface_form": "täällä"
-    },
-    {
-      "section_id": "a1.2-section-4",
-      "item_id": "a12s4-hf-17",
-      "form_id": "form:76-6f-69",
-      "surface_form": "voi"
     },
     {
       "section_id": "a1.2-section-4",
@@ -878,12 +849,6 @@
       "item_id": "a13s1-h-012",
       "form_id": "form:79-68-64-65-73-73-e4",
       "surface_form": "yhdessä"
-    },
-    {
-      "section_id": "a1.3-section-1",
-      "item_id": "a13s1-h-013",
-      "form_id": "form:76-6f-69",
-      "surface_form": "voi"
     },
     {
       "section_id": "a1.3-section-1",
@@ -989,12 +954,6 @@
     },
     {
       "section_id": "a1.3-section-2",
-      "item_id": "a13s2-h-017",
-      "form_id": "form:70-69-74-e4-e4",
-      "surface_form": "pitää"
-    },
-    {
-      "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-018",
       "form_id": "form:74-65-68-64-e4",
       "surface_form": "tehdä"
@@ -1022,12 +981,6 @@
       "item_id": "a13s2-h-029",
       "form_id": "form:6f-69-6b-65-69-6e",
       "surface_form": "oikein"
-    },
-    {
-      "section_id": "a1.3-section-2",
-      "item_id": "a13s2-h-037",
-      "form_id": "form:76-6f-69",
-      "surface_form": "voi"
     },
     {
       "section_id": "a1.3-section-2",
@@ -1091,12 +1044,6 @@
     },
     {
       "section_id": "a1.3-section-3",
-      "item_id": "a13s3-h-002",
-      "form_id": "form:70-69-74-e4-e4",
-      "surface_form": "pitää"
-    },
-    {
-      "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-003",
       "form_id": "form:74-e4-6e-e4",
       "surface_form": "tänä"
@@ -1136,12 +1083,6 @@
       "item_id": "a13s3-h-022",
       "form_id": "form:6a-e4-6c-6b-65-65-6e",
       "surface_form": "jälkeen"
-    },
-    {
-      "section_id": "a1.3-section-3",
-      "item_id": "a13s3-h-029",
-      "form_id": "form:76-6f-69",
-      "surface_form": "voi"
     },
     {
       "section_id": "a1.3-section-3",
@@ -1232,12 +1173,6 @@
       "item_id": "a13s4-h-002",
       "form_id": "form:6f-6c-69-6e",
       "surface_form": "olin"
-    },
-    {
-      "section_id": "a1.3-section-4",
-      "item_id": "a13s4-h-003",
-      "form_id": "form:74-75-6c-69",
-      "surface_form": "tuli"
     },
     {
       "section_id": "a1.3-section-4",
@@ -1379,12 +1314,6 @@
     },
     {
       "section_id": "a2.1-section-1",
-      "item_id": "a21s1-h-010",
-      "form_id": "form:74-75-6c-69",
-      "surface_form": "tuli"
-    },
-    {
-      "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-011",
       "form_id": "form:65-6e-6e-65-6e",
       "surface_form": "ennen"
@@ -1469,12 +1398,6 @@
     },
     {
       "section_id": "a2.1-section-2",
-      "item_id": "a21s2-h-012",
-      "form_id": "form:70-69-74-e4-e4",
-      "surface_form": "pitää"
-    },
-    {
-      "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-021",
       "form_id": "form:6f-6c-69",
       "surface_form": "oli"
@@ -1514,12 +1437,6 @@
       "item_id": "a21s2-h-075",
       "form_id": "form:6d-79-f6-73",
       "surface_form": "myös"
-    },
-    {
-      "section_id": "a2.1-section-2",
-      "item_id": "a21s2-t-003",
-      "form_id": "form:61-6a-61-6e",
-      "surface_form": "ajan"
     },
     {
       "section_id": "a2.1-section-2",

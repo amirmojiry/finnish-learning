@@ -18,9 +18,17 @@ const BATCH_FORMS=Object.freeze([
 const BASE_FORMS=Object.freeze(['kissa','koira','kirja','minä','minun','sinä','sinun']);
 const DEFERRED_FORMS=Object.freeze(['aika','ajan','kotona','voi','pitää','tuli']);
 function evaluate(sidecar, reviews) {
- const errors=[],records=sidecar.records||[],entries=reviews.entries||[];
- const byForm=new Map(records.filter(r=>r.kind==='form').map(r=>[normalize(r.surface_form),r]));
+ const errors=[],entries=reviews.entries||[];
  const approved=new Map(entries.map(e=>[normalize(e.surface_form),e]));
+ // Historical batch-1 report is frozen to its 47 originally reviewed forms.
+ // Later separately verified batches retain their real reviewed status in the
+ // live sidecar, but are projected as unresolved solely for this old report.
+ const records=(sidecar.records||[]).map(row=>{
+  if(row.identity_review_status==='reviewed' && !approved.has(normalize(row.surface_form)))
+   return {...row,lexeme_id:null,sense_id:null,morphology:null,identity_review_status:'unresolved'};
+  return row;
+ });
+ const byForm=new Map(records.filter(r=>r.kind==='form').map(r=>[normalize(r.surface_form),r]));
  if(new Set(BATCH_FORMS).size!==40||BATCH_FORMS.length!==40)errors.push('Batch must have 40 unique forms');
  if(new Set(BASE_FORMS).size!==7)errors.push('Baseline identities list is invalid');
  if(new Set(entries.map(e=>normalize(e.surface_form))).size!==entries.length)errors.push('Duplicate reviewed editorial surfaces');
