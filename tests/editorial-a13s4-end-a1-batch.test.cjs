@@ -229,13 +229,13 @@ test('v1.66.0 bilingual release and 140-lesson audit reflect checkpoint retrieva
  const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
  const en=fs.readFileSync(path.join(root,'README.md'),'utf8'),fa=fs.readFileSync(path.join(root,'README.fa.md'),'utf8');
  const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
- assert.equal(version, '1.69.0');assert.equal(pkg.version,version);assert.match(changelog,/\[1\.66\.0\]/);
+ assert.equal(version, '1.70.0');assert.equal(pkg.version,version);assert.match(changelog,/\[1\.66\.0\]/);
  assert.match(en,/47 curated lessons \/ 189 fewer graded opportunities/);
  assert.match(fa,/۴۷ درس بازنگری‌شده و ۱۸۹ پاسخ نمره‌دار کمتر/);
  const report=audit.buildReport();assert.equal(report.summary.shipped_lessons,140);
- assert.equal(report.summary.editorially_revised_lessons, 71);
- assert.equal(report.summary.removed_grading_opportunities, 232);
+ assert.equal(report.summary.editorially_revised_lessons, 80);
+ assert.equal(report.summary.removed_grading_opportunities, 254);
  assert.equal(report.summary.learner_lessons_exceeding_30_slides,0);
- assert.equal(audit.priorityRows(report).length, 69);
- assert.match(audit.priorityMarkdown(report),/Remaining uncurated lessons: \*\*69\*\*; all \*\*71\*\* previously curated lessons are excluded\./);
+ assert.equal(audit.priorityRows(report).length, 60);
+ assert.match(audit.priorityMarkdown(report),/Remaining uncurated lessons: \*\*60\*\*; all \*\*80\*\* previously curated lessons are excluded\./);
 });

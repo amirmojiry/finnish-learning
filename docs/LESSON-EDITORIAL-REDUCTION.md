@@ -2,6 +2,33 @@
 
 [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Implementation #194](https://github.com/amirmojiry/finnish-learning/issues/194) · [Resumable pacing](LESSON-PACING.md)
 
+## Phase 15 — final nine historically overlong A1.1/A1.2 lessons (v1.70.0, issue #223)
+
+The complete original **55-lesson >30-authored-activity cohort** has been individually audited. These last nine lessons use shorter **fresh-start** selections, with original authored arrays preserved, and a bounded locally resumable sitting plan for the two intensive A1.1 lessons. All statistics below refer to *prepared learner-effective* activities, not minutes spent learning.
+
+| Section / lesson | Activities source → effective | Graded source → effective | Initial screens | Omitted source activity indices |
+| --- | ---: | ---: | ---: | --- |
+| A1.1 S2 L7: numbers 0–20 and age | 36 → 34 | 31 → 30 | 21 (paced) | 13, 15 |
+| A1.1 S3 L10: everyday routine review checkpoint | 37 → 33 | 37 → 33 | 23 (paced) | 6, 10, 11, 12 |
+| A1.2 S1 L2: prices and numbers | 36 → 33 | 23 → 20 | 18 | 16, 19, 21 |
+| A1.2 S1 L3: polite requests | 34 → 31 | 25 → 22 | 21 | 1, 19, 26 |
+| A1.2 S1 L6: size and fit | 31 → 29 | 21 → 19 | 20 | 1, 3 |
+| A1.2 S1 L8: problems with service | 32 → 29 | 20 → 17 | 18 | 19, 22, 24 |
+| A1.2 S2 L5: transport | 33 → 30 | 21 → 18 | 19 | 26, 27, 31 |
+| A1.2 S2 L6: tickets | 32 → 31 | 22 → 21 | 17 | 11 |
+| A1.2 S2 L8: distance and duration | 35 → 33 | 24 → 22 | 19 | 26, 32 |
+| **Nine lessons** | **306 → 283** | **224 → 202** | **176** | **23 activities / 22 graded** |
+
+### Safeguarded choices and review boundaries
+
+- A1.1 S2 L7 removes one duplicate typed age expression and one repeat **teach** card; the original 0–20 number-grid, later dictated assessment and structured age expression remain. Its graded numeric responses are not silently dropped.
+- A1.1 S3 L10 removes four redundant review-mode responses whose *same-lesson* grammar-positive alternatives survive. The checkpoint still independently grades all **15 checkpoint target IDs**, including its **five negative-transform** grammar assessments. The checkpoint **did not originally have an 80% pass threshold**; this PR does not fabricate one.
+- The seven A1.2 lessons defer only already-assessed reviewed responses with prior effective graded evidence **and another later graded recall**, or omit duplicate same-lesson recognition while preserving a distinct independently scored mode. All grammar-evidence indices/types, introduction/assessment, Finnish listening and dictation, number forms, contextual writing and the final 80%-pass checkpoints in their own sections remain unchanged.
+- For two A1.1 lessons only, the pre-existing `study_pacing` runtime now bounds *initial and all-wrong retry* sittings to **15 screens / 20 graded answers**, with offline local resume and fingerprint checking. These two lessons had **no historical paced drafts** before this change; archived course completion, SRS and original activities are left untouched.
+- Tests compare positively graded **later effective-lesson retrieval** before/after editing across A1.1 S2/S3 and A1.2 S1/S2. Any **new** gap fails; existing baseline gaps are not claimed to be repaired, and must be investigated separately before full pedagogical sign-off.
+
+**Result after this PR:** 80 of 140 lessons have shorter individually audited editions; all **55 originally overlong** lessons are covered; 60 other lessons remain individually uncurated, not necessarily overly long. This does not complete real-device RTL, screen-reader, manual linguistic review, learner retention/time-on-task assessment, or the A2.1 S3 release gates. Parent [#189](https://github.com/amirmojiry/finnish-learning/issues/189) remains open.
+
 ## Phase 14 — A2.1 Section 1 travel and imperfect-past narrative (v1.69.0, #221)
 
 Conservative fresh-start editorial revisions retain historical original arrays, all 140 lesson identities, saved grades and Word Practice SRS.

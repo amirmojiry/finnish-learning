@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.70.0] - 2026-10-26
+
+### Changed
+
+- Finish evidence-based, **single-PR curation of the nine remaining original >30-authoring-entry A1.1/A1.2 lessons**: A1.1 Section 2 L7 numbers/age, Section 3 L10 daily-routine checkpoint, A1.2 Section 1 L2/L3/L6/L8 shopping and service, and A1.2 Section 2 L5/L6/L8 transport and tickets. For fresh attempts, their combined original/prepared **306→283 activities and 224→202 independently graded answers** (22 redundant scored responses and one duplicate teach card removed). Historical arrays, 140 stable lesson IDs, past scores and Word Practice SRS are unchanged.
+- Add **max 15 initial/retry screens / max 20 independently graded answers per sitting** to both newly curated intensive A1.1 lessons, using the established offline-first resumable draft code. Preserve the A1.1 Section 3 checkpoint's **15 target IDs**, all five explicit negative-transform grammatical checks and historical lack of a new pass threshold. Neither of these two lessons had a pre-existing paced draft to migrate.
+- Preserve the **numeric 0–20 introduction grid**, prepared Finnish listening and dictation in every edited lesson, productive skills and every referenced grammar assessment. Enforce no **new** later-graded-retrieval gaps across the four affected sections relative to pre-edit effective editions. Existing older baseline holes remain visible and outside this narrowly scoped curation; do not misreport them as repaired.
+- Extend source-array-hash, lesson-load, checkpoint, stable-ID and all-wrong retry/draft compatibility tests. Now **all 55 originally >30-activity lessons** have been individually reviewed, but this is not proof that the other 60 lessons, mobile RTL/accessibility or learning outcomes were reviewed. Whole-course static snapshot: **80 individually curated / 254 fewer independently graded answers**, **60** not individually curated. Update bilingual release docs, editorial rationale/roadmap, version and cache/deploy markers. No observed fatigue, time-savings or CEFR proficiency claim.
+
 ## [1.69.0] - 2026-10-26
 
 ### Changed
