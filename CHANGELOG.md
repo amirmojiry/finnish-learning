@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.68.0] - 2026-10-26
+
+### Changed
+
+- Add conservative, separately versioned editorial editions for **A2.1 Section 2 Lessons 2–9** (appointments, symptoms, public-service interactions, pharmacy, forms and document requests). New attempts use **231 → 219 activities and 175 → 163 independently graded responses** across the eight lessons. The original authored arrays and 140 stable lesson IDs are preserved for legacy/resumable progress, along with unchanged Word Practice SRS identities.
+- Omit **five previously graded reviewed-frequency recognition choices** and **seven redundant recognition choices** whose typed, production or sentence-order assessments survive. Preserve all Finnish listening and dictation, indexed/type-matched grammar evidence, morphology, negative transformations, contextual production, Lesson 8 and 9 guided writing, two Lesson 9 reading passages with all four questions, and the unchanged final section checkpoint (80% pass requirement).
+- Add deterministic original-source hashes, positive earlier-or-same-lesson evidence checks for each omission and a **67/67 later effective-lesson independently graded target retrieval gate**, protecting against previous A1/A2 editorial spacing regressions.
+- Synchronize English/Persian release, editorial and roadmap documentation, release/cache markers and deterministic audit totals: **63 curated lessons / 221 fewer independently graded opportunities**, 77 not individually curated. Each revised lesson has **16–21 visible initial screens**. No inference about actual learner fatigue, retention, CEFR proficiency or minutes saved.
+
 ## [1.67.0] - 2026-10-22
 
 ### Changed

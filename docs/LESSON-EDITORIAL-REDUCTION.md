@@ -2,6 +2,30 @@
 
 [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) · [Parent #189](https://github.com/amirmojiry/finnish-learning/issues/189) · [Implementation #194](https://github.com/amirmojiry/finnish-learning/issues/194) · [Resumable pacing](LESSON-PACING.md)
 
+## Phase 13 — A2.1 Section 2 healthcare and service encounters (proposed v1.68.0, issue #219)
+
+Eight A2.1 Section 2 lessons receive conservative **fresh-start only** editorial selections. The original authored arrays (including all 67 introductions, original grammar and reading evidence) remain untouched, so earlier lesson completion and Word Practice SRS data retain their identities. Counts below derive from prepared learner-effective activity editions, not elapsed time.
+
+| Lesson | Activities original → revised | Graded original → revised | Revised initial screens | Omitted |
+| --- | ---: | ---: | ---: | ---: |
+| S2 L2: rescheduling / cancelling | 27 → 26 | 21 → 20 | 17 | 1 |
+| S2 L3: symptoms and onset | 25 → 24 | 18 → 17 | 16 | 1 |
+| S2 L4: staff instructions | 28 → 26 | 20 → 18 | 17 | 2 |
+| S2 L5: pharmacy advice | 29 → 28 | 22 → 21 | 17 | 1 |
+| S2 L6: service counters | 28 → 26 | 20 → 18 | 17 | 2 |
+| S2 L7: a simple form | 28 → 27 | 20 → 19 | 17 | 1 |
+| S2 L8: certificate request | 38 → 36 | 26 → 24 | 21 | 2 |
+| S2 L9: integrated service visit | 28 → 26 | 28 → 26 | 20 | 2 |
+| **Total** | **231 → 219** | **175 → 163** | **142** | **12** |
+
+### Why these particular choices, not a broad review-tail cut
+
+Each original source activity index is pinned by an immutable FNV32 regression fingerprint. Only **five reviewed high-frequency recognition choices** are fully deferred; all had earlier independently scored positives in previously effective Section 2 lessons: L4 indices 16 (a21s2-h-011) and 22 (a21s2-h-012); L6 index 22 (a21s2-h-011); L7 index 21 (a21s2-h-011); L8 index 26 (a21s2-h-001). Seven other recognition duplicates have a still-present **independently graded same-lesson alternative**: L2 index 15 (a21s2-e-020, typed), L3 index 7 (a21s2-e-025, production), L5 index 16 (a21s2-e-047, typed), L6 index 17 (a21s2-e-056, typed), L8 index 21 (a21s2-e-074, typed), and L9 indices 0 (a21s2-e-078, production) and 6 (a21s2-e-081, sentence ordering). No listening, dictation, grammar evidence, negative transformation, morphological work, reading or guided writing task is removed.
+
+A regression gate checks both an earlier/same-lesson positively graded alternative for **all 12 omissions** and at least one later independently graded positive opportunity in a subsequent **effective lesson for all 67 newly introduced exact targets**. Crucially, all reviewed response tails that are the *sole* later retrieval of a new item remain: e.g. the Lesson 7 form expressions checked in Lesson 8 and Lesson 8 expressions checked in Lesson 9. Preserve both original Lesson 9 readings with all four questions, and four-item guided writing in each of Lessons 8 and 9. Lesson 10's 15 checkpoint targets and 80%-pass requirement, as well as Lesson 1, are unchanged. The selected eight lessons have no study_pacing drafts requiring editorial fingerprint migration.
+
+Current proposed full-course audit: **63 curated lessons, 221 fewer independently graded answers** versus historical source, **77** lessons not yet curated. These counts are not measures of actual fatigue, retention, time saved, CEFR mastery or speaking performance. Manual mobile/RTL/assistive-technology review remains under parent #189.
+
 ## Phase 12 — A1.3 Section 1 social invitations, messages and plans (proposed v1.67.0, issue #217)
 
 The new-start editorial revisions for Lessons 2–9 preserve the full original authored manifests but reduce repeated independently graded work. These static counts are produced from the learner-effective curated edition after Finnish listening, dictation and structured-practice preparation (not estimates of minutes or mastery).
