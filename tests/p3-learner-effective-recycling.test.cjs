@@ -68,6 +68,16 @@ test('same written form in a different item or example cannot be reintroduced as
  assert.equal(r.summary.duplicate_exact_introduction_count,1);
  assert.ok(r.errors.some(x=>x.reasons.some(y=>y.includes('form already introduced'))));
 });
+test('same exact written form with two different item IDs in a single lesson is not two new targets',()=>{
+ const s=section();
+ s.lessons[0].new_targets.push('oneCopy');
+ const r=p3.assess([s],side);
+ assert.equal(r.summary.duplicate_exact_introduction_count,1);
+ assert.deepEqual(r.lessons[0].repeated_new_exact_ids,[id('form','minä')]);
+ assert.ok(r.errors.some(e=>e.lesson_id==='fixture-one'&&
+  e.reasons.some(reason=>reason.includes('form already introduced'))));
+});
+
 test('a later identical sentence is a review but not a new authored context',()=>{
  const s=section();
  s.lessons[1].activities=s.lessons[1].activities.filter(x=>x.item!=='oneAgain');

@@ -53,7 +53,12 @@ function assess(sections,sidecar){
   for(const lesson of s.lessons){
    const introduced=unique(lesson.new_targets||[]).map(id=>form(s,id,known));
    const graded=evidence(s,lesson,known),checkpoint=!!(lesson.checkpoint_targets?.length||lesson.passing_score);
-   const duplicates=introduced.filter(x=>first.has(x.id));
+   const introducedHere=new Set();
+   const duplicates=introduced.filter(x=>{
+    const duplicate=first.has(x.id)||introducedHere.has(x.id);
+    introducedHere.add(x.id);
+    return duplicate;
+   });
    const newFamilyForm=introduced.filter(x=>x.family_id&&families.has(x.family_id)&&families.get(x.family_id)!==x.id);
    const previouslyGraded=[...graded.keys()].filter(id=>first.has(id)&&first.get(id).lesson!==lesson.id);
    const strict=s.id==='a2.1-section-3'||lesson.composition_policy==='required';
