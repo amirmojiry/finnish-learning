@@ -4,9 +4,13 @@
 
 ## Key distinction
 
-**A corpus position is not a CEFR word requirement.** The project currently ships 400 curated Parole-backed Finnish written *surface forms* in `data/common-words.json`, but the full underlying source is larger. A ranked form, a Finnish lexeme, a grammatical inflection and a multiword expression are different accounting units. Comprehending one inflected form does not imply productive command of the lemma, nor the entire language.
+**A corpus position is not a CEFR word requirement.** As of v1.71.0 the project ships 425 curated Parole-backed Finnish written *surface forms* in `data/common-words.json`, but the full underlying source is larger. A ranked form, a Finnish lexeme, a grammatical inflection and a multiword expression are different accounting units. Comprehending one inflected form does not imply productive command of the lemma, nor the entire language.
 
 The priority bands below are **project review queues**, not promised per-stage word counts. A candidate may be deferred due to pedagogical difficulty, replaced by a more relevant topic item, or recycled from an earlier level. Adjacent levels deliberately review earlier candidates.
+
+## Editorial sense identity state (v1.71.0)
+
+The 14 shipped sections contain **1,264 unique identity records** (824 exact single forms, 440 multiword expressions). The **70 current exact forms** have AI-assisted, source-witnessed editorial lexeme/sense/case decisions (independent human linguistic sign-off is still recommended); **1,194 records** remain unresolved (754 single forms, 440 expressions) in the [priority review queue](P2-UNRESOLVED-REVIEW-QUEUE.md). Five written homographs (including `voi` and `pitää`) already have [item-scoped contextual decisions](P2-CONTEXTUAL-IDENTITY-BATCH2.md) but deliberately lack global senses. The current exact-form Course→Word Practice review bridge is **advisory for unseen words only** and is not a shared learner-mastery database. Do not conflate Parole source ranks, reviewed forms, course exposure or a correct response with full vocabulary understanding or CEFR/YKI attainment.
 
 ## Advisory candidate allocation across levels
 

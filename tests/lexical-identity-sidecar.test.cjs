@@ -52,7 +52,8 @@ test('source-ranked fields follow curated Parole entries, not guessed morphology
 test('real output reproducibility and no dictionary/course schema modifications',()=>{
  const stages=['a1.1','a1.2','a1.3','a2.1'].flatMap(level=>[1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
    .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
- const actual=generator.build(read('data/common-words.json'),stages,generator.readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))),read('data/course/reviewed-lexical-identities.json'));
+ const actual=generator.build(read('data/common-words.json'),stages,generator.readParoleSource(fs.readFileSync(path.join(ROOT,'data/parole_frek_3.txt'))),{entries:[...read('data/course/reviewed-lexical-identities.json').entries,
+   ...read('data/course/reviewed-lexical-identities-batch3.json').entries]});
  assert.deepEqual(actual,sidecar);
  assert.equal(actual.counts.shipped_lessons,140);
 });
