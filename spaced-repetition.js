@@ -6,6 +6,7 @@
   'use strict';
 
   const STORAGE_KEY = 'fiSrsProgressV1';
+  const PREFERENCES_KEY = 'fiSrsPreferencesV1';
   const SCHEMA_VERSION = 1;
   const DAY_MS = 24 * 60 * 60 * 1000;
   const RETRY_MS = 10 * 60 * 1000;
@@ -28,6 +29,30 @@
 
   function emptyProgress(now = Date.now()) {
     return { version: SCHEMA_VERSION, words: {}, dailyNew: { date: localDateKey(now), count: 0 } };
+  }
+
+  function defaultReviewPreferences(){
+    return {version:1,newLimit:DEFAULT_NEW_LIMIT,sessionLimit:DEFAULT_SESSION_LIMIT};
+  }
+  function sanitizeReviewPreferences(value){
+    const defaults=defaultReviewPreferences();
+    if(!value||typeof value!=='object'||value.version!==1)return defaults;
+    const int=(v,def,min,max)=>Number.isInteger(v)?Math.max(min,Math.min(max,v)):def;
+    return {version:1,newLimit:int(value.newLimit,defaults.newLimit,0,30),
+      sessionLimit:int(value.sessionLimit,defaults.sessionLimit,1,50)};
+  }
+  function loadReviewPreferences(storage){
+    if(!storage||typeof storage.getItem!=='function')return defaultReviewPreferences();
+    try{
+      const raw=storage.getItem(PREFERENCES_KEY);
+      return raw?sanitizeReviewPreferences(JSON.parse(raw)):defaultReviewPreferences();
+    }catch{return defaultReviewPreferences();}
+  }
+  function saveReviewPreferences(storage,settings){
+    const clean=sanitizeReviewPreferences(settings);
+    if(!storage||typeof storage.setItem!=='function')return {settings:clean,saved:false};
+    try{storage.setItem(PREFERENCES_KEY,JSON.stringify(clean));return {settings:clean,saved:true};}
+    catch{return {settings:clean,saved:false};}
   }
 
   function sanitizeRecord(record) {
@@ -71,7 +96,8 @@
 
   function saveProgress(storage, progress, now = Date.now()) {
     const clean = sanitizeProgress(progress, now);
-    if (storage && typeof storage.setItem === 'function') storage.setItem(STORAGE_KEY, JSON.stringify(clean));
+    try{storage?.setItem?.(STORAGE_KEY, JSON.stringify(clean));}
+    catch{/* Keep the in-memory review record if browser storage is denied. */}
     return clean;
   }
 
@@ -218,6 +244,7 @@
       <div class="spaced-review-heading"><div><p class="spaced-review-eyebrow">مرور هوشمند</p><h2 id="spaced-review-title">مرور امروز</h2><p id="spaced-review-message">وضعیت مرور در حال آماده‌شدن است.</p></div><button id="spaced-review-start" class="primary-button spaced-review-start" type="button" disabled>شروع مرور</button></div>
       <div class="spaced-review-stats" aria-label="وضعیت مرور فاصله‌دار"><div class="spaced-review-stat"><strong id="spaced-review-due">۰</strong><span>موعددار</span></div><div class="spaced-review-stat"><strong id="spaced-review-new">۰</strong><span>جدید امروز</span></div><button id="spaced-review-learned-card" class="spaced-review-stat spaced-review-stat-button" type="button" aria-expanded="false" aria-controls="spaced-review-history"><strong id="spaced-review-learned">۰</strong><span>شروع‌شده</span></button><div class="spaced-review-stat"><strong id="spaced-review-mastered">۰</strong><span>مسلط</span></div></div>
       <section class="spaced-review-coverage" aria-labelledby="spaced-review-coverage-title"><div class="spaced-review-coverage-heading"><div><p class="spaced-review-coverage-label">پوشش واژگانی تقریبی</p><h3 id="spaced-review-coverage-title"><span id="spaced-review-reviewed-coverage">۰٫۰۰</span>٪ از توکن‌های نوشتاری</h3></div><span class="spaced-review-mastered-coverage">تثبیت‌شده: <strong id="spaced-review-mastered-coverage">۰٫۰۰</strong>٪</span></div><div class="spaced-review-coverage-track" aria-hidden="true"><span id="spaced-review-coverage-bar"></span></div><p>این برآورد از جمع درصد بسامد واژه‌های مرورشده در پیکره Parole به‌دست می‌آید و معادل سنجش کامل فهم متن نیست.</p></section>
+      <div class="spaced-review-preferences" role="group" aria-label="تنظیمات سرعت مرور"><label for="spaced-review-new-limit">واژهٔ جدید در روز <input type="number" id="spaced-review-new-limit" min="0" max="30" step="1" inputmode="numeric"></label><label for="spaced-review-session-limit">واژه در هر نوبت <input type="number" id="spaced-review-session-limit" min="1" max="50" step="1" inputmode="numeric"></label><p id="spaced-review-preferences-status" role="status" aria-live="polite">پاسخ اشتباه برای مرور دوباره پس از ۱۰ دقیقه موعددار می‌شود؛ واژه‌های موعددار همیشه اولویت دارند.</p></div>
       <section id="spaced-review-history" class="spaced-review-history" hidden aria-labelledby="spaced-review-history-title"><div class="spaced-review-history-heading"><div><h3 id="spaced-review-history-title">واژه‌های مرورشده</h3><p>برای دیدن جزئیات هر واژه، روی آن بزن.</p></div><button id="spaced-review-history-close" class="text-button" type="button">بستن</button></div><div id="spaced-review-history-list" class="spaced-review-history-list"></div><p id="spaced-review-history-empty" class="spaced-review-history-empty" hidden>هنوز واژه‌ای مرور نشده است.</p></section>`;
     slot.replaceChildren(panel);
     return panel;
@@ -229,11 +256,12 @@
     const panel = createPanel(document);
     if (!panel) return;
     const elements = {
-      start: document.getElementById('spaced-review-start'), message: document.getElementById('spaced-review-message'), due: document.getElementById('spaced-review-due'), newToday: document.getElementById('spaced-review-new'), learned: document.getElementById('spaced-review-learned'), mastered: document.getElementById('spaced-review-mastered'), learnedCard: document.getElementById('spaced-review-learned-card'), reviewedCoverage: document.getElementById('spaced-review-reviewed-coverage'), masteredCoverage: document.getElementById('spaced-review-mastered-coverage'), coverageBar: document.getElementById('spaced-review-coverage-bar'), history: document.getElementById('spaced-review-history'), historyList: document.getElementById('spaced-review-history-list'), historyEmpty: document.getElementById('spaced-review-history-empty'), historyClose: document.getElementById('spaced-review-history-close'),
+      start: document.getElementById('spaced-review-start'), message: document.getElementById('spaced-review-message'), due: document.getElementById('spaced-review-due'), newToday: document.getElementById('spaced-review-new'), learned: document.getElementById('spaced-review-learned'), mastered: document.getElementById('spaced-review-mastered'), learnedCard: document.getElementById('spaced-review-learned-card'), reviewedCoverage: document.getElementById('spaced-review-reviewed-coverage'), masteredCoverage: document.getElementById('spaced-review-mastered-coverage'), coverageBar: document.getElementById('spaced-review-coverage-bar'), history: document.getElementById('spaced-review-history'), historyList: document.getElementById('spaced-review-history-list'), historyEmpty: document.getElementById('spaced-review-history-empty'), historyClose: document.getElementById('spaced-review-history-close'), newLimitInput: document.getElementById('spaced-review-new-limit'), sessionLimitInput: document.getElementById('spaced-review-session-limit'), preferencesStatus: document.getElementById('spaced-review-preferences-status'),
     };
     let words = [];
     let wordMap = new Map();
     let progress = loadProgress(windowObject.localStorage);
+    let preferences = loadReviewPreferences(windowObject.localStorage);
     let courseReviewMap = null;
     function courseReviewPriorities() {
       const course = windowObject.FinnishCourse;
@@ -243,6 +271,14 @@
         windowObject.localStorage, courseReviewMap, course.STORAGE_KEY, course.SCHEMA_VERSION
       );
     }
+    function courseReviewHints(){
+      const course=windowObject.FinnishCourse,bridge=windowObject.FinnishCourseSrsBridge;
+      if(!courseReviewMap||!course?.STORAGE_KEY||!bridge?.reviewHintsByFormIdFromStorage)return {};
+      return bridge.reviewHintsByFormIdFromStorage(
+        windowObject.localStorage,courseReviewMap,course.STORAGE_KEY,course.SCHEMA_VERSION
+      );
+    }
+    let sessionHints = {};
     let active = false;
     let queue = [];
     let currentWord = null;
@@ -297,7 +333,7 @@
     }
     function updatePanel() {
       progress = sanitizeProgress(progress);
-      const stats = summarizeProgress(words, progress);
+      const stats = summarizeProgress(words, progress, Date.now(), {newLimit:preferences.newLimit});
       const coverage = calculateCoverage(words, progress);
       elements.due.textContent = toPersianNumber(stats.due); elements.newToday.textContent = toPersianNumber(stats.availableNewToday); elements.learned.textContent = toPersianNumber(stats.learned); elements.mastered.textContent = toPersianNumber(stats.mastered);
       elements.learnedCard.disabled = stats.learned === 0; elements.reviewedCoverage.textContent = toPersianPercent(coverage.reviewedPercent); elements.masteredCoverage.textContent = toPersianPercent(coverage.masteredPercent); elements.coverageBar.style.width = `${coverage.reviewedPercent}%`;
@@ -312,9 +348,15 @@
       if (!word) return;
       answerRecorded = false;
       activateRegularView('practice');
-      const mode = REVIEW_MODES[sessionAnswered % REVIEW_MODES.length];
+      const key=normalizeWord(word.word),record=progress.words[key];
+      const unseen=!record||record.totalAnswers===0;
+      const hint=unseen?sessionHints[stableFormId(word.word)]:null;
+      const suggested=windowObject.FinnishCourseSrsBridge?.suggestedMode?.(hint);
+      const mode=suggested&&REVIEW_MODES.includes(suggested)?suggested
+        :REVIEW_MODES[sessionAnswered % REVIEW_MODES.length];
       windowObject.hideReviewFeedback?.();
-      windowObject.startReviewPractice(word, mode);
+      // Source-authored context is optional; the dictionary remains the offline fallback.
+      windowObject.startReviewPractice(word,mode,hint?.lastError?.context||null);
     }
     function completeSession() {
       active = false;
@@ -350,8 +392,19 @@
         updatePanel();
         return;
       }
-      progress = loadProgress(windowObject.localStorage);
-      queue = buildReviewQueue(words, progress, Date.now(), { courseFormPriorities: courseReviewPriorities() });
+      // Preserve in-memory answers when storage is unavailable; do not
+      // replace them with a fresh empty state on the next session.
+      try{
+        if(windowObject.localStorage?.getItem(STORAGE_KEY))
+          progress=loadProgress(windowObject.localStorage);
+      }catch{
+        elements.preferencesStatus.textContent='ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط در این صفحه می‌مانند.';
+      }
+      sessionHints=courseReviewHints();
+      queue = buildReviewQueue(words, progress, Date.now(), {
+        newLimit:preferences.newLimit,sessionLimit:preferences.sessionLimit,
+        courseFormPriorities: courseReviewPriorities()
+      });
       if (queue.length === 0) {
         completionMessage = 'در حال حاضر واژه موعددار یا سهمیه واژه جدیدی باقی نمانده است.';
         updatePanel();
@@ -368,6 +421,12 @@
     function persistAnswer(correct) {
       if (!active || !currentWord || answerRecorded) return;
       progress = saveProgress(windowObject.localStorage, recordAnswer(progress, currentWord, correct));
+      try{
+        if(windowObject.localStorage?.getItem(STORAGE_KEY)!==JSON.stringify(progress))
+          throw Error('SRS progress storage unavailable');
+      }catch{
+        elements.preferencesStatus.textContent='ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط تا بستن صفحه باقی می‌مانند.';
+      }
       answerRecorded = true;
       sessionAnswered += 1;
       if (correct) sessionCorrect += 1;
@@ -376,13 +435,41 @@
       updatePanel();
     }
 
+    elements.newLimitInput.value=String(preferences.newLimit);
+    elements.sessionLimitInput.value=String(preferences.sessionLimit);
+    function updatePreferences(){
+      const parsed=(input,fallback)=>input.value.trim()!==''&&/^\d+$/u.test(input.value.trim())
+        ?Number(input.value.trim()):fallback;
+      const result=saveReviewPreferences(windowObject.localStorage,{
+        version:1,
+        newLimit:parsed(elements.newLimitInput,preferences.newLimit),
+        sessionLimit:parsed(elements.sessionLimitInput,preferences.sessionLimit),
+      });
+      preferences=result.settings;
+      elements.newLimitInput.value=String(preferences.newLimit);
+      elements.sessionLimitInput.value=String(preferences.sessionLimit);
+      elements.preferencesStatus.textContent=result.saved
+        ?'تنظیمات مرور ذخیره شد؛ زمان مرورهای موعددار تغییری نکرد.'
+        :'ذخیرهٔ مرورگر در دسترس نیست؛ تنظیمات فقط تا زمان بازبودن صفحه فعال‌اند.';
+      updatePanel();
+    }
+    elements.newLimitInput.addEventListener('change',updatePreferences);
+    elements.sessionLimitInput.addEventListener('change',updatePreferences);
     elements.start.addEventListener('click', () => active ? stopSession() : startSession());
     elements.learnedCard.addEventListener('click', () => { const open = elements.history.hidden; elements.history.hidden = !open; elements.learnedCard.setAttribute('aria-expanded', String(open)); if (open) renderHistory(); });
     elements.historyClose.addEventListener('click', closeHistory);
     windowObject.addEventListener('finnish-review-answer', (event) => persistAnswer(Boolean(event.detail?.correct)));
     windowObject.addEventListener('finnish-review-next', () => launchNext());
     windowObject.addEventListener('finnish-word-review-ready', updatePanel);
-    windowObject.addEventListener('storage', (event) => { if (event.key === STORAGE_KEY) { progress = loadProgress(windowObject.localStorage); updatePanel(); } });
+    windowObject.addEventListener('storage', event => {
+      if(event.key===STORAGE_KEY){progress=loadProgress(windowObject.localStorage);updatePanel();}
+      if(event.key===PREFERENCES_KEY){
+        preferences=loadReviewPreferences(windowObject.localStorage);
+        elements.newLimitInput.value=String(preferences.newLimit);
+        elements.sessionLimitInput.value=String(preferences.sessionLimit);
+        updatePanel();
+      }
+    });
     const detailWord = document.getElementById('detail-word'); if (detailWord && typeof windowObject.MutationObserver === 'function') new windowObject.MutationObserver(renderDetailReviewStatus).observe(detailWord, { childList: true, characterData: true, subtree: true });
     windowObject.fetch(`./data/course/course-review-form-map.json?v=${Date.now()}`, { cache: 'no-store' })
       .then(response => { if (!response.ok) throw Error(String(response.status)); return response.json(); })
@@ -396,5 +483,5 @@
     else initializeBrowser(window);
   }
 
-  return { STORAGE_KEY, DAY_MS, RETRY_MS, DEFAULT_NEW_LIMIT, DEFAULT_SESSION_LIMIT, normalizeWord, localDateKey, emptyProgress, sanitizeRecord, sanitizeProgress, loadProgress, saveProgress, scheduleAnswer, recordAnswer, isMastered, buildReviewQueue, summarizeProgress, reviewedWordEntries, calculateCoverage, wordReviewStatus, initializeBrowser };
+  return { STORAGE_KEY, PREFERENCES_KEY, DAY_MS, RETRY_MS, DEFAULT_NEW_LIMIT, DEFAULT_SESSION_LIMIT, defaultReviewPreferences, sanitizeReviewPreferences, loadReviewPreferences, saveReviewPreferences, stableFormId, normalizeWord, localDateKey, emptyProgress, sanitizeRecord, sanitizeProgress, loadProgress, saveProgress, scheduleAnswer, recordAnswer, isMastered, buildReviewQueue, summarizeProgress, reviewedWordEntries, calculateCoverage, wordReviewStatus, initializeBrowser };
 });

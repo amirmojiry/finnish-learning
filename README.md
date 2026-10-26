@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.72.0`
+- Version: `1.73.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.73.0: P5 contextual review hints and learner-paced Word Practice.** An **exact-form-only**, first-attempt Course evidence bridge now distinguishes recognition, Finnish listening, dictation, typing, guided and independent production failures when prioritizing *unseen* dictionary words. Due reviews and existing SRS schedules always come first; no course recognition click or form-family match transfers mastery. The generated review map includes **239 unambiguous form-item links**, **224 verified Finnish/Persian examples** and **31 previously reviewed P2 sense links**; ambiguous words such as `pitää` and `voi` stay excluded. Word Practice adds saved settings for **0–30 new words/day** (default 10) and **1–50 per session** (default 20), with safe corrupted/blocked-storage fallbacks and an unchanged `fiSrsProgressV1` schema. A typed error can suggest contextual cloze instead of implying new grammar competence. [Issue #229](https://github.com/amirmojiry/finnish-learning/issues/229) · [P5 safeguards](docs/P5-CONTEXTUAL-REVIEW-BRIDGE.md) · [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101). Broader shared lexeme mastery, actual audio-skill validation and device accessibility QA remain open.
 
 **v1.72.0: P3 learner-effective composition and retrieval audit.** New deterministic checks inspect **all 140 shipped lessons in 14 sections** as a new learner actually sees them, respecting the 80 editorially shortened editions. They distinguish exact-form first introductions, P2-reviewed semantic families, unresolved senses, recommended **2 ranked + 2 topical + 1 useful expression / 3–5 reviews** (guidance, not quotas), later graded recall, receptive vs dictated/typed/produced evidence, and genuine changes of Finnish example. All **931** declared exact-form introductions are unique by canonical normalized form across shipped lessons. A strict **future A2.1 Section 3** release gate rejects unreviewed duplicate introductions and missing later scored, differently contextualized practice; existing 140 lessons are an **advisory** backlog, not automatically rewritten or declared fully validated. No Course/SRS scores, dictionary, 140 IDs or Parole values change. [P3 methodology](docs/P3-LEARNER-EFFECTIVE-RECYCLING.md) · [Issue #227](https://github.com/amirmojiry/finnish-learning/issues/227) · [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101).
 

@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.73.0] - 2026-10-26
+
+### Changed
+
+- Extend the P5 read-only Course → Word Practice bridge with **mode-aware first-attempt answer evidence** (meaning recognition, Finnish listening, dictation, typed, guided and independent production). Deduplicated wrong answers only prioritize **unseen exact dictionary forms**; due reviews, learner-specific intervals, stored word progress and old course scores are unchanged. An optional, source-authored context sentence can replace the dictionary example only when the same form occurs explicitly and a Persian translation is present. Ambiguous globally unresolved forms, including `voi` and `pitää`, remain excluded. Never equate any Course recognition with mastered Word Practice knowledge.
+- Regenerate the deterministic course-review map with **239 eligible section-item/form mappings**, **224 safely matched Finnish/Persian example pairs** and **31 previously reviewed P2 sense links**. Keep separate form identities for every inflection; no implicit lexeme-family inheritance and no source or Parole rank changes.
+- Add accessible configurable **daily new-word limit 0–30** (default 10) and **session size 1–50** (default 20) in Word Practice, saved under optional `fiSrsPreferencesV1`. Zero new still admits due reviews; corrupt/blocked storage uses safe defaults and blocked SRS writes preserve current-page memory with a visible warning. Existing `fiSrsProgressV1` storage schema, due dates, successes, lapses, source data and rollback compatibility remain unchanged.
+- Add regression tests for safe context provenance, mode attribution and deduplicated errors, ambiguity exclusion, independent storage preferences and legacy SRS compatibility, and update bilingual docs and cache/version markers. Parent #101 P5 remains open for lexeme-wide editorial validation, real listening-device UX, manual RTL/accessibility and release signoff.
+
 ## [1.72.0] - 2026-10-26
 
 ### Added

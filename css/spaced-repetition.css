@@ -151,6 +151,46 @@
   line-height: 1.8;
 }
 
+.spaced-review-preferences {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px 18px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.spaced-review-preferences label {
+  display: grid;
+  gap: 6px;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+.spaced-review-preferences input {
+  width: 94px;
+  max-width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+.spaced-review-preferences input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.spaced-review-preferences p {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.75;
+}
+
 .spaced-review-history {
   margin-top: 18px;
   padding-top: 18px;

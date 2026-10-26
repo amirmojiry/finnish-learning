@@ -157,6 +157,65 @@ test('spaced-repetition documentation matches the Word Practice integration', ()
   assert.doesNotMatch(docs, /normal free practice/);
 });
 
+
+test('P5 new-word and session limits persist separately without touching legacy SRS records',()=>{
+ const memory=new Map();
+ const storage={
+  getItem:key=>memory.get(key)||null,
+  setItem:(key,val)=>memory.set(key,String(val)),
+  removeItem:key=>memory.delete(key),
+ };
+ const old=srs.recordAnswer(srs.emptyProgress(BASE),words[0],false,BASE);
+ storage.setItem(srs.STORAGE_KEY,JSON.stringify(old));
+ const baseline=storage.getItem(srs.STORAGE_KEY);
+ assert.deepEqual(srs.loadReviewPreferences(storage),srs.defaultReviewPreferences());
+ const result=srs.saveReviewPreferences(storage,{version:1,newLimit:0,sessionLimit:2});
+ assert.equal(result.saved,true);
+ assert.deepEqual(srs.loadReviewPreferences(storage),{version:1,newLimit:0,sessionLimit:2});
+ assert.equal(storage.getItem(srs.STORAGE_KEY),baseline);
+ let due=srs.buildReviewQueue(words,old,BASE+11*60000,{...srs.loadReviewPreferences(storage),
+  coursePriorities:{on:100}});
+ assert.deepEqual(due.map(x=>x.word),['ja']); // due only, even when daily new allowance=0
+ const now=BASE+11*60000;
+ assert.equal(srs.summarizeProgress(words,old,now,{newLimit:0}).availableNewToday,0);
+ assert.equal(srs.loadProgress(storage,BASE).words.ja.dueAt,old.words.ja.dueAt);
+});
+test('P5 invalid, legacy and extreme preferences fail closed; blocked storage keeps in-memory answers',()=>{
+ const defaults=srs.defaultReviewPreferences();
+ assert.deepEqual(srs.sanitizeReviewPreferences({newLimit:3}),defaults); // wrong version
+ assert.deepEqual(srs.sanitizeReviewPreferences({version:1,newLimit:-2,sessionLimit:99}),
+  {version:1,newLimit:0,sessionLimit:50});
+ assert.deepEqual(srs.sanitizeReviewPreferences({version:1,newLimit:'4',sessionLimit:null}),defaults);
+ assert.deepEqual(srs.loadReviewPreferences({getItem:()=>'{bad-json'}),defaults);
+ assert.deepEqual(srs.loadReviewPreferences({getItem(){throw Error('storage blocked')}}),defaults);
+ const fail={getItem(){throw Error('blocked')},setItem(){throw Error('quota')}};
+ const pref=srs.saveReviewPreferences(fail,{version:1,newLimit:7,sessionLimit:11});
+ assert.deepEqual(pref,{settings:{version:1,newLimit:7,sessionLimit:11},saved:false});
+ const answer=srs.recordAnswer(srs.emptyProgress(BASE),words[0],false,BASE);
+ assert.deepEqual(srs.saveProgress(fail,answer,BASE),answer);
+ assert.equal(answer.words.ja.dueAt,BASE+srs.RETRY_MS);
+ assert.equal(srs.PREFERENCES_KEY,'fiSrsPreferencesV1');
+ assert.equal(srs.STORAGE_KEY,'fiSrsProgressV1');
+ assert.equal(srs.DEFAULT_NEW_LIMIT,10);
+ assert.equal(srs.DEFAULT_SESSION_LIMIT,20);
+});
+test('P5 Word Practice exposes accessible pace limits and honors authored exact-form contexts',()=>{
+ const source=fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8');
+ const app=fs.readFileSync(path.join(ROOT,'app.js'),'utf8');
+ const css=fs.readFileSync(path.join(ROOT,'css/spaced-repetition.css'),'utf8');
+ assert.match(source,/id="spaced-review-new-limit"/);
+ assert.match(source,/id="spaced-review-session-limit"/);
+ assert.match(source,/aria-live="polite"/);
+ assert.match(source,/reviewHintsByFormIdFromStorage/);
+ assert.match(source,/courseFormPriorities: courseReviewPriorities\(\)/);
+ assert.match(source,/newLimit:preferences\.newLimit/);
+ assert.match(source,/sessionLimit:preferences\.sessionLimit/);
+ assert.match(source,/PREFERENCES_KEY/);
+ assert.match(app,/function safeCourseReviewExample\(/);
+ assert.match(app,/function startReviewPractice\(word, mode = MODES\.TRANSLATION, courseExample = null\)/);
+ assert.match(css,/\.spaced-review-preferences/);
+});
+
 test('navigation preserves an active smart-review question for return to Word Practice', () => {
   const app = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8');
   const navigationHandler = app.match(/els\.viewLinks\.forEach\([\s\S]*?\}\)\);/)?.[0] || '';
