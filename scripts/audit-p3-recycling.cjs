@@ -28,6 +28,27 @@ function form(section,itemId,known){
   family_id:verified?row.lexeme_id+'/'+row.sense_id:null,
   provenance:row?.provenance||'unresolved',context:norm(item.example_fi)};
 }
+// Context is the Finnish *graded prompt*, not the referenced item's reusable
+// dictionary example. A single expected inflection ("olen") is not a sentence:
+// use its completed frame when available, or the authored item example.
+function gradedContext(activity, fallback=''){
+ const full=value=>typeof value==='string'&&value.trim().split(/\s+/u).length>=2
+  &&!/_{2,}/u.test(value)?norm(value):'';
+ const expected=full(activity.expected_fi);
+ if(expected)return expected;
+ const answer=typeof activity.expected_fi==='string'&&activity.expected_fi.trim()
+  ?activity.expected_fi.trim()
+  :Array.isArray(activity.accepted_answers)&&activity.accepted_answers.length===1
+   ?activity.accepted_answers[0]:null;
+ for(const prompt of [activity.prompt_fi,activity.frame_fi]){
+  if(typeof prompt!=='string'||!prompt.trim())continue;
+  const completed=answer&&/_{2,}/u.test(prompt)
+   ?prompt.replace(/_{2,}/gu,answer):prompt;
+  const result=full(completed);
+  if(result)return result;
+ }
+ return fallback;
+}
 function evidence(section,lesson,known){
  const out=new Map();
  for(const a of course.lessonEditionActivities(lesson,'editorial')){
@@ -37,7 +58,8 @@ function evidence(section,lesson,known){
    const x=form(section,id,known);
    const existing=out.get(x.id)||{modes:Object.fromEntries(MODES.map(m=>[m,0])),contexts:new Set()};
    existing.modes[activityMode(a)]++;
-   if(x.context)existing.contexts.add(x.context);
+   const context=gradedContext(a,x.context);
+   if(context)existing.contexts.add(context);
    out.set(x.id,existing);
   }
  }
@@ -85,7 +107,11 @@ function assess(sections,sidecar){
     later_retrieval:[],_introduced:introduced,_graded:graded};
    rows.push(row);bySection.get(s.id).push(row);
    for(const x of introduced){
-    if(!first.has(x.id))first.set(x.id,{lesson:lesson.id,context:x.context});
+    // Compare later graded contexts with the actual initially assessed ones.
+    // The item example is used only when initial grading has no full sentence.
+    if(!first.has(x.id))first.set(x.id,{lesson:lesson.id,
+     contexts:new Set(graded.get(x.id)?.contexts.size?[...graded.get(x.id).contexts]:
+      x.context?[x.context]:[])});
     if(x.family_id&&!families.has(x.family_id))families.set(x.family_id,x.id);
    }
   }
@@ -101,7 +127,8 @@ function assess(sections,sidecar){
   const row=rows[i];
   row.later_retrieval=row._introduced.map(x=>{
    const subsequent=(occurrences.get(x.id)||[]).filter(y=>y.index>i);
-   const contextual=subsequent.filter(y=>[...y.contexts].some(c=>c!==x.context));
+   const initially=first.get(x.id)?.contexts||new Set(x.context?[x.context]:[]);
+   const contextual=subsequent.filter(y=>[...y.contexts].some(c=>!initially.has(c)));
    const r=subsequent.some(y=>y.modes.receptive+y.modes.listening>0);
    const p=subsequent.some(y=>y.modes.dictation+y.modes.typed+y.modes.guided+y.modes.independent>0);
    if(subsequent.length)later++;if(contextual.length)novel++;if(r)receptive++;if(p)productive++;
@@ -194,4 +221,4 @@ function main(args=process.argv.slice(2)){
  if(report.errors.length)throw Error('Strict P3 acceptance failures: '+JSON.stringify(report.errors.slice(0,20)));
 }
 if(require.main===module)main();
-module.exports={activityMode,form,evidence,assess,markdown,load,main};
+module.exports={activityMode,gradedContext,form,evidence,assess,markdown,load,main};

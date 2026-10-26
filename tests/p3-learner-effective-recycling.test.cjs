@@ -61,6 +61,42 @@ test('reviewed lexeme/sense families keep distinct exact form evidence',()=>{
  assert.equal(x.family_id,y.family_id);
  assert.notEqual(x.id,y.id);
 });
+
+test('graded activity sentence overrides a stale item example for contextual retrieval',()=>{
+ const s=section();
+ s.items.oneCopy.example_fi='Minä olen täällä.'; // same static example
+ s.lessons[1].activities[1]={type:'expression-completion',item:'oneCopy',
+  prompt_fi:'Minä _____ suomea.',expected_fi:'Minä opiskelen suomea.'};
+ s.lessons[1].activities=s.lessons[1].activities.filter(a=>a.item!=='oneAgain');
+ const row=p3.assess([s],side).lessons[0].later_retrieval.find(
+  x=>x.form_id===id('form','minä'));
+ assert.deepEqual(row.novel_context_lesson_ids,['fixture-two']);
+ assert.equal(p3.gradedContext({type:'type',item:'one',
+  expected_fi:'minä'},'fallback sentence'),'fallback sentence');
+ assert.equal(p3.gradedContext({type:'inflection-production',
+  frame_fi:'Minä _____ Suomessa.',expected_fi:'olen'}),
+  lexical.normalize('Minä olen Suomessa.'));
+});
+test('alias item example cannot fabricate a context the learner was never asked',()=>{
+ const s=section();
+ s.items.oneCopy.example_fi='Minä opiskelen suomea.';
+ s.lessons[1].activities[1]={type:'expression-completion',item:'oneCopy',
+  expected_fi:'Minä olen täällä.',prompt_fi:'Minä _____ täällä.'};
+ s.lessons[1].activities=s.lessons[1].activities.filter(a=>a.item!=='oneAgain');
+ const row=p3.assess([s],side).lessons[0].later_retrieval.find(
+  x=>x.form_id===id('form','minä'));
+ assert.deepEqual(row.novel_context_lesson_ids,[]);
+});
+test('initial graded sentence sets baseline, not unrelated dictionary example',()=>{
+ const s=section();
+ s.lessons[0].activities[1]={type:'expression-completion',item:'one',
+  expected_fi:'Minä opiskelen suomea.'};
+ s.lessons[1].activities=s.lessons[1].activities.filter(a=>a.item!=='oneCopy');
+ const row=p3.assess([s],side).lessons[0].later_retrieval.find(
+  x=>x.form_id===id('form','minä'));
+ assert.deepEqual(row.novel_context_lesson_ids,[]);
+});
+
 test('same written form in a different item or example cannot be reintroduced as new',()=>{
  const s=section();
  s.lessons[1].new_targets=['oneAgain'];
