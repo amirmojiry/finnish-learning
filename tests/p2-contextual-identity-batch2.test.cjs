@@ -141,8 +141,16 @@ test('morphological person, case, polarity and exception edits cannot silently p
 test('Course, Parole provenance and Word Practice mapping remain surface-specific',()=>{
  const reviewMap=read('data/course/course-review-form-map.json');
  assert.equal(reviewMap.identity_scope,'reviewable_curated_dictionary_surface_forms_only');
- assert.ok(reviewMap.mappings.every(r=>!Object.hasOwn(r,'sense_id')&&!Object.hasOwn(r,'lexeme_id')
-   &&!Object.hasOwn(r,'mastered')&&!Object.hasOwn(r,'nextReviewAt')));
+ assert.ok(reviewMap.mappings.every(r=>{
+  // Sense/lexeme labels may be passed only when reviewed, never as SRS mastery.
+  const identity=prior.records.find(x=>x.kind==='form'&&x.form_id===r.form_id
+    &&x.identity_review_status==='reviewed');
+  const hasLexeme=Object.hasOwn(r,'lexeme_id'),hasSense=Object.hasOwn(r,'sense_id');
+  return hasLexeme===hasSense&&(!hasLexeme||(identity&&identity.lexeme_id===r.lexeme_id
+    &&identity.sense_id===r.sense_id))
+    &&!['mastered','dueAt','nextReviewAt','score','lapses'].some(key=>Object.hasOwn(r,key));
+ }));
+ assert.equal(reviewMap.mappings.filter(r=>Object.hasOwn(r,'lexeme_id')).length,31);
  assert.ok(built.occurrences.every(r=>!Object.hasOwn(r,'mastered')&&!Object.hasOwn(r,'score')
    &&!Object.hasOwn(r,'dueAt')&&!Object.hasOwn(r,'nextReviewAt')));
  assert.ok(prior.records.every(r=>r.form_id===null||r.form_id===r.id));

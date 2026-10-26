@@ -101,6 +101,19 @@
     return clean;
   }
 
+  // Failed writes must not be replaced with old persisted answers later.
+  function progressPersisted(storage, progress) {
+    try { return storage?.getItem?.(STORAGE_KEY) === JSON.stringify(progress); }
+    catch { return false; }
+  }
+  function resumeReviewProgress(progress, storage, hasUnsavedAnswers) {
+    if (!hasUnsavedAnswers) {
+      try { if (storage?.getItem?.(STORAGE_KEY)) return loadProgress(storage); }
+      catch { /* Continue with in-memory progress when storage is blocked. */ }
+    }
+    return sanitizeProgress(progress);
+  }
+
   function scheduleAnswer(record, correct, now = Date.now()) {
     const current = sanitizeRecord(record);
     const next = {
@@ -260,22 +273,28 @@
     };
     let words = [];
     let wordMap = new Map();
-    let progress = loadProgress(windowObject.localStorage);
-    let preferences = loadReviewPreferences(windowObject.localStorage);
+    // Accessing localStorage itself can throw in privacy-restricted browsers.
+    let storage = null;
+    try { storage = windowObject.localStorage; } catch { /* Memory-only review. */ }
+    let progress = loadProgress(storage);
+    let unsavedAnswers = false;
+    let preferences = loadReviewPreferences(storage);
+    if (!storage) elements.preferencesStatus.textContent =
+      'ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط تا بستن صفحه باقی می‌مانند.';
     let courseReviewMap = null;
     function courseReviewPriorities() {
       const course = windowObject.FinnishCourse;
       const bridge = windowObject.FinnishCourseSrsBridge;
       if (!courseReviewMap || !course?.STORAGE_KEY || !bridge?.reviewPrioritiesByFormIdFromStorage) return {};
       return bridge.reviewPrioritiesByFormIdFromStorage(
-        windowObject.localStorage, courseReviewMap, course.STORAGE_KEY, course.SCHEMA_VERSION
+        storage, courseReviewMap, course.STORAGE_KEY, course.SCHEMA_VERSION
       );
     }
     function courseReviewHints(){
       const course=windowObject.FinnishCourse,bridge=windowObject.FinnishCourseSrsBridge;
       if(!courseReviewMap||!course?.STORAGE_KEY||!bridge?.reviewHintsByFormIdFromStorage)return {};
       return bridge.reviewHintsByFormIdFromStorage(
-        windowObject.localStorage,courseReviewMap,course.STORAGE_KEY,course.SCHEMA_VERSION
+        storage,courseReviewMap,course.STORAGE_KEY,course.SCHEMA_VERSION
       );
     }
     let sessionHints = {};
@@ -392,14 +411,8 @@
         updatePanel();
         return;
       }
-      // Preserve in-memory answers when storage is unavailable; do not
-      // replace them with a fresh empty state on the next session.
-      try{
-        if(windowObject.localStorage?.getItem(STORAGE_KEY))
-          progress=loadProgress(windowObject.localStorage);
-      }catch{
-        elements.preferencesStatus.textContent='ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط در این صفحه می‌مانند.';
-      }
+      // A failed write must not be undone by reloading stale stored state.
+      progress = resumeReviewProgress(progress, storage, unsavedAnswers);
       sessionHints=courseReviewHints();
       queue = buildReviewQueue(words, progress, Date.now(), {
         newLimit:preferences.newLimit,sessionLimit:preferences.sessionLimit,
@@ -420,13 +433,10 @@
     }
     function persistAnswer(correct) {
       if (!active || !currentWord || answerRecorded) return;
-      progress = saveProgress(windowObject.localStorage, recordAnswer(progress, currentWord, correct));
-      try{
-        if(windowObject.localStorage?.getItem(STORAGE_KEY)!==JSON.stringify(progress))
-          throw Error('SRS progress storage unavailable');
-      }catch{
-        elements.preferencesStatus.textContent='ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط تا بستن صفحه باقی می‌مانند.';
-      }
+      progress = saveProgress(storage, recordAnswer(progress, currentWord, correct));
+      unsavedAnswers = !progressPersisted(storage, progress);
+      if (unsavedAnswers) elements.preferencesStatus.textContent =
+        'ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط تا بستن صفحه باقی می‌مانند.';
       answerRecorded = true;
       sessionAnswered += 1;
       if (correct) sessionCorrect += 1;
@@ -440,7 +450,7 @@
     function updatePreferences(){
       const parsed=(input,fallback)=>input.value.trim()!==''&&/^\d+$/u.test(input.value.trim())
         ?Number(input.value.trim()):fallback;
-      const result=saveReviewPreferences(windowObject.localStorage,{
+      const result=saveReviewPreferences(storage,{
         version:1,
         newLimit:parsed(elements.newLimitInput,preferences.newLimit),
         sessionLimit:parsed(elements.sessionLimitInput,preferences.sessionLimit),
@@ -462,9 +472,9 @@
     windowObject.addEventListener('finnish-review-next', () => launchNext());
     windowObject.addEventListener('finnish-word-review-ready', updatePanel);
     windowObject.addEventListener('storage', event => {
-      if(event.key===STORAGE_KEY){progress=loadProgress(windowObject.localStorage);updatePanel();}
+      if(event.key===STORAGE_KEY&&!unsavedAnswers){progress=loadProgress(storage);updatePanel();}
       if(event.key===PREFERENCES_KEY){
-        preferences=loadReviewPreferences(windowObject.localStorage);
+        preferences=loadReviewPreferences(storage);
         elements.newLimitInput.value=String(preferences.newLimit);
         elements.sessionLimitInput.value=String(preferences.sessionLimit);
         updatePanel();
@@ -475,7 +485,7 @@
       .then(response => { if (!response.ok) throw Error(String(response.status)); return response.json(); })
       .then(data => { if (data?.schema_version === 1 && Array.isArray(data.mappings)) courseReviewMap = data; })
       .catch(() => { courseReviewMap = null; }); // Word Practice remains usable offline or without Course evidence.
-    windowObject.fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' }).then((response) => { if (!response.ok) throw new Error(String(response.status)); return response.json(); }).then((payload) => { words = Array.isArray(payload.words) ? payload.words : []; wordMap = new Map(words.map((word) => [normalizeWord(word.word), word])); progress = loadProgress(windowObject.localStorage); updatePanel(); }).catch(() => { elements.message.textContent = 'بارگذاری صف مرور انجام نشد.'; elements.start.disabled = true; });
+    windowObject.fetch(`./data/common-words.json?v=${Date.now()}`, { cache: 'no-store' }).then((response) => { if (!response.ok) throw new Error(String(response.status)); return response.json(); }).then((payload) => { words = Array.isArray(payload.words) ? payload.words : []; wordMap = new Map(words.map((word) => [normalizeWord(word.word), word])); progress = resumeReviewProgress(progress, storage, unsavedAnswers); updatePanel(); }).catch(() => { elements.message.textContent = 'بارگذاری صف مرور انجام نشد.'; elements.start.disabled = true; });
   }
 
   if (typeof window !== 'undefined' && window.document) {
@@ -483,5 +493,5 @@
     else initializeBrowser(window);
   }
 
-  return { STORAGE_KEY, PREFERENCES_KEY, DAY_MS, RETRY_MS, DEFAULT_NEW_LIMIT, DEFAULT_SESSION_LIMIT, defaultReviewPreferences, sanitizeReviewPreferences, loadReviewPreferences, saveReviewPreferences, stableFormId, normalizeWord, localDateKey, emptyProgress, sanitizeRecord, sanitizeProgress, loadProgress, saveProgress, scheduleAnswer, recordAnswer, isMastered, buildReviewQueue, summarizeProgress, reviewedWordEntries, calculateCoverage, wordReviewStatus, initializeBrowser };
+  return { STORAGE_KEY, PREFERENCES_KEY, DAY_MS, RETRY_MS, DEFAULT_NEW_LIMIT, DEFAULT_SESSION_LIMIT, defaultReviewPreferences, sanitizeReviewPreferences, loadReviewPreferences, saveReviewPreferences, stableFormId, normalizeWord, localDateKey, emptyProgress, sanitizeRecord, sanitizeProgress, loadProgress, saveProgress, progressPersisted, resumeReviewProgress, scheduleAnswer, recordAnswer, isMastered, buildReviewQueue, summarizeProgress, reviewedWordEntries, calculateCoverage, wordReviewStatus, initializeBrowser };
 });

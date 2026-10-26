@@ -199,6 +199,38 @@ test('P5 invalid, legacy and extreme preferences fail closed; blocked storage ke
  assert.equal(srs.DEFAULT_NEW_LIMIT,10);
  assert.equal(srs.DEFAULT_SESSION_LIMIT,20);
 });
+test('P5 keeps unsaved answers across review sessions instead of resurrecting stale storage',()=>{
+ const persisted=srs.recordAnswer(srs.emptyProgress(BASE),words[0],true,BASE);
+ const db=new Map([[srs.STORAGE_KEY,JSON.stringify(persisted)]]);
+ let rejectWrites=true;
+ const storage={
+  getItem(key){return db.get(key)||null;},
+  setItem(key,val){if(rejectWrites)throw Error('storage quota');db.set(key,String(val));},
+ };
+ const updated=srs.recordAnswer(persisted,words[0],false,BASE+1000);
+ const memory=srs.saveProgress(storage,updated,BASE+1000);
+ assert.equal(srs.progressPersisted(storage,memory),false);
+ const next=srs.resumeReviewProgress(memory,storage,true);
+ assert.equal(next.words.ja.totalAnswers,2);
+ assert.equal(next.words.ja.lapses,1);
+ assert.equal(next.words.ja.dueAt,BASE+1000+srs.RETRY_MS);
+ assert.equal(srs.loadProgress(storage,BASE+1000).words.ja.totalAnswers,1);
+ // A cross-tab storage notification must not force stale data into the active page.
+ assert.match(fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8'),
+  /event.key===STORAGE_KEY&&!unsavedAnswers/);
+ rejectWrites=false;
+ const saved=srs.saveProgress(storage,next,BASE+1000);
+ assert.equal(srs.progressPersisted(storage,saved),true);
+ assert.equal(srs.resumeReviewProgress(saved,storage,false).words.ja.totalAnswers,2);
+ const blocked={getItem(){throw Error('access denied')},setItem(){throw Error('access denied')}};
+ assert.equal(srs.progressPersisted(blocked,next),false);
+ assert.equal(srs.resumeReviewProgress(next,blocked,true).words.ja.totalAnswers,2);
+ assert.equal(srs.resumeReviewProgress(next,null,true).words.ja.totalAnswers,2);
+ const browserSource=fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8');
+ assert.match(browserSource,/try \{ storage = windowObject\.localStorage; \} catch/);
+ assert.match(browserSource,/progress = resumeReviewProgress\(progress, storage, unsavedAnswers\)/);
+});
+
 test('P5 Word Practice exposes accessible pace limits and honors authored exact-form contexts',()=>{
  const source=fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8');
  const app=fs.readFileSync(path.join(ROOT,'app.js'),'utf8');
