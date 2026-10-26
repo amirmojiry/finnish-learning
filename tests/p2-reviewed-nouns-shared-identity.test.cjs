@@ -74,7 +74,7 @@ test('editorial noun witnesses reject changed contexts, invented cases and unapp
  assert.throws(()=>nouns.audit(mutate(b=>b.entries[0].lexeme_id='lexeme:voi'),old,side,dict,sections),
   /Unreviewed noun sense or inflection/);
  assert.throws(()=>nouns.audit(mutate(b=>b.entries.pop()),old,side,dict,sections),
-  /Expected 25 explicit noun decisions/);
+  /Expected 23 exact-attested noun decisions/);
  for(const form of ['aika','ajan','voi','pitää','tuli','kotona']){
   const row=record(form);
   assert.equal(row.identity_review_status,'unresolved',form);

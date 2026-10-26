@@ -89,7 +89,7 @@ test('review coverage is exhaustive for exactly five globally unresolved surface
      &&x.lesson_id===o.lesson_id&&x.form_id===side.form_id),form+'/'+o.item_id);
   }
  }
- assert.equal(prior.records.filter(x=>x.identity_review_status==='reviewed').length,72);
+ assert.equal(prior.records.filter(x=>x.identity_review_status==='reviewed').length,70);
  assert.equal(prior.records.length,1264);
  assert.ok(built.items.every(x=>!Object.hasOwn(x,'mastered')&&
    !Object.hasOwn(x,'nextReviewAt')&&!Object.hasOwn(x,'dueAt')&&!Object.hasOwn(x,'score')));
