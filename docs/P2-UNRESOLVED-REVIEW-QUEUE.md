@@ -5,8 +5,8 @@
 **Unreviewed is not unlearned.** These are authoring identity records; no user results are read, inferred or stored.
 
 - All globally indexed forms/expressions: **1264**
-- Explicit reviewed global noun/pronoun identities: **72**
-- Still globally unresolved: **1192** (**752** exact forms, **440** expressions)
+- Explicit reviewed global noun/pronoun identities: **70**
+- Still globally unresolved: **1194** (**754** exact forms, **440** expressions)
 - Existing item-scoped contextual sense reviews: **15**; the five affected ambiguous written surfaces remain globally unresolved.
 
 ## Prioritized next review witnesses

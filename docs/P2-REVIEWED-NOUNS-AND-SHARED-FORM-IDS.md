@@ -1,12 +1,12 @@
-# P2 — 25 reviewed noun forms and sense-safe shared exact-form IDs (v1.71.0)
+# P2 — 23 reviewed noun forms and sense-safe shared exact-form IDs (v1.71.0)
 
 [فارسی](P2-REVIEWED-NOUNS-AND-SHARED-FORM-IDS.fa.md) · [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101) · [Child #225](https://github.com/amirmojiry/finnish-learning/issues/225) · [Unresolved review queue](P2-UNRESOLVED-REVIEW-QUEUE.md)
 
 ## What changed
 
-This is one **bounded editorial delivery**, not the completion of all P2 lexical meanings. We added **25 manually selected, cross-checked noun surface readings** to the previous 47. The resulting stable global `form_id` and reviewed `lexeme_id`/`sense_id` mapping covers **72 of 1,264** exact surface/expression records; **1,192 remain unreviewed**, including **440 multiword expressions**. There are still 15 explicitly reviewed **course item contexts** for `aika`, `ajan`, `voi`, `pitää`, `tuli` (24 lesson occurrences), and none is converted to a globally valid sense merely because the spelling matches.
+This is one **bounded editorial delivery**, not the completion of all P2 lexical meanings. We added **23 manually selected, cross-checked noun surface readings** to the previous 47. The resulting stable global `form_id` and reviewed `lexeme_id`/`sense_id` mapping covers **70 of 1,264** exact surface/expression records; **1,194 remain unreviewed**, including **440 multiword expressions**. There are still 15 explicitly reviewed **course item contexts** for `aika`, `ajan`, `voi`, `pitää`, `tuli` (24 lesson occurrences), and none is converted to a globally valid sense merely because the spelling matches.
 
-**Review status:** these 25 decisions were checked against actual authored examples and source glosses using AI-assisted editorial analysis, not independent human linguistic peer review. A Finnish-language expert should confirm nuanced case and sense choices before final pedagogical sign-off. No uncertain cases were automatically approved.
+**Review status:** these 23 decisions were checked against actual authored examples and source glosses using AI-assisted editorial analysis, not independent human linguistic peer review. A Finnish-language expert should confirm nuanced case and sense choices before final pedagogical sign-off. No uncertain cases were automatically approved.
 
 Each new editorial row in `data/course/reviewed-lexical-identities-batch3.json` carries the **exact section/item ID and authored Finnish example plus Persian item gloss**, or, for dictionary-only `työtä`, its checked dictionary witness. Original authored items (including older lemma-field inaccuracies), Parole source rank/count/percentage, dictionary schema and all Course/Word Practice progress are unchanged. The read-only overlay documents the interpretation, not a student achievement.
 
@@ -17,11 +17,13 @@ Every case below is **singular** and belongs only to the attested form; no other
 | Review scope | Exact surface forms | Case / sense |
 | --- | --- | --- |
 | Everyday people | `ystävä`, `lapsi`, `perhe`, `lääkäri` | nominative, friend / child / family / doctor |
-| Spaces and services | `kirjasto`, `pankki`, `huone`, `sänky` | nominative, library / bank / room / bed |
-| Shopping and travel | `takki`, `juna`, `euro`, `musiikki`, `harrastus` | nominative, jacket / train / euro / music / hobby |
+| Spaces and services | `kirjasto`, `pankki`, `huone` | nominative, library / bank / room / bed |
+| Shopping and travel | `takki`, `juna`, `musiikki`, `harrastus` | nominative, jacket / train / euro / music / hobby |
 | Food and other items | `ruoka`, `kahvi`, `apu`, `ilta`, `työ` | nominative, food / coffee / help / evening / work |
 | Exact partitive forms | `kahvia`, `vettä`, `työtä`, `lippua` | partitive singular, coffee / water / work / **travel ticket** |
 | Exact governed/local cases | `lääkärille`, `asemalle`, `kaupasta` | allative doctor / station, elative shop |
+
+Exact-token witnesses are now mandatory for every approved nominative. Where the original item's example contains only an inflection, the editorial record points to a second *existing* authored example: `juna` in `Juna saapuu kello yhdeksän.`, `kahvi` in `Yksi kahvi, kiitos.`, and `ruoka` in the dictionary example `Ruoka oli todella hyvä.`; `apu` now uses the exact Course example `Apu tulee pian.`. The proposed `euro` and `sänky` nominatives were removed from this reviewed batch and remain globally **unresolved**, because no exact-form authored witness was found. No example was invented or learner data changed.
 
 The surface-specific forms `kahvi/kahvia`, `työ/työtä`, `lääkäri/lääkärille`, `vesi/vettä`, `lippu/lippua`, `asema/asemalle` and `kauppa/kaupasta` now have reviewed shared **lexeme/sense identity**, but **distinct form IDs and distinct practice evidence**. Example: a correct choice for `kahvi` does not mark `kahvia` mastered. The authored item `kaupasta` stores the legacy inflected lemma as source metadata; the review explicitly links the attested elative back to `kauppa` without rewriting learner content.
 
@@ -34,9 +36,9 @@ The surface-specific forms `kahvi/kahvia`, `työ/työtä`, `lääkäri/lääkär
 
 ## What this does **not** establish
 
-No learner-level lexeme mastery model, no automatic transfer of Course scores to Word Practice schedules, no inflection generation, no CEFR/YKI claim and no certainty for the other **1,192** identities. The explicit queue `data/course/p2-unresolved-review-queue.json` ranks those records but labels **all as pending human review**. Its five context-sensitive written forms come first; it does not assign senses.
+No learner-level lexeme mastery model, no automatic transfer of Course scores to Word Practice schedules, no inflection generation, no CEFR/YKI claim and no certainty for the other **1,194** identities. The explicit queue `data/course/p2-unresolved-review-queue.json` ranks those records but labels **all as pending human review**. Its five context-sensitive written forms come first; it does not assign senses.
 
-The older `P2-IDENTITY-BATCH1-REPORT.md` stays as a **historical 47-form snapshot**. `audit-reviewed-lexical-identities.cjs` projects later reviewed decisions as unresolved only when reproducing that historical report; the live sidecar and new coverage audit still count all **72** actual reviewed global forms. Next batches should review nouns, verbs, cases and phrases in explicit attested context, not use one global `lemma` string for ambiguous written words.
+The older `P2-IDENTITY-BATCH1-REPORT.md` stays as a **historical 47-form snapshot**. `audit-reviewed-lexical-identities.cjs` projects later reviewed decisions as unresolved only when reproducing that historical report; the live sidecar and new coverage audit still count all **70** actual reviewed global forms. Next batches should review nouns, verbs, cases and phrases in explicit attested context, not use one global `lemma` string for ambiguous written words.
 
 ## Reproducibility
 

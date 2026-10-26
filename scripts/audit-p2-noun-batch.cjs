@@ -7,9 +7,9 @@ const {normalize,stableId,validateReviews}=require('./build-lexical-identity.cjs
 const ROOT=path.resolve(__dirname,'..');
 const read=rel=>JSON.parse(fs.readFileSync(path.join(ROOT,rel),'utf8'));
 const REQUIRED=Object.freeze([
- 'takki','juna','kirjasto','ystävä','ruoka','kahvi','kahvia','vettä','euro',
+ 'takki','juna','kirjasto','ystävä','ruoka','kahvi','kahvia','vettä',
  'työ','työtä','lääkäri','lääkärille','kaupasta','asemalle','lippua',
- 'musiikki','harrastus','apu','ilta','huone','sänky','perhe','lapsi','pankki'
+ 'musiikki','harrastus','apu','ilta','huone','perhe','lapsi','pankki'
 ]);
 const SENSES=Object.freeze({
  'takki':['takki','jacket','nominative'],
@@ -20,7 +20,6 @@ const SENSES=Object.freeze({
  'kahvi':['kahvi','coffee','nominative'],
  'kahvia':['kahvi','coffee','partitive'],
  'vettä':['vesi','water','partitive'],
- 'euro':['euro','currency','nominative'],
  'työ':['tyo','work','nominative'],
  'työtä':['tyo','work','partitive'],
  'lääkäri':['laakari','doctor','nominative'],
@@ -33,11 +32,20 @@ const SENSES=Object.freeze({
  'apu':['apu','help','nominative'],
  'ilta':['ilta','evening','nominative'],
  'huone':['huone','room','nominative'],
- 'sänky':['sanky','bed','nominative'],
  'perhe':['perhe','family','nominative'],
  'lapsi':['lapsi','child','nominative'],
  'pankki':['pankki','bank','nominative'],
 });
+// Only attested exact token occurrences may witness a nominative identity.
+// Some original item glosses cite an inflected form; these separately pinned
+// authored examples support the exact surface without rewriting legacy lessons.
+const SUPPLEMENTAL=Object.freeze({
+ juna:Object.freeze({source:'course',section_id:'a1.2-section-2',item_id:'a12s2-topic-saapuu'}),
+ kahvi:Object.freeze({source:'course',section_id:'a1.1-section-4',item_id:'s4-yksi'}),
+ ruoka:Object.freeze({source:'dictionary_example',word:'hyvä',field:'example_2_fi'})
+});
+const exactWords=value=>typeof value==='string'
+ ?value.normalize('NFC').toLocaleLowerCase('fi-FI').match(/[\p{L}\p{M}]+/gu)||[]:[];
 const AMBIGUOUS=Object.freeze(['aika','ajan','voi','pitää','tuli','kotona']);
 function audit(batch,base,sidecar,dictionary,sections) {
  if(batch?.schema_version!==1||!Array.isArray(batch.entries)||batch.batch_issue!==225)
@@ -48,7 +56,7 @@ function audit(batch,base,sidecar,dictionary,sections) {
  const rows=new Map(sidecar.records.filter(x=>x.kind==='form').map(x=>[x.surface_form,x]));
  const words=new Map(dictionary.words.map(w=>[normalize(w.word),w]));
  const stages=new Map(sections.map(s=>[s.id,s]));
- if(new Set(REQUIRED).size!==25||batch.entries.length!==25)throw Error('Expected 25 explicit noun decisions');
+ if(new Set(REQUIRED).size!==23||batch.entries.length!==23)throw Error('Expected 23 exact-attested noun decisions');
  const seen=new Set();
  for(const entry of batch.entries){
   const f=normalize(entry.surface_form);
@@ -82,14 +90,36 @@ function audit(batch,base,sidecar,dictionary,sections) {
    witness.source_lemma_fi!==source.lemma||
    typeof witness.example_fi!=='string'||!witness.example_fi.trim())
    throw Error('Stale authored Finnish noun context, gloss or source lemma: '+f);
+  const supplement=SUPPLEMENTAL[f];
+  let exactExample=witness.example_fi;
+  if(supplement){
+   if(JSON.stringify(witness.exact_example_source)!==JSON.stringify(supplement))
+    throw Error('Unapproved exact noun witness reference: '+f);
+   if(supplement.source==='course'){
+    const another=stages.get(supplement.section_id)?.items?.[supplement.item_id];
+    if(!another||another.item_type==='expression')throw Error('Unknown exact course noun witness: '+f);
+    exactExample=another.example_fi;
+   }else if(supplement.source==='dictionary_example'){
+    const another=words.get(supplement.word);
+    if(!another||!['example_fi','example_2_fi'].includes(supplement.field))
+     throw Error('Unknown exact dictionary noun witness: '+f);
+    exactExample=another[supplement.field];
+   }
+  }else if(Object.hasOwn(witness,'exact_example_source')){
+   throw Error('Unreviewed supplementary noun witness: '+f);
+  }
+  // Match the ENTIRE Finnish token, not a prefix or substring of a case
+  // inflection, so "junalla" never certifies "juna" as nominative.
+  if(!exactWords(exactExample).includes(f))
+   throw Error('Missing exact Finnish noun surface token in attested example: '+f);
  }
- if(seen.size!==25||REQUIRED.some(f=>!seen.has(f)))throw Error('Missing reviewed noun');
+ if(seen.size!==23||REQUIRED.some(f=>!seen.has(f)))throw Error('Missing reviewed noun');
  if(base.entries.length!==47)throw Error('Original 47 decisions must remain intact');
- if(validateReviews({entries:[...base.entries,...batch.entries]},available).size!==72)
+ if(validateReviews({entries:[...base.entries,...batch.entries]},available).size!==70)
   throw Error('Merged P2 schema validation did not yield 72 reviewed forms');
  const reviewed=sidecar.records.filter(x=>x.identity_review_status==='reviewed');
- if(sidecar.records.length!==1264||reviewed.length!==72||
-   sidecar.records.filter(x=>x.identity_review_status==='unresolved').length!==1192||
+ if(sidecar.records.length!==1264||reviewed.length!==70||
+   sidecar.records.filter(x=>x.identity_review_status==='unresolved').length!==1194||
    sidecar.records.filter(x=>x.kind==='expression'&&x.identity_review_status!=='unresolved').length)
   throw Error('Current exact-form/expression review coverage mismatch');
  for(const form of AMBIGUOUS){

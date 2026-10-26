@@ -24,14 +24,14 @@ const NOW=Date.parse('2026-10-26T09:00:00Z');
 const event=(changes={})=>({sequence:1,answeredAt:NOW-60000,sessionId:'lesson-one',
  sectionId:'s',targetId:'one',activityType:'choice',firstAttempt:true,correct:false,...changes});
 
-test('25 deliberate nouns have witnessed morphology, approved senses, and preserve all 47 old IDs',()=>{
+test('23 noun forms have exact attested token witnesses and preserve all 47 old IDs',()=>{
  const result=nouns.audit(batch,old,side,dict,sections);
- assert.deepEqual(result,{global_total:1264,reviewed:72,new_nouns:25,unresolved:1192,
-  unresolved_expressions:440,exact_noun_witnesses:25,unchanged_base:47});
+ assert.deepEqual(result,{global_total:1264,reviewed:70,new_nouns:23,unresolved:1194,
+  unresolved_expressions:440,exact_noun_witnesses:23,unchanged_base:47});
  assert.equal(old.entries.length,47);
- assert.equal(batch.entries.length,25);
+ assert.equal(batch.entries.length,23);
  const combined=new Set([...old.entries,...batch.entries].map(x=>x.surface_form));
- assert.equal(combined.size,72);
+ assert.equal(combined.size,70);
  for(const entry of [...old.entries,...batch.entries]){
   const row=record(entry.surface_form);
   assert.equal(row.form_id,stable(entry.surface_form));
@@ -52,8 +52,15 @@ test('25 deliberate nouns have witnessed morphology, approved senses, and preser
   assert.notEqual(record(base).form_id,record(derived).form_id);
  }
  assert.ok(batch.entries.every(e=>e.morphology.number==='singular'));
- assert.equal(batch.entries.filter(e=>e.witness.source==='course').length,24);
+ assert.equal(batch.entries.filter(e=>e.witness.source==='course').length,22);
  assert.equal(batch.entries.filter(e=>e.witness.source==='dictionary').length,1);
+ for(const form of ['euro','sänky']){
+  const row=record(form);
+  assert.equal(row.identity_review_status,'unresolved',form+' lacks a nominative token witness');
+  assert.equal(row.lexeme_id,null);
+  assert.equal(row.sense_id,null);
+  assert.ok(!batch.entries.some(e=>e.surface_form===form));
+ }
 });
 
 test('editorial noun witnesses reject changed contexts, invented cases and unapproved ambiguities',()=>{
@@ -78,15 +85,38 @@ test('editorial noun witnesses reject changed contexts, invented cases and unapp
  assert.equal(ctx.items.some(x=>x.surface_form==='pitää'&&x.sense_id==='sense:pitaa-necessity'),true);
 });
 
+test('review refuses inflected-only course and dictionary examples as nominative evidence',()=>{
+ const cloned=()=>structuredClone(sections);
+ const altered=cloned(), transport=altered.find(s=>s.id==='a1.2-section-2');
+ transport.items['a12s2-topic-saapuu'].example_fi='Menen junalla.';
+ assert.throws(()=>nouns.audit(batch,old,side,dict,altered),
+  /Missing exact Finnish noun surface token in attested example: juna/);
+
+ const drinks=cloned(), cafe=drinks.find(s=>s.id==='a1.1-section-4');
+ cafe.items['s4-yksi'].example_fi='Yksi kahvia, kiitos.';
+ assert.throws(()=>nouns.audit(batch,old,side,dict,drinks),
+  /Missing exact Finnish noun surface token in attested example: kahvi/);
+
+ const food=structuredClone(dict);
+ food.words.find(w=>w.word==='hyvä').example_2_fi='Tämä on ruokaa.';
+ assert.throws(()=>nouns.audit(batch,old,side,food,sections),
+  /Missing exact Finnish noun surface token in attested example: ruoka/);
+
+ const alteredBatch=structuredClone(batch);
+ alteredBatch.entries.find(e=>e.surface_form==='kahvi').witness.exact_example_source.item_id='s4-kahvi';
+ assert.throws(()=>nouns.audit(alteredBatch,old,side,dict,sections),
+  /Unapproved exact noun witness reference: kahvi/);
+});
+
 test('whole P2 queue accounts for every unresolved form and phrase without manufacturing senses',()=>{
  const actual=backlog.build(side,ctx);
  assert.deepEqual(read('data/course/p2-unresolved-review-queue.json'),actual);
  assert.equal(fs.readFileSync(path.join(ROOT,'docs/P2-UNRESOLVED-REVIEW-QUEUE.md'),'utf8'),
   backlog.markdown(actual));
- assert.deepEqual(actual.counts,{identity_records:1264,globally_reviewed:72,unresolved:1192,
-  unresolved_forms:752,unresolved_expressions:440,contextual_items_reviewed:15,
+ assert.deepEqual(actual.counts,{identity_records:1264,globally_reviewed:70,unresolved:1194,
+  unresolved_forms:754,unresolved_expressions:440,contextual_items_reviewed:15,
   globally_unresolved_context_sensitive:5});
- assert.equal(new Set(actual.records.map(x=>x.id)).size,1192);
+ assert.equal(new Set(actual.records.map(x=>x.id)).size,1194);
  assert.deepEqual(actual.records.slice(0,2).map(x=>x.surface_form),['voi','pitää']);
  assert.ok(actual.records.every(x=>x.review_status==='pending_human_review'&&
   side.records.some(old=>old.id===x.id&&old.identity_review_status==='unresolved')));

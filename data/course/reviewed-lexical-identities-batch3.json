@@ -39,7 +39,12 @@
         "item_id": "a12s2-topic-juna",
         "example_fi": "Menen junalla.",
         "gloss_fa": "قطار",
-        "source_lemma_fi": "juna"
+        "source_lemma_fi": "juna",
+        "exact_example_source": {
+          "source": "course",
+          "section_id": "a1.2-section-2",
+          "item_id": "a12s2-topic-saapuu"
+        }
       }
     },
     {
@@ -96,7 +101,12 @@
         "item_id": "s4-ruoka",
         "example_fi": "Tämä on ruokaa.",
         "gloss_fa": "غذا",
-        "source_lemma_fi": "ruoka"
+        "source_lemma_fi": "ruoka",
+        "exact_example_source": {
+          "source": "dictionary_example",
+          "word": "hyvä",
+          "field": "example_2_fi"
+        }
       }
     },
     {
@@ -115,7 +125,12 @@
         "item_id": "s4-kahvi",
         "example_fi": "Tämä on kahvia.",
         "gloss_fa": "قهوه",
-        "source_lemma_fi": "kahvi"
+        "source_lemma_fi": "kahvi",
+        "exact_example_source": {
+          "source": "course",
+          "section_id": "a1.1-section-4",
+          "item_id": "s4-yksi"
+        }
       }
     },
     {
@@ -154,25 +169,6 @@
         "example_fi": "Haluan vettä.",
         "gloss_fa": "آب (پارتی‌تیو)",
         "source_lemma_fi": "vettä"
-      }
-    },
-    {
-      "surface_form": "euro",
-      "lexeme_id": "lexeme:euro",
-      "sense_id": "sense:euro-currency",
-      "sense_gloss_en": "currency",
-      "morphology": {
-        "part_of_speech": "noun",
-        "case": "nominative",
-        "number": "singular"
-      },
-      "witness": {
-        "source": "course",
-        "section_id": "a1.2-section-1",
-        "item_id": "a12s1-topic-euro",
-        "example_fi": "Se maksaa viisi euroa.",
-        "gloss_fa": "یورو",
-        "source_lemma_fi": "euro"
       }
     },
     {
@@ -356,9 +352,9 @@
       },
       "witness": {
         "source": "course",
-        "section_id": "a1.2-section-1",
-        "item_id": "a12s1-topic-apu",
-        "example_fi": "Tarvitsen apua.",
+        "section_id": "a1.2-section-4",
+        "item_id": "a12s4-topic-32",
+        "example_fi": "Apu tulee pian.",
         "gloss_fa": "کمک",
         "source_lemma_fi": "apu"
       }
@@ -399,25 +395,6 @@
         "example_fi": "Tämä on huone.",
         "gloss_fa": "اتاق",
         "source_lemma_fi": "huone"
-      }
-    },
-    {
-      "surface_form": "sänky",
-      "lexeme_id": "lexeme:sanky",
-      "sense_id": "sense:sanky-bed",
-      "sense_gloss_en": "bed",
-      "morphology": {
-        "part_of_speech": "noun",
-        "case": "nominative",
-        "number": "singular"
-      },
-      "witness": {
-        "source": "course",
-        "section_id": "a1.1-section-4",
-        "item_id": "s4-sanky",
-        "example_fi": "Kissa on sängyllä.",
-        "gloss_fa": "تخت",
-        "source_lemma_fi": "sänky"
       }
     },
     {
