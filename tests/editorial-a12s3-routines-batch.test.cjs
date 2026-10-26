@@ -258,7 +258,7 @@ test('current version, cumulative counts and priority report reflect eight more 
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, '1.71.0');
+  assert.equal(version, '1.72.0');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.61\.0\]/);
   assert.match(en, /23 curated lessons \/ 129 fewer graded opportunities/);
