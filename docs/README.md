@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- Learner-effective P3 vocabulary composition and spaced-context audits: [English](P3-LEARNER-EFFECTIVE-RECYCLING.md) / [فارسی](P3-LEARNER-EFFECTIVE-RECYCLING.fa.md) — canonical exact-form/sense treatment, graded modes, later retrieval and strict future A2.1 section release gate. Parent #101 remains open.
 - Editorially shortened A1 editions: [English](LESSON-EDITORIAL-REDUCTION.md) / [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) — actual 52-answer reduction for four priority lessons, with v1.56 draft compatibility and full-course audit.
 - Pacing for four heavy A1 lessons: [English](LESSON-PACING.md) / [فارسی](LESSON-PACING.fa.md) — local resumable sittings capped at 15 screens and 20 graded answers, without deleting original assessments.
 - Live grouped-slide compaction: [English](LESSON-SLIDE-COMPACTION.md) / [فارسی](LESSON-SLIDE-COMPACTION.fa.md) — independently scored matching/typing and ≤30 initial screens, with an on-demand audit.

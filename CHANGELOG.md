@@ -6,6 +6,17 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.72.0] - 2026-10-26
+
+### Added
+
+- Add a deterministic learner-effective **P3 composition and spaced-retrieval audit** for **14 sections and 140 lessons**, using the actual fresh learner editorial edition. Analyze all 931 unique exact-form introductions, P2-reviewed lexeme/sense families vs unverified semantics, ranked/topic/expression proportions, previously introduced reviewed forms, later scored retrieval, context variation and separated receptive/listening/dictation/typed/guided/independent practice. Expose check/JSON/Markdown CLI and regression fixtures.
+- Add a strict release-time **A2.1 Section 3 / explicit section opt-in gate** for later positive exact-form retrieval in a genuinely different authored Finnish context, plus existing strict new-introduction and checkpoint invariants. The proposed 2+2+1 / 3–5 composition remains guidance, never an enforced quota.
+
+### Changed
+
+- Report existing 140 lessons as an **advisory** backlog rather than declaring full legacy P3 or P2 semantic acceptance. Preserve all authored activity arrays, 140 lesson IDs, saved progress, Word Practice SRS and dictionary/Parole provenance. No inferred learner mastery, CEFR/YKI progress or measured fatigue.
+
 ## [1.71.0] - 2026-10-26
 
 ### Added

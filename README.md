@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.71.0`
+- Version: `1.72.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.72.0: P3 learner-effective composition and retrieval audit.** New deterministic checks inspect **all 140 shipped lessons in 14 sections** as a new learner actually sees them, respecting the 80 editorially shortened editions. They distinguish exact-form first introductions, P2-reviewed semantic families, unresolved senses, recommended **2 ranked + 2 topical + 1 useful expression / 3–5 reviews** (guidance, not quotas), later graded recall, receptive vs dictated/typed/produced evidence, and genuine changes of Finnish example. All **931** declared exact-form introductions are unique by canonical normalized form across shipped lessons. A strict **future A2.1 Section 3** release gate rejects unreviewed duplicate introductions and missing later scored, differently contextualized practice; existing 140 lessons are an **advisory** backlog, not automatically rewritten or declared fully validated. No Course/SRS scores, dictionary, 140 IDs or Parole values change. [P3 methodology](docs/P3-LEARNER-EFFECTIVE-RECYCLING.md) · [Issue #227](https://github.com/amirmojiry/finnish-learning/issues/227) · [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101).
 
 **v1.71.0: P2 reviewed nouns and exact-form Course ↔ Word Practice identity bridge.** A further **23 exactly attested noun forms** (e.g. `kahvi / kahvia`, `vesi / vettä`, `lippu / lippua`, `lääkäri / lääkärille`) now have documented, reviewed **lexeme/sense/case** mappings, raising the global reviewed set from **47 to 70 of 1,264** written-form/expression identities. The remaining **1,194** (754 forms and 440 phrases) have an explicitly unresolved, deterministic [review queue](docs/P2-UNRESOLVED-REVIEW-QUEUE.md); no morphological/sense guessing is presented as review. The actual Course→Word Practice bridge now validates canonical form IDs and prioritizes matching **unseen exact dictionary forms only**, never transferring related-case or related-sense mastery. Five globally ambiguous forms (`aika`, `ajan`, `voi`, `pitää`, `tuli`) are excluded from context-free SRS hints; their 15 previously reviewed item-specific meanings remain scoped. Overdue-word priority, local SRS records, all dictionary/Parole source fields, 140 lesson identities, saved scores and daily review limits remain unchanged. [Implementation and scope](docs/P2-REVIEWED-NOUNS-AND-SHARED-FORM-IDS.md) · [Issue #225](https://github.com/amirmojiry/finnish-learning/issues/225) · [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101). **Two proposed nominatives (`euro`, `sänky`) remain unresolved because their authored examples attest inflected forms only. P2 remains incomplete** pending a reviewed interpretation for the unresolved 1,194 and the wider shared learner-evidence model.
 
