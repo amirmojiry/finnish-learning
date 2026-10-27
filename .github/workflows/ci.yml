@@ -44,16 +44,18 @@ jobs:
         run: |
           git fetch origin '${{ github.event.pull_request.head.ref }}'
           git checkout -B '${{ github.event.pull_request.head.ref }}' 'origin/${{ github.event.pull_request.head.ref }}'
+          npm run p3:reviews:write
           npm run curriculum:coverage:write
           npm run lexical:identity:write
           npm run course:review:write
           npm run p2:identity:write
           npm run p2:context:write
           npm run p2:cross-app:write
+          npm run p2:queue:write
           npm run r3:structure:write
           npm run section:a21:s1:write
           npm run section:a21:s2:write
-          git add data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md data/course/a2.1-section-2-acceptance.json docs/A21-SECTION2-ACCEPTANCE.md data/course/p2-identity-batch1-audit.json docs/P2-IDENTITY-BATCH1-REPORT.md data/course/contextual-lexical-identity-map.json data/course/p2-cross-app-identity.json data/course/p2-cross-app-runtime.json docs/P2-CONTEXTUAL-IDENTITY-BATCH2-REPORT.md data/course/section-structure-audit.json docs/SECTION-STRUCTURE-AUDIT.md
+          git add data/course/*-section-*.json data/course/p2-unresolved-review-queue.json docs/P2-UNRESOLVED-REVIEW-QUEUE.md data/course/coverage-audit.json docs/COURSE-COVERAGE-AUDIT.md data/course/lexical-identity-sidecar.json data/course/course-review-form-map.json data/course/a2.1-section-1-acceptance.json docs/A21-SECTION1-ACCEPTANCE.md data/course/a2.1-section-2-acceptance.json docs/A21-SECTION2-ACCEPTANCE.md data/course/p2-identity-batch1-audit.json docs/P2-IDENTITY-BATCH1-REPORT.md data/course/contextual-lexical-identity-map.json data/course/p2-cross-app-identity.json data/course/p2-cross-app-runtime.json docs/P2-CONTEXTUAL-IDENTITY-BATCH2-REPORT.md data/course/section-structure-audit.json docs/SECTION-STRUCTURE-AUDIT.md
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
