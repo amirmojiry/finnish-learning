@@ -509,6 +509,13 @@
     return `_____ — ${sentence}`;
   }
 
+  function makeExactReviewCloze(example, surface) {
+    const sentence = String(example || '');
+    const pattern = new RegExp('(^|[^\\p{L}\\p{N}])' + escapeRegExp(String(surface || '').trim()) +
+      '(?=$|[^\\p{L}\\p{N}])', 'iu');
+    return sentence.replace(pattern, (_, boundary) => boundary + '_____');
+  }
+
   function acceptedAnswers(item) {
     const values = Array.isArray(item && item.accepted_answers) ? item.accepted_answers : [];
     return [...new Set([item && item.surface_form, ...values].map(normalizeAnswer).filter(Boolean))];
@@ -4279,7 +4286,9 @@
           sentence.className = 'course-cloze-sentence';
           sentence.lang = 'fi';
           sentence.dir = 'ltr';
-          sentence.textContent = makeCloze(item.example_fi, item.surface_form);
+          sentence.textContent = activity.p3_review
+            ? makeExactReviewCloze(item.example_fi, item.surface_form)
+            : makeCloze(item.example_fi, item.surface_form);
           const translation = document.createElement('p');
           translation.className = 'course-cloze-translation';
           translation.textContent = item.example_fa;
