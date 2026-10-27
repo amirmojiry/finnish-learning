@@ -31,7 +31,8 @@ test('P2 cross-app index reproduces all exact forms, expressions, topic IDs, and
  const byId=new Map(output.records.map(r=>[r.id,r]));
  for(const row of output.course_items) {
   const section=sections.find(s=>s.id===row.section_id);
-  assert.ok(section?.items[row.item_id]);
+  assert.ok(section?.items[row.item_id] || section?.p3_review_items?.[row.item_id],
+   'P2 must resolve both original and separately authored P3 review items');
   assert.equal(row.topic_id,section.curriculum_section_id);
   assert.ok(byId.has(row.identity_id));
  }
