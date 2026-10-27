@@ -23,3 +23,15 @@ test('legacy lesson details retain objective summary and grammar', () => {
   assert.equal(view.summary, legacySection.lessons[0].summary_fa); // Legacy lessons retain their authored summary.
   assert.ok(view.grammar);
 });
+
+test('R1 lexical objectives show authored meaning and lemma without inventing a reviewed sense', () => {
+  const view = lessonObjectiveDisplay(section.lessons[2], section.items);
+  const targets = section.lessons[2].learning_objectives.lexical;
+  for (let i = 0; i < targets.length; i++) {
+    const item = section.items[targets[i].target_id];
+    assert.ok(view.lexical[i].label.includes(item.surface_form));
+    if (item.translation_fa) assert.ok(view.lexical[i].label.includes(item.translation_fa));
+    if (item.item_type === 'word' && item.lemma && item.lemma !== item.surface_form)
+      assert.ok(view.lexical[i].label.includes('ریشه: ' + item.lemma));
+  }
+});

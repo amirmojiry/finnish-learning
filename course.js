@@ -1509,10 +1509,17 @@
     const objectives = lesson.learning_objectives;
     if (!objectives) return { ...detail, structured: false, communicative: [], lexical: [], grammarGoals: [] };
     const communicative = (objectives.communicative || []).map(goal => goal.can_do_fa).filter(Boolean);
-    const lexical = (objectives.lexical || []).map(goal => ({
-      label: items[goal.target_id]?.surface_form || goal.target_id,
-      status: goal.status,
-    }));
+    const lexical = (objectives.lexical || []).map(goal => {
+      const item = items[goal.target_id];
+      const form = item?.surface_form || goal.target_id;
+      const meaning = item?.translation_fa;
+      const lemma = item?.item_type === 'word' && item.lemma && item.lemma !== form ? item.lemma : '';
+      return {
+        label: [form, meaning ? `(${meaning})` : '', lemma ? `— ریشه: ${lemma}` : ''].filter(Boolean).join(' '),
+        status: goal.status,
+      };
+    });
+
     const grammarGoals = (objectives.grammar || []).map(goal => ({
       label: goal.explanation_fa,
       status: goal.status,
@@ -3711,27 +3718,46 @@
       }
       track.append(bar, counter);
       progressWrap.append(track);
-      top.append(close, progressWrap);
-
-      const card = document.createElement('div');
-      card.className = 'course-question-card';
-      const prompt = document.createElement('p');
-      prompt.className = 'course-question-label';
-      prompt.textContent = questionHeading(activity);
-      card.append(prompt);
-
-      if (activityIndex === 0) {
+         // Keep canonical lesson objectives available throughout the exercise, including resumed slides.
+      if (!activeLesson.focused_practice) {
         const intro = createInfoDisclosure((panel) => {
-          const summary = document.createElement('p');
-          summary.textContent = activeLesson.summary_fa;
-          const grammar = document.createElement('p');
-          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
-          panel.append(summary, grammar);
-        }, 'توضیحات این درس');
+          const detail = lessonObjectiveDisplay(activeLesson, section.items);
+          const addParagraph = value => {
+            if (!value) return;
+            const paragraph = document.createElement('p');
+            paragraph.textContent = value;
+            panel.append(paragraph);
+          };
+          const addList = (heading, entries) => {
+            if (!entries.length) return;
+            const group = document.createElement('section');
+            group.className = 'course-lesson-objective-group';
+            const title = document.createElement('h3');
+            title.textContent = heading;
+            const list = document.createElement('ul');
+            for (const entry of entries) {
+              const row = document.createElement('li');
+              row.textContent = entry;
+              list.append(row);
+            }
+            group.append(title, list);
+            panel.append(group);
+          };
+          if (detail.structured) {
+            addList('هدف‌های ارتباطی', detail.communicative);
+            addList('واژگان', detail.lexical.map(goal =>
+              `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`));
+            appendGrammarGoalDetails(panel, detail);
+            if (!detail.communicative.length) addParagraph(detail.objective);
+          } else {
+            addParagraph(detail.objective);
+            addParagraph(detail.summary);
+          }
+          addParagraph(detail.grammar ? `نکتهٔ زبان: ${detail.grammar}` : '');
+        }, 'جزئیات و هدف‌های درس');
         intro.classList.add('course-lesson-inline-info');
         card.append(intro);
       }
-
       const feedback = document.createElement('div');
       feedback.className = 'course-answer-feedback course-primary-feedback';
       feedback.setAttribute('role', 'status');

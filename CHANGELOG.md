@@ -6,6 +6,13 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.74.0] - 2026-10-27
+
+### Added
+
+- R1: Reopen canonical lesson objectives throughout active exercises, including resumed lessons; include authored Finnish form, Persian meaning and lemma (Closes #233).
+
+
 ## [1.73.1] - 2026-10-27
 
 ### Fixed
