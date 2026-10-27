@@ -53,7 +53,7 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
   for(const lesson of section.lessons||[]){
    const refs=lesson.curriculum_target_refs||{};
    const active=new Set([...(refs.high_frequency||[]),...(refs.topic||[]),...(refs.expressions||[]),...(lesson.new_targets||[]),...(lesson.practice_targets||[]),...(lesson.checkpoint_targets||[]),...(lesson.review_targets||[])]);
-   for(const activity of lesson.activities||[]){
+   for(const activity of [...(lesson.activities||[]), ...(lesson.p3_review_activities||[])]){
     for(const field of ['item','answer_item','question_item','negative_item','affirmative_item','event_item','time_item','prompt_item']){
      if(activity[field]&&section.items[activity[field]])active.add(activity[field]);
     }
