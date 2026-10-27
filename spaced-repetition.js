@@ -282,6 +282,7 @@
     if (!storage) elements.preferencesStatus.textContent =
       'ذخیرهٔ مرورگر در دسترس نیست؛ پاسخ‌ها فقط تا بستن صفحه باقی می‌مانند.';
     let courseReviewMap = null;
+    let p2Identity = null;
     function courseReviewPriorities() {
       const course = windowObject.FinnishCourse;
       const bridge = windowObject.FinnishCourseSrsBridge;
@@ -325,6 +326,14 @@
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'spaced-review-history-item';
+        const identity = p2Identity?.wordPracticeWord?.(entry.word.word);
+        if (identity?.form_id) {
+          button.dataset.formId = identity.form_id;
+          if (identity.review_scope === 'global') {
+            button.dataset.lexemeId = identity.lexeme_id;
+            button.dataset.senseId = identity.sense_id;
+          }
+        }
         const main = document.createElement('span'); main.className = 'spaced-review-history-main';
         const word = document.createElement('strong'); word.lang = 'fi'; word.textContent = entry.word.word;
         const translation = document.createElement('span'); translation.textContent = entry.word.translation_fa;
@@ -483,6 +492,10 @@
       }
     });
     const detailWord = document.getElementById('detail-word'); if (detailWord && typeof windowObject.MutationObserver === 'function') new windowObject.MutationObserver(renderDetailReviewStatus).observe(detailWord, { childList: true, characterData: true, subtree: true });
+    windowObject.FinnishP2Identity?.load?.(windowObject).then(index => {
+      p2Identity = index;
+      renderHistory();
+    }).catch(() => { p2Identity = null; });
     windowObject.fetch(`./data/course/course-review-form-map.json?v=${Date.now()}`, { cache: 'no-store' })
       .then(response => { if (!response.ok) throw Error(String(response.status)); return response.json(); })
       .then(data => { if (data?.schema_version === 1 && Array.isArray(data.mappings)) courseReviewMap = data; })
