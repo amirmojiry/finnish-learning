@@ -18,6 +18,8 @@ The source of truth remains `data/course/lexical-identity-sidecar.json`, generat
 
 ## Browser read-only integration
 
+The full generated index is an auditable build artifact; browsers download only the separate **compact 174 KB** `data/course/p2-cross-app-runtime.json` representation, not the large source analysis sidecar or full occurrence manifest. Both are produced and verified by one builder.
+
 `p2-shared-identity.js` provides `hydrate()`, `courseItem(sectionId,itemId)`, `dictionaryWord(surface)`, `wordPracticeWord(surface)`, and `expression(surface)`. Each resolver shares exact stable identities; only `courseItem` can expose a separately reviewed context-only sense. Course objective labels mark verified senses, the dictionary attaches exact-form metadata to its detail lemma, and Word Practice history attaches the same exact-form ID. All existing progress keys (`fiCourseProgressV1`, `fiSrsProgressV1`, `fiSrsPreferencesV1`) and due-first scheduling stay unchanged. If the optional lookup cannot load, the pre-existing interface continues working.
 
 ## Build, test and release gates
