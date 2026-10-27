@@ -1725,7 +1725,8 @@
           throw new Error('P3 supplements must be bounded, unpaced, non-checkpoint new-start reviews: ' + lesson.id);
         }
         for (const activity of supplements) {
-          const item = section.items[activity.item];
+          const item = section.p3_review_items?.[activity.item];
+          if (section.items[activity.item]) throw new Error('P3 review cannot replace archived item: ' + lesson.id);
           if (activity.type !== 'type' || !['finnish', 'cloze'].includes(activity.mode) ||
             !item || (lesson.new_targets || []).includes(activity.item) ||
             !item.p3_review_provenance?.source_section_id ||
@@ -3709,7 +3710,7 @@
       answered = false;
       const item = ['activity-group', 'dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
-        : section.items[activity.item];
+        : section.items[activity.item] || section.p3_review_items?.[activity.item];
       root.replaceChildren();
 
       const shell = document.createElement('section');
