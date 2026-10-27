@@ -1504,7 +1504,7 @@
           }
   }
 
-  function lessonObjectiveDisplay(lesson, items = {}) {
+  function lessonObjectiveDisplay(lesson, items = {}, identityIndex = null, sectionId = null) {
     const detail = lessonDetailParagraphs(lesson);
     const objectives = lesson.learning_objectives;
     if (!objectives) return { ...detail, structured: false, communicative: [], lexical: [], grammarGoals: [] };
@@ -1512,11 +1512,16 @@
     const lexical = (objectives.lexical || []).map(goal => {
       const item = items[goal.target_id];
       const form = item?.surface_form || goal.target_id;
+      const approvedIdentity = identityIndex?.courseItem?.(sectionId, goal.target_id);
       const meaning = item?.translation_fa;
       const lemma = item?.item_type === 'word' && item.lemma && item.lemma !== form ? item.lemma : '';
       return {
-        label: [form, meaning ? `(${meaning})` : '', lemma ? `— ریشه: ${lemma}` : ''].filter(Boolean).join(' '),
+        label: [form, meaning ? `(${meaning})` : '', lemma ? `— ریشه: ${lemma}` : '',
+          approvedIdentity?.sense_id ? '· معنای بررسی‌شده' : ''].filter(Boolean).join(' '),
         status: goal.status,
+        form_id: approvedIdentity?.form_id || null,
+        expression_id: approvedIdentity?.expression_id || null,
+        sense_id: approvedIdentity?.sense_id || null,
       };
     });
 
@@ -2603,6 +2608,7 @@
 
     let sections = [];
     let section = null;
+    let p2Identity = null;
     let curricula = new Map();
     let progress = loadProgress(windowObject.localStorage);
     let activeLesson = null;
@@ -3132,7 +3138,7 @@
         const details = document.createElement('div');
         details.className = 'course-lesson-popover-details';
         details.hidden = true;
-        const detailCopy = lessonObjectiveDisplay(lesson, section.items);
+        const detailCopy = lessonObjectiveDisplay(lesson, section.items, p2Identity, section.id);
         const appendParagraph = (value, className) => {
           if (!value) return;
           const paragraph = document.createElement('p');
@@ -3721,7 +3727,7 @@
          // Keep canonical lesson objectives available throughout the exercise, including resumed slides.
       if (!activeLesson.focused_practice) {
         const intro = createInfoDisclosure((panel) => {
-          const detail = lessonObjectiveDisplay(activeLesson, section.items);
+          const detail = lessonObjectiveDisplay(activeLesson, section.items, p2Identity, section.id);
           const addParagraph = value => {
             if (!value) return;
             const paragraph = document.createElement('p');
@@ -4516,6 +4522,7 @@
 
     const version = document.querySelector('meta[name="app-version"]')?.content || Date.now();
     renderLoading();
+    const identityPromise = windowObject.FinnishP2Identity?.load?.(windowObject) || Promise.resolve(null);
     Promise.all(COURSE_STAGES.map(async (stage) => {
       const [curriculumResponse, ...sectionResponses] = await Promise.all([
         windowObject.fetch(`${stage.curriculumUrl}?v=${version}`, { cache: 'no-store' }),
@@ -4531,7 +4538,8 @@
         sections: await Promise.all(sectionResponses.map((response) => response.json())),
       };
     }))
-      .then((stagePayloads) => {
+      .then(async (stagePayloads) => {
+        p2Identity = await identityPromise;
         curricula = new Map(stagePayloads.map((stage) => [stage.level, stage.curriculum]));
         sections = validateImplementedPath(stagePayloads);
         progress = loadProgress(windowObject.localStorage);

@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.75.0] - 2026-10-27
+
+### Added
+
+- Add canonical curriculum topic IDs and explicitly authored review lessons to all P2 lexical identity records, while preserving null semantic IDs for unreviewed forms and expressions.
+- Publish a reproducible cross-app Course / Dictionary / Word Practice identity index for 1,264 stable surface/expression records, 1,178 authored item links, and all 425 curated dictionary/SRS words. Keep 15 reviewed homograph contexts item-scoped and all existing SRS histories independent.
+- Add read-only browser identity resolution, reviewed-context labels in course lesson objectives, dictionary and Word Practice exact-form metadata links, and comprehensive regression/CI checks with offline fallback.
+
+
 ## [1.74.0] - 2026-10-27
 
 ### Added

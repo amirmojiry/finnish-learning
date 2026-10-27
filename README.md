@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.74.0`
+- Version: `1.75.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.75.0 — verified P2 identity linkage across Course / Dictionary / Word Practice.** All 1,264 stable written-form/expression records now include canonical curriculum topics and explicit authored review lesson links. A deterministic browser index connects 1,178 unique Course items and all 425 curated dictionary/SRS forms by exact IDs; the 15 reviewed homograph contexts are strictly item-scoped. Only 70 reviewed global sense identities are certified; 1,194 remain explicitly unresolved rather than auto-guessed. Course and Word Practice progress, due schedules and original Parole ranks remain unchanged. [Technical contract](docs/P2-SHARED-IDENTITY-CONTRACT.md) / [Persian](docs/P2-SHARED-IDENTITY-CONTRACT.fa.md).
 
 **v1.73.1: P3 true-new lexeme/sense accounting and prioritized legacy review queue.** The verified learner-effective audit now separately counts first reviewed **lexeme+sense family** introductions, subsequent case/inflection forms belonging to an already taught reviewed family, and P2-unresolved forms for which no semantic equivalence can be inferred. Even when two forms share a reviewed family, their independently graded evidence stays separate. A deterministic **all-140-lesson remediation queue** ranks opportunities lacking later graded retrieval (62/931) or a genuinely different graded Finnish context (838/931), lists separate receptive/listening/dictation/typed/guided/independent modes, and marks late introductions that may depend on unshipped A2.1 content. No fictional Finnish examples, reauthored lesson arrays, SRS mastery inheritance, or learner-data migration. A new optional authoring skill-balance gate can require both later receptive and productive evidence when explicitly selected. These 62/838 findings remain **open editorial review work**, not resolved content or learner-failure counts. [Issue #232](https://github.com/amirmojiry/finnish-learning/issues/232) · [P3 triage commands](docs/P3-LEARNER-EFFECTIVE-RECYCLING.md) · [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101).
 
