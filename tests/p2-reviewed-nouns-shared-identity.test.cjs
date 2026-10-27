@@ -129,7 +129,8 @@ test('Course-to-dictionary form mapping excludes contextual homographs without c
  const built=reviewMap.build(side,dict,ctx);
  assert.deepEqual(map,built);
  assert.equal(map.schema_version,1);
- assert.equal(map.mappings.length,239);
+ assert.equal(map.mappings.filter(row => !row.item_id.startsWith('p3r-')).length,239);
+ assert.ok(map.mappings.length >=239,'P3 additions cannot delete pre-existing Course form mappings');
  assert.equal(map.excluded_ambiguous_form_ids.length,5);
  assert.ok(map.excluded_ambiguous_form_ids.includes(stable('voi')));
  assert.ok(map.excluded_ambiguous_form_ids.includes(stable('pitää')));
