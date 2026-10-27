@@ -1509,10 +1509,16 @@
     const objectives = lesson.learning_objectives;
     if (!objectives) return { ...detail, structured: false, communicative: [], lexical: [], grammarGoals: [] };
     const communicative = (objectives.communicative || []).map(goal => goal.can_do_fa).filter(Boolean);
-    const lexical = (objectives.lexical || []).map(goal => ({
-      label: items[goal.target_id]?.surface_form || goal.target_id,
-      status: goal.status,
-    }));
+    const lexical = (objectives.lexical || []).map(goal => {
+      const item = items[goal.target_id];
+      const form = item?.surface_form || goal.target_id;
+      const meaning = item?.translation_fa;
+      const lemma = item?.item_type === 'word' && item.lemma && item.lemma !== form ? item.lemma : '';
+      return {
+        label: [form, meaning ? `(${meaning})` : '', lemma ? `— ریشه: ${lemma}` : ''].filter(Boolean).join(' '),
+        status: goal.status,
+      };
+    });
     const grammarGoals = (objectives.grammar || []).map(goal => ({
       label: goal.explanation_fa,
       status: goal.status,
