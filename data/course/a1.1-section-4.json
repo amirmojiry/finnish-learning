@@ -1905,6 +1905,385 @@
       "accepted_answers": [
         "Kissa on suuri."
       ]
+    },
+    "p3r-036-s4-tama-on-koira": {
+      "id": "p3r-036-s4-tama-on-koira",
+      "surface_form": "Tämä on koira.",
+      "lemma": "Tämä on koira",
+      "translation_fa": "این سگ است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Tämä on koira.",
+      "example_fa": "این سگ است.",
+      "accepted_answers": [
+        "Tämä on koira."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-6",
+        "source_item_id": "s4-tama-on-koira",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-036-s4-kissa": {
+      "id": "p3r-036-s4-kissa",
+      "surface_form": "kissa",
+      "lemma": "kissa",
+      "translation_fa": "گربه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Kissa nukkuu sohvalla.",
+      "example_fa": "گربه روی مبل می‌خوابد.",
+      "accepted_answers": [
+        "kissa"
+      ],
+      "visual": "🐈",
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-6",
+        "source_item_id": "s4-kissa",
+        "context_origin": "authored_course_example",
+        "context_section_id": "a1.1-section-1",
+        "context_item_id": "kissa"
+      }
+    },
+    "p3r-034-s4-vetta": {
+      "id": "p3r-034-s4-vetta",
+      "surface_form": "vettä",
+      "lemma": "vettä",
+      "translation_fa": "آب (پارتی‌تیو)",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "drink",
+        "morphology"
+      ],
+      "example_fi": "Haluan vettä.",
+      "example_fa": "آب می‌خواهم.",
+      "accepted_answers": [
+        "vettä"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-4",
+        "source_item_id": "s4-vetta",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-034-s4-minulla-on-jano": {
+      "id": "p3r-034-s4-minulla-on-jano",
+      "surface_form": "Minulla on jano.",
+      "lemma": "Minulla on jano",
+      "translation_fa": "تشنه‌ام.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Minulla on jano.",
+      "example_fa": "تشنه‌ام.",
+      "accepted_answers": [
+        "Minulla on jano."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-4",
+        "source_item_id": "s4-minulla-on-jano",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-034-s4-minulla-on-nalka": {
+      "id": "p3r-034-s4-minulla-on-nalka",
+      "surface_form": "Minulla on nälkä.",
+      "lemma": "Minulla on nälkä",
+      "translation_fa": "گرسنه‌ام.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "needs"
+      ],
+      "example_fi": "Minulla on nälkä.",
+      "example_fa": "گرسنه‌ام.",
+      "accepted_answers": [
+        "Minulla on nälkä."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-4",
+        "source_item_id": "s4-minulla-on-nalka",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-033-s4-tama-on-leipa": {
+      "id": "p3r-033-s4-tama-on-leipa",
+      "surface_form": "Tämä on leipä.",
+      "lemma": "Tämä on leipä",
+      "translation_fa": "این نان است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food"
+      ],
+      "example_fi": "Tämä on leipä.",
+      "example_fa": "این نان است.",
+      "accepted_answers": [
+        "Tämä on leipä."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-3",
+        "source_item_id": "s4-tama-on-leipa",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-033-s4-maito": {
+      "id": "p3r-033-s4-maito",
+      "surface_form": "maito",
+      "lemma": "maito",
+      "translation_fa": "شیر",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "drink"
+      ],
+      "example_fi": "Tämä on maitoa.",
+      "example_fa": "این شیر است.",
+      "accepted_answers": [
+        "maito"
+      ],
+      "visual": "🥛",
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-3",
+        "source_item_id": "s4-maito",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-033-s4-tee": {
+      "id": "p3r-033-s4-tee",
+      "surface_form": "tee",
+      "lemma": "tee",
+      "translation_fa": "چای",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "drink"
+      ],
+      "example_fi": "Tämä on teetä.",
+      "example_fa": "این چای است.",
+      "accepted_answers": [
+        "tee"
+      ],
+      "visual": "🍵",
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-3",
+        "source_item_id": "s4-tee",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-032-s4-se-on-sangylla": {
+      "id": "p3r-032-s4-se-on-sangylla",
+      "surface_form": "Se on sängyllä.",
+      "lemma": "Se on sängyllä",
+      "translation_fa": "روی تخت است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on sängyllä.",
+      "example_fa": "روی تخت است.",
+      "accepted_answers": [
+        "Se on sängyllä."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-2",
+        "source_item_id": "s4-se-on-sangylla",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-032-s4-se-on-tuolilla": {
+      "id": "p3r-032-s4-se-on-tuolilla",
+      "surface_form": "Se on tuolilla.",
+      "lemma": "Se on tuolilla",
+      "translation_fa": "روی صندلی است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on tuolilla.",
+      "example_fa": "روی صندلی است.",
+      "accepted_answers": [
+        "Se on tuolilla."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-2",
+        "source_item_id": "s4-se-on-tuolilla",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-026-s3-tyo": {
+      "id": "p3r-026-s3-tyo",
+      "surface_form": "työ",
+      "lemma": "työ",
+      "translation_fa": "کار",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "work"
+      ],
+      "example_fi": "Työ on täällä.",
+      "example_fa": "کار اینجاست.",
+      "accepted_answers": [
+        "työ"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-6",
+        "source_item_id": "s3-tyo",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-025-s3-mina-juon-kahvia": {
+      "id": "p3r-025-s3-mina-juon-kahvia",
+      "surface_form": "Minä juon kahvia.",
+      "lemma": "Minä juon kahvia",
+      "translation_fa": "من قهوه می‌نوشم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine"
+      ],
+      "example_fi": "Minä juon kahvia.",
+      "example_fa": "من قهوه می‌نوشم.",
+      "accepted_answers": [
+        "Minä juon kahvia."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-5",
+        "source_item_id": "s3-mina-juon-kahvia",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-025-s3-nukun": {
+      "id": "p3r-025-s3-nukun",
+      "surface_form": "nukun",
+      "lemma": "nukun",
+      "translation_fa": "می‌خوابم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "routine",
+        "verbs"
+      ],
+      "example_fi": "Yöllä nukun.",
+      "example_fa": "شب می‌خوابم.",
+      "accepted_answers": [
+        "nukun"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-5",
+        "source_item_id": "s3-nukun",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-023-s3-ilta": {
+      "id": "p3r-023-s3-ilta",
+      "surface_form": "ilta",
+      "lemma": "ilta",
+      "translation_fa": "عصر / شب",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Ilta alkaa.",
+      "example_fa": "عصر آغاز می‌شود.",
+      "accepted_answers": [
+        "ilta"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-3",
+        "source_item_id": "s3-ilta",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-023-s3-aamu": {
+      "id": "p3r-023-s3-aamu",
+      "surface_form": "aamu",
+      "lemma": "aamu",
+      "translation_fa": "صبح",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Aamu alkaa.",
+      "example_fa": "صبح آغاز می‌شود.",
+      "accepted_answers": [
+        "aamu"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-3",
+        "source_item_id": "s3-aamu",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-022-s3-tiistai": {
+      "id": "p3r-022-s3-tiistai",
+      "surface_form": "tiistai",
+      "lemma": "tiistai",
+      "translation_fa": "سه‌شنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on tiistai.",
+      "example_fa": "امروز سه‌شنبه است.",
+      "accepted_answers": [
+        "tiistai"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-2",
+        "source_item_id": "s3-tiistai",
+        "context_origin": "original_lesson"
+      }
     }
   },
   "lessons": [
@@ -2285,7 +2664,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-026-s3-tyo",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-023-s3-ilta",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-2",
@@ -2744,7 +3137,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-025-s3-mina-juon-kahvia",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-023-s3-aamu",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-3",
@@ -3053,6 +3460,20 @@
       },
       "practice_targets": [
         "s4-kahvia"
+      ],
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-025-s3-nukun",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-022-s3-tiistai",
+          "p3_review": true
+        }
       ]
     },
     {
@@ -3435,7 +3856,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-032-s4-se-on-sangylla",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-032-s4-se-on-tuolilla",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-5",
@@ -3675,7 +4110,21 @@
         ],
         "grammar_scope": "formulaic",
         "grammar": []
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-033-s4-tama-on-leipa",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-033-s4-maito",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-6",
@@ -4014,7 +4463,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-034-s4-vetta",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-034-s4-minulla-on-nalka",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-7",
@@ -4292,7 +4755,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-034-s4-minulla-on-jano",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-033-s4-tee",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-8",
@@ -4581,7 +5058,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-036-s4-tama-on-koira",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-036-s4-kissa",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "section-4-lesson-9",
@@ -4591,7 +5082,39 @@
       },
       "editorial_revision": {
         "id": "r189-a11-s4-l09-v1",
-        "activity_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 35, 40, 43]
+        "activity_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          28,
+          35,
+          40,
+          43
+        ]
       },
       "curriculum_id": "a1.1-s4-l09",
       "order": 9,
