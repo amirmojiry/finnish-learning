@@ -12,6 +12,40 @@
  // Only manually reviewed global or exact Course-item contextual senses can be exposed.
  // No shared progress score is created: SRS and Course history remain distinct.
  function hydrate(data) {
+  if (data?.identity_scope === 'compact_exact_forms_and_reviewed_context_only') {
+   if (data.schema_version !== 1 || !Array.isArray(data.rows) || !Array.isArray(data.links))
+    throw Error('Invalid compact P2 identity index');
+   const records = data.rows.map(row => {
+    if (!Array.isArray(row) || row.length !== 7 || ![0,1].includes(row[0]) ||
+        ![0,1].includes(row[3]) || !Array.isArray(row[4]) ||
+        !Array.isArray(row[6]) || (row[2] !== null &&
+        (!Array.isArray(row[2]) || row[2].length !== 3))) {
+     throw Error('Malformed compact P2 identity record');
+    }
+    const kind=row[0] === 0 ? 'form' : 'expression',surface=normalize(row[1]),id=stableId(kind,surface);
+    if (row[3] === 1 && kind !== 'form') throw Error('Expressions cannot inherit SRS identity');
+    return {id,kind,surface_form:surface,form_id:kind === 'form' ? id : null,
+     expression_id:kind === 'expression' ? id : null,
+     lexeme_id:row[2]?.[0] || null,sense_id:row[2]?.[1] || null,
+     morphology:row[2]?.[2] || null,
+     identity_review_status:row[2] ? 'reviewed' : 'unresolved',
+     topic_ids:row[4],first_shipped_lesson:row[5],
+     explicit_review_lesson_ids:row[6],
+     dictionary_word:row[3] ? surface : null,word_practice_key:row[3] ? surface : null};
+   });
+   const course_items=data.links.map(link => {
+    if (!Array.isArray(link) || link.length !== 4 ||
+        !Number.isInteger(link[2]) || link[2] < 0 || link[2] >= records.length ||
+        (link[3] !== null && (!Array.isArray(link[3]) || link[3].length !== 4))) {
+     throw Error('Malformed compact P2 Course-item link');
+    }
+    return {section_id:link[0],item_id:link[1],identity_id:records[link[2]].id,
+     context_review:link[3] ? {context_id:link[3][0],lexeme_id:link[3][1],
+      sense_id:link[3][2],morphology:link[3][3]} : null};
+   });
+   data={schema_version:1,identity_scope:'exact_form_expression_and_explicitly_reviewed_sense_only',
+    counts:data.counts,records,course_items};
+  }
   if (data?.schema_version !== 1 ||
       data.identity_scope !== 'exact_form_expression_and_explicitly_reviewed_sense_only' ||
       !Array.isArray(data.records) || !Array.isArray(data.course_items)) throw Error('Invalid P2 identity index');
@@ -87,7 +121,7 @@
   if (!windowObject?.fetch) return Promise.resolve(null);
   if (!pendingLoad) {
    const version=windowObject.document?.querySelector('meta[name="app-version"]')?.content || '1';
-   pendingLoad=windowObject.fetch('./data/course/p2-cross-app-identity.json?v='+encodeURIComponent(version),
+   pendingLoad=windowObject.fetch('./data/course/p2-cross-app-runtime.json?v='+encodeURIComponent(version),
      {cache:'no-store'})
     .then(response=>{if(!response.ok)throw Error(String(response.status));return response.json();})
     .then(hydrate).catch(()=>null); // Legacy/offline views continue without the optional index.
