@@ -59,6 +59,7 @@ function build(sidecar, dictionary, contextual, sections) {
     throw Error('Stale course occurrence: ' + o.section_id + '/' + o.item_id);
    }
    const reviewed = (lesson.review_targets || []).includes(o.item_id) ||
+    (lesson.p3_review_activities || []).some(a => a.item === o.item_id && a.p3_review === true) ||
     (lesson.learning_objectives?.lexical || []).some(g => g.target_id === o.item_id && g.status === 'reviewed');
    if (reviewed) approvedReviews.add(lesson.id);
    const key = o.section_id + '\u0000' + o.item_id;
