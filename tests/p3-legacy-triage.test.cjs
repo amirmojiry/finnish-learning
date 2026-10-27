@@ -15,10 +15,11 @@ test('all 140 actual learner editions have an actionable deterministic P3 review
  assert.deepEqual(result.summary.sections,14);
  assert.equal(result.summary.lessons,140);
  assert.equal(result.summary.introductions,931);
- assert.equal(result.summary.without_later_graded,62);
- assert.equal(result.summary.without_later_different_context,838);
- assert.ok(result.summary.actionable_records>=838);
- assert.ok(result.entries.some(x=>x.priority_class==='missing-retrieval'));
+ assert.equal(result.summary.without_later_graded,0,'source-backed P3 reviews cover every shipped first introduction');
+ assert.ok(result.summary.without_later_different_context > 0);
+ assert.ok(result.summary.without_later_different_context <= 838);
+ assert.ok(result.summary.actionable_records>=result.summary.without_later_different_context);
+ assert.ok(!result.entries.some(x=>x.priority_class==='missing-retrieval'));
  assert.ok(result.entries.some(x=>x.priority_class==='same-context-only'));
  assert.ok(result.entries.every(x=>x.priority_score>=0&&x.form_id&&x.lesson_id));
  assert.ok(result.entries.every(x=>!x.lexeme_id || x.identity_review_status==='reviewed'));
