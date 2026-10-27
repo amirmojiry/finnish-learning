@@ -117,6 +117,7 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
    const lesson = section?.lessons?.find(l => l.id === o.lesson_id);
    if (!lesson) throw Error('Stale occurrence in reviewed lesson index: ' + record.id);
    const explicitlyReviewed = (lesson.review_targets || []).includes(o.item_id)
+    || (lesson.p3_review_activities || []).some(a => a.item === o.item_id && a.p3_review === true)
     || (lesson.learning_objectives?.lexical || [])
       .some(goal => goal.target_id === o.item_id && goal.status === 'reviewed');
    if (explicitlyReviewed) reviewLessons.add(o.lesson_id);
