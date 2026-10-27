@@ -30,7 +30,7 @@ The 14 shipped sections contain **1,264 unique identity records** (824 exact sin
 
 **How to use the bands:** The ranges refer only to an original Parole source-position sequence and must not be mistaken for `frequency_rank` ties, the 400-entry application's `position` field, frequency percentages, or recognized vocabulary size. Do not assume every source form in a band is appropriate. C1/C2 have no fixed ceiling and require authentic genre-specific texts.
 
-**P4 implementation preparation:** See the [Parole source-backed review queue](P4-PAROLE-REVIEW-QUEUE.md) and run `npm run parole:plan:markdown`. This ordered selection tool does not add new dictionary entries. The actual first curated contiguous Parole tranche remains a separate release-gated child task under [#101](https://github.com/amirmojiry/finnish-learning/issues/101).
+**P4 implementation preparation:** Apply the [prerequisite-aware candidate approval gate](P4-PREREQUISITE-CANDIDATE-GATE.md) before selecting the next batch. See the [Parole source-backed review queue](P4-PAROLE-REVIEW-QUEUE.md) and run `npm run parole:plan:markdown`. This ordered selection tool does not add new dictionary entries. The actual first curated contiguous Parole tranche remains a separate release-gated child task under [#101](https://github.com/amirmojiry/finnish-learning/issues/101).
 
 ## The four complementary lexical channels
 
