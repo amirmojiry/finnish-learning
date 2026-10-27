@@ -17,7 +17,7 @@ function activityMode(a){
  return GUIDED.has(a.type)?'guided':'receptive';
 }
 function form(section,itemId,known){
- const item=section.items?.[itemId];
+ const item=section.items?.[itemId] || section.p3_review_items?.[itemId];
  if(!item?.surface_form)throw Error('P3 unknown authored item '+section.id+'/'+itemId);
  const kind=item.item_type==='expression'?'expression':'form';
  const id=lexical.stableId(kind,norm(item.surface_form));
@@ -51,14 +51,15 @@ function gradedContext(activity, fallback=''){
 }
 function evidence(section,lesson,known){
  const out=new Map();
- for(const a of course.lessonEditionActivities(lesson,'editorial')){
+ for(const a of course.lessonEditionActivities(lesson,lesson.p3_review_activities?.length?'p3':'editorial')){
   if(course.scoredOpportunitiesOnSlide(a)===0)continue;
   for(const id of audit.positives(a)){
-   if(!section.items?.[id])continue;
+   if(!section.items?.[id] && !section.p3_review_items?.[id])continue;
    const x=form(section,id,known);
    const existing=out.get(x.id)||{modes:Object.fromEntries(MODES.map(m=>[m,0])),contexts:new Set()};
    existing.modes[activityMode(a)]++;
-   const context=gradedContext(a,x.context);
+   // Translation-only recall is graded retrieval, not a new Finnish sentence prompt.
+   const context=a.p3_review && a.mode==='finnish' ? '' : gradedContext(a,x.context);
    if(context)existing.contexts.add(context);
    out.set(x.id,existing);
   }
@@ -107,7 +108,7 @@ function assess(sections,sidecar){
    }
    const row={section_id:s.id,lesson_id:lesson.id,level:s.level,checkpoint,strict_gate:strict,
     authored_activity_count:lesson.activities.length,
-    effective_activity_count:course.lessonEditionActivities(lesson,'editorial').length,
+    effective_activity_count:course.lessonEditionActivities(lesson,lesson.p3_review_activities?.length?'p3':'editorial').length,
     new_exact_form_count:introduced.length,
     new_ranked_form_count:introduced.filter(x=>x.kind==='form'&&x.provenance==='ranked').length,
     new_topic_form_count:introduced.filter(x=>x.kind==='form'&&x.provenance!=='ranked').length,

@@ -25,7 +25,8 @@ function build(sidecar,dictionary,contextual,loadSection=id=>read('data/course/'
  const targets=new Map(),sectionCache=new Map();
  const itemFor=(sectionId,itemId)=>{
   if(!sectionCache.has(sectionId))sectionCache.set(sectionId,loadSection(sectionId));
-  return sectionCache.get(sectionId)?.items?.[itemId];
+  const section=sectionCache.get(sectionId);
+  return section?.items?.[itemId] || section?.p3_review_items?.[itemId];
  };
  for(const row of sidecar.records||[]){
   if(row.kind!=='form'||!row.form_id||!available.has(row.surface_form)||excluded.has(row.form_id))continue;

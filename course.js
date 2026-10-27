@@ -509,6 +509,13 @@
     return `_____ — ${sentence}`;
   }
 
+  function makeExactReviewCloze(example, surface) {
+    const sentence = String(example || '');
+    const pattern = new RegExp('(^|[^\\p{L}\\p{N}])' + escapeRegExp(String(surface || '').trim()) +
+      '(?=$|[^\\p{L}\\p{N}])', 'iu');
+    return sentence.replace(pattern, (_, boundary) => boundary + '_____');
+  }
+
   function acceptedAnswers(item) {
     const values = Array.isArray(item && item.accepted_answers) ? item.accepted_answers : [];
     return [...new Set([item && item.surface_form, ...values].map(normalizeAnswer).filter(Boolean))];
@@ -1264,6 +1271,10 @@
   }
 
   function lessonEditionActivities(lesson, edition = 'legacy') {
+    if (edition === 'p3') {
+      const base = lessonEditionActivities(lesson, lesson.editorial_revision ? 'editorial' : 'legacy');
+      return [...base, ...(lesson.p3_review_activities || [])];
+    }
     const revision = lessonEditorialRevision(lesson, edition);
     return revision ? revision.activity_indices.map((index) => lesson.activities[index]) : lesson.activities;
   }
@@ -1707,6 +1718,31 @@
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
       validateLessonEditorialRevision(lesson);
+      if (lesson.p3_review_activities !== undefined) {
+        const supplements = lesson.p3_review_activities;
+        if (!Array.isArray(supplements) || supplements.length < 1 || supplements.length > 2
+          || lesson.study_pacing || lesson.editorial_revision || index === section.lessons.length - 1) {
+          throw new Error('P3 supplements must be bounded, unpaced, non-checkpoint new-start reviews: ' + lesson.id);
+        }
+        for (const activity of supplements) {
+          const item = section.p3_review_items?.[activity.item];
+          if (section.items[activity.item]) throw new Error('P3 review cannot replace archived item: ' + lesson.id);
+          if (activity.type !== 'type' || !['finnish', 'cloze'].includes(activity.mode) ||
+            !item || (lesson.new_targets || []).includes(activity.item) ||
+            !item.p3_review_provenance?.source_section_id ||
+            !item.p3_review_provenance?.source_item_id) {
+            throw new Error('Invalid P3 review source and independent typing activity: ' + lesson.id);
+          }
+          const sentenceTokens = String(item.example_fi || '').normalize('NFC')
+            .toLocaleLowerCase('fi-FI').match(/[\p{L}\p{N}]+/gu) || [];
+          if (activity.mode === 'cloze' && (item.item_type === 'expression' || !item.example_fa ||
+            !sentenceTokens.includes(normalizeAnswer(item.surface_form)))) {
+            throw new Error('P3 contextual review needs an authored bilingual exact-form sentence: ' + lesson.id);
+          }
+        }
+        if (lessonEditionSlides(lesson, 'p3').length > 30)
+          throw new Error('P3 reviews exceed the 30-slide learner edition budget: ' + lesson.id);
+      }
       if (lesson.editorial_revision_history !== undefined) {
         const history = lesson.editorial_revision_history;
         if (!lesson.editorial_revision || !Array.isArray(history) || !history.length) {
@@ -3420,7 +3456,8 @@
       const saved = loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
       // Old v1.56 drafts have no edition marker: resume their original activity
       // order without replaying scored questions. Fresh starts are concise.
-      const editorialEdition = !authored.editorial_revision ? 'legacy'
+      const editorialEdition = authored.p3_review_activities?.length && !saved ? 'p3'
+        : !authored.editorial_revision ? 'legacy'
         : saved && !saved.editorialEdition ? 'legacy'
         : saved && saved.editorialEdition !== authored.editorial_revision.id
           ? saved.editorialEdition : 'editorial';
@@ -3673,7 +3710,7 @@
       answered = false;
       const item = ['activity-group', 'dialogue-order', 'number-grid', 'sequence-order', 'negative-transform', 'guided-writing', 'event-time-match', 'visual-choice', 'prompt-choice', 'category-match', 'short-reading'].includes(activity.type)
         ? null
-        : section.items[activity.item];
+        : section.items[activity.item] || section.p3_review_items?.[activity.item];
       root.replaceChildren();
 
       const shell = document.createElement('section');
@@ -4250,7 +4287,9 @@
           sentence.className = 'course-cloze-sentence';
           sentence.lang = 'fi';
           sentence.dir = 'ltr';
-          sentence.textContent = makeCloze(item.example_fi, item.surface_form);
+          sentence.textContent = activity.p3_review
+            ? makeExactReviewCloze(item.example_fi, item.surface_form)
+            : makeCloze(item.example_fi, item.surface_form);
           const translation = document.createElement('p');
           translation.className = 'course-cloze-translation';
           translation.textContent = item.example_fa;

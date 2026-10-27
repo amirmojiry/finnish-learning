@@ -53,9 +53,9 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
   for(const lesson of section.lessons||[]){
    const refs=lesson.curriculum_target_refs||{};
    const active=new Set([...(refs.high_frequency||[]),...(refs.topic||[]),...(refs.expressions||[]),...(lesson.new_targets||[]),...(lesson.practice_targets||[]),...(lesson.checkpoint_targets||[]),...(lesson.review_targets||[])]);
-   for(const activity of lesson.activities||[]){
+   for(const activity of [...(lesson.activities||[]), ...(lesson.p3_review_activities||[])]){
     for(const field of ['item','answer_item','question_item','negative_item','affirmative_item','event_item','time_item','prompt_item']){
-     if(activity[field]&&section.items[activity[field]])active.add(activity[field]);
+     if(activity[field]&&(section.items[activity[field]]||section.p3_review_items?.[activity[field]]))active.add(activity[field]);
     }
     for(const field of ['items','turns','expected_items']){
      if(Array.isArray(activity[field]))for(const itemId of activity[field]){
@@ -64,7 +64,7 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
     }
    }
    for(const itemId of [...active].sort()){
-    const item=section.items[itemId];if(!item)throw Error('Unknown lesson item '+section.id+'/'+itemId);
+    const item=section.items[itemId]||section.p3_review_items?.[itemId];if(!item)throw Error('Unknown lesson item '+section.id+'/'+itemId);
     const form=normalize(item.surface_form);if(!form)throw Error('Empty form '+itemId);
     const kind=item.item_type==='expression'?'expression':'form';
     const id=stableId(kind,form);
@@ -117,6 +117,7 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
    const lesson = section?.lessons?.find(l => l.id === o.lesson_id);
    if (!lesson) throw Error('Stale occurrence in reviewed lesson index: ' + record.id);
    const explicitlyReviewed = (lesson.review_targets || []).includes(o.item_id)
+    || (lesson.p3_review_activities || []).some(a => a.item === o.item_id && a.p3_review === true)
     || (lesson.learning_objectives?.lexical || [])
       .some(goal => goal.target_id === o.item_id && goal.status === 'reviewed');
    if (explicitlyReviewed) reviewLessons.add(o.lesson_id);

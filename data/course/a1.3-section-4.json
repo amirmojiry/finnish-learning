@@ -2012,7 +2012,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-017-s2-num-nelja",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-015-s2-perhe",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.3-section-4-lesson-2",
@@ -8341,5 +8355,55 @@
         }
       ]
     }
-  ]
+  ],
+  "p3_review_items": {
+    "p3r-017-s2-num-nelja": {
+      "id": "p3r-017-s2-num-nelja",
+      "surface_form": "neljä",
+      "lemma": "neljä",
+      "translation_fa": "۴",
+      "item_type": "number",
+      "frequency_status": "ranked",
+      "frequency_rank": 254,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on neljä.",
+      "example_fa": "عدد ۴ است.",
+      "accepted_answers": [
+        "neljä",
+        "4",
+        "۴"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-nelja",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-015-s2-perhe": {
+      "id": "p3r-015-s2-perhe",
+      "surface_form": "perhe",
+      "lemma": "perhe",
+      "translation_fa": "خانواده",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "family"
+      ],
+      "example_fi": "Minulla on perhe.",
+      "example_fa": "من خانواده دارم.",
+      "accepted_answers": [
+        "perhe"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-5",
+        "source_item_id": "s2-perhe",
+        "context_origin": "original_lesson"
+      }
+    }
+  }
 }

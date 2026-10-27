@@ -3,7 +3,7 @@
 <!-- PROJECT_STATUS_START -->
 ## Project status
 
-- Version: `1.75.0`
+- Version: `1.76.0`
 - Vocabulary entries: **425**
 - Required quality gate: `npm test`
 - Production deploys run only after the complete test suite passes.
@@ -18,6 +18,8 @@ See [Versioning](docs/VERSIONING.md) and [AI contribution rules](AGENTS.md).
 A lightweight, mobile-friendly web app for learning and practicing high-frequency Finnish word forms with Persian translations.
 
 ## Current features
+
+**v1.76.0 — real P3 later retrieval remediation:** Adds up to two independently scored source-backed bilingual review questions to eligible later learner-edition lessons for the 62/931 exact introductions previously lacking any subsequent graded assessment. Original lessons, saved grades and Word Practice intervals remain unchanged; the new-start edition is bounded and verified. A translation-only recall is **not** claimed to be a distinct Finnish example. The remaining context-variety gaps require further expert-authored content. [Evidence and limitations](docs/P3-AUTHORED-RETRIEVAL-REMEDIATION.md).
 
 **v1.75.0 — verified P2 identity linkage across Course / Dictionary / Word Practice.** All 1,264 stable written-form/expression records now include canonical curriculum topics and explicit authored review lesson links. A deterministic browser index connects 1,178 unique Course items and all 425 curated dictionary/SRS forms by exact IDs; the 15 reviewed homograph contexts are strictly item-scoped. Only 70 reviewed global sense identities are certified; 1,194 remain explicitly unresolved rather than auto-guessed. Course and Word Practice progress, due schedules and original Parole ranks remain unchanged. [Technical contract](docs/P2-SHARED-IDENTITY-CONTRACT.md) / [Persian](docs/P2-SHARED-IDENTITY-CONTRACT.fa.md).
 

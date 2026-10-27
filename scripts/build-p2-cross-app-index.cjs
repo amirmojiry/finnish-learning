@@ -52,13 +52,14 @@ function build(sidecar, dictionary, contextual, sections) {
   const approvedReviews = new Set();
   for (const o of row.occurrences || []) {
    const section = bySection.get(o.section_id);
-   const item = section.items[o.item_id];
+   const item = section.items[o.item_id] || section.p3_review_items?.[o.item_id];
    const lesson = section.lessons.find(l => l.id === o.lesson_id);
    if (!item || !lesson || normalize(item.surface_form) !== row.surface_form ||
        (item.item_type === 'expression' ? 'expression' : 'form') !== row.kind) {
     throw Error('Stale course occurrence: ' + o.section_id + '/' + o.item_id);
    }
    const reviewed = (lesson.review_targets || []).includes(o.item_id) ||
+    (lesson.p3_review_activities || []).some(a => a.item === o.item_id && a.p3_review === true) ||
     (lesson.learning_objectives?.lexical || []).some(g => g.target_id === o.item_id && g.status === 'reviewed');
    if (reviewed) approvedReviews.add(lesson.id);
    const key = o.section_id + '\u0000' + o.item_id;
