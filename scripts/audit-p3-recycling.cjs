@@ -58,7 +58,8 @@ function evidence(section,lesson,known){
    const x=form(section,id,known);
    const existing=out.get(x.id)||{modes:Object.fromEntries(MODES.map(m=>[m,0])),contexts:new Set()};
    existing.modes[activityMode(a)]++;
-   const context=gradedContext(a,x.context);
+   // Translation-only recall is graded retrieval, not a new Finnish sentence prompt.
+   const context=a.p3_review && a.mode==='finnish' ? '' : gradedContext(a,x.context);
    if(context)existing.contexts.add(context);
    out.set(x.id,existing);
   }
