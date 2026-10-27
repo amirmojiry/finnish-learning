@@ -1264,6 +1264,10 @@
   }
 
   function lessonEditionActivities(lesson, edition = 'legacy') {
+    if (edition === 'p3') {
+      const base = lessonEditionActivities(lesson, lesson.editorial_revision ? 'editorial' : 'legacy');
+      return [...base, ...(lesson.p3_review_activities || [])];
+    }
     const revision = lessonEditorialRevision(lesson, edition);
     return revision ? revision.activity_indices.map((index) => lesson.activities[index]) : lesson.activities;
   }
@@ -1707,6 +1711,28 @@
       lessonIds.add(lesson.id);
       curriculumIds.add(lesson.curriculum_id);
       validateLessonEditorialRevision(lesson);
+      if (lesson.p3_review_activities !== undefined) {
+        const supplements = lesson.p3_review_activities;
+        if (!Array.isArray(supplements) || supplements.length < 1 || supplements.length > 2
+          || lesson.study_pacing || lesson.editorial_revision || index === section.lessons.length - 1) {
+          throw new Error('P3 supplements must be bounded, unpaced, non-checkpoint new-start reviews: ' + lesson.id);
+        }
+        for (const activity of supplements) {
+          const item = section.items[activity.item];
+          if (activity.type !== 'type' || !['finnish', 'cloze'].includes(activity.mode) ||
+            !item || (lesson.new_targets || []).includes(activity.item) ||
+            !item.p3_review_provenance?.source_section_id ||
+            !item.p3_review_provenance?.source_item_id) {
+            throw new Error('Invalid P3 review source and independent typing activity: ' + lesson.id);
+          }
+          if (activity.mode === 'cloze' && (!item.example_fi || !item.example_fa ||
+            !makeCloze(item.example_fi, item.surface_form).includes('_____'))) {
+            throw new Error('P3 contextual review needs an authored bilingual exact-form sentence: ' + lesson.id);
+          }
+        }
+        if (lessonEditionSlides(lesson, 'p3').length > 30)
+          throw new Error('P3 reviews exceed the 30-slide learner edition budget: ' + lesson.id);
+      }
       if (lesson.editorial_revision_history !== undefined) {
         const history = lesson.editorial_revision_history;
         if (!lesson.editorial_revision || !Array.isArray(history) || !history.length) {
@@ -3420,7 +3446,8 @@
       const saved = loadPacedLessonDraft(windowObject.localStorage, section.id, authored);
       // Old v1.56 drafts have no edition marker: resume their original activity
       // order without replaying scored questions. Fresh starts are concise.
-      const editorialEdition = !authored.editorial_revision ? 'legacy'
+      const editorialEdition = authored.p3_review_activities?.length && !saved ? 'p3'
+        : !authored.editorial_revision ? 'legacy'
         : saved && !saved.editorialEdition ? 'legacy'
         : saved && saved.editorialEdition !== authored.editorial_revision.id
           ? saved.editorialEdition : 'editorial';
