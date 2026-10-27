@@ -6,12 +6,35 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
-## [1.73.0] - 2026-10-27
+## [1.74.0] - 2026-10-27
 
 ### Added
 
-- Reopen canonical lesson goals on every activity slide, including resumed sessions; display authored Finnish forms, Persian meanings and lemmas without claiming unreviewed P2 semantic identity (R1 child issue #233).
+- R1: Reopen canonical lesson objectives throughout active exercises, including resumed lessons; include authored Finnish form, Persian meaning and lemma (Closes #233).
 
+
+## [1.73.1] - 2026-10-27
+
+### Fixed
+
+- P3 learner-effective composition no longer counts a newly introduced **inflected exact form** in an already reviewed `lexeme_id` + `sense_id` family as a *truly new lexeme/sense*. Same-lesson reviewed-family variants are classified separately from first reviewed-family introductions; distinct senses never merge. Previously unknown P2 forms remain explicitly unreviewed rather than receiving guessed lemma/sense identities.
+- Extend P3 later evidence with separate actual receptive/listening/dictation/typed/guided/independent graded mode inventory and distinct-authored-context counts. Add an **explicit opt-in** section skill-balance gate that can require both later receptive and productive assessments without imposing a new quota on 140 legacy lessons.
+
+### Added
+
+- Deterministic `p3:triage:check`, `p3:triage:report`, and `p3:triage:json` commands: audit all 931 introduced exact forms across 140 learner-effective lessons and prioritize the 62 missing any later graded retrieval, the 838 without later different-example graded evidence, and open per-mode cases. Flag near-terminal introductions awaiting unshipped content; preserve exact P2 IDs, source Parole ranks, original activities, Course progress and Word Practice SRS.
+- Unit tests for same-lesson semantic-family inflections vs distinct reviewed senses, globally ambiguous homographs, later skill-mode classifications, a stricter opted-in skill gate, unshipped section boundaries, deterministic queue and unchanged legacy storage behavior. Bilingual documentation and code comments explicitly distinguish authored opportunities from observed learner mastery.
+
+**P3 remains open:** no automated Finnish example invention, bulk lesson reauthoring or claimed correction of the 62/838 baseline gaps; those cases need pedagogically reviewed follow-up content and human language/accessibility QA before completion of parent #101.
+
+## [1.73.0] - 2026-10-26
+
+### Changed
+
+- Extend the P5 read-only Course → Word Practice bridge with **mode-aware first-attempt answer evidence** (meaning recognition, Finnish listening, dictation, typed, guided and independent production). Deduplicated wrong answers only prioritize **unseen exact dictionary forms**; due reviews, learner-specific intervals, stored word progress and old course scores are unchanged. An optional, source-authored context sentence can replace the dictionary example only when the same form occurs explicitly and a Persian translation is present. Ambiguous globally unresolved forms, including `voi` and `pitää`, remain excluded. Never equate any Course recognition with mastered Word Practice knowledge.
+- Regenerate the deterministic course-review map with **239 eligible section-item/form mappings**, **224 safely matched Finnish/Persian example pairs** and **31 previously reviewed P2 sense links**. Keep separate form identities for every inflection; no implicit lexeme-family inheritance and no source or Parole rank changes.
+- Add accessible configurable **daily new-word limit 0–30** (default 10) and **session size 1–50** (default 20) in Word Practice, saved under optional `fiSrsPreferencesV1`. Zero new still admits due reviews; corrupt/blocked storage uses safe defaults and blocked SRS writes preserve current-page memory with a visible warning. Existing `fiSrsProgressV1` storage schema, due dates, successes, lapses, source data and rollback compatibility remain unchanged.
+- Add regression tests for safe context provenance, mode attribution and deduplicated errors, ambiguity exclusion, independent storage preferences and legacy SRS compatibility, and update bilingual docs and cache/version markers. Parent #101 P5 remains open for lexeme-wide editorial validation, real listening-device UX, manual RTL/accessibility and release signoff.
 
 ## [1.72.0] - 2026-10-26
 

@@ -263,7 +263,7 @@ test('v1.64.0 bilingual status and deterministic 140-lesson audit match the curr
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, require('node:fs').readFileSync(require('node:path').join(__dirname, '..', 'VERSION'), 'utf8').trim());
+  assert.equal(version, '1.73.1');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.64\.0\]/);
   assert.match(en, /39 curated lessons \/ 170 fewer graded opportunities/);

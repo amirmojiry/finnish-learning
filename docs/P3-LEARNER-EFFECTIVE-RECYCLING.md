@@ -2,6 +2,24 @@
 
 [Parent #101](https://github.com/amirmojiry/finnish-learning/issues/101) · [Issue #227](https://github.com/amirmojiry/finnish-learning/issues/227) · [فارسی](P3-LEARNER-EFFECTIVE-RECYCLING.fa.md)
 
+## Follow-up P3 triage and semantic novelty (v1.73.1, issue #232)
+
+The prior v1.72.0 analysis was **an audit, not repair**. The new step makes the report actionable without changing authored lesson arrays: a previously introduced *reviewed lexeme+sense* is **not newly learned again** merely because a later lesson teaches another case/inflection. The later grammatical form remains new **as an exact form**, with separate positive grading and no SRS mastery inheritance. Same-lesson inflections sharing one reviewed sense are classified correctly; forms with **unreviewed P2 semantics** are not guessed into families. The ~2 ranked + ~2 topical + 1 expression / 3–5 reviewed policy remains guidance only. Ranked/form counts and *verified truly new lexeme+sense counts* are different measures, not interchangeable.
+
+Use the new deterministic **P3 editorial remediation queue** to prioritize the **62/931 forms without later independently graded retrieval** and **838/931 without a later graded different authored Finnish example**. Some late introductions in A2.1 Section 2 may legitimately await a future playable section. The queue keeps exact written form IDs, reviewed sense metadata only when explicit, original Parole rank if source-backed, remaining shipped lessons, actual later scored modes and a clearly labeled heuristic priority score. **It never invents Finnish examples, alters learner progress or presents static opportunities as language proficiency.**
+
+For new authored sections, `composition_recycling_gate: "required"` still requires later graded recall in a genuinely changed sentence. An additional **opt-in** `composition_skill_gate: "required"` can require later *receptive* and *productive* practice separately. It is not imposed retroactively on 140 legacy lessons; whether both skills are necessary for each lexical target is a pedagogical decision.
+
+Run the triage commands alongside the original P3 audit:
+
+```sh
+npm run p3:triage:check
+npm run p3:triage:report
+npm run p3:triage:json
+```
+
+The report is a **review queue**, not 838 automatically written exercises. Each proposed new context requires human-confirmed Finnish, Persian meaning, suitable receptive/productive difficulty and a backward-compatible edition plan. The broad three P3 acceptance boxes in #101 remain open until those content decisions and relevant P2 sense review are completed.
+
 ## Why a separate audit
 
 The initial P3 report checked **authored** activities, but 80 of the 140 shipped lessons now have shorter **fresh-start editorial editions**. An authored question omitted from those editions is **not** graded evidence for new learners. This revision adds an independent, reproducible audit of **all 14 sections / 140 actual learner-effective lessons**, with 931 declared new exact-form introductions and zero duplicates by normalized written form across shipped sections. The report keeps source authored activity totals separate from effective counts and never touches previous Course scores or Word Practice SRS.

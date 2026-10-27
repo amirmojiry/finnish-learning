@@ -210,7 +210,7 @@ test('current release and bilingual summary remain synchronized', () => {
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, require('node:fs').readFileSync(require('node:path').join(__dirname, '..', 'VERSION'), 'utf8').trim());
+  assert.equal(version, '1.73.1');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.67\.0\]/);
   assert.match(en, /80 curated lessons \/ 254 fewer graded opportunities/);

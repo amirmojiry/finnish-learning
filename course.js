@@ -1519,6 +1519,7 @@
         status: goal.status,
       };
     });
+
     const grammarGoals = (objectives.grammar || []).map(goal => ({
       label: goal.explanation_fa,
       status: goal.status,
@@ -3717,16 +3718,7 @@
       }
       track.append(bar, counter);
       progressWrap.append(track);
-      top.append(close, progressWrap);
-
-      const card = document.createElement('div');
-      card.className = 'course-question-card';
-      const prompt = document.createElement('p');
-      prompt.className = 'course-question-label';
-      prompt.textContent = questionHeading(activity);
-      card.append(prompt);
-
-      // Keep canonical lesson objectives available throughout the exercise, including resumed slides.
+         // Keep canonical lesson objectives available throughout the exercise, including resumed slides.
       if (!activeLesson.focused_practice) {
         const intro = createInfoDisclosure((panel) => {
           const detail = lessonObjectiveDisplay(activeLesson, section.items);
@@ -3763,6 +3755,14 @@
           }
           addParagraph(detail.grammar ? `نکتهٔ زبان: ${detail.grammar}` : '');
         }, 'جزئیات و هدف‌های درس');
+        intro.classList.add('course-lesson-inline-info');
+        card.append(intro);
+      }
+_fa;
+          const grammar = document.createElement('p');
+          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
+          panel.append(summary, grammar);
+        }, 'توضیحات این درس');
         intro.classList.add('course-lesson-inline-info');
         card.append(intro);
       }

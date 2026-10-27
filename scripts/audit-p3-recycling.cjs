@@ -81,7 +81,21 @@ function assess(sections,sidecar){
     introducedHere.add(x.id);
     return duplicate;
    });
-   const newFamilyForm=introduced.filter(x=>x.family_id&&families.has(x.family_id)&&families.get(x.family_id)!==x.id);
+
+   // A new inflected form can be new as a *form* without being a truly new
+   // lexeme/sense. Include earlier introductions in this same lesson.
+   const firstReviewedFamilies=[],reviewedFamilyVariants=[],familyFirstHere=new Map();
+   for(const x of introduced){
+    if(!x.family_id)continue; // Unreviewed semantics must stay unknown.
+    const firstFamilyForm=families.get(x.family_id)||familyFirstHere.get(x.family_id);
+    if(!firstFamilyForm){
+     familyFirstHere.set(x.family_id,x.id);
+     firstReviewedFamilies.push(x);
+    }else if(firstFamilyForm!==x.id){
+     reviewedFamilyVariants.push({form_id:x.id,family_id:x.family_id,
+      previously_introduced_form_id:firstFamilyForm});
+    }
+   }
    const previouslyGraded=[...graded.keys()].filter(id=>first.has(id)&&first.get(id).lesson!==lesson.id);
    const strict=s.id==='a2.1-section-3'||lesson.composition_policy==='required';
    if(strict){
@@ -99,7 +113,12 @@ function assess(sections,sidecar){
     new_topic_form_count:introduced.filter(x=>x.kind==='form'&&x.provenance!=='ranked').length,
     new_expression_count:introduced.filter(x=>x.kind==='expression').length,
     introduced_unreviewed_semantics_count:introduced.filter(x=>!x.reviewed).length,
-    introduced_form_in_reviewed_family_count:newFamilyForm.length,
+    // Verified lexeme+sense families, NOT merely similar written lemma strings.
+    new_reviewed_lexeme_sense_count:firstReviewedFamilies.length,
+    new_ranked_reviewed_lexeme_sense_count:firstReviewedFamilies.filter(x=>x.provenance==='ranked').length,
+    new_topic_reviewed_lexeme_sense_count:firstReviewedFamilies.filter(x=>x.provenance!=='ranked').length,
+    introduced_form_in_reviewed_family_count:reviewedFamilyVariants.length,
+    reviewed_family_form_variants:reviewedFamilyVariants,
     repeated_new_exact_ids:duplicates.map(x=>x.id),
     previously_introduced_graded_count:previouslyGraded.length,
     outside_new_guidance:!checkpoint&&(introduced.length<3||introduced.length>6),
@@ -134,18 +153,30 @@ function assess(sections,sidecar){
    if(subsequent.length)later++;if(contextual.length)novel++;if(r)receptive++;if(p)productive++;
    return {form_id:x.id,later_lesson_ids:unique(subsequent.map(y=>y.lesson_id)),
     novel_context_lesson_ids:unique(contextual.map(y=>y.lesson_id)),
-    later_receptive:r,later_productive:p};
+    later_receptive:r,later_productive:p,
+    later_graded_modes:MODES.filter(mode=>subsequent.some(y=>y.modes[mode]>0)),
+    later_distinct_new_context_count:new Set(contextual.flatMap(y=>
+     [...y.contexts].filter(context=>!initially.has(context)))).size};
   });
   delete row._introduced;delete row._graded;
  }
  for(const s of sections){
   const group=bySection.get(s.id);
   const required=s.composition_recycling_gate==='required'||(s.id==='a2.1-section-3'&&group.length===10);
-  if(!required)continue;
+  const skillRequired=s.composition_skill_gate==='required';
+  if(!required&&!skillRequired)continue;
   for(const lesson of group)if(!lesson.checkpoint)for(const x of lesson.later_retrieval){
    const reasons=[];
-   if(!x.later_lesson_ids.length)reasons.push('missing later scored retrieval');
-   if(!x.novel_context_lesson_ids.length)reasons.push('missing later new Finnish example');
+   if(required){
+    if(!x.later_lesson_ids.length)reasons.push('missing later scored retrieval');
+    if(!x.novel_context_lesson_ids.length)reasons.push('missing later new Finnish example');
+   }
+   // Optional *explicit* acceptance policy: keep receptive and productive
+   // later evidence separately. Ordinary lessons remain advisory.
+   if(skillRequired){
+    if(!x.later_receptive)reasons.push('missing later receptive evidence');
+    if(!x.later_productive)reasons.push('missing later productive evidence');
+   }
    if(reasons.length)errors.push({section_id:s.id,lesson_id:lesson.lesson_id,form_id:x.form_id,reasons});
   }
  }
@@ -154,6 +185,7 @@ function assess(sections,sidecar){
   introduced_exact_forms:rows.reduce((n,x)=>n+x.new_exact_form_count,0),
   duplicate_exact_introduction_count:rows.reduce((n,x)=>n+x.repeated_new_exact_ids.length,0),
   introduced_other_form_of_reviewed_family:rows.reduce((n,x)=>n+x.introduced_form_in_reviewed_family_count,0),
+  newly_introduced_reviewed_lexeme_senses:rows.reduce((n,x)=>n+x.new_reviewed_lexeme_sense_count,0),
   introductions_with_unknown_semantics:rows.reduce((n,x)=>n+x.introduced_unreviewed_semantics_count,0),
   introductions_with_later_graded:later,introductions_with_later_new_context:novel,
   introductions_with_later_receptive:receptive,introductions_with_later_productive:productive,
@@ -173,6 +205,7 @@ function markdown(report){
   ['Sections','sections'],['Lessons','lessons'],['Exact introductions','introduced_exact_forms'],
   ['Repeated exact introductions','duplicate_exact_introduction_count'],
   ['Introductions of additional forms in reviewed lexeme/sense families','introduced_other_form_of_reviewed_family'],
+  ['Verified first introductions of reviewed lexeme/sense families','newly_introduced_reviewed_lexeme_senses'],
   ['Introductions with unknown P2 semantics','introductions_with_unknown_semantics'],
   ['Later scored retrievals','introductions_with_later_graded'],
   ['Later distinct authored example','introductions_with_later_new_context'],
@@ -183,17 +216,18 @@ function markdown(report){
   ['Shorter effective lesson editions','lessons_with_editorial_reduction'],
   ['Strictly gated new lessons','strict_lessons']])lines.push('| '+name+' | '+s[key]+' |');
  lines.push('','## Priority legacy exceptions (advisory)','',
-  '| Lesson | New exact forms | Ranked | Topic | Expressions | Previously graded exact forms | Later graded | Later different context |',
-  '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |');
+  '| Lesson | New exact forms | Verified new lexeme/senses | New forms of known families | Ranked forms | Topic forms | Expressions | Previously graded exact forms | Later graded | Later different context |',
+  '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |');
  const score=r=>2*r.later_retrieval.filter(x=>!x.later_lesson_ids.length).length+
   r.later_retrieval.filter(x=>!x.novel_context_lesson_ids.length).length+Number(r.outside_review_guidance);
  for(const r of report.lessons.filter(x=>!x.checkpoint).slice().sort((a,b)=>score(b)-score(a)||a.lesson_id.localeCompare(b.lesson_id,'en')).slice(0,30))
-  lines.push('| '+r.lesson_id+' | '+r.new_exact_form_count+' | '+r.new_ranked_form_count+' | '+
+  lines.push('| '+r.lesson_id+' | '+r.new_exact_form_count+' | '+r.new_reviewed_lexeme_sense_count+' | '+
+   r.introduced_form_in_reviewed_family_count+' | '+r.new_ranked_form_count+' | '+
    r.new_topic_form_count+' | '+r.new_expression_count+' | '+r.previously_introduced_graded_count+
    ' | '+r.later_retrieval.filter(x=>x.later_lesson_ids.length).length+
    ' | '+r.later_retrieval.filter(x=>x.novel_context_lesson_ids.length).length+' |');
  lines.push('','## Interpretation','','- The proposed 2+2+1 / 3-5 composition is a **default suggestion**, not an enforced lexical quota.',
-  '- P2-reviewed lexeme/sense families can be grouped for authoring, but individual inflections retain independent form IDs and grading. Other semantics remain unknown.',
+  '- For P2-reviewed lexeme/sense families, a later inflection is a new exact form but NOT a new lexeme/sense; within-lesson variants are also deduplicated. Individual form grading stays independent. Other semantics remain unknown.',
   '- An identical sentence in a later lesson is a **review**, not evidence for new context generalization.',
   '- Auditing removed editorial questions as current retrieval is incorrect; only learner-effective activities are counted.',
   '- Future complete A2.1 Section 3 lessons must have later positive grading in a changed authored Finnish context. Existing lessons remain advisory.',

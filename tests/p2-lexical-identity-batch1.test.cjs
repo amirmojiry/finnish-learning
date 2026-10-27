@@ -117,7 +117,16 @@ test('frequency provenance and Course-to-Word Practice linkage stay surface-spec
  const reviewMap=read('data/course/course-review-form-map.json');
  assert.equal(reviewMap.identity_scope,'reviewable_curated_dictionary_surface_forms_only');
  assert.ok(reviewMap.mappings.every(e=>e.form_id===build.stableId('form',e.surface_form)));
- assert.ok(reviewMap.mappings.every(e=>!Object.hasOwn(e,'lexeme_id')&&!Object.hasOwn(e,'sense_id')&&!Object.hasOwn(e,'mastered')&&!Object.hasOwn(e,'nextReviewAt')));
+ assert.ok(reviewMap.mappings.every(e=>{
+  // Reviewed exact-form identities are context hints, never mastery transfers.
+  const identity=sidecar.records.find(r=>r.kind==='form'&&r.form_id===e.form_id
+    &&r.identity_review_status==='reviewed');
+  const hasLexeme=Object.hasOwn(e,'lexeme_id'),hasSense=Object.hasOwn(e,'sense_id');
+  return hasLexeme===hasSense&&(!hasLexeme||(identity&&identity.lexeme_id===e.lexeme_id
+    &&identity.sense_id===e.sense_id))
+    &&!['mastered','dueAt','nextReviewAt','score','lapses'].some(key=>Object.hasOwn(e,key));
+ }));
+ assert.equal(reviewMap.mappings.filter(e=>Object.hasOwn(e,'lexeme_id')).length,31);
  assert.notEqual(records.get('minä').form_id,records.get('minulle').form_id);
  assert.equal(sidecar.disclaimer.includes('SRS'),true);
 });

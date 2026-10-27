@@ -1,10 +1,10 @@
 {
   "name": "finnish-learning",
-  "version": "1.73.0",
+  "version": "1.74.0",
   "private": true,
   "description": "A Persian-first Finnish vocabulary learning web application.",
   "scripts": {
-    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/audit-reviewed-lexical-identities.cjs --check && node scripts/audit-p2-noun-batch.cjs --check && node scripts/build-contextual-lexical-identities.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/build-p2-review-queue.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/audit-p3-recycling.cjs --check && node scripts/audit-section-structure.cjs --check && node scripts/audit-lesson-slide-budget.cjs --check && node scripts/audit-lesson-practice-load.cjs --check && node scripts/audit-editorial-lesson-load.cjs --check && node scripts/audit-a11-section1.cjs --check && node scripts/audit-a11-section2.cjs --check && node scripts/audit-a11-section3.cjs --check && node scripts/audit-a11-section4.cjs --check && node scripts/audit-a12-section1.cjs --check && node scripts/audit-a12-section2.cjs --check && node scripts/audit-a12-section3.cjs --check && node scripts/audit-a12-section4.cjs --check && node scripts/audit-a13-section1.cjs --check && node scripts/audit-a13-section2.cjs --check && node scripts/audit-a13-section3.cjs --check && node scripts/audit-a13-section4.cjs --check && node scripts/audit-a21-section1.cjs --check && node scripts/audit-a21-section2.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "node scripts/check-version.cjs && node scripts/build-vocabulary.mjs --check && node scripts/sync-grammar-registry.cjs --check && node scripts/audit-course-coverage.cjs --check && node scripts/build-lexical-identity.cjs --check && node scripts/audit-reviewed-lexical-identities.cjs --check && node scripts/audit-p2-noun-batch.cjs --check && node scripts/build-contextual-lexical-identities.cjs --check && node scripts/build-course-review-map.cjs --check && node scripts/build-p2-review-queue.cjs --check && node scripts/audit-lesson-composition.cjs --check && node scripts/audit-p3-recycling.cjs --check && node scripts/plan-p3-remediation.cjs --check && node scripts/audit-section-structure.cjs --check && node scripts/audit-lesson-slide-budget.cjs --check && node scripts/audit-lesson-practice-load.cjs --check && node scripts/audit-editorial-lesson-load.cjs --check && node scripts/audit-a11-section1.cjs --check && node scripts/audit-a11-section2.cjs --check && node scripts/audit-a11-section3.cjs --check && node scripts/audit-a11-section4.cjs --check && node scripts/audit-a12-section1.cjs --check && node scripts/audit-a12-section2.cjs --check && node scripts/audit-a12-section3.cjs --check && node scripts/audit-a12-section4.cjs --check && node scripts/audit-a13-section1.cjs --check && node scripts/audit-a13-section2.cjs --check && node scripts/audit-a13-section3.cjs --check && node scripts/audit-a13-section4.cjs --check && node scripts/audit-a21-section1.cjs --check && node scripts/audit-a21-section2.cjs --check && node scripts/plan-parole-expansion.cjs --check && node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:js": "node --test tests/*.test.cjs",
     "test:data": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "build:vocabulary": "node scripts/build-vocabulary.mjs",
@@ -24,6 +24,9 @@
     "p3:recycling:check": "node scripts/audit-p3-recycling.cjs --check",
     "p3:recycling:json": "node scripts/audit-p3-recycling.cjs --json",
     "p3:recycling:report": "node scripts/audit-p3-recycling.cjs --markdown",
+    "p3:triage:check": "node scripts/plan-p3-remediation.cjs --check",
+    "p3:triage:report": "node scripts/plan-p3-remediation.cjs --markdown",
+    "p3:triage:json": "node scripts/plan-p3-remediation.cjs --json",
     "lesson:composition:json": "node scripts/audit-lesson-composition.cjs --json",
     "lesson:composition:report": "node scripts/audit-lesson-composition.cjs --markdown",
     "lesson:composition:write": "node scripts/audit-lesson-composition.cjs --write",
