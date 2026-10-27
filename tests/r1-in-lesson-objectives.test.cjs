@@ -6,7 +6,7 @@ const source = fs.readFileSync(path.join(__dirname, '..', 'course.js'), 'utf8');
 
 test('R1 offers canonical objectives in the exercise on every slide, including resumed lessons', () => {
   const activity = source.slice(source.indexOf('function renderActivity()'), source.indexOf('function renderActivity()') + 8500);
-  assert.match(activity, /lessonObjectiveDisplay\(activeLesson, section\.items\)/);
+  assert.match(activity, /lessonObjectiveDisplay\(activeLesson, section\.items, p2Identity, section\.id\)/);
   assert.match(activity, /appendGrammarGoalDetails\(panel, detail\)/);
   assert.match(activity, /جزئیات و هدف‌های درس/);
   assert.doesNotMatch(activity, /activityIndex === 0\) \{\s*const intro/);
