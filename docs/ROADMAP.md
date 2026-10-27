@@ -5,6 +5,10 @@
 This document is the **single maintained delivery roadmap**. [Learning Design](LEARNING-DESIGN.md) covers *why* and *how* we teach; the [master curriculum](MASTER-CURRICULUM.md) specifies *what* the whole A1.1–C2 learning path should cover. They are not independent backlogs.
 
 
+## P2 cross-app identities — v1.75.0 (2026-10-27)
+
+[Child #237](https://github.com/amirmojiry/finnish-learning/issues/237) joins all 1,264 exact-form/expression identities, 1,178 authored Course-item references and 425 dictionary/Word Practice forms with canonical topic IDs and explicit authored-review lesson references. Only 70 global reviewed senses and 15 item-specific reviewed homograph contexts receive semantic IDs; 1,194 unresolved records remain explicit and carry no inferred mastery. The full cross-app identity contract is verified in regression tests and the browser uses a read-only resolver with offline fallback. **This is stable identity infrastructure, not independent linguistic approval of every unresolved surface**. [English contract](P2-SHARED-IDENTITY-CONTRACT.md) / [Persian](P2-SHARED-IDENTITY-CONTRACT.fa.md).
+
 ## P3 next — verified semantic novelty and an actionable 140-lesson gap queue (2026-10-27, v1.73.1)
 
 [Child issue #232](https://github.com/amirmojiry/finnish-learning/issues/232) follows merged P3 audit #228 and merged P5 #230. The first-reviewed `lexeme_id`+`sense_id` family is now distinct from later exact-case/inflection form introductions in the same reviewed family. These subsequent forms retain independent assessment; unresolved P2 homographs remain unknown. The recommended 2+2+1 new form/lexeme/expression balance and 3–5 reviewed exact forms remain **editorial suggestions**, never quotas. A new explicit opt-in skill-balance gate can enforce both later receptive and productive checks for future sections that choose it.
