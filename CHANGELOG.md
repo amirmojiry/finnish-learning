@@ -6,6 +6,20 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.73.1] - 2026-10-27
+
+### Fixed
+
+- P3 learner-effective composition no longer counts a newly introduced **inflected exact form** in an already reviewed `lexeme_id` + `sense_id` family as a *truly new lexeme/sense*. Same-lesson reviewed-family variants are classified separately from first reviewed-family introductions; distinct senses never merge. Previously unknown P2 forms remain explicitly unreviewed rather than receiving guessed lemma/sense identities.
+- Extend P3 later evidence with separate actual receptive/listening/dictation/typed/guided/independent graded mode inventory and distinct-authored-context counts. Add an **explicit opt-in** section skill-balance gate that can require both later receptive and productive assessments without imposing a new quota on 140 legacy lessons.
+
+### Added
+
+- Deterministic `p3:triage:check`, `p3:triage:report`, and `p3:triage:json` commands: audit all 931 introduced exact forms across 140 learner-effective lessons and prioritize the 62 missing any later graded retrieval, the 838 without later different-example graded evidence, and open per-mode cases. Flag near-terminal introductions awaiting unshipped content; preserve exact P2 IDs, source Parole ranks, original activities, Course progress and Word Practice SRS.
+- Unit tests for same-lesson semantic-family inflections vs distinct reviewed senses, globally ambiguous homographs, later skill-mode classifications, a stricter opted-in skill gate, unshipped section boundaries, deterministic queue and unchanged legacy storage behavior. Bilingual documentation and code comments explicitly distinguish authored opportunities from observed learner mastery.
+
+**P3 remains open:** no automated Finnish example invention, bulk lesson reauthoring or claimed correction of the 62/838 baseline gaps; those cases need pedagogically reviewed follow-up content and human language/accessibility QA before completion of parent #101.
+
 ## [1.73.0] - 2026-10-26
 
 ### Changed
