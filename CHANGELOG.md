@@ -10,7 +10,7 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ### Added
 
-- Reopen canonical lesson goals on every activity slide, including resumed sessions; display authored Finnish forms, Persian meanings and lemmas without claiming unreviewed P2 semantic identity.
+- Reopen canonical lesson goals on every activity slide, including resumed sessions; display authored Finnish forms, Persian meanings and lemmas without claiming unreviewed P2 semantic identity (R1 child issue #233).
 
 
 ## [1.72.0] - 2026-10-26
