@@ -51,7 +51,7 @@ function gradedContext(activity, fallback=''){
 }
 function evidence(section,lesson,known){
  const out=new Map();
- for(const a of course.lessonEditionActivities(lesson,'editorial')){
+ for(const a of course.lessonEditionActivities(lesson,lesson.p3_review_activities?.length?'p3':'editorial')){
   if(course.scoredOpportunitiesOnSlide(a)===0)continue;
   for(const id of audit.positives(a)){
    if(!section.items?.[id])continue;
@@ -107,7 +107,7 @@ function assess(sections,sidecar){
    }
    const row={section_id:s.id,lesson_id:lesson.id,level:s.level,checkpoint,strict_gate:strict,
     authored_activity_count:lesson.activities.length,
-    effective_activity_count:course.lessonEditionActivities(lesson,'editorial').length,
+    effective_activity_count:course.lessonEditionActivities(lesson,lesson.p3_review_activities?.length?'p3':'editorial').length,
     new_exact_form_count:introduced.length,
     new_ranked_form_count:introduced.filter(x=>x.kind==='form'&&x.provenance==='ranked').length,
     new_topic_form_count:introduced.filter(x=>x.kind==='form'&&x.provenance!=='ranked').length,
