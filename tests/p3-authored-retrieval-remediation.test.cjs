@@ -85,7 +85,8 @@ test('new review aliases resolve to canonical exact-form identities, not to a sh
  const link=new Map(index.course_items.map(x=>[x.section_id+'/'+x.item_id,x]));
  for(const section of sections)for(const lesson of section.lessons)
   for(const activity of lesson.p3_review_activities||[]){
-   const item=section.items[activity.item];
+   const item=section.p3_review_items?.[activity.item];
+   assert.ok(item,'missing separately authored review alias');
    const type=item.item_type==='expression'?'expression':'form';
    const id=lexical.stableId(type,lexical.normalize(item.surface_form));
    assert.ok(sideIds.has(id),'missing stable form/expression for '+activity.item);
