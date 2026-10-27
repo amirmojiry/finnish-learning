@@ -105,6 +105,24 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
   record.morphology=match.morphology;
   record.identity_review_status='reviewed';
  }
+ // Attach canonical curriculum topic IDs and explicitly authored review lesson IDs
+ // without mistaking an appearance in a later lesson for scored review evidence.
+ const sectionById = new Map(sections.map(section => [section.id, section]));
+ for (const record of entries.values()) {
+  record.topic_ids = [...new Set(record.occurrences.map(o =>
+   sectionById.get(o.section_id)?.curriculum_section_id || o.section_id))].sort();
+  const reviewLessons = new Set();
+  for (const o of record.occurrences) {
+   const section = sectionById.get(o.section_id);
+   const lesson = section?.lessons?.find(l => l.id === o.lesson_id);
+   if (!lesson) throw Error('Stale occurrence in reviewed lesson index: ' + record.id);
+   const explicitlyReviewed = (lesson.review_targets || []).includes(o.item_id)
+    || (lesson.learning_objectives?.lexical || [])
+      .some(goal => goal.target_id === o.item_id && goal.status === 'reviewed');
+   if (explicitlyReviewed) reviewLessons.add(o.lesson_id);
+  }
+  record.explicit_review_lesson_ids = [...reviewLessons].sort();
+ }
  return {schema_version:1,identity_scope:'reviewed_identity_overlay_on_normalized_surface',
   disclaimer:'Stable surface/expression IDs do not verify lexemes, senses, morphology, teaching mastery or SRS transfers.',
   counts:{shipped_sections:sections.length,shipped_lessons:sections.reduce((n,s)=>n+s.lessons.length,0),dictionary_forms:dictionaryByForm.size,records:entries.size},
