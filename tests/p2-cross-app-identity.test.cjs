@@ -104,7 +104,7 @@ test('P2 resolver fails closed for forged senses, unsafe joins and absent browse
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
  const helperPos=html.indexOf('p2-shared-identity.js?v=');
  assert.ok(helperPos>=0&&helperPos<html.indexOf('app.js?v='));
- assert.match(fs.readFileSync(path.join(root,'course.js'),'utf8'),/p2Identity\?\.courseItem/);
+ assert.match(fs.readFileSync(path.join(root,'course.js'),'utf8'),/identityIndex\?\.courseItem/);
  assert.match(fs.readFileSync(path.join(root,'app.js'),'utf8'),/p2Identity\?\.dictionaryWord/);
  assert.match(fs.readFileSync(path.join(root,'spaced-repetition.js'),'utf8'),/p2Identity\?\.wordPracticeWord/);
 });
