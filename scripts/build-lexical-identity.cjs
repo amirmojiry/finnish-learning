@@ -55,7 +55,7 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
    const active=new Set([...(refs.high_frequency||[]),...(refs.topic||[]),...(refs.expressions||[]),...(lesson.new_targets||[]),...(lesson.practice_targets||[]),...(lesson.checkpoint_targets||[]),...(lesson.review_targets||[])]);
    for(const activity of [...(lesson.activities||[]), ...(lesson.p3_review_activities||[])]){
     for(const field of ['item','answer_item','question_item','negative_item','affirmative_item','event_item','time_item','prompt_item']){
-     if(activity[field]&&section.items[activity[field]])active.add(activity[field]);
+     if(activity[field]&&(section.items[activity[field]]||section.p3_review_items?.[activity[field]]))active.add(activity[field]);
     }
     for(const field of ['items','turns','expected_items']){
      if(Array.isArray(activity[field]))for(const itemId of activity[field]){
@@ -64,7 +64,7 @@ function build(dictionary,sections,parole,reviews={entries:[]}){
     }
    }
    for(const itemId of [...active].sort()){
-    const item=section.items[itemId];if(!item)throw Error('Unknown lesson item '+section.id+'/'+itemId);
+    const item=section.items[itemId]||section.p3_review_items?.[itemId];if(!item)throw Error('Unknown lesson item '+section.id+'/'+itemId);
     const form=normalize(item.surface_form);if(!form)throw Error('Empty form '+itemId);
     const kind=item.item_type==='expression'?'expression':'form';
     const id=stableId(kind,form);
