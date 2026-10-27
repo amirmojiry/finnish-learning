@@ -3720,14 +3720,43 @@
       prompt.textContent = questionHeading(activity);
       card.append(prompt);
 
-      if (activityIndex === 0) {
+      // Keep canonical lesson objectives available throughout the exercise, including resumed slides.
+      if (!activeLesson.focused_practice) {
         const intro = createInfoDisclosure((panel) => {
-          const summary = document.createElement('p');
-          summary.textContent = activeLesson.summary_fa;
-          const grammar = document.createElement('p');
-          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
-          panel.append(summary, grammar);
-        }, 'توضیحات این درس');
+          const detail = lessonObjectiveDisplay(activeLesson, section.items);
+          const addParagraph = value => {
+            if (!value) return;
+            const paragraph = document.createElement('p');
+            paragraph.textContent = value;
+            panel.append(paragraph);
+          };
+          const addList = (heading, entries) => {
+            if (!entries.length) return;
+            const group = document.createElement('section');
+            group.className = 'course-lesson-objective-group';
+            const title = document.createElement('h3');
+            title.textContent = heading;
+            const list = document.createElement('ul');
+            for (const entry of entries) {
+              const row = document.createElement('li');
+              row.textContent = entry;
+              list.append(row);
+            }
+            group.append(title, list);
+            panel.append(group);
+          };
+          if (detail.structured) {
+            addList('هدف‌های ارتباطی', detail.communicative);
+            addList('واژگان', detail.lexical.map(goal =>
+              `${goal.label} — ${goal.status === 'introduced' ? 'جدید' : 'مرور'}`));
+            appendGrammarGoalDetails(panel, detail);
+            if (!detail.communicative.length) addParagraph(detail.objective);
+          } else {
+            addParagraph(detail.objective);
+            addParagraph(detail.summary);
+          }
+          addParagraph(detail.grammar ? `نکتهٔ زبان: ${detail.grammar}` : '');
+        }, 'جزئیات و هدف‌های درس');
         intro.classList.add('course-lesson-inline-info');
         card.append(intro);
       }
