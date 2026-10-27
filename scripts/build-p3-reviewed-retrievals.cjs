@@ -37,6 +37,7 @@ function build(rawSections, dictionary) {
   for (const [itemId,item] of Object.entries(section.items)) {
    if (item.p3_review_provenance) delete section.items[itemId];
   }
+  delete section.p3_review_items;
   for (const lesson of section.lessons) delete lesson.p3_review_activities;
  }
  const rows = sections.flatMap(section => section.lessons.map((lesson,j) => ({
@@ -95,8 +96,9 @@ function build(rawSections, dictionary) {
    acceptable(example.fi, example.fa, original.surface_form);
   const itemId='p3r-'+String(entry.index+1).padStart(3,'0')+'-'+
    entry.itemId.replace(/[^a-z0-9-]/gi,'-').slice(0,75);
-  if (target.row.section.items[itemId]) throw Error('P3 alias collision: '+itemId);
-  target.row.section.items[itemId] = {
+  if (target.row.section.items[itemId] || target.row.section.p3_review_items?.[itemId])
+   throw Error('P3 alias collision: '+itemId);
+  (target.row.section.p3_review_items ||= {})[itemId] = {
    ...original,id:itemId,example_fi:example.fi,example_fa:example.fa,
    p3_review_provenance:{
     source_section_id:entry.row.section.id,
