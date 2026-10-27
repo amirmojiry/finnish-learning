@@ -251,7 +251,7 @@ test('v1.63.0 bilingual release metadata and cumulative priority report stay syn
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, '1.72.0');
+  assert.equal(version, require('node:fs').readFileSync(require('node:path').join(__dirname, '..', 'VERSION'), 'utf8').trim());
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.63\.0\]/);
   assert.match(en, /31 curated lessons \/ 149 fewer graded opportunities/);
