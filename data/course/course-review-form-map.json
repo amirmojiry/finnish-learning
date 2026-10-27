@@ -743,14 +743,6 @@
       "context_fa": "مستقیم برو و بعد به چپ بپیچ."
     },
     {
-      "section_id": "a1.2-section-2",
-      "item_id": "p3r-048-a12s1-hf-mitaan",
-      "form_id": "form:6d-69-74-e4-e4-6e",
-      "surface_form": "mitään",
-      "context_fi": "En ostanut mitään.",
-      "context_fa": "چیزی نخریدم."
-    },
-    {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-01",
       "form_id": "form:74-65-6b-65-65",
@@ -1423,14 +1415,6 @@
       "context_fa": "از اینجا می‌توان کمک گرفت."
     },
     {
-      "section_id": "a1.3-section-2",
-      "item_id": "p3r-017-s2-num-viisi",
-      "form_id": "form:76-69-69-73-69",
-      "surface_form": "viisi",
-      "context_fi": "Numero on viisi.",
-      "context_fa": "عدد ۵ است."
-    },
-    {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-001",
       "form_id": "form:74-65-68-64-e4",
@@ -1595,14 +1579,6 @@
       "surface_form": "perjantaina",
       "context_fi": "Nähdään perjantaina.",
       "context_fa": "جمعه همدیگر را می‌بینیم."
-    },
-    {
-      "section_id": "a1.3-section-3",
-      "item_id": "p3r-017-s2-num-kolme",
-      "form_id": "form:6b-6f-6c-6d-65",
-      "surface_form": "kolme",
-      "context_fi": "Numero on kolme.",
-      "context_fa": "عدد ۳ است."
     },
     {
       "section_id": "a1.3-section-4",
@@ -1779,14 +1755,6 @@
       "item_id": "a13s4-t-066",
       "form_id": "form:76-61-69-6b-65-61",
       "surface_form": "vaikea"
-    },
-    {
-      "section_id": "a1.3-section-4",
-      "item_id": "p3r-017-s2-num-nelja",
-      "form_id": "form:6e-65-6c-6a-e4",
-      "surface_form": "neljä",
-      "context_fi": "Numero on neljä.",
-      "context_fa": "عدد ۴ است."
     },
     {
       "section_id": "a2.1-section-1",

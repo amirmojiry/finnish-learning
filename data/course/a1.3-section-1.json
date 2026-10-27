@@ -1436,56 +1436,6 @@
       "accepted_answers": [
         "Minun täytyy lähteä."
       ]
-    },
-    "p3r-055-a12s2-topic-taksi": {
-      "id": "p3r-055-a12s2-topic-taksi",
-      "surface_form": "taksi",
-      "lemma": "taksi",
-      "translation_fa": "تاکسی",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "travel",
-        "topic"
-      ],
-      "example_fi": "Tulen taksilla.",
-      "example_fa": "با تاکسی می‌آیم.",
-      "accepted_answers": [
-        "taksi"
-      ],
-      "visual": "🚕",
-      "p3_review_provenance": {
-        "source_section_id": "a1.2-section-2",
-        "source_lesson_id": "a1.2-section-2-lesson-5",
-        "source_item_id": "a12s2-topic-taksi",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-seitseman": {
-      "id": "p3r-017-s2-num-seitseman",
-      "surface_form": "seitsemän",
-      "lemma": "seitsemän",
-      "translation_fa": "۷",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on seitsemän.",
-      "example_fa": "عدد ۷ است.",
-      "accepted_answers": [
-        "seitsemän",
-        "7",
-        "۷"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-seitseman",
-        "context_origin": "original_lesson"
-      }
     }
   },
   "lessons": [
@@ -7118,5 +7068,57 @@
         ]
       }
     }
-  ]
+  ],
+  "p3_review_items": {
+    "p3r-055-a12s2-topic-taksi": {
+      "id": "p3r-055-a12s2-topic-taksi",
+      "surface_form": "taksi",
+      "lemma": "taksi",
+      "translation_fa": "تاکسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Tulen taksilla.",
+      "example_fa": "با تاکسی می‌آیم.",
+      "accepted_answers": [
+        "taksi"
+      ],
+      "visual": "🚕",
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-2",
+        "source_lesson_id": "a1.2-section-2-lesson-5",
+        "source_item_id": "a12s2-topic-taksi",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-seitseman": {
+      "id": "p3r-017-s2-num-seitseman",
+      "surface_form": "seitsemän",
+      "lemma": "seitsemän",
+      "translation_fa": "۷",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on seitsemän.",
+      "example_fa": "عدد ۷ است.",
+      "accepted_answers": [
+        "seitsemän",
+        "7",
+        "۷"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-seitseman",
+        "context_origin": "original_lesson"
+      }
+    }
+  }
 }

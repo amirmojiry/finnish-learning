@@ -41,7 +41,6 @@
 | `koska` | form | course_form | 5 | ranked |
 | `ehkä` | form | course_form | 5 | ranked |
 | `täällä` | form | course_form | 5 | ranked |
-| `nukun` | form | course_form | 5 | source_backed_outside_dictionary |
 | `mutta` | form | course_form | 4 | ranked |
 | `viime` | form | course_form | 4 | ranked |
 | `ennen` | form | course_form | 4 | ranked |
@@ -53,6 +52,7 @@
 | `antaa` | form | course_form | 4 | ranked |
 | `liian` | form | course_form | 4 | ranked |
 | `torstaina` | form | course_form | 4 | ranked |
+| `ensin` | form | course_form | 4 | ranked |
 
 ## How to progress safely
 

@@ -1558,294 +1558,6 @@
       "accepted_answers": [
         "Syön kello kolme."
       ]
-    },
-    "p3r-026-s3-kouluun": {
-      "id": "p3r-026-s3-kouluun",
-      "surface_form": "kouluun",
-      "lemma": "kouluun",
-      "translation_fa": "به مدرسه",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "school",
-        "direction"
-      ],
-      "example_fi": "Menen kouluun.",
-      "example_fa": "به مدرسه می‌روم.",
-      "accepted_answers": [
-        "kouluun"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-3",
-        "source_lesson_id": "section-3-lesson-6",
-        "source_item_id": "s3-kouluun",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-024-s3-paivalla": {
-      "id": "p3r-024-s3-paivalla",
-      "surface_form": "päivällä",
-      "lemma": "päivällä",
-      "translation_fa": "در طول روز",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "time",
-        "day-parts"
-      ],
-      "example_fi": "Päivällä opiskelen.",
-      "example_fa": "روز درس می‌خوانم.",
-      "accepted_answers": [
-        "päivällä"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-3",
-        "source_lesson_id": "section-3-lesson-4",
-        "source_item_id": "s3-paivalla",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-023-s3-kello-viisi": {
-      "id": "p3r-023-s3-kello-viisi",
-      "surface_form": "Kello on viisi.",
-      "lemma": "Kello on viisi",
-      "translation_fa": "ساعت پنج است.",
-      "item_type": "expression",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "clock"
-      ],
-      "example_fi": "Kello on viisi.",
-      "example_fa": "ساعت پنج است.",
-      "accepted_answers": [
-        "Kello on viisi."
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-3",
-        "source_lesson_id": "section-3-lesson-3",
-        "source_item_id": "s3-kello-viisi",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-023-s3-kello-kolme": {
-      "id": "p3r-023-s3-kello-kolme",
-      "surface_form": "Kello on kolme.",
-      "lemma": "Kello on kolme",
-      "translation_fa": "ساعت سه است.",
-      "item_type": "expression",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "clock"
-      ],
-      "example_fi": "Kello on kolme.",
-      "example_fa": "ساعت سه است.",
-      "accepted_answers": [
-        "Kello on kolme."
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-3",
-        "source_lesson_id": "section-3-lesson-3",
-        "source_item_id": "s3-kello-kolme",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-022-s3-torstai": {
-      "id": "p3r-022-s3-torstai",
-      "surface_form": "torstai",
-      "lemma": "torstai",
-      "translation_fa": "پنج‌شنبه",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "weekdays"
-      ],
-      "example_fi": "Tänään on torstai.",
-      "example_fa": "امروز پنج‌شنبه است.",
-      "accepted_answers": [
-        "torstai"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-3",
-        "source_lesson_id": "section-3-lesson-2",
-        "source_item_id": "s3-torstai",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-022-s3-keskiviikko": {
-      "id": "p3r-022-s3-keskiviikko",
-      "surface_form": "keskiviikko",
-      "lemma": "keskiviikko",
-      "translation_fa": "چهارشنبه",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "weekdays"
-      ],
-      "example_fi": "Tänään on keskiviikko.",
-      "example_fa": "امروز چهارشنبه است.",
-      "accepted_answers": [
-        "keskiviikko"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-3",
-        "source_lesson_id": "section-3-lesson-2",
-        "source_item_id": "s3-keskiviikko",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-018-s2-minun-numeroni": {
-      "id": "p3r-018-s2-minun-numeroni",
-      "surface_form": "Minun numeroni on",
-      "lemma": "Minun numeroni on",
-      "translation_fa": "شمارهٔ من ... است",
-      "item_type": "sentence_frame",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "contact"
-      ],
-      "example_fi": "Minun numeroni on 040 123 4567.",
-      "example_fa": "شمارهٔ من ۰۴۰ ۱۲۳ ۴۵۶۷ است.",
-      "accepted_answers": [
-        "Minun numeroni on"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-8",
-        "source_item_id": "s2-minun-numeroni",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-kuusitoista": {
-      "id": "p3r-017-s2-num-kuusitoista",
-      "surface_form": "kuusitoista",
-      "lemma": "kuusitoista",
-      "translation_fa": "۱۶",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on kuusitoista.",
-      "example_fa": "عدد ۱۶ است.",
-      "accepted_answers": [
-        "kuusitoista",
-        "16",
-        "۱۶"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-kuusitoista",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-viisitoista": {
-      "id": "p3r-017-s2-num-viisitoista",
-      "surface_form": "viisitoista",
-      "lemma": "viisitoista",
-      "translation_fa": "۱۵",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on viisitoista.",
-      "example_fa": "عدد ۱۵ است.",
-      "accepted_answers": [
-        "viisitoista",
-        "15",
-        "۱۵"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-viisitoista",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-kolmetoista": {
-      "id": "p3r-017-s2-num-kolmetoista",
-      "surface_form": "kolmetoista",
-      "lemma": "kolmetoista",
-      "translation_fa": "۱۳",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on kolmetoista.",
-      "example_fa": "عدد ۱۳ است.",
-      "accepted_answers": [
-        "kolmetoista",
-        "13",
-        "۱۳"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-kolmetoista",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-yksitoista": {
-      "id": "p3r-017-s2-num-yksitoista",
-      "surface_form": "yksitoista",
-      "lemma": "yksitoista",
-      "translation_fa": "۱۱",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on yksitoista.",
-      "example_fa": "عدد ۱۱ است.",
-      "accepted_answers": [
-        "yksitoista",
-        "11",
-        "۱۱"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-yksitoista",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-yhdeksan": {
-      "id": "p3r-017-s2-num-yhdeksan",
-      "surface_form": "yhdeksän",
-      "lemma": "yhdeksän",
-      "translation_fa": "۹",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on yhdeksän.",
-      "example_fa": "عدد ۹ است.",
-      "accepted_answers": [
-        "yhdeksän",
-        "9",
-        "۹"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-yhdeksan",
-        "context_origin": "original_lesson"
-      }
     }
   },
   "lessons": [
@@ -6577,5 +6289,295 @@
         "max_graded": 20
       }
     }
-  ]
+  ],
+  "p3_review_items": {
+    "p3r-026-s3-kouluun": {
+      "id": "p3r-026-s3-kouluun",
+      "surface_form": "kouluun",
+      "lemma": "kouluun",
+      "translation_fa": "به مدرسه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "school",
+        "direction"
+      ],
+      "example_fi": "Menen kouluun.",
+      "example_fa": "به مدرسه می‌روم.",
+      "accepted_answers": [
+        "kouluun"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-6",
+        "source_item_id": "s3-kouluun",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-024-s3-paivalla": {
+      "id": "p3r-024-s3-paivalla",
+      "surface_form": "päivällä",
+      "lemma": "päivällä",
+      "translation_fa": "در طول روز",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "time",
+        "day-parts"
+      ],
+      "example_fi": "Päivällä opiskelen.",
+      "example_fa": "روز درس می‌خوانم.",
+      "accepted_answers": [
+        "päivällä"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-4",
+        "source_item_id": "s3-paivalla",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-023-s3-kello-viisi": {
+      "id": "p3r-023-s3-kello-viisi",
+      "surface_form": "Kello on viisi.",
+      "lemma": "Kello on viisi",
+      "translation_fa": "ساعت پنج است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on viisi.",
+      "example_fa": "ساعت پنج است.",
+      "accepted_answers": [
+        "Kello on viisi."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-3",
+        "source_item_id": "s3-kello-viisi",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-023-s3-kello-kolme": {
+      "id": "p3r-023-s3-kello-kolme",
+      "surface_form": "Kello on kolme.",
+      "lemma": "Kello on kolme",
+      "translation_fa": "ساعت سه است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "clock"
+      ],
+      "example_fi": "Kello on kolme.",
+      "example_fa": "ساعت سه است.",
+      "accepted_answers": [
+        "Kello on kolme."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-3",
+        "source_item_id": "s3-kello-kolme",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-022-s3-torstai": {
+      "id": "p3r-022-s3-torstai",
+      "surface_form": "torstai",
+      "lemma": "torstai",
+      "translation_fa": "پنج‌شنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on torstai.",
+      "example_fa": "امروز پنج‌شنبه است.",
+      "accepted_answers": [
+        "torstai"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-2",
+        "source_item_id": "s3-torstai",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-022-s3-keskiviikko": {
+      "id": "p3r-022-s3-keskiviikko",
+      "surface_form": "keskiviikko",
+      "lemma": "keskiviikko",
+      "translation_fa": "چهارشنبه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "weekdays"
+      ],
+      "example_fi": "Tänään on keskiviikko.",
+      "example_fa": "امروز چهارشنبه است.",
+      "accepted_answers": [
+        "keskiviikko"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-3",
+        "source_lesson_id": "section-3-lesson-2",
+        "source_item_id": "s3-keskiviikko",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-018-s2-minun-numeroni": {
+      "id": "p3r-018-s2-minun-numeroni",
+      "surface_form": "Minun numeroni on",
+      "lemma": "Minun numeroni on",
+      "translation_fa": "شمارهٔ من ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "contact"
+      ],
+      "example_fi": "Minun numeroni on 040 123 4567.",
+      "example_fa": "شمارهٔ من ۰۴۰ ۱۲۳ ۴۵۶۷ است.",
+      "accepted_answers": [
+        "Minun numeroni on"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-8",
+        "source_item_id": "s2-minun-numeroni",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-kuusitoista": {
+      "id": "p3r-017-s2-num-kuusitoista",
+      "surface_form": "kuusitoista",
+      "lemma": "kuusitoista",
+      "translation_fa": "۱۶",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kuusitoista.",
+      "example_fa": "عدد ۱۶ است.",
+      "accepted_answers": [
+        "kuusitoista",
+        "16",
+        "۱۶"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-kuusitoista",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-viisitoista": {
+      "id": "p3r-017-s2-num-viisitoista",
+      "surface_form": "viisitoista",
+      "lemma": "viisitoista",
+      "translation_fa": "۱۵",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on viisitoista.",
+      "example_fa": "عدد ۱۵ است.",
+      "accepted_answers": [
+        "viisitoista",
+        "15",
+        "۱۵"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-viisitoista",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-kolmetoista": {
+      "id": "p3r-017-s2-num-kolmetoista",
+      "surface_form": "kolmetoista",
+      "lemma": "kolmetoista",
+      "translation_fa": "۱۳",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kolmetoista.",
+      "example_fa": "عدد ۱۳ است.",
+      "accepted_answers": [
+        "kolmetoista",
+        "13",
+        "۱۳"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-kolmetoista",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-yksitoista": {
+      "id": "p3r-017-s2-num-yksitoista",
+      "surface_form": "yksitoista",
+      "lemma": "yksitoista",
+      "translation_fa": "۱۱",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yksitoista.",
+      "example_fa": "عدد ۱۱ است.",
+      "accepted_answers": [
+        "yksitoista",
+        "11",
+        "۱۱"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-yksitoista",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-yhdeksan": {
+      "id": "p3r-017-s2-num-yhdeksan",
+      "surface_form": "yhdeksän",
+      "lemma": "yhdeksän",
+      "translation_fa": "۹",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on yhdeksän.",
+      "example_fa": "عدد ۹ است.",
+      "accepted_answers": [
+        "yhdeksän",
+        "9",
+        "۹"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-yhdeksan",
+        "context_origin": "original_lesson"
+      }
+    }
+  }
 }

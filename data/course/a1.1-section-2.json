@@ -1608,294 +1608,6 @@
       "accepted_answers": [
         "Minun nimeni on Sara. Olen Iranista. Asun Vaasassa. Puhun persiaa."
       ]
-    },
-    "p3r-017-s2-num-kahdeksantoista": {
-      "id": "p3r-017-s2-num-kahdeksantoista",
-      "surface_form": "kahdeksantoista",
-      "lemma": "kahdeksantoista",
-      "translation_fa": "۱۸",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on kahdeksantoista.",
-      "example_fa": "عدد ۱۸ است.",
-      "accepted_answers": [
-        "kahdeksantoista",
-        "18",
-        "۱۸"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-kahdeksantoista",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-neljatoista": {
-      "id": "p3r-017-s2-num-neljatoista",
-      "surface_form": "neljätoista",
-      "lemma": "neljätoista",
-      "translation_fa": "۱۴",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on neljätoista.",
-      "example_fa": "عدد ۱۴ است.",
-      "accepted_answers": [
-        "neljätoista",
-        "14",
-        "۱۴"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-neljatoista",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-016-s2-minun-kotini": {
-      "id": "p3r-016-s2-minun-kotini",
-      "surface_form": "minun kotini",
-      "lemma": "minun kotini",
-      "translation_fa": "خانهٔ من",
-      "item_type": "expression",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "possession",
-        "home"
-      ],
-      "example_fi": "Minun kotini on Vaasassa.",
-      "example_fa": "خانهٔ من در واسا است.",
-      "accepted_answers": [
-        "minun kotini"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-6",
-        "source_item_id": "s2-minun-kotini",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-016-s2-sinun": {
-      "id": "p3r-016-s2-sinun",
-      "surface_form": "sinun",
-      "lemma": "sinun",
-      "translation_fa": "مال تو / توِ",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "possession"
-      ],
-      "example_fi": "Mikä sinun nimesi on?",
-      "example_fa": "نام تو چیست؟",
-      "accepted_answers": [
-        "sinun"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-6",
-        "source_item_id": "s2-sinun",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-014-s2-asun": {
-      "id": "p3r-014-s2-asun",
-      "surface_form": "asun",
-      "lemma": "asun",
-      "translation_fa": "زندگی می‌کنم",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "location",
-        "verbs"
-      ],
-      "example_fi": "Asun Vaasassa.",
-      "example_fa": "در واسا زندگی می‌کنم.",
-      "accepted_answers": [
-        "asun"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-4",
-        "source_item_id": "s2-asun",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-014-s2-vaasa": {
-      "id": "p3r-014-s2-vaasa",
-      "surface_form": "Vaasa",
-      "lemma": "Vaasa",
-      "translation_fa": "واسا",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "location",
-        "cities"
-      ],
-      "example_fi": "Asun Vaasassa.",
-      "example_fa": "در واسا زندگی می‌کنم.",
-      "accepted_answers": [
-        "Vaasa"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-4",
-        "source_item_id": "s2-vaasa",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-013-s2-englanti": {
-      "id": "p3r-013-s2-englanti",
-      "surface_form": "englanti",
-      "lemma": "englanti",
-      "translation_fa": "زبان انگلیسی",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "languages"
-      ],
-      "example_fi": "Puhun englantia.",
-      "example_fa": "انگلیسی صحبت می‌کنم.",
-      "accepted_answers": [
-        "englanti"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-3",
-        "source_item_id": "s2-englanti",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-013-s2-persia": {
-      "id": "p3r-013-s2-persia",
-      "surface_form": "persia",
-      "lemma": "persia",
-      "translation_fa": "زبان فارسی",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "languages"
-      ],
-      "example_fi": "Puhun persiaa.",
-      "example_fa": "فارسی صحبت می‌کنم.",
-      "accepted_answers": [
-        "persia"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-3",
-        "source_item_id": "s2-persia",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-012-s2-iran": {
-      "id": "p3r-012-s2-iran",
-      "surface_form": "Iran",
-      "lemma": "Iran",
-      "translation_fa": "ایران",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "countries"
-      ],
-      "example_fi": "Iran on maa.",
-      "example_fa": "ایران یک کشور است.",
-      "accepted_answers": [
-        "Iran"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-2",
-        "source_item_id": "s2-iran",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-011-s2-te-olette": {
-      "id": "p3r-011-s2-te-olette",
-      "surface_form": "Te olette",
-      "lemma": "Te olette",
-      "translation_fa": "شما ... هستید",
-      "item_type": "sentence_frame",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "people",
-        "olla"
-      ],
-      "example_fi": "Te olette täällä.",
-      "example_fa": "شما اینجا هستید.",
-      "accepted_answers": [
-        "Te olette"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-1",
-        "source_item_id": "s2-te-olette",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-011-s2-han-on": {
-      "id": "p3r-011-s2-han-on",
-      "surface_form": "Hän on",
-      "lemma": "Hän on",
-      "translation_fa": "او ... است",
-      "item_type": "sentence_frame",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "people",
-        "olla"
-      ],
-      "example_fi": "Hän on ystävä.",
-      "example_fa": "او یک دوست است.",
-      "accepted_answers": [
-        "Hän on"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-1",
-        "source_item_id": "s2-han-on",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-011-s2-te": {
-      "id": "p3r-011-s2-te",
-      "surface_form": "te",
-      "lemma": "te",
-      "translation_fa": "شما",
-      "item_type": "word",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "people",
-        "pronouns"
-      ],
-      "example_fi": "Te olette Suomessa.",
-      "example_fa": "شما در فنلاند هستید.",
-      "accepted_answers": [
-        "te"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-1",
-        "source_item_id": "s2-te",
-        "context_origin": "authored_course_example",
-        "context_section_id": "a1.1-section-1",
-        "context_item_id": "te"
-      }
     }
   },
   "lessons": [
@@ -6563,6 +6275,296 @@
     "s2-hei": {
       "section_id": "a1.1-section-1",
       "item_id": "hei"
+    }
+  },
+  "p3_review_items": {
+    "p3r-017-s2-num-kahdeksantoista": {
+      "id": "p3r-017-s2-num-kahdeksantoista",
+      "surface_form": "kahdeksantoista",
+      "lemma": "kahdeksantoista",
+      "translation_fa": "۱۸",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kahdeksantoista.",
+      "example_fa": "عدد ۱۸ است.",
+      "accepted_answers": [
+        "kahdeksantoista",
+        "18",
+        "۱۸"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-kahdeksantoista",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-neljatoista": {
+      "id": "p3r-017-s2-num-neljatoista",
+      "surface_form": "neljätoista",
+      "lemma": "neljätoista",
+      "translation_fa": "۱۴",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on neljätoista.",
+      "example_fa": "عدد ۱۴ است.",
+      "accepted_answers": [
+        "neljätoista",
+        "14",
+        "۱۴"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-neljatoista",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-016-s2-minun-kotini": {
+      "id": "p3r-016-s2-minun-kotini",
+      "surface_form": "minun kotini",
+      "lemma": "minun kotini",
+      "translation_fa": "خانهٔ من",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession",
+        "home"
+      ],
+      "example_fi": "Minun kotini on Vaasassa.",
+      "example_fa": "خانهٔ من در واسا است.",
+      "accepted_answers": [
+        "minun kotini"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-6",
+        "source_item_id": "s2-minun-kotini",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-016-s2-sinun": {
+      "id": "p3r-016-s2-sinun",
+      "surface_form": "sinun",
+      "lemma": "sinun",
+      "translation_fa": "مال تو / توِ",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "possession"
+      ],
+      "example_fi": "Mikä sinun nimesi on?",
+      "example_fa": "نام تو چیست؟",
+      "accepted_answers": [
+        "sinun"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-6",
+        "source_item_id": "s2-sinun",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-014-s2-asun": {
+      "id": "p3r-014-s2-asun",
+      "surface_form": "asun",
+      "lemma": "asun",
+      "translation_fa": "زندگی می‌کنم",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "verbs"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "asun"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-4",
+        "source_item_id": "s2-asun",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-014-s2-vaasa": {
+      "id": "p3r-014-s2-vaasa",
+      "surface_form": "Vaasa",
+      "lemma": "Vaasa",
+      "translation_fa": "واسا",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location",
+        "cities"
+      ],
+      "example_fi": "Asun Vaasassa.",
+      "example_fa": "در واسا زندگی می‌کنم.",
+      "accepted_answers": [
+        "Vaasa"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-4",
+        "source_item_id": "s2-vaasa",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-013-s2-englanti": {
+      "id": "p3r-013-s2-englanti",
+      "surface_form": "englanti",
+      "lemma": "englanti",
+      "translation_fa": "زبان انگلیسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun englantia.",
+      "example_fa": "انگلیسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "englanti"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-3",
+        "source_item_id": "s2-englanti",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-013-s2-persia": {
+      "id": "p3r-013-s2-persia",
+      "surface_form": "persia",
+      "lemma": "persia",
+      "translation_fa": "زبان فارسی",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "languages"
+      ],
+      "example_fi": "Puhun persiaa.",
+      "example_fa": "فارسی صحبت می‌کنم.",
+      "accepted_answers": [
+        "persia"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-3",
+        "source_item_id": "s2-persia",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-012-s2-iran": {
+      "id": "p3r-012-s2-iran",
+      "surface_form": "Iran",
+      "lemma": "Iran",
+      "translation_fa": "ایران",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "countries"
+      ],
+      "example_fi": "Iran on maa.",
+      "example_fa": "ایران یک کشور است.",
+      "accepted_answers": [
+        "Iran"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-2",
+        "source_item_id": "s2-iran",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-011-s2-te-olette": {
+      "id": "p3r-011-s2-te-olette",
+      "surface_form": "Te olette",
+      "lemma": "Te olette",
+      "translation_fa": "شما ... هستید",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "olla"
+      ],
+      "example_fi": "Te olette täällä.",
+      "example_fa": "شما اینجا هستید.",
+      "accepted_answers": [
+        "Te olette"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-1",
+        "source_item_id": "s2-te-olette",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-011-s2-han-on": {
+      "id": "p3r-011-s2-han-on",
+      "surface_form": "Hän on",
+      "lemma": "Hän on",
+      "translation_fa": "او ... است",
+      "item_type": "sentence_frame",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "olla"
+      ],
+      "example_fi": "Hän on ystävä.",
+      "example_fa": "او یک دوست است.",
+      "accepted_answers": [
+        "Hän on"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-1",
+        "source_item_id": "s2-han-on",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-011-s2-te": {
+      "id": "p3r-011-s2-te",
+      "surface_form": "te",
+      "lemma": "te",
+      "translation_fa": "شما",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "people",
+        "pronouns"
+      ],
+      "example_fi": "Te olette Suomessa.",
+      "example_fa": "شما در فنلاند هستید.",
+      "accepted_answers": [
+        "te"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-1",
+        "source_item_id": "s2-te",
+        "context_origin": "authored_course_example",
+        "context_section_id": "a1.1-section-1",
+        "context_item_id": "te"
+      }
     }
   }
 }

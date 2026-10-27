@@ -1454,56 +1454,6 @@
       "accepted_answers": [
         "Lähetän sinulle viestin."
       ]
-    },
-    "p3r-017-s2-num-kuusi": {
-      "id": "p3r-017-s2-num-kuusi",
-      "surface_form": "kuusi",
-      "lemma": "kuusi",
-      "translation_fa": "۶",
-      "item_type": "number",
-      "frequency_status": "unranked",
-      "frequency_rank": null,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on kuusi.",
-      "example_fa": "عدد ۶ است.",
-      "accepted_answers": [
-        "kuusi",
-        "6",
-        "۶"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-kuusi",
-        "context_origin": "original_lesson"
-      }
-    },
-    "p3r-017-s2-num-kolme": {
-      "id": "p3r-017-s2-num-kolme",
-      "surface_form": "kolme",
-      "lemma": "kolme",
-      "translation_fa": "۳",
-      "item_type": "number",
-      "frequency_status": "ranked",
-      "frequency_rank": 125,
-      "topics": [
-        "numbers"
-      ],
-      "example_fi": "Numero on kolme.",
-      "example_fa": "عدد ۳ است.",
-      "accepted_answers": [
-        "kolme",
-        "3",
-        "۳"
-      ],
-      "p3_review_provenance": {
-        "source_section_id": "a1.1-section-2",
-        "source_lesson_id": "section-2-lesson-7",
-        "source_item_id": "s2-num-kolme",
-        "context_origin": "original_lesson"
-      }
     }
   },
   "lessons": [
@@ -7966,5 +7916,57 @@
         ]
       }
     }
-  ]
+  ],
+  "p3_review_items": {
+    "p3r-017-s2-num-kuusi": {
+      "id": "p3r-017-s2-num-kuusi",
+      "surface_form": "kuusi",
+      "lemma": "kuusi",
+      "translation_fa": "۶",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kuusi.",
+      "example_fa": "عدد ۶ است.",
+      "accepted_answers": [
+        "kuusi",
+        "6",
+        "۶"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-kuusi",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-kolme": {
+      "id": "p3r-017-s2-num-kolme",
+      "surface_form": "kolme",
+      "lemma": "kolme",
+      "translation_fa": "۳",
+      "item_type": "number",
+      "frequency_status": "ranked",
+      "frequency_rank": 125,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kolme.",
+      "example_fa": "عدد ۳ است.",
+      "accepted_answers": [
+        "kolme",
+        "3",
+        "۳"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-kolme",
+        "context_origin": "original_lesson"
+      }
+    }
+  }
 }
