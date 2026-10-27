@@ -52,7 +52,7 @@ function build(sidecar, dictionary, contextual, sections) {
   const approvedReviews = new Set();
   for (const o of row.occurrences || []) {
    const section = bySection.get(o.section_id);
-   const item = section.items[o.item_id];
+   const item = section.items[o.item_id] || section.p3_review_items?.[o.item_id];
    const lesson = section.lessons.find(l => l.id === o.lesson_id);
    if (!item || !lesson || normalize(item.surface_form) !== row.surface_form ||
        (item.item_type === 'expression' ? 'expression' : 'form') !== row.kind) {
