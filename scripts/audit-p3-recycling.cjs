@@ -17,7 +17,7 @@ function activityMode(a){
  return GUIDED.has(a.type)?'guided':'receptive';
 }
 function form(section,itemId,known){
- const item=section.items?.[itemId];
+ const item=section.items?.[itemId] || section.p3_review_items?.[itemId];
  if(!item?.surface_form)throw Error('P3 unknown authored item '+section.id+'/'+itemId);
  const kind=item.item_type==='expression'?'expression':'form';
  const id=lexical.stableId(kind,norm(item.surface_form));
@@ -54,7 +54,7 @@ function evidence(section,lesson,known){
  for(const a of course.lessonEditionActivities(lesson,lesson.p3_review_activities?.length?'p3':'editorial')){
   if(course.scoredOpportunitiesOnSlide(a)===0)continue;
   for(const id of audit.positives(a)){
-   if(!section.items?.[id])continue;
+   if(!section.items?.[id] && !section.p3_review_items?.[id])continue;
    const x=form(section,id,known);
    const existing=out.get(x.id)||{modes:Object.fromEntries(MODES.map(m=>[m,0])),contexts:new Set()};
    existing.modes[activityMode(a)]++;
