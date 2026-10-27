@@ -5,7 +5,7 @@ Scope: [#235](https://github.com/amirmojiry/finnish-learning/issues/235), parent
 ## Source of truth and accounting units
 
 - The [P4 review queue](P4-PAROLE-REVIEW-QUEUE.md) proposes source-attested **written forms**; it is not a syllabus or a frequency-ranked lexeme list.
-- [Grammar roadmap](GRAMMAR-ROADMAP.md) and `data/course/master-curriculum.json` define the ordered concept and prerequisite graph. A corpus form cannot silently introduce an unintroduced productive grammar concept.
+- `data/course/master-curriculum.json` is the **sole authoritative source** for the ordered grammar concepts and prerequisite graph. The [grammar roadmap](GRAMMAR-ROADMAP.md) explains that canonical JSON for readers; if the prose and JSON disagree, use the JSON and correct the roadmap before approving a candidate. A corpus form cannot silently introduce an unintroduced productive grammar concept.
 - [Vocabulary roadmap](VOCABULARY-ROADMAP.md) supplies advisory stage bands and topics. An original source position is not a guaranteed CEFR placement or proficiency claim.
 - [P2 identity report](P2-UNRESOLVED-REVIEW-QUEUE.md) records reviewed versus unresolved senses. Never infer a stable sense from a surface spelling alone, particularly for homographs.
 
