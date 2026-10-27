@@ -381,7 +381,9 @@
       active = false;
       currentWord = null;
       queue = [];
-      completionMessage = `مرور امروز تمام شد؛ ${toPersianNumber(sessionCorrect)} پاسخ از ${toPersianNumber(sessionAnswered)} پاسخ درست بود.`;
+      const remaining = summarizeProgress(words, progress, Date.now(), {newLimit:preferences.newLimit});
+      const moreAvailable = remaining.due + remaining.availableNewToday > 0;
+      completionMessage = `${moreAvailable ? 'این نوبت مرور تمام شد؛ هنوز واژه‌هایی برای مرور باقی مانده‌اند.' : 'مرور امروز تمام شد.'} ${toPersianNumber(sessionCorrect)} پاسخ از ${toPersianNumber(sessionAnswered)} پاسخ درست بود.`;
       windowObject.hideReviewFeedback?.();
       windowObject.closeReviewQuiz?.();
       updatePanel();
