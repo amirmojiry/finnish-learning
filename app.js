@@ -15,6 +15,7 @@ const state = {
   mode: MODES.TRANSLATION,
   view: 'course',
   detailWord: null,
+  p2Identity: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -365,6 +366,24 @@ function renderDictionaryList() {
   }
 }
 
+function applyDictionaryP2Identity(word) {
+  const identity = state.p2Identity?.dictionaryWord?.(word?.word);
+  if (!identity) {
+    els.detailLemma.removeAttribute('data-form-id');
+    els.detailLemma.removeAttribute('data-lexeme-id');
+    els.detailLemma.removeAttribute('data-sense-id');
+    return;
+  }
+  els.detailLemma.dataset.formId = identity.form_id;
+  if (identity.review_scope === 'global' && identity.lexeme_id && identity.sense_id) {
+    els.detailLemma.dataset.lexemeId = identity.lexeme_id;
+    els.detailLemma.dataset.senseId = identity.sense_id;
+  } else {
+    els.detailLemma.removeAttribute('data-lexeme-id');
+    els.detailLemma.removeAttribute('data-sense-id');
+  }
+}
+
 function openWordDetail(word) {
   if (!word) return;
   state.detailWord = word;
@@ -377,6 +396,7 @@ function openWordDetail(word) {
   els.detailRank.textContent = `#${word.rank}`;
   els.detailPos.textContent = word.part_of_speech_fa || word.part_of_speech;
   els.detailLemma.textContent = word.lemma;
+  applyDictionaryP2Identity(word);
   els.detailExamples.replaceChildren();
 
   for (const example of getExamples(word)) {
@@ -428,6 +448,10 @@ async function init() {
     if (!Array.isArray(payload.words) || payload.words.length < 4) throw new Error('invalid data');
     state.words = payload.words;
     state.wordMap = new Map(state.words.map((word) => [normalize(word.word), word]));
+    window.FinnishP2Identity?.load?.(window).then(identity => {
+      state.p2Identity = identity;
+      if (state.detailWord) applyDictionaryP2Identity(state.detailWord);
+    }).catch(() => { state.p2Identity = null; });
     populatePosFilter();
     routeFromHash();
     window.dispatchEvent(new CustomEvent('finnish-word-review-ready'));
