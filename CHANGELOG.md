@@ -6,6 +6,15 @@ The project follows [Semantic Versioning](docs/VERSIONING.md).
 
 ## [Unreleased]
 
+## [1.76.0] - 2026-10-27
+
+### Added
+
+- Add bounded, independently graded post-introduction retrieval to 62 historically unreviewed exact-form introductions in early A1.1/A1.2, using curated Finnish/Persian source examples without changing archived activity arrays or legacy lesson progress keys.
+- Add optional P3 learner editions to non-paced teaching lessons (maximum two new reviews per lesson) and preserve original legacy/editorial activity ordering and checkpoint content. Keep translation-only recall distinct from novel-context practice in P3 audits.
+- Add deterministic P3 reviewer/source builder, dependency-aware P2 identity regeneration, exact-form and history regression coverage, and a remaining-gap report. No invented new Finnish sentences or claims of actual learner mastery.
+
+
 ## [1.75.0] - 2026-10-27
 
 ### Added
