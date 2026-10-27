@@ -3758,15 +3758,6 @@
         intro.classList.add('course-lesson-inline-info');
         card.append(intro);
       }
-_fa;
-          const grammar = document.createElement('p');
-          grammar.innerHTML = `<strong>نکتهٔ زبان:</strong> ${activeLesson.grammar_fa}`;
-          panel.append(summary, grammar);
-        }, 'توضیحات این درس');
-        intro.classList.add('course-lesson-inline-info');
-        card.append(intro);
-      }
-
       const feedback = document.createElement('div');
       feedback.className = 'course-answer-feedback course-primary-feedback';
       feedback.setAttribute('role', 'status');
