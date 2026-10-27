@@ -4,6 +4,7 @@
 
 This is the documentation entry point for **Finnish Learning**. Each subject has one canonical source of truth; bilingual files serve different readers, not competing specifications.
 
+- P5 mode-aware Course-to-Word Practice context hints and safe daily/session preferences: [English](P5-CONTEXTUAL-REVIEW-BRIDGE.md) / [فارسی](P5-CONTEXTUAL-REVIEW-BRIDGE.fa.md) — exact-form provenance, ambiguous-sense exclusion, due-first SRS, settings recovery; parent #101 remains open.
 - Learner-effective P3 vocabulary composition and spaced-context audits: [English](P3-LEARNER-EFFECTIVE-RECYCLING.md) / [فارسی](P3-LEARNER-EFFECTIVE-RECYCLING.fa.md) — canonical exact-form/sense treatment, graded modes, later retrieval and strict future A2.1 section release gate. Parent #101 remains open.
 - Editorially shortened A1 editions: [English](LESSON-EDITORIAL-REDUCTION.md) / [فارسی](LESSON-EDITORIAL-REDUCTION.fa.md) — actual 52-answer reduction for four priority lessons, with v1.56 draft compatibility and full-course audit.
 - Pacing for four heavy A1 lessons: [English](LESSON-PACING.md) / [فارسی](LESSON-PACING.fa.md) — local resumable sittings capped at 15 screens and 20 graded answers, without deleting original assessments.

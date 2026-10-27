@@ -88,6 +88,15 @@ function reviewExample(word) {
   return examples[(Number(word.rank) || 1) % examples.length];
 }
 
+// Only display a Course sentence if it is a source-authored, translated
+// context containing the *exact* dictionary form being reviewed.
+function safeCourseReviewExample(word,context){
+  if(!context||typeof context.fi!=='string'||typeof context.fa!=='string')return null;
+  const fi=context.fi.trim(),fa=context.fa.trim();
+  const tokens=fi.normalize('NFC').toLocaleLowerCase('fi-FI').match(/[\p{L}\p{N}]+/gu)||[];
+  return fi.length<=220&&fa.length<=220&&tokens.length>=2&&tokens.includes(normalize(word.word))&&fa
+    ?{fi,fa}:null;
+}
 function makeTranslationOptions(word) {
   return shuffle([
     word,
@@ -205,10 +214,10 @@ function renderChoiceOptions(options, label, isFinnish = false) {
   }
 }
 
-function startReviewPractice(word, mode = MODES.TRANSLATION) {
+function startReviewPractice(word, mode = MODES.TRANSLATION, courseExample = null) {
   if (!word) return;
   state.current = word;
-  state.currentExample = reviewExample(word);
+  state.currentExample = safeCourseReviewExample(word,courseExample) || reviewExample(word);
   state.mode = Object.values(MODES).includes(mode) ? mode : MODES.TRANSLATION;
   state.answered = false;
   showView('practice');

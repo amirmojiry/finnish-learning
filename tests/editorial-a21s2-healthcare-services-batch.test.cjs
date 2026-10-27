@@ -215,7 +215,7 @@ test('v1.68.0 release and bilingual current status agree', () => {
   const en = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   const fa = fs.readFileSync(path.join(root, 'README.fa.md'), 'utf8');
   const changelog = fs.readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8');
-  assert.equal(version, '1.72.0');
+  assert.equal(version, '1.73.0');
   assert.equal(pkg.version, version);
   assert.match(changelog, /\[1\.68\.0\]/);
   assert.match(en, /80 curated lessons \/ 254 fewer graded opportunities/);

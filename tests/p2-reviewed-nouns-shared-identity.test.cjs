@@ -136,7 +136,16 @@ test('Course-to-dictionary form mapping excludes contextual homographs without c
  assert.ok(map.excluded_ambiguous_form_ids.includes(stable('ajan')));
  assert.ok(map.mappings.every(row=>row.form_id===stable(row.surface_form)));
  assert.ok(map.mappings.every(row=>!map.excluded_ambiguous_form_ids.includes(row.form_id)));
- assert.ok(map.mappings.every(row=>!('lexeme_id' in row)&&!('sense_id' in row)&&!('dueAt' in row)));
+ assert.ok(map.mappings.every(row=>{
+  // Review labels must match the audited sidecar; SRS records are never copied.
+  const identity=side.records.find(x=>x.kind==='form'&&x.form_id===row.form_id
+    &&x.identity_review_status==='reviewed');
+  const hasLexeme=Object.hasOwn(row,'lexeme_id'),hasSense=Object.hasOwn(row,'sense_id');
+  return hasLexeme===hasSense&&(!hasLexeme||(identity&&identity.lexeme_id===row.lexeme_id
+    &&identity.sense_id===row.sense_id))
+    &&!['dueAt','nextReviewAt','mastered','score','lapses'].some(key=>Object.hasOwn(row,key));
+ }));
+ assert.equal(map.mappings.filter(row=>Object.hasOwn(row,'lexeme_id')).length,31);
 });
 
 test('Course first-attempt errors flow by exact form ID and never inherit another case or sense',()=>{

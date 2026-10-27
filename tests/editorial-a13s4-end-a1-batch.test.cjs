@@ -229,7 +229,7 @@ test('v1.66.0 bilingual release and 140-lesson audit reflect checkpoint retrieva
  const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
  const en=fs.readFileSync(path.join(root,'README.md'),'utf8'),fa=fs.readFileSync(path.join(root,'README.fa.md'),'utf8');
  const changelog=fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8');
- assert.equal(version, '1.72.0');assert.equal(pkg.version,version);assert.match(changelog,/\[1\.66\.0\]/);
+ assert.equal(version, '1.73.0');assert.equal(pkg.version,version);assert.match(changelog,/\[1\.66\.0\]/);
  assert.match(en,/47 curated lessons \/ 189 fewer graded opportunities/);
  assert.match(fa,/۴۷ درس بازنگری‌شده و ۱۸۹ پاسخ نمره‌دار کمتر/);
  const report=audit.buildReport();assert.equal(report.summary.shipped_lessons,140);

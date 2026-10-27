@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "identity_scope": "reviewable_curated_dictionary_surface_forms_only",
-  "disclaimer": "Course authored exact-form mistakes only prioritize unseen dictionary forms. Known context-sensitive homographs are deliberately excluded; no SRS history, sense or lexeme mastery is transferred.",
+  "disclaimer": "Only validated, source-authored Finnish/Persian example contexts are optional review hints. Known context-sensitive homographs are excluded; no Course error transfers SRS history, a lexeme/sense score, or mastery.",
   "excluded_ambiguous_form_ids": [
     "form:61-69-6b-61",
     "form:61-6a-61-6e",
@@ -14,19 +14,27 @@
       "section_id": "a1.1-section-1",
       "item_id": "ei",
       "form_id": "form:65-69",
-      "surface_form": "ei"
+      "surface_form": "ei",
+      "context_fi": "Ei, hän ei ole kotona.",
+      "context_fa": "نه، او در خانه نیست."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "en",
       "form_id": "form:65-6e",
-      "surface_form": "en"
+      "surface_form": "en",
+      "context_fi": "En ymmärrä.",
+      "context_fa": "متوجه نمی‌شوم."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "han",
       "form_id": "form:68-e4-6e",
-      "surface_form": "hän"
+      "surface_form": "hän",
+      "lexeme_id": "lexeme:han",
+      "sense_id": "sense:han-third-person-singular",
+      "context_fi": "Hän asuu Vaasassa.",
+      "context_fa": "او در واسا زندگی می‌کند."
     },
     {
       "section_id": "a1.1-section-1",
@@ -38,169 +46,243 @@
       "section_id": "a1.1-section-1",
       "item_id": "ihminen",
       "form_id": "form:69-68-6d-69-6e-65-6e",
-      "surface_form": "ihminen"
+      "surface_form": "ihminen",
+      "context_fi": "Hän on ihminen.",
+      "context_fa": "او یک انسان است."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "ja",
       "form_id": "form:6a-61",
-      "surface_form": "ja"
+      "surface_form": "ja",
+      "context_fi": "Hei ja tervetuloa!",
+      "context_fa": "سلام و خوش آمدی!"
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "kuka",
       "form_id": "form:6b-75-6b-61",
-      "surface_form": "kuka"
+      "surface_form": "kuka",
+      "context_fi": "Kuka hän on?",
+      "context_fa": "او کیست؟"
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "kylla",
       "form_id": "form:6b-79-6c-6c-e4",
-      "surface_form": "kyllä"
+      "surface_form": "kyllä",
+      "context_fi": "Kyllä, minä puhun suomea.",
+      "context_fa": "بله، من فنلاندی صحبت می‌کنم."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "mika",
       "form_id": "form:6d-69-6b-e4",
-      "surface_form": "mikä"
+      "surface_form": "mikä",
+      "lexeme_id": "lexeme:mika",
+      "sense_id": "sense:mika-interrogative-what-which",
+      "context_fi": "Mikä tämä on?",
+      "context_fa": "این چیست؟"
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "mina",
       "form_id": "form:6d-69-6e-e4",
-      "surface_form": "minä"
+      "surface_form": "minä",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Minä olen Amir.",
+      "context_fa": "من امیر هستم."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "mita",
       "form_id": "form:6d-69-74-e4",
-      "surface_form": "mitä"
+      "surface_form": "mitä",
+      "context_fi": "Mitä kuuluu?",
+      "context_fa": "حالت چطور است؟"
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "ole",
       "form_id": "form:6f-6c-65",
-      "surface_form": "ole"
+      "surface_form": "ole",
+      "context_fi": "Ole hyvä.",
+      "context_fa": "بفرمایید / خواهش می‌کنم."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "olen",
       "form_id": "form:6f-6c-65-6e",
-      "surface_form": "olen"
+      "surface_form": "olen",
+      "context_fi": "Minä olen Suomessa.",
+      "context_fa": "من در فنلاند هستم."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "on",
       "form_id": "form:6f-6e",
-      "surface_form": "on"
+      "surface_form": "on",
+      "context_fi": "Tämä on kirja.",
+      "context_fa": "این یک کتاب است."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "se",
       "form_id": "form:73-65",
-      "surface_form": "se"
+      "surface_form": "se",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "context_fi": "Se on pöydällä.",
+      "context_fa": "آن روی میز است."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "sina",
       "form_id": "form:73-69-6e-e4",
-      "surface_form": "sinä"
+      "surface_form": "sinä",
+      "lexeme_id": "lexeme:sina",
+      "sense_id": "sense:sina-second-person",
+      "context_fi": "Sinä olet opiskelija.",
+      "context_fa": "تو دانشجو هستی."
     },
     {
       "section_id": "a1.1-section-1",
       "item_id": "tama",
       "form_id": "form:74-e4-6d-e4",
-      "surface_form": "tämä"
+      "surface_form": "tämä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Tämä on minun kirjani.",
+      "context_fa": "این کتاب من است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-han",
       "form_id": "form:68-e4-6e",
-      "surface_form": "hän"
+      "surface_form": "hän",
+      "lexeme_id": "lexeme:han",
+      "sense_id": "sense:han-third-person-singular",
+      "context_fi": "Hän on ystäväni.",
+      "context_fa": "او دوست من است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-he",
       "form_id": "form:68-65",
-      "surface_form": "he"
+      "surface_form": "he",
+      "lexeme_id": "lexeme:he",
+      "sense_id": "sense:he-third-person-plural",
+      "context_fi": "He ovat täällä.",
+      "context_fa": "آن‌ها اینجا هستند."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-maa",
       "form_id": "form:6d-61-61",
-      "surface_form": "maa"
+      "surface_form": "maa",
+      "context_fi": "Suomi on maa.",
+      "context_fa": "فنلاند یک کشور است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-me",
       "form_id": "form:6d-65",
-      "surface_form": "me"
+      "surface_form": "me",
+      "lexeme_id": "lexeme:me",
+      "sense_id": "sense:me-first-person-plural",
+      "context_fi": "Me olemme ystäviä.",
+      "context_fa": "ما دوست هستیم."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-minun",
       "form_id": "form:6d-69-6e-75-6e",
-      "surface_form": "minun"
+      "surface_form": "minun",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Minun nimeni on Sara.",
+      "context_fa": "نام من سارا است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-missa",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä asut?",
+      "context_fa": "کجا زندگی می‌کنی؟"
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-mista",
       "form_id": "form:6d-69-73-74-e4",
-      "surface_form": "mistä"
+      "surface_form": "mistä",
+      "context_fi": "Mistä olet?",
+      "context_fa": "اهل کجایی؟"
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-num-kaksi",
       "form_id": "form:6b-61-6b-73-69",
-      "surface_form": "kaksi"
+      "surface_form": "kaksi",
+      "context_fi": "Numero on kaksi.",
+      "context_fa": "عدد ۲ است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-num-kolme",
       "form_id": "form:6b-6f-6c-6d-65",
-      "surface_form": "kolme"
+      "surface_form": "kolme",
+      "context_fi": "Numero on kolme.",
+      "context_fa": "عدد ۳ است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-num-kymmenen",
       "form_id": "form:6b-79-6d-6d-65-6e-65-6e",
-      "surface_form": "kymmenen"
+      "surface_form": "kymmenen",
+      "context_fi": "Numero on kymmenen.",
+      "context_fa": "عدد ۱۰ است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-num-nelja",
       "form_id": "form:6e-65-6c-6a-e4",
-      "surface_form": "neljä"
+      "surface_form": "neljä",
+      "context_fi": "Numero on neljä.",
+      "context_fa": "عدد ۴ است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-num-viisi",
       "form_id": "form:76-69-69-73-69",
-      "surface_form": "viisi"
+      "surface_form": "viisi",
+      "context_fi": "Numero on viisi.",
+      "context_fa": "عدد ۵ است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-num-yksi",
       "form_id": "form:79-6b-73-69",
-      "surface_form": "yksi"
+      "surface_form": "yksi",
+      "context_fi": "Numero on yksi.",
+      "context_fa": "عدد ۱ است."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-olen",
       "form_id": "form:6f-6c-65-6e",
-      "surface_form": "olen"
+      "surface_form": "olen",
+      "context_fi": "Olen Iranista.",
+      "context_fa": "من اهل ایران هستم."
     },
     {
       "section_id": "a1.1-section-2",
       "item_id": "s2-suomi",
       "form_id": "form:73-75-6f-6d-69",
-      "surface_form": "suomi"
+      "surface_form": "suomi",
+      "context_fi": "Suomi on maa.",
+      "context_fa": "فنلاند یک کشور است."
     },
     {
       "section_id": "a1.1-section-2",
@@ -212,625 +294,853 @@
       "section_id": "a1.1-section-3",
       "item_id": "s3-en",
       "form_id": "form:65-6e",
-      "surface_form": "en"
+      "surface_form": "en",
+      "context_fi": "En syö.",
+      "context_fa": "نمی‌خورم."
     },
     {
       "section_id": "a1.1-section-3",
       "item_id": "s3-mita",
       "form_id": "form:6d-69-74-e4",
-      "surface_form": "mitä"
+      "surface_form": "mitä",
+      "context_fi": "Mitä teet?",
+      "context_fa": "چه کار می‌کنی؟"
     },
     {
       "section_id": "a1.1-section-3",
       "item_id": "s3-nyt",
       "form_id": "form:6e-79-74",
-      "surface_form": "nyt"
+      "surface_form": "nyt",
+      "context_fi": "Nyt on ilta.",
+      "context_fa": "الان عصر است."
     },
     {
       "section_id": "a1.1-section-3",
       "item_id": "s3-tanaan",
       "form_id": "form:74-e4-6e-e4-e4-6e",
-      "surface_form": "tänään"
+      "surface_form": "tänään",
+      "context_fi": "Tänään on maanantai.",
+      "context_fa": "امروز دوشنبه است."
     },
     {
       "section_id": "a1.1-section-4",
       "item_id": "s4-missa",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä puhelin on?",
+      "context_fa": "تلفن کجاست؟"
     },
     {
       "section_id": "a1.1-section-4",
       "item_id": "s4-on",
       "form_id": "form:6f-6e",
-      "surface_form": "on"
+      "surface_form": "on",
+      "context_fi": "Puhelin on pöydällä.",
+      "context_fa": "تلفن روی میز است."
     },
     {
       "section_id": "a1.1-section-4",
       "item_id": "s4-pieni",
       "form_id": "form:70-69-65-6e-69",
-      "surface_form": "pieni"
+      "surface_form": "pieni",
+      "context_fi": "Kissa on pieni.",
+      "context_fa": "گربه کوچک است."
     },
     {
       "section_id": "a1.1-section-4",
       "item_id": "s4-yksi",
       "form_id": "form:79-6b-73-69",
-      "surface_form": "yksi"
+      "surface_form": "yksi",
+      "context_fi": "Yksi kahvi, kiitos.",
+      "context_fa": "یک قهوه، لطفاً."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-10",
       "form_id": "form:31-30",
-      "surface_form": "10"
+      "surface_form": "10",
+      "context_fi": "Tapaaminen alkaa kello 10.",
+      "context_fa": "دیدار ساعت ۱۰ آغاز می‌شود."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-20",
       "form_id": "form:32-30",
-      "surface_form": "20"
+      "surface_form": "20",
+      "context_fi": "Kurssilla on 20 opiskelijaa.",
+      "context_fa": "در دوره ۲۰ دانشجو وجود دارد."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-50",
       "form_id": "form:35-30",
-      "surface_form": "50"
+      "surface_form": "50",
+      "context_fi": "Liput maksavat yhteensä 50 euroa.",
+      "context_fa": "بلیت‌ها در مجموع ۵۰ یورو قیمت دارند."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-antaa",
       "form_id": "form:61-6e-74-61-61",
-      "surface_form": "antaa"
+      "surface_form": "antaa",
+      "context_fi": "Voitko antaa minulle vettä?",
+      "context_fa": "می‌توانی به من آب بدهی؟"
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-ei",
       "form_id": "form:65-69",
-      "surface_form": "ei"
+      "surface_form": "ei",
+      "context_fi": "Hän ei tule tänään.",
+      "context_fa": "او امروز نمی‌آید."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-liian",
       "form_id": "form:6c-69-69-61-6e",
-      "surface_form": "liian"
+      "surface_form": "liian",
+      "context_fi": "Tämä takki on liian kallis.",
+      "context_fa": "این کت بیش از حد گران است."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-lisaa",
       "form_id": "form:6c-69-73-e4-e4",
-      "surface_form": "lisää"
+      "surface_form": "lisää",
+      "context_fi": "Tarvitsen lisää aikaa.",
+      "context_fa": "به زمان بیشتری نیاز دارم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-missa",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä asema on?",
+      "context_fa": "ایستگاه کجاست؟"
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-mita",
       "form_id": "form:6d-69-74-e4",
-      "surface_form": "mitä"
+      "surface_form": "mitä",
+      "context_fi": "Mitä sinä teet?",
+      "context_fa": "تو چه کار می‌کنی؟"
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-mitaan",
       "form_id": "form:6d-69-74-e4-e4-6e",
-      "surface_form": "mitään"
+      "surface_form": "mitään",
+      "context_fi": "En kuullut mitään.",
+      "context_fa": "چیزی نشنیدم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-ottaa",
       "form_id": "form:6f-74-74-61-61",
-      "surface_form": "ottaa"
+      "surface_form": "ottaa",
+      "context_fi": "Haluan ottaa kupin kahvia.",
+      "context_fa": "می‌خواهم یک فنجان قهوه بگیرم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-paljon",
       "form_id": "form:70-61-6c-6a-6f-6e",
-      "surface_form": "paljon"
+      "surface_form": "paljon",
+      "context_fi": "Minulla on paljon työtä.",
+      "context_fa": "کار زیادی دارم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-rahaa",
       "form_id": "form:72-61-68-61-61",
-      "surface_form": "rahaa"
+      "surface_form": "rahaa",
+      "context_fi": "Minulla ei ole tarpeeksi rahaa.",
+      "context_fa": "پول کافی ندارم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-siella",
       "form_id": "form:73-69-65-6c-6c-e4",
-      "surface_form": "siellä"
+      "surface_form": "siellä",
+      "context_fi": "Ystäväni asuu siellä.",
+      "context_fa": "دوستم آنجا زندگی می‌کند."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-taalla",
       "form_id": "form:74-e4-e4-6c-6c-e4",
-      "surface_form": "täällä"
+      "surface_form": "täällä",
+      "context_fi": "Olen asunut täällä kaksi vuotta.",
+      "context_fa": "دو سال است اینجا زندگی کرده‌ام."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-takaisin",
       "form_id": "form:74-61-6b-61-69-73-69-6e",
-      "surface_form": "takaisin"
+      "surface_form": "takaisin",
+      "context_fi": "Tulen takaisin huomenna.",
+      "context_fa": "فردا برمی‌گردم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-tama",
       "form_id": "form:74-e4-6d-e4",
-      "surface_form": "tämä"
+      "surface_form": "tämä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Tämä kirja on helppo.",
+      "context_fa": "این کتاب آسان است."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-toinen",
       "form_id": "form:74-6f-69-6e-65-6e",
-      "surface_form": "toinen"
+      "surface_form": "toinen",
+      "context_fi": "Toinen vaihtoehto on halvempi.",
+      "context_fa": "گزینه دوم ارزان‌تر است."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-vahan",
       "form_id": "form:76-e4-68-e4-6e",
-      "surface_form": "vähän"
+      "surface_form": "vähän",
+      "context_fi": "Puhun vähän suomea.",
+      "context_fa": "کمی فنلاندی صحبت می‌کنم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-hf-yksi",
       "form_id": "form:79-6b-73-69",
-      "surface_form": "yksi"
+      "surface_form": "yksi",
+      "context_fi": "Minulla on yksi kysymys.",
+      "context_fa": "من یک سؤال دارم."
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-topic-maksaa",
       "form_id": "form:6d-61-6b-73-61-61",
-      "surface_form": "maksaa"
+      "surface_form": "maksaa",
+      "context_fi": "Voinko maksaa kortilla?",
+      "context_fa": "می‌توانم با کارت پرداخت کنم؟"
     },
     {
       "section_id": "a1.2-section-1",
       "item_id": "a12s1-topic-pieni",
       "form_id": "form:70-69-65-6e-69",
-      "surface_form": "pieni"
+      "surface_form": "pieni",
+      "context_fi": "Tämä on liian pieni.",
+      "context_fa": "این بیش از حد کوچک است."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-aikaa",
       "form_id": "form:61-69-6b-61-61",
-      "surface_form": "aikaa"
+      "surface_form": "aikaa",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "context_fi": "Minulla ei ole aikaa.",
+      "context_fa": "وقت ندارم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-antaa",
       "form_id": "form:61-6e-74-61-61",
-      "surface_form": "antaa"
+      "surface_form": "antaa",
+      "context_fi": "Voitko antaa minulle vettä?",
+      "context_fa": "می‌توانی به من آب بدهی؟"
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-ennen",
       "form_id": "form:65-6e-6e-65-6e",
-      "surface_form": "ennen"
+      "surface_form": "ennen",
+      "context_fi": "Tule ennen kello kuutta.",
+      "context_fa": "پیش از ساعت شش بیا."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-jalkeen",
       "form_id": "form:6a-e4-6c-6b-65-65-6e",
-      "surface_form": "jälkeen"
+      "surface_form": "jälkeen",
+      "context_fi": "Tulen töiden jälkeen.",
+      "context_fa": "بعد از کار می‌آیم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-kaksi",
       "form_id": "form:6b-61-6b-73-69",
-      "surface_form": "kaksi"
+      "surface_form": "kaksi",
+      "context_fi": "Minulla on kaksi kirjaa.",
+      "context_fa": "من دو کتاب دارم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-kanssa",
       "form_id": "form:6b-61-6e-73-73-61",
-      "surface_form": "kanssa"
+      "surface_form": "kanssa",
+      "context_fi": "Menen kauppaan ystävän kanssa.",
+      "context_fa": "با دوستم به فروشگاه می‌روم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-klo",
       "form_id": "form:6b-6c-6f",
-      "surface_form": "klo"
+      "surface_form": "klo",
+      "context_fi": "Kokous alkaa klo 9.",
+      "context_fa": "جلسه ساعت نه آغاز می‌شود."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-kohti",
       "form_id": "form:6b-6f-68-74-69",
-      "surface_form": "kohti"
+      "surface_form": "kohti",
+      "context_fi": "Kävelimme kohti keskustaa.",
+      "context_fa": "به‌سوی مرکز شهر قدم زدیم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-kuinka",
       "form_id": "form:6b-75-69-6e-6b-61",
-      "surface_form": "kuinka"
+      "surface_form": "kuinka",
+      "context_fi": "Kuinka paljon tämä maksaa?",
+      "context_fa": "این چقدر قیمت دارد؟"
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-missa",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä asema on?",
+      "context_fa": "ایستگاه کجاست؟"
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-miten",
       "form_id": "form:6d-69-74-65-6e",
-      "surface_form": "miten"
+      "surface_form": "miten",
+      "context_fi": "Miten tämä toimii?",
+      "context_fa": "این چطور کار می‌کند؟"
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-pois",
       "form_id": "form:70-6f-69-73",
-      "surface_form": "pois"
+      "surface_form": "pois",
+      "context_fi": "Laita puhelin pois.",
+      "context_fa": "تلفن را کنار بگذار."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-siella",
       "form_id": "form:73-69-65-6c-6c-e4",
-      "surface_form": "siellä"
+      "surface_form": "siellä",
+      "context_fi": "Ystäväni asuu siellä.",
+      "context_fa": "دوستم آنجا زندگی می‌کند."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-siihen",
       "form_id": "form:73-69-69-68-65-6e",
-      "surface_form": "siihen"
+      "surface_form": "siihen",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "context_fi": "Laita kirja siihen.",
+      "context_fa": "کتاب را آنجا بگذار."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-siita",
       "form_id": "form:73-69-69-74-e4",
-      "surface_form": "siitä"
+      "surface_form": "siitä",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative",
+      "context_fi": "Puhumme siitä huomenna.",
+      "context_fa": "فردا درباره آن صحبت می‌کنیم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-taalla",
       "form_id": "form:74-e4-e4-6c-6c-e4",
-      "surface_form": "täällä"
+      "surface_form": "täällä",
+      "context_fi": "Olen asunut täällä kaksi vuotta.",
+      "context_fa": "دو سال است اینجا زندگی کرده‌ام."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-tahan",
       "form_id": "form:74-e4-68-e4-6e",
-      "surface_form": "tähän"
+      "surface_form": "tähän",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Kirjoita nimesi tähän.",
+      "context_fa": "نامت را اینجا بنویس."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-takaisin",
       "form_id": "form:74-61-6b-61-69-73-69-6e",
-      "surface_form": "takaisin"
+      "surface_form": "takaisin",
+      "context_fi": "Tulen takaisin huomenna.",
+      "context_fa": "فردا برمی‌گردم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-tasta",
       "form_id": "form:74-e4-73-74-e4",
-      "surface_form": "tästä"
+      "surface_form": "tästä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Puhumme tästä huomenna.",
+      "context_fa": "فردا دربارهٔ این صحبت می‌کنیم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-tulee",
       "form_id": "form:74-75-6c-65-65",
-      "surface_form": "tulee"
+      "surface_form": "tulee",
+      "context_fi": "Bussi tulee pian.",
+      "context_fa": "اتوبوس به‌زودی می‌آید."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-usein",
       "form_id": "form:75-73-65-69-6e",
-      "surface_form": "usein"
+      "surface_form": "usein",
+      "context_fi": "Käyn usein kirjastossa.",
+      "context_fa": "اغلب به کتابخانه می‌روم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-valilla",
       "form_id": "form:76-e4-6c-69-6c-6c-e4",
-      "surface_form": "välillä"
+      "surface_form": "välillä",
+      "context_fi": "Junat kulkevat kaupunkien välillä.",
+      "context_fa": "قطارها بین شهرها رفت‌وآمد می‌کنند."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-hf-yksi",
       "form_id": "form:79-6b-73-69",
-      "surface_form": "yksi"
+      "surface_form": "yksi",
+      "context_fi": "Minulla on yksi kysymys.",
+      "context_fa": "من یک سؤال دارم."
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-topic-mista",
       "form_id": "form:6d-69-73-74-e4",
-      "surface_form": "mistä"
+      "surface_form": "mistä",
+      "context_fi": "Mistä tulet?",
+      "context_fa": "از کجا می‌آیی؟"
     },
     {
       "section_id": "a1.2-section-2",
       "item_id": "a12s2-topic-suoraan",
       "form_id": "form:73-75-6f-72-61-61-6e",
-      "surface_form": "suoraan"
+      "surface_form": "suoraan",
+      "context_fi": "Mene suoraan ja käänny sitten vasemmalle.",
+      "context_fa": "مستقیم برو و بعد به چپ بپیچ."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-01",
       "form_id": "form:74-65-6b-65-65",
-      "surface_form": "tekee"
+      "surface_form": "tekee",
+      "context_fi": "Hän tekee töitä.",
+      "context_fa": "او کار می‌کند."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-02",
       "form_id": "form:74-75-6c-65-65",
-      "surface_form": "tulee"
+      "surface_form": "tulee",
+      "context_fi": "Hän tulee kotiin.",
+      "context_fa": "او به خانه می‌آید."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-03",
       "form_id": "form:6b-e4-79-74-74-e4-e4",
-      "surface_form": "käyttää"
+      "surface_form": "käyttää",
+      "context_fi": "Hän käyttää puhelinta.",
+      "context_fa": "او از تلفن استفاده می‌کند."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-04",
       "form_id": "form:61-69-6e-61",
-      "surface_form": "aina"
+      "surface_form": "aina",
+      "context_fi": "Olen aina ajoissa.",
+      "context_fa": "همیشه به‌موقع می‌رسم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-05",
       "form_id": "form:75-73-65-69-6e",
-      "surface_form": "usein"
+      "surface_form": "usein",
+      "context_fi": "Käyn siellä usein.",
+      "context_fa": "اغلب به آنجا می‌روم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-06",
       "form_id": "form:6a-6f-73-6b-75-73",
-      "surface_form": "joskus"
+      "surface_form": "joskus",
+      "context_fi": "Teen sen joskus.",
+      "context_fa": "گاهی آن کار را انجام می‌دهم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-07",
       "form_id": "form:79-6c-65-65-6e-73-e4",
-      "surface_form": "yleensä"
+      "surface_form": "yleensä",
+      "context_fi": "Yleensä opiskelen kotona.",
+      "context_fa": "معمولاً در خانه درس می‌خوانم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-08",
       "form_id": "form:74-65-68-64-e4",
-      "surface_form": "tehdä"
+      "surface_form": "tehdä",
+      "context_fi": "Haluan tehdä ruokaa.",
+      "context_fa": "می‌خواهم غذا درست کنم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-09",
       "form_id": "form:6d-61-61-6e",
-      "surface_form": "maan"
+      "surface_form": "maan",
+      "context_fi": "Tämä on maan kartta.",
+      "context_fa": "این نقشهٔ کشور است."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-10",
       "form_id": "form:6b-61-75-70-75-6e-67-69-6e",
-      "surface_form": "kaupungin"
+      "surface_form": "kaupungin",
+      "lexeme_id": "lexeme:kaupunki",
+      "sense_id": "sense:kaupunki-city",
+      "context_fi": "Tämä on kaupungin kartta.",
+      "context_fa": "این نقشهٔ شهر است."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-11",
       "form_id": "form:79-68-64-65-73-73-e4",
-      "surface_form": "yhdessä"
+      "surface_form": "yhdessä",
+      "context_fi": "Mennään yhdessä.",
+      "context_fa": "با هم برویم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-12",
       "form_id": "form:70-61-6c-6a-6f-6e",
-      "surface_form": "paljon"
+      "surface_form": "paljon",
+      "context_fi": "Opiskelen paljon.",
+      "context_fa": "زیاد درس می‌خوانم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-15",
       "form_id": "form:73-69-74-74-65-6e",
-      "surface_form": "sitten"
+      "surface_form": "sitten",
+      "context_fi": "Ensin syön, sitten lähden.",
+      "context_fa": "اول غذا می‌خورم، بعد می‌روم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-16",
       "form_id": "form:65-68-6b-e4",
-      "surface_form": "ehkä"
+      "surface_form": "ehkä",
+      "context_fi": "Ei, ehkä myöhemmin.",
+      "context_fa": "نه، شاید بعداً."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-17",
       "form_id": "form:6d-61-61-6e-61-6e-74-61-69-6e-61",
-      "surface_form": "maanantaina"
+      "surface_form": "maanantaina",
+      "context_fi": "Tavataan maanantaina.",
+      "context_fa": "دوشنبه همدیگر را می‌بینیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-18",
       "form_id": "form:74-69-69-73-74-61-69-6e-61",
-      "surface_form": "tiistaina"
+      "surface_form": "tiistaina",
+      "context_fi": "Tavataan tiistaina.",
+      "context_fa": "سه‌شنبه همدیگر را می‌بینیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-19",
       "form_id": "form:74-6f-72-73-74-61-69-6e-61",
-      "surface_form": "torstaina"
+      "surface_form": "torstaina",
+      "context_fi": "Tavataan torstaina.",
+      "context_fa": "پنجشنبه همدیگر را می‌بینیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-20",
       "form_id": "form:65-6e-73-69",
-      "surface_form": "ensi"
+      "surface_form": "ensi",
+      "context_fi": "Ensi viikolla.",
+      "context_fa": "هفتهٔ آینده."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-21",
       "form_id": "form:76-69-69-6d-65",
-      "surface_form": "viime"
+      "surface_form": "viime",
+      "context_fi": "Viime viikolla.",
+      "context_fa": "هفتهٔ گذشته."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-22",
       "form_id": "form:6b-61-6e-73-73-61",
-      "surface_form": "kanssa"
+      "surface_form": "kanssa",
+      "context_fi": "Tulen ystävän kanssa.",
+      "context_fa": "با دوستم می‌آیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-23",
       "form_id": "form:6b-79-6c-6c-e4",
-      "surface_form": "kyllä"
+      "surface_form": "kyllä",
+      "context_fi": "Kyllä, sopii.",
+      "context_fa": "بله، مناسب است."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-24",
       "form_id": "form:6e-79-74",
-      "surface_form": "nyt"
+      "surface_form": "nyt",
+      "context_fi": "Nyt on hyvä aika.",
+      "context_fa": "حالا زمان خوبی است."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-25",
       "form_id": "form:6d-79-f6-68-65-6d-6d-69-6e",
-      "surface_form": "myöhemmin"
+      "surface_form": "myöhemmin",
+      "context_fi": "Ei, ehkä myöhemmin.",
+      "context_fa": "نه، شاید بعداً."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-hf-26",
       "form_id": "form:68-65-74-69",
-      "surface_form": "heti"
+      "surface_form": "heti",
+      "context_fi": "Tulen heti.",
+      "context_fa": "فوراً می‌آیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-topic-08",
       "form_id": "form:79-6c-69-6f-70-69-73-74-6f",
-      "surface_form": "yliopisto"
+      "surface_form": "yliopisto",
+      "context_fi": "Yliopisto on keskustassa.",
+      "context_fa": "دانشگاه در مرکز شهر است."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-topic-19",
       "form_id": "form:6b-65-73-6b-69-76-69-69-6b-6b-6f-6e-61",
-      "surface_form": "keskiviikkona"
+      "surface_form": "keskiviikkona",
+      "context_fi": "Nähdään keskiviikkona.",
+      "context_fa": "چهارشنبه می‌بینمت."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-topic-20",
       "form_id": "form:70-65-72-6a-61-6e-74-61-69-6e-61",
-      "surface_form": "perjantaina"
+      "surface_form": "perjantaina",
+      "context_fi": "Nähdään perjantaina.",
+      "context_fa": "جمعه همدیگر را می‌بینیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-topic-21",
       "form_id": "form:6c-61-75-61-6e-74-61-69-6e-61",
-      "surface_form": "lauantaina"
+      "surface_form": "lauantaina",
+      "context_fi": "Tavataan lauantaina.",
+      "context_fa": "شنبه همدیگر را می‌بینیم."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-topic-22",
       "form_id": "form:73-75-6e-6e-75-6e-74-61-69-6e-61",
-      "surface_form": "sunnuntaina"
+      "surface_form": "sunnuntaina",
+      "context_fi": "Nähdään sunnuntaina.",
+      "context_fa": "یکشنبه می‌بینمت."
     },
     {
       "section_id": "a1.2-section-3",
       "item_id": "a12s3-topic-23",
       "form_id": "form:74-75-6c-6c-61",
-      "surface_form": "tulla"
+      "surface_form": "tulla",
+      "context_fi": "Haluatko tulla kahville?",
+      "context_fa": "می‌خواهی برای قهوه بیایی؟"
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-01",
       "form_id": "form:6e-79-74",
-      "surface_form": "nyt"
+      "surface_form": "nyt",
+      "context_fi": "Nyt on hyvä aika.",
+      "context_fa": "حالا زمان خوبی است."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-02",
       "form_id": "form:68-79-76-69-6e",
-      "surface_form": "hyvin"
+      "surface_form": "hyvin",
+      "context_fi": "En voi hyvin.",
+      "context_fa": "حالم خوب نیست."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-03",
       "form_id": "form:70-61-6c-6a-6f-6e",
-      "surface_form": "paljon"
+      "surface_form": "paljon",
+      "context_fi": "Tänään sataa paljon.",
+      "context_fa": "امروز باران زیادی می‌بارد."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-04",
       "form_id": "form:61-69-6b-61-6e-61",
-      "surface_form": "aikana"
+      "surface_form": "aikana",
+      "lexeme_id": "lexeme:aika",
+      "sense_id": "sense:aika-time",
+      "context_fi": "Päivän aikana sataa.",
+      "context_fa": "در طول روز باران می‌بارد."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-05",
       "form_id": "form:6c-69-69-61-6e",
-      "surface_form": "liian"
+      "surface_form": "liian",
+      "context_fi": "On liian kylmä.",
+      "context_fa": "هوا بیش از اندازه سرد است."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-06",
       "form_id": "form:74-e4-6d-e4",
-      "surface_form": "tämä"
+      "surface_form": "tämä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Tämä on käsi.",
+      "context_fa": "این دست است."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-07",
       "form_id": "form:6d-69-6e-75-6e",
-      "surface_form": "minun"
+      "surface_form": "minun",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Minun päätäni särkee.",
+      "context_fa": "سرم درد می‌کند."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-08",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä apteekki on?",
+      "context_fa": "داروخانه کجاست؟"
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-09",
       "form_id": "form:76-e4-68-e4-6e",
-      "surface_form": "vähän"
+      "surface_form": "vähän",
+      "context_fi": "Minulla on vähän kuumetta.",
+      "context_fa": "کمی تب دارم."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-10",
       "form_id": "form:6f-6c-65-6e",
-      "surface_form": "olen"
+      "surface_form": "olen",
+      "context_fi": "Olen sairas.",
+      "context_fa": "بیمارم."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-11",
       "form_id": "form:6d-69-74-e4",
-      "surface_form": "mitä"
+      "surface_form": "mitä",
+      "context_fi": "Mitä tähän voi ottaa?",
+      "context_fa": "برای این مشکل چه می‌توان مصرف کرد؟"
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-12",
       "form_id": "form:73-61-61",
-      "surface_form": "saa"
+      "surface_form": "saa",
+      "context_fi": "Täältä saa apua.",
+      "context_fa": "از اینجا می‌توان کمک گرفت."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-13",
       "form_id": "form:6f-74-74-61-61",
-      "surface_form": "ottaa"
+      "surface_form": "ottaa",
+      "context_fi": "Mitä tähän voi ottaa?",
+      "context_fa": "برای این مشکل چه می‌توان مصرف کرد؟"
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-15",
       "form_id": "form:68-65-74-69",
-      "surface_form": "heti"
+      "surface_form": "heti",
+      "context_fi": "Tarvitsen apua heti.",
+      "context_fa": "فوراً کمک لازم دارم."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-16",
       "form_id": "form:74-e4-e4-6c-6c-e4",
-      "surface_form": "täällä"
+      "surface_form": "täällä",
+      "context_fi": "Olen täällä.",
+      "context_fa": "اینجا هستم."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-18",
       "form_id": "form:6a-6f-73",
-      "surface_form": "jos"
+      "surface_form": "jos",
+      "context_fi": "Jos on kylmä, ota takki.",
+      "context_fa": "اگر هوا سرد است، کاپشن بردار."
     },
     {
       "section_id": "a1.2-section-4",
       "item_id": "a12s4-hf-19",
       "form_id": "form:65-68-6b-e4",
-      "surface_form": "ehkä"
+      "surface_form": "ehkä",
+      "context_fi": "Ehkä huomenna.",
+      "context_fa": "شاید فردا."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-001",
       "form_id": "form:6d-69-74-e4",
-      "surface_form": "mitä"
+      "surface_form": "mitä",
+      "context_fi": "Mitä tähän voi ottaa?",
+      "context_fa": "برای این مشکل چه می‌توان مصرف کرد؟"
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-002",
       "form_id": "form:6e-79-74",
-      "surface_form": "nyt"
+      "surface_form": "nyt",
+      "context_fi": "Nyt on hyvä aika.",
+      "context_fa": "حالا زمان خوبی است."
     },
     {
       "section_id": "a1.3-section-1",
@@ -842,43 +1152,59 @@
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-011",
       "form_id": "form:6b-61-6e-73-73-61",
-      "surface_form": "kanssa"
+      "surface_form": "kanssa",
+      "context_fi": "Tulen ystävän kanssa.",
+      "context_fa": "با دوستم می‌آیم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-012",
       "form_id": "form:79-68-64-65-73-73-e4",
-      "surface_form": "yhdessä"
+      "surface_form": "yhdessä",
+      "context_fi": "Mennään yhdessä.",
+      "context_fa": "بیا با هم برویم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-021",
       "form_id": "form:6d-79-f6-68-65-6d-6d-69-6e",
-      "surface_form": "myöhemmin"
+      "surface_form": "myöhemmin",
+      "context_fi": "Ei, ehkä myöhemmin.",
+      "context_fa": "نه، شاید بعداً."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-022",
       "form_id": "form:73-69-74-74-65-6e",
-      "surface_form": "sitten"
+      "surface_form": "sitten",
+      "context_fi": "Ensin syön, sitten lähden.",
+      "context_fa": "اول غذا می‌خورم، بعد می‌روم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-023",
       "form_id": "form:65-68-6b-e4",
-      "surface_form": "ehkä"
+      "surface_form": "ehkä",
+      "context_fi": "Ehkä huomenna.",
+      "context_fa": "شاید فردا."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-031",
       "form_id": "form:68-65-74-69",
-      "surface_form": "heti"
+      "surface_form": "heti",
+      "context_fi": "Tarvitsen apua heti.",
+      "context_fa": "فوراً کمک لازم دارم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-032",
       "form_id": "form:6d-69-6e-75-6c-6c-65",
-      "surface_form": "minulle"
+      "surface_form": "minulle",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Minulle kuuluu hyvää.",
+      "context_fa": "حالم خوب است."
     },
     {
       "section_id": "a1.3-section-1",
@@ -896,151 +1222,205 @@
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-049",
       "form_id": "form:65-6e-65-6d-6d-e4-6e",
-      "surface_form": "enemmän"
+      "surface_form": "enemmän",
+      "context_fi": "Pidän enemmän teestä.",
+      "context_fa": "چای را بیشتر دوست دارم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-057",
       "form_id": "form:6b-6f-73-6b-61",
-      "surface_form": "koska"
+      "surface_form": "koska",
+      "context_fi": "En tule, koska olen väsynyt.",
+      "context_fa": "نمی‌آیم چون خسته‌ام."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-058",
       "form_id": "form:6d-75-74-74-61",
-      "surface_form": "mutta"
+      "surface_form": "mutta",
+      "context_fi": "Haluaisin tulla, mutta olen kiireinen.",
+      "context_fa": "دوست دارم بیایم، اما سرم شلوغ است."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-059",
       "form_id": "form:73-69-6b-73-69",
-      "surface_form": "siksi"
+      "surface_form": "siksi",
+      "context_fi": "Olen väsynyt, siksi menen kotiin.",
+      "context_fa": "خسته‌ام؛ برای همین به خانه می‌روم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-h-065",
       "form_id": "form:76-6f-69-64-61-61-6e",
-      "surface_form": "voidaan"
+      "surface_form": "voidaan",
+      "context_fi": "Voidaan mennä yhdessä.",
+      "context_fa": "می‌توانیم با هم برویم."
     },
     {
       "section_id": "a1.3-section-1",
       "item_id": "a13s1-t-005",
       "form_id": "form:74-e4-6e-e4-e4-6e",
-      "surface_form": "tänään"
+      "surface_form": "tänään",
+      "context_fi": "Mitä teet tänään?",
+      "context_fa": "امروز چه کار می‌کنی؟"
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-001",
       "form_id": "form:74-e4-73-73-e4",
-      "surface_form": "tässä"
+      "surface_form": "tässä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Keittiö on tässä.",
+      "context_fa": "آشپزخانه اینجاست."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-002",
       "form_id": "form:73-69-65-6c-6c-e4",
-      "surface_form": "siellä"
+      "surface_form": "siellä",
+      "context_fi": "Ystäväni asuu siellä.",
+      "context_fa": "دوستم آنجا زندگی می‌کند."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-003",
       "form_id": "form:6b-61-69-6b-6b-69",
-      "surface_form": "kaikki"
+      "surface_form": "kaikki",
+      "context_fi": "Kaikki on valmista.",
+      "context_fa": "همه‌چیز آماده است."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-010",
       "form_id": "form:73-69-69-6e-e4",
-      "surface_form": "siinä"
+      "surface_form": "siinä",
+      "lexeme_id": "lexeme:se",
+      "sense_id": "sense:se-referential-demonstrative"
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-018",
       "form_id": "form:74-65-68-64-e4",
-      "surface_form": "tehdä"
+      "surface_form": "tehdä",
+      "context_fi": "Haluan tehdä ruokaa.",
+      "context_fa": "می‌خواهم غذا درست کنم."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-019",
       "form_id": "form:6c-69-73-e4-e4",
-      "surface_form": "lisää"
+      "surface_form": "lisää",
+      "context_fi": "Tarvitsen lisää aikaa.",
+      "context_fa": "وقت بیشتری لازم دارم."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-027",
       "form_id": "form:65-69",
-      "surface_form": "ei"
+      "surface_form": "ei",
+      "context_fi": "Hän ei tule tänään.",
+      "context_fa": "او امروز نمی‌آید."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-028",
       "form_id": "form:76-69-65-6c-e4",
-      "surface_form": "vielä"
+      "surface_form": "vielä",
+      "context_fi": "Ongelma ei ole vielä korjattu.",
+      "context_fa": "مشکل هنوز برطرف نشده است."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-029",
       "form_id": "form:6f-69-6b-65-69-6e",
-      "surface_form": "oikein"
+      "surface_form": "oikein",
+      "context_fi": "Lämmitys ei toimi oikein.",
+      "context_fa": "سیستم گرمایش درست کار نمی‌کند."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-038",
       "form_id": "form:68-65-74-69",
-      "surface_form": "heti"
+      "surface_form": "heti",
+      "context_fi": "Tarvitsen apua heti.",
+      "context_fa": "فوراً کمک لازم دارم."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-039",
       "form_id": "form:6d-69-6e-75-6c-6c-65",
-      "surface_form": "minulle"
+      "surface_form": "minulle",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Voitteko soittaa minulle?",
+      "context_fa": "می‌توانید با من تماس بگیرید؟"
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-047",
       "form_id": "form:74-e4-e4-6c-6c-e4",
-      "surface_form": "täällä"
+      "surface_form": "täällä",
+      "context_fi": "Olen täällä.",
+      "context_fa": "اینجا هستم."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-048",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä apteekki on?",
+      "context_fa": "داروخانه کجاست؟"
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-049",
       "form_id": "form:6d-79-f6-73",
-      "surface_form": "myös"
+      "surface_form": "myös",
+      "context_fi": "Täällä on myös kirjasto.",
+      "context_fa": "اینجا کتابخانه هم هست."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-057",
       "form_id": "form:6b-69-69-6e-6e-69",
-      "surface_form": "kiinni"
+      "surface_form": "kiinni",
+      "context_fi": "Se menee kiinni kello kuusi.",
+      "context_fa": "ساعت شش بسته می‌شود."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-058",
       "form_id": "form:6b-6c-6f",
-      "surface_form": "klo"
+      "surface_form": "klo",
+      "context_fi": "Kokous alkaa klo 9.",
+      "context_fa": "جلسه ساعت نه آغاز می‌شود."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-059",
       "form_id": "form:6a-e4-6c-6b-65-65-6e",
-      "surface_form": "jälkeen"
+      "surface_form": "jälkeen",
+      "context_fi": "Tulen töiden jälkeen.",
+      "context_fa": "بعد از کار می‌آیم."
     },
     {
       "section_id": "a1.3-section-2",
       "item_id": "a13s2-h-067",
       "form_id": "form:73-61-61",
-      "surface_form": "saa"
+      "surface_form": "saa",
+      "context_fi": "Täältä saa apua.",
+      "context_fa": "از اینجا می‌توان کمک گرفت."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-001",
       "form_id": "form:74-65-68-64-e4",
-      "surface_form": "tehdä"
+      "surface_form": "tehdä",
+      "context_fi": "Haluan tehdä ruokaa.",
+      "context_fa": "می‌خواهم غذا درست کنم."
     },
     {
       "section_id": "a1.3-section-3",
@@ -1052,13 +1432,17 @@
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-010",
       "form_id": "form:6d-69-74-e4",
-      "surface_form": "mitä"
+      "surface_form": "mitä",
+      "context_fi": "Mitä tähän voi ottaa?",
+      "context_fa": "برای این مشکل چه می‌توان مصرف کرد؟"
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-011",
       "form_id": "form:6d-69-74-65-6e",
-      "surface_form": "miten"
+      "surface_form": "miten",
+      "context_fi": "Miten tämä toimii?",
+      "context_fa": "این چطور کار می‌کند؟"
     },
     {
       "section_id": "a1.3-section-3",
@@ -1070,55 +1454,77 @@
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-020",
       "form_id": "form:65-6e-73-69-6e",
-      "surface_form": "ensin"
+      "surface_form": "ensin",
+      "context_fi": "Avaa tiedosto ensin.",
+      "context_fa": "اول فایل را باز کن."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-021",
       "form_id": "form:73-69-74-74-65-6e",
-      "surface_form": "sitten"
+      "surface_form": "sitten",
+      "context_fi": "Ensin syön, sitten lähden.",
+      "context_fa": "اول غذا می‌خورم، بعد می‌روم."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-022",
       "form_id": "form:6a-e4-6c-6b-65-65-6e",
-      "surface_form": "jälkeen"
+      "surface_form": "jälkeen",
+      "context_fi": "Tulen töiden jälkeen.",
+      "context_fa": "بعد از کار می‌آیم."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-030",
       "form_id": "form:76-e4-68-e4-6e",
-      "surface_form": "vähän"
+      "surface_form": "vähän",
+      "context_fi": "Minulla on vähän kuumetta.",
+      "context_fa": "کمی تب دارم."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-038",
       "form_id": "form:6b-61-6e-73-73-61",
-      "surface_form": "kanssa"
+      "surface_form": "kanssa",
+      "context_fi": "Tulen ystävän kanssa.",
+      "context_fa": "با دوستم می‌آیم."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-039",
       "form_id": "form:79-68-64-65-73-73-e4",
-      "surface_form": "yhdessä"
+      "surface_form": "yhdessä",
+      "context_fi": "Mennään yhdessä.",
+      "context_fa": "با هم برویم."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-040",
       "form_id": "form:6d-65-69-64-e4-6e",
-      "surface_form": "meidän"
+      "surface_form": "meidän",
+      "lexeme_id": "lexeme:me",
+      "sense_id": "sense:me-first-person-plural",
+      "context_fi": "Meidän opettajamme on täällä.",
+      "context_fa": "معلم ما اینجاست."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-048",
       "form_id": "form:6d-69-6e-75-6c-6c-65",
-      "surface_form": "minulle"
+      "surface_form": "minulle",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Voitko lähettää sen minulle?",
+      "context_fa": "می‌توانی آن را برایم بفرستی؟"
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-049",
       "form_id": "form:73-69-6e-e4",
-      "surface_form": "sinä"
+      "surface_form": "sinä",
+      "lexeme_id": "lexeme:sina",
+      "sense_id": "sense:sina-second-person"
     },
     {
       "section_id": "a1.3-section-3",
@@ -1130,49 +1536,65 @@
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-058",
       "form_id": "form:65-6e-73-69",
-      "surface_form": "ensi"
+      "surface_form": "ensi",
+      "context_fi": "Ensi viikolla.",
+      "context_fa": "هفتهٔ آینده."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-059",
       "form_id": "form:76-69-69-6d-65",
-      "surface_form": "viime"
+      "surface_form": "viime",
+      "context_fi": "Viime viikolla.",
+      "context_fa": "هفتهٔ گذشته."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-067",
       "form_id": "form:6b-6f-73-6b-61",
-      "surface_form": "koska"
+      "surface_form": "koska",
+      "context_fi": "Olen myöhässä, koska bussi on myöhässä.",
+      "context_fa": "دیر کرده‌ام چون اتوبوس تأخیر دارد."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-068",
       "form_id": "form:70-6f-69-73",
-      "surface_form": "pois"
+      "surface_form": "pois",
+      "context_fi": "Laita puhelin pois.",
+      "context_fa": "تلفن را کنار بگذار."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-h-069",
       "form_id": "form:76-75-6f-6b-73-69",
-      "surface_form": "vuoksi"
+      "surface_form": "vuoksi",
+      "context_fi": "Olen poissa sairauden vuoksi.",
+      "context_fa": "به‌دلیل بیماری غایبم."
     },
     {
       "section_id": "a1.3-section-3",
       "item_id": "a13s3-t-061",
       "form_id": "form:70-65-72-6a-61-6e-74-61-69-6e-61",
-      "surface_form": "perjantaina"
+      "surface_form": "perjantaina",
+      "context_fi": "Nähdään perjantaina.",
+      "context_fa": "جمعه همدیگر را می‌بینیم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-001",
       "form_id": "form:6f-6c-69",
-      "surface_form": "oli"
+      "surface_form": "oli",
+      "context_fi": "Eilen oli kylmä.",
+      "context_fa": "دیروز هوا سرد بود."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-002",
       "form_id": "form:6f-6c-69-6e",
-      "surface_form": "olin"
+      "surface_form": "olin",
+      "context_fi": "Eilen olin kotona.",
+      "context_fa": "دیروز خانه بودم."
     },
     {
       "section_id": "a1.3-section-4",
@@ -1190,79 +1612,105 @@
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-013",
       "form_id": "form:73-61-6e-6f-69",
-      "surface_form": "sanoi"
+      "surface_form": "sanoi",
+      "context_fi": "Hän sanoi kiitos.",
+      "context_fa": "او تشکر کرد."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-022",
       "form_id": "form:65-6e-73-69-6e",
-      "surface_form": "ensin"
+      "surface_form": "ensin",
+      "context_fi": "Ensin olin töissä.",
+      "context_fa": "اول سر کار بودم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-023",
       "form_id": "form:73-69-74-74-65-6e",
-      "surface_form": "sitten"
+      "surface_form": "sitten",
+      "context_fi": "Ensin syön, sitten lähden.",
+      "context_fa": "اول غذا می‌خورم، بعد می‌روم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-024",
       "form_id": "form:6a-e4-6c-6b-65-65-6e",
-      "surface_form": "jälkeen"
+      "surface_form": "jälkeen",
+      "context_fi": "Tulen töiden jälkeen.",
+      "context_fa": "بعد از کار می‌آیم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-031",
       "form_id": "form:6d-69-73-73-e4",
-      "surface_form": "missä"
+      "surface_form": "missä",
+      "context_fi": "Missä apteekki on?",
+      "context_fa": "داروخانه کجاست؟"
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-032",
       "form_id": "form:73-69-65-6c-6c-e4",
-      "surface_form": "siellä"
+      "surface_form": "siellä",
+      "context_fi": "Ystäväni asuu siellä.",
+      "context_fa": "دوستم آنجا زندگی می‌کند."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-033",
       "form_id": "form:6b-61-6e-73-73-61",
-      "surface_form": "kanssa"
+      "surface_form": "kanssa",
+      "context_fi": "Tulen ystävän kanssa.",
+      "context_fa": "با دوستم می‌آیم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-041",
       "form_id": "form:65-6e-73-69",
-      "surface_form": "ensi"
+      "surface_form": "ensi",
+      "context_fi": "Ensi viikolla.",
+      "context_fa": "هفتهٔ آینده."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-042",
       "form_id": "form:65-68-6b-e4",
-      "surface_form": "ehkä"
+      "surface_form": "ehkä",
+      "context_fi": "Ehkä huomenna.",
+      "context_fa": "شاید فردا."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-043",
       "form_id": "form:74-75-6c-65-65",
-      "surface_form": "tulee"
+      "surface_form": "tulee",
+      "context_fi": "Hän tulee kotiin.",
+      "context_fa": "او به خانه می‌آید."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-051",
       "form_id": "form:65-6e-65-6d-6d-e4-6e",
-      "surface_form": "enemmän"
+      "surface_form": "enemmän",
+      "context_fi": "Pidän tästä enemmän.",
+      "context_fa": "این را بیشتر دوست دارم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-052",
       "form_id": "form:74-6f-69-6e-65-6e",
-      "surface_form": "toinen"
+      "surface_form": "toinen",
+      "context_fi": "Toinen vaihtoehto on halvempi.",
+      "context_fa": "گزینه دوم ارزان‌تر است."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-053",
       "form_id": "form:6c-69-69-61-6e",
-      "surface_form": "liian"
+      "surface_form": "liian",
+      "context_fi": "On liian kylmä.",
+      "context_fa": "هوا بیش از اندازه سرد است."
     },
     {
       "section_id": "a1.3-section-4",
@@ -1274,25 +1722,33 @@
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-062",
       "form_id": "form:68-79-76-e4",
-      "surface_form": "hyvä"
+      "surface_form": "hyvä",
+      "context_fi": "Minun mielestäni tämä on hyvä.",
+      "context_fa": "به نظر من این خوب است."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-063",
       "form_id": "form:6d-75-74-74-61",
-      "surface_form": "mutta"
+      "surface_form": "mutta",
+      "context_fi": "Se on vaikea, mutta hyvä.",
+      "context_fa": "سخت است، اما خوب است."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-070",
       "form_id": "form:6a-61",
-      "surface_form": "ja"
+      "surface_form": "ja",
+      "context_fi": "Eilen olin kotona ja tein ruokaa.",
+      "context_fa": "دیروز خانه بودم و غذا درست کردم."
     },
     {
       "section_id": "a1.3-section-4",
       "item_id": "a13s4-h-071",
       "form_id": "form:6b-6f-73-6b-61",
-      "surface_form": "koska"
+      "surface_form": "koska",
+      "context_fi": "Huomenna menen kauppaan, koska tarvitsen ruokaa.",
+      "context_fa": "فردا به فروشگاه می‌روم چون غذا لازم دارم."
     },
     {
       "section_id": "a1.3-section-4",
@@ -1304,79 +1760,105 @@
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-001",
       "form_id": "form:6f-6c-69-6e",
-      "surface_form": "olin"
+      "surface_form": "olin",
+      "context_fi": "Olin siellä kaksi päivää.",
+      "context_fa": "دو روز آنجا بودم."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-002",
       "form_id": "form:6f-6c-69",
-      "surface_form": "oli"
+      "surface_form": "oli",
+      "context_fi": "Matka oli mukava.",
+      "context_fa": "سفر دلپذیر بود."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-011",
       "form_id": "form:65-6e-6e-65-6e",
-      "surface_form": "ennen"
+      "surface_form": "ennen",
+      "context_fi": "Lähdin ennen kahdeksaa.",
+      "context_fa": "پیش از ساعت هشت حرکت کردم."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-020",
       "form_id": "form:6d-79-f6-73",
-      "surface_form": "myös"
+      "surface_form": "myös",
+      "context_fi": "Ostin myös paluulipun.",
+      "context_fa": "بلیت برگشت هم خریدم."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-021",
       "form_id": "form:70-61-6c-6a-6f-6e",
-      "surface_form": "paljon"
+      "surface_form": "paljon",
+      "context_fi": "Maksoiko lippu paljon?",
+      "context_fa": "آیا بلیت گران تمام شد؟"
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-030",
       "form_id": "form:73-69-74-74-65-6e",
-      "surface_form": "sitten"
+      "surface_form": "sitten",
+      "context_fi": "Sitten bussi tuli asemalle.",
+      "context_fa": "سپس اتوبوس به ایستگاه رسید."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-039",
       "form_id": "form:68-79-76-e4",
-      "surface_form": "hyvä"
+      "surface_form": "hyvä",
+      "context_fi": "Aamiainen oli hyvä.",
+      "context_fa": "صبحانه خوب بود."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-048",
       "form_id": "form:6b-6f-73-6b-61",
-      "surface_form": "koska"
+      "surface_form": "koska",
+      "context_fi": "Myöhästyin, koska juna oli myöhässä.",
+      "context_fa": "دیر رسیدم، چون قطار تأخیر داشت."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-065",
       "form_id": "form:6a-e4-6c-6b-65-65-6e",
-      "surface_form": "jälkeen"
+      "surface_form": "jälkeen",
+      "context_fi": "Sen jälkeen kävelin hotelliin.",
+      "context_fa": "پس از آن پیاده به هتل رفتم."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-h-073",
       "form_id": "form:76-69-69-6d-65",
-      "surface_form": "viime"
+      "surface_form": "viime",
+      "context_fi": "Missä kävit viime viikonloppuna?",
+      "context_fa": "آخر هفتهٔ گذشته کجا رفتی؟"
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-t-066",
       "form_id": "form:65-6e-73-69-6e",
-      "surface_form": "ensin"
+      "surface_form": "ensin",
+      "context_fi": "Ensin ostin lipun.",
+      "context_fa": "اول بلیت خریدم."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-t-074",
       "form_id": "form:6c-61-75-61-6e-74-61-69-6e-61",
-      "surface_form": "lauantaina"
+      "surface_form": "lauantaina",
+      "context_fi": "Viime lauantaina kävin Tampereella.",
+      "context_fa": "شنبهٔ گذشته به تامپره رفتم."
     },
     {
       "section_id": "a2.1-section-1",
       "item_id": "a21s1-t-076",
       "form_id": "form:73-75-6e-6e-75-6e-74-61-69-6e-61",
-      "surface_form": "sunnuntaina"
+      "surface_form": "sunnuntaina",
+      "context_fi": "Palasin kotiin sunnuntaina.",
+      "context_fa": "یکشنبه به خانه برگشتم."
     },
     {
       "section_id": "a2.1-section-2",
@@ -1388,61 +1870,89 @@
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-002",
       "form_id": "form:6d-69-6e-75-6c-6c-65",
-      "surface_form": "minulle"
+      "surface_form": "minulle",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Tiistai kello kymmenen sopii minulle.",
+      "context_fa": "سه‌شنبه ساعت ده برایم مناسب است."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-011",
       "form_id": "form:6d-69-6e-75-6e",
-      "surface_form": "minun"
+      "surface_form": "minun",
+      "lexeme_id": "lexeme:mina",
+      "sense_id": "sense:mina-first-person",
+      "context_fi": "Minun pitää siirtää vastaanottoaikaani.",
+      "context_fa": "باید وقت ویزیتم را جابه‌جا کنم."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-021",
       "form_id": "form:6f-6c-69",
-      "surface_form": "oli"
+      "surface_form": "oli",
+      "context_fi": "Minulla oli kuumetta eilen.",
+      "context_fa": "دیروز تب داشتم."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-038",
       "form_id": "form:65-6e-6e-65-6e",
-      "surface_form": "ennen"
+      "surface_form": "ennen",
+      "context_fi": "Luen ohjeen ennen käyttöä.",
+      "context_fa": "پیش از استفاده، راهنما را می‌خوانم."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-039",
       "form_id": "form:6a-6f-73",
-      "surface_form": "jos"
+      "surface_form": "jos",
+      "context_fi": "Kysyn apteekista, jos en ymmärrä.",
+      "context_fa": "اگر متوجه نشوم، از داروخانه می‌پرسم."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-048",
       "form_id": "form:74-e4-6d-e4",
-      "surface_form": "tämä"
+      "surface_form": "tämä",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Onko tämä oikea paikka?",
+      "context_fa": "آیا اینجا جای درست است؟"
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-057",
       "form_id": "form:74-e4-68-e4-6e",
-      "surface_form": "tähän"
+      "surface_form": "tähän",
+      "lexeme_id": "lexeme:tama",
+      "sense_id": "sense:tama-proximal-demonstrative",
+      "context_fi": "Kirjoitan nimeni tähän.",
+      "context_fa": "نامم را اینجا می‌نویسم."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-066",
       "form_id": "form:73-61-61-64-61",
-      "surface_form": "saada"
+      "surface_form": "saada",
+      "context_fi": "Voinko saada kopion tästä?",
+      "context_fa": "می‌توانم یک کپی از این بگیرم؟"
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-h-075",
       "form_id": "form:6d-79-f6-73",
-      "surface_form": "myös"
+      "surface_form": "myös",
+      "context_fi": "Tarvitsen myös todistuksen.",
+      "context_fa": "به گواهی هم نیاز دارم."
     },
     {
       "section_id": "a2.1-section-2",
       "item_id": "a21s2-t-076",
       "form_id": "form:74-6f-72-73-74-61-69-6e-61",
-      "surface_form": "torstaina"
+      "surface_form": "torstaina",
+      "context_fi": "Onko torstaina vapaita aikoja?",
+      "context_fa": "پنجشنبه وقت خالی دارید؟"
     }
   ]
 }

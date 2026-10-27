@@ -7,8 +7,7 @@ The review queue is implemented in `spaced-repetition.js` and stores learner pro
 - Previously reviewed words whose `dueAt` is in the past are selected first.
 - Due words are ordered by the oldest due time and then by vocabulary rank.
 - Unseen words fill remaining session slots within the existing daily-new cap; forms with recent *first-attempt* Course mistakes are suggested first using the exact P2 source-form mapping, then by frequency rank. Without valid Course evidence or map data, the original rank order remains.
-- A session contains at most 20 words.
-- At most 10 unseen words can be introduced during one local calendar day.
+- The default is **20 words per session** and **10 unseen words per local day**. Learners can configure **1–50 per session** and **0–30 new/day** without changing any existing due dates. Zero new/day still admits due reviews.
 
 The daily new-word counter changes only after the learner answers a previously unseen word. Starting and abandoning a session does not consume the daily allowance.
 
@@ -63,6 +62,14 @@ Only answers submitted while a Smart Review session is active update the spaced-
 An active Smart Review must also survive temporary navigation. Opening Dictionary or a reviewed word hides the Word Practice view through normal view routing, but the current review quiz and `currentWord` stay intact. Returning to Word Practice reveals the same unanswered or answered question. The quiz is cleared only when the review controller explicitly stops or completes the session via `closeReviewQuiz()`.
 
 Dictionary detail pages may display the current spaced-repetition status for a word, but they do not provide a per-word “practice this word” entry point.
+
+## P5 contextual and mode-aware review (v1.73.0)
+
+[Implementation contract](P5-CONTEXTUAL-REVIEW-BRIDGE.md) · [فارسی](P5-CONTEXTUAL-REVIEW-BRIDGE.fa.md) · [Issue #229](https://github.com/amirmojiry/finnish-learning/issues/229)
+
+The `startReviewPractice(word, mode)` contract remains backward-compatible; an optional third argument supplies a validated Course example, never a guessed translation. On first-attempt Course errors the bridge distinguishes receptive, listening, dictated, typed, guided and independent activity evidence, with **no cross-case or cross-sense mastery**. Only **unseen exact-form** words use suggestions to choose a compatible Word Practice exercise; due words retain the normal due-first order and mode rotation. The mode chosen for a listening mistake is a text-based contextual choice and is **not** claimed to certify listening skill.
+
+The optional, separately versioned `fiSrsPreferencesV1` stores limits; `fiSrsProgressV1` stays **unchanged at version 1**. Corrupt, unsupported or blocked preference data safely falls back to defaults, and browser storage errors retain answers in open-page memory with a visible warning. Unchanged older SRS data and Course scores remain recoverable; rollback requires no SRS migration and must never remove the two legacy progress keys.
 
 ## Required validation
 
