@@ -266,3 +266,12 @@ test('the review integration keeps its required public app contracts', () => {
   assert.doesNotMatch(app, /function startFocusedPractice/);
   assert.doesNotMatch(app, /fiQuizMode/);
 });
+
+
+test('P5 bounded sessions distinguish remaining review work from daily completion',()=>{
+ const source=fs.readFileSync(path.join(ROOT,'spaced-repetition.js'),'utf8');
+ assert.match(source,/const remaining = summarizeProgress\(words, progress, Date\.now\(\), \{newLimit:preferences\.newLimit\}\)/);
+ assert.match(source,/remaining\.due \+ remaining\.availableNewToday > 0/);
+ assert.match(source,/این نوبت مرور تمام شد؛ هنوز واژه‌هایی برای مرور باقی مانده‌اند/);
+ assert.match(source,/مرور امروز تمام شد/);
+});
