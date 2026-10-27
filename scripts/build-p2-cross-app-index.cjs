@@ -122,23 +122,46 @@ function build(sidecar, dictionary, contextual, sections) {
   counts,records,course_items};
 }
 
+
+function compact(data) {
+ const index = new Map(data.records.map((r,i) => [r.id,i]));
+ return {
+  schema_version:1,identity_scope:'compact_exact_forms_and_reviewed_context_only',
+  counts:data.counts,
+  rows:data.records.map(r => [
+   r.kind === 'form' ? 0 : 1,r.surface_form,
+   r.identity_review_status === 'reviewed' ? [r.lexeme_id,r.sense_id,r.morphology] : null,
+   r.dictionary_word === null ? 0 : 1,r.topic_ids,
+   r.first_shipped_lesson,r.explicit_review_lesson_ids
+  ]),
+  links:data.course_items.map(x => [
+   x.section_id,x.item_id,index.get(x.identity_id),
+   x.context_review ? [x.context_review.context_id,x.context_review.lexeme_id,
+    x.context_review.sense_id,x.context_review.morphology] : null
+  ])
+ };
+}
+
 function main(args=process.argv.slice(2)) {
  const mode = args[0] || '--check';
  if (!['--check','--write'].includes(mode)) throw Error('Usage: build-p2-cross-app-index.cjs --check|--write');
  const sections = ['a1.1','a1.2','a1.3','a2.1'].flatMap(level =>
   [1,2,3,4].map(n=>'data/course/'+level+'-section-'+n+'.json')
    .filter(p=>fs.existsSync(path.join(ROOT,p))).map(read));
- const output = JSON.stringify(build(
-  read('data/course/lexical-identity-sidecar.json'),
+ const data = build(read('data/course/lexical-identity-sidecar.json'),
   read('data/common-words.json'),
-  read('data/course/contextual-lexical-identity-map.json'),sections))+'\n';
- const dest = path.join(ROOT,OUTPUT);
- if (mode === '--write') {
-  fs.writeFileSync(dest,output);
-  process.stdout.write('Wrote P2 cross-app exact-form identity index.\n');
- } else if (!fs.existsSync(dest) || fs.readFileSync(dest,'utf8') !== output) {
-  throw Error('P2 shared identity index stale; run npm run p2:cross-app:write');
- } else process.stdout.write('P2 shared identity index current.\n');
+  read('data/course/contextual-lexical-identity-map.json'),sections);
+ const outputs = [
+  [OUTPUT,JSON.stringify(data)+'\n'],
+  ['data/course/p2-cross-app-runtime.json',JSON.stringify(compact(data))+'\n']
+ ];
+ for(const [file,output] of outputs) {
+  const dest=path.join(ROOT,file);
+  if(mode==='--write')fs.writeFileSync(dest,output);
+  else if(!fs.existsSync(dest)||fs.readFileSync(dest,'utf8')!==output)
+   throw Error('P2 shared identity index stale: '+file+'; run npm run p2:cross-app:write');
+ }
+ process.stdout.write('P2 cross-app audit and compact runtime indexes current.\n');
 }
 if (require.main === module) main();
-module.exports = {build,main};
+module.exports = {build,compact,main};
