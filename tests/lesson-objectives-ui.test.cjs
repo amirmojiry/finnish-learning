@@ -29,7 +29,7 @@ test('R1 lexical objectives show authored meaning and lemma without inventing a 
   const targets = section.lessons[2].learning_objectives.lexical;
   for (let i = 0; i < targets.length; i++) {
     const item = section.items[targets[i].target_id];
-    assert.match(view.lexical[i].label, new RegExp(item.surface_form.replace(/[.*+?^$\\{}()|[\\]\\]/g, '\\$&')));
+    assert.ok(view.lexical[i].label.includes(item.surface_form));
     if (item.translation_fa) assert.ok(view.lexical[i].label.includes(item.translation_fa));
     if (item.item_type === 'word' && item.lemma && item.lemma !== item.surface_form)
       assert.ok(view.lexical[i].label.includes('ریشه: ' + item.lemma));
