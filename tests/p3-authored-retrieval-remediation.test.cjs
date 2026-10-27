@@ -46,7 +46,8 @@ test('all revised learner editions keep original archived content, stable IDs an
     assert.equal(activity.p3_review,true);
     assert.equal(activity.type,'type');
     assert.ok(['finnish','cloze'].includes(activity.mode));
-    const item=section.items[activity.item],provenance=item?.p3_review_provenance;
+    const item=section.p3_review_items?.[activity.item],provenance=item?.p3_review_provenance;
+    assert.equal(section.items[activity.item],undefined,'historical item map changed');
     assert.ok(item&&provenance,'missing documented bilingual source');
     const origin=sections.find(x=>x.id===provenance.source_section_id);
     const source=origin?.items[provenance.source_item_id];
