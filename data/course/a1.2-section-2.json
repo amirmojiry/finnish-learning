@@ -1710,6 +1710,103 @@
       "accepted_answers": [
         "Bussi lähtee kello kahdeksan. Juna saapuu kello yhdeksän."
       ]
+    },
+    "p3r-048-a12s1-topic-vaara": {
+      "id": "p3r-048-a12s1-topic-vaara",
+      "surface_form": "väärä",
+      "lemma": "väärä",
+      "translation_fa": "اشتباه / نادرست",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Tämä on väärä.",
+      "example_fa": "این اشتباه است.",
+      "accepted_answers": [
+        "väärä"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-1",
+        "source_lesson_id": "a1.2-section-1-lesson-8",
+        "source_item_id": "a12s1-topic-vaara",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-048-a12s1-topic-ongelma": {
+      "id": "p3r-048-a12s1-topic-ongelma",
+      "surface_form": "ongelma",
+      "lemma": "ongelma",
+      "translation_fa": "مشکل",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "shopping",
+        "service"
+      ],
+      "example_fi": "Minulla on ongelma.",
+      "example_fa": "من یک مشکل دارم.",
+      "accepted_answers": [
+        "ongelma"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-1",
+        "source_lesson_id": "a1.2-section-1-lesson-8",
+        "source_item_id": "a12s1-topic-ongelma",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-048-a12s1-hf-mitaan": {
+      "id": "p3r-048-a12s1-hf-mitaan",
+      "surface_form": "mitään",
+      "lemma": "mikään",
+      "translation_fa": "هیچ‌چیز / چیزی؛ معمولاً در جمله منفی",
+      "item_type": "word",
+      "frequency_status": "ranked",
+      "frequency_rank": 74,
+      "topics": [
+        "shopping",
+        "high-frequency"
+      ],
+      "example_fi": "En ostanut mitään.",
+      "example_fa": "چیزی نخریدم.",
+      "accepted_answers": [
+        "mitään"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-1",
+        "source_lesson_id": "a1.2-section-1-lesson-8",
+        "source_item_id": "a12s1-hf-mitaan",
+        "context_origin": "curated_dictionary_example_2"
+      }
+    },
+    "p3r-017-s2-num-kahdeksan": {
+      "id": "p3r-017-s2-num-kahdeksan",
+      "surface_form": "kahdeksan",
+      "lemma": "kahdeksan",
+      "translation_fa": "۸",
+      "item_type": "number",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on kahdeksan.",
+      "example_fa": "عدد ۸ است.",
+      "accepted_answers": [
+        "kahdeksan",
+        "8",
+        "۸"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-kahdeksan",
+        "context_origin": "original_lesson"
+      }
     }
   },
   "lessons": [
@@ -2111,7 +2208,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-048-a12s1-topic-vaara",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-048-a12s1-hf-mitaan",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.2-section-2-lesson-2",
@@ -2496,7 +2607,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-048-a12s1-topic-ongelma",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-017-s2-num-kahdeksan",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.2-section-2-lesson-3",

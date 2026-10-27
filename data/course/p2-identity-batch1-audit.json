@@ -17,7 +17,7 @@
     "distinct_reviewed_senses": 32,
     "new_forms_in_shipped_lessons": 38,
     "new_dictionary_only_forms": 2,
-    "new_course_occurrences": 108
+    "new_course_occurrences": 111
   },
   "batch_provenance": {
     "ranked": 19,
@@ -93,7 +93,7 @@
           "case": "nominative",
           "number": "singular",
           "provenance": "source_backed_outside_dictionary",
-          "shipped_lesson_count": 2
+          "shipped_lesson_count": 3
         }
       ]
     },
@@ -173,7 +173,7 @@
           "case": "nominative",
           "number": "singular",
           "provenance": "source_backed_outside_dictionary",
-          "shipped_lesson_count": 2
+          "shipped_lesson_count": 3
         }
       ]
     },
@@ -215,7 +215,7 @@
           "case": "nominative",
           "number": "singular",
           "provenance": "source_backed_outside_dictionary",
-          "shipped_lesson_count": 2
+          "shipped_lesson_count": 3
         }
       ]
     },
@@ -509,7 +509,7 @@
           "case": "genitive",
           "number": "singular",
           "provenance": "source_backed_outside_dictionary",
-          "shipped_lesson_count": 2
+          "shipped_lesson_count": 3
         },
         {
           "surface_form": "sinä",
@@ -569,7 +569,7 @@
           "case": "nominative",
           "number": "plural",
           "provenance": "source_backed_outside_dictionary",
-          "shipped_lesson_count": 2
+          "shipped_lesson_count": 3
         }
       ]
     },

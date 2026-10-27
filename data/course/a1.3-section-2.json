@@ -1454,6 +1454,56 @@
       "accepted_answers": [
         "Se avautuu kello yhdeksän. Se menee kiinni kello kuusi."
       ]
+    },
+    "p3r-055-a12s2-topic-bussi": {
+      "id": "p3r-055-a12s2-topic-bussi",
+      "surface_form": "bussi",
+      "lemma": "bussi",
+      "translation_fa": "اتوبوس",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Menen bussilla.",
+      "example_fa": "با اتوبوس می‌روم.",
+      "accepted_answers": [
+        "bussi"
+      ],
+      "visual": "🚌",
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-2",
+        "source_lesson_id": "a1.2-section-2-lesson-5",
+        "source_item_id": "a12s2-topic-bussi",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-017-s2-num-viisi": {
+      "id": "p3r-017-s2-num-viisi",
+      "surface_form": "viisi",
+      "lemma": "viisi",
+      "translation_fa": "۵",
+      "item_type": "number",
+      "frequency_status": "ranked",
+      "frequency_rank": 318,
+      "topics": [
+        "numbers"
+      ],
+      "example_fi": "Numero on viisi.",
+      "example_fa": "عدد ۵ است.",
+      "accepted_answers": [
+        "viisi",
+        "5",
+        "۵"
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-2",
+        "source_lesson_id": "section-2-lesson-7",
+        "source_item_id": "s2-num-viisi",
+        "context_origin": "original_lesson"
+      }
     }
   },
   "lessons": [
@@ -1818,7 +1868,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-055-a12s2-topic-bussi",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-017-s2-num-viisi",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.3-section-2-lesson-2",

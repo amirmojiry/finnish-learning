@@ -1634,6 +1634,55 @@
       "accepted_answers": [
         "Voimmeko tavata huomenna? Sopiiko kello kuusi? Kyllä, sopii. Olen vähän myöhässä."
       ]
+    },
+    "p3r-056-a12s2-topic-meno-paluu": {
+      "id": "p3r-056-a12s2-topic-meno-paluu",
+      "surface_form": "meno-paluu",
+      "lemma": "meno-paluu",
+      "translation_fa": "رفت‌وبرگشت",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "topic"
+      ],
+      "example_fi": "Meno-paluu, kiitos.",
+      "example_fa": "رفت‌وبرگشت، لطفاً.",
+      "accepted_answers": [
+        "meno-paluu"
+      ],
+      "visual": "🔁",
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-2",
+        "source_lesson_id": "a1.2-section-2-lesson-6",
+        "source_item_id": "a12s2-topic-meno-paluu",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-055-a12s2-expr-tulen-taksilla-50": {
+      "id": "p3r-055-a12s2-expr-tulen-taksilla-50",
+      "surface_form": "Tulen taksilla.",
+      "lemma": "Tulen taksilla.",
+      "translation_fa": "با تاکسی می‌آیم.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "travel",
+        "conversation"
+      ],
+      "example_fi": "Tulen taksilla.",
+      "example_fa": "با تاکسی می‌آیم.",
+      "accepted_answers": [
+        "Tulen taksilla."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.2-section-2",
+        "source_lesson_id": "a1.2-section-2-lesson-5",
+        "source_item_id": "a12s2-expr-tulen-taksilla-50",
+        "context_origin": "original_lesson"
+      }
     }
   },
   "lessons": [
@@ -2094,7 +2143,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-056-a12s2-topic-meno-paluu",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-055-a12s2-expr-tulen-taksilla-50",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.2-section-3-lesson-2",

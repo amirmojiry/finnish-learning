@@ -1455,6 +1455,152 @@
       "accepted_answers": [
         "Hei! Haluaisin tämän, kiitos. Paljonko tämä maksaa? Se maksaa kaksikymmentä euroa. Voinko maksaa kortilla? Kyllä. Kuitti, kiitos."
       ]
+    },
+    "p3r-037-s4-lehma-on-elain": {
+      "id": "p3r-037-s4-lehma-on-elain",
+      "surface_form": "Lehmä on eläin.",
+      "lemma": "Lehmä on eläin",
+      "translation_fa": "گاو حیوان است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Lehmä on eläin.",
+      "example_fa": "گاو حیوان است.",
+      "accepted_answers": [
+        "Lehmä on eläin."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-7",
+        "source_item_id": "s4-lehma-on-elain",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-037-s4-karhu-on-elain": {
+      "id": "p3r-037-s4-karhu-on-elain",
+      "surface_form": "Karhu on eläin.",
+      "lemma": "Karhu on eläin",
+      "translation_fa": "خرس حیوان است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Karhu on eläin.",
+      "example_fa": "خرس حیوان است.",
+      "accepted_answers": [
+        "Karhu on eläin."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-7",
+        "source_item_id": "s4-karhu-on-elain",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-037-s4-lammas": {
+      "id": "p3r-037-s4-lammas",
+      "surface_form": "lammas",
+      "lemma": "lammas",
+      "translation_fa": "گوسفند",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Lammas on valkoinen.",
+      "example_fa": "گوسفند سفید است.",
+      "accepted_answers": [
+        "lammas"
+      ],
+      "visual": "🐑",
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-7",
+        "source_item_id": "s4-lammas",
+        "context_origin": "authored_course_example",
+        "context_section_id": "a1.1-section-1",
+        "context_item_id": "lammas"
+      }
+    },
+    "p3r-037-s4-lehma": {
+      "id": "p3r-037-s4-lehma",
+      "surface_form": "lehmä",
+      "lemma": "lehmä",
+      "translation_fa": "گاو",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "animals"
+      ],
+      "example_fi": "Lehmä syö ruohoa.",
+      "example_fa": "گاو علف می‌خورد.",
+      "accepted_answers": [
+        "lehmä"
+      ],
+      "visual": "🐄",
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-7",
+        "source_item_id": "s4-lehma",
+        "context_origin": "authored_course_example",
+        "context_section_id": "a1.1-section-1",
+        "context_item_id": "lehma"
+      }
+    },
+    "p3r-033-s4-kahvi": {
+      "id": "p3r-033-s4-kahvi",
+      "surface_form": "kahvi",
+      "lemma": "kahvi",
+      "translation_fa": "قهوه",
+      "item_type": "word",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "food",
+        "drink"
+      ],
+      "example_fi": "Tämä on kahvia.",
+      "example_fa": "این قهوه است.",
+      "accepted_answers": [
+        "kahvi"
+      ],
+      "visual": "☕",
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-3",
+        "source_item_id": "s4-kahvi",
+        "context_origin": "original_lesson"
+      }
+    },
+    "p3r-032-s4-se-on-huoneessa": {
+      "id": "p3r-032-s4-se-on-huoneessa",
+      "surface_form": "Se on huoneessa.",
+      "lemma": "Se on huoneessa",
+      "translation_fa": "در اتاق است.",
+      "item_type": "expression",
+      "frequency_status": "unranked",
+      "frequency_rank": null,
+      "topics": [
+        "location"
+      ],
+      "example_fi": "Se on huoneessa.",
+      "example_fa": "در اتاق است.",
+      "accepted_answers": [
+        "Se on huoneessa."
+      ],
+      "p3_review_provenance": {
+        "source_section_id": "a1.1-section-4",
+        "source_lesson_id": "section-4-lesson-2",
+        "source_item_id": "s4-se-on-huoneessa",
+        "context_origin": "original_lesson"
+      }
     }
   },
   "lessons": [
@@ -1819,7 +1965,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-037-s4-lehma-on-elain",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-037-s4-lehma",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.2-section-1-lesson-2",
@@ -3190,7 +3350,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-037-s4-karhu-on-elain",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-033-s4-kahvi",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.2-section-1-lesson-5",
@@ -4452,7 +4626,21 @@
             ]
           }
         ]
-      }
+      },
+      "p3_review_activities": [
+        {
+          "type": "type",
+          "mode": "cloze",
+          "item": "p3r-037-s4-lammas",
+          "p3_review": true
+        },
+        {
+          "type": "type",
+          "mode": "finnish",
+          "item": "p3r-032-s4-se-on-huoneessa",
+          "p3_review": true
+        }
+      ]
     },
     {
       "id": "a1.2-section-1-lesson-8",
