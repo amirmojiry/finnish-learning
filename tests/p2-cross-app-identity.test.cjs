@@ -9,6 +9,7 @@ const builder = require('../scripts/build-p2-cross-app-index.cjs');
 const identity = require('../p2-shared-identity.js');
 const srs = require('../spaced-repetition.js');
 const output = read('data/course/p2-cross-app-identity.json');
+const compact = read('data/course/p2-cross-app-runtime.json');
 const sidecar = read('data/course/lexical-identity-sidecar.json');
 const dictionary = read('data/common-words.json');
 const contextual = read('data/course/contextual-lexical-identity-map.json');
@@ -19,6 +20,8 @@ const sections = ['a1.1','a1.2','a1.3','a2.1'].flatMap(level =>
 test('P2 cross-app index reproduces all exact forms, expressions, topic IDs, and reviewed occurrences', () => {
  const generated=builder.build(sidecar,dictionary,contextual,sections);
  assert.deepEqual(output,generated);
+ assert.deepEqual(compact,builder.compact(generated));
+ assert.ok(JSON.stringify(compact).length < JSON.stringify(generated).length / 3);
  assert.equal(output.counts.identity_records,sidecar.records.length);
  assert.equal(output.counts.globally_reviewed,70);
  assert.equal(output.counts.globally_unresolved,1194);
@@ -42,7 +45,7 @@ test('P2 cross-app index reproduces all exact forms, expressions, topic IDs, and
 });
 
 test('Course, Dictionary and Word Practice resolve exactly the same eligible form IDs', () => {
- const joined=identity.hydrate(output);
+ const joined=identity.hydrate(compact);
  for(const word of dictionary.words) {
   const dict=joined.dictionaryWord(word.word),practice=joined.wordPracticeWord(word.word);
   assert.ok(dict&&practice,'Missing dictionary/SRS identity for '+word.word);
@@ -67,7 +70,7 @@ test('Course, Dictionary and Word Practice resolve exactly the same eligible for
 });
 
 test('P2 protects case/tense evidence and reviewed contexts without inheriting SRS mastery',()=>{
- const joined=identity.hydrate(output);
+ const joined=identity.hydrate(compact);
  const on=joined.dictionaryWord('on'),olin=joined.dictionaryWord('olin');
  assert.ok(on&&olin);
  assert.notEqual(on.form_id,olin.form_id);
@@ -100,6 +103,8 @@ test('P2 resolver fails closed for forged senses, unsafe joins and absent browse
  const unresolved=output.records.find(r=>r.identity_review_status==='unresolved');
  const forged={...output,records:output.records.map(r=>r.id===unresolved.id?{...r,sense_id:'sense:guessed'}:r)};
  assert.throws(()=>identity.hydrate(forged),/Unreviewed P2 sense/);
+ const badCompact={...compact,links:[...compact.links,["fake","fake",compact.rows.length,null]]};
+ assert.throws(()=>identity.hydrate(badCompact),/Malformed compact/);
  assert.equal(await identity.load({}),null);
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
  const helperPos=html.indexOf('p2-shared-identity.js?v=');
