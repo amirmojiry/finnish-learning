@@ -1725,8 +1725,10 @@
             !item.p3_review_provenance?.source_item_id) {
             throw new Error('Invalid P3 review source and independent typing activity: ' + lesson.id);
           }
-          if (activity.mode === 'cloze' && (!item.example_fi || !item.example_fa ||
-            !makeCloze(item.example_fi, item.surface_form).includes('_____'))) {
+          const sentenceTokens = String(item.example_fi || '').normalize('NFC')
+            .toLocaleLowerCase('fi-FI').match(/[\p{L}\p{N}]+/gu) || [];
+          if (activity.mode === 'cloze' && (item.item_type !== 'word' || !item.example_fa ||
+            !sentenceTokens.includes(normalizeAnswer(item.surface_form)))) {
             throw new Error('P3 contextual review needs an authored bilingual exact-form sentence: ' + lesson.id);
           }
         }
